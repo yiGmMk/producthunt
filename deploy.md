@@ -48,3 +48,4 @@ ref https://github.com/orgs/vercel/discussions/38
 ## netlify
 
 suport hugo but old version 0.85.x,and we need 0.123.x or later,not work
+不支持
