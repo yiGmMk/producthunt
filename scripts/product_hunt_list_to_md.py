@@ -222,14 +222,14 @@ def generate_markdown(products, date_str:str,en:bool):
         markdown_content += product.to_markdown(rank,en)
 
     # 确保 data 目录存在
-    os.makedirs('content/en', exist_ok=True)
-    os.makedirs('content/zh-cn', exist_ok=True)
+    os.makedirs('content/en/post', exist_ok=True)
+    os.makedirs('content/zh-cn/post', exist_ok=True)
 
     # 修改文件保存路径到 data 目录
     if en:
-        file_name = f"content/en/producthunt-daily-{date_str}.md"
+        file_name = f"content/en/post/producthunt-daily-{date_str}.md"
     else:
-        file_name = f"content/zh-cn/producthunt-daily-{date_str}.md"
+        file_name = f"content/zh-cn/post/producthunt-daily-{date_str}.md"
     
     # 如果文件存在，直接覆盖
     with open(file_name, 'w', encoding='utf-8') as file:
