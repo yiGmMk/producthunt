@@ -1,0 +1,462 @@
+---
+title: 今日热榜 | 2024-08-07
+date: 2024-08-07 06:25:17+0000
+image: https://ph-files.imgix.net/63dd8582-072d-4c8c-9600-e873880e3bdc.png?auto=format&fit=crop&frame=1&h=512&w=1024
+tags: ["人工智能", "思维捕捉", "职业发展"]
+categories: ["人工智能"]
+---
+# PH今日热榜 | 2024-08-07
+
+## 1. Me.bot
+**标语**：将你的想法变成一个人工智能生活教练  
+**介绍**：Me.bot能够捕捉并连接你的想法，更好地理解你。它像一个教练，帮助你应对生活中的各种挑战，无论是重大的职业变化还是小小的低落时刻。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/GYQAZMBAY3CAWS?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/me-bot-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![Me.bot](https://ph-files.imgix.net/63dd8582-072d-4c8c-9600-e873880e3bdc.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：Me.bot, 人工智能, 生活教练, 思维捕捉, 个人成长, 职业发展, 心理支持, 生活挑战, 创意实现, 情感管理  
+**票数**: 🔺1618  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 2. Upmetrics AI
+**标语**：利用人工智能制定商业计划和财务预测  
+**介绍**：Upmetrics是一款基于人工智能的商业计划软件，旨在为创业者和团队简化规划流程，提供直观易用的工具。用户可以轻松创建全面的商业计划、准确的财务预测、吸引人的演示文稿以及战略规划。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/M3RTVMIE3LHY5O?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/upmetrics-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![Upmetrics AI](https://ph-files.imgix.net/4db6e1db-7970-42f0-a820-0899301ad829.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：Upmetrics AI, 商业计划, 财务预测, 人工智能, 企业家, 团队工具, 综合商业计划, 准确财务预测, 吸引人的推介文稿, 战略计划  
+**票数**: 🔺1155  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 3. Frontend AI
+**标语**：你的用户界面是通过提示或图片生成的。  
+**介绍**：想要加速你的前端开发吗？试试 Frontend AI。只需简单输入你的需求或粘贴一张图片，就能预览你的组件并获取相应的代码。现在就来试试吧——无需登录！🧙 小贴士：可以尝试使用他们推荐的提示，或者从 Figma 或你喜欢的应用中上传一张图片。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/RT3FNFH7EFTW35?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/frontend-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![Frontend AI](https://ph-files.imgix.net/3581b7da-0857-4bfe-8920-db385320088e.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：前端AI, 用户界面生成, 提示生成, 图片生成, 组件预览, 代码获取, 加速前端, 无需登录, Figma, 应用图片, 提示建议  
+**票数**: 🔺940  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 4. Brainybear.ai
+**标语**：三步训练AI聊天机器人，立即为客户提供帮助。  
+**介绍**：只需3个步骤即可构建AI聊天机器人，3次点击即可完成训练。Brainybear会扫描您的网站或上传的文件，快速准确地为客户问题提供AI答案。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/HNWM4G3MRWCNFZ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/brainybear-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![Brainybear.ai](https://ph-files.imgix.net/84a02e5b-aca1-4bad-bd58-2ba7d99fa490.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：Brainybear.ai, AI 聊天机器人, 训练聊天机器人, 三步构建, 三次点击, 快速准确, 客户查询, 网站扫描, 上传文件, 实时帮助  
+**票数**: 🔺828  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 5. Rosebud
+**标语**：有治疗师支持的人工智能日记与日志  
+**介绍**：全球最有效的日记工具，由专业治疗师支持。实时反馈，个性化见解，帮助你跟踪自己的成长。已有2500多位满意客户，累计写下超过9000万字的日记。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/6U6RMQIVIWJQHI?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/rosebud-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![Rosebud](https://ph-files.imgix.net/40c43d96-1f58-4fe7-8fb5-e793a4db66a1.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：玫瑰花蕾, AI日记, 心理治疗支持, 实时反馈, 个性化见解, 成长追踪, 高效日记, 满意客户, 文字记录, 心理健康工具  
+**票数**: 🔺647  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM06:01 (北京时间)  
+
+---
+
+## 6. Codei AI
+**标语**：找到你梦想的软件工作  
+**介绍**：通过Codei提升你的软件工程职业生涯吧！你可以追踪应用程序，生成针对不同角色的编程题目，并上传你的GitHub解决方案以获取反馈。参与真实项目，提升技能，助你找到梦想工作。今天就免费注册Codei，开始你的旅程！  
+**产品网站**: [立即访问](https://www.producthunt.com/r/OQSJINXVEKFNRX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/codei-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![Codei AI](https://ph-files.imgix.net/d3f5f66d-7ebb-42c5-b48a-da98fc2fbeb4.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：Codei AI, 软件工程, 职业发展, 求职, 编码问题, GitHub解决方案, 技能提升, 实际项目, 免费试用, 梦想工作  
+**票数**: 🔺399  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 7. LLM Beefer Upper
+**标语**：通过多智能体提示模板自动化思维链  
+**介绍**：*新用户可获得50个积分* 简化自动化的批评、反思和改进过程，也就是让模型在“发言”之前先考虑一下，这样可以大幅提升生成的人工智能输出质量。你可以选择现成的多智能体模板，或者在Claude的帮助下创建自己的模板。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/QGBVEIWIRGRSJ7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/llm-beefer-upper?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![LLM Beefer Upper](https://ph-files.imgix.net/f2b4be94-4512-4c55-acb5-b9e8ce19683e.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：LLM Beefer Upper, 自动化思维链, 多代理提示模板, 新用户50积分, 简化自动化批评, 反思与改进, 模型思考, 优化生成AI输出, 预构  
+**票数**: 🔺294  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 8. Delphi
+**标语**：与观众进行一对一的个性化视频通话，实现规模化交流。  
+**介绍**：Delphi是一个数字克隆平台，可以捕捉你的思维方式，让你在文本、语音甚至视频中实现个性化的1对1互动。无论你是专家、创作者、教练、家庭成员还是企业主，你的智慧都能被无限次地访问和分享。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/X3GZXWZ2U6PTX7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/delphi-4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![Delphi](https://ph-files.imgix.net/6ed344ae-3801-41dc-a410-df01da11bcb7.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：Delphi, 数字克隆平台, 个性化视频通话, 1对1互动, 思维捕捉, 专家, 创作者, 教练, 家庭成员, 商业人士, 知识共享,  
+**票数**: 🔺261  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 9. Lancey (YC S22)
+**标语**：开发用户所需的功能  
+**介绍**：Lancey将产品使用情况和客户反馈转化为分类洞察，帮助你开发下一个伟大的创意。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/PJKOYAT2KL42KQ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/lancey-yc-s22?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![Lancey (YC S22)](https://ph-files.imgix.net/d4dbeb77-42aa-4d77-b16b-4d1f62c32a3e.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：Lancey, YC S22, 用户需求, 产品使用, 客户反馈, 分类洞察, 创新产品, 用户体验, 产品开发, 市场调研  
+**票数**: 🔺246  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 10. Minvo 2.0
+**标语**：一站式人工智能短视频平台，适用于播客等多种内容。  
+**介绍**：这是提取热门短视频的最佳视频剪辑工具。Minvo强大的在线视频编辑器和社交媒体整合功能，让大规模创建视频内容变得轻而易举。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/Z7MHZVRFYV6AVZ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/minvo-2-0?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![Minvo 2.0](https://ph-files.imgix.net/b48f6665-2cc0-4aba-9aef-151168a93b99.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：Minvo 2.0, AI视频短片平台, 播客视频编辑工具, 短视频提取, 在线视频编辑器, 社交媒体集成, 视频内容创作, 长视频转短视频, 热  
+**票数**: 🔺225  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 11. VideoDubber - Fast Video Translator
+**标语**：用你的声音翻译视频，一键全球化！  
+**介绍**：一键用人工智能将视频翻译成150多种语言和口音，保留原声。主要特点：1. 高级视频翻译仅需0.1美元/分钟，支持声音克隆；2. 无限编辑功能；3. 可导出MP4/SRT/MP3格式。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/NIAOC3Z5FMCZ5Q?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/videodubber-fast-video-translator?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![VideoDubber - Fast Video Translator](https://ph-files.imgix.net/1c66dfc8-ebbc-4fa8-b8ac-5136c0958763.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：视频翻译, 快速视频翻译, AI翻译, 视频配音, 语音克隆, 多语言翻译, 视频编辑, MP4导出, SRT导出, MP3导出, 全球化,  
+**票数**: 🔺169  
+**是否精选**：否  
+**发布时间**：2024年08月06日 PM04:20 (北京时间)  
+
+---
+
+## 12. I'M SAFE
+**标语**：女性安全应用程序，提供实时保障  
+**介绍**：I’M SAFE让你无畏地探索世界。我们的应用程序提供实时GPS位置共享、紧急警报、求助热线、匿名录音和虚假来电功能，所有这些都是免费的，旨在提升你的安全感。掌控自己的安全，勇敢前行吧！  
+**产品网站**: [立即访问](https://www.producthunt.com/r/FGE5MXF4I7ILHN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/i-m-safe?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![I'M SAFE](https://ph-files.imgix.net/71278d67-fed1-41c0-ae8c-1bdca9f6b1e6.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：女性安全应用, 实时安全, GPS位置共享, 紧急警报, 求助热线, 匿名录音, 假电话功能, 穿戴设备, 免费安全应用, 提升安全, 自信出行  
+**票数**: 🔺161  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 13. XO Platform
+**标语**：自动化与人工辅助的客户体验聊天  
+**介绍**：XO平台提供了更强大的AI聊天机器人管理功能、优化的搜索体验和与人工客服的无缝对接，从而重新定义了客户体验。我们基于生成式AI的平面拥有简单易用的界面，让聊天机器人在几分钟内就能启动运行！  
+**产品网站**: [立即访问](https://www.producthunt.com/r/WSOU5AZPYPZGGA?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/xo-platform?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![XO Platform](https://ph-files.imgix.net/659ba94d-1156-4aea-9df6-d06b2d5fb8fb.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：XO平台, 自动化客服, 人工辅助, 客户体验, AI聊天机器人, 聊天机器人编排, 优化搜索, 人工客服转接, 生成式AI, 简单界面, 快速部署,  
+**票数**: 🔺156  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 14. zitefy
+**标语**：超级可定制的开放式链接工具，带有人工智能功能。  
+**介绍**：一个开源的链接聚合工具，但它有点特别。你可以编辑模板的源代码，或者使用AI助手ZiteChef。无论是程序员还是非程序员，都能实现真正的个性化定制。创建独特的网站，或者贡献你的模板。让你的数字形象尽情释放。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/JSHUFX3DJRTOE7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/zitefy?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![zitefy](https://ph-files.imgix.net/f08911a5-894c-4119-aa4d-fd0fd4831280.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：zitefy, 自定义, 链接工具, 开源, AI助手, ZiteChef, 模板, 数字存在, 编码, 非编码者, 唯一网站, 贡献模板, 自由定制  
+**票数**: 🔺129  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 15. Dayzero Worx
+**标语**：针对市场营销公司的专业AI团队  
+**介绍**：Dayzero Worx 是一家专注于营销的人工智能辅助机构。它的AI助手从撰写精确的项目简介到策划整个营销活动，都能协同工作。它们由行业专家进行培训，利用您的品牌数据，帮助您以十倍的速度服务客户。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/DY5X33S6XSSTLU?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/dayzero-worx?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![Dayzero Worx](https://ph-files.imgix.net/7cd0f1f5-5cfe-41c5-94ef-4d78ccd067a9.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：Dayzero Worx, 营销代理, 人工智能团队, 市场营销, 广告策划, 智能助手, 品牌数据, 客户服务, 提高效率, 行业专家  
+**票数**: 🔺125  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 16. TarotRead AI
+**标语**：别再依赖水晶球了——这就是未来。  
+**介绍**：探索塔罗牌的神秘世界，尽在TarotRead.ai。通过先进的人工智能，为您提供个性化的塔罗牌解读、每日抽牌以及深入的解析，尽享现代科技的魅力。与您的免费AI塔罗助手一起，揭开古老智慧的面纱吧！  
+**产品网站**: [立即访问](https://www.producthunt.com/r/54XVPOMM7H7CEN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/tarotread-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![TarotRead AI](https://ph-files.imgix.net/603792d0-8510-41af-a6c2-28fc366b8b59.gif?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：塔罗牌, AI, 塔罗阅读, 个性化塔罗, 每日抽牌, 深入解读, 现代科技, 古老智慧, 免费塔罗伴侣, 神秘世界  
+**票数**: 🔺124  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 17. CoinRender
+**标语**：快速生成3D加密货币币种图像  
+**介绍**：CoinRender 是一款网络工具，可以帮助你将标志转化为惊艳的3D加密货币营销资产。使用它，你可以将制作成本和交付时间降低多达75%。它支持PNG和SVG格式的标志。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/XYTHG24YFVG63B?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/coinrender?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![CoinRender](https://ph-files.imgix.net/e2e8b842-d2fc-4dd4-9554-deb60efb3d95.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：CoinRender, 3D 加密货币币种, 3D 渲染工具, 加密货币营销资产, 标志制作, 降低生产成本, 提高交付效率, PNG 标志, SVG 标  
+**票数**: 🔺124  
+**是否精选**：否  
+**发布时间**：2024年08月06日 PM04:42 (北京时间)  
+
+---
+
+## 18. Finsweet Components for Webflow
+**标语**：在Webflow中无代码构建复杂组件  
+**介绍**：在Webflow中，无需编写代码即可构建自定义滑块和Cookie同意框。    
+- 可以在Webflow中原生地对组件进行样式设置。  
+- 在编辑模式下轻松修改组件。  
+- 在测试网址上免费使用。  
+- 提供免费的人工支持，人人可用。
+**产品网站**: [立即访问](https://www.producthunt.com/r/UVULBGT4IATFSY?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/finsweet-components-for-webflow?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![Finsweet Components for Webflow](https://ph-files.imgix.net/09c72617-2682-466e-94f3-475ab888f9d4.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：Finsweet组件, Webflow, 无需编码, 自定义滑块, Cookie同意, 原生样式, 编辑模式, 免费使用, 暂存网址, 免费人性化支持  
+**票数**: 🔺122  
+**是否精选**：是  
+**发布时间**：2024年08月07日 AM12:01 (北京时间)  
+
+---
+
+## 19. flickd
+**标语**：影迷和剧迷讨论与追踪内容的首选应用程序  
+**介绍**：flickd 是一款专为电影和电视爱好者打造的应用，让大家可以在一个地方聚集、交流和记录观看的内容，还能从其他用户那里获取推荐。没有剧透，没有干扰，只有对娱乐的纯粹热爱。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/6VD2MT7CNUDYJU?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/flickd?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![flickd](https://ph-files.imgix.net/22831a12-d42d-44c5-bb9c-2120e5d746a0.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：flickd, 影视爱好者, 讨论, 跟踪内容, 推荐, 电影应用, 电视应用, 纯粹娱乐, 共享激情, 社交平台  
+**票数**: 🔺108  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 20. Shepherd Pro
+**标语**：引导用户体验你应用的“灵光一现”时刻。  
+**介绍**：基于流行的开源库，Shepherd Pro 在扩展性方面进行了改进，增加了分析功能、高级目标定位和应用内旅程创建工具，确保能够引导用户体验到应用中的“顿悟”时刻。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/PVV5DB3352QLHP?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/shepherd-pro?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![Shepherd Pro](https://ph-files.imgix.net/34116b62-1398-4767-8710-86e91f1df3d8.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：Shepherd Pro, 用户引导, a-ha时刻, 开源库, 可扩展性, 数据分析, 高级定位, 应用内旅程创建器, 用户体验, 产品优化  
+**票数**: 🔺106  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 21. YouTube Ultra Focus Mode
+**标语**：无干扰的YouTube学习  
+**介绍**：YouTube Ultra Focus Mode扩展功能能让你在学习时不受干扰，帮助你屏蔽无关的推荐内容，并根据你提供的关键词筛选出相关视频。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/5ADCVCK4XPA5UR?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/youtube-ultra-focus-mode?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![YouTube Ultra Focus Mode](https://ph-files.imgix.net/5ca39a79-3eb9-44d9-9a64-0db85d9f4337.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：YouTube超专注模式, 无干扰学习, 视频过滤, 关键词过滤, 学习扩展, YouTube扩展, 分心, 视频推荐, 专注学习, 提高学习效率  
+**票数**: 🔺105  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 22. bunpun
+**标语**：按需直播平台，专注于公益活动  
+**介绍**：bunpun.com 是一个负责任的社交直播按需市场平台，客户可以在这里发布任务和报酬，而主播则可以完成这些任务并获得报酬。我们的使命是让善行得到回报和关注。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/WPYCP6WEOYJNWD?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/bunpun?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![bunpun](https://ph-files.imgix.net/201bab54-4e4d-4367-98f2-505f93ee0974.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：bunpun, 直播平台, 社会责任, 按需直播, 好事, 任务发布, 收益分享, 直播任务, 社会公益, 在线市场, 付费直播, 互助平台  
+**票数**: 🔺100  
+**是否精选**：否  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 23. uPresenter
+**标语**：人工智能驱动的演示文稿和测验生成平台  
+**介绍**：这是一款由人工智能驱动的平台，可以轻松生成演示文稿和测验，同时支持无缝共享和参与情况跟踪。简化你的工作流程，随时随地进行协作。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/LWOROBKYT6XL72?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/upresenter?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![uPresenter](https://ph-files.imgix.net/bd15f417-49d8-4f6c-a633-7fcacc1b3139.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：uPresenter, AI平台, 演示文稿生成, 测验生成, 无缝分享, 参与跟踪, 工作流程优化, 远程协作, 人工智能工具, 教育科技  
+**票数**: 🔺84  
+**是否精选**：否  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 24. Bubble Screener
+**标语**：股票市场的互动气泡图  
+**介绍**：在气泡筛选器上以引人入胜的气泡图展示主要市场的股票。识别趋势，深入了解股票市场的格局。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/NFB56CVCTLJ3KL?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/bubble-screener?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![Bubble Screener](https://ph-files.imgix.net/37d51014-520d-42bb-a72f-0026ec3b57b0.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：气泡筛选器, 互动气泡图, 股票市场, 可视化股票, 气泡图, 识别趋势, 股票市场洞察, 主要市场, 数据可视化, 投资分析  
+**票数**: 🔺81  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 25. 20min
+**标语**：专家和创作者的问答支付商店  
+**介绍**：20min 是一个“链接在个人资料”平台，专为专家和创作者提供付费咨询的解决方案。通过文字、语音或视频快速提供建议，帮助需要你专业知识的人，进而实现时间和专长的变现。你可以在几分钟内免费创建属于自己的咨询与支付商店，轻松开始赚钱！  
+**产品网站**: [立即访问](https://www.producthunt.com/r/FPGU5EQ7XG3ALT?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/20min?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![20min](https://ph-files.imgix.net/b45250d9-7089-4bd3-b12f-1f5a0771a8c2.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：20min, 专家, 创作者, 收费咨询, 付费问答, 链接个人主页, 赚钱, 快速建议, 文本咨询, 语音咨询, 视频咨询, 自己的商店,  
+**票数**: 🔺76  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 26. Supachat
+**标语**：让Telegram频道自动化运行  
+**介绍**：Supachat 可以自动生成并发布 Telegram 频道的内容。它会根据真实数据，如网站、博客、文章或股市信息，生成内容，然后将其安排好并发布到你的频道上。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/EG6D52OY4LOPB3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/supachat?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![Supachat](https://ph-files.imgix.net/f30d1865-5c0e-4aa4-85a0-bfa946d095e3.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：Supachat, 机器人, 自动化, Telegram频道, 内容创作, 内容发布, 数据生成, 网站, 博客, 文章, 股票市场, 定时发布, 社交媒体管理  
+**票数**: 🔺74  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 27. RivalOut
+**标语**：基于人工智能的竞争对手分析与比较平台  
+**介绍**：RivalOut是一个基于人工智能的平台，旨在简化和提升竞争对手分析的过程。它为企业提供了关于竞争对手流量、搜索排名和社交媒体表现等方面的可操作性洞察，这一切都得益于AI的分析支持。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/HNT3WUWW4DUO3N?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/rivalout?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![RivalOut](https://ph-files.imgix.net/d3b42327-25f5-4b5a-94b6-f3cb378aad65.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：竞争对手分析, AI驱动, 竞争公司比较平台, 数据分析, 竞争情报, 搜索排名, 社交媒体表现, 商业洞察, 业务优化, 竞争策略  
+**票数**: 🔺70  
+**是否精选**：否  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 28. Extractopus
+**标语**：高效的潜在客户生成和冷邮件推广工具  
+**介绍**：这是您高效获取潜在客户和进行冷联系的首选工具。帮助您为本地企业和不同角色找到精准的潜在客户，助力提升销售和市场推广效果。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/HSEOJH3BBVOYZW?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/extractopus?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![Extractopus](https://ph-files.imgix.net/1e1d758c-9c99-4391-9b94-598e8f10c3f1.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：高效线索生成器, 冷邮件工具, 线索发现, 本地企业, 销售提升, 市场营销工具, 目标客户, 营销效率, 业务发展, 潜在客户  
+**票数**: 🔺65  
+**是否精选**：否  
+**发布时间**：2024年08月06日 PM03:04 (北京时间)  
+
+---
+
+## 29. Dlopo
+**标语**：您的一站式日程安排中心  
+**介绍**：使用一个能帮助你保持井井有条的工具，掌控你的日程安排，让你不会错过任何重要时刻。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/PM5BVJ274ZHVAY?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/dlopo?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![Dlopo](https://ph-files.imgix.net/2806dcfc-8d0b-43e8-ada7-7c1945a465a8.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：Dlopo, 统一日程管理, 日程安排工具, 组织管理, 提高效率, 时间管理, 不遗漏重要事项, 计划工具, 全能调度中心  
+**票数**: 🔺64  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
+
+## 30. Cruisen
+**标语**：更好的邮轮预订体验  
+**介绍**：Cruisen是一款以人工智能为驱动的移动优先消费应用，旨在简化和便捷化大规模的邮轮预订过程。  
+**产品网站**: [立即访问](https://www.producthunt.com/r/OAWFV7FEHPWNET?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/cruisen?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)  
+
+![Cruisen](https://ph-files.imgix.net/0a76ae7d-2e80-44e9-bcca-f95d15b2392d.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：Cruisen, 邮轮预订, 人工智能, 移动应用, 简单预订, 无缝体验, 大规模预订, 旅游应用, 旅行助手  
+**票数**: 🔺60  
+**是否精选**：是  
+**发布时间**：2024年08月06日 PM03:01 (北京时间)  
+
+---
