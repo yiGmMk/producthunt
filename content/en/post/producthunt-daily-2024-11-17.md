@@ -1,6 +1,6 @@
 ---
 title: Producthunt Daily | 2024-11-18
-date: 2024-11-18 06:25:17+0000
+date: 2024-11-18 07:22:21+0000
 image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=format&fit=crop&frame=1&h=512&w=1024
 ---
 
@@ -12,8 +12,8 @@ image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=
 
 ![Momen](https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 
-**Keyword**：Momen, no-code web app builder, AI agent development, MVP development, quick deployment, time-to-market, seamless iteration, scaling platform, full-stack development, integrated framework, build and scale, software development, app creation, user-friendly tools, rapid prototyping.  
-**VotesCount**: 🔺615  
+**Keyword**：Momen, no-code, web app builder, AI agent development, MVP, time-to-market, seamless iteration, scaling, full-stack, integrated framework, rapid deployment, product development, software development, user-friendly, tech innovation, startup tools  
+**VotesCount**: 🔺674  
 **Featured**：Yes  
 **CreatedAt**：2024-11-17T08:01:00Z  
 
@@ -27,8 +27,8 @@ image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=
 
 ![AI Game Master ](https://ph-files.imgix.net/9461281b-554a-4c24-99d5-b072091ab339.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 
-**Keyword**：AI游戏大师, 沉浸式体验, DnD灵感, 角色扮演, 移动游戏, 创建角色, 探索任务, 招募伙伴, AI生成图像, 回合制战斗, 史诗冒险, 文本RPG  
-**VotesCount**: 🔺479  
+**Keyword**：AI Game Master, immersive experience, DnD inspired, text-based role playing, mobile game, unique characters, thrilling quests, recruit companions, AI generated images, turn based combat, epic adventure, RPG, role playing game, adventure game, fantasy game, character creation, quest exploration, gaming experience.  
+**VotesCount**: 🔺507  
 **Featured**：Yes  
 **CreatedAt**：2024-11-17T08:01:00Z  
 
@@ -42,8 +42,8 @@ image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=
 
 ![Sharbo](https://ph-files.imgix.net/e2158ebf-b4b1-43de-8f93-2e187f3af50a.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 
-**Keyword**：Sharbo, competitor product insights, quick setup, custom sources, instant comparisons, embeddable comparisons, fine-tune analysis, auto-sync data, targeted insights, track competitors, compare products, effortless tracking, data analysis, market insights, product comparison tool  
-**VotesCount**: 🔺374  
+**Keyword**：Sharbo, competitor product insights, quick setup, custom sources, instant comparisons, embeddable comparisons, fine-tune analysis, auto-sync data, targeted insights, track competitors, compare products, stay ahead, effortless tracking  
+**VotesCount**: 🔺395  
 **Featured**：Yes  
 **CreatedAt**：2024-11-17T08:01:00Z  
 
@@ -58,7 +58,7 @@ image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=
 ![Mikrotakt](https://ph-files.imgix.net/a26e7974-0f99-47a7-b505-8b47380280e5.webp?auto=format&fit=crop&frame=1&h=512&w=1024)  
 
 **Keyword**：Mikrotakt, AI Vocal Remover, Instrumental Isolation, AI-powered tool, extract vocals, extract instruments, extract drums, music production, musicians, producers, content creators, chord detection, pitch control, tempo control, metronome, AI mastering, voice cleaner, music editing, audio processing, sound isolation  
-**VotesCount**: 🔺191  
+**VotesCount**: 🔺201  
 **Featured**：Yes  
 **CreatedAt**：2024-11-17T08:01:00Z  
 
@@ -72,8 +72,8 @@ image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=
 
 ![NFRT](https://ph-files.imgix.net/e6f48743-edae-4e89-a6f6-4554daf199d0.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 
-**Keyword**：NFRT, Non-Fungible Real Things, physical canvas prints, digital artwork, wall art, art ownership, revolution in art, no crypto, no gas fees, tangible art, real-life art, digital to physical, art for everyone, accessible art, unique art pieces  
-**VotesCount**: 🔺169  
+**Keyword**：NFRT, Non-Fungible Real Things, physical canvas prints, digital artwork, wall art, art ownership, revolution in art, no crypto, no gas fees, tangible art, real-life art, art for everyone, accessible art, digital to physical, art without technology  
+**VotesCount**: 🔺177  
 **Featured**：Yes  
 **CreatedAt**：2024-11-17T08:01:00Z  
 
@@ -87,8 +87,8 @@ image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=
 
 ![Wins 2.5](https://ph-files.imgix.net/ae12ddc3-a540-419a-ae63-9ebcba0c18fd.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 
-**Keyword**：Wins 2.5, window manager, Apple fan, features, Apple, software, productivity, user interface, macOS, innovative design, application management, desktop organization, user experience, customization, technology  
-**VotesCount**: 🔺121  
+**Keyword**：Wins 2.5, window manager, Apple fan, features, Apple, software, productivity, user interface, macOS, innovative design, desktop management, application organization, seamless experience, customization, user-friendly  
+**VotesCount**: 🔺130  
 **Featured**：Yes  
 **CreatedAt**：2024-11-17T08:01:00Z  
 
@@ -102,8 +102,8 @@ image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=
 
 ![Kidtivity Lab](https://ph-files.imgix.net/1e16c92c-2a71-4fac-a285-5f65e06328b0.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 
-**Keyword**：Kidtivity Lab, AI-powered activities, fun learning for kids, creative projects, educational activities, art projects for children, kitchen science for kids, inspire curiosity, child development, engaging activities, parenting support, age-appropriate activities, creativity enhancement, joyful learning  
-**VotesCount**: 🔺105  
+**Keyword**：Kidtivity Lab, AI-powered activities, fun learning for kids, creative projects, educational activities, art projects for children, kitchen science for kids, inspire curiosity, spark joy in learning, activities for different ages, parent resources, child development, engaging kids' activities, creativity and fun.  
+**VotesCount**: 🔺109  
 **Featured**：Yes  
 **CreatedAt**：2024-11-17T08:01:00Z  
 
@@ -118,7 +118,7 @@ image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=
 ![PitchQuick.co](https://ph-files.imgix.net/fbcfc426-93e0-449d-b7cc-884fb1e7b0a5.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 
 **Keyword**：PitchQuick.co, interactive pitches, stunning presentations, engagement tracking, custom link sharing, attention-grabbing, time-saving, standout presentations, real-time analytics, pitch creation tool  
-**VotesCount**: 🔺100  
+**VotesCount**: 🔺105  
 **Featured**：Yes  
 **CreatedAt**：2024-11-17T08:01:00Z  
 
@@ -132,8 +132,8 @@ image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=
 
 ![MarqueeKit](https://ph-files.imgix.net/37140386-c440-4b0f-9c6f-cced6c154d3f.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 
-**Keyword**：MarqueeKit, infinite scrolling, image marquee, Vanilla JS tool, smooth scrolling, customizable, lightweight, website integration, static images, easy setup, web development, user-friendly, dynamic content, responsive design  
-**VotesCount**: 🔺90  
+**Keyword**：MarqueeKit, infinite scrolling, image marquee, Vanilla JS tool, smooth scrolling, customizable, lightweight, website integration, static images, easy setup, web development, user-friendly, dynamic content, JavaScript library, responsive design  
+**VotesCount**: 🔺96  
 **Featured**：Yes  
 **CreatedAt**：2024-11-17T08:01:00Z  
 
@@ -148,7 +148,7 @@ image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=
 ![Velocity Lapse](https://ph-files.imgix.net/d2c71172-a73f-46e9-9d3c-6ca44df1cd53.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)  
 
 **Keyword**：Velocity Lapse, time-lapse videos, Android app, video creation, intuitive interface, manual camera controls, pro-level features, beautiful videos, process visualization, photography app, video editing, creative tools, time-lapse photography, user-friendly design.  
-**VotesCount**: 🔺88  
+**VotesCount**: 🔺91  
 **Featured**：Yes  
 **CreatedAt**：2024-11-17T08:01:00Z  
 
