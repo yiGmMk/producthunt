@@ -1,10 +1,10 @@
 ---
 title: Producthunt Daily | 2024-11-18
-date: 2024-11-18 06:19:59+0000
+date: 2024-11-18 06:25:17+0000
 image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=format&fit=crop&frame=1&h=512&w=1024
 ---
 
-## [1. Momen](https://www.producthunt.com/posts/momen?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
+## 1. Momen
 **Tagline**：Build your MVP and scale it, no code needed.  
 **Description**：Momen is a full-stack, no-code web app builder with an integrated AI agent development framework. It enables you to quickly build and deploy your MVP, reducing time-to-market, and allows seamless iteration and scaling on the same platform.  
 **Website**: [open](https://www.producthunt.com/r/L2L5AHPQ3BZKNQ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
@@ -12,14 +12,14 @@ image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=
 
 ![Momen](https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 
-**Keyword**：Momen, no-code web app builder, MVP development, AI agent framework, full-stack development, quick deployment, time-to-market, seamless iteration, scaling platform, integrated development tools  
-**VotesCount**: 🔺612  
+**Keyword**：Momen, no-code web app builder, AI agent development, MVP development, quick deployment, time-to-market, seamless iteration, scaling platform, full-stack development, integrated framework, build and scale, software development, app creation, user-friendly tools, rapid prototyping.  
+**VotesCount**: 🔺615  
 **Featured**：Yes  
 **CreatedAt**：2024-11-17T08:01:00Z  
 
 ---  
 
-## [2. AI Game Master ](https://www.producthunt.com/posts/ai-game-master?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
+## 2. AI Game Master 
 **Tagline**：Fully immersive DnD inspired experience powered by AI  
 **Description**：AI Game Master is an immersive text-based role playing mobile game. Create unique characters, explore thrilling quests, and recruit loyal companions. With AI generated images and turn based combat, it's not just another text RPG — it’s an epic adventure!  
 **Website**: [open](https://www.producthunt.com/r/ZV7WQEY2OOKFA6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
@@ -27,14 +27,14 @@ image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=
 
 ![AI Game Master ](https://ph-files.imgix.net/9461281b-554a-4c24-99d5-b072091ab339.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 
-**Keyword**：AI Game Master, immersive experience, DnD inspired, text-based role playing, mobile game, unique characters, thrilling quests, loyal companions, AI generated images, turn based combat, epic adventure, RPG, role playing game, adventure game, character creation, quest exploration, gaming experience.  
-**VotesCount**: 🔺477  
+**Keyword**：AI游戏大师, 沉浸式体验, DnD灵感, 角色扮演, 移动游戏, 创建角色, 探索任务, 招募伙伴, AI生成图像, 回合制战斗, 史诗冒险, 文本RPG  
+**VotesCount**: 🔺479  
 **Featured**：Yes  
 **CreatedAt**：2024-11-17T08:01:00Z  
 
 ---  
 
-## [3. Sharbo](https://www.producthunt.com/posts/sharbo?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
+## 3. Sharbo
 **Tagline**：Effortless competitor product insights  
 **Description**：Sharbo tracks competitor product insights with quick setup and custom sources. Generate instant, embeddable comparisons, fine-tune analysis, and auto-sync data at custom frequencies for targeted insights. Track, compare, and stay ahead effortlessly.  
 **Website**: [open](https://www.producthunt.com/r/EKZZF5B2GMKOWQ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
@@ -42,14 +42,14 @@ image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=
 
 ![Sharbo](https://ph-files.imgix.net/e2158ebf-b4b1-43de-8f93-2e187f3af50a.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 
-**Keyword**：Sharbo, competitor product insights, quick setup, custom sources, instant comparisons, embeddable comparisons, fine-tune analysis, auto-sync data, targeted insights, track and compare, stay ahead, effortless tracking, product analysis, market intelligence, data synchronization.  
-**VotesCount**: 🔺370  
+**Keyword**：Sharbo, competitor product insights, quick setup, custom sources, instant comparisons, embeddable comparisons, fine-tune analysis, auto-sync data, targeted insights, track competitors, compare products, effortless tracking, data analysis, market insights, product comparison tool  
+**VotesCount**: 🔺374  
 **Featured**：Yes  
 **CreatedAt**：2024-11-17T08:01:00Z  
 
 ---  
 
-## [4. Mikrotakt](https://www.producthunt.com/posts/mikrotakt?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
+## 4. Mikrotakt
 **Tagline**：AI Vocal Remover & Instrumental Isolation  
 **Description**：Mikrotakt is an AI-powered tool that lets you extract vocals, instruments, drums, and more from any song. Perfect for musicians, producers, and content creators. Includes chord detection, pitch, tempo control, metronome, AI mastering, voice cleaner and more.  
 **Website**: [open](https://www.producthunt.com/r/OOB7722MJY2WY3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
@@ -64,7 +64,7 @@ image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=
 
 ---  
 
-## [5. NFRT](https://www.producthunt.com/posts/nfrt?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
+## 5. NFRT
 **Tagline**：Non-Fungible Real Things  
 **Description**：NFRTs are a revolution. They’re physical canvas prints of digital artwork that you can hang on your wall and admire without needing a digital wallet or a blockchain something. No crypto, no gas fees, no tech – just art you can actually own in real life.  
 **Website**: [open](https://www.producthunt.com/r/FEROUS5HCMQF6D?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
@@ -72,14 +72,14 @@ image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=
 
 ![NFRT](https://ph-files.imgix.net/e6f48743-edae-4e89-a6f6-4554daf199d0.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 
-**Keyword**：NFRT, Non-Fungible Real Things, physical canvas prints, digital artwork, wall art, art ownership, revolution in art, no crypto, no gas fees, tangible art, real-life art, art without technology, collectible art, home decor, unique artwork  
+**Keyword**：NFRT, Non-Fungible Real Things, physical canvas prints, digital artwork, wall art, art ownership, revolution in art, no crypto, no gas fees, tangible art, real-life art, digital to physical, art for everyone, accessible art, unique art pieces  
 **VotesCount**: 🔺169  
 **Featured**：Yes  
 **CreatedAt**：2024-11-17T08:01:00Z  
 
 ---  
 
-## [6. Wins 2.5](https://www.producthunt.com/posts/wins-2-5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
+## 6. Wins 2.5
 **Tagline**：A window manager like apple made  
 **Description**：A passionate Apple fan created the features that Apple should have made but didn’t.  
 **Website**: [open](https://www.producthunt.com/r/7TZDFMRP7NOP53?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
@@ -94,7 +94,7 @@ image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=
 
 ---  
 
-## [7. Kidtivity Lab](https://www.producthunt.com/posts/kidtivity-lab?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
+## 7. Kidtivity Lab
 **Tagline**：Your AI-Powered partner in creating fun activities for kids  
 **Description**：Kidtivity Lab helps parents spark joy in learning. Our AI crafts activities that fit your child’s age and interests—from art projects to kitchen science. Inspire curiosity, creativity, and endless fun.  
 **Website**: [open](https://www.producthunt.com/r/XUKD3KZWD62XSZ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
@@ -102,14 +102,14 @@ image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=
 
 ![Kidtivity Lab](https://ph-files.imgix.net/1e16c92c-2a71-4fac-a285-5f65e06328b0.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 
-**Keyword**：Kidtivity Lab, AI-powered activities, fun learning for kids, creative projects, kitchen science, art activities, child development, parenting tools, inspire curiosity, educational fun, age-appropriate activities, kids' creativity, joyful learning, interactive play, family activities  
+**Keyword**：Kidtivity Lab, AI-powered activities, fun learning for kids, creative projects, educational activities, art projects for children, kitchen science for kids, inspire curiosity, child development, engaging activities, parenting support, age-appropriate activities, creativity enhancement, joyful learning  
 **VotesCount**: 🔺105  
 **Featured**：Yes  
 **CreatedAt**：2024-11-17T08:01:00Z  
 
 ---  
 
-## [8. PitchQuick.co](https://www.producthunt.com/posts/pitchquick-co?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
+## 8. PitchQuick.co
 **Tagline**：Stop wasting time on boring pitches  
 **Description**：Create stunning interactive pitches that grab attention. Share with a custom link. Track engagement in real-time. Stand out from day one.  
 **Website**: [open](https://www.producthunt.com/r/ZNVWWKEUYBMQ5X?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
@@ -124,7 +124,7 @@ image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=
 
 ---  
 
-## [9. MarqueeKit](https://www.producthunt.com/posts/marqueekit?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
+## 9. MarqueeKit
 **Tagline**：Easy Infinite Scrolling Marquees  
 **Description**：Introducing MarqueeKit—a straightforward Vanilla JS tool for adding smooth, scrollable image marquees to any website. Lightweight and customizable, MarqueeKit integrates effortlessly, bringing static images to life with minimal setup.  
 **Website**: [open](https://www.producthunt.com/r/C4ETQLNZ4W5W7Z?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
@@ -132,14 +132,14 @@ image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=
 
 ![MarqueeKit](https://ph-files.imgix.net/37140386-c440-4b0f-9c6f-cced6c154d3f.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 
-**Keyword**：MarqueeKit, infinite scrolling, image marquee, Vanilla JS tool, smooth scrolling, customizable, lightweight, website integration, static images, easy setup, web development, user-friendly, dynamic content, JavaScript library  
-**VotesCount**: 🔺89  
+**Keyword**：MarqueeKit, infinite scrolling, image marquee, Vanilla JS tool, smooth scrolling, customizable, lightweight, website integration, static images, easy setup, web development, user-friendly, dynamic content, responsive design  
+**VotesCount**: 🔺90  
 **Featured**：Yes  
 **CreatedAt**：2024-11-17T08:01:00Z  
 
 ---  
 
-## [10. Velocity Lapse](https://www.producthunt.com/posts/velocity-lapse?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
+## 10. Velocity Lapse
 **Tagline**：Create beautiful time-lapse videos of processes over time  
 **Description**：Android app with all the features you need and expect for creating beautiful time-lapses wrapped in an intuitive interface—plus pro-level features like manual camera controls.  
 **Website**: [open](https://www.producthunt.com/r/T6UOBC625CNY2E?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
