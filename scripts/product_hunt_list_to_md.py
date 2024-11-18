@@ -223,7 +223,7 @@ def generate_markdown(products, date_str:str,en:bool):
 
     markdown_content = f"# PH今日热榜 | {date_today}\n\n"
     for rank, product in enumerate(products, 1):
-        markdown_content += product.to_markdown(rank,en)
+        markdown_content += product.to_markdown(rank)
 
     # 确保 data 目录存在
     os.makedirs('content/en/post', exist_ok=True)
@@ -250,8 +250,8 @@ def main():
     products,productsEn = fetch_product_hunt_data()
 
     # 生成Markdown文件
-    generate_markdown(products, date_str)
-    generate_markdown(productsEn, date_str)
+    generate_markdown(products, date_str,en=False)
+    generate_markdown(productsEn, date_str,en=True)
 
 if __name__ == "__main__":
     main()
