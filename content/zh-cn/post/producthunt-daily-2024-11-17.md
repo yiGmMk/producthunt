@@ -1,10 +1,11 @@
 ---
 title: 今日热榜 | 2024-11-18
-date: 2024-11-18 03:27:11+0000
+date: 2024-11-18 03:38:58+0000
+image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=format&fit=crop&frame=1&h=512&w=1024
 ---
 
 ## [1. Momen](https://www.producthunt.com/posts/momen?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
-**标语**：构建你的最小可行产品（MVP），无需编写代码，轻松扩展。
+**标语**：构建你的最小可行产品（MVP），并实现规模化，无需编写代码。
 **介绍**：Momen 是一个全栈的无代码网页应用构建工具，配备了集成的人工智能代理开发框架。它让你能够快速构建和部署你的最小可行产品（MVP），从而缩短上市时间，并且可以在同一平台上轻松进行迭代和扩展。
 **产品网站**: [立即访问](https://www.producthunt.com/r/L2L5AHPQ3BZKNQ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/momen?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
@@ -12,7 +13,7 @@ date: 2024-11-18 03:27:11+0000
 ![Momen](https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=format&fit=crop&frame=1&h=512&w=1024)
 
 **关键词**：Momen, 无代码, MVP, 全栈, 网页应用构建器, AI代理开发框架, 快速构建, 部署, 减少上市时间, 无缝迭代, 扩展, 平台
-**票数**: 🔺451
+**票数**: 🔺458
 **是否精选**：是
 **发布时间**：2024年11月17日 PM04:01 (北京时间)
 
@@ -26,8 +27,8 @@ date: 2024-11-18 03:27:11+0000
 
 ![AI Game Master ](https://ph-files.imgix.net/9461281b-554a-4c24-99d5-b072091ab339.png?auto=format&fit=crop&frame=1&h=512&w=1024)
 
-**关键词**：AI游戏大师, 沉浸式, DnD灵感, 角色扮演, 移动游戏, 独特角色, 刺激任务, 忠诚伙伴, AI生成图像, 回合制战斗, 史诗冒险, 文本RPG
-**票数**: 🔺422
+**关键词**：AI游戏大师, 沉浸式体验, DnD灵感, 角色扮演, 移动游戏, 创建角色, 探索任务, 招募伙伴, AI生成图像, 回合制战斗, 文字RPG, 史诗冒险
+**票数**: 🔺425
 **是否精选**：是
 **发布时间**：2024年11月17日 PM04:01 (北京时间)
 
@@ -41,8 +42,8 @@ date: 2024-11-18 03:27:11+0000
 
 ![Sharbo](https://ph-files.imgix.net/e2158ebf-b4b1-43de-8f93-2e187f3af50a.png?auto=format&fit=crop&frame=1&h=512&w=1024)
 
-**关键词**：Sharbo, 竞争对手产品洞察, 快速设置, 自定义来源, 即时比较, 嵌入式比较, 精细分析, 自动同步数据, 定制频率, 目标洞察, 跟踪比较, 轻松领先
-**票数**: 🔺297
+**关键词**：Sharbo, 竞争对手产品洞察, 快速设置, 自定义来源, 即时比较, 嵌入式比较, 精细分析, 自动同步数据, 定制频率, 目标洞察, 跟踪, 比较, 轻松领先
+**票数**: 🔺302
 **是否精选**：是
 **发布时间**：2024年11月17日 PM04:01 (北京时间)
 
@@ -50,13 +51,13 @@ date: 2024-11-18 03:27:11+0000
 
 ## [4. Mikrotakt](https://www.producthunt.com/posts/mikrotakt?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
 **标语**：AI人声去除器与伴奏隔离器
-**介绍**：Mikrotakt 是一款基于人工智能的工具，可以让你从任何歌曲中提取人声、乐器、鼓声等。它非常适合音乐人、制作人和内容创作者使用。这个工具还包括和弦检测、音高和节奏控制、节拍器、AI 母带处理、声音清理等功能。
+**介绍**：Mikrotakt 是一款基于人工智能的工具，可以让你从任何歌曲中提取人声、乐器、鼓声等。非常适合音乐人、制作人和内容创作者使用。它还包括和弦检测、音高和节奏控制、节拍器、AI 母带处理、声音清理等功能。
 **产品网站**: [立即访问](https://www.producthunt.com/r/OOB7722MJY2WY3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/mikrotakt?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
 
 ![Mikrotakt](https://ph-files.imgix.net/a26e7974-0f99-47a7-b505-8b47380280e5.webp?auto=format&fit=crop&frame=1&h=512&w=1024)
 
-**关键词**：Mikrotakt, AI人声去除, 乐器隔离, 音乐工具, 人声提取, 乐器提取, 鼓声提取, 和弦检测, 音高控制, 节奏控制, 节拍器, AI母带处理, 人声清理, 音乐制作, 内容创作者
+**关键词**：Mikrotakt, AI人声去除, 乐器隔离, 音乐工具, 人声提取, 乐器提取, 鼓声提取, 和弦检测, 音高控制, 节奏控制, 电子节拍器, AI母带处理, 人声清理, 音乐制作, 内容创作者
 **票数**: 🔺174
 **是否精选**：是
 **发布时间**：2024年11月17日 PM04:01 (北京时间)
@@ -65,7 +66,7 @@ date: 2024-11-18 03:27:11+0000
 
 ## [5. NFRT](https://www.producthunt.com/posts/nfrt?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
 **标语**：非同质化真实物品
-**介绍**：NFRTs是一场革命。它们是数字艺术作品的实体画布印刷品，你可以把它挂在墙上欣赏，而不需要数字钱包或区块链之类的东西。没有加密货币，没有手续费，没有复杂的技术——这就是你可以在现实生活中真正拥有的艺术。
+**介绍**：NFRTs是一场革命。它们是数字艺术作品的实物画布印刷品，你可以把它们挂在墙上欣赏，而不需要数字钱包或区块链之类的东西。没有加密货币，没有手续费，没有复杂的技术——这就是你可以在现实生活中真正拥有的艺术。
 **产品网站**: [立即访问](https://www.producthunt.com/r/FEROUS5HCMQF6D?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/nfrt?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
 
@@ -86,14 +87,29 @@ date: 2024-11-18 03:27:11+0000
 
 ![Wins 2.5](https://ph-files.imgix.net/ae12ddc3-a540-419a-ae63-9ebcba0c18fd.png?auto=format&fit=crop&frame=1&h=512&w=1024)
 
-**关键词**：Wins 2.5, 窗口管理器, 苹果风格, 苹果粉丝, 功能设计, 创新工具, 用户体验, 苹果应用, 窗口管理, 生产力工具
-**票数**: 🔺103
+**关键词**：Wins 2.5, 窗口管理器, 苹果风格, 苹果粉丝, 功能设计, 创新软件, 用户体验, 苹果应用, 窗口管理, 便捷操作
+**票数**: 🔺104
 **是否精选**：是
 **发布时间**：2024年11月17日 PM04:01 (北京时间)
 
 ---
 
-## [7. PitchQuick.co](https://www.producthunt.com/posts/pitchquick-co?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
+## [7. Kidtivity Lab](https://www.producthunt.com/posts/kidtivity-lab?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
+**标语**：你智能助手，帮你为孩子们创造有趣的活动。
+**介绍**：Kidtivity Lab 帮助家长激发孩子对学习的热情。我们的人工智能会根据孩子的年龄和兴趣，设计出各种活动，从艺术项目到厨房科学应有尽有。让孩子们充满好奇心、创造力，享受无尽的乐趣。
+**产品网站**: [立即访问](https://www.producthunt.com/r/XUKD3KZWD62XSZ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/kidtivity-lab?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
+
+![Kidtivity Lab](https://ph-files.imgix.net/1e16c92c-2a71-4fac-a285-5f65e06328b0.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**关键词**：Kidtivity Lab, AI助手, 儿童活动, 学习乐趣, 家长支持, 创意项目, 科学实验, 激发好奇心, 适龄活动, 快乐学习, 亲子互动, 艺术项目, 厨房科学, 无尽乐趣
+**票数**: 🔺92
+**是否精选**：是
+**发布时间**：2024年11月17日 PM04:01 (北京时间)
+
+---
+
+## [8. PitchQuick.co](https://www.producthunt.com/posts/pitchquick-co?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
 **标语**：别再浪费时间在无聊的推销上了。
 **介绍**：创建引人注目的互动演示，吸引大家的注意。通过自定义链接分享内容。实时跟踪参与情况。从第一天起就脱颖而出。
 **产品网站**: [立即访问](https://www.producthunt.com/r/ZNVWWKEUYBMQ5X?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
@@ -108,24 +124,9 @@ date: 2024-11-18 03:27:11+0000
 
 ---
 
-## [8. Kidtivity Lab](https://www.producthunt.com/posts/kidtivity-lab?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
-**标语**：您智能化的伙伴，帮助您为孩子们创造有趣的活动。
-**介绍**：Kidtivity Lab 帮助家长激发孩子对学习的热情。我们的人工智能会根据孩子的年龄和兴趣，设计出各种活动，从艺术项目到厨房科学应有尽有。让孩子们充满好奇心、创造力，享受无尽的乐趣。
-**产品网站**: [立即访问](https://www.producthunt.com/r/XUKD3KZWD62XSZ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
-**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/kidtivity-lab?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
-
-![Kidtivity Lab](https://ph-files.imgix.net/1e16c92c-2a71-4fac-a285-5f65e06328b0.png?auto=format&fit=crop&frame=1&h=512&w=1024)
-
-**关键词**：Kidtivity Lab, AI助手, 儿童活动, 学习乐趣, 家长支持, 创意项目, 科学实验, 激发好奇心, 适龄活动, 快乐学习, 亲子活动, 艺术项目, 厨房科学, 无尽乐趣
-**票数**: 🔺86
-**是否精选**：是
-**发布时间**：2024年11月17日 PM04:01 (北京时间)
-
----
-
 ## [9. MarqueeKit](https://www.producthunt.com/posts/marqueekit?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
 **标语**：轻松无限滚动的跑马灯
-**介绍**：介绍一下 MarqueeKit——一个简单易用的 Vanilla JS 工具，可以为任何网站添加平滑可滚动的图片走马灯。它轻量且可定制，能够轻松集成，让静态图片焕发活力，设置过程也非常简单。
+**介绍**：介绍一下 MarqueeKit——一个简单易用的 Vanilla JS 工具，可以为任何网站添加平滑可滚动的图片走马灯。它轻量且可定制，能够轻松集成，让静态图片生动起来，设置过程也非常简单。
 **产品网站**: [立即访问](https://www.producthunt.com/r/C4ETQLNZ4W5W7Z?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/marqueekit?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
 
@@ -140,7 +141,7 @@ date: 2024-11-18 03:27:11+0000
 
 ## [10. Velocity Lapse](https://www.producthunt.com/posts/velocity-lapse?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
 **标语**：制作美丽的时间流逝视频，展示事物随时间变化的过程。
-**介绍**：这款安卓应用程序具备您所需的所有功能，能够轻松创建美丽的延时摄影作品，界面直观易用。此外，它还提供专业级的功能，比如手动相机控制。
+**介绍**：这款安卓应用程序具备你所需的所有功能，让你轻松制作出美丽的延时摄影作品，界面直观易用。此外，它还提供了专业级的功能，比如手动相机控制。
 **产品网站**: [立即访问](https://www.producthunt.com/r/T6UOBC625CNY2E?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/velocity-lapse?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
 

@@ -1,6 +1,7 @@
 ---
 title: Producthunt Daily | 2024-11-18
-date: 2024-11-18 03:27:11+0000
+date: 2024-11-18 03:38:58+0000
+image: https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=format&fit=crop&frame=1&h=512&w=1024
 ---
 
 ## [1. Momen](https://www.producthunt.com/posts/momen?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
@@ -12,7 +13,7 @@ date: 2024-11-18 03:27:11+0000
 ![Momen](https://ph-files.imgix.net/dc297a3b-b655-48ba-84df-a6bcc1628d2b.png?auto=format&fit=crop&frame=1&h=512&w=1024)
 
 **Keyword**：Momen, no-code web app builder, MVP development, AI agent framework, full-stack development, quick deployment, time-to-market, seamless iteration, scaling platform, integrated development tools
-**VotesCount**: 🔺451
+**VotesCount**: 🔺458
 **Featured**：Yes
 **CreatedAt**：2024-11-17T08:01:00Z
 
@@ -26,8 +27,8 @@ date: 2024-11-18 03:27:11+0000
 
 ![AI Game Master ](https://ph-files.imgix.net/9461281b-554a-4c24-99d5-b072091ab339.png?auto=format&fit=crop&frame=1&h=512&w=1024)
 
-**Keyword**：AI Game Master, immersive experience, DnD inspired, text-based RPG, mobile game, unique characters, thrilling quests, loyal companions, AI generated images, turn based combat, epic adventure, role playing game
-**VotesCount**: 🔺422
+**Keyword**：AI Game Master, immersive experience, DnD inspired, text-based role playing, mobile game, unique characters, thrilling quests, loyal companions, AI generated images, turn based combat, epic adventure, RPG, role playing game, adventure game, character creation, quest exploration, gaming experience.
+**VotesCount**: 🔺425
 **Featured**：Yes
 **CreatedAt**：2024-11-17T08:01:00Z
 
@@ -41,8 +42,8 @@ date: 2024-11-18 03:27:11+0000
 
 ![Sharbo](https://ph-files.imgix.net/e2158ebf-b4b1-43de-8f93-2e187f3af50a.png?auto=format&fit=crop&frame=1&h=512&w=1024)
 
-**Keyword**：Sharbo, competitor product insights, quick setup, custom sources, instant comparisons, embeddable comparisons, fine-tune analysis, auto-sync data, targeted insights, track competitors, compare products, effortless tracking, data analysis, market insights, product comparison tool
-**VotesCount**: 🔺297
+**Keyword**：Sharbo, competitor product insights, quick setup, custom sources, instant comparisons, embeddable comparisons, fine-tune analysis, auto-sync data, targeted insights, track competitors, compare products, stay ahead, effortless tracking
+**VotesCount**: 🔺302
 **Featured**：Yes
 **CreatedAt**：2024-11-17T08:01:00Z
 
@@ -56,7 +57,7 @@ date: 2024-11-18 03:27:11+0000
 
 ![Mikrotakt](https://ph-files.imgix.net/a26e7974-0f99-47a7-b505-8b47380280e5.webp?auto=format&fit=crop&frame=1&h=512&w=1024)
 
-**Keyword**：Mikrotakt, AI Vocal Remover, Instrumental Isolation, AI-powered tool, extract vocals, extract instruments, extract drums, musicians, producers, content creators, chord detection, pitch control, tempo control, metronome, AI mastering, voice cleaner, music production, audio editing, sound isolation, music tools
+**Keyword**：Mikrotakt, AI Vocal Remover, Instrumental Isolation, AI-powered tool, extract vocals, extract instruments, music production, musicians, producers, content creators, chord detection, pitch control, tempo control, metronome, AI mastering, voice cleaner, music editing, audio processing, song extraction, music tools
 **VotesCount**: 🔺174
 **Featured**：Yes
 **CreatedAt**：2024-11-17T08:01:00Z
@@ -71,7 +72,7 @@ date: 2024-11-18 03:27:11+0000
 
 ![NFRT](https://ph-files.imgix.net/e6f48743-edae-4e89-a6f6-4554daf199d0.png?auto=format&fit=crop&frame=1&h=512&w=1024)
 
-**Keyword**：NFRT, Non-Fungible Real Things, physical canvas prints, digital artwork, wall art, art ownership, revolution in art, no crypto, no gas fees, tangible art, real-life art, art for everyone, accessible art, digital to physical, art collection
+**Keyword**：NFRT, Non-Fungible Real Things, physical canvas prints, digital artwork, wall art, art ownership, revolution in art, no crypto, no gas fees, tangible art, real-life art, art without technology, collectible art, home decor, unique art pieces
 **VotesCount**: 🔺147
 **Featured**：Yes
 **CreatedAt**：2024-11-17T08:01:00Z
@@ -86,29 +87,14 @@ date: 2024-11-18 03:27:11+0000
 
 ![Wins 2.5](https://ph-files.imgix.net/ae12ddc3-a540-419a-ae63-9ebcba0c18fd.png?auto=format&fit=crop&frame=1&h=512&w=1024)
 
-**Keyword**：Wins 2.5, window manager, Apple fan, Apple features, macOS, user interface, productivity tool, software development, innovative design, Apple-like experience
-**VotesCount**: 🔺103
+**Keyword**：Wins 2.5, window manager, Apple fan, features, Apple, software, productivity, user interface, macOS, innovative design, application management, desktop organization, user experience
+**VotesCount**: 🔺104
 **Featured**：Yes
 **CreatedAt**：2024-11-17T08:01:00Z
 
 ---
 
-## [7. PitchQuick.co](https://www.producthunt.com/posts/pitchquick-co?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
-**Tagline**：Stop wasting time on boring pitches
-**Description**：Create stunning interactive pitches that grab attention. Share with a custom link. Track engagement in real-time. Stand out from day one.
-**Website**: [open](https://www.producthunt.com/r/ZNVWWKEUYBMQ5X?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
-**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/pitchquick-co?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
-
-![PitchQuick.co](https://ph-files.imgix.net/fbcfc426-93e0-449d-b7cc-884fb1e7b0a5.png?auto=format&fit=crop&frame=1&h=512&w=1024)
-
-**Keyword**：PitchQuick.co, interactive pitches, stunning presentations, engagement tracking, custom link sharing, attention-grabbing, real-time analytics, standout presentations, pitch creation, innovative pitching, time-saving pitches, professional presentations.
-**VotesCount**: 🔺88
-**Featured**：Yes
-**CreatedAt**：2024-11-17T08:01:00Z
-
----
-
-## [8. Kidtivity Lab](https://www.producthunt.com/posts/kidtivity-lab?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
+## [7. Kidtivity Lab](https://www.producthunt.com/posts/kidtivity-lab?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
 **Tagline**：Your AI-Powered partner in creating fun activities for kids
 **Description**：Kidtivity Lab helps parents spark joy in learning. Our AI crafts activities that fit your child’s age and interests—from art projects to kitchen science. Inspire curiosity, creativity, and endless fun.
 **Website**: [open](https://www.producthunt.com/r/XUKD3KZWD62XSZ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
@@ -116,8 +102,23 @@ date: 2024-11-18 03:27:11+0000
 
 ![Kidtivity Lab](https://ph-files.imgix.net/1e16c92c-2a71-4fac-a285-5f65e06328b0.png?auto=format&fit=crop&frame=1&h=512&w=1024)
 
-**Keyword**：Kidtivity Lab, AI-powered activities, fun learning for kids, creative projects, educational activities, art projects for children, kitchen science for kids, inspire curiosity, spark joy in learning, activities for different ages, parent resources, child development, engaging kids' activities, creativity enhancement, interactive learning.
-**VotesCount**: 🔺86
+**Keyword**：Kidtivity Lab, AI-powered activities, fun learning for kids, creative projects, educational activities, art projects for children, kitchen science for kids, inspire curiosity, spark joy in learning, activities for different ages, parenting tools, child development, engaging kids' activities, creativity enhancement, interactive learning.
+**VotesCount**: 🔺92
+**Featured**：Yes
+**CreatedAt**：2024-11-17T08:01:00Z
+
+---
+
+## [8. PitchQuick.co](https://www.producthunt.com/posts/pitchquick-co?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
+**Tagline**：Stop wasting time on boring pitches
+**Description**：Create stunning interactive pitches that grab attention. Share with a custom link. Track engagement in real-time. Stand out from day one.
+**Website**: [open](https://www.producthunt.com/r/ZNVWWKEUYBMQ5X?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/pitchquick-co?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)
+
+![PitchQuick.co](https://ph-files.imgix.net/fbcfc426-93e0-449d-b7cc-884fb1e7b0a5.png?auto=format&fit=crop&frame=1&h=512&w=1024)
+
+**Keyword**：PitchQuick.co, interactive pitches, stunning presentations, attention-grabbing, custom link sharing, real-time engagement tracking, stand out, effective pitching, innovative presentations, pitch management, audience engagement, professional pitches, time-saving presentations, creative pitch solutions.
+**VotesCount**: 🔺88
 **Featured**：Yes
 **CreatedAt**：2024-11-17T08:01:00Z
 
@@ -146,7 +147,7 @@ date: 2024-11-18 03:27:11+0000
 
 ![Velocity Lapse](https://ph-files.imgix.net/d2c71172-a73f-46e9-9d3c-6ca44df1cd53.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)
 
-**Keyword**：Velocity Lapse, time-lapse videos, Android app, video creation, intuitive interface, manual camera controls, pro-level features, beautiful videos, process visualization, video editing app
+**Keyword**：Velocity Lapse, time-lapse videos, Android app, video creation, intuitive interface, manual camera controls, pro-level features, beautiful videos, process visualization, photography app, video editing, creative tools, time-lapse photography, user-friendly design.
 **VotesCount**: 🔺74
 **Featured**：Yes
 **CreatedAt**：2024-11-17T08:01:00Z
