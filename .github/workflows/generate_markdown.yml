@@ -33,13 +33,14 @@ jobs:
         run: |
           python scripts/product_hunt_list_to_md.py
 
-      - name: Commit files
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add .
-          git commit -m "Generated daily content"
-
-      - name: Push changes
-        run: |
-          git push --force https://${{ secrets.GH_TOKEN }}@github.com/${{ github.repository_owner }}/producthunt.git HEAD:main
+      - name: Commit and push if changed
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |-
+          git diff
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git pull
+          git add -A
+          git commit -m "Generated daily content" || exit 0
+          git push
