@@ -44,3 +44,7 @@ hugo mod tidy
 ### Vercel
 
 not work for hugo 0.138.0 2024/11/18 [说明](./deploy.md)
+
+### Netlify
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3b25f6c5-ce4c-4825-9c3b-943592e42e88/deploy-status)](https://app.netlify.com/sites/producthunt-daily/deploys)
