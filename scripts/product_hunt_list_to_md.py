@@ -115,32 +115,33 @@ class Product:
         """返回产品数据的Markdown格式"""
         og_image_markdown = f"![{self.name}]({self.og_image_url})"
         if self.en:
+            # hugo 需要双空格+\n才是换行
             return (
                 f"## [{rank}. {self.name}]({self.url})\n"
-                f"**Tagline**：{self.translated_tagline}\n"
-                f"**Description**：{self.translated_description}\n"
-                f"**Website**: [open]({self.website})\n"
-                f"**Product Hunt**: [View on Product Hunt]({self.url})\n\n"
-                f"{og_image_markdown}\n\n"
-                f"**Keyword**：{self.keyword}\n"
-                f"**VotesCount**: 🔺{self.votes_count}\n"
-                f"**Featured**：{self.featured}\n"
-                f"**CreatedAt**：{self.created_at}\n\n"
-                f"---\n\n"
+                f"**Tagline**：{self.translated_tagline}  \n"
+                f"**Description**：{self.translated_description}  \n"
+                f"**Website**: [open]({self.website})  \n"
+                f"**Product Hunt**: [View on Product Hunt]({self.url})  \n\n"
+                f"{og_image_markdown}  \n\n"
+                f"**Keyword**：{self.keyword}  \n"
+                f"**VotesCount**: 🔺{self.votes_count}  \n"
+                f"**Featured**：{self.featured}  \n"
+                f"**CreatedAt**：{self.created_at}  \n\n"
+                f"---  \n\n"
             )
         else:                
             return (
                 f"## [{rank}. {self.name}]({self.url})\n"
-                f"**标语**：{self.translated_tagline}\n"
-                f"**介绍**：{self.translated_description}\n"
-                f"**产品网站**: [立即访问]({self.website})\n"
-                f"**Product Hunt**: [View on Product Hunt]({self.url})\n\n"
-                f"{og_image_markdown}\n\n"
-                f"**关键词**：{self.keyword}\n"
-                f"**票数**: 🔺{self.votes_count}\n"
-                f"**是否精选**：{self.featured}\n"
-                f"**发布时间**：{self.created_at}\n\n"
-                f"---\n\n"
+                f"**标语**：{self.translated_tagline}  \n"
+                f"**介绍**：{self.translated_description}  \n"
+                f"**产品网站**: [立即访问]({self.website})  \n"
+                f"**Product Hunt**: [View on Product Hunt]({self.url})  \n\n"
+                f"{og_image_markdown}  \n\n"
+                f"**关键词**：{self.keyword}  \n"
+                f"**票数**: 🔺{self.votes_count}  \n"
+                f"**是否精选**：{self.featured}  \n"
+                f"**发布时间**：{self.created_at}  \n\n"
+                f"---  \n\n"
             )
 
 def get_producthunt_token(): 
