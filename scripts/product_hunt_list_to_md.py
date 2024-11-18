@@ -5,7 +5,7 @@ from datetime import datetime, timedelta, timezone
 from openai import OpenAI
 from bs4 import BeautifulSoup
 import pytz
-
+from collections import Counter
 # 加载 .env 文件
 # load_dotenv()
 
@@ -21,6 +21,21 @@ producthunt_client_id = os.getenv('PRODUCTHUNT_CLIENT_ID')
 producthunt_client_secret = os.getenv('PRODUCTHUNT_CLIENT_SECRET')
 # 只取前 10 条数据
 top_num=10
+
+
+# Define category to keywords mapping
+# Add more categories and corresponding keywords as needed
+category_mapping_zh = {
+    "人工智能": ["AI", "人工智能", "机器学习"],
+    "工具": ["工具", "生产力工具", "效率","Notion"],
+    "开发": ["API","数据库","REST API","SQL"]
+}
+
+category_mapping_en = {
+    "AI": ["AI", "Artificial intelligence", "machine learning"],
+    "Tools": ["tool", "效率"],
+    "Develop": ["API","Database","REST API","SQL"]
+}
 
 class Product:
     def __init__(self, id: str, name: str, tagline: str, description: str, votesCount: int, createdAt: str, featuredAt: str, website: str, url: str,en: bool, **kwargs):
@@ -216,6 +231,27 @@ def fetch_product_hunt_data():
     # 只保留前top_num个产品
     return [Product(**{**post, 'en': False}) for post in sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:top_num]],[Product(**{**post, 'en': True}) for post in sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:top_num]]
 
+
+# 提取关键字
+def extract_keywords(products,en:bool):
+    keywords=[]
+    max_len =10
+    if en:
+        max_len=30
+    for product in products:
+        if product.keyword:
+            
+            val=[keyword.strip() for keyword in product.keyword.split(',') if keyword.strip() and len(keyword)<max_len]
+            keywords.extend(val)    
+    return keywords
+
+def count_and_sort_keywords(keywords):
+    # 计算每个关键词的出现次数
+    keyword_counts = Counter(keywords)
+    # 按出现次数排序
+    sorted_keywords = keyword_counts.most_common()
+    return sorted_keywords
+
 def generate_markdown(products, date_str:str,en:bool):
     """生成Markdown内容并保存到data目录"""
     # 获取今天的日期并格式化
@@ -223,16 +259,37 @@ def generate_markdown(products, date_str:str,en:bool):
     date_today = today.strftime('%Y-%m-%d')
     date = today.strftime('%Y-%m-%d %H:%M:%S%z')
     
+    # 提取关键词
+    keywords = extract_keywords(products,en=en)
+    top_keywords=count_and_sort_keywords(keywords)
+
     ## 文章标题
     markdown_content="---\n"
     if en:
         markdown_content += f"title: Producthunt Daily | {date_today}\n"
         markdown_content += f"date: {date}\n"
-        markdown_content += f"image: {products[0].og_image_url}\n"        
+        markdown_content += f"image: {products[0].og_image_url}\n"  
+        category_mapping=category_mapping_en
     else:
         markdown_content += f"title: 今日热榜 | {date_today}\n"
         markdown_content += f"date: {date}\n"
         markdown_content += f"image: {products[0].og_image_url}\n"        
+        category_mapping=category_mapping_zh
+    
+    if len(top_keywords)>0:
+        hugo_keywords = ', '.join([f'"{keyword}"' for keyword, _ in top_keywords[:3]])
+        markdown_content += f'tags: [{hugo_keywords}]\n'
+
+        categories = set()
+        keyword_set = set(keyword for keyword, _ in top_keywords)
+        for category, keywords in category_mapping.items():
+            if any(keyword in keyword_set for keyword in keywords):
+                categories.add(category)    
+        if categories:
+            vals = list(categories)
+            vals.sort()
+            formatted_categories = ', '.join(f'"{category}"' for category in vals)
+            markdown_content += f'categories: [{formatted_categories}]\n'      
     markdown_content+="---\n\n"
     
     ## 内容

@@ -26,3 +26,4 @@ print(b.to_markdown(100))
 
 
 generate_markdown([a],date_str='2023-10-05',en=False)
+generate_markdown([b],date_str='2023-10-05',en=True)
