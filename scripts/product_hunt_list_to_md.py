@@ -28,15 +28,21 @@ class Product:
         self.tagline = tagline
         self.description = description
         self.votes_count = votesCount
-        self.created_at = self.convert_to_beijing_time(createdAt)
-        self.featured = "是" if featuredAt else "否"
+        self.en = en
+        if self.en:
+            self.featured = "Yes" if featuredAt else "No"
+            self.created_at = createdAt
+            self.translated_tagline = self.tagline
+            self.translated_description = self.description
+        else:
+            self.created_at = self.convert_to_beijing_time(createdAt)
+            self.featured = "是" if featuredAt else "否"
+            self.translated_tagline = self.translate_text(self.tagline)
+            self.translated_description = self.translate_text(self.description)
         self.website = website
         self.url = url
-        self.en = en
         self.og_image_url = self.fetch_og_image_url()
         self.keyword = self.generate_keywords()
-        self.translated_tagline = self.translate_text(self.tagline)
-        self.translated_description = self.translate_text(self.description)
 
     def fetch_og_image_url(self) -> str:
         """获取产品的Open Graph图片URL"""
@@ -52,7 +58,7 @@ class Product:
         """生成产品的关键词，显示在一行，用逗号分隔"""
         if self.en:
             prompt = f"根据以下内容生成适合的英文关键词，用英文逗号分隔开：\n\n产品名称：{self.name}\n\n标语：{self.tagline}\n\n描述：{self.description}"
-        else
+        else:
             prompt = f"根据以下内容生成适合的中文关键词，用英文逗号分隔开：\n\n产品名称：{self.name}\n\n标语：{self.tagline}\n\n描述：{self.description}"
         
         try:
@@ -78,8 +84,6 @@ class Product:
 
     def translate_text(self, text: str) -> str:
         """使用OpenAI翻译文本内容"""
-        if self.en:
-            return text
         try:
             response = client.chat.completions.create(
                 model="gpt-4o-mini",
@@ -107,10 +111,10 @@ class Product:
         beijing_time = utc_time.replace(tzinfo=pytz.utc).astimezone(beijing_tz)
         return beijing_time.strftime('%Y年%m月%d日 %p%I:%M (北京时间)')
 
-    def to_markdown(self, rank: int,en:bool) -> str:
+    def to_markdown(self, rank: int) -> str:
         """返回产品数据的Markdown格式"""
         og_image_markdown = f"![{self.name}]({self.og_image_url})"
-        if en:
+        if self.en:
             return (
                 f"## [{rank}. {self.name}]({self.url})\n"
                 f"**Tagline**：{self.translated_tagline}\n"
@@ -243,11 +247,11 @@ def main():
     date_str = yesterday.strftime('%Y-%m-%d')
 
     # 获取Product Hunt数据
-    products,prpductsEn = fetch_product_hunt_data()
+    products,productsEn = fetch_product_hunt_data()
 
     # 生成Markdown文件
-    generate_markdown(products, date_str,en=False)
-    generate_markdown(productsEn, date_str,en=True)
+    generate_markdown(products, date_str)
+    generate_markdown(productsEn, date_str)
 
 if __name__ == "__main__":
     main()
