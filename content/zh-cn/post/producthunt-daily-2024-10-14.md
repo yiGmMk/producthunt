@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-10-14
 date: 2024-10-14 06:25:17+0000
 image: https://ph-files.imgix.net/a2f243e8-b18e-43f4-a9ef-118c8f290ef1.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["人工智能", "提高效率", "免费"]
-categories: ["开发", "人工智能"]
+categories: ["人工智能", "开发"]
 ---
 # PH今日热榜 | 2024-10-14
 

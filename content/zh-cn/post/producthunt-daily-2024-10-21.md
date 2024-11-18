@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-10-21
 date: 2024-10-21 06:25:17+0000
 image: https://ph-files.imgix.net/4d11679d-fe5a-47c4-be26-c8c5038ad8ba.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["时间管理", "人工智能", "开发者"]
-categories: ["开发", "人工智能", "工具"]
+categories: ["人工智能", "工具", "开发"]
 ---
 # PH今日热榜 | 2024-10-21
 

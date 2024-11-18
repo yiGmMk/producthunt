@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-11-01
 date: 2024-11-01 06:25:17+0000
 image: https://ph-files.imgix.net/6078bb88-c7d4-41b5-9268-14688e8653af.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["时间管理", "客户支持", "苹果智能"]
-categories: ["开发", "人工智能", "工具"]
+categories: ["人工智能", "工具", "开发"]
 ---
 # PH今日热榜 | 2024-11-01
 

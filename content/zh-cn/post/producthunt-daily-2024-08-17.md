@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-08-17
 date: 2024-08-17 06:25:17+0000
 image: https://ph-files.imgix.net/348a23ca-f247-4d8d-b00d-827d6a9d8a34.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["人工智能", "营销自动化", "开发者"]
-categories: ["开发", "人工智能"]
+categories: ["人工智能", "开发"]
 ---
 # PH今日热榜 | 2024-08-17
 

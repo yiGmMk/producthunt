@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-08-28
 date: 2024-08-28 06:25:17+0000
 image: https://ph-files.imgix.net/f1f4527b-6b7f-403a-ac4d-b0ac4448bc3f.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["浏览器扩展", "人工智能", "分享"]
-categories: ["开发", "人工智能"]
+categories: ["人工智能", "开发"]
 ---
 # PH今日热榜 | 2024-08-28
 ## 1. 10xlaunch

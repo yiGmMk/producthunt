@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-10-02
 date: 2024-10-02 06:25:17+0000
 image: https://ph-files.imgix.net/55cdcd37-9c80-44e7-ab78-f40ae04c98ec.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["人工智能", "自动化", "社交媒体"]
-categories: ["开发", "人工智能"]
+categories: ["人工智能", "开发"]
 ---
 # PH今日热榜 | 2024-10-02
 

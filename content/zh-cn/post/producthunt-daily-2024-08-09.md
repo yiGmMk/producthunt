@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-08-09
 date: 2024-08-09 06:25:17+0000
 image: https://ph-files.imgix.net/b8853154-bde6-4b1a-9ebc-684207d72ef5.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["人工智能", "AI聊天", "社交媒体"]
-categories: ["开发", "人工智能", "工具"]
+categories: ["人工智能", "工具", "开发"]
 ---
 # PH今日热榜 | 2024-08-09
 

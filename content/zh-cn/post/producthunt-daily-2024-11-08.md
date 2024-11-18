@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-11-08
 date: 2024-11-08 06:25:17+0000
 image: https://ph-files.imgix.net/6a6b6d1c-2f3d-41ca-b67c-94e3460c7dc8.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["AI助手", "人工智能", "AI驱动"]
-categories: ["开发", "人工智能"]
+categories: ["人工智能", "开发"]
 ---
 # PH今日热榜 | 2024-11-08
 

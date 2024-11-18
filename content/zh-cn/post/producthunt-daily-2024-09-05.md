@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-09-05
 date: 2024-09-05 06:25:17+0000
 image: https://ph-files.imgix.net/cf41696b-58c3-48a0-9a2e-3431a9ed2ef3.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["人工智能", "便签", "改进建议"]
-categories: ["开发", "人工智能", "工具"]
+categories: ["人工智能", "工具", "开发"]
 ---
 # PH今日热榜 | 2024-09-05
 

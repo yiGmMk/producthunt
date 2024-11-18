@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-10-10
 date: 2024-10-10 06:25:17+0000
 image: https://ph-files.imgix.net/671b01ef-eda7-42d1-be24-6f2d13230d4e.gif?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["人工智能", "学习", "节省时间"]
-categories: ["开发", "人工智能", "工具"]
+categories: ["人工智能", "工具", "开发"]
 ---
 # PH今日热榜 | 2024-10-10
 

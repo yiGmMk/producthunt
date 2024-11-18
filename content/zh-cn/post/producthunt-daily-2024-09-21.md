@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-09-21
 date: 2024-09-21 06:25:17+0000
 image: https://ph-files.imgix.net/f8948f05-b5e9-4ddc-9ebf-1d4b980bd9a2.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["人工智能", "视觉效果", "未来AGI"]
-categories: ["开发", "人工智能", "工具"]
+categories: ["人工智能", "工具", "开发"]
 ---
 # PH今日热榜 | 2024-09-21
 

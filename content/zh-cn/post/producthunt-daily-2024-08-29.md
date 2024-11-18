@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-08-29
 date: 2024-08-29 06:25:17+0000
 image: https://ph-files.imgix.net/3964527f-891b-4477-9433-ec7346b4c41a.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["简单", "创意工具", "人工智能"]
-categories: ["开发", "人工智能"]
+categories: ["人工智能", "开发"]
 ---
 # PH今日热榜 | 2024-08-29
 

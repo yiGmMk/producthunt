@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-10-23
 date: 2024-10-23 06:25:17+0000
 image: https://ph-files.imgix.net/b64dd867-0400-4895-ab79-c6d4e489c6e3.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["人工智能", "自动化", "数据库"]
-categories: ["开发", "人工智能", "工具"]
+categories: ["人工智能", "工具", "开发"]
 ---
 # PH今日热榜 | 2024-10-23
 

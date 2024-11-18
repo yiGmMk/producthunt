@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-08-31
 date: 2024-08-31 06:25:17+0000
 image: https://ph-files.imgix.net/cf231c4b-391c-4fd4-907f-265ead98dfbf.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["AI驱动", "用户友好", "专业人士"]
-categories: ["开发", "人工智能"]
+categories: ["人工智能", "开发"]
 ---
 # PH今日热榜 | 2024-08-31
 

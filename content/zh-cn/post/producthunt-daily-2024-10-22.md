@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-10-22
 date: 2024-10-22 06:25:17+0000
 image: https://ph-files.imgix.net/e96bdcbf-0179-4a0e-a07a-454b65bb02a7.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["人工智能", "电子邮件", "邮件服务"]
-categories: ["开发", "人工智能"]
+categories: ["人工智能", "开发"]
 ---
 # PH今日热榜 | 2024-10-22
 

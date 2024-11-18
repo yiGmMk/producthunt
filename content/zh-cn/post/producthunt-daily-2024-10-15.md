@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-10-15
 date: 2024-10-15 06:25:17+0000
 image: https://ph-files.imgix.net/5400faef-0b8c-45ff-81dc-7b6c7bc267e8.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["人工智能", "Stripe小部件", "收入信息"]
-categories: ["开发", "人工智能"]
+categories: ["人工智能", "开发"]
 ---
 # PH今日热榜 | 2024-10-15
 

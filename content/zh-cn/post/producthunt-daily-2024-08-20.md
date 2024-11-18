@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-08-20
 date: 2024-08-20 06:25:17+0000
 image: https://ph-files.imgix.net/6c2680e2-b0a1-4495-ad3d-d8cecd811713.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["初创企业", "自动化", "社交媒体"]
-categories: ["开发", "工具"]
+categories: ["工具", "开发"]
 ---
 # PH今日热榜 | 2024-08-20
 

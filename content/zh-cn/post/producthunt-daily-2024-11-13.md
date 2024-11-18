@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-11-13
 date: 2024-11-13 06:25:17+0000
 image: https://ph-files.imgix.net/22c2ac05-90ee-4ec2-a034-ea119c9c4c5d.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["人工智能", "开发者", "协作平台"]
-categories: ["开发", "人工智能", "工具"]
+categories: ["人工智能", "工具", "开发"]
 ---
 # PH今日热榜 | 2024-11-13
 

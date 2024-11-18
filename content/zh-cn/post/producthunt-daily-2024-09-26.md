@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-09-26
 date: 2024-09-26 06:25:17+0000
 image: https://ph-files.imgix.net/06460c4e-5cc9-4373-8864-e42df2ed9b42.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["人工智能", "开发工具", "开发者"]
-categories: ["开发", "人工智能"]
+categories: ["人工智能", "开发"]
 ---
 # PH今日热榜 | 2024-09-26
 

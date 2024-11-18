@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-09-27
 date: 2024-09-27 06:25:17+0000
 image: https://ph-files.imgix.net/74380b97-ba26-47bd-b06d-9f536bc7e3eb.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["开发者工具", "快速集成", "网站设计"]
-categories: ["开发", "人工智能"]
+categories: ["人工智能", "开发"]
 ---
 # PH今日热榜 | 2024-09-27
 

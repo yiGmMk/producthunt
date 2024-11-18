@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-11-07
 date: 2024-11-07 06:25:17+0000
 image: https://ph-files.imgix.net/56353686-2963-4b40-9221-e34f1d8d350d.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["人工智能", "数据洞察", "提高生产力"]
-categories: ["开发", "人工智能"]
+categories: ["人工智能", "开发"]
 ---
 # PH今日热榜 | 2024-11-07
 

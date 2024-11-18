@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-10-17
 date: 2024-10-17 06:25:17+0000
 image: https://ph-files.imgix.net/2c71a261-d7dd-4420-98bf-e7c26ce20795.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["提高效率", "无需编码", "简单易用"]
-categories: ["开发", "人工智能"]
+categories: ["人工智能", "开发"]
 ---
 # PH今日热榜 | 2024-10-17
 

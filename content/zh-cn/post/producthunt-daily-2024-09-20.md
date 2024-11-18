@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-09-20
 date: 2024-09-20 06:25:17+0000
 image: https://ph-files.imgix.net/003819ca-65d2-40ad-9687-5e03c38c118d.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["AI驱动", "健康生活", "人工智能"]
-categories: ["开发", "人工智能"]
+categories: ["人工智能", "开发"]
 ---
 # PH今日热榜 | 2024-09-20
 

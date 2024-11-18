@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-08-24
 date: 2024-08-24 06:25:17+0000
 image: https://ph-files.imgix.net/221dfeac-64ff-4768-92b1-dba8a06c9a21.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["人工智能", "提高效率", "快速求职"]
-categories: ["开发", "人工智能"]
+categories: ["人工智能", "开发"]
 ---
 # PH今日热榜 | 2024-08-24
 

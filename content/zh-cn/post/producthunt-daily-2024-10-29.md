@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-10-29
 date: 2024-10-29 06:25:17+0000
 image: https://ph-files.imgix.net/fd456aee-5928-49af-967f-2c740f77bd65.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["人工智能", "开源", "数据分析"]
-categories: ["开发", "人工智能"]
+categories: ["人工智能", "开发"]
 ---
 # PH今日热榜 | 2024-10-29
 

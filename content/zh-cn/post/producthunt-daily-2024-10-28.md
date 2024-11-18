@@ -3,7 +3,7 @@ title: 今日热榜 | 2024-10-28
 date: 2024-10-28 06:25:17+0000
 image: https://ph-files.imgix.net/3ccac660-4ceb-4539-8acf-af8211c71fae.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["学习平台", "人工智能", "纪念"]
-categories: ["开发", "人工智能"]
+categories: ["人工智能", "开发"]
 ---
 # PH今日热榜 | 2024-10-28
 
