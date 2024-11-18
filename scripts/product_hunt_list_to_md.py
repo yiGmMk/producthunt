@@ -117,7 +117,7 @@ class Product:
         if self.en:
             # hugo 需要双空格+\n才是换行
             return (
-                f"## [{rank}. {self.name}]({self.url})\n"
+                f"## {rank}. {self.name}\n"
                 f"**Tagline**：{self.translated_tagline}  \n"
                 f"**Description**：{self.translated_description}  \n"
                 f"**Website**: [open]({self.website})  \n"
@@ -131,7 +131,7 @@ class Product:
             )
         else:                
             return (
-                f"## [{rank}. {self.name}]({self.url})\n"
+                f"## {rank}. {self.name}\n"
                 f"**标语**：{self.translated_tagline}  \n"
                 f"**介绍**：{self.translated_description}  \n"
                 f"**产品网站**: [立即访问]({self.website})  \n"
