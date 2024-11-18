@@ -1,8 +1,10 @@
 # deploy
 
+github actions 构建,构建后存储到pages分支,再使用netlify部署静态网页
+
 ## vercel
 
-no support for go build ,we need to install go manually
+no support for go build ,we need to install go manually, 下面的方法试了走不通 [2024/11/18],改用github actions构建
 
 ### install go
 
