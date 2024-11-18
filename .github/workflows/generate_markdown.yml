@@ -32,7 +32,7 @@ jobs:
           PRODUCTHUNT_CLIENT_SECRET: ${{ secrets.PRODUCTHUNT_CLIENT_SECRET }}
         run: |
           python scripts/product_hunt_list_to_md.py
-
+      # github flow 需要提交要在repo settings里添加secrets 并且,在Actions里开启Workflow permissions 的 "Read and write permissions"
       - name: Commit and push if changed
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
