@@ -220,8 +220,19 @@ def generate_markdown(products, date_str:str,en:bool):
     # 获取今天的日期并格式化
     today = datetime.now(timezone.utc)
     date_today = today.strftime('%Y-%m-%d')
-
-    markdown_content = f"# PH今日热榜 | {date_today}\n\n"
+    date = today.strftime('%Y-%m-%d %H:%M:%S%z')
+    
+    ## 文章标题
+    markdown_content="---\n"
+    if en:
+        markdown_content += f"title: Producthunt Daily | {date_today}\n"
+        markdown_content += f"date: {date}\n"
+    else:
+        markdown_content += f"title: 今日热榜 | {date_today}\n"
+        markdown_content += f"date: {date}\n"
+    markdown_content+="---\n\n"
+    
+    ## 内容
     for rank, product in enumerate(products, 1):
         markdown_content += product.to_markdown(rank)
 

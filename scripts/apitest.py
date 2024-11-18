@@ -1,5 +1,4 @@
-from product_hunt_list_to_md import Product
-
+from product_hunt_list_to_md import Product,generate_markdown
 
 a=Product(id='11',
           name='Softr for Notion',
@@ -24,3 +23,6 @@ b=Product(id='11',
           url='https://www.producthunt.com/posts/softr-for-notion?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29',
           en=True)
 print(b.to_markdown(100))
+
+
+generate_markdown([a],date_str='2023-10-05',en=False)
