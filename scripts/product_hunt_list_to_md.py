@@ -227,9 +227,11 @@ def generate_markdown(products, date_str:str,en:bool):
     if en:
         markdown_content += f"title: Producthunt Daily | {date_today}\n"
         markdown_content += f"date: {date}\n"
+        markdown_content += f"image: {products[0].og_image_url}\n"        
     else:
         markdown_content += f"title: 今日热榜 | {date_today}\n"
         markdown_content += f"date: {date}\n"
+        markdown_content += f"image: {products[0].og_image_url}\n"        
     markdown_content+="---\n\n"
     
     ## 内容
