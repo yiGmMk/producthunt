@@ -42,8 +42,10 @@ jobs:
           hugo-version: "latest"
           extended: true
 
+      # --minify 会删除meta里的",先禁用
       - name: Build
-        run: hugo --minify --gc
+        #run: hugo --minify --gc
+        run: hugo --gc
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
