@@ -47,3 +47,47 @@ hugo --gc 通常与其他构建选项结合使用，尤其是在你对网站进�
 ### 网站head
 
 在 layout/partials/head下新建custom.html文件,添加自定义标签
+
+### 评论giscus
+
+- [官方文档](https://giscus.app/zh-CN)
+- [stack主题,Issue,giscus无法使用,giscus在中文下不显示，并提示：”giscus.app 已拒绝连接“](https://github.com/CaiJimmy/hugo-theme-stack/issues/1096)
+- [stack主题配置](https://stack.jimmycai.com/config/comments)
+
+```sh
+  giscus:
+    repo: "yiGmMk/xxxx"
+    repoID: "MDExxxx"
+    category: "Announcements"
+    categoryID: "DICxxxx"
+    mapping: "title"
+    strict: "0" # Giscus的data-strict字段
+    theme: "preferred_color_scheme"
+    reactions: false
+    reactionsEnabled: 1
+    emitMetadata: 0
+    loading: "lazy"
+```
+
+giscus 标签
+
+```sh
+<script src="https://giscus.app/client.js"
+        data-repo="yiGmMk/xxxx"
+        data-repo-id="MDExxxx="
+        data-category="Announcements"
+        data-category-id="DICxxxx"
+        data-mapping="title"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+```
+
+stack主题里的 languageCode 必须与giscus匹配,中文为zh-CN,英文为en,默认的为en-us,zh-cn,需要修改后才能使用
