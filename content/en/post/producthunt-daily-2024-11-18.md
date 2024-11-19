@@ -3,6 +3,7 @@ title: Producthunt Daily | 2024-11-19
 date: 2024-11-19 07:21:26+0000
 image: https://ph-files.imgix.net/4776b657-e494-4c52-87ee-1f7907af9690.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["social media", "content creation", "digital marketing"]
+categories: ["AI agent"]
 ---
 
 ## 1. Layer 

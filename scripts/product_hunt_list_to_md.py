@@ -32,7 +32,7 @@ category_mapping_zh = {
 }
 
 category_mapping_en = {
-    "AI": ["AI", "Artificial intelligence", "machine learning"],
+    "AI": ["AI", "Artificial intelligence", "machine learning","AI agent"],
     "Tools": ["tool", "效率"],
     "Develop": ["API","Database","REST API","SQL"]
 }
