@@ -87,9 +87,7 @@ class Product:
                 temperature=0.7,
                 timeout=600,
             )
-            # 标准api keywords = response.choices[0].message.content.strip()
-            # 代理api
-            keywords = response.choices[0].message.strip()
+            keywords = response.choices[0].message.content.strip()
             if ',' not in keywords:
                 keywords = ', '.join(keywords.split())
             return keywords
@@ -111,9 +109,7 @@ class Product:
                 timeout=600,
             )
 
-            #translated_text = response.choices[0].message.content.strip()
-            # 代理api
-            translated_text = response.choices[0].message.strip()
+            translated_text = response.choices[0].message.content.strip()
             return translated_text
         except Exception as e:
             print(f"Error occurred during translation: {e}")

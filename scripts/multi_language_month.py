@@ -165,7 +165,7 @@ class Product:
                 temperature=0.7,
                 timeout=600,
             )
-            keywords = response.choices[0].message.strip()
+            keywords = response.choices[0].message.content.strip()
             return ', '.join(keywords.split()) if ',' not in keywords else keywords
         except Exception as e:
             print(f"Error occurred during keyword generation: {e}")
@@ -180,7 +180,7 @@ class Product:
                 temperature=0.7,
                 timeout=600,
             )
-            return response.choices[0].message.strip()
+            return response.choices[0].message.content.strip()
         except Exception as e:
             print(f"Error occurred during translation: {e}")
             return text
