@@ -1,5 +1,5 @@
 ---
-title: Producthunt Daily | 2024-11-21
+title: Tendencias de Hoy | 2024-11-21
 date: 2024-11-21 08:18:53+0000
 image: https://ph-files.imgix.net/984f71ce-a892-46c0-af7f-222c0a1c5af4.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["no coding", "24/7 Support", "Postiz"]
