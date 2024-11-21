@@ -1,18 +1,18 @@
 ---
 title: 本月热榜 | 2024-10
-date: 2024-11-21 08:27:50+0000
+date: 2024-11-21 08:40:06+0000
 image: https://ph-files.imgix.net/e96bdcbf-0179-4a0e-a07a-454b65bb02a7.png?auto=format&fit=crop&frame=1&h=512&w=1024
-tags: ["集成", "Trag", "AI"]
-categories: ["Monthly", "人工智能"]
+tags: ["集成", "Trag", "AI代码审查"]
+categories: ["月榜"]
 ---
 
 ## 1. Trag  
-**标语**: AI 代码审查助手  
-**介绍**: Trag 是一个具有独特功能的 AI 代码审查助手！它就像一个代码检查工具，可以检查模式。Trag 接收普通英语规则作为输入，并在每个拉取请求中在几秒钟内进行审查。将您的知识转化为模式，并通过 Trag 实现审查自动化。  
+**标语**: AI代码审查助手  
+**介绍**: Trag 是一个具有独特功能的 AI 代码审查助手！它就像一个代码检查工具，可以检查模式。Trag 接收普通英语规则作为输入，并在每个拉取请求中迅速进行审查。将您的知识转化为模式，并通过 Trag 实现审查自动化。  
 **网站**: [立即访问](https://www.producthunt.com/r/D5IRI4EG7YP5QC?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/trag?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Trag](https://ph-files.imgix.net/e96bdcbf-0179-4a0e-a07a-454b65bb02a7.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**关键词**: Trag, AI, 代码审查, 伴侣, Linter, 规则, 自动化, Pull Request, 代码模式  
+**关键词**: Trag, AI代码审查, 代码审查助手, Linter, 自动化审查, 英文规则, 拉取请求, 知识模式化  
 **票数**: 🔺1600  
 **是否精选**: 是  
 **发布时间**: 2024年10月21日 PM03:01 (北京时间)  
@@ -25,7 +25,7 @@ categories: ["Monthly", "人工智能"]
 **网站**: [立即访问](https://www.producthunt.com/r/OTWG7QWBMBQ2H7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/bolt-new?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![bolt.new](https://ph-files.imgix.net/243b8dd1-15ce-4df7-99f4-e65347e9b06f.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**关键词**: bolt.new, 全栈应用, 实时执行, 调试错误, 部署应用, 无需编码, 浏览器操作  
+**关键词**: bolt.new, 全栈应用, 快速部署, 实时执行, 错误调试, 无需编码, 浏览器操作  
 **票数**: 🔺1563  
 **是否精选**: 是  
 **发布时间**: 2024年10月30日 PM03:01 (北京时间)  
@@ -33,12 +33,12 @@ categories: ["Monthly", "人工智能"]
 ---  
 
 ## 3. Video SDK 3.0  
-**标语**: 构建和集成实时多模态人工智能角色。  
+**标语**: 构建和集成实时多模态AI角色。  
 **介绍**: CharacterSDK 允许开发者创建多模态 AI 角色，能够进行实时互动和上下文理解。将这些智能伴侣无缝集成到现有工作流程中，以提供个性化的用户体验。  
 **网站**: [立即访问](https://www.producthunt.com/r/3FA5V4ZO5BQXTJ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/video-sdk-3-0?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Video SDK 3.0](https://ph-files.imgix.net/55cdcd37-9c80-44e7-ab78-f40ae04c98ec.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**关键词**: Video SDK 3.0, 实时, 多模态, AI角色, 开发者, 互动, 上下文理解, 集成, 个性化用户体验  
+**关键词**: Video SDK 3.0, 实时, 多模态, AI角色, 开发者, 互动, 上下文理解, 智能伴侣, 个性化用户体验, 集成  
 **票数**: 🔺1553  
 **是否精选**: 是  
 **发布时间**: 2024年10月01日 PM03:01 (北京时间)  
@@ -47,11 +47,11 @@ categories: ["Monthly", "人工智能"]
 
 ## 4. KYZON Space  
 **标语**: 通过简单而富有吸引力的会议，将想法转化为成果。  
-**介绍**: KYZON Space 是在会议中处理文档最简单有效的方法。再也不用担心分享错误的屏幕或看到模糊的图像。您可以放心，因为所有内容都会自动保存到您的集成云端。  
+**介绍**: KYZON Space 是在会议中处理文档最简单、最有效的方法。再也不用担心分享错误的屏幕或看到模糊的图像。您可以放心，因为所有内容都会自动保存到您的集成云端。  
 **网站**: [立即访问](https://www.producthunt.com/r/5PKJOW7LF7PKWL?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/kyzon-space?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![KYZON Space](https://ph-files.imgix.net/beb6ae4b-54d2-42f5-8d3e-df16bcf1167c.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**关键词**: KYZON Space, 简单有效, 会议, 文档协作, 自动保存, 集成云, 共享屏幕, 清晰图像  
+**关键词**: KYZON Space, 简单有效, 会议, 文档协作, 自动保存, 集成云, 清晰分享, 互动会议  
 **票数**: 🔺1541  
 **是否精选**: 是  
 **发布时间**: 2024年10月18日 PM03:01 (北京时间)  
@@ -77,7 +77,7 @@ categories: ["Monthly", "人工智能"]
 **网站**: [立即访问](https://www.producthunt.com/r/7TYJP2W2CUACRH?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/buzzabout?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![buzzabout](https://ph-files.imgix.net/3fa1f2b4-c625-4e9d-a7d0-d42e84f71452.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**关键词**: buzzabout, 观众洞察, 在线讨论, 客户理解, AI驱动工具, 实时洞察, 客户痛点, 客户收益, 在线对话  
+**关键词**: buzzabout, 观众洞察, 在线讨论, 客户理解, AI工具, 实时洞察, 客户痛点, 客户收益, 在线对话  
 **票数**: 🔺1356  
 **是否精选**: 是  
 **发布时间**: 2024年10月03日 PM03:01 (北京时间)  
@@ -99,11 +99,11 @@ categories: ["Monthly", "人工智能"]
 
 ## 8. General Collaboration  
 **标语**: 一个收件箱，处理您所有的工作讨论。  
-**介绍**: GC 在您工作中使用的所有应用程序内外工作，寻找需要您关注的评论，神奇地为您正在进行的每个项目创建一个“单一真相来源”，并帮助您轻松跟上团队成员的进展，了解他们正在做什么。  
+**介绍**: GC 在您工作中使用的所有应用程序内外工作，寻找需要您关注的评论，神奇地为您正在进行的每个项目创建一个“单一真相来源”，并帮助您轻松跟上您的团队成员，了解他们正在做什么。  
 **网站**: [立即访问](https://www.producthunt.com/r/FHOTPFSKLWMXCX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/general-collaboration?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![General Collaboration](https://ph-files.imgix.net/dcebc6a1-8ef7-4d77-8cec-b11d10688178.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**关键词**: 协作, 工作讨论, 单一信息源, 项目管理, 团队沟通, 应用整合  
+**关键词**: 协作, 工作讨论, 单一信息源, 项目管理, 团队沟通, 应用整合, 注意事项, 实时更新  
 **票数**: 🔺1110  
 **是否精选**: 是  
 **发布时间**: 2024年10月08日 PM03:01 (北京时间)  
@@ -116,7 +116,7 @@ categories: ["Monthly", "人工智能"]
 **网站**: [立即访问](https://www.producthunt.com/r/2V2UFNLGFPS2MB?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/readkidz?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![ReadKidz](https://ph-files.imgix.net/de7f0a33-881a-43d6-8817-8f001ff83ca1.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**关键词**: ReadKidz, 多媒体, 儿童故事, 创作平台, 故事转化, 文本, 图片, 音频, 叙事, 插图生成, 内容发布, KDP, YouTube, 灵感, 出版, 想象力, 收入  
+**关键词**: ReadKidz, 多媒体, 儿童故事, 创作平台, 故事转化, 文本, 图片, 音频, 叙事, 插图生成, KDP, YouTube, 灵感, 出版, 想象力, 收入  
 **票数**: 🔺1058  
 **是否精选**: 是  
 **发布时间**: 2024年10月28日 PM03:01 (北京时间)  
