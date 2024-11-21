@@ -285,8 +285,10 @@ def count_and_sort_keywords(keywords):
     keyword_counts = Counter(keywords)
     return keyword_counts.most_common()
 
+# 月报,标题为上月月份
 def generate_markdown(products, date_str: str, language: str):
     today = datetime.now(timezone.utc)
+    first_day_of_last_month = (today.replace(day=1) - relativedelta(months=1)).strftime('%Y-%m')
     date_today = today.strftime('%Y-%m-%d')
     date = today.strftime('%Y-%m-%d %H:%M:%S%z')
     keywords = extract_keywords(products)
@@ -297,12 +299,13 @@ def generate_markdown(products, date_str: str, language: str):
     category_mapping = settings['category_mapping']
 
     os.makedirs(path, exist_ok=True)
-    markdown_content = f"---\ntitle: {settings['title']} | {date_today}\ndate: {date}\nimage: {products[0].og_image_url}\n"
+    markdown_content = f"---\ntitle: {settings['title']} | {first_day_of_last_month}\ndate: {date}\nimage: {products[0].og_image_url}\n"
 
     if top_keywords:
         hugo_keywords = ', '.join([f'"{keyword}"' for keyword, _ in top_keywords[:3]])
         markdown_content += f"tags: [{hugo_keywords}]\n"
         categories = set()
+        categories.add("Monthly")
         keyword_set = set(keyword for keyword, _ in top_keywords)
         for category, keywords in category_mapping.items():
             if any(keyword in keyword_set for keyword in keywords):
