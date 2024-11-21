@@ -31,6 +31,7 @@ LANGUAGE_SETTINGS = {
         "created_at_label": "发布时间",
         "keyword_prompt": "根据以下内容生成适合的简短中文关键词，用英文逗号分隔开：\n\n产品名称：{name}\n\n标语：{tagline}\n\n描述：{description}",
         "default_keyword": "无关键词",
+        "monthly_label": "月榜",
     },
     "en": {
         "title": "Producthunt Monthly Top",
@@ -55,6 +56,7 @@ LANGUAGE_SETTINGS = {
         "created_at_label": "CreatedAt",
         "keyword_prompt": "Generate suitable short keywords based on the product information provided, separated by commas.\n\nName: {name}\nTagline: {tagline}\nDescription: {description}",
         "default_keyword": "No keywords",
+        "monthly_label": "Monthly",
     },
     "es": {
         "title": "Lo Mejor del Mes en Producthunt",
@@ -78,7 +80,8 @@ LANGUAGE_SETTINGS = {
         "featured_mapping": {"yes": "Sí", "no": "No"},
         "created_at_label": "Fecha de creación",
         "keyword_prompt": "Generate suitable short keywords using Spanish based on the product information provided, separated by commas.\n\nName: {name}\nTagline: {tagline}\nDescription: {description}",
-        "default_keyword": "Sin palabras clave"
+        "default_keyword": "Sin palabras clave",
+        "monthly_label": "Clasificación Mensual",
     },
     "ar": {
         "title": "الأعلى شهريًا في Producthunt",
@@ -102,7 +105,8 @@ LANGUAGE_SETTINGS = {
         "featured_mapping": {"yes": "نعم", "no": "لا"},
         "created_at_label": "تاريخ الإنشاء",
         "keyword_prompt": "Generate suitable short keywords in Arabic based on the product information provided, separated by commas.\n\nName: {name}\nTagline: {tagline}\nDescription: {description}",
-        "default_keyword": "لا توجد كلمات مفتاحية"
+        "default_keyword": "لا توجد كلمات مفتاحية",
+        "monthly_label": "التصنيف الشهري",
     }
 }
 
@@ -305,7 +309,7 @@ def generate_markdown(products, date_str: str, language: str):
         hugo_keywords = ', '.join([f'"{keyword}"' for keyword, _ in top_keywords[:3]])
         markdown_content += f"tags: [{hugo_keywords}]\n"
         categories = set()
-        categories.add("Monthly")
+        categories.add(settings["monthly_label"])
         keyword_set = set(keyword for keyword, _ in top_keywords)
         for category, keywords in category_mapping.items():
             if any(keyword in keyword_set for keyword in keywords):
