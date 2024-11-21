@@ -293,7 +293,6 @@ def count_and_sort_keywords(keywords):
 def generate_markdown(products, date_str: str, language: str):
     today = datetime.now(timezone.utc)
     first_day_of_last_month = (today.replace(day=1) - relativedelta(months=1)).strftime('%Y-%m')
-    date_today = today.strftime('%Y-%m-%d')
     date = today.strftime('%Y-%m-%d %H:%M:%S%z')
     keywords = extract_keywords(products)
     top_keywords = count_and_sort_keywords(keywords)
@@ -319,7 +318,7 @@ def generate_markdown(products, date_str: str, language: str):
             markdown_content += f'categories: [{formatted_categories}]\n'
     markdown_content += "---\n\n" + ''.join(product.to_markdown(rank) for rank, product in enumerate(products, 1))
 
-    file_name = f"{path}/producthunt-monthly-{date_str}.md"
+    file_name = f"{path}/producthunt-monthly-{first_day_of_last_month}.md"
     with open(file_name, 'w', encoding='utf-8') as file:
         file.write(markdown_content)
     print(f"文件 {file_name} 生成成功并已覆盖。")
