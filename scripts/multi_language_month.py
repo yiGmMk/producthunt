@@ -11,7 +11,7 @@ LANGUAGE_SETTINGS = {
     "zh": {
         "title": "本月热榜",
         "file_path": "content/zh-cn/post",
-        "translate_task": "将以下内容翻译成简体中文。",
+        "translate_task": "将以下内容翻译成简体中文,只需返回译文:",
         "category_mapping": {
             "人工智能": ["AI", "人工智能", "机器学习"],
             "工具": ["工具", "生产力工具", "效率", "Notion"],
@@ -36,7 +36,7 @@ LANGUAGE_SETTINGS = {
     "en": {
         "title": "Producthunt Monthly Top",
         "file_path": "content/en/post",
-        "translate_task": "Translate the following text to English.",
+        "translate_task": "Translate the following text to English,only return the translation:",
         "category_mapping": {
             "AI": ["AI", "Artificial intelligence", "machine learning", "AI agent"],
             "Tools": ["tool", "效率"],
@@ -61,7 +61,7 @@ LANGUAGE_SETTINGS = {
     "es": {
         "title": "Lo Mejor del Mes en Producthunt",
         "file_path": "content/es/post",
-        "translate_task": "Translate the following text to Spanish.",
+        "translate_task": "Translate the following text to Spanish,only return the translation:",
         "category_mapping": {
             "Inteligencia Artificial": ["AI", "Inteligencia Artificial", "aprendizaje automático"],
             "Herramientas": ["herramienta", "productividad", "eficiencia", "Notion"],
@@ -86,7 +86,7 @@ LANGUAGE_SETTINGS = {
     "ar": {
         "title": "الأعلى شهريًا في Producthunt",
         "file_path": "content/ar/post",
-        "translate_task": "Translate the following text to Arabic.",
+        "translate_task": "Translate the following text to Arabic,only return the translation:",
         "category_mapping": {
             "الذكاء الاصطناعي": ["الذكاء الاصطناعي", "AI", "تعلم الآلة"],
             "الأدوات": ["أداة", "إنتاجية", "كفاءة", "Notion"],
