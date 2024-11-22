@@ -1,19 +1,19 @@
 ---
 title: 今日热榜 | 2024-11-22
-date: 2024-11-22 08:43:52+0000
+date: 2024-11-22 09:04:43+0000
 image: https://ph-files.imgix.net/b885d93b-af75-4bf9-933d-08f40991c1ce.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["企业", "Lovable", "AI全栈工程师"]
 categories: ["人工智能", "开发"]
 ---
 
 ## 1. Lovable  
-**标语**: 世界上第一位人工智能全栈工程师  
-**介绍**: GPT Engineer 在 140 个国家拥有超过 50,000 名用户，并在 2024 年获得 5/5 星的评价。现在我们推出 Lovable：全球首个 AI 全栈工程师。以比编写代码快 20 倍的速度交付应用程序，支持身份验证、数据存储和 AI。无锁定，GitHub 同步，一键部署。  
+**标语**: 世界首位人工智能全栈工程师  
+**介绍**: GPT Engineer 在 140 个国家拥有超过 50,000 名用户，并在 2024 年获得 5/5 星的评价。现在我们推出 Lovable：全球首个 AI 全栈工程师。以比编写代码快 20 倍的速度发布应用，支持身份验证、数据存储和 AI。无锁定、GitHub 同步、一键部署。  
 **网站**: [立即访问](https://www.producthunt.com/r/VKFOBFFX4XP4DK?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/lovable?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Lovable](https://ph-files.imgix.net/b885d93b-af75-4bf9-933d-08f40991c1ce.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **关键词**: Lovable, AI全栈工程师, 50,000+用户, 140个国家, 5/5星, 2024, 快速开发, 应用程序, 身份验证, 数据存储, AI, 20倍速度, 无锁定, GitHub同步, 一键部署  
-**票数**: 🔺890  
+**票数**: 🔺895  
 **是否精选**: 是  
 **发布时间**: 2024年11月21日 PM04:01 (北京时间)  
 
@@ -25,8 +25,8 @@ categories: ["人工智能", "开发"]
 **网站**: [立即访问](https://www.producthunt.com/r/NGEBAQUGHYW4QN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/maxim?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Maxim](https://ph-files.imgix.net/5885b7d2-e48c-4c12-ae62-9e8f96329af0.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**关键词**: Maxim, AI评估, 观察平台, 高质量产品, 5倍速度, 实验, 预发布测试, 生产监控  
-**票数**: 🔺742  
+**关键词**: Maxim, AI评估, 观察平台, 高质量产品, 5倍速度, 开发者工具, 实验, 预发布测试, 生产监控  
+**票数**: 🔺743  
 **是否精选**: 否  
 **发布时间**: 2024年11月21日 PM04:01 (北京时间)  
 
@@ -39,7 +39,7 @@ categories: ["人工智能", "开发"]
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/desktop-recording-sdk-by-recall-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Desktop Recording SDK by Recall.ai](https://ph-files.imgix.net/1a9d8505-0f0d-4b50-8b18-1a0d33771e59.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **关键词**: 桌面录音SDK, Recall.ai, 实时会议数据, 无需机器人, 录音, 转录, 元数据, 应用集成, Electron应用, Zoom, Google Meet, Microsoft Teams  
-**票数**: 🔺685  
+**票数**: 🔺687  
 **是否精选**: 是  
 **发布时间**: 2024年11月21日 PM04:01 (北京时间)  
 
@@ -51,8 +51,8 @@ categories: ["人工智能", "开发"]
 **网站**: [立即访问](https://www.producthunt.com/r/Q342CWB3EC2X6F?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/embedded-wallet-sdk?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Embedded Wallet SDK](https://ph-files.imgix.net/f1c88ded-fb21-459f-9d9c-3e9db904e3c4.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**关键词**: 嵌入式钱包SDK, 最小编码, 一键钱包设置, Web3, Web2体验, 邮件登录, 社交登录, 密钥登录, 开发者, 企业, 区块链, 用户友好  
-**票数**: 🔺458  
+**关键词**: 嵌入式钱包SDK, 最少编码, 一键钱包设置, Web3入门, Web2体验, 邮件登录, 社交登录, 密钥登录, 开发者, 企业, 区块链简化, 日常用户  
+**票数**: 🔺460  
 **是否精选**: 否  
 **发布时间**: 2024年11月21日 PM04:01 (北京时间)  
 
@@ -65,7 +65,7 @@ categories: ["人工智能", "开发"]
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/boltic-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Boltic](https://ph-files.imgix.net/43cab141-d288-459a-9e50-f9511b8752ba.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **关键词**: Boltic, AI驱动, 工作流, 自动化, 企业, 智能集成, 高效, 定制化  
-**票数**: 🔺396  
+**票数**: 🔺397  
 **是否精选**: 否  
 **发布时间**: 2024年11月21日 PM04:01 (北京时间)  
 
@@ -78,7 +78,7 @@ categories: ["人工智能", "开发"]
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/fireside-9?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Fireside](https://ph-files.imgix.net/d421ee1b-784a-40ab-b9b2-d5164cfd011c.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **关键词**: Fireside, 记录故事, 保护记忆, 视频采访, 音频采访, AI引导, 问题库, 数字纪念品, 实体纪念品, 永久分享  
-**票数**: 🔺294  
+**票数**: 🔺295  
 **是否精选**: 是  
 **发布时间**: 2024年11月21日 PM04:01 (北京时间)  
 
@@ -91,7 +91,7 @@ categories: ["人工智能", "开发"]
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/taurin?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Taurin](https://ph-files.imgix.net/49a629e5-c3f6-4ffd-8abb-3e070314817f.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **关键词**: Taurin, AI邮件客户端, 创始人, 简化邮箱体验, 组织收件箱, 提供摘要, 丰富联系人数据库, 自主功能, 节省时间, 建立联系  
-**票数**: 🔺256  
+**票数**: 🔺257  
 **是否精选**: 是  
 **发布时间**: 2024年11月21日 PM04:01 (北京时间)  
 
@@ -112,11 +112,11 @@ categories: ["人工智能", "开发"]
 
 ## 9. Fusion AI  
 **标语**: Fusion AI将顶尖的人工智能模型整合为一个统一的团队。  
-**介绍**: Fusion AI 将领先的人工智能模型整合到一个易于使用的平台中，提供卓越的质量而无需麻烦。我们让人工智能作为一个统一的团队协同工作，提供您在其他地方无法获得的增强结果。可以把它看作是您的人工智能梦之队。  
+**介绍**: Fusion AI 将领先的人工智能模型整合到一个易于使用的平台中，提供卓越的质量而无需麻烦。我们使人工智能作为一个统一的团队协同工作，提供您在其他地方无法获得的增强结果。可以把它看作是您的人工智能梦之队。  
 **网站**: [立即访问](https://www.producthunt.com/r/K7XFG6VQR5JXNB?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/fusion-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Fusion AI](https://ph-files.imgix.net/ba5a0095-0511-49b7-bd4f-54f4d2b7936a.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**关键词**: Fusion AI, 顶尖AI模型, 统一团队, 易用平台, 卓越质量, 整合, 提升结果, AI梦之队  
+**关键词**: Fusion AI, 顶级AI模型, 统一团队, 易用平台, 卓越质量, 整合, 提升结果, AI梦之队  
 **票数**: 🔺170  
 **是否精选**: 否  
 **发布时间**: 2024年11月21日 PM04:01 (北京时间)  
