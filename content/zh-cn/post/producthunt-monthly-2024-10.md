@@ -1,19 +1,19 @@
 ---
 title: 本月热榜 | 2024-10
-date: 2024-11-21 08:40:06+0000
+date: 2024-11-22 08:49:32+0000
 image: https://ph-files.imgix.net/e96bdcbf-0179-4a0e-a07a-454b65bb02a7.png?auto=format&fit=crop&frame=1&h=512&w=1024
-tags: ["集成", "Trag", "AI代码审查"]
-categories: ["月榜"]
+tags: ["集成", "Trag", "AI"]
+categories: ["人工智能", "月榜"]
 ---
 
 ## 1. Trag  
 **标语**: AI代码审查助手  
-**介绍**: Trag 是一个具有独特功能的 AI 代码审查助手！它就像一个代码检查工具，可以检查模式。Trag 接收普通英语规则作为输入，并在每个拉取请求中迅速进行审查。将您的知识转化为模式，并通过 Trag 实现审查自动化。  
+**介绍**: Trag 是一个具有独特功能的 AI 代码审查助手！它就像一个代码检查工具，可以检查模式。Trag 接收普通英语规则作为输入，并在每个拉取请求中在几秒钟内进行审查。将您的知识转化为模式，并通过 Trag 实现审查自动化。  
 **网站**: [立即访问](https://www.producthunt.com/r/D5IRI4EG7YP5QC?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/trag?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Trag](https://ph-files.imgix.net/e96bdcbf-0179-4a0e-a07a-454b65bb02a7.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**关键词**: Trag, AI代码审查, 代码审查助手, Linter, 自动化审查, 英文规则, 拉取请求, 知识模式化  
-**票数**: 🔺1600  
+**关键词**: Trag, AI, 代码审查, 伴侣, Linter, 规则, 自动化, Pull Request, 代码质量, 代码模式  
+**票数**: 🔺1603  
 **是否精选**: 是  
 **发布时间**: 2024年10月21日 PM03:01 (北京时间)  
 
@@ -25,15 +25,15 @@ categories: ["月榜"]
 **网站**: [立即访问](https://www.producthunt.com/r/OTWG7QWBMBQ2H7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/bolt-new?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![bolt.new](https://ph-files.imgix.net/243b8dd1-15ce-4df7-99f4-e65347e9b06f.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**关键词**: bolt.new, 全栈应用, 快速部署, 实时执行, 错误调试, 无需编码, 浏览器操作  
-**票数**: 🔺1563  
+**关键词**: bolt.new, 全栈应用, 实时执行, 调试错误, 部署应用, 无需编码, 浏览器操作  
+**票数**: 🔺1564  
 **是否精选**: 是  
 **发布时间**: 2024年10月30日 PM03:01 (北京时间)  
 
 ---  
 
 ## 3. Video SDK 3.0  
-**标语**: 构建和集成实时多模态AI角色。  
+**标语**: 构建和集成实时多模态人工智能角色。  
 **介绍**: CharacterSDK 允许开发者创建多模态 AI 角色，能够进行实时互动和上下文理解。将这些智能伴侣无缝集成到现有工作流程中，以提供个性化的用户体验。  
 **网站**: [立即访问](https://www.producthunt.com/r/3FA5V4ZO5BQXTJ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/video-sdk-3-0?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
@@ -51,8 +51,8 @@ categories: ["月榜"]
 **网站**: [立即访问](https://www.producthunt.com/r/5PKJOW7LF7PKWL?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/kyzon-space?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![KYZON Space](https://ph-files.imgix.net/beb6ae4b-54d2-42f5-8d3e-df16bcf1167c.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**关键词**: KYZON Space, 简单有效, 会议, 文档协作, 自动保存, 集成云, 清晰分享, 互动会议  
-**票数**: 🔺1541  
+**关键词**: KYZON Space, 简单有效, 会议, 文档协作, 自动保存, 集成云, 共享屏幕, 清晰图像  
+**票数**: 🔺1540  
 **是否精选**: 是  
 **发布时间**: 2024年10月18日 PM03:01 (北京时间)  
 
@@ -77,8 +77,8 @@ categories: ["月榜"]
 **网站**: [立即访问](https://www.producthunt.com/r/7TYJP2W2CUACRH?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/buzzabout?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![buzzabout](https://ph-files.imgix.net/3fa1f2b4-c625-4e9d-a7d0-d42e84f71452.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**关键词**: buzzabout, 观众洞察, 在线讨论, 客户理解, AI工具, 实时洞察, 客户痛点, 客户收益, 在线对话  
-**票数**: 🔺1356  
+**关键词**: buzzabout, 观众洞察, 在线讨论, 客户理解, AI驱动工具, 实时洞察, 客户痛点, 客户收益, 在线对话  
+**票数**: 🔺1361  
 **是否精选**: 是  
 **发布时间**: 2024年10月03日 PM03:01 (北京时间)  
 
@@ -91,7 +91,7 @@ categories: ["月榜"]
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/feta?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Feta](https://ph-files.imgix.net/bcd45dbd-586e-4f03-bce7-9e374499eaea.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **关键词**: Feta, 视频通话工具, 产品团队, 工程团队, 智能站立会议, AI文档, 自动化工作流程, 无缝会议  
-**票数**: 🔺1236  
+**票数**: 🔺1240  
 **是否精选**: 是  
 **发布时间**: 2024年10月17日 PM03:01 (北京时间)  
 
@@ -104,7 +104,7 @@ categories: ["月榜"]
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/general-collaboration?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![General Collaboration](https://ph-files.imgix.net/dcebc6a1-8ef7-4d77-8cec-b11d10688178.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **关键词**: 协作, 工作讨论, 单一信息源, 项目管理, 团队沟通, 应用整合, 注意事项, 实时更新  
-**票数**: 🔺1110  
+**票数**: 🔺1106  
 **是否精选**: 是  
 **发布时间**: 2024年10月08日 PM03:01 (北京时间)  
 
@@ -116,23 +116,23 @@ categories: ["月榜"]
 **网站**: [立即访问](https://www.producthunt.com/r/2V2UFNLGFPS2MB?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/readkidz?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![ReadKidz](https://ph-files.imgix.net/de7f0a33-881a-43d6-8817-8f001ff83ca1.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**关键词**: ReadKidz, 多媒体, 儿童故事, 创作平台, 故事转化, 文本, 图片, 音频, 叙事, 插图生成, KDP, YouTube, 灵感, 出版, 想象力, 收入  
-**票数**: 🔺1058  
+**关键词**: ReadKidz, 多媒体, 儿童故事, 创作平台, 故事转化, 文本, 图片, 音频, 叙事, 插图生成, 内容发布, KDP, YouTube, 灵感, 出版, 想象力, 收入  
+**票数**: 🔺1060  
 **是否精选**: 是  
 **发布时间**: 2024年10月28日 PM03:01 (北京时间)  
 
 ---  
 
-## 10. HeyForm 3.0  
-**标语**: 开源表单生成器，旨在帮助小型企业成功。  
-**介绍**: HeyForm是一款简单而强大的软件，帮助公司轻松创建引人入胜的表单。它提供现代化的工具，通过可自定义的表单收集和分析数据，集成各种应用程序，并简化工作流程。  
-**网站**: [立即访问](https://www.producthunt.com/r/HKHFR3TT4JXCQL?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
-**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/heyform-3-0?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
-![HeyForm 3.0](https://ph-files.imgix.net/54dd4c03-0b65-4e04-b794-b34946bfa600.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**关键词**: HeyForm 3.0, 开源表单生成器, 小企业成功, 简单强大, 创建互动表单, 数据收集与分析, 可定制表单, 应用集成, 简化工作流程  
-**票数**: 🔺1057  
+## 10. FullEnrich 2.0  
+**标语**: 电子邮件和电话号码的瀑布式丰富化  
+**介绍**: FullEnrich 汇聚了来自超过 15 个数据提供商的数据，用于 B2B 联系人丰富。通过瀑布式丰富，它为电子邮件和手机号码提供最佳的丰富率，帮助您接触未来的客户。  
+**网站**: [立即访问](https://www.producthunt.com/r/KBUW4JDHFDGKGS?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/fullenrich-2-0?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![FullEnrich 2.0](https://ph-files.imgix.net/538ed249-eab1-4542-b34b-6e7434257232.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**关键词**: FullEnrich 2.0, 水fall enrichment, 电子邮件, 手机号码, 数据聚合, B2B 联系人, 数据提供商, 最佳丰富率, 客户获取  
+**票数**: 🔺1055  
 **是否精选**: 是  
-**发布时间**: 2024年10月15日 PM03:01 (北京时间)  
+**发布时间**: 2024年10月03日 PM03:01 (北京时间)  
 
 ---  
 

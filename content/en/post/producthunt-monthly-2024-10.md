@@ -1,8 +1,8 @@
 ---
 title: Producthunt Monthly Top | 2024-10
-date: 2024-11-21 08:40:06+0000
+date: 2024-11-22 08:49:32+0000
 image: https://ph-files.imgix.net/e96bdcbf-0179-4a0e-a07a-454b65bb02a7.png?auto=format&fit=crop&frame=1&h=512&w=1024
-tags: ["developer tools", "user-friendly", "productivity"]
+tags: ["developer tools", "AI code review", "code linter"]
 categories: ["Monthly"]
 ---
 
@@ -12,8 +12,8 @@ categories: ["Monthly"]
 **Website**: [open](https://www.producthunt.com/r/D5IRI4EG7YP5QC?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/trag?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Trag](https://ph-files.imgix.net/e96bdcbf-0179-4a0e-a07a-454b65bb02a7.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: Trag, AI code review, code linter, pull request review, automated reviews, pattern recognition, plain English rules, software development, coding companion, code quality, developer tools, AI automation.  
-**VotesCount**: 🔺1600  
+**Keyword**: AI code review, code linter, pull request review, automation, pattern recognition, plain English rules, software development, coding companion, code quality, review automation  
+**VotesCount**: 🔺1603  
 **Featured**: Yes  
 **CreatedAt**: 2024-10-21 07:01 AM (UTC)  
 
@@ -25,8 +25,8 @@ categories: ["Monthly"]
 **Website**: [open](https://www.producthunt.com/r/OTWG7QWBMBQ2H7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/bolt-new?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![bolt.new](https://ph-files.imgix.net/243b8dd1-15ce-4df7-99f4-e65347e9b06f.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: bolt.new, full-stack web apps, prompt, run, edit, deploy, real-time execution, debug errors, no code, browser-based, app development, instant deployment, user-friendly, web application builder  
-**VotesCount**: 🔺1563  
+**Keyword**: bolt.new, full-stack web apps, prompt, run, edit, deploy, real-time execution, debug errors, no code, browser-based, functional app  
+**VotesCount**: 🔺1564  
 **Featured**: Yes  
 **CreatedAt**: 2024-10-30 07:01 AM (UTC)  
 
@@ -51,8 +51,8 @@ categories: ["Monthly"]
 **Website**: [open](https://www.producthunt.com/r/5PKJOW7LF7PKWL?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/kyzon-space?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![KYZON Space](https://ph-files.imgix.net/beb6ae4b-54d2-42f5-8d3e-df16bcf1167c.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: KYZON Space, meetings, document collaboration, cloud integration, screen sharing, productivity, engagement, ideas to outcomes, effective meetings, automatic saving.  
-**VotesCount**: 🔺1541  
+**Keyword**: KYZON Space, meetings, document collaboration, cloud integration, screen sharing, effective communication, idea management, automatic saving, engaging meetings, productivity tool  
+**VotesCount**: 🔺1540  
 **Featured**: Yes  
 **CreatedAt**: 2024-10-18 07:01 AM (UTC)  
 
@@ -64,7 +64,7 @@ categories: ["Monthly"]
 **Website**: [open](https://www.producthunt.com/r/TBWEUYRNDGSED5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/apipark?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![APIPark](https://ph-files.imgix.net/fd456aee-5928-49af-967f-2c740f77bd65.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: APIPark, open source, AI gateway, API developer portal, manage AI, integrate API, deploy services, AI models, API services, seamless connection, invoke APIs  
+**Keyword**: APIPark, open source, AI gateway, API developer portal, manage AI, integrate API, deploy services, AI models, API services, seamless connection, easy invocation, developer tools, AI capabilities.  
 **VotesCount**: 🔺1483  
 **Featured**: Yes  
 **CreatedAt**: 2024-10-28 07:01 AM (UTC)  
@@ -78,7 +78,7 @@ categories: ["Monthly"]
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/buzzabout?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![buzzabout](https://ph-files.imgix.net/3fa1f2b4-c625-4e9d-a7d0-d42e84f71452.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **Keyword**: buzzabout, audience insights, online discussions, customer understanding, AI-driven tool, real-time insights, customer pains, customer gains, market research, conversation analysis  
-**VotesCount**: 🔺1356  
+**VotesCount**: 🔺1361  
 **Featured**: Yes  
 **CreatedAt**: 2024-10-03 07:01 AM (UTC)  
 
@@ -91,7 +91,7 @@ categories: ["Monthly"]
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/feta?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Feta](https://ph-files.imgix.net/bcd45dbd-586e-4f03-bce7-9e374499eaea.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **Keyword**: Feta, video-calling tool, product teams, engineering teams, stand-ups, retros, sprint sessions, AI-powered documentation, automated workflows, seamless communication, team collaboration.  
-**VotesCount**: 🔺1236  
+**VotesCount**: 🔺1240  
 **Featured**: Yes  
 **CreatedAt**: 2024-10-17 07:01 AM (UTC)  
 
@@ -103,8 +103,8 @@ categories: ["Monthly"]
 **Website**: [open](https://www.producthunt.com/r/FHOTPFSKLWMXCX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/general-collaboration?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![General Collaboration](https://ph-files.imgix.net/dcebc6a1-8ef7-4d77-8cec-b11d10688178.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: collaboration, work discussions, single source of truth, project management, team communication, productivity, app integration, comments tracking, teamwork, workflow management  
-**VotesCount**: 🔺1110  
+**Keyword**: collaboration, productivity, project management, team communication, single source of truth, work discussions, app integration, task tracking, team collaboration, attention management  
+**VotesCount**: 🔺1106  
 **Featured**: Yes  
 **CreatedAt**: 2024-10-08 07:01 AM (UTC)  
 
@@ -116,23 +116,23 @@ categories: ["Monthly"]
 **Website**: [open](https://www.producthunt.com/r/2V2UFNLGFPS2MB?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/readkidz?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![ReadKidz](https://ph-files.imgix.net/de7f0a33-881a-43d6-8817-8f001ff83ca1.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: ReadKidz, multimedia stories, children's stories, story creation, text and images, audio integration, narrative crafting, illustration generation, KDP publishing, YouTube content, inspiration to publication, imagination to income.  
-**VotesCount**: 🔺1058  
+**Keyword**: ReadKidz, multimedia stories, children's stories, story creation, text and images, audio integration, narrative crafting, illustrations, KDP publishing, YouTube content, inspiration to publication, imagination to income.  
+**VotesCount**: 🔺1060  
 **Featured**: Yes  
 **CreatedAt**: 2024-10-28 07:01 AM (UTC)  
 
 ---  
 
-## 10. HeyForm 3.0  
-**Tagline**: Open source form builder, built for small business success  
-**Description**: HeyForm is a simple yet powerful software for companies to create engaging forms with ease. It offers modern tools to collect and analyze data through customizable forms, integrate with various applications, and simplify workflows.  
-**Website**: [open](https://www.producthunt.com/r/HKHFR3TT4JXCQL?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
-**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/heyform-3-0?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
-![HeyForm 3.0](https://ph-files.imgix.net/54dd4c03-0b65-4e04-b794-b34946bfa600.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: HeyForm, form builder, open source, small business, data collection, customizable forms, workflow automation, application integration, user-friendly, powerful software, engaging forms, data analysis.  
-**VotesCount**: 🔺1057  
+## 10. FullEnrich 2.0  
+**Tagline**: Waterfall enrichment for emails & phone numbers  
+**Description**: FullEnrich aggregates data from over 15 data providers for B2B contact enrichment. Using waterfall enrichment, it provides the best enrichment rates for emails and mobile phone numbers, helping you reach your future customers.  
+**Website**: [open](https://www.producthunt.com/r/KBUW4JDHFDGKGS?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/fullenrich-2-0?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![FullEnrich 2.0](https://ph-files.imgix.net/538ed249-eab1-4542-b34b-6e7434257232.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Keyword**: FullEnrich, B2B contact enrichment, waterfall enrichment, email enrichment, phone number enrichment, data aggregation, contact data, customer outreach, data providers, enrichment rates  
+**VotesCount**: 🔺1055  
 **Featured**: Yes  
-**CreatedAt**: 2024-10-15 07:01 AM (UTC)  
+**CreatedAt**: 2024-10-03 07:01 AM (UTC)  
 
 ---  
 
