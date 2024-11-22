@@ -1,6 +1,6 @@
 ---
 title: Producthunt Daily | 2024-11-22
-date: 2024-11-22 07:21:09+0000
+date: 2024-11-22 08:43:52+0000
 image: https://ph-files.imgix.net/b885d93b-af75-4bf9-933d-08f40991c1ce.png?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["SDK", "Lovable", "AI Full Stack Engineer"]
 categories: ["Develop"]
@@ -12,8 +12,8 @@ categories: ["Develop"]
 **Website**: [open](https://www.producthunt.com/r/VKFOBFFX4XP4DK?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/lovable?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Lovable](https://ph-files.imgix.net/b885d93b-af75-4bf9-933d-08f40991c1ce.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: Lovable, AI Full Stack Engineer, GPT Engineer, app development, 20x faster, auth, data storage, AI integration, no lock-in, GitHub sync, 1-click deploy, 5/5 stars, 50,000+ users, global reach, 2024 launch.  
-**VotesCount**: 🔺856  
+**Keyword**: Lovable, AI Full Stack Engineer, GPT Engineer, app development, 20x faster coding, authentication, data storage, AI integration, GitHub sync, 1-click deploy, 5/5 stars, global users, no lock-in, software development.  
+**VotesCount**: 🔺890  
 **Featured**: Yes  
 **CreatedAt**: 2024-11-21 08:01 AM (UTC)  
 
@@ -25,8 +25,8 @@ categories: ["Develop"]
 **Website**: [open](https://www.producthunt.com/r/NGEBAQUGHYW4QN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/maxim?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Maxim](https://ph-files.imgix.net/5885b7d2-e48c-4c12-ae62-9e8f96329af0.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: Maxim, AI evaluation, observability platform, high-quality AI products, faster AI testing, AI lifecycle tools, experimentation, pre-release testing, production monitoring, AI product improvement.  
-**VotesCount**: 🔺728  
+**Keyword**: Maxim, AI evaluation, observability platform, high-quality AI products, faster testing, developer tools, AI lifecycle, experimentation, pre-release testing, production monitoring  
+**VotesCount**: 🔺742  
 **Featured**: No  
 **CreatedAt**: 2024-11-21 08:01 AM (UTC)  
 
@@ -38,8 +38,8 @@ categories: ["Develop"]
 **Website**: [open](https://www.producthunt.com/r/NVYT26XX3NIYBN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/desktop-recording-sdk-by-recall-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Desktop Recording SDK by Recall.ai](https://ph-files.imgix.net/1a9d8505-0f0d-4b50-8b18-1a0d33771e59.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: Desktop Recording, Recall.ai, Real-time Meeting Data, No Bots, Electron Integration, Zoom, Google Meet, Microsoft Teams, Transcripts, Metadata, Fast Access, SDK.  
-**VotesCount**: 🔺664  
+**Keyword**: Desktop Recording, Recall.ai, Real-time Meeting Data, No Bots, SDK, Electron Integration, Zoom, Google Meet, Microsoft Teams, Recordings, Transcripts, Metadata, Fast Access, Live Data.  
+**VotesCount**: 🔺685  
 **Featured**: Yes  
 **CreatedAt**: 2024-11-21 08:01 AM (UTC)  
 
@@ -52,7 +52,7 @@ categories: ["Develop"]
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/embedded-wallet-sdk?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Embedded Wallet SDK](https://ph-files.imgix.net/f1c88ded-fb21-459f-9d9c-3e9db904e3c4.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **Keyword**: Embedded Wallet, SDK, Web3, Wallet Setup, Minimal Coding, User-Friendly, Onboarding, Email Login, Social Login, Passkey Login, Blockchain Simplified, Developer Tools, Business Solutions, Everyday Users.  
-**VotesCount**: 🔺454  
+**VotesCount**: 🔺458  
 **Featured**: No  
 **CreatedAt**: 2024-11-21 08:01 AM (UTC)  
 
@@ -64,8 +64,8 @@ categories: ["Develop"]
 **Website**: [open](https://www.producthunt.com/r/WOPIIQFKPDVHGU?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/boltic-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Boltic](https://ph-files.imgix.net/43cab141-d288-459a-9e50-f9511b8752ba.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: Boltic, AI-Powered, Workflow, Automation, Enterprises, Intelligent Integrations, Seamless Automation, Business Needs, Smarter Workflows, Faster Operations  
-**VotesCount**: 🔺395  
+**Keyword**: Boltic, AI-Powered, Workflow Automation, Enterprise Solutions, Intelligent Integrations, Seamless Automation, Business Efficiency, Smart Workflows, Tailored Operations, Next-Level Performance  
+**VotesCount**: 🔺396  
 **Featured**: No  
 **CreatedAt**: 2024-11-21 08:01 AM (UTC)  
 
@@ -77,8 +77,8 @@ categories: ["Develop"]
 **Website**: [open](https://www.producthunt.com/r/AWN7J2WOKFHKAY?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/fireside-9?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Fireside](https://ph-files.imgix.net/d421ee1b-784a-40ab-b9b2-d5164cfd011c.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: Fireside, life stories, preserve memories, video interviews, audio interviews, AI prompts, question bank, digital keepsakes, physical keepsakes, shareable memories, family heritage, storytelling, memory preservation, generational stories.  
-**VotesCount**: 🔺284  
+**Keyword**: Fireside, life stories, preserve memories, video interviews, audio interviews, AI prompts, curated questions, digital keepsakes, physical keepsakes, shareable memories, family heritage, storytelling, memory preservation.  
+**VotesCount**: 🔺294  
 **Featured**: Yes  
 **CreatedAt**: 2024-11-21 08:01 AM (UTC)  
 
@@ -91,7 +91,7 @@ categories: ["Develop"]
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/taurin?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Taurin](https://ph-files.imgix.net/49a629e5-c3f6-4ffd-8abb-3e070314817f.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **Keyword**: Taurin, AI email client, founders, inbox organization, email summaries, contact database, autonomous features, email management, meaningful connections, productivity tool  
-**VotesCount**: 🔺246  
+**VotesCount**: 🔺256  
 **Featured**: Yes  
 **CreatedAt**: 2024-11-21 08:01 AM (UTC)  
 
@@ -104,7 +104,7 @@ categories: ["Develop"]
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/notclass-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![notclass](https://ph-files.imgix.net/3a61df92-4622-4284-af65-d44113bdf862.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **Keyword**: notclass, YouTube search, AI video segments, educational videos, video content, relevant segments, AI search, video education, learn with AI, video discovery  
-**VotesCount**: 🔺192  
+**VotesCount**: 🔺203  
 **Featured**: Yes  
 **CreatedAt**: 2024-11-21 08:01 AM (UTC)  
 
@@ -117,7 +117,7 @@ categories: ["Develop"]
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/fusion-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Fusion AI](https://ph-files.imgix.net/ba5a0095-0511-49b7-bd4f-54f4d2b7936a.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **Keyword**: Fusion AI, AI models, unified team, easy-to-use platform, exceptional quality, integrated AI, enhanced results, AI dream team, seamless integration, collaborative AI.  
-**VotesCount**: 🔺163  
+**VotesCount**: 🔺170  
 **Featured**: No  
 **CreatedAt**: 2024-11-21 08:01 AM (UTC)  
 
@@ -129,8 +129,8 @@ categories: ["Develop"]
 **Website**: [open](https://www.producthunt.com/r/3FJ6FI4XZUVF3Y?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/humanlayer?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![HumanLayer](https://ph-files.imgix.net/8f16bdc6-cd02-4d6e-ae00-711b08fc3b43.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: HumanLayer, AI agents, human-in-the-loop, API, SDK, tool-calling, feedback, approvals, human assistance, AI infrastructure  
-**VotesCount**: 🔺161  
+**Keyword**: HumanLayer, AI agents, human-in-the-loop, API, SDK, tool-calling, feedback, approvals, infrastructure, collaboration, automation, human assistance.  
+**VotesCount**: 🔺164  
 **Featured**: Yes  
 **CreatedAt**: 2024-11-21 08:01 AM (UTC)  
 
