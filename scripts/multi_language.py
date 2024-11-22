@@ -280,7 +280,7 @@ def fetch_product_hunt_data():
         'es': [Product(language='es', **post) for post in sorted_posts],
         'ar': [Product(language='ar', **post) for post in sorted_posts]
     }
-    return products_by_language['zh'], products_by_language['en'], products_by_language['es'], products_by_language['ar']
+    return sorted_posts,products_by_language['zh'], products_by_language['en'], products_by_language['es'], products_by_language['ar']
 
 def extract_keywords(products):
     keywords = [keyword.strip() for product in products for keyword in product.keyword.split(',') if keyword.strip()]
@@ -325,11 +325,14 @@ def generate_markdown(products, date_str: str, language: str):
 def main():
     yesterday = datetime.now(timezone.utc) - timedelta(days=1)
     date_str = yesterday.strftime('%Y-%m-%d')
-    products_zh, products_en,products_es,products_ar = fetch_product_hunt_data()
+    posts,products_zh, products_en,products_es,products_ar = fetch_product_hunt_data()
     generate_markdown(products_zh, date_str, language='zh')
     generate_markdown(products_en, date_str, language='en')
     generate_markdown(products_es, date_str, language='es')
     generate_markdown(products_ar, date_str, language='ar')
+
+def save_csv():
+    return 
 
 if __name__ == "__main__":
     main()
