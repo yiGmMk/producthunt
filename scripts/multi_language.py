@@ -1,4 +1,5 @@
 import os
+from time import sleep
 import requests
 from datetime import datetime, timedelta, timezone
 from openai import OpenAI
@@ -273,14 +274,7 @@ def fetch_product_hunt_data():
         cursor = data['pageInfo']['endCursor']
     # 只进行一次排序
     sorted_posts = sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:top_num]
-    # 根据不同的语言创建 Product 对象
-    products_by_language = {
-        'zh': [Product(language='zh', **post) for post in sorted_posts],
-        'en': [Product(language='en', **post) for post in sorted_posts],
-        'es': [Product(language='es', **post) for post in sorted_posts],
-        'ar': [Product(language='ar', **post) for post in sorted_posts]
-    }
-    return sorted_posts,products_by_language['zh'], products_by_language['en'], products_by_language['es'], products_by_language['ar']
+    return sorted_posts
 
 def extract_keywords(products):
     keywords = [keyword.strip() for product in products for keyword in product.keyword.split(',') if keyword.strip()]
@@ -325,10 +319,17 @@ def generate_markdown(products, date_str: str, language: str):
 def main():
     yesterday = datetime.now(timezone.utc) - timedelta(days=1)
     date_str = yesterday.strftime('%Y-%m-%d')
-    posts,products_zh, products_en,products_es,products_ar = fetch_product_hunt_data()
-    #generate_markdown(products_zh, date_str, language='zh')
-    #generate_markdown(products_en, date_str, language='en')
-    #generate_markdown(products_es, date_str, language='es')
+    posts = fetch_product_hunt_data()
+    products_zh=[Product(language='zh', **post) for post in posts]
+    sleep(5)
+    products_en=[Product(language='en', **post) for post in posts]
+    sleep(5)
+    products_es=[Product(language='es', **post) for post in posts]
+    sleep(5)
+    products_ar=[Product(language='ar', **post) for post in posts]
+    generate_markdown(products_zh, date_str, language='zh')
+    generate_markdown(products_en, date_str, language='en')
+    generate_markdown(products_es, date_str, language='es')
     generate_markdown(products_ar, date_str, language='ar')
 
 def save_csv():
