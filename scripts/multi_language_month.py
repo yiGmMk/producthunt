@@ -85,7 +85,7 @@ LANGUAGE_SETTINGS = {
         "monthly_label": "Clasificación Mensual",
     },
     "ar": {
-        "title": "الأعلى شهريًا في Producthunt",
+        "title": "الأعلى شهريًا في",
         "file_path": "content/ar/post",
         "translate_task": "将以下内容翻译成阿拉伯语,只返回译文:",
         "category_mapping": {
