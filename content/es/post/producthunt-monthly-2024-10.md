@@ -1,8 +1,8 @@
 ---
 title: Lo Mejor del Mes en Producthunt | 2024-10
-date: 2024-11-22 15:18:26+0000
+date: 2024-11-22 15:25:05+0000
 image: https://ph-files.imgix.net/e96bdcbf-0179-4a0e-a07a-454b65bb02a7.png?auto=format&fit=crop&frame=1&h=512&w=1024
-tags: ["automatización", "colaboración", "Trag"]
+tags: ["tiempo real", "Trag", "compañero de revisión de código"]
 categories: ["Clasificación Mensual", "Herramientas", "Inteligencia Artificial"]
 ---
 
@@ -25,7 +25,7 @@ categories: ["Clasificación Mensual", "Herramientas", "Inteligencia Artificial"
 **Sitio web**: [Visitar](https://www.producthunt.com/r/OTWG7QWBMBQ2H7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/bolt-new?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![bolt.new](https://ph-files.imgix.net/243b8dd1-15ce-4df7-99f4-e65347e9b06f.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Palabras clave**: aplicaciones web, desarrollo sin código, ejecución en tiempo real, depuración de errores, implementación fácil, full-stack, navegador, bolt.new, creación de aplicaciones, tecnología web  
+**Palabras clave**: aplicaciones web, desarrollo, implementación, sin código, tiempo real, depuración, full-stack, navegador, ejecución, edición  
 **Votos**: 🔺1564  
 **Destacado**: Sí  
 **Fecha de creación**: 2024-10-30 08:01 AM (UTC)  
@@ -51,7 +51,7 @@ categories: ["Clasificación Mensual", "Herramientas", "Inteligencia Artificial"
 **Sitio web**: [Visitar](https://www.producthunt.com/r/5PKJOW7LF7PKWL?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/kyzon-space?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![KYZON Space](https://ph-files.imgix.net/beb6ae4b-54d2-42f5-8d3e-df16bcf1167c.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Palabras clave**: KYZON Espacio, reuniones efectivas, ideas a resultados, trabajo en documentos, compartir pantalla, imagen clara, nube integrada, simplicidad, colaboración, productividad.  
+**Palabras clave**: KYZON Espacio, reuniones efectivas, trabajo en documentos, compartir pantalla, imagen clara, nube integrada, ideas a resultados, reuniones atractivas, simplicidad, confianza.  
 **Votos**: 🔺1523  
 **Destacado**: Sí  
 **Fecha de creación**: 2024-10-18 09:01 AM (UTC)  
@@ -72,7 +72,7 @@ categories: ["Clasificación Mensual", "Herramientas", "Inteligencia Artificial"
 ---  
 
 ## 6. buzzabout  
-**Lema**: Perspectivas de la audiencia de más de 1,000 millones de discusiones en línea en 2 minutos.  
+**Lema**: Perspectivas de la audiencia de más de 1B de discusiones en línea en 2 minutos.  
 **Descripción**: Gana más clientes al comprender sus dolores, ganancias y pensamientos. Herramienta impulsada por IA que extrae información en tiempo real de miles de millones de conversaciones en línea.  
 **Sitio web**: [Visitar](https://www.producthunt.com/r/7TYJP2W2CUACRH?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/buzzabout?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
@@ -90,7 +90,7 @@ categories: ["Clasificación Mensual", "Herramientas", "Inteligencia Artificial"
 **Sitio web**: [Visitar](https://www.producthunt.com/r/ZQN6DXXIAU4CFN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/feta?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Feta](https://ph-files.imgix.net/bcd45dbd-586e-4f03-bce7-9e374499eaea.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Palabras clave**: Sin palabras clave  
+**Palabras clave**: Feta, herramienta de video, equipos de producto, equipos de ingeniería, reuniones eficientes, stand-ups, retrospectivas, sesiones de sprint, sincronización, documentación con IA, flujos de trabajo automatizados.  
 **Votos**: 🔺1236  
 **Destacado**: Sí  
 **Fecha de creación**: 2024-10-17 09:01 AM (UTC)  
@@ -98,8 +98,8 @@ categories: ["Clasificación Mensual", "Herramientas", "Inteligencia Artificial"
 ---  
 
 ## 8. General Collaboration  
-**Lema**: One inbox for all your work discussions  
-**Descripción**: GC works inside and across all the apps you use at work to find comments that need your attention, magically create a “single source of truth” for each project you’re working on, and helps you easily keep up with your teammates to see what they’re working on.  
+**Lema**: Una bandeja de entrada para todas tus discusiones laborales.  
+**Descripción**: GC trabaja dentro y a través de todas las aplicaciones que usas en el trabajo para encontrar comentarios que necesitan tu atención, crear mágicamente una “fuente única de verdad” para cada proyecto en el que estás trabajando y te ayuda a mantenerte al día con tus compañeros de equipo para ver en qué están trabajando.  
 **Sitio web**: [Visitar](https://www.producthunt.com/r/FHOTPFSKLWMXCX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/general-collaboration?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![General Collaboration](https://ph-files.imgix.net/dcebc6a1-8ef7-4d77-8cec-b11d10688178.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
@@ -116,7 +116,7 @@ categories: ["Clasificación Mensual", "Herramientas", "Inteligencia Artificial"
 **Sitio web**: [Visitar](https://www.producthunt.com/r/2V2UFNLGFPS2MB?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/readkidz?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![ReadKidz](https://ph-files.imgix.net/de7f0a33-881a-43d6-8817-8f001ff83ca1.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Palabras clave**: ReadKidz, plataforma multimedia, historias infantiles, creación de cuentos, texto e imágenes, audio integrado, narrativas, ilustraciones, contenido publicable, KDP, YouTube, inspiración a publicación, imaginación en ingresos.  
+**Palabras clave**: ReadKidz, historias infantiles, creación multimedia, plataforma de cuentos, texto e imágenes, narrativas, ilustraciones, contenido publicable, KDP, YouTube, inspiración a publicación, imaginación, ingresos.  
 **Votos**: 🔺1058  
 **Destacado**: Sí  
 **Fecha de creación**: 2024-10-28 08:01 AM (UTC)  
@@ -129,7 +129,7 @@ categories: ["Clasificación Mensual", "Herramientas", "Inteligencia Artificial"
 **Sitio web**: [Visitar](https://www.producthunt.com/r/KBUW4JDHFDGKGS?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/fullenrich-2-0?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![FullEnrich 2.0](https://ph-files.imgix.net/538ed249-eab1-4542-b34b-6e7434257232.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Palabras clave**: enriquecimiento, datos B2B, correos electrónicos, números de teléfono, FullEnrich, proveedores de datos, tasa de enriquecimiento, clientes potenciales, marketing, automatización  
+**Palabras clave**: FullEnrich, enriquecimiento, datos, B2B, correos electrónicos, números de teléfono, proveedores de datos, tasa de enriquecimiento, clientes futuros, marketing.  
 **Votos**: 🔺1055  
 **Destacado**: Sí  
 **Fecha de creación**: 2024-10-03 09:01 AM (UTC)  
