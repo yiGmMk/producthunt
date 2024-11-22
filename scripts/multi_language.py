@@ -116,6 +116,8 @@ producthunt_client_id = os.getenv('PRODUCTHUNT_CLIENT_ID')
 producthunt_client_secret = os.getenv('PRODUCTHUNT_CLIENT_SECRET')
 top_num = 10
 
+lang = os.getenv('LANGUAGE')
+
 class Product:
     def __init__(self, language: str, **kwargs):
         self.language = language
@@ -320,17 +322,16 @@ def main():
     yesterday = datetime.now(timezone.utc) - timedelta(days=1)
     date_str = yesterday.strftime('%Y-%m-%d')
     posts = fetch_product_hunt_data()
-    products_zh=[Product(language='zh', **post) for post in posts]
-    sleep(5)
-    products_en=[Product(language='en', **post) for post in posts]
-    sleep(5)
-    products_es=[Product(language='es', **post) for post in posts]
-    sleep(5)
-    products_ar=[Product(language='ar', **post) for post in posts]
-    generate_markdown(products_zh, date_str, language='zh')
-    generate_markdown(products_en, date_str, language='en')
-    generate_markdown(products_es, date_str, language='es')
-    generate_markdown(products_ar, date_str, language='ar')
+    #products_zh=[Product(language='zh', **post) for post in posts]
+    #products_en=[Product(language='en', **post) for post in posts]
+    #products_es=[Product(language='es', **post) for post in posts]
+    #products_ar=[Product(language='ar', **post) for post in posts]
+    #generate_markdown(products_zh, date_str, language='zh')
+    #generate_markdown(products_en, date_str, language='en')
+    #generate_markdown(products_es, date_str, language='es')
+    #generate_markdown(products_ar, date_str, language='ar')
+    products=[Product(language=lang, **post) for post in posts]
+    generate_markdown(products, date_str, language=lang)
 
 def save_csv():
     return 
