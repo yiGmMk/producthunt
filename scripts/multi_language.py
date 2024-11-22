@@ -83,7 +83,7 @@ LANGUAGE_SETTINGS = {
     "ar": {
         "title": "الأكثر رواجًا اليوم",
         "file_path": "content/ar/post",
-        "translate_task": "Translate the following text to Arabic,only return the translation:",
+        "translate_task": "将以下内容翻译成阿拉伯语,只需返回译文:",
         "category_mapping": {
             "الذكاء الاصطناعي": ["الذكاء الاصطناعي", "AI", "تعلم الآلة"],
             "الأدوات": ["أداة", "إنتاجية", "كفاءة", "Notion"],
@@ -101,7 +101,7 @@ LANGUAGE_SETTINGS = {
         "featured_label": "مميز",
         "featured_mapping": {"yes": "نعم", "no": "لا"},
         "created_at_label": "تاريخ الإنشاء",
-        "keyword_prompt": "Generate suitable short keywords in Arabic based on the product information provided, separated by commas.\n\nName: {name}\nTagline: {tagline}\nDescription: {description}",
+        "keyword_prompt": "根据以下内容生成简短的适合的阿拉伯语关键词，用英文逗号分隔开：\n\n产品名称：{name}\n\n标语：{tagline}\n\n描述：{description}",
         "default_keyword": "لا توجد كلمات مفتاحية"
     }
 }
