@@ -279,8 +279,10 @@ def fetch_product_hunt_data():
         has_next_page = data['pageInfo']['hasNextPage']
         cursor = data['pageInfo']['endCursor']
     return [Product(language='zh', **post) for post in sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:top_num]], \
-           [Product(language='en', **post) for post in sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:top_num]]
-
+           [Product(language='en', **post) for post in sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:top_num]],\
+           [Product(language='es', **post) for post in sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:top_num]],\
+           [Product(language='ar', **post) for post in sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:top_num]]
+           
 def extract_keywords(products):
     keywords = [keyword.strip() for product in products for keyword in product.keyword.split(',') if keyword.strip()]
     return keywords
@@ -326,11 +328,11 @@ def generate_markdown(products, date_str: str, language: str):
 def main():
     yesterday = datetime.now(timezone.utc) - timedelta(days=1)
     date_str = yesterday.strftime('%Y-%m-%d')
-    products_zh, products_en = fetch_product_hunt_data()
+    products_zh, products_en,products_es,products_ar = fetch_product_hunt_data()
     generate_markdown(products_zh, date_str, language='zh')
     generate_markdown(products_en, date_str, language='en')
-    generate_markdown(products_en, date_str, language='es')
-    generate_markdown(products_en, date_str, language='ar')
+    generate_markdown(products_es, date_str, language='es')
+    generate_markdown(products_ar, date_str, language='ar')
 
 if __name__ == "__main__":
     main()
