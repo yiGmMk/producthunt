@@ -1,8 +1,8 @@
 ---
 title: Producthunt Monthly Top | 2024-10
-date: 2024-11-22 08:49:32+0000
+date: 2024-11-22 09:05:30+0000
 image: https://ph-files.imgix.net/e96bdcbf-0179-4a0e-a07a-454b65bb02a7.png?auto=format&fit=crop&frame=1&h=512&w=1024
-tags: ["developer tools", "AI code review", "code linter"]
+tags: ["No keywords", "AI code review", "code linter"]
 categories: ["Monthly"]
 ---
 
@@ -12,7 +12,7 @@ categories: ["Monthly"]
 **Website**: [open](https://www.producthunt.com/r/D5IRI4EG7YP5QC?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/trag?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Trag](https://ph-files.imgix.net/e96bdcbf-0179-4a0e-a07a-454b65bb02a7.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: AI code review, code linter, pull request review, automation, pattern recognition, plain English rules, software development, coding companion, code quality, review automation  
+**Keyword**: AI code review, code linter, pull request review, automation, pattern recognition, plain English rules, software development, coding standards, code quality, Trag  
 **VotesCount**: 🔺1603  
 **Featured**: Yes  
 **CreatedAt**: 2024-10-21 07:01 AM (UTC)  
@@ -25,7 +25,7 @@ categories: ["Monthly"]
 **Website**: [open](https://www.producthunt.com/r/OTWG7QWBMBQ2H7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/bolt-new?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![bolt.new](https://ph-files.imgix.net/243b8dd1-15ce-4df7-99f4-e65347e9b06f.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: bolt.new, full-stack web apps, prompt, run, edit, deploy, real-time execution, debug errors, no code, browser-based, functional app  
+**Keyword**: No keywords  
 **VotesCount**: 🔺1564  
 **Featured**: Yes  
 **CreatedAt**: 2024-10-30 07:01 AM (UTC)  
@@ -38,7 +38,7 @@ categories: ["Monthly"]
 **Website**: [open](https://www.producthunt.com/r/3FA5V4ZO5BQXTJ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/video-sdk-3-0?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Video SDK 3.0](https://ph-files.imgix.net/55cdcd37-9c80-44e7-ab78-f40ae04c98ec.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: Video SDK, AI characters, real-time interactions, multimodal, CharacterSDK, contextual understanding, intelligent companions, developer tools, personalized user experience, integration, workflows.  
+**Keyword**: No keywords  
 **VotesCount**: 🔺1553  
 **Featured**: Yes  
 **CreatedAt**: 2024-10-01 07:01 AM (UTC)  
@@ -64,7 +64,7 @@ categories: ["Monthly"]
 **Website**: [open](https://www.producthunt.com/r/TBWEUYRNDGSED5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/apipark?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![APIPark](https://ph-files.imgix.net/fd456aee-5928-49af-967f-2c740f77bd65.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: APIPark, open source, AI gateway, API developer portal, manage AI, integrate API, deploy services, AI models, API services, seamless connection, easy invocation, developer tools, AI capabilities.  
+**Keyword**: APIPark, open source, AI gateway, API developer portal, manage AI, integrate API, deploy services, AI models, API services, seamless connection, easy invocation, developer tools.  
 **VotesCount**: 🔺1483  
 **Featured**: Yes  
 **CreatedAt**: 2024-10-28 07:01 AM (UTC)  
@@ -90,7 +90,7 @@ categories: ["Monthly"]
 **Website**: [open](https://www.producthunt.com/r/ZQN6DXXIAU4CFN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/feta?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Feta](https://ph-files.imgix.net/bcd45dbd-586e-4f03-bce7-9e374499eaea.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: Feta, video-calling tool, product teams, engineering teams, stand-ups, retros, sprint sessions, AI-powered documentation, automated workflows, seamless communication, team collaboration.  
+**Keyword**: No keywords  
 **VotesCount**: 🔺1240  
 **Featured**: Yes  
 **CreatedAt**: 2024-10-17 07:01 AM (UTC)  
@@ -103,7 +103,7 @@ categories: ["Monthly"]
 **Website**: [open](https://www.producthunt.com/r/FHOTPFSKLWMXCX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/general-collaboration?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![General Collaboration](https://ph-files.imgix.net/dcebc6a1-8ef7-4d77-8cec-b11d10688178.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: collaboration, productivity, project management, team communication, single source of truth, work discussions, app integration, task tracking, team collaboration, attention management  
+**Keyword**: collaboration, work discussions, single source of truth, project management, team communication, productivity, app integration, comments tracking, teamwork, workplace efficiency  
 **VotesCount**: 🔺1106  
 **Featured**: Yes  
 **CreatedAt**: 2024-10-08 07:01 AM (UTC)  
@@ -129,7 +129,7 @@ categories: ["Monthly"]
 **Website**: [open](https://www.producthunt.com/r/KBUW4JDHFDGKGS?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/fullenrich-2-0?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![FullEnrich 2.0](https://ph-files.imgix.net/538ed249-eab1-4542-b34b-6e7434257232.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Keyword**: FullEnrich, B2B contact enrichment, waterfall enrichment, email enrichment, phone number enrichment, data aggregation, contact data, customer outreach, data providers, enrichment rates  
+**Keyword**: FullEnrich, waterfall enrichment, email enrichment, phone number enrichment, B2B contact data, data aggregation, contact enrichment, customer outreach, data providers, enrichment rates  
 **VotesCount**: 🔺1055  
 **Featured**: Yes  
 **CreatedAt**: 2024-10-03 07:01 AM (UTC)  
