@@ -326,9 +326,9 @@ def main():
     yesterday = datetime.now(timezone.utc) - timedelta(days=1)
     date_str = yesterday.strftime('%Y-%m-%d')
     posts,products_zh, products_en,products_es,products_ar = fetch_product_hunt_data()
-    generate_markdown(products_zh, date_str, language='zh')
-    generate_markdown(products_en, date_str, language='en')
-    generate_markdown(products_es, date_str, language='es')
+    #generate_markdown(products_zh, date_str, language='zh')
+    #generate_markdown(products_en, date_str, language='en')
+    #generate_markdown(products_es, date_str, language='es')
     generate_markdown(products_ar, date_str, language='ar')
 
 def save_csv():
