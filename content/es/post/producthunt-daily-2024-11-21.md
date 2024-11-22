@@ -1,8 +1,8 @@
 ---
 title: Tendencias de Hoy | 2024-11-22
-date: 2024-11-22 10:32:02+0000
+date: 2024-11-22 14:15:25+0000
 image: https://ph-files.imgix.net/b885d93b-af75-4bf9-933d-08f40991c1ce.png?auto=format&fit=crop&frame=1&h=512&w=1024
-tags: ["Sin palabras clave", "Lovable", "ingeniero full stack"]
+tags: ["Sin palabras clave", "Lovable", "ingeniero de software"]
 ---
 
 ## 1. Lovable  
@@ -11,8 +11,8 @@ tags: ["Sin palabras clave", "Lovable", "ingeniero full stack"]
 **Sitio web**: [Visitar](https://www.producthunt.com/r/VKFOBFFX4XP4DK?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/lovable?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Lovable](https://ph-files.imgix.net/b885d93b-af75-4bf9-933d-08f40991c1ce.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Palabras clave**: Lovable, ingeniero full stack, IA, desarrollo de aplicaciones, autenticación, almacenamiento de datos, sincronización GitHub, despliegue con un clic, 20 veces más rápido, 50,000 usuarios, 140 países, 5 estrellas, 2024.  
-**Votos**: 🔺911  
+**Palabras clave**: Lovable, ingeniero de software, IA, desarrollo de aplicaciones, autenticación, almacenamiento de datos, sincronización GitHub, despliegue con un clic, 20 veces más rápido, 50,000 usuarios, 140 países, 5 estrellas, 2024.  
+**Votos**: 🔺965  
 **Destacado**: Sí  
 **Fecha de creación**: 2024-11-21 09:01 AM (UTC)  
 
@@ -25,7 +25,7 @@ tags: ["Sin palabras clave", "Lovable", "ingeniero full stack"]
 **Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/maxim?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Maxim](https://ph-files.imgix.net/5885b7d2-e48c-4c12-ae62-9e8f96329af0.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **Palabras clave**: Maxim, evaluación, mejora, productos AI, 5x más rápido, plataforma, observabilidad, pruebas, calidad, ciclo de vida AI, experimentación, pruebas previas al lanzamiento, monitoreo de producción.  
-**Votos**: 🔺746  
+**Votos**: 🔺748  
 **Destacado**: No  
 **Fecha de creación**: 2024-11-21 09:01 AM (UTC)  
 
@@ -37,21 +37,21 @@ tags: ["Sin palabras clave", "Lovable", "ingeniero full stack"]
 **Sitio web**: [Visitar](https://www.producthunt.com/r/NVYT26XX3NIYBN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/desktop-recording-sdk-by-recall-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Desktop Recording SDK by Recall.ai](https://ph-files.imgix.net/1a9d8505-0f0d-4b50-8b18-1a0d33771e59.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**Palabras clave**: Sin palabras clave  
-**Votos**: 🔺694  
+**Palabras clave**: SDK de grabación, Recall.ai, acceso rápido, datos en tiempo real, sin bots, grabaciones, transcripciones, metadatos, integración, aplicaciones Electron, Zoom, Google Meet, Microsoft Teams.  
+**Votos**: 🔺692  
 **Destacado**: Sí  
 **Fecha de creación**: 2024-11-21 09:01 AM (UTC)  
 
 ---  
 
 ## 4. Embedded Wallet SDK  
-**Lema**: Minimal coding for you, one-click wallet setup for users.  
+**Lema**: Codificación mínima para ti, configuración de billetera con un clic para los usuarios.  
 **Descripción**: Embedded wallets turn Web3 onboarding into a familiar Web2-like experience via email, social, or passkey login. Ideal for developers and businesses making Web3 easy for everyday users—they won’t even know it’s blockchain!  
 **Sitio web**: [Visitar](https://www.producthunt.com/r/Q342CWB3EC2X6F?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/embedded-wallet-sdk?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Embedded Wallet SDK](https://ph-files.imgix.net/f1c88ded-fb21-459f-9d9c-3e9db904e3c4.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **Palabras clave**: Sin palabras clave  
-**Votos**: 🔺455  
+**Votos**: 🔺451  
 **Destacado**: No  
 **Fecha de creación**: 2024-11-21 09:01 AM (UTC)  
 
@@ -71,13 +71,13 @@ tags: ["Sin palabras clave", "Lovable", "ingeniero full stack"]
 ---  
 
 ## 6. Fireside  
-**Lema**: Capture Stories of a Lifetime, Preserve for Generations  
+**Lema**: Capture stories of a lifetime, preserve for generations  
 **Descripción**: Fireside helps you capture and preserve loved ones' life stories. Record video/audio interviews with AI-guided prompts, access a curated question bank, and create digital and physical keepsakes. Keep memories safe and shareable, forever.  
 **Sitio web**: [Visitar](https://www.producthunt.com/r/AWN7J2WOKFHKAY?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/fireside-9?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Fireside](https://ph-files.imgix.net/d421ee1b-784a-40ab-b9b2-d5164cfd011c.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **Palabras clave**: Sin palabras clave  
-**Votos**: 🔺300  
+**Votos**: 🔺308  
 **Destacado**: Sí  
 **Fecha de creación**: 2024-11-21 09:01 AM (UTC)  
 
@@ -90,7 +90,7 @@ tags: ["Sin palabras clave", "Lovable", "ingeniero full stack"]
 **Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/taurin?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Taurin](https://ph-files.imgix.net/49a629e5-c3f6-4ffd-8abb-3e070314817f.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **Palabras clave**: Sin palabras clave  
-**Votos**: 🔺257  
+**Votos**: 🔺266  
 **Destacado**: Sí  
 **Fecha de creación**: 2024-11-21 09:01 AM (UTC)  
 
@@ -103,7 +103,7 @@ tags: ["Sin palabras clave", "Lovable", "ingeniero full stack"]
 **Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/notclass-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![notclass](https://ph-files.imgix.net/3a61df92-4622-4284-af65-d44113bdf862.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **Palabras clave**: Sin palabras clave  
-**Votos**: 🔺202  
+**Votos**: 🔺207  
 **Destacado**: Sí  
 **Fecha de creación**: 2024-11-21 09:01 AM (UTC)  
 
@@ -124,12 +124,12 @@ tags: ["Sin palabras clave", "Lovable", "ingeniero full stack"]
 
 ## 10. HumanLayer  
 **Lema**: Human-in-the-loop infra for AI agents  
-**Descripción**: HumanLayer is an API and SDK that enables tool-calling AI Agents to contact humans for help, feedback, and approvals.  
+**Descripción**: HumanLayer es una API y SDK que permite a los agentes de IA que llaman a herramientas contactar a humanos para obtener ayuda, comentarios y aprobaciones.  
 **Sitio web**: [Visitar](https://www.producthunt.com/r/3FJ6FI4XZUVF3Y?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/humanlayer?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![HumanLayer](https://ph-files.imgix.net/8f16bdc6-cd02-4d6e-ae00-711b08fc3b43.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **Palabras clave**: Sin palabras clave  
-**Votos**: 🔺163  
+**Votos**: 🔺166  
 **Destacado**: Sí  
 **Fecha de creación**: 2024-11-21 09:01 AM (UTC)  
 
