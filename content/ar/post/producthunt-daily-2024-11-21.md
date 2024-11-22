@@ -1,8 +1,8 @@
 ---
 title: الأكثر رواجًا اليوم | 2024-11-22
-date: 2024-11-22 13:59:08+0000
+date: 2024-11-22 14:15:25+0000
 image: https://ph-files.imgix.net/b885d93b-af75-4bf9-933d-08f40991c1ce.png?auto=format&fit=crop&frame=1&h=512&w=1024
-tags: ["لا توجد كلمات مفتاحية"]
+tags: ["لا توجد كلمات مفتاحية", "توريين", "عميل بريد إلكتروني"]
 ---
 
 ## 1. Lovable  
@@ -89,7 +89,7 @@ tags: ["لا توجد كلمات مفتاحية"]
 **الموقع الإلكتروني**: [زيارة](https://www.producthunt.com/r/UKBJNAP6KOPTPE?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [عرض على Product Hunt](https://www.producthunt.com/posts/taurin?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Taurin](https://ph-files.imgix.net/49a629e5-c3f6-4ffd-8abb-3e070314817f.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**الكلمات المفتاحية**: لا توجد كلمات مفتاحية  
+**الكلمات المفتاحية**: توريين, عميل بريد إلكتروني, مؤسسين, تجربة بريد مبسطة, تنظيم صندوق الوارد, ملخصات, قاعدة بيانات جهات الاتصال, ميزات مستقلة, إدارة البريد الإلكتروني, بناء علاقات ذات مغزى  
 **عدد الأصوات**: 🔺266  
 **مميز**: نعم  
 **تاريخ الإنشاء**: 2024-11-21 11:01 AM (UTC)  
