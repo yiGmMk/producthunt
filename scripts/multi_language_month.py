@@ -61,7 +61,7 @@ LANGUAGE_SETTINGS = {
     "es": {
         "title": "Lo Mejor del Mes en Producthunt",
         "file_path": "content/es/post",
-        "translate_task": "Traduce el siguiente texto al español.",
+        "translate_task": "Translate the following text to Spanish.",
         "category_mapping": {
             "Inteligencia Artificial": ["AI", "Inteligencia Artificial", "aprendizaje automático"],
             "Herramientas": ["herramienta", "productividad", "eficiencia", "Notion"],
@@ -86,7 +86,7 @@ LANGUAGE_SETTINGS = {
     "ar": {
         "title": "الأعلى شهريًا في Producthunt",
         "file_path": "content/ar/post",
-        "translate_task": "ترجم النص التالي إلى العربية.",
+        "translate_task": "Translate the following text to Arabic.",
         "category_mapping": {
             "الذكاء الاصطناعي": ["الذكاء الاصطناعي", "AI", "تعلم الآلة"],
             "الأدوات": ["أداة", "إنتاجية", "كفاءة", "Notion"],

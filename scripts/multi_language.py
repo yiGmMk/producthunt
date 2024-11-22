@@ -59,7 +59,7 @@ LANGUAGE_SETTINGS = {
     "es": {
         "title": "Tendencias de Hoy",
         "file_path": "content/es/post",
-        "translate_task": "Traduce el siguiente texto al español.",
+        "translate_task": "Translate the following text to Spanish.",
         "category_mapping": {
             "Inteligencia Artificial": ["AI", "Inteligencia Artificial", "aprendizaje automático"],
             "Herramientas": ["herramienta", "productividad", "eficiencia", "Notion"],
@@ -83,7 +83,7 @@ LANGUAGE_SETTINGS = {
     "ar": {
         "title": "الأكثر رواجًا اليوم",
         "file_path": "content/ar/post",
-        "translate_task": "ترجم النص التالي إلى العربية.",
+        "translate_task": "Translate the following text to Arabic.",
         "category_mapping": {
             "الذكاء الاصطناعي": ["الذكاء الاصطناعي", "AI", "تعلم الآلة"],
             "الأدوات": ["أداة", "إنتاجية", "كفاءة", "Notion"],
