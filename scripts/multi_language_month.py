@@ -11,7 +11,7 @@ LANGUAGE_SETTINGS = {
     "zh": {
         "title": "本月热榜",
         "file_path": "content/zh-cn/post",
-        "translate_task": "将以下内容翻译成简体中文,只需返回译文:",
+        "translate_task": "将以下内容翻译成简体中文,只返回译文:",
         "category_mapping": {
             "人工智能": ["AI", "人工智能", "机器学习"],
             "工具": ["工具", "生产力工具", "效率", "Notion"],
@@ -86,7 +86,7 @@ LANGUAGE_SETTINGS = {
     "ar": {
         "title": "الأعلى شهريًا في Producthunt",
         "file_path": "content/ar/post",
-        "translate_task": "将以下内容翻译成阿拉伯语,只需返回译文:",
+        "translate_task": "将以下内容翻译成阿拉伯语,只返回译文:",
         "category_mapping": {
             "الذكاء الاصطناعي": ["الذكاء الاصطناعي", "AI", "تعلم الآلة"],
             "الأدوات": ["أداة", "إنتاجية", "كفاءة", "Notion"],
@@ -278,11 +278,17 @@ def fetch_product_hunt_data():
         all_posts.extend(posts)
         has_next_page = data['pageInfo']['hasNextPage']
         cursor = data['pageInfo']['endCursor']
-    return [Product(language='zh', **post) for post in sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:top_num]], \
-           [Product(language='en', **post) for post in sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:top_num]],\
-           [Product(language='es', **post) for post in sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:top_num]],\
-           [Product(language='ar', **post) for post in sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:top_num]]
-           
+    
+    # 只进行一次排序
+    sorted_posts = sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:top_num]
+    # 根据不同的语言创建 Product 对象
+    products_by_language = {
+        'zh': [Product(language='zh', **post) for post in sorted_posts],
+        'en': [Product(language='en', **post) for post in sorted_posts],
+        'es': [Product(language='es', **post) for post in sorted_posts],
+        'ar': [Product(language='ar', **post) for post in sorted_posts]
+    }
+    return products_by_language['zh'], products_by_language['en'], products_by_language['es'], products_by_language['ar']       
 def extract_keywords(products):
     keywords = [keyword.strip() for product in products for keyword in product.keyword.split(',') if keyword.strip()]
     return keywords
