@@ -1,9 +1,8 @@
 ---
 title: الأكثر رواجًا اليوم | 2024-11-22
-date: 2024-11-22 09:04:43+0000
+date: 2024-11-22 09:19:37+0000
 image: https://ph-files.imgix.net/b885d93b-af75-4bf9-933d-08f40991c1ce.png?auto=format&fit=crop&frame=1&h=512&w=1024
-tags: ["لا توجد كلمات مفتاحية", "notclass", "بحث"]
-categories: ["الذكاء الاصطناعي"]
+tags: ["لا توجد كلمات مفتاحية"]
 ---
 
 ## 1. Lovable  
@@ -39,7 +38,7 @@ categories: ["الذكاء الاصطناعي"]
 **Product Hunt**: [عرض على Product Hunt](https://www.producthunt.com/posts/desktop-recording-sdk-by-recall-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Desktop Recording SDK by Recall.ai](https://ph-files.imgix.net/1a9d8505-0f0d-4b50-8b18-1a0d33771e59.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **الكلمات المفتاحية**: لا توجد كلمات مفتاحية  
-**عدد الأصوات**: 🔺687  
+**عدد الأصوات**: 🔺686  
 **مميز**: نعم  
 **تاريخ الإنشاء**: 2024-11-21 11:01 AM (UTC)  
 
@@ -52,14 +51,14 @@ categories: ["الذكاء الاصطناعي"]
 **Product Hunt**: [عرض على Product Hunt](https://www.producthunt.com/posts/embedded-wallet-sdk?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Embedded Wallet SDK](https://ph-files.imgix.net/f1c88ded-fb21-459f-9d9c-3e9db904e3c4.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **الكلمات المفتاحية**: لا توجد كلمات مفتاحية  
-**عدد الأصوات**: 🔺460  
+**عدد الأصوات**: 🔺459  
 **مميز**: لا  
 **تاريخ الإنشاء**: 2024-11-21 11:01 AM (UTC)  
 
 ---  
 
 ## 5. Boltic  
-**الشعار**: AI-Powered Workflow & Automation for Enterprises  
+**الشعار**: أتمتة وتدفق عمل مدعوم بالذكاء الاصطناعي للمؤسسات  
 **الوصف**: With AI-powered workflows and automation capabilities, Boltic takes enterprise operations to the next level! From intelligent integrations to seamless automation, Boltic ensures your workflows are smarter, faster, and perfectly tailored to your business needs.  
 **الموقع الإلكتروني**: [زيارة](https://www.producthunt.com/r/WOPIIQFKPDVHGU?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [عرض على Product Hunt](https://www.producthunt.com/posts/boltic-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
@@ -78,7 +77,7 @@ categories: ["الذكاء الاصطناعي"]
 **Product Hunt**: [عرض على Product Hunt](https://www.producthunt.com/posts/fireside-9?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Fireside](https://ph-files.imgix.net/d421ee1b-784a-40ab-b9b2-d5164cfd011c.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **الكلمات المفتاحية**: لا توجد كلمات مفتاحية  
-**عدد الأصوات**: 🔺295  
+**عدد الأصوات**: 🔺293  
 **مميز**: نعم  
 **تاريخ الإنشاء**: 2024-11-21 11:01 AM (UTC)  
 
@@ -91,7 +90,7 @@ categories: ["الذكاء الاصطناعي"]
 **Product Hunt**: [عرض على Product Hunt](https://www.producthunt.com/posts/taurin?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Taurin](https://ph-files.imgix.net/49a629e5-c3f6-4ffd-8abb-3e070314817f.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **الكلمات المفتاحية**: لا توجد كلمات مفتاحية  
-**عدد الأصوات**: 🔺257  
+**عدد الأصوات**: 🔺255  
 **مميز**: نعم  
 **تاريخ الإنشاء**: 2024-11-21 11:01 AM (UTC)  
 
@@ -99,38 +98,38 @@ categories: ["الذكاء الاصطناعي"]
 
 ## 8. notclass  
 **الشعار**: Search YouTube videos using AI and get relevant segments  
-**الوصف**: ابحث في آلاف المحتويات التعليمية المرئية واحصل على ما تبحث عنه بالضبط. لقد قمنا بإدراج عشرات الآلاف من مقاطع الفيديو التعليمية على يوتيوب، والآن يمكنك الحصول على جميع المقاطع ذات الصلة التي تحتاجها!  
+**الوصف**: Search through thousands of educational video content and get exactly what you're looking for. We've embedded tens of thousands of educational youtube videos, and now you can get all the relevant segments that you need!  
 **الموقع الإلكتروني**: [زيارة](https://www.producthunt.com/r/OR2W4POVKSLMP5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [عرض على Product Hunt](https://www.producthunt.com/posts/notclass-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![notclass](https://ph-files.imgix.net/3a61df92-4622-4284-af65-d44113bdf862.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**الكلمات المفتاحية**: notclass, بحث, فيديوهات يوتيوب, الذكاء الاصطناعي, محتوى تعليمي, مقاطع ذات صلة, تعليم, فيديوهات تعليمية, تعليم عبر الإنترنت, تعليم مرئي  
-**عدد الأصوات**: 🔺203  
+**الكلمات المفتاحية**: لا توجد كلمات مفتاحية  
+**عدد الأصوات**: 🔺201  
 **مميز**: نعم  
 **تاريخ الإنشاء**: 2024-11-21 11:01 AM (UTC)  
 
 ---  
 
 ## 9. Fusion AI  
-**الشعار**: تجمع Fusion AI أفضل نماذج الذكاء الاصطناعي للعمل كفريق موحد.  
-**الوصف**: تدمج Fusion AI نماذج الذكاء الاصطناعي الرائدة في منصة واحدة سهلة الاستخدام، مما يوفر جودة استثنائية دون عناء. نحن نجعل الذكاء الاصطناعي يعمل كفريق موحد، مما يقدم نتائج محسّنة لا يمكنك الحصول عليها في أي مكان آخر. اعتبرها فريق أحلامك من الذكاء الاصطناعي.  
+**الشعار**: تجمع Fusion AI أفضل نماذج الذكاء الاصطناعي للعمل كفريق موحد  
+**الوصف**: Fusion AI integrates leading AI models into a single, easy-to-use platform, providing exceptional quality without the hassle. We make AIs work as a unified team, delivering enhanced results you can't get anywhere else. Think of it as your AI dream team.  
 **الموقع الإلكتروني**: [زيارة](https://www.producthunt.com/r/K7XFG6VQR5JXNB?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [عرض على Product Hunt](https://www.producthunt.com/posts/fusion-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Fusion AI](https://ph-files.imgix.net/ba5a0095-0511-49b7-bd4f-54f4d2b7936a.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
-**الكلمات المفتاحية**: ذكاء اصطناعي, نماذج رائدة, منصة موحدة, جودة استثنائية, فريق موحد, نتائج محسنة, تجربة سهلة, فريق أحلام الذكاء الاصطناعي  
-**عدد الأصوات**: 🔺170  
+**الكلمات المفتاحية**: لا توجد كلمات مفتاحية  
+**عدد الأصوات**: 🔺169  
 **مميز**: لا  
 **تاريخ الإنشاء**: 2024-11-21 11:01 AM (UTC)  
 
 ---  
 
 ## 10. HumanLayer  
-**الشعار**: البنية التحتية التي تتضمن الإنسان في حلقة العمل لوكلاء الذكاء الاصطناعي  
-**الوصف**: HumanLayer هو واجهة برمجة تطبيقات (API) ومجموعة أدوات تطوير البرمجيات (SDK) تتيح لوكلاء الذكاء الاصطناعي الذين يستدعون الأدوات الاتصال بالبشر للحصول على المساعدة والتعليقات والموافقات.  
+**الشعار**: Human-in-the-loop infra for AI agents  
+**الوصف**: HumanLayer is an API and SDK that enables tool-calling AI Agents to contact humans for help, feedback, and approvals.  
 **الموقع الإلكتروني**: [زيارة](https://www.producthunt.com/r/3FJ6FI4XZUVF3Y?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [عرض على Product Hunt](https://www.producthunt.com/posts/humanlayer?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![HumanLayer](https://ph-files.imgix.net/8f16bdc6-cd02-4d6e-ae00-711b08fc3b43.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
 **الكلمات المفتاحية**: لا توجد كلمات مفتاحية  
-**عدد الأصوات**: 🔺164  
+**عدد الأصوات**: 🔺163  
 **مميز**: نعم  
 **تاريخ الإنشاء**: 2024-11-21 11:01 AM (UTC)  
 
