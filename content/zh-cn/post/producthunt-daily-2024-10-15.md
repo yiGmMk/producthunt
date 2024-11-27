@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/5400faef-0b8c-45ff-81dc-7b6c7bc267e8.png?auto=
 tags: ["人工智能", "Stripe小部件", "收入信息"]
 categories: ["人工智能", "开发"]
 ---
-# PH今日热榜 | 2024-10-15
 
 ## 1. Widgets for Stripe
 **标语**：让我们以最酷的方式来快速了解你的收入信息。  

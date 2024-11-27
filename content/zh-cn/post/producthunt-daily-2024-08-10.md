@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/3a5b777e-9da9-4bd2-917d-1d8dc606598a.png?auto=
 tags: ["人工智能", "AI助手", "浏览器自动化"]
 categories: ["人工智能", "开发"]
 ---
-# PH今日热榜 | 2024-08-10
 
 ## 1. Bardeen 3.0
 **标语**：浏览器的AI助手  

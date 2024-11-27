@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/59d9ceb4-e523-40bf-8abb-0adba4ebfe26.png?auto=
 tags: ["人工智能", "免费应用", "健身应用"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-11-11
 
 ## 1. Genbler
 **标语**：为内容创作者提供的照片和视频人工智能软件即服务解决方案  

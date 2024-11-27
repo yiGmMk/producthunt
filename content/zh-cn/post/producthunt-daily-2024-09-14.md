@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/1485d38f-2168-4cf1-abba-aa826df30fca.png?auto=
 tags: ["人工智能", "压力管理", "简单易用"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-09-14
 
 ## 1. AIPhone.AI
 **标语**：一款支持实时翻译的人工智能电话应用程序  

@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/eb6e680f-fe12-4397-a09e-ba3518559e9d.png?auto=
 tags: ["人工智能", "免费", "个性化内容"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-08-25
 
 ## 1. WP Adminify
 **标语**：全面的WordPress后台定制  

@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/b64dd867-0400-4895-ab79-c6d4e489c6e3.png?auto=
 tags: ["人工智能", "自动化", "数据库"]
 categories: ["人工智能", "工具", "开发"]
 ---
-# PH今日热榜 | 2024-10-23
 
 ## 1. Softr for Notion
 **标语**：将 Notion 数据库转变为门户网站和应用程序，无需编码。  

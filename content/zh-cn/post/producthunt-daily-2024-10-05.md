@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/5f7359ee-1397-42f2-b92d-d85bc8ba83a2.png?auto=
 tags: ["人工智能", "用户体验", "数据分析"]
 categories: ["人工智能", "工具"]
 ---
-# PH今日热榜 | 2024-10-05
 
 ## 1. JoggAI
 **标语**：使用人工智能在几分钟内制作引人入胜的视频广告  

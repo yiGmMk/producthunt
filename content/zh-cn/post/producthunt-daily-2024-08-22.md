@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/61979f24-0992-4467-acf3-1b3b2a581a9a.png?auto=
 tags: ["设计师", "财务研究", "应用程序"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-08-22
 
 ## 1. D-ID Video Translate
 **标语**：即时视频翻译  

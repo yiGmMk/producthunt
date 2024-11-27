@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/221dfeac-64ff-4768-92b1-dba8a06c9a21.jpeg?auto
 tags: ["人工智能", "提高效率", "快速求职"]
 categories: ["人工智能", "开发"]
 ---
-# PH今日热榜 | 2024-08-24
 
 ## 1. Paperguide
 **标语**：轻松使用人工智能发现、阅读、撰写和管理研究资料。  

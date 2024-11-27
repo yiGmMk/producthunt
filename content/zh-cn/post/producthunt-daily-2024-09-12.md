@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/6739c243-6b85-4127-93f9-a5615c244da9.png?auto=
 tags: ["人工智能", "应用程序", "招聘工具"]
 categories: ["人工智能", "工具"]
 ---
-# PH今日热榜 | 2024-09-12
 
 ## 1. Serra (YC S23)
 **标语**：利用人工智能寻找最佳人才  

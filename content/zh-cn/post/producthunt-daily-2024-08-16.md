@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/16fd17a0-8213-45a4-8ddc-d30044e50a71.png?auto=
 tags: ["开发工具", "人工智能", "数据分析"]
 categories: ["人工智能", "工具"]
 ---
-# PH今日热榜 | 2024-08-16
 
 ## 1. Conversational Replicas by Tavus
 **标语**：构建实时数字双胞胎，它们能够说话、观察和听见。  

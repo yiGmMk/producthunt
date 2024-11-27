@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/b1bdf9e6-1b94-46dd-8936-a2b247c59111.png?auto=
 tags: ["人工智能", "目标管理", "团队协作"]
 categories: ["人工智能", "工具"]
 ---
-# PH今日热榜 | 2024-08-26
 
 ## 1. Seven24.ai
 **标语**：收集反馈并将其转化为任务  

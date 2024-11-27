@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/ef4c9fc4-b156-4f7a-9431-5d4c5416c377.jpeg?auto
 tags: ["人工智能", "数据分析", "互动演示"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-09-18
 
 ## 1. Supademo 3.0
 **标语**：令人愉悦的AI驱动互动演示——现在无需登录即可使用！  

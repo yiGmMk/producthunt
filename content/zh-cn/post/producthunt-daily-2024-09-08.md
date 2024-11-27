@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/0989c380-7c29-4db1-a2f9-0a1e2f61d4fa.png?auto=
 tags: ["人工智能", "无代码", "工单管理"]
 categories: ["人工智能", "工具"]
 ---
-# PH今日热榜 | 2024-09-08
 
 ## 1. Trupeer.ai
 **标语**：将屏幕录制转换为专业级的产品视频和文档  

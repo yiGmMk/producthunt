@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/e57bc0a3-0c1f-494f-bd78-9766601f8ce0.png?auto=
 tags: ["Polar", "开源", "货币化平台"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-09-06
 
 ## 1. Polar
 **标语**：一个面向开发者的开源盈利平台  

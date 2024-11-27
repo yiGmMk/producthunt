@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/81d2faf4-ae5e-43f6-ba10-2abbac6debbb.jpeg?auto
 tags: ["人工智能", "自动化工具", "创意设计"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-10-07
 
 ## 1. Open Agent Cloud (Antler F24)
 **标语**：从屏幕录制生成无代码自动化代理  

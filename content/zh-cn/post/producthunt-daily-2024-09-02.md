@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/a4cdecd1-1a14-47f2-8365-f00eff663364.png?auto=
 tags: ["学习工具", "快速设置", "网站构建"]
 categories: ["人工智能", "工具"]
 ---
-# PH今日热榜 | 2024-09-02
 
 ## 1. QWiser
 **标语**：更聪明的学习方法  

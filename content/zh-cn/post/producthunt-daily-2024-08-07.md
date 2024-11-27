@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/63dd8582-072d-4c8c-9600-e873880e3bdc.png?auto=
 tags: ["人工智能", "思维捕捉", "职业发展"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-08-07
 
 ## 1. Me.bot
 **标语**：将你的想法变成一个人工智能生活教练  

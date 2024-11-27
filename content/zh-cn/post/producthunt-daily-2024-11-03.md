@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/5c2cace7-3e5e-45ba-b392-8eb7ed464074.png?auto=
 tags: ["数据分析", "人工智能", "个性化"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-11-03
 
 ## 1. Monica Code
 **标语**：在你的集成开发环境（IDE）中与GPT-4o和Claude 3.5一起编写代码。  

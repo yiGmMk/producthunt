@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/7f178ee2-5558-4365-913c-121226db45d4.jpeg?auto
 tags: ["人工智能", "简单易用", "任务管理"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-09-07
 
 ## 1. VideoGen (YC S24)
 **标语**：几秒钟内生成专业视频  

@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/50c40e9d-f1f5-4dd9-8f1e-c01e6291330b.png?auto=
 tags: ["人工智能", "客户旅程", "无需编码"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-11-05
 
 ## 1. FullContext
 **标语**：使用自然语言将GTM工作流程构建速度提升20倍  

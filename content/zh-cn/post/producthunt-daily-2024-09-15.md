@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/6a0db68b-22e1-4bb0-bffa-7ca3d09aaa29.png?auto=
 tags: ["视觉化", "信息图", "AI"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-09-15
 
 ## 1. Infography - V2
 **标语**：利用人工智能将你的博客内容转化为精彩的信息图表。  

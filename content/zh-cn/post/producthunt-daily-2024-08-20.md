@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/6c2680e2-b0a1-4495-ad3d-d8cecd811713.png?auto=
 tags: ["初创企业", "自动化", "社交媒体"]
 categories: ["工具", "开发"]
 ---
-# PH今日热榜 | 2024-08-20
 
 ## 1. Coldreach (YC W23)
 **标语**：寻找可以立即购买的潜在客户，并与人工智能保持相关性。  

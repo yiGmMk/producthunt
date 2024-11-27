@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/9001b551-f2da-401d-8819-dd532d1700a2.jpeg?auto
 tags: ["人工智能", "AI助手", "Chrome扩展"]
 categories: ["人工智能", "开发"]
 ---
-# PH今日热榜 | 2024-10-11
 
 ## 1. Mitzu
 **标语**：SaaS自助式商业智能  

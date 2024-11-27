@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/30f52c72-ba49-472a-9ddd-996e18a423d8.png?auto=
 tags: ["节省时间", "AI助手", "关键词研究"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-11-02
 
 ## 1. Truva AI
 **标语**：用AI助手，实现更多销售，减少琐碎工作。  

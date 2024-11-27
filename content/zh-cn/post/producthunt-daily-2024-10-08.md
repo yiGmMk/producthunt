@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/e3a8f571-bbdd-44c3-9393-a7376de18c80.png?auto=
 tags: ["人工智能", "开发者", "团队协作"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-10-08
 
 ## 1. OpenBB Terminal
 **标语**：利用人工智能驱动的研究，做出更明智的投资决策。  

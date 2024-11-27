@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/8e10e2e7-249d-4055-8273-b3e92adc5705.png?auto=
 tags: ["人工智能", "节省时间", "用户友好"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-08-15
 
 ## 1. ralify
 **标语**：减少会议，快速行动，实现目标。  

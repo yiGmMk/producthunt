@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/243b8dd1-15ce-4df7-99f4-e65347e9b06f.jpeg?auto
 tags: ["人工智能", "转化率提升", "用户体验"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-10-31
 
 ## 1. bolt.new
 **标语**：快速启动、运行、编辑和部署全栈网页应用程序。  

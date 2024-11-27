@@ -10,7 +10,7 @@ from collections import Counter
 # Language-related configurations
 LANGUAGE_SETTINGS = {
     "zh": {
-        "title": "今日热榜",
+        "title": "Product Hunt 今日热榜",
         "file_path": "content/zh-cn/post",
         "translate_task": "将以下内容翻译成简体中文,只返回译文:",
         "category_mapping": {
@@ -34,7 +34,7 @@ LANGUAGE_SETTINGS = {
         "default_keyword": "无关键词",
     },
     "en": {
-        "title": "Producthunt Daily",
+        "title": "Product Hunt Daily",
         "file_path": "content/en/post",
         "translate_task": "Translate the following text to English,only return the translation:",
         "category_mapping": {

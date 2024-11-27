@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/d2a83cec-3779-4544-b78c-5da87a6690d4.gif?auto=
 tags: ["应用程序", "人工智能", "提高效率"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-08-13
 
 ## 1. Jupitrr AI
 **标语**：自动生成内容营销视频的辅助画面  

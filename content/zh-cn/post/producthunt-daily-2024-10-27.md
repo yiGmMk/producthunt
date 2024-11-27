@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/f3e9e9cc-bee5-4bac-bb22-0457121e24a6.png?auto=
 tags: ["自动化", "免费", "节省时间"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-10-27
 
 ## 1. Retail Connect by Pietra
 **标语**：生成批发线索，接触零售商，提升销售额。  

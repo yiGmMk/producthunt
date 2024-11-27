@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/06460c4e-5cc9-4373-8864-e42df2ed9b42.png?auto=
 tags: ["人工智能", "开发工具", "开发者"]
 categories: ["人工智能", "开发"]
 ---
-# PH今日热榜 | 2024-09-26
 
 ## 1. Not Common
 **标语**：在浏览时，验证社交账户的真实性。  

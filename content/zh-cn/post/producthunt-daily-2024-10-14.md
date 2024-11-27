@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/a2f243e8-b18e-43f4-a9ef-118c8f290ef1.png?auto=
 tags: ["人工智能", "提高效率", "免费"]
 categories: ["人工智能", "开发"]
 ---
-# PH今日热榜 | 2024-10-14
 
 ## 1. Pricing Table Builder
 **标语**：几分钟内创建可嵌入的价格表  

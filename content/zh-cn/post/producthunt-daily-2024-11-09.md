@@ -4,7 +4,6 @@ date: 2024-11-09 06:25:17+0000
 image: https://ph-files.imgix.net/e9c64d4b-84da-4666-8978-2363853a3f95.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024
 tags: ["自定义", "项目管理", "开发者工具"]
 ---
-# PH今日热榜 | 2024-11-09
 
 ## 1. Shootmail
 **标语**：类似于Notion的邮件编辑器和精美的邮件模板  

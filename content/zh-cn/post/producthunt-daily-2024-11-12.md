@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/2f547a53-7afe-4489-9b03-6ef767a8d477.png?auto=
 tags: ["AI助手", "AI技术", "人工智能"]
 categories: ["人工智能", "工具"]
 ---
-# PH今日热榜 | 2024-11-12
 
 ## 1. Spiky
 **标语**：实时洞察，助力更快速、更智能的销售决策  

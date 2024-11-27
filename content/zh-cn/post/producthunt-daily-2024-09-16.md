@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/cc3a39e6-b71c-48e4-a9cb-36a9afffd022.png?auto=
 tags: ["人工智能", "社交媒体", "直观"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-09-16
 
 ## 1. MindPal
 **标语**：利用AI多代理工作流来展示你的领域专长  

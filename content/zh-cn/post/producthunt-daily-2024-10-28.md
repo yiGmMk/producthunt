@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/3ccac660-4ceb-4539-8acf-af8211c71fae.png?auto=
 tags: ["学习平台", "人工智能", "纪念"]
 categories: ["人工智能", "开发"]
 ---
-# PH今日热榜 | 2024-10-28
 
 ## 1. Pricing Maker
 **标语**：产品或软件即服务（SaaS）的人工智能定价生成器  

@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/9e92dd73-0a72-4353-8a41-424df07906c4.png?auto=
 tags: ["社交媒体", "iOS", "开源软件"]
 categories: ["人工智能", "开发"]
 ---
-# PH今日热榜 | 2024-08-30
 
 ## 1. CompanyGPT 2.0
 **标语**：公司和个人搜索引擎  

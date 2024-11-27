@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/effdccda-e614-4ac0-bca3-7e4363e4e609.jpeg?auto
 tags: ["人工智能", "无代码平台", "自动化"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-09-04
 
 ## 1. User Flows by Nudge
 **标语**：构建用户流程，以激活、留住和盈利应用用户。  

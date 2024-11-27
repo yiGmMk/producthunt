@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/fa804a58-8306-4253-bbce-34ec60547908.png?auto=
 tags: ["人工智能", "高质量", "Glazed"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-10-24
 
 ## 1. Glazed
 **标语**：从你的Figma设计中获取用户洞察  

@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/0ac9a71d-ecb8-49bf-8027-889dc759668b.png?auto=
 tags: ["人工智能", "AI助手", "开源"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-10-30
 
 ## 1. Hire Pam
 **标语**：市场上最佳的人工智能客服助手  

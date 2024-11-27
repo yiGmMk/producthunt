@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/671b01ef-eda7-42d1-be24-6f2d13230d4e.gif?auto=
 tags: ["人工智能", "学习", "节省时间"]
 categories: ["人工智能", "工具", "开发"]
 ---
-# PH今日热榜 | 2024-10-10
 
 ## 1. Miro 2.0 The Innovation Workspace
 **标语**：在这里，人工智能将创意转化为原型、计划、简报等多种形式。  

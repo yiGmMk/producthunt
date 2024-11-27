@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/eae37365-6f9c-46a9-8aa8-08b2063b51c7.png?auto=
 tags: ["AI助手", "AI驱动", "免费"]
 categories: ["人工智能", "工具", "开发"]
 ---
-# PH今日热榜 | 2024-09-10
 
 ## 1. SciSpace AI Academic Writer
 **标语**：请用科学家的语气写。  

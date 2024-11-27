@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/fe48094d-1b60-42e6-8bed-d9bd6bd3496b.png?auto=
 tags: ["人工智能", "创作者", "搜索引擎优化"]
 categories: ["人工智能", "工具"]
 ---
-# PH今日热榜 | 2024-10-06
 
 ## 1. Savvyshot
 **标语**：在Windows和MacOS上简化的美丽截图  

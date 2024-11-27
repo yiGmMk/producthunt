@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/55cdcd37-9c80-44e7-ab78-f40ae04c98ec.png?auto=
 tags: ["人工智能", "自动化", "社交媒体"]
 categories: ["人工智能", "开发"]
 ---
-# PH今日热榜 | 2024-10-02
 
 ## 1. Video SDK 3.0
 **标语**：构建并整合实时多模态人工智能角色。  

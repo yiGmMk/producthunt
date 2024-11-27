@@ -10,7 +10,7 @@ from collections import Counter
 # Language-related configurations
 LANGUAGE_SETTINGS = {
     "zh": {
-        "title": "本月热榜",
+        "title": "Product Hunt 本月热榜",
         "file_path": "content/zh-cn/post",
         "translate_task": "将以下内容翻译成简体中文,只返回译文:",
         "category_mapping": {
@@ -35,7 +35,7 @@ LANGUAGE_SETTINGS = {
         "monthly_label": "月榜",
     },
     "en": {
-        "title": "Producthunt Monthly Top",
+        "title": "Product Hunt Monthly Top",
         "file_path": "content/en/post",
         "translate_task": "Translate the following text to English,only return the translation:",
         "category_mapping": {
@@ -60,7 +60,7 @@ LANGUAGE_SETTINGS = {
         "monthly_label": "Monthly",
     },
     "es": {
-        "title": "Lo Mejor del Mes en Producthunt",
+        "title": "Lo Mejor del Mes en Product Hunt",
         "file_path": "content/es/post",
         "translate_task": "Translate the following text to Spanish,only return the translation:",
         "category_mapping": {

@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/2a984db7-5429-4f03-9f38-11147acfdabd.jpeg?auto
 tags: ["节省时间", "人工智能", "ZEPIC"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-11-15
 
 ## 1. ZEPIC
 **标语**：个性化的WhatsApp和电子邮件AI营销活动，助力转化率提升  

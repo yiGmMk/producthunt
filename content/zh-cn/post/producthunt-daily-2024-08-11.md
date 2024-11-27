@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/d8f445c7-c3d6-45f3-8f3a-b7295cbda10b.png?auto=
 tags: ["视频制作", "人工智能", "聊天机器人"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-08-11
 
 ## 1. LandingPro AI (Buildspace S5)
 **标语**：能够撰写真正能促成销售的网站文案的人工智能  

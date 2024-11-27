@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/391927cf-7db3-4ee0-8b75-6806378cef6b.jpeg?auto
 tags: ["人工智能", "用户互动", "用户体验"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-11-04
 
 ## 1. KLING AI
 **标语**：下一代人工智能创意工作室  

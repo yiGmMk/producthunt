@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/f8948f05-b5e9-4ddc-9ebf-1d4b980bd9a2.png?auto=
 tags: ["人工智能", "视觉效果", "未来AGI"]
 categories: ["人工智能", "工具", "开发"]
 ---
-# PH今日热榜 | 2024-09-21
 
 ## 1. Future AGI
 **标语**：自动化错误检测，确保你的人工智能高准确率。  

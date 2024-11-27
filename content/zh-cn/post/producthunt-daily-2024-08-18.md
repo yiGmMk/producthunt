@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/962e7889-fe41-4403-909a-a73c583b92ba.png?auto=
 tags: ["人工智能", "AI应用", "动力提升"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-08-18
 
 ## 1. MYND
 **标语**：随时随地的AI好友，助你心理健康！  

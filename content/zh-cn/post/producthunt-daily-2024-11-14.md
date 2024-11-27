@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/0033bf68-388c-44f3-bc7f-d6151760609c.jpeg?auto
 tags: ["人工智能", "应用程序", "AI工具"]
 categories: ["人工智能", "工具"]
 ---
-# PH今日热榜 | 2024-11-14
 
 ## 1. Vocera
 **标语**：通过模拟和监控，更快地启动语音助手。  

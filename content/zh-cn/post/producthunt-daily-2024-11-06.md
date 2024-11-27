@@ -5,7 +5,6 @@ image: https://ph-files.imgix.net/ed928307-8aba-4b45-954f-eff2ae59afab.png?auto=
 tags: ["人工智能", "AI工具", "提高生产力"]
 categories: ["人工智能"]
 ---
-# PH今日热榜 | 2024-11-06
 
 ## 1. TherapyAI
 **标语**：选举压力的人工智能疗法  
