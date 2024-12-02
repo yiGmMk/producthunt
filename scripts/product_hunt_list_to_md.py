@@ -21,7 +21,8 @@ producthunt_client_id = os.getenv('PRODUCTHUNT_CLIENT_ID')
 producthunt_client_secret = os.getenv('PRODUCTHUNT_CLIENT_SECRET')
 # 只取前 10 条数据
 top_num=10
-
+model = "gpt-4o-mini" 
+#model = "Qwen/Qwen2.5-7B-Instruct" 
 
 # Define category to keywords mapping
 # Add more categories and corresponding keywords as needed
@@ -78,7 +79,7 @@ class Product:
         
         try:
             response = client.chat.completions.create(
-                model="gpt-4o-mini",
+                model=model,
                 messages=[
                     {"role": "system", "content": "Generate suitable Chinese keywords based on the product information provided. The keywords should be separated by commas."},
                     {"role": "user", "content": prompt},
@@ -99,7 +100,7 @@ class Product:
         """使用OpenAI翻译文本内容"""
         try:
             response = client.chat.completions.create(
-                model="gpt-4o-mini",
+                model=model,
                 messages=[
                     {"role": "system", "content": "你是世界上最专业的翻译工具，擅长英文和中文互译。你是一位精通英文和中文的专业翻译，尤其擅长将IT公司黑话和专业词汇翻译成简洁易懂的地道表达。你的任务是将以下内容翻译成地道的中文，风格与科普杂志或日常对话相似。"},
                     {"role": "user", "content": text},

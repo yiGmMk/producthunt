@@ -119,6 +119,8 @@ client = OpenAI(api_key=api_key, base_url=base_url) if base_url else OpenAI(api_
 producthunt_client_id = os.getenv('PRODUCTHUNT_CLIENT_ID')
 producthunt_client_secret = os.getenv('PRODUCTHUNT_CLIENT_SECRET')
 top_num = 10
+model = "gpt-4o-mini" 
+#model = "Qwen/Qwen2.5-7B-Instruct" 
 
 lang = os.getenv('LANGUAGE')
 
@@ -162,7 +164,7 @@ class Product:
 
         try:
             response = client.chat.completions.create(
-                model="gpt-4o-mini",
+                model=model,
                 messages=[{"role": "system", "content": prompt}],
                 max_tokens=100,
                 temperature=0.7,
@@ -177,7 +179,7 @@ class Product:
     def translate_text(self, text: str) -> str:
         try:
             response = client.chat.completions.create(
-                model="gpt-4o-mini",
+                model=model,
                 messages=[{"role": "system", "content": self.settings['translate_task']}, {"role": "user", "content": text}],
                 max_tokens=500,
                 temperature=0.7,
