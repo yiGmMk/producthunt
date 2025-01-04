@@ -1,0 +1,137 @@
+---
+title: Product Hunt Daily | 2025-01-04
+date: 2025-01-04 07:18:47+0000
+image: https://ph-files.imgix.net/c9d32359-a22b-437c-9fd2-f8e39dd55aac.png?auto=format&fit=crop&frame=1&h=512&w=1024
+tags: ["productivity", "time-saving", "user-friendly"]
+---
+
+## 1. Flowdrafter  
+**Tagline**: Write faster by not editing as you go  
+**Description**: A (weird-at-first!) free tool to help you write more productively by preventing you from editing as you go. Instead, get your first draft written as quickly as possible. Once you have a first draft, you can then edit and refine it as you like.  
+**Website**: [open](https://www.producthunt.com/r/YIFYZCGV6EWEND?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/flowdrafter?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Flowdrafter](https://ph-files.imgix.net/c9d32359-a22b-437c-9fd2-f8e39dd55aac.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Keyword**: Flowdrafter, writing tool, productivity, first draft, no editing, fast writing, draft writing, writing efficiency, creative process, writing aid, free tool, writing improvement, streamline writing, focus on drafting.  
+**VotesCount**: 🔺351  
+**Featured**: Yes  
+**CreatedAt**: 2025-01-03 08:01 AM (UTC)  
+
+---  
+
+## 2. Outpost  
+**Tagline**: Ask experts anything, get a guaranteed response  
+**Description**: Get your startup critiqued, designs improved, or portfolio reviewed by professionals from top companies like Microsoft, Amazon, and Meta. Outpost connects you directly to experts for actionable advice in minutes—no networking or guesswork needed!  
+**Website**: [open](https://www.producthunt.com/r/4M6I5HM2IWEJXU?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/outpost-4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Outpost](https://ph-files.imgix.net/7eca4739-fcb2-4363-8002-5dfe5379d768.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Keyword**: Outpost, expert advice, startup critique, design improvement, portfolio review, professional feedback, Microsoft, Amazon, Meta, actionable insights, direct connection, guaranteed response, no networking, quick advice.  
+**VotesCount**: 🔺330  
+**Featured**: Yes  
+**CreatedAt**: 2025-01-03 08:01 AM (UTC)  
+
+---  
+
+## 3. Dotomo  
+**Tagline**: An intuitive note taker where bedtime notes become reminders  
+**Description**: AI To-Do Companion for Your Night! Dotomo turns nighttime thoughts into actionable tasks instantly. Enter a task, and our AI crafts reminders and schedules, delivering personalized insights and notifications to boost your productivity effortlessly!  
+**Website**: [open](https://www.producthunt.com/r/TSWSI3YVJKZITN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/dotomo?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Dotomo](https://ph-files.imgix.net/940a219b-1d24-44e8-a748-e293cb95bd2f.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Keyword**: Dotomo, note taker, bedtime notes, reminders, AI To-Do, productivity, actionable tasks, personalized insights, notifications, night companion, intuitive, task management, scheduling, effortless productivity.  
+**VotesCount**: 🔺264  
+**Featured**: Yes  
+**CreatedAt**: 2025-01-03 08:01 AM (UTC)  
+
+---  
+
+## 4. Snowball  
+**Tagline**: Your all-in-one 𝕏 growth platform  
+**Description**: Write better content, engage faster and get more 𝕏 followers. All the tools brands and creators need to grow an audience on X/Twitter - with or without AI. Focus mode, auto-drafts, post scheduler, AI replies, feed filters, analytics, content planner & more.  
+**Website**: [open](https://www.producthunt.com/r/WNCNS4OOFCPKBK?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/snowball-700e3f06-2cd9-469e-a1f3-0bbf51a1136a?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Snowball](https://ph-files.imgix.net/21717c01-ac66-4237-829c-0ae7852d9e08.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Keyword**: Snowball, growth platform, X growth, content creation, audience engagement, Twitter tools, AI features, post scheduler, analytics, content planner, auto-drafts, feed filters, focus mode, follower growth, brand tools, creator tools.  
+**VotesCount**: 🔺260  
+**Featured**: Yes  
+**CreatedAt**: 2025-01-03 08:01 AM (UTC)  
+
+---  
+
+## 5. Pie Menu  
+**Tagline**: One shortcut to control all your Mac apps with a radial menu  
+**Description**: Pie Menu introduces a revolutionary way to save time across all your Mac apps. Just use one shortcut to open a customizable radial menu around your cursor, tailored for each app you use.  
+**Website**: [open](https://www.producthunt.com/r/6MWYZ4LXR45NNE?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/pie-menu?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Pie Menu](https://ph-files.imgix.net/513e79e3-8af3-4248-905f-69017608571b.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Keyword**: Pie Menu, Mac apps, radial menu, shortcut, customizable, time-saving, app control, productivity, user-friendly, innovative tool  
+**VotesCount**: 🔺246  
+**Featured**: Yes  
+**CreatedAt**: 2025-01-03 08:01 AM (UTC)  
+
+---  
+
+## 6. Symphony  
+**Tagline**: An OS where AI controls keyboard and mouse  
+**Description**: Create your OS, ask AI to do stuff for you. AI will work with existing programs on the OS: - Navigate to a webpage to gather information. - Make a presentation all by itself. - Extract data from webpage to a spreadsheet. * Use computer to view your OS  
+**Website**: [open](https://www.producthunt.com/r/VW6UNXN6TM4XHT?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/symphony-7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Symphony](https://ph-files.imgix.net/7fd05a7c-b10b-4b56-be76-4869bc19dae4.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Keyword**: Symphony, AI OS, keyboard control, mouse control, create OS, AI assistance, webpage navigation, data extraction, automated presentations, spreadsheet integration, user-friendly, productivity tool, smart OS, AI-driven tasks.  
+**VotesCount**: 🔺189  
+**Featured**: Yes  
+**CreatedAt**: 2025-01-03 08:01 AM (UTC)  
+
+---  
+
+## 7. Coffee Commit  
+**Tagline**: Track Your coffee to commit ratio  
+**Description**: Coffee Commit is a GitHub tracker that correlates your coffee intake with your commits. It's just for fun to see at which hours you drink the most coffee and how it affects your commits. Completely free and easy to start, just log in.  
+**Website**: [open](https://www.producthunt.com/r/YLCPYUHW6G4FWU?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/coffee-commit?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Coffee Commit](https://ph-files.imgix.net/360618de-037d-4449-b536-32485520a82f.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Keyword**: Coffee, Commit, Tracker, GitHub, Coffee Intake, Productivity, Fun, Free, Log In, Correlation, Hours, Data, Analysis, Ratio, Software, Tool  
+**VotesCount**: 🔺169  
+**Featured**: Yes  
+**CreatedAt**: 2025-01-03 08:01 AM (UTC)  
+
+---  
+
+## 8. Remtoloc  
+**Tagline**: Sync databases and files to your Mac with just two clicks  
+**Description**: Sync databases and files from your server to your Mac with just two clicks from the menu bar  
+**Website**: [open](https://www.producthunt.com/r/MGO4FTTTLYLVDR?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/remtoloc?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Remtoloc](https://ph-files.imgix.net/2379e6fa-4a7d-439a-b7a5-d8c8a072b11f.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Keyword**: Remtoloc, sync databases, sync files, Mac sync, server to Mac, menu bar, easy sync, two clicks, file transfer, database synchronization  
+**VotesCount**: 🔺139  
+**Featured**: Yes  
+**CreatedAt**: 2025-01-03 08:01 AM (UTC)  
+
+---  
+
+## 9. Cutmuse  
+**Tagline**: Find your hairstyle with a personalized visagism analysis  
+**Description**: Cutmuse offers personalized visagism analysis to help you find the perfect hairstyle for you. Upload your photos, share your style, and get up to 5 tailored hairstyle recommendations with different looks to visualize and choose your ideal style.  
+**Website**: [open](https://www.producthunt.com/r/CGTYW7IXYYKLZP?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/cutmuse?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Cutmuse](https://ph-files.imgix.net/8e75146d-11c5-487e-9e02-82e5f6fa67d3.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Keyword**: Cutmuse, hairstyle, visagism analysis, personalized recommendations, photo upload, style sharing, tailored looks, ideal hairstyle, visualize styles, hair consultation  
+**VotesCount**: 🔺109  
+**Featured**: No  
+**CreatedAt**: 2025-01-03 08:01 AM (UTC)  
+
+---  
+
+## 10. Never Have Outdated Footer Dates Again  
+**Tagline**: Making the world a better place one footer at a time  
+**Description**: Tired of manually updating copyright years every January 1st? GetFullYear provides a simple, reliable API to automatically update your footer year, saving you time and embarrassment.  
+**Website**: [open](https://www.producthunt.com/r/TLPSKVOPSQCJCI?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/never-have-outdated-footer-dates-again?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Never Have Outdated Footer Dates Again](https://ph-files.imgix.net/c2d536e0-3725-40e6-96ed-9d145227a13c.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Keyword**: footer dates, copyright update, automatic year, reliable API, time-saving, hassle-free, GetFullYear, footer management, website maintenance, year automation  
+**VotesCount**: 🔺69  
+**Featured**: No  
+**CreatedAt**: 2025-01-03 08:01 AM (UTC)  
+
+---  
+
