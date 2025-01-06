@@ -24,7 +24,7 @@ jobs:
           pip install openai>=1.0.0
           pip install python-wordpress-xmlrpc
 
-      - name: Generate Markdown
+      - name: Generate Markdown 中文
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
@@ -40,6 +40,26 @@ jobs:
           PRODUCTHUNT_CLIENT_ID: ${{ secrets.PRODUCTHUNT_CLIENT_ID }}
           PRODUCTHUNT_CLIENT_SECRET: ${{ secrets.PRODUCTHUNT_CLIENT_SECRET }}
           LANGUAGE: "en"
+        run: |
+          python scripts/multi_language_month.py
+
+      - name: Generate Markdown 阿拉伯语
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          PRODUCTHUNT_CLIENT_ID: ${{ secrets.PRODUCTHUNT_CLIENT_ID }}
+          PRODUCTHUNT_CLIENT_SECRET: ${{ secrets.PRODUCTHUNT_CLIENT_SECRET }}
+          LANGUAGE: "ar"
+        run: |
+          python scripts/multi_language_month.py
+
+      - name: Generate Markdown 西班牙语
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          PRODUCTHUNT_CLIENT_ID: ${{ secrets.PRODUCTHUNT_CLIENT_ID }}
+          PRODUCTHUNT_CLIENT_SECRET: ${{ secrets.PRODUCTHUNT_CLIENT_SECRET }}
+          LANGUAGE: "es"
         run: |
           python scripts/multi_language_month.py
 
