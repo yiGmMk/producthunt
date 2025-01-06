@@ -1,12 +1,23 @@
+# Product Hunt 热榜
+
+使用Product Hunt API 获取每日产品热榜,bing使用LLM翻译成多语言版本
+
+## LLM
+
+- [自部署gpt-4o接口](https://gpt4o.programnotes.cn/docs),使用https://github.com/yiGmMk/free-unoficial-gpt4o-mini-api 部署
+- google gemini 转换成openai格式的接口: [gemini-1.5-flash](https://gemini2gpt.programnotes.cn/v1),使用https://github.com/yiGmMk/openai-gemini部署
+- [硅基流动提供的免费额度](https://cloud.siliconflow.cn/i/eluTiiYw)
+- [openrouter.ai提供的免费额度](https://openrouter.ai/)
+
 <img align="right" width="150" alt="logo" src="https://user-images.githubusercontent.com/5889006/190859553-5b229b4f-c476-4cbd-928f-890f5265ca4c.png">
 
-# Hugo Theme Stack Starter Template
+## Hugo Theme Stack Starter Template
 
 This is a quick start template for [Hugo theme Stack](https://github.com/CaiJimmy/hugo-theme-stack). It uses [Hugo modules](https://gohugo.io/hugo-modules/) feature to load the theme.
 
 It comes with a basic theme structure and configuration. GitHub action has been set up to deploy the theme to a public GitHub page automatically. Also, there's a cron job to update the theme automatically everyday.
 
-## Get started
+### Get started
 
 1. Click *Use this template*, and create your repository as `<username>.github.io` on GitHub.
 ![Step 1](https://user-images.githubusercontent.com/5889006/156916624-20b2a784-f3a9-4718-aa5f-ce2a436b241f.png)
@@ -28,7 +39,7 @@ It comes with a basic theme structure and configuration. GitHub action has been 
 
 In case you don't want to use GitHub codespace, you can also run this template in your local machine. **You need to install Git, Go and Hugo extended locally.**
 
-## Update theme manually
+### Update theme manually
 
 Run:
 
@@ -46,5 +57,7 @@ hugo mod tidy
 not work for hugo 0.138.0 2024/11/18 [说明](./deploy.md)
 
 ### Netlify
+
+现部署到github的指定分支 gh-pages(使用github actions),再将静态文件部署到netlify
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3b25f6c5-ce4c-4825-9c3b-943592e42e88/deploy-status)](https://app.netlify.com/sites/producthunt-daily/deploys)
