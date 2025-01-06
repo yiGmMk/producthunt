@@ -21,8 +21,10 @@ producthunt_client_id = os.getenv('PRODUCTHUNT_CLIENT_ID')
 producthunt_client_secret = os.getenv('PRODUCTHUNT_CLIENT_SECRET')
 # 只取前 10 条数据
 top_num=10
-model = "gpt-4o-mini" 
-#model = "Qwen/Qwen2.5-7B-Instruct" 
+
+model = "gemini-1.5-flash" 
+#model = "gpt-4o-mini" 
+#model = "deepseek-ai/DeepSeek-V2.5" 
 
 # Define category to keywords mapping
 # Add more categories and corresponding keywords as needed

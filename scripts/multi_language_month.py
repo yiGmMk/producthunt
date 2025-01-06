@@ -119,8 +119,11 @@ client = OpenAI(api_key=api_key, base_url=base_url) if base_url else OpenAI(api_
 producthunt_client_id = os.getenv('PRODUCTHUNT_CLIENT_ID')
 producthunt_client_secret = os.getenv('PRODUCTHUNT_CLIENT_SECRET')
 top_num = 10
-model = "gpt-4o-mini" 
+
 #model = "Qwen/Qwen2.5-7B-Instruct" 
+model = "gemini-1.5-flash" 
+#model = "gpt-4o-mini" 
+#model = "deepseek-ai/DeepSeek-V2.5" 
 
 lang = os.getenv('LANGUAGE')
 
