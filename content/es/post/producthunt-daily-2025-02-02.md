@@ -1,0 +1,137 @@
+---
+title: Tendencias de Hoy | 2025-02-03
+date: 2025-02-03 07:31:31+0000
+image: https://ph-files.imgix.net/8df1e5a3-fe33-4fcb-993a-01b310098a3f.png?auto=format&fit=crop&frame=1&h=512&w=1024
+tags: ["IA", "monitor", "sistema"]
+---
+
+## 1. Usage  
+**Lema**: Monitor de actividad del sistema para Mac y iPhone  
+**Descripción**: ¡La aplicación de monitorización que te mereces! • Monitorización completa del sistema (CPU, RAM, disco, red, GPU, ventiladores y más) • Compatibilidad con la barra de menú • Bonitos widgets • Sincronización a través de iCloud • Impacto mínimo en el rendimiento • Muchas opciones de personalización  
+**Sitio web**: [Visitar](https://www.producthunt.com/r/6JHA2OAJZOX7CZ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/usage-4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Usage](https://ph-files.imgix.net/8df1e5a3-fe33-4fcb-993a-01b310098a3f.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Palabras clave**: monitor, sistema, mac, iphone, cpu, ram, disco, red, gpu, ventiladores, widgets, icloud, ligero, personalizable, actividad, rendimiento  
+**Votos**: 🔺430  
+**Destacado**: Sí  
+**Fecha de creación**: 2025-02-02 09:01 AM (UTC)  
+
+---  
+
+## 2. Pimosa  
+**Lema**: Herramientas sencillas de edición de video, fotos y música en una sola aplicación  
+**Descripción**: Pimosa te permite convertir, editar y mejorar archivos de video, fotos y música fácilmente. Procesamiento por lotes para un trabajo más rápido. Herramientas sencillas para todos.  
+**Sitio web**: [Visitar](https://www.producthunt.com/r/DZ2U5M64QVAEFS?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/pimosa?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Pimosa](https://ph-files.imgix.net/fab5fd6b-860d-43cd-a3e9-57a24324f0a7.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Palabras clave**: Edición video, edición foto, edición música, Pimosa, edición, herramientas edición,  conversión video, conversión foto, conversión música, procesamiento por lotes, app edición, fácil edición, herramientas simples  
+**Votos**: 🔺373  
+**Destacado**: Sí  
+**Fecha de creación**: 2025-02-02 09:01 AM (UTC)  
+
+---  
+
+## 3. openRCP  
+**Lema**: Tus recetas favoritas, pero sin anuncios.  
+**Descripción**: Roba recetas de cualquier lugar, impórtalas a openRCP con 1 clic y obtén una versión limpia, minimalista y, lo más importante, sin anuncios (en segundos).  
+**Sitio web**: [Visitar](https://www.producthunt.com/r/KOKYKVY5MPC4F4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/openrcp?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![openRCP](https://ph-files.imgix.net/5fcdd98d-b52f-422f-86a6-727f1ec2cd63.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Palabras clave**: recetas,limpio,minimalista,sin anuncios,recetario,importar recetas,openRCP,recetas gratis,organizador recetas,libre de anuncios  
+**Votos**: 🔺327  
+**Destacado**: Sí  
+**Fecha de creación**: 2025-02-02 09:01 AM (UTC)  
+
+---  
+
+## 4. ProductHunt Chaos Simulator  
+**Lema**: Mira lo que podría pasar el día del lanzamiento de tu producto en Product Hunt  
+**Descripción**: Simula tu lanzamiento en Product Hunt con Grok de xAI. Predice votos positivos, comentarios, errores del creador e incluso giros argumentales. Es gratis, divertido y parte de AnotherWrapper, un kit de inicio con 11 aplicaciones de IA listas para personalizar.  
+**Sitio web**: [Visitar](https://www.producthunt.com/r/FPP7TTBS35I7L5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/producthunt-chaos-simulator?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![ProductHunt Chaos Simulator](https://ph-files.imgix.net/508a9939-48a8-40c6-b527-0e241d6f66a2.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Palabras clave**: Simulador Product Hunt, Simulación Lanzamiento, Predicción Product Hunt,  Grok, xAI, AnotherWrapper,  Upvotes, Comentarios,  Errores Maker,  Lanzamiento Producto,  Kit de inicio AI  
+**Votos**: 🔺296  
+**Destacado**: Sí  
+**Fecha de creación**: 2025-02-02 09:01 AM (UTC)  
+
+---  
+
+## 5. Atwork 2.0  
+**Lema**: Tu sistema operativo de trabajo, potenciado por IA  
+**Descripción**: Atwork es un sistema operativo de trabajo personalizable con aplicaciones integradas para gestión de tareas, CRM, gestión de agendas, creación de formularios y más. Ofrece automatización con IA, información en tiempo real y herramientas de colaboración, ayudando a los equipos a optimizar los flujos de trabajo y aumentar la productividad.  
+**Sitio web**: [Visitar](https://www.producthunt.com/r/HI3FRX3TN77N7W?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/atwork-2-0?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Atwork 2.0](https://ph-files.imgix.net/1b4f0f36-d049-4ec8-be13-83726eb39964.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Palabras clave**: Atwork 2.0,  Work OS,  IA (Inteligencia Artificial),  Automatización,  Gestión de tareas,  CRM,  Gestión de agendas,  Creación de formularios,  Colaboración,  Productividad,  Eficiencia,  Herramientas de trabajo,  Software empresarial,  AI empresarial  
+**Votos**: 🔺228  
+**Destacado**: Sí  
+**Fecha de creación**: 2025-02-02 09:01 AM (UTC)  
+
+---  
+
+## 6. Supadex  
+**Lema**: Panel de control de Supabase: tus datos, en tu bolsillo  
+**Descripción**: Supadex: El panel móvil definitivo para Supabase. Gestiona bases de datos, rastrea métricas y monitoriza proyectos sin problemas, en cualquier momento y lugar.  
+**Sitio web**: [Visitar](https://www.producthunt.com/r/TXMWVIULRHVMCF?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/supadex?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Supadex](https://ph-files.imgix.net/0da9d37a-b5f2-4f68-b89c-8c979f359e21.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Palabras clave**: Supadex,Supabase,Dashboard,Móvil,Datos,Métricas,Monitoreo,Base de datos,App,Panel,Supabase móvil,Analítica,Control,Supervisión  
+**Votos**: 🔺178  
+**Destacado**: Sí  
+**Fecha de creación**: 2025-02-02 09:01 AM (UTC)  
+
+---  
+
+## 7. Marketing Audit & Strategy Generator  
+**Lema**: Obtenga información práctica de marketing en minutos  
+**Descripción**: Obtenga información basada en datos para construir una marca poderosa, conectarse con su público ideal y destacarse de la competencia. Nuestra plataforma integral le ofrece todo, desde el posicionamiento estratégico hasta campañas de marketing accionables, respaldadas por IA y marcos probados.  
+**Sitio web**: [Visitar](https://www.producthunt.com/r/6XTEF4OP4D2APU?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/marketing-audit-strategy-generator?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Marketing Audit & Strategy Generator](https://ph-files.imgix.net/5b1d0c19-faa1-49ca-981a-4e8b8929ab04.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Palabras clave**: Auditoría de marketing, Estrategia de marketing,  Marketing digital,  Análisis de marketing,  Insights de marketing,  Plan de marketing,  Posicionamiento de marca,  Campañas de marketing,  Inteligencia artificial,  Marketing AI,  Generador de estrategias  
+**Votos**: 🔺77  
+**Destacado**: No  
+**Fecha de creación**: 2025-02-02 09:01 AM (UTC)  
+
+---  
+
+## 8. PayTres  
+**Lema**: ¡Pagos Web3 Simplificados!  
+**Descripción**: Crea facturas sin esfuerzo, acepta pagos en moneda fiduciaria y criptomonedas, pagos transfronterizos sin problemas y soporte multidivisa. Tarifas de acceso y salida más económicas. Perfecto para autónomos y empresas. ¡Cobra más rápido, de forma más inteligente y segura con PayTres! 🌟  
+**Sitio web**: [Visitar](https://www.producthunt.com/r/OHOXAA6KIBMX42?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/paytres?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![PayTres](https://ph-files.imgix.net/964e7593-6a05-44f9-b6d7-1c63bfb0962d.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Palabras clave**: Pagos,Web3,Criptopagos,Facturas,Pagos internacionales,Multidivisa,Freelancers,Empresas,Cobros,Tarifas,Onramp,Offramp  
+**Votos**: 🔺64  
+**Destacado**: No  
+**Fecha de creación**: 2025-02-02 09:01 AM (UTC)  
+
+---  
+
+## 9. TechIns8  
+**Lema**: La primera bolsa de trabajo para desarrolladores impulsada por IA.  
+**Descripción**: TechIns8 es tu asistente personal que agrega y verifica ofertas de varias fuentes importantes, permitiéndote concentrarte en las oportunidades que realmente coinciden con tus criterios.  
+**Sitio web**: [Visitar](https://www.producthunt.com/r/RUIOQGZCCDA7AL?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/techins8?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![TechIns8](https://ph-files.imgix.net/0077d117-1552-4bd9-8533-91715fe26120.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Palabras clave**: empleos, programadores, IA,  trabajo, ofertas, tecnología,  bolsa de trabajo,  desarrollo,  IA, asistente,  TechIns8  
+**Votos**: 🔺63  
+**Destacado**: No  
+**Fecha de creación**: 2025-02-02 09:01 AM (UTC)  
+
+---  
+
+## 10. Language Tools Directory  
+**Lema**: Descubre las mejores herramientas para aprender cualquier idioma.  
+**Descripción**: Descubre las mejores herramientas para aprender cualquier idioma. Curadas manualmente, revisadas cuidadosamente, más de 100 idiomas disponibles.  
+**Sitio web**: [Visitar](https://www.producthunt.com/r/HV24IFGK2QWGT3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [Ver en Product Hunt](https://www.producthunt.com/posts/language-tools-directory?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Language Tools Directory](https://ph-files.imgix.net/13fcaffe-601f-402e-b420-a1c7122c9790.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**Palabras clave**: herramientas lenguaje, aprender idiomas, directorio idiomas, recursos idiomas, curso idiomas,  aprender español,  aprender ingles,  mejores herramientas,  aplicación idiomas, software idiomas  
+**Votos**: 🔺40  
+**Destacado**: No  
+**Fecha de creación**: 2025-02-02 09:01 AM (UTC)  
+
+---  
+
