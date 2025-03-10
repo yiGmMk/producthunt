@@ -6,6 +6,7 @@ from openai import OpenAI
 from bs4 import BeautifulSoup
 import pytz
 from collections import Counter
+from multi_language import get_producthunt_token
 
 # Language-related configurations
 LANGUAGE_SETTINGS = {
@@ -232,18 +233,6 @@ class Product:
         ]
         return "  \n".join(fields) + "  \n\n"
 
-def get_producthunt_token():
-    url = "https://api.producthunt.com/v2/oauth/token"
-    payload = {
-        "client_id": producthunt_client_id,
-        "client_secret": producthunt_client_secret,
-        "grant_type": "client_credentials",
-    }
-    headers = {"Content-Type": "application/json"}
-    response = requests.post(url, json=payload, headers=headers)
-    response.raise_for_status()
-    return response.json().get("access_token")
-
 from dateutil.relativedelta import relativedelta
 def fetch_product_hunt_data():
     token = get_producthunt_token()
@@ -252,7 +241,11 @@ def fetch_product_hunt_data():
     first_day_of_this_month = today.replace(day=1).strftime('%Y-%m-%d')
     first_day_of_last_month = (today.replace(day=1) - relativedelta(months=1)).strftime('%Y-%m-%d')
     url = "https://api.producthunt.com/v2/api/graphql"
-    headers = {"Authorization": f"Bearer {token}"}
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"           
+    }
     base_query = """
     {
       posts(order: VOTES, postedAfter: "%sT00:00:00Z", postedBefore: "%sT23:59:59Z", after: "%s") {

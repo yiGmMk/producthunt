@@ -232,8 +232,12 @@ def get_producthunt_token():
         "client_secret": producthunt_client_secret,
         "grant_type": "client_credentials",
     }
-    headers = {"Content-Type": "application/json"}
-    response = requests.post(url, json=payload, headers=headers)
+    headers = {
+        "Content-Type": "application/json",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+    }
+    response = requests.post(url, json=payload, headers=headers, verify=False)
+    print(response.text)
     response.raise_for_status()
     return response.json().get("access_token")
 
@@ -242,7 +246,11 @@ def fetch_product_hunt_data():
     yesterday = datetime.now(timezone.utc) - timedelta(days=1)
     date_str = yesterday.strftime('%Y-%m-%d')
     url = "https://api.producthunt.com/v2/api/graphql"
-    headers = {"Authorization": f"Bearer {token}"}
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+    }
     base_query = """
     {
       posts(order: VOTES, postedAfter: "%sT00:00:00Z", postedBefore: "%sT23:59:59Z", after: "%s") {
@@ -269,7 +277,7 @@ def fetch_product_hunt_data():
     cursor = ""
     while has_next_page and len(all_posts) < top_num:
         query = base_query % (date_str, date_str, cursor)
-        response = requests.post(url, headers=headers, json={"query": query})
+        response = requests.post(url, headers=headers, json={"query": query}, verify=False)
         response.raise_for_status()
         data = response.json()['data']['posts']
         posts = data['nodes']
