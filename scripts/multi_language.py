@@ -236,7 +236,7 @@ def get_producthunt_token():
         "Content-Type": "application/json",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
     }
-    response = requests.post(url, json=payload, headers=headers, verify=False)
+    response = requests.post(url, json=payload, headers=headers)
     print(response.text)
     response.raise_for_status()
     return response.json().get("access_token")
@@ -277,7 +277,7 @@ def fetch_product_hunt_data():
     cursor = ""
     while has_next_page and len(all_posts) < top_num:
         query = base_query % (date_str, date_str, cursor)
-        response = requests.post(url, headers=headers, json={"query": query}, verify=False)
+        response = requests.post(url, headers=headers, json={"query": query})
         response.raise_for_status()
         data = response.json()['data']['posts']
         posts = data['nodes']
