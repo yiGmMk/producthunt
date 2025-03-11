@@ -150,7 +150,10 @@ class Product:
         self.keyword = self.generate_keywords()
 
     def fetch_og_image_url(self) -> str:
-        response = requests.get(self.url)
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+        }
+        response = requests.get(self.url,headers=headers)
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
             og_image = soup.find("meta", property="og:image")
