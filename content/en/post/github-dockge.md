@@ -1,9 +1,9 @@
 ---
 title: dockge
-date: 2025-04-02T17:45:36+08:00
+date: 2025-04-02T18:39:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1742302954292-1f903368084e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM1ODcwMjd8&ixlib=rb-4.0.3
-tags: ['github',docker-compose,Docker,UI,web,reactive,manager,stack,container]
+image: https://images.unsplash.com/photo-1680761060530-87f01f1f1803?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM1OTAyNzV8&ixlib=rb-4.0.3
+tags: ['github',docker-compose,Docker,UI,reactive,web-terminal,self-hosted,stack-manager,container-management]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: fastmcp
-date: 2025-04-02T17:44:38+08:00
+date: 2025-04-02T18:38:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1743074169369-1b9237cb4d2c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM1ODcwMjd8&ixlib=rb-4.0.3
-tags: ['github',FastMCP,Model Context Protocol,MCP,Python,LLM,servers,tools,resources,prompts,images,context,development,Claude,deployment,dependencies]
+image: https://images.unsplash.com/photo-1501862169286-518c291e3eed?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM1OTAyNzV8&ixlib=rb-4.0.3
+tags: ['github',FastMCP,Model Context Protocol,MCP,Python,LLM,server,tools,resources,prompts,images,context,development,Claude,deployment,dependencies]
 categories: ['github']
 ---
 

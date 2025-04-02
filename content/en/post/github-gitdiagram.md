@@ -1,9 +1,9 @@
 ---
 title: gitdiagram
-date: 2025-04-02T17:44:06+08:00
+date: 2025-04-02T18:38:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1743076851851-0762b336b56d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM1ODcwMjd8&ixlib=rb-4.0.3
-tags: ['github',GitHub,repository,diagram,visualization,interactive,API,Next.js,FastAPI]
+image: https://images.unsplash.com/photo-1680761060530-87f01f1f1803?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM1OTAyNzV8&ixlib=rb-4.0.3
+tags: ['github',GitHub,repository,diagram,visualization,interactive,Mermaid.js,OpenAI,API,Next.js,FastAPI]
 categories: ['github']
 ---
 

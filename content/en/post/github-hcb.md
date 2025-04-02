@@ -1,9 +1,9 @@
 ---
 title: hcb
-date: 2025-04-02T17:45:06+08:00
+date: 2025-04-02T18:39:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1741920852866-94d44a2d32bb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM1ODcwMjd8&ixlib=rb-4.0.3
-tags: ['github',Hackathon,Hack Club,fiscal sponsorship,open source,Ruby on Rails,HCB,development,contributions]
+image: https://images.unsplash.com/photo-1723920449193-cba2f39a4d0c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM1OTAyNzV8&ixlib=rb-4.0.3
+tags: ['github',Hackathon,Hack Club,fiscal sponsorship,open source,Ruby on Rails,HCB,financial platform,high schoolers]
 categories: ['github']
 ---
 

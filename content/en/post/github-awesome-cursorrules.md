@@ -2,7 +2,7 @@
 title: awesome-cursorrules
 date: 2025-04-02T17:58:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1742237424056-ea5cbb674d66?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM1ODc4MjJ8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1680761060530-87f01f1f1803?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM1OTAyNzV8&ixlib=rb-4.0.3
 tags: ['github',Cursor AI,.cursorrules,code generation,AI-powered code editor,coding standards,best practices,code suggestions,productivity,team alignment,project-specific knowledge]
 categories: ['github']
 ---
