@@ -118,7 +118,7 @@ class SaveToMD:
         # Remove relative image paths
         import re
 
-        content = re.sub(r"!\[.*?\]\(\.\/.*?\)", "", content)
+        content = re.sub(r"!\[.*?\]\(\.\/.*?\)|<img.*?src=\"\/(.*?)\".*?>", "", content)
         markdown_text += content
 
         # 将字符串写入 Markdown 文件
