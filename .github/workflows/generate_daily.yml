@@ -44,6 +44,16 @@ jobs:
         run: |
           python scripts/multi_language.py
 
+      - name: Generate Markdown 英文 github
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          PRODUCTHUNT_CLIENT_ID: ${{ secrets.PRODUCTHUNT_CLIENT_ID }}
+          PRODUCTHUNT_CLIENT_SECRET: ${{ secrets.PRODUCTHUNT_CLIENT_SECRET }}
+          LANGUAGE: "en"
+        run: |
+          python scripts/main.py
+
       - name: Generate Markdown 阿拉伯语
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
