@@ -13,7 +13,6 @@ categories: ['github']
 
 <p align="center">
   <a href="https://patrickjs.com" target="_blank">
-    <img src="/cursor-ai-logo.png" alt="Awesome CursorRules" />
   </a>
 </p>
 
@@ -41,6 +40,7 @@ By creating a `.cursorrules` file in your project's root directory, you can leve
 
 ## Contents
 
+- [PatrickJS/awesome-cursorrules](#patrickjsawesome-cursorrules)
 - [Awesome CursorRules ](#awesome-cursorrules-)
   - [Why .cursorrules?](#why-cursorrules)
   - [Contents](#contents)
