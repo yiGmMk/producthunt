@@ -1,9 +1,9 @@
 ---
 title: youtube-music
-date: 2025-04-02T18:38:03+08:00
+date: 2025-04-03T15:30:47+08:00
 draft: False
-image: https://images.unsplash.com/photo-1501862169286-518c291e3eed?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM1OTAyNzV8&ixlib=rb-4.0.3
-tags: ['github',YouTube Music,Electron,plugins,custom plugins,ad blocker,album color theme,ambient mode,audio compressor,Discord Rich Presence,downloader,equalizer,exponential volume,Last.fm,ListenBrainz]
+image: https://images.unsplash.com/photo-1602646659518-071f12284388?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM2NjU0MzF8&ixlib=rb-4.0.3
+tags: ['github',YouTube Music,Electron,plugins,plugin,features,download,macOS,Windows,Arch Linux]
 categories: ['github']
 ---
 

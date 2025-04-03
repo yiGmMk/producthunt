@@ -1,9 +1,9 @@
 ---
 title: nvm
-date: 2025-04-02T18:38:33+08:00
+date: 2025-04-03T15:30:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1705198190334-156df02024de?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM1OTAyNzV8&ixlib=rb-4.0.3
-tags: ['github',Node,nvm,npm,nodejs,version,manager,install,uninstall,Linux]
+image: https://images.unsplash.com/photo-1602646659518-071f12284388?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM2NjU0MzF8&ixlib=rb-4.0.3
+tags: ['github',node.js,nvm,npm,installation,version,manager,Linux,macOS,Windows]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: awesome-mcp-servers
-date: 2025-04-02T18:38:23+08:00
+date: 2025-04-03T15:30:58+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591017895512-7ad085aea404?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM1OTAyNzV8&ixlib=rb-4.0.3
-tags: ['github',Model Context Protocol,MCP servers,AI models,local resources,remote resources,database connections,API integrations,clients,tutorials,community]
+image: https://images.unsplash.com/photo-1596999034018-abea57f9f54b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM2NjU0MzF8&ixlib=rb-4.0.3
+tags: ['github',Model Context Protocol,MCP servers,AI models,local resources,remote resources,server implementations,AI capabilities,file access,database connections,API integrations,clients,tutorials,community]
 categories: ['github']
 ---
 
