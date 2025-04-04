@@ -1,9 +1,9 @@
 ---
 title: rustdesk
-date: 2025-04-02T18:38:49+08:00
+date: 2025-04-04T15:28:05+08:00
 draft: False
-image: https://images.unsplash.com/photo-1602481678277-6ecbec3ec0b1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM1OTAyNzV8&ixlib=rb-4.0.3
-tags: ['github',RustDesk,remote desktop,software,Rust,open source,screen sharing,file transfer,secure,cross-platform,remote access]
+image: https://images.unsplash.com/photo-1507372953381-f69d9aeac620?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM3NTE2MDB8&ixlib=rb-4.0.3
+tags: ['github',RustDesk,remote desktop,screen sharing,file transfer,open source,Rust,cross-platform,remote access,software,secure]
 categories: ['github']
 ---
 

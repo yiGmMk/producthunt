@@ -1,9 +1,9 @@
 ---
 title: postiz-app
-date: 2025-04-03T15:31:23+08:00
+date: 2025-04-04T15:27:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1536645152842-6b5fbacf1153?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM2NjU0MzF8&ixlib=rb-4.0.3
-tags: ['github',social media scheduling, AI features, social media management, audience building, lead capture, business growth, analytics, team collaboration,  PostgreSQL, NextJS]
+image: https://images.unsplash.com/photo-1658901097893-cfe9605ca208?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM3NTE2MDB8&ixlib=rb-4.0.3
+tags: ['github',social media scheduling, AI features, social media management, audience building, lead capture, business growth, analytics, team collaboration,  Postiz]
 categories: ['github']
 ---
 

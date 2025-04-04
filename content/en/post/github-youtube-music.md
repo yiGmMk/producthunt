@@ -1,9 +1,9 @@
 ---
 title: youtube-music
-date: 2025-04-03T15:30:47+08:00
+date: 2025-04-04T15:28:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1602646659518-071f12284388?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM2NjU0MzF8&ixlib=rb-4.0.3
-tags: ['github',YouTube Music,Electron,plugins,plugin,features,download,macOS,Windows,Arch Linux]
+image: https://images.unsplash.com/photo-1658901097893-cfe9605ca208?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM3NTE2MDB8&ixlib=rb-4.0.3
+tags: ['github',YouTube Music,Electron,plugins,plugin,custom plugins,YouTube,Music,features,download,Arch Linux,macOS,Windows]
 categories: ['github']
 ---
 
