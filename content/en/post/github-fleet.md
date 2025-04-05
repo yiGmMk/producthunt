@@ -1,9 +1,9 @@
 ---
 title: fleet
-date: 2025-04-04T15:28:18+08:00
+date: 2025-04-05T15:25:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1658901097893-cfe9605ca208?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM3NTE2MDB8&ixlib=rb-4.0.3
-tags: ['github',Fleet, open-source, IT, security, device management, vulnerability reporting, MDM,  CIS benchmarks,  osquery]
+image: https://images.unsplash.com/photo-1502218670253-c4193007b068?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM4Mzc4ODJ8&ixlib=rb-4.0.3
+tags: ['github',Fleet,IT security,device management,MDM,vulnerability reporting,open source,osquery,API,GitOps]
 categories: ['github']
 ---
 

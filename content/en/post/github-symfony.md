@@ -1,9 +1,9 @@
 ---
 title: symfony
-date: 2025-04-04T15:28:35+08:00
+date: 2025-04-05T15:25:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1605101100278-5d1deb2b6498?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM3NTE2MDB8&ixlib=rb-4.0.3
-tags: ['github',Symfony,PHP framework,web applications,PHP components,Composer,semantic versioning,LTS,Sulu,Rector]
+image: https://images.unsplash.com/photo-1458777494317-654abe82b4d7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM4Mzc4ODJ8&ixlib=rb-4.0.3
+tags: ['github',Symfony,PHP,framework,web applications,PHP components,Composer,semantic versioning,LTS,Sulu,Rector]
 categories: ['github']
 ---
 

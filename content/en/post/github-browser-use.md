@@ -1,9 +1,9 @@
 ---
 title: browser-use
-date: 2025-04-04T15:27:59+08:00
+date: 2025-04-05T15:26:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1658901097893-cfe9605ca208?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM3NTE2MDB8&ixlib=rb-4.0.3
-tags: ['github',AI,browser automation,web automation,Langchain,Playwright,Python,LLM,agent]
+image: https://images.unsplash.com/photo-1458777494317-654abe82b4d7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM4Mzc4ODJ8&ixlib=rb-4.0.3
+tags: ['github',AI,browser automation,web automation,Langchain,Playwright,Python,OpenAI,API]
 categories: ['github']
 ---
 

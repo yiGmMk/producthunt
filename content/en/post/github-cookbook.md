@@ -1,9 +1,9 @@
 ---
 title: cookbook
-date: 2025-04-03T15:32:10+08:00
+date: 2025-04-05T15:26:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1683775648099-607caa8658e2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM2NjU0MzF8&ixlib=rb-4.0.3
-tags: ['github',Gemini API,Google Gemini,cookbook,quickstarts,examples,demos,Imagen,Live API,code execution,function calling,Google Search grounding,media generation,migration guide,authentication,multimodal input,Python,Google AI Studio,Vertex AI,SDKs,REST API]
+image: https://images.unsplash.com/photo-1685516126008-41b3d54786f8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM4Mzc4ODJ8&ixlib=rb-4.0.3
+tags: ['github',Gemini,API,Google,AI,models,Imagen,quickstarts,examples,SDK,code execution,function calling,Google Search grounding,media generation,Live API,multimodal]
 categories: ['github']
 ---
 

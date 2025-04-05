@@ -1,9 +1,9 @@
 ---
 title: slam-handbook-public-release
-date: 2025-04-04T15:27:14+08:00
+date: 2025-04-05T15:26:36+08:00
 draft: False
-image: https://images.unsplash.com/photo-1513039235271-5937eefe2959?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM3NTE2MDB8&ixlib=rb-4.0.3
-tags: ['github',SLAM,Simultaneous Localization and Mapping,Spatial AI,Factor Graphs,Visual SLAM,LiDAR SLAM,Deep Learning,Robotics]
+image: https://images.unsplash.com/photo-1719942377441-34812a61580a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM4Mzc4ODJ8&ixlib=rb-4.0.3
+tags: ['github',SLAM,Simultaneous Localization and Mapping,Spatial AI,Visual SLAM,LiDAR SLAM,Robotics,Deep Learning,Factor Graphs]
 categories: ['github']
 ---
 

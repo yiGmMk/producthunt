@@ -1,9 +1,9 @@
 ---
 title: aie-book
-date: 2025-04-03T15:32:48+08:00
+date: 2025-04-05T15:25:27+08:00
 draft: False
-image: https://images.unsplash.com/photo-1588330392572-e81b2c67c119?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM2NjU0MzF8&ixlib=rb-4.0.3
-tags: ['github',AI Engineering,Foundation Models,Large Language Models,LLMs,Prompt Engineering,AI Applications,Machine Learning,Model Evaluation,AI Development]
+image: https://images.unsplash.com/photo-1675814015142-c9b189eb062c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM4Mzc4ODJ8&ixlib=rb-4.0.3
+tags: ['github',AI Engineering,foundation models,large language models,prompt engineering,AI applications,machine learning,model evaluation,AI development]
 categories: ['github']
 ---
 

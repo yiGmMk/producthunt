@@ -1,9 +1,9 @@
 ---
 title: crawl4ai
-date: 2025-04-04T15:26:57+08:00
+date: 2025-04-05T15:26:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1627308072378-f119244a66c1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM3NTE2MDB8&ixlib=rb-4.0.3
-tags: ['github',web crawler,web scraper,LLM,markdown,data extraction,Python,open-source,AI]
+image: https://images.unsplash.com/photo-1685516126008-41b3d54786f8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM4Mzc4ODJ8&ixlib=rb-4.0.3
+tags: ['github',web crawler,web scraper,LLM,AI,data extraction,markdown,open source,Python]
 categories: ['github']
 ---
 
