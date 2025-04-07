@@ -1,9 +1,9 @@
 ---
 title: BabelDOC
-date: 2025-04-06T15:25:52+08:00
+date: 2025-04-07T15:29:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1658901097708-ff93ddafc4c2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM5MjQyODJ8&ixlib=rb-4.0.3
-tags: ['github',PDF translation,BabelDOC,scientific paper,Python API,command line interface,OpenAI,translation service,PDF processing,bilingual comparison]
+image: https://images.unsplash.com/photo-1613410607457-5def91475ee8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQwMTA4OTZ8&ixlib=rb-4.0.3
+tags: ['github',PDF,translation,BabelDOC,OpenAI,Python,API,command line interface,PDFMathTranslate]
 categories: ['github']
 ---
 
@@ -37,6 +37,9 @@ categories: ['github']
   <a href="https://t.me/+Z9_SgnxmsmA5NzBl">
     <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=flat-squeare&logo=telegram&logoColor=white"></a>
 </p>
+
+<a href="https://trendshift.io/repositories/13358" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13358" alt="funstory-ai%2FBabelDOC | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+
 </div>
 
 PDF scientific paper translation and bilingual comparison library.
@@ -176,6 +179,7 @@ uv run babeldoc --files example.pdf --files example2.pdf --openai --openai-model
 > 1. Currently, only OpenAI-compatible LLM is supported. For more translator support, please use [PDFMathTranslate](https://github.com/Byaidu/PDFMathTranslate).
 > 2. It is recommended to use models with strong compatibility with OpenAI, such as: `glm-4-flash`, `deepseek-chat`, etc.
 > 3. Currently, it has not been optimized for traditional translation engines like Bing/Google, it is recommended to use LLMs.
+> 4. You can use [litellm](https://github.com/BerriAI/litellm) to access multiple models.
 
 ### OpenAI Specific Options
 

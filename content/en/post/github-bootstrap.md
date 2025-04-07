@@ -1,9 +1,9 @@
 ---
 title: bootstrap
-date: 2025-04-06T15:26:02+08:00
+date: 2025-04-07T15:29:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1498962342534-ee08a0bb1d45?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM5MjQyODJ8&ixlib=rb-4.0.3
-tags: ['github',Bootstrap,CSS,JavaScript,front-end framework,web development,GitHub,documentation,npm,Sass]
+image: https://images.unsplash.com/photo-1596321971168-66d7c88222f3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQwMTA4OTZ8&ixlib=rb-4.0.3
+tags: ['github',Bootstrap,front-end framework,web development,CSS,JavaScript,GitHub,documentation,npm,release]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: fleet
-date: 2025-04-06T15:26:09+08:00
+date: 2025-04-07T15:29:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1689364743295-eeafe1e9559e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM5MjQyODJ8&ixlib=rb-4.0.3
-tags: ['github',Fleet,IT security,device management,MDM,vulnerability reporting,open source,software licensing,compliance,CIS benchmarks]
+image: https://images.unsplash.com/photo-1634930778824-78936981064c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQwMTA4OTZ8&ixlib=rb-4.0.3
+tags: ['github',Fleet,IT security,device management,MDM,vulnerability reporting,open source,macOS,Windows]
 categories: ['github']
 ---
 
