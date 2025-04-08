@@ -1,9 +1,9 @@
 ---
 title: supabase-mcp
-date: 2025-04-07T15:29:29+08:00
+date: 2025-04-08T15:27:53+08:00
 draft: False
-image: https://images.unsplash.com/photo-1625596802932-6c70a9ec68d5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQwMTA4OTZ8&ixlib=rb-4.0.3
-tags: ['github',Supabase,MCP,Large Language Models,LLMs,AI assistants,Cursor,Claude,Windsurf,Model Context Protocol,Node.js,personal access token,PAT,Supabase settings,database,SQL,migrations,TypeScript,PostgREST,Project Management,Database Operations,Project Configuration,Branching]
+image: https://images.unsplash.com/photo-1536522456442-8047d3366dcf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQwOTcyNDB8&ixlib=rb-4.0.3
+tags: ['github',Supabase,MCP,Large Language Models,LLMs,AI assistants,Cursor,Claude,Windsurf,Model Context Protocol,Node.js,personal access token,PAT,Supabase projects,database,SQL,migrations,TypeScript,Project Management,Database Operations,Project Configuration,Branching,Development Tools,Cost Confirmation,@supabase/mcp-server-postgrest]
 categories: ['github']
 ---
 
@@ -164,6 +164,11 @@ The following Supabase tools are available to the LLM:
 #### Development Tools
 
 - `generate_typescript_types`: Generates TypeScript types based on the database schema. LLMs can save this to a file and use it in their code.
+
+#### Cost Confirmation
+
+- `get_cost`: Gets the cost of a new project or branch for an organization.
+- `confirm_cost`: Confirms the user's understanding of new project or branch costs. This is required to create a new project or branch.
 
 ## Other MCP servers
 

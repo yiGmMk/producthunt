@@ -1,8 +1,8 @@
 ---
 title: PhysX
-date: 2025-04-07T15:28:50+08:00
+date: 2025-04-08T15:28:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1467693068421-3a2b8d01faf0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQwMTA4OTZ8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1682109306925-c0e3af679137?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQwOTcyNDB8&ixlib=rb-4.0.3
 tags: ['github',NVIDIA,PhysX,SDK,Omniverse,Flow,Blast,GitHub,Documentation,Issues,Discussions]
 categories: ['github']
 ---

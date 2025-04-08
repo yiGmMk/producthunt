@@ -1,8 +1,8 @@
 ---
 title: llama-models
-date: 2025-04-07T15:28:24+08:00
+date: 2025-04-08T15:27:36+08:00
 draft: False
-image: https://images.unsplash.com/photo-1613410607457-5def91475ee8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQwMTA4OTZ8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1612866510806-a9a9f7abd246?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQwOTcyNDB8&ixlib=rb-4.0.3
 tags: ['github',Llama, large language model, open access,  LLM,  generative AI,  Hugging Face,  Meta]
 categories: ['github']
 ---
