@@ -1,9 +1,9 @@
 ---
 title: anime
-date: 2025-04-08T15:28:27+08:00
+date: 2025-04-09T15:29:27+08:00
 draft: False
-image: https://images.unsplash.com/photo-1614282635334-600d44ad88b1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQwOTcyNDB8&ixlib=rb-4.0.3
-tags: ['github',JavaScript,Animation,anime.js,JavaScript library,CSS,SVG,DOM]
+image: https://images.unsplash.com/photo-1528184039930-bd03972bd974?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQxODM2NTd8&ixlib=rb-4.0.3
+tags: ['github',JavaScript,Animation,Library,Anime.js,JavaScript library,Web animation,CSS,SVG,DOM]
 categories: ['github']
 ---
 

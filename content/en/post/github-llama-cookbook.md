@@ -1,9 +1,9 @@
 ---
 title: llama-cookbook
-date: 2025-04-08T15:28:12+08:00
+date: 2025-04-09T15:29:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1614282635334-600d44ad88b1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQwOTcyNDB8&ixlib=rb-4.0.3
-tags: ['github',Llama,Cookbook,fine-tuning,inference,LLM,models,multimodal,repository,use-cases]
+image: https://images.unsplash.com/photo-1516503424803-708327384b90?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQxODM2NTd8&ixlib=rb-4.0.3
+tags: ['github',Llama,Cookbook,fine-tuning,inference,multimodal,models,LLM,repository,end-to-end]
 categories: ['github']
 ---
 

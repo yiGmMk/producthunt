@@ -1,9 +1,9 @@
 ---
 title: supabase-mcp
-date: 2025-04-08T15:27:53+08:00
+date: 2025-04-09T15:28:02+08:00
 draft: False
-image: https://images.unsplash.com/photo-1536522456442-8047d3366dcf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQwOTcyNDB8&ixlib=rb-4.0.3
-tags: ['github',Supabase,MCP,Large Language Models,LLMs,AI assistants,Cursor,Claude,Windsurf,Model Context Protocol,Node.js,personal access token,PAT,Supabase projects,database,SQL,migrations,TypeScript,Project Management,Database Operations,Project Configuration,Branching,Development Tools,Cost Confirmation,@supabase/mcp-server-postgrest]
+image: https://images.unsplash.com/photo-1516503424803-708327384b90?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQxODM2NTd8&ixlib=rb-4.0.3
+tags: ['github',Supabase,MCP,LLM,Large Language Models,AI assistants,Cursor,Claude,Windsurf,Model Context Protocol,Node.js,personal access token,PAT,Supabase settings,database,SQL,migrations,TypeScript,Project Management,Database Operations,Project Configuration,Branching,Development Tools,Cost Confirmation,PostgREST]
 categories: ['github']
 ---
 
@@ -55,9 +55,9 @@ Next, configure your MCP client (such as Cursor) to use this server. Most MCP cl
 }
 ```
 
-Replace `<personal-access-token>` with the token you created in step 1. If you are on Windows, you will need to [prefix this command](#windows).
+Replace `<personal-access-token>` with the token you created in step 1. Alternatively you can omit `--access-token` and instead set the `SUPABASE_ACCESS_TOKEN` environment variable to your personal access token (you will need to restart your MCP client after setting this). This allows you to keep your token out of version control if you plan on committing this configuration to a repository.
 
-If your MCP client doesn't accept JSON, the direct CLI command is:
+If you are on Windows, you will need to [prefix the command](#windows). If your MCP client doesn't accept JSON, the direct CLI command is:
 
 ```shell
 npx -y @supabase/mcp-server-supabase@latest --access-token=<personal-access-token>

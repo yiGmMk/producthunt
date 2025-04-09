@@ -1,9 +1,9 @@
 ---
 title: llm-cookbook
-date: 2025-04-07T15:28:57+08:00
+date: 2025-04-09T15:28:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1467693068421-3a2b8d01faf0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQwMTA4OTZ8&ixlib=rb-4.0.3
-tags: ['github',Large Language Model,LLM,Prompt Engineering,ChatGPT API,LangChain,Application Development,Generative AI,Datawhale]
+image: https://images.unsplash.com/photo-1614282635334-600d44ad88b1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQxODM2NTd8&ixlib=rb-4.0.3
+tags: ['github',Large Language Model,LLM,Prompt Engineering,LangChain,ChatGPT API,RAG,Generative AI,Model Fine-tuning,Datawhale]
 categories: ['github']
 ---
 

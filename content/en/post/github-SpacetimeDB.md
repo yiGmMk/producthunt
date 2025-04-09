@@ -1,9 +1,9 @@
 ---
 title: SpacetimeDB
-date: 2025-04-08T15:28:03+08:00
+date: 2025-04-09T15:28:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1573115846435-f287289feb2a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQwOTcyNDB8&ixlib=rb-4.0.3
-tags: ['github',SpacetimeDB,database,Rust,modules,real-time applications,low latency,MMORPG,BitCraft Online,smart contracts,installation,documentation]
+image: https://images.unsplash.com/photo-1598542308621-75dfe78cf939?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQxODM2NTd8&ixlib=rb-4.0.3
+tags: ['github',SpacetimeDB,database,modules,Rust,real-time applications,low latency,MMORPG,BitCraft Online,installation,Docker]
 categories: ['github']
 ---
 
