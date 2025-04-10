@@ -1,9 +1,9 @@
 ---
 title: LightRAG
-date: 2025-04-09T15:27:55+08:00
+date: 2025-04-10T15:27:56+08:00
 draft: False
-image: https://images.unsplash.com/photo-1598542308621-75dfe78cf939?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQxODM2NTd8&ixlib=rb-4.0.3
-tags: ['github',LightRAG,Retrieval-Augmented Generation,Knowledge Graph,Vector Database,LLM,OpenAI,Hugging Face,Ollama,LlamaIndex,Neo4J,PostgreSQL,Faiss,embedding,query,insert,delete,merge,export,citation,conversation history,custom prompt,keyword extraction,token usage tracking,graph visualization]
+image: https://images.unsplash.com/photo-1735395109786-40ce7029fe6f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQyNzAwMzJ8&ixlib=rb-4.0.3
+tags: ['github',LightRAG,Retrieval-Augmented Generation,Knowledge Graph,Vector Database,LLM,Embedding,OpenAI,Hugging Face,Ollama,LlamaIndex,Neo4J,PostgreSQL,Faiss,Multi-turn dialogue,Custom prompt,Keyword extraction,Token usage tracking,Data export,Entity merging,Graph visualization]
 categories: ['github']
 ---
 

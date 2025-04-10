@@ -1,9 +1,9 @@
 ---
 title: activepieces
-date: 2025-04-08T15:29:03+08:00
+date: 2025-04-10T15:28:23+08:00
 draft: False
-image: https://images.unsplash.com/photo-1717444309226-c0809d4b5bde?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQwOTcyNDB8&ixlib=rb-4.0.3
-tags: ['github',Activepieces,Zapier,open source,TypeScript,AI automation,MCP,LLMs,Claude Desktop,Cursor,Windsurf]
+image: https://images.unsplash.com/photo-1610049354374-9705db19fef9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQyNzAwMzJ8&ixlib=rb-4.0.3
+tags: ['github',Activepieces,Zapier,automation,TypeScript,open-source,AI,integration,pieces]
 categories: ['github']
 ---
 
@@ -399,6 +399,7 @@ Not into coding but still interested in contributing? Come join our [Discord](ht
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/briceflaceliere"><img src="https://avatars.githubusercontent.com/u/5811531?v=4?s=100" width="100px;" alt="Brice"/><br /><sub><b>Brice</b></sub></a><br /><a href="#security-briceflaceliere" title="Security">🛡️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://mg-wunna.github.io/mg-wunna/"><img src="https://avatars.githubusercontent.com/u/63114419?v=4?s=100" width="100px;" alt="Mg Wunna"/><br /><sub><b>Mg Wunna</b></sub></a><br /><a href="#plugin-mg-wunna" title="Plugin/utility libraries">🔌</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/harikrishnanum/"><img src="https://avatars.githubusercontent.com/u/61736905?v=4?s=100" width="100px;" alt="Harikrishnan U M"/><br /><sub><b>Harikrishnan U M</b></sub></a><br /><a href="https://github.com/activepieces/activepieces/issues?q=author%3Ahakrsh" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/perrine-pullicino-alan"><img src="https://avatars.githubusercontent.com/u/143406842?v=4?s=100" width="100px;" alt="perrine-pullicino-alan"/><br /><sub><b>perrine-pullicino-alan</b></sub></a><br /><a href="#plugin-perrine-pullicino-alan" title="Plugin/utility libraries">🔌</a></td>
     </tr>
   </tbody>
 </table>

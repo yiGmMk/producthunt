@@ -1,9 +1,9 @@
 ---
 title: protobuf
-date: 2025-04-09T15:30:19+08:00
+date: 2025-04-10T15:28:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1695807216937-fddfaa1f63ac?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQxODM2NTd8&ixlib=rb-4.0.3
-tags: ['github',Protocol Buffers,protobuf,data interchange format,serialization,structured data,Google,protoc,compiler,.proto files,runtime]
+image: https://images.unsplash.com/photo-1698514216194-ac523dfe9e33?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQyNzAwMzJ8&ixlib=rb-4.0.3
+tags: ['github',Protocol Buffers,protobuf,data interchange format,serialization,Google,protoc,runtime,programming language,installation]
 categories: ['github']
 ---
 

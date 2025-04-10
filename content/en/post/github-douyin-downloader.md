@@ -1,8 +1,8 @@
 ---
 title: douyin-downloader
-date: 2025-04-08T15:29:10+08:00
+date: 2025-04-10T15:28:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1717444309226-c0809d4b5bde?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQwOTcyNDB8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1724771203573-580f053b357c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQyNzAwMzJ8&ixlib=rb-4.0.3
 tags: ['github',DouyinDownloader,Python,command-line,YAML,multithreading,batch download,TikTok,video download,music download,watermark removal]
 categories: ['github']
 ---

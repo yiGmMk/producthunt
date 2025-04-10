@@ -1,9 +1,9 @@
 ---
 title: supabase-mcp
-date: 2025-04-09T15:28:02+08:00
+date: 2025-04-10T15:27:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1516503424803-708327384b90?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQxODM2NTd8&ixlib=rb-4.0.3
-tags: ['github',Supabase,MCP,LLM,Large Language Models,AI assistants,Cursor,Claude,Windsurf,Model Context Protocol,Node.js,personal access token,PAT,Supabase settings,database,SQL,migrations,TypeScript,Project Management,Database Operations,Project Configuration,Branching,Development Tools,Cost Confirmation,PostgREST]
+image: https://images.unsplash.com/photo-1666032309795-9c48fd1a6d5a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQyNzAwMzJ8&ixlib=rb-4.0.3
+tags: ['github',Supabase,MCP,LLM,Large Language Model,AI assistant,Model Context Protocol,Supabase project,database,SQL,project management,database operations,project configuration,branching,development tools,cost confirmation,PostgREST]
 categories: ['github']
 ---
 
