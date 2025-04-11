@@ -1,9 +1,9 @@
 ---
 title: ml-course
-date: 2025-04-10T15:28:31+08:00
+date: 2025-04-11T15:27:06+08:00
 draft: False
-image: https://images.unsplash.com/photo-1610049354374-9705db19fef9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQyNzAwMzJ8&ixlib=rb-4.0.3
-tags: ['github',Machine Learning,Deep Learning,Linear Regression,SVM,Gradient Boosting,Neural Networks,Naive Bayes,kNN]
+image: https://images.unsplash.com/photo-1538558940285-e76825003c99?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQzNTY0MTZ8&ixlib=rb-4.0.3
+tags: ['github',Machine Learning,Deep Learning,Linear Regression,SVM,Naive Bayes,kNN,Gradient Boosting,Neural Networks]
 categories: ['github']
 ---
 

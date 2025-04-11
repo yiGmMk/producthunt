@@ -1,9 +1,9 @@
 ---
 title: cuda-python
-date: 2025-04-09T15:29:33+08:00
+date: 2025-04-11T15:27:47+08:00
 draft: False
-image: https://images.unsplash.com/photo-1634129366530-61d3e56a84fb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQxODM2NTd8&ixlib=rb-4.0.3
-tags: ['github',CUDA,Python,GPU,NVIDIA,CUDA Runtime,CUDA Driver,Numba,kernels,parallel algorithms]
+image: https://images.unsplash.com/photo-1538558940285-e76825003c99?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQzNTY0MTZ8&ixlib=rb-4.0.3
+tags: ['github',CUDA,Python,CUDA Runtime,CUDA Driver,Numba,GPU,parallel algorithms,kernels,device functions]
 categories: ['github']
 ---
 

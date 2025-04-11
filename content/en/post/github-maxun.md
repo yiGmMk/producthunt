@@ -1,9 +1,9 @@
 ---
 title: maxun
-date: 2025-04-09T15:28:19+08:00
+date: 2025-04-11T15:28:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1614282635334-600d44ad88b1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQxODM2NTd8&ixlib=rb-4.0.3
-tags: ['github',web scraping,data extraction,no-code platform,web data,automation,robots,web automation,data automation]
+image: https://images.unsplash.com/photo-1678865841922-4bab3ddd1148?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQzNTY0MTZ8&ixlib=rb-4.0.3
+tags: ['github',web scraping,data extraction,no-code platform,web automation,robot,proxy,data automation,web data]
 categories: ['github']
 ---
 
