@@ -1,9 +1,9 @@
 ---
 title: free-for-dev
-date: 2025-04-10T15:29:15+08:00
+date: 2025-04-12T15:25:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1735395109786-40ce7029fe6f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQyNzAwMzJ8&ixlib=rb-4.0.3
-tags: ['github',free-tier, SaaS, PaaS, IaaS, API, cloud-providers, open-source, developer-tools, cloud-management]
+image: https://images.unsplash.com/photo-1689591136887-fa62fd76eecd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ0NDI2NzR8&ixlib=rb-4.0.3
+tags: ['github',free-tier, SaaS, PaaS, IaaS, API, cloud-hosting, open-source, developer-tools, cloud-services]
 categories: ['github']
 ---
 
@@ -1534,7 +1534,7 @@ Update Time, five active automations, webhooks.
   * [MConverter.eu](https://mconverter.eu/) – Convert files in bulk. Supports many file formats, including new ones like [AVIF](https://mconverter.eu/convert/to/avif/). Extract all image frames from videos. Free for up to ten 100MB-files per day, processed in batches of two.
   * [ImageEngine](https://imageengine.io/) – ImageEngine is an easy to use global image CDN. Sub 60 sec setup. AVIF and JPEGXL support, WordPress-, Magento-, React-, Vue- plugins and more. Claim your free developer account [here](https://imageengine.io/developer-program/).
   * [DocsParse](https://docsparse.com/) – GPT powered AI processing of PDFs, Images, into structured data in JSON, CSV, EXCEL formats. 30 credits for free each month.
-
+  * [VaocherApp QR Code Generator](https://www.vaocherapp.com/qr-code-generator) – Easily create custom QR codes for gift cards, gift vouchers, and promotions. Support custom styling, color, logo...
 
 **[⬆️ Back to Top](#table-of-contents)**
 
