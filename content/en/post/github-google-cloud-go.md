@@ -1,9 +1,9 @@
 ---
 title: google-cloud-go
-date: 2025-04-12T15:25:22+08:00
+date: 2025-04-13T15:26:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1640386355103-83ebf7c6c83e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ0NDI2NzR8&ixlib=rb-4.0.3
-tags: ['github',Google Cloud,Go,Client Libraries,API,Authentication,Application Default Credentials,service account,credentials,Google Cloud Platform]
+image: https://images.unsplash.com/photo-1456318456940-4da16c8fc9bc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ1MjkwODV8&ixlib=rb-4.0.3
+tags: ['github',Google Cloud,Go,Client Libraries,Authentication,Application Default Credentials,service account,Google Cloud Platform,Go Versions,API]
 categories: ['github']
 ---
 

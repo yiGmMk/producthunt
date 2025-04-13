@@ -1,9 +1,9 @@
 ---
 title: BabelDOC
-date: 2025-04-08T15:27:45+08:00
+date: 2025-04-13T15:25:55+08:00
 draft: False
-image: https://images.unsplash.com/photo-1536522456442-8047d3366dcf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQwOTcyNDB8&ixlib=rb-4.0.3
-tags: ['github',PDF,translation,BabelDOC,OpenAI,Python,API,command line interface,PDFMathTranslate]
+image: https://images.unsplash.com/photo-1627590720218-c5ed819dae7e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ1MjkwODV8&ixlib=rb-4.0.3
+tags: ['github',PDF,translation,BabelDOC,Python,API,command line,OpenAI,LLM]
 categories: ['github']
 ---
 

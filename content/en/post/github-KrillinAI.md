@@ -1,9 +1,9 @@
 ---
 title: KrillinAI
-date: 2025-04-12T15:24:56+08:00
+date: 2025-04-13T15:26:02+08:00
 draft: False
-image: https://images.unsplash.com/photo-1595923941716-39a9c58a9661?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ0NDI2NzR8&ixlib=rb-4.0.3
-tags: ['github',AI video translation, video localization, subtitle translation, dubbing, voice cloning, video composition, Whisper, LLM, yt-dlp, CosyVoice]
+image: https://images.unsplash.com/photo-1638633898609-07028cc6d756?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ1MjkwODV8&ixlib=rb-4.0.3
+tags: ['github',video localization, AI translation, dubbing, voice cloning, subtitle generation, video editing,  multilingual support,  video enhancement]
 categories: ['github']
 ---
 

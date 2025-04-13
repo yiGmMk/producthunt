@@ -1,9 +1,9 @@
 ---
 title: cursor-free-vip
-date: 2025-04-12T15:24:49+08:00
+date: 2025-04-13T15:24:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1576026339862-83ada3330f75?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ0NDI2NzR8&ixlib=rb-4.0.3
-tags: ['github',Cursor,automation,account registration,Google OAuth,GitHub OAuth,Windows,macOS,Linux,authentication,configuration reset]
+image: https://images.unsplash.com/photo-1732486631757-a4d149ad64e8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ1MjkwODV8&ixlib=rb-4.0.3
+tags: ['github',Cursor,automation,account registration,Google OAuth,GitHub OAuth,Windows,macOS,Linux]
 categories: ['github']
 ---
 
@@ -24,6 +24,10 @@ categories: ['github']
 [![Download](https://img.shields.io/github/downloads/yeongpin/cursor-free-vip/total?style=flat-square&logo=github&color=52c41a1)](https://github.com/yeongpin/cursor-free-vip/releases/latest)
 
 </p>
+
+<a href="https://trendshift.io/repositories/13425" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13425" alt="yeongpin%2Fcursor-free-vip | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+
+
 <h4>Support Latest 0.48.x Version | 支持最新 0.48.x 版本</h4>
 
 This tool registers accounts with custom emails, support Google and GitHub account registrations, temporary GitHub account registration, kills all Cursor's running processes, resets and wipes Cursor data and hardware info.
