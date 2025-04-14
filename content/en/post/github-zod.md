@@ -1,9 +1,9 @@
 ---
 title: zod
-date: 2025-04-13T15:25:19+08:00
+date: 2025-04-14T15:29:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1691952991676-d3f56bf3b786?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ1MjkwODV8&ixlib=rb-4.0.3
-tags: ['github',TypeScript, schema, validation, Zod, static, inference, JavaScript, API, library]
+image: https://images.unsplash.com/photo-1641403100719-be7f1ff2e771?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ2MTU2OTl8&ixlib=rb-4.0.3
+tags: ['github',TypeScript,schema validation,Zod,static type inference,data validation,schema declaration,API libraries,form integrations,TypeScript types]
 categories: ['github']
 ---
 
@@ -621,6 +621,7 @@ There are a growing number of tools that are built atop or support Zod natively!
 - [`unplugin-environment`](https://github.com/r17x/js/tree/main/packages/unplugin-environment#readme): A plugin for loading enviroment variables safely with schema validation, simple with virtual module, type-safe with intellisense, and better DX 🔥 🚀 👷. Powered by Zod.
 - [`zod-struct`](https://codeberg.org/reesericci/zod-struct): Create runtime-checked structs with Zod.
 - [`zod-csv`](https://github.com/bartoszgolebiowski/zod-csv): Validation helpers for zod for parsing CSV data.
+- [`fullproduct.dev`](https://fullproduct.dev?identity=freelancers&v=z3): Universal Expo + Next.js App Starter that uses Zod schemas as the single source of truth to keep generated MDX docs, GraphQL, database models, forms, and fetcher functions in sync.
 
 #### Utilities for Zod
 

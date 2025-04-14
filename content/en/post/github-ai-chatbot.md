@@ -1,8 +1,8 @@
 ---
 title: ai-chatbot
-date: 2025-04-12T15:25:12+08:00
+date: 2025-04-14T15:28:36+08:00
 draft: False
-image: https://images.unsplash.com/photo-1576026339862-83ada3330f75?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ0NDI2NzR8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1617036213219-533c4492dc49?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ2MTU2OTl8&ixlib=rb-4.0.3
 tags: ['github',Next.js,AI Chatbot,LLM,OpenAI,xAI,Vercel,Chat SDK,Authentication,Data Persistence]
 categories: ['github']
 ---

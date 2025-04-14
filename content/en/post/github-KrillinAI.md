@@ -1,9 +1,9 @@
 ---
 title: KrillinAI
-date: 2025-04-13T15:26:02+08:00
+date: 2025-04-14T15:28:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1638633898609-07028cc6d756?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ1MjkwODV8&ixlib=rb-4.0.3
-tags: ['github',video localization, AI translation, dubbing, voice cloning, subtitle generation, video editing,  multilingual support,  video enhancement]
+image: https://images.unsplash.com/photo-1582457524080-01f5b04cb2db?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ2MTU2OTl8&ixlib=rb-4.0.3
+tags: ['github',video localization, AI translation, dubbing, voice cloning, subtitle generation, video editing,  multi-language support,  video enhancement]
 categories: ['github']
 ---
 
