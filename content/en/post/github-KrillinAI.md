@@ -1,9 +1,9 @@
 ---
 title: KrillinAI
-date: 2025-04-14T15:28:46+08:00
+date: 2025-04-15T15:29:47+08:00
 draft: False
-image: https://images.unsplash.com/photo-1582457524080-01f5b04cb2db?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ2MTU2OTl8&ixlib=rb-4.0.3
-tags: ['github',video localization, AI translation, dubbing, voice cloning, subtitle generation, video editing,  multi-language support,  video enhancement]
+image: https://images.unsplash.com/photo-1538097759666-75891238b8c7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3MDIxNjZ8&ixlib=rb-4.0.3
+tags: ['github',AI video translation, video localization, dubbing, voice cloning, subtitle translation, speech recognition, large language model, OpenAI Whisper, FasterWhisper, WhisperKit, Alibaba Cloud ASR, OpenAI API, video composition, video formatting]
 categories: ['github']
 ---
 
@@ -17,7 +17,7 @@ categories: ['github']
 
 <a href="https://trendshift.io/repositories/13360" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13360" alt="krillinai%2FKrillinAI | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
-  **[English](./README.md)｜[简体中文](./docs/README_zh.md)｜[日本語](./docs/README_jp.md)｜[한국어](./docs/README_kr.md)｜[Français](./docs/README_fr.md)｜[Deutsch](./docs/README_de.md)｜[Español](./docs/README_es.md)｜[Português](./docs/README_pt.md)｜[Русский](./docs/README_rus.md)**
+  **[English](./README.md)｜[简体中文](./docs/README_zh.md)｜[日本語](./docs/README_jp.md)｜[한국어](./docs/README_kr.md)｜[Français](./docs/README_fr.md)｜[Deutsch](./docs/README_de.md)｜[Español](./docs/README_es.md)｜[Português](./docs/README_pt.md)｜[Русский](./docs/README_rus.md)｜[اللغة العربية](./docs/README_ar.md)**
 
   [![Twitter](https://img.shields.io/badge/Twitter-KrillinAI-orange?logo=twitter)](https://x.com/KrillinAI)
 [![Bilibili](https://img.shields.io/badge/dynamic/json?label=Bilibili&query=%24.data.follower&suffix=%20followers&url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Frelation%2Fstat%3Fvmid%3D242124650&logo=bilibili&color=00A1D6&labelColor=FE7398&logoColor=FFFFFF)](https://space.bilibili.com/242124650)
@@ -79,6 +79,25 @@ https://github.com/user-attachments/assets/c2c7b528-0ef8-4ba9-b8ac-f9f92f6d4e71
 
 </tr>
 </table>
+
+## 🔍 Speech Recognition Support
+_**All local models in the table below support automatic installation of executable files + model files. Just make your selection, and KrillinAI will handle everything else for you.**_
+
+| Service         | Supported Platforms          | Model Options                     | Local/Cloud | Notes          |
+|-----------------|------------------------------|-----------------------------------|-------------|----------------|
+| **OpenAI Whisper** | Cross-platform       | -                                 | Cloud       | Fast with excellent results |
+| **FasterWhisper** | Windows/Linux     | `tiny`/`medium`/`large-v2` (recommend medium+) | Local    | Faster speed, no cloud service overhead |
+| **WhisperKit**    | macOS (Apple Silicon only)   | `large-v2`                        | Local       | Native optimization for Apple chips |
+| **Alibaba Cloud ASR** | Cross-platform    | -                                 | Cloud       | Bypasses China mainland network issues |
+
+## 🚀 Large Language Model Support
+
+✅ Compatible with all **OpenAI API-compatible** cloud/local LLM services including but not limited to:
+- OpenAI
+- DeepSeek
+- Qwen (Tongyi Qianwen)
+- Self-hosted open-source models
+- Other OpenAI-format compatible API services
 
 ## 🌍 Language Support
 Input languages: Chinese, English, Japanese, German, Turkish supported (more languages being added)  

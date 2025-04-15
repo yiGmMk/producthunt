@@ -1,9 +1,9 @@
 ---
 title: HeyGem.ai
-date: 2025-04-13T15:25:12+08:00
+date: 2025-04-15T15:30:25+08:00
 draft: False
-image: https://images.unsplash.com/photo-1732486631757-a4d149ad64e8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ1MjkwODV8&ixlib=rb-4.0.3
-tags: ['github',Heygem, digital human, voice cloning, video synthesis, AI, open source, API, Docker, Ubuntu, Windows]
+image: https://images.unsplash.com/photo-1474511019749-26a5a4b632b2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3MDIxNjZ8&ixlib=rb-4.0.3
+tags: ['github',Heygem, digital human, AI, voice cloning, video synthesis, open source, local deployment, API, deep learning, Ubuntu, Windows]
 categories: ['github']
 ---
 
@@ -205,7 +205,7 @@ Installation using Docker, docker-compose as follows:
 1. The `docker-compose.yml` file is in the `/deploy` directory.
 2. Execute `docker-compose up -d` in the `/deploy` directory, <u>if you want to use the lite version, execute `docker-compose -f docker-compose-lite.yml up -d`</u>
 3. Wait patiently (about half an hour, speed depends on network), download will consume about 70GB of traffic, make sure to use WiFi
-4. When you see three services in Docker, it indicates success
+4. When you see three services in Docker, it indicates success (the lite version has only one service `heygem-gen-video`)
 
    ![e29d1922-7c58-46b4-b1e9-961f853f26d4](README_zh.assets/e29d1922-7c58-46b4-b1e9-961f853f26d4.png)
 

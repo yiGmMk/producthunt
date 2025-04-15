@@ -1,8 +1,8 @@
 ---
 title: freqtrade
-date: 2025-04-14T15:30:12+08:00
+date: 2025-04-15T15:31:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1582457524080-01f5b04cb2db?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ2MTU2OTl8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1496088285923-2bcbf1ba3f62?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3MDIxNjZ8&ixlib=rb-4.0.3
 tags: ['github',crypto trading bot, Python, Binance, exchange, backtesting, machine learning, strategy optimization, Telegram, webUI]
 categories: ['github']
 ---

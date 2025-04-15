@@ -1,9 +1,9 @@
 ---
 title: meeting-minutes
-date: 2025-04-14T15:29:24+08:00
+date: 2025-04-15T15:30:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1542733620-eb2122012b5d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ2MTU2OTl8&ixlib=rb-4.0.3
-tags: ['github',meeting minutes, AI-powered assistant, real-time transcription, meeting summarization, local processing, privacy, open-source, Whisper.cpp, LLM integration,  macOS, Windows]
+image: https://images.unsplash.com/photo-1538097759666-75891238b8c7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3MDIxNjZ8&ixlib=rb-4.0.3
+tags: ['github',meeting minutes, AI-powered, transcription, summarization, privacy, open-source, local processing, Whisper.cpp, LLM]
 categories: ['github']
 ---
 

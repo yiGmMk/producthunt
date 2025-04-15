@@ -1,9 +1,9 @@
 ---
 title: omi
-date: 2025-04-14T15:30:19+08:00
+date: 2025-04-15T15:30:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591375452003-22ea1d5b809d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ2MTU2OTl8&ixlib=rb-4.0.3
-tags: ['github',AI wearable, real-time transcription, open-source, mobile app, voice memo, meeting transcription, conversation capture, developer kit,  AI audio processing,  webhook]
+image: https://images.unsplash.com/photo-1702731798357-22bd8ca4a484?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3MDIxNjZ8&ixlib=rb-4.0.3
+tags: ['github',AI wearable,open-source,real-time transcription,meeting summaries,action items,mobile app,developer kit,webhook]
 categories: ['github']
 ---
 
@@ -76,6 +76,7 @@ Start speaking, you'll see Real-time transcript on [webhook.site ](https://webho
 ## In this repo:
 
 - [omi device](https://github.com/BasedHardware/omi/tree/main/omi)
+- [omi glass](https://github.com/BasedHardware/omi/tree/main/omiGlass)
 - [mobile app](https://github.com/BasedHardware/omi/tree/main/app)
 - [ai personas (web)](https://github.com/BasedHardware/omi/tree/main/personas-open-source)
 - [SDKs](sdks)
