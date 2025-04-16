@@ -1,9 +1,9 @@
 ---
 title: KrillinAI
-date: 2025-04-15T15:29:47+08:00
+date: 2025-04-16T15:29:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1538097759666-75891238b8c7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3MDIxNjZ8&ixlib=rb-4.0.3
-tags: ['github',AI video translation, video localization, dubbing, voice cloning, subtitle translation, speech recognition, large language model, OpenAI Whisper, FasterWhisper, WhisperKit, Alibaba Cloud ASR, OpenAI API, video composition, video formatting]
+image: https://images.unsplash.com/photo-1727175401108-6e8bf73ca114?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3ODg0NTh8&ixlib=rb-4.0.3
+tags: ['github',AI video translation, video localization, dubbing, voice cloning, subtitle translation, speech recognition, large language model, OpenAI Whisper, FasterWhisper, WhisperKit, Alibaba Cloud ASR, OpenAI API, video editing,  video formatting]
 categories: ['github']
 ---
 

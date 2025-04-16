@@ -1,9 +1,9 @@
 ---
 title: cursor-free-vip
-date: 2025-04-15T15:29:37+08:00
+date: 2025-04-16T15:28:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1694112406735-cafd2fa1e913?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3MDIxNjZ8&ixlib=rb-4.0.3
-tags: ['github',Cursor,account registration,GitHub,Google,OAuth,automation,Windows,macOS,Linux]
+image: https://images.unsplash.com/photo-1661478845791-4c73e9085554?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3ODg0NTh8&ixlib=rb-4.0.3
+tags: ['github',Cursor,Windows,macOS,Linux,reset,configuration,multi-language,support,script,automation]
 categories: ['github']
 ---
 
@@ -35,26 +35,24 @@ categories: ['github']
 
 <h4>Support Latest 0.48.x Version | 支持最新 0.48.x 版本</h4>
 
-This tool registers accounts with custom emails, support Google and GitHub account registrations, temporary GitHub account registration, kills all Cursor's running processes, resets and wipes Cursor data and hardware info.
+This tool is for educational purposes, currently the repo does not violate any laws. Please support the original project.
+This tool will not generate any fake email accounts and OAuth access.
 
 Supports Windows, macOS and Linux.
 
 For optimal performance, run with privileges and always stay up to date.
 
-Always clean your browser's cache and cookies. If possible, use a VPN to create new accounts.
+這是一款用於學習和研究的工具，目前 repo 沒有違反任何法律。請支持原作者。
+這款工具不會生成任何假的電子郵件帳戶和 OAuth 訪問。
 
+支持 Windows、macOS 和 Linux。
 
-這是一個自動化工具，自動註冊，支持 Windows macOS 和 Linux 系統，完成 Auth 驗證，重置 Cursor 的配置。
+對於最佳性能，請以管理員身份運行並始終保持最新。
+
 
 <p align="center">
-  <img src="./images/pro_2025-04-05_18-47-56.png" alt="new" width="800" style="border-radius: 6px;"/><br>
+  <img src="./images/product_2025-04-16_10-40-21.png" alt="new" width="800" style="border-radius: 6px;"/><br>
 </p>
-
-##### If you don't have browser, you can download it from  
-
-##### 如果沒有瀏覽器，可以從这里下載  
-
-[Google Chrome](https://www.google.com/intl/en_pk/chrome/) | [Opera](https://www.opera.com/download) | [Edge](https://www.microsoft.com/en-us/edge) | [Firefox](https://www.mozilla.org/en-US/firefox/new/) | [Brave](https://www.brave.com/download/)
 
 </div>
 
@@ -64,19 +62,9 @@ Always clean your browser's cache and cookies. If possible, use a VPN to create 
 
 ## ✨ Features | 功能特點
 
-* 🌟 Google OAuth Authentication with Lifetime Access<br>使用 Google OAuth 認證（終身訪問）<br>
-
-* ⭐ GitHub OAuth Authentication with Lifetime Access<br>使用 GitHub OAuth 認證（終身訪問）<br>
-
-* Automatically register Cursor membership<br>自動註冊 Cursor 會員<br>
-
 * Support Windows macOS and Linux systems<br>支持 Windows、macOS 和 Linux 系統<br>
 
-* Complete Auth verification<br>完成 Auth 驗證<br>
-
 * Reset Cursor's configuration<br>重置 Cursor 的配置<br>
-
-* Delete Cursor Google Account<br>删除 Cursor Google 账号<br>
 
 * Multi-language support (English, 简体中文, 繁體中文, Vietnamese)<br>多語言支持（英文、简体中文、繁體中文、越南語）<br>
 

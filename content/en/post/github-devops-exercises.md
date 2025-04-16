@@ -1,9 +1,9 @@
 ---
 title: devops-exercises
-date: 2025-04-14T15:30:02+08:00
+date: 2025-04-16T15:29:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1627758754900-a7ec9b622158?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ2MTU2OTl8&ixlib=rb-4.0.3
-tags: ['github',DevOps,Git,Kubernetes,AWS,Azure,Linux,CI/CD,Containers,Ansible,Terraform]
+image: https://images.unsplash.com/photo-1594671521780-751b3eee8ccf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3ODg0NTh8&ixlib=rb-4.0.3
+tags: ['github',DevOps,Git,Kubernetes,AWS,Azure,Linux,Containers,CI/CD,Terraform,Ansible,Observability,Prometheus,Software Development,Python,Go,Networking]
 categories: ['github']
 ---
 

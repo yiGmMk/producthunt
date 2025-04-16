@@ -1,9 +1,9 @@
 ---
 title: maybe
-date: 2025-04-14T15:29:03+08:00
+date: 2025-04-16T15:29:58+08:00
 draft: False
-image: https://images.unsplash.com/photo-1648536145010-3edd19636856?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ2MTU2OTl8&ixlib=rb-4.0.3
-tags: ['github',personal finance, wealth management, open-source, Docker, PostgreSQL, Ruby, multi-currency, Synth, AGPLv3]
+image: https://images.unsplash.com/photo-1714165861000-ee5b656c54e3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3ODg0NTh8&ixlib=rb-4.0.3
+tags: ['github',personal finance, wealth management, open-source, Docker, PostgreSQL, Ruby, multi-currency support, Synth, AGPLv3 license]
 categories: ['github']
 ---
 
@@ -35,7 +35,7 @@ and eventually offer a hosted version of the app for a small monthly fee.
 
 ## Maybe Hosting
 
-There are 3 primary ways to use the Maybe app:
+There are 2 primary ways to use the Maybe app:
 
 1. Managed (easiest) - we're in alpha and release invites in our Discord
 2. [Self-host with Docker](docs/hosting/docker.md)
