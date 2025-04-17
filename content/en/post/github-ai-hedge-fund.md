@@ -1,9 +1,9 @@
 ---
 title: ai-hedge-fund
-date: 2025-04-16T15:27:47+08:00
+date: 2025-04-17T15:28:56+08:00
 draft: False
-image: https://images.unsplash.com/photo-1714165861000-ee5b656c54e3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3ODg0NTh8&ixlib=rb-4.0.3
-tags: ['github',AI, hedge fund, trading, agents, value investing, growth investing, sentiment analysis, fundamental analysis, technical analysis, backtesting, portfolio management, risk management]
+image: https://images.unsplash.com/photo-1719451643491-d41067a8bffd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ4NzQ5MzB8&ixlib=rb-4.0.3
+tags: ['github',AI,hedge fund,trading,agents,investing,backtesting,valuation,sentiment analysis]
 categories: ['github']
 ---
 

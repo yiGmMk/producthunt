@@ -1,8 +1,8 @@
 ---
 title: fumadocs
-date: 2025-04-16T15:29:10+08:00
+date: 2025-04-17T15:29:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1696229667093-414c6535cef2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3ODg0NTh8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1598561315290-246b74fc91b0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ4NzQ5MzB8&ixlib=rb-4.0.3
 tags: ['github',Next.js,documentation,website,framework,fumadocs,ESM,Contributing Guide,pull request]
 categories: ['github']
 ---

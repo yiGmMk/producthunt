@@ -1,9 +1,9 @@
 ---
 title: nvim-lspconfig
-date: 2025-04-15T15:30:51+08:00
+date: 2025-04-17T15:30:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1700508672285-786060ccf960?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3MDIxNjZ8&ixlib=rb-4.0.3
-tags: ['github',neovim,nvim-lspconfig,LSP,language server,configurations,plugin,plugin manager,Lua]
+image: https://images.unsplash.com/photo-1719451643491-d41067a8bffd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ4NzQ5MzB8&ixlib=rb-4.0.3
+tags: ['github',neovim,nvim-lspconfig,LSP,language server,configuration,plugin,installation,setup,troubleshooting]
 categories: ['github']
 ---
 
@@ -42,7 +42,7 @@ View [all configs](doc/configs.md) or `:help lspconfig-all` from Nvim.
    npm i -g pyright
    ```
 2. Add the language server setup to your init.lua.
-    - Nvim 0.11+ (see [vim.lsp.config](#vim.lsp.config))
+    - Nvim 0.11+ (see [vim.lsp.config](#vimlspconfig))
       ```lua
       vim.lsp.enable('pyright')
       ```
