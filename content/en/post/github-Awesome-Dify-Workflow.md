@@ -1,17 +1,24 @@
 ---
 title: Awesome-Dify-Workflow
-date: 2025-04-17T15:30:29+08:00
+date: 2025-04-18T15:28:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1679358361387-562f19741452?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ4NzQ5MzB8&ixlib=rb-4.0.3
-tags: ['github',Dify,workflow,chatbot,agent,plugin,model,LLM,tool,sandbox,knowledge base]
+image: https://images.unsplash.com/photo-1504069764974-3831da96850b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ5NjEyNjh8&ixlib=rb-4.0.3
+tags: ['github',Dify,Workflow,Agent,LLM,Chatbot,Plugin,Model,Deepseek,OpenAI,Anthropic]
 categories: ['github']
 ---
 
 # [svcvit/Awesome-Dify-Workflow](https://github.com/svcvit/Awesome-Dify-Workflow)
 
-# Awesome-Dify-Workflow
+<div align="center">
+
+# Awesome-Dify-Workflow 🚀
+<strong>Share & Discover Useful Dify Workflows! For personal use & learning. </strong>
 
 [English](README_EN.md) | [中文](README.md)
+
+<a href="https://trendshift.io/repositories/13476" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13476" alt="svcvit%2FAwesome-Dify-Workflow | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+
+</div>
 
 
 分享一些好用的 Dify 工作流程，自用、学习两相宜，请使用 Dify 0.13.0 及以上版本导入。已支持多 **任务并行**、**会话变量**、**表单**、**echart渲染** 相关特性。Agent节点为1.0版本之后功能，请尽可能使用最新版DIFY导入。
@@ -19,9 +26,9 @@ categories: ['github']
 所有的 Workflow 基本都可以 **免费** 使用，更多 Workflow 收集整理中……
 
 ## 分享群
-开了一个分享群，有兴趣可以加入，如果你有关于 workflow 的问题也可以一起讨论。（2025/04/16 更新）
+开了一个分享群，有兴趣可以加入，如果你有关于 workflow 的问题也可以一起讨论。（2025/04/17 更新）
 - 主群都超200了，加群主好友，备注 dify，拉你到人多一些的群。不过微信风控，有时候加不上，可以稍后再试。
-- 当然，也可以加新群，目前人少一点，基本3-7天左右一个群就能满200.
+- 当然，也可以加新群，目前人少一点，基本1-2天左右一个群就能满200.
 
 
 

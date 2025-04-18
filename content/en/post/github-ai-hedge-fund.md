@@ -1,9 +1,9 @@
 ---
 title: ai-hedge-fund
-date: 2025-04-17T15:28:56+08:00
+date: 2025-04-18T15:28:02+08:00
 draft: False
-image: https://images.unsplash.com/photo-1719451643491-d41067a8bffd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ4NzQ5MzB8&ixlib=rb-4.0.3
-tags: ['github',AI,hedge fund,trading,agents,investing,backtesting,valuation,sentiment analysis]
+image: https://images.unsplash.com/photo-1631097574841-b20e9b94bff9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ5NjEyNjh8&ixlib=rb-4.0.3
+tags: ['github',AI,hedge fund,trading,investment,agents,value investing,growth investing,backtesting,portfolio management,risk management]
 categories: ['github']
 ---
 
@@ -166,6 +166,7 @@ ai-hedge-fund/
 │   │   ├── sentiment.py          # Sentiment analysis agent
 │   │   ├── technicals.py         # Technical analysis agent
 │   │   ├── valuation.py          # Valuation analysis agent
+│   │   ├── ...                   # Other agents
 │   │   ├── warren_buffett.py     # Warren Buffett agent
 │   ├── tools/                    # Agent tools
 │   │   ├── api.py                # API tools
