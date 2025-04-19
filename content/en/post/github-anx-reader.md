@@ -1,9 +1,9 @@
 ---
 title: anx-reader
-date: 2025-04-17T15:29:12+08:00
+date: 2025-04-19T15:25:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1670144415812-f8dca862e8bc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ4NzQ5MzB8&ixlib=rb-4.0.3
-tags: ['github',e-book reader, AI capabilities, e-book formats, cross-platform, reading progress sync, OpenAI, Claude, Gemini, DeepSeek, reading analytics, note system]
+image: https://images.unsplash.com/photo-1599773230174-91fcd6afc0c3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUwNDc0NTR8&ixlib=rb-4.0.3
+tags: ['github',e-book reader, AI capabilities, e-book formats, cross-platform, reading analytics, note system,  customizable styles,  WebDAV sync]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: stagehand
-date: 2025-04-18T15:29:49+08:00
+date: 2025-04-19T15:25:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1622085354806-80fcdcd4ef4a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ5NjEyNjh8&ixlib=rb-4.0.3
-tags: ['github',browser automation, AI, Playwright, natural language, OpenAI, Anthropic, web automation,  computer use models,  Stagehand]
+image: https://images.unsplash.com/photo-1508416163602-e4eb39645e86?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUwNDc0NTR8&ixlib=rb-4.0.3
+tags: ['github',browser automation, AI, Playwright, natural language, web automation, OpenAI, Anthropic,  LLM,  computer use models]
 categories: ['github']
 ---
 
@@ -139,7 +139,7 @@ For more information, please see our [Contributing Guide](https://docs.stagehand
 
 ## Acknowledgements
 
-This project heavily relies on [Playwright](https://playwright.dev/) as a resilient backbone to automate the web. It also would not be possible without the awesome techniques and discoveries made by [tarsier](https://github.com/reworkd/tarsier), and [fuji-web](https://github.com/normal-computing/fuji-web).
+This project heavily relies on [Playwright](https://playwright.dev/) as a resilient backbone to automate the web. It also would not be possible without the awesome techniques and discoveries made by [tarsier](https://github.com/reworkd/tarsier), [gemini-zod](https://github.com/jbeoris/gemini-zod), and [fuji-web](https://github.com/normal-computing/fuji-web).
 
 We'd like to thank the following people for their major contributions to Stagehand:
 - [Paul Klein](https://github.com/pkiv)

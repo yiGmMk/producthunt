@@ -1,9 +1,9 @@
 ---
 title: docmost
-date: 2025-04-18T15:28:46+08:00
+date: 2025-04-19T15:25:03+08:00
 draft: False
-image: https://images.unsplash.com/photo-1723748753732-1358d7c8a920?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ5NjEyNjh8&ixlib=rb-4.0.3
-tags: ['github',wiki, documentation, collaboration, software, open-source, features, real-time, permissions]
+image: https://images.unsplash.com/photo-1552363451-885c4ba31879?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUwNDc0NTR8&ixlib=rb-4.0.3
+tags: ['github',wiki,documentation,software,collaboration,real-time,features,open-source,AGPL,Enterprise]
 categories: ['github']
 ---
 

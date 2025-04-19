@@ -1,8 +1,8 @@
 ---
 title: RAG_Techniques
-date: 2025-04-18T15:28:15+08:00
+date: 2025-04-19T15:25:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1622085354806-80fcdcd4ef4a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ5NjEyNjh8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1594482361382-cdc9475300f9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUwNDc0NTR8&ixlib=rb-4.0.3
 tags: ['github',Retrieval-Augmented Generation,RAG,NLP,LLM,Embeddings,Semantic Search,Information Retrieval,LangChain,LlamaIndex]
 categories: ['github']
 ---
