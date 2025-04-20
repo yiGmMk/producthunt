@@ -1,9 +1,9 @@
 ---
 title: HowToCook
-date: 2025-04-19T15:24:22+08:00
+date: 2025-04-20T15:25:54+08:00
 draft: False
-image: https://images.unsplash.com/photo-1594482361382-cdc9475300f9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUwNDc0NTR8&ixlib=rb-4.0.3
-tags: ['github',cooking recipes,docker,GitHub,programming,open source,web service,contribution,cookbook]
+image: https://images.unsplash.com/photo-1636992539350-b89430fe3286?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUxMzM5NDV8&ixlib=rb-4.0.3
+tags: ['github',cooking recipes, recipes, dishes, food, cooking, programmer, cookbook, GitHub, open source]
 categories: ['github']
 ---
 
@@ -122,6 +122,7 @@ docker run -d -p 5000:5000 ghcr.io/anduin2017/how-to-cook:latest
 - [白菜猪肉炖粉条](dishes/meat_dish/白菜猪肉炖粉条.md)
 - [带把肘子](dishes/meat_dish/带把肘子.md)
 - [冬瓜酿肉](dishes/meat_dish/冬瓜酿肉/冬瓜酿肉.md)
+- [豆豉鲮鱼油麦菜](dishes/meat_dish/豆豉鲮鱼油麦菜/豆豉鲮鱼油麦菜.md)
 - [番茄红酱](dishes/meat_dish/番茄红酱.md)
 - [粉蒸肉](dishes/meat_dish/粉蒸肉.md)
 - [干煸仔鸡](dishes/meat_dish/干煸仔鸡/干煸仔鸡.md)
@@ -146,6 +147,7 @@ docker run -d -p 5000:5000 ghcr.io/anduin2017/how-to-cook:latest
 - [酱牛肉](dishes/meat_dish/酱牛肉/酱牛肉.md)
 - [酱排骨](dishes/meat_dish/酱排骨/酱排骨.md)
 - [椒盐排条](dishes/meat_dish/椒盐排条.md)
+- [芥末罗氏虾](dishes/meat_dish/芥末罗氏虾/芥末罗氏虾.md)
 - [咖喱肥牛](dishes/meat_dish/咖喱肥牛/咖喱肥牛.md)
 - [烤鸡翅](dishes/meat_dish/烤鸡翅.md)
 - [可乐鸡翅](dishes/meat_dish/可乐鸡翅.md)
@@ -356,6 +358,7 @@ docker run -d -p 5000:5000 ghcr.io/anduin2017/how-to-cook:latest
 - [金汤力](dishes/drink/金汤力/金汤力.md)
 - [可乐桶](dishes/drink/可乐桶.md)
 - [奶茶](dishes/drink/奶茶.md)
+- [柠檬水](dishes/drink/柠檬水/柠檬水.md)
 - [奇异果菠菜特调](dishes/drink/奇异果菠菜特调/奇异果菠菜特调.md)
 - [砂糖椰子冰沙](dishes/drink/砂糖椰子冰沙/砂糖椰子冰沙.md)
 - [酸梅汤](dishes/drink/酸梅汤/酸梅汤.md)

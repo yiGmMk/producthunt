@@ -1,9 +1,9 @@
 ---
 title: stagehand
-date: 2025-04-19T15:25:29+08:00
+date: 2025-04-20T15:27:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1508416163602-e4eb39645e86?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUwNDc0NTR8&ixlib=rb-4.0.3
-tags: ['github',browser automation, AI, Playwright, natural language, web automation, OpenAI, Anthropic,  LLM,  computer use models]
+image: https://images.unsplash.com/photo-1655791378082-b47ed92ee363?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUxMzM5NDV8&ixlib=rb-4.0.3
+tags: ['github',browser automation, AI, Playwright, natural language, web automation, OpenAI, Anthropic,  LLM,  computer vision]
 categories: ['github']
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: 1Panel
-date: 2025-04-19T15:25:43+08:00
+date: 2025-04-20T15:26:33+08:00
 draft: False
-image: https://images.unsplash.com/photo-1552363451-885c4ba31879?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUwNDc0NTR8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1714547509056-8873c83d03b0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUxMzM5NDV8&ixlib=rb-4.0.3
 tags: ['github',Linux,Server,Management,Web,Interface,Container,Database]
 categories: ['github']
 ---

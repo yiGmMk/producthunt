@@ -1,8 +1,8 @@
 ---
 title: sigma
-date: 2025-04-18T15:28:38+08:00
+date: 2025-04-20T15:26:58+08:00
 draft: False
-image: https://images.unsplash.com/photo-1723748753732-1358d7c8a920?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ5NjEyNjh8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1714547509056-8873c83d03b0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUxMzM5NDV8&ixlib=rb-4.0.3
 tags: ['github',Sigma, detection rules, SIEM, threat hunting, security, log analysis, open source, YARA, Snort, MITRE ATT&CK]
 categories: ['github']
 ---
