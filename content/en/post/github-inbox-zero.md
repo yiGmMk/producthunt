@@ -1,9 +1,9 @@
 ---
 title: inbox-zero
-date: 2025-04-20T15:26:41+08:00
+date: 2025-04-21T15:29:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1718154710424-d44de466c549?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUxMzM5NDV8&ixlib=rb-4.0.3
-tags: ['github',AI email assistant, inbox zero, email client, email management, email analytics, cold email blocker, bulk unsubscribing, smart categories, reply tracking, open source]
+image: https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUyMjA0NjF8&ixlib=rb-4.0.3
+tags: ['github',AI email assistant, inbox zero, email client, email management, email analytics, cold email blocker, bulk unsubscriber, smart categories, reply zero, open source]
 categories: ['github']
 ---
 

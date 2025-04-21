@@ -1,9 +1,9 @@
 ---
 title: HowToCook
-date: 2025-04-20T15:25:54+08:00
+date: 2025-04-21T15:28:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1636992539350-b89430fe3286?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUxMzM5NDV8&ixlib=rb-4.0.3
-tags: ['github',cooking recipes, recipes, dishes, food, cooking, programmer, cookbook, GitHub, open source]
+image: https://images.unsplash.com/photo-1721497684662-cf36f0ee232e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUyMjA0NjF8&ixlib=rb-4.0.3
+tags: ['github',Recipes,Cooking,Dishes,Food,Programmers,GitHub,Docker,Web,Service]
 categories: ['github']
 ---
 
@@ -107,6 +107,7 @@ docker run -d -p 5000:5000 ghcr.io/anduin2017/how-to-cook:latest
 - [上汤娃娃菜](dishes/vegetable_dish/上汤娃娃菜/上汤娃娃菜.md)
 - [手撕包菜](dishes/vegetable_dish/手撕包菜/手撕包菜.md)
 - [水油焖蔬菜](dishes/vegetable_dish/水油焖蔬菜.md)
+- [松仁玉米](dishes/vegetable_dish/松仁玉米.md)
 - [素炒豆角](dishes/vegetable_dish/素炒豆角.md)
 - [酸辣土豆丝](dishes/vegetable_dish/酸辣土豆丝.md)
 - [糖拌西红柿](dishes/vegetable_dish/糖拌西红柿/糖拌西红柿.md)
@@ -119,6 +120,7 @@ docker run -d -p 5000:5000 ghcr.io/anduin2017/how-to-cook:latest
 
 ### 荤菜
 
+- [巴基斯坦牛肉咖喱](dishes/meat_dish/巴基斯坦牛肉咖喱/巴基斯坦牛肉咖喱.md)
 - [白菜猪肉炖粉条](dishes/meat_dish/白菜猪肉炖粉条.md)
 - [带把肘子](dishes/meat_dish/带把肘子.md)
 - [冬瓜酿肉](dishes/meat_dish/冬瓜酿肉/冬瓜酿肉.md)
@@ -407,9 +409,3 @@ docker run -d -p 5000:5000 ghcr.io/anduin2017/how-to-cook:latest
 - [辅料技巧](tips/advanced/辅料技巧.md)
 - [高级专业术语](tips/advanced/高级专业术语.md)
 - [油温判断技巧](tips/advanced/油温判断技巧.md)
-
-## 鸣谢
-
-对这份菜谱的下列作者表示感谢！
-
-[![contributors](https://contrib.rocks/image?repo=Anduin2017/HowToCook&max=999&column=20)](https://github.com/Anduin2017/HowToCook/graphs/contributors)

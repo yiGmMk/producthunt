@@ -1,8 +1,8 @@
 ---
 title: fastmcp
-date: 2025-04-20T15:26:08+08:00
+date: 2025-04-21T15:28:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1707825849604-d835e2fd92ee?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUxMzM5NDV8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1721497684662-cf36f0ee232e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUyMjA0NjF8&ixlib=rb-4.0.3
 tags: ['github',FastMCP,MCP,LLM,Python,server,client,tools,resources,prompts,context]
 categories: ['github']
 ---
