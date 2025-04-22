@@ -1,9 +1,9 @@
 ---
 title: awesome-llm-apps
-date: 2025-04-21T15:28:18+08:00
+date: 2025-04-22T15:28:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1721497684662-cf36f0ee232e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUyMjA0NjF8&ixlib=rb-4.0.3
-tags: ['github',Large Language Model, AI Agents, RAG, OpenAI, Anthropic, Google, DeepSeek, Qwen, Llama, Hackathon,  GitHub,  LLM Applications]
+image: https://images.unsplash.com/photo-1707402771668-1b7786f7c990?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUzMDY4ODB8&ixlib=rb-4.0.3
+tags: ['github',Large Language Model, AI Agents, RAG, OpenAI, Anthropic, Google, DeepSeek, Qwen, Llama, Hackathon,  GitHub]
 categories: ['github']
 ---
 

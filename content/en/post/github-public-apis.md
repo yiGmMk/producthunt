@@ -1,9 +1,9 @@
 ---
 title: public-apis
-date: 2025-04-21T15:28:03+08:00
+date: 2025-04-22T15:29:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1737392402963-a489a17826eb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUyMjA0NjF8&ixlib=rb-4.0.3
-tags: ['github',public APIs,API,APILayer,REST API,JSON,web APIs,GitHub,Open Source]
+image: https://images.unsplash.com/photo-1707402771668-1b7786f7c990?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUzMDY4ODB8&ixlib=rb-4.0.3
+tags: ['github',public-apis,API,REST,JSON,free,open-source,data,web-api,programming]
 categories: ['github']
 ---
 

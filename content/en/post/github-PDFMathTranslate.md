@@ -1,9 +1,9 @@
 ---
 title: PDFMathTranslate
-date: 2025-04-21T15:27:54+08:00
+date: 2025-04-22T15:29:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1721497684662-cf36f0ee232e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUyMjA0NjF8&ixlib=rb-4.0.3
-tags: ['github',PDF translation, scientific paper, multilingual, translation services, commandline tool, GUI, Docker, BabelDOC, Xinference, OpenAI, Azure, PDFMathTranslate,  Zotero]
+image: https://images.unsplash.com/photo-1701836924593-40a62ee74184?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUzMDY4ODB8&ixlib=rb-4.0.3
+tags: ['github',PDF translation,scientific paper,bilingual comparison,formula preservation,multiple languages,translation services,commandline tool,interactive user interface,Docker,BabelDOC,Xinference,OpenAI]
 categories: ['github']
 ---
 
