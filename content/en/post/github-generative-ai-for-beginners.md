@@ -1,9 +1,9 @@
 ---
 title: generative-ai-for-beginners
-date: 2025-04-02T18:39:16+08:00
+date: 2025-04-23T15:32:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1602481678277-6ecbec3ec0b1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM1OTAyNzV8&ixlib=rb-4.0.3
-tags: ['github',Generative-AI,Large-Language-Models,LLMs,Prompt-Engineering,Azure-OpenAI,OpenAI-API,Python,TypeScript]
+image: https://images.unsplash.com/photo-1688620770837-7753c2688183?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUzOTM1MTJ8&ixlib=rb-4.0.3
+tags: ['github',Generative AI,Large Language Models,Prompt Engineering,Azure OpenAI,OpenAI API,Python,TypeScript]
 categories: ['github']
 ---
 
@@ -41,12 +41,12 @@ Each lesson also includes a "Keep Learning" section with additional learning too
 
 ## What You Need
 ### To run the code of this course, you can use either: 
- - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai) - **Lessons:** "aoai-assignment"
- - [GitHub Marketplace Model Catalog](https://aka.ms/genai-beginners/gh-models) - **Lessons:** "githubmodels"
- - [OpenAI API](https://aka.ms/genai-beginners/open-ai) - **Lessons:** "oai-assignment" 
+ - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Lessons:** "aoai-assignment"
+ - [GitHub Marketplace Model Catalog](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **Lessons:** "githubmodels"
+ - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **Lessons:** "oai-assignment" 
    
-- Basic knowledge of Python or TypeScript is helpful - \*For absolute beginners check out these [Python](https://aka.ms/genai-beginners/python) and [TypeScript](https://aka.ms/genai-beginners/typescript) courses
-- A GitHub account to [fork this entire repo](https://aka.ms/genai-beginners/github) to your own GitHub account
+- Basic knowledge of Python or TypeScript is helpful - \*For absolute beginners check out these [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) and [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) courses
+- A GitHub account to [fork this entire repo](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) to your own GitHub account
 
 We have created a **[Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** lesson to help you with setting up your development environment.
 
