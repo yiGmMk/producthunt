@@ -1,9 +1,9 @@
 ---
 title: coding-interview-university
-date: 2025-04-22T15:29:30+08:00
+date: 2025-04-24T15:28:54+08:00
 draft: False
-image: https://images.unsplash.com/photo-1683817580104-57bcb2eca608?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUzMDY4ODB8&ixlib=rb-4.0.3
-tags: ['github',software engineer,coding interview,data structures,algorithms,Amazon,Facebook,Google,Microsoft,study plan]
+image: https://images.unsplash.com/photo-1649878190052-d00375ef7398?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU0Nzk2Nzd8&ixlib=rb-4.0.3
+tags: ['github',software engineer, coding interview, data structures, algorithms, Amazon, Google, Microsoft, Facebook]
 categories: ['github']
 ---
 

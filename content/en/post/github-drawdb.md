@@ -1,9 +1,9 @@
 ---
 title: drawdb
-date: 2025-04-23T15:32:28+08:00
+date: 2025-04-24T15:28:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1655635643568-f30d5abc618a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUzOTM1MTJ8&ixlib=rb-4.0.3
-tags: ['github',database schema editor,SQL generator,database entity relationship,DBER editor,web application,diagram,software development,local development,docker]
+image: https://images.unsplash.com/photo-1605726149812-40be3bfce6d8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU0Nzk2Nzd8&ixlib=rb-4.0.3
+tags: ['github',database,schema,editor,SQL,generator,diagram,browser,development,Docker]
 categories: ['github']
 ---
 
@@ -59,4 +59,4 @@ docker build -t drawdb .
 docker run -p 3000:80 drawdb
 ```
 
-Set up the [server](https://github.com/drawdb-io/drawdb-server) and environment variables according to `.env.sample` for the survey and bug report forms.
+If you wish to work with sharing, set up [server](https://github.com/drawdb-io/drawdb-server) and environment variables according to `.env.sample`. This is not required unless you want to share files.
