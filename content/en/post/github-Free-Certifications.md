@@ -1,9 +1,9 @@
 ---
 title: Free-Certifications
-date: 2025-04-23T15:33:22+08:00
+date: 2025-04-25T15:27:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1678564205744-3dc5913fc3fe?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUzOTM1MTJ8&ixlib=rb-4.0.3
-tags: ['github',free certifications,cloud computing,online courses,certification,training,IT,technology,AWS,Google Cloud]
+image: https://images.unsplash.com/photo-1559666126-84f389727b9a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU1NjYwMzd8&ixlib=rb-4.0.3
+tags: ['github',free certifications, online courses, cloud computing, certifications, training,  IT,  technology,  cybersecurity]
 categories: ['github']
 ---
 

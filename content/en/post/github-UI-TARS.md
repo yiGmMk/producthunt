@@ -1,9 +1,9 @@
 ---
 title: UI-TARS
-date: 2025-04-24T15:28:29+08:00
+date: 2025-04-25T15:27:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1608329997339-4278cee1d785?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU0Nzk2Nzd8&ixlib=rb-4.0.3
-tags: ['github',UI-TARS, multimodal agent, GUI interaction, vision-language model, reinforcement learning, open-source,  benchmark,  OSWorld]
+image: https://images.unsplash.com/photo-1538492732910-eb0899daf4dd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU1NjYwMzd8&ixlib=rb-4.0.3
+tags: ['github',UI-TARS, multimodal agent, vision-language model, reinforcement learning, GUI interaction, automated GUI,  benchmark, open-source]
 categories: ['github']
 ---
 

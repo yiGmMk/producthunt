@@ -1,9 +1,9 @@
 ---
 title: tensorflow
-date: 2025-04-06T15:26:41+08:00
+date: 2025-04-25T15:28:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1658901097708-ff93ddafc4c2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM5MjQyODJ8&ixlib=rb-4.0.3
-tags: ['github',TensorFlow,machine learning,deep learning,neural networks,Python,C++,GPU,installation,tutorials]
+image: https://images.unsplash.com/photo-1639475377520-b256a5d204b1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU1NjYwMzd8&ixlib=rb-4.0.3
+tags: ['github',TensorFlow,machine learning,deep learning,neural networks,Python,API,GPU,installation,tutorials]
 categories: ['github']
 ---
 
