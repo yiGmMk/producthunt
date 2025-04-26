@@ -1,9 +1,9 @@
 ---
 title: suna
-date: 2025-04-25T15:27:25+08:00
+date: 2025-04-26T15:24:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1538492732910-eb0899daf4dd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU1NjYwMzd8&ixlib=rb-4.0.3
-tags: ['github',AI Agent, Open Source, Browser Automation, Data Analysis, Workflow Automation, LLM Integration, Supabase, Next.js, React, Python, FastAPI, Docker, OpenAI, Anthropic, LiteLLM, Tavily, RapidAPI]
+image: https://images.unsplash.com/photo-1598775764807-f8ea9b3b3966?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU2NTIyNzZ8&ixlib=rb-4.0.3
+tags: ['github',Suna,Open-Source,AI,Agent,Assistant,Browser,Automation,Data,Analysis,Web,Crawling,Command-Line,API,Integration]
 categories: ['github']
 ---
 
@@ -51,7 +51,7 @@ Suna's powerful toolkit includes seamless browser automation to navigate the web
 Suna consists of four main components:
 
 ### Backend API
-Python/FastAPI service that handles REST endpoints, thread management, and LLM integration with OpenAI, Anthropic, and others via LiteLLM.
+Python/FastAPI service that handles REST endpoints, thread management, and LLM integration with Anthropic, and others via LiteLLM.
 
 ### Frontend
 Next.js/React application providing a responsive UI with chat interface, dashboard, etc.
@@ -99,12 +99,13 @@ You'll need the following components:
 - Redis database for caching and session management
 - Daytona sandbox for secure agent execution
 - Python 3.11 for the API backend
-- API keys for LLM providers (OpenAI or Anthropic)
-- (Optional but recommended) Tavily API key for enhanced search capabilities
+- API keys for LLM providers (Anthropic)
+- Tavily API key for enhanced search capabilities
+- Firecrawl API key for web scraping capabilities
 
 ### Prerequisites
 
-1. **Supabase**: 
+1. **Supabase**:
    - Create a new [Supabase project](https://supabase.com/dashboard/projects)
    - Save your project's API URL, anon key, and service role key for later use
    - Install the [Supabase CLI](https://supabase.com/docs/guides/cli/getting-started)
@@ -115,9 +116,12 @@ You'll need the following components:
      - [Mac](https://formulae.brew.sh/formula/redis): `brew install redis`
      - [Linux](https://redis.io/docs/getting-started/installation/install-redis-on-linux/): Follow distribution-specific instructions
      - [Windows](https://redis.io/docs/getting-started/installation/install-redis-on-windows/): Use WSL2 or Docker
-   - Save your Redis connection details for later use
+   - Docker Compose (included in our setup):
+     - If you're using our Docker Compose setup, Redis is included and configured automatically
+     - No additional installation is needed
+   - Save your Redis connection details for later use (not needed if using Docker Compose)
 
-3. **Daytona**: 
+3. **Daytona**:
    - Create an account on [Daytona](https://app.daytona.io/)
    - Generate an API key from your account settings
    - Go to [Images](https://app.daytona.io/dashboard/images)
@@ -126,12 +130,14 @@ You'll need the following components:
    - Set `/usr/bin/supervisord -n -c /etc/supervisor/conf.d/supervisord.conf` as the Entrypoint
 
 4. **LLM API Keys**:
-   - Obtain an API key from [OpenAI](https://platform.openai.com/) or [Anthropic](https://www.anthropic.com/)
-   - While other providers should work via [LiteLLM](https://github.com/BerriAI/litellm), OpenAI and Anthropic are recommended
+   - Obtain an API key [Anthropic](https://www.anthropic.com/)
+   - While other providers should work via [LiteLLM](https://github.com/BerriAI/litellm), Anthropic is recommended – the prompt needs to be adjusted for other providers to output correct XML for tool calls.
 
 5. **Search API Key** (Optional):
    - For enhanced search capabilities, obtain an [Tavily API key](https://tavily.com/)
+   - For web scraping capabilities, obtain a [Firecrawl API key](https://firecrawl.dev/)
   
+
 6. **RapidAPI API Key** (Optional):
    - To enable API services like LinkedIn, and others, you'll need a RapidAPI key
    - Each service requires individual activation in your RapidAPI account:
@@ -174,17 +180,15 @@ DAYTONA_API_KEY=your_daytona_api_key
 DAYTONA_SERVER_URL="https://app.daytona.io/api"
 DAYTONA_TARGET="us"
 
-# Anthropic or OpenAI: 
 # Anthropic
 ANTHROPIC_API_KEY=
-MODEL_TO_USE="anthropic/claude-3-7-sonnet-latest"
 
-# OR OpenAI API:
+# OpenAI API:
 OPENAI_API_KEY=your_openai_api_key
-MODEL_TO_USE="gpt-4o"
 
 # Optional but recommended
-TAVILY_API_KEY=your_tavily_api_key  # Optional
+TAVILY_API_KEY=your_tavily_api_key  # For enhanced search capabilities
+FIRECRAWL_API_KEY=your_firecrawl_api_key  # For web scraping capabilities
 RAPID_API_KEY=
 ```
 
@@ -212,8 +216,13 @@ cp .env.example .env.local  # Create from example if available, or use the follo
 ```
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-NEXT_PUBLIC_BACKEND_URL="http://localhost:8000/api"
+NEXT_PUBLIC_BACKEND_URL="http://localhost:8000/api"  # Use this for local development
 NEXT_PUBLIC_URL="http://localhost:3000"
+```
+
+   Note: If you're using Docker Compose, use the container name instead of localhost:
+```
+NEXT_PUBLIC_BACKEND_URL="http://backend:8000/api"  # Use this when running with Docker Compose
 ```
 
 5. **Install dependencies**:
@@ -241,6 +250,34 @@ cd backend
 python api.py
 ```
 
+5-6. **Docker Compose Alternative**:
+
+Before running with Docker Compose, make sure your environment files are properly configured:
+- In `backend/.env`, set all the required environment variables as described above
+  - For Redis configuration, use `REDIS_HOST=redis` instead of localhost
+  - The Docker Compose setup will automatically set these Redis environment variables:
+    ```
+    REDIS_HOST=redis
+    REDIS_PORT=6379
+    REDIS_PASSWORD=
+    REDIS_SSL=False
+    ```
+- In `frontend/.env.local`, make sure to set `NEXT_PUBLIC_BACKEND_URL="http://backend:8000/api"` to use the container name
+
+Then run:
+```bash
+export GITHUB_REPOSITORY="your-github-username/repo-name"
+docker compose -f docker-compose.ghcr.yaml up
+```
+
+If you're building the images locally instead of using pre-built ones:
+```bash
+docker compose up
+```
+
+The Docker Compose setup includes a Redis service that will be used by the backend automatically.
+
+
 7. **Access Suna**:
    - Open your browser and navigate to `http://localhost:3000`
    - Sign up for an account using the Supabase authentication
@@ -260,6 +297,7 @@ python api.py
 - [OpenAI](https://openai.com/) - LLM provider
 - [Anthropic](https://www.anthropic.com/) - LLM provider
 - [Tavily](https://tavily.com/) - Search capabilities
+- [Firecrawl](https://firecrawl.dev/) - Web scraping capabilities
 - [RapidAPI](https://rapidapi.com/) - API services
 
 

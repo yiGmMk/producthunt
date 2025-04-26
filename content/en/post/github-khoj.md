@@ -1,9 +1,9 @@
 ---
 title: khoj
-date: 2025-04-25T15:28:15+08:00
+date: 2025-04-26T15:26:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1538492732910-eb0899daf4dd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU1NjYwMzd8&ixlib=rb-4.0.3
-tags: ['github',Khoj, AI, personal AI, LLM, large language model, semantic search, agents, open-source, self-hostable]
+image: https://images.unsplash.com/photo-1708742916134-ebb76614b383?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU2NTIyNzZ8&ixlib=rb-4.0.3
+tags: ['github',Khoj,AI,personal AI,LLM,semantic search,agent creation,document processing,open-source,self-hostable]
 categories: ['github']
 ---
 
