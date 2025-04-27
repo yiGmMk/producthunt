@@ -1,9 +1,9 @@
 ---
 title: suna
-date: 2025-04-26T15:24:46+08:00
+date: 2025-04-27T15:24:50+08:00
 draft: False
-image: https://images.unsplash.com/photo-1598775764807-f8ea9b3b3966?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU2NTIyNzZ8&ixlib=rb-4.0.3
-tags: ['github',Suna,Open-Source,AI,Agent,Assistant,Browser,Automation,Data,Analysis,Web,Crawling,Command-Line,API,Integration]
+image: https://images.unsplash.com/photo-1718343110021-735fdd5726c5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU3Mzg2ODJ8&ixlib=rb-4.0.3
+tags: ['github',Suna,Open-Source,AI,Agent,Assistant,Browser,Automation,Data,Analysis,Web,Crawling,Command-Line,API,Integration,Supabase,LLM]
 categories: ['github']
 ---
 

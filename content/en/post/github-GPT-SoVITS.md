@@ -1,9 +1,9 @@
 ---
 title: GPT-SoVITS
-date: 2025-04-25T15:27:34+08:00
+date: 2025-04-27T15:27:03+08:00
 draft: False
-image: https://images.unsplash.com/photo-1590919097686-843b4ce68c01?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU1NjYwMzd8&ixlib=rb-4.0.3
-tags: ['github',GPT-SoVITS, voice conversion, text-to-speech, WebUI, few-shot learning, pretrained models]
+image: https://images.unsplash.com/photo-1693758167890-ad34d54df28f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU3Mzg2ODJ8&ixlib=rb-4.0.3
+tags: ['github',GPT-SoVITS, text-to-speech, voice conversion, WebUI, few-shot learning, pretrained models]
 categories: ['github']
 ---
 

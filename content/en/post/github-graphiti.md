@@ -1,9 +1,9 @@
 ---
 title: graphiti
-date: 2025-04-26T15:26:05+08:00
+date: 2025-04-27T15:26:30+08:00
 draft: False
-image: https://images.unsplash.com/photo-1616273695000-ec14158cf3f1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU2NTIyNzZ8&ixlib=rb-4.0.3
-tags: ['github',knowledge graph, AI agents, real-time, temporal, knowledge graph framework, data integration,  information retrieval,  agent memory]
+image: https://images.unsplash.com/photo-1693758167890-ad34d54df28f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU3Mzg2ODJ8&ixlib=rb-4.0.3
+tags: ['github',knowledge graph, AI agents, real-time updates, temporal knowledge graph,  information retrieval,  RAG,  semantic search, hybrid search]
 categories: ['github']
 ---
 
@@ -25,6 +25,7 @@ Graphiti
 [![Unit Tests](https://github.com/getzep/Graphiti/actions/workflows/unit_tests.yml/badge.svg)](https://github.com/getzep/Graphiti/actions/workflows/unit_tests.yml)
 [![MyPy Check](https://github.com/getzep/Graphiti/actions/workflows/typecheck.yml/badge.svg)](https://github.com/getzep/Graphiti/actions/workflows/typecheck.yml)
 
+![GitHub Repo stars](https://img.shields.io/github/stars/getzep/graphiti)
 [![Discord](https://dcbadge.vercel.app/api/server/W8Kw6bsgXQ?style=flat)](https://discord.com/invite/W8Kw6bsgXQ)
 [![arXiv](https://img.shields.io/badge/arXiv-2501.13956-b31b1b.svg?style=flat)](https://arxiv.org/abs/2501.13956)
 [![Release](https://img.shields.io/github/v/release/getzep/graphiti?style=flat&label=Release&color=limegreen)](https://github.com/getzep/graphiti/releases)

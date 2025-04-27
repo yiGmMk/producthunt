@@ -1,9 +1,9 @@
 ---
 title: trivy
-date: 2025-04-26T15:26:14+08:00
+date: 2025-04-27T15:25:24+08:00
 draft: False
-image: https://images.unsplash.com/photo-1598775764807-f8ea9b3b3966?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU2NTIyNzZ8&ixlib=rb-4.0.3
-tags: ['github',Trivy,security scanner,container image,vulnerability,software dependencies,IaC,misconfiguration,secret detection]
+image: https://images.unsplash.com/photo-1644990978896-c86bd2e5fd2e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU3Mzg2ODJ8&ixlib=rb-4.0.3
+tags: ['github',Trivy,security scanner,container image,vulnerability,software dependencies,IaC,misconfiguration,secrets,SBOM]
 categories: ['github']
 ---
 

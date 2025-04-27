@@ -1,9 +1,9 @@
 ---
 title: hyprnote
-date: 2025-04-26T15:25:54+08:00
+date: 2025-04-27T15:26:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1543259601-a15df8ff2be3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU2NTIyNzZ8&ixlib=rb-4.0.3
-tags: ['github',Hyprnote,meeting notes,AI,transcription,summarization,offline,local-first,open-source,plugins,extensions,macOS]
+image: https://images.unsplash.com/photo-1661897808368-9bef3103319d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU3Mzg2ODJ8&ixlib=rb-4.0.3
+tags: ['github',Hyprnote,meeting notes,AI,offline,local-first,transcription,summarization,extensions,plugins]
 categories: ['github']
 ---
 
