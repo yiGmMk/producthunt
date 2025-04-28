@@ -1,8 +1,8 @@
 ---
 title: generative-ai-for-beginners
-date: 2025-04-27T15:26:10+08:00
+date: 2025-04-28T15:55:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1723118641142-dfbb59b9b8d6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU3Mzg2ODJ8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1493218020922-9468357cd319?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU4MjY4OTJ8&ixlib=rb-4.0.3
 tags: ['github',Generative AI,Large Language Models,Prompt Engineering,Azure OpenAI,OpenAI API,Python,TypeScript]
 categories: ['github']
 ---

@@ -1,9 +1,9 @@
 ---
 title: Stirling-PDF
-date: 2025-04-26T15:27:10+08:00
+date: 2025-04-28T15:55:36+08:00
 draft: False
-image: https://images.unsplash.com/photo-1683484017528-8d7006d7140f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU2NTIyNzZ8&ixlib=rb-4.0.3
-tags: ['github',PDF, Docker, web application, PDF manipulation, open source, features, conversion, security]
+image: https://images.unsplash.com/photo-1660579232151-f12f71c76cd2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU4MjY4OTJ8&ixlib=rb-4.0.3
+tags: ['github',PDF, Docker, web application, PDF manipulation, open source, features, operations, conversion]
 categories: ['github']
 ---
 

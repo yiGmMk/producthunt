@@ -1,9 +1,9 @@
 ---
 title: lapce
-date: 2025-04-27T15:24:58+08:00
+date: 2025-04-28T15:56:33+08:00
 draft: False
-image: https://images.unsplash.com/photo-1661897808368-9bef3103319d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU3Mzg2ODJ8&ixlib=rb-4.0.3
-tags: ['github',code editor,Rust,Floem,Rope Science,Xi-Editor,Wgpu,LSP,remote development,plugins,WASI]
+image: https://images.unsplash.com/photo-1713094735214-9c0a970d85d7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU4MjY4OTJ8&ixlib=rb-4.0.3
+tags: ['github',Lapce,code editor,Rust,Floem,Rope Science,Xi-Editor,Wgpu,LSP,remote development,plugins,WASI]
 categories: ['github']
 ---
 
