@@ -1,13 +1,26 @@
 ---
 title: drawdb
-date: 2025-04-26T15:26:21+08:00
+date: 2025-04-29T15:29:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1708742916134-ebb76614b383?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU2NTIyNzZ8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1715271040278-9c6fcd6e669b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU5MTE3MjZ8&ixlib=rb-4.0.3
 tags: ['github',database,schema,editor,SQL,generator,diagram,browser,development,Docker]
 categories: ['github']
 ---
 
 # [drawdb-io/drawdb](https://github.com/drawdb-io/drawdb)
+
+<div align="center">
+  <sup>Special thanks to:</sup>
+  <br>
+  <a href="https://www.warp.dev/drawdb/" target="_blank">
+    <img alt="Warp sponsorship" width="280" src="https://github.com/user-attachments/assets/c7f141e7-9751-407d-bb0e-d6f2c487b34f">
+    <br>
+    <b>Next-gen AI-powered intelligent terminal for all platforms</b>
+  </a>
+</div>
+
+<br/>
+<br/>
 
 <div align="center">
     <img width="64" alt="drawdb logo" src="./src/assets/icon-dark.png">

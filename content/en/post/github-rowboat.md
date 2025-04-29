@@ -1,8 +1,8 @@
 ---
 title: rowboat
-date: 2025-04-28T15:55:15+08:00
+date: 2025-04-29T15:30:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1493218020922-9468357cd319?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU4MjY4OTJ8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1597432763509-7e03cdb74027?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU5MTE3MjZ8&ixlib=rb-4.0.3
 tags: ['github',multi-agent workflows, AI, OpenAI, Agents SDK, Rowboat, workflow automation, HTTP API, Python SDK,  MCP servers,  multi-agent assistant]
 categories: ['github']
 ---
