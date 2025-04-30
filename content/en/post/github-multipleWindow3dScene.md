@@ -1,9 +1,9 @@
 ---
 title: multipleWindow3dScene
-date: 2025-04-29T15:31:04+08:00
+date: 2025-04-30T15:27:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1539678786826-79e8b51b457a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU5MTE3MjZ8&ixlib=rb-4.0.3
-tags: ['github',Three.js,3D scene,localStorage,browser windows,window management,web graphics,JavaScript,WindowManager.js,main.js,index.html]
+image: https://images.unsplash.com/photo-1679629595664-87d8ab6f56cb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU5OTgwMzZ8&ixlib=rb-4.0.3
+tags: ['github',Three.js,3D scene,localStorage,browser windows,window management,web graphics,JavaScript,WindowManager.js,main.js,synchronization]
 categories: ['github']
 ---
 

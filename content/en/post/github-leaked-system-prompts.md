@@ -1,8 +1,8 @@
 ---
 title: leaked-system-prompts
-date: 2025-04-29T15:29:21+08:00
+date: 2025-04-30T15:28:58+08:00
 draft: False
-image: https://images.unsplash.com/photo-1597432763509-7e03cdb74027?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU5MTE3MjZ8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1598674931646-412655aa28d6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU5OTgwMzZ8&ixlib=rb-4.0.3
 tags: ['github',Anthropic-Claude, leaked prompts, large language models, AI models, system prompts]
 categories: ['github']
 ---

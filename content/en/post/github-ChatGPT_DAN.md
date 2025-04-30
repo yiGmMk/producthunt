@@ -1,9 +1,9 @@
 ---
 title: ChatGPT_DAN
-date: 2025-04-29T15:31:12+08:00
+date: 2025-04-30T15:27:43+08:00
 draft: False
-image: https://images.unsplash.com/photo-1541902001797-3989f96ab97e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU5MTE3MjZ8&ixlib=rb-4.0.3
-tags: ['github',ChatGPT, DAN, jailbreak, OpenAI, prompt, AI, model, policy, content, response]
+image: https://images.unsplash.com/photo-1629546174885-7ce9a5ab4190?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU5OTgwMzZ8&ixlib=rb-4.0.3
+tags: ['github',ChatGPT, DAN, Jailbreak, OpenAI, prompt, AI, language model, content policy, restrictions, guidelines]
 categories: ['github']
 ---
 
