@@ -1,9 +1,9 @@
 ---
 title: vllm
-date: 2025-04-13T15:25:38+08:00
+date: 2025-05-01T15:28:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1670782559267-d4c1ef138060?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ1MjkwODV8&ixlib=rb-4.0.3
-tags: ['github',LLM,serving,inference,PagedAttention,HuggingFace,CUDA,quantization,parallelism]
+image: https://images.unsplash.com/photo-1588609021245-df09ceb07de7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYwODQ0NzN8&ixlib=rb-4.0.3
+tags: ['github',LLM,serving,inference,PagedAttention,HuggingFace,models,parallelism,quantization,performance]
 categories: ['github']
 ---
 

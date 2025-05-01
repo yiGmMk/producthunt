@@ -1,9 +1,9 @@
 ---
 title: Agent-S
-date: 2025-04-30T15:28:32+08:00
+date: 2025-05-01T15:29:01+08:00
 draft: False
-image: https://images.unsplash.com/photo-1715464881649-894a5c244b46?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU5OTgwMzZ8&ixlib=rb-4.0.3
-tags: ['github',Agent-S,Computer-Use Agents,GUI agents,OSWorld,WindowsAgentArena,AndroidWorld,AI,automation]
+image: https://images.unsplash.com/photo-1686147441561-48fabf9d652c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYwODQ0NzN8&ixlib=rb-4.0.3
+tags: ['github',Agent-S,Computer Use Agents,GUI agents,OSWorld,WindowsAgentArena,AndroidWorld,UI-TARS,OpenAI CUA]
 categories: ['github']
 ---
 
