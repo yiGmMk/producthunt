@@ -1,9 +1,9 @@
 ---
 title: daytona
-date: 2025-05-01T15:28:44+08:00
+date: 2025-05-02T15:29:24+08:00
 draft: False
-image: https://images.unsplash.com/photo-1590173872156-7caa1375e3ad?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYwODQ0NzN8&ixlib=rb-4.0.3
-tags: ['github',AI-generated code,Sandbox,Daytona,Python,TypeScript,SDK,Infrastructure,API,OCI,Docker]
+image: https://images.unsplash.com/photo-1544798309-feda3785706a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYxNzA4Njl8&ixlib=rb-4.0.3
+tags: ['github',AI-generated code,Sandbox,Daytona,Python,TypeScript,SDK,Infrastructure,OCI,Docker]
 categories: ['github']
 ---
 

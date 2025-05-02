@@ -1,8 +1,8 @@
 ---
 title: Python-100-Days
-date: 2025-04-30T15:28:18+08:00
+date: 2025-05-02T15:28:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1725666263438-0a509650c65f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU5OTgwMzZ8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1468083684825-012f39547b23?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYxNzA4Njl8&ixlib=rb-4.0.3
 tags: ['github',Python,programming,machine learning,data analysis,web development,Django,data science]
 categories: ['github']
 ---

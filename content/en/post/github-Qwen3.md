@@ -1,9 +1,9 @@
 ---
 title: Qwen3
-date: 2025-05-01T15:28:26+08:00
+date: 2025-05-02T15:28:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1499796683658-b659bc751db1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYwODQ0NzN8&ixlib=rb-4.0.3
-tags: ['github',Qwen3,large language model,MoE,reasoning capabilities,human preference alignment,agent capabilities,multilingual support,Transformers,llama.cpp,Ollama]
+image: https://images.unsplash.com/photo-1524474881054-1e155f1138d5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYxNzA4Njl8&ixlib=rb-4.0.3
+tags: ['github',Qwen3,large language model,Mixture-of-Experts,MoE,reasoning capabilities,human preference alignment,agent capabilities,multilingual support]
 categories: ['github']
 ---
 

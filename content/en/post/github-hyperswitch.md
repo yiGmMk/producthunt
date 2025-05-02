@@ -1,9 +1,9 @@
 ---
 title: hyperswitch
-date: 2025-05-01T15:28:34+08:00
+date: 2025-05-02T15:28:22+08:00
 draft: False
-image: https://images.unsplash.com/photo-1598476957242-69c64cb66af7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYwODQ0NzN8&ixlib=rb-4.0.3
-tags: ['github',payments orchestration, open-source, payment processing, SDK, Control Center, Juspay,  payment gateway,  APIs]
+image: https://images.unsplash.com/photo-1732006358505-e2f6a623adc2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYxNzA4Njl8&ixlib=rb-4.0.3
+tags: ['github',Hyperswitch,Open-Source,Payments Orchestration,Payment Processing,API,Rust,SDK,Control Center,AWS,Docker]
 categories: ['github']
 ---
 

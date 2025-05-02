@@ -1,9 +1,9 @@
 ---
 title: Qwen-Agent
-date: 2025-05-01T15:28:18+08:00
+date: 2025-05-02T15:28:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1588609021245-df09ceb07de7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYwODQ0NzN8&ixlib=rb-4.0.3
-tags: ['github',Qwen-Agent,LLM applications,instruction following,tool usage,planning,memory,Browser Assistant,Code Interpreter,Custom Assistant,Qwen Chat,DashScope,Qwen2,vLLM,Ollama,QwQ-32B,Gradio,RAG,MCP,function calling,PDF,code execution,question-answering,long-context,BrowserQwen]
+image: https://images.unsplash.com/photo-1593945049362-068f62683e56?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYxNzA4Njl8&ixlib=rb-4.0.3
+tags: ['github',Qwen-Agent,LLM,tool usage,instruction following,planning,memory,Browser Assistant,Code Interpreter,Custom Assistant,Qwen Chat,DashScope,vLLM,Ollama,RAG,MCP,function calling,tool calling,question-answering,long-context,super-long documents]
 categories: ['github']
 ---
 
@@ -30,8 +30,9 @@ It also comes with example applications such as Browser Assistant, Code Interpre
 Now Qwen-Agent plays as the backend of [Qwen Chat](https://chat.qwen.ai/).
 
 # News
+* 🔥🔥🔥May 1, 2025: Add [Qwen3 Tool-call Demo](./examples/assistant_qwen3.py).
 * Mar 18, 2025: Support for the `reasoning_content` field; adjust the default [Function Call template](./qwen_agent/llm/fncall_prompts/nous_fncall_prompt.py), which is applicable to the Qwen2.5 series general models and QwQ-32B. If you need to use the old version of the template, please refer to the [example](./examples/function_calling.py) for passing parameters.
-* 🔥🔥🔥Mar 7, 2025: Added [QwQ-32B Tool-call Demo](./examples/assistant_qwq.py). It supports parallel, multi-step, and multi-turn tool calls.
+* Mar 7, 2025: Added [QwQ-32B Tool-call Demo](./examples/assistant_qwq.py). It supports parallel, multi-step, and multi-turn tool calls.
 * Dec 3, 2024: Upgrade GUI to Gradio 5 based. Note: GUI requires Python 3.10 or higher.
 * Sep 18, 2024: Added [Qwen2.5-Math Demo](./examples/tir_math.py) to showcase the Tool-Integrated Reasoning capabilities of Qwen2.5-Math. Note: The python executor is not sandboxed and is intended for local testing only, not for production use.
 
@@ -69,7 +70,7 @@ variable `DASHSCOPE_API_KEY` to your unique DashScope API key.
 
 - Alternatively, if you prefer to deploy and use your own model service, please follow the instructions provided in the README of Qwen2 for deploying an OpenAI-compatible API service.
 Specifically, consult the [vLLM](https://github.com/QwenLM/Qwen2?tab=readme-ov-file#vllm) section for high-throughput GPU deployment or the [Ollama](https://github.com/QwenLM/Qwen2?tab=readme-ov-file#ollama) section for local CPU (+GPU) deployment.
-For the QwQ model, it is recommended to add the `--enable-reasoning` and `--reasoning-parser deepseek_r1` parameters when starting the service. **Do not** add the `--enable-auto-tool-choice` and `--tool-call-parser hermes` parameters, as Qwen-Agent will parse the tool outputs from vLLM on its own.
+For the QwQ and Qwen3 model, it is recommended to add the `--enable-reasoning` and `--reasoning-parser deepseek_r1` parameters when starting the service. **Do not** add the `--enable-auto-tool-choice` and `--tool-call-parser hermes` parameters, as Qwen-Agent will parse the tool outputs from vLLM on its own.
 
 ## Developing Your Own Agent
 
