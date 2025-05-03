@@ -1,8 +1,8 @@
 ---
 title: open-webui
-date: 2025-05-02T15:29:32+08:00
+date: 2025-05-03T15:27:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1544798309-feda3785706a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYxNzA4Njl8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1707417089733-500269069159?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYyNTcxMjF8&ixlib=rb-4.0.3
 tags: ['github',Open-WebUI,AI,LLM,Ollama,OpenAI,Docker,Kubernetes,RAG]
 categories: ['github']
 ---

@@ -1,9 +1,9 @@
 ---
 title: Deep-Live-Cam
-date: 2025-05-02T15:27:57+08:00
+date: 2025-05-03T15:25:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1740658961640-9571a451d750?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYxNzA4Njl8&ixlib=rb-4.0.3
-tags: ['github',Deepfake, real-time, face swap, video, AI, webcam, software, application,  models]
+image: https://images.unsplash.com/photo-1669457818072-362120e870cb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYyNTcxMjF8&ixlib=rb-4.0.3
+tags: ['github',Deepfake, real-time, face swap, video, AI, webcam,  live stream,  face mapping]
 categories: ['github']
 ---
 
@@ -144,10 +144,18 @@ Place these files in the "**models**" folder.
 
 We highly recommend using a `venv` to avoid issues.
 
+
 For Windows:
 ```bash
 python -m venv venv
 venv\Scripts\activate
+pip install -r requirements.txt
+```
+For Linux:
+```bash
+# Ensure you use the installed Python 3.10
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 

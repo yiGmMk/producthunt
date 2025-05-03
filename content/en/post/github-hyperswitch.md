@@ -1,9 +1,9 @@
 ---
 title: hyperswitch
-date: 2025-05-02T15:28:22+08:00
+date: 2025-05-03T15:26:11+08:00
 draft: False
-image: https://images.unsplash.com/photo-1732006358505-e2f6a623adc2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYxNzA4Njl8&ixlib=rb-4.0.3
-tags: ['github',Hyperswitch,Open-Source,Payments Orchestration,Payment Processing,API,Rust,SDK,Control Center,AWS,Docker]
+image: https://images.unsplash.com/photo-1607288610581-5a6334da4cbc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYyNTcxMjF8&ixlib=rb-4.0.3
+tags: ['github',Hyperswitch,Payments,Orchestration,Open-Source,Payment Processing,Rust,API,SDK,Control Center]
 categories: ['github']
 ---
 
@@ -80,15 +80,27 @@ Read more at [Hyperswitch docs](https://docs.hyperswitch.io/).
 
 ### 1. Local Setup
 
-You can run Hyperswitch on your system using Docker compose after cloning this repository. 
-We recommend using Docker Desktop (Or Orbstack) for Windows and Mac OS. On Linux, you can install Docker Engine directly.
+#### One-Click Setup (Recommended)
+
+You can run Hyperswitch on your system with a single command using our one-click setup script:
+
 ```shell
 git clone --depth 1 --branch latest https://github.com/juspay/hyperswitch
 cd hyperswitch
-docker compose up -d
-# This script verifies the setup and provides links to the individual components.
-scripts/docker_output.sh
+scripts/setup.sh
 ```
+
+The above script will:
+- Check for prerequisites (Docker Compose/Podman)
+- Set up necessary configurations
+- Let you select a deployment profile:
+  - **Standard**: Recommended - App server + Control Center + Web SDK.
+  - **Full**: Standard + Monitoring + Scheduler.
+  - **Standalone App Server**: Core services only (Hyperswitch server, PostgreSQL, Redis)
+- Start the selected services
+- Check service health
+- Provide access information
+
 The next step is to [configure a connector][configure-a-connector] with the Hyperswitch Control Center and [try a payment][try-a-payment].
 
 Check out the [local setup guide][local-setup-guide] for more details on setting up the entire stack or component wise.

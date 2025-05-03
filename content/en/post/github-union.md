@@ -1,9 +1,9 @@
 ---
 title: union
-date: 2025-04-09T15:30:10+08:00
+date: 2025-05-03T15:26:30+08:00
 draft: False
-image: https://images.unsplash.com/photo-1614282635334-600d44ad88b1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQxODM2NTd8&ixlib=rb-4.0.3
-tags: ['github',zero-knowledge,message passing,asset transfers,NFTs,DeFi,Cosmos,Ethereum,IBC,Consensus Verification,EVM]
+image: https://images.unsplash.com/photo-1598245615049-c86df18526ab?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYyNTcxMjF8&ixlib=rb-4.0.3
+tags: ['github',zero-knowledge,infrastructure,message passing,asset transfers,NFTs,DeFi,Cosmos,Ethereum]
 categories: ['github']
 ---
 
@@ -47,7 +47,7 @@ The upgradability of contracts on other chains, connections, token configuration
 | [`unionvisor`](./unionvisor/README.md)                | Node supervisor intended for production usage        | [Rust]                |
 | [`drip`](./drip)                                      | Faucet for [Cosmos] chains: [app.union.build/faucet] | [Rust]                |
 | [`evm`](./evm)                                        | [EVM] smart contract stack                           | [Solidity]            |
-| [`app`](./app)                                        | [app.union.build]                                    | [TypeScript] [Svelte] |
+| [`app`](./app2)                                       | [app.union.build]                                    | [TypeScript] [Svelte] |
 | [`site`](./site)                                      | [union.build]                                        | [TypeScript] [Astro]  |
 | [`TypeScript SDK`](./typescript-sdk)                  | TypeScript SDK for interacting with Union            | [TypeScript]          |
 

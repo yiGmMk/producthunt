@@ -1,9 +1,9 @@
 ---
 title: Qwen-Agent
-date: 2025-05-02T15:28:04+08:00
+date: 2025-05-03T15:27:03+08:00
 draft: False
-image: https://images.unsplash.com/photo-1593945049362-068f62683e56?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYxNzA4Njl8&ixlib=rb-4.0.3
-tags: ['github',Qwen-Agent,LLM,tool usage,instruction following,planning,memory,Browser Assistant,Code Interpreter,Custom Assistant,Qwen Chat,DashScope,vLLM,Ollama,RAG,MCP,function calling,tool calling,question-answering,long-context,super-long documents]
+image: https://images.unsplash.com/photo-1680598810612-f2e434a9fc45?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYyNTcxMjF8&ixlib=rb-4.0.3
+tags: ['github',Qwen-Agent,LLM,tool usage,planning,memory,instruction following,Browser Assistant,Code Interpreter,Custom Assistant,Qwen Chat,DashScope,vLLM,Ollama,function calling,RAG,MCP,GUI,Gradio,PDF,image generation,question-answering,long-context]
 categories: ['github']
 ---
 

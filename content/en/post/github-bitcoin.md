@@ -1,9 +1,9 @@
 ---
 title: bitcoin
-date: 2025-05-01T15:29:52+08:00
+date: 2025-05-03T15:27:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1701496592478-70b30294bbc7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYwODQ0NzN8&ixlib=rb-4.0.3
-tags: ['github',Bitcoin,Bitcoin Core,peer-to-peer network,wallet,GUI,MIT license,unit tests,regression tests,Continuous Integration,Transifex]
+image: https://images.unsplash.com/photo-1669457818072-362120e870cb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYyNTcxMjF8&ixlib=rb-4.0.3
+tags: ['github',Bitcoin,Bitcoin Core,peer-to-peer,transactions,wallet,GUI,MIT license,testing,translations]
 categories: ['github']
 ---
 
