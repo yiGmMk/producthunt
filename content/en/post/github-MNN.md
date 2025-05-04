@@ -1,8 +1,8 @@
 ---
 title: MNN
-date: 2025-05-02T15:29:59+08:00
+date: 2025-05-04T15:27:11+08:00
 draft: False
-image: https://images.unsplash.com/photo-1732006358505-e2f6a623adc2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYxNzA4Njl8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1674763766874-a779ba110133?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYzNDM1MTd8&ixlib=rb-4.0.3
 tags: ['github',MNN, deep learning, inference, training, mobile, embedded, large language model, LLM, stable diffusion]
 categories: ['github']
 ---
@@ -10,12 +10,12 @@ categories: ['github']
 # [alibaba/MNN](https://github.com/alibaba/MNN)
 
 ![MNN](doc/banner.png)
-
-[中文版本](README_CN.md)
-
-[日本語バージョン](README_JP.md)
-
-[MNN Homepage](http://www.mnn.zone)
+---
+[![License](https://img.shields.io/github/license/alibaba/MNN)](LICENSE.txt)
+[![Documentation](https://img.shields.io/badge/Documentation-Read-green)](https://mnn-docs.readthedocs.io/en/latest/)
+[![中文版本](https://img.shields.io/badge/Language-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-green)](README_CN.md)
+[![日本語バージョン](https://img.shields.io/badge/Language-%E6%97%A5%E6%9C%AC%E8%AA%9E-green)](README_JP.md)
+[![MNN Homepage](https://img.shields.io/badge/Homepage-Visit-green)](http://www.mnn.zone)
 
 ## News 🔥
 - [2025/04/30] android app support qwen3 and dark mode [MnnLlmChat](./apps/Android/MnnLlmChat/README.md#version-040).

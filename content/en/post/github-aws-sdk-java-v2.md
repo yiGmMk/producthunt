@@ -1,9 +1,9 @@
 ---
 title: aws-sdk-java-v2
-date: 2025-05-03T15:27:51+08:00
+date: 2025-05-04T15:26:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1602548568341-13511c551dcc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYyNTcxMjF8&ixlib=rb-4.0.3
-tags: ['github',AWS,Java,SDK,Amazon,Web,Services,Maven,HTTP]
+image: https://images.unsplash.com/photo-1617209637559-e5189a9c234c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYzNDM1MTd8&ixlib=rb-4.0.3
+tags: ['github',AWS,SDK,Java,Maven,Amazon,services,modules,dependencies]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: koreader
-date: 2025-04-03T15:32:19+08:00
+date: 2025-05-04T15:26:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1596999034018-abea57f9f54b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM2NjU0MzF8&ixlib=rb-4.0.3
-tags: ['github',e-reader,e-book,KOReader,document viewer,EPUB,PDF,multi-format,open source]
+image: https://images.unsplash.com/photo-1658244042443-7a8c7764dd52?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYzNDM1MTd8&ixlib=rb-4.0.3
+tags: ['github',e-reader,KOReader,e-book,document viewer,EPUB,PDF,multi-format,open-source]
 categories: ['github']
 ---
 

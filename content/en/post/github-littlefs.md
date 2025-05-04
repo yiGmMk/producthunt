@@ -1,9 +1,9 @@
 ---
 title: littlefs
-date: 2025-05-02T15:30:24+08:00
+date: 2025-05-04T15:27:50+08:00
 draft: False
-image: https://images.unsplash.com/photo-1727659346580-05ba1e71aeb2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYxNzA4Njl8&ixlib=rb-4.0.3
-tags: ['github',littlefs,filesystem,microcontrollers,flash,wear leveling,RAM,ROM,POSIX,error handling]
+image: https://images.unsplash.com/photo-1674763766874-a779ba110133?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYzNDM1MTd8&ixlib=rb-4.0.3
+tags: ['github',littlefs,filesystem,microcontrollers,flash,wear leveling,embedded systems,C,POSIX]
 categories: ['github']
 ---
 

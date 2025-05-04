@@ -1,9 +1,9 @@
 ---
 title: Atmosphere
-date: 2025-05-03T15:26:21+08:00
+date: 2025-05-04T15:25:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1691030133693-84d7bbec65a2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYyNTcxMjF8&ixlib=rb-4.0.3
-tags: ['github',Nintendo Switch,Atmosphere,custom firmware,Fusée,Exosphère,Thermosphère,Stratosphère,Troposphère,GPLv2]
+image: https://images.unsplash.com/photo-1723569575972-e669a0917cd8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYzNDM1MTd8&ixlib=rb-4.0.3
+tags: ['github',Nintendo Switch, Atmosphere, customized firmware, Fusée, Exosphère, Thermosphère, Stratosphère, Troposphère, GPLv2]
 categories: ['github']
 ---
 

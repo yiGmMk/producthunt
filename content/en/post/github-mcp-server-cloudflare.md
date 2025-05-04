@@ -1,9 +1,9 @@
 ---
 title: mcp-server-cloudflare
-date: 2025-05-03T15:25:52+08:00
+date: 2025-05-04T15:26:03+08:00
 draft: False
-image: https://images.unsplash.com/photo-1683699947127-7fea7bf89d73?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYyNTcxMjF8&ixlib=rb-4.0.3
-tags: ['github',Model Context Protocol,MCP server,Cloudflare,LLM,large language models,external systems,MCP client,Workers,application development,security,performance,Observability,Radar,Container,Browser rendering,Logpush,AI Gateway,AutoRAG,Audit Logs,DNS Analytics,Digital Experience Monitoring,Cloudflare One CASB]
+image: https://images.unsplash.com/photo-1646963834394-ecf3696d3de8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYzNDM1MTd8&ixlib=rb-4.0.3
+tags: ['github',Cloudflare,MCP,LLM,large language models,Model Context Protocol,servers,Workers,Observability,Radar,Container,Browser rendering,Logpush,AI Gateway,AutoRAG,Audit Logs,DNS Analytics,Digital Experience Monitoring,Cloudflare One CASB]
 categories: ['github']
 ---
 
