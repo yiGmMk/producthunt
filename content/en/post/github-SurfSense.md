@@ -1,23 +1,26 @@
 ---
 title: SurfSense
-date: 2025-05-03T15:25:44+08:00
+date: 2025-05-05T15:30:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1707417089733-500269069159?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYyNTcxMjF8&ixlib=rb-4.0.3
-tags: ['github',SurfSense,AI research agent,personal knowledge base,external sources,LLMs,embedding models,RAG,search engines,document uploading,chat interface,cited answers,self-hostable,open source]
+image: https://images.unsplash.com/photo-1539199828864-e64f055bd62e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY0MzAxMDl8&ixlib=rb-4.0.3
+tags: ['github',AI research agent, personal knowledge base, external sources, search engines, Slack, Linear, Notion, YouTube, GitHub, LLM, embedding models, rerankers, RAG, hybrid search, vector embeddings, PostgreSQL, pgvector, FastAPI, LangChain, LangGraph, React, Next.js, TypeScript]
 categories: ['github']
 ---
 
 # [MODSetter/SurfSense](https://github.com/MODSetter/SurfSense)
 
 
-
-
 ![new_header](https://github.com/user-attachments/assets/e236b764-0ddc-42ff-a1f1-8fbb3d2e0e65)
+
 
 
 
 # SurfSense
 While tools like NotebookLM and Perplexity are impressive and highly effective for conducting research on any topic/query, SurfSense elevates this capability by integrating with your personal knowledge base. It is a highly customizable AI research agent, connected to external sources such as search engines (Tavily, LinkUp), Slack, Linear, Notion, YouTube, GitHub and more to come.
+
+<div align="center">
+<a href="https://trendshift.io/repositories/13606" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13606" alt="MODSetter%2FSurfSense | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+</div>
 
 
 # Video
@@ -213,4 +216,14 @@ Before installation, make sure to complete the [prerequisite setup steps](https:
 
 Contributions are very welcome! A contribution can be as small as a ⭐ or even finding and creating issues.
 Fine-tuning the Backend is always desired.
+
+## Star History
+
+<a href="https://www.star-history.com/#MODSetter/SurfSense&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=MODSetter/SurfSense&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=MODSetter/SurfSense&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=MODSetter/SurfSense&type=Date" />
+ </picture>
+</a>
 

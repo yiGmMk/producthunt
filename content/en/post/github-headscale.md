@@ -1,9 +1,9 @@
 ---
 title: headscale
-date: 2025-05-04T15:26:34+08:00
+date: 2025-05-05T15:30:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1622266234859-e4654e3587d8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYzNDM1MTd8&ixlib=rb-4.0.3
-tags: ['github',Tailscale,Headscale,Wireguard,VPN,self-hosted,open-source,control server,overlay network,NAT traversal]
+image: https://images.unsplash.com/photo-1604208032420-8595afeb49b7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY0MzAxMDl8&ixlib=rb-4.0.3
+tags: ['github',Headscale,Tailscale,Wireguard,VPN,overlay network,NAT traversal,self-hosted,open source,control server]
 categories: ['github']
 ---
 
@@ -18,8 +18,12 @@ An open source, self-hosted implementation of the Tailscale control server.
 Join our [Discord server](https://discord.gg/c84AZQhmpx) for a chat.
 
 **Note:** Always select the same GitHub tag as the released version you use
-to ensure you have the correct example configuration and documentation.
-The `main` branch might contain unreleased changes.
+to ensure you have the correct example configuration. The `main` branch might
+contain unreleased changes. The documentation is available for stable and
+development versions:
+
+* [Documentation for the stable version](https://headscale.net/stable/)
+* [Documentation for the development version](https://headscale.net/development/)
 
 ## What is Tailscale
 

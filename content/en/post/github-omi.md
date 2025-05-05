@@ -1,9 +1,9 @@
 ---
 title: omi
-date: 2025-04-15T15:30:14+08:00
+date: 2025-05-05T15:29:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1702731798357-22bd8ca4a484?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3MDIxNjZ8&ixlib=rb-4.0.3
-tags: ['github',AI wearable,open-source,real-time transcription,meeting summaries,action items,mobile app,developer kit,webhook]
+image: https://images.unsplash.com/photo-1554602337-bcb0d619e511?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY0MzAxMDl8&ixlib=rb-4.0.3
+tags: ['github',AI wearable,Omi,real-time transcription,open-source,mobile app,developer kit,webhook,AI audio processing,low-power Bluetooth]
 categories: ['github']
 ---
 
