@@ -1,9 +1,9 @@
 ---
 title: awesome-llm-apps
-date: 2025-04-22T15:28:38+08:00
+date: 2025-05-06T15:29:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1707402771668-1b7786f7c990?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUzMDY4ODB8&ixlib=rb-4.0.3
-tags: ['github',Large Language Model, AI Agents, RAG, OpenAI, Anthropic, Google, DeepSeek, Qwen, Llama, Hackathon,  GitHub]
+image: https://images.unsplash.com/photo-1541563991147-7ce10f22b1ff?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY1MTY1MTB8&ixlib=rb-4.1.0
+tags: ['github',LLM,AI Agents,RAG,OpenAI,Anthropic,Google,DeepSeek,Qwen,Llama,Hackathon,AI,applications,models,GitHub,code,email,projects,open-source,agents,multi-agent,systems]
 categories: ['github']
 ---
 
@@ -58,7 +58,7 @@ We're launching a Global AI Agent Hackathon in collaboration with AI Agent ecosy
 
 ### AI Agents
 
-#### 🌱 Starter AI Agents
+### 🌱 Starter AI Agents
 
 *   [🎙️ AI Blog to Podcast Agent](starter_ai_agents/ai_blog_to_podcast_agent/)
 *   [❤️‍🩹 AI Breakup Recovery Agent](starter_ai_agents/ai_breakup_recovery_agent/)
@@ -74,7 +74,7 @@ We're launching a Global AI Agent Hackathon in collaboration with AI Agent ecosy
 *   [🔍 OpenAI Research Agent](starter_ai_agents/opeani_research_agent/)
 *   [🕸️ Web Scrapping AI Agent (Local & Cloud)](starter_ai_agents/web_scrapping_ai_agent/)
 
-#### 🚀 Advanced AI Agents
+### 🚀 Advanced AI Agents
 
 *   [🔍 AI Deep Research Agent](advanced_ai_agents/single_agent_apps/ai_deep_research_agent/)
 *   [🏗️ AI System Architect Agent](advanced_ai_agents/single_agent_apps/ai_system_architect_r1/)
@@ -88,13 +88,13 @@ We're launching a Global AI Agent Hackathon in collaboration with AI Agent ecosy
 *   [🧠 AI Mental Wellbeing Agent](advanced_ai_agents/multi_agent_apps/ai_mental_wellbeing_agent/)
 *   [📑 AI Meeting Agent](advanced_ai_agents/single_agent_apps/ai_meeting_agent/)
 
-#### 🎮 Autonomous Game Playing Agents
+### 🎮 Autonomous Game Playing Agents
 
 *   [🎮 AI 3D Pygame Agent](advanced_ai_agents/autonomous_game_playing_agent_apps/ai_3dpygame_r1/)
 *   [♜ AI Chess Agent](advanced_ai_agents/autonomous_game_playing_agent_apps/ai_chess_agent/)
 *   [🎲 AI Tic-Tac-Toe Agent](advanced_ai_agents/autonomous_game_playing_agent_apps/ai_tic_tac_toe_agent/)
 
-#### 🤝 Multi-agent Teams
+### 🤝 Multi-agent Teams
 
 *   [🧲 AI Competitor Intelligence Agent Team](advanced_ai_agents/multi_agent_apps/agent_teams/ai_competitor_intelligence_agent_team/)
 *   [💲 AI Finance Agent Team](advanced_ai_agents/multi_agent_apps/agent_teams/ai_finance_agent_team/)
@@ -134,6 +134,7 @@ We're launching a Global AI Agent Hackathon in collaboration with AI Agent ecosy
 *   [✨ RAG Agent with Cohere](rag_tutorials/rag_agent_cohere/)
 *   [⛓️ Basic RAG Chain](rag_tutorials/rag_chain/)
 *   [📠 RAG with Database Routing](rag_tutorials/rag_database_routing/)
+*   [🖼️ Vision RAG](rag_tutorials/vision_rag/)
 
 ### MCP AI Agents
 - [🐙 MCP GitHub Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/mcp_ai_agents/github_mcp_agent)
@@ -141,7 +142,7 @@ We're launching a Global AI Agent Hackathon in collaboration with AI Agent ecosy
 
 ### 🧠 Advanced LLM Apps
 
-#### 💬 Chat with X Tutorials
+### 💬 Chat with X Tutorials
 
 *   [💬 Chat with GitHub (GPT & Llama3)](advanced_llm_apps/chat_with_X_tutorials/chat_with_github/)
 *   [📨 Chat with Gmail](advanced_llm_apps/chat_with_X_tutorials/chat_with_gmail/)
@@ -150,7 +151,7 @@ We're launching a Global AI Agent Hackathon in collaboration with AI Agent ecosy
 *   [📝 Chat with Substack](advanced_llm_apps/chat_with_X_tutorials/chat_with_substack/)
 *   [📽️ Chat with YouTube Videos](advanced_llm_apps/chat_with_X_tutorials/chat_with_youtube_videos/)
 
-#### 💾 LLM Apps with Memory Tutorials
+### 💾 LLM Apps with Memory Tutorials
 
 *   [💾 AI ArXiv Agent with Memory](advanced_llm_apps/llm_apps_with_memory_tutorials/ai_arxiv_agent_memory/)
 *   [🛩️ AI Travel Agent with Memory](advanced_llm_apps/llm_apps_with_memory_tutorials/ai_travel_agent_memory/)
@@ -159,7 +160,7 @@ We're launching a Global AI Agent Hackathon in collaboration with AI Agent ecosy
 *   [🗄️ Local ChatGPT Clone with Memory](advanced_llm_apps/llm_apps_with_memory_tutorials/local_chatgpt_with_memory/)
 *   [🧠 Multi-LLM Application with Shared Memory](advanced_llm_apps/llm_apps_with_memory_tutorials/multi_llm_memory/)
 
-#### 🔧 LLM Fine-tuning Tutorials
+### 🔧 LLM Fine-tuning Tutorials
 
 *   [🔧 Llama 3.2 Fine-tuning](advanced_llm_apps/llm_finetuning_tutorials/llama3.2_finetuning/)
 

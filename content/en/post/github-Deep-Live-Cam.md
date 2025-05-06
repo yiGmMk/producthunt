@@ -1,9 +1,9 @@
 ---
 title: Deep-Live-Cam
-date: 2025-05-05T15:28:40+08:00
+date: 2025-05-06T15:28:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1541317717750-b3bfaeb873ef?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY0MzAxMDl8&ixlib=rb-4.0.3
-tags: ['github',Deepfake, real-time, face swap, video, AI, webcam,  live stream,  face mapping]
+image: https://images.unsplash.com/photo-1605289686707-c13ede6e7c75?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY1MTY1MTB8&ixlib=rb-4.1.0
+tags: ['github',Deepfake, real-time, face swap, video, AI, webcam, software,  GitHub,  live stream]
 categories: ['github']
 ---
 

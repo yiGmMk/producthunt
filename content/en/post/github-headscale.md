@@ -1,9 +1,9 @@
 ---
 title: headscale
-date: 2025-05-05T15:30:51+08:00
+date: 2025-05-06T15:29:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1604208032420-8595afeb49b7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY0MzAxMDl8&ixlib=rb-4.0.3
-tags: ['github',Headscale,Tailscale,Wireguard,VPN,overlay network,NAT traversal,self-hosted,open source,control server]
+image: https://images.unsplash.com/photo-1642091127753-300f6b462934?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY1MTY1MTB8&ixlib=rb-4.1.0
+tags: ['github',Tailscale,Headscale,Wireguard,VPN,self-hosted,open-source,control server,overlay network,NAT traversal]
 categories: ['github']
 ---
 

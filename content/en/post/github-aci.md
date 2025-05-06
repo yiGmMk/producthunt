@@ -1,9 +1,9 @@
 ---
 title: aci
-date: 2025-05-05T15:28:57+08:00
+date: 2025-05-06T15:30:01+08:00
 draft: False
-image: https://images.unsplash.com/photo-1604208032420-8595afeb49b7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY0MzAxMDl8&ixlib=rb-4.0.3
-tags: ['github',AI-agent,tool-use,Unified MCP server,ACI.dev,open-source infrastructure,multi-tenant authentication,LLM framework,Python SDK]
+image: https://images.unsplash.com/photo-1668961029030-787f7950864c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY1MTY1MTB8&ixlib=rb-4.1.0
+tags: ['github',AI-agent,tool-use,infrastructure,authentication,permissions,Unified-MCP-server,Python-SDK,LLM,open-source]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: sunnypilot
-date: 2025-05-04T15:27:59+08:00
+date: 2025-05-06T15:30:56+08:00
 draft: False
-image: https://images.unsplash.com/photo-1646963834394-ecf3696d3de8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYzNDM1MTd8&ixlib=rb-4.0.3
-tags: ['github',openpilot,sunnypilot,driver-assistance,comma three,adaptive cruise control,lane-keeping assist,MADS,driving enhancements]
+image: https://images.unsplash.com/photo-1613085628218-d08b3a264f86?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY1MTY1MTB8&ixlib=rb-4.1.0
+tags: ['github',openpilot,sunnypilot,driver-assistance,adaptive-cruise-control,lane-keeping-assist,comma-three,installation,driving-enhancements,safety]
 categories: ['github']
 ---
 
