@@ -1,9 +1,9 @@
 ---
 title: union
-date: 2025-05-06T15:29:37+08:00
+date: 2025-05-07T15:29:10+08:00
 draft: False
-image: https://images.unsplash.com/photo-1495785870240-c8456d5aeda2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY1MTY1MTB8&ixlib=rb-4.1.0
-tags: ['github',zero-knowledge,message passing,asset transfers,NFTs,DeFi,Cosmos,Ethereum,IBC,smart contracts,decentralized governance]
+image: https://images.unsplash.com/photo-1593541709161-6e62ed66ea90?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY2MDI5MDd8&ixlib=rb-4.1.0
+tags: ['github',Union,zero-knowledge,message passing,asset transfers,NFTs,DeFi,Consensus Verification,IBC,Cosmos,Ethereum,Berachain,Arbitrum,governance,smart contracts,cross-ecosystem]
 categories: ['github']
 ---
 

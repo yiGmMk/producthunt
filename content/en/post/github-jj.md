@@ -1,9 +1,9 @@
 ---
 title: jj
-date: 2025-05-05T15:28:48+08:00
+date: 2025-05-07T15:30:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592299751221-914d8930f4d0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY0MzAxMDl8&ixlib=rb-4.0.3
-tags: ['github',Jujutsu,version control system,Git,Mercurial,conflict resolution,rebase,working copy]
+image: https://images.unsplash.com/photo-1678165629195-f8a4b5c54536?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY2MDI5MDd8&ixlib=rb-4.1.0
+tags: ['github',version control system,Git,Mercurial,Jujutsu,repository,commits,conflict resolution,rebase,working copy]
 categories: ['github']
 ---
 

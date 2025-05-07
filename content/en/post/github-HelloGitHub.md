@@ -1,9 +1,9 @@
 ---
 title: HelloGitHub
-date: 2025-05-05T15:29:27+08:00
+date: 2025-05-07T15:28:50+08:00
 draft: False
-image: https://images.unsplash.com/photo-1634128510033-a548c3456cad?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY0MzAxMDl8&ixlib=rb-4.0.3
-tags: ['github',GitHub,open source,projects,software,programming,resources,monthly,community]
+image: https://images.unsplash.com/photo-1591042344856-adaf4928a71e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY2MDI5MDd8&ixlib=rb-4.1.0
+tags: ['github',GitHub,HelloGitHub,open source,projects,monthly,software,programming,community]
 categories: ['github']
 ---
 

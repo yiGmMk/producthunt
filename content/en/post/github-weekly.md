@@ -1,9 +1,9 @@
 ---
 title: weekly
-date: 2025-04-27T15:26:47+08:00
+date: 2025-05-07T15:30:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1644990978896-c86bd2e5fd2e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU3Mzg2ODJ8&ixlib=rb-4.0.3
-tags: ['github',AI,Artificial Intelligence,Software Development,Technology,Internet,Programming,Machine Learning,Innovation]
+image: https://images.unsplash.com/photo-1591042344856-adaf4928a71e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY2MDI5MDd8&ixlib=rb-4.1.0
+tags: ['github',AI,Artificial Intelligence,Internet,Technology,Software,Programming,Business,Innovation]
 categories: ['github']
 ---
 
