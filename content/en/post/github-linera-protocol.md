@@ -1,8 +1,8 @@
 ---
 title: linera-protocol
-date: 2025-04-21T15:29:37+08:00
+date: 2025-05-08T15:30:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1645334710996-0d59a16768e4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUyMjA0NjF8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1718036094456-5f57368fdabd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY2ODkzMTF8&ixlib=rb-4.1.0
 tags: ['github',blockchain,Linera,Web3,scalability,low-latency,decentralized,Rust,cryptography]
 categories: ['github']
 ---
@@ -101,6 +101,7 @@ FAUCET_URL=http://localhost:8080
 
 # Set the path of the future wallet.
 export LINERA_WALLET="$LINERA_TMP_DIR/wallet.json"
+export LINERA_KEYSTORE="$LINERA_TMP_DIR/keystore.json"
 export LINERA_STORAGE="rocksdb:$LINERA_TMP_DIR/client.db"
 
 # Initialize a new user wallet.
@@ -110,9 +111,9 @@ linera wallet init --faucet $FAUCET_URL
 INFO1=($(linera wallet request-chain --faucet $FAUCET_URL))
 INFO2=($(linera wallet request-chain --faucet $FAUCET_URL))
 CHAIN1="${INFO1[0]}"
-ACCOUNT1="${INFO1[3]}"
+ACCOUNT1="${INFO1[2]}"
 CHAIN2="${INFO2[0]}"
-ACCOUNT2="${INFO2[3]}"
+ACCOUNT2="${INFO2[2]}"
 
 # Show the different chains tracked by the wallet.
 linera wallet show

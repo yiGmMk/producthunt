@@ -1,9 +1,9 @@
 ---
 title: cline
-date: 2025-04-18T15:29:38+08:00
+date: 2025-05-08T15:30:30+08:00
 draft: False
-image: https://images.unsplash.com/photo-1462524653740-777d166c975e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ5NjEyNjh8&ixlib=rb-4.0.3
-tags: ['github',Cline,AI assistant,CLI,editor,software development,Claude,Anthropic,OpenAI,API,Model Context Protocol,MCP,code completion,terminal commands,file editing,browser automation,debugging,web development,API providers,OpenRouter,local model,LM Studio,Ollama,VSCode,command palette,shell integration,linter,compiler errors,diff view,Timeline,Computer Use,custom tools,context,checkpoints,workspace]
+image: https://images.unsplash.com/photo-1602774033599-1a1fe9af740d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY2ODkzMTF8&ixlib=rb-4.1.0
+tags: ['github',Cline,AI assistant,CLI,editor,software development,Claude,Anthropic,OpenAI,Google Gemini,AWS Bedrock,Azure,GCP Vertex,Model Context Protocol,MCP,API,browser,debugging,web development,terminal,commands,file management,code completion,tools]
 categories: ['github']
 ---
 

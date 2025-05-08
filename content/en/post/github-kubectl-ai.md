@@ -1,8 +1,8 @@
 ---
 title: kubectl-ai
-date: 2025-05-07T15:28:36+08:00
+date: 2025-05-08T15:28:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592238711123-f1525212bcd7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY2MDI5MDd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1602774033599-1a1fe9af740d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY2ODkzMTF8&ixlib=rb-4.1.0
 tags: ['github',kubectl,kubernetes,AI,LLM,Gemini,OpenAI,Azure,Grok,ollama,llama.cpp]
 categories: ['github']
 ---
@@ -94,6 +94,14 @@ You can also use OpenAI models by setting your OpenAI API key and specifying the
 ```bash
 export OPENAI_API_KEY=your_openai_api_key_here
 kubectl-ai --llm-provider=openai --model=gpt-4.1
+```
+
+#### Using OpenAI Compatible API
+For example, you can use aliyun qwen-xxx module as follows
+```bash
+export OPENAI_API_KEY=your_openai_api_key_here
+export OPENAI_ENDPOINT=https://dashscope.aliyuncs.com/compatible-mode/v1
+kubectl-ai --llm-provider=openai --model=qwen-plus
 ```
 
 * Note: `kubectl-ai` supports AI models from `gemini`, `vertexai`, `azopenai`, `openai`, `grok` and local LLM providers such as `ollama` and `llamacpp`.
