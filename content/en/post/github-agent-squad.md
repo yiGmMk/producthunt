@@ -1,9 +1,9 @@
 ---
 title: agent-squad
-date: 2025-05-07T15:28:59+08:00
+date: 2025-05-09T15:28:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1678178092123-7763d2975fbc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY2MDI5MDd8&ixlib=rb-4.1.0
-tags: ['github',AI agent, conversation orchestration, multi-agent system, context management,  SupervisorAgent,  AWS services,  Bedrock, Lex]
+image: https://images.unsplash.com/photo-1597677182932-162cea661a63?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY3NzU2Nzd8&ixlib=rb-4.1.0
+tags: ['github',AI agent, conversation, orchestrator, framework, context management, agent squad, SupervisorAgent, multi-agent]
 categories: ['github']
 ---
 

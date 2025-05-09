@@ -1,9 +1,9 @@
 ---
 title: SurfSense
-date: 2025-05-05T15:30:12+08:00
+date: 2025-05-09T15:29:02+08:00
 draft: False
-image: https://images.unsplash.com/photo-1539199828864-e64f055bd62e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY0MzAxMDl8&ixlib=rb-4.0.3
-tags: ['github',AI research agent, personal knowledge base, external sources, search engines, Slack, Linear, Notion, YouTube, GitHub, LLM, embedding models, rerankers, RAG, hybrid search, vector embeddings, PostgreSQL, pgvector, FastAPI, LangChain, LangGraph, React, Next.js, TypeScript]
+image: https://images.unsplash.com/photo-1588097268475-525cdc0602b1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY3NzU2Nzd8&ixlib=rb-4.1.0
+tags: ['github',AI research agent,knowledge base,external sources,search engines,Slack,Notion,YouTube,GitHub,LLMs,embedding models,rerankers,RAG,podcast generation,self-hostable,browser extension]
 categories: ['github']
 ---
 
@@ -27,6 +27,13 @@ While tools like NotebookLM and Perplexity are impressive and highly effective f
 
 https://github.com/user-attachments/assets/48142909-6391-4084-b7e8-81da388bb1fc
 
+# Podcast's
+
+https://github.com/user-attachments/assets/d516982f-de00-4c41-9e4c-632a7d942f41
+
+## Podcast Sample
+
+https://github.com/user-attachments/assets/bf64a6ca-934b-47ac-9e1b-edac5fe972ec
 
 
 
@@ -47,6 +54,11 @@ Get Cited answers just like Perplexity.
 Works Flawlessly with Ollama local LLMs.
 #### 🏠 **Self Hostable**
 Open source and easy to deploy locally.
+#### 🎙️ Podcasts 
+- Blazingly fast podcast generation agent. (Creates a 3-minute podcast in under 20 seconds.)
+- Convert your chat conversations into engaging audio content
+- Support for multiple TTS providers (OpenAI, Azure, Google Vertex AI)
+
 #### 📊 **Advanced RAG Techniques**
 - Supports 150+ LLM's
 - Supports 6000+ Embedding Models.
@@ -67,12 +79,6 @@ Open source and easy to deploy locally.
 #### 🔖 Cross Browser Extension
 - The SurfSense extension can be used to save any webpage you like.
 - Its main usecase is to save any webpages protected beyond authentication.
-
-
-### 2. Temporarily Deprecated
-
-#### Podcasts 
-- The SurfSense Podcast feature is currently being reworked for better UI and stability. Expect it soon.
 
 
 ## FEATURE REQUESTS AND FUTURE
@@ -115,6 +121,9 @@ Before installation, make sure to complete the [prerequisite setup steps](https:
 
 ![researcher](https://github.com/user-attachments/assets/fda3e61f-f936-4b66-b565-d84edde44a67)
 
+**Podcast Agent** 
+![podcasts](https://github.com/user-attachments/assets/6cb82ffd-9e14-4172-bc79-67faf34c4c1c)
+
 
 **Agent Chat** 
 
@@ -125,6 +134,7 @@ Before installation, make sure to complete the [prerequisite setup steps](https:
 ![ext1](https://github.com/user-attachments/assets/1f042b7a-6349-422b-94fb-d40d0df16c40)
 
 ![ext2](https://github.com/user-attachments/assets/a9b9f1aa-2677-404d-b0a0-c1b2dddf24a7)
+
 
 ## Tech Stack
 

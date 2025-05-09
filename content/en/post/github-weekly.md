@@ -1,9 +1,9 @@
 ---
 title: weekly
-date: 2025-05-08T15:28:58+08:00
+date: 2025-05-09T15:28:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1642418379704-cee4daa4679b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY2ODkzMTF8&ixlib=rb-4.1.0
-tags: ['github',AI,Artificial Intelligence,Internet,Technology,Software,Programming,Business,Innovation]
+image: https://images.unsplash.com/photo-1598365856908-fdd745466515?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY3NzU2Nzd8&ixlib=rb-4.1.0
+tags: ['github',AI,Artificial Intelligence,Technology,Software,Internet,Programming,Innovation,Digital]
 categories: ['github']
 ---
 
@@ -15,7 +15,7 @@ categories: ['github']
 
 欢迎投稿，推荐或自荐文章/软件/资源，请[提交 issue](https://github.com/ruanyf/weekly/issues) 。
 
-> P.S. 讨论区的[《谁在招人》](https://github.com/ruanyf/weekly/issues/6443)，是一个免费的程序员招聘帖，提供大量就业信息，欢迎访问或发布工作/实习岗位。
+> P.S. 讨论区的[《谁在招人》](https://github.com/ruanyf/weekly/issues/6771)，是一个免费的程序员招聘帖，提供大量就业信息，欢迎访问或发布工作/实习岗位。
 
 ## 如何搜索
 
@@ -38,6 +38,10 @@ $ grep -nri css docs | cat --number
 ```
 
 ## 2025
+
+**五月**
+
+- 第 347 期：[冷启动的破解之道](docs/issue-347.md)
 
 **四月**
 

@@ -1,9 +1,9 @@
 ---
 title: void
-date: 2025-05-08T15:29:21+08:00
+date: 2025-05-09T15:29:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1738005787906-11fe4d0bcdad?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY2ODkzMTF8&ixlib=rb-4.1.0
-tags: ['github',Void,open-source,Cursor,alternative,sourcecode,contribute,collaboration,vscode]
+image: https://images.unsplash.com/photo-1598365856908-fdd745466515?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY3NzU2Nzd8&ixlib=rb-4.1.0
+tags: ['github',Void,open-source,Cursor,AI agents,codebase,changes,model,data]
 categories: ['github']
 ---
 
@@ -22,17 +22,17 @@ categories: ['github']
 
 Void is the open-source Cursor alternative.
 
+Use AI agents on your codebase, checkpoint and visualize changes, and bring any model or host locally. Void sends messages directly to providers without retaining your data.
+
 This repo contains the full sourcecode for Void. If you're new, welcome!
 
 - 👋 [Discord](https://discord.gg/RSNjgaugJs)
-
-- 🔨 [Contribute](https://github.com/voideditor/void/blob/main/HOW_TO_CONTRIBUTE.md)
 
 - 🚙 [Roadmap](https://github.com/orgs/voideditor/projects/2)
 
 - 📝 [Changelog](https://voideditor.com/changelog)
 
-- 🧭 [Codebase Guide](https://github.com/voideditor/void/blob/main/VOID_CODEBASE_GUIDE.md)
+- 🧭 [Website](https://voideditor.com)
 
 ## Contributing
 
