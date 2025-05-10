@@ -1,9 +1,9 @@
 ---
 title: nakama
-date: 2025-05-08T15:30:39+08:00
+date: 2025-05-10T15:26:57+08:00
 draft: False
-image: https://images.unsplash.com/photo-1673550632925-211ae506eb65?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY2ODkzMTF8&ixlib=rb-4.1.0
-tags: ['github',Nakama,social,realtime,games,apps,server,multiplayer,leaderboards]
+image: https://images.unsplash.com/photo-1669220235918-04cbf9e054b9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY4NjE4OTR8&ixlib=rb-4.1.0
+tags: ['github',Nakama,social,realtime,games,apps,server,Multiplayer,Leaderboards,Tournaments]
 categories: ['github']
 ---
 

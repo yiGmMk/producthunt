@@ -1,9 +1,9 @@
 ---
 title: mlx-audio
-date: 2025-05-09T15:29:17+08:00
+date: 2025-05-10T15:26:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1515006754768-2fc6d4c12173?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY3NzU2Nzd8&ixlib=rb-4.1.0
-tags: ['github',text-to-speech, speech-to-speech, Apple Silicon, MLX framework, voice customization, speech speed control, REST API, quantization, Kokoro, CSM, 3D audio visualization]
+image: https://images.unsplash.com/photo-1676579300183-c53b23384218?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY4NjE4OTR8&ixlib=rb-4.1.0
+tags: ['github',text-to-speech, speech-to-speech, Apple Silicon, MLX framework, voice customization, speech speed control, REST API,  quantization,  3D audio visualization]
 categories: ['github']
 ---
 

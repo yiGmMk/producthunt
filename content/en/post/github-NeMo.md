@@ -1,9 +1,9 @@
 ---
 title: NeMo
-date: 2025-05-09T15:29:49+08:00
+date: 2025-05-10T15:25:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1588097268475-525cdc0602b1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY3NzU2Nzd8&ixlib=rb-4.1.0
-tags: ['github',NVIDIA NeMo, Large Language Models, Multimodal Models, Automatic Speech Recognition, Text to Speech, Computer Vision,  LLMs,  MMs,  PyTorch]
+image: https://images.unsplash.com/photo-1729952832073-bf7d3d6150cd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY4NjE4OTR8&ixlib=rb-4.1.0
+tags: ['github',NVIDIA,NeMo,Large Language Models,Multimodal Models,Automatic Speech Recognition,Text to Speech,Computer Vision,LLMs,MMs,ASR,TTS,CV]
 categories: ['github']
 ---
 

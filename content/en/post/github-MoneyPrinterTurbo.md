@@ -1,9 +1,9 @@
 ---
 title: MoneyPrinterTurbo
-date: 2025-05-09T15:29:24+08:00
+date: 2025-05-10T15:25:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1644727130323-33546f86ad31?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY3NzU2Nzd8&ixlib=rb-4.1.0
-tags: ['github',AI video generation, video editing, short video creation,  video script generation,  multi-model support,  API, Web UI]
+image: https://images.unsplash.com/photo-1591081810479-91243487dbbd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY4NjE4OTR8&ixlib=rb-4.1.0
+tags: ['github',AI video generation, video editing, short video creation, video script generation, video material generation,  multi-model support,  web UI, API]
 categories: ['github']
 ---
 
