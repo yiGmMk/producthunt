@@ -1,8 +1,8 @@
 ---
 title: zed
-date: 2025-05-10T15:26:24+08:00
+date: 2025-05-11T15:26:36+08:00
 draft: False
-image: https://images.unsplash.com/photo-1558392606-89f76d482685?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY4NjE4OTR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1661243038698-dc8b600f23d2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY5NDgzNjN8&ixlib=rb-4.1.0
 tags: ['github',Zed,code editor,multiplayer,Atom,Tree-sitter,macOS,Linux,Windows,Web]
 categories: ['github']
 ---

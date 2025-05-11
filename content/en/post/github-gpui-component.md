@@ -1,9 +1,9 @@
 ---
 title: gpui-component
-date: 2025-05-10T15:25:02+08:00
+date: 2025-05-11T15:27:24+08:00
 draft: False
-image: https://images.unsplash.com/photo-1507566218255-bfdc14d2ccf1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY4NjE4OTR8&ixlib=rb-4.1.0
-tags: ['github',GPUI,GPUI Component,desktop applications,UI components,cross-platform,macOS,Windows,shadcn/ui,Theme,ThemeColor,multi-theme,layout,WebView,Wry,Lucide]
+image: https://images.unsplash.com/photo-1696247835110-32a6a6629252?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY5NDgzNjN8&ixlib=rb-4.1.0
+tags: ['github',GPUI,GPUI-Component,desktop,UI,components,cross-platform,macOS,Windows,shadcn,Theme,layout,WebView,Wry,Lucide]
 categories: ['github']
 ---
 

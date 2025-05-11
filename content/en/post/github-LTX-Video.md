@@ -1,9 +1,9 @@
 ---
 title: LTX-Video
-date: 2025-05-10T15:26:05+08:00
+date: 2025-05-11T15:27:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1669220235918-04cbf9e054b9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY4NjE4OTR8&ixlib=rb-4.1.0
-tags: ['github',LTX-Video, video generation, real-time, high-quality, text-to-video, image-to-video, keyframe, video extension, model, diffusion]
+image: https://images.unsplash.com/photo-1589097486539-3093d77c5657?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY5NDgzNjN8&ixlib=rb-4.1.0
+tags: ['github',LTX-Video, video generation, real-time, high-quality, text-to-video, image-to-video, keyframe, video extension,  model,  HuggingFace]
 categories: ['github']
 ---
 
