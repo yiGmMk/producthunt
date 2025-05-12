@@ -1,9 +1,9 @@
 ---
 title: void
-date: 2025-05-11T15:26:30+08:00
+date: 2025-05-12T15:28:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1632729153562-96c80a733827?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY5NDgzNjN8&ixlib=rb-4.1.0
-tags: ['github',Void,open-source,Cursor,AI agents,codebase,changes,model,data]
+image: https://images.unsplash.com/photo-1623101622795-dc2f6b071f34?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcwMzQ4OTF8&ixlib=rb-4.1.0
+tags: ['github',Void,open-source,Cursor,AI,codebase,changes,model,data]
 categories: ['github']
 ---
 

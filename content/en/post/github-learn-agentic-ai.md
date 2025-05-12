@@ -1,9 +1,9 @@
 ---
 title: learn-agentic-ai
-date: 2025-05-11T15:27:32+08:00
+date: 2025-05-12T15:29:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1543159346-52240544f431?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY5NDgzNjN8&ixlib=rb-4.1.0
-tags: ['github',Agentic AI,Dapr,Kubernetes,OpenAI Agents SDK,DACA,AI-201,AI-202,AI-301,Pakistan]
+image: https://images.unsplash.com/photo-1672173234737-684207ad12a0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcwMzQ4OTF8&ixlib=rb-4.1.0
+tags: ['github',Agentic AI,Dapr,Kubernetes,OpenAI Agents SDK,DACA,AI Agents,Multi-agent systems,Model Context Protocol,Agent2Agent]
 categories: ['github']
 ---
 
@@ -81,7 +81,7 @@ Kubernetes with Dapr can theoretically handle 10 million concurrent agents in an
 </p>
 
 
-## The Dapr Agentic Cloud Ascent (DACA) Design Pattern Addresses 10 Million Concurrent Users Challenge 
+## The Dapr Agentic Cloud Ascent (DACA) Design Pattern Addresses 10 Million AI Agents Challenge 
 
 Let's understand and learn about "Dapr Agentic Cloud Ascent (DACA)", our winning design pattern for developing and deploying planet scale multi-agent systems.
 

@@ -1,9 +1,9 @@
 ---
 title: Zero
-date: 2025-05-04T15:26:54+08:00
+date: 2025-05-12T15:29:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1723569575972-e669a0917cd8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYzNDM1MTd8&ixlib=rb-4.0.3
-tags: ['github',email, open-source, AI, self-hosting, Gmail, privacy,  authentication,  PostgreSQL]
+image: https://images.unsplash.com/photo-1649938398370-3bb814c03b1e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcwMzQ4OTF8&ixlib=rb-4.1.0
+tags: ['github',email, open-source, AI, self-hosting, Gmail, privacy,  Next.js, React]
 categories: ['github']
 ---
 
@@ -263,7 +263,7 @@ If you'd like to help with translating Zero to other languages, check out our [t
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Mail-0/Zero&type=Timeline)](https://star-history.com/#Mail-0/Zero&Timeline)
+[![Star History Chart](https://api.star-history.com/svg?repos=Mail-0/Zero&type=Timeline)](https://www.star-history.com/#Mail-0/Zero&Timeline)
 
 ## This project wouldn't be possible without these awesome companies
 
