@@ -1,9 +1,9 @@
 ---
 title: MoneyPrinterTurbo
-date: 2025-05-12T15:28:20+08:00
+date: 2025-05-13T15:29:01+08:00
 draft: False
-image: https://images.unsplash.com/photo-1647894335344-17e1f0a0c683?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcwMzQ4OTF8&ixlib=rb-4.1.0
-tags: ['github',video generation, AI video generator, video editing, short video creation, automated video production, video script generation, multi-lingual support, API, web UI]
+image: https://images.unsplash.com/photo-1496268280706-ec91c5e133c7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcxMjEzMzF8&ixlib=rb-4.1.0
+tags: ['github',AI video generation, video editing, video production, short video creation, API, web UI,  large language models,  text-to-video]
 categories: ['github']
 ---
 
@@ -70,7 +70,7 @@ categories: ['github']
 - [x] 支持 **背景音乐**，随机或者指定音乐文件，可设置`背景音乐音量`
 - [x] 视频素材来源 **高清**，而且 **无版权**，也可以使用自己的 **本地素材**
 - [x] 支持 **OpenAI**、**Moonshot**、**Azure**、**gpt4free**、**one-api**、**通义千问**、**Google Gemini**、**Ollama**、
-  **DeepSeek**、 **文心一言** 等多种模型接入
+  **DeepSeek**、 **文心一言**, **pollinations** 等多种模型接入
     - 中国用户建议使用 **DeepSeek** 或 **Moonshot** 作为大模型提供商（国内可直接访问，不需要VPN。注册就送额度，基本够用）
 
 ### 后期计划 📅

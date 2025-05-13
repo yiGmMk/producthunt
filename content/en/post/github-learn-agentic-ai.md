@@ -1,8 +1,8 @@
 ---
 title: learn-agentic-ai
-date: 2025-05-12T15:29:38+08:00
+date: 2025-05-13T15:30:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1672173234737-684207ad12a0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcwMzQ4OTF8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1597609490757-5fc92ead5cb1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcxMjEzMzF8&ixlib=rb-4.1.0
 tags: ['github',Agentic AI,Dapr,Kubernetes,OpenAI Agents SDK,DACA,AI Agents,Multi-agent systems,Model Context Protocol,Agent2Agent]
 categories: ['github']
 ---

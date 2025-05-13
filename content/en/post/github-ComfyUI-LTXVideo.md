@@ -1,9 +1,9 @@
 ---
 title: ComfyUI-LTXVideo
-date: 2025-05-12T15:29:45+08:00
+date: 2025-05-13T15:29:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1722168785859-979ea89c2da7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcwMzQ4OTF8&ixlib=rb-4.1.0
-tags: ['github',ComfyUI, LTXVideo, video generation, AI video, machine learning, deep learning, model,  workflows,  upscaling]
+image: https://images.unsplash.com/photo-1600631446782-cd7015c38f22?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcxMjEzMzF8&ixlib=rb-4.1.0
+tags: ['github',ComfyUI, LTXVideo, video generation, AI, machine learning, deep learning, model, workflow, nodes]
 categories: ['github']
 ---
 

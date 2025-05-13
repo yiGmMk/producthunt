@@ -1,9 +1,9 @@
 ---
 title: Zero
-date: 2025-05-12T15:29:19+08:00
+date: 2025-05-13T15:30:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1649938398370-3bb814c03b1e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcwMzQ4OTF8&ixlib=rb-4.1.0
-tags: ['github',email, open-source, AI, self-hosting, Gmail, privacy,  Next.js, React]
+image: https://images.unsplash.com/photo-1496268280706-ec91c5e133c7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcxMjEzMzF8&ixlib=rb-4.1.0
+tags: ['github',email, open-source, AI, self-hosting, Gmail, privacy, Node.js, React]
 categories: ['github']
 ---
 
@@ -91,6 +91,7 @@ You can set up Zero in two ways:
      cp .env.example .env
      ```
    - Configure your environment variables (see below)
+   - Setup cloudflare with `bun run cf-install`, you will need to run this everytime there is a `.env` change
    - Start the database with the provided docker compose setup: `bun docker:up`
    - Initialize the database: `bun db:push`
 
@@ -159,7 +160,7 @@ bun install
    - Create OAuth 2.0 credentials (Web application type)
    - Add authorized redirect URIs:
      - Development:
-       - `http://localhost:3000/api/auth/callback/google`
+       - `http://localhost:8787/api/auth/callback/google`
      - Production:
        - `https://your-production-url/api/auth/callback/google`
    - Add to `.env`:
@@ -221,7 +222,7 @@ Zero uses PostgreSQL for storing data. Here's how to set it up:
 
 2. **Set Up Database Connection**
 
-   Make sure your database connection string is in `.env` file.
+   Make sure your database connection string is in `.env` file. And you have ran `bun run cf-install` to sync the latest env.
 
    For local development use:
 
