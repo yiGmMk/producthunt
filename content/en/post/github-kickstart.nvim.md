@@ -1,9 +1,9 @@
 ---
 title: kickstart.nvim
-date: 2025-04-14T15:30:28+08:00
+date: 2025-05-14T15:30:02+08:00
 draft: False
-image: https://images.unsplash.com/photo-1605612700580-2fe118b94c69?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ2MTU2OTl8&ixlib=rb-4.0.3
-tags: ['github',Neovim,Lua,kickstart.nvim,plugin,installation,configuration,git,dependencies,ripgrep,Nerd Font,emoji]
+image: https://images.unsplash.com/photo-1696251502207-dad49fd10bbf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcyMDc3MDd8&ixlib=rb-4.1.0
+tags: ['github',Neovim,Lua,kickstart.nvim,plugin,installation,configuration,git,dependencies,ripgrep,fd-find,Nerd Font,emoji]
 categories: ['github']
 ---
 
@@ -34,7 +34,8 @@ If you are experiencing issues, please make sure you have the latest versions.
 
 External Requirements:
 - Basic utils: `git`, `make`, `unzip`, C Compiler (`gcc`)
-- [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
+- [ripgrep](https://github.com/BurntSushi/ripgrep#installation),
+  [fd-find](https://github.com/sharkdp/fd#installation)
 - Clipboard tool (xclip/xsel/win32yank or other depending on the platform)
 - A [Nerd Font](https://www.nerdfonts.com/): optional, provides various icons
   - if you have it set `vim.g.have_nerd_font` in `init.lua` to true

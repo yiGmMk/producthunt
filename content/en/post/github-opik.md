@@ -1,9 +1,9 @@
 ---
 title: opik
-date: 2025-05-13T15:30:40+08:00
+date: 2025-05-14T15:29:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1645743943096-fd41e391543c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcxMjEzMzF8&ixlib=rb-4.1.0
-tags: ['github',LLM,evaluation,framework,monitoring,tracing,Comet,OpenAI,LangChain]
+image: https://images.unsplash.com/photo-1696251502207-dad49fd10bbf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcyMDc3MDd8&ixlib=rb-4.1.0
+tags: ['github',LLM,evaluation,framework,monitoring,tracing,Comet,OpenAI,LangChain,Python]
 categories: ['github']
 ---
 

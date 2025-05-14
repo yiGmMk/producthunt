@@ -1,9 +1,9 @@
 ---
 title: MoneyPrinterTurbo
-date: 2025-05-13T15:29:01+08:00
+date: 2025-05-14T15:28:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1496268280706-ec91c5e133c7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcxMjEzMzF8&ixlib=rb-4.1.0
-tags: ['github',AI video generation, video editing, video production, short video creation, API, web UI,  large language models,  text-to-video]
+image: https://images.unsplash.com/photo-1667318121664-1437a1e74a0b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcyMDc3MDd8&ixlib=rb-4.1.0
+tags: ['github',video generation, AI, video editing, short video, automated video creation,  video script,  video素材,  multi-model support]
 categories: ['github']
 ---
 
@@ -69,9 +69,9 @@ categories: ['github']
 - [x] 支持 **字幕生成**，可以调整 `字体`、`位置`、`颜色`、`大小`，同时支持`字幕描边`设置
 - [x] 支持 **背景音乐**，随机或者指定音乐文件，可设置`背景音乐音量`
 - [x] 视频素材来源 **高清**，而且 **无版权**，也可以使用自己的 **本地素材**
-- [x] 支持 **OpenAI**、**Moonshot**、**Azure**、**gpt4free**、**one-api**、**通义千问**、**Google Gemini**、**Ollama**、
-  **DeepSeek**、 **文心一言**, **pollinations** 等多种模型接入
+- [x] 支持 **OpenAI**、**Moonshot**、**Azure**、**gpt4free**、**one-api**、**通义千问**、**Google Gemini**、**Ollama**、**DeepSeek**、 **文心一言**, **Pollinations** 等多种模型接入
     - 中国用户建议使用 **DeepSeek** 或 **Moonshot** 作为大模型提供商（国内可直接访问，不需要VPN。注册就送额度，基本够用）
+
 
 ### 后期计划 📅
 
@@ -123,15 +123,24 @@ categories: ['github']
 
 ## 配置要求 📦
 
-- 建议最低 CPU 4核或以上，内存 8G 或以上，显卡非必须
+- 建议最低 CPU **4核** 或以上，内存 **4G** 或以上，显卡非必须
 - Windows 10 或 MacOS 11.0 以上系统
+
 
 ## 快速开始 🚀
 
+### 在 Google Colab 中运行
+免去本地环境配置，点击直接在 Google Colab 中快速体验 MoneyPrinterTurbo
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/harry0703/MoneyPrinterTurbo/blob/main/docs/MoneyPrinterTurbo.ipynb)
+
+
+### Windows一键启动包
+
 下载一键启动包，解压直接使用（路径不要有 **中文**、**特殊字符**、**空格**）
 
-### Windows
 - 百度网盘（v1.2.6）: https://pan.baidu.com/s/1wg0UaIyXpO3SqIpaq790SQ?pwd=sbqx 提取码: sbqx
+- Google Drive (v1.2.6): https://drive.google.com/file/d/1HsbzfT7XunkrCrHw5ncUjFX8XX4zAuUh/view?usp=sharing
 
 下载后，建议先**双击执行** `update.bat` 更新到**最新代码**，然后双击 `start.bat` 启动
 
@@ -189,14 +198,16 @@ docker-compose up
 - 完整的使用演示：https://v.douyin.com/iFhnwsKY/
 - 如何在Windows上部署：https://v.douyin.com/iFyjoW3M
 
-#### ① 依赖安装
+#### ① 创建虚拟环境
 
-建议使用 [pdm](https://pdm-project.org/en/latest/#installation)
+建议使用 [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) 创建 python 虚拟环境
 
 ```shell
 git clone https://github.com/harry0703/MoneyPrinterTurbo.git
 cd MoneyPrinterTurbo
-pdm sync
+conda create -n MoneyPrinterTurbo python=3.11
+conda activate MoneyPrinterTurbo
+pip install -r requirements.txt
 ```
 
 #### ② 安装好 ImageMagick
@@ -359,11 +370,6 @@ Trying to load the model directly from the local cache, if it exists.
 
 - 可以提交 [issue](https://github.com/harry0703/MoneyPrinterTurbo/issues)
   或者 [pull request](https://github.com/harry0703/MoneyPrinterTurbo/pulls)。
-
-## 参考项目 📚
-
-该项目基于 https://github.com/FujiwaraChoki/MoneyPrinter 重构而来，做了大量的优化，增加了更多的功能。
-感谢原作者的开源精神。
 
 ## 许可证 📝
 
