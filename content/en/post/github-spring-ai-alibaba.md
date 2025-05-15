@@ -1,9 +1,9 @@
 ---
 title: spring-ai-alibaba
-date: 2025-05-14T15:29:06+08:00
+date: 2025-05-15T15:29:25+08:00
 draft: False
-image: https://images.unsplash.com/photo-1639322537169-60139ceb56b5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcyMDc3MDd8&ixlib=rb-4.1.0
-tags: ['github',Spring-AI-Alibaba, Java, Spring Boot, Alibaba Cloud, QWen, LLM, ChatClient, AI agent, RAG, VectorStore]
+image: https://images.unsplash.com/photo-1680849219172-71e4f632b282?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcyOTQxMjN8&ixlib=rb-4.1.0
+tags: ['github',Spring-AI-Alibaba,Java,Alibaba Cloud,QWen,LLM,Spring Boot,ChatClient,AI agent,RAG,Vector Store]
 categories: ['github']
 ---
 
@@ -31,7 +31,7 @@ Overall, it takes only two steps to turn your Spring Boot application into an in
    <dependency>
         <groupId>com.alibaba.cloud.ai</groupId>
         <artifactId>spring-ai-alibaba-starter</artifactId>
-        <version>1.0.0-M6.1</version>
+        <version>1.0.0-M8.1-SNAPSHOT</version>
    </dependency>
    ```
 

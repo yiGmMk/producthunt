@@ -1,9 +1,9 @@
 ---
 title: 3rd-devs
-date: 2025-05-14T15:28:56+08:00
+date: 2025-05-15T15:30:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1682251024337-1c540c69a670?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcyMDc3MDd8&ixlib=rb-4.1.0
-tags: ['github',JavaScript,TypeScript,Node.js,Bun,OpenAI,Docker,Firecrawl,Linear,Langfuse,Qdrant,Algolia,Neo4j,ElevenLabs,Google AI Studio,prompt engineering,LLM,RAG]
+image: https://images.unsplash.com/photo-1666548004110-c1afb19c1582?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcyOTQxMjN8&ixlib=rb-4.1.0
+tags: ['github',JavaScript,TypeScript,Node.js,Bun,OpenAI,Docker,Firecrawl,Linear,Langfuse,Qdrant,Algolia,Neo4j,ElevenLabs,Google AI Studio,prompt engineering,LLM,RAG,vector database,embedding,semantic search]
 categories: ['github']
 ---
 

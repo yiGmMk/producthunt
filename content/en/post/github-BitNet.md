@@ -1,9 +1,9 @@
 ---
 title: BitNet
-date: 2025-05-14T15:29:21+08:00
+date: 2025-05-15T15:29:00+08:00
 draft: False
-image: https://images.unsplash.com/photo-1593669939982-e7c5465ea421?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcyMDc3MDd8&ixlib=rb-4.1.0
-tags: ['github',BitNet, 1-bit LLMs, inference, CPU, ARM, x86, energy efficiency, Hugging Face, llama.cpp, T-MAC,  performance]
+image: https://images.unsplash.com/photo-1611777908195-41d30fa7df5d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcyOTQxMjN8&ixlib=rb-4.1.0
+tags: ['github',BitNet, 1-bit LLMs, inference, CPU, ARM, x86, energy consumption, Hugging Face, llama.cpp, T-MAC, performance, speedup]
 categories: ['github']
 ---
 
