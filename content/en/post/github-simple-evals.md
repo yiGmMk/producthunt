@@ -1,9 +1,9 @@
 ---
 title: simple-evals
-date: 2025-05-15T15:29:33+08:00
+date: 2025-05-16T15:29:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1666548004110-c1afb19c1582?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcyOTQxMjN8&ixlib=rb-4.1.0
-tags: ['github',language models, benchmark, evaluation, MMLU, MATH, GPQA, DROP, MGSM, HumanEval, SimpleQA]
+image: https://images.unsplash.com/photo-1704245399181-a58b30509d2f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDczODA0ODd8&ixlib=rb-4.1.0
+tags: ['github',Language Models, Evaluation, Benchmark, MMLU, MATH, GPQA, DROP, MGSM, HumanEval, SimpleQA]
 categories: ['github']
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: mem0
-date: 2025-05-15T15:29:08+08:00
+date: 2025-05-16T15:28:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1611777908195-41d30fa7df5d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcyOTQxMjN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1589708658790-d49a4aa1d4e6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDczODA0ODd8&ixlib=rb-4.1.0
 tags: ['github',AI,memory,LLM,chatbot,personalization,OpenAI,customer support,productivity]
 categories: ['github']
 ---

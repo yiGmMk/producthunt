@@ -1,9 +1,9 @@
 ---
 title: WeClone
-date: 2025-05-15T15:29:57+08:00
+date: 2025-05-16T15:28:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1542732055-9f0355ab3288?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcyOTQxMjR8&ixlib=rb-4.1.0
-tags: ['github',digital twin, LLM, WeChat, fine-tuning, chatbot, privacy,  WeClone,  AstrBot]
+image: https://images.unsplash.com/photo-1634701948478-3eb1f882da25?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDczODA0ODd8&ixlib=rb-4.1.0
+tags: ['github',digital clone, LLM, WeChat, fine-tuning, chatbot, privacy,  deployment,  AstrBot, LangBot]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: airweave
-date: 2025-05-15T15:29:17+08:00
+date: 2025-05-16T15:29:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1479976216085-1f910b69304c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcyOTQxMjN8&ixlib=rb-4.1.0
-tags: ['github',semantic search,agent,data synchronization,API,knowledge,information retrieval,data integration,entity extraction]
+image: https://images.unsplash.com/photo-1595716912088-16d44c84216f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDczODA0ODd8&ixlib=rb-4.1.0
+tags: ['github',Airweave,semantic search,agent,knowledge,data synchronization,API,SDK,integration]
 categories: ['github']
 ---
 
@@ -19,7 +19,8 @@ categories: ['github']
 [![Backend Tests](https://github.com/airweave-ai/airweave/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/airweave-ai/airweave/actions/workflows/tests.yml)
 [![Codecov](https://codecov.io/gh/airweave-ai/airweave/branch/main/graph/badge.svg)](https://codecov.io/gh/airweave-ai/airweave)
 [![Discord](https://img.shields.io/discord/1323415085011701870?label=Discord&logo=discord&logoColor=white&style=flat-square)](https://discord.com/invite/484HY9Ehxt)
-
+<br>
+<a href="https://trendshift.io/repositories/13748" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13748" alt="airweave-ai%2Fairweave | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </div>
 
 # Airweave

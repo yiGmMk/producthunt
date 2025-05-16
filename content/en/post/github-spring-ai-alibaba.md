@@ -1,9 +1,9 @@
 ---
 title: spring-ai-alibaba
-date: 2025-05-15T15:29:25+08:00
+date: 2025-05-16T15:29:56+08:00
 draft: False
-image: https://images.unsplash.com/photo-1680849219172-71e4f632b282?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcyOTQxMjN8&ixlib=rb-4.1.0
-tags: ['github',Spring-AI-Alibaba,Java,Alibaba Cloud,QWen,LLM,Spring Boot,ChatClient,AI agent,RAG,Vector Store]
+image: https://images.unsplash.com/photo-1543372654-b45dd90eeee5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDczODA0ODd8&ixlib=rb-4.1.0
+tags: ['github',Spring-AI-Alibaba,Java,Alibaba Cloud,QWen,LLM,Spring Boot,ChatClient,AI agent,RAG,VectorStore]
 categories: ['github']
 ---
 
