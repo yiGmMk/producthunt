@@ -1,9 +1,9 @@
 ---
 title: PyWxDump
-date: 2025-05-15T15:30:27+08:00
+date: 2025-05-17T15:27:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1680849219172-71e4f632b282?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcyOTQxMjN8&ixlib=rb-4.1.0
-tags: ['github',WeChat,database,decryption,chat,export,backup,Python,PyWxDump]
+image: https://images.unsplash.com/photo-1699307152461-65c3c3657c5b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc0NjY3Mzd8&ixlib=rb-4.1.0
+tags: ['github',WeChat,database,decryption,chat,backup,Python,PyWxDump,information]
 categories: ['github']
 ---
 
