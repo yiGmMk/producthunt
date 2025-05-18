@@ -1,9 +1,9 @@
 ---
 title: tchMaterial-parser
-date: 2025-05-17T15:26:19+08:00
+date: 2025-05-18T15:26:34+08:00
 draft: False
-image: https://images.unsplash.com/photo-1615201427688-24a604af15d6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc0NjY3Mzd8&ixlib=rb-4.1.0
-tags: ['github',Python,PDF,download,electronic textbook,China,education platform,Access Token,batch download,National Primary and Secondary School Smart Education Platform]
+image: https://images.unsplash.com/photo-1695871136637-5e636f8469af?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc1NTMxMjl8&ixlib=rb-4.1.0
+tags: ['github',Python, Access Token, PDF, ebook, download,  ChinaTextbook,  tchMaterial-parser,  国家中小学智慧教育平台,  electronic textbook]
 categories: ['github']
 ---
 

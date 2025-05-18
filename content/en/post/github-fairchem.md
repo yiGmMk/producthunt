@@ -1,9 +1,9 @@
 ---
 title: fairchem
-date: 2025-05-16T15:29:40+08:00
+date: 2025-05-18T15:27:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1544558653-7e0b1bbb5177?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDczODA0ODd8&ixlib=rb-4.1.0
-tags: ['github',FAIRChem, materials science, quantum chemistry, UMA model, ASE, Hugging Face, catalysis, inorganic materials, molecules, MOFs, molecular crystals]
+image: https://images.unsplash.com/photo-1680640902934-8de42295e1f0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc1NTMxMjl8&ixlib=rb-4.1.0
+tags: ['github',fairchem, materials science, quantum chemistry, UMA model, ASE, Hugging Face, catalysis, inorganic materials, molecules, MOFs, molecular crystals]
 categories: ['github']
 ---
 

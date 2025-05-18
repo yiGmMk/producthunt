@@ -1,9 +1,9 @@
 ---
 title: youtube-music
-date: 2025-04-04T15:28:12+08:00
+date: 2025-05-18T15:27:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1658901097893-cfe9605ca208?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM3NTE2MDB8&ixlib=rb-4.0.3
-tags: ['github',YouTube Music,Electron,plugins,plugin,custom plugins,YouTube,Music,features,download,Arch Linux,macOS,Windows]
+image: https://images.unsplash.com/photo-1529579134665-75dfc9c5ccef?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc1NTMxMjl8&ixlib=rb-4.1.0
+tags: ['github',YouTube Music,Electron,plugins,custom plugins,ad blocker,album color theme,ambient mode,audio compressor,bypass age restrictions,captions selector]
 categories: ['github']
 ---
 
@@ -32,7 +32,7 @@ categories: ['github']
 	</a>
 </div>
 
-Read this in other languages: [🇰🇷](./docs/readme/README-ko.md), [🇫🇷](./docs/readme/README-fr.md), [🇮🇸](./docs/readme/README-is.md), [🇨🇱 🇪🇸](./docs/readme/README-es.md), [🇷🇺](./docs/readme/README-ru.md), [🇭🇺](./docs/readme/README-hu.md)
+Read this in other languages: [🇰🇷](./docs/readme/README-ko.md), [🇫🇷](./docs/readme/README-fr.md), [🇮🇸](./docs/readme/README-is.md), [🇨🇱 🇪🇸](./docs/readme/README-es.md), [🇷🇺](./docs/readme/README-ru.md), [🇺🇦](./docs/readme/README-uk.md), [🇭🇺](./docs/readme/README-hu.md), [🇧🇷](./docs/readme/README-pt.md), [🇯🇵](./docs/readme/README-ja.md)
 
 **Electron wrapper around YouTube Music featuring:**
 
