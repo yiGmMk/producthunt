@@ -1,9 +1,9 @@
 ---
 title: ChinaTextbook
-date: 2025-05-18T15:25:40+08:00
+date: 2025-05-19T15:29:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1717226263667-7ce6f7f35d9d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc1NTMxMjl8&ixlib=rb-4.1.0
-tags: ['github',ChinaTextbook, open-source, education resources,义务教育, primary school mathematics, middle school mathematics, high school mathematics, university mathematics]
+image: https://images.unsplash.com/photo-1675610858652-a7a8e7c97774?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc2Mzk3MzV8&ixlib=rb-4.1.0
+tags: ['github',ChinaTextbook,Open Educational Resources,Free Education,Chinese Textbooks,Mathematics,Primary School,Middle School,High School,University,PDF]
 categories: ['github']
 ---
 

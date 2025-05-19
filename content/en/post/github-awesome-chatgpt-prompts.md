@@ -1,9 +1,9 @@
 ---
 title: awesome-chatgpt-prompts
-date: 2025-05-18T15:26:23+08:00
+date: 2025-05-19T15:30:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1680640902934-8de42295e1f0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc1NTMxMjl8&ixlib=rb-4.1.0
-tags: ['github',ChatGPT,Large Language Model,AI models,prompts,Claude,Gemini,Hugging Face Chat,Llama,Mistral,OpenAI,GPT,GPT-4o,GPT-o1,Solidity,Linux,English,JavaScript,Excel,pronunciation,spoken English,travel guide,plagiarism checker,character,advertiser,storyteller,football commentator,stand-up comedian,motivational coach,composer,debater,debate coach,screenwriter,novelist,]
+image: https://images.unsplash.com/photo-1589692261219-5316108f9233?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc2Mzk3MzV8&ixlib=rb-4.1.0
+tags: ['github',ChatGPT,AI models,prompts,Claude,Gemini,Hugging Face Chat,Llama,Mistral,OpenAI,GPT,GPT-4o,GPT-o1,Solidity,Linux,English,JavaScript,Excel,pronunciation,English teacher,travel guide,plagiarism checker,character,advertiser,storyteller,football commentator,stand-up comedian,motivational coach,composer,debater,debate coach,screenwriter,novelist,movie critic,relationship]
 categories: ['github']
 ---
 

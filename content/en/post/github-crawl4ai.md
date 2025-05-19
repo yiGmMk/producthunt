@@ -1,9 +1,9 @@
 ---
 title: crawl4ai
-date: 2025-04-06T15:26:18+08:00
+date: 2025-05-19T15:29:53+08:00
 draft: False
-image: https://images.unsplash.com/photo-1735822081174-c919b99e8623?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM5MjQyODJ8&ixlib=rb-4.0.3
-tags: ['github',web crawler,web scraper,LLM,AI,data extraction,markdown,open source,Python]
+image: https://images.unsplash.com/photo-1645088520336-62d94324e869?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc2Mzk3MzV8&ixlib=rb-4.1.0
+tags: ['github',web crawler,web scraper,LLM,AI,markdown,data extraction,open source,Python]
 categories: ['github']
 ---
 
@@ -32,9 +32,9 @@ categories: ['github']
 
 Crawl4AI is the #1 trending GitHub repository, actively maintained by a vibrant community. It delivers blazing-fast, AI-ready web crawling tailored for LLMs, AI agents, and data pipelines. Open source, flexible, and built for real-time performance, Crawl4AI empowers developers with unmatched speed, precision, and deployment ease.  
 
-[✨ Check out latest update v0.5.0](#-recent-updates)
+[✨ Check out latest update v0.6.0](#-recent-updates)
 
-🎉 **Version 0.5.0 is out!** This major release introduces Deep Crawling with BFS/DFS/BestFirst strategies, Memory-Adaptive Dispatcher, Multiple Crawling Strategies (Playwright and HTTP), Docker Deployment with FastAPI, Command-Line Interface (CLI), and more! [Read the release notes →](https://docs.crawl4ai.com/blog)
+🎉 **Version 0.6.0 is now available!** This release candidate introduces World-aware Crawling with geolocation and locale settings, Table-to-DataFrame extraction, Browser pooling with pre-warming, Network and console traffic capture, MCP integration for AI tools, and a completely revamped Docker deployment! [Read the release notes →](https://docs.crawl4ai.com/blog)
 
 <details>
 <summary>🤓 <strong>My Personal Story</strong></summary>
@@ -264,24 +264,29 @@ pip install -e ".[all]"             # Install all optional features
 <details>
 <summary>🐳 <strong>Docker Deployment</strong></summary>
 
-> 🚀 **Major Changes Coming!** We're developing a completely new Docker implementation that will make deployment even more efficient and seamless. The current Docker setup is being deprecated in favor of this new solution.
+> 🚀 **Now Available!** Our completely redesigned Docker implementation is here! This new solution makes deployment more efficient and seamless than ever.
 
-### Current Docker Support
+### New Docker Features
 
-The existing Docker implementation is being deprecated and will be replaced soon. If you still need to use Docker with the current version:
+The new Docker implementation includes:
+- **Browser pooling** with page pre-warming for faster response times
+- **Interactive playground** to test and generate request code
+- **MCP integration** for direct connection to AI tools like Claude Code
+- **Comprehensive API endpoints** including HTML extraction, screenshots, PDF generation, and JavaScript execution
+- **Multi-architecture support** with automatic detection (AMD64/ARM64)
+- **Optimized resources** with improved memory management
 
-- 📚 [Deprecated Docker Setup](./docs/deprecated/docker-deployment.md) - Instructions for the current Docker implementation
-- ⚠️ Note: This setup will be replaced in the next major release
+### Getting Started
 
-### What's Coming Next?
+```bash
+# Pull and run the latest release candidate
+docker pull unclecode/crawl4ai:0.6.0-rN # Use your favorite revision number
+docker run -d -p 11235:11235 --name crawl4ai --shm-size=1g unclecode/crawl4ai:0.6.0-rN # Use your favorite revision number
 
-Our new Docker implementation will bring:
-- Improved performance and resource efficiency
-- Streamlined deployment process
-- Better integration with Crawl4AI features
-- Enhanced scalability options
+# Visit the playground at http://localhost:11235/playground
+```
 
-Stay connected with our [GitHub repository](https://github.com/unclecode/crawl4ai) for updates!
+For complete documentation, see our [Docker Deployment Guide](https://docs.crawl4ai.com/core/docker-deployment/).
 
 </details>
 
@@ -511,31 +516,92 @@ async def test_news_crawl():
 
 ## ✨ Recent Updates
 
-### Version 0.5.0 Major Release Highlights
+### Version 0.6.0 Release Highlights
 
--   **🚀 Deep Crawling System**: Explore websites beyond initial URLs with three strategies:
-    -   **BFS Strategy**: Breadth-first search explores websites level by level
-    -   **DFS Strategy**: Depth-first search explores each branch deeply before backtracking
-    -   **BestFirst Strategy**: Uses scoring functions to prioritize which URLs to crawl next
-    -   **Page Limiting**: Control the maximum number of pages to crawl with `max_pages` parameter
-    -   **Score Thresholds**: Filter URLs based on relevance scores
--   **⚡ Memory-Adaptive Dispatcher**: Dynamically adjusts concurrency based on system memory with built-in rate limiting
--   **🔄 Multiple Crawling Strategies**:
-    -   **AsyncPlaywrightCrawlerStrategy**: Browser-based crawling with JavaScript support (Default)
-    -   **AsyncHTTPCrawlerStrategy**: Fast, lightweight HTTP-only crawler for simple tasks
--   **🐳 Docker Deployment**: Easy deployment with FastAPI server and streaming/non-streaming endpoints
--   **💻 Command-Line Interface**: New `crwl` CLI provides convenient terminal access to all features with intuitive commands and configuration options
--   **👤 Browser Profiler**: Create and manage persistent browser profiles to save authentication states, cookies, and settings for seamless crawling of protected content
--   **🧠 Crawl4AI Coding Assistant**: AI-powered coding assistant to answer your question for Crawl4ai, and generate proper code for crawling.
--   **🏎️ LXML Scraping Mode**: Fast HTML parsing using the `lxml` library for improved performance
--   **🌐 Proxy Rotation**: Built-in support for proxy switching with `RoundRobinProxyStrategy`
+- **🌎 World-aware Crawling**: Set geolocation, language, and timezone for authentic locale-specific content:
+  ```python
+    crun_cfg = CrawlerRunConfig(
+        url="https://browserleaks.com/geo",          # test page that shows your location
+        locale="en-US",                              # Accept-Language & UI locale
+        timezone_id="America/Los_Angeles",           # JS Date()/Intl timezone
+        geolocation=GeolocationConfig(                 # override GPS coords
+            latitude=34.0522,
+            longitude=-118.2437,
+            accuracy=10.0,
+        )
+    )
+  ```
+
+- **📊 Table-to-DataFrame Extraction**: Extract HTML tables directly to CSV or pandas DataFrames:
+  ```python
+    crawler = AsyncWebCrawler(config=browser_config)
+    await crawler.start()
+
+    try:
+        # Set up scraping parameters
+        crawl_config = CrawlerRunConfig(
+            table_score_threshold=8,  # Strict table detection
+        )
+
+        # Execute market data extraction
+        results: List[CrawlResult] = await crawler.arun(
+            url="https://coinmarketcap.com/?page=1", config=crawl_config
+        )
+
+        # Process results
+        raw_df = pd.DataFrame()
+        for result in results:
+            if result.success and result.media["tables"]:
+                raw_df = pd.DataFrame(
+                    result.media["tables"][0]["rows"],
+                    columns=result.media["tables"][0]["headers"],
+                )
+                break
+        print(raw_df.head())
+
+    finally:
+        await crawler.stop()
+  ```
+
+- **🚀 Browser Pooling**: Pages launch hot with pre-warmed browser instances for lower latency and memory usage
+
+- **🕸️ Network and Console Capture**: Full traffic logs and MHTML snapshots for debugging:
+  ```python
+  crawler_config = CrawlerRunConfig(
+      capture_network=True,
+      capture_console=True,
+      mhtml=True
+  )
+  ```
+
+- **🔌 MCP Integration**: Connect to AI tools like Claude Code through the Model Context Protocol
+  ```bash
+  # Add Crawl4AI to Claude Code
+  claude mcp add --transport sse c4ai-sse http://localhost:11235/mcp/sse
+  ```
+
+- **🖥️ Interactive Playground**: Test configurations and generate API requests with the built-in web interface at `http://localhost:11235//playground`
+
+- **🐳 Revamped Docker Deployment**: Streamlined multi-architecture Docker image with improved resource efficiency
+
+- **📱 Multi-stage Build System**: Optimized Dockerfile with platform-specific performance enhancements
+
+Read the full details in our [0.6.0 Release Notes](https://docs.crawl4ai.com/blog/releases/0.6.0.html) or check the [CHANGELOG](https://github.com/unclecode/crawl4ai/blob/main/CHANGELOG.md).
+
+### Previous Version: 0.5.0 Major Release Highlights
+
+-   **🚀 Deep Crawling System**: Explore websites beyond initial URLs with BFS, DFS, and BestFirst strategies
+-   **⚡ Memory-Adaptive Dispatcher**: Dynamically adjusts concurrency based on system memory
+-   **🔄 Multiple Crawling Strategies**: Browser-based and lightweight HTTP-only crawlers
+-   **💻 Command-Line Interface**: New `crwl` CLI provides convenient terminal access
+-   **👤 Browser Profiler**: Create and manage persistent browser profiles
+-   **🧠 Crawl4AI Coding Assistant**: AI-powered coding assistant
+-   **🏎️ LXML Scraping Mode**: Fast HTML parsing using the `lxml` library
+-   **🌐 Proxy Rotation**: Built-in support for proxy switching
 -   **🤖 LLM Content Filter**: Intelligent markdown generation using LLMs
 -   **📄 PDF Processing**: Extract text, images, and metadata from PDF files
--   **🔗 URL Redirection Tracking**: Automatically follow and record HTTP redirects
--   **🤖 LLM Schema Generation**: Easily create extraction schemas with LLM assistance
--   **🔍 robots.txt Compliance**: Respect website crawling rules
 
-Read the full details in our [0.5.0 Release Notes](https://docs.crawl4ai.com/blog/releases/0.5.0.html) or check the [CHANGELOG](https://github.com/unclecode/crawl4ai/blob/main/CHANGELOG.md).
+Read the full details in our [0.5.0 Release Notes](https://docs.crawl4ai.com/blog/releases/0.5.0.html).
 
 ## Version Numbering in Crawl4AI
 
@@ -551,7 +617,7 @@ We use different suffixes to indicate development stages:
 - `dev` (0.4.3dev1): Development versions, unstable
 - `a` (0.4.3a1): Alpha releases, experimental features
 - `b` (0.4.3b1): Beta releases, feature complete but needs testing
-- `rc` (0.4.3rc1): Release candidates, potential final version
+- `rc` (0.4.3): Release candidates, potential final version
 
 #### Installation
 - Regular installation (stable version):

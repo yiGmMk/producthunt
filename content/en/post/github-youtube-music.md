@@ -1,9 +1,9 @@
 ---
 title: youtube-music
-date: 2025-05-18T15:27:13+08:00
+date: 2025-05-19T15:29:25+08:00
 draft: False
-image: https://images.unsplash.com/photo-1529579134665-75dfc9c5ccef?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc1NTMxMjl8&ixlib=rb-4.1.0
-tags: ['github',YouTube Music,Electron,plugins,custom plugins,ad blocker,album color theme,ambient mode,audio compressor,bypass age restrictions,captions selector]
+image: https://images.unsplash.com/photo-1649999361030-3bb0ac366598?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc2Mzk3MzV8&ixlib=rb-4.1.0
+tags: ['github',YouTube Music,Electron,plugins,custom plugins,plugin,ad blocker,album color theme,ambient mode,audio compressor,blur navigation bar,bypass age restrictions,captions selector,compact sidebar,crossfade,disable autoplay,Discord Rich Presence,downloader,equalizer,exponential volume,in-app menu,scrobbler]
 categories: ['github']
 ---
 
