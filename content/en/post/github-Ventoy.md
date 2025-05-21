@@ -1,8 +1,8 @@
 ---
 title: Ventoy
-date: 2025-05-19T15:30:02+08:00
+date: 2025-05-21T15:29:11+08:00
 draft: False
-image: https://images.unsplash.com/photo-1655998712100-974c84f586a5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc2Mzk3MzV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1690809004765-b46af04f1691?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTI0ODF8&ixlib=rb-4.1.0
 tags: ['github',Ventoy,bootable USB,ISO,WIM,IMG,VHD,EFI,BIOS,UEFI,open source]
 categories: ['github']
 ---

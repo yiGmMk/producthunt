@@ -1,15 +1,15 @@
 ---
 title: dify
-date: 2025-04-29T15:30:13+08:00
+date: 2025-05-21T15:29:24+08:00
 draft: False
-image: https://images.unsplash.com/photo-1599568723850-14196ee0f991?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU5MTE3MjZ8&ixlib=rb-4.0.3
-tags: ['github',LLM, workflow, AI, open-source, model, agent, RAG, LLMops, Dify]
+image: https://images.unsplash.com/photo-1468259275383-c4f1b88d5772?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTI0ODF8&ixlib=rb-4.1.0
+tags: ['github',LLM,AI,workflow,RAG,agent,model,OpenAI]
 categories: ['github']
 ---
 
 # [langgenius/dify](https://github.com/langgenius/dify)
 
-![cover-v5-optimized](https://github.com/langgenius/dify/assets/13230914/f9e19af5-61ba-4119-b926-d10c4c06ebab)
+
 
 <p align="center">
   📌 <a href="https://dify.ai/blog/introducing-dify-workflow-file-upload-a-demo-on-ai-podcast">Introducing Dify Workflow File Upload: Recreate Google NotebookLM Podcast</a>
@@ -97,8 +97,6 @@ Please refer to our [FAQ](https://docs.dify.ai/getting-started/install-self-host
 
 **1. Workflow**:
 Build and test powerful AI workflows on a visual canvas, leveraging all the following features and beyond.
-
-https://github.com/langgenius/dify/assets/13230914/356df23e-1604-483d-80a6-9517ece318aa
 
 **2. Comprehensive model support**:
 Seamless integration with hundreds of proprietary / open-source LLMs from dozens of inference providers and self-hosted solutions, covering GPT, Mistral, Llama3, and any OpenAI API-compatible models. A full list of supported model providers can be found [here](https://docs.dify.ai/getting-started/readme/model-providers).

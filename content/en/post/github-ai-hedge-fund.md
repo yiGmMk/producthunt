@@ -1,8 +1,8 @@
 ---
 title: ai-hedge-fund
-date: 2025-05-19T15:29:45+08:00
+date: 2025-05-21T15:28:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1655998712100-974c84f586a5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc2Mzk3MzV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1498329741116-4d1987b210d0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTI0ODF8&ixlib=rb-4.1.0
 tags: ['github',AI,hedge fund,trading,investment,agents,valuation,sentiment,fundamentals,technicals,risk management]
 categories: ['github']
 ---
@@ -44,10 +44,10 @@ This system employs several agents working together:
 This project is for **educational and research purposes only**.
 
 - Not intended for real trading or investment
-- No warranties or guarantees provided
-- Past performance does not indicate future results
+- No investment advice or guarantees provided
 - Creator assumes no liability for financial losses
 - Consult a financial advisor for investment decisions
+- Past performance does not indicate future results
 
 By using this software, you agree to use it solely for learning purposes.
 
