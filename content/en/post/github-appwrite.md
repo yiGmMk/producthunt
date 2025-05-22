@@ -1,8 +1,8 @@
 ---
 title: appwrite
-date: 2025-05-21T15:28:35+08:00
+date: 2025-05-22T15:30:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1689361319907-a7c75f63600b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTI0ODF8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1485204261646-2e9f783c88cd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4OTg4OTN8&ixlib=rb-4.1.0
 tags: ['github',Appwrite,backend,platform,Web,Mobile,Flutter,open source,microservices,Docker,authentication,database,storage,Cloud Functions,messaging]
 categories: ['github']
 ---
@@ -89,7 +89,7 @@ docker run -it --rm \
     --volume /var/run/docker.sock:/var/run/docker.sock \
     --volume "$(pwd)"/appwrite:/usr/src/code/appwrite:rw \
     --entrypoint="install" \
-    appwrite/appwrite:1.7.0
+    appwrite/appwrite:1.7.2
 ```
 
 ### Windows
@@ -101,7 +101,7 @@ docker run -it --rm ^
     --volume //var/run/docker.sock:/var/run/docker.sock ^
     --volume "%cd%"/appwrite:/usr/src/code/appwrite:rw ^
     --entrypoint="install" ^
-    appwrite/appwrite:1.7.0
+    appwrite/appwrite:1.7.2
 ```
 
 #### PowerShell
@@ -111,7 +111,7 @@ docker run -it --rm `
     --volume /var/run/docker.sock:/var/run/docker.sock `
     --volume ${pwd}/appwrite:/usr/src/code/appwrite:rw `
     --entrypoint="install" `
-    appwrite/appwrite:1.7.0
+    appwrite/appwrite:1.7.2
 ```
 
 Once the Docker installation is complete, go to http://localhost to access the Appwrite console from your browser. Please note that on non-Linux native hosts, the server might take a few minutes to start after completing the installation.
