@@ -1,9 +1,9 @@
 ---
 title: learn-agentic-ai
-date: 2025-05-13T15:30:15+08:00
+date: 2025-05-23T15:28:23+08:00
 draft: False
-image: https://images.unsplash.com/photo-1597609490757-5fc92ead5cb1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcxMjEzMzF8&ixlib=rb-4.1.0
-tags: ['github',Agentic AI,Dapr,Kubernetes,OpenAI Agents SDK,DACA,AI Agents,Multi-agent systems,Model Context Protocol,Agent2Agent]
+image: https://images.unsplash.com/photo-1590133971207-8092c34ead5c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5ODUyNzh8&ixlib=rb-4.1.0
+tags: ['github',Agentic AI, Dapr, Kubernetes, OpenAI Agents SDK, DACA, AI-201, AI-202, AI-301, multi-agent systems, scalability]
 categories: ['github']
 ---
 
@@ -167,9 +167,17 @@ Prerequisite: Successful completion of AI-201
 
 Prerequisite: Successful completion of AI-201 & AI-202
 
+## Evaluations
 
+Quizzes + Hackathons (Everything is Onsite)
 
-
-
-
-
+1. Advanced Modern Python (including asyncio) [Q1]
+2. OpenAI Agents SDK (45 MCQ in 1 hour) [01_ai_agents_first]
+3. Protocols & Design Patterns (A2A and MCP) [05_ai_protocols]
+4. Hackathon1 - 8 Hours (Using Above Quiz Stack)
+5. Containerization + FastAPI [04_daca_agent_native_dev = 01 + 02 ]
+6. Kubernetes (Rancher Desktop) [Stimulations] [04_daca_agent_native_dev = 02 ]
+7. Dapr-1 - State, PubSub, Bindings, Invocation [04_daca_agent_native_dev = 03 ]
+8. Dapr-2 - Workflows, Virtual Actors [04_agent_native = 04, 05, 06]
+9. Hackathon2 - 8 Hours (Agent Native Startup) 
+10. CKAD + DAPR + ArgoCD (Simulations) [06_daca_deployment_guide + 07_ckad]

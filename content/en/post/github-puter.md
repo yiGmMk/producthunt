@@ -1,8 +1,8 @@
 ---
 title: puter
-date: 2025-05-22T15:29:50+08:00
+date: 2025-05-23T15:28:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1605738862138-6704bedb5202?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4OTg4OTN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1731635793345-81555953ba2a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5ODUyNzh8&ixlib=rb-4.1.0
 tags: ['github',Puter,open-source,internet operating system,personal cloud,web development,cloud computing,self-hosting]
 categories: ['github']
 ---

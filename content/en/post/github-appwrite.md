@@ -1,9 +1,9 @@
 ---
 title: appwrite
-date: 2025-05-22T15:30:16+08:00
+date: 2025-05-23T15:28:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1485204261646-2e9f783c88cd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4OTg4OTN8&ixlib=rb-4.1.0
-tags: ['github',Appwrite,backend,platform,Web,Mobile,Flutter,open source,microservices,Docker,authentication,database,storage,Cloud Functions,messaging]
+image: https://images.unsplash.com/photo-1731635793345-81555953ba2a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5ODUyNzh8&ixlib=rb-4.1.0
+tags: ['github',Appwrite,backend,platform,Web,Mobile,Flutter,open source,microservices,Docker,authentication,database,storage,file management,image manipulation,Cloud Functions,messaging]
 categories: ['github']
 ---
 

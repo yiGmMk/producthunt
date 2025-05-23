@@ -1,9 +1,9 @@
 ---
 title: memos
-date: 2025-05-22T15:29:43+08:00
+date: 2025-05-23T15:28:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1485204261646-2e9f783c88cd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4OTg4OTN8&ixlib=rb-4.1.0
-tags: ['github',Memos,note-taking,open-source,self-hosted,markdown,Go,React.js,Docker]
+image: https://images.unsplash.com/photo-1557380664-dd666ff4e559?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5ODUyNzh8&ixlib=rb-4.1.0
+tags: ['github',Memos,note-taking,open-source,self-hosted,markdown,plain text,Docker,Go,React.js]
 categories: ['github']
 ---
 

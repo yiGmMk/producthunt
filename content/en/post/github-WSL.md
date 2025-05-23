@@ -1,8 +1,8 @@
 ---
 title: WSL
-date: 2025-05-22T15:28:20+08:00
+date: 2025-05-23T15:28:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1701141440914-1ce2f9e60a7f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4OTg4OTN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1557380664-dd666ff4e559?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5ODUyNzh8&ixlib=rb-4.1.0
 tags: ['github',Windows,Subsystem,Linux,WSL,command-line,utilities,applications,Linux kernel]
 categories: ['github']
 ---
