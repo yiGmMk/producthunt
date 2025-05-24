@@ -1,9 +1,9 @@
 ---
 title: vscode
-date: 2025-05-23T15:29:29+08:00
+date: 2025-05-24T15:26:22+08:00
 draft: False
-image: https://images.unsplash.com/photo-1537779948435-62e7e105ce9a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5ODUyNzh8&ixlib=rb-4.1.0
-tags: ['github',Visual Studio Code,Microsoft,code editor,debugging,extensibility,extensions,development container,GitHub Codespaces,open source]
+image: https://images.unsplash.com/photo-1676377049143-9da3c3a9e748?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgwNzE1Mjl8&ixlib=rb-4.1.0
+tags: ['github',Visual Studio Code,Microsoft,code editor,debugging,extensibility,extensions,development container,GitHub,open source]
 categories: ['github']
 ---
 

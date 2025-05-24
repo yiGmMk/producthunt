@@ -1,9 +1,9 @@
 ---
 title: registry
-date: 2025-05-23T15:29:02+08:00
+date: 2025-05-24T15:25:54+08:00
 draft: False
-image: https://images.unsplash.com/photo-1731635793345-81555953ba2a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5ODUyNzh8&ixlib=rb-4.1.0
-tags: ['github',Model Context Protocol,MCP Registry,RESTful API,MongoDB,Docker,Go,OpenAPI,Swagger,health check,pagination,server entries,registry entries,API documentation]
+image: https://images.unsplash.com/photo-1692019988434-b0f367a6c211?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgwNzE1Mjl8&ixlib=rb-4.1.0
+tags: ['github',Model Context Protocol, MCP Registry, RESTful API, MongoDB, Docker, OpenAPI, server management, health check, pagination, Go,  GitHub]
 categories: ['github']
 ---
 
