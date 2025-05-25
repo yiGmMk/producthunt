@@ -1,8 +1,8 @@
 ---
 title: freeCodeCamp
-date: 2025-05-24T15:26:33+08:00
+date: 2025-05-25T15:26:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591330916623-7df4333618e2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgwNzE1Mjl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1693115236667-7a1703506fee?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgxNTc5Mjd8&ixlib=rb-4.1.0
 tags: ['github',freeCodeCamp,web development,coding,curriculum,certification,JavaScript,Python,machine learning,full-stack]
 categories: ['github']
 ---

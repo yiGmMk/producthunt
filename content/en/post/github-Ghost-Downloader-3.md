@@ -1,9 +1,9 @@
 ---
 title: Ghost-Downloader-3
-date: 2025-05-24T15:26:13+08:00
+date: 2025-05-25T15:26:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1606337950875-90eb08a20d14?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgwNzE1Mjl8&ixlib=rb-4.1.0
-tags: ['github',Ghost-Downloader-3,Python,downloader,multithreaded,AI-powered,cross-platform,Linux,Windows,macOS,plugin]
+image: https://images.unsplash.com/photo-1531332284185-744ef7764058?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgxNTc5Mjd8&ixlib=rb-4.1.0
+tags: ['github',Ghost-Downloader-3,Python,downloader,multithreaded,AI-powered,cross-platform,plugin,Linux,Windows,macOS]
 categories: ['github']
 ---
 
@@ -13,8 +13,11 @@ categories: ['github']
   <a href="README_zh.md">简体中文</a> | English
 </h4>
  
-> [!NOTE]
+> [!IMPORTANT]
 > Due to the developer's preparation for the college entrance exam (Gaokao), project updates are temporarily suspended 😭 Join QQ group [`531928387`](https://qm.qq.com/q/PlUBdzqZCm) for latest updates
+
+> [!NOTE]
+> The project is still in its early stages, and there is still a lot of shortcomings.
 
 > [!TIP]
 > If you want to use Ghost-Downloader-3 on Windows 7, please download the version `v3.5.8-Portable`.
@@ -23,6 +26,8 @@ categories: ['github']
 <div align="center">
 
 ![Banner](resources/banner.webp)
+
+<a href="https://trendshift.io/repositories/13847" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13847" alt="XiaoYouChR%2FGhost-Downloader-3 | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
 <h3>
     AI-powered next-generation cross-platform multithreaded downloader
@@ -71,9 +76,11 @@ categories: ['github']
   - ✅ Upgrade Qt version
   - ✅ Implement HttpClient reuse
   - ✅ Replace some multithreading with coroutines
-- ❌ MVC -> MVVM architecture upgrade and plugin support (In progress...see Folk: feature/Plugins)
+- ❌ MVC → MVVM upgrade and a new architecture based on events (In progress...see branch: feature/Plugins)
 - ❌ Enhanced task editing (powerful features like binding multiple Clients to one task)
 - ❌ Magnet/BT download (Considering libtorrent implementation)
+- ❌ Powerful plugin system
+- ❌ Powerful browser extension features
 
 Visit [Open issues](https://github.com/XiaoYouChR/Ghost-Downloader-3/issues) to see all requested features (and known issues).
 

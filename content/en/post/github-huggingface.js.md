@@ -1,9 +1,9 @@
 ---
 title: huggingface.js
-date: 2025-05-23T15:29:37+08:00
+date: 2025-05-25T15:27:02+08:00
 draft: False
-image: https://images.unsplash.com/photo-1557380664-dd666ff4e559?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5ODUyNzh8&ixlib=rb-4.1.0
-tags: ['github',HuggingFace,Javascript,Inference,API,Machine Learning,Models,Libraries,Hub,NPM,CDN,Deno,ES Modules,Chat Completion,Text-to-Image,Model Context Protocol,GGUF,DDUF]
+image: https://images.unsplash.com/photo-1650018943477-781416d478cf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgxNTc5Mjd8&ixlib=rb-4.1.0
+tags: ['github',Hugging Face JS,InferenceClient,Inference Endpoints,Hugging Face API,machine learning models,model repositories,file upload,model deployment,MCP client,GGUF parser,DDUF parser,pipeline tasks,Jinja templating engine,Ollama compatibility]
 categories: ['github']
 ---
 

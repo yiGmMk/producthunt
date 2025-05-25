@@ -1,9 +1,9 @@
 ---
 title: OpenHands
-date: 2025-05-24T15:25:47+08:00
+date: 2025-05-25T15:25:59+08:00
 draft: False
-image: https://images.unsplash.com/photo-1721353171313-d3c46d141771?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgwNzE1Mjl8&ixlib=rb-4.1.0
-tags: ['github',OpenHands,AI,software development,agent,LLM,Docker,GitHub,community,documentation,Cloud]
+image: https://images.unsplash.com/photo-1520607725487-81e65ed08c8b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgxNTc5Mjd8&ixlib=rb-4.1.0
+tags: ['github',OpenHands, AI, software development, agents, code, Docker, LLM, Anthropic, Claude, Github]
 categories: ['github']
 ---
 
