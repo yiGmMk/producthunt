@@ -1,9 +1,9 @@
 ---
 title: qlib
-date: 2025-05-25T15:25:44+08:00
+date: 2025-05-26T15:38:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1637054900657-8760783746be?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgxNTc5Mjd8&ixlib=rb-4.1.0
-tags: ['github',quantitative investment, machine learning, reinforcement learning, Qlib, financial data, portfolio optimization, trading strategies, alpha seeking, risk modeling]
+image: https://images.unsplash.com/reserve/91JuTaUSKaMh2yjB1C4A_IMG_9284.jpg?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgyNDUwNjV8&ixlib=rb-4.1.0
+tags: ['github',quantitative investment, machine learning, reinforcement learning, financial data, portfolio optimization, trading strategies, qlib, RD-Agent, alpha seeking]
 categories: ['github']
 ---
 
