@@ -1,9 +1,9 @@
 ---
 title: LLaMA-Factory
-date: 2025-05-26T15:38:42+08:00
+date: 2025-05-27T15:31:11+08:00
 draft: False
-image: https://images.unsplash.com/photo-1594649927863-e7035ab9560a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgyNDUwNjV8&ixlib=rb-4.1.0
-tags: ['github',LLaMA-Factory,large language models,fine-tuning,zero-code,CLI,Web UI,multimodal,LLaMA,LLaVA,Mistral,Mixtral-MoE,Qwen,Qwen2-VL,DeepSeek,Yi,Gemma,ChatGLM,Phi]
+image: https://images.unsplash.com/photo-1680153527310-1a70b47af6e9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgzMzA5MjJ8&ixlib=rb-4.1.0
+tags: ['github',LLaMA-Factory,large language models,fine-tuning,multimodal,zero-code,CLI,Web UI,LLaMA,LLaVA,Mistral,Mixtral-MoE,Qwen,Qwen2-VL,DeepSeek,Yi,Gemma,ChatGLM,Phi]
 categories: ['github']
 ---
 

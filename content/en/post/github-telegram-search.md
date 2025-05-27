@@ -1,9 +1,9 @@
 ---
 title: telegram-search
-date: 2025-05-26T15:38:18+08:00
+date: 2025-05-27T15:28:59+08:00
 draft: False
-image: https://images.unsplash.com/photo-1637507143792-66d72198f87e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgyNDUwNjV8&ixlib=rb-4.1.0
-tags: ['github',Telegram,search,OpenAI,semantic,vector,database,message retrieval,chat]
+image: https://images.unsplash.com/photo-1680153527310-1a70b47af6e9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgzMzA5MjJ8&ixlib=rb-4.1.0
+tags: ['github',Telegram,search,OpenAI,semantic,vector,database,chat,messages]
 categories: ['github']
 ---
 
@@ -11,7 +11,7 @@ categories: ['github']
 
 # Telegram Search
 
-[English](./README_EN.md)
+[English](./README_EN.md) | [快速开始](./getting-started.md)
 
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/+Gs3SH2qAPeFhYmU9)
 [![Discord](https://dcbadge.limes.pink/api/server/NzYsmJSgCT)](https://discord.gg/NzYsmJSgCT)
@@ -22,9 +22,8 @@ categories: ['github']
 
 - 欢迎 PR 贡献！
 - 由于项目处于快速迭代阶段，可能会出现数据库不兼容的情况，建议定期备份数据。
-- 获取 API key: [#111](https://github.com/GramSearch/telegram-search/issues/111)
 
-![image](https://github.com/user-attachments/assets/0fa3ba2f-9a3d-4530-9ecd-3336a0f952ad)
+
 
 ## 💖 赞助者
 
@@ -53,7 +52,7 @@ pnpm install
 cp config/config.example.yaml config/config.yaml
 ```
 
-4. 启动数据库容器:
+4. 启动数据库容器：
 
 ```bash
 docker compose up -d

@@ -1,9 +1,9 @@
 ---
 title: jellyfin
-date: 2025-05-26T15:39:35+08:00
+date: 2025-05-27T15:29:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591460318747-b1c00fd3a8ff?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgyNDUwNjV8&ixlib=rb-4.1.0
-tags: ['github',Jellyfin,Media System,Free Software,Emby,Plex,cross-platform,.NET,server,streaming,media]
+image: https://images.unsplash.com/photo-1589807867645-53afff92b7d8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgzMzA5MjJ8&ixlib=rb-4.1.0
+tags: ['github',Jellyfin,Media System,Free Software,Emby,Plex,.NET,cross-platform,open source,media server,streaming]
 categories: ['github']
 ---
 

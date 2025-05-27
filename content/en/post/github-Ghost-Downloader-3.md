@@ -1,8 +1,8 @@
 ---
 title: Ghost-Downloader-3
-date: 2025-05-25T15:26:32+08:00
+date: 2025-05-27T15:30:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1531332284185-744ef7764058?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgxNTc5Mjd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1702274397667-14596faf1cd1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgzMzA5MjJ8&ixlib=rb-4.1.0
 tags: ['github',Ghost-Downloader-3,Python,downloader,multithreaded,AI-powered,cross-platform,plugin,Linux,Windows,macOS]
 categories: ['github']
 ---

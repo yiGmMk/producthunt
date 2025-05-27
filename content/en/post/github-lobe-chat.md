@@ -1,9 +1,9 @@
 ---
 title: lobe-chat
-date: 2025-05-26T15:39:10+08:00
+date: 2025-05-27T15:29:54+08:00
 draft: False
-image: https://images.unsplash.com/photo-1698298836213-f721f3f40e0a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgyNDUwNjV8&ixlib=rb-4.1.0
-tags: ['github',ChatGPT,LLMs,UI,Framework,speech-synthesis,multi-modal,plugin,OpenAI,deployment,Claude,Gemini,Groq,Ollama]
+image: https://images.unsplash.com/photo-1589807867645-53afff92b7d8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgzMzA5MjJ8&ixlib=rb-4.1.0
+tags: ['github',LobeChat,ChatGPT,LLMs,open-source,multi-modal,plugin,deployment,AI]
 categories: ['github']
 ---
 

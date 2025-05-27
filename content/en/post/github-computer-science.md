@@ -1,8 +1,8 @@
 ---
 title: computer-science
-date: 2025-05-15T15:29:43+08:00
+date: 2025-05-27T15:30:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1666548004110-c1afb19c1582?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcyOTQxMjN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1591345433545-1b07e50e6366?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgzMzA5MjJ8&ixlib=rb-4.1.0
 tags: ['github',Computer Science,Curriculum,Open Source,Education,Online Courses,Programming,Mathematics,Systems,Theory]
 categories: ['github']
 ---

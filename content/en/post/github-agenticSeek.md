@@ -1,9 +1,9 @@
 ---
 title: agenticSeek
-date: 2025-05-26T15:37:55+08:00
+date: 2025-05-27T15:28:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1539404234905-48cf3d73aec5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgyNDUwNjV8&ixlib=rb-4.1.0
-tags: ['github',AgenticSeek, Manus, AI assistant, voice-enabled, local, privacy, web browsing, coding assistant, task planning, Python, Go, Java, LLM, Qwen, Deepseek, Ollama, lm-studio, openai]
+image: https://images.unsplash.com/photo-1583940408833-2188ef47cff3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgzMzA5MjJ8&ixlib=rb-4.1.0
+tags: ['github',AgenticSeek, Manus, AI assistant, voice-enabled, local, private, web browsing, coding assistant, task planning, Python, C, Go, Java,  LLM]
 categories: ['github']
 ---
 
