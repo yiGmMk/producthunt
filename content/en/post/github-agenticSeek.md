@@ -1,9 +1,9 @@
 ---
 title: agenticSeek
-date: 2025-05-27T15:28:49+08:00
+date: 2025-05-28T15:28:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1583940408833-2188ef47cff3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgzMzA5MjJ8&ixlib=rb-4.1.0
-tags: ['github',AgenticSeek, Manus, AI assistant, voice-enabled, local, private, web browsing, coding assistant, task planning, Python, C, Go, Java,  LLM]
+image: https://images.unsplash.com/photo-1594655088154-c6b61fb057d9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg0MTcyOTd8&ixlib=rb-4.1.0
+tags: ['github',AgenticSeek, Manus, AI assistant, voice-enabled, local, privacy, web browsing, coding assistant, task planning, Python, Go, Java,  LLM]
 categories: ['github']
 ---
 
@@ -43,7 +43,9 @@ https://github.com/user-attachments/assets/b8ca60e9-7b3b-4533-840e-08f9ac426316
 
 Disclaimer: This demo, including all the files that appear (e.g: CV_candidates.zip), are entirely fictional. We are not a corporation, we seek open-source contributors not candidates.
 
-> 🛠️ **Work in Progress** – Looking for contributors!
+> 🛠⚠️️ **Active Work in Progress** – Please note that Code/Bash is not dockerized yet but will be soon (see docker_deployement branch) - Do not deploy over network or production.
+
+> 🙏 Please also understand that this project began as a side experiment, with no roadmap and no expectations, we didn't expect to end in Github trending. Financial backing is exactly $1/month (shoutout to my single sponsor). Contributions, feedback, and patience are deeply appreciated.
 
 ## Installation
 
@@ -563,8 +565,8 @@ We’re looking for developers to improve AgenticSeek! Check out open issues or 
 
 ## Maintainers:
 
- > [Fosowl](https://github.com/Fosowl) | Paris Time | (Sometime busy)
+ > [Fosowl](https://github.com/Fosowl) | Paris Time 
 
- > [https://github.com/antoineVIVIES](antoineVIVIES) | Taipei Time | (Often busy)
+ > [antoineVIVIES](https://github.com/antoineVIVIES) | Taipei Time 
 
- > [steveh8758](https://github.com/steveh8758) | Taipei Time | (Always busy)
+ > [steveh8758](https://github.com/steveh8758) | Taipei Time 

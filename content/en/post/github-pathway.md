@@ -1,8 +1,8 @@
 ---
 title: pathway
-date: 2025-05-27T15:31:33+08:00
+date: 2025-05-28T15:28:54+08:00
 draft: False
-image: https://images.unsplash.com/photo-1589807867645-53afff92b7d8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgzMzA5MjJ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1694248607966-7e6ac34c6e56?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg0MTcyOTd8&ixlib=rb-4.1.0
 tags: ['github',Python,ETL,streaming,real-time analytics,LLM,RAG,data processing]
 categories: ['github']
 ---

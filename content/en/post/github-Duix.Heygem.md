@@ -1,8 +1,8 @@
 ---
 title: Duix.Heygem
-date: 2025-05-26T15:40:03+08:00
+date: 2025-05-28T15:29:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1681973255445-a5aa8b884b84?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgyNDUwNjV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1694248607966-7e6ac34c6e56?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg0MTcyOTd8&ixlib=rb-4.1.0
 tags: ['github',AI avatar, HeyGem, open-source, video synthesis, voice cloning, digital human, offline, Windows, Ubuntu]
 categories: ['github']
 ---

@@ -1,9 +1,9 @@
 ---
 title: typescript-go
-date: 2025-05-26T15:39:18+08:00
+date: 2025-05-28T15:29:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1637507143792-66d72198f87e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgyNDUwNjV8&ixlib=rb-4.1.0
-tags: ['github',TypeScript,Go,Rust,Node.js,npm,VS Code,TypeScript 7,keyword extraction,language server protocol]
+image: https://images.unsplash.com/photo-1540840054964-107a689b509c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg0MTcyOTd8&ixlib=rb-4.1.0
+tags: ['github',TypeScript,Go,Rust,Node.js,npm,VS Code,TypeScript 7,tsgo,LSP]
 categories: ['github']
 ---
 

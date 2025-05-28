@@ -1,9 +1,9 @@
 ---
 title: mindsdb
-date: 2025-05-27T15:30:13+08:00
+date: 2025-05-28T15:29:27+08:00
 draft: False
-image: https://images.unsplash.com/photo-1668539045322-19d2eba52541?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgzMzA5MjJ8&ixlib=rb-4.1.0
-tags: ['github',MindsDB, open-source, data, AI, machine learning, SQL, federated query, agents]
+image: https://images.unsplash.com/photo-1641029380362-4717c3f9d4e7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg0MTcyOTd8&ixlib=rb-4.1.0
+tags: ['github',MindsDB,SQL,data,AI,machine learning,database,open-source,server,agents]
 categories: ['github']
 ---
 
@@ -44,7 +44,8 @@ categories: ['github']
 
 MindsDB enables humans, AI, agents, and applications to get highly accurate answers across sprawled and large scale data sources.
 
-<img width="1454" alt="image" src="https://github.com/user-attachments/assets/87930824-2624-4c71-ac08-475e12e5475f" />
+![image](https://github.com/user-attachments/assets/a796276a-2d3e-4aa2-9a52-25bf44cf32e7)
+
 
 [MindsDB has an MCP server built in](https://docs.mindsdb.com/mcp/overview) that enables your MCP applications to connect, unify and respond to questions over large-scale federated data—spanning databases, data warehouses, and SaaS applications.
 

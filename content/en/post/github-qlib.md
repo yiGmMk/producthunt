@@ -1,9 +1,9 @@
 ---
 title: qlib
-date: 2025-05-27T15:29:08+08:00
+date: 2025-05-28T15:28:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1680153527310-1a70b47af6e9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgzMzA5MjJ8&ixlib=rb-4.1.0
-tags: ['github',quantitative investment, machine learning, reinforcement learning, financial data, portfolio optimization, trading strategies, alpha seeking, risk modeling, qlib, RD-Agent]
+image: https://images.unsplash.com/photo-1540840054964-107a689b509c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg0MTcyOTd8&ixlib=rb-4.1.0
+tags: ['github',quantitative investment, machine learning, reinforcement learning, financial data, portfolio optimization, trading strategies, qlib, RD-Agent, alpha seeking]
 categories: ['github']
 ---
 
@@ -37,7 +37,8 @@ We have prepared several demo videos for you:
 | Quant Factor Mining from reports | [Link](https://rdagent.azurewebsites.net/report_factor?lang=en) | [Link](https://rdagent.azurewebsites.net/report_factor?lang=zh) |
 | Quant Model Optimization | [Link](https://rdagent.azurewebsites.net/model_loop?lang=en) | [Link](https://rdagent.azurewebsites.net/model_loop?lang=zh) |
 
-- [R&D-Agent-Quant: A Multi-Agent Framework for Data-Centric Factors and Model Joint Optimization](https://arxiv.org/abs/2505.15155)
+- 📃**Paper**: [R&D-Agent-Quant: A Multi-Agent Framework for Data-Centric Factors and Model Joint Optimization](https://arxiv.org/abs/2505.15155)
+- 👾**Code**: https://github.com/microsoft/RD-Agent/
 ```BibTeX
 @misc{li2025rdagentquant,
     title={R\&D-Agent-Quant: A Multi-Agent Framework for Data-Centric Factors and Model Joint Optimization},
