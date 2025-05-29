@@ -1,9 +1,9 @@
 ---
 title: RD-Agent
-date: 2025-05-28T15:29:03+08:00
+date: 2025-05-29T15:29:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1540840054964-107a689b509c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg0MTcyOTd8&ixlib=rb-4.1.0
-tags: ['github',R&D-Agent, machine learning, MLE-bench, data science, AI agent, model development, data building,  quantitative trading,  financial reports]
+image: https://images.unsplash.com/photo-1690342822366-733e2a9fcf10?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg1MDM3MDJ8&ixlib=rb-4.1.0
+tags: ['github',machine learning,AI agent,MLE-bench,R&D-Agent,data science,model development,quantitative trading,LLM]
 categories: ['github']
 ---
 

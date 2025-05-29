@@ -1,9 +1,9 @@
 ---
 title: sktime
-date: 2025-05-28T15:30:10+08:00
+date: 2025-05-29T15:31:06+08:00
 draft: False
-image: https://images.unsplash.com/photo-1672821337870-2180f5223865?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg0MTcyOTd8&ixlib=rb-4.1.0
-tags: ['github',Time series, machine learning, forecasting, classification, scikit-learn, Python, algorithms, sktime]
+image: https://images.unsplash.com/photo-1648964417564-a88e0c9baafe?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg1MDM3MDJ8&ixlib=rb-4.1.0
+tags: ['github',time series analysis, forecasting, time series classification, machine learning, Python, sktime, scikit-learn, algorithms,  data science]
 categories: ['github']
 ---
 

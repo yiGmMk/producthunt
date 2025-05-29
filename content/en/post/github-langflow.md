@@ -1,9 +1,9 @@
 ---
 title: langflow
-date: 2025-05-27T15:30:58+08:00
+date: 2025-05-29T15:29:03+08:00
 draft: False
-image: https://images.unsplash.com/photo-1690122644787-d20b6c6b51b9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgzMzA5MjJ8&ixlib=rb-4.1.0
-tags: ['github',Langflow,AI,workflows,agents,LLMs,vector databases,API,deployment,visual builder]
+image: https://images.unsplash.com/photo-1592916897895-a512203faa63?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg1MDM3MDJ8&ixlib=rb-4.1.0
+tags: ['github',Langflow,AI,workflows,agents,LLMs,vector databases,API,visual builder,deployment]
 categories: ['github']
 ---
 

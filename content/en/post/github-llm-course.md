@@ -1,8 +1,8 @@
 ---
 title: llm-course
-date: 2025-05-27T15:29:17+08:00
+date: 2025-05-29T15:30:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591345433545-1b07e50e6366?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgzMzA5MjJ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1709376385680-b7593aa4b9a8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg1MDM3MDJ8&ixlib=rb-4.1.0
 tags: ['github',LLM,Large Language Model,Fine-tuning,Quantization,Post-training,Pre-training,RAG,Retrieval Augmented Generation]
 categories: ['github']
 ---

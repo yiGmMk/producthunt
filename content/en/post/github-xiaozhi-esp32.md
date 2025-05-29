@@ -1,9 +1,9 @@
 ---
 title: xiaozhi-esp32
-date: 2025-05-09T15:28:23+08:00
+date: 2025-05-29T15:30:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1517826372987-c0119a026097?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY3NzU2Nzd8&ixlib=rb-4.1.0
-tags: ['github',ESP32, AI chatbot, XiaoZhi, voice recognition, large language model, speech synthesis,  IoT,  hardware development,  open source]
+image: https://images.unsplash.com/photo-1639085532709-8999368cc79e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg1MDM3MDJ8&ixlib=rb-4.1.0
+tags: ['github',ESP32, AI chatbot, XiaoZhi, voice recognition, large language model,  speech synthesis,  IoT,  hardware development,  open source]
 categories: ['github']
 ---
 
@@ -46,6 +46,12 @@ categories: ['github']
 - OLED / LCD 显示屏，显示信号强弱或对话内容
 - 支持 LCD 显示图片表情
 - 支持多语言（中文、英文）
+
+## ✅ 已支持的芯片平台
+
+- ✅ ESP32-S3
+- ✅ ESP32-C3
+- ✅ ESP32-P4
 
 ## 硬件部分
 
