@@ -1,8 +1,8 @@
 ---
 title: chatgpt-on-wechat
-date: 2025-05-29T15:29:18+08:00
+date: 2025-05-30T15:30:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1648964417564-a88e0c9baafe?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg1MDM3MDJ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1664768297497-e60629c80ef4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg1OTAxMDZ8&ixlib=rb-4.1.0
 tags: ['github',chatgpt-on-wechat, WeChat, enterprise WeChat, Feishu, DingTalk, GPT-3.5, GPT-4, Claude, Gemini, LinkAI, multi-modal, plugins]
 categories: ['github']
 ---

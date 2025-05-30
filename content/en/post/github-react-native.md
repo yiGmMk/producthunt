@@ -1,9 +1,9 @@
 ---
 title: react-native
-date: 2025-05-29T15:31:14+08:00
+date: 2025-05-30T15:30:06+08:00
 draft: False
-image: https://images.unsplash.com/photo-1593280276854-8559ce0028e6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg1MDM3MDJ8&ixlib=rb-4.1.0
-tags: ['github',React Native,mobile apps,React,iOS,Android,UI,JavaScript,component-based,declarative]
+image: https://images.unsplash.com/photo-1624291732728-651136d8a3d4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg1OTAxMDZ8&ixlib=rb-4.1.0
+tags: ['github',React Native, mobile apps, React, iOS, Android, UI, JavaScript, components, portability]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: computer-science
-date: 2025-05-29T15:28:47+08:00
+date: 2025-05-30T15:29:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1661692410737-2804d762237d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg1MDM3MDJ8&ixlib=rb-4.1.0
-tags: ['github',Computer Science, Curriculum, OSSU, Programming, Courses, Mathematics, Systems, Theory, Security,  Ethics]
+image: https://images.unsplash.com/photo-1581196598638-2aa9cba1432a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg1OTAxMDZ8&ixlib=rb-4.1.0
+tags: ['github',Computer Science,Curriculum,Open Source,Education,Programming,Mathematics,Systems,Theory,Security,Applications]
 categories: ['github']
 ---
 

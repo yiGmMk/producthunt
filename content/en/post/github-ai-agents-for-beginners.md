@@ -1,9 +1,9 @@
 ---
 title: ai-agents-for-beginners
-date: 2025-05-08T15:28:52+08:00
+date: 2025-05-30T15:29:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1673550632925-211ae506eb65?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY2ODkzMTF8&ixlib=rb-4.1.0
-tags: ['github',AI Agents,Microsoft,Azure,Semantic Kernel,AutoGen,GitHub,course,lessons,tutorial]
+image: https://images.unsplash.com/photo-1705607984977-9057bb5fa8e2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg1OTAxMDZ8&ixlib=rb-4.1.0
+tags: ['github',AI Agents,Microsoft,Azure,Semantic Kernel,AutoGen,AI Agent frameworks,course,lessons,tutorial]
 categories: ['github']
 ---
 
@@ -13,7 +13,7 @@ categories: ['github']
 
 
 
-## 10 Lessons teaching everything you need to know to start building AI Agents
+## 11 Lessons teaching everything you need to know to start building AI Agents
 
 [![GitHub license](https://img.shields.io/github/license/microsoft/ai-agents-for-beginners.svg)](https://github.com/microsoft/ai-agents-for-beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
 [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/ai-agents-for-beginners.svg)](https://GitHub.com/microsoft/ai-agents-for-beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
@@ -45,7 +45,7 @@ categories: ['github']
 
 ## 🌱 Getting Started
 
-This course has 10 lessons covering the fundamentals of building AI Agents. Each lesson covers its own topic so start wherever you like!
+This course has 11 lessons covering the fundamentals of building AI Agents. Each lesson covers its own topic so start wherever you like!
 
 There is multi-language support for this course. Go to our [available languages here](#-multi-language-support). 
 
@@ -74,7 +74,9 @@ For more information on running the code for this course, go to the [Course Setu
 
 Do you have suggestions or found spelling or code errors? [Raise an issue](https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst) or [Create a pull request](https://github.com/microsoft/ai-agents-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 
-If you get stuck or have any questions about building AI Agents, join our [Azure AI Community Discord](https://discord.gg/kzRShWzttr).
+If you get stuck or have any questions about building AI Agents, join our [Azure AI Foundry Community Discord](https://discord.gg/kzRShWzttr) 
+
+If you have product feedback or errors whilst building visit our [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum)
 
 ## 📂 Each lesson includes
 
@@ -97,30 +99,20 @@ If you get stuck or have any questions about building AI Agents, join our [Azure
 | Multi-Agent Design Pattern               | [Link](./08-multi-agent/README.md)                 | [Video](https://youtu.be/V6HpE9hZEx0?si=rMgDhEu7wXo2uo6g)  | [Link](https://aka.ms/ai-agents-beginners/collection?WT.mc_id=academic-105485-koreyst) |
 | Metacognition Design Pattern             | [Link](./09-metacognition/README.md)               | [Video](https://youtu.be/His9R6gw6Ec?si=8gck6vvdSNCt6OcF)  | [Link](https://aka.ms/ai-agents-beginners/collection?WT.mc_id=academic-105485-koreyst) |
 | AI Agents in Production                  | [Link](./10-ai-agents-production/README.md)        | [Video](https://youtu.be/l4TP6IyJxmQ?si=31dnhexRo6yLRJDl)  | [Link](https://aka.ms/ai-agents-beginners/collection?WT.mc_id=academic-105485-koreyst) |
+| AI Agents with MCP                       | [Link](./11-mcp/README.md)                         |                                                            | [Link](https://aka.ms/mcp-for-beginners)                                               |
 
-## 🌐 Multi-Language Support
+### 🌐 Multi-Language Support
 
-| Language             | Code | Link to Translated README                               | Last Updated |
-|----------------------|------|---------------------------------------------------------|--------------|
-| Chinese (Simplified) | zh   | [Chinese Translation](./translations/zh/README.md)      | 2025-03-24   |
-| Chinese (Traditional)| tw   | [Chinese Translation](./translations/tw/README.md)      | 2025-03-28   |
-| Chinese (Hong Kong)  | hk   | [Chinese (Hong Kong) Translation](./translations/hk/README.md) | 2025-03-28   |
-| French               | fr   | [French Translation](./translations/fr/README.md)       | 2025-03-28   |
-| Japanese             | ja   | [Japanese Translation](./translations/ja/README.md)     | 2025-03-28   |
-| Korean               | ko   | [Korean Translation](./translations/ko/README.md)       | 2025-03-28   |
-| Portuguese           | pt   | [Portuguese Translation](./translations/pt/README.md)   | 2025-03-28   |
-| Spanish              | es   | [Spanish Translation](./translations/es/README.md)      | 2025-03-28   |
-| German               | de   | [German Translation](./translations/de/README.md)       | 2025-03-28   |
-| Persian              | fa   | [Persian Translation](./translations/fa/README.md)       | 2025-03-28   |
-| Polish               | pl   | [Polish Translation](./translations/pl/README.md)       | 2025-03-28  |
-| Hindi               | hi   | [Hindi Translation](./translations/hi/README.md)       | 2025-04-05   |
+#### Supported via GitHub Action (Automated & Always Up-to-Date)
 
+[French](./translations/fr/README.md) | [Spanish](./translations/es/README.md) | [German](./translations/de/README.md) | [Persian (Farsi)](./translations/fa/README.md) | [Chinese (Simplified)](./translations/zh/README.md) | [Chinese (Traditional, Hong Kong)](./translations/hk/README.md) | [Chinese (Traditional, Taiwan)](./translations/tw/README.md) | [Japanese](./translations/ja/README.md) | [Korean](./translations/ko/README.md) | [Hindi](./translations/hi/README.md) | [Portuguese (Portugal)](./translations/pt/README.md) | [Polish](./translations/pl/README.md)
 
 ## 🎒 Other Courses
 
 Our team produces other courses! Check out:
 
-- [**NEW** Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
+- [**NEW** Model Context Protocol (MCP) For Beginners](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
+- [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 - [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 - [ML for Beginners](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 - [Data Science for Beginners](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
