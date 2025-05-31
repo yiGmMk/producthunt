@@ -1,9 +1,9 @@
 ---
 title: the-book-of-secret-knowledge
-date: 2025-05-30T15:29:42+08:00
+date: 2025-05-31T15:26:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1664768297497-e60629c80ef4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg1OTAxMDZ8&ixlib=rb-4.1.0
-tags: ['github',github,repository,tools,devops,security,linux,administrator,penetration testing]
+image: https://images.unsplash.com/photo-1634363657957-d91ac22d230a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg2NzYzNzZ8&ixlib=rb-4.1.0
+tags: ['github',github,repository,tools,security,devops,linux,cli,system administrator]
 categories: ['github']
 ---
 

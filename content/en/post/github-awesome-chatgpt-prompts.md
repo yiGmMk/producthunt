@@ -1,9 +1,9 @@
 ---
 title: awesome-chatgpt-prompts
-date: 2025-05-21T15:29:52+08:00
+date: 2025-05-31T15:28:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1738249034651-1896f689be58?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTI0ODF8&ixlib=rb-4.1.0
-tags: ['github',ChatGPT,AI models,prompts,language models,GPT,Claude,Gemini,Hugging Face Chat,Llama,Mistral,Solidity,Linux,English,JavaScript,Excel,pronunciation,spoken English,travel,plagiarism,character,advertising,storytelling,football,comedy,motivational coach,composer,debater,screenwriter,novelist,movie critic,relationship coach,poet,rapper,motivational speaker,philosophy,mathematics,UX/UI,cybersecurity]
+image: https://images.unsplash.com/photo-1718036094542-4761e519f079?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg2NzYzNzZ8&ixlib=rb-4.1.0
+tags: ['github',ChatGPT,Prompt Engineering,AI models,Large language models,NLP techniques,Solidity,Linux,JavaScript,Excel,English,Pronunciation,Travel,Plagiarism,Character,Advertising,Storytelling,Football,Comedy,Motivation,Composition,Debate,Screenwriting,Novels,Movie review,Relationship,Poetry,Rap,Public speaking,Philosophy,Mathematics,Writing,UX/UI,Cybersecurity,Recruiting,Life coaching,Etymology,Commentary,Magic,Dentistry,Web design,]
 categories: ['github']
 ---
 
@@ -1654,10 +1654,11 @@ Contributed by [burakcan](https://github.com/burakcan)
 
 ## Act as a Senior Frontend Developer
 
-Contributed by [zaferayan](https://github.com/ozcanzaferayan)
+Contributed by: [zaferayan](https://github.com/ozcanzaferayan)
+Contributed by: [MustafaEminn](https://github.com/MustafaEminn)
 
 > I want you to act as a Senior Frontend developer. I will describe a project
-> details you will code project with this tools: Create React App, yarn, Ant
+> details you will code project with this tools: Vite (React template), yarn, Ant
 > Design, List, Redux Toolkit, createSlice, thunk, axios. You should merge files
 > in single index.js file and nothing else. Do not write explanations. My first
 > request is "Create Pokemon App that lists pokemons with images that come from

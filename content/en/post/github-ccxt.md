@@ -1,9 +1,9 @@
 ---
 title: ccxt
-date: 2025-05-29T15:30:55+08:00
+date: 2025-05-31T15:27:22+08:00
 draft: False
-image: https://images.unsplash.com/photo-1593280276854-8559ce0028e6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg1MDM3MDJ8&ixlib=rb-4.1.0
-tags: ['github',cryptocurrency,exchange,trading,API,JavaScript,Python,PHP]
+image: https://images.unsplash.com/photo-1554668329-bee7191d83d7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg2NzYzNzZ8&ixlib=rb-4.1.0
+tags: ['github',cryptocurrency, exchange, trading, library, API, JavaScript, Python]
 categories: ['github']
 ---
 
@@ -29,6 +29,15 @@ Current feature list:
 - an out of the box unified API that is extremely easy to integrate
 - works in Node 10.4+, Python 3, PHP 8.1+, netstandard2.0/2.1, Go 1.20+ and web browsers
 
+## Disclaimer
+
+CCXT is not a service nor a server. CCXT is a software. **CCXT is a free open source non-custodian API broker software under MIT license**.
+
+- **Non-custodian** means CCXT is not an intermediary in trading, it does not hold traders' money at any point in time, traders install CCXT and use CCXT to talk to exchanges directly.
+- **MIT license** means CCXT can be used for any purpose, but use at your own risk without any warranties.
+- **API broker** means CCXT is funded with rebates from exchanges' API broker programs and it is an official API broker with many exchanges. Broker rebates from trading fees range from 30% to 65%. All rebates and related fees are handled by the exchanges solely in accordance with exchanges' respective terms and conditions established by each partner exchange.
+- **Free software** means CCXT is free to use and has no hidden fees, with CCXT traders pay the same trading fees they would pay to the exchanges directly.
+- **Open source** means anyone is allowed to use it, to look inside the code and to change everything, including other brokers.
 
 ## See Also
 
@@ -675,16 +684,6 @@ Thank you!
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=ccxt/ccxt&type=Date)](https://star-history.com/#ccxt/ccxt&Date)
-
-## Disclaimer
-
-CCXT is not a service nor a server. CCXT is a software. **CCXT is a free open source non-custodian API broker software under MIT license**.
-
-- **Non-custodian** means CCXT is not an intermediary in trading, it does not hold traders' money at any point in time, traders install CCXT and use CCXT to talk to exchanges directly.
-- **MIT license** means CCXT can be used for any purpose, but use at your own risk without any warranties.
-- **API broker** means CCXT is funded with rebates from exchanges' API broker programs and it is an official API broker with many exchanges.
-- **Free software** means CCXT is free to use and has no hidden fees, with CCXT traders pay the same trading fees they would pay to the exchanges directly.
-- **Open source** means anyone is allowed to use it, to look inside the code and to change everything, including other brokers.
 
 ## Contact Us
 

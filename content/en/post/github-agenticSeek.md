@@ -1,9 +1,9 @@
 ---
 title: agenticSeek
-date: 2025-05-30T15:28:33+08:00
+date: 2025-05-31T15:27:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1647506596841-eea4ef80e807?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg1OTAxMDZ8&ixlib=rb-4.1.0
-tags: ['github',AgenticSeek, local Manus alternative, AI assistant, voice-enabled, web browsing, coding assistant, task planning, privacy, local reasoning models,  LLM]
+image: https://images.unsplash.com/photo-1554668329-bee7191d83d7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg2NzYzNzZ8&ixlib=rb-4.1.0
+tags: ['github',AgenticSeek, Manus, AI assistant, local, private, voice-enabled, web browsing, coding assistant, task planning, Python, Go, Java, LLM, deepseek, ollama]
 categories: ['github']
 ---
 
