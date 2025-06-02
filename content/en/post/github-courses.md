@@ -1,9 +1,9 @@
 ---
 title: courses
-date: 2025-05-31T15:27:11+08:00
+date: 2025-06-02T15:30:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1673861431020-ce48c9232d66?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg2NzYzNzZ8&ixlib=rb-4.1.0
-tags: ['github',Anthropic,Claude,API,prompt engineering,prompt evaluations,tool use,multimodal prompts,Claude 3 Haiku]
+image: https://images.unsplash.com/photo-1730690238691-562786bebc36?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg4NDk0MTN8&ixlib=rb-4.1.0
+tags: ['github',Anthropic,Claude,API,prompt engineering,prompt evaluations,tool use,model parameters,multimodal prompts]
 categories: ['github']
 ---
 

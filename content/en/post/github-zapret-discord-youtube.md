@@ -1,9 +1,9 @@
 ---
 title: zapret-discord-youtube
-date: 2025-05-03T15:26:55+08:00
+date: 2025-06-02T15:31:11+08:00
 draft: False
-image: https://images.unsplash.com/photo-1669457818072-362120e870cb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYyNTcxMjF8&ixlib=rb-4.0.3
-tags: ['github',Windows,Discord,YouTube,bypass,block,WinDivert,zapret,network,filtering]
+image: https://images.unsplash.com/photo-1635799944379-7c20f383d352?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg4NDk0MTN8&ixlib=rb-4.1.0
+tags: ['github',Discord, YouTube, Windows, WinDivert, blocking, bypass, strategy, bat files]
 categories: ['github']
 ---
 

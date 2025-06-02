@@ -1,9 +1,9 @@
 ---
 title: ai-agents-for-beginners
-date: 2025-05-31T15:26:34+08:00
+date: 2025-06-02T15:31:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1673861431020-ce48c9232d66?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg2NzYzNzZ8&ixlib=rb-4.1.0
-tags: ['github',AI Agents,Microsoft,Azure,course,lessons,frameworks,Semantic Kernel,AutoGen,AI Agent Service,GitHub]
+image: https://images.unsplash.com/photo-1691520673295-9626f624869b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg4NDk0MTN8&ixlib=rb-4.1.0
+tags: ['github',AI Agents,Microsoft,Azure,Semantic Kernel,AutoGen,AI Agent frameworks,GitHub Models,Azure AI Foundry,Language Models,course]
 categories: ['github']
 ---
 
