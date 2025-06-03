@@ -1,8 +1,8 @@
 ---
 title: courses
-date: 2025-06-02T15:30:32+08:00
+date: 2025-06-03T15:31:55+08:00
 draft: False
-image: https://images.unsplash.com/photo-1730690238691-562786bebc36?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg4NDk0MTN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1689066404849-49cea7ea4b55?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg5MzU4NDN8&ixlib=rb-4.1.0
 tags: ['github',Anthropic,Claude,API,prompt engineering,prompt evaluations,tool use,model parameters,multimodal prompts]
 categories: ['github']
 ---

@@ -1,9 +1,9 @@
 ---
 title: onlook
-date: 2025-06-02T15:30:45+08:00
+date: 2025-06-03T15:30:53+08:00
 draft: False
-image: https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg4NDk0MTN8&ixlib=rb-4.1.0
-tags: ['github',Onlook,visual editor,Next.js,TailwindCSS,AI,code editor,web development,open-source]
+image: https://images.unsplash.com/photo-1650918182927-ebb89884568e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg5MzU4NDN8&ixlib=rb-4.1.0
+tags: ['github',Onlook,visual editor,Next.js,TailwindCSS,AI,code editor,web development,design tools]
 categories: ['github']
 ---
 
@@ -160,6 +160,7 @@ For a full walkthrough, check out our
 - [TailwindCSS](https://tailwindcss.com/)
 - [Bun](https://bun.sh/)
 - [tRPC](https://trpc.io/)
+- [Morph Fast Apply](https://morphllm.com)
 
 ## Contributing
 

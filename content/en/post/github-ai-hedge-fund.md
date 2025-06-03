@@ -1,9 +1,9 @@
 ---
 title: ai-hedge-fund
-date: 2025-05-23T15:29:19+08:00
+date: 2025-06-03T15:32:54+08:00
 draft: False
-image: https://images.unsplash.com/photo-1731635793345-81555953ba2a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5ODUyNzh8&ixlib=rb-4.1.0
-tags: ['github',AI,hedge fund,trading,investment,agents,valuation,sentiment,fundamentals,technicals,risk management]
+image: https://images.unsplash.com/photo-1660136308586-432226190a26?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg5MzU4NDN8&ixlib=rb-4.1.0
+tags: ['github',AI,hedge fund,trading,investment,agents,valuation,stock,market sentiment,fundamental analysis,technical analysis]
 categories: ['github']
 ---
 
@@ -23,14 +23,15 @@ This system employs several agents working together:
 6. Michael Burry Agent - The Big Short contrarian who hunts for deep value
 7. Peter Lynch Agent - Practical investor who seeks "ten-baggers" in everyday businesses
 8. Phil Fisher Agent - Meticulous growth investor who uses deep "scuttlebutt" research 
-9. Stanley Druckenmiller Agent - Macro legend who hunts for asymmetric opportunities with growth potential
-10. Warren Buffett Agent - The oracle of Omaha, seeks wonderful companies at a fair price
-11. Valuation Agent - Calculates the intrinsic value of a stock and generates trading signals
-12. Sentiment Agent - Analyzes market sentiment and generates trading signals
-13. Fundamentals Agent - Analyzes fundamental data and generates trading signals
-14. Technicals Agent - Analyzes technical indicators and generates trading signals
-15. Risk Manager - Calculates risk metrics and sets position limits
-16. Portfolio Manager - Makes final trading decisions and generates orders
+9. Rakesh Jhunjhunwala Agent - The Big Bull of India
+10. Stanley Druckenmiller Agent - Macro legend who hunts for asymmetric opportunities with growth potential
+11. Warren Buffett Agent - The oracle of Omaha, seeks wonderful companies at a fair price
+12. Valuation Agent - Calculates the intrinsic value of a stock and generates trading signals
+13. Sentiment Agent - Analyzes market sentiment and generates trading signals
+14. Fundamentals Agent - Analyzes fundamental data and generates trading signals
+15. Technicals Agent - Analyzes technical indicators and generates trading signals
+16. Risk Manager - Calculates risk metrics and sets position limits
+17. Portfolio Manager - Makes final trading decisions and generates orders
     
 <img width="1042" alt="Screenshot 2025-03-22 at 6 19 07 PM" src="https://github.com/user-attachments/assets/cbae3dcf-b571-490d-b0ad-3f0f035ac0d4" />
 
@@ -58,7 +59,6 @@ By using this software, you agree to use it solely for learning purposes.
 - [Usage](#usage)
   - [Running the Hedge Fund](#running-the-hedge-fund)
   - [Running the Backtester](#running-the-backtester)
-- [Project Structure](#project-structure)
 - [Contributing](#contributing)
 - [Feature Requests](#feature-requests)
 - [License](#license)
@@ -240,32 +240,6 @@ poetry run python src/backtester.py --ticker AAPL,MSFT,NVDA --ollama
 
 # With Docker (on Windows):
 run.bat --ticker AAPL,MSFT,NVDA --ollama backtest
-```
-
-
-## Project Structure 
-```
-ai-hedge-fund/
-├── src/
-│   ├── agents/                   # Agent definitions and workflow
-│   │   ├── bill_ackman.py        # Bill Ackman agent
-│   │   ├── fundamentals.py       # Fundamental analysis agent
-│   │   ├── portfolio_manager.py  # Portfolio management agent
-│   │   ├── risk_manager.py       # Risk management agent
-│   │   ├── sentiment.py          # Sentiment analysis agent
-│   │   ├── technicals.py         # Technical analysis agent
-│   │   ├── valuation.py          # Valuation analysis agent
-│   │   ├── ...                   # Other agents
-│   │   ├── warren_buffett.py     # Warren Buffett agent
-│   │   ├── aswath_damodaran.py   # Aswath Damodaran agent
-│   │   ├── ...                   # Other agents
-│   │   ├── ...                   # Other agents
-│   ├── tools/                    # Agent tools
-│   │   ├── api.py                # API tools
-│   ├── backtester.py             # Backtesting tools
-│   ├── main.py # Main entry point
-├── pyproject.toml
-├── ...
 ```
 
 ## Contributing

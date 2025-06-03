@@ -1,9 +1,9 @@
 ---
 title: postiz-app
-date: 2025-04-04T15:27:52+08:00
+date: 2025-06-03T15:31:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1658901097893-cfe9605ca208?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM3NTE2MDB8&ixlib=rb-4.0.3
-tags: ['github',social media scheduling, AI features, social media management, audience building, lead capture, business growth, analytics, team collaboration,  Postiz]
+image: https://images.unsplash.com/photo-1650918182927-ebb89884568e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg5MzU4NDN8&ixlib=rb-4.1.0
+tags: ['github',social media, scheduling, AI, marketing, analytics, collaboration, Postiz,  teamwork,  social media management]
 categories: ['github']
 ---
 
@@ -16,14 +16,13 @@ categories: ['github']
 </p>
 
 <p align="center">
-  <a href="https://postiz.com" target="_blank">
+  <a href="https://postiz.com/" target="_blank">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/765e9d72-3ee7-4a56-9d59-a2c9befe2311">
     <img alt="Postiz Logo" src="https://github.com/user-attachments/assets/f0d30d70-dddb-4142-8876-e9aa6ed1cb99" width="280"/>
   </picture>
   </a>
 </p>
-
 
 <p align="center">
 <a href="https://opensource.org/licenses/Apache-2.0">
@@ -38,7 +37,6 @@ categories: ['github']
   </strong>
   Postiz offers everything you need to manage your social media posts,<br />build an audience, capture leads, and grow your business.
 </div>
-
 
 <div class="flex" align="center">
   <br />
@@ -63,6 +61,10 @@ categories: ['github']
   <a href="https://docs.postiz.com" rel="dofollow"><strong>Explore the docs »</strong></a>
   <br />
 
+  <br />
+  <a href="https://youtube.com/@postizofficial" rel="dofollow"><strong>Watch the YouTube Tutorials»</strong></a>
+  <br />
+
   <br/>
     <a href="https://platform.postiz.com">Register</a>
     ·
@@ -84,7 +86,7 @@ categories: ['github']
 ## ✨ Features
 
 | ![Image 1](https://github.com/user-attachments/assets/a27ee220-beb7-4c7e-8c1b-2c44301f82ef) | ![Image 2](https://github.com/user-attachments/assets/eb5f5f15-ed90-47fc-811c-03ccba6fa8a2) |
-|--------------------------------|--------------------------------|
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | ![Image 3](https://github.com/user-attachments/assets/d51786ee-ddd8-4ef8-8138-5192e9cfe7c3) | ![Image 4](https://github.com/user-attachments/assets/91f83c89-22f6-43d6-b7aa-d2d3378289fb) |
 
 # Intro
@@ -105,9 +107,11 @@ categories: ['github']
 - Resend (email notifications)
 
 ## Quick Start
+
 To have the project up and running, please follow the [Quick Start Guide](https://docs.postiz.com/quickstart)
 
 ## Invest in the Postiz Coin :)
+
 DMsTbeCfX1crgAse5tver98KAMarPWeP3d6U3Gmmpump
 
 # License
@@ -119,5 +123,3 @@ This repository's source code is available under the [AGPL-3.0 license](LICENSE)
 <p align="center">
   <a href="https://www.g2.com/products/postiz/take_survey" target="blank"><img alt="g2" src="https://github.com/user-attachments/assets/892cb74c-0b49-4589-b2f5-fbdbf7a98f66" /></a>
 </p>
-
-
