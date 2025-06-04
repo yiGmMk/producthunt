@@ -1,9 +1,9 @@
 ---
 title: postiz-app
-date: 2025-06-03T15:31:18+08:00
+date: 2025-06-04T15:30:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1650918182927-ebb89884568e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg5MzU4NDN8&ixlib=rb-4.1.0
-tags: ['github',social media, scheduling, AI, marketing, analytics, collaboration, Postiz,  teamwork,  social media management]
+image: https://images.unsplash.com/photo-1639498624831-9ffb4ebc222b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkwMjIxNTd8&ixlib=rb-4.1.0
+tags: ['github',social media scheduling, AI features, social media management, audience growth, business growth, analytics, team collaboration,  Postiz,  social media marketing]
 categories: ['github']
 ---
 

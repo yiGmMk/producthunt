@@ -1,8 +1,8 @@
 ---
 title: RedditVideoMakerBot
-date: 2025-06-03T15:32:12+08:00
+date: 2025-06-04T15:30:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1634315100046-b7aef36eaa22?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg5MzU4NDN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1597368090281-acf7386a9c18?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkwMjIxNTd8&ixlib=rb-4.1.0
 tags: ['github',RedditVideoMakerBot,Python,video creation,automation,TikTok,YouTube,Instagram,Reddit API,Playwright,programming]
 categories: ['github']
 ---

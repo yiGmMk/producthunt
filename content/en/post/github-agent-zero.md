@@ -1,9 +1,9 @@
 ---
 title: agent-zero
-date: 2025-06-03T15:32:02+08:00
+date: 2025-06-04T15:29:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1645829245183-36b0e62877f4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg5MzU4NDN8&ixlib=rb-4.1.0
-tags: ['github',Agent-Zero, personal assistant, AI framework, multi-agent, customizable, extensible, Docker, tools,  communication,  prompt-based]
+image: https://images.unsplash.com/photo-1666032309795-9c48fd1a6d5a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkwMjIxNTd8&ixlib=rb-4.1.0
+tags: ['github',Agent Zero, personal assistant, AI framework, multi-agent cooperation, customizable, extensible]
 categories: ['github']
 ---
 
