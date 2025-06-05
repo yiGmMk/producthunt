@@ -1,9 +1,9 @@
 ---
 title: nautilus_trader
-date: 2025-06-04T15:29:37+08:00
+date: 2025-06-05T15:29:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1639498624831-9ffb4ebc222b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkwMjIxNTd8&ixlib=rb-4.1.0
-tags: ['github',algorithmic trading,Rust,Python,high-frequency trading,backtesting,AI,machine learning,quantitative trading]
+image: https://images.unsplash.com/photo-1591284080149-58e039950b29?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkxMDg1MjN8&ixlib=rb-4.1.0
+tags: ['github',algorithmic trading,high-performance trading,backtesting,live trading,Python,Rust]
 categories: ['github']
 ---
 

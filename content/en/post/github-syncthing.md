@@ -1,9 +1,9 @@
 ---
 title: syncthing
-date: 2025-06-03T15:31:40+08:00
+date: 2025-06-05T15:30:53+08:00
 draft: False
-image: https://images.unsplash.com/photo-1634315100046-b7aef36eaa22?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg5MzU4NDN8&ixlib=rb-4.1.0
-tags: ['github',file synchronization,data security,continuous synchronization,open source,GPLv2,software,privacy,cross platform,distributed]
+image: https://images.unsplash.com/photo-1669560085006-95124f1a901b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkxMDg1MjN8&ixlib=rb-4.1.0
+tags: ['github',file synchronization,data security,continuous synchronization,open source,cross-platform,privacy,security,software]
 categories: ['github']
 ---
 

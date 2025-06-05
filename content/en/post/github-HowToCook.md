@@ -1,9 +1,9 @@
 ---
 title: HowToCook
-date: 2025-04-21T15:28:12+08:00
+date: 2025-06-05T15:29:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1721497684662-cf36f0ee232e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUyMjA0NjF8&ixlib=rb-4.0.3
-tags: ['github',Recipes,Cooking,Dishes,Food,Programmers,GitHub,Docker,Web,Service]
+image: https://images.unsplash.com/photo-1601282099691-5e535a98d87b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkxMDg1MjN8&ixlib=rb-4.1.0
+tags: ['github',cooking recipes,programming,docker,GitHub,open source,web service,contribution,cuisine]
 categories: ['github']
 ---
 
@@ -17,6 +17,7 @@ categories: ['github']
 [![npm](https://img.shields.io/npm/v/how-to-cook)](https://www.npmjs.com/package/how-to-cook)
 ![Man hours](https://manhours.aiursoft.cn/r/github.com/anduin2017/howtocook.svg)
 [![Docker](https://img.shields.io/badge/docker-latest-blue?logo=docker)](https://github.com/Anduin2017/HowToCook/pkgs/container/how-to-cook)
+[![Join the AnduinOS Community on Revolt](https://img.shields.io/badge/Revolt-Join-fd6671?style=flat-square)](https://rvlt.gg/ndApqZEs)
 
 最近宅在家做饭，作为程序员，我偶尔在网上找找菜谱和做法。但是这些菜谱往往写法千奇百怪，经常中间莫名出来一些材料。对于习惯了形式语言的程序员来说极其不友好。
 
@@ -97,12 +98,16 @@ docker run -d -p 5000:5000 ghcr.io/anduin2017/how-to-cook:latest
 - [烤茄子](dishes/vegetable_dish/烤茄子/烤茄子.md)
 - [榄菜肉末四季豆](dishes/vegetable_dish/榄菜肉末四季豆/榄菜肉末四季豆.md)
 - [雷椒皮蛋](dishes/vegetable_dish/雷椒皮蛋.md)
+- [凉拌豆腐](dishes/vegetable_dish/凉拌豆腐.md)
 - [凉拌黄瓜](dishes/vegetable_dish/凉拌黄瓜.md)
+- [凉拌金针菇](dishes/vegetable_dish/凉拌金针菇.md)
 - [凉拌木耳](dishes/vegetable_dish/凉拌木耳/凉拌木耳.md)
 - [凉拌莴笋](dishes/vegetable_dish/凉拌莴笋/凉拌莴笋.md)
 - [凉拌油麦菜](dishes/vegetable_dish/凉拌油麦菜.md)
 - [蒲烧茄子](dishes/vegetable_dish/蒲烧茄子.md)
 - [芹菜拌茶树菇](dishes/vegetable_dish/芹菜拌茶树菇/芹菜拌茶树菇.md)
+- [清炒花菜](dishes/vegetable_dish/清炒花菜.md)
+- [清蒸南瓜](dishes/vegetable_dish/清蒸南瓜.md)
 - [陕北熬豆角](dishes/vegetable_dish/陕北熬豆角.md)
 - [上汤娃娃菜](dishes/vegetable_dish/上汤娃娃菜/上汤娃娃菜.md)
 - [手撕包菜](dishes/vegetable_dish/手撕包菜/手撕包菜.md)
@@ -110,6 +115,8 @@ docker run -d -p 5000:5000 ghcr.io/anduin2017/how-to-cook:latest
 - [松仁玉米](dishes/vegetable_dish/松仁玉米.md)
 - [素炒豆角](dishes/vegetable_dish/素炒豆角.md)
 - [酸辣土豆丝](dishes/vegetable_dish/酸辣土豆丝.md)
+- [蒜蓉空心菜](dishes/vegetable_dish/蒜蓉空心菜/蒜蓉空心菜.md)
+- [蒜蓉西兰花](dishes/vegetable_dish/蒜蓉西兰花.md)
 - [糖拌西红柿](dishes/vegetable_dish/糖拌西红柿/糖拌西红柿.md)
 - [莴笋叶煎饼](dishes/vegetable_dish/莴笋叶煎饼/莴笋叶煎饼.md)
 - [西红柿炒鸡蛋](dishes/vegetable_dish/西红柿炒鸡蛋.md)
@@ -138,6 +145,7 @@ docker run -d -p 5000:5000 ghcr.io/anduin2017/how-to-cook:latest
 - [南派红烧肉](dishes/meat_dish/红烧肉/南派红烧肉.md)
 - [红烧猪蹄](dishes/meat_dish/红烧猪蹄/红烧猪蹄.md)
 - [湖南家常红烧肉](dishes/meat_dish/湖南家常红烧肉/湖南家常红烧肉.md)
+- [虎皮肘子](dishes/meat_dish/虎皮肘子.md)
 - [黄瓜炒肉](dishes/meat_dish/黄瓜炒肉.md)
 - [黄焖鸡](dishes/meat_dish/黄焖鸡.md)
 - [徽派红烧肉](dishes/meat_dish/徽派红烧肉/徽派红烧肉.md)
@@ -172,6 +180,7 @@ docker run -d -p 5000:5000 ghcr.io/anduin2017/how-to-cook:latest
 - [啤酒鸭](dishes/meat_dish/啤酒鸭/啤酒鸭.md)
 - [黔式腊肠娃娃菜](dishes/meat_dish/黔式腊肠娃娃菜/黔式腊肠娃娃菜.md)
 - [青椒土豆炒肉](dishes/meat_dish/青椒土豆炒肉/青椒土豆炒肉.md)
+- [清蒸鳜鱼](dishes/meat_dish/清蒸鳜鱼/清蒸鳜鱼.md)
 - [肉饼炖蛋](dishes/meat_dish/肉饼炖蛋.md)
 - [杀猪菜](dishes/meat_dish/杀猪菜.md)
 - [山西过油肉](dishes/meat_dish/山西过油肉.md)
@@ -274,6 +283,7 @@ docker run -d -p 5000:5000 ghcr.io/anduin2017/how-to-cook:latest
 - [炒馍](dishes/staple/炒馍.md)
 - [炒年糕](dishes/staple/炒年糕.md)
 - [炒意大利面](dishes/staple/炒意大利面/炒意大利面.md)
+- [葱油拌面](dishes/staple/葱油拌面.md)
 - [蛋包饭](dishes/staple/蛋包饭.md)
 - [蛋炒饭](dishes/staple/蛋炒饭.md)
 - [豆角焖面](dishes/staple/豆角焖面/豆角焖面.md)
@@ -291,6 +301,7 @@ docker run -d -p 5000:5000 ghcr.io/anduin2017/how-to-cook:latest
 - [老友猪肉粉](dishes/staple/老友猪肉粉/老友猪肉粉.md)
 - [烙饼](dishes/staple/烙饼/烙饼.md)
 - [凉粉](dishes/staple/凉粉/凉粉.md)
+- [螺蛳粉](dishes/staple/螺蛳粉.md)
 - [麻辣减脂荞麦面](dishes/staple/麻辣减脂荞麦面.md)
 - [麻油拌面](dishes/staple/麻油拌面.md)
 - [电饭煲蒸米饭](dishes/staple/米饭/电饭煲蒸米饭.md)
@@ -307,6 +318,7 @@ docker run -d -p 5000:5000 ghcr.io/anduin2017/how-to-cook:latest
 - [微波炉腊肠煲仔饭](dishes/staple/微波炉腊肠煲仔饭/微波炉腊肠煲仔饭.md)
 - [西红柿鸡蛋挂面](dishes/staple/西红柿鸡蛋挂面/西红柿鸡蛋挂面.md)
 - [扬州炒饭](dishes/staple/扬州炒饭/扬州炒饭.md)
+- [意式肉酱面](dishes/staple/意式肉酱面/意式肉酱面.md)
 - [炸酱面](dishes/staple/炸酱面.md)
 - [蒸卤面](dishes/staple/蒸卤面.md)
 - [中式馅饼](dishes/staple/中式馅饼/中式馅饼.md)
@@ -346,6 +358,7 @@ docker run -d -p 5000:5000 ghcr.io/anduin2017/how-to-cook:latest
 - [羊肉汤](dishes/soup/羊肉汤/羊肉汤.md)
 - [银耳莲子粥](dishes/soup/银耳莲子粥/银耳莲子粥.md)
 - [玉米排骨汤](dishes/soup/玉米排骨汤/玉米排骨汤.md)
+- [朱雀汤](dishes/soup/朱雀汤/朱雀汤.md)
 - [紫菜蛋花汤](dishes/soup/紫菜蛋花汤.md)
 
 ### 饮料
@@ -375,9 +388,9 @@ docker run -d -p 5000:5000 ghcr.io/anduin2017/how-to-cook:latest
 
 - [草莓酱](dishes/condiment/草莓酱/草莓酱.md)
 - [葱油](dishes/condiment/葱油.md)
+- [简易版炒糖色](dishes/condiment/简易版炒糖色.md)
 - [蒜香酱油](dishes/condiment/蒜香酱油.md)
 - [糖醋汁](dishes/condiment/糖醋汁.md)
-- [糖色](dishes/condiment/糖色.md)
 - [油泼辣子](dishes/condiment/油泼辣子/油泼辣子.md)
 - [油酥](dishes/condiment/油酥.md)
 - [炸串酱料](dishes/condiment/炸串酱料.md)
@@ -408,4 +421,10 @@ docker run -d -p 5000:5000 ghcr.io/anduin2017/how-to-cook:latest
 
 - [辅料技巧](tips/advanced/辅料技巧.md)
 - [高级专业术语](tips/advanced/高级专业术语.md)
+- [糖色的炒制](tips/advanced/糖色的炒制.md)
 - [油温判断技巧](tips/advanced/油温判断技巧.md)
+
+## 衍生作品推荐
+
+- [HowToCook-mcp 让 AI 助手变身私人大厨，为你的一日三餐出谋划策](https://github.com/worryzyy/HowToCook-mcp)
+- [HowToCook-py-mcp 让 AI 助手变身私人大厨，为你的一日三餐出谋划策 (Python)](https://github.com/DusKing1/howtocook-py-mcp)
