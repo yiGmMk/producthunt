@@ -1,9 +1,9 @@
 ---
 title: HowToCook
-date: 2025-06-05T15:29:19+08:00
+date: 2025-06-06T15:28:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1601282099691-5e535a98d87b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkxMDg1MjN8&ixlib=rb-4.1.0
-tags: ['github',cooking recipes,programming,docker,GitHub,open source,web service,contribution,cuisine]
+image: https://images.unsplash.com/photo-1596742876919-7ddd30ef4e4a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkxOTQ4NzV8&ixlib=rb-4.1.0
+tags: ['github',cooking recipes, recipes, dishes, cooking, food, programmer, GitHub, open source, community]
 categories: ['github']
 ---
 
@@ -286,6 +286,7 @@ docker run -d -p 5000:5000 ghcr.io/anduin2017/how-to-cook:latest
 - [葱油拌面](dishes/staple/葱油拌面.md)
 - [蛋包饭](dishes/staple/蛋包饭.md)
 - [蛋炒饭](dishes/staple/蛋炒饭.md)
+- [电饭煲三文鱼炊饭](dishes/staple/电饭煲三文鱼炊饭/电饭煲三文鱼炊饭.md)
 - [豆角焖面](dishes/staple/豆角焖面/豆角焖面.md)
 - [韩式拌饭](dishes/staple/韩式拌饭/韩式拌饭.md)
 - [河南蒸面条](dishes/staple/河南蒸面条/河南蒸面条.md)
