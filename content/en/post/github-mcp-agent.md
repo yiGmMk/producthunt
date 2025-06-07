@@ -1,9 +1,9 @@
 ---
 title: mcp-agent
-date: 2025-06-06T15:29:29+08:00
+date: 2025-06-07T15:26:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1519640392999-f65f71a0efda?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkxOTQ4NzV8&ixlib=rb-4.1.0
-tags: ['github',Model Context Protocol, agents, composable, workflows, Anthropic, OpenAI Swarm, multi-agent,  MCP servers, LLM]
+image: https://images.unsplash.com/photo-1591026902834-4065ab5bb297?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkyODExODN8&ixlib=rb-4.1.0
+tags: ['github',Model Context Protocol, agents, composable, workflows, Anthropic, OpenAI Swarm,  MCP servers,  LLM]
 categories: ['github']
 ---
 

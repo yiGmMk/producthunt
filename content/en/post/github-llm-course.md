@@ -1,9 +1,9 @@
 ---
 title: llm-course
-date: 2025-05-29T15:30:09+08:00
+date: 2025-06-07T15:27:54+08:00
 draft: False
-image: https://images.unsplash.com/photo-1709376385680-b7593aa4b9a8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg1MDM3MDJ8&ixlib=rb-4.1.0
-tags: ['github',LLM,Large Language Model,Fine-tuning,Quantization,Post-training,Pre-training,RAG,Retrieval Augmented Generation]
+image: https://images.unsplash.com/photo-1600781045350-c5d1107d3be0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkyODExODR8&ixlib=rb-4.1.0
+tags: ['github',Large Language Models,LLMs,Fine-tuning,Quantization,Retrieval Augmented Generation,RAG,Prompt Engineering,Model Merging,Deployment]
 categories: ['github']
 ---
 
@@ -45,6 +45,8 @@ A list of notebooks and articles I wrote about LLMs.
 | ⚡ AutoQuant | Quantize LLMs in GGUF, GPTQ, EXL2, AWQ, and HQQ formats in one click. | <a href="https://colab.research.google.com/drive/1b6nqC7UZVt8bx4MksX7s656GXPM-eWw4?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
 | 🌳 Model Family Tree | Visualize the family tree of merged models. | <a href="https://colab.research.google.com/drive/1s2eQlolcI1VGgDhqWIANfkfKvcKrMyNr?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
 | 🚀 ZeroSpace | Automatically create a Gradio chat interface using a free ZeroGPU. | <a href="https://colab.research.google.com/drive/1LcVUW5wsJTO2NGmozjji5CkC--646LgC"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| ✂️ AutoAbliteration | Automatically abliteration models with custom datasets. | <a href="https://colab.research.google.com/drive/1RmLv-pCMBBsQGXQIM8yF-OdCNyoylUR1?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| 🧼 AutoDedup | Automatically deduplicate datasets using the Rensa library. | <a href="https://colab.research.google.com/drive/1o1nzwXWAa8kdkEJljbJFW1VuI-3VZLUn?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
 
 ### Fine-tuning
 

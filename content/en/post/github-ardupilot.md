@@ -1,9 +1,9 @@
 ---
 title: ardupilot
-date: 2025-06-06T15:29:10+08:00
+date: 2025-06-07T15:28:10+08:00
 draft: False
-image: https://images.unsplash.com/photo-1538123198808-dcb3497166d6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkxOTQ4NzV8&ixlib=rb-4.1.0
-tags: ['github',ArduPilot,open-source,autopilot,software,vehicles,flight-control,UAV]
+image: https://images.unsplash.com/photo-1604866810607-bbf1801ab31d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkyODExODN8&ixlib=rb-4.1.0
+tags: ['github',ArduPilot,open-source,autopilot,software,vehicles,flight,control]
 categories: ['github']
 ---
 
