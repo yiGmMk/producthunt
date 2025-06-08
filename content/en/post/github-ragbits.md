@@ -1,9 +1,9 @@
 ---
 title: ragbits
-date: 2025-06-07T15:27:33+08:00
+date: 2025-06-08T15:27:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1656519966579-da21868b7ed7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkyODExODN8&ixlib=rb-4.1.0
-tags: ['github',Ragbits,GenAI,LLM,vector store,RAG,document search,knowledge base,chatbot]
+image: https://images.unsplash.com/photo-1676147243987-2c06f338e133?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkzNjc1OTN8&ixlib=rb-4.1.0
+tags: ['github',Ragbits,LLMs,vector databases,RAG,Python,document search,retrieval-augmented generation,chatbots,OpenTelemetry]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: llm-course
-date: 2025-06-07T15:27:54+08:00
+date: 2025-06-08T15:28:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1600781045350-c5d1107d3be0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkyODExODR8&ixlib=rb-4.1.0
-tags: ['github',Large Language Models,LLMs,Fine-tuning,Quantization,Retrieval Augmented Generation,RAG,Prompt Engineering,Model Merging,Deployment]
+image: https://images.unsplash.com/photo-1539718110656-942f6db1bfa0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkzNjc1OTN8&ixlib=rb-4.1.0
+tags: ['github',Large Language Models,LLM,Fine-tuning,Quantization,Retrieval Augmented Generation,Prompt Engineering,Deployment,Model Merging,Evaluation]
 categories: ['github']
 ---
 

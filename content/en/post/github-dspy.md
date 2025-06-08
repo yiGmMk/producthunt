@@ -1,9 +1,9 @@
 ---
 title: dspy
-date: 2025-06-07T15:26:54+08:00
+date: 2025-06-08T15:27:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1610225199874-d989d5650b9a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkyODExODN8&ixlib=rb-4.1.0
-tags: ['github',documentation, dspy, git, subtree, contribution, website, repository, github, pull request, docusaurus]
+image: https://images.unsplash.com/photo-1539718110656-942f6db1bfa0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkzNjc1OTN8&ixlib=rb-4.1.0
+tags: ['github',documentation,dspy,git,subtree,github,contributing,website,docusaurus]
 categories: ['github']
 ---
 

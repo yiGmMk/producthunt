@@ -1,15 +1,15 @@
 ---
 title: note-gen
-date: 2025-06-07T15:27:01+08:00
+date: 2025-06-08T15:27:02+08:00
 draft: False
-image: https://images.unsplash.com/photo-1640919570975-420db180f038?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkyODExODR8&ixlib=rb-4.1.0
-tags: ['github',NoteGen,Markdown,note-taking,AI,cross-platform,recording,writing,knowledge organization,GitHub,Gitee,WebDAV,ChatGPT,Gemini,Ollama,LM Studio,Grok,RAG]
+image: https://images.unsplash.com/photo-1519523396617-4c81d5ca919d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkzNjc1OTN8&ixlib=rb-4.1.0
+tags: ['github',NoteGen, Markdown, note-taking, AI, cross-platform, recording, writing, knowledge organization,  GitHub, Gitee]
 categories: ['github']
 ---
 
 # [codexu/note-gen](https://github.com/codexu/note-gen)
 
-<img src="https://s2.loli.net/2025/05/26/YMNgxKVDrB84ZtW.png" width="128" height="128" />
+![note-gen](https://socialify.git.ci/codexu/note-gen/image?custom_description=Cross-Platform+%7C+LLM+%7C+Markdown+%7C++Recording++%26+Writing&description=1&font=Raleway&forks=1&issues=1&logo=https%3A%2F%2Fcamo.githubusercontent.com%2Fbe4a3a39f8724658ad5bc549d63f0454ad4ca98564c73b7b0778704ca5212509%2F68747470733a2f2f73322e6c6f6c692e6e65742f323032352f30352f32362f594d4e67784b5644724238345a74572e706e67&name=1&owner=1&pattern=Circuit+Board&stargazers=1&theme=Light)
 
 # NoteGen
 
