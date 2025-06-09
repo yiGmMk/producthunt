@@ -1,9 +1,9 @@
 ---
 title: cognee
-date: 2025-06-08T15:26:44+08:00
+date: 2025-06-09T15:30:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1693421385607-8f034601ad6f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkzNjc1OTN8&ixlib=rb-4.1.0
-tags: ['github',AI, memory, agents, RAG, knowledge graph, vector database, Pydantic, NLP]
+image: https://images.unsplash.com/photo-1682343161276-ac8033b14906?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk0NTQxOTl8&ixlib=rb-4.1.0
+tags: ['github',AI,memory,agents,knowledge graph,RAG,LLM,python,Cognee]
 categories: ['github']
 ---
 

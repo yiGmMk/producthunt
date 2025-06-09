@@ -1,9 +1,9 @@
 ---
 title: dify
-date: 2025-06-08T15:28:04+08:00
+date: 2025-06-09T15:30:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1590139939257-a5e9b7c36fd7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkzNjc1OTN8&ixlib=rb-4.1.0
-tags: ['github',LLM,Workflow,AI,Open-source,RAG,Agent,Model,Deployment]
+image: https://images.unsplash.com/photo-1682343161276-ac8033b14906?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk0NTQxOTl8&ixlib=rb-4.1.0
+tags: ['github',LLM,workflow,AI,open-source,RAG,agent,model,docker]
 categories: ['github']
 ---
 

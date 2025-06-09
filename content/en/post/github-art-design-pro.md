@@ -1,8 +1,8 @@
 ---
 title: art-design-pro
-date: 2025-06-08T15:27:56+08:00
+date: 2025-06-09T15:31:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1693421385607-8f034601ad6f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkzNjc1OTN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1696182773863-e5b25e10675d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk0NTQxOTl8&ixlib=rb-4.1.0
 tags: ['github',admin management system,ElementPlus,open-source,rapid development,user experience,UI design,theme customization,multi-language support]
 categories: ['github']
 ---

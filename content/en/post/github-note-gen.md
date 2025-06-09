@@ -1,9 +1,9 @@
 ---
 title: note-gen
-date: 2025-06-08T15:27:02+08:00
+date: 2025-06-09T15:30:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1519523396617-4c81d5ca919d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkzNjc1OTN8&ixlib=rb-4.1.0
-tags: ['github',NoteGen, Markdown, note-taking, AI, cross-platform, recording, writing, knowledge organization,  GitHub, Gitee]
+image: https://images.unsplash.com/photo-1739369120307-e66b50d4f879?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk0NTQxOTl8&ixlib=rb-4.1.0
+tags: ['github',NoteGen,Markdown,AI,note-taking,cross-platform,recording,writing,knowledge organization,LLM]
 categories: ['github']
 ---
 
@@ -19,13 +19,12 @@ categories: ['github']
 ![](https://img.shields.io/github/downloads/codexu/note-gen/total)
 ![](https://img.shields.io/github/commit-activity/m/codexu/note-gen)
 
-English | [简体中文](.github/README.zh.md) | [日本語](.github/README.ja.md)
-
-<div style="display: flex; gap: 1rem;">
+<div>
   <a href="https://www.producthunt.com/products/notegen-2?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-notegen&#0045;2" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=956348&theme=light&t=1749194675492" alt="NoteGen - A&#0032;cross&#0045;platform&#0032;Markdown&#0032;note&#0045;taking&#0032;application | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-
   <a href="https://trendshift.io/repositories/12784" target="_blank"><img src="https://trendshift.io/api/badge/repositories/12784" alt="codexu%2Fnote-gen | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </div>
+
+English | [简体中文](.github/README.zh.md) | [日本語](.github/README.ja.md)
 
 ## Guide
 
@@ -133,6 +132,13 @@ The note-taking application can be used directly without configuration. If you w
 <a href="https://github.com/codexu/note-gen/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=codexu/note-gen" />
 </a>
+
+## Sponsors
+
+<div>
+  <a href="https://docs.siliconflow.cn/cn/usercases/use-siliconcloud-in-NoteGen" target="_blank"><img src="https://s2.loli.net/2025/06/09/PDNBYc1KTgOLnje.png" ></a>
+  <a href="https://www.qiniu.com/products/ai-token-api" target="_blank"><img src="https://s2.loli.net/2025/06/09/dyX97jPiH6YlaKU.png" ></a>
+</div>
 
 ## Star History
 

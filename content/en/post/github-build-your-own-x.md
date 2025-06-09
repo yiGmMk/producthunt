@@ -1,9 +1,9 @@
 ---
 title: build-your-own-x
-date: 2025-06-07T15:28:19+08:00
+date: 2025-06-09T15:31:50+08:00
 draft: False
-image: https://images.unsplash.com/photo-1610225199874-d989d5650b9a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkyODExODN8&ixlib=rb-4.1.0
-tags: ['github',programming language, operating system, web server, database, neural network, game, 3D renderer, blockchain]
+image: https://images.unsplash.com/photo-1682343161276-ac8033b14906?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk0NTQxOTl8&ixlib=rb-4.1.0
+tags: ['github',programming language, operating system, web server, database, game, neural network, 3D renderer, blockchain]
 categories: ['github']
 ---
 

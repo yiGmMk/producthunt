@@ -1,9 +1,9 @@
 ---
 title: netbird
-date: 2025-06-08T15:26:52+08:00
+date: 2025-06-09T15:31:11+08:00
 draft: False
-image: https://images.unsplash.com/photo-1693421385607-8f034601ad6f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkzNjc1OTN8&ixlib=rb-4.1.0
-tags: ['github',NetBird,WireGuard,VPN,private network,network security,access control,remote access,peer-to-peer,encryption]
+image: https://images.unsplash.com/photo-1682343161276-ac8033b14906?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk0NTQxOTl8&ixlib=rb-4.1.0
+tags: ['github',NetBird,WireGuard,VPN,private network,access control,network security,peer-to-peer,remote access]
 categories: ['github']
 ---
 
@@ -23,7 +23,7 @@ categories: ['github']
        <img src="https://img.shields.io/badge/license-BSD--3-blue" />
      </a> 
     <br>
-    <a href="https://join.slack.com/t/netbirdio/shared_invite/zt-31rofwmxc-27akKd0Le0vyRpBcwXkP0g">
+    <a href="https://docs.netbird.io/slack-url">
         <img src="https://img.shields.io/badge/slack-@netbird-red.svg?logo=slack"/>
      </a>  
      <br>
@@ -40,7 +40,7 @@ categories: ['github']
   <br/>
   See <a href="https://netbird.io/docs/">Documentation</a>
   <br/>
-   Join our <a href="https://join.slack.com/t/netbirdio/shared_invite/zt-31rofwmxc-27akKd0Le0vyRpBcwXkP0g">Slack channel</a>
+   Join our <a href="https://docs.netbird.io/slack-url">Slack channel</a>
   <br/>
  
 </strong>
