@@ -1,9 +1,9 @@
 ---
 title: cognee
-date: 2025-06-09T15:30:26+08:00
+date: 2025-06-10T15:29:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1682343161276-ac8033b14906?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk0NTQxOTl8&ixlib=rb-4.1.0
-tags: ['github',AI,memory,agents,knowledge graph,RAG,LLM,python,Cognee]
+image: https://images.unsplash.com/photo-1672243776765-58c978b61fd8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk1NDA1MjF8&ixlib=rb-4.1.0
+tags: ['github',AI, memory, agents, RAG, knowledge graph, vector database, Pydantic, LLM]
 categories: ['github']
 ---
 
@@ -49,11 +49,15 @@ More on [use-cases](https://docs.cognee.ai/use-cases) and [evals](https://github
   <p align="center">
   🌐 Available Languages
   :
-  <a href="assets/community/README.pt.md">🇵🇹 Português</a>
-  ·
-  <a href="assets/community/README.zh.md">🇨🇳 [中文]</a>
-  ·
-  <a href="assets/community/README.ru.md">🇷🇺 Русский</a>
+  <!-- Keep these links. Translations will automatically update with the README. -->
+  <a href="https://www.readme-i18n.com/topoteretes/cognee?lang=de">Deutsch</a> | 
+  <a href="https://www.readme-i18n.com/topoteretes/cognee?lang=es">Español</a> | 
+  <a href="https://www.readme-i18n.com/topoteretes/cognee?lang=fr">français</a> | 
+  <a href="https://www.readme-i18n.com/topoteretes/cognee?lang=ja">日本語</a> | 
+  <a href="https://www.readme-i18n.com/topoteretes/cognee?lang=ko">한국어</a> | 
+  <a href="https://www.readme-i18n.com/topoteretes/cognee?lang=pt">Português</a> | 
+  <a href="https://www.readme-i18n.com/topoteretes/cognee?lang=ru">Русский</a> | 
+  <a href="https://www.readme-i18n.com/topoteretes/cognee?lang=zh">中文</a>
   </p>
 
 

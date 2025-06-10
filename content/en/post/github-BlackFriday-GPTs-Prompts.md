@@ -1,8 +1,8 @@
 ---
 title: BlackFriday-GPTs-Prompts
-date: 2025-06-09T15:31:26+08:00
+date: 2025-06-10T15:30:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1612676845942-3cc1906c0cd3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk0NTQxOTl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1544508182-65ac5f7755d9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk1NDA1MjF8&ixlib=rb-4.1.0
 tags: ['github',GPTs,Prompts,Jailbreaks,AI,Software,Engineering,Programming,Marketing,Business,Productivity]
 categories: ['github']
 ---

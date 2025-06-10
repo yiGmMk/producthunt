@@ -1,9 +1,9 @@
 ---
 title: tensorzero
-date: 2025-06-09T15:30:05+08:00
+date: 2025-06-10T15:28:54+08:00
 draft: False
-image: https://images.unsplash.com/photo-1682343161276-ac8033b14906?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk0NTQxOTl8&ixlib=rb-4.1.0
-tags: ['github',LLM,TensorZero,LLMOps,model optimization,inference optimization,prompt optimization,observability,evaluation,experimentation,feedback loop]
+image: https://images.unsplash.com/photo-1672243776765-58c978b61fd8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk1NDA1MjF8&ixlib=rb-4.1.0
+tags: ['github',LLM,TensorZero,Large Language Model,optimization,inference,observability,evaluation,experimentation,LLMOps]
 categories: ['github']
 ---
 
@@ -12,6 +12,8 @@ categories: ['github']
 <img src="https://github.com/user-attachments/assets/47d67430-386d-4675-82ad-d4734d3262d9" width=128 height=128>
 
 # TensorZero
+
+<p><picture><img src="https://www.tensorzero.com/github-trending-badge.svg" alt="#1 Repository Of The Day"></picture></p>
 
 **TensorZero creates a feedback loop for optimizing LLM applications — turning production data into smarter, faster, and cheaper models.**
 

@@ -1,9 +1,9 @@
 ---
 title: vosk-api
-date: 2025-06-08T15:28:59+08:00
+date: 2025-06-10T15:28:47+08:00
 draft: False
-image: https://images.unsplash.com/photo-1676147243987-2c06f338e133?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkzNjc1OTN8&ixlib=rb-4.1.0
-tags: ['github',speech recognition,Vosk,open source,offline,multi-language,streaming API,speaker identification,speech-to-text,NLP]
+image: https://images.unsplash.com/photo-1734543920039-76b0778dbe8e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk1NDA1MjF8&ixlib=rb-4.1.0
+tags: ['github',speech recognition, Vosk, offline, open source, multilingual, transcription, continuous, streaming API]
 categories: ['github']
 ---
 

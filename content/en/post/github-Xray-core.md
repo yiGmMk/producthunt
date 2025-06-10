@@ -1,9 +1,9 @@
 ---
 title: Xray-core
-date: 2025-06-09T15:30:35+08:00
+date: 2025-06-10T15:29:05+08:00
 draft: False
-image: https://images.unsplash.com/photo-1612676845942-3cc1906c0cd3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk0NTQxOTl8&ixlib=rb-4.1.0
-tags: ['github',Xray-core, XTLS, VLESS, REALITY, Project X, network tools,  installation,  documentation]
+image: https://images.unsplash.com/photo-1595445364671-15205e6c380c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk1NDA1MjF8&ixlib=rb-4.1.0
+tags: ['github',Xray-core, XTLS, Project X, VLESS, REALITY, Xray-examples,  XTLS-install,  NFT]
 categories: ['github']
 ---
 
