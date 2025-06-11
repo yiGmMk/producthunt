@@ -1,9 +1,9 @@
 ---
 title: PathOfBuilding
-date: 2025-06-10T15:29:59+08:00
+date: 2025-06-11T15:30:33+08:00
 draft: False
-image: https://images.unsplash.com/photo-1595445364671-15205e6c380c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk1NDA1MjF8&ixlib=rb-4.1.0
-tags: ['github',PathOfExile,PathOfBuilding,build planner,passive skill tree,skill planner,item planner,DPS calculations,item crafting,character stats,support gems]
+image: https://images.unsplash.com/photo-1670968982568-51116a0770c0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk2MjY5MTV8&ixlib=rb-4.1.0
+tags: ['github',Path of Exile,Path of Building,build planner,passive skill tree,skill planner,item planner,DPS calculations,item crafting,character stats,support gems]
 categories: ['github']
 ---
 

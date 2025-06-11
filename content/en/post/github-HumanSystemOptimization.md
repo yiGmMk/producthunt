@@ -1,8 +1,8 @@
 ---
 title: HumanSystemOptimization
-date: 2025-06-10T15:29:45+08:00
+date: 2025-06-11T15:29:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1734543920039-76b0778dbe8e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk1NDA1MjF8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1547973629-acb677cac9bd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk2MjY5MTV8&ixlib=rb-4.1.0
 tags: ['github',sleep, dopamine, intermittent fasting, neuroplasticity,  focus,  longevity,  diet,  exercise]
 categories: ['github']
 ---

@@ -1,9 +1,9 @@
 ---
 title: boltz
-date: 2025-06-08T15:27:29+08:00
+date: 2025-06-11T15:28:43+08:00
 draft: False
-image: https://images.unsplash.com/photo-1539718110656-942f6db1bfa0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkzNjc1OTN8&ixlib=rb-4.1.0
-tags: ['github',Boltz-2,Boltz-1,biomolecular interaction prediction,binding affinity,molecular design,deep learning,AlphaFold3,free-energy perturbation,drug discovery]
+image: https://images.unsplash.com/photo-1587643092588-99260443a990?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk2MjY5MTV8&ixlib=rb-4.1.0
+tags: ['github',Boltz, biomolecular, interaction, prediction, AlphaFold3, binding, affinity, deep learning, drug discovery]
 categories: ['github']
 ---
 
@@ -15,7 +15,7 @@ categories: ['github']
   <img src="https://model-gateway.boltz.bio/a.png?x-pxid=bce1627f-f326-4bff-8a97-45c6c3bc929d" />
 
 [Boltz-1](https://doi.org/10.1101/2024.11.19.624167) | [Boltz-2](https://bit.ly/boltz2-pdf) |
-[Slack](https://boltz-community.slack.com/join/shared_invite/zt-37b5dxiuo-80rPSDp6lXjD1GTC4bxNIw#/shared-invite/email) <br> <br>
+[Slack](https://join.slack.com/t/boltz-community/shared_invite/zt-3751cpmn6-kDLgLcQFMOPeUdFIJd4oqQ) <br> <br>
 </div>
 
 
@@ -55,6 +55,10 @@ boltz predict input_path --use_msa_server
 ```
 
 `input_path` should point to a YAML file, or a directory of YAML files for batched processing, describing the biomolecules you want to model and the properties you want to predict (e.g. affinity). To see all available options: `boltz predict --help` and for more information on these input formats, see our [prediction instructions](docs/prediction.md). By default, the `boltz` command will run the latest version of the model.
+
+### Binding Affinity Prediction
+There are two main predictions in the affinity output: `affinity_pred_value` and `affinity_probability_binary`. They are trained on largely different datasets, with different supervisions, and should be used in different contexts. The `affinity_probability_binary` field should be used to detect binders from decoys, for example in a hit-discovery stage. It's value ranges from 0 to 1 and represents the predicted probability that the ligand is a binder. The `affinity_pred_value` aims to measure the specific affinity of different binders and how this changes with small modifications of the molecule. This should be used in ligand optimization stages such as hit-to-lead and lead-optimization. It reports a binding affinity value as `log(IC50)`, derived from an `IC50` measured in `μM`. More details on how to run affinity predictions and parse the output can be found in our [prediction instructions](docs/prediction.md).
+
 
 ## Evaluation
 

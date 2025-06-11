@@ -1,9 +1,9 @@
 ---
 title: tensorzero
-date: 2025-06-10T15:28:54+08:00
+date: 2025-06-11T15:28:50+08:00
 draft: False
-image: https://images.unsplash.com/photo-1672243776765-58c978b61fd8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk1NDA1MjF8&ixlib=rb-4.1.0
-tags: ['github',LLM,TensorZero,Large Language Model,optimization,inference,observability,evaluation,experimentation,LLMOps]
+image: https://images.unsplash.com/photo-1599489302236-948046b5d48b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk2MjY5MTV8&ixlib=rb-4.1.0
+tags: ['github',LLM,TensorZero,optimization,inference,observability,evaluation,experimentation,LLMOps]
 categories: ['github']
 ---
 
