@@ -1,9 +1,9 @@
 ---
 title: boltz
-date: 2025-06-11T15:28:43+08:00
+date: 2025-06-12T15:29:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1587643092588-99260443a990?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk2MjY5MTV8&ixlib=rb-4.1.0
-tags: ['github',Boltz, biomolecular, interaction, prediction, AlphaFold3, binding, affinity, deep learning, drug discovery]
+image: https://images.unsplash.com/photo-1573787164450-6a90f501a554?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk3MTMzNDd8&ixlib=rb-4.1.0
+tags: ['github',Boltz-2,Boltz-1,biomolecular interaction prediction,binding affinity prediction,AlphaFold3,deep learning,molecular design,drug discovery,protein folding,free-energy perturbation]
 categories: ['github']
 ---
 
