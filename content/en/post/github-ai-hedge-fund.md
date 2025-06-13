@@ -1,9 +1,9 @@
 ---
 title: ai-hedge-fund
-date: 2025-06-03T15:32:54+08:00
+date: 2025-06-13T15:41:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1660136308586-432226190a26?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg5MzU4NDN8&ixlib=rb-4.1.0
-tags: ['github',AI,hedge fund,trading,investment,agents,valuation,stock,market sentiment,fundamental analysis,technical analysis]
+image: https://images.unsplash.com/photo-1711928932754-a6cd14ce4000?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk4MDAyMzZ8&ixlib=rb-4.1.0
+tags: ['github',AI,hedge fund,trading,investment,valuation,agents,backtesting,portfolio management,risk management,machine learning]
 categories: ['github']
 ---
 
@@ -122,7 +122,12 @@ cp .env.example .env
 
 4. Edit the .env file to add your API keys as described above.
 
-5. Build the Docker image:
+5. Navigate to the docker directory:
+```bash
+cd docker
+```
+
+6. Build the Docker image:
 ```bash
 # On Linux/Mac:
 ./run.sh build
@@ -147,7 +152,12 @@ poetry run python src/main.py --ticker AAPL,MSFT,NVDA
 ```
 
 #### With Docker
+**Note**: All Docker commands must be run from the `docker/` directory.
+
 ```bash
+# Navigate to the docker directory first
+cd docker
+
 # On Linux/Mac:
 ./run.sh --ticker AAPL,MSFT,NVDA main
 
@@ -164,10 +174,11 @@ You can also specify a `--ollama` flag to run the AI hedge fund using local LLMs
 # With Poetry:
 poetry run python src/main.py --ticker AAPL,MSFT,NVDA --ollama
 
-# With Docker (on Linux/Mac):
+# With Docker (from docker/ directory):
+# On Linux/Mac:
 ./run.sh --ticker AAPL,MSFT,NVDA --ollama main
 
-# With Docker (on Windows):
+# On Windows:
 run.bat --ticker AAPL,MSFT,NVDA --ollama main
 ```
 
@@ -177,10 +188,11 @@ You can also specify a `--show-reasoning` flag to print the reasoning of each ag
 # With Poetry:
 poetry run python src/main.py --ticker AAPL,MSFT,NVDA --show-reasoning
 
-# With Docker (on Linux/Mac):
+# With Docker (from docker/ directory):
+# On Linux/Mac:
 ./run.sh --ticker AAPL,MSFT,NVDA --show-reasoning main
 
-# With Docker (on Windows):
+# On Windows:
 run.bat --ticker AAPL,MSFT,NVDA --show-reasoning main
 ```
 
@@ -190,10 +202,11 @@ You can optionally specify the start and end dates to make decisions for a speci
 # With Poetry:
 poetry run python src/main.py --ticker AAPL,MSFT,NVDA --start-date 2024-01-01 --end-date 2024-03-01 
 
-# With Docker (on Linux/Mac):
+# With Docker (from docker/ directory):
+# On Linux/Mac:
 ./run.sh --ticker AAPL,MSFT,NVDA --start-date 2024-01-01 --end-date 2024-03-01 main
 
-# With Docker (on Windows):
+# On Windows:
 run.bat --ticker AAPL,MSFT,NVDA --start-date 2024-01-01 --end-date 2024-03-01 main
 ```
 
@@ -205,7 +218,12 @@ poetry run python src/backtester.py --ticker AAPL,MSFT,NVDA
 ```
 
 #### With Docker
+**Note**: All Docker commands must be run from the `docker/` directory.
+
 ```bash
+# Navigate to the docker directory first
+cd docker
+
 # On Linux/Mac:
 ./run.sh --ticker AAPL,MSFT,NVDA backtest
 
@@ -223,10 +241,11 @@ You can optionally specify the start and end dates to backtest over a specific t
 # With Poetry:
 poetry run python src/backtester.py --ticker AAPL,MSFT,NVDA --start-date 2024-01-01 --end-date 2024-03-01
 
-# With Docker (on Linux/Mac):
+# With Docker (from docker/ directory):
+# On Linux/Mac:
 ./run.sh --ticker AAPL,MSFT,NVDA --start-date 2024-01-01 --end-date 2024-03-01 backtest
 
-# With Docker (on Windows):
+# On Windows:
 run.bat --ticker AAPL,MSFT,NVDA --start-date 2024-01-01 --end-date 2024-03-01 backtest
 ```
 
@@ -235,10 +254,11 @@ You can also specify a `--ollama` flag to run the backtester using local LLMs.
 # With Poetry:
 poetry run python src/backtester.py --ticker AAPL,MSFT,NVDA --ollama
 
-# With Docker (on Linux/Mac):
+# With Docker (from docker/ directory):
+# On Linux/Mac:
 ./run.sh --ticker AAPL,MSFT,NVDA --ollama backtest
 
-# With Docker (on Windows):
+# On Windows:
 run.bat --ticker AAPL,MSFT,NVDA --ollama backtest
 ```
 

@@ -1,9 +1,9 @@
 ---
 title: self-llm
-date: 2025-06-12T15:30:03+08:00
+date: 2025-06-13T15:38:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1714997219788-660af304f464?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk3MTMzNDd8&ixlib=rb-4.1.0
-tags: ['github',large language model, LLM, open-source, deployment, fine-tuning, tutorial, Linux, instruction]
+image: https://images.unsplash.com/photo-1508791573065-57c595096106?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk4MDAyMzZ8&ixlib=rb-4.1.0
+tags: ['github',open-source large language models,LLM,tutorial,deployment,fine-tuning,Linux,ChatGLM,LLaMA,InternLM,Qwen]
 categories: ['github']
 ---
 
