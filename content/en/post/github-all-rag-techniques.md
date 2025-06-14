@@ -1,9 +1,9 @@
 ---
 title: all-rag-techniques
-date: 2025-06-13T15:41:20+08:00
+date: 2025-06-14T15:27:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1687027053771-76a0460d1c68?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk4MDAyMzZ8&ixlib=rb-4.1.0
-tags: ['github',Retrieval-Augmented-Generation,RAG,LLM,OpenAI,Nebius-AI,Python,Jupyter-Notebook,embedding,vector-search,semantic-search,knowledge-graph]
+image: https://images.unsplash.com/photo-1693356094787-abc268269c8e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk4ODU5OTR8&ixlib=rb-4.1.0
+tags: ['github',Retrieval-Augmented-Generation,RAG,Python,OpenAI,Nebius-AI,LLM,embeddings,vector-store,cosine-similarity,chunking,retrieval,generation,Jupyter-Notebook]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: awesome-llm-apps
-date: 2025-06-13T15:37:43+08:00
+date: 2025-06-14T15:26:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1508791573065-57c595096106?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk4MDAyMzZ8&ixlib=rb-4.1.0
-tags: ['github',LLM,AI Agents,Multi-agent Teams,RAG,MCP,Voice Agents,OpenAI,Anthropic,Google,DeepSeek,Qwen,Llama,GitHub,code,applications,projects]
+image: https://images.unsplash.com/photo-1556106295-38bf5e6e4f8e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk4ODU5OTR8&ixlib=rb-4.1.0
+tags: ['github',LLM,AI Agents,Multi-agent Teams,RAG,MCP,Voice Agents,OpenAI,Anthropic,Google,DeepSeek,Qwen,Llama,GitHub,code,email,applications,projects,models]
 categories: ['github']
 ---
 

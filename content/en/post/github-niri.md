@@ -1,9 +1,9 @@
 ---
 title: niri
-date: 2025-06-13T15:40:58+08:00
+date: 2025-06-14T15:27:43+08:00
 draft: False
-image: https://images.unsplash.com/photo-1606994829363-fb1ca4740eb6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk4MDAyMzZ8&ixlib=rb-4.1.0
-tags: ['github',Wayland, compositor, tiling, scrollable, workspaces, windows, monitor, features, configuration]
+image: https://images.unsplash.com/photo-1636044594149-6e2f289c3868?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk4ODU5OTR8&ixlib=rb-4.1.0
+tags: ['github',Wayland, compositor, tiling, scrollable, workspaces, windows, monitors, gestures, tabs]
 categories: ['github']
 ---
 

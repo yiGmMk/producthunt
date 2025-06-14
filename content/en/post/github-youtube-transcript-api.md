@@ -1,9 +1,9 @@
 ---
 title: youtube-transcript-api
-date: 2025-06-13T15:39:14+08:00
+date: 2025-06-14T15:27:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1661922822762-9c737624f7d6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk4MDAyMzZ8&ixlib=rb-4.1.0
-tags: ['github',YouTube,Transcript,API,Python,video,subtitles,transcript retrieval,language,translation]
+image: https://images.unsplash.com/photo-1700438938244-d903dbc0de9a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk4ODU5OTR8&ixlib=rb-4.1.0
+tags: ['github',youtube-transcript-api, Python, YouTube, subtitles, transcript, video, API, language, translation]
 categories: ['github']
 ---
 
