@@ -1,9 +1,9 @@
 ---
 title: chili3d
-date: 2025-06-14T15:26:58+08:00
+date: 2025-06-15T15:27:58+08:00
 draft: False
-image: https://images.unsplash.com/photo-1693356094787-abc268269c8e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk4ODU5OTR8&ixlib=rb-4.1.0
-tags: ['github',web-based 3D CAD,OpenCascade,Three.js,WebAssembly,TypeScript,online modeling,CAD software]
+image: https://images.unsplash.com/photo-1643266809211-8c65ed4a92c8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk5NzI0NTJ8&ixlib=rb-4.1.0
+tags: ['github',3D CAD,WebAssembly,OpenCascade,Three.js,TypeScript,browser-based,online modeling,CAD software]
 categories: ['github']
 ---
 

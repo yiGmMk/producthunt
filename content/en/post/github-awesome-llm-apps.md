@@ -1,9 +1,9 @@
 ---
 title: awesome-llm-apps
-date: 2025-06-14T15:26:44+08:00
+date: 2025-06-15T15:27:43+08:00
 draft: False
-image: https://images.unsplash.com/photo-1556106295-38bf5e6e4f8e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk4ODU5OTR8&ixlib=rb-4.1.0
-tags: ['github',LLM,AI Agents,Multi-agent Teams,RAG,MCP,Voice Agents,OpenAI,Anthropic,Google,DeepSeek,Qwen,Llama,GitHub,code,email,applications,projects,models]
+image: https://images.unsplash.com/photo-1722258222641-5dcf03703490?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk5NzI0NTJ8&ixlib=rb-4.1.0
+tags: ['github',LLM,AI Agents,RAG,Multi-agent,MCP,Voice Agents,OpenAI,Anthropic,Google,DeepSeek,Qwen,Llama]
 categories: ['github']
 ---
 
@@ -22,6 +22,18 @@ categories: ['github']
   <a href="https://twitter.com/Saboo_Shubham_">
     <img src="https://img.shields.io/twitter/follow/Shubham_Saboo" alt="Twitter">
   </a>
+</p>
+
+<p align="center">
+  <!-- Keep these links. Translations will automatically update with the README. -->
+  <a href="https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=de">Deutsch</a> | 
+  <a href="https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=es">Español</a> | 
+  <a href="https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=fr">français</a> | 
+  <a href="https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=ja">日本語</a> | 
+  <a href="https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=ko">한국어</a> | 
+  <a href="https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=pt">Português</a> | 
+  <a href="https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=ru">Русский</a> | 
+  <a href="https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=zh">中文</a>
 </p>
 
 <hr/>

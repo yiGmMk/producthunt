@@ -1,9 +1,9 @@
 ---
 title: deepeval
-date: 2025-06-14T15:27:33+08:00
+date: 2025-06-15T15:28:36+08:00
 draft: False
-image: https://images.unsplash.com/photo-1651853082689-706323a31427?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk4ODU5OTR8&ixlib=rb-4.1.0
-tags: ['github',LLM, evaluation, framework, DeepEval, metrics, RAG, agents, LangChain, LlamaIndex, testing, CI/CD, benchmark, MMLU, HellaSwag, DROP, BIG-Bench, TruthfulQA, HumanEval, GSM8K]
+image: https://images.unsplash.com/photo-1545065942-3a37886535d5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk5NzI0NTJ8&ixlib=rb-4.1.0
+tags: ['github',LLM, evaluation, framework, DeepEval, metrics, RAG, agents, LangChain, LlamaIndex, G-Eval, hallucination,  benchmark]
 categories: ['github']
 ---
 
