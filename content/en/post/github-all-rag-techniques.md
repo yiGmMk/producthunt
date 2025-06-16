@@ -1,9 +1,9 @@
 ---
 title: all-rag-techniques
-date: 2025-06-15T15:28:55+08:00
+date: 2025-06-16T15:31:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1483005072456-2fa6287a0dbc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk5NzI0NTJ8&ixlib=rb-4.1.0
-tags: ['github',Retrieval-Augmented-Generation,RAG,Python,OpenAI,Nebius-AI,Large-Language-Model,LLM,embeddings,vector-store,cosine-similarity,chunking,semantic-chunking,query-transform,reranker,RSE,contextual-compression,feedback-loop,adaptive-RAG,self-RAG,proposition-chunking,multimodal-RAG,fusion-RAG,graph-RAG,hierarchy-RAG,HyDE-RAG,]
+image: https://images.unsplash.com/photo-1510792047925-c55a452bbad7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAwNTkwNDV8&ixlib=rb-4.1.0
+tags: ['github',Retrieval-Augmented-Generation,RAG,Python,OpenAI,Nebius-AI,LLM,embeddings,vector-search,knowledge-graphs,Reinforcement-Learning,semantic-search,question-answering]
 categories: ['github']
 ---
 
