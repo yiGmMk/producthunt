@@ -1,9 +1,9 @@
 ---
 title: ai-hedge-fund
-date: 2025-06-16T15:31:56+08:00
+date: 2025-06-17T15:30:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1587365001066-8263b7061a38?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAwNTkwNDV8&ixlib=rb-4.1.0
-tags: ['github',AI,Hedge Fund,Trading,Investment,Valuation,Stock,Portfolio,Risk Management,Backtesting,LLM]
+image: https://images.unsplash.com/photo-1460221700692-42c3a02b509c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAxNDUzNDN8&ixlib=rb-4.1.0
+tags: ['github',AI,Hedge Fund,Trading,Investment,Valuation,Stock,Agent,Portfolio,Backtesting]
 categories: ['github']
 ---
 
