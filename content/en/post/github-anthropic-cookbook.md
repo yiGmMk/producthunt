@@ -1,9 +1,9 @@
 ---
 title: anthropic-cookbook
-date: 2025-06-17T15:29:26+08:00
+date: 2025-06-18T15:31:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1636995717048-c7c3bef35f3d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAxNDUzNDN8&ixlib=rb-4.1.0
-tags: ['github',Claude, Anthropic API, Python,  Retrieval Augmented Generation,  Summarization,  Text Classification,  Tool Use,  Multimodal Capabilities,  Large Language Models]
+image: https://images.unsplash.com/photo-1669925752098-a887283d2d97?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAyMzE4NTd8&ixlib=rb-4.1.0
+tags: ['github',Claude,Anthropic API,Python,Retrieval Augmented Generation,Summarization,Text Classification,Tool Use,Multimodal Capabilities,Vector Databases,Image Generation,PDF Processing,Prompt Engineering,Content Moderation,API Integration]
 categories: ['github']
 ---
 
