@@ -1,9 +1,9 @@
 ---
 title: prompt-optimizer
-date: 2025-06-17T15:30:28+08:00
+date: 2025-06-19T15:29:30+08:00
 draft: False
-image: https://images.unsplash.com/photo-1636995717048-c7c3bef35f3d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAxNDUzNDN8&ixlib=rb-4.1.0
-tags: ['github',prompt-optimizer, AI, prompt engineering, large language models, LLM, OpenAI, Gemini, DeepSeek,  智谱AI, SiliconFlow, Chrome extension]
+image: https://images.unsplash.com/photo-1648914300949-a59ba0614055?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAzMTgxMzV8&ixlib=rb-4.1.0
+tags: ['github',prompt-optimizer, AI, prompt engineering, large language model, LLM, OpenAI, Gemini, DeepSeek,  智谱AI, SiliconFlow]
 categories: ['github']
 ---
 

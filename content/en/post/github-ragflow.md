@@ -1,9 +1,9 @@
 ---
 title: ragflow
-date: 2025-06-18T15:31:55+08:00
+date: 2025-06-19T15:29:58+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592828866941-5946cba7c2c8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAyMzE4NTd8&ixlib=rb-4.1.0
-tags: ['github',RAGFlow,Retrieval-Augmented Generation,LLM,Large Language Models,question-answering,Deep document understanding,unstructured data,knowledge extraction,text chunking,grounded citations,hallucinations,heterogeneous data sources,data haystack]
+image: https://images.unsplash.com/photo-1596230003747-44ac27b05bba?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAzMTgxMzV8&ixlib=rb-4.1.0
+tags: ['github',RAGFlow,Retrieval-Augmented Generation,LLM,Large Language Models,deep document understanding,knowledge extraction,unstructured data,grounded citations,hallucinations,heterogeneous data sources,question-answering]
 categories: ['github']
 ---
 
@@ -33,7 +33,7 @@ categories: ['github']
         <img alt="Static Badge" src="https://img.shields.io/badge/Online-Demo-4e6b99">
     </a>
     <a href="https://hub.docker.com/r/infiniflow/ragflow" target="_blank">
-        <img src="https://img.shields.io/docker/pulls/infiniflow/ragflow?label=Docker%20Pulls&color=0db7ed&logo=docker&logoColor=white&style=flat-square" alt="docker pull infiniflow/ragflow:v0.19.0">
+        <img src="https://img.shields.io/docker/pulls/infiniflow/ragflow?label=Docker%20Pulls&color=0db7ed&logo=docker&logoColor=white&style=flat-square" alt="docker pull infiniflow/ragflow:v0.19.1">
     </a>
     <a href="https://github.com/infiniflow/ragflow/releases/latest">
         <img src="https://img.shields.io/github/v/release/infiniflow/ragflow?color=blue&label=Latest%20Release" alt="Latest Release">
@@ -198,7 +198,7 @@ releases! 🌟
 > All Docker images are built for x86 platforms. We don't currently offer Docker images for ARM64.
 > If you are on an ARM64 platform, follow [this guide](https://ragflow.io/docs/dev/build_docker_image) to build a Docker image compatible with your system.
 
-   > The command below downloads the `v0.19.0-slim` edition of the RAGFlow Docker image. See the following table for descriptions of different RAGFlow editions. To download a RAGFlow edition different from `v0.19.0-slim`, update the `RAGFLOW_IMAGE` variable accordingly in **docker/.env** before using `docker compose` to start the server. For example: set `RAGFLOW_IMAGE=infiniflow/ragflow:v0.19.0` for the full edition `v0.19.0`.
+   > The command below downloads the `v0.19.1-slim` edition of the RAGFlow Docker image. See the following table for descriptions of different RAGFlow editions. To download a RAGFlow edition different from `v0.19.1-slim`, update the `RAGFLOW_IMAGE` variable accordingly in **docker/.env** before using `docker compose` to start the server. For example: set `RAGFLOW_IMAGE=infiniflow/ragflow:v0.19.1` for the full edition `v0.19.1`.
 
    ```bash
    $ cd ragflow/docker
@@ -211,8 +211,8 @@ releases! 🌟
 
    | RAGFlow image tag | Image size (GB) | Has embedding models? | Stable?                  |
    |-------------------|-----------------|-----------------------|--------------------------|
-   | v0.19.0           | &approx;9       | :heavy_check_mark:    | Stable release           |
-   | v0.19.0-slim      | &approx;2       | ❌                   | Stable release            |
+   | v0.19.1           | &approx;9       | :heavy_check_mark:    | Stable release           |
+   | v0.19.1-slim      | &approx;2       | ❌                   | Stable release            |
    | nightly           | &approx;9       | :heavy_check_mark:    | _Unstable_ nightly build |
    | nightly-slim      | &approx;2       | ❌                   | _Unstable_ nightly build  |
 

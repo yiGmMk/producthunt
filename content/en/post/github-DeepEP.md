@@ -1,9 +1,9 @@
 ---
 title: DeepEP
-date: 2025-06-18T15:32:18+08:00
+date: 2025-06-19T15:30:08+08:00
 draft: False
-image: https://images.unsplash.com/photo-1669925752098-a887283d2d97?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAyMzE4NTd8&ixlib=rb-4.1.0
-tags: ['github',Mixture-of-Experts, expert parallelism, GPU kernels, MoE dispatch, low-latency, high-throughput, FP8, DeepSeek-V3, RDMA, NVLink,  inference decoding, communication-computation overlap]
+image: https://images.unsplash.com/photo-1699190375905-3cac33bbdbb1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAzMTgxMzV8&ixlib=rb-4.1.0
+tags: ['github',Mixture-of-Experts, MoE, expert parallelism, GPU kernels, DeepSeek-V3, low-latency, high-throughput, RDMA, NVLink, FP8, BF16]
 categories: ['github']
 ---
 

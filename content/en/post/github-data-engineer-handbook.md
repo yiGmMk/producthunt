@@ -1,9 +1,9 @@
 ---
 title: data-engineer-handbook
-date: 2025-06-04T15:29:54+08:00
+date: 2025-06-19T15:29:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1550628339-1882aff21347?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkwMjIxNTd8&ixlib=rb-4.1.0
-tags: ['github',data engineering,data engineer,machine learning,data science,cloud computing,big data,data pipeline,data warehouse]
+image: https://images.unsplash.com/photo-1516495312540-a148643b22d3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAzMTgxMzV8&ixlib=rb-4.1.0
+tags: ['github',data engineering, data engineer, data pipeline, big data, cloud computing, machine learning, data warehousing, data quality]
 categories: ['github']
 ---
 
@@ -126,6 +126,8 @@ Top must-join communities for ML:
   - [Responsive](https://www.responsive.dev/)
   - [RisingWave](https://risingwave.com/)
   - [Striim](https://www.striim.com/)
+- Data Lineage
+  - [OpenLineage](https://openlineage.io/)
 
 
 ### Data Engineering blogs of companies:
@@ -230,6 +232,7 @@ Here's the mostly comprehensive list of data engineering creators:
 | Lakshmi Sontenam         | [Lakshmi Sontenam](https://www.linkedin.com/in/shivaga9esh)                                      | 9,500+         |
 | Soumil Shah              | [Soumil Shah](https://www.linkedin.com/in/shah-soumil/)                                          | 8,000+         |
 | Arnaud Milleker          | [Arnaud Milleker](https://www.linkedin.com/in/arnaudmilleker/)                                    | 7,000+         |
+| Dimitri Visnadi          | [Dimitri Visnadi](https://www.linkedin.com/in/visnadi/)                                    | 7,000+         |
 | Lenny                    | [Lenny A](https://www.linkedin.com/in/lennyardiles/)                                         | 6,000+         |
 | Dipankar Mazumdar        | [Dipankar Mazumdar](https://www.linkedin.com/in/dipankar-mazumdar/)                                 | 5,000+         |
 | Daniel Ciocirlan         | [Daniel Ciocirlan](https://www.linkedin.com/in/danielciocirlan)                                    | 5,000+         |
@@ -242,6 +245,7 @@ Here's the mostly comprehensive list of data engineering creators:
 | Subhankar                | [Subhankar](https://www.linkedin.com/in/subhankarumass/)                                            | 5,000+         |
 | Nitin                    | [Nitin](https://www.linkedin.com/in/tomernitin29/)                                                        | N/A           |
 | Hassaan                    | [Hassaan](https://www.linkedin.com/in/shassaan/)                                                        | 5000+           |
+| Javier de la Torre             | [Javier](www.linkedin.com/in/javier-de-la-torre-medina)                                                        | 5000+           |
 
 
 #### X/Twitter
