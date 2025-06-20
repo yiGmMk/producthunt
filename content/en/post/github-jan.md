@@ -1,9 +1,9 @@
 ---
 title: jan
-date: 2025-06-19T15:29:22+08:00
+date: 2025-06-20T15:28:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591713625282-1af7738e08d4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAzMTgxMzV8&ixlib=rb-4.1.0
-tags: ['github',Jan,LLM,AI,offline,privacy,local,HuggingFace,OpenAI,custom assistants]
+image: https://images.unsplash.com/photo-1554232682-b9ef9c92f8de?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA0MDQ1MTR8&ixlib=rb-4.1.0
+tags: ['github',Jan,LLM,AI,offline,local,privacy,ChatGPT,HuggingFace,Llama,Gemma,Qwen]
 categories: ['github']
 ---
 

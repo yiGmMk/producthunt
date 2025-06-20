@@ -1,9 +1,9 @@
 ---
 title: frankenphp
-date: 2025-06-19T15:30:16+08:00
+date: 2025-06-20T15:29:59+08:00
 draft: False
-image: https://images.unsplash.com/photo-1725645605964-c0e395fec453?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAzMTgxMzV8&ixlib=rb-4.1.0
-tags: ['github',FrankenPHP,PHP,Caddy,web server,HTTP,HTTPS,HTTP/2,HTTP/3,Laravel,Symfony,Docker,Go,PHP 8.4,worker mode,Early Hints,real-time capabilities]
+image: https://images.unsplash.com/photo-1714234374195-f2fbbcef7259?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA0MDQ1MTR8&ixlib=rb-4.1.0
+tags: ['github',FrankenPHP,PHP,Caddy,web server,HTTP,HTTPS,HTTP/2,HTTP/3,Laravel,Symfony,Docker,Go,Homebrew,PHP 8.4]
 categories: ['github']
 ---
 

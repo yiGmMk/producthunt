@@ -1,8 +1,8 @@
 ---
 title: fluentui-system-icons
-date: 2025-06-19T15:29:16+08:00
+date: 2025-06-20T15:29:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591713625282-1af7738e08d4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAzMTgxMzV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1667582704408-aca85f4aea5a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA0MDQ1MTR8&ixlib=rb-4.1.0
 tags: ['github',FluentUI,System Icons,Android,iOS,macOS,Flutter,SVG,Installation,Contributing]
 categories: ['github']
 ---

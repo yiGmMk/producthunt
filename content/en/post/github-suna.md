@@ -1,9 +1,9 @@
 ---
 title: suna
-date: 2025-05-21T15:29:17+08:00
+date: 2025-06-20T15:29:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1738249034651-1896f689be58?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTI0ODF8&ixlib=rb-4.1.0
-tags: ['github',Suna,Open-Source,AI,Agent,Task Automation,Browser Automation,Data Analysis,Web Crawling,LLM,Anthropic,OpenAI,LiteLLM,Supabase,Next.js,React,Python,FastAPI,Daytona,Playwright,File Management]
+image: https://images.unsplash.com/photo-1619029903335-d95dc6acab2d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA0MDQ1MTR8&ixlib=rb-4.1.0
+tags: ['github',Suna,Open-Source,AI,Agent,Assistant,Browser,Automation,Data,Analysis,Web,Crawling,LLM,Anthropic,LiteLLM,FastAPI,Next.js,React,Docker,Supabase]
 categories: ['github']
 ---
 
@@ -126,7 +126,7 @@ python start.py
 
 See the [Self-Hosting Guide](./docs/SELF-HOSTING.md) for detailed manual setup instructions.
 
-The wizard will guide you through all necessary steps to get your Suna instance up and running. For detailed instructions, troubleshooting tips, and advanced configuration options, see the [Self-Hosting Guide](./SELF-HOSTING.md).
+The wizard will guide you through all necessary steps to get your Suna instance up and running. For detailed instructions, troubleshooting tips, and advanced configuration options, see the [Self-Hosting Guide](./docs/SELF-HOSTING.md).
 
 ## Contributing
 

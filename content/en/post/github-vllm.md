@@ -1,9 +1,9 @@
 ---
 title: vllm
-date: 2025-05-28T15:30:21+08:00
+date: 2025-06-20T15:30:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1672821337870-2180f5223865?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg0MTcyOTd8&ixlib=rb-4.1.0
-tags: ['github',LLM,serving,inference,PagedAttention,HuggingFace,quantization,parallelism,GPU,performance]
+image: https://images.unsplash.com/photo-1669281151275-1d430c0a3496?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA0MDQ1MTR8&ixlib=rb-4.1.0
+tags: ['github',LLM,serving,inference,PagedAttention,HuggingFace,quantization,parallelism,CUDA,performance]
 categories: ['github']
 ---
 
@@ -69,8 +69,8 @@ vLLM is fast with:
 - Efficient management of attention key and value memory with [**PagedAttention**](https://blog.vllm.ai/2023/06/20/vllm.html)
 - Continuous batching of incoming requests
 - Fast model execution with CUDA/HIP graph
-- Quantizations: [GPTQ](https://arxiv.org/abs/2210.17323), [AWQ](https://arxiv.org/abs/2306.00978), [AutoRound](https://arxiv.org/abs/2309.05516),INT4, INT8, and FP8.
-- Optimized CUDA kernels, including integration with FlashAttention and FlashInfer.
+- Quantizations: [GPTQ](https://arxiv.org/abs/2210.17323), [AWQ](https://arxiv.org/abs/2306.00978), [AutoRound](https://arxiv.org/abs/2309.05516), INT4, INT8, and FP8
+- Optimized CUDA kernels, including integration with FlashAttention and FlashInfer
 - Speculative decoding
 - Chunked prefill
 
@@ -83,14 +83,14 @@ vLLM is flexible and easy to use with:
 - Tensor parallelism and pipeline parallelism support for distributed inference
 - Streaming outputs
 - OpenAI-compatible API server
-- Support NVIDIA GPUs, AMD CPUs and GPUs, Intel CPUs and GPUs, PowerPC CPUs, TPU, and AWS Neuron.
+- Support NVIDIA GPUs, AMD CPUs and GPUs, Intel CPUs and GPUs, PowerPC CPUs, TPU, and AWS Neuron
 - Prefix caching support
 - Multi-LoRA support
 
 vLLM seamlessly supports most popular open-source models on HuggingFace, including:
 - Transformer-like LLMs (e.g., Llama)
 - Mixture-of-Expert LLMs (e.g., Mixtral, Deepseek-V2 and V3)
-- Embedding Models (e.g. E5-Mistral)
+- Embedding Models (e.g., E5-Mistral)
 - Multi-modal LLMs (e.g., LLaVA)
 
 Find the full list of supported models [here](https://docs.vllm.ai/en/latest/models/supported_models.html).
@@ -167,10 +167,10 @@ If you use vLLM for your research, please cite our [paper](https://arxiv.org/abs
 
 - For technical questions and feature requests, please use GitHub [Issues](https://github.com/vllm-project/vllm/issues) or [Discussions](https://github.com/vllm-project/vllm/discussions)
 - For discussing with fellow users, please use the [vLLM Forum](https://discuss.vllm.ai)
-- coordinating contributions and development, please use [Slack](https://slack.vllm.ai)
+- For coordinating contributions and development, please use [Slack](https://slack.vllm.ai)
 - For security disclosures, please use GitHub's [Security Advisories](https://github.com/vllm-project/vllm/security/advisories) feature
 - For collaborations and partnerships, please contact us at [vllm-questions@lists.berkeley.edu](mailto:vllm-questions@lists.berkeley.edu)
 
 ## Media Kit
 
-- If you wish to use vLLM's logo, please refer to [our media kit repo](https://github.com/vllm-project/media-kit).
+- If you wish to use vLLM's logo, please refer to [our media kit repo](https://github.com/vllm-project/media-kit)

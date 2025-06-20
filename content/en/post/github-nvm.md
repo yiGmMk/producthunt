@@ -1,9 +1,9 @@
 ---
 title: nvm
-date: 2025-06-19T15:30:54+08:00
+date: 2025-06-20T15:29:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1698892289193-eb8b082ecce3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAzMTgxMzV8&ixlib=rb-4.1.0
-tags: ['github',Node.js,nvm,npm,installation,version,manager,upgrade,Linux,macOS]
+image: https://images.unsplash.com/photo-1619029903335-d95dc6acab2d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA0MDQ1MTR8&ixlib=rb-4.1.0
+tags: ['github',Node,npm,nvm,version,manager,install,uninstall,update]
 categories: ['github']
 ---
 

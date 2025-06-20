@@ -1,9 +1,9 @@
 ---
 title: data-engineer-handbook
-date: 2025-06-19T15:29:42+08:00
+date: 2025-06-20T15:28:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1516495312540-a148643b22d3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAzMTgxMzV8&ixlib=rb-4.1.0
-tags: ['github',data engineering, data engineer, data pipeline, big data, cloud computing, machine learning, data warehousing, data quality]
+image: https://images.unsplash.com/photo-1669281151275-1d430c0a3496?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA0MDQ1MTR8&ixlib=rb-4.1.0
+tags: ['github',data engineering,data engineer,machine learning,big data,cloud computing,data warehousing,data pipeline,data integration]
 categories: ['github']
 ---
 
