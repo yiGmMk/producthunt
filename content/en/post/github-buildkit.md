@@ -1,8 +1,8 @@
 ---
 title: buildkit
-date: 2025-06-19T15:30:35+08:00
+date: 2025-06-21T15:28:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1698892289193-eb8b082ecce3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAzMTgxMzV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1616860895045-13553f397d64?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA0OTA4MDd8&ixlib=rb-4.1.0
 tags: ['github',BuildKit,Dockerfile,container,image,build,cache,LLB,frontend]
 categories: ['github']
 ---

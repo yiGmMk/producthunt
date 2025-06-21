@@ -1,0 +1,138 @@
+---
+title: Product Hunt 今日热榜 | 2025-06-21
+date: 2025-06-21 07:23:55+0000
+image: https://ph-files.imgix.net/34bd266f-5951-403c-a75b-84731f2d8b07.png?auto=format&fit=crop&frame=1&h=512&w=1024
+tags: ["ComputerX", "智能代理", "电脑工作"]
+categories: ["人工智能", "工具"]
+---
+
+## 1. ComputerX  
+**标语**: 帮你处理电脑工作的智能代理  
+**介绍**: 想象一下，有一个代理能帮你完成电脑上的所有工作——从自动化到网络搜索，再到创建交付成果。只需用简单自然的语言输入你的需求，ComputerX 就能将你的文字转化为行动。  
+**网站**: [立即访问](https://www.producthunt.com/r/YIFKFLW4RCQT3G?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/computerx-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![ComputerX](https://ph-files.imgix.net/34bd266f-5951-403c-a75b-84731f2d8b07.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**关键词**: ComputerX,智能代理,电脑工作,自动化,网页搜索,交付成果,自然语言处理,AI助手  
+**票数**: 🔺514  
+**是否精选**: 是  
+**发布时间**: 2025年06月20日 PM03:01 (北京时间)  
+
+---  
+
+## 2. Perplexity Tasks  
+**标语**: 你的例行工作，强效升级  
+**介绍**: Perplexity 任务是一个自动化你的研究的新功能。设置一个提示和一个时间表（每日、每周、每月），Perplexity 的 AI 将运行搜索并为你提供结果。  
+**网站**: [立即访问](https://www.producthunt.com/r/D3ZDUNWLVV6KKD?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/perplexity-tasks?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Perplexity Tasks](https://ph-files.imgix.net/901754c2-8f6c-41cb-8ab1-e0ad31140bc4.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**关键词**: AI, research automation, task automation, scheduled search, Perplexity, AI assistant, routine optimization  
+**票数**: 🔺315  
+**是否精选**: 是  
+**发布时间**: 2025年06月20日 PM03:01 (北京时间)  
+
+---  
+
+## 3. EntelligenceAI VSCode Extension  
+**标语**: 在合并代码之前，直接在你的 IDE 中审查！  
+**介绍**: 在编码过程中捕获错误、问题和性能问题。直接在 VS Code、Cursor 和 Windsurf 中运行。无需离开编辑器即可获得 AI 代码审查。  
+**网站**: [立即访问](https://www.producthunt.com/r/3T5E7JPV3YCHVJ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/entelligenceai-vscode-extension?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![EntelligenceAI VSCode Extension](https://ph-files.imgix.net/9d3ccf07-a8c0-4633-acf7-c8ea2411ff95.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**关键词**: AI代码审查,VS Code插件,代码检查,Bug检测,性能问题,IDE集成,EntelligenceAI  
+**票数**: 🔺298  
+**是否精选**: 是  
+**发布时间**: 2025年06月20日 PM03:01 (北京时间)  
+
+---  
+
+## 4. Slashit App  
+**标语**: 用AI将你的普通文本转换成快捷方式，提高工作效率  
+**介绍**: Slashit 是一款简单的工具，它使用动态模板、文本片段和 AI 驱动的命令帮助任何人更快地回复信息。无论你是从事支持、销售、自由职业，还是只是需要大量写作，它都能帮你节省时间，减少重复输入，提高效率。  
+**网站**: [立即访问](https://www.producthunt.com/r/VGRVIPTVMGFQQN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/slashit-app?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Slashit App](https://ph-files.imgix.net/f873ddc2-e129-4495-bbfd-bbfb4f488b8b.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**关键词**: Slashit App, AI文本快捷方式, 动态模板, 文本片段, 生产力工具, 节省时间, 快速回复, AI命令,  高效写作  
+**票数**: 🔺229  
+**是否精选**: 是  
+**发布时间**: 2025年06月20日 PM03:01 (北京时间)  
+
+---  
+
+## 5. Liquid Glassifier  
+**标语**: 只需复制粘贴即可将液体玻璃引入您的网站  
+**介绍**: 创建你自定义的苹果液体玻璃按钮，并在你的网页上使用它  
+**网站**: [立即访问](https://www.producthunt.com/r/HULB7UMIFQFZV3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/liquid-glassifier?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Liquid Glassifier](https://ph-files.imgix.net/f5478cdb-6896-4da5-80eb-797f3c0058a7.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**关键词**: Liquid Glass, Apple Button, Web Button, Copy-Paste, Liquid Glassifier, Website Button, Custom Button  
+**票数**: 🔺227  
+**是否精选**: 是  
+**发布时间**: 2025年06月20日 PM03:01 (北京时间)  
+
+---  
+
+## 6. Accordio  
+**标语**: 代理合同。更聪明的商业。  
+**介绍**: 别再被法律术语淹没，也别再从网上那些不知靠谱与否的模板里复制粘贴条款了。我帮你创建、分析和管理真正有意义的合同。你可以把我当成你略带幽默感的法律助手，一个用人话说话，而不是律师腔的助手。  
+**网站**: [立即访问](https://www.producthunt.com/r/AOIFROI7FPYUMB?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/accordio?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Accordio](https://ph-files.imgix.net/403e10ff-7707-47ed-9749-49da33436aa7.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**关键词**: contract management, legal tech, contract analysis, smart contracts, legal assistant, business contracts,  Accordio  
+**票数**: 🔺189  
+**是否精选**: 是  
+**发布时间**: 2025年06月20日 PM03:01 (北京时间)  
+
+---  
+
+## 7. LetMeCheck.ai  
+**标语**: 让我检查一下你的代码风格 - 代码分析工具  
+**介绍**: 🔥 LetMeCheck.ai——您可以信赖的代码质量洞察 LetMeCheck.ai帮助创始人、CTO和技术负责人快速了解其代码库的健康状况——在他们聘请代理机构、合并拉取请求或向投资者推销之前。  
+**网站**: [立即访问](https://www.producthunt.com/r/UTKKBCU4BL3AD2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/letmecheck-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![LetMeCheck.ai](https://ph-files.imgix.net/328ec932-66d1-442c-bbb4-d0bd34907b97.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**关键词**: code analysis, code quality, code health, software analysis, tech due diligence, pre-investment analysis, code review, LetMeCheck.ai  
+**票数**: 🔺170  
+**是否精选**: 是  
+**发布时间**: 2025年06月20日 PM03:01 (北京时间)  
+
+---  
+
+## 8. DeepGuard  
+**标语**: 几秒钟内辨别视频真伪  
+**介绍**: 欢迎来到DeepGuard，您的第二双网络之眼！无论您是在核实重要信息，还是对病毒式剪辑感到不确定，只需上传或粘贴链接，即可获得清晰、周到的判决结果。快速识别深度伪造，了解真伪。  
+**网站**: [立即访问](https://www.producthunt.com/r/CEHO5VRCSI756S?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/deepguard?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![DeepGuard](https://ph-files.imgix.net/cb4d0a2a-520f-4a14-b292-fc729e4c02a9.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**关键词**: Deepfake detection, video verification, fake video detection, authenticity verification, DeepGuard,  video analysis, fact-checking, online safety  
+**票数**: 🔺151  
+**是否精选**: 是  
+**发布时间**: 2025年06月20日 PM03:01 (北京时间)  
+
+---  
+
+## 9. AdCreative.ai Video Era  
+**标语**: 欢迎来到广告的视频时代  
+**介绍**: AdCreative.ai视频时代：7款AI工具助您更高效、更低成本、更高质量地制作高性能视频广告。  
+**网站**: [立即访问](https://www.producthunt.com/r/UD3DWI4IPH6UEH?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/adcreative-ai-video-era?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![AdCreative.ai Video Era](https://ph-files.imgix.net/bf3f99d3-fca7-4049-b1bc-192e58f6bdc3.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**关键词**: AI广告视频, 视频广告制作, AI视频工具, 广告创意, 高效视频广告,  视频广告平台, AI营销,  视频广告自动化  
+**票数**: 🔺146  
+**是否精选**: 是  
+**发布时间**: 2025年06月20日 PM03:01 (北京时间)  
+
+---  
+
+## 10. Easlo Menu  
+**标语**: 您的全套菜单  
+**介绍**: 吃什么，去哪儿，做什么菜，甚至做什么？在当今世界，我们面临着选择的悖论。Easlo Menu 将你所有常用的选项汇集在一个地方，帮你过滤掉噪音。  
+**网站**: [立即访问](https://www.producthunt.com/r/RRJYLCXI3XPN4E?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/posts/easlo-menu?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Easlo Menu](https://ph-files.imgix.net/d93622a8-a142-49a0-a425-fb539a2712c0.png?auto=format&fit=crop&frame=1&h=512&w=1024)  
+**关键词**: menu, food, recommendation, choice, decision, planning, app, easy, simple, organize  
+**票数**: 🔺140  
+**是否精选**: 是  
+**发布时间**: 2025年06月20日 PM03:01 (北京时间)  
+
+---  
+

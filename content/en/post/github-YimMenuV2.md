@@ -1,9 +1,9 @@
 ---
 title: YimMenuV2
-date: 2025-06-19T15:30:45+08:00
+date: 2025-06-21T15:27:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1648914300949-a59ba0614055?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAzMTgxMzV8&ixlib=rb-4.1.0
-tags: ['github',C++20,template metaprogramming,mod menu,game development,software development,programming,C++]
+image: https://images.unsplash.com/photo-1610889917692-d2b8eb958853?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA0OTA4MDd8&ixlib=rb-4.1.0
+tags: ['github',C++, template metaprogramming, mod menu, game hacking, software development]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: NotepadNext
-date: 2025-06-20T15:29:02+08:00
+date: 2025-06-21T15:27:05+08:00
 draft: False
-image: https://images.unsplash.com/photo-1725715443838-1574b8eb1c3a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA0MDQ1MTR8&ixlib=rb-4.1.0
-tags: ['github',NotepadNext,cross-platform,Notepad++,Windows,Linux,MacOS,installation,development,Qt,C++]
+image: https://images.unsplash.com/photo-1543857270-ee8300ebe3c6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA0OTA4MDd8&ixlib=rb-4.1.0
+tags: ['github',NotepadNext,cross-platform,Notepad++,Windows,Linux,MacOS,installation,development,Qt,QtCreator]
 categories: ['github']
 ---
 
