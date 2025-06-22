@@ -1,13 +1,19 @@
 ---
 title: ai-engineering-hub
-date: 2025-05-02T15:29:13+08:00
+date: 2025-06-22T15:27:53+08:00
 draft: False
-image: https://images.unsplash.com/photo-1468083684825-012f39547b23?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYxNzA4Njl8&ixlib=rb-4.0.3
-tags: ['github',AI Engineering,LLMs,RAGs,AI agents,tutorials,Data Science,machine learning,repository]
+image: https://images.unsplash.com/photo-1651071862281-06ddf1571342?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA1NzcyNTl8&ixlib=rb-4.1.0
+tags: ['github',AI Engineering,LLMs,RAGs,AI agents,tutorials,Data Science,GitHub,repository]
 categories: ['github']
 ---
 
 # [patchy631/ai-engineering-hub](https://github.com/patchy631/ai-engineering-hub)
+
+<p align="center">
+  <img src="assets/ai-eng-hub.gif" alt="AI Engineering Hub Banner">
+</p>
+
+---
 
 # AI Engineering Hub 🚀
 Welcome to the **AI Engineering Hub**!

@@ -1,9 +1,9 @@
 ---
 title: newsnow
-date: 2025-06-11T15:29:29+08:00
+date: 2025-06-22T15:28:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1700159915754-2b4ba5b2e3be?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk2MjY5MTV8&ixlib=rb-4.1.0
-tags: ['github',NewsNow, real-time news, UI design, GitHub OAuth, data synchronization, cache, scraping, MCP server, multi-language support, personalization, data sources]
+image: https://images.unsplash.com/photo-1721157549719-c72de1bc0d48?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA1NzcyNTl8&ixlib=rb-4.1.0
+tags: ['github',NewsNow, real-time news, news aggregator, UI design, GitHub OAuth, data synchronization, caching, MCP server,  data sources, multi-language support]
 categories: ['github']
 ---
 
