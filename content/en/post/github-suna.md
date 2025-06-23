@@ -1,9 +1,9 @@
 ---
 title: suna
-date: 2025-06-20T15:29:29+08:00
+date: 2025-06-23T15:31:36+08:00
 draft: False
-image: https://images.unsplash.com/photo-1619029903335-d95dc6acab2d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA0MDQ1MTR8&ixlib=rb-4.1.0
-tags: ['github',Suna,Open-Source,AI,Agent,Assistant,Browser,Automation,Data,Analysis,Web,Crawling,LLM,Anthropic,LiteLLM,FastAPI,Next.js,React,Docker,Supabase]
+image: https://images.unsplash.com/photo-1652576781533-8c1cab0898fd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA2NjM4NDJ8&ixlib=rb-4.1.0
+tags: ['github',Suna,AI assistant,open-source,browser automation,data analysis,web crawling,LLM integration,Supabase,Daytona]
 categories: ['github']
 ---
 

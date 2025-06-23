@@ -1,9 +1,9 @@
 ---
 title: LLMs-from-scratch
-date: 2025-06-22T15:28:16+08:00
+date: 2025-06-23T15:30:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1646315026047-c424f211e5bd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA1NzcyNTl8&ixlib=rb-4.1.0
-tags: ['github',Large Language Model,GPT,LLM,PyTorch,text classification,instruction finetuning,pretraining,finetuning]
+image: https://images.unsplash.com/photo-1593199170816-a892201d7a17?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA2NjM4NDJ8&ixlib=rb-4.1.0
+tags: ['github',Large Language Model,GPT,PyTorch,book,code,attention mechanisms,pretraining,finetuning]
 categories: ['github']
 ---
 

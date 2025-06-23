@@ -1,9 +1,9 @@
 ---
 title: manim
-date: 2025-06-21T15:28:18+08:00
+date: 2025-06-23T15:31:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1725538031920-1505c79bbb8d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA0OTA4MDd8&ixlib=rb-4.1.0
-tags: ['github',Manim,animation,math,videos,3Blue1Brown,educational,Python,installation,usage,documentation,Docker,community,contribution,license,MIT]
+image: https://images.unsplash.com/photo-1652576781533-8c1cab0898fd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA2NjM4NDJ8&ixlib=rb-4.1.0
+tags: ['github',Manim,animation,math,videos,3Blue1Brown,educational,Python,installation,usage,documentation,Docker,community,contributing,license,MIT]
 categories: ['github']
 ---
 

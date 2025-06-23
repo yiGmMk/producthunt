@@ -1,9 +1,9 @@
 ---
 title: gitingest
-date: 2025-06-22T15:28:31+08:00
+date: 2025-06-23T15:32:10+08:00
 draft: False
-image: https://images.unsplash.com/photo-1536759808958-bcc29b661ec6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA1NzcyNTl8&ixlib=rb-4.1.0
-tags: ['github',Git,repository,LLM,prompt,code,GitHub,Python,CLI]
+image: https://images.unsplash.com/photo-1553277835-e88e4a95efa5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA2NjM4NDJ8&ixlib=rb-4.1.0
+tags: ['github',Git,LLM,GitHub,code,repository,text,ingest,prompt,Python]
 categories: ['github']
 ---
 
