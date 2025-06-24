@@ -1,9 +1,9 @@
 ---
 title: suna
-date: 2025-06-23T15:31:36+08:00
+date: 2025-06-24T15:30:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1652576781533-8c1cab0898fd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA2NjM4NDJ8&ixlib=rb-4.1.0
-tags: ['github',Suna,AI assistant,open-source,browser automation,data analysis,web crawling,LLM integration,Supabase,Daytona]
+image: https://images.unsplash.com/photo-1488085061387-422e29b40080?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA3NTAyMDV8&ixlib=rb-4.1.0
+tags: ['github',Suna,AI Agent,Open Source,Task Automation,Browser Automation,Data Analysis,Web Crawling,LLM Integration,Anthropic,LiteLLM,FastAPI,Next.js,React,Docker,Supabase]
 categories: ['github']
 ---
 
@@ -91,15 +91,18 @@ Handles data persistence with authentication, user management, conversation hist
 
 ## Self-Hosting
 
-Suna can be self-hosted on your own infrastructure using our setup wizard. For a comprehensive guide to self-hosting Suna, please refer to our [Self-Hosting Guide](./docs/SELF-HOSTING.md).
+Suna can be self-hosted on your own infrastructure using our comprehensive setup wizard. For a complete guide to self-hosting Suna, please refer to our [Self-Hosting Guide](./docs/SELF-HOSTING.md).
 
 The setup process includes:
 
 - Setting up a Supabase project for database and authentication
 - Configuring Redis for caching and session management
 - Setting up Daytona for secure agent execution
-- Integrating with LLM providers (Anthropic, OpenAI, Groq, etc.)
-- Configuring web search and scraping capabilities
+- Integrating with LLM providers (Anthropic, OpenAI, OpenRouter, etc.)
+- Configuring web search and scraping capabilities (Tavily, Firecrawl)
+- Setting up QStash for background job processing and workflows
+- Configuring webhook handling for automated tasks
+- Optional integrations (RapidAPI, Smithery for custom agents)
 
 ### Quick Start
 
@@ -115,6 +118,8 @@ cd suna
 ```bash
 python setup.py
 ```
+
+The wizard will guide you through 14 steps with progress saving, so you can resume if interrupted.
 
 3. **Start or stop the containers**:
 
@@ -149,7 +154,9 @@ We welcome contributions from the community! Please see our [Contributing Guide]
 - [Anthropic](https://www.anthropic.com/) - LLM provider
 - [Tavily](https://tavily.com/) - Search capabilities
 - [Firecrawl](https://firecrawl.dev/) - Web scraping capabilities
+- [QStash](https://upstash.com/qstash) - Background job processing and workflows
 - [RapidAPI](https://rapidapi.com/) - API services
+- [Smithery](https://smithery.ai/) - Custom agent development
 
 ## License
 

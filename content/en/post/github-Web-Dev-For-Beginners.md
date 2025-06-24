@@ -1,9 +1,9 @@
 ---
 title: Web-Dev-For-Beginners
-date: 2025-06-23T15:32:24+08:00
+date: 2025-06-24T15:31:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1672755232440-42a947d9f9db?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA2NjM4NDJ8&ixlib=rb-4.1.0
-tags: ['github',Web-Development,JavaScript,HTML,CSS,Microsoft,Curriculum,Beginner,Programming,Web-Development-Course]
+image: https://images.unsplash.com/photo-1589371917123-cb9ccf53a931?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA3NTAyMDV8&ixlib=rb-4.1.0
+tags: ['github',web development, JavaScript, HTML, CSS, curriculum, beginners, Microsoft, project-based learning]
 categories: ['github']
 ---
 
