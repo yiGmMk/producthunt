@@ -1,9 +1,9 @@
 ---
 title: typst
-date: 2025-06-24T15:30:56+08:00
+date: 2025-06-25T15:30:47+08:00
 draft: False
-image: https://images.unsplash.com/photo-1538672943114-8334c8306d3e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA3NTAyMDV8&ixlib=rb-4.1.0
-tags: ['github',Typst,typesetting,markup,LaTeX,compiler,scripting,math,bibliography,incremental compilation,documentation]
+image: https://images.unsplash.com/photo-1672215526564-67cbd6ea95f9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA4MzY1ODN8&ixlib=rb-4.1.0
+tags: ['github',Typst,typesetting,markup,LaTeX,compiler,CLI,scripting,math,bibliography,incremental compilation,web app]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: isle-portable
-date: 2025-06-24T15:31:41+08:00
+date: 2025-06-25T15:30:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1614521185607-c374b6c5609c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA3NTAyMDV8&ixlib=rb-4.1.0
-tags: ['github',LEGO Island, platform independence, SDL3,  decompilation,  Windows, Linux, macOS, Web,  libiniparser, libsmacker]
+image: https://images.unsplash.com/photo-1591811859365-c947a1967368?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA4MzY1ODN8&ixlib=rb-4.1.0
+tags: ['github',LEGO Island, platform independence, SDL3, decompilation, porting, Windows, Linux, macOS, Web, libiniparser, libsmacker, CMake]
 categories: ['github']
 ---
 

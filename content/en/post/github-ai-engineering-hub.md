@@ -1,13 +1,19 @@
 ---
 title: ai-engineering-hub
-date: 2025-06-23T15:31:01+08:00
+date: 2025-06-25T15:29:58+08:00
 draft: False
-image: https://images.unsplash.com/photo-1652576781533-8c1cab0898fd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA2NjM4NDJ8&ixlib=rb-4.1.0
-tags: ['github',AI Engineering,LLMs,RAGs,AI agents,tutorials,Data Science,GitHub,repository]
+image: https://images.unsplash.com/photo-1672215526564-67cbd6ea95f9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA4MzY1ODN8&ixlib=rb-4.1.0
+tags: ['github',AI Engineering,LLMs,RAGs,AI agents,tutorials,Data Science,machine learning,repository]
 categories: ['github']
 ---
 
 # [patchy631/ai-engineering-hub](https://github.com/patchy631/ai-engineering-hub)
+
+<p align="center">
+  <a href="https://trendshift.io/repositories/12800">
+    <img src="assets/TRENDING-BADGE.png" alt="Trending Badge" style="width: 250px; height: 55px;" width="250" height="55"/>
+  </a>
+</p>
 
 <p align="center">
   <img src="assets/ai-eng-hub.gif" alt="AI Engineering Hub Banner">

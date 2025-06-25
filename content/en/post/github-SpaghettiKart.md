@@ -1,9 +1,9 @@
 ---
 title: SpaghettiKart
-date: 2025-06-24T15:31:04+08:00
+date: 2025-06-25T15:30:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1488085061387-422e29b40080?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA3NTAyMDV8&ixlib=rb-4.1.0
-tags: ['github',Nintendo-64,ROM,emulator,C++,OpenGL,DirectX,Metal,assets,menu]
+image: https://images.unsplash.com/photo-1700372599816-010cbb047e94?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA4MzY1ODN8&ixlib=rb-4.1.0
+tags: ['github',Nintendo-64,ROM,Emulator,SpaghettiKart,C++,OpenGL,DirectX,Custom Assets,Menus]
 categories: ['github']
 ---
 
