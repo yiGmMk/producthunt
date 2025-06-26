@@ -1,9 +1,9 @@
 ---
 title: best-of-ml-python
-date: 2025-06-25T15:31:23+08:00
+date: 2025-06-26T15:31:01+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591811859365-c947a1967368?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA4MzY1ODN8&ixlib=rb-4.1.0
-tags: ['github',machine learning,Python,libraries,deep learning,TensorFlow]
+image: https://images.unsplash.com/photo-1704022677001-64ee39ae1759?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA5MjI5NzV8&ixlib=rb-4.1.0
+tags: ['github',machine learning,Python,libraries,deep learning,frameworks]
 categories: ['github']
 ---
 

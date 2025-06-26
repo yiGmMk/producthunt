@@ -1,9 +1,9 @@
 ---
 title: claude-code-router
-date: 2025-06-25T15:30:30+08:00
+date: 2025-06-26T15:29:59+08:00
 draft: False
-image: https://images.unsplash.com/photo-1700372599816-010cbb047e94?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA4MzY1ODN8&ixlib=rb-4.1.0
-tags: ['github',Claude Code Router,LLM,model routing,API,config.json,plugins,GitHub Actions,DeepSeek,OpenRouter,Ollama]
+image: https://images.unsplash.com/photo-1666107677986-c264fc8f908e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA5MjI5NzV8&ixlib=rb-4.1.0
+tags: ['github',Claude Code Router,LLM,model routing,API,OpenAI,Anthropic,DeepSeek,Ollama,plugin,GitHub Actions]
 categories: ['github']
 ---
 
