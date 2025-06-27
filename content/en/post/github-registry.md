@@ -1,9 +1,9 @@
 ---
 title: registry
-date: 2025-05-24T15:25:54+08:00
+date: 2025-06-27T15:29:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1692019988434-b0f367a6c211?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgwNzE1Mjl8&ixlib=rb-4.1.0
-tags: ['github',Model Context Protocol, MCP Registry, RESTful API, MongoDB, Docker, OpenAPI, server management, health check, pagination, Go,  GitHub]
+image: https://images.unsplash.com/photo-1649902241864-eeba8d1adffd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEwMDkzNTV8&ixlib=rb-4.1.0
+tags: ['github',Model Context Protocol,MCP Registry,RESTful API,MongoDB,Docker,Go,OpenAPI,Swagger,server entries,health check,pagination,seed data,API documentation]
 categories: ['github']
 ---
 
@@ -168,7 +168,6 @@ Response example:
     "release_date": "2025-05-16T19:13:21Z",
     "is_latest": true
   },
-  "package_canonical": "docker",
   "packages": [
     {
       "registry_name": "docker",
@@ -216,7 +215,6 @@ Request body example:
 {
     "description": "<your description here>",
     "name": "io.github.<owner>/<server-name>",
-    "package_canonical": "<package_registry",
     "packages": [
         {
             "registry_name": "npm",
@@ -264,7 +262,7 @@ Request body example:
         }
     ],
     "repository": {
-        "url": "https://github.com//<owner>/<server-name>",
+        "url": "https://github.com/<owner>/<server-name>",
         "source": "github"
     },
     "version_detail": {
@@ -302,6 +300,7 @@ The service can be configured using environment variables:
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `MCP_REGISTRY_APP_VERSION`           | Application version | `dev` |
+| `MCP_REGISTRY_DATABASE_TYPE`         | Database type | `mongodb` |
 | `MCP_REGISTRY_COLLECTION_NAME`       | MongoDB collection name | `servers_v2` |
 | `MCP_REGISTRY_DATABASE_NAME`         | MongoDB database name | `mcp-registry` |
 | `MCP_REGISTRY_DATABASE_URL`          | MongoDB connection string | `mongodb://localhost:27017` |

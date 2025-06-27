@@ -1,8 +1,8 @@
 ---
 title: edit
-date: 2025-06-25T15:30:04+08:00
+date: 2025-06-27T15:29:25+08:00
 draft: False
-image: https://images.unsplash.com/photo-1675410200389-903e50c46cbf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA4MzY1ODN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1649902241864-eeba8d1adffd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEwMDkzNTV8&ixlib=rb-4.1.0
 tags: ['github',text editor, MS-DOS Editor, VS Code, installation, build instructions, Rust, ICU library]
 categories: ['github']
 ---

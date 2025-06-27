@@ -1,9 +1,9 @@
 ---
 title: Best-websites-a-programmer-should-visit
-date: 2025-06-26T15:30:35+08:00
+date: 2025-06-27T15:32:01+08:00
 draft: False
-image: https://images.unsplash.com/photo-1666107677986-c264fc8f908e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA5MjI5NzV8&ixlib=rb-4.1.0
-tags: ['github',programming, developers, websites, resources, tutorials, coding, interview, AI, machine learning]
+image: https://images.unsplash.com/photo-1598976455660-0aa91134f9e2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEwMDkzNTV8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

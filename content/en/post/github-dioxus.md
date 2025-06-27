@@ -1,8 +1,8 @@
 ---
 title: dioxus
-date: 2025-06-26T15:29:45+08:00
+date: 2025-06-27T15:30:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1666107677986-c264fc8f908e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA5MjI5NzV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1548159417-f283998827c1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEwMDkzNTV8&ixlib=rb-4.1.0
 tags: ['github',Dioxus,Rust,UI,framework,cross-platform,hot-reloading,state management,web,mobile,desktop]
 categories: ['github']
 ---

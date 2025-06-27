@@ -1,9 +1,9 @@
 ---
 title: Self-Hosting-Guide
-date: 2025-06-26T15:31:21+08:00
+date: 2025-06-27T15:31:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1616361889157-7b095931aea5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA5MjI5NzV8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1598976455660-0aa91134f9e2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEwMDkzNTV8&ixlib=rb-4.1.0
+tags: ['github',self-hosting,guide,software,hardware,tools,containers,docker]
 categories: ['github']
 ---
 
@@ -47,10 +47,11 @@ categories: ['github']
        * [Configuration Management](#Configuration-Management)
        * [Cloud Storage](#cloud-storage)
        * [Cloud](https://github.com/mikeroyal/Self-Hosting-Guide#Cloud)
-          * [Linode](#Linode)
-	      * [Nextcloud](#Nextcloud)
-	      * [DigitalOcean](#DigitalOcean)
-	      * [MinIO Object Storage](#MinIO-Object-Storage)
+        * [Linode](#Linode)
+	* [Nextcloud](#Nextcloud)
+	* [DigitalOcean](#DigitalOcean)
+        * [Back4app Web Deployment](#back4app-web-deployment)
+	* [MinIO Object Storage](#MinIO-Object-Storage)
        * [Databases](#Databases)
          - [SQL](#SQL)
          - [NoSQL](#NoSQL)
@@ -327,7 +328,7 @@ Most self-hosted software can be installed using [Docker](https://en.wikipedia.o
 
 [OTF](https://github.com/leg100/otf) is an open source alternative to Terraform Enterprise. Includes SSO, team management, agents, and as many applies as you can throw hardware at.
 
-[Ansible Semaphore](https://github.com/ansible-semaphore/semaphore) is a modern UI for Ansible. It lets you easily run Ansible playbooks, get notifications about fails, control access to deployment system.
+[Semaphore UI](https://github.com/ansible-semaphore/semaphore) is a modern UI for Ansible. It lets you easily run Ansible playbooks, get notifications about fails, control access to deployment system.
 
 [APITable](https://apitable.com/) is an API-oriented low-code platform for building collaborative apps and better than all other Airtable open-source alternatives. 
 
@@ -447,6 +448,8 @@ Most self-hosted software can be installed using [Docker](https://en.wikipedia.o
 
 [Apache](https://httpd.apache.org/) - Most popular web server.
 
+[OpenResty Manager](https://om.uusec.com/) - The easiest using, powerful and beautiful OpenResty Manager(Nginx Enhanced Version), open source alternative to OpenResty Edge.
+
 [Beakon](https://github.com/RealDudePerson/beakon) - A self-host location sharing webserver. Beakon aims to leak as little data as possible and uses mostly self-contained libraries and local database files. Where possible, it will reference local files and not reach out over any network. 
 
 [Caddy](https://caddyserver.com/) - The HTTP/2 Web Server with Fully Managed TLS.
@@ -518,6 +521,8 @@ Most self-hosted software can be installed using [Docker](https://en.wikipedia.o
 [Yeagar ai](https://github.com/yeagerai/yeagerai-agent) is a Langchain Agent creator designed to help you build, prototype, and deploy AI-powered agents with ease.
 
 [KoboldCpp](https://github.com/LostRuins/koboldcpp) is an easy-to-use AI text-generation software for GGML models. It's a single self contained distributable from Concedo, that builds off llama.cpp, and adds a versatile Kobold API endpoint, additional format support, backward compatibility, as well as a fancy UI with persistent stories, editing tools, save formats, memory, world info, author's note, characters, and scenarios.
+
+[Minima](https://github.com/dmayboroda/minima) is a configurable conversational RAG system that runs LLM locally and on-premises using containers.
 
 ### ChatGPT 
 
@@ -876,6 +881,16 @@ Nexcloud Hub
 [DigitalOcean Custom images](https://www.digitalocean.com/docs/images/custom-images/) is a service that quickly builds your environment in the cloud by provisioning servers with your own custom image, or choose from various Linux distributions.
 
 [Container Registry](https://www.digitalocean.com/products/container-registry/) is a service that easily stores, manages, and protects private container images.
+
+### Back4app Web Deployment
+
+[Back4app Web Deployment](https://www.back4app.com/web-deployment-platform) is a Container as a Service (CaaS) provider platform that allows the dev teams to build and deploy containerized applications with no downtime. You can simply connect it to a GitHub repository and publish the code within seconds. 
+
+  * [Back4app Web Deployment Platform Pricing](https://www.back4app.com/pricing/container-as-a-service)
+
+  * [Back4app GitHub](https://github.com/back4app)
+
+  * [Back4app Tutorials](https://www.back4app.com/tutorials)
 
 ### MinIO Object Storage
 
@@ -1565,6 +1580,8 @@ Minio's test-server called "play" is already configured in the default client, y
 [Back to The Top](#table-of-contents)
 
 [Blackbox](https://github.com/StackExchange/blackbox) - Safely store secrets in Git/Mercurial. Provides tooling to automatically encrypt secrets like passwords.
+
+[CrowdSec](https://github.com/crowdsecurity/crowdsec) - Locally scans log files and optionnaly requests, detecting and blocking malicious behaviors. AppSec capabilities to enable virtual-patching and turn your install into a WAF. Share attacks signals and benefit from real time blocklist of the most agressive IPs attacking CrowdSec's network.
 
 [Denyhosts](http://denyhosts.sourceforge.net/) - Thwart SSH dictionary based attacks and brute force attacks.
 
@@ -3156,9 +3173,11 @@ Home Assistant integrations. Credit: [Home Assistant](https://www.home-assistant
 
 [Back to the Top](#table-of-contents)
 
-[ActivityWatch](https://activitywatch.net) isn app that automatically tracks how you spend time on your devices.
+[ActivityWatch](https://activitywatch.net) is an app that automatically tracks how you spend time on your devices.
 
 [Kimai](https://www.kimai.org/)  is a free & open source timetracker. It tracks work time and prints out a summary of your activities on demand. 
+
+[Solidtime](https://www.solidtime.io/) is an open source time tracking software for individuals and teams, with a modern user interface and reporting.
 
 [TimeTagger](https://timetagger.app) is an open source time-tracker based on an interactive timeline and powerful reporting. 
 
@@ -3206,6 +3225,7 @@ Home Assistant integrations. Credit: [Home Assistant](https://www.home-assistant
 
 [WackoWiki](https://wackowiki.org/) - WackoWiki is a light and easy to install multilingual Wiki-engine. 
 
+[Gramax](https://gram.ax/) - Free, open-source application for creating, editing, and publishing Git-driven documentation sites using Markdown and a visual editor.
 
 ### Gaming
 
