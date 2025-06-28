@@ -1,9 +1,9 @@
 ---
 title: base-ui
-date: 2025-06-27T15:29:34+08:00
+date: 2025-06-28T15:28:55+08:00
 draft: False
-image: https://images.unsplash.com/photo-1716562846499-16c68d88486e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEwMDkzNTV8&ixlib=rb-4.1.0
-tags: ['github',Base UI,UI components,accessible user interfaces,React,Radix,Floating UI,Material UI,Discord,X,Bluesky]
+image: https://images.unsplash.com/photo-1496046596374-a16aa8b8ae63?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEwOTU2MjR8&ixlib=rb-4.1.0
+tags: ['github',Base-UI,UI,component,library,accessible,user,interfaces,React,development]
 categories: ['github']
 ---
 

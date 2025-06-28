@@ -1,8 +1,8 @@
 ---
 title: leaked-system-prompts
-date: 2025-06-27T15:30:14+08:00
+date: 2025-06-28T15:27:58+08:00
 draft: False
-image: https://images.unsplash.com/photo-1701352281550-4a7b283df099?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEwMDkzNTV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1651794327243-d976672943c2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEwOTU2MjR8&ixlib=rb-4.1.0
 tags: ['github',LLM,system prompts,leaked prompts,repository,GitHub,DMCA,source code,reproducible prompts,verification,contributions]
 categories: ['github']
 ---

@@ -1,9 +1,9 @@
 ---
 title: automatisch
-date: 2025-06-21T15:27:13+08:00
+date: 2025-06-28T15:28:24+08:00
 draft: False
-image: https://images.unsplash.com/photo-1515696955266-4f67e13219e8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA0OTA4MDd8&ixlib=rb-4.1.0
-tags: ['github',business automation, workflow automation, open-source, Zapier alternative, data privacy, GDPR, self-hosting]
+image: https://images.unsplash.com/photo-1665838584121-445caad9c6aa?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEwOTU2MjR8&ixlib=rb-4.1.0
+tags: ['github',business automation, workflow automation, open-source, Zapier alternative, data privacy, GDPR,  self-hosting,  no vendor lock-in]
 categories: ['github']
 ---
 

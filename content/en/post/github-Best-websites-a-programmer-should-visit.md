@@ -1,9 +1,9 @@
 ---
 title: Best-websites-a-programmer-should-visit
-date: 2025-06-27T15:32:01+08:00
+date: 2025-06-28T15:28:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1598976455660-0aa91134f9e2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEwMDkzNTV8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1676147953698-52a4e64a160d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEwOTU2MjR8&ixlib=rb-4.1.0
+tags: ['github',programming,developers,software,computer science,coding,web development,interview preparation,artificial intelligence]
 categories: ['github']
 ---
 
@@ -254,6 +254,7 @@ When learning CS, there are some useful sites you must know to get always inform
 - [Pyrexp](https://pythonium.net/regex) : Online regex tester and visualizer for Python.
 - [regex101](https://regex101.com) : Online regex tester and debugger: PHP, PCRE, Python, Golang and JavaScript
 - [regexr](https://regexr.com) : Another online tool to learn, build & test Regular Expressions
+- [Ray.so](https://www.ray.so/): Beautiful code snippet screenshots.
 - [Prodia AI Image API](https://prodia.com/) : API for open sourced image models
 - [Wit AI](https://wit.ai) : Natural Language for Developers
 - [SaaS Design](https://www.saasdesign.io/free-figma-templates) : Collection of open source Figma UI design templates for your next project.

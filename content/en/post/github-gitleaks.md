@@ -1,9 +1,9 @@
 ---
 title: gitleaks
-date: 2025-06-27T15:29:45+08:00
+date: 2025-06-28T15:27:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1679365132923-8880aebede7b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEwMDkzNTV8&ixlib=rb-4.1.0
-tags: ['github',gitleaks,secret detection,git,repository,security,passwords,API keys,tokens,pre-commit,GitHub Action,Docker]
+image: https://images.unsplash.com/photo-1676147953698-52a4e64a160d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEwOTU2MjR8&ixlib=rb-4.1.0
+tags: ['github',gitleaks,secret detection,git,repository,security,API keys,tokens,passwords,pre-commit hook,GitHub Action]
 categories: ['github']
 ---
 
