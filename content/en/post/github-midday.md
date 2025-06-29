@@ -1,9 +1,9 @@
 ---
 title: midday
-date: 2025-04-18T15:28:57+08:00
+date: 2025-06-29T15:28:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1723748753732-1358d7c8a920?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ5NjEyNjh8&ixlib=rb-4.0.3
-tags: ['github',business management,freelancers,contractors,consultants,solo entrepreneurs,time tracking,invoicing,financial tracking]
+image: https://images.unsplash.com/photo-1567167170071-db93479ea045?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTExODIwNTJ8&ixlib=rb-4.1.0
+tags: ['github',Midday,business management,freelancers,contractors,solo entrepreneurs,time tracking,invoicing,financial tracking]
 categories: ['github']
 ---
 
@@ -66,15 +66,15 @@ We are working on the documentation to get started with Midday for local develop
 - Nextjs
 - Supabase
 - Shadcn
-- ToDesktop
+- Tauri
 - Expo
 - TailwindCSS
 
 ### Hosting
 
 - Supabase (database, storage, realtime, auth)
-- Vercel (Website, edge-config, and metrics)
-- Upstash (redis)
+- Vercel (Website, Dashboard)
+- Fly.io (API/tRPC)
 
 ### Services
 
@@ -86,9 +86,10 @@ We are working on the documentation to get started with Midday for local develop
 - Plaid (Bank connection in Canada and US)
 - Teller (Bank connection in the US)
 - OpenPanel (Events and Analytics)
-- Dub (Short URLs)
 - Polar (Payment processing)
 - Typesense (Search)
+- Mistral
+- OpenAI
 
 ## Repo Activity
 

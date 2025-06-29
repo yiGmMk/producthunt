@@ -1,9 +1,9 @@
 ---
 title: flux
-date: 2025-06-28T15:27:50+08:00
+date: 2025-06-29T15:27:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1588427523420-dcd7c2562b7d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEwOTU2MjR8&ixlib=rb-4.1.0
-tags: ['github',image generation, image editing, open-weight models, FLUX, text-to-image,  inpainting, structural conditioning, image variation, image editing]
+image: https://images.unsplash.com/photo-1668122989563-09152d286ff6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTExODIwNTJ8&ixlib=rb-4.1.0
+tags: ['github',image generation, image editing, open-weight models, FLUX,  TensorRT,  HuggingFace,  API]
 categories: ['github']
 ---
 
