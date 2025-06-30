@@ -1,9 +1,9 @@
 ---
 title: PayloadsAllTheThings
-date: 2025-06-29T15:29:01+08:00
+date: 2025-06-30T15:32:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1675870730410-7671bf53de53?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTExODIwNTJ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1577095887311-81a8c4edae8d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEyNjg2Mzd8&ixlib=rb-4.1.0
+tags: ['github',Web-Application-Security,Payloads,Bypasses,Pentesting,Security,Vulnerability,Exploit,Cheatsheets]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: twenty
-date: 2025-06-29T15:27:40+08:00
+date: 2025-06-30T15:30:43+08:00
 draft: False
-image: https://images.unsplash.com/photo-1544109816-57e549024d34?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTExODIwNTJ8&ixlib=rb-4.1.0
-tags: ['github',Open-Source,CRM,Twenty,Workflow,Automation,Customization,Permissions,Kanban,Table Views]
+image: https://images.unsplash.com/photo-1646345098774-acb16125b6f3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEyNjg2Mzd8&ixlib=rb-4.1.0
+tags: ['github',Open-Source,CRM,TypeScript,React,PostgreSQL,workflow automation,customizable,permissions]
 categories: ['github']
 ---
 

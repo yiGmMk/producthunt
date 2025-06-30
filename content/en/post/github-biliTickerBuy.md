@@ -1,9 +1,9 @@
 ---
 title: biliTickerBuy
-date: 2025-06-23T15:31:26+08:00
+date: 2025-06-30T15:32:33+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591765122536-4cd261fe7290?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA2NjM4NDJ8&ixlib=rb-4.1.0
-tags: ['github',biliTickerBuy,Bilibili,member purchase,assistant tool,open source,MIT License,automation,web scraping,GitHub]
+image: https://images.unsplash.com/photo-1541053892672-e3e9f3947e42?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEyNjg2Mzd8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
