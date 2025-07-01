@@ -1,9 +1,9 @@
 ---
 title: wallet-gen
-date: 2025-06-30T15:31:03+08:00
+date: 2025-07-01T15:31:34+08:00
 draft: False
-image: https://images.unsplash.com/photo-1577095887311-81a8c4edae8d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEyNjg2Mzd8&ixlib=rb-4.1.0
-tags: ['github',Octra,blockchain,wallet generator,cryptocurrency,mnemonic,private key,public key,address]
+image: https://images.unsplash.com/photo-1596016903962-8d8c2f5763b6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEzNTUwNDh8&ixlib=rb-4.1.0
+tags: ['github',Octra,blockchain,wallet,generator,cryptocurrency,keys,mnemonic,address]
 categories: ['github']
 ---
 

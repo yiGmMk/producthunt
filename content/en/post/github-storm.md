@@ -1,9 +1,9 @@
 ---
 title: storm
-date: 2025-06-30T15:31:42+08:00
+date: 2025-07-01T15:32:10+08:00
 draft: False
-image: https://images.unsplash.com/photo-1641463789150-9d8a474ed1b7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEyNjg2Mzd8&ixlib=rb-4.1.0
-tags: ['github',STORM,Co-STORM,knowledge curation,LLM,Wikipedia,article generation,information retrieval,question answering,collaborative discourse]
+image: https://images.unsplash.com/photo-1593548378009-5e04aa256e42?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEzNTUwNDh8&ixlib=rb-4.1.0
+tags: ['github',STORM,Co-STORM,knowledge curation,large language model,LLM,Wikipedia,article generation,information retrieval,question answering,collaborative discourse]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: Synology_HDD_db
-date: 2025-04-22T15:29:47+08:00
+date: 2025-07-01T15:32:47+08:00
 draft: False
-image: https://images.unsplash.com/photo-1707402771668-1b7786f7c990?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUzMDY4ODB8&ixlib=rb-4.0.3
-tags: ['github',Synology,HDD,SSD,NAS,DSM,script,database,drives]
+image: https://images.unsplash.com/photo-1695754700290-2259d243ae71?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEzNTUwNDh8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -27,6 +27,8 @@ Add your SATA or SAS HDDs and SSDs plus SATA and NVMe M.2 drives to your Synolog
 The script works in DSM 7, including DSM 7.2, and DSM 6.
 
 It also has a restore option to undo all the changes made by the script.
+
+Works for 2025 series or later Plus models. See [2025_plus_models.md](https://github.com/007revad/Synology_HDD_db/blob/main/2025_plus_models.md)
 
 #### What the script does:
 
@@ -216,6 +218,11 @@ Thank you to the PayPal and Buy Me a Coffee donators, GitHub sponsors and hardwa
 
 |  |  |  |  | 
 |--------------------|--------------------|----------------------|----------------------|
+|  |  | bizIT Hirschberg | Alexander Ziemann |
+| Chris Black Media | Brent Bertram | Carsten Schmidt | Christopher Nichols |
+| Roland Thätig | Sebastian Brandt | HFB2022 | jtrouzes |
+| stove | Simon Küest | Oliver Weber | Kevin Randino |
+| Alex Tripp | Peter Kleissner | Dominic Lee | Daniel Boecker |
 | Pat A Phillips | Craikeybaby | Jason DeCorte | Salovaara Antti Sakari |
 | Jérôme MORIN | Sven Bauer | Fabien Vallet | Fabio Petgola |
 | lonestar6262 | Netchoice | Fabio Cecchinato | Jacek  |
