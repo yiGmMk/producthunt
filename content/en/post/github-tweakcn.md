@@ -1,9 +1,9 @@
 ---
 title: tweakcn
-date: 2025-06-30T15:31:48+08:00
+date: 2025-07-02T15:31:11+08:00
 draft: False
-image: https://images.unsplash.com/photo-1646345098774-acb16125b6f3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEyNjg2Mzd8&ixlib=rb-4.1.0
-tags: ['github',Tailwind CSS,shadcn/ui,Visual Theme Editor,UI customization,theme presets,web development,component customization,GitHub]
+image: https://images.unsplash.com/photo-1598781514001-bd730d80b674?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE0NDEzNTl8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

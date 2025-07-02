@@ -1,9 +1,9 @@
 ---
 title: deepeval
-date: 2025-06-16T15:31:29+08:00
+date: 2025-07-02T15:29:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1510792047925-c55a452bbad7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAwNTkwNDV8&ixlib=rb-4.1.0
-tags: ['github',LLM,evaluation,framework,DeepEval,metrics,RAG,G-Eval,hallucination,LangChain,LlamaIndex,open-source,testing]
+image: https://images.unsplash.com/photo-1692191778222-ef097375197c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE0NDEzNTl8&ixlib=rb-4.1.0
+tags: ['github',LLM, evaluation, framework, DeepEval, metrics, RAG,  testing,  LangChain, LlamaIndex]
 categories: ['github']
 ---
 
@@ -42,6 +42,9 @@ categories: ['github']
     </a>
     <a href="https://github.com/confident-ai/deepeval/blob/master/LICENSE.md">
         <img alt="License" src="https://img.shields.io/github/license/confident-ai/deepeval.svg?color=yellow">
+    </a>
+    <a href="https://x.com/deepeval">
+        <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/deepeval?style=social&logo=x">
     </a>
 </p>
 
@@ -344,7 +347,7 @@ The correct LLM evaluation lifecycle is only achievable with [the DeepEval platf
 5. Monitor & evaluate LLM responses in product to improve datasets with real-world data
 6. Repeat until perfection
 
-Everything on Confident AI, including how to use Confident is available [here](https://documentation.confident-ai.com?utm_source=GitHub).
+Everything on Confident AI, including how to use Confident is available [here](https://documentation.confident-ai.com/docs?utm_source=GitHub).
 
 To begin, login from the CLI:
 

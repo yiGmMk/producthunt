@@ -1,9 +1,9 @@
 ---
 title: onlook
-date: 2025-06-07T15:28:26+08:00
+date: 2025-07-02T15:30:59+08:00
 draft: False
-image: https://images.unsplash.com/photo-1656519966579-da21868b7ed7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkyODExODN8&ixlib=rb-4.1.0
-tags: ['github',Onlook,visual editor,Next.js,TailwindCSS,AI,code editor,web development,design]
+image: https://images.unsplash.com/photo-1571171285419-408dc73f8dc3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE0NDEzNTl8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -19,6 +19,12 @@ categories: ['github']
     <br />
     <a href="https://docs.onlook.com"><strong>Explore the docs »</strong></a>
     <br />
+  </p>
+  <p align="center">
+    👨‍💻👩‍💻👨‍💻
+    <a href="https://www.ycombinator.com/companies/onlook/jobs/e4gHv1n-founding-engineer-fullstack">We're hiring engineers in SF!</a>
+    👩‍💻👨‍💻👩‍💻
+  </p>
     <br />
     <a href="https://youtu.be/RSX_3EaO5eU?feature=shared">View Demo</a>
     ·
@@ -122,7 +128,7 @@ Available soon with a [hosted app](https://onlook.com) or
 ### Usage
 
 Onlook will run on any Next.js + TailwindCSS project, import your project
-through into Onlook or start from scratch within the editor.
+into Onlook or start from scratch within the editor.
 
 Use the AI chat to create or edit a project you're working on. At any time, you
 can always right-click an element to open up the exact location of the element

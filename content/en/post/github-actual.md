@@ -1,9 +1,9 @@
 ---
 title: actual
-date: 2025-07-01T15:31:40+08:00
+date: 2025-07-02T15:30:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1531781760952-ffc164f36d13?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEzNTUwNDh8&ixlib=rb-4.1.0
-tags: ['github',personal finance, budgeting, open-source, NodeJS, synchronization, Docker,  desktop app,  community]
+image: https://images.unsplash.com/photo-1651097514002-683b2ff49c66?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE0NDEzNTl8&ixlib=rb-4.1.0
+tags: ['github',personal finance, budgeting, open-source, NodeJS, synchronization, Docker, desktop app, community,  contributing]
 categories: ['github']
 ---
 
