@@ -1,9 +1,9 @@
 ---
 title: Graphite
-date: 2025-07-02T15:29:33+08:00
+date: 2025-07-03T15:30:02+08:00
 draft: False
-image: https://images.unsplash.com/photo-1705412155482-4edcc784c19b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE0NDEzNTl8&ixlib=rb-4.1.0
-tags: ['github',vector graphics,raster graphics,node-based,generative design,2D content creation,open source,graphics engine,digital painting]
+image: https://images.unsplash.com/photo-1729670586402-6f607b348d3f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE1Mjc3NDd8&ixlib=rb-4.1.0
+tags: ['github',Graphite,vector graphics,raster graphics,node-based design,open source,2D design,digital painting,motion graphics,VFX compositing,desktop publishing]
 categories: ['github']
 ---
 

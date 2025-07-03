@@ -1,9 +1,9 @@
 ---
 title: Project-Ideas-And-Resources
-date: 2025-07-02T15:30:52+08:00
+date: 2025-07-03T15:30:11+08:00
 draft: False
-image: https://images.unsplash.com/photo-1571171285419-408dc73f8dc3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE0NDEzNTl8&ixlib=rb-4.1.0
-tags: ['github',coding,projects,programming,resources,tutorials,beginner,intermediate,advanced]
+image: https://images.unsplash.com/photo-1600242466690-c1c04f081762?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE1Mjc3NDd8&ixlib=rb-4.1.0
+tags: ['github',coding,projects,resources,beginner,intermediate,advanced,web development,programming]
 categories: ['github']
 ---
 

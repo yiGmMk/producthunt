@@ -1,9 +1,9 @@
 ---
 title: MediaCrawler
-date: 2025-07-02T15:30:23+08:00
+date: 2025-07-03T15:29:25+08:00
 draft: False
-image: https://images.unsplash.com/photo-1692191778222-ef097375197c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE0NDEzNTl8&ixlib=rb-4.1.0
-tags: ['github',MediaCrawler,Playwright,web scraping,social media,data collection,Python,multi-platform,data crawling,browser automation,MediaCrawlerPro]
+image: https://images.unsplash.com/photo-1604877890226-00ea119c4369?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE1Mjc3NDd8&ixlib=rb-4.1.0
+tags: ['github',MediaCrawler,Playwright,web scraping,social media,data crawling,Python,multiple platforms,browser automation,keyword search]
 categories: ['github']
 ---
 

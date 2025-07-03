@@ -1,8 +1,8 @@
 ---
 title: gemini-balance
-date: 2025-07-02T15:31:20+08:00
+date: 2025-07-03T15:30:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1534877505613-a00fd6ed83b5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE0NDEzNTl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1723642859234-612c0d3ee700?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE1Mjc3NDd8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
