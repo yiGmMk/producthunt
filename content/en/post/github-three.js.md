@@ -1,9 +1,9 @@
 ---
 title: three.js
-date: 2025-07-03T15:31:38+08:00
+date: 2025-07-04T15:30:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1723642859234-612c0d3ee700?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE1Mjc3NDd8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1678762200388-51e11225d4de?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE2MTQyMDR8&ixlib=rb-4.1.0
+tags: ['github',three.js,WebGL,WebGPU,JavaScript,3D library,rendering,animation,geometry]
 categories: ['github']
 ---
 

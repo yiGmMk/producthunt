@@ -1,9 +1,9 @@
 ---
 title: openssl
-date: 2025-07-03T15:31:15+08:00
+date: 2025-07-04T15:30:55+08:00
 draft: False
-image: https://images.unsplash.com/photo-1542802465-24e0b4b82644?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE1Mjc3NDd8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1566740646808-bcb0f3725abe?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE2MTQyMDR8&ixlib=rb-4.1.0
+tags: ['github',OpenSSL,TLS,cryptography,libssl,libcrypto,DTLS,QUIC,certificates]
 categories: ['github']
 ---
 
