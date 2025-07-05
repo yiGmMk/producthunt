@@ -1,9 +1,9 @@
 ---
 title: swagger-ui
-date: 2025-07-04T15:32:12+08:00
+date: 2025-07-05T15:27:27+08:00
 draft: False
-image: https://images.unsplash.com/photo-1643144282726-8736271c5a95?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE2MTQyMDR8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1605260300160-97b082c200a6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3MDA0MTV8&ixlib=rb-4.1.0
+tags: ['github',Swagger-UI,OpenAPI Specification,npm,React,JavaScript,HTML,CSS,API visualization]
 categories: ['github']
 ---
 

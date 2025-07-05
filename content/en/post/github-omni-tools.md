@@ -1,9 +1,9 @@
 ---
 title: omni-tools
-date: 2025-06-09T15:31:00+08:00
+date: 2025-07-05T15:29:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1696182773863-e5b25e10675d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk0NTQxOTl8&ixlib=rb-4.1.0
-tags: ['github',OmniTools,web,application,self-hosted,Docker,React,TypeScript,Material UI,image,video,PDF,tools]
+image: https://images.unsplash.com/photo-1531427176069-271336ff51fe?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3MDA0MTZ8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

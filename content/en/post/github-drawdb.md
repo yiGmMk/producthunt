@@ -1,9 +1,9 @@
 ---
 title: drawdb
-date: 2025-04-29T15:29:28+08:00
+date: 2025-07-05T15:28:25+08:00
 draft: False
-image: https://images.unsplash.com/photo-1715271040278-9c6fcd6e669b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU5MTE3MjZ8&ixlib=rb-4.0.3
-tags: ['github',database,schema,editor,SQL,generator,diagram,browser,development,Docker]
+image: https://images.unsplash.com/photo-1614522586497-1004752679ea?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3MDA0MTZ8&ixlib=rb-4.1.0
+tags: ['github',database,schema,SQL,editor,diagram,drawDB,development,Docker]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: onlook
-date: 2025-07-03T15:30:53+08:00
+date: 2025-07-05T15:28:55+08:00
 draft: False
-image: https://images.unsplash.com/photo-1546663481-614a764c0404?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE1Mjc3NDd8&ixlib=rb-4.1.0
-tags: ['github',Onlook,visual editor,Next.js,TailwindCSS,AI,code editor,web development,design tools]
+image: https://images.unsplash.com/photo-1614522586497-1004752679ea?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3MDA0MTZ8&ixlib=rb-4.1.0
+tags: ['github',Onlook,visual editor,Next.js,TailwindCSS,AI,code editor,web development,design]
 categories: ['github']
 ---
 

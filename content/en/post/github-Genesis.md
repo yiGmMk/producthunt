@@ -1,9 +1,9 @@
 ---
 title: Genesis
-date: 2025-07-04T15:31:01+08:00
+date: 2025-07-05T15:27:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1447082640993-8c45a4126547?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE2MTQyMDR8&ixlib=rb-4.1.0
-tags: ['github',physics engine, robotics simulation, photo-realistic rendering, generative data, embodied AI, physics solvers, material models, differentiable simulation]
+image: https://images.unsplash.com/photo-1592851834916-f9234d7ffa00?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3MDA0MTZ8&ixlib=rb-4.1.0
+tags: ['github',physics engine, robotics simulation, photorealistic rendering, generative data engine, embodied AI, physical AI, physics solvers, material models, differentiable simulation]
 categories: ['github']
 ---
 
@@ -29,6 +29,7 @@ categories: ['github']
 # Genesis
 
 ## 🔥 News
+- [2025-07-02] The development of Genesis is now officially supported by [Genesis AI](https://genesis-ai.company/).
 - [2025-01-09] We released a [detailed performance benchmarking and comparison report](https://github.com/zhouxian/genesis-speed-benchmark) on Genesis, together with all the test scripts.
 - [2025-01-08] Released v0.2.1 🎊 🎉
 - [2025-01-08] Created [Discord](https://discord.gg/nukCuhB47p) and [Wechat](https://drive.google.com/uc?export=view&id=1ZS9nnbQ-t1IwkzJlENBYqYIIOOZhXuBZ) group.

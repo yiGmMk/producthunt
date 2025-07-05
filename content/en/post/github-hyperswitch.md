@@ -1,9 +1,9 @@
 ---
 title: hyperswitch
-date: 2025-06-12T15:30:13+08:00
+date: 2025-07-05T15:27:56+08:00
 draft: False
-image: https://images.unsplash.com/photo-1727207652611-59e981d73c48?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk3MTMzNDd8&ixlib=rb-4.1.0
-tags: ['github',Hyperswitch,open-source,payments,infrastructure,payment processing,modules,Rust]
+image: https://images.unsplash.com/photo-1680214180543-119d7f766381?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3MDA0MTZ8&ixlib=rb-4.1.0
+tags: ['github',Hyperswitch,Payments,Infrastructure,Open-Source,Payment-Processing,Modular,Rust,API,Microservices,Cloud-Deployment]
 categories: ['github']
 ---
 
@@ -42,7 +42,7 @@ categories: ['github']
   <a href="https://x.com/hyperswitchio">
     <img src="https://img.shields.io/badge/follow-%40hyperswitchio-white?logo=x&labelColor=grey"/>
   </a>
-  <a href="https://join.slack.com/t/hyperswitch-io/shared_invite/zt-2jqxmpsbm-WXUENx022HjNEy~Ark7Orw">
+  <a href="https://inviter.co/hyperswitch-slack">
     <img src="https://img.shields.io/badge/chat-on_slack-blue?logo=slack&labelColor=grey&color=%233f0e40"/>
   </a>
 </p>
@@ -207,7 +207,7 @@ We welcome contributors from around the world to help build Hyperswitch. Whether
 
 Please read our [contributing guidelines](https://github.com/juspay/hyperswitch/blob/main/docs/CONTRIBUTING.md) to get started.
 
-Join the conversation on [Slack](https://join.slack.com/t/hyperswitch-io/shared_invite/zt-2jqxmpsbm-WXUENx022HjNEy~Ark7Orw) or explore open issues on [GitHub](https://github.com/juspay/hyperswitch/issues).
+Join the conversation on [Slack](https://inviter.co/hyperswitch-slack) or explore open issues on [GitHub](https://github.com/juspay/hyperswitch/issues).
 
 <a href="#feature-requests">
   <h2 id="feature-requests">Feature requests & Bugs</h2>

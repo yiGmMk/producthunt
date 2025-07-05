@@ -1,9 +1,9 @@
 ---
 title: happy-llm
-date: 2025-07-04T15:31:50+08:00
+date: 2025-07-05T15:28:06+08:00
 draft: False
-image: https://images.unsplash.com/photo-1643144282726-8736271c5a95?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE2MTQyMDR8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1614522586497-1004752679ea?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3MDA0MTZ8&ixlib=rb-4.1.0
+tags: ['github',Large Language Model,LLM,Transformer,NLP,Deep Learning,Pre-training,Fine-tuning,Natural Language Processing]
 categories: ['github']
 ---
 

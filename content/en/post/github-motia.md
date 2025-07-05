@@ -1,9 +1,9 @@
 ---
 title: motia
-date: 2025-07-04T15:31:42+08:00
+date: 2025-07-05T15:28:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1605025178143-c346fedb7a50?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE2MTQyMDR8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1598209186423-5a46f584604f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3MDA0MTZ8&ixlib=rb-4.1.0
+tags: ['github',Motia,backend framework,API,events,AI agents,Step,workflows,observability,state management,JavaScript,TypeScript,Python]
 categories: ['github']
 ---
 
