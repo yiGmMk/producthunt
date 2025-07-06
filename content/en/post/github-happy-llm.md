@@ -1,9 +1,9 @@
 ---
 title: happy-llm
-date: 2025-07-05T15:28:06+08:00
+date: 2025-07-06T15:27:10+08:00
 draft: False
-image: https://images.unsplash.com/photo-1614522586497-1004752679ea?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3MDA0MTZ8&ixlib=rb-4.1.0
-tags: ['github',Large Language Model,LLM,Transformer,NLP,Deep Learning,Pre-training,Fine-tuning,Natural Language Processing]
+image: https://images.unsplash.com/photo-1650403335744-fbdcfb6df461?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3ODY3OTN8&ixlib=rb-4.1.0
+tags: ['github',Large Language Model,LLM,Transformer,NLP,Natural Language Processing,Deep Learning,Pre-training,Fine-tuning]
 categories: ['github']
 ---
 
@@ -20,6 +20,10 @@ categories: ['github']
   <img src="https://img.shields.io/badge/language-Chinese-brightgreen?style=flat" alt="Language"/>
   <a href="https://github.com/datawhalechina/happy-llm"><img src="https://img.shields.io/badge/GitHub-Project-blue?style=flat&logo=github" alt="GitHub Project"></a>
   <a href="https://swanlab.cn/@kmno4/Happy-LLM/overview"><img src="https://raw.githubusercontent.com/SwanHubX/assets/main/badge1.svg" alt="SwanLab"></a>
+</div>
+
+<div align="center">
+  <a href="https://trendshift.io/repositories/14175" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14175" alt="datawhalechina%2Fhappy-llm | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </div>
 
 <div align="center">
@@ -121,7 +125,7 @@ categories: ['github']
 ## Star History
 
 <div align='center'>
-    <img src="./images/star-history-2025624.png" alt="Datawhale" width="90%">
+    <img src="./images/star-history-202575.png" alt="Datawhale" width="90%">
 </div>
 
 <div align="center">

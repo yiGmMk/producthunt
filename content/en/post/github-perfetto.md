@@ -1,9 +1,9 @@
 ---
 title: perfetto
-date: 2025-05-18T15:27:45+08:00
+date: 2025-07-06T15:28:02+08:00
 draft: False
-image: https://images.unsplash.com/photo-1695069081587-8eab96a7a5aa?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc1NTMxMjl8&ixlib=rb-4.1.0
-tags: ['github',Perfetto,system profiling,trace analysis,performance instrumentation,app tracing,heap profiling,SQL,web-based UI]
+image: https://images.unsplash.com/photo-1615377730068-e8235046ff05?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3ODY3OTR8&ixlib=rb-4.1.0
+tags: ['github',Perfetto,performance instrumentation,trace analysis,system profiling,app tracing,heap profiling,SQL,web-based UI]
 categories: ['github']
 ---
 

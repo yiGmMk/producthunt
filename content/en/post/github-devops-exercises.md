@@ -1,8 +1,8 @@
 ---
 title: devops-exercises
-date: 2025-04-28T15:55:27+08:00
+date: 2025-07-06T15:27:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1612356698282-7a128ff04a21?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU4MjY4OTJ8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1543414535-5da1098bf8c2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3ODY3OTR8&ixlib=rb-4.1.0
 tags: ['github',DevOps,Git,Kubernetes,AWS,Azure,Linux,CI/CD,Containers,Ansible,Terraform]
 categories: ['github']
 ---
