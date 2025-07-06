@@ -1,5 +1,5 @@
 ---
-title: 超强AI工具|提示词优化器（prompt-optimizer），开源，好用
+title: prompt-optimizer
 date: 2025-06-19T15:29:30+08:00
 draft: False
 image: https://images.unsplash.com/photo-1648914300949-a59ba0614055?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAzMTgxMzV8&ixlib=rb-4.1.0
