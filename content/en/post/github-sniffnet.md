@@ -1,9 +1,9 @@
 ---
 title: sniffnet
-date: 2025-06-29T15:29:21+08:00
+date: 2025-07-07T15:31:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1677611998429-1baa4371456b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTExODIwNTJ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1612815292258-f4354f7f5c76?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE4NzM0MjZ8&ixlib=rb-4.1.0
+tags: ['github',Sniffnet, network, traffic, monitoring, application, cross-platform, filters]
 categories: ['github']
 ---
 

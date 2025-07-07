@@ -1,9 +1,9 @@
 ---
 title: omni-tools
-date: 2025-07-05T15:29:04+08:00
+date: 2025-07-07T15:31:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1531427176069-271336ff51fe?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3MDA0MTZ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1533382433768-3d403240fa40?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE4NzM0MjZ8&ixlib=rb-4.1.0
+tags: ['github',OmniTools,web,app,self-hosted,online tools,image processing,video processing,PDF tools,Docker]
 categories: ['github']
 ---
 
