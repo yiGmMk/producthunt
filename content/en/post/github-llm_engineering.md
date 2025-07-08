@@ -1,9 +1,9 @@
 ---
 title: llm_engineering
-date: 2025-05-21T15:28:54+08:00
+date: 2025-07-08T15:33:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1468259275383-c4f1b88d5772?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4MTI0ODF8&ixlib=rb-4.1.0
-tags: ['github',LLM,engineering,AI,large language models,Ollama,Llama,Google Colab,API,open-source models]
+image: https://images.unsplash.com/photo-1728653866452-bcd57e3267da?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE5NTk4ODV8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

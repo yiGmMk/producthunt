@@ -1,9 +1,9 @@
 ---
 title: youtube-music
-date: 2025-05-19T15:29:25+08:00
+date: 2025-07-08T15:31:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1649999361030-3bb0ac366598?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc2Mzk3MzV8&ixlib=rb-4.1.0
-tags: ['github',YouTube Music,Electron,plugins,custom plugins,plugin,ad blocker,album color theme,ambient mode,audio compressor,blur navigation bar,bypass age restrictions,captions selector,compact sidebar,crossfade,disable autoplay,Discord Rich Presence,downloader,equalizer,exponential volume,in-app menu,scrobbler]
+image: https://images.unsplash.com/photo-1677440077380-c4142a2eda83?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE5NTk4ODV8&ixlib=rb-4.1.0
+tags: ['github',YouTube Music,Electron,plugins,custom plugins,plugin,YouTube,Music,player,features,download,Arch Linux,macOS,Windows]
 categories: ['github']
 ---
 
@@ -32,7 +32,7 @@ categories: ['github']
 	</a>
 </div>
 
-Read this in other languages: [🇰🇷](./docs/readme/README-ko.md), [🇫🇷](./docs/readme/README-fr.md), [🇮🇸](./docs/readme/README-is.md), [🇨🇱 🇪🇸](./docs/readme/README-es.md), [🇷🇺](./docs/readme/README-ru.md), [🇺🇦](./docs/readme/README-uk.md), [🇭🇺](./docs/readme/README-hu.md), [🇧🇷](./docs/readme/README-pt.md), [🇯🇵](./docs/readme/README-ja.md)
+Read this in other languages: [한국어](./docs/readme/README-ko.md), [Française](./docs/readme/README-fr.md), [Íslenska](./docs/readme/README-is.md), [Español](./docs/readme/README-es.md), [Pусский](./docs/readme/README-ru.md), [Українська](./docs/readme/README-uk.md), [Magyar](./docs/readme/README-hu.md), [Português](./docs/readme/README-pt.md), [日本語](./docs/readme/README-ja.md)
 
 **Electron wrapper around YouTube Music featuring:**
 

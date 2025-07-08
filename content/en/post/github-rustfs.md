@@ -1,9 +1,9 @@
 ---
 title: rustfs
-date: 2025-07-06T15:26:51+08:00
+date: 2025-07-08T15:31:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1512903326996-baea07b26e21?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3ODY3OTR8&ixlib=rb-4.1.0
-tags: ['github',RustFS,object storage,distributed,S3 compatibility,high-performance,Rust,open-source,data lake,MinIO]
+image: https://images.unsplash.com/photo-1748365335160-566e2b914b45?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE5NTk4ODV8&ixlib=rb-4.1.0
+tags: ['github',RustFS,distributed object storage,object storage,S3 compatibility,high-performance,Rust,MinIO,open-source,data lake]
 categories: ['github']
 ---
 

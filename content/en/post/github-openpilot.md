@@ -1,9 +1,9 @@
 ---
 title: openpilot
-date: 2025-05-06T15:30:40+08:00
+date: 2025-07-08T15:32:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1670811456186-e73d0ace9454?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY1MTY1MTB8&ixlib=rb-4.1.0
-tags: ['github',openpilot,comma,self-driving,driver-assistance,automotive,software,hardware,open-source]
+image: https://images.unsplash.com/photo-1597011652835-f97c992e8dba?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE5NTk4ODV8&ixlib=rb-4.1.0
+tags: ['github',openpilot,comma,self-driving,autonomous driving,driver assistance,hardware,software,car]
 categories: ['github']
 ---
 
@@ -16,7 +16,7 @@ categories: ['github']
 <p>
   <b>openpilot is an operating system for robotics.</b>
   <br>
-  Currently, it upgrades the driver assistance system in 275+ supported cars.
+  Currently, it upgrades the driver assistance system in 300+ supported cars.
 </p>
 
 <h3>
@@ -33,8 +33,7 @@ categories: ['github']
 
 Quick start: `bash <(curl -fsSL openpilot.comma.ai)`
 
-![openpilot tests](https://github.com/commaai/openpilot/actions/workflows/selfdrive_tests.yaml/badge.svg)
-[![codecov](https://codecov.io/gh/commaai/openpilot/branch/master/graph/badge.svg)](https://codecov.io/gh/commaai/openpilot)
+[![openpilot tests](https://github.com/commaai/openpilot/actions/workflows/selfdrive_tests.yaml/badge.svg)](https://github.com/commaai/openpilot/actions/workflows/selfdrive_tests.yaml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![X Follow](https://img.shields.io/twitter/follow/comma_ai)](https://x.com/comma_ai)
 [![Discord](https://img.shields.io/discord/469524606043160576)](https://discord.comma.ai)
@@ -68,6 +67,7 @@ We have detailed instructions for [how to install the harness and device in a ca
 | `release3-staging` | openpilot-test.comma.ai                | This is the staging branch for releases. Use it to get new releases slightly early. |
 | `nightly`          | openpilot-nightly.comma.ai             | This is the bleeding edge development branch. Do not expect this to be stable.      |
 | `nightly-dev`      | installer.comma.ai/commaai/nightly-dev | Same as nightly, but includes experimental development features for some cars.      |
+| `secretgoodopenpilot` | installer.comma.ai/commaai/secretgoodopenpilot | This is a preview branch from the autonomy team where new driving models get merged earlier than master. |
 
 To start developing openpilot
 ------
@@ -77,7 +77,6 @@ openpilot is developed by [comma](https://comma.ai/) and by users like you. We w
 * Join the [community Discord](https://discord.comma.ai)
 * Check out [the contributing docs](docs/CONTRIBUTING.md)
 * Check out the [openpilot tools](tools/)
-* Read about the [development workflow](docs/WORKFLOW.md)
 * Code documentation lives at https://docs.comma.ai
 * Information about running openpilot lives on the [community wiki](https://github.com/commaai/openpilot/wiki)
 
@@ -94,8 +93,8 @@ Safety and Testing
 * panda has additional hardware-in-the-loop [tests](https://github.com/commaai/panda/blob/master/Jenkinsfile).
 * We run the latest openpilot in a testing closet containing 10 comma devices continuously replaying routes.
 
-Licensing
-------
+<details>
+<summary>MIT Licensed</summary>
 
 openpilot is released under the MIT license. Some parts of the software are released under other licenses as specified.
 
@@ -104,15 +103,17 @@ Any user of this software shall indemnify and hold harmless Comma.ai, Inc. and i
 **THIS IS ALPHA QUALITY SOFTWARE FOR RESEARCH PURPOSES ONLY. THIS IS NOT A PRODUCT.
 YOU ARE RESPONSIBLE FOR COMPLYING WITH LOCAL LAWS AND REGULATIONS.
 NO WARRANTY EXPRESSED OR IMPLIED.**
+</details>
 
-User Data and comma Account
-------
+<details>
+<summary>User Data and comma Account</summary>
 
 By default, openpilot uploads the driving data to our servers. You can also access your data through [comma connect](https://connect.comma.ai/). We use your data to train better models and improve openpilot for everyone.
 
 openpilot is open source software: the user is free to disable data collection if they wish to do so.
 
 openpilot logs the road-facing cameras, CAN, GPS, IMU, magnetometer, thermal sensors, crashes, and operating system logs.
-The driver-facing camera is only logged if you explicitly opt-in in settings. The microphone is not recorded.
+The driver-facing camera and microphone are only logged if you explicitly opt-in in settings.
 
 By using openpilot, you agree to [our Privacy Policy](https://comma.ai/privacy). You understand that use of this software or its related services will generate certain types of user data, which may be logged and stored at the sole discretion of comma. By accepting this agreement, you grant an irrevocable, perpetual, worldwide right to comma for the use of this data.
+</details>
