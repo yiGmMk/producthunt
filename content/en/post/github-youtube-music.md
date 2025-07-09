@@ -1,9 +1,9 @@
 ---
 title: youtube-music
-date: 2025-07-08T15:31:48+08:00
+date: 2025-07-09T15:30:58+08:00
 draft: False
-image: https://images.unsplash.com/photo-1677440077380-c4142a2eda83?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE5NTk4ODV8&ixlib=rb-4.1.0
-tags: ['github',YouTube Music,Electron,plugins,custom plugins,plugin,YouTube,Music,player,features,download,Arch Linux,macOS,Windows]
+image: https://images.unsplash.com/photo-1593073231604-85ef405c1b0b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIwNDYyMzF8&ixlib=rb-4.1.0
+tags: ['github',YouTube Music,Electron,plugins,plugin,custom plugins,ad blocker,album color theme,ambient mode,audio compressor,blur navigation bar,bypass age restrictions,captions selector,compact sidebar,crossfade,disable autoplay,Discord Rich Presence,downloader,equalizer,exponential volume,in-app menu,scrobbler]
 categories: ['github']
 ---
 
@@ -163,6 +163,8 @@ Read this in other languages: [한국어](./docs/readme/README-ko.md), [Françai
 
 - **Tuna OBS**: Integration with [OBS](https://obsproject.com/)'s
   plugin [Tuna](https://obsproject.com/forum/resources/tuna.843/)
+
+- **Unobtrusive Player**: Prevents the player from popping up when playing a song
 
 - **Video Quality Changer**: Allows changing the video quality with
   a [button](https://user-images.githubusercontent.com/78568641/138574366-70324a5e-2d64-4f6a-acdd-dc2a2b9cecc5.png) on

@@ -1,9 +1,9 @@
 ---
 title: openpilot
-date: 2025-07-08T15:32:14+08:00
+date: 2025-07-09T15:31:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1597011652835-f97c992e8dba?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE5NTk4ODV8&ixlib=rb-4.1.0
-tags: ['github',openpilot,comma,self-driving,autonomous driving,driver assistance,hardware,software,car]
+image: https://images.unsplash.com/photo-1559255244-34f2765f07c4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIwNDYyMzF8&ixlib=rb-4.1.0
+tags: ['github',openpilot, comma, self-driving, driver-assistance, robotics, operating-system, car-harness, supported-cars]
 categories: ['github']
 ---
 
