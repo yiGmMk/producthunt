@@ -1,9 +1,9 @@
 ---
 title: rustfs
-date: 2025-07-09T15:31:31+08:00
+date: 2025-07-10T15:30:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1630744816462-77e37bb398d1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIwNDYyMzF8&ixlib=rb-4.1.0
-tags: ['github',RustFS,object storage,distributed,high-performance,S3 compatibility,Rust,open-source,MinIO,data lake]
+image: https://images.unsplash.com/photo-1508874343624-e697766fd01a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIxMzI2MjF8&ixlib=rb-4.1.0
+tags: ['github',RustFS,object storage,distributed,S3 compatibility,high-performance,Rust,open-source,MinIO,data lake]
 categories: ['github']
 ---
 
@@ -11,7 +11,9 @@ categories: ['github']
 
 [![RustFS](https://rustfs.com/images/rustfs-github.png)](https://rustfs.com)
 
+
 <p align="center">RustFS is a high-performance distributed object storage software built using Rust</p>
+
 
 <p align="center">
   <a href="https://github.com/rustfs/rustfs/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/rustfs/rustfs/actions/workflows/ci.yml/badge.svg" /></a>
@@ -40,6 +42,9 @@ English | <a href="https://github.com/rustfs/rustfs/blob/main/README_ZH.md">简�
 </p>
 
 RustFS is a high-performance distributed object storage software built using Rust, one of the most popular languages worldwide. Along with MinIO, it shares a range of advantages such as simplicity, S3 compatibility, open-source nature, support for data lakes, AI, and big data. Furthermore, it has a better and more user-friendly open-source license in comparison to other storage systems, being constructed under the Apache license. As Rust serves as its foundation, RustFS provides faster speed and safer distributed features for high-performance object storage.
+
+
+> ⚠️ **RustFS is under rapid development. Do NOT use in production environments!**
 
 ## Features
 

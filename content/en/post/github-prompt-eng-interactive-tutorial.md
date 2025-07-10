@@ -1,9 +1,9 @@
 ---
 title: prompt-eng-interactive-tutorial
-date: 2025-07-09T15:31:23+08:00
+date: 2025-07-10T15:30:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1559255244-34f2765f07c4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIwNDYyMzF8&ixlib=rb-4.1.0
-tags: ['github',prompt engineering, Claude, Anthropic, tutorial, large language models, prompt design, AI, chatbot, instruction tuning]
+image: https://images.unsplash.com/photo-1667346697446-139e30b75c91?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIxMzI2MjF8&ixlib=rb-4.1.0
+tags: ['github',prompt engineering, Claude, Anthropic, large language model, tutorial, AI, prompt design, chatbot,  instruction tuning]
 categories: ['github']
 ---
 

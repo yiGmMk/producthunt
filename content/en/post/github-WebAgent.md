@@ -1,8 +1,8 @@
 ---
 title: WebAgent
-date: 2025-07-09T15:30:47+08:00
+date: 2025-07-10T15:30:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1593073231604-85ef405c1b0b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIwNDYyMzF8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1728279320747-e29867b7e455?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIxMzI2MjF8&ixlib=rb-4.1.0
 tags: ['github',WebAgent,WebSailor,WebDancer,WebWalker,information seeking,agentic search,large language models,LLMs,benchmarking]
 categories: ['github']
 ---
@@ -186,8 +186,6 @@ If this work is helpful, please kindly cite as:
 }
 ```
 
-The repo is contributed by [Jialong Wu](https://callanwu.github.io/). If you have any questions, please feel free to contact via wujialongml@gmail.com or create an issue.
-
 ## 🌟 Misc
 
 <div align="center">
@@ -203,3 +201,8 @@ The repo is contributed by [Jialong Wu](https://callanwu.github.io/). If you hav
 📚 **Research Area**：Web Agent, Search Agent, Agent RL, MultiAgent RL, Agentic RAG
 
 ☎️ **Contact**：[yongjiang.jy@alibaba-inc.com]()
+
+
+## Contact Information
+
+For communications, please contact Yong Jiang (yongjiang.jy@alibaba-inc.com).
