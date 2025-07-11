@@ -1,9 +1,9 @@
 ---
 title: MoneyPrinterV2
-date: 2025-07-09T15:31:46+08:00
+date: 2025-07-11T15:35:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1651129917297-f07c59720bdc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIwNDYyMzF8&ixlib=rb-4.1.0
-tags: ['github',MoneyPrinterV2,Python,Affiliate Marketing,Twitter Bot,YouTube Automation,Cold Outreach,Automation,Business]
+image: https://images.unsplash.com/photo-1556106295-38bf5e6e4f8e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIyMTkyMzR8&ixlib=rb-4.1.0
+tags: ['github',MoneyPrinterV2,Python,automation,affiliate marketing,Twitter bot,YouTube,cold outreach,business,social media]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: Hands-On-Large-Language-Models
-date: 2025-07-09T15:31:06+08:00
+date: 2025-07-11T15:35:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1559255244-34f2765f07c4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIwNDYyMzF8&ixlib=rb-4.1.0
-tags: ['github',Large Language Models,LLMs,Transformer,Text Classification,Text Generation,Prompt Engineering,Semantic Search,Multimodal Models,Fine-tuning]
+image: https://images.unsplash.com/photo-1610482650877-a580984185a0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIyMTkyMzR8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -21,7 +21,7 @@ Welcome! In this repository you will find the code for all examples throughout t
 
 Through the visually educational nature of this book and with **almost 300 custom made figures**, learn the practical tools and concepts you need to use Large Language Models today!
 
-<a href="https://www.amazon.com/Hands-Large-Language-Models-Understanding/dp/1098150961"><img src="images/book_cover.png" width="50%" height="50%"></a>
+<a href="https://www.amazon.com/Hands-Large-Language-Models-Understanding/dp/1098150961"><img src="images/book_cover.png" width="50%" ></a>
 
 <br>
 
