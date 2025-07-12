@@ -1,9 +1,9 @@
 ---
 title: awesome-mcp-clients
-date: 2025-07-11T15:35:14+08:00
+date: 2025-07-12T15:38:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1613425269135-fb9f19ae7be8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIyMTkyMzR8&ixlib=rb-4.1.0
-tags: ['github',Model Context Protocol, MCP clients, AI, LLM, agents, tools, servers,  desktop app, web app, CLI]
+image: https://images.unsplash.com/photo-1683526976156-1a3f1a315049?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIzMDU4MDJ8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -39,6 +39,7 @@ A curated list of awesome Model Context Protocol (MCP) clients.
     - [eechat](#eechat)
     - [5ire](#5ire)
     - [AIaW](#aiaw)
+    - [BrowseWiz](#browsewiz)
     - [CarrotAI](#CarrotAI)
     - [Chainlit](#chainlit)
     - [ChatMCP](#chatmcp)
@@ -54,6 +55,7 @@ A curated list of awesome Model Context Protocol (MCP) clients.
     - [Dolphin-MCP](#dolphin-mcp)
     - [FLUJO](#flujo)
     - [Goose](#goose)
+    - [Glue](#glue)
     - [HyperChat](#hyperchat)
     - [kibitz](#kibitz)
     - [LibreChat](#librechat)
@@ -61,12 +63,15 @@ A curated list of awesome Model Context Protocol (MCP) clients.
     - [MCP CLI client](#mcp-cli-client)
     - [MCP Simple Slackbot](#mcp-simple-slackbot)
     - [MCPOmni Connect](#mcpomni-connect)
+    - [MCP SuperAssistant](#mcp-superassistant)
     - [Nerve](#nerve)
     - [NextChat](#nextchat)
     - [oterm](#oterm)
+    - [Runbear](#runbear)
     - [Superinterface](#superinterface)
     - [SeekChat](#seekchat)
     - [Simple AI](#simple-ai-chat)
+    - [Tambo](#tambo)
     - [Tester MCP Client](#tester-mcp-client)
     - [Tome](#tome)
     - [VS Code GitHub Copilot](#vs-code-github-copilot)
@@ -151,6 +156,36 @@ AIaW is a cross-platform, full-featured and lightweight AI Chat client with full
 
 </details>
 
+### BrowseWiz
+
+<table>
+<tr><th align="left">GitHub</th><td>N/A</td></tr>
+<tr><th align="left">Website</th><td>https://browsewiz.com</td></tr>
+<tr><th align="left">License</th><td>Proprietary</td></tr>
+<tr><th align="left">Type</th><td>Browser extension</td></tr>
+<tr><th align="left">Platforms</th><td>Chromium-based desktop browsers</td></tr>
+<tr><th align="left">Pricing</th><td>Freemium</td></tr>
+<tr><th align="left">Programming Languages</th><td>TypeScript</td></tr>
+</table>
+
+BrowseWiz is a *customizable* AI Chat, AI Assistant and AI Agent for browser's side panel.
+It is a flexible tool that can help automate *your* workflows.
+
+**Key Features:**
+- give AI access to contexts: files, active tab, YT video transcript, text selected on a page
+- manage collection of prompts, add 1-click prompt buttons
+- set and manage system instructions
+- bring your own key or model (OpenAI API-compatible)
+- add tools for agentic capabilities via webhooks/APIs + JSON schema or by providing MCP server URLs (supports streamable HTTP and SSE)
+
+<details>
+<summary>Screenshots</summary>
+
+
+
+
+</details>
+
 ### CarrotAI
 
 <table>
@@ -176,7 +211,6 @@ CarrotAI is an advanced AI agent application that enables real-time streaming ch
 
 
 </details>
-
 
 ### Chainlit
 
@@ -523,6 +557,28 @@ Goose is a general-purpose AI agent that can dynamically plug into new extension
 
 </details>
 
+### Glue
+
+<table>
+<tr><th align="left">GitHub</th><td>-</td></tr>
+<tr><th align="left">Website</th><td>https://glue.ai</td></tr>
+<tr><th align="left">License</th><td>-</td></tr>
+<tr><th align="left">Type</th><td>Web app, Desktop app, Mobile app</td></tr>
+<tr><th align="left">Platforms</th><td>Web, MacOS, Windows, Mobile</td></tr>
+<tr><th align="left">Pricing</th><td>$8/user/month</td></tr>
+<tr><th align="left">Programming Languages</th><td>-</td></tr>
+</table>
+
+Glue is a full-featured, thread-first team chat platform with a built-in AI agent and support for MCP, enabling teams to leverage intelligent tools and insights. [Learn more.](https://glue.ai/labs)
+
+<details>
+<summary>Screenshots</summary>
+
+
+
+
+</details>
+
 ### HyperChat
 
 <table>
@@ -677,6 +733,27 @@ A powerful universal CLI client for MCP Servers that provides seamless integrati
 
 </details>
 
+### MCP SuperAssistant
+
+<table>
+<tr><th align="left">GitHub</th><td>https://github.com/srbhptl39/MCP-SuperAssistant</td></tr>
+<tr><th align="left">Website</th><td>https://mcpsuperassistant.ai/</td></tr>
+<tr><th align="left">License</th><td>MIT</td></tr>
+<tr><th align="left">Type</th><td>Chrome Extenstion</td></tr>
+<tr><th align="left">Platforms</th><td>Windows, MacOS, Linux</td></tr>
+<tr><th align="left">Pricing</th><td>Free</td></tr>
+<tr><th align="left">Programming Languages</th><td>TypeScript</td></tr>
+</table>
+
+Add MCP Capabilities to Chatgpt, Gemini, Grok, Google AI Studio, DeepSeek, AI Studio, OpenRouter, T3 Chat, Mistral and Github Copilot. This extension allows you to connect to any MCP server and use its tools, models, and capabilities directly from your browser without any API key required in these Chat Platforms.
+
+<details>
+<summary>Screenshots</summary>
+
+
+
+</details>
+
 ### Nerve
 
 <table>
@@ -732,6 +809,28 @@ Light and Fast AI Assistant, with Claude, DeepSeek, GPT4, Gemini Pro & MCP suppo
 </table>
 
 A terminal client for Ollama, with support for MCP servers.
+
+<details>
+<summary>Screenshots</summary>
+
+
+
+
+</details>
+
+### Runbear
+
+<table>
+<tr><th align="left">GitHub</th><td>https://github.com/runbear-io</td></tr>
+<tr><th align="left">Website</th><td>https://runbear.io</td></tr>
+<tr><th align="left">License</th><td>Proprietary</td></tr>
+<tr><th align="left">Type</th><td>Slack, MS Teams, Discord app</td></tr>
+<tr><th align="left">Platforms</th><td>Windows, MacOS, Linux</td></tr>
+<tr><th align="left">Pricing</th><td>Freemium</td></tr>
+<tr><th align="left">Programming Languages</th><td>-</td></tr>
+</table>
+
+No-code MCP clients for Slack, Microsoft Teams, and Discord with full support for MCP servers, connected knowledge sources, and custom instructions.
 
 <details>
 <summary>Screenshots</summary>
@@ -811,6 +910,29 @@ Simple AI (simple-ai-io) is a command-based web/cli application, supports MCP.
 
 <details>
 <summary>Screenshots</summary>
+
+
+
+
+</details>
+
+### Tambo
+
+<table>
+<tr><th align="left">GitHub</th><td>https://github.com/tambo-ai/tambo</td></tr>
+<tr><th align="left">Website</th><td>https://tambo.co</td></tr>
+<tr><th align="left">License</th><td>MIT</td></tr>
+<tr><th align="left">Type</th><td>Web app</td></tr>
+<tr><th align="left">Platforms</th><td>Web</td></tr>
+<tr><th align="left">Pricing</th><td>Free</td></tr>
+<tr><th align="left">Programming Languages</th><td>TypeScript</td></tr>
+</table>
+
+[Tambo](https://tambo.co) is a platform for building custom chat experiences, with integrated custom user interface components.
+
+<details>
+<summary>Screenshots</summary>
+
 
 
 

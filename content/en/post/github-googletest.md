@@ -1,9 +1,9 @@
 ---
 title: googletest
-date: 2025-04-06T15:25:41+08:00
+date: 2025-07-12T15:37:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1704596999523-33c343ce1bc2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM5MjQyODJ8&ixlib=rb-4.0.3
-tags: ['github',GoogleTest,xUnit,C++,unit testing,testing framework,assertions,death tests,parameterized tests,test discovery]
+image: https://images.unsplash.com/photo-1565377572295-775293e25631?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIzMDU4MDJ8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -13,30 +13,19 @@ categories: ['github']
 
 ### Announcements
 
-#### Live at Head
-
-GoogleTest now follows the
-[Abseil Live at Head philosophy](https://abseil.io/about/philosophy#upgrade-support).
-We recommend
-[updating to the latest commit in the `main` branch as often as possible](https://github.com/abseil/abseil-cpp/blob/master/FAQ.md#what-is-live-at-head-and-how-do-i-do-it).
-We do publish occasional semantic versions, tagged with
-`v${major}.${minor}.${patch}` (e.g. `v1.16.0`).
-
 #### Documentation Updates
 
 Our documentation is now live on GitHub Pages at
 https://google.github.io/googletest/. We recommend browsing the documentation on
 GitHub Pages rather than directly in the repository.
 
-#### Release 1.16.0
+#### Release 1.17.0
 
-[Release 1.16.0](https://github.com/google/googletest/releases/tag/v1.16.0) is
+[Release 1.17.0](https://github.com/google/googletest/releases/tag/v1.17.0) is
 now available.
 
-The 1.16.x branch requires at least C++14.
-
-The 1.16.x branch will be the last to support C++14. Future development will
-[require at least C++17](https://opensource.google/documentation/policies/cplusplus-support#c_language_standard).
+The 1.17.x branch
+[requires at least C++17](https://opensource.google/documentation/policies/cplusplus-support#c_language_standard).
 
 #### Continuous Integration
 

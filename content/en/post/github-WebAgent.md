@@ -1,9 +1,9 @@
 ---
 title: WebAgent
-date: 2025-07-11T15:34:00+08:00
+date: 2025-07-12T15:37:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1702777326906-9c480b4b316c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIyMTkyMzR8&ixlib=rb-4.1.0
-tags: ['github',WebAgent,WebSailor,WebDancer,WebWalker,information seeking,large language models,LLMs,agentic search,autonomous information seeking]
+image: https://images.unsplash.com/photo-1665591239163-848a79a758e7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIzMDU4MDJ8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -11,7 +11,7 @@ categories: ['github']
 
 <div align="center">
 
-<h2>WebAgent for Information Seeking bulit by Tongyi Lab, Alibaba Group <img src="./assets/tongyi.png" width="30px" style="display:inline;"></h2>
+<h2>WebAgent for Information Seeking built by Tongyi Lab, Alibaba Group <img src="./assets/tongyi.png" width="30px" style="display:inline;"></h2>
 
 </div>
 <p align="center">
@@ -47,6 +47,7 @@ alt="Alibaba-NLP%2FWebAgent | Trendshift" style="width: 250px; height: 55px;" wi
 
 ## 📰 News and Updates
 
+- `2025.07.11` 🔥🔥🔥**WebSailor-3B** is [released](https://huggingface.co/Alibaba-NLP/WebSailor-3B). You can deploy it with one click using <img src="./assets/aliyun.png" width="14px" style="display:inline;"> [Alibaba Cloud's FunctionAI](https://functionai.console.aliyun.com/template-detail?template=Alibaba-NLP-WebSailor-3B) in ten minutes!
 - `2025.07.03` 🔥🔥🔥We release **WebSailor**, an agentic search model specialized in performing extremely complex information seeking tasks, achieving open-source SOTA on some of the most difficult browsing benchmarks. **WebSailor** topped the HuggingFace [daily papers](https://huggingface.co/papers/2507.02592).
 - `2025.06.23` 🔥🔥🔥The model, interactive demo, and some of the data of **WebDancer** have been open-sourced. You're welcome to try them out!
 - `2025.05.29` 🔥🔥🔥We release **WebDancer**, a native agentic search model towards autonomous information seeking agency and _Deep Research_-like model.

@@ -1,9 +1,9 @@
 ---
 title: genai-toolbox
-date: 2025-07-11T15:34:16+08:00
+date: 2025-07-12T15:37:00+08:00
 draft: False
-image: https://images.unsplash.com/photo-1733325600234-2e404a049573?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIyMTkyMzR8&ixlib=rb-4.1.0
-tags: ['github',database, tools, agents, AI, development,  MCP,  toolbox,  applications,  security]
+image: https://images.unsplash.com/photo-1717444255955-d34c2ddfbb69?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIzMDU4MDJ8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
