@@ -1,8 +1,8 @@
 ---
 title: OCRmyPDF
-date: 2025-04-27T15:25:15+08:00
+date: 2025-07-13T15:31:01+08:00
 draft: False
-image: https://images.unsplash.com/photo-1644990978896-c86bd2e5fd2e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU3Mzg2ODJ8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1582575633518-b2b7d205a386?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIzOTE3NDd8&ixlib=rb-4.1.0
 tags: ['github',OCRmyPDF,PDF,OCR,Tesseract,PDF/A,searchable PDF,image processing,command-line,multi-lingual]
 categories: ['github']
 ---

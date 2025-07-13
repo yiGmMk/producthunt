@@ -1,9 +1,9 @@
 ---
 title: agentic-doc
-date: 2025-07-12T15:38:32+08:00
+date: 2025-07-13T15:30:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1565377572295-775293e25631?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIzMDU4MDJ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1582575633518-b2b7d205a386?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIzOTE3NDd8&ixlib=rb-4.1.0
+tags: ['github',Python,Agentic Document Extraction,API,PDF,Image,URL,Data Extraction,JSON,Markdown,Parallel Processing,Large File Processing,Error Handling,Google Drive,Amazon S3,Batch Processing]
 categories: ['github']
 ---
 

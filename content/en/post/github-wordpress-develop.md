@@ -1,9 +1,9 @@
 ---
 title: wordpress-develop
-date: 2025-07-12T15:37:18+08:00
+date: 2025-07-13T15:30:11+08:00
 draft: False
-image: https://images.unsplash.com/photo-1717444255955-d34c2ddfbb69?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIzMDU4MDJ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1582575633518-b2b7d205a386?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIzOTE3NDd8&ixlib=rb-4.1.0
+tags: ['github',WordPress,PHP,MySQL,JavaScript,Node.js,npm,Docker,WP-CLI,development environment,local development]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: opentelemetry-go
-date: 2025-07-12T15:38:40+08:00
+date: 2025-07-13T15:29:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1628260043263-7b78c670aa43?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIzMDU4MDJ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1685793709807-f8d974dd5e95?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIzOTE3NDd8&ixlib=rb-4.1.0
+tags: ['github',OpenTelemetry,Go,tracing,metrics,logs,instrumentation,exporter,observability]
 categories: ['github']
 ---
 
