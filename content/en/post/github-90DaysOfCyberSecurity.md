@@ -1,9 +1,9 @@
 ---
 title: 90DaysOfCyberSecurity
-date: 2025-07-13T15:30:53+08:00
+date: 2025-07-14T15:41:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1517733340021-9762be68f73a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIzOTE3NDd8&ixlib=rb-4.1.0
-tags: ['github',Cybersecurity,90-Day-Plan,Network+,Security+,Linux,Python,Traffic-Analysis,Git,ELK,Cloud-Platforms]
+image: https://images.unsplash.com/photo-1613327986042-63d4425a1a5d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI0Nzg3OTZ8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

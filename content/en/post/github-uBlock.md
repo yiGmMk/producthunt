@@ -1,9 +1,9 @@
 ---
 title: uBlock
-date: 2025-07-13T15:30:22+08:00
+date: 2025-07-14T15:41:03+08:00
 draft: False
-image: https://images.unsplash.com/photo-1489619243109-4e0ea59cfe10?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIzOTE3NDd8&ixlib=rb-4.1.0
-tags: ['github',uBlock Origin,content blocker,ad blocker,tracker blocker,privacy,Firefox,Chrome,Chromium,browser extension,filter lists]
+image: https://images.unsplash.com/photo-1591563727708-e5a8c6e2b245?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI0Nzg3OTZ8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: graphiti
-date: 2025-07-13T15:29:52+08:00
+date: 2025-07-14T15:41:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1581108346058-2a4438b1c924?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIzOTE3NDd8&ixlib=rb-4.1.0
-tags: ['github',knowledge graph, AI agents, real-time updates, temporal knowledge graph, RAG, information retrieval, semantic search, keyword search, graph traversal]
+image: https://images.unsplash.com/photo-1689431135576-5f7c97286346?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI0Nzg3OTZ8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
