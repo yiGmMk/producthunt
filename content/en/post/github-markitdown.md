@@ -1,9 +1,9 @@
 ---
 title: markitdown
-date: 2025-04-24T15:28:07+08:00
+date: 2025-07-15T15:32:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1559650939-33b2f010370a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU0Nzk2Nzd8&ixlib=rb-4.0.3
-tags: ['github',MarkItDown,Python,Markdown,LLM,text analysis,file conversion,PDF,PowerPoint,Word,Excel,Images,Audio,HTML,CSV,JSON,XML,ZIP,Youtube,EPub,Document Intelligence,plugins]
+image: https://images.unsplash.com/photo-1698417749491-72bba47caf07?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI1NjQ3MTl8&ixlib=rb-4.1.0
+tags: ['github',MarkItDown,Python,Markdown,LLM,text analysis,document conversion,PDF,PowerPoint,Word,Excel,Images,Audio,HTML,file conversion,text extraction]
 categories: ['github']
 ---
 
@@ -26,7 +26,7 @@ categories: ['github']
 
 MarkItDown is a lightweight Python utility for converting various files to Markdown for use with LLMs and related text analysis pipelines. To this end, it is most comparable to [textract](https://github.com/deanmalmgren/textract), but with a focus on preserving important document structure and content as Markdown (including: headings, lists, tables, links, etc.) While the output is often reasonably presentable and human-friendly, it is meant to be consumed by text analysis tools -- and may not be the best option for high-fidelity document conversions for human consumption.
 
-At present, MarkItDown supports:
+MarkItDown currently supports the conversion from:
 
 - PDF
 - PowerPoint
@@ -49,6 +49,31 @@ OpenAI's GPT-4o, natively "_speak_" Markdown, and often incorporate Markdown int
 responses unprompted. This suggests that they have been trained on vast amounts of
 Markdown-formatted text, and understand it well. As a side benefit, Markdown conventions
 are also highly token-efficient.
+
+## Prerequisites
+MarkItDown requires Python 3.10 or higher. It is recommended to use a virtual environment to avoid dependency conflicts.
+
+With the standard Python installation, you can create and activate a virtual environment using the following commands:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+If using `uv`, you can create a virtual environment with:
+
+```bash
+uv venv --python=3.12 .venv
+source .venv/bin/activate
+# NOTE: Be sure to use 'uv pip install' rather than just 'pip install' to install packages in this virtual environment
+```
+
+If you are using Anaconda, you can create a virtual environment with:
+
+```bash
+conda create -n markitdown python=3.12
+conda activate markitdown
+```
 
 ## Installation
 
