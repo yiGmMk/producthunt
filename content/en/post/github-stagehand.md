@@ -1,8 +1,8 @@
 ---
 title: stagehand
-date: 2025-07-14T15:41:33+08:00
+date: 2025-07-16T15:33:50+08:00
 draft: False
-image: https://images.unsplash.com/photo-1689431135576-5f7c97286346?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI0Nzg3OTZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1533069174012-17e2fefc8e2a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI2NTExMDJ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

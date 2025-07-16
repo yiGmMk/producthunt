@@ -1,9 +1,9 @@
 ---
 title: mindsdb
-date: 2025-07-15T15:32:53+08:00
+date: 2025-07-16T15:33:01+08:00
 draft: False
-image: https://images.unsplash.com/photo-1725984509121-926215743c5e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI1NjQ3MTl8&ixlib=rb-4.1.0
-tags: ['github',MindsDB,SQL,data,AI,machine learning,database,open-source,server,agents]
+image: https://images.unsplash.com/photo-1612416365463-9ddb415d7f71?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI2NTExMDJ8&ixlib=rb-4.1.0
+tags: ['github',MindsDB, open-source, SQL, data, AI, machine learning, federated query, agents]
 categories: ['github']
 ---
 

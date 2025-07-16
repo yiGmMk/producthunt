@@ -1,9 +1,9 @@
 ---
 title: WirelessAndroidAutoDongle
-date: 2025-07-15T15:33:52+08:00
+date: 2025-07-16T15:32:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1599175052629-772cb4180ff2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI1NjQ3MTl8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1725146657674-5ebce14f89b9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI2NTExMDJ8&ixlib=rb-4.1.0
+tags: ['github',Wireless Android Auto,Raspberry Pi,Android Auto,USB OTG,Bluetooth,Wifi,DIY,Headunit,Car]
 categories: ['github']
 ---
 
@@ -25,7 +25,7 @@ This repository consists of the buildroot setup to generate an sd card image to 
 This is currently tested and built for the following Raspberry Pi boards supporting USB OTG.
 - **Raspberry Pi Zero W**
 - **Raspberry Pi Zero 2 W**
-- **Raspberry Pi 3 A+** _(Raspberry Pi 3 B+ is not supported)_
+- **Raspberry Pi 3 A+** _(Raspberry Pi 3 B+ is not supported due to lack of USB OTG support.)_
 - **Raspberry Pi 4**
 
 In theory, this can be extended to more hardware in future with these basic requirements.

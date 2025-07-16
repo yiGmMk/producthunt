@@ -1,9 +1,9 @@
 ---
 title: graphiti
-date: 2025-07-15T15:34:27+08:00
+date: 2025-07-16T15:32:03+08:00
 draft: False
-image: https://images.unsplash.com/photo-1654009730888-ac8f77fc8d4a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI1NjQ3MTl8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1612416365463-9ddb415d7f71?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI2NTExMDJ8&ixlib=rb-4.1.0
+tags: ['github',knowledge graph, AI agents, real-time updates, temporal knowledge graph, RAG, information retrieval, semantic search, keyword search, graph traversal]
 categories: ['github']
 ---
 
@@ -26,7 +26,7 @@ Graphiti
 [![MyPy Check](https://github.com/getzep/Graphiti/actions/workflows/typecheck.yml/badge.svg)](https://github.com/getzep/Graphiti/actions/workflows/typecheck.yml)
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/getzep/graphiti)
-[![Discord](https://dcbadge.vercel.app/api/server/W8Kw6bsgXQ?style=flat)](https://discord.com/invite/W8Kw6bsgXQ)
+[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white)](https://discord.com/invite/W8Kw6bsgXQ)
 [![arXiv](https://img.shields.io/badge/arXiv-2501.13956-b31b1b.svg?style=flat)](https://arxiv.org/abs/2501.13956)
 [![Release](https://img.shields.io/github/v/release/getzep/graphiti?style=flat&label=Release&color=limegreen)](https://github.com/getzep/graphiti/releases)
 

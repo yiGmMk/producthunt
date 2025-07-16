@@ -1,15 +1,15 @@
 ---
 title: system-prompts-and-models-of-ai-tools
-date: 2025-06-30T15:31:23+08:00
+date: 2025-07-16T15:31:56+08:00
 draft: False
-image: https://images.unsplash.com/photo-1641463789150-9d8a474ed1b7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEyNjg2Mzd8&ixlib=rb-4.1.0
-tags: ['github',AI tools,system prompts,models,GitHub,repository,open source,AI models,security,AI startups,roadmap,feedback,support]
+image: https://images.unsplash.com/photo-1538554527980-e19306940004?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI2NTExMDJ8&ixlib=rb-4.1.0
+tags: ['github',AI tools, system prompts, models, GitHub repository, open source, AI security, ZeroLeaks]
 categories: ['github']
 ---
 
 # [x1xhlol/system-prompts-and-models-of-ai-tools](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools)
 
-# **FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent, VSCode Agent, Dia Browser, Trae AI, Cluely & Spawn (And other Open Sourced) System Prompts, Tools & AI Models**  
+# **FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent, VSCode Agent, Dia Browser, Trae AI, Cluely, Xcode & Spawn (And other Open Sourced) System Prompts, Tools & AI Models**  
 
 <a href="https://trendshift.io/repositories/14084" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14084" alt="x1xhlol%2Fsystem-prompts-and-models-of-ai-tools | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
@@ -19,14 +19,30 @@ categories: ['github']
 
 ---
 
+## ❤️ Support the Project
+
+If you find this collection valuable and appreciate the effort involved in obtaining and sharing these insights, please consider supporting the project. Your contribution helps keep this resource updated and allows for further exploration.
+
+You can show your support via:
+
+- **PayPal:** `lucknitelol@proton.me`  
+- **Cryptocurrency:**  
+  - **BTC:** `bc1q7zldmzjwspnaa48udvelwe6k3fef7xrrhg5625`  
+  - **LTC:** `LRWgqwEYDwqau1WeiTs6Mjg85NJ7m3fsdQ`  
+  - **ETH:** `0x3f844B2cc3c4b7242964373fB0A41C4fdffB192A`
+
+🙏 Thank you for your support!
+
+
+---
+
 ## 📑 Table of Contents
 
 1. [Available Files](#-available-files)  
 2. [Roadmap & Feedback](#-roadmap--feedback)  
-3. [Support the Project](#%EF%B8%8F-support-the-project)  
-4. [Connect With Me](#-connect-with-me)  
-5. [Security Notice for AI Startups](#%EF%B8%8F-security-notice-for-ai-startups)  
-6. [Star History](#-star-history) 
+3. [Connect With Me](#-connect-with-me)  
+4. [Security Notice for AI Startups](#%EF%B8%8F-security-notice-for-ai-startups)  
+5. [Star History](#-star-history) 
 
 ---
 
@@ -44,7 +60,8 @@ categories: ['github']
 - **Cursor Folder**  
 - **Dia Folder**  
 - **Trae AI Folder**  
-- **Cluely Folder**  
+- **Cluely Folder**
+- **Xcode Folder**  
 - **Open Source prompts Folder**  
   - Codex CLI  
   - Cline  
@@ -58,23 +75,7 @@ categories: ['github']
 > **Note:** We no longer use GitHub issues for roadmap and feedback.  
 > Please visit [System Prompts Roadmap & Feedback](https://systemprompts.featurebase.app/) to share your suggestions and track upcoming features.
 
-> **Latest Update:** 27/06/2025
-
----
-
-## ❤️ Support the Project
-
-If you find this collection valuable and appreciate the effort involved in obtaining and sharing these insights, please consider supporting the project. Your contribution helps keep this resource updated and allows for further exploration.
-
-You can show your support via:
-
-- **PayPal:** `lucknitelol@proton.me`  
-- **Cryptocurrency:**  
-  - **BTC:** `bc1q7zldmzjwspnaa48udvelwe6k3fef7xrrhg5625`  
-  - **LTC:** `LRWgqwEYDwqau1WeiTs6Mjg85NJ7m3fsdQ`  
-  - **ETH:** `0x3f844B2cc3c4b7242964373fB0A41C4fdffB192A`
-
-🙏 Thank you for your support!
+> **Latest Update:** 04/07/2025
 
 ---
 

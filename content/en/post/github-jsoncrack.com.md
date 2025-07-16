@@ -1,9 +1,9 @@
 ---
 title: jsoncrack.com
-date: 2025-06-28T15:28:34+08:00
+date: 2025-07-16T15:33:43+08:00
 draft: False
-image: https://images.unsplash.com/photo-1588427523420-dcd7c2562b7d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEwOTU2MjR8&ixlib=rb-4.1.0
-tags: ['github',JSON,JSONCrack,data visualization,interactive graphs,data conversion,JSON Schema,data validation,code generation,TypeScript,Golang]
+image: https://images.unsplash.com/photo-1612416365463-9ddb415d7f71?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI2NTExMDJ8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
