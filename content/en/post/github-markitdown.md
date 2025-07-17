@@ -1,9 +1,9 @@
 ---
 title: markitdown
-date: 2025-07-16T15:31:50+08:00
+date: 2025-07-17T15:36:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1718976142371-0439eabdc1cb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI2NTExMDJ8&ixlib=rb-4.1.0
-tags: ['github',MarkItDown,Python,Markdown,LLM,document conversion,file conversion,PDF,PowerPoint,Word,Excel,Images,Audio,HTML,text analysis,plugins,Azure Document Intelligence]
+image: https://images.unsplash.com/photo-1544363635-44cbff5f1143?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI3Mzc3OTN8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

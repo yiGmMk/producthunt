@@ -1,9 +1,9 @@
 ---
 title: erpnext
-date: 2025-07-16T15:32:21+08:00
+date: 2025-07-17T15:37:06+08:00
 draft: False
-image: https://images.unsplash.com/photo-1668749092857-dc9d93494586?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI2NTExMDJ8&ixlib=rb-4.1.0
-tags: ['github',ERPNext, Frappe, MariaDB, Python, JavaScript, accounting, inventory, CRM]
+image: https://images.unsplash.com/photo-1515259387710-51e175f9ec6d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI3Mzc3OTN8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

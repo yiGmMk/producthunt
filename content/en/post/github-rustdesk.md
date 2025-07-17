@@ -1,9 +1,9 @@
 ---
 title: rustdesk
-date: 2025-06-07T15:27:39+08:00
+date: 2025-07-17T15:38:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591026902834-4065ab5bb297?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkyODExODN8&ixlib=rb-4.1.0
-tags: ['github',RustDesk,remote desktop,software,Rust,open source,screen sharing,file transfer,remote access,cross-platform,secure]
+image: https://images.unsplash.com/photo-1658039615872-f3369fa3e1fd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI3Mzc3OTN8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -28,7 +28,7 @@ Chat with us: [Discord](https://discord.gg/nDceKgxnkV) | [Twitter](https://twitt
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I04VU09)
 
-Yet another remote desktop software, written in Rust. Works out of the box, no configuration required. You have full control of your data, with no concerns about security. You can use our rendezvous/relay server, [set up your own](https://rustdesk.com/server), or [write your own rendezvous/relay server](https://github.com/rustdesk/rustdesk-server-demo).
+Yet another remote desktop solution, written in Rust. Works out of the box with no configuration required. You have full control of your data, with no concerns about security. You can use our rendezvous/relay server, [set up your own](https://rustdesk.com/server), or [write your own rendezvous/relay server](https://github.com/rustdesk/rustdesk-server-demo).
 
 ![image](https://user-images.githubusercontent.com/71636191/171661982-430285f0-2e12-4b1d-9957-4a58e375304d.png)
 
@@ -57,7 +57,7 @@ Please download Sciter dynamic library yourself.
 [Linux](https://raw.githubusercontent.com/c-smile/sciter-sdk/master/bin.lnx/x64/libsciter-gtk.so) |
 [macOS](https://raw.githubusercontent.com/c-smile/sciter-sdk/master/bin.osx/libsciter.dylib)
 
-## Raw steps to build
+## Raw Steps to build
 
 - Prepare your Rust development env and C++ build env
 
@@ -70,7 +70,7 @@ Please download Sciter dynamic library yourself.
 
 ## [Build](https://rustdesk.com/docs/en/dev/build/)
 
-## How to build on Linux
+## How to Build on Linux
 
 ### Ubuntu 18 (Debian 10)
 
@@ -165,7 +165,7 @@ Or, if you're running a release executable:
 target/release/rustdesk
 ```
 
-Please ensure that you are running these commands from the root of the RustDesk repository, otherwise the application might not be able to find the required resources. Also note that other cargo subcommands such as `install` or `run` are not currently supported via this method as they would install or run the program inside the container instead of the host.
+Please ensure that you run these commands from the root of the RustDesk repository, or the application may not find the required resources. Also note that other cargo subcommands such as `install` or `run` are not currently supported via this method as they would install or run the program inside the container instead of the host.
 
 ## File Structure
 

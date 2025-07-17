@@ -1,9 +1,9 @@
 ---
 title: claude-code
-date: 2025-07-16T15:33:17+08:00
+date: 2025-07-17T15:37:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1543096757-a42d5d384910?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI2NTExMDJ8&ixlib=rb-4.1.0
-tags: ['github',Claude Code, agentic coding tool, natural language commands, codebase, terminal, git workflows,  GitHub,  Anthropic]
+image: https://images.unsplash.com/photo-1549889699-bbca54432749?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI3Mzc3OTN8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

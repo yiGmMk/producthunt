@@ -1,9 +1,9 @@
 ---
 title: vanna
-date: 2025-04-18T15:28:24+08:00
+date: 2025-07-17T15:38:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1547810689-3c16713a7a3c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ5NjEyNjh8&ixlib=rb-4.0.3
-tags: ['github',Vanna,SQL,RAG,LLM,database,vector database,OpenAI,Python]
+image: https://images.unsplash.com/photo-1544363635-44cbff5f1143?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI3Mzc3OTN8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
