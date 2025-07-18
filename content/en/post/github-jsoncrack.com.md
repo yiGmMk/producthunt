@@ -1,9 +1,9 @@
 ---
 title: jsoncrack.com
-date: 2025-07-16T15:33:43+08:00
+date: 2025-07-18T15:35:06+08:00
 draft: False
-image: https://images.unsplash.com/photo-1612416365463-9ddb415d7f71?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI2NTExMDJ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1560826187-7df41feb4831?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI4MjQwNDR8&ixlib=rb-4.1.0
+tags: ['github',JSON,JSONCrack,visualization,data,graph,editor,conversion,validation,schema]
 categories: ['github']
 ---
 
@@ -137,6 +137,10 @@ docker compose up
 
 # Go to http://localhost:8888
 ```
+
+## Configuration
+
+The supported node limit can be changed by editing the `NEXT_PUBLIC_NODE_LIMIT` value in the `.env` file at the project root.
 
 <!-- LICENSE -->
 

@@ -1,9 +1,9 @@
 ---
 title: localGPT
-date: 2025-07-17T15:36:52+08:00
+date: 2025-07-18T15:34:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1672444992812-8c82c435eed8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI3Mzc3OTN8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1560826187-7df41feb4831?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI4MjQwNDR8&ixlib=rb-4.1.0
+tags: ['github',LocalGPT,LangChain,HuggingFace,LLM,embeddings,vector database,Chroma,InstructorEmbeddings,LlamaCpp,GGML,GGUF,GPTQ,GPU,CPU,HPU,MPS,RAG,open-source]
 categories: ['github']
 ---
 
