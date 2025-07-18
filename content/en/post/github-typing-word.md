@@ -29,6 +29,8 @@ Github Pages: <https://typing-word.ttentau.top>(国内推荐访问这个)
 
 Netlify: <https://typing-words.netlify.app/>(需要翻墙)
 
+CDN加速版本: [https://typing-words.programnotes.cn](https://typing-words.programnotes.cn),国内可访问
+
 ## 🛠 功能列表
 
 ### 背单词
