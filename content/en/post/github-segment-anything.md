@@ -1,9 +1,9 @@
 ---
 title: segment-anything
-date: 2025-07-17T15:38:48+08:00
+date: 2025-07-19T15:33:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1595160510280-c1f6dd26aa9d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI3Mzc3OTN8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1656873186004-f53c335fa348?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI5MTAzNzN8&ixlib=rb-4.1.0
+tags: ['github',Segment-Anything-Model, SAM, image-segmentation, video-segmentation, foundation-model, promptable-segmentation, transformer-architecture, SA-V-dataset]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: open_deep_research
-date: 2025-07-18T15:35:43+08:00
+date: 2025-07-19T15:33:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1560826187-7df41feb4831?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI4MjQwNDR8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1563283730-9a0dafc3c51f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI5MTAzNzN8&ixlib=rb-4.1.0
+tags: ['github',Langchain,Open Deep Research,research agent,LangGraph,model providers,search tools,MCP servers,configuration options,model behavior,web UI,environment variables]
 categories: ['github']
 ---
 

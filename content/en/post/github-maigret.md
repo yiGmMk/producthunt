@@ -1,9 +1,9 @@
 ---
 title: maigret
-date: 2025-07-18T15:34:32+08:00
+date: 2025-07-19T15:33:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1529635296056-77136234fa2a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI4MjQwNDR8&ixlib=rb-4.1.0
-tags: ['github',Maigret,OSINT,username,social media,account,profile,search,web scraping]
+image: https://images.unsplash.com/photo-1593415948999-e76d576c2000?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI5MTAzNzN8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
