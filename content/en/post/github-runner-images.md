@@ -1,9 +1,9 @@
 ---
 title: runner-images
-date: 2025-05-29T15:29:49+08:00
+date: 2025-07-20T15:30:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1593280276854-8559ce0028e6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg1MDM3MDJ8&ixlib=rb-4.1.0
-tags: ['github',GitHub Actions,runner images,Azure Pipelines,Ubuntu,macOS,Windows Server,software,image support,deployment,beta,GA,deprecation,label scheme,package managers,contributions]
+image: https://images.unsplash.com/photo-1567710145156-9e5bc95bc430?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI5OTY0NzF8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -41,7 +41,7 @@ To build a VM machine from this repo's source, see the [instructions](docs/creat
 | macOS 13 Arm64 | `macos-13-xlarge` | [macOS-13-arm64] | ![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fsubir0071%2F385e39188f4280878bada99250e99db7%2Fraw%2Fmacos-13-arm64.json) |
 | Windows Server 2025 | `windows-2025` | [windows-2025] | ![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fsubir0071%2F385e39188f4280878bada99250e99db7%2Fraw%2Fwin25.json) |
 | Windows Server 2022 | `windows-latest` or `windows-2022` | [windows-2022] | ![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fsubir0071%2F385e39188f4280878bada99250e99db7%2Fraw%2Fwin22.json) |
-| Windows Server 2019 | `windows-2019` | [windows-2019] | ![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fsubir0071%2F385e39188f4280878bada99250e99db7%2Fraw%2Fwin19.json) |
+| Windows Server 2019 | `windows-2019` | [windows-2019] | ![Deprecated](https://img.shields.io/badge/-Deprecated-red) |
 
 ### Label scheme
 
@@ -50,9 +50,9 @@ To build a VM machine from this repo's source, see the [instructions](docs/creat
 
 [ubuntu-24.04]: https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md
 [ubuntu-22.04]: https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2204-Readme.md
+[windows-2019]: https://github.com/actions/runner-images/blob/main/images/windows/Windows2019-Readme.md
 [windows-2025]: https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-Readme.md
 [windows-2022]: https://github.com/actions/runner-images/blob/main/images/windows/Windows2022-Readme.md
-[windows-2019]: https://github.com/actions/runner-images/blob/main/images/windows/Windows2019-Readme.md
 [macOS-13]: https://github.com/actions/runner-images/blob/main/images/macos/macos-13-Readme.md
 [macOS-13-arm64]: https://github.com/actions/runner-images/blob/main/images/macos/macos-13-arm64-Readme.md
 [macOS-14]: https://github.com/actions/runner-images/blob/main/images/macos/macos-14-Readme.md

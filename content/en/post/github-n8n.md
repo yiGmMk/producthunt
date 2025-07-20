@@ -1,9 +1,9 @@
 ---
 title: n8n
-date: 2025-07-19T15:34:27+08:00
+date: 2025-07-20T15:29:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1656873186004-f53c335fa348?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI5MTAzNzN8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1611486212557-88be5ff6f941?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI5OTY0NzF8&ixlib=rb-4.1.0
+tags: ['github',workflow automation,no-code,low-code,AI,LangChain,JavaScript,Python,self-hosting,enterprise,open-source]
 categories: ['github']
 ---
 

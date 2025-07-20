@@ -1,9 +1,9 @@
 ---
 title: remote-jobs
-date: 2025-07-19T15:34:37+08:00
+date: 2025-07-20T15:28:59+08:00
 draft: False
-image: https://images.unsplash.com/photo-1593415948999-e76d576c2000?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI5MTAzNzN8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1512510002561-b32d0f7dcab5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI5OTY0NzF8&ixlib=rb-4.1.0
+tags: ['github',remote work, companies, technology, global, jobs, remote jobs, hiring, careers]
 categories: ['github']
 ---
 
@@ -495,6 +495,7 @@ Name | Website | Region
 [Maxicus](/company-profiles/maxicus.md) | https://maxicus.com/ | India
 [Mayven Studios](/company-profiles/mayven-studios.md) | https://mayvenstudios.com/ | Worldwide
 [Mayvue](/company-profiles/mayvue.md) | https://mayvue.com/ | USA
+[Meant4](/company-profiles/meant4.md) | <https://meant4.com> | Worldwide
 [Mediacurrent](/company-profiles/mediacurrent.md) | https://www.mediacurrent.com/ | USA
 [Mediavine](/company-profiles/mediavine.md) | https://www.mediavine.com/ | USA
 [Medium](/company-profiles/medium.md) | https://medium.com/ | USA
@@ -656,6 +657,7 @@ Name | Website | Region
 [Roadpass Digital](/company-profiles/roadpass-digital.md) | https://roadpass.com | USA
 [Roadtrippers](/company-profiles/roadtrippers.md) | https://www.roadtrippers.com | USA
 [Rocket.Chat](/company-profiles/rocket-chat.md) | https://rocket.chat | Worldwide
+[Roundproxies](/company-profiles/roundproxies.md) | https://roundproxies.com/ | Worldwide
 [rtCamp](/company-profiles/rtcamp-solutions.md) | https://rtcamp.com | Worldwide
 [SadaPay](/company-profiles/sadapay.md) | https://sadapay.pk/ | Pakistan
 [Safeguard Global](/company-profiles/safeguard-global.md) | https://www.safeguardglobal.com/ | Worldwide
