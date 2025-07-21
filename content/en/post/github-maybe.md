@@ -1,18 +1,18 @@
 ---
 title: maybe
-date: 2025-04-16T15:29:58+08:00
+date: 2025-07-21T15:38:22+08:00
 draft: False
-image: https://images.unsplash.com/photo-1714165861000-ee5b656c54e3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3ODg0NTh8&ixlib=rb-4.0.3
-tags: ['github',personal finance, wealth management, open-source, Docker, PostgreSQL, Ruby, multi-currency support, Synth, AGPLv3 license]
+image: https://images.unsplash.com/photo-1664784805210-9fa665e2b7e9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMwODM0NTd8&ixlib=rb-4.1.0
+tags: ['github',personal finance,wealth management,open-source,Docker,self-host,multi-currency,PostgreSQL,Ruby,development]
 categories: ['github']
 ---
 
 # [maybe-finance/maybe](https://github.com/maybe-finance/maybe)
 
-<img width="1440" alt="dashboard_mockup" src="https://github.com/maybe-finance/maybe/assets/35243/a7763d0e-a942-42db-bde7-eb8d28106917">
-<sup><i>(Note: The image above is a mockup of what we're working towards. We're rapidly approaching the functionality shown, but not all of the parts are ready just yet.)</i></sup>
 
-# Maybe: The OS for your personal finances
+<img width="1190" alt="maybe_hero" src="https://github.com/user-attachments/assets/13fc5ef4-ce0f-4073-a163-9dbc3eb4c8e5" />
+
+# Maybe: The personal finance app for everyone
 
 <b>Get
 involved: [Discord](https://link.maybe.co/discord) • [Website](https://maybefinance.com) • [Issues](https://github.com/maybe-finance/maybe/issues)</b>
@@ -49,6 +49,14 @@ Once you've done that, please visit
 our [contributing guide](https://github.com/maybe-finance/maybe/blob/main/CONTRIBUTING.md)
 to get started!
 
+### Performance Issues
+
+With data-heavy apps, inevitably, there are performance issues. We've set up a public dashboard showing the problematic requests, along with the stacktraces to help debug them.
+
+Any contributions that help improve performance are very much welcome.
+
+https://oss.skylight.io/app/applications/XDpPIXEX52oi/recent/6h/endpoints
+
 ## Local Development Setup
 
 **If you are trying to _self-host_ the Maybe app, stop here. You
@@ -70,7 +78,7 @@ bin/setup
 bin/dev
 
 # Optionally, load demo data
-rake demo_data:reset
+rake demo_data:default
 ```
 
 And visit http://localhost:3000 to see the app. You can use the following

@@ -1,9 +1,9 @@
 ---
 title: burn
-date: 2025-04-28T15:55:44+08:00
+date: 2025-07-21T15:39:08+08:00
 draft: False
-image: https://images.unsplash.com/photo-1612356698282-7a128ff04a21?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU4MjY4OTJ8&ixlib=rb-4.0.3
-tags: ['github',Deep Learning,Rust,GPU,Performance,Framework,Backend,Autodiff,Kernel Fusion]
+image: https://images.unsplash.com/photo-1590157807557-9a89183d4da6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMwODM0NTd8&ixlib=rb-4.1.0
+tags: ['github',Deep Learning,Rust,GPU,Performance,Backend,Framework,Training,Inference]
 categories: ['github']
 ---
 
@@ -17,8 +17,8 @@ categories: ['github']
 [![Minimum Supported Rust Version](https://img.shields.io/crates/msrv/burn)](https://crates.io/crates/burn)
 [![Documentation](https://img.shields.io/badge/docs-latest-blue)](https://burn.dev/docs/burn)
 [![Test Status](https://github.com/tracel-ai/burn/actions/workflows/test.yml/badge.svg)](https://github.com/tracel-ai/burn/actions/workflows/test.yml)
-[![CodeCov](https://codecov.io/gh/tracel-ai/burn/branch/main/graph/badge.svg)](https://codecov.io/gh/tracel-ai/burn)
-![license](https://shields.io/badge/license-MIT%2FApache--2.0-blue)
+[![license](https://shields.io/badge/license-MIT%2FApache--2.0-blue)](#license)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/tracel-ai/burn)
 
 [<img src="https://www.runblaze.dev/ci-blaze-powered.png" width="125px"/>](https://www.runblaze.dev)
 
@@ -187,7 +187,7 @@ functionalities of a backend implementation to suit your personal modeling requi
 
 This versatility is advantageous in numerous ways, such as supporting custom operations like flash
 attention or manually writing your own kernel for a specific backend to enhance performance. See
-[this section](https://burn.dev/burn-book/advanced/backend-extension/index.html) in the Burn Book 🔥
+[this section](https://burn.dev/books/burn/advanced/backend-extension/index.html) in the Burn Book 🔥
 for more details.
 
 </details>
@@ -199,10 +199,10 @@ for more details.
 <div align="left">
 <img align="right" src="https://raw.githubusercontent.com/tracel-ai/burn/main/assets/backend-chip.png" height="96px"/>
 
-
 Burn strives to be as fast as possible on as many hardwares as possible, with robust implementations.
 We believe this flexibility is crucial for modern needs where you may train your models in the cloud,
 then deploy on customer hardwares, which vary from user to user.
+
 </div>
 
 <br />
@@ -210,7 +210,7 @@ then deploy on customer hardwares, which vary from user to user.
 **Supported Backends**
 
 | Backend  | Devices                      | Class       |
-| -------  | ---------------------------- | ----------- |
+| -------- | ---------------------------- | ----------- |
 | CUDA     | NVIDIA GPUs                  | First-Party |
 | ROCm     | AMD GPUs                     | First-Party |
 | Metal    | Apple GPUs                   | First-Party |
@@ -428,7 +428,7 @@ you have written in another framework like TensorFlow or PyTorch to Burn to bene
 advantages our framework offers.
 
 Our ONNX support is further described in
-[this section of the Burn Book 🔥](https://burn.dev/burn-book/import/onnx-model.html).
+[this section of the Burn Book 🔥](https://burn.dev/books/burn/import/onnx-model.html).
 
 > **Note**: This crate is in active development and currently supports a
 > [limited set of ONNX operators](./crates/burn-import/SUPPORTED-ONNX-OPS.md).
@@ -437,13 +437,16 @@ Our ONNX support is further described in
 
 <details>
 <summary>
-Importing PyTorch Models 🚚
+Importing PyTorch or Safetensors Models 🚚
 </summary>
 <br />
 
-Support for loading of PyTorch model weights into Burn’s native model architecture, ensuring
-seamless integration. See
-[Burn Book 🔥 section on importing PyTorch](https://burn.dev/burn-book/import/pytorch-model.html)
+You can load weights from PyTorch or Safetensors formats directly into your Burn-defined models. This makes it easy to reuse existing models while benefiting from Burn's performance and deployment features.
+
+Learn more:
+
+- [Import pre-trained PyTorch models into Burn](https://burn.dev/books/burn/import/pytorch-model.html)
+- [Load models from Safetensors format](https://burn.dev/books/burn/import/safetensors-model.html)
 
 </details>
 
@@ -479,7 +482,6 @@ means it can run in bare metal environment such as embedded devices without an o
 
 <br />
 
-
 ### Benchmarks
 
 To evaluate performance across different backends and track improvements over time, we provide a
@@ -487,15 +489,15 @@ dedicated benchmarking suite.
 
 Run and compare benchmarks using [burn-bench](https://github.com/tracel-ai/burn-bench).
 
-
-> ⚠️ **Warning**  
-> When using one of the `wgpu` backends, you may encounter compilation errors related to recursive type evaluation. This is due to complex type nesting within the `wgpu` dependency chain.  
+> ⚠️ **Warning**
+> When using one of the `wgpu` backends, you may encounter compilation errors related to recursive type evaluation. This is due to complex type nesting within the `wgpu` dependency chain.
 > To resolve this issue, add the following line at the top of your `main.rs` or `lib.rs` file:
+>
 > ```rust
 > #![recursion_limit = "256"]
 > ```
+>
 > The default recursion limit (128) is often just below the required depth (typically 130-150) due to deeply nested associated types and trait bounds.
-
 
 ## Getting Started
 
@@ -515,7 +517,7 @@ The Burn Book 🔥
 
 To begin working effectively with Burn, it is crucial to understand its key components and
 philosophy. This is why we highly recommend new users to read the first sections of
-[The Burn Book 🔥](https://burn.dev/burn-book/). It provides detailed examples and explanations
+[The Burn Book 🔥](https://burn.dev/books/burn/). It provides detailed examples and explanations
 covering every facet of the framework, including building blocks like tensors, modules, and
 optimizers, all the way to advanced usage, like coding your own GPU kernels.
 
@@ -561,7 +563,7 @@ impl<B: Backend> PositionWiseFeedForward<B> {
 We have a somewhat large amount of [examples](./examples) in the repository that shows how to use
 the framework in different scenarios.
 
-Following [the book](https://burn.dev/burn-book/):
+Following [the book](https://burn.dev/books/burn/):
 
 - [Basic Workflow](./examples/guide) : Creates a custom CNN `Module` to train on the MNIST dataset
   and use for inference.

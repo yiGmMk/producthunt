@@ -1,9 +1,9 @@
 ---
 title: open_deep_research
-date: 2025-07-20T15:28:09+08:00
+date: 2025-07-21T15:38:58+08:00
 draft: False
-image: https://images.unsplash.com/photo-1571213536516-14ad51515905?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI5OTY0NzF8&ixlib=rb-4.1.0
-tags: ['github',Langchain,Open Deep Research,research agent,model providers,search tools,MCP servers,LangGraph,configuration,models,summarization,research,compression,final report,structured outputs,search API,tool calling,Model Context Protocol,MCP,filesystem,remote,Arcade,evaluation,LangSmith,deployment,LangGraph Studio,Open Agent Platform,OAP,legacy implementations,workflow,multi-agent]
+image: https://images.unsplash.com/photo-1601280950338-c232a7b117a3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMwODM0NTd8&ixlib=rb-4.1.0
+tags: ['github',Langchain,Open Deep Research,research agent,model providers,search tools,MCP servers,LangGraph,configuration,models,structured outputs,search API,tool calling,evaluation,LangSmith,deployment,Open Agent Platform]
 categories: ['github']
 ---
 
