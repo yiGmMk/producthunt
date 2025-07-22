@@ -1,9 +1,9 @@
 ---
 title: open_deep_research
-date: 2025-07-21T15:38:58+08:00
+date: 2025-07-22T15:33:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1601280950338-c232a7b117a3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMwODM0NTd8&ixlib=rb-4.1.0
-tags: ['github',Langchain,Open Deep Research,research agent,model providers,search tools,MCP servers,LangGraph,configuration,models,structured outputs,search API,tool calling,evaluation,LangSmith,deployment,Open Agent Platform]
+image: https://images.unsplash.com/photo-1694250990115-ca7d9d991b24?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMxNjk1NjB8&ixlib=rb-4.1.0
+tags: ['github',Langchain,Deep Research,Agent,Open Source,Model Providers,Search Tools,MCP Servers,LangGraph,Configuration,Models,Summarization,Research,Compression,Final Report,Structured Outputs,Search API,Tool Calling,OpenAI,Anthropic,Google Vertex AI,Filesystem MCP Server,Remote MCP Servers,Arcade MCP Server,Evaluation,Multi-dimensional Scoring,Dataset-driven Evaluation]
 categories: ['github']
 ---
 

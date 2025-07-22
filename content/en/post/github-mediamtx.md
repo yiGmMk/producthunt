@@ -1,9 +1,9 @@
 ---
 title: mediamtx
-date: 2025-07-20T15:28:17+08:00
+date: 2025-07-22T15:34:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1566066055109-3792a5bd2590?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI5OTY0NzF8&ixlib=rb-4.1.0
-tags: ['github',MediaMTX, media server, media proxy, video streams, audio streams, SRT, WebRTC, RTSP, RTMP, HLS, FFmpeg, GStreamer, OBS Studio, Raspberry Pi]
+image: https://images.unsplash.com/photo-1679365132909-7e2ae661a3be?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMxNjk1NjF8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

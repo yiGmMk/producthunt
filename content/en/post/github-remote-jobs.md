@@ -1,9 +1,9 @@
 ---
 title: remote-jobs
-date: 2025-07-21T15:38:14+08:00
+date: 2025-07-22T15:34:55+08:00
 draft: False
-image: https://images.unsplash.com/photo-1724568220248-53febda7fcd1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMwODM0NTd8&ixlib=rb-4.1.0
-tags: ['github',remote work, companies, technology, list, jobs, careers, worldwide, remote jobs]
+image: https://images.unsplash.com/photo-1546123752-348d95b3facd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMxNjk1NjF8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
