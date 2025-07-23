@@ -1,9 +1,9 @@
 ---
 title: NextChat
-date: 2025-07-22T15:32:56+08:00
+date: 2025-07-23T15:34:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1597431417971-4db2a9c8788d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMxNjk1NjF8&ixlib=rb-4.1.0
-tags: ['github',NextChat, AI assistant, Claude, DeepSeek, GPT4, Gemini,  LLM,  desktop app, iOS app]
+image: https://images.unsplash.com/photo-1644381348384-da4f9a7b4c5f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMyNTYwMTZ8&ixlib=rb-4.1.0
+tags: ['github',NextChat, AI Assistant, Claude, DeepSeek, GPT4, Gemini,  LLM,  ChatGPT,  iOS]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: awesome-claude-code
-date: 2025-07-22T15:33:06+08:00
+date: 2025-07-23T15:36:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1679365132909-7e2ae661a3be?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMxNjk1NjF8&ixlib=rb-4.1.0
-tags: ['github',Claude Code, CLI, slash-commands, workflows,  coding assistant,  productivity,  best practices,  knowledge sharing,  tooling, IDE integrations, hooks, version control, Git, code analysis, testing, context loading, priming, documentation, changelogs, CI, deployment, project management, CLAUDE.md files,  language-specific, domain-specific, project scaffolding, MCP, Anthropic]
+image: https://images.unsplash.com/photo-1703088996593-39768a77fb82?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMyNTYwMTZ8&ixlib=rb-4.1.0
+tags: ['github',Claude Code, CLI, slash-commands, workflows, tooling, hooks, CLAUDE.md, coding assistant, agent, productivity, best practices, knowledge sharing,  GitHub,  version control, Git, code analysis, testing, context loading, priming, documentation, changelogs, CI, deployment, project management, task management, IDE integrations, language-specific, domain-specific, project scaffolding, MCP, Model Context Protocol]
 categories: ['github']
 ---
 

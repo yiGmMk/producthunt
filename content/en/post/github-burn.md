@@ -1,9 +1,9 @@
 ---
 title: burn
-date: 2025-07-21T15:39:08+08:00
+date: 2025-07-23T15:36:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1590157807557-9a89183d4da6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMwODM0NTd8&ixlib=rb-4.1.0
-tags: ['github',Deep Learning,Rust,GPU,Performance,Backend,Framework,Training,Inference]
+image: https://images.unsplash.com/photo-1667742363443-263a86a80a36?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMyNTYwMTZ8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

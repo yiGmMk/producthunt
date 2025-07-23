@@ -1,9 +1,9 @@
 ---
 title: Resume-Matcher
-date: 2025-07-22T15:34:34+08:00
+date: 2025-07-23T15:33:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1648871646984-12cf8ba64f1c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMxNjk1NjF8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1632168305415-6c6c6079ff24?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMyNTYwMTZ8&ixlib=rb-4.1.0
+tags: ['github',Resume,Matcher,ATS,AI,keywords,optimization,job,description,resume-building]
 categories: ['github']
 ---
 

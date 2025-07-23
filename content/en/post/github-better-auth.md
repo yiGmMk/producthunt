@@ -1,9 +1,9 @@
 ---
 title: better-auth
-date: 2025-07-22T15:34:13+08:00
+date: 2025-07-23T15:34:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1648871646984-12cf8ba64f1c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMxNjk1NjF8&ixlib=rb-4.1.0
-tags: ['github',TypeScript,Authentication,Authorization,Library,Framework-agnostic,Plugin,2FA,Multi-tenant,Open-source,Security]
+image: https://images.unsplash.com/photo-1632168305415-6c6c6079ff24?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMyNTYwMTZ8&ixlib=rb-4.1.0
+tags: ['github',TypeScript,authentication,authorization,library,plugin,2FA,multi-tenant,open-source,security]
 categories: ['github']
 ---
 

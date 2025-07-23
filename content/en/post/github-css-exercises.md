@@ -1,8 +1,8 @@
 ---
 title: css-exercises
-date: 2025-07-21T15:39:27+08:00
+date: 2025-07-23T15:36:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1590904015339-6e3bd5e396c1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMwODM0NTd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1715858410620-702b795d19e0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMyNTYwMTZ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
