@@ -1,9 +1,9 @@
 ---
 title: maybe
-date: 2025-07-23T15:33:58+08:00
+date: 2025-07-24T15:36:01+08:00
 draft: False
-image: https://images.unsplash.com/photo-1599837598039-4e7f39ba3f54?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMyNTYwMTZ8&ixlib=rb-4.1.0
-tags: ['github',personal finance, wealth management, open-source, Docker, self-host, multi-currency, PostgreSQL, Ruby]
+image: https://images.unsplash.com/photo-1649293813833-ac6820c63d3d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMzNDI1NDV8&ixlib=rb-4.1.0
+tags: ['github',personal finance app, open-source, wealth management, Docker, multi-currency support,  self-host,  development setup,  contributing guide, performance issues]
 categories: ['github']
 ---
 

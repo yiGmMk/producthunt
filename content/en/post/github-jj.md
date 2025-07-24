@@ -1,9 +1,9 @@
 ---
 title: jj
-date: 2025-05-07T15:30:14+08:00
+date: 2025-07-24T15:37:54+08:00
 draft: False
-image: https://images.unsplash.com/photo-1678165629195-f8a4b5c54536?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY2MDI5MDd8&ixlib=rb-4.1.0
-tags: ['github',version control system,Git,Mercurial,Jujutsu,repository,commits,conflict resolution,rebase,working copy]
+image: https://images.unsplash.com/photo-1649293813833-ac6820c63d3d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMzNDI1NDV8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -224,7 +224,6 @@ the header of the website when you scroll to the top of any page.
 
 Jujutsu is designed so that the underlying data and storage model is abstract.
 Today, only the Git backend is production-ready. The Git backend uses the
-[libgit2](https://libgit2.org/) C library and the
 [gitoxide](https://github.com/Byron/gitoxide) Rust library.
 
 [backends]: https://jj-vcs.github.io/jj/latest/glossary#backend
@@ -325,10 +324,9 @@ January 2021. I haven't had to re-clone from source (I don't think I've even had
 to restore from backup).
 
 There *will* be changes to workflows and backward-incompatible changes to the
-on-disk formats before version 1.0.0. Even the binary's name may change (i.e.
-away from `jj`). For any format changes, we'll try to implement transparent
-upgrades (as we've done with recent changes), or provide upgrade commands or
-scripts if requested.
+on-disk formats before version 1.0.0. For any format changes, we'll try to
+implement transparent upgrades (as we've done with recent changes), or provide
+upgrade commands or scripts if requested.
 
 ## Related work
 

@@ -1,9 +1,9 @@
 ---
 title: OpenBB
-date: 2025-07-16T15:32:51+08:00
+date: 2025-07-24T15:36:08+08:00
 draft: False
-image: https://images.unsplash.com/photo-1622441083964-daabbe5ef047?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI2NTExMDJ8&ixlib=rb-4.1.0
-tags: ['github',OpenBB,finance,platform,Python,CLI,data,integration,AI,agents,equity,options]
+image: https://images.unsplash.com/photo-1508972036778-18166e320345?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMzNDI1NDV8&ixlib=rb-4.1.0
+tags: ['github',OpenBB,financial,platform,Python,CLI,data,integration,AI,agents,equity,options,crypto,forex,macro-economy,fixed-income]
 categories: ['github']
 ---
 
@@ -142,7 +142,7 @@ There are three main ways of contributing to this project. (Hopefully you have s
 
 ### Become a Contributor
 
-- More information on our [Contributing Documentation](https://docs.openbb.co/platform/developer_guide/contributing).
+- More information on our [Contributing Documentation](https://docs.openbb.co/platform/developer_guide/misc/contributing).
 
 ### Create a GitHub ticket
 
