@@ -1,9 +1,9 @@
 ---
 title: cursor-free-vip
-date: 2025-07-24T15:37:47+08:00
+date: 2025-07-25T15:33:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1550514704-8c4b1b66026b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMzNDI1NDV8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1702576179843-73c378fc4c2d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM0Mjg3NDh8&ixlib=rb-4.1.0
+tags: ['github',Cursor,Windows,macOS,Linux,automation,script,config,installation,support]
 categories: ['github']
 ---
 

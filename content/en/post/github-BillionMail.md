@@ -1,9 +1,9 @@
 ---
 title: BillionMail
-date: 2025-05-31T15:26:55+08:00
+date: 2025-07-25T15:33:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1706820643404-71812d9d7d3a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg2NzYzNzZ8&ixlib=rb-4.1.0
-tags: ['github',BillionMail,email marketing,open-source,mail server,email campaigns,newsletter,analytics,customer management,self-hosted,email marketing platform]
+image: https://images.unsplash.com/photo-1591784383009-bc583c53da97?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM0Mjg3NDh8&ixlib=rb-4.1.0
+tags: ['github',BillionMail, email marketing, open-source, mail server, email campaigns, newsletter, analytics, aaPanel, Docker]
 categories: ['github']
 ---
 
@@ -18,7 +18,7 @@ categories: ['github']
 
 [![][license-shield]][license-link] [![][docs-shield]][docs-link] [![][github-release-shield]][github-release-link] [![][github-stars-shield]][github-stars-link]
 
-English | [简体中文](README-zh_CN.md)
+English | [简体中文](README-zh_CN.md) | [日本語](README-ja.md)
 </div>
 <br/>
 
@@ -60,15 +60,17 @@ cd /opt && git clone https://github.com/aaPanel/BillionMail && cd BillionMail &&
     <img src="https://img.youtube.com/vi/UHgxZa_9jGs/maxresdefault.jpg" alt="" width="80%">
     <br />
     <img src="https://www.iconfinder.com/icons/317714/download/png/16" alt="YouTube" width="16"/>
-    <b>Watching on the YouTube</b>
+    <b>Watch on Youtube</b>
   </a>
 </div>
 
 
 ## Other installation methods
-👉 https://www.aapanel.com/new/download.html
 
 ### One-click installation on aaPanel
+👉 https://www.aapanel.com/new/download.html  (Log in to ✅aaPanel --> 🐳Docker --> 1️⃣OneClick install)
+
+
 
 
 **Docker**
@@ -149,6 +151,10 @@ cd /opt && git clone https://github.com/aaPanel/BillionMail && cd BillionMail &&
 cd /opt && git clone https://github.com/aaPanel/BillionMail && cd BillionMail && cp env_init .env && docker compose up -d || docker-compose up -d
 ```
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=aapanel/billionmail&type=Date)](https://www.star-history.com/#aapanel/billionmail&Date)
+
 ## License
 
 BillionMail is licensed under the **AGPLv3 License**. This means you can:
@@ -165,7 +171,7 @@ See the [LICENSE](LICENSE) file for more details.
 [docs-link]: https://www.billionmail.com/
 
 <!-- BillionMail Other link-->
-[license-link]: https://www.gnu.org/licenses/gpl-3.0.html
+[license-link]: https://www.gnu.org/licenses/agpl-3.0.html
 [github-release-link]: https://github.com/aaPanel/BillionMail/releases/latest
 [github-stars-link]: https://github.com/aaPanel/BillionMail
 [github-issues-link]: https://github.com/aaPanel/BillionMail/issues

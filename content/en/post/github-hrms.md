@@ -1,9 +1,9 @@
 ---
 title: hrms
-date: 2025-07-24T15:37:27+08:00
+date: 2025-07-25T15:33:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1649293813833-ac6820c63d3d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMzNDI1NDV8&ixlib=rb-4.1.0
-tags: ['github',Frappe HR,HRMS,Payroll,Employee Management,Leave Management,Expense Management,Performance Management,Onboarding]
+image: https://images.unsplash.com/photo-1642376344452-4c6001638603?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM0Mjg3NDh8&ixlib=rb-4.1.0
+tags: ['github',HRMS,Payroll,Employee Management,Leave Management,Performance Management,Expense Management,Onboarding,Taxation]
 categories: ['github']
 ---
 

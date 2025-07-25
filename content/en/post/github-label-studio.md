@@ -1,9 +1,9 @@
 ---
 title: label-studio
-date: 2025-07-05T15:27:35+08:00
+date: 2025-07-25T15:32:55+08:00
 draft: False
-image: https://images.unsplash.com/photo-1680214180543-119d7f766381?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3MDA0MTZ8&ixlib=rb-4.1.0
-tags: ['github',data labeling,machine learning,annotation,open source,data annotation,model training,image annotation,audio annotation,video annotation]
+image: https://images.unsplash.com/photo-1614660086475-58cbb5980288?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM0Mjg3NDh8&ixlib=rb-4.1.0
+tags: ['github',data labeling,machine learning,Label Studio,open source,data annotation,model training,AI,annotation tools]
 categories: ['github']
 ---
 
