@@ -1,9 +1,9 @@
 ---
 title: moby
-date: 2025-07-24T15:36:17+08:00
+date: 2025-07-26T15:30:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591708370135-f2fac858e97b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMzNDI1NDV8&ixlib=rb-4.1.0
-tags: ['github',Moby,containerization,Docker,open-source,container-based systems,container tools,orchestration,runtime,modular,flexible]
+image: https://images.unsplash.com/photo-1629482924451-44eff104bcd9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM1MTQ5Mzl8&ixlib=rb-4.1.0
+tags: ['github',Moby,containerization,Docker,open-source,container-based systems,container tools,orchestration,runtime,modular architecture]
 categories: ['github']
 ---
 

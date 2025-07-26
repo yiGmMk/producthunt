@@ -1,9 +1,9 @@
 ---
 title: neko
-date: 2025-06-30T15:32:42+08:00
+date: 2025-07-26T15:29:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1717223633316-1e3f2986608e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEyNjg2Mzd8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1599422174180-87db8b05f661?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM1MTQ5Mzl8&ixlib=rb-4.1.0
+tags: ['github',Neko,WebRTC,virtual browser,Docker,secure browsing,multi-user,watch party,interactive presentation,collaborative tool]
 categories: ['github']
 ---
 
@@ -20,7 +20,7 @@ categories: ['github']
     <a href="https://github.com/m1k1o/neko/blob/master/LICENSE">
       <img src="https://img.shields.io/github/license/m1k1o/neko" alt="license">
     </a>
-    <a href="https://hub.docker.com/u/m1k1o/neko">
+    <a href="https://hub.docker.com/r/m1k1o/neko">
       <img src="https://img.shields.io/docker/pulls/m1k1o/neko" alt="pulls">
     </a>
     <a href="https://github.com/m1k1o/neko/issues">

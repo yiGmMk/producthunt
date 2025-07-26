@@ -1,9 +1,9 @@
 ---
 title: awesome-generative-ai
-date: 2025-07-24T15:38:03+08:00
+date: 2025-07-26T15:30:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMzNDI1NDV8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1673294321138-0a12f967d83b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM1MTQ5Mzl8&ixlib=rb-4.1.0
+tags: ['github',Generative AI,large language model,text-to-image,image generation,AI models,ChatGPT,Stable Diffusion,open source,LLMs]
 categories: ['github']
 ---
 

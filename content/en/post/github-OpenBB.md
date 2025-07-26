@@ -1,9 +1,9 @@
 ---
 title: OpenBB
-date: 2025-07-25T15:32:46+08:00
+date: 2025-07-26T15:29:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1641752084801-80dc709cdf28?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM0Mjg3NDh8&ixlib=rb-4.1.0
-tags: ['github',OpenBB,financial,platform,Python,CLI,data,integration,AI,agents,equity,options,crypto,forex,macro,economy,fixed,income]
+image: https://images.unsplash.com/photo-1673294321138-0a12f967d83b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM1MTQ5Mzl8&ixlib=rb-4.1.0
+tags: ['github',OpenBB,finance,platform,Python,CLI,data,integration,AI,agents]
 categories: ['github']
 ---
 
