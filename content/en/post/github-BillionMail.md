@@ -1,9 +1,9 @@
 ---
 title: BillionMail
-date: 2025-07-26T15:30:29+08:00
+date: 2025-07-27T15:29:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1713211762276-d30a318b241f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM1MTQ5Mzl8&ixlib=rb-4.1.0
-tags: ['github',BillionMail, email marketing, open-source, mail server, email campaigns, newsletter, analytics, aaPanel, Docker, RoundCube]
+image: https://images.unsplash.com/photo-1721069621475-2e7a07ff8834?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM2MDEyOTh8&ixlib=rb-4.1.0
+tags: ['github',BillionMail, email marketing, open-source, mail server, email campaigns, newsletter, analytics, aaPanel, Docker]
 categories: ['github']
 ---
 

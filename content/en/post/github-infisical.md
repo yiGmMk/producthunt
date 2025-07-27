@@ -1,9 +1,9 @@
 ---
 title: infisical
-date: 2025-07-05T15:29:25+08:00
+date: 2025-07-27T15:29:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1598209186423-5a46f584604f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3MDA0MTZ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1498329741116-4d1987b210d0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM2MDEyOTh8&ixlib=rb-4.1.0
+tags: ['github',secret management, open source, PKI, Kubernetes, secrets, access control, security, SSH]
 categories: ['github']
 ---
 
@@ -160,11 +160,8 @@ Not sure where to get started? You can:
 
 - Join our <a href="https://infisical.com/slack">Slack</a>, and ask us any questions there.
 
-## Resources
+## We are hiring!
 
-- [Docs](https://infisical.com/docs/documentation/getting-started/introduction) for comprehensive documentation and guides
-- [Slack](https://infisical.com/slack) for discussion with the community and Infisical team.
-- [GitHub](https://github.com/Infisical/infisical) for code, issues, and pull requests
-- [Twitter](https://twitter.com/infisical) for fast news
-- [YouTube](https://www.youtube.com/@infisical_os) for videos on secret management
-- [Blog](https://infisical.com/blog) for secret management insights, articles, tutorials, and updates
+If you're reading this, there is a strong chance you like the products we created.
+
+You might also make a great addition to our team. We're growing fast and would love for you to [join us](https://infisical.com/careers).

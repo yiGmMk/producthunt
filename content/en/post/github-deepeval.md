@@ -1,9 +1,9 @@
 ---
 title: deepeval
-date: 2025-07-02T15:29:41+08:00
+date: 2025-07-27T15:29:36+08:00
 draft: False
-image: https://images.unsplash.com/photo-1692191778222-ef097375197c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE0NDEzNTl8&ixlib=rb-4.1.0
-tags: ['github',LLM, evaluation, framework, DeepEval, metrics, RAG,  testing,  LangChain, LlamaIndex]
+image: https://images.unsplash.com/photo-1640457298166-fe3eddec2d5f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM2MDEyOTh8&ixlib=rb-4.1.0
+tags: ['github',LLM, evaluation, framework, metrics, DeepEval, testing, RAG, agents, LangChain, LlamaIndex, G-Eval, hallucination,  benchmark]
 categories: ['github']
 ---
 
@@ -15,6 +15,10 @@ categories: ['github']
 
 <p align="center">
     <h1 align="center">The LLM Evaluation Framework</h1>
+</p>
+
+<p align="center">
+<a href="https://trendshift.io/repositories/5917" target="_blank"><img src="https://trendshift.io/api/badge/repositories/5917" alt="confident-ai%2Fdeepeval | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </p>
 
 <p align="center">
@@ -208,7 +212,7 @@ deepeval test run test_chatbot.py
 **Congratulations! Your test case should have passed ✅** Let's breakdown what happened.
 
 - The variable `input` mimics a user input, and `actual_output` is a placeholder for what your application's supposed to output based on this input.
-- The variable `expected_output` represents the ideal answer for a given `input`, and [`GEval`](https://deepeval.com/docs/metrics-llm-evals) is a research-backed metric provided by `deepeval` for you to evaluate your LLM output's on any custom custom with human-like accuracy.
+- The variable `expected_output` represents the ideal answer for a given `input`, and [`GEval`](https://deepeval.com/docs/metrics-llm-evals) is a research-backed metric provided by `deepeval` for you to evaluate your LLM output's on any custom with human-like accuracy.
 - In this example, the metric `criteria` is correctness of the `actual_output` based on the provided `expected_output`.
 - All metric scores range from 0 - 1, which the `threshold=0.5` threshold ultimately determines if your test have passed or not.
 
@@ -299,23 +303,26 @@ In DeepEval, a dataset is simply a collection of test cases. Here is how you can
 ```python
 import pytest
 from deepeval import assert_test
-from deepeval.metrics import HallucinationMetric, AnswerRelevancyMetric
+from deepeval.dataset import EvaluationDataset, Golden
+from deepeval.metrics import AnswerRelevancyMetric
 from deepeval.test_case import LLMTestCase
-from deepeval.dataset import EvaluationDataset
 
-first_test_case = LLMTestCase(input="...", actual_output="...", context=["..."])
-second_test_case = LLMTestCase(input="...", actual_output="...", context=["..."])
+dataset = EvaluationDataset(goldens=[Golden(input="What's the weather like today?")])
 
-dataset = EvaluationDataset(test_cases=[first_test_case, second_test_case])
+for golden in dataset.goldens:
+    test_case = LLMTestCase(
+        input=golden.input,
+        actual_output=your_llm_app(golden.input)
+    )
+    dataset.add_test_case(test_case)
 
 @pytest.mark.parametrize(
     "test_case",
     dataset,
 )
 def test_customer_chatbot(test_case: LLMTestCase):
-    hallucination_metric = HallucinationMetric(threshold=0.3)
     answer_relevancy_metric = AnswerRelevancyMetric(threshold=0.5)
-    assert_test(test_case, [hallucination_metric, answer_relevancy_metric])
+    assert_test(test_case, [answer_relevancy_metric])
 ```
 
 ```bash

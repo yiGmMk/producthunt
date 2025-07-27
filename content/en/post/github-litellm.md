@@ -1,9 +1,9 @@
 ---
 title: litellm
-date: 2025-07-25T15:33:55+08:00
+date: 2025-07-27T15:29:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1614660086475-58cbb5980288?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM0Mjg3NDh8&ixlib=rb-4.1.0
-tags: ['github',LLM,API,OpenAI,Proxy,Langchain,Azure,Huggingface,Streaming,Async]
+image: https://images.unsplash.com/photo-1599069158346-684fee0e414a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM2MDEyOTh8&ixlib=rb-4.1.0
+tags: ['github',LLM,API,OpenAI,Langchain,Proxy,LiteLLM,BerriAI,Multi-provider,LLM Gateway]
 categories: ['github']
 ---
 

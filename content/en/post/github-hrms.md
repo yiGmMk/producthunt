@@ -1,8 +1,8 @@
 ---
 title: hrms
-date: 2025-07-26T15:29:49+08:00
+date: 2025-07-27T15:28:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1596897338626-1bb331918878?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM1MTQ5Mzl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1625008383174-2c22592a3c67?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM2MDEyOTh8&ixlib=rb-4.1.0
 tags: ['github',HRMS,Payroll,Employee Management,Leave Management,Performance Management,Expense Management,Onboarding,Taxation]
 categories: ['github']
 ---
@@ -21,6 +21,7 @@ categories: ['github']
 [![CI](https://github.com/frappe/hrms/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/frappe/hrms/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/frappe/hrms/branch/develop/graph/badge.svg?token=0TwvyUg3I5)](https://codecov.io/gh/frappe/hrms)
 
+<a href="https://trendshift.io/repositories/10972" target="_blank"><img src="https://trendshift.io/api/badge/repositories/10972" alt="frappe%2Fhrms | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </div>
 
 <div align="center">
