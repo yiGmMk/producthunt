@@ -1,9 +1,9 @@
 ---
 title: awesome-llm-apps
-date: 2025-06-18T15:32:32+08:00
+date: 2025-07-28T15:35:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1739946544837-266f0d1d1590?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAyMzE4NTd8&ixlib=rb-4.1.0
-tags: ['github',LLM,AI Agents,RAG,Multi-agent,MCP,Voice Agents,OpenAI,Anthropic,Google,DeepSeek,Qwen,Llama]
+image: https://images.unsplash.com/photo-1599073154547-fa7525af0639?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM2ODgwOTB8&ixlib=rb-4.1.0
+tags: ['github',LLM, AI Agents, RAG, Multi-agent,  OpenAI, Anthropic, Google, DeepSeek, Qwen, Llama]
 categories: ['github']
 ---
 
@@ -77,6 +77,7 @@ A curated collection of **Awesome LLM apps built with RAG, AI Agents, Multi-agen
 ### 🚀 Advanced AI Agents
 
 *   [🔍 AI Deep Research Agent](advanced_ai_agents/single_agent_apps/ai_deep_research_agent/)
+*   [🤝 AI Consultant Agent](advanced_ai_agents/single_agent_apps/ai_consultant_agent)
 *   [🏗️ AI System Architect Agent](advanced_ai_agents/single_agent_apps/ai_system_architect_r1/)
 *   [🎯 AI Lead Generation Agent](advanced_ai_agents/single_agent_apps/ai_lead_generation_agent/)
 *   [💰 AI Financial Coach Agent](advanced_ai_agents/multi_agent_apps/ai_financial_coach_agent/)
@@ -88,6 +89,7 @@ A curated collection of **Awesome LLM apps built with RAG, AI Agents, Multi-agen
 *   [🧠 AI Mental Wellbeing Agent](advanced_ai_agents/multi_agent_apps/ai_mental_wellbeing_agent/)
 *   [📑 AI Meeting Agent](advanced_ai_agents/single_agent_apps/ai_meeting_agent/)
 *   [🧬 AI Self-Evolving Agent](advanced_ai_agents/multi_agent_apps/ai_Self-Evolving_agent/)
+*   [🎧 AI Social Media News and Podcast Agent](advanced_ai_agents/multi_agent_apps/ai_news_and_podcast_agents/)
 
 ### 🎮 Autonomous Game Playing Agents
 
@@ -106,6 +108,7 @@ A curated collection of **Awesome LLM apps built with RAG, AI Agents, Multi-agen
 *   [👨‍🏫 AI Teaching Agent Team](advanced_ai_agents/multi_agent_apps/agent_teams/ai_teaching_agent_team/)
 *   [💻 Multimodal Coding Agent Team](advanced_ai_agents/multi_agent_apps/agent_teams/multimodal_coding_agent_team/)
 *   [✨ Multimodal Design Agent Team](advanced_ai_agents/multi_agent_apps/agent_teams/multimodal_design_agent_team/)
+*   [🌏 AI Travel Planner Agent Team](/advanced_ai_agents/multi_agent_apps/agent_teams/ai_travel_planner_agent_team/)
 
 ### 🗣️ Voice AI Agents
 

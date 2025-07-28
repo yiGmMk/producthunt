@@ -1,9 +1,9 @@
 ---
 title: infisical
-date: 2025-07-27T15:29:28+08:00
+date: 2025-07-28T15:35:47+08:00
 draft: False
-image: https://images.unsplash.com/photo-1498329741116-4d1987b210d0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM2MDEyOTh8&ixlib=rb-4.1.0
-tags: ['github',secret management, open source, PKI, Kubernetes, secrets, access control, security, SSH]
+image: https://images.unsplash.com/photo-1665048945777-68145f234a03?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM2ODgwOTB8&ixlib=rb-4.1.0
+tags: ['github',secret management, open source, PKI, Kubernetes, secrets, access control, security, DevOps]
 categories: ['github']
 ---
 

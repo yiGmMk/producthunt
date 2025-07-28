@@ -1,9 +1,9 @@
 ---
 title: Genesis
-date: 2025-07-05T15:27:14+08:00
+date: 2025-07-28T15:34:59+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592851834916-f9234d7ffa00?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3MDA0MTZ8&ixlib=rb-4.1.0
-tags: ['github',physics engine, robotics simulation, photorealistic rendering, generative data engine, embodied AI, physical AI, physics solvers, material models, differentiable simulation]
+image: https://images.unsplash.com/photo-1553597711-98fe18c0069b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM2ODgwOTB8&ixlib=rb-4.1.0
+tags: ['github',physics engine, robotics simulation, photo-realistic rendering, generative data engine, embodied AI, physical AI, physics solvers, material models, differentiable simulation]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: hyperswitch
-date: 2025-07-27T15:28:48+08:00
+date: 2025-07-28T15:35:23+08:00
 draft: False
-image: https://images.unsplash.com/photo-1665424579802-99548c889569?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM2MDEyOTh8&ixlib=rb-4.1.0
-tags: ['github',Hyperswitch,Open-Source,Payments,Infrastructure,Modular,Payment Processing,Rust,Docker,Cloud Deployment,PCI-compliant]
+image: https://images.unsplash.com/photo-1521710696740-c8144a7eaf88?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM2ODgwOTB8&ixlib=rb-4.1.0
+tags: ['github',Hyperswitch,payments,open-source,payment infrastructure,Rust,modules,payment processing,Control Center]
 categories: ['github']
 ---
 

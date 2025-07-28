@@ -1,8 +1,8 @@
 ---
 title: hrms
-date: 2025-07-27T15:28:28+08:00
+date: 2025-07-28T15:35:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1625008383174-2c22592a3c67?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM2MDEyOTh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1696386863089-51aeac60112c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM2ODgwOTB8&ixlib=rb-4.1.0
 tags: ['github',HRMS,Payroll,Employee Management,Leave Management,Performance Management,Expense Management,Onboarding,Taxation]
 categories: ['github']
 ---
