@@ -1,9 +1,9 @@
 ---
 title: ai-cookbook
-date: 2025-07-28T15:35:31+08:00
+date: 2025-07-29T15:36:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1675891050864-1489dc71ccdd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM2ODgwOTB8&ixlib=rb-4.1.0
-tags: ['github',AI,machine learning,deep learning,python,developers,tutorials,freelancing,data science]
+image: https://images.unsplash.com/photo-1545394323-ac7b17d5f43c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM3NzQ1NTF8&ixlib=rb-4.1.0
+tags: ['github',AI,developers,tutorials,machine learning,Python,freelancing,Data Science,AI systems]
 categories: ['github']
 ---
 

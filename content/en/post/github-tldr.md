@@ -1,9 +1,9 @@
 ---
 title: tldr
-date: 2025-07-28T15:35:38+08:00
+date: 2025-07-29T15:36:23+08:00
 draft: False
-image: https://images.unsplash.com/photo-1675891050864-1489dc71ccdd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM2ODgwOTB8&ixlib=rb-4.1.0
-tags: ['github',command-line,tldr-pages,man pages,help pages,command-line tools,UNIX,Linux,macOS]
+image: https://images.unsplash.com/photo-1545394323-ac7b17d5f43c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM3NzQ1NTF8&ixlib=rb-4.1.0
+tags: ['github',command-line,tldr-pages,man pages,UNIX,Linux,macOS,help pages,command-line tools,CLI]
 categories: ['github']
 ---
 
