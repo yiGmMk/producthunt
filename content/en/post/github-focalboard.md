@@ -1,9 +1,9 @@
 ---
 title: focalboard
-date: 2025-07-29T15:37:20+08:00
+date: 2025-07-31T15:35:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1666944073140-6bb0f0c5209e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM3NzQ1NTF8&ixlib=rb-4.1.0
-tags: ['github',Focalboard, project management, Trello, Notion, Asana, open source, self-hosted, desktop app, server, macOS, Windows, Linux, API, development, unit testing]
+image: https://images.unsplash.com/photo-1596825644259-5bd73854413d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM5NDcyMTB8&ixlib=rb-4.1.0
+tags: ['github',Focalboard, project management, Trello, Notion, Asana, open source, self-hosted, desktop app, server, macOS, Windows, Linux, API, development, Ubuntu]
 categories: ['github']
 ---
 

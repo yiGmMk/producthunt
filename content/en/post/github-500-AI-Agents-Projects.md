@@ -1,9 +1,9 @@
 ---
 title: 500-AI-Agents-Projects
-date: 2025-07-30T15:46:50+08:00
+date: 2025-07-31T15:35:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1510518477772-3ed26dd27c7c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM4NjE1MTR8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1547133166-95fde0ea4c49?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM5NDcyMTB8&ixlib=rb-4.1.0
+tags: ['github',AI agents, use cases, industries, open-source, projects, frameworks, CrewAI, Autogen, Agno, Langgraph]
 categories: ['github']
 ---
 

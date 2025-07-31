@@ -1,9 +1,9 @@
 ---
 title: outline
-date: 2025-07-30T15:47:07+08:00
+date: 2025-07-31T15:34:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1724649398952-1bf7d608effb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM4NjE1MTR8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1656772710810-677f691cc688?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM5NDcyMTB8&ixlib=rb-4.1.0
+tags: ['github',React,Node.js,TypeScript,knowledge base,collaboration,Outline,JavaScript,backend,frontend]
 categories: ['github']
 ---
 

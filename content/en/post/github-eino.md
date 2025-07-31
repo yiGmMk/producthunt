@@ -1,9 +1,9 @@
 ---
 title: eino
-date: 2025-07-30T15:45:35+08:00
+date: 2025-07-31T15:35:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1642777690193-2d695e5f372a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM4NjE1MTR8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1633585343497-78cb5db7fb14?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM5NDcyMTB8&ixlib=rb-4.1.0
+tags: ['github',LLM,Golang,framework,application development,Eino,LangChain,LlamaIndex,components,composition,API,flows,examples]
 categories: ['github']
 ---
 
