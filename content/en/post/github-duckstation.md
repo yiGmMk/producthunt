@@ -1,9 +1,9 @@
 ---
 title: duckstation
-date: 2025-08-01T15:36:49+08:00
+date: 2025-08-02T15:29:47+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591013663678-7d1dd82fc514?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQwMzM3OTR8&ixlib=rb-4.1.0
-tags: ['github',PlayStation,PSX,emulator,DuckStation,CPU,GPU,rendering,compatibility]
+image: https://images.unsplash.com/photo-1721046600653-fc7413e43991?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQxMTk3MDd8&ixlib=rb-4.1.0
+tags: ['github',PlayStation,PSX,emulator,DuckStation,BIOS,ROM,game compatibility,controller]
 categories: ['github']
 ---
 

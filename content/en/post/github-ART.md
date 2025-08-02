@@ -1,9 +1,9 @@
 ---
 title: ART
-date: 2025-08-01T15:37:11+08:00
+date: 2025-08-02T15:28:36+08:00
 draft: False
-image: https://images.unsplash.com/photo-1610788918578-f57076d50b0c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQwMzM3OTR8&ixlib=rb-4.1.0
-tags: ['github',Reinforcement Learning, Agent Training, Large Language Models, Reward Function, GRPO, RULER, ART, OpenPipe]
+image: https://images.unsplash.com/photo-1558682467-2fbe1776528c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQxMTk3MDd8&ixlib=rb-4.1.0
+tags: ['github',Reinforcement Learning, Agent Training, Large Language Models, Reward Function, GRPO, OpenPipe, ART, RULER]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: copyparty
-date: 2025-08-01T15:37:36+08:00
+date: 2025-08-02T15:29:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591013663678-7d1dd82fc514?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQwMzM3OTR8&ixlib=rb-4.1.0
-tags: ['github',copyparty,file server,resumable uploads,resumable downloads,web browser,Python,http,webdav,ftp,tftp,smb,cifs,android app,iPhone shortcuts]
+image: https://images.unsplash.com/photo-1602856581427-23104ccfb5b8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQxMTk3MDd8&ixlib=rb-4.1.0
+tags: ['github',copyparty,file server,resumable uploads,resumable downloads,web browser,Python,protocols,http,webdav,ftp,tftp,smb,cifs,android app,iPhone shortcuts,file indexing]
 categories: ['github']
 ---
 
