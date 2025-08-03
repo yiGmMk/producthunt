@@ -1,8 +1,8 @@
 ---
 title: swift-composable-architecture
-date: 2025-08-01T15:38:04+08:00
+date: 2025-08-03T15:29:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1660122315753-08d854183103?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQwMzM3OTR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1491550509181-fa5704644766?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQyMDYxMjV8&ixlib=rb-4.1.0
 tags: ['github',Composable Architecture,Swift,State management,Composition,Side effects,Testing,Ergonomics,SwiftUI,UIKit,Apple platforms,Reducer,Store,Effect]
 categories: ['github']
 ---

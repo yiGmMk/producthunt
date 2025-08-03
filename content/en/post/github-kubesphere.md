@@ -1,9 +1,9 @@
 ---
 title: kubesphere
-date: 2025-08-02T15:29:07+08:00
+date: 2025-08-03T15:29:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1672928130266-aaf030518e4f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQxMTk3MDd8&ixlib=rb-4.1.0
-tags: ['github',Kubernetes,KubeSphere,container platform,multi-cloud,DevOps,microservices,cloud-native,application management]
+image: https://images.unsplash.com/photo-1484820986637-7ec3e85b394f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQyMDYxMjV8&ixlib=rb-4.1.0
+tags: ['github',Kubernetes,KubeSphere,container platform,multi-cloud,DevOps,cloud-native,microservices,Istio]
 categories: ['github']
 ---
 

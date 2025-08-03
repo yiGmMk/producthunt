@@ -1,9 +1,9 @@
 ---
 title: VideoLingo
-date: 2025-08-02T15:30:14+08:00
+date: 2025-08-03T15:30:27+08:00
 draft: False
-image: https://images.unsplash.com/photo-1595084438531-f6c0f240e105?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQxMTk3MDd8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1450501719076-a6d5e3e780e5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQyMDYxMjV8&ixlib=rb-4.1.0
+tags: ['github',VideoLingo, video translation, subtitle generation, dubbing, WhisperX, NLP, AI, multi-language, Streamlit, YouTube]
 categories: ['github']
 ---
 

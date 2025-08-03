@@ -1,9 +1,9 @@
 ---
 title: javascript-algorithms
-date: 2025-07-05T15:29:35+08:00
+date: 2025-08-03T15:29:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1680214180543-119d7f766381?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3MDA0MTZ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1645334710996-0d59a16768e4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQyMDYxMjV8&ixlib=rb-4.1.0
+tags: ['github',JavaScript,algorithms,data structures,data-structures,algorithm,programming]
 categories: ['github']
 ---
 
