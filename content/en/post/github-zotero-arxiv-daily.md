@@ -1,9 +1,9 @@
 ---
 title: zotero-arxiv-daily
-date: 2025-08-02T15:30:07+08:00
+date: 2025-08-04T15:40:24+08:00
 draft: False
-image: https://images.unsplash.com/photo-1558682467-2fbe1776528c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQxMTk3MDd8&ixlib=rb-4.1.0
-tags: ['github',Zotero,arXiv,Github Actions,AI,email,LLM,workflow,paper,recommendation]
+image: https://images.unsplash.com/photo-1627996319060-cc7c5a7f7ac9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQyOTMxMzN8&ixlib=rb-4.1.0
+tags: ['github',Zotero,arXiv,Github Actions,AI,LLM,email,workflow,paper recommendation,research]
 categories: ['github']
 ---
 

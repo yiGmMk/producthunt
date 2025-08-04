@@ -1,9 +1,9 @@
 ---
 title: motia
-date: 2025-08-03T15:29:13+08:00
+date: 2025-08-04T15:40:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1584530198797-1745fb464823?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQyMDYxMjV8&ixlib=rb-4.1.0
-tags: ['github',backend framework, APIs, workflows, AI agents, JavaScript, TypeScript, Python, Step, event-driven, observability]
+image: https://images.unsplash.com/photo-1665635325885-f0d850a44038?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQyOTMxMzN8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -23,7 +23,7 @@ categories: ['github']
 </p>
 
 <p align="center">
-  <strong>🔥 A Modern Unified Backend Framework for APIs, Events and Agents 🔥</strong>
+  <strong>🔥 A Modern Unified Backend Framework for APIs, background jobs, workflows, and Agents 🔥</strong>
 </p>
 
 <p align="center">

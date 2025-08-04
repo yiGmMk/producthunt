@@ -1,8 +1,8 @@
 ---
 title: recipes
-date: 2025-08-02T15:28:45+08:00
+date: 2025-08-04T15:40:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1672928130266-aaf030518e4f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQxMTk3MDd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1537987571070-9df5420854b2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQyOTMxMzN8&ixlib=rb-4.1.0
 tags: ['github',recipe management, meal planning, shopping lists, cookbooks, recipe sharing]
 categories: ['github']
 ---

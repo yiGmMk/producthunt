@@ -1,9 +1,9 @@
 ---
 title: sumo
-date: 2025-08-02T15:29:17+08:00
+date: 2025-08-04T15:39:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1595084438531-f6c0f240e105?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQxMTk3MDd8&ixlib=rb-4.1.0
-tags: ['github',traffic simulation, SUMO, open source, road networks, microscopic simulation, transportation, urban mobility,  Institute of Transportation Systems, German Aerospace Center]
+image: https://images.unsplash.com/photo-1537987571070-9df5420854b2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQyOTMxMzN8&ixlib=rb-4.1.0
+tags: ['github',traffic simulation, SUMO, open source, microscopic traffic simulation, road networks, transportation, urban mobility, German Aerospace Center, Eclipse Public License]
 categories: ['github']
 ---
 
