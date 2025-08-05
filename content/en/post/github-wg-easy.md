@@ -1,9 +1,9 @@
 ---
 title: wg-easy
-date: 2025-08-04T15:39:13+08:00
+date: 2025-08-05T15:37:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1583350043082-8a19a5f49cdb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQyOTMxMzN8&ixlib=rb-4.1.0
-tags: ['github',WireGuard,Easy,installation,management,Linux,Docker,Web,UI,clients,configuration]
+image: https://images.unsplash.com/photo-1692368865385-f43cac0c4a51?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQzNzkzNzV8&ixlib=rb-4.1.0
+tags: ['github',WireGuard,Easy,installation,management,Linux,Docker,WebUI,clients,configuration]
 categories: ['github']
 ---
 
