@@ -1,9 +1,9 @@
 ---
 title: reflex
-date: 2025-08-05T15:37:16+08:00
+date: 2025-08-06T15:36:08+08:00
 draft: False
-image: https://images.unsplash.com/photo-1594844862885-f0a64d371deb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQzNzkzNzV8&ixlib=rb-4.1.0
-tags: ['github',Reflex,Python,webapps,full-stack,deployment,AI,React,OpenAI,components]
+image: https://images.unsplash.com/photo-1650749837474-a9ab19e3d1af?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ0NjU3NTF8&ixlib=rb-4.1.0
+tags: ['github',Python,Reflex,webapps,full-stack,frontend,backend,deployment,AI]
 categories: ['github']
 ---
 
@@ -21,6 +21,7 @@ categories: ['github']
 [![Documentation](https://img.shields.io/badge/Documentation%20-Introduction%20-%20%23007ec6)](https://reflex.dev/docs/getting-started/introduction)
 [![PyPI Downloads](https://static.pepy.tech/badge/reflex)](https://pepy.tech/projects/reflex)
 [![Discord](https://img.shields.io/discord/1029853095527727165?color=%237289da&label=Discord)](https://discord.gg/T5WSbC2YtQ)
+[![Twitter](https://img.shields.io/twitter/follow/getreflex)](https://x.com/getreflex)
 
 </div>
 

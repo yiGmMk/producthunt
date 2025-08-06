@@ -1,9 +1,9 @@
 ---
 title: actual
-date: 2025-08-05T15:36:38+08:00
+date: 2025-08-06T15:36:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1692368865385-f43cac0c4a51?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQzNzkzNzV8&ixlib=rb-4.1.0
-tags: ['github',Actual Budget,personal finance,NodeJS,open-source,synchronization,Docker, budgeting app,community,contribution]
+image: https://images.unsplash.com/photo-1720293592077-421afa9e257d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ0NjU3NTF8&ixlib=rb-4.1.0
+tags: ['github',personal finance, budgeting, open-source, NodeJS,  desktop application,  Docker,  community,  software]
 categories: ['github']
 ---
 
