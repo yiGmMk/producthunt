@@ -1,9 +1,9 @@
 ---
 title: openai-cookbook
-date: 2025-04-16T15:29:52+08:00
+date: 2025-08-07T15:37:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1622960748096-1983e5f17824?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3ODg0NTh8&ixlib=rb-4.0.3
-tags: ['github',OpenAI,API,Python,cookbook,code examples,programming,machine learning,natural language processing]
+image: https://images.unsplash.com/photo-1601254668802-d38da4bceb16?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ1NTIwOTR8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -20,7 +20,7 @@ categories: ['github']
  
 > ✨ Navigate at [cookbook.openai.com](https://cookbook.openai.com)
 
-Example code and guides for accomplishing common tasks with the [OpenAI API](https://platform.openai.com/docs/introduction). To run these examples, you'll need an OpenAI account and associated API key ([create a free account here](https://beta.openai.com/signup)). Set an environment variable called `OPENAI_API_KEY` with your API key. Alternatively, in most IDEs such as Visual Studio Code, you can create an `.env` file at the root of your repo containing `OPENAI_API_KEY=<your API key>`, which will be picked up by the notebooks.
+Example code and guides for accomplishing common tasks with the [OpenAI API](https://platform.openai.com/docs/introduction). To run these examples, you'll need an OpenAI account and associated API key ([create a free account here](https://platform.openai.com/signup)). Set an environment variable called `OPENAI_API_KEY` with your API key. Alternatively, in most IDEs such as Visual Studio Code, you can create an `.env` file at the root of your repo containing `OPENAI_API_KEY=<your API key>`, which will be picked up by the notebooks.
 
 Most code examples are written in Python, though the concepts can be applied in any language.
 
@@ -28,4 +28,4 @@ For other useful tools, guides and courses, check out these [related resources f
 
 ## License
 
-MIT
+MIT License

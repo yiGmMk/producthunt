@@ -1,9 +1,9 @@
 ---
 title: dyad
-date: 2025-08-06T15:36:01+08:00
+date: 2025-08-07T15:35:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1608234885919-b69645a599f7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ0NjU3NTF8&ixlib=rb-4.1.0
-tags: ['github',AI,app,builder,local,open-source,privacy,cross-platform]
+image: https://images.unsplash.com/photo-1621013484527-b6c27a86fa0d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ1NTIwOTR8&ixlib=rb-4.1.0
+tags: ['github',AI,app,builder,local,open-source,privacy,cross-platform,machine-learning]
 categories: ['github']
 ---
 

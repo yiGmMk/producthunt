@@ -1,9 +1,9 @@
 ---
 title: frigate
-date: 2025-06-10T15:30:40+08:00
+date: 2025-08-07T15:35:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1672243776765-58c978b61fd8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk1NDA1MjF8&ixlib=rb-4.1.0
-tags: ['github',Home Assistant,IP cameras,object detection,OpenCV,TensorFlow,Google Coral Accelerator,MQTT,video recording,RTSP,WebRTC]
+image: https://images.unsplash.com/photo-1714581401566-a38ee4987b34?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ1NTIwOTR8&ixlib=rb-4.1.0
+tags: ['github',Home Assistant, object detection, IP cameras, OpenCV, TensorFlow, Google Coral, MQTT, video recording, RTSP, WebRTC]
 categories: ['github']
 ---
 

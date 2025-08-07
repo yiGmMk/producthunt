@@ -1,9 +1,9 @@
 ---
 title: MaaAssistantArknights
-date: 2025-08-05T15:37:07+08:00
+date: 2025-08-07T15:36:27+08:00
 draft: False
-image: https://images.unsplash.com/photo-1609418694568-3cc8d23f2e7c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQzNzkzNzV8&ixlib=rb-4.1.0
-tags: ['github',Arknights, MaaAssistantArknights, image recognition, automation, task automation, resource management,  game assistant,  API,  open source]
+image: https://images.unsplash.com/photo-1621051431590-4d2e2e10637e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ1NTIwOTR8&ixlib=rb-4.1.0
+tags: ['github',Arknights, MaaAssistantArknights, image recognition, automation, game assistant, resource management, scheduling, recruitment,  API,  open-source]
 categories: ['github']
 ---
 
