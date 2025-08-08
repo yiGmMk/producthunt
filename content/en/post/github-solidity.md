@@ -1,9 +1,9 @@
 ---
 title: solidity
-date: 2025-08-07T15:35:56+08:00
+date: 2025-08-08T15:39:50+08:00
 draft: False
-image: https://images.unsplash.com/photo-1648152298347-ee10674a14fa?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ1NTIwOTR8&ixlib=rb-4.1.0
-tags: ['github',Solidity,smart contracts,Ethereum,programming language,compiler,blockchain,development,smart contract development,virtual machine]
+image: https://images.unsplash.com/photo-1587045930305-4875b26e8f25?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ2Mzg3MjN8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

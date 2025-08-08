@@ -1,8 +1,8 @@
 ---
 title: prisma
-date: 2025-08-07T15:37:05+08:00
+date: 2025-08-08T15:40:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1664649907970-b678f696c81b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ1NTIwOTR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1687890174631-fa2a3e33793c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ2Mzg3MjN8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
