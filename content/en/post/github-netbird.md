@@ -1,9 +1,9 @@
 ---
 title: netbird
-date: 2025-08-08T15:39:36+08:00
+date: 2025-08-09T15:28:11+08:00
 draft: False
-image: https://images.unsplash.com/photo-1543834569-2096e01c06a3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ2Mzg3MjN8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1701112658125-2570bb6c8be2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ3MjQ0NTR8&ixlib=rb-4.1.0
+tags: ['github',NetBird,WireGuard,VPN,private network,network security,access control,remote access,peer-to-peer]
 categories: ['github']
 ---
 

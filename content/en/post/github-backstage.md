@@ -1,9 +1,9 @@
 ---
 title: backstage
-date: 2025-04-05T15:26:52+08:00
+date: 2025-08-09T15:29:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1604502130010-22a9eb4c77a8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM4Mzc4ODJ8&ixlib=rb-4.0.3
-tags: ['github',Backstage,developer portal,software catalog,microservices,software templates,TechDocs,open source,CNCF,documentation]
+image: https://images.unsplash.com/photo-1633588189646-c212f17b6cca?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ3MjQ0NTR8&ixlib=rb-4.1.0
+tags: ['github',Backstage,developer portal,software catalog,microservices,software templates,TechDocs,technical documentation,open source plugins,Cloud Native Computing Foundation]
 categories: ['github']
 ---
 

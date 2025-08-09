@@ -1,8 +1,8 @@
 ---
 title: stagehand
-date: 2025-08-08T15:39:02+08:00
+date: 2025-08-09T15:28:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1587045930305-4875b26e8f25?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ2Mzg3MjN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1572467112159-8e767608e0db?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ3MjQ0NTR8&ixlib=rb-4.1.0
 tags: ['github',browser automation, AI, Stagehand, Playwright, natural language, computer vision, OpenAI, Anthropic]
 categories: ['github']
 ---

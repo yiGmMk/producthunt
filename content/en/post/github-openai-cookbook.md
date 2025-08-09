@@ -1,9 +1,9 @@
 ---
 title: openai-cookbook
-date: 2025-08-08T15:40:11+08:00
+date: 2025-08-09T15:27:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1667322124405-cafd0489bcdd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ2Mzg3MjN8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1572467112159-8e767608e0db?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ3MjQ0NTR8&ixlib=rb-4.1.0
+tags: ['github',OpenAI,API,Python,cookbook,code examples,machine learning,natural language processing,programming]
 categories: ['github']
 ---
 

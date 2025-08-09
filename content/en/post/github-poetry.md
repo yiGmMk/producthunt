@@ -1,8 +1,8 @@
 ---
 title: poetry
-date: 2025-08-07T15:35:38+08:00
+date: 2025-08-09T15:28:34+08:00
 draft: False
-image: https://images.unsplash.com/photo-1621013484527-b6c27a86fa0d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ1NTIwOTR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1718791319096-7e7cd38fb0c6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ3MjQ0NTR8&ixlib=rb-4.1.0
 tags: ['github',Python,Poetry,dependency management,packaging,Pyproject.toml,dependencies,installation,documentation,contribution,Python projects]
 categories: ['github']
 ---
