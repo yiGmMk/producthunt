@@ -1,8 +1,8 @@
 ---
 title: fastapi_mcp
-date: 2025-07-03T15:31:27+08:00
+date: 2025-08-10T15:28:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1505697751269-99413df6b7e0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE1Mjc3NDd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1641894316201-2b5c31863eac?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ4MTA4MjN8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -10,7 +10,15 @@ categories: ['github']
 # [tadata-org/fastapi_mcp](https://github.com/tadata-org/fastapi_mcp)
 
 <p align="center"><a href="https://github.com/tadata-org/fastapi_mcp"><img src="https://github.com/user-attachments/assets/7e44e98b-a0ba-4aff-a68a-4ffee3a6189c" alt="fastapi-to-mcp" height=100/></a></p>
-<h1 align="center">FastAPI-MCP</h1>
+
+<div align="center">
+  <span style="font-size: 0.85em; font-weight: normal;">Built by <a href="https://tadata.com">Tadata</a></span>
+</div>
+
+<h1 align="center">
+  FastAPI-MCP
+</h1>
+
 <p align="center">Expose your FastAPI endpoints as Model Context Protocol (MCP) tools, with Auth!</p>
 <div align="center">
 

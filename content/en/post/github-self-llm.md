@@ -1,8 +1,8 @@
 ---
 title: self-llm
-date: 2025-08-08T15:40:36+08:00
+date: 2025-08-10T15:28:53+08:00
 draft: False
-image: https://images.unsplash.com/photo-1687890174631-fa2a3e33793c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ2Mzg3MjN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1621423028650-a5164d5cc49a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ4MTA4MjN8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
