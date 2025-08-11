@@ -1,9 +1,9 @@
 ---
 title: polar
-date: 2025-08-10T15:27:48+08:00
+date: 2025-08-11T15:34:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1671299733690-3c9baaeac269?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ4MTA4MjN8&ixlib=rb-4.1.0
-tags: ['github',open-source,monetization platform,payments infrastructure,SaaS,digital products,developers,subscriptions,API,SDK]
+image: https://images.unsplash.com/photo-1487226658827-f4ee83412c4b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ4OTc2MzZ8&ixlib=rb-4.1.0
+tags: ['github',open-source,payments,monetization,platform,developers,SaaS,digital products,subscriptions,API,SDK]
 categories: ['github']
 ---
 

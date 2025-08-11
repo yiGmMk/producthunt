@@ -1,9 +1,9 @@
 ---
 title: SDL
-date: 2025-08-10T15:28:18+08:00
+date: 2025-08-11T15:34:11+08:00
 draft: False
-image: https://images.unsplash.com/photo-1671299733690-3c9baaeac269?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ4MTA4MjN8&ixlib=rb-4.1.0
-tags: ['github',SDL,cross-platform,library,multi-media,games,emulators,zlib license,installation]
+image: https://images.unsplash.com/photo-1638645670971-7cc61256bd95?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ4OTc2MzZ8&ixlib=rb-4.1.0
+tags: ['github',SDL,cross-platform,library,multimedia,games,emulators,zlib,license,installation,software]
 categories: ['github']
 ---
 

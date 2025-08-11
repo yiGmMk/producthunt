@@ -1,9 +1,9 @@
 ---
 title: dart_simple_live
-date: 2025-08-10T15:27:21+08:00
+date: 2025-08-11T15:35:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1524087086535-177f3752451c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ4MTA4MjN8&ixlib=rb-4.1.0
-tags: ['github',Flutter,Dart,Live Streaming,Android,iOS,Windows,macOS,Linux,Android TV]
+image: https://images.unsplash.com/photo-1638645670971-7cc61256bd95?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ4OTc2MzZ8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
