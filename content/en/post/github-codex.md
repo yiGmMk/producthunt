@@ -1,9 +1,9 @@
 ---
 title: codex
-date: 2025-08-11T15:34:31+08:00
+date: 2025-08-12T15:30:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1624293547285-d892edcc8bdc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ4OTc2MzZ8&ixlib=rb-4.1.0
-tags: ['github',OpenAI Codex CLI, ChatGPT, code generation, natural language processing, API key,  OpenAI API,  model selection,  sandboxing,  OSS models]
+image: https://images.unsplash.com/photo-1706708316348-942c80a29576?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ5ODM4MDZ8&ixlib=rb-4.1.0
+tags: ['github',OpenAI Codex CLI, ChatGPT, code generation, natural language processing, API key, OpenAI API, model selection,  sandboxing,  OSS models,  configuration,  GitHub,  authentication]
 categories: ['github']
 ---
 

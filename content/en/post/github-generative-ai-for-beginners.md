@@ -1,9 +1,9 @@
 ---
 title: generative-ai-for-beginners
-date: 2025-07-29T15:36:31+08:00
+date: 2025-08-12T15:31:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1697048851928-8f21b9db630a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM3NzQ1NTF8&ixlib=rb-4.1.0
-tags: ['github',Generative AI,Large Language Models,Prompt Engineering,Azure OpenAI,OpenAI API,Python,TypeScript]
+image: https://images.unsplash.com/photo-1558395335-9ff2fa9eccf1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ5ODM4MDZ8&ixlib=rb-4.1.0
+tags: ['github',Generative-AI,Large-Language-Models,LLMs,Prompt-Engineering,Azure-OpenAI,OpenAI-API,Python,TypeScript]
 categories: ['github']
 ---
 
@@ -70,7 +70,7 @@ Ask questions or share product feedback in our [Azure AI Foundry Developer Forum
 
 ## 🚀 Building a Startup?
 
-Sign up for [Microsoft for Startups Founders Hub](https://aka.ms/genai-foundershub?WT.mc_id=academic-105485-koreyst) to receive **free OpenAI credits** and up to **$150k towards Azure credits to access OpenAI models through Azure OpenAI Services**.
+Visit [Microsoft for Startups](https://www.microsoft.com/startups) to find out how to get started building with Azure credits today.
 
 ## 🙏 Want to help?
 

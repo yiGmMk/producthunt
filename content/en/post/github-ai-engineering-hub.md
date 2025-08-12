@@ -1,8 +1,8 @@
 ---
 title: ai-engineering-hub
-date: 2025-06-25T15:29:58+08:00
+date: 2025-08-12T15:30:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1672215526564-67cbd6ea95f9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA4MzY1ODN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1721653384080-0577b7943ec0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ5ODM4MDZ8&ixlib=rb-4.1.0
 tags: ['github',AI Engineering,LLMs,RAGs,AI agents,tutorials,Data Science,machine learning,repository]
 categories: ['github']
 ---

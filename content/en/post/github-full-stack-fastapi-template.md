@@ -1,8 +1,8 @@
 ---
 title: full-stack-fastapi-template
-date: 2025-08-11T15:34:59+08:00
+date: 2025-08-12T15:31:34+08:00
 draft: False
-image: https://images.unsplash.com/photo-1670834416096-08d3e126f083?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ4OTc2MzZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1587582423136-e9c64887a99d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ5ODM4MDZ8&ixlib=rb-4.1.0
 tags: ['github',FastAPI,React,SQLModel,PostgreSQL,Pydantic,Chakra UI,TypeScript,Docker Compose,JWT,Traefik]
 categories: ['github']
 ---

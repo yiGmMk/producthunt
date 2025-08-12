@@ -1,9 +1,9 @@
 ---
 title: jan
-date: 2025-08-11T15:34:19+08:00
+date: 2025-08-12T15:30:58+08:00
 draft: False
-image: https://images.unsplash.com/photo-1727277794673-802092abacdb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ4OTc2MzZ8&ixlib=rb-4.1.0
-tags: ['github',Jan,AI assistant,LLM,offline,privacy,HuggingFace,OpenAI,custom assistants,Model Context Protocol,MCP]
+image: https://images.unsplash.com/photo-1706708316348-942c80a29576?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ5ODM4MDZ8&ixlib=rb-4.1.0
+tags: ['github',Jan,AI,assistant,LLM,offline,privacy,HuggingFace,OpenAI,custom assistants]
 categories: ['github']
 ---
 

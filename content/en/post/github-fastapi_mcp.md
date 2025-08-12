@@ -1,9 +1,9 @@
 ---
 title: fastapi_mcp
-date: 2025-08-10T15:28:42+08:00
+date: 2025-08-12T15:30:25+08:00
 draft: False
-image: https://images.unsplash.com/photo-1641894316201-2b5c31863eac?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ4MTA4MjN8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1638864616266-c390568f9092?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ5ODM4MDZ8&ixlib=rb-4.1.0
+tags: ['github',FastAPI,MCP,Model Context Protocol,Authentication,FastAPI-native,API,endpoints,Swagger,ASGI,deployment,Python]
 categories: ['github']
 ---
 
@@ -18,6 +18,10 @@ categories: ['github']
 <h1 align="center">
   FastAPI-MCP
 </h1>
+
+<div align="center">
+<a href="https://trendshift.io/repositories/14064" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14064" alt="tadata-org%2Ffastapi_mcp | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+</div>
 
 <p align="center">Expose your FastAPI endpoints as Model Context Protocol (MCP) tools, with Auth!</p>
 <div align="center">

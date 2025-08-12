@@ -1,9 +1,9 @@
 ---
 title: midday
-date: 2025-07-01T15:31:23+08:00
+date: 2025-08-12T15:31:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1738082657794-4b514e916d4b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEzNTUwNDh8&ixlib=rb-4.1.0
-tags: ['github',business management,freelancers,contractors,consultants,solo entrepreneurs,time tracking,invoicing,financial tracking]
+image: https://images.unsplash.com/photo-1587582423136-e9c64887a99d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ5ODM4MDZ8&ixlib=rb-4.1.0
+tags: ['github',business management,freelancers,contractors,solo entrepreneurs,time tracking,invoicing,financial tracking]
 categories: ['github']
 ---
 
@@ -25,9 +25,16 @@ categories: ['github']
   </p>
 </p>
 
+<p align="center">
+  <a href="https://go.midday.ai/K7GwMoQ">
+    <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" />
+  </a>
+</p>
+
 ## About Midday
 
 Midday is an all-in-one tool designed to help freelancers, contractors, consultants, and solo entrepreneurs manage their business operations more efficiently. It integrates various functions typically scattered across multiple platforms into a single, cohesive system.
+
 
 ## Features
 
@@ -39,19 +46,7 @@ Midday is an all-in-one tool designed to help freelancers, contractors, consulta
 **Assistant**: Provides tailored insights into financial situations, helping users understand spending patterns, cut costs, and find documents.<br/>
 
 
-## Recognition
 
-<a href="https://news.ycombinator.com/item?id=40737901">
-  <img
-    style="width: 250px; height: 54px;" width="250" height="54"
-    alt="Featured on Hacker News"
-    src="https://hackernews-badge.vercel.app/api?id=40737901"
-  />
-</a>
-
-<a href="https://www.producthunt.com/posts/midday-2?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-midday&#0045;2" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=460784&theme=light" alt="Midday - Run&#0032;your&#0032;business&#0032;smarter | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-
-<br/>
 
 ## Get started
 

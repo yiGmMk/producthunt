@@ -1,9 +1,9 @@
 ---
 title: firecrawl
-date: 2025-07-01T15:31:54+08:00
+date: 2025-08-12T15:31:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1597125165736-f71b21f869c5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEzNTUwNDh8&ixlib=rb-4.1.0
-tags: ['github',web scraping,web crawling,data extraction,API,markdown,structured data,LLM]
+image: https://images.unsplash.com/photo-1651151798244-e2641c1af115?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ5ODM4MDZ8&ixlib=rb-4.1.0
+tags: ['github',web scraping, web crawling, data extraction, API, SDK, LLM, markdown, structured data]
 categories: ['github']
 ---
 
@@ -82,7 +82,7 @@ To use the API, you need to sign up on [Firecrawl](https://firecrawl.dev) and ge
 
 - [**Scrape**](#scraping): scrapes a URL and get its content in LLM-ready format (markdown, structured data via [LLM Extract](#llm-extraction-beta), screenshot, html)
 - [**Crawl**](#crawling): scrapes all the URLs of a web page and return content in LLM-ready format
-- [**Map**](#map-alpha): input a website and get all the website urls - extremely fast
+- [**Map**](#map): input a website and get all the website urls - extremely fast
 - [**Search**](#search): search the web and get full content from results
 - [**Extract**](#extract): get structured data from single page, multiple pages or entire websites with AI.
 
