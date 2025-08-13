@@ -1,9 +1,9 @@
 ---
 title: umami
-date: 2025-08-12T15:31:53+08:00
+date: 2025-08-13T15:31:23+08:00
 draft: False
-image: https://images.unsplash.com/photo-1544554196-94abacdf8297?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ5ODM4MDZ8&ixlib=rb-4.1.0
-tags: ['github',Umami,Google Analytics,privacy,website analytics,open-source,Node.js,Docker,database]
+image: https://images.unsplash.com/photo-1747633322335-1790ca959e33?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUwNzAyNDF8&ixlib=rb-4.1.0
+tags: ['github',Umami,Google Analytics,privacy,alternative,website analytics,data privacy,open source,self-hosted,web analytics]
 categories: ['github']
 ---
 
