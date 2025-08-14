@@ -1,9 +1,9 @@
 ---
 title: mkcert
-date: 2025-08-13T15:33:25+08:00
+date: 2025-08-14T15:31:05+08:00
 draft: False
-image: https://images.unsplash.com/photo-1544166094-d2b74a1f7667?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUwNzAyNDF8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1649726635267-d675c83e6064?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUxNTY2MDV8&ixlib=rb-4.1.0
+tags: ['github',mkcert, local, certificates, development, CA, installation, macOS, Linux, Windows, trust store]
 categories: ['github']
 ---
 

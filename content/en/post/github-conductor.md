@@ -1,9 +1,9 @@
 ---
 title: conductor
-date: 2025-08-13T15:32:51+08:00
+date: 2025-08-14T15:31:43+08:00
 draft: False
-image: https://images.unsplash.com/photo-1626579483268-5ef9c79e6dd9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUwNzAyNDF8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1649726635267-d675c83e6064?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUxNTY2MDV8&ixlib=rb-4.1.0
+tags: ['github',workflow orchestration,microservices,Conductor,open-source,distributed workflows,asynchronous workflows,workflow management,microservices orchestration]
 categories: ['github']
 ---
 

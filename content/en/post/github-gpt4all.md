@@ -1,9 +1,9 @@
 ---
 title: gpt4all
-date: 2025-08-13T15:31:17+08:00
+date: 2025-08-14T15:31:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592730838907-5908b2832585?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUwNzAyNDF8&ixlib=rb-4.1.0
-tags: ['github',GPT4All,LLMs,large language models,local inference,desktop,laptop,GGUF,Python,llama.cpp,Nomic,Paperspace,Windows,macOS,Linux,ARM,Apple Silicon,LocalDocs,Vulkan,GPU]
+image: https://images.unsplash.com/photo-1512221747435-73c38dd7afa1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUxNTY2MDV8&ixlib=rb-4.1.0
+tags: ['github',GPT4All, large language models, LLMs, local inference,  desktop, laptops,  GGUF,  Python]
 categories: ['github']
 ---
 

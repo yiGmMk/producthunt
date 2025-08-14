@@ -1,9 +1,9 @@
 ---
 title: project-based-learning
-date: 2025-06-07T15:28:03+08:00
+date: 2025-08-14T15:32:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1594644404420-055495d3b31e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkyODExODR8&ixlib=rb-4.1.0
-tags: ['github',programming,tutorials,software developers,application development,programming languages]
+image: https://images.unsplash.com/photo-1584247740245-23dfe7d9a125?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUxNTY2MDV8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

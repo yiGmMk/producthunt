@@ -1,8 +1,8 @@
 ---
 title: opentelemetry-collector
-date: 2025-08-13T15:31:49+08:00
+date: 2025-08-14T15:31:22+08:00
 draft: False
-image: https://images.unsplash.com/photo-1742523688710-3df07b9260f0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUwNzAyNDF8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1584247740245-23dfe7d9a125?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUxNTY2MDV8&ixlib=rb-4.1.0
 tags: ['github',OpenTelemetry,Collector,Telemetry,Metrics,Traces,Logs,Observability,Go]
 categories: ['github']
 ---

@@ -1,9 +1,9 @@
 ---
 title: notebooks
-date: 2025-08-13T15:31:33+08:00
+date: 2025-08-14T15:32:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592730838907-5908b2832585?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUwNzAyNDF8&ixlib=rb-4.1.0
-tags: ['github',LLMs, fine-tuning, Google Colab, Kaggle, notebooks, models, vision, TTS]
+image: https://images.unsplash.com/photo-1592833087839-31d590347c5c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUxNTY2MDV8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
