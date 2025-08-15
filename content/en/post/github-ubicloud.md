@@ -1,9 +1,9 @@
 ---
 title: ubicloud
-date: 2025-08-14T15:30:14+08:00
+date: 2025-08-15T15:30:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1660142106167-6f27269eb276?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUxNTY2MDV8&ixlib=rb-4.1.0
-tags: ['github',open-source cloud,IaaS,bare-metal,cloud providers,managed service,virtual machines,Linux,containers,docker]
+image: https://images.unsplash.com/photo-1594630957561-df0346706d90?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUyNDI5OTV8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

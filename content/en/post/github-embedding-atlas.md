@@ -1,9 +1,9 @@
 ---
 title: embedding-atlas
-date: 2025-08-14T15:30:20+08:00
+date: 2025-08-15T15:31:55+08:00
 draft: False
-image: https://images.unsplash.com/photo-1584247740245-23dfe7d9a125?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUxNTY2MDV8&ixlib=rb-4.1.0
-tags: ['github',EmbeddingAtlas,interactive visualization,embeddings,metadata,data clustering,density estimation,WebGPU,WebGL,Jupyter widget,Python,npm]
+image: https://images.unsplash.com/photo-1615050348898-5de3114abce0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUyNDI5OTV8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

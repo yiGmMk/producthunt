@@ -1,9 +1,9 @@
 ---
 title: UI-TARS-desktop
-date: 2025-08-14T15:30:57+08:00
+date: 2025-08-15T15:31:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1676068646516-5eda1745a641?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUxNTY2MDV8&ixlib=rb-4.1.0
-tags: ['github',Agent TARS,UI-TARS-desktop,multimodal AI Agent,GUI Agent,Vision,LLMs,MCP,local operator,remote operator,browser operator]
+image: https://images.unsplash.com/photo-1692607334682-59c90d345679?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUyNDI5OTV8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

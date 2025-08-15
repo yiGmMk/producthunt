@@ -1,8 +1,8 @@
 ---
 title: terraform
-date: 2025-07-12T15:38:23+08:00
+date: 2025-08-15T15:31:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1565377572295-775293e25631?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIzMDU4MDJ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1651608903386-8e918ff298f6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUyNDI5OTV8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -52,7 +52,7 @@ This repository contains only Terraform core, which includes the command line in
 
 - To learn more about how we handle bug reports, refer to the [bug triage guide](./BUGPROCESS.md).
 
-- To learn how to contribute to the Terraform documentation in this repository, refer to the [Terraform Documentation README](/website/README.md).
+- To learn how to contribute to the Terraform documentation, refer to the [Web Unified Docs repository](https://github.com/hashicorp/web-unified-docs).
 
 ## License
 
