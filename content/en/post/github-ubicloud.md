@@ -1,9 +1,9 @@
 ---
 title: ubicloud
-date: 2025-08-15T15:30:07+08:00
+date: 2025-08-16T15:27:02+08:00
 draft: False
-image: https://images.unsplash.com/photo-1594630957561-df0346706d90?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUyNDI5OTV8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1698665483450-6991335db7f3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUzMjkyMDF8&ixlib=rb-4.1.0
+tags: ['github',open-source cloud, IaaS, bare-metal, Ubicloud, cloud-hypervisor, IPsec, SPDK, ABAC,  managed service]
 categories: ['github']
 ---
 

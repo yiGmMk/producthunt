@@ -1,8 +1,8 @@
 ---
 title: jitsi-meet
-date: 2025-08-14T15:30:30+08:00
+date: 2025-08-16T15:28:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1512221747435-73c38dd7afa1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUxNTY2MDV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1656964001105-f58ff9b5b995?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUzMjkyMDF8&ixlib=rb-4.1.0
 tags: ['github',Jitsi Meet,video conferencing,Open Source,HD audio,video,content sharing,mobile applications,Web SDKs,native SDKs]
 categories: ['github']
 ---

@@ -1,9 +1,9 @@
 ---
 title: go-redis
-date: 2025-08-15T15:30:42+08:00
+date: 2025-08-16T15:27:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1566683777581-1a8051f226c9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUyNDI5OTV8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1594034083109-6f9de7fe9035?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUzMjkyMDF8&ixlib=rb-4.1.0
+tags: ['github',Redis,Go,client,library,commands,connection,pooling,Pub/Sub]
 categories: ['github']
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: fastapi_mcp
-date: 2025-08-14T15:30:36+08:00
+date: 2025-08-16T15:26:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1512221747435-73c38dd7afa1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUxNTY2MDV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1679108319531-278564f267ec?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUzMjkyMDF8&ixlib=rb-4.1.0
 tags: ['github',FastAPI,MCP,Model Context Protocol,Authentication,FastAPI-native,API,endpoints,Swagger,ASGI,deployment,Python]
 categories: ['github']
 ---
