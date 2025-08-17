@@ -1,9 +1,9 @@
 ---
 title: poml
-date: 2025-08-15T15:30:16+08:00
+date: 2025-08-17T15:27:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1651608903386-8e918ff298f6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUyNDI5OTV8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1596650829777-4cb3b4f92f53?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU0MTU2Mzd8&ixlib=rb-4.1.0
+tags: ['github',Prompt Orchestration Markup Language,LLM,Large Language Models,prompt engineering,structured prompting,data handling,presentation styling,templating engine,Visual Studio Code,SDKs]
 categories: ['github']
 ---
 

@@ -1,15 +1,15 @@
 ---
 title: build-your-own-x
-date: 2025-07-07T15:31:31+08:00
+date: 2025-08-17T15:27:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1567281398682-d86e7b695afd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE4NzM0MjZ8&ixlib=rb-4.1.0
-tags: ['github',programming language, operating system, web server, game, neural network, database, blockchain, 3d renderer,  bot,  search engine]
+image: https://images.unsplash.com/photo-1591388561505-ea5f5a146339?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU0MTU2Mzd8&ixlib=rb-4.1.0
+tags: ['github',programming language,operating system,web server,database,neural network,game,blockchain,3d renderer,emulator,bot]
 categories: ['github']
 ---
 
 # [codecrafters-io/build-your-own-x](https://github.com/codecrafters-io/build-your-own-x)
 
-[![Banner](https://codecrafters.io/images/byox-banner.gif)](https://codecrafters.io/github-banner)
+[![Banner](https://codecrafters.io/images/updated-byox-banner.gif)](https://codecrafters.io/github-banner)
 
 ## Build your own &lt;insert-technology-here&gt;
 
@@ -338,7 +338,6 @@ It's a great way to learn.
 * [**Racket**: _Beautiful Racket: How to make your own programming languages with Racket_](https://beautifulracket.com/)
 * [**Ruby**: _A Compiler From Scratch_](https://www.destroyallsoftware.com/screencasts/catalog/a-compiler-from-scratch)
 * [**Ruby**: _Markdown compiler from scratch in Ruby_](https://blog.beezwax.net/2017/07/07/writing-a-markdown-compiler/)
-* [**Rust**: _So You Want to Build a Language VM_](https://blog.subnetzero.io/post/building-language-vm-part-00/)
 * [**Rust**: _Learning Parser Combinators With Rust_](https://bodil.lol/parser-combinators/)
 * [**Swift**: _Building a LISP from scratch with Swift_](https://www.uraimo.com/2017/02/05/building-a-lisp-from-scratch-with-swift/)
 * [**TypeScript**: _Build your own WebAssembly Compiler_](https://blog.scottlogic.com/2019/05/17/webassembly-compiler.html)
