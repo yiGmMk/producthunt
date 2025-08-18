@@ -1,9 +1,9 @@
 ---
 title: colmap
-date: 2025-08-15T15:30:52+08:00
+date: 2025-08-18T15:33:30+08:00
 draft: False
-image: https://images.unsplash.com/photo-1651608903386-8e918ff298f6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUyNDI5OTV8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1536045082245-23940deb3be1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU1MDIzMzB8&ixlib=rb-4.1.0
+tags: ['github',Structure-from-Motion,Multi-View-Stereo,3D-Reconstruction,COLMAP,Computer-Vision,Image-Retrieval,SfM,MVS]
 categories: ['github']
 ---
 

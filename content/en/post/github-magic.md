@@ -1,9 +1,9 @@
 ---
 title: magic
-date: 2025-08-17T15:28:57+08:00
+date: 2025-08-18T15:33:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591388561505-ea5f5a146339?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU0MTU2Mzd8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1722542251482-c08511075bab?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU1MDIzMzB8&ixlib=rb-4.1.0
+tags: ['github',AI,productivity,platform,Agent,workflow,Magic,open-source,large language model]
 categories: ['github']
 ---
 

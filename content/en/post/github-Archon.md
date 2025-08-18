@@ -1,9 +1,9 @@
 ---
 title: Archon
-date: 2025-08-17T15:27:23+08:00
+date: 2025-08-18T15:32:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1709538028489-c321340bd26e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU0MTU2Mzd8&ixlib=rb-4.1.0
-tags: ['github',Archon,AI coding assistants,Model Context Protocol,MCP server,knowledge base,task management,RAG strategies,smart search,real-time updates,documentation]
+image: https://images.unsplash.com/photo-1722542251482-c08511075bab?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU1MDIzMzB8&ixlib=rb-4.1.0
+tags: ['github',Archon,AI coding assistants,MCP server,knowledge base,task management,Claude Code,Kiro,Cursor,Windsurf,RAG strategies]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: LMCache
-date: 2025-08-17T15:27:41+08:00
+date: 2025-08-18T15:33:24+08:00
 draft: False
-image: https://images.unsplash.com/photo-1631846966229-3fd644de2486?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU0MTU2Mzd8&ixlib=rb-4.1.0
-tags: ['github',LLM,serving engine,throughput,long-context,KV cache,GPU,response delay,vLLM,RAG]
+image: https://images.unsplash.com/photo-1690973691853-488b67beed7b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU1MDIzMzB8&ixlib=rb-4.1.0
+tags: ['github',LLM, serving engine, throughput, long-context, KV cache, GPU, CPU, vLLM,  delay savings, RAG]
 categories: ['github']
 ---
 

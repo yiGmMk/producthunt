@@ -1,9 +1,9 @@
 ---
 title: awesome-llm-apps
-date: 2025-08-17T15:28:47+08:00
+date: 2025-08-18T15:32:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1709538028489-c321340bd26e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU0MTU2Mzd8&ixlib=rb-4.1.0
-tags: ['github',LLM, AI Agents, Multi-agent Teams, RAG,  OpenAI, Anthropic, Google, DeepSeek, Qwen, Llama]
+image: https://images.unsplash.com/photo-1690973691853-488b67beed7b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU1MDIzMzB8&ixlib=rb-4.1.0
+tags: ['github',LLM,AI Agents,RAG,Multi-agent,MCP,Voice Agents,OpenAI,Anthropic,Google,DeepSeek,Qwen,Llama]
 categories: ['github']
 ---
 
@@ -165,6 +165,15 @@ A curated collection of **Awesome LLM apps built with RAG, AI Agents, Multi-agen
 ### 🔧 LLM Fine-tuning Tutorials
 
 *   [🔧 Llama 3.2 Fine-tuning](advanced_llm_apps/llm_finetuning_tutorials/llama3.2_finetuning/)
+
+### 🧑‍🏫 AI Agent Framework Crash Course
+
+- [Google ADK Crash Course](ai_agent_framework_crash_course/google_adk_crash_course/)
+  - Starter agent; model‑agnostic (OpenAI, Claude)
+  - Structured outputs (Pydantic)
+  - Tools: built‑in, function, third‑party, MCP tools
+  - Memory; callbacks; Plugins
+  - Simple multi‑agent; Multi‑agent patterns
 
 ## 🚀 Getting Started
 

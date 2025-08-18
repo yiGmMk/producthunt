@@ -1,9 +1,9 @@
 ---
 title: parlant
-date: 2025-08-17T15:28:30+08:00
+date: 2025-08-18T15:32:25+08:00
 draft: False
-image: https://images.unsplash.com/photo-1636412911203-4065623b94fc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU0MTU2Mzd8&ixlib=rb-4.1.0
-tags: ['github',AI agent,Parlant,LLM,instruction following,rule compliance,AI development,production AI agents,conversational AI]
+image: https://images.unsplash.com/photo-1683560660669-6be33568035e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU1MDIzMzB8&ixlib=rb-4.1.0
+tags: ['github',AI agent,Parlant,LLM,instruction following,rule compliance,agent development,guideline,conversational AI,production AI]
 categories: ['github']
 ---
 
@@ -172,7 +172,7 @@ if __name__ == "__main__":
 - **📱 React Widget** - [Drop-in chat UI for any web app](https://github.com/emcie-co/parlant-chat-react)
 - **🔍 Full Explainability** - Understand every decision your agent makes
 
-## 📈 Join 4,000+ Developers Building Better AI
+## 📈 Join 5,000+ Developers Building Better AI
 
 <div align="center">
 

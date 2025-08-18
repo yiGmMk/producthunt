@@ -1,21 +1,24 @@
 ---
 title: motia
-date: 2025-08-05T15:36:47+08:00
+date: 2025-08-18T15:34:05+08:00
 draft: False
-image: https://images.unsplash.com/photo-1679447701375-b5fcaf2c711d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQzNzkzNzV8&ixlib=rb-4.1.0
-tags: ['github',backend framework,workflows,AI agents,APIs,background jobs,Step,event-driven,observability,JavaScript,TypeScript,Python]
+image: https://images.unsplash.com/photo-1590199106160-d3e7fa893a9e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU1MDIzMzB8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
 # [MotiaDev/motia](https://github.com/MotiaDev/motia)
 
 <a href="https://motia.dev">
-  <img src="packages/docs/public/github-readme-banner.png" alt="Motia Banner" width="100%">
+  <img src="assets/github-readme-banner.png" alt="Motia Banner" width="100%">
 </a>
 
 <p align="center">
-  <a href="https://trendshift.io/repositories/14032">
-    <img src="https://trendshift.io/api/badge/repositories/14032" alt="Motia" style="width: 250px; height: 55px;" width="250" height="55"/>
+  <a href="https://trendshift.io/repositories/14032" style="margin-right:8px;">
+    <img src="https://trendshift.io/api/badge/repositories/14032" alt="Motia" style="width: 250px; height: 55px; margin-right:8px;" width="250" height="55"/>
+  </a>
+  <a href="https://vercel.com/blog/summer-2025-oss-program#motia" target="_blank" style="margin-left:8px;">
+    <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" style="width: 250px; height: 55px; margin-left:8px;" width="250" height="55"/>
   </a>
 </p>
 
@@ -44,7 +47,7 @@ categories: ['github']
   <a href="https://www.motia.dev/manifesto">💡 Motia Manifesto</a> •
   <a href="https://www.motia.dev/docs/getting-started/quick-start">🚀 Quick Start</a> •
   <a href="https://www.motia.dev/docs/concepts/steps/defining-steps">📋 Defining Steps</a> •
-  <a href="https://motia.dev/docs">📚 Docs</a>
+  <a href="https://www.motia.dev/docs">📚 Docs</a>
 </p>
 
 ---
@@ -114,8 +117,6 @@ The Workbench is your command centre:
 - ✅ Visual debugger & flow inspector
 - ✅ Built-in observability
 - ✅ Hot-reload for instant feedback
-
----
 
 ### 🧱 The Step Philosophy
 
