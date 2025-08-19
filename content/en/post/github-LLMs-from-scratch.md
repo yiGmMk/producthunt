@@ -1,9 +1,9 @@
 ---
 title: LLMs-from-scratch
-date: 2025-08-05T15:36:59+08:00
+date: 2025-08-19T15:28:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1609418694568-3cc8d23f2e7c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQzNzkzNzV8&ixlib=rb-4.1.0
-tags: ['github',Large Language Model,LLM,GPT,PyTorch,text analysis,natural language processing,deep learning,finetuning]
+image: https://images.unsplash.com/photo-1634525341372-2869bdaa7c8c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU1ODg0ODJ8&ixlib=rb-4.1.0
+tags: ['github',Large Language Model,LLM,GPT,PyTorch,text classification,instruction finetuning,pretraining,finetuning]
 categories: ['github']
 ---
 
@@ -170,6 +170,7 @@ Several folders contain optional materials as a bonus for interested readers:
   - [Converting GPT to Llama](ch05/07_gpt_to_llama)
   - [Llama 3.2 From Scratch](ch05/07_gpt_to_llama/standalone-llama32.ipynb)
   - [Qwen3 Dense and Mixture-of-Experts (MoE) From Scratch](ch05/11_qwen3/)
+  - [Gemma 3 From Scratch](ch05/12_gemma3/)
   - [Memory-efficient Model Weight Loading](ch05/08_memory_efficient_weight_loading/memory-efficient-state-dict.ipynb)
   - [Extending the Tiktoken BPE Tokenizer with New Tokens](ch05/09_extending-tokenizers/extend-tiktoken.ipynb)
   - [PyTorch Performance Tips for Faster LLM Training](ch05/10_llm-training-speed)

@@ -1,9 +1,9 @@
 ---
 title: data-engineer-handbook
-date: 2025-08-18T15:33:48+08:00
+date: 2025-08-19T15:28:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1690973691853-488b67beed7b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU1MDIzMzB8&ixlib=rb-4.1.0
-tags: ['github',data engineering,data engineer,machine learning,cloud computing,big data,data warehousing,data pipeline,data quality]
+image: https://images.unsplash.com/photo-1738082657785-9c63e1d6b7c6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU1ODg0ODJ8&ixlib=rb-4.1.0
+tags: ['github',data engineering,data engineer,machine learning,boot camp,resources,companies,communities,books]
 categories: ['github']
 ---
 
@@ -18,9 +18,13 @@ This repo has all the resources you need to become an amazing data engineer!
 
 If you are new to data engineering, start by following this [2024 breaking into data engineering roadmap](https://blog.dataengineer.io/p/the-2024-breaking-into-data-engineering)
 
-If you are here for the [6-week free YouTube boot camp](https://youtu.be/myhe0LXpCeo) you can check out
-- [introduction](bootcamp/introduction.md)
-- [software needed](bootcamp/software.md)
+If you are here for the [4-week free beginner boot camp](https://learn.dataexpert.io/program/the-absolute-beginner-data-engineering-boot-camp-starting-august-7th-6453/details) you can check out:
+- [introduction](beginner-bootcamp/introduction.md)
+- [software needed](beginner-bootcamp/software.md)
+
+If you are here for the [6-week free intermediate boot camp](https://learn.dataexpert.io/program/free-community-boot-camp/details) you can check out
+- [introduction](intermediate-bootcamp/introduction.md)
+- [software needed](intermediate-bootcamp/software.md)
 
 
 For more applied learning:

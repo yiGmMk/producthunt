@@ -1,9 +1,9 @@
 ---
 title: parlant
-date: 2025-08-18T15:32:25+08:00
+date: 2025-08-19T15:28:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1683560660669-6be33568035e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU1MDIzMzB8&ixlib=rb-4.1.0
-tags: ['github',AI agent,Parlant,LLM,instruction following,rule compliance,agent development,guideline,conversational AI,production AI]
+image: https://images.unsplash.com/photo-1685392485351-f7d93de2231e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU1ODg0ODJ8&ixlib=rb-4.1.0
+tags: ['github',AI agent,Parlant,LLM,guideline,rule-following,conversational AI,agent development,production AI]
 categories: ['github']
 ---
 
@@ -176,7 +176,7 @@ if __name__ == "__main__":
 
 <div align="center">
 
-**Companies using Parlant in production:**
+**Companies using Parlant:**
 
 _Financial institutions • Healthcare providers • Legal firms • E-commerce platforms_
 
