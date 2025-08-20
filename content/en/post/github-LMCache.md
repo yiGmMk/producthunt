@@ -1,9 +1,9 @@
 ---
 title: LMCache
-date: 2025-08-18T15:33:24+08:00
+date: 2025-08-20T15:28:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1690973691853-488b67beed7b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU1MDIzMzB8&ixlib=rb-4.1.0
-tags: ['github',LLM, serving engine, throughput, long-context, KV cache, GPU, CPU, vLLM,  delay savings, RAG]
+image: https://images.unsplash.com/photo-1478034460338-249ef2da6c0f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU2NzQ5MDF8&ixlib=rb-4.1.0
+tags: ['github',LLM,serving engine,TTFT,throughput,long-context,KV caches,GPU,CPU,vLLM,RAG]
 categories: ['github']
 ---
 
@@ -76,7 +76,7 @@ pip install lmcache
 
 Works on Linux NVIDIA GPU platform.
 
-More [detailed installation instructions](https://docs.lmcache.ai/getting_started/installation) are available in the docs.
+More [detailed installation instructions](https://docs.lmcache.ai/getting_started/installation) are available in the docs, particularly if you are not using the latest stable version of vllm or using another serving engine with different dependencies. Any "undefined symbol" or torch mismatch versions can be resolved in the documentation. 
 
 ## Getting started
 

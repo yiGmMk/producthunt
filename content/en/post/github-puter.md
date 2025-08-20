@@ -1,9 +1,9 @@
 ---
 title: puter
-date: 2025-05-23T15:28:45+08:00
+date: 2025-08-20T15:30:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1731635793345-81555953ba2a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc5ODUyNzh8&ixlib=rb-4.1.0
-tags: ['github',Puter,open-source,internet operating system,personal cloud,web development,cloud computing,self-hosting]
+image: https://images.unsplash.com/photo-1612127636851-3392ed50d75f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU2NzQ5MDF8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -58,7 +58,7 @@ cd puter
 npm install
 npm start
 ```
-✨ This should launch Puter at 
+**→** This should launch Puter at 
 <font color="red"> http://puter.localhost:4100 (or the next available port). </font>
 
 
@@ -73,7 +73,7 @@ troubleshooting steps.
 ```bash
 mkdir puter && cd puter && mkdir -p puter/config puter/data && sudo chown -R 1000:1000 puter && docker run --rm -p 4100:4100 -v `pwd`/puter/config:/etc/puter -v `pwd`/puter/data:/var/puter  ghcr.io/heyputer/puter
 ```
-✨ This should launch Puter at 
+**→** This should launch Puter at 
 <font color="red"> http://puter.localhost:4100 (or the next available port). </font>
 
 <br/>
@@ -88,7 +88,7 @@ sudo chown -R 1000:1000 puter
 wget https://raw.githubusercontent.com/HeyPuter/puter/main/docker-compose.yml
 docker compose up
 ```
-✨ This should be available at 
+**→** This should be available at 
 <font color="red"> http://puter.localhost:4100 (or the next available port). </font>
 
 <br/>
@@ -103,7 +103,7 @@ New-Item -Path "puter\data" -ItemType Directory -Force
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/HeyPuter/puter/main/docker-compose.yml" -OutFile "docker-compose.yml"
 docker compose up
 ```
-✨ This should launch Puter at 
+**→** This should launch Puter at 
 <font color="red"> http://puter.localhost:4100 (or the next available port). </font>
 
 <br/>

@@ -1,9 +1,9 @@
 ---
 title: immich
-date: 2025-08-19T15:29:03+08:00
+date: 2025-08-20T15:29:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1548581255-e398010debfb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU1ODg0ODJ8&ixlib=rb-4.1.0
-tags: ['github',photo,video,management,self-hosted,backup,solution,mobile,app]
+image: https://images.unsplash.com/photo-1630581630833-27c2b470e9cc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU2NzQ5MDF8&ixlib=rb-4.1.0
+tags: ['github',photo,video,management,self-hosted,backup,solution,mobile,web]
 categories: ['github']
 ---
 

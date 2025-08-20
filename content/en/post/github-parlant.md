@@ -1,9 +1,9 @@
 ---
 title: parlant
-date: 2025-08-19T15:28:20+08:00
+date: 2025-08-20T15:28:30+08:00
 draft: False
-image: https://images.unsplash.com/photo-1685392485351-f7d93de2231e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU1ODg0ODJ8&ixlib=rb-4.1.0
-tags: ['github',AI agent,Parlant,LLM,guideline,rule-following,conversational AI,agent development,production AI]
+image: https://images.unsplash.com/photo-1675096686677-859e9634ae33?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU2NzQ5MDF8&ixlib=rb-4.1.0
+tags: ['github',AI agent,Parlant,LLM,guideline,rule-following,production AI agents,conversational AI,agent development]
 categories: ['github']
 ---
 

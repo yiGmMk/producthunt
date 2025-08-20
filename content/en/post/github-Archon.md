@@ -1,9 +1,9 @@
 ---
 title: Archon
-date: 2025-08-19T15:28:12+08:00
+date: 2025-08-20T15:28:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1738082657785-9c63e1d6b7c6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU1ODg0ODJ8&ixlib=rb-4.1.0
-tags: ['github',Archon,AI coding assistant,knowledge base,task management,Model Context Protocol,MCP server,RAG,semantic search,LLM,OpenAI,Ollama,Gemini]
+image: https://images.unsplash.com/photo-1612127636851-3392ed50d75f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU2NzQ5MDF8&ixlib=rb-4.1.0
+tags: ['github',Archon,AI coding assistant,MCP server,knowledge base,task management,web crawling,document processing,vector search,multi-LLM support,RAG strategies]
 categories: ['github']
 ---
 
@@ -59,12 +59,12 @@ This new vision for Archon replaces the old one (the agenteer). Archon used to b
 ### Setup Instructions
 
 1. **Clone Repository**:
-
    ```bash
    git clone https://github.com/coleam00/archon.git
+   ```
+   ```bash
    cd archon
    ```
-
 2. **Environment Configuration**:
 
    ```bash
