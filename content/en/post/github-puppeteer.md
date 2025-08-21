@@ -1,9 +1,9 @@
 ---
 title: puppeteer
-date: 2025-08-02T15:29:00+08:00
+date: 2025-08-21T15:30:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1595084438531-f6c0f240e105?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQxMTk3MDd8&ixlib=rb-4.1.0
-tags: ['github',Puppeteer,Chrome,JavaScript,API,DevTools Protocol,WebDriver BiDi,headless,browser automation,web scraping]
+image: https://images.unsplash.com/photo-1565116028383-aea2dc5e29fa?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU3NjE0MDF8&ixlib=rb-4.1.0
+tags: ['github',Puppeteer,JavaScript,Chrome,Firefox,DevTools Protocol,WebDriver BiDi,headless,API,installation,example]
 categories: ['github']
 ---
 

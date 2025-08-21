@@ -1,9 +1,9 @@
 ---
 title: PixiEditor
-date: 2025-08-20T15:29:59+08:00
+date: 2025-08-21T15:31:56+08:00
 draft: False
-image: https://images.unsplash.com/photo-1477586957327-847a0f3f4fe3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU2NzQ5MDF8&ixlib=rb-4.1.0
-tags: ['github',PixiEditor,2D editor,pixel art,painting,vector graphics,animation,node system,raster,software,graphics]
+image: https://images.unsplash.com/photo-1515096788709-a3cf4ce0a4a6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU3NjE0MDF8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
