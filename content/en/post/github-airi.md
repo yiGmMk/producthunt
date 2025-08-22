@@ -1,8 +1,8 @@
 ---
 title: airi
-date: 2025-08-21T15:30:21+08:00
+date: 2025-08-22T15:27:06+08:00
 draft: False
-image: https://images.unsplash.com/photo-1643861707106-5ed1e3c52a37?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU3NjE0MDF8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1726413980384-6ff5bec9b948?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU4NDc2MTV8&ixlib=rb-4.1.0
 tags: ['github',AI, VTuber, Neuro-sama, large language models, ChatGPT, WebGPU, WebAssembly,  Live2D, VRM]
 categories: ['github']
 ---

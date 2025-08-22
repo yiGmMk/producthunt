@@ -1,9 +1,9 @@
 ---
 title: clients
-date: 2025-08-21T15:30:41+08:00
+date: 2025-08-22T15:27:27+08:00
 draft: False
-image: https://images.unsplash.com/photo-1596312227389-44ec814d5c1c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU3NjE0MDF8&ixlib=rb-4.1.0
-tags: ['github',Bitwarden,clients,password manager,authentication,software development,GitHub,open source]
+image: https://images.unsplash.com/photo-1695748216442-5eaad91860f2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU4NDc2MTV8&ixlib=rb-4.1.0
+tags: ['github',Bitwarden,client applications,password manager,GitHub,contributing,security,iOS,Android,backend]
 categories: ['github']
 ---
 

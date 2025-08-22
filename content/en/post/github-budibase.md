@@ -1,8 +1,8 @@
 ---
 title: budibase
-date: 2025-04-16T15:29:25+08:00
+date: 2025-08-22T15:27:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1727175401108-6e8bf73ca114?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3ODg0NTh8&ixlib=rb-4.0.3
+image: https://images.unsplash.com/photo-1578351490078-118d060b46cf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU4NDc2MTV8&ixlib=rb-4.1.0
 tags: ['github',Budibase,low-code platform,open-source,application development,data integration,automation,API,self-hosting,cloud deployment]
 categories: ['github']
 ---
