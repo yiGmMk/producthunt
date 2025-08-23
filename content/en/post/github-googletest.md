@@ -1,8 +1,8 @@
 ---
 title: googletest
-date: 2025-08-22T15:27:18+08:00
+date: 2025-08-23T15:25:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591013663603-2a7e3f1312f9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU4NDc2MTV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1543926668-051ea8e5d547?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU5MzM5MjF8&ixlib=rb-4.1.0
 tags: ['github',GoogleTest,xUnit,C++,unit testing,testing framework,assertions,death tests,parameterized tests,test discovery]
 categories: ['github']
 ---

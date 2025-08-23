@@ -1,9 +1,9 @@
 ---
 title: sim
-date: 2025-08-22T15:27:12+08:00
+date: 2025-08-23T15:25:30+08:00
 draft: False
-image: https://images.unsplash.com/photo-1575974307282-b8fba8a13090?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU4NDc2MTV8&ixlib=rb-4.1.0
-tags: ['github',AI agent workflow, workflow deployment, machine learning, AI models,  Ollama, Copilot API,  Next.js, PostgreSQL]
+image: https://images.unsplash.com/photo-1664366095115-9b4882d0d3b7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU5MzM5MjF8&ixlib=rb-4.1.0
+tags: ['github',AI agent workflow, workflow deployment, cloud-hosted AI, self-hosted AI,  Ollama,  Copilot API,  PostgreSQL,  Next.js]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: saas-starter
-date: 2025-08-22T15:28:04+08:00
+date: 2025-08-23T15:26:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591013663603-2a7e3f1312f9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU4NDc2MTV8&ixlib=rb-4.1.0
-tags: ['github',Next.js,SaaS,Stripe,Postgres,Drizzle,Authentication,Payments,Dashboard,RBAC,Subscription]
+image: https://images.unsplash.com/photo-1664366095115-9b4882d0d3b7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU5MzM5MjF8&ixlib=rb-4.1.0
+tags: ['github',Next.js,SaaS,Stripe,Authentication,Dashboard,Postgres,Drizzle,RBAC,JWT,Middleware,Zod]
 categories: ['github']
 ---
 
