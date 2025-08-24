@@ -1,9 +1,9 @@
 ---
 title: leantime
-date: 2025-08-23T15:27:06+08:00
+date: 2025-08-24T15:27:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1664366095115-9b4882d0d3b7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU5MzM5MjF8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1694937987248-595bf680cfe0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYwMjAzODF8&ixlib=rb-4.1.0
+tags: ['github',project management, open source, kanban, Jira, Trello, task management, project planning, SaaS]
 categories: ['github']
 ---
 

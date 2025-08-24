@@ -1,9 +1,9 @@
 ---
 title: univer
-date: 2025-08-23T15:26:01+08:00
+date: 2025-08-24T15:28:25+08:00
 draft: False
-image: https://images.unsplash.com/photo-1636381284874-065d9d35e275?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU5MzM5MjF8&ixlib=rb-4.1.0
-tags: ['github',Spreadsheet,Documents,Presentations,Isomorphic,Full-Stack,Framework,Collaborative Editing,Formula]
+image: https://images.unsplash.com/photo-1593447261553-c1d26bd46f99?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYwMjAzODF8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -16,7 +16,7 @@ categories: ['github']
     <img src="./docs/img/banner-dark.png" alt="Univer" width="400" />
 </picture>
 
-An Isomorphic Full-Stack Framework for Creating and Editing Spreadsheets, Docs, and Slides Across Web and Server<br />
+An Isomorphic Full-Stack Framework for Creating and Editing Spreadsheets, Docs, and Slides Across Web and Server.<br />
 **Extensible. High-performance. Embedded to your application.**
 
 **English** | [简体中文][readme-zh-link] | [日本語][readme-ja-link] | [Español][readme-es-link] <br />
@@ -35,6 +35,10 @@ An Isomorphic Full-Stack Framework for Creating and Editing Spreadsheets, Docs, 
 [![Trendshift][github-trending-shield]][github-trending-url]
 
 </div>
+
+Use Univer MCP to drive Univer Sheet with natural language and build truly AI-native spreadsheets.
+
+https://github.com/user-attachments/assets/fb439d4d-ef91-4747-ad43-aa8c731ba60b
 
 <details open>
 <summary>

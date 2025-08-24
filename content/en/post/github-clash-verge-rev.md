@@ -1,9 +1,9 @@
 ---
 title: clash-verge-rev
-date: 2025-08-18T15:33:57+08:00
+date: 2025-08-24T15:27:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1683560660669-6be33568035e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU1MDIzMzB8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1551958941-658e0532724a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYwMjAzODF8&ixlib=rb-4.1.0
+tags: ['github',Clash,Tauri,GUI,Clash.Meta,mihomo,proxy,VPN,Windows,macOS,Linux]
 categories: ['github']
 ---
 
@@ -96,11 +96,6 @@ Refer to [Doc FAQ Page](https://clash-verge-rev.github.io/faq/windows.html)
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for more details.
 
 To run the development server, execute the following commands after all prerequisites for **Tauri** are installed:
-
-> [!NOTE]
-> **If you are using a Windows ARM device, you additionally need to install [LLVM](https://github.com/llvm/llvm-project/releases) (including clang) and set the environment variable.**
->
-> Because the `ring` crate is compiled based on `clang` under Windows ARM.
 
 ```shell
 pnpm i

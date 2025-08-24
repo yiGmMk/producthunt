@@ -1,9 +1,9 @@
 ---
 title: puck
-date: 2025-08-23T15:26:16+08:00
+date: 2025-08-24T15:28:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1653450283266-c788c2ca4ab2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU5MzM5MjF8&ixlib=rb-4.1.0
-tags: ['github',React,Puck,Visual Editor,Drag-and-drop,Open-source,React.js,Next.js]
+image: https://images.unsplash.com/photo-1651264364386-51415f828b54?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYwMjAzODF8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

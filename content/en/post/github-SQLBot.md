@@ -1,9 +1,9 @@
 ---
 title: SQLBot
-date: 2025-08-23T15:25:54+08:00
+date: 2025-08-24T15:29:00+08:00
 draft: False
-image: https://images.unsplash.com/photo-1664366095115-9b4882d0d3b7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU5MzM5MjF8&ixlib=rb-4.1.0
-tags: ['github',SQLBot,text2sql,RAG,large language model,data source,AI,question answering system,Docker,Linux]
+image: https://images.unsplash.com/photo-1593447261553-c1d26bd46f99?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYwMjAzODF8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -56,8 +56,7 @@ docker compose up -d
 
 如你有更多问题，可以加入我们的技术交流群与我们交流。
 
-<img width="396" height="396" alt="contact_me_qr" src="https://github.com/user-attachments/assets/2594ff29-5426-4457-b051-279855610030" />
-
+<img width="180" height="180" alt="contact_me_qr" src="https://github.com/user-attachments/assets/2594ff29-5426-4457-b051-279855610030" />
 
 ## UI 展示
 

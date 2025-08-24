@@ -1,9 +1,9 @@
 ---
 title: chartdb
-date: 2025-04-09T15:29:09+08:00
+date: 2025-08-24T15:28:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1612386649465-5afc2ef04bc1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQxODM2NTd8&ixlib=rb-4.0.3
-tags: ['github',database,diagramming,editor,schema,SQL,visualization,AI,export]
+image: https://images.unsplash.com/photo-1744324472890-d4cac1650e2e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYwMjAzODF8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -41,8 +41,8 @@ categories: ['github']
   <a href="https://discord.gg/QeFwyWSKwC">
     <img src="https://img.shields.io/discord/1277047413705670678?color=5865F2&label=Discord&logo=discord&logoColor=white" alt="Discord community channel" />
   </a>
-  <a href="https://x.com/chartdb_io">
-    <img src="https://img.shields.io/twitter/follow/ChartDB?style=social"/>
+  <a href="https://x.com/intent/follow?screen_name=jonathanfishner">
+    <img src="https://img.shields.io/twitter/follow/jonathanfishner?style=social"/>
   </a>
 
 </h4>
@@ -136,6 +136,8 @@ docker run \
   -p 8080:80 chartdb
 ```
 
+> **Privacy Note:** ChartDB includes privacy-focused analytics via Fathom Analytics. You can disable this by adding `-e DISABLE_ANALYTICS=true` to the run command or `--build-arg VITE_DISABLE_ANALYTICS=true` when building.
+
 > **Note:** You must configure either Option 1 (OpenAI API key) OR Option 2 (Custom endpoint and model name) for AI capabilities to work. Do not mix the two options.
 
 Open your browser and navigate to `http://localhost:8080`.
@@ -160,7 +162,7 @@ VITE_LLM_MODEL_NAME=Qwen/Qwen2.5-32B-Instruct-AWQ
 
 - [Discord](https://discord.gg/QeFwyWSKwC) (For live discussion with the community and the ChartDB team)
 - [GitHub Issues](https://github.com/chartdb/chartdb/issues) (For any bugs and errors you encounter using ChartDB)
-- [Twitter](https://x.com/chartdb_io) (Get news fast)
+- [Twitter](https://x.com/intent/follow?screen_name=jonathanfishner) (Get news fast)
 
 ## Contributing
 
