@@ -1,9 +1,9 @@
 ---
 title: midday
-date: 2025-08-15T15:31:22+08:00
+date: 2025-08-25T15:29:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1468818438311-4bab781ab9b8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUyNDI5OTV8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1652039033514-48553cc28a9d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxMDY5Mjh8&ixlib=rb-4.1.0
+tags: ['github',business management,freelancers,contractors,consultants,solo entrepreneurs,time tracking,invoicing,financial tracking]
 categories: ['github']
 ---
 
@@ -75,7 +75,6 @@ We are working on the documentation to get started with Midday for local develop
 
 - Trigger.dev (background jobs)
 - Resend (Transactional & Marketing)
-- Novu (notifications)
 - Github Actions (CI/CD)
 - GoCardLess (Bank connection EU)
 - Plaid (Bank connection in Canada and US)
@@ -84,6 +83,7 @@ We are working on the documentation to get started with Midday for local develop
 - Polar (Payment processing)
 - Typesense (Search)
 - Mistral
+- Gemini
 - OpenAI
 
 ## Repo Activity

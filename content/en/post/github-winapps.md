@@ -1,9 +1,9 @@
 ---
 title: winapps
-date: 2025-08-24T15:27:36+08:00
+date: 2025-08-25T15:28:57+08:00
 draft: False
-image: https://images.unsplash.com/photo-1531748528593-991cafd0101f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYwMjAzODF8&ixlib=rb-4.1.0
-tags: ['github',Windows,Linux,KDE,GNOME,XFCE,Docker,Podman,libvirt,FreeRDP]
+image: https://images.unsplash.com/photo-1652039033514-48553cc28a9d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxMDY5Mjh8&ixlib=rb-4.1.0
+tags: ['github',WinApps,Linux,Windows,RDP,FreeRDP,Docker,Podman,libvirt,KVM,Microsoft 365,Adobe Creative Cloud]
 categories: ['github']
 ---
 
@@ -325,7 +325,7 @@ Install the required dependencies.
       ```bash
       sudo pacman -Syu --needed -y curl dialog freerdp git iproute2 libnotify openbsd-netcat
       ```
-  - OpenSUSE:
+  - openSUSE:
       ```bash
       sudo zypper install -y curl dialog freerdp git iproute2 libnotify-tools netcat-openbsd
       ```
@@ -430,8 +430,7 @@ DEBUG="true"
 
 # [AUTOMATICALLY PAUSE WINDOWS]
 # NOTES:
-# - This is currently INCOMPATIBLE with 'docker' and 'manual'.
-# - See https://github.com/dockur/windows/issues/674
+# - This is currently INCOMPATIBLE with 'manual'.
 # DEFAULT VALUE: 'off'
 # VALID VALUES:
 # - 'on'

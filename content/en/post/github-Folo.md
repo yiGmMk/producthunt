@@ -1,9 +1,9 @@
 ---
 title: Folo
-date: 2025-08-11T15:34:40+08:00
+date: 2025-08-25T15:31:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1670834416096-08d3e126f083?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ4OTc2MzZ8&ixlib=rb-4.1.0
-tags: ['github',Folo,RSS feed,content aggregation,AI features,open source,community,cross-platform app,information hub,ownership economy]
+image: https://images.unsplash.com/photo-1533668945923-8c50a25ffbdf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxMDY5Mjh8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

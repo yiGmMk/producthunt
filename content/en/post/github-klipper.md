@@ -1,9 +1,9 @@
 ---
 title: klipper
-date: 2025-05-05T15:30:19+08:00
+date: 2025-08-25T15:30:50+08:00
 draft: False
-image: https://images.unsplash.com/photo-1554602337-bcb0d619e511?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY0MzAxMDl8&ixlib=rb-4.0.3
-tags: ['github',Klipper,3D-printer,firmware,micro-controller,software,installation,features,license,documentation,sponsors]
+image: https://images.unsplash.com/photo-1498124411641-3b7f4ab6492f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxMDY5Mjh8&ixlib=rb-4.1.0
+tags: ['github',3d-Printers,Klipper,firmware,micro-controllers,software,Installation,Free Software,license]
 categories: ['github']
 ---
 

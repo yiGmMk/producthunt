@@ -1,9 +1,9 @@
 ---
 title: mesh2motion-app
-date: 2025-08-24T15:28:04+08:00
+date: 2025-08-25T15:29:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1620583968283-30c4e58b416b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYwMjAzODF8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1591241900019-b4a4c6d1cb61?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxMDY5Mjh8&ixlib=rb-4.1.0
+tags: ['github',3D model animation,GLB/GLTF,Mesh2Motion,web application,skeleton,animation export,animation preview,Blender]
 categories: ['github']
 ---
 
