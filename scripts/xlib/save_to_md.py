@@ -64,7 +64,7 @@ sections: None
 highlighting: None
 Validation Rules:
 
-validation: Check that the output is a comma-separated string of English keywords.
+validation: Check that the output is a comma-separated string of English keywords.Don't contain any special characters,like #,if so,remove them.
 constraints: The number of keywords must not exceed 8.
 error_handling: If the analysis yields fewer than 8 keywords, return all identified keywords.
 Example Illustrations:
