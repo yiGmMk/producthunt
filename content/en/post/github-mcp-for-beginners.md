@@ -3,7 +3,7 @@ title: mcp-for-beginners
 date: 2025-08-06T15:36:21+08:00
 draft: False
 image: https://images.unsplash.com/photo-1634153570366-deda92ecf625?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ0NjU3NTF8&ixlib=rb-4.1.0
-tags: ['github',Model Context Protocol,MCP,AI,tutorial,curriculum,programming,languages,C#,Java,JavaScript,Python,TypeScript]
+tags: ['github',Model Context Protocol,MCP,AI,tutorial,curriculum,programming,languages,Java,JavaScript,Python,TypeScript]
 categories: ['github']
 ---
 

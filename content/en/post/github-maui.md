@@ -3,7 +3,7 @@ title: maui
 date: 2025-08-16T15:28:23+08:00
 draft: False
 image: https://images.unsplash.com/photo-1698665483450-6991335db7f3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUzMjkyMDF8&ixlib=rb-4.1.0
-tags: ['github',.NET MAUI,.NET,cross-platform,mobile apps,desktop apps,C#,XAML,Android,iOS,iPadOS,macOS,Windows]
+tags: ['github',.NET MAUI,.NET,cross-platform,mobile apps,desktop apps,XAML,Android,iOS,iPadOS,macOS,Windows]
 categories: ['github']
 ---
 
