@@ -1,9 +1,9 @@
 ---
 title: airi
-date: 2025-08-25T15:29:07+08:00
+date: 2025-08-26T15:28:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1595677079470-cb42d070ca30?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxMDY5Mjh8&ixlib=rb-4.1.0
-tags: ['github',AI, virtual character, Neuro-sama, VTuber, large language model, WebGPU, WebAssembly,  Live2D, VRM]
+image: https://images.unsplash.com/photo-1469599898013-056a11a139cb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxOTMyOTR8&ixlib=rb-4.1.0
+tags: ['github',AI, virtual character, VTuber, Neuro-sama, large language model,  WebGPU,  Live2D, VRM]
 categories: ['github']
 ---
 

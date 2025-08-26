@@ -1,9 +1,9 @@
 ---
 title: generative-ai-for-beginners
-date: 2025-08-12T15:31:07+08:00
+date: 2025-08-26T15:29:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1558395335-9ff2fa9eccf1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ5ODM4MDZ8&ixlib=rb-4.1.0
-tags: ['github',Generative-AI,Large-Language-Models,LLMs,Prompt-Engineering,Azure-OpenAI,OpenAI-API,Python,TypeScript]
+image: https://images.unsplash.com/photo-1606133460875-78fd3c245b37?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxOTMyOTR8&ixlib=rb-4.1.0
+tags: ['github',Generative AI,Large Language Models,Prompt Engineering,Azure OpenAI,OpenAI API,Python,TypeScript]
 categories: ['github']
 ---
 
@@ -124,6 +124,7 @@ Our team produces other courses! Check out:
 - [AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 - [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 - [Generative AI for Beginners using JavaScript](https://aka.ms/genai-js-course?WT.mc_id=academic-105485-koreyst)
+- [Generative AI for Beginners using Java](https://aka.ms/genaijava?WT.mc_id=academic-105485-koreyst)
 - [ML for Beginners](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 - [Data Science for Beginners](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 - [AI for Beginners](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)

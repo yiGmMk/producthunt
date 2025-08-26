@@ -1,9 +1,9 @@
 ---
 title: winapps
-date: 2025-08-25T15:28:57+08:00
+date: 2025-08-26T15:28:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1652039033514-48553cc28a9d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxMDY5Mjh8&ixlib=rb-4.1.0
-tags: ['github',WinApps,Linux,Windows,RDP,FreeRDP,Docker,Podman,libvirt,KVM,Microsoft 365,Adobe Creative Cloud]
+image: https://images.unsplash.com/photo-1675358489651-7938bd7c0602?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxOTMyOTR8&ixlib=rb-4.1.0
+tags: ['github',Windows,Linux,KDE,GNOME,XFCE,Docker,Podman,libvirt,FreeRDP]
 categories: ['github']
 ---
 

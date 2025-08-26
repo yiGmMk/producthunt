@@ -1,9 +1,9 @@
 ---
 title: DeepCode
-date: 2025-08-25T15:29:15+08:00
+date: 2025-08-26T15:28:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1595677079470-cb42d070ca30?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxMDY5Mjh8&ixlib=rb-4.1.0
-tags: ['github',DeepCode,Multi-Agent,Code,Generation,Paper2Code,Text2Web,Text2Backend,AI,Python,Algorithm,Implementation,Frontend,Backend,Web,Development]
+image: https://images.unsplash.com/photo-1469599898013-056a11a139cb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxOTMyOTR8&ixlib=rb-4.1.0
+tags: ['github',DeepCode,OpenAgenticCoding,Multi-AgentSystem,CodeGeneration,Paper2Code,Text2Web,Text2Backend,AI,AlgorithmImplementation]
 categories: ['github']
 ---
 

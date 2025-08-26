@@ -1,9 +1,9 @@
 ---
 title: yt-dlp
-date: 2025-08-25T15:30:32+08:00
+date: 2025-08-26T15:30:24+08:00
 draft: False
-image: https://images.unsplash.com/photo-1642251715719-c4711e4d1ae4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxMDY5Mjh8&ixlib=rb-4.1.0
-tags: ['github',yt-dlp,command-line,audio,video,downloader,supportedsites,installation,options,configuration,output,template,format,selection,metadata,plugins,youtube-dl]
+image: https://images.unsplash.com/photo-1597773662034-ee5c82d7403f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxOTMyOTR8&ixlib=rb-4.1.0
+tags: ['github',yt-dlp,audio,video,downloader,command-line,extractor,formats,options,plugins]
 categories: ['github']
 ---
 
