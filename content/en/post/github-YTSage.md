@@ -3,7 +3,7 @@ title: YTSage
 date: 2025-08-15T15:32:07+08:00
 draft: False
 image: https://images.unsplash.com/photo-1692607334682-59c90d345679?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUyNDI5OTV8&ixlib=rb-4.1.0
-tags: ['github',]
+tags: ['github']
 categories: ['github']
 ---
 

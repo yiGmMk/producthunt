@@ -3,7 +3,7 @@ title: zotero-arxiv-daily
 date: 2025-08-06T15:37:36+08:00
 draft: False
 image: https://images.unsplash.com/photo-1608234885919-b69645a599f7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ0NjU3NTF8&ixlib=rb-4.1.0
-tags: ['github',]
+tags: ['github']
 categories: ['github']
 ---
 

@@ -3,7 +3,7 @@ title: ZLinq
 date: 2025-05-22T15:29:23+08:00
 draft: False
 image: https://images.unsplash.com/photo-1597389664050-94e9ca3d7a80?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4OTg4OTN8&ixlib=rb-4.1.0
-tags: ['github',ZLinq,.NET,LINQ,Span,SIMD,Zero-allocation,High-performance,Unity,Godot,.NET Framework]
+tags: ['github',ZLinq,LINQ,Span,SIMD,Zero-allocation,High-performance,Unity,Godot]
 categories: ['github']
 ---
 
