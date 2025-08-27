@@ -1,9 +1,9 @@
 ---
 title: Hands-On-Large-Language-Models
-date: 2025-07-23T15:36:37+08:00
+date: 2025-08-27T15:29:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1667742363443-263a86a80a36?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMyNTYwMTZ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1733939910552-7752db0c03d0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYyNzk2MTd8&ixlib=rb-4.1.0
+tags: ['github',Large Language Models,LLMs,Transformer,Text Generation,Prompt Engineering,Text Classification,Semantic Search,Multimodal,Fine-tuning,Text Embedding]
 categories: ['github']
 ---
 

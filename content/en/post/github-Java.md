@@ -1,9 +1,9 @@
 ---
 title: Java
-date: 2025-08-25T15:30:59+08:00
+date: 2025-08-27T15:27:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1595677079470-cb42d070ca30?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxMDY5Mjh8&ixlib=rb-4.1.0
-tags: ['github',Java,algorithms,programming,data structures,computer science,coding,software,education]
+image: https://images.unsplash.com/photo-1596784269480-039b2a893af0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYyNzk2MTd8&ixlib=rb-4.1.0
+tags: ['github',Java,algorithms,programming,data structures,computer science,software,education,coding,GitHub]
 categories: ['github']
 ---
 

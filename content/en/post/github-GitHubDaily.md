@@ -1,9 +1,9 @@
 ---
 title: GitHubDaily
-date: 2025-08-26T15:30:14+08:00
+date: 2025-08-27T15:28:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1675358489651-7938bd7c0602?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxOTMyOTR8&ixlib=rb-4.1.0
-tags: ['github',GitHub,open-source,AI,tools,resources,programming,learning,projects]
+image: https://images.unsplash.com/photo-1596784269480-039b2a893af0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYyNzk2MTd8&ixlib=rb-4.1.0
+tags: ['github',GitHub,open-source,AI,tools,projects,resources,programming,learning]
 categories: ['github']
 ---
 

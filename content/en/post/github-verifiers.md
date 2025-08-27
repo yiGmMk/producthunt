@@ -1,9 +1,9 @@
 ---
 title: verifiers
-date: 2025-08-26T15:29:04+08:00
+date: 2025-08-27T15:27:22+08:00
 draft: False
-image: https://images.unsplash.com/photo-1705646742193-d0ffd590193b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxOTMyOTR8&ixlib=rb-4.1.0
-tags: ['github',LLM,Reinforcement Learning,RL environments,LLM agents,transformers,GRPO,prime-rl,OpenAI,LLM evaluations,synthetic data,agent harnesses,Python,Hugging Face,Dataset,Rubric,Parser,MultiTurnEnv,SingleTurnEnv,ToolEnv,GRPOTrainer,FSDP]
+image: https://images.unsplash.com/photo-1597014303490-6743d387083c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYyNzk2MTd8&ixlib=rb-4.1.0
+tags: ['github',LLM,Reinforcement Learning,RL environments,transformers,prime-rl,OpenAI,LLM evaluations,synthetic data,agent harnesses,GRPO,FSDP,MultiTurnEnv,SingleTurnEnv,ToolEnv,Hugging Face,Dataset,Rubric,Parser,SamplingParams,vLLM]
 categories: ['github']
 ---
 
@@ -257,21 +257,7 @@ If you do not require LoRA support, you may want to use the `prime-rl` trainer, 
 
 ## Further Documentation
 
-See the full [docs](https://verifiers.readthedocs.io/en/latest/) for more info, including:
-- Dataset configuration options (system prompts, few-shot examples, eval datasets)
-- Parsers (e.g. ThinkParser, XMLParser)
-- Advanced Rubric patterns
-- Composing Environments (EnvGroup) and Rubrics (RubricGroup)
-- Creating and saving rollout datasets using Environments
-- More Environment example walkthroughs
-- Hardware considerations
-- SFT warmup for improving small-model training efficiency
-- RL + GRPO best practices
-- Common footguns
-
-## Footguns
-
-**Non-Increasing Chat Templates:** The Qwen3 and DeepSeek-R1 model series both remove `<think>` sections from messages when processing inputs, which violates the increasing context requirement for multi-turn GRPO-style training. We provide versions of many of these models with modified chat templates [here](https://huggingface.co/collections/willcb/qwen3-68434f4883925bfdb4570ee5).
+See the full [docs](https://verifiers.readthedocs.io/en/latest/) for more information.
 
 ## Contributions
 
@@ -295,7 +281,6 @@ If you use this code in your research, please cite:
 
 
 ## Roadmap
-
 - A community Environments hub for crowdsourcing, sharing, and discovering new RL environments built with `verifiers`
 - Default patterns for hosted resources such as code sandboxes, auxiliary models, and MCP servers
 - Multimodal input support
