@@ -1,9 +1,9 @@
 ---
 title: terminal
-date: 2025-04-28T15:57:14+08:00
+date: 2025-08-28T15:28:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1683829801588-f6fbdf35518d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU4MjY4OTJ8&ixlib=rb-4.0.3
-tags: ['github',Windows Terminal,Console,command-line,GitHub,Microsoft Store,winget,Chocolatey,Scoop,Cascadia Code,ConPTY]
+image: https://images.unsplash.com/photo-1616386138980-762a425295de?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYzNjYwODJ8&ixlib=rb-4.1.0
+tags: ['github',Windows Terminal,Console,command-line,Cascadia Code,GitHub,Microsoft Store,winget,Chocolatey,Scoop,ConPTY,ANSI,UTF-8]
 categories: ['github']
 ---
 

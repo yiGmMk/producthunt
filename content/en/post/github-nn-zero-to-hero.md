@@ -1,8 +1,8 @@
 ---
 title: nn-zero-to-hero
-date: 2025-08-26T15:29:31+08:00
+date: 2025-08-28T15:28:55+08:00
 draft: False
-image: https://images.unsplash.com/photo-1675358489651-7938bd7c0602?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxOTMyOTR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1666868722446-893552f83436?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYzNjYwODJ8&ixlib=rb-4.1.0
 tags: ['github',neural networks,backpropagation,language modeling,PyTorch,GPT,Transformer,machine learning,deep learning,NLP]
 categories: ['github']
 ---

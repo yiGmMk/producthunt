@@ -1,9 +1,9 @@
 ---
 title: bootstrap
-date: 2025-07-26T15:30:49+08:00
+date: 2025-08-28T15:29:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1600115010857-edbbc7e1efb8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM1MTQ5Mzl8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1623936174855-af0b96a7b035?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYzNjYwODJ8&ixlib=rb-4.1.0
+tags: ['github',Bootstrap,web development,CSS,JavaScript,front-end framework,npm,GitHub,Sass,documentation]
 categories: ['github']
 ---
 
@@ -26,8 +26,6 @@ categories: ['github']
   <a href="https://github.com/twbs/bootstrap/issues/new?assignees=-&labels=bug&template=bug_report.yml">Report bug</a>
   ·
   <a href="https://github.com/twbs/bootstrap/issues/new?assignees=&labels=feature&template=feature_request.yml">Request feature</a>
-  ·
-  <a href="https://themes.getbootstrap.com/">Themes</a>
   ·
   <a href="https://blog.getbootstrap.com/">Blog</a>
 </p>
@@ -57,12 +55,12 @@ Our default branch is for development of our Bootstrap 5 release. Head to the [`
 
 Several quick start options are available:
 
-- [Download the latest release](https://github.com/twbs/bootstrap/archive/v5.3.7.zip)
+- [Download the latest release](https://github.com/twbs/bootstrap/archive/v5.3.8.zip)
 - Clone the repo: `git clone https://github.com/twbs/bootstrap.git`
-- Install with [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.7`
-- Install with [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.7`
-- Install with [Bun](https://bun.sh/): `bun add bootstrap@v5.3.7`
-- Install with [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.7`
+- Install with [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.8`
+- Install with [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.8`
+- Install with [Bun](https://bun.sh/): `bun add bootstrap@v5.3.8`
+- Install with [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.8`
 - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
 Read the [Getting started page](https://getbootstrap.com/docs/5.3/getting-started/introduction/) for information on the framework contents, templates, examples, and more.

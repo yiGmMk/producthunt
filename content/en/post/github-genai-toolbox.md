@@ -1,9 +1,9 @@
 ---
 title: genai-toolbox
-date: 2025-07-13T15:29:39+08:00
+date: 2025-08-28T15:29:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1692026187565-5cd1ac9a4f5a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIzOTE3NDd8&ixlib=rb-4.1.0
-tags: ['github',database, tools, agents, AI,  MCP,  development,  security,  observability]
+image: https://images.unsplash.com/photo-1637863685875-bbdf41639d00?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYzNjYwODJ8&ixlib=rb-4.1.0
+tags: ['github',database, tools, agents, AI, development,  applications,  MCP,  observability]
 categories: ['github']
 ---
 
@@ -13,7 +13,9 @@ categories: ['github']
 
 # MCP Toolbox for Databases
 
-[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Dmm69peqjh)
+[![Docs](https://img.shields.io/badge/docs-MCP_Toolbox-blue)](https://googleapis.github.io/genai-toolbox/)
+[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=flat&logo=discord&logoColor=white)](https://discord.gg/Dmm69peqjh)
+[![Medium](https://img.shields.io/badge/Medium-12100E?style=flat&logo=medium&logoColor=white)](https://medium.com/@mcp_toolbox)
 [![Go Report Card](https://goreportcard.com/badge/github.com/googleapis/genai-toolbox)](https://goreportcard.com/report/github.com/googleapis/genai-toolbox)
 
 > [!NOTE]
@@ -42,12 +44,15 @@ documentation](https://googleapis.github.io/genai-toolbox/).
 - [Getting Started](#getting-started)
   - [Installing the server](#installing-the-server)
   - [Running the server](#running-the-server)
+    - [Homebrew Users](#homebrew-users)
   - [Integrating your application](#integrating-your-application)
 - [Configuration](#configuration)
   - [Sources](#sources)
   - [Tools](#tools)
   - [Toolsets](#toolsets)
 - [Versioning](#versioning)
+  - [Pre-1.0.0 Versioning](#pre-100-versioning)
+  - [Post-1.0.0 Versioning](#post-100-versioning)
 - [Contributing](#contributing)
 - [Community](#community)
 
@@ -123,7 +128,7 @@ To install Toolbox as a binary:
 <!-- {x-release-please-start-version} -->
 ```sh
 # see releases page for other versions
-export VERSION=0.9.0
+export VERSION=0.13.0
 curl -O https://storage.googleapis.com/genai-toolbox/v$VERSION/linux/amd64/toolbox
 chmod +x toolbox
 ```
@@ -136,8 +141,19 @@ You can also install Toolbox as a container:
 
 ```sh
 # see releases page for other versions
-export VERSION=0.9.0
+export VERSION=0.13.0
 docker pull us-central1-docker.pkg.dev/database-toolbox/toolbox/toolbox:$VERSION
+```
+
+</details>
+
+<details>
+<summary>Homebrew</summary>
+
+To install Toolbox using Homebrew on macOS or Linux:
+
+```sh
+brew install mcp-toolbox
 ```
 
 </details>
@@ -149,7 +165,7 @@ To install from source, ensure you have the latest version of
 [Go installed](https://go.dev/doc/install), and then run the following command:
 
 ```sh
-go install github.com/googleapis/genai-toolbox@v0.9.0
+go install github.com/googleapis/genai-toolbox@v0.13.0
 ```
 <!-- {x-release-please-end} -->
 
@@ -163,8 +179,18 @@ execute `toolbox` to start the server:
 ```sh
 ./toolbox --tools-file "tools.yaml"
 ```
+
 > [!NOTE]
-> Toolbox enables dynamic reloading by default. To disable, use the `--disable-reload` flag.
+> Toolbox enables dynamic reloading by default. To disable, use the
+> `--disable-reload` flag.
+
+#### Homebrew Users
+
+If you installed Toolbox using Homebrew, the `toolbox` binary is available in your system path. You can start the server with the same command:
+
+```sh
+toolbox --tools-file "tools.yaml"
+```
 
 You can use `toolbox help` for a full list of flags! To stop the server, send a
 terminate signal (`ctrl+c` on most platforms).
@@ -499,6 +525,7 @@ For more detailed instructions on using the Toolbox Core SDK, see the
       "github.com/firebase/genkit/go/ai"
       "github.com/firebase/genkit/go/genkit"
       "github.com/googleapis/mcp-toolbox-sdk-go/core"
+      "github.com/googleapis/mcp-toolbox-sdk-go/tbgenkit"
       "github.com/invopop/jsonschema"
     )
 
@@ -514,30 +541,12 @@ For more detailed instructions on using the Toolbox Core SDK, see the
       // Framework agnostic tool
       tool, err := client.LoadTool("toolName", ctx)
 
-      // Fetch the tool's input schema
-      inputschema, err := tool.InputSchema()
-
-      var schema *jsonschema.Schema
-      _ = json.Unmarshal(inputschema, &schema)
-
-      executeFn := func(ctx *ai.ToolContext, input any) (string, error) {
-        result, err := tool.Invoke(ctx, input.(map[string]any))
-        if err != nil {
-          // Propagate errors from the tool invocation.
-          return "", err
-        }
-
-        return result.(string), nil
-      }
-
+      // Convert the tool using the tbgenkit package
       // Use this tool with Genkit Go
-      genkitTool := genkit.DefineToolWithInputSchema(
-        g,
-        tool.Name(),
-        tool.Description(),
-        schema,
-        executeFn,
-      )
+      genkitTool, err := tbgenkit.ToGenkitTool(tool, g)
+      if err != nil {
+        log.Fatalf("Failed to convert tool: %v\n", err)
+      }
     }
     ```
 
@@ -729,12 +738,26 @@ my_second_toolset = client.load_toolset("my_second_toolset")
 
 ## Versioning
 
-This project uses [semantic versioning](https://semver.org/), including a
-`MAJOR.MINOR.PATCH` version number that increments with:
+This project uses [semantic versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`).
+Since the project is in a pre-release stage (version `0.x.y`), we follow the
+standard conventions for initial  development:
 
-- MAJOR version when we make incompatible API changes
-- MINOR version when we add functionality in a backward compatible manner
-- PATCH version when we make backward compatible bug fixes
+### Pre-1.0.0 Versioning
+While the major version is `0`, the public API should be considered unstable.
+The version will be incremented  as follows:
+
+- **`0.MINOR.PATCH`**: The **MINOR** version is incremented when we add
+  new functionality or make breaking, incompatible API changes.
+- **`0.MINOR.PATCH`**: The **PATCH** version is incremented for
+  backward-compatible bug fixes.
+
+### Post-1.0.0 Versioning
+Once the project reaches a stable `1.0.0` release, the versioning will follow
+the more common convention:
+
+- **`MAJOR.MINOR.PATCH`**: Incremented for incompatible API changes.
+- **`MAJOR.MINOR.PATCH`**: Incremented for new, backward-compatible functionality.
+- **`MAJOR.MINOR.PATCH`**: Incremented for backward-compatible bug fixes.
 
 The public API that this applies to is the CLI associated with Toolbox, the
 interactions with official SDKs, and the definitions in the `tools.yaml` file.

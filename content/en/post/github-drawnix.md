@@ -1,9 +1,9 @@
 ---
 title: drawnix
-date: 2025-08-27T15:27:14+08:00
+date: 2025-08-28T15:28:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1719836568066-845188a72a2f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYyNzk2MTd8&ixlib=rb-4.1.0
-tags: ['github',online whiteboard, collaborative drawing, mind mapping, flowchart, open-source, free software, plugin architecture, Plait framework]
+image: https://images.unsplash.com/photo-1642620954915-a57b1d0404ea?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYzNjYwODJ8&ixlib=rb-4.1.0
+tags: ['github',online whiteboard, collaborative drawing, mind mapping, flowchart, free software, open source, plugin architecture]
 categories: ['github']
 ---
 
