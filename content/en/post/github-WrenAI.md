@@ -1,9 +1,9 @@
 ---
 title: WrenAI
-date: 2025-08-01T15:37:57+08:00
+date: 2025-08-29T15:27:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1671299736439-001f7f658a4e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQwMzM3OTR8&ixlib=rb-4.1.0
-tags: ['github',WrenAI,GenBI,Text-to-SQL,Text-to-Charts,AI,Large Language Model,LLM,database,SQL,charts,insights]
+image: https://images.unsplash.com/photo-1633468300598-19406aa04a3c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY0NTI0MTZ8&ixlib=rb-4.1.0
+tags: ['github',WrenAI,GenBI,Text-to-SQL,Text-to-Charts,AI,Large Language Model,LLM,database,data analysis]
 categories: ['github']
 ---
 

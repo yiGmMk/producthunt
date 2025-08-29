@@ -1,9 +1,9 @@
 ---
 title: audiblez
-date: 2025-08-28T15:29:04+08:00
+date: 2025-08-29T15:27:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1637863685875-bbdf41639d00?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYzNjYwODJ8&ixlib=rb-4.1.0
-tags: ['github',Audiobook, e-book, Text-to-speech, Kokoro-82M, Speech synthesis, Audiblez, Python, GUI]
+image: https://images.unsplash.com/photo-1688870559348-bfbad318db1f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY0NTI0MTZ8&ixlib=rb-4.1.0
+tags: ['github',Audiobook,e-book,text-to-speech,Kokoro-82M,speech synthesis,Audiblez,command line tool,graphical interface,CUDA]
 categories: ['github']
 ---
 

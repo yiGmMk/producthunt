@@ -1,9 +1,9 @@
 ---
 title: openproject
-date: 2025-08-27T15:29:22+08:00
+date: 2025-08-29T15:28:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1696832946712-25114c098225?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYyNzk2MTd8&ixlib=rb-4.1.0
-tags: ['github',OpenProject,project management,software,collaboration,task management,Agile,Scrum,time tracking,bug tracking]
+image: https://images.unsplash.com/photo-1605025175565-a2937cf2e7aa?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY0NTI0MTZ8&ixlib=rb-4.1.0
+tags: ['github',OpenProject, project management, task management, Agile, Scrum, time tracking, bug tracking, collaboration, roadmap]
 categories: ['github']
 ---
 

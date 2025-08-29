@@ -1,9 +1,9 @@
 ---
 title: SurfSense
-date: 2025-08-27T15:27:48+08:00
+date: 2025-08-29T15:28:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1719836568066-845188a72a2f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYyNzk2MTd8&ixlib=rb-4.1.0
-tags: ['github',AI research agent, knowledge base, LLM, LangChain,  vector search,  podcast generation,  file upload,  external sources]
+image: https://images.unsplash.com/photo-1651836528367-dbfa1035ebdb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY0NTI0MTZ8&ixlib=rb-4.1.0
+tags: ['github',AI research agent, knowledge base, external sources,  LLM support,  podcast generation, RAG techniques, file uploading,  self-hostable,  search]
 categories: ['github']
 ---
 
@@ -128,6 +128,21 @@ Open source and easy to deploy locally.
 - The SurfSense extension can be used to save any webpage you like.
 - Its main usecase is to save any webpages protected beyond authentication.
 
+
+---
+---
+<p align="center">
+  <a href="https://handbook.opencoreventures.com/catalyst-sponsorship-program/" target="_blank" rel="noopener noreferrer">
+    <img 
+      src="https://github.com/user-attachments/assets/329c9bc2-6005-4aed-a629-700b5ae296b4" 
+      alt="Catalyst Sponsorship Program" 
+      width="600"
+    />
+  </a>
+</p>
+
+---
+---
 
 ## FEATURE REQUESTS AND FUTURE
 
@@ -278,7 +293,6 @@ Before installation, make sure to complete the [prerequisite setup steps](https:
 ## Future Work
 - Add More Connectors.
 - Patch minor bugs.
-- Document Chat **[REIMPLEMENT]**
 - Document Podcasts
 
 

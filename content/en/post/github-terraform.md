@@ -1,9 +1,9 @@
 ---
 title: terraform
-date: 2025-08-15T15:31:38+08:00
+date: 2025-08-29T15:28:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1651608903386-8e918ff298f6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUyNDI5OTV8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1651836528367-dbfa1035ebdb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY0NTI0MTZ8&ixlib=rb-4.1.0
+tags: ['github',Terraform,Infrastructure as Code,Execution Plans,Resource Graph,Change Automation,HashiCorp,Providers,Plugin development,Documentation,Certification]
 categories: ['github']
 ---
 
