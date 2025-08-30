@@ -1,8 +1,8 @@
 ---
 title: cobra
-date: 2025-08-28T15:29:55+08:00
+date: 2025-08-30T15:25:30+08:00
 draft: False
-image: https://images.unsplash.com/photo-1666868722446-893552f83436?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYzNjYwODJ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1666115883766-efa38b52630c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY1Mzg2NDl8&ixlib=rb-4.1.0
 tags: ['github',CLI,Cobra,Go,command-line interface,flags,subcommands,application,generator,viper]
 categories: ['github']
 ---

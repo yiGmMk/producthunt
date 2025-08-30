@@ -1,8 +1,8 @@
 ---
 title: rustdesk
-date: 2025-08-01T15:38:38+08:00
+date: 2025-08-30T15:26:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1683733150127-4890f25229aa?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQwMzM3OTR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1682345334042-3b4b8ab0c29a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY1Mzg2NDl8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -26,7 +26,7 @@ categories: ['github']
 
 Chat with us: [Discord](https://discord.gg/nDceKgxnkV) | [Twitter](https://twitter.com/rustdesk) | [Reddit](https://www.reddit.com/r/rustdesk) | [YouTube](https://www.youtube.com/@rustdesk)
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I04VU09)
+[![RustDesk Server Pro](https://img.shields.io/badge/RustDesk%20Server%20Pro-Advanced%20Features-blue)](https://rustdesk.com/pricing.html)
 
 Yet another remote desktop solution, written in Rust. Works out of the box with no configuration required. You have full control of your data, with no concerns about security. You can use our rendezvous/relay server, [set up your own](https://rustdesk.com/server), or [write your own rendezvous/relay server](https://github.com/rustdesk/rustdesk-server-demo).
 
