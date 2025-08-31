@@ -1,9 +1,9 @@
 ---
 title: mcp
-date: 2025-08-30T15:24:29+08:00
+date: 2025-08-31T15:25:33+08:00
 draft: False
-image: https://images.unsplash.com/photo-1720293080711-b89d093111dc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY1Mzg2NDl8&ixlib=rb-4.1.0
-tags: ['github',Model Context Protocol,MCP,Azure,Microsoft,AI,LLMs,large language models,servers,applications,data sources]
+image: https://images.unsplash.com/photo-1503900038894-cb3a9cb28484?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY2MjUxMDd8&ixlib=rb-4.1.0
+tags: ['github',Model Context Protocol,MCP,Azure,Microsoft,AI,LLM,large language models,data sources,servers,clients]
 categories: ['github']
 ---
 

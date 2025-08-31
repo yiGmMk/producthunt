@@ -1,9 +1,9 @@
 ---
 title: WhisperLiveKit
-date: 2025-08-30T15:24:19+08:00
+date: 2025-08-31T15:25:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1662736618648-d37c1cfc92d3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY1Mzg2NDl8&ixlib=rb-4.1.0
-tags: ['github',WhisperLiveKit, real-time speech transcription, speaker identification, browser, backend, frontend, SimulStreaming, WhisperStreaming, Streaming Sortformer, Diart, Silero VAD]
+image: https://images.unsplash.com/photo-1515799251528-8e14681f214e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY2MjUxMDd8&ixlib=rb-4.1.0
+tags: ['github',WhisperLiveKit, real-time, speech-to-text, speaker identification, transcription, browser, backend, frontend, SimulStreaming, WhisperStreaming, Streaming Sortformer, Diart, Silero VAD]
 categories: ['github']
 ---
 
@@ -139,7 +139,7 @@ async def websocket_endpoint(websocket: WebSocket):
         await audio_processor.process_audio(message)        
 ```
 
-**Frontend Implementation**: The package includes an HTML/JavaScript implementation [here](https://github.com/QuentinFuxa/WhisperLiveKit/blob/main/whisperlivekit/web/live_transcription.html). You can also import it using `from whisperlivekit import get_web_interface_html` & `page = get_web_interface_html()`
+**Frontend Implementation**: The package includes an HTML/JavaScript implementation [here](https://github.com/QuentinFuxa/WhisperLiveKit/blob/main/whisperlivekit/web/live_transcription.html). You can also import it using `from whisperlivekit import get_inline_ui_html` & `page = get_inline_ui_html()`
 
 
 ## Parameters & Configuration

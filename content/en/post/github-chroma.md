@@ -1,9 +1,9 @@
 ---
 title: chroma
-date: 2025-08-29T15:27:34+08:00
+date: 2025-08-31T15:27:02+08:00
 draft: False
-image: https://images.unsplash.com/photo-1637160691421-e66ac6194e2b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY0NTI0MTZ8&ixlib=rb-4.1.0
-tags: ['github',ChromaDB,embedding database,vector database,LLM applications,Python,JavaScript,open-source,semantic search,nearest neighbors]
+image: https://images.unsplash.com/photo-1630345099947-271d4936bba8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY2MjUxMDd8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

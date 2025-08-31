@@ -1,9 +1,9 @@
 ---
 title: firecracker
-date: 2025-08-29T15:27:25+08:00
+date: 2025-08-31T15:26:47+08:00
 draft: False
-image: https://images.unsplash.com/photo-1672872476232-da16b45c9001?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY0NTI0MTZ8&ixlib=rb-4.1.0
-tags: ['github',virtual machine monitor, microVM, container, serverless, security, virtualization, KVM, Linux, AWS Lambda, AWS Fargate]
+image: https://images.unsplash.com/photo-1515799251528-8e14681f214e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY2MjUxMDd8&ixlib=rb-4.1.0
+tags: ['github',virtual machine,microVM,container,serverless,virtualization,KVM,security,Linux,AWS]
 categories: ['github']
 ---
 
