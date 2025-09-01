@@ -1,9 +1,9 @@
 ---
 title: hyperswitch
-date: 2025-08-31T15:25:14+08:00
+date: 2025-09-01T15:29:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1541990202460-76a724b4a44f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY2MjUxMDd8&ixlib=rb-4.1.0
-tags: ['github',Hyperswitch,payments,infrastructure,open-source,payment-processing,modules,Rust]
+image: https://images.unsplash.com/photo-1591082668115-df59c9484b77?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY3MTE3MjR8&ixlib=rb-4.1.0
+tags: ['github',Hyperswitch,open-source,payments,infrastructure,payment-processing,modules,Rust]
 categories: ['github']
 ---
 

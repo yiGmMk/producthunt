@@ -1,9 +1,9 @@
 ---
 title: humanlayer
-date: 2025-08-30T15:25:11+08:00
+date: 2025-09-01T15:30:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1543876739-ffff1164ecf3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY1Mzg2NDl8&ixlib=rb-4.1.0
-tags: ['github',HumanLayer,Agentic Workflows,LLMs,function calling,AI agents,human oversight,high-stakes functions,Autonomous Agents,outer loop,reliable tools]
+image: https://images.unsplash.com/photo-1551299329-f819836c4554?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY3MTE3MjR8&ixlib=rb-4.1.0
+tags: ['github',HumanLayer,Agentic Workflows,LLMs,AI agents,function calling,human oversight,high-stakes functions,reliable,Autonomous Agents,outer loop]
 categories: ['github']
 ---
 

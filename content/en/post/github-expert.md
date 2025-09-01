@@ -1,9 +1,9 @@
 ---
 title: expert
-date: 2025-08-31T15:25:55+08:00
+date: 2025-09-01T15:30:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1515799251528-8e14681f214e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY2MjUxMDd8&ixlib=rb-4.1.0
-tags: ['github',Elixir,Expert,language server,installation,nightly builds,source code,sponsorship,development,architecture]
+image: https://images.unsplash.com/photo-1574001412367-cf5f9756bb32?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY3MTE3MjR8&ixlib=rb-4.1.0
+tags: ['github',Elixir,Expert,language server,installation,nightly builds,source code,sponsorship,GitHub]
 categories: ['github']
 ---
 

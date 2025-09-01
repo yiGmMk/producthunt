@@ -1,9 +1,9 @@
 ---
 title: paperless-ngx
-date: 2025-07-01T15:32:38+08:00
+date: 2025-09-01T15:30:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1597125165736-f71b21f869c5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTEzNTUwNDh8&ixlib=rb-4.1.0
-tags: ['github',document management,paperless-ngx,docker,searchable archive,installation,features,screenshots,contribution]
+image: https://images.unsplash.com/photo-1695694391311-a7af130bf7e4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY3MTE3MjR8&ixlib=rb-4.1.0
+tags: ['github',document management,paperless-ngx,docker,online archive,searchable archive,document scanning,installation,migration]
 categories: ['github']
 ---
 
