@@ -1,9 +1,9 @@
 ---
 title: activepieces
-date: 2025-09-01T15:30:06+08:00
+date: 2025-09-02T15:28:57+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592236121078-9be8374d993a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY3MTE3MjR8&ixlib=rb-4.1.0
-tags: ['github',Activepieces,Zapier,automation,TypeScript,open-source,AI,integration,community]
+image: https://images.unsplash.com/photo-1724204400838-ca4cd781cc40?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY3OTgwOTd8&ixlib=rb-4.1.0
+tags: ['github',Activepieces,Zapier,open source,TypeScript,AI automation,MCP,LLMs,Claude Desktop,Cursor,Windsurf,integration]
 categories: ['github']
 ---
 

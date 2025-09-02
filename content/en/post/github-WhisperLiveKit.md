@@ -1,9 +1,9 @@
 ---
 title: WhisperLiveKit
-date: 2025-09-01T15:28:53+08:00
+date: 2025-09-02T15:28:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1681459799763-79c3fe63dd0a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY3MTE3MjR8&ixlib=rb-4.1.0
-tags: ['github',WhisperLiveKit, real-time, speech-to-text, speaker identification, transcription, browser, backend, frontend, SimulStreaming, WhisperStreaming, Streaming Sortformer, Diart, Silero VAD]
+image: https://images.unsplash.com/photo-1590615216008-8921f03835d4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY3OTgwOTd8&ixlib=rb-4.1.0
+tags: ['github',WhisperLiveKit, real-time speech-to-text, speaker identification, speech transcription, browser, backend, frontend, SimulStreaming, WhisperStreaming, Streaming Sortformer, Diart, Silero VAD]
 categories: ['github']
 ---
 

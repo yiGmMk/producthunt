@@ -1,9 +1,9 @@
 ---
 title: bevy
-date: 2025-09-01T15:29:53+08:00
+date: 2025-09-02T15:30:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592236121078-9be8374d993a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY3MTE3MjR8&ixlib=rb-4.1.0
-tags: ['github',Bevy,game engine,Rust,Entity Component System,2D,3D,data-driven,open-source,game development]
+image: https://images.unsplash.com/photo-1642970047680-c940bb0bcf03?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY3OTgwOTd8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

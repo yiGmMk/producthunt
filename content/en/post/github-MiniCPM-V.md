@@ -1,9 +1,9 @@
 ---
 title: MiniCPM-V
-date: 2025-08-30T15:24:49+08:00
+date: 2025-09-02T15:29:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1635418921255-6ee53b68464c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY1Mzg2NDl8&ixlib=rb-4.1.0
-tags: ['github',MiniCPM-V,MiniCPM-o,MLLM,multimodal,vision-language,speech,video,audio,GPT-4o,Gemini,Qwen,OpenCompass,OCRBench,MMHal-Bench,RLAIF-V,VisCPM,efficient,deployment,high-FPS,long-video]
+image: https://images.unsplash.com/photo-1638382620941-f5c0628d21bd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY3OTgwOTd8&ixlib=rb-4.1.0
+tags: ['github',MiniCPM-V,MiniCPM-o,MLLM,multimodal,vision-language,speech,video,audio,OpenCompass,GPT-4o,Gemini,Qwen,efficient,deployment,high-FPS,long-video,OCR,document-parsing,RLAIF-V,VisCPM]
 categories: ['github']
 ---
 
@@ -52,6 +52,9 @@ categories: ['github']
 ## News <!-- omit in toc -->
 
 #### 📌 Pinned
+
+
+* [2025.09.01] ⭐️⭐️⭐️ MiniCPM-V 4.5 has been officially supported by [llama.cpp](https://github.com/ggml-org/llama.cpp/pull/15575), [vLLM](https://github.com/vllm-project/vllm/pull/23586), and [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory/pull/9022). You are welcome to use it directly through these official channels! Support for additional frameworks such as [Ollama](https://github.com/ollama/ollama/pull/12078) and [SGLang](https://github.com/sgl-project/sglang/pull/9610) is actively in progress.
 
 * [2025.08.26] 🔥🔥🔥 We open-source MiniCPM-V 4.5, which outperforms GPT-4o-latest, Gemini-2.0 Pro, and Qwen2.5-VL 72B. It advances popular capabilities of MiniCPM-V, and brings useful new features. Try it now!
 
@@ -120,6 +123,7 @@ categories: ['github']
 
 
 - [MiniCPM-V 4.5](#minicpm-v-45)
+  - [Inference Efficiency](#inference-efficiency)
 - [MiniCPM-o 2.6](#minicpm-o-26)
 - [MiniCPM-V \& o Cookbook](#minicpm-v--o-cookbook)
 - [Chat with Our Demo on Gradio 🤗](#chat-with-our-demo-on-gradio-)
@@ -258,7 +262,7 @@ MiniCPM-V 4.5 can be easily used in various ways: (1) [llama.cpp](https://github
 </table>
 </div>
 
-Both Video-MME and OpenCompass were evaluated using 8×A100 GPUs for inference. The reported inference time of Video-MME excludes the cost of video frame extraction.
+Both Video-MME and OpenCompass were evaluated using 8×A100 GPUs for inference. The reported inference time of Video-MME includes full model-side computation, and excludes the external cost of video frame extraction (dependent on specific frame extraction tools) for fair comparison.
 
 
 ### Examples  <!-- omit in toc -->
@@ -2098,13 +2102,13 @@ This project is developed by the following institutions:
 ## 🌟 Star History <!-- omit in toc -->
 
 
-<!-- <table align="center">
+<table align="center">
     <p align="center">
-      <img src="assets/star_history.svg"/>
+      <img src="assets/star-history-25-09-02.png"/>
     </p>
-</table> -->
+</table>
 
-<picture>
+<!-- <picture>
   <source
     media="(prefers-color-scheme: dark)"
     srcset="
@@ -2121,7 +2125,7 @@ This project is developed by the following institutions:
     alt="Star History Chart"
     src="https://api.star-history.com/svg?repos=OpenBMB/MiniCPM-o&type=Date"
   />
-</picture>
+</picture> -->
 
 ## Key Techniques and Other Multimodal Projects <!-- omit in toc -->
 
