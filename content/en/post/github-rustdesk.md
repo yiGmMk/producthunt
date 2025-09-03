@@ -1,9 +1,9 @@
 ---
 title: rustdesk
-date: 2025-08-30T15:26:35+08:00
+date: 2025-09-03T15:27:34+08:00
 draft: False
-image: https://images.unsplash.com/photo-1682345334042-3b4b8ab0c29a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY1Mzg2NDl8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1532559171549-edb0ed61d587?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY4ODQzNjh8&ixlib=rb-4.1.0
+tags: ['github',RustDesk, remote desktop, screen capture, file transfer, TCP tunneling, open source, cross-platform]
 categories: ['github']
 ---
 

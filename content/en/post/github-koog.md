@@ -1,9 +1,9 @@
 ---
 title: koog
-date: 2025-09-02T15:28:33+08:00
+date: 2025-09-03T15:26:34+08:00
 draft: False
-image: https://images.unsplash.com/photo-1638382620941-f5c0628d21bd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY3OTgwOTd8&ixlib=rb-4.1.0
-tags: ['github',Kotlin,AI agents,LLM,framework,MCP,vector embeddings,tool creation,agent memory,workflows]
+image: https://images.unsplash.com/photo-1638940053762-81ca0f2a627b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY4ODQzNjh8&ixlib=rb-4.1.0
+tags: ['github',Kotlin,AI agents,LLM,framework,agents,MCP,embeddings,tools,workflows]
 categories: ['github']
 ---
 

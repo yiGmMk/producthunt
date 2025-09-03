@@ -1,8 +1,8 @@
 ---
 title: 500-AI-Agents-Projects
-date: 2025-09-02T15:29:52+08:00
+date: 2025-09-03T15:26:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1642970047680-c940bb0bcf03?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY3OTgwOTd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1579380670192-cc50977a8c27?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY4ODQzNjh8&ixlib=rb-4.1.0
 tags: ['github',AI agent,use cases,healthcare,finance,education,customer service,retail,transportation,manufacturing,real estate,agriculture,energy,entertainment,legal,human resources,hospitality,gaming,cybersecurity,e-commerce,supply chain]
 categories: ['github']
 ---

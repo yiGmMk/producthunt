@@ -1,8 +1,8 @@
 ---
 title: chatterbox
-date: 2025-09-02T15:29:30+08:00
+date: 2025-09-03T15:27:08+08:00
 draft: False
-image: https://images.unsplash.com/photo-1601222372089-728949e3404f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY3OTgwOTd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1638940053762-81ca0f2a627b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY4ODQzNjh8&ixlib=rb-4.1.0
 tags: ['github',ChatterboxTTS, text-to-speech, voice conversion, emotion exaggeration, open-source, Llama,  watermarking,  Resemble AI,  English]
 categories: ['github']
 ---

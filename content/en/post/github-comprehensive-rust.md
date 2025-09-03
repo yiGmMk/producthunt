@@ -1,9 +1,9 @@
 ---
 title: comprehensive-rust
-date: 2025-09-01T15:30:39+08:00
+date: 2025-09-03T15:27:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1595587637401-83ff822bd63e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY3MTE3MjR8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1542707088-7fa1c72006d8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY4ODQzNjh8&ixlib=rb-4.1.0
+tags: ['github',Rust,programming,course,tutorial,software engineers,Android,Chromium,concurrency,bare-metal,Google]
 categories: ['github']
 ---
 
