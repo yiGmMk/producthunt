@@ -1,9 +1,9 @@
 ---
 title: crewAI
-date: 2025-09-03T15:26:25+08:00
+date: 2025-09-05T15:27:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1594805552216-24884efc94dd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY4ODQzNjh8&ixlib=rb-4.1.0
-tags: ['github',Multi-agent,AI,automation,framework,Crews,Flows,LangChain,Python,LLM,agents,workflows]
+image: https://images.unsplash.com/photo-1588017571031-356e08526b59?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcwNTcxODl8&ixlib=rb-4.1.0
+tags: ['github',Python,CrewAI,AI,Agents,Multi-Agent,Automation,Framework,Flows,Crews]
 categories: ['github']
 ---
 

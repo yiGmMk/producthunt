@@ -1,8 +1,8 @@
 ---
 title: pocketbase
-date: 2025-07-08T15:32:03+08:00
+date: 2025-09-05T15:27:59+08:00
 draft: False
-image: https://images.unsplash.com/photo-1588337420510-22ed1ab56990?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE5NTk4ODV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1695075989376-ac0e8549ec8f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcwNTcxODl8&ixlib=rb-4.1.0
 tags: ['github',PocketBase,Go,open-source,backend,database,SQLite,realtime subscriptions,files management,users management,Admin dashboard]
 categories: ['github']
 ---

@@ -1,15 +1,21 @@
 ---
 title: Termix
-date: 2025-09-03T15:27:27+08:00
+date: 2025-09-05T15:26:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1622483952252-59d06372b5be?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY4ODQzNjh8&ixlib=rb-4.1.0
-tags: ['github',React,TypeScript,Node.js,Vite,Tailwind CSS,Docker,SQLite,Radix UI]
+image: https://images.unsplash.com/photo-1566072535552-15c9f8a35079?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcwNTcxODl8&ixlib=rb-4.1.0
+tags: ['github',Termix,SSH,server,management,platform,terminal,tunnel,file editor,React,Tailwind CSS]
 categories: ['github']
 ---
 
 # [LukeGus/Termix](https://github.com/LukeGus/Termix)
 
 # Repo Stats
+<p align="center">
+  <img src="https://flagcdn.com/us.svg" alt="English" width="24" height="16"> English | 
+  <a href="README-CN.md"><img src="https://flagcdn.com/cn.svg" alt="中文" width="24" height="16"> 中文</a>
+</p>
+
+
 ![GitHub Repo stars](https://img.shields.io/github/stars/LukeGus/Termix?style=flat&label=Stars)
 ![GitHub forks](https://img.shields.io/github/forks/LukeGus/Termix?style=flat&label=Forks)
 ![GitHub Release](https://img.shields.io/github/v/release/LukeGus/Termix?style=flat&label=Release)

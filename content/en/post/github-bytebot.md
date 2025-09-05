@@ -1,9 +1,9 @@
 ---
 title: bytebot
-date: 2025-09-03T15:27:42+08:00
+date: 2025-09-05T15:26:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1542707088-7fa1c72006d8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY4ODQzNjh8&ixlib=rb-4.1.0
-tags: ['github',Bytebot,AI,desktop agent,virtual desktop,task automation,natural language processing,API,workflow automation,document processing]
+image: https://images.unsplash.com/photo-1604580824859-20d9665f58b5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcwNTcxODl8&ixlib=rb-4.1.0
+tags: ['github',Bytebot,AI,desktop agent,virtual desktop,task automation,multi-step workflows,document processing,API,open source]
 categories: ['github']
 ---
 
@@ -14,6 +14,8 @@ categories: ['github']
 <img src="docs/images/bytebot-logo.png" width="500" alt="Bytebot Logo">
 
 # Bytebot: Open-Source AI Desktop Agent
+
+<a href="https://trendshift.io/repositories/14624" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14624" alt="bytebot-ai%2Fbytebot | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
 **An AI that has its own computer to complete tasks for you**
 
@@ -31,13 +33,7 @@ categories: ['github']
 
 https://github.com/user-attachments/assets/f271282a-27a3-43f3-9b99-b34007fdd169
 
-
-
 https://github.com/user-attachments/assets/72a43cf2-bd87-44c5-a582-e7cbe176f37f
-
-
-
-
 
 ## What is a Desktop Agent?
 

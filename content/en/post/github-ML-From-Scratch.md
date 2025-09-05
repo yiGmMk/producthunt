@@ -1,9 +1,9 @@
 ---
 title: ML-From-Scratch
-date: 2025-06-26T15:31:43+08:00
+date: 2025-09-05T15:27:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1709238672317-9464e3d278e2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA5MjI5NzV8&ixlib=rb-4.1.0
-tags: ['github',Machine Learning,Python,Algorithms,Deep Learning,Neural Networks,Supervised Learning,Unsupervised Learning,Reinforcement Learning]
+image: https://images.unsplash.com/photo-1588017571031-356e08526b59?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcwNTcxODl8&ixlib=rb-4.1.0
+tags: ['github',machine learning,python,algorithms,deep learning,neural networks,supervised learning,unsupervised learning,reinforcement learning]
 categories: ['github']
 ---
 
