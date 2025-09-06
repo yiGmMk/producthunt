@@ -1,9 +1,9 @@
 ---
 title: kestra
-date: 2025-04-17T15:30:39+08:00
+date: 2025-09-06T15:25:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1719451643491-d41067a8bffd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ4NzQ5MzB8&ixlib=rb-4.0.3
-tags: ['github',workflow orchestration,event-driven,declarative,YAML,plugins,workflows,tasks,CI/CD]
+image: https://images.unsplash.com/photo-1656890300047-17b87ee5f27b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcxNDM0MTJ8&ixlib=rb-4.1.0
+tags: ['github',workflow orchestration,event-driven,scheduled workflows,YAML,plugins,CI/CD,workflows as code]
 categories: ['github']
 ---
 
@@ -75,10 +75,6 @@ Kestra is an open-source, event-driven orchestration platform that makes both **
 ---
 
 ## 🚀 Quick Start
-
-### Try the Live Demo
-
-Try Kestra with our [**Live Demo**](https://demo.kestra.io/ui/login?auto). No installation required!
 
 ### Get Started Locally in 5 Minutes
 

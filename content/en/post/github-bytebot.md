@@ -1,9 +1,9 @@
 ---
 title: bytebot
-date: 2025-09-05T15:26:39+08:00
+date: 2025-09-06T15:23:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1604580824859-20d9665f58b5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcwNTcxODl8&ixlib=rb-4.1.0
-tags: ['github',Bytebot,AI,desktop agent,virtual desktop,task automation,multi-step workflows,document processing,API,open source]
+image: https://images.unsplash.com/photo-1576078766417-80f4b730120c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcxNDM0MTJ8&ixlib=rb-4.1.0
+tags: ['github',Bytebot,AI Agent,Desktop Agent,Virtual Desktop,Task Automation,Multi-application Workflow,API,OpenAI,Anthropic,Google Gemini]
 categories: ['github']
 ---
 
