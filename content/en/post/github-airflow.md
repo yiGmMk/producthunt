@@ -1,9 +1,9 @@
 ---
 title: airflow
-date: 2025-09-06T15:25:31+08:00
+date: 2025-09-07T15:25:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1589725465800-d41dc6ce7124?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcxNDM0MTJ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1659720212900-702e1765621d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcyMjk4MjZ8&ixlib=rb-4.1.0
+tags: ['github',Apache Airflow, workflow, orchestration, DAGs, tasks, scheduler, user interface, Python, Kubernetes]
 categories: ['github']
 ---
 

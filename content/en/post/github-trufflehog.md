@@ -1,9 +1,9 @@
 ---
 title: trufflehog
-date: 2025-09-06T15:24:09+08:00
+date: 2025-09-07T15:24:10+08:00
 draft: False
-image: https://images.unsplash.com/photo-1496614932623-0a3a9743552e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcxNDM0MTJ8&ixlib=rb-4.1.0
-tags: ['github',truffleHog,secret detection,git repository,commit history,regex,entropy,security,devops,source code]
+image: https://images.unsplash.com/photo-1706562018252-5ce3eadb2288?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcyMjk4MjZ8&ixlib=rb-4.1.0
+tags: ['github',truffleHog,secret detection,git repository,regex,entropy,commit history,devops,security,source code analysis]
 categories: ['github']
 ---
 

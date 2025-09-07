@@ -1,9 +1,9 @@
 ---
 title: parlant
-date: 2025-09-06T15:24:45+08:00
+date: 2025-09-07T15:24:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1650532596364-37b8a537f3f2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcxNDM0MTJ8&ixlib=rb-4.1.0
-tags: ['github',AI agent,Parlant,LLM,instruction following,agent development,guideline,tools,customer journey,behavioral modeling]
+image: https://images.unsplash.com/photo-1706562018252-5ce3eadb2288?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcyMjk4MjZ8&ixlib=rb-4.1.0
+tags: ['github',AI agent,Parlant,LLM,instruction following,agent development,guidelines,tools,customer journeys,behavioral modeling]
 categories: ['github']
 ---
 
