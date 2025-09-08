@@ -1,9 +1,9 @@
 ---
 title: parlant
-date: 2025-09-07T15:24:45+08:00
+date: 2025-09-08T15:27:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1706562018252-5ce3eadb2288?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcyMjk4MjZ8&ixlib=rb-4.1.0
-tags: ['github',AI agent,Parlant,LLM,instruction following,agent development,guidelines,tools,customer journeys,behavioral modeling]
+image: https://images.unsplash.com/photo-1671549296089-88b3a6eb347e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTczMTY0NTl8&ixlib=rb-4.1.0
+tags: ['github',AI agent,LLM,Parlant,guidelines,tools,compliance,agent development,instruction following]
 categories: ['github']
 ---
 
@@ -77,6 +77,8 @@ await agent.create_guideline(
     tools=[check_order_status],
 )
 ```
+
+[Blog: How Parlant Guarantees Agent Compliance](https://www.parlant.io/blog/how-parlant-guarantees-compliance)
 
 #### Parlant gives you all the structure you need to build customer-facing agents that behave exactly as your business requires:
 
@@ -216,7 +218,7 @@ if __name__ == "__main__":
 - **📱 React Widget** - [Drop-in chat UI for any web app](https://github.com/emcie-co/parlant-chat-react)
 - **🔍 Full Explainability** - Understand every decision your agent makes
 
-## 📈 Join 8,000+ Developers Building Better AI
+## 📈 Join 10,000+ Developers Building Better AI
 
 <div align="center">
 

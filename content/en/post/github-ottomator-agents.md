@@ -1,9 +1,9 @@
 ---
 title: ottomator-agents
-date: 2025-09-07T15:24:36+08:00
+date: 2025-09-08T15:28:05+08:00
 draft: False
-image: https://images.unsplash.com/photo-1546954636-1e5d5e1545ca?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcyMjk4MjZ8&ixlib=rb-4.1.0
-tags: ['github',AI agents,Live Agent Studio,ottomator,open source,LLM,tokens,community,platform,AI technology,developer]
+image: https://images.unsplash.com/photo-1672243776765-58c978b61fd8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTczMTY0NTl8&ixlib=rb-4.1.0
+tags: ['github',AI agents,Live Agent Studio,ottomator,open source,LLM,tokens,community,educational platform,AI technology,agent development]
 categories: ['github']
 ---
 

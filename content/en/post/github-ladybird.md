@@ -1,9 +1,9 @@
 ---
 title: ladybird
-date: 2025-08-04T15:40:03+08:00
+date: 2025-09-08T15:29:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1589565716806-6baa4a15c064?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQyOTMxMzN8&ixlib=rb-4.1.0
-tags: ['github',web browser,Ladybird,SerenityOS,LibWeb,LibJS,WebAssembly,Linux,macOS]
+image: https://images.unsplash.com/photo-1566590921430-d8f2729a54c9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTczMTY0NTl8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
