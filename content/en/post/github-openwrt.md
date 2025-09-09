@@ -1,9 +1,9 @@
 ---
 title: openwrt
-date: 2025-09-08T15:28:30+08:00
+date: 2025-09-09T15:28:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1725714834984-4f37a2406563?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTczMTY0NTl8&ixlib=rb-4.1.0
-tags: ['github',OpenWrt,Linux,embedded devices,package management,firmware,customization,GNU/Linux,macOS,opkg]
+image: https://images.unsplash.com/photo-1701271925022-854c2eea3059?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0MDI4NTN8&ixlib=rb-4.1.0
+tags: ['github',OpenWrt,Linux,embedded devices,package management,firmware,customization,opkg,GNU/Linux,development]
 categories: ['github']
 ---
 

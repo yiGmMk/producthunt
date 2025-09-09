@@ -1,15 +1,15 @@
 ---
 title: system-prompts-and-models-of-ai-tools
-date: 2025-08-14T15:32:02+08:00
+date: 2025-09-09T15:28:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1649726635267-d675c83e6064?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUxNTY2MDV8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1675365723622-4f502982f089?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0MDI4NTN8&ixlib=rb-4.1.0
+tags: ['github',AI tools,system prompts,models,GitHub repository,AI models,programming,code,software,development,open source]
 categories: ['github']
 ---
 
 # [x1xhlol/system-prompts-and-models-of-ai-tools](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools)
 
-# **FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent, VSCode Agent, Dia Browser, Trae AI, Cluely, Perplexity, Xcode, Spawn & Orchids.app (And other Open Sourced) System Prompts, Tools & AI Models**  
+# **System Prompts and Models of AI Tools**  
 
 ---
 <a href="https://discord.gg/NwzrWErdMU" target="_blank">
@@ -21,7 +21,7 @@ categories: ['github']
 
 <a href="https://trendshift.io/repositories/14084" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14084" alt="x1xhlol%2Fsystem-prompts-and-models-of-ai-tools | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
-📜 Over **9000+ lines** of insights into their structure and functionality.  
+📜 Over **20,000+ lines** of insights into their structure and functionality.  
 
 [![Build Status](https://app.cloudback.it/badge/x1xhlol/system-prompts-and-models-of-ai-tools)](https://cloudback.it)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/x1xhlol/system-prompts-and-models-of-ai-tools)
@@ -48,42 +48,49 @@ You can show your support via:
 
 ## 📑 Table of Contents
 
-1. [Available Files](#-available-files)  
-2. [Roadmap & Feedback](#-roadmap--feedback)  
-3. [Connect With Me](#-connect-with-me)  
-4. [Security Notice for AI Startups](#%EF%B8%8F-security-notice-for-ai-startups)  
-5. [Star History](#-star-history) 
+  - [❤️ Support the Project](#️-support-the-project)
+  - [📑 Table of Contents](#-table-of-contents)
+  - [📂 Available Files](#-available-files)
+  - [🛠 Roadmap \& Feedback](#-roadmap--feedback)
+  - [🔗 Connect With Me](#-connect-with-me)
+  - [🛡️ Security Notice for AI Startups](#️-security-notice-for-ai-startups)
+  - [📊 Star History](#-star-history)
 
 ---
 
 ## 📂 Available Files
 
-- [**v0 Folder**](./v0%20Prompts%20and%20Tools/)
-- [**Spawn Folder**](./-Spawn/)
-- [**Manus Folder**](./Manus%20Agent%20Tools%20&%20Prompt/)
-- [**Lovable Folder**](./Lovable/)
-- [**Devin Folder**](./Devin%20AI/)
-- [**Same.dev Folder**](./Same.dev/)
-- [**Replit Folder**](./Replit/)
-- [**Windsurf Agent Folder**](./Windsurf/)
-- [**VSCode (Copilot) Agent Folder**](./VSCode%20Agent/)
-- [**Cursor Folder**](./Cursor%20Prompts/)
-- [**Dia Folder**](./dia/)
-- [**Trae AI Folder**](./Trae/)
-- [**Perplexity Folder**](./Perplexity/)
-- [**Cluely Folder**](./Cluely/)
-- [**Xcode Folder**](./Xcode/)
-- [**Orchids.app Folder**](./Orchids.app/)
-- [**Junie Folder**](./Junie/)
+- [**v0**](./v0%20Prompts%20and%20Tools/)
+- [**Manus**](./Manus%20Agent%20Tools%20&%20Prompt/)
+- [**Augment Code**](./Augment%20Code/)
+- [**Lovable**](./Lovable/)
+- [**Devin**](./Devin%20AI/)
+- [**Same.dev**](./Same.dev/)
+- [**Replit**](./Replit/)
+- [**Windsurf Agent**](./Windsurf/)
+- [**VSCode (Copilot) Agent**](./VSCode%20Agent/)
+- [**Cursor**](./Cursor%20Prompts/)
+- [**Dia**](./dia/)
+- [**Trae AI**](./Trae/)
+- [**Perplexity**](./Perplexity/)
+- [**Cluely**](./Cluely/)
+- [**Xcode**](./Xcode/)
+- [**Notion AI**](./NotionAi/)
+- [**Orchids.app**](./Orchids.app/)
+- [**Junie**](./Junie/)
 - [**Kiro**](./Kiro/)
 - [**Warp.dev**](./Warp.dev/)
 - [**Z.ai Code**](./Z.ai%20Code/)
-- [**Open Source prompts Folder**](./Open%20Source%20prompts/)
+- [**Qoder**](./Qoder/)
+- [**Claude Code**](./Claude%20Code/)
+- [**Open Source prompts**](./Open%20Source%20prompts/)
   - [Codex CLI](./Open%20Source%20prompts/Codex%20CLI/)
   - [Cline](./Open%20Source%20prompts/Cline/)
   - [Bolt](./Open%20Source%20prompts/Bolt/)
   - [RooCode](./Open%20Source%20prompts/RooCode/)
   - [Lumo](./Open%20Source%20prompts/Lumo/)
+  - [Gemini CLI](./Open%20Source%20prompts/Gemini%20CLI/)
+- [**CodeBuddy**](./CodeBuddy%20Prompts/)
 
 ---
 
@@ -91,7 +98,7 @@ You can show your support via:
 
 > Open an issue.
 
-> **Latest Update:** 11/08/2025
+> **Latest Update:** 08/09/2025
 
 ---
 

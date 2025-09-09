@@ -1,9 +1,9 @@
 ---
 title: coreutils
-date: 2025-09-08T15:29:13+08:00
+date: 2025-09-09T15:29:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1671549296089-88b3a6eb347e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTczMTY0NTl8&ixlib=rb-4.1.0
-tags: ['github',Rust,coreutils,GNU,cross-platform,reimplementation,command-line,utilities,Cargo,Make]
+image: https://images.unsplash.com/photo-1688890239467-c43da335fe7e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0MDI4NTR8&ixlib=rb-4.1.0
+tags: ['github',Rust,coreutils,GNU,command-line,utilities,cross-platform,reimplementation,Cargo,Make]
 categories: ['github']
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: XLeRobot
-date: 2025-09-08T15:30:03+08:00
+date: 2025-09-09T15:29:25+08:00
 draft: False
-image: https://images.unsplash.com/photo-1715625382706-1102f34fa0c7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTczMTY0NTl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1609562234105-470e02356c87?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0MDI4NTR8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

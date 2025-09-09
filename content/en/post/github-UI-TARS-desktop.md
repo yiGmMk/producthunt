@@ -1,9 +1,9 @@
 ---
 title: UI-TARS-desktop
-date: 2025-08-15T15:31:13+08:00
+date: 2025-09-09T15:28:05+08:00
 draft: False
-image: https://images.unsplash.com/photo-1692607334682-59c90d345679?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUyNDI5OTV8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1701271925022-854c2eea3059?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0MDI4NTN8&ixlib=rb-4.1.0
+tags: ['github',Agent TARS,UI-TARS-desktop,multimodal AI Agent,GUI Agent,Vision,LLMs,MCP,computer vision,natural language processing]
 categories: ['github']
 ---
 
@@ -251,7 +251,7 @@ Visit the comprehensive [Quick Start](https://agent-tars.com/guide/get-started/q
   <img alt="UI-TARS" width="260" src="./apps/ui-tars/resources/icon.png">
 </p>
 
-UI-TARS Desktop is a native GUI agent driven by [UI-TARS](https://github.com/bytedance/UI-TARS) and Seed-1.5-VL/1.6 series models, available on your local computer and remote VM sandbox on cloud.
+UI-TARS Desktop is a native GUI agent for your local computer, driven by [UI-TARS](https://github.com/bytedance/UI-TARS) and Seed-1.5-VL/1.6 series models.
 
 <div align="center">
 <p>
@@ -283,7 +283,6 @@ UI-TARS Desktop is a native GUI agent driven by [UI-TARS](https://github.com/byt
 - 💻 Cross-platform support (Windows/MacOS/Browser)
 - 🔄 Real-time feedback and status display
 - 🔐 Private and secure - fully local processing
-- 🛠️ Effortless setup and intuitive remote operators
 
 ### Quick Start
 

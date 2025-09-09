@@ -1,9 +1,9 @@
 ---
 title: kilocode
-date: 2025-09-08T15:28:39+08:00
+date: 2025-09-09T15:28:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1597143888592-12eb5a48f8b1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTczMTY0NTl8&ixlib=rb-4.1.0
-tags: ['github',VS Code,AI agent,code generation,task automation,code refactoring,AI models,Gemini,Claude,GPT]
+image: https://images.unsplash.com/photo-1727949395650-5315f1c592c2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0MDI4NTR8&ixlib=rb-4.1.0
+tags: ['github',VS Code,AI agent,code generation,task automation,code refactoring,MCP server,AI models,Gemini 2.5 Pro,Claude 4]
 categories: ['github']
 ---
 
