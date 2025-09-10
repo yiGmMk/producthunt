@@ -1,9 +1,9 @@
 ---
 title: kotaemon
-date: 2025-09-09T15:29:06+08:00
+date: 2025-09-10T15:28:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1727949395650-5315f1c592c2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0MDI4NTR8&ixlib=rb-4.1.0
-tags: ['github',RAG,UI,LLM,OpenAI,document QA,kotaemon,Gradio,retrieval,embedding]
+image: https://images.unsplash.com/photo-1676309973406-1153db3131ee?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0ODkyMzB8&ixlib=rb-4.1.0
+tags: ['github',RAG,UI,LLM,OpenAI,AzureOpenAI,Cohere,ollama,llama-cpp-python,Gradio,document QA,question answering,vector database,multimodal,retrieval,reasoning,ReAct,ReWOO]
 categories: ['github']
 ---
 

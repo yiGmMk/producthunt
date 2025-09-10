@@ -1,9 +1,9 @@
 ---
 title: jaaz
-date: 2025-09-09T15:28:29+08:00
+date: 2025-09-10T15:28:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1675365723622-4f502982f089?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0MDI4NTN8&ixlib=rb-4.1.0
-tags: ['github',Jaaz,Canva,AI,open-source,multimodal,creative assistant,video generation,image generation]
+image: https://images.unsplash.com/photo-1615887933766-bb2b6198f60d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0ODkyMzB8&ixlib=rb-4.1.0
+tags: ['github',Jaaz.app,Canva,AI,open-source,multimodal,video generation,image generation,Magic Canvas]
 categories: ['github']
 ---
 
@@ -20,8 +20,17 @@ categories: ['github']
 </p>
 
 </h2>
-<p align="center">The world's first open-source multimodal creative assistant</p>
+<p align="center">The world's first open-source multimodal canvas creative agent</p>
 <p align="center">This is a substitute for Canva and Manus that prioritizes privacy and is usable locally.</p>
+<p>
+  <b>📣 [New!] Enterprise Cloud “Full” Edition</b> — Private/on-prem deployment & commercial licensing (Docker image or full source). Includes all jaaz.app online features. 
+  <b>30% OFF</b> through <b>Sep 15, 2025</b>. 
+  <a href="mailto:info@jaaz.app">Contact us →</a> info@jaaz.app
+  <br>
+  <br>
+  <b>📣 [New!] 企业云端完整版</b> — 支持<span>私有化部署</span>与<span>商业授权</span>（Docker 镜像或源码交付），包含 jaaz.app 全量线上功能。限时 <b>30% OFF</b>，截止 <b>2025-09-15</b>。 
+  <a href="mailto:info@jaaz.app">了解/洽谈 →</a> info@jaaz.app
+</p>
 <br><br>
 
 <p align="center">
@@ -197,6 +206,10 @@ VSCode/Cursor Install Extensions：
 `pip install -r requirements.txt`
 
 `python main.py`
+
+
+
+
 
 
 
