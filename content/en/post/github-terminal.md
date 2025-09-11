@@ -1,9 +1,9 @@
 ---
 title: terminal
-date: 2025-08-30T15:25:37+08:00
+date: 2025-09-11T15:33:03+08:00
 draft: False
-image: https://images.unsplash.com/photo-1720293080711-b89d093111dc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY1Mzg2NDl8&ixlib=rb-4.1.0
-tags: ['github',Windows Terminal,console,command-line,Cascadia Code,GitHub,Microsoft Store,winget,Chocolatey,Scoop,ConPTY,ANSI]
+image: https://images.unsplash.com/photo-1627930441243-03eccdb0ce6e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc1NzU3Mzd8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -386,7 +386,7 @@ winget configure .config\configuration.winget
 
 ## Building the Code
 
-OpenConsole.sln may be built from within Visual Studio or from the command-line
+OpenConsole.slnx may be built from within Visual Studio or from the command-line
 using a set of convenience scripts & tools in the **/tools** directory:
 
 ### Building in PowerShell

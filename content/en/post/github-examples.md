@@ -1,8 +1,8 @@
 ---
 title: examples
-date: 2025-09-10T15:28:02+08:00
+date: 2025-09-11T15:29:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1676309973406-1153db3131ee?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0ODkyMzB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1639401182416-313713ce68de?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc1NzU3Mzd8&ixlib=rb-4.1.0
 tags: ['github',Vercel,examples,Next.js,templates,GitHub,deployment,README,plop,Husky]
 categories: ['github']
 ---

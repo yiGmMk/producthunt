@@ -1,9 +1,9 @@
 ---
 title: jaaz
-date: 2025-09-10T15:28:38+08:00
+date: 2025-09-11T15:30:11+08:00
 draft: False
-image: https://images.unsplash.com/photo-1615887933766-bb2b6198f60d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0ODkyMzB8&ixlib=rb-4.1.0
-tags: ['github',Jaaz.app,Canva,AI,open-source,multimodal,video generation,image generation,Magic Canvas]
+image: https://images.unsplash.com/photo-1653140819631-72cad12c5f55?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc1NzU3Mzd8&ixlib=rb-4.1.0
+tags: ['github',Ja dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam dalam]
 categories: ['github']
 ---
 

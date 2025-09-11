@@ -1,9 +1,9 @@
 ---
 title: Stirling-PDF
-date: 2025-09-10T15:27:53+08:00
+date: 2025-09-11T15:32:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1615887933766-bb2b6198f60d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0ODkyMzB8&ixlib=rb-4.1.0
-tags: ['github',PDF,Docker,web-based,PDF manipulation,LibreOffice,Tesseract OCR,qpdf,API,Single Sign-On,Enterprise]
+image: https://images.unsplash.com/photo-1636114673156-052a83459fc1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc1NzU3Mzd8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
