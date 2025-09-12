@@ -1,9 +1,9 @@
 ---
 title: the-algorithm
-date: 2025-09-11T15:30:34+08:00
+date: 2025-09-12T15:31:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1613268257121-84f266d8474f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc1NzU3Mzd8&ixlib=rb-4.1.0
-tags: ['github',Recommendation algorithm,X,For You Timeline,Notifications,machine learning,models,ranking,candidate sourcing,data]
+image: https://images.unsplash.com/photo-1611086810555-1eb945f1aecc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc2NjIyMDd8&ixlib=rb-4.1.0
+tags: ['github',Recommendation Algorithm, X, For You Timeline, Notifications, machine learning, ranking, models,  candidate sourcing,  social media]
 categories: ['github']
 ---
 

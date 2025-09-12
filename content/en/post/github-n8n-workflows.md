@@ -1,9 +1,9 @@
 ---
 title: n8n-workflows
-date: 2025-09-09T15:29:17+08:00
+date: 2025-09-12T15:33:57+08:00
 draft: False
-image: https://images.unsplash.com/photo-1642266351423-efa1b7ffe527?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0MDI4NTR8&ixlib=rb-4.1.0
-tags: ['github',n8n,workflows,automation,integration,API,search,documentation,database,SQLite,FastAPI]
+image: https://images.unsplash.com/photo-1611086810555-1eb945f1aecc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc2NjIyMDd8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

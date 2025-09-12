@@ -1,8 +1,8 @@
 ---
 title: OpenMower
-date: 2025-09-11T15:32:36+08:00
+date: 2025-09-12T15:32:55+08:00
 draft: False
-image: https://images.unsplash.com/photo-1636114673156-052a83459fc1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc1NzU3Mzd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1541022052127-e2acfc01d336?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc2NjIyMDd8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

@@ -1,9 +1,9 @@
 ---
 title: openpi
-date: 2025-09-11T15:29:19+08:00
+date: 2025-09-12T15:30:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1653140819631-72cad12c5f55?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc1NzU3Mzd8&ixlib=rb-4.1.0
-tags: ['github',openpi, robotics, vision-language-action model, VLA, Pi0, Pi0-FAST, Pi0.5, fine-tuning, inference, robot data,  knowledge insulation]
+image: https://images.unsplash.com/photo-1685729368148-0d512f47cf53?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc2NjIyMDd8&ixlib=rb-4.1.0
+tags: ['github',openpi, robotics, vision-language-action, VLA, model, PyTorch, JAX, fine-tuning, inference, checkpoints]
 categories: ['github']
 ---
 

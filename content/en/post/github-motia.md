@@ -1,9 +1,9 @@
 ---
 title: motia
-date: 2025-08-21T15:31:07+08:00
+date: 2025-09-12T15:32:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1663756080499-c29e3346c462?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU3NjE0MDF8&ixlib=rb-4.1.0
-tags: ['github',backend,framework,API,workflows,AI,JavaScript,TypeScript,Python]
+image: https://images.unsplash.com/photo-1454117096348-e4abbeba002c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc2NjIyMDd8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -60,13 +60,13 @@ categories: ['github']
 
 **Motia solves backend fragmentation.** 
 
-Modern software engineering is splintered – APIs live in one framework, background jobs in another, queues have their own tooling, and AI agents are springing up in yet more isolated runtimes. **This fragmentation demands a unified system.**
+Modern software engineering is disjointed – APIs live in one framework, background jobs in another, queues have their own tooling, and AI agents are springing up in yet more isolated runtimes. **This fragmentation demands a unified system.**
 
-Motia unifies APIs, background jobs, workflows, and AI agents into a **single coherent system** with shared observability and developer experience. Similar to how React simplified frontend development where everything is a component, **Motia simplifies backend development where everything is a Step**.
+Motia unifies APIs, background jobs, workflows, and AI agents into a **single coherent system** with shared observability and developer experience. Similar to how React simplified frontend development, where everything is a component, **Motia simplifies backend development, where everything is a Step**.
 
 Write **JavaScript, TypeScript, Python, and more** in the same workflow. **What used to take 5 frameworks to build now comes out of the box with Motia.**
 
-[![Motia combines APIs, background queues, and AI agents into one system](assets/Motia_Github_Repository_GIF.gif)](https://motia.dev)
+[![Motia combines APIs, background queues, and AI agents into one system](assets/github-readme-banner.gif)](https://motia.dev)
 
 ## 🚀 Quickstart
 
@@ -75,7 +75,7 @@ Get Motia project up and running in **under 60 seconds**:
 ### 1. Bootstrap a New Motia Project
 
 ```bash
-npx motia@latest create -i   # runs the interactive terminal
+npx motia@latest create   # runs the interactive terminal
 ```
 
 Follow the prompts to pick a template, project name, and language.

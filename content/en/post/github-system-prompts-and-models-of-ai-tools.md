@@ -1,9 +1,9 @@
 ---
 title: system-prompts-and-models-of-ai-tools
-date: 2025-09-11T15:31:48+08:00
+date: 2025-09-12T15:33:47+08:00
 draft: False
-image: https://images.unsplash.com/photo-1633506157576-c9f1b074d5f8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc1NzU3Mzd8&ixlib=rb-4.1.0
-tags: ['github',AI tools,system prompts,models,GitHub repository,open source,AI security,support,contributions,roadmap,feedback,Discord,X,ZeroLeaks]
+image: https://images.unsplash.com/photo-1611086810555-1eb945f1aecc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc2NjIyMDd8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
