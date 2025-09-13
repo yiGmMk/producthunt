@@ -1,9 +1,9 @@
 ---
 title: everyone-can-use-english
-date: 2025-09-11T15:30:54+08:00
+date: 2025-09-13T15:25:54+08:00
 draft: False
-image: https://images.unsplash.com/photo-1633506157576-c9f1b074d5f8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc1NzU3Mzd8&ixlib=rb-4.1.0
-tags: ['github',AI, English learning, Enjoy app, web application, desktop application,  language learning,  1000h project,  ZuodaoTech]
+image: https://images.unsplash.com/photo-1590797204754-142b8acdf5a7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc3NDgxOTF8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: expo
-date: 2025-05-07T15:30:28+08:00
+date: 2025-09-13T15:24:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1678178092123-7763d2975fbc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY2MDI5MDd8&ixlib=rb-4.1.0
-tags: ['github',Expo,React,JavaScript,mobile,Android,iOS,native,open-source,development]
+image: https://images.unsplash.com/photo-1729433272880-a697791721e7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc3NDgxOTF8&ixlib=rb-4.1.0
+tags: ['github',Expo,React,JavaScript,Android,iOS,mobile,development,framework]
 categories: ['github']
 ---
 

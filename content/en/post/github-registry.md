@@ -1,9 +1,9 @@
 ---
 title: registry
-date: 2025-09-12T15:30:50+08:00
+date: 2025-09-13T15:26:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1454117096348-e4abbeba002c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc2NjIyMDd8&ixlib=rb-4.1.0
-tags: ['github',MCP Registry,ModelContextProtocol,server,publishing,API,authentication,GitHub,OAuth,OIDC,DNS,HTTP,Docker,Go,PostgreSQL]
+image: https://images.unsplash.com/photo-1568620702288-bc95c57fda6a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc3NDgxOTF8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
