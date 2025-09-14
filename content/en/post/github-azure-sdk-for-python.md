@@ -1,9 +1,9 @@
 ---
 title: azure-sdk-for-python
-date: 2025-09-13T15:25:47+08:00
+date: 2025-09-14T15:25:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1729433272880-a697791721e7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc3NDgxOTF8&ixlib=rb-4.1.0
-tags: ['github',Azure SDK,Python,Azure,libraries,management,client,resources,authentication,telemetry]
+image: https://images.unsplash.com/photo-1726500087571-d3193fb2b6b3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc4MzQ2NTB8&ixlib=rb-4.1.0
+tags: ['github',Azure,SDK,Python,libraries,management,client,resources,authentication]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: codebuff
-date: 2025-09-13T15:23:38+08:00
+date: 2025-09-14T15:25:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1568620702288-bc95c57fda6a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc3NDgxOTF8&ixlib=rb-4.1.0
-tags: ['github',AI coding assistant, codebase editing, natural language instructions, multi-agent system, open-source, codebuff, agents, OpenRouter]
+image: https://images.unsplash.com/photo-1673208128281-eabef9c6f259?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc4MzQ2NTB8&ixlib=rb-4.1.0
+tags: ['github',AI coding assistant,codebase,natural language instructions,specialized agents,multi-agent approach,OpenRouter,custom agents,TypeScript,SDK]
 categories: ['github']
 ---
 

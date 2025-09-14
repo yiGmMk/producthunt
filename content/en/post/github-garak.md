@@ -1,9 +1,9 @@
 ---
 title: garak
-date: 2025-09-13T15:24:31+08:00
+date: 2025-09-14T15:26:22+08:00
 draft: False
-image: https://images.unsplash.com/photo-1683746215116-a5fc9288793a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc3NDgxOTF8&ixlib=rb-4.1.0
-tags: ['github',LLM,vulnerability,scanner,garak,probing,security,red-teaming,AI]
+image: https://images.unsplash.com/photo-1592281085369-973c59a66c31?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc4MzQ2NTB8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

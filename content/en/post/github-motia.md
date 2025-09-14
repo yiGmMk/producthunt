@@ -1,9 +1,9 @@
 ---
 title: motia
-date: 2025-09-12T15:32:35+08:00
+date: 2025-09-14T15:24:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1454117096348-e4abbeba002c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc2NjIyMDd8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1673208128281-eabef9c6f259?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc4MzQ2NTB8&ixlib=rb-4.1.0
+tags: ['github',Motia,backend,framework,APIs,background jobs,workflows,AI agents,JavaScript,TypeScript,Python,multi-language,unified system]
 categories: ['github']
 ---
 

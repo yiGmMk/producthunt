@@ -1,9 +1,9 @@
 ---
 title: openpi
-date: 2025-09-13T15:23:31+08:00
+date: 2025-09-14T15:26:34+08:00
 draft: False
-image: https://images.unsplash.com/photo-1590797204754-142b8acdf5a7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc3NDgxOTF8&ixlib=rb-4.1.0
-tags: ['github',openpi, robotics, vision-language-action model, VLA,  π₀, π₀-FAST, π₀.₅,  fine-tuning,  knowledge insulation,  DROID, ALOHA]
+image: https://images.unsplash.com/photo-1700245481730-d375ad70ff2b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc4MzQ2NTB8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

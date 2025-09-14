@@ -1,9 +1,9 @@
 ---
 title: happy-llm
-date: 2025-07-06T15:27:10+08:00
+date: 2025-09-14T15:25:54+08:00
 draft: False
-image: https://images.unsplash.com/photo-1650403335744-fbdcfb6df461?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3ODY3OTN8&ixlib=rb-4.1.0
-tags: ['github',Large Language Model,LLM,Transformer,NLP,Natural Language Processing,Deep Learning,Pre-training,Fine-tuning]
+image: https://images.unsplash.com/photo-1700245481730-d375ad70ff2b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc4MzQ2NTB8&ixlib=rb-4.1.0
+tags: ['github',Large Language Model,LLM,Transformer,NLP,pre-training,fine-tuning,attention mechanism]
 categories: ['github']
 ---
 
@@ -68,6 +68,25 @@ categories: ['github']
 | [第五章 动手搭建大模型](./docs/chapter5/第五章%20动手搭建大模型.md) | 实现 LLaMA2、训练 Tokenizer、预训练小型 LLM | ✅ |
 | [第六章 大模型训练实践](./docs/chapter6/第六章%20大模型训练流程实践.md) | 预训练、有监督微调、LoRA/QLoRA 高效微调 | 🚧 |
 | [第七章 大模型应用](./docs/chapter7/第七章%20大模型应用.md) | 模型评测、RAG 检索增强、Agent 智能体 | ✅ |
+| [Extra Chapter LLM Blog](./Extra-Chapter/) | 优秀的大模型 学习笔记/Blog ，欢迎大家来 PR ！| 🚧 |
+
+### Extra Chapter LLM Blog
+
+- [大模型都这么厉害了，微调0.6B的小模型有什么意义？](./Extra-Chapter/why-fine-tune-small-large-language-models/readme.md) @[不要葱姜蒜](https://github.com/KMnO4-zx) 2025-7-11
+
+- [Transformer 整体模块设计解读](./Extra-Chapter/transformer-architecture/) @[ditingdapeng](https://github.com/ditingdapeng) 2025-7-14
+
+- [文本数据处理详解](./Extra-Chapter/text-data-processing/readme.md) @[蔡鋆捷](https://github.com/xinala-781) 2025-7-14
+
+- [Qwen3-"VL"——超小中文多模态模型的“拼接微调”之路](./Extra-Chapter/vlm-concatenation-finetune/README.md) @[ShaohonChen](https://github.com/ShaohonChen) 2025-7-30
+
+- [S1: Thinking Budget with vLLM](./Extra-Chapter/s1-vllm-thinking-budget/readme.md) @[kmno4-zx](https://github.com/kmno4-zx) 2025-8-03
+
+
+- [CDDRS: 使用细粒度语义信息指导增强的RAG检索方法](./Extra-Chapter/CDDRS/readme.md) @[Hongru0306](https://github.com/Hongru0306) 2025-8-21
+
+
+> &emsp;&emsp;*如果大家在学习 Happy-LLM 项目或 LLM 相关知识中有自己独到的见解、认知、实践，欢迎大家 PR 在 [Extra Chapter LLM Blog](./Extra-Chapter/) 中。请遵守 Extra Chapter LLM Blog 的 [PR 规范](./Extra-Chapter/Readme.md)，我们会视 PR 内容的质量和价值来决定是否合并或补充到 Happy-LLM 正文中来。*
 
 ### 模型下载
 
@@ -83,8 +102,7 @@ categories: ['github']
 
 &emsp;&emsp;***本 Happy-LLM PDF 教程完全开源免费。为防止各类营销号加水印后贩卖给大模型初学者，我们特地在 PDF 文件中预先添加了不影响阅读的 Datawhale 开源标志水印，敬请谅解～***
 
-> *Happy-LLM PDF : https://github.com/datawhalechina/happy-llm/releases/tag/PDF*  
-> *Happy-LLM PDF 国内下载地址 : https://www.datawhale.cn/learn/summary/179*  
+> *Happy-LLM PDF : https://github.com/datawhalechina/happy-llm/releases/tag/v1.0.1*  
 
 ## 💡 如何学习
 
@@ -112,6 +130,13 @@ categories: ['github']
 - [邹雨衡-项目负责人](https://github.com/logan-zou) (Datawhale成员-对外经济贸易大学)
 - [朱信忠-指导专家](https://xinzhongzhu.github.io/)（Datawhale首席科学家-浙江师范大学杭州人工智能研究院教授）
 
+### Extra-Chapter 贡献者
+
+- [ditingdapeng](https://github.com/ditingdapeng)（内容贡献者-云原生基础架构工程师）
+- [蔡鋆捷](https://github.com/xinala-781)（内容贡献者-福州大学）
+- [ShaohonChen](https://github.com/ShaohonChen) （情感机器实验室研究员-西安电子科技大学在读硕士）
+- [肖鸿儒, 庄健琨](https://github.com/Hongru0306) (内容贡献者-同济大学)
+
 ### 特别感谢
 - 感谢 [@Sm1les](https://github.com/Sm1les) 对本项目的帮助与支持
 - 感谢所有为本项目做出贡献的开发者们 ❤️
@@ -125,7 +150,7 @@ categories: ['github']
 ## Star History
 
 <div align='center'>
-    <img src="./images/star-history-202575.png" alt="Datawhale" width="90%">
+    <img src="./images/star-history-2025710.png" alt="Datawhale" width="90%">
 </div>
 
 <div align="center">

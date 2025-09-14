@@ -1,9 +1,9 @@
 ---
 title: ROMA
-date: 2025-09-13T15:23:46+08:00
+date: 2025-09-14T15:24:50+08:00
 draft: False
-image: https://images.unsplash.com/photo-1729433272880-a697791721e7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc3NDgxOTF8&ixlib=rb-4.1.0
-tags: ['github',ROMA, meta-agent, multi-agent systems, hierarchical, parallel problem solving, transparent development, open-source, extensible, recursive, plan-execute loop, Atomizer, Planner, Executor, Aggregator, LLM, APIs, AgnoAgents, FastAPI, Flask, React, TypeScript, LiteLLM, S3, goofys, E2B,  benchmark, SEAL-0, FRAMES, SimpleQA]
+image: https://images.unsplash.com/photo-1700245481730-d375ad70ff2b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc4MzQ2NTB8&ixlib=rb-4.1.0
+tags: ['github',ROMA, meta-agent, multi-agent systems, hierarchical, parallel problem solving, transparent development, open-source, extensible, recursive, plan-execute loop, Atomizer, Planner, Executor, Aggregator, LLM, APIs, AgnoAgents, FastAPI, Flask, React, TypeScript, LiteLLM, S3, goofys, E2B, AI agents,  benchmark]
 categories: ['github']
 ---
 
