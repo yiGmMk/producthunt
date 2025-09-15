@@ -1,9 +1,9 @@
 ---
 title: ripple
-date: 2025-09-14T15:24:25+08:00
+date: 2025-09-15T15:30:01+08:00
 draft: False
-image: https://images.unsplash.com/photo-1660949158247-2b835108c86d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc4MzQ2NTB8&ixlib=rb-4.1.0
-tags: ['github',TypeScript,UI framework,React,Solid,Svelte,JSX,reactive,components]
+image: https://images.unsplash.com/photo-1479030574009-1e48577746e8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc5MjEzODJ8&ixlib=rb-4.1.0
+tags: ['github',TypeScript,UI framework,React,Solid,Svelte,JSX,reactive state,component-based architecture]
 categories: ['github']
 ---
 

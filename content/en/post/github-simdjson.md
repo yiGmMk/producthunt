@@ -1,9 +1,9 @@
 ---
 title: simdjson
-date: 2025-09-14T15:26:03+08:00
+date: 2025-09-15T15:31:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1659878997289-b9ab5a0663b6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc4MzQ2NTB8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1573470271783-0054dcd317fd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc5MjEzODJ8&ixlib=rb-4.1.0
+tags: ['github',simdjson,JSON,parsing,performance,C++,UTF-8,validation,SIMD,microarchitectures]
 categories: ['github']
 ---
 

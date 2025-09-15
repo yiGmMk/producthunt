@@ -1,9 +1,9 @@
 ---
 title: genkit
-date: 2025-09-13T15:23:53+08:00
+date: 2025-09-15T15:31:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1730472528700-4965c3aff6d1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc3NDgxOTF8&ixlib=rb-4.1.0
-tags: ['github',Genkit,AI,framework,models,Google,OpenAI,Anthropic,Ollama,SDKs]
+image: https://images.unsplash.com/photo-1740393148307-b70a9e5c4ce3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc5MjEzODJ8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
