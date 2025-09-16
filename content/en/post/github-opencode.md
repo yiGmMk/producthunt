@@ -1,9 +1,9 @@
 ---
 title: opencode
-date: 2025-08-04T15:40:13+08:00
+date: 2025-09-16T15:28:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1627996319060-cc7c5a7f7ac9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQyOTMxMzN8&ixlib=rb-4.1.0
-tags: ['github',AI coding agent,terminal,open source,LLM,code generation,Anthropic,OpenAI,Google,TUI,client/server architecture]
+image: https://images.unsplash.com/photo-1725368024928-131f6fa64269?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgwMDc2NTh8&ixlib=rb-4.1.0
+tags: ['github',AI coding agent,terminal,open source,LLM,OpenAI,Google,Anthropic,TUI,client/server architecture,neovim,terminal.shop]
 categories: ['github']
 ---
 
@@ -37,7 +37,7 @@ curl -fsSL https://opencode.ai/install | bash
 
 # Package managers
 npm i -g opencode-ai@latest        # or bun/pnpm/yarn
-brew install sst/tap/opencode      # macOS
+brew install sst/tap/opencode      # macOS and Linux
 paru -S opencode-bin               # Arch Linux
 ```
 
@@ -94,7 +94,7 @@ And run.
 
 ```bash
 $ bun install
-$ bun run packages/opencode/src/index.ts
+$ bun dev
 ```
 
 #### Development Notes
@@ -118,4 +118,4 @@ The other confusingly named repo has no relation to this one. You can [read the 
 
 ---
 
-**Join our community** [Discord](https://discord.gg/opencode) | [YouTube](https://www.youtube.com/c/sst-dev) | [X.com](https://x.com/SST_dev)
+**Join our community** [Discord](https://discord.gg/opencode) | [X.com](https://x.com/opencode)

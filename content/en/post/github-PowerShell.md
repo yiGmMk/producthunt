@@ -1,8 +1,8 @@
 ---
 title: PowerShell
-date: 2025-09-15T15:29:51+08:00
+date: 2025-09-16T15:27:53+08:00
 draft: False
-image: https://images.unsplash.com/photo-1543217482-b4422d879240?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc5MjEzODJ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1725368024928-131f6fa64269?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgwMDc2NTh8&ixlib=rb-4.1.0
 tags: ['github',PowerShell,automation,configuration,cross-platform,cmdlets,Windows,Linux,macOS,scripting,community]
 categories: ['github']
 ---

@@ -1,9 +1,9 @@
 ---
 title: system-prompts-and-models-of-ai-tools
-date: 2025-09-12T15:33:47+08:00
+date: 2025-09-16T15:28:03+08:00
 draft: False
-image: https://images.unsplash.com/photo-1611086810555-1eb945f1aecc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc2NjIyMDd8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgwMDc2NTh8&ixlib=rb-4.1.0
+tags: ['github',AI tools,system prompts,models,GitHub repository,AI models,code,programming,software,development,AI security,startup,security audit,open source,Discord,PayPal,cryptocurrency,BTC,LTC,ETH,Patreon,Ko-fi]
 categories: ['github']
 ---
 
@@ -40,15 +40,14 @@ You can show your support via:
   - **LTC:** `LRWgqwEYDwqau1WeiTs6Mjg85NJ7m3fsdQ`  
   - **ETH:** `0x3f844B2cc3c4b7242964373fB0A41C4fdffB192A`
 - **Patreon:** https://patreon.com/lucknite
+- **Ko-fi:** https://ko-fi.com/lucknite
 
 🙏 Thank you for your support!
-
 
 ---
 
 ## 📑 Table of Contents
 
-  - [❤️ Support the Project](#️-support-the-project)
   - [📑 Table of Contents](#-table-of-contents)
   - [📂 Available Files](#-available-files)
   - [🛠 Roadmap \& Feedback](#-roadmap--feedback)
@@ -75,6 +74,7 @@ You can show your support via:
 - [**Perplexity**](./Perplexity/)
 - [**Cluely**](./Cluely/)
 - [**Xcode**](./Xcode/)
+- [**Leap.new**](./Leap.new/)
 - [**Notion AI**](./NotionAi/)
 - [**Orchids.app**](./Orchids.app/)
 - [**Junie**](./Junie/)
@@ -91,6 +91,7 @@ You can show your support via:
   - [Lumo](./Open%20Source%20prompts/Lumo/)
   - [Gemini CLI](./Open%20Source%20prompts/Gemini%20CLI/)
 - [**CodeBuddy**](./CodeBuddy%20Prompts/)
+- [**Poke**](./Poke/)
 
 ---
 
@@ -98,7 +99,7 @@ You can show your support via:
 
 > Open an issue.
 
-> **Latest Update:** 08/09/2025
+> **Latest Update:** 15/09/2025
 
 ---
 

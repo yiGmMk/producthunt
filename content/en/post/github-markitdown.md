@@ -1,9 +1,9 @@
 ---
 title: markitdown
-date: 2025-08-16T15:28:09+08:00
+date: 2025-09-16T15:27:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592391651451-707cf0e69666?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUzMjkyMDF8&ixlib=rb-4.1.0
-tags: ['github',MarkItDown,Python,Markdown,LLM,document conversion,PDF,PowerPoint,Word,Excel,Images,Audio,HTML,text analysis,file conversion,plugin]
+image: https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgwMDc2NTh8&ixlib=rb-4.1.0
+tags: ['github',MarkItDown,Python,Markdown,file conversion,LLM,text analysis,PDF,PowerPoint,Word,Excel,Images,Audio,HTML,Document Intelligence,Azure]
 categories: ['github']
 ---
 
@@ -175,14 +175,14 @@ result = md.convert("test.pdf")
 print(result.text_content)
 ```
 
-To use Large Language Models for image descriptions, provide `llm_client` and `llm_model`:
+To use Large Language Models for image descriptions (currently only for pptx and image files), provide `llm_client` and `llm_model`:
 
 ```python
 from markitdown import MarkItDown
 from openai import OpenAI
 
 client = OpenAI()
-md = MarkItDown(llm_client=client, llm_model="gpt-4o")
+md = MarkItDown(llm_client=client, llm_model="gpt-4o", llm_prompt="optional custom prompt")
 result = md.convert("example.jpg")
 print(result.text_content)
 ```
@@ -210,7 +210,7 @@ contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additio
 
 ### How to Contribute
 
-You can help by looking at issues or helping review PRs. Any issue or PR is welcome, but we have also marked some as 'open for contribution' and 'open for reviewing' to help facilitate community contributions. These are ofcourse just suggestions and you are welcome to contribute in any way you like.
+You can help by looking at issues or helping review PRs. Any issue or PR is welcome, but we have also marked some as 'open for contribution' and 'open for reviewing' to help facilitate community contributions. These are of course just suggestions and you are welcome to contribute in any way you like.
 
 <div align="center">
 

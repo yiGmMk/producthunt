@@ -1,9 +1,9 @@
 ---
 title: simdjson
-date: 2025-09-15T15:31:28+08:00
+date: 2025-09-16T15:28:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1573470271783-0054dcd317fd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc5MjEzODJ8&ixlib=rb-4.1.0
-tags: ['github',simdjson,JSON,parsing,performance,C++,UTF-8,validation,SIMD,microarchitectures]
+image: https://images.unsplash.com/photo-1674007983449-1fa6e9a097c4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgwMDc2NTh8&ixlib=rb-4.1.0
+tags: ['github',simdjson,JSON,parsing,performance,C++,UTF-8,validation,libraries,benchmark]
 categories: ['github']
 ---
 
@@ -128,9 +128,10 @@ Godbolt
 -------------
 
 Some users may want to browse code along with the compiled assembly. You want to check out the following lists of examples:
+* [C++26 reflection example](https://godbolt.org/z/K3Px64TqK)
 * [simdjson examples with errors handled through exceptions](https://godbolt.org/z/7G5qE4sr9)
 * [simdjson examples with errors without exceptions](https://godbolt.org/z/e9dWb9E4v)
-* [C++26 reflection example](https://godbolt.org/z/xK5TGKdPb)
+ 
 
 Performance results
 -------------------

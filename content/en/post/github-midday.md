@@ -1,9 +1,9 @@
 ---
 title: midday
-date: 2025-09-15T15:30:42+08:00
+date: 2025-09-16T15:29:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1666635376090-ab9ac8a5d911?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc5MjEzODJ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgwMDc2NTh8&ixlib=rb-4.1.0
+tags: ['github',business management,freelancers,contractors,consultants,solo entrepreneurs,time tracking,invoicing,financial tracking]
 categories: ['github']
 ---
 
