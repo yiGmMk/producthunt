@@ -1,8 +1,8 @@
 ---
 title: open-battery-information
-date: 2025-09-16T15:29:49+08:00
+date: 2025-09-17T15:29:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgwMDc2NTh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1721777068175-89419e48a1c7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgwOTQwODd8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

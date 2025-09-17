@@ -1,9 +1,9 @@
 ---
 title: ai-hedge-fund
-date: 2025-09-16T15:28:11+08:00
+date: 2025-09-17T15:28:53+08:00
 draft: False
-image: https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgwMDc2NTh8&ixlib=rb-4.1.0
-tags: ['github',AI,hedge fund,trading,investment,valuation,machine learning,portfolio management,risk management]
+image: https://images.unsplash.com/photo-1653309687132-335175966dd5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgwOTQwODd8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

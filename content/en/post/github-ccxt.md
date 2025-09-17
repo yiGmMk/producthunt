@@ -1,9 +1,9 @@
 ---
 title: ccxt
-date: 2025-09-16T15:29:11+08:00
+date: 2025-09-17T15:29:02+08:00
 draft: False
-image: https://images.unsplash.com/photo-1636109751387-e5e2434268e3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgwMDc2NTh8&ixlib=rb-4.1.0
-tags: ['github',cryptocurrency,exchange,trading,API,JavaScript,Python]
+image: https://images.unsplash.com/photo-1566573208827-3aa9eadf0ed4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgwOTQwODd8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

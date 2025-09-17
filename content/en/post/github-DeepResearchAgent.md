@@ -1,9 +1,9 @@
 ---
 title: DeepResearchAgent
-date: 2025-09-15T15:30:14+08:00
+date: 2025-09-17T15:28:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1479030574009-1e48577746e8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc5MjEzODJ8&ixlib=rb-4.1.0
-tags: ['github',DeepResearchAgent,multi-agent system,task decomposition,agent coordination,Deep Analyzer,Deep Researcher,Browser Use,MCP Manager Agent,General Tool Calling Agent,hierarchical agent collaboration,asynchronous operations,OpenAI,Anthropic,Google LLMs,Qwen models,vLLM,image generation,video generation,GAIA benchmark]
+image: https://images.unsplash.com/photo-1566573208827-3aa9eadf0ed4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgwOTQwODd8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
