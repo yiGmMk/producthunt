@@ -1,9 +1,9 @@
 ---
 title: brush
-date: 2025-09-17T15:29:57+08:00
+date: 2025-09-19T15:28:23+08:00
 draft: False
-image: https://images.unsplash.com/photo-1599117583064-48d912976a91?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgwOTQwODd8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1676139524257-6b71166d737e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgyNjY3ODh8&ixlib=rb-4.1.0
+tags: ['github',3D-reconstruction,Gaussian-splatting,WebGPU,Burn,real-time-rendering,machine-learning,COLMAP,Nerfstudio]
 categories: ['github']
 ---
 

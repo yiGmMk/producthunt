@@ -1,9 +1,9 @@
 ---
 title: SQLBot
-date: 2025-09-18T15:31:35+08:00
+date: 2025-09-19T15:28:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1695940519002-ad9de83b9ec9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgxODA2MTF8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1598620650015-717ea19b8901?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgyNjY3ODh8&ixlib=rb-4.1.0
+tags: ['github',SQLBot,text2sql,RAG,large language model,data source,data access,question answering,AI application,Docker]
 categories: ['github']
 ---
 
@@ -43,7 +43,7 @@ docker run -d \
   -p 8001:8001 \
   -v ./data/sqlbot/excel:/opt/sqlbot/data/excel \
   -v ./data/sqlbot/images:/opt/sqlbot/images \
-  -v ./data/sqlbot/logs:/opt/sqlbot/logs \
+  -v ./data/sqlbot/logs:/opt/sqlbot/app/logs \
   -v ./data/postgresql:/var/lib/postgresql/data \
   --privileged=true \
   dataease/sqlbot

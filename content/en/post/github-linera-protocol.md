@@ -1,17 +1,17 @@
 ---
 title: linera-protocol
-date: 2025-05-08T15:30:13+08:00
+date: 2025-09-19T15:28:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1718036094456-5f57368fdabd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY2ODkzMTF8&ixlib=rb-4.1.0
-tags: ['github',blockchain,Linera,Web3,scalability,low-latency,decentralized,Rust,cryptography]
+image: https://images.unsplash.com/photo-1676139524257-6b71166d737e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgyNjY3ODh8&ixlib=rb-4.1.0
+tags: ['github',Linera,blockchain,Web3,decentralized,scalability,low-latency,Rust,cryptography,SDK]
 categories: ['github']
 ---
 
 # [linera-io/linera-protocol](https://github.com/linera-io/linera-protocol)
 
-# <img src="https://github.com/linera-io/linera-protocol/assets/1105398/fe08c941-93af-4114-bb83-bcc0eaec95f9" width="250" height="90" />
+# <img src="https://github.com/linera-io/linera-protocol/assets/1105398/fe08c941-93af-4114-bb83-bcc0eaec95f9" width="250" height="85" />
 
-[![License](https://img.shields.io/badge/license-Apache-green.svg)](LICENSE)
+[![License](https://img.shields.io/github/license/linera-io/linera-protocol)](LICENSE)
 [![Build Status for Docker](https://github.com/linera-io/linera-protocol/actions/workflows/docker-compose.yml/badge.svg)](https://github.com/linera-io/linera-protocol/actions/workflows/docker-compose.yml)
 [![Build Status for Rust](https://github.com/linera-io/linera-protocol/actions/workflows/rust.yml/badge.svg)](https://github.com/linera-io/linera-protocol/actions/workflows/rust.yml)
 [![Build Status for Documentation](https://github.com/linera-io/linera-protocol/actions/workflows/documentation.yml/badge.svg)](https://github.com/linera-io/linera-protocol/actions/workflows/documentation.yml)
@@ -21,7 +21,9 @@ categories: ['github']
 <!-- [![Build Status for Kubernetes](https://github.com/linera-io/linera-protocol/actions/workflows/kubernetes.yml/badge.svg)](https://github.com/linera-io/linera-protocol/actions/workflows/kubernetes.yml) -->
 
 [Linera](https://linera.io) is a decentralized blockchain infrastructure designed for highly scalable,
-low-latency Web3 applications.
+secure, low-latency Web3 applications.
+
+## Documentation
 
 Visit our [developer page](https://linera.dev) and read our
 [whitepaper](https://linera.io/whitepaper) to learn more about the Linera protocol.
@@ -73,6 +75,9 @@ from low to high levels in the dependency graph)
 
 * [`examples`](./examples) Examples of Linera applications written in Rust.
 
+## Prerequisites
+
+See [`INSTALL.md`](./INSTALL.md) for software requirements to develop in this repo.
 
 ## Quickstart with the Linera CLI tool
 
@@ -111,9 +116,9 @@ linera wallet init --faucet $FAUCET_URL
 INFO1=($(linera wallet request-chain --faucet $FAUCET_URL))
 INFO2=($(linera wallet request-chain --faucet $FAUCET_URL))
 CHAIN1="${INFO1[0]}"
-ACCOUNT1="${INFO1[2]}"
+ACCOUNT1="${INFO1[1]}"
 CHAIN2="${INFO2[0]}"
-ACCOUNT2="${INFO2[2]}"
+ACCOUNT2="${INFO2[1]}"
 
 # Show the different chains tracked by the wallet.
 linera wallet show
@@ -141,3 +146,15 @@ linera query-balance "$CHAIN2:$ACCOUNT2"
 
 More complex examples may be found in our [developer manual](https://linera.dev) as well
 as the [example applications](./examples) in this repository.
+
+## Contributing
+
+We welcome contributions from the community! If you'd like to contribute to the Linera protocol:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+For detailed guidelines, see our [contribution guide](./CONTRIBUTING.md).

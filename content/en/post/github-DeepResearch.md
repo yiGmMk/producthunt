@@ -1,9 +1,9 @@
 ---
 title: DeepResearch
-date: 2025-09-18T15:32:01+08:00
+date: 2025-09-19T15:27:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592508278711-a9365a009923?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgxODA2MTF8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1694608108899-b70271860e86?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgyNjY3ODh8&ixlib=rb-4.1.0
+tags: ['github',Tongyi-DeepResearch, large language model, agentic search, reinforcement learning, information-seeking, long-horizon,  WebAgent,  data synthesis]
 categories: ['github']
 ---
 

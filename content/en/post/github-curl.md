@@ -1,9 +1,9 @@
 ---
 title: curl
-date: 2025-09-18T15:33:07+08:00
+date: 2025-09-19T15:26:50+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592508278711-a9365a009923?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgxODA2MTF8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1676139524257-6b71166d737e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgyNjY3ODh8&ixlib=rb-4.1.0
+tags: ['github',curl,libcurl,command-line tool,data transfer,URL syntax,Open Source,MIT license,GitHub,security]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: omi
-date: 2025-09-17T15:29:40+08:00
+date: 2025-09-19T15:27:57+08:00
 draft: False
-image: https://images.unsplash.com/photo-1676293963736-260e3b78e643?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgwOTQwODd8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1590520694457-4a5308a424d9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgyNjY3ODh8&ixlib=rb-4.1.0
+tags: ['github',Omi, AI wearable, real-time transcription, audio processing, open-source, mobile app, developer kit,  webhook,  AI personas]
 categories: ['github']
 ---
 
@@ -70,8 +70,8 @@ Start speaking, you'll see Real-time transcript on [webhook.site ](https://webho
 
 - [Introduction](https://docs.omi.me/)
 - [omi App setup](https://docs.omi.me/doc/developer/AppSetup)
-- [Buying Guide](https://docs.omi.me/docs/assembly/Buying_Guide/)
-- [Build the device](https://docs.omi.me/docs/assembly/Build_the_device/)
+- [Buying Guide](https://docs.omi.me/doc/assembly/Buying_Guide/)
+- [Build the device](https://docs.omi.me/doc/assembly/Build_the_device/)
 - [Install firmware](https://docs.omi.me/doc/get_started/Flash_device/)
 - [Create your own app in 1 minute](https://docs.omi.me/doc/developer/apps/Introduction).
 
@@ -86,7 +86,7 @@ Start speaking, you'll see Real-time transcript on [webhook.site ](https://webho
 [//]: # "## More links:"
 [//]: #
 [//]: # "- [Contributing](https://docs.omi.me/doc/developer/Contribution/)"
-[//]: # "- [Support](https://docs.omi.me/docs/info/Support/;"
+[//]: # "- [Support](https://docs.omi.me/doc/info/Support/)"
 [//]: # "- [BLE Protocol](https://docs.omi.me/doc/developer/Protocol/)"
 [//]: # "- [Plugins](https://docs.omi.me/doc/developer/Plugins/)"
 

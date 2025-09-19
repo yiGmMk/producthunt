@@ -1,9 +1,9 @@
 ---
 title: flutter
-date: 2025-09-18T15:32:50+08:00
+date: 2025-09-19T15:27:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1639252233126-a8ad466e0732?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgxODA2MTF8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1598620650015-717ea19b8901?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgyNjY3ODh8&ixlib=rb-4.1.0
+tags: ['github',Flutter,SDK,mobile,web,desktop,cross-platform,UI,Dart]
 categories: ['github']
 ---
 
