@@ -1,9 +1,9 @@
 ---
 title: DeepResearch
-date: 2025-09-19T15:27:18+08:00
+date: 2025-09-20T15:24:22+08:00
 draft: False
-image: https://images.unsplash.com/photo-1694608108899-b70271860e86?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgyNjY3ODh8&ixlib=rb-4.1.0
-tags: ['github',Tongyi-DeepResearch, large language model, agentic search, reinforcement learning, information-seeking, long-horizon,  WebAgent,  data synthesis]
+image: https://images.unsplash.com/photo-1676806850877-0e0acd08985b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgzNTMwNTN8&ixlib=rb-4.1.0
+tags: ['github',Tongyi-DeepResearch, large language model, agentic search, long-horizon information-seeking, reinforcement learning,  data synthesis pipeline,  agent inference,  benchmark evaluation]
 categories: ['github']
 ---
 
@@ -127,8 +127,8 @@ We provide benchmark evaluation scripts for various datasets. Please refer to th
 
 Tongyi DeepResearch also has an extensive deep research agent family. You can find more information in the following paper:
 
-[1] [WebWalker: Benchmarking LLMs in Web Traversal](https://arxiv.org/pdf/2501.07572)<br>
-[2] [WebDancer: Towards Autonomous Information Seeking Agency](https://arxiv.org/pdf/2505.22648)<br>
+[1] [WebWalker: Benchmarking LLMs in Web Traversal](https://arxiv.org/pdf/2501.07572) (ACL 2025)<br>
+[2] [WebDancer: Towards Autonomous Information Seeking Agency](https://arxiv.org/pdf/2505.22648) (NeurIPS 2025)<br>
 [3] [WebSailor: Navigating Super-human Reasoning for Web Agent](https://arxiv.org/pdf/2507.02592)<br>
 [4] [WebShaper: Agentically Data Synthesizing via Information-Seeking Formalization](https://arxiv.org/pdf/2507.15061)<br>
 [5] [WebWatcher: Breaking New Frontier of Vision-Language Deep Research Agent](https://arxiv.org/pdf/2508.05748)<br>

@@ -1,9 +1,9 @@
 ---
 title: LazyVim
-date: 2025-05-09T15:29:40+08:00
+date: 2025-09-20T15:24:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1733345743514-297504c58bd2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY3NzU2Nzd8&ixlib=rb-4.1.0
-tags: ['github',Neovim,LazyVim,lazy.nvim,plugins,configuration,IDE,Lua,customization]
+image: https://images.unsplash.com/photo-1591805732958-11e0abc9b290?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgzNTMwNTN8&ixlib=rb-4.1.0
+tags: ['github',Neovim,LazyVim,lazy.nvim,plugins,configuration,IDE,Lua]
 categories: ['github']
 ---
 
@@ -67,7 +67,7 @@ to tweak your config as needed, along with the convenience of a pre-configured s
 
 ## ⚡️ Requirements
 
-- Neovim >= **0.9.0** (needs to be built with **LuaJIT**)
+- Neovim >= **0.11.2** (needs to be built with **LuaJIT**)
 - Git >= **2.19.0** (for partial clones support)
 - a [Nerd Font](https://www.nerdfonts.com/) **_(optional)_**
 - a **C** compiler for `nvim-treesitter`. See [here](https://github.com/nvim-treesitter/nvim-treesitter#requirements)

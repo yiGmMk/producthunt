@@ -1,9 +1,9 @@
 ---
 title: nocodb
-date: 2025-09-18T15:31:25+08:00
+date: 2025-09-20T15:25:05+08:00
 draft: False
-image: https://images.unsplash.com/photo-1590658179309-5971bd8572cf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgxODA2MTF8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1677146138576-be7fd85bba89?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgzNTMwNTN8&ixlib=rb-4.1.0
+tags: ['github',NocoDB,Open-Source,Airtable,Alternative,Database,Spreadsheet,Interface,Workflow,Automations,REST,APIs]
 categories: ['github']
 ---
 
