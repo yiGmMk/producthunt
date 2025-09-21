@@ -1,9 +1,9 @@
 ---
 title: fmt
-date: 2025-09-20T15:25:24+08:00
+date: 2025-09-21T15:24:06+08:00
 draft: False
-image: https://images.unsplash.com/photo-1597814419713-99e2923951b6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgzNTMwNTN8&ixlib=rb-4.1.0
-tags: ['github',C++,formatting library,stdio,iostreams,format API,std::format,std::print,Python,floating-point,Unicode,printf,user-defined types,performance,code size,testing,fuzzing,safety,portability,locale,header-only]
+image: https://images.unsplash.com/photo-1597219911221-0c49f5d2a3b7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg0MzkzOTB8&ixlib=rb-4.1.0
+tags: ['github',fmt,formatting library,C++,stdio,iostreams,format API,std::format,std::print,format string syntax,Dragonbox algorithm,Unicode support]
 categories: ['github']
 ---
 

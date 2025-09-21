@@ -1,9 +1,9 @@
 ---
 title: linera-protocol
-date: 2025-09-20T15:25:41+08:00
+date: 2025-09-21T15:24:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1677146138576-be7fd85bba89?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgzNTMwNTN8&ixlib=rb-4.1.0
-tags: ['github',Linera,blockchain,Web3,scalability,low-latency,decentralized,protocol,Rust]
+image: https://images.unsplash.com/photo-1681394344964-04387f320e83?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg0MzkzOTB8&ixlib=rb-4.1.0
+tags: ['github',blockchain,Linera,Web3,decentralized,scalability,low-latency,Rust,cryptography]
 categories: ['github']
 ---
 

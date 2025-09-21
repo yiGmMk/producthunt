@@ -1,9 +1,9 @@
 ---
 title: loki
-date: 2025-06-21T15:27:37+08:00
+date: 2025-09-21T15:24:27+08:00
 draft: False
-image: https://images.unsplash.com/photo-1616860895045-13553f397d64?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA0OTA4MDd8&ixlib=rb-4.1.0
-tags: ['github',Grafana,Loki,log aggregation,Prometheus,metrics,logs,Kubernetes,Alloy,Promtail]
+image: https://images.unsplash.com/photo-1675021278785-adc2f7d92173?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg0MzkzOTB8&ixlib=rb-4.1.0
+tags: ['github',Loki,Grafana,Prometheus,logs,log aggregation,monitoring,Kubernetes,Alloy,Promtail]
 categories: ['github']
 ---
 

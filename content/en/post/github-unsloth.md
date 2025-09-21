@@ -1,8 +1,8 @@
 ---
 title: unsloth
-date: 2025-09-19T15:28:43+08:00
+date: 2025-09-21T15:25:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1737629918402-b6fe238e9f0b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgyNjY3ODh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1698859546308-81d50527132c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg0MzkzOTB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

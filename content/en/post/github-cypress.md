@@ -1,8 +1,8 @@
 ---
 title: cypress
-date: 2025-09-19T15:29:16+08:00
+date: 2025-09-21T15:25:27+08:00
 draft: False
-image: https://images.unsplash.com/photo-1590520694457-4a5308a424d9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgyNjY3ODh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1681394344964-04387f320e83?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg0MzkzOTB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

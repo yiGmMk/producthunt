@@ -1,9 +1,9 @@
 ---
 title: CopilotKit
-date: 2025-09-20T15:25:59+08:00
+date: 2025-09-21T15:24:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591805732958-11e0abc9b290?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgzNTMwNTN8&ixlib=rb-4.1.0
-tags: ['github',CopilotKit,AI,agent,LangGraph,React,Next.js,headless UI,open source,CLI,integration,security,community]
+image: https://images.unsplash.com/photo-1645743943096-fd41e391543c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg0MzkzOTB8&ixlib=rb-4.1.0
+tags: ['github',CopilotKit,AI,agent,LangGraph,React,Next.js,headless UI,open source,CLI,integration,coagent,generative AI]
 categories: ['github']
 ---
 

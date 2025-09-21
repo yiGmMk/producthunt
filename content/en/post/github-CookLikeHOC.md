@@ -1,9 +1,9 @@
 ---
 title: CookLikeHOC
-date: 2025-09-20T15:25:33+08:00
+date: 2025-09-21T15:23:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1676806850877-0e0acd08985b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgzNTMwNTN8&ixlib=rb-4.1.0
-tags: ['github',Laoxiangji, recipe, cooking, food, website, report, contributor, Home Original Chicken, HOC]
+image: https://images.unsplash.com/photo-1602976730901-934e43f0e550?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg0MzkzOTB8&ixlib=rb-4.1.0
+tags: ['github',Laoxiangji,recipes,cooking,food,Chinese cuisine,website,repository,GitHub,contributor]
 categories: ['github']
 ---
 
