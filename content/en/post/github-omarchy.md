@@ -1,9 +1,9 @@
 ---
 title: omarchy
-date: 2025-09-20T15:24:40+08:00
+date: 2025-09-22T15:30:59+08:00
 draft: False
-image: https://images.unsplash.com/photo-1672357867665-4e4f7392edce?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgzNTMwNTN8&ixlib=rb-4.1.0
-tags: ['github',Arch,Linux,Hyprland,web development,command-line tools,Omarchy,Omakub,MIT License]
+image: https://images.unsplash.com/photo-1509716159367-0180b75063d0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg1MjYxOTV8&ixlib=rb-4.1.0
+tags: ['github',Arch Linux,Hyprland,web development,Linux,Omarchy,command-line tools,configuration,MIT License]
 categories: ['github']
 ---
 

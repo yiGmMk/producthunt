@@ -1,9 +1,9 @@
 ---
 title: AI-For-Beginners
-date: 2025-09-21T15:24:37+08:00
+date: 2025-09-22T15:31:53+08:00
 draft: False
-image: https://images.unsplash.com/photo-1698859546308-81d50527132c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg0MzkzOTB8&ixlib=rb-4.1.0
-tags: ['github',Artificial Intelligence,Deep Learning,Neural Networks,Computer Vision,Natural Language Processing,TensorFlow,PyTorch,Machine Learning]
+image: https://images.unsplash.com/photo-1539206263626-8e1342ad1c60?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg1MjYxOTV8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

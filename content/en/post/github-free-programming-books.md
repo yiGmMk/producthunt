@@ -1,9 +1,9 @@
 ---
 title: free-programming-books
-date: 2025-08-25T15:29:33+08:00
+date: 2025-09-22T15:32:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1698321007024-c53f23b3ca31?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxMDY5Mjh8&ixlib=rb-4.1.0
-tags: ['github',programming books, free resources, programming languages, online courses, cheat sheets, GitHub, EbookFoundation, open source, contribution]
+image: https://images.unsplash.com/photo-1600626721022-33a0113e144d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg1MjYxOTV8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: WebGoat
-date: 2025-09-20T15:24:49+08:00
+date: 2025-09-22T15:31:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1714505867464-1ecf0bc5fb97?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgzNTMwNTN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1731574573959-993dda686d36?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg1MjYxOTV8&ixlib=rb-4.1.0
 tags: ['github',WebGoat,OWASP,web application security,penetration testing,Docker,Java,Spring Boot,security lessons,application flaws]
 categories: ['github']
 ---

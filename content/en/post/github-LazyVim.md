@@ -1,9 +1,9 @@
 ---
 title: LazyVim
-date: 2025-09-20T15:24:32+08:00
+date: 2025-09-22T15:30:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591805732958-11e0abc9b290?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgzNTMwNTN8&ixlib=rb-4.1.0
-tags: ['github',Neovim,LazyVim,lazy.nvim,plugins,configuration,IDE,Lua]
+image: https://images.unsplash.com/photo-1590024229925-4c7bc9d982ef?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg1MjYxOTV8&ixlib=rb-4.1.0
+tags: ['github',Neovim,LazyVim,lazy.nvim,plugin,configuration,IDE,Lua]
 categories: ['github']
 ---
 
