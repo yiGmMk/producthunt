@@ -1,9 +1,9 @@
 ---
 title: hiring-without-whiteboards
-date: 2025-06-25T15:31:42+08:00
+date: 2025-09-23T15:29:24+08:00
 draft: False
-image: https://images.unsplash.com/photo-1675410200389-903e50c46cbf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA4MzY1ODN8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1662403655546-2610bdbc34dc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2MTI0NzN8&ixlib=rb-4.1.0
+tags: ['github',interview, companies, hiring, software, engineering, technology, remote, project]
 categories: ['github']
 ---
 
@@ -907,6 +907,7 @@ Also check out [No Whiteboards](https://www.nowhiteboard.org) to search for jobs
 - [Vance](https://www.vance.tech/careers) | Bangalore, India | A take-home exercise followed by two rounds of interviews: the first with a team member focusing on technical skills and practical problem-solving, and the second with the Head of Engineering, also centered on technical expertise and real-world challenges.
 - [Varsity Tutors](https://www.varsitytutors.com) | Remote | Take home assignment, presentation of assignment, live code review with team. Advanced / high-level chat with team based on skillset and role.
 - [Vayu Technology](https://vayu.com.au) | Sydney, Australia; Kathmandu, Nepal | Short interview, general programming questions and short take home challenge.
+- [Vector Informatik GmbH](https://jobs.vector.com/de) | Karlruhe, Germany | Short online interview, a case study and a presentation of given solution.
 - [Vena Solutions](https://careers.venasolutions.com) | Toronto, Canada | Phone screen, on-site pair-programming and code-review exercise on a real-world problem
 - [Venminder, Inc.](https://www.venminder.com) | Elizabethtown, KY; Louisville, KY | Initial phone screen to explain position. If candidate interested they get a take home assignment followed by a non-scripted in-person interview with team members to judge personality fit.
 - [Verloop](https://verloop.io) | Bengaluru, India | A take home programming exercise and technical discussion

@@ -1,15 +1,15 @@
 ---
 title: bevy
-date: 2025-09-02T15:30:17+08:00
+date: 2025-09-23T15:28:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1642970047680-c940bb0bcf03?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY3OTgwOTd8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1689197736392-7116fcbacfe0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2MTI0NzN8&ixlib=rb-4.1.0
+tags: ['github',Bevy,game engine,Rust,ECS,2D,3D,data-driven,open-source,MIT License,Apache License]
 categories: ['github']
 ---
 
 # [bevyengine/bevy](https://github.com/bevyengine/bevy)
 
-# [![Bevy](assets/branding/bevy_logo_light_dark_and_dimmed.svg)](https://bevy.org)
+# [![Bevy](https://bevy.org/assets/bevy_logo_light_dark_and_dimmed.svg)](https://bevy.org)
 
 [![License](https://img.shields.io/badge/license-MIT%2FApache-blue.svg)](https://github.com/bevyengine/bevy#license)
 [![Crates.io](https://img.shields.io/crates/v/bevy.svg)](https://crates.io/crates/bevy)

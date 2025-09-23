@@ -1,9 +1,9 @@
 ---
 title: CookLikeHOC
-date: 2025-09-22T15:30:24+08:00
+date: 2025-09-23T15:28:00+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592336449622-3db8a7ff377e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg1MjYxOTV8&ixlib=rb-4.1.0
-tags: ['github',Laoxiangji, recipes, cooking, food, Chinese cuisine,  CookLikeHOC,  website,  repository]
+image: https://images.unsplash.com/photo-1547882472-17b34a4465a2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2MTI0NzN8&ixlib=rb-4.1.0
+tags: ['github',Laoxiangji, recipes, cooking, food, Chinese cuisine,  website,  CookLikeHOC,  repository]
 categories: ['github']
 ---
 

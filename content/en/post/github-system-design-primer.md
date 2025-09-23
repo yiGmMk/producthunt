@@ -1,9 +1,9 @@
 ---
 title: system-design-primer
-date: 2025-09-15T15:31:56+08:00
+date: 2025-09-23T15:30:08+08:00
 draft: False
-image: https://images.unsplash.com/photo-1666635376090-ab9ac8a5d911?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc5MjEzODJ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1590147074903-b9ad6ba9eb5a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2MTI0NzN8&ixlib=rb-4.1.0
+tags: ['github',system design, interview preparation, scalability, distributed systems, databases, caching, load balancing]
 categories: ['github']
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: free-programming-books
-date: 2025-09-22T15:32:21+08:00
+date: 2025-09-23T15:29:50+08:00
 draft: False
-image: https://images.unsplash.com/photo-1600626721022-33a0113e144d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg1MjYxOTV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1662403655546-2610bdbc34dc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2MTI0NzN8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

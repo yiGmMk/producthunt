@@ -1,9 +1,9 @@
 ---
 title: stable-diffusion-webui
-date: 2025-04-14T15:29:14+08:00
+date: 2025-09-23T15:29:34+08:00
 draft: False
-image: https://images.unsplash.com/photo-1582457524080-01f5b04cb2db?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ2MTU2OTl8&ixlib=rb-4.0.3
-tags: ['github',Stable Diffusion, web UI, txt2img, img2img, inpainting, outpainting, upscaling, Textual Inversion, GFPGAN, CodeFormer, RealESRGAN, ESRGAN, SwinIR, Swin2SR, LDSR, xformers, Stable Diffusion 2.0, Alt-Diffusion]
+image: https://images.unsplash.com/photo-1590147074903-b9ad6ba9eb5a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2MTI0NzN8&ixlib=rb-4.1.0
+tags: ['github',Stable Diffusion,web UI,text-to-image,image-to-image,inpainting,outpainting,upscaling,GFPGAN,CodeFormer]
 categories: ['github']
 ---
 

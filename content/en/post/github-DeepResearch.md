@@ -1,9 +1,9 @@
 ---
 title: DeepResearch
-date: 2025-09-22T15:30:13+08:00
+date: 2025-09-23T15:28:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1731574573959-993dda686d36?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg1MjYxOTV8&ixlib=rb-4.1.0
-tags: ['github',Tongyi-DeepResearch,large language model,agentic search,information-seeking,reinforcement learning,continual pre-training,synthetic data,benchmark,agent inference]
+image: https://images.unsplash.com/photo-1722929184854-ab6210e4aa29?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2MTI0NzN8&ixlib=rb-4.1.0
+tags: ['github',Tongyi-DeepResearch,large language model,agentic search,information-seeking,reinforcement learning,continual pre-training,synthetic data,agent inference,benchmark]
 categories: ['github']
 ---
 

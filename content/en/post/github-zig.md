@@ -1,9 +1,9 @@
 ---
 title: zig
-date: 2025-05-26T15:38:24+08:00
+date: 2025-09-23T15:30:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1691867378997-abb037235380?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDgyNDUwNjV8&ixlib=rb-4.1.0
-tags: ['github',Zig,programming language,toolchain,software,robust,optimal,reusable,installation,building,LLVM,C,compiler]
+image: https://images.unsplash.com/photo-1501998913911-1d69b8304eb3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2MTI0NzN8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -58,7 +58,7 @@ Ensure you have the required dependencies:
 
  * CMake >= 3.15
  * System C/C++ Toolchain
- * LLVM, Clang, LLD development libraries == 20.x
+ * LLVM, Clang, LLD development libraries == 21.x
 
 Then it is the standard CMake build process:
 

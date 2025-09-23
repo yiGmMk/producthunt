@@ -1,9 +1,9 @@
 ---
 title: freqtrade
-date: 2025-04-15T15:31:09+08:00
+date: 2025-09-23T15:30:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1496088285923-2bcbf1ba3f62?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3MDIxNjZ8&ixlib=rb-4.0.3
-tags: ['github',crypto trading bot, Python, Binance, exchange, backtesting, machine learning, strategy optimization, Telegram, webUI]
+image: https://images.unsplash.com/photo-1630484790258-fa675debd10a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2MTI0NzN8&ixlib=rb-4.1.0
+tags: ['github',crypto trading bot,Python,machine learning,backtesting,exchange,Binance,Telegram,strategy optimization,FreqAI,webUI]
 categories: ['github']
 ---
 
@@ -15,7 +15,6 @@ categories: ['github']
 [![DOI](https://joss.theoj.org/papers/10.21105/joss.04864/status.svg)](https://doi.org/10.21105/joss.04864)
 [![Coverage Status](https://coveralls.io/repos/github/freqtrade/freqtrade/badge.svg?branch=develop&service=github)](https://coveralls.io/github/freqtrade/freqtrade?branch=develop)
 [![Documentation](https://readthedocs.org/projects/freqtrade/badge/)](https://www.freqtrade.io)
-[![Maintainability](https://api.codeclimate.com/v1/badges/5737e6d668200b7518ff/maintainability)](https://codeclimate.com/github/freqtrade/freqtrade/maintainability)
 
 Freqtrade is a free and open source crypto trading bot written in Python. It is designed to support all major exchanges and be controlled via Telegram or webUI. It contains backtesting, plotting and money management tools as well as strategy optimization by machine learning.
 
@@ -75,13 +74,12 @@ Please find the complete documentation on the [freqtrade website](https://www.fr
 
 ## Features
 
-- [x] **Based on Python 3.10+**: For botting on any operating system - Windows, macOS and Linux.
+- [x] **Based on Python 3.11+**: For botting on any operating system - Windows, macOS and Linux.
 - [x] **Persistence**: Persistence is achieved through sqlite.
 - [x] **Dry-run**: Run the bot without paying money.
 - [x] **Backtesting**: Run a simulation of your buy/sell strategy.
 - [x] **Strategy Optimization by machine learning**: Use machine learning to optimize your buy/sell strategy parameters with real exchange data.
 - [X] **Adaptive prediction modeling**: Build a smart strategy with FreqAI that self-trains to the market via adaptive machine learning methods. [Learn more](https://www.freqtrade.io/en/stable/freqai/)
-- [x] **Edge position sizing** Calculate your win rate, risk reward ratio, the best stoploss and adjust your position size before taking a position for each specific market. [Learn more](https://www.freqtrade.io/en/stable/edge/).
 - [x] **Whitelist crypto-currencies**: Select which crypto-currency you want to trade or use dynamic whitelists.
 - [x] **Blacklist crypto-currencies**: Select which crypto-currency you want to avoid.
 - [x] **Builtin WebUI**: Builtin web UI to manage your bot.
@@ -123,7 +121,6 @@ positional arguments:
     backtesting-show    Show past Backtest results
     backtesting-analysis
                         Backtest Analysis module.
-    edge                Edge module.
     hyperopt            Hyperopt module.
     hyperopt-list       List Hyperopt results
     hyperopt-show       Show details of Hyperopt results
@@ -159,6 +156,8 @@ Telegram is not mandatory. However, this is a great way to control your bot. Mor
 - `/stopentry`: Stop entering new trades.
 - `/status <trade_id>|[table]`: Lists all or specific open trades.
 - `/profit [<n>]`: Lists cumulative profit from all finished trades, over the last n days.
+- `/profit_long [<n>]`: Lists cumulative profit from all finished long trades, over the last n days.
+- `/profit_short [<n>]`: Lists cumulative profit from all finished short trades, over the last n days.
 - `/forceexit <trade_id>|all`: Instantly exits the given trade (Ignoring `minimum_roi`).
 - `/fx <trade_id>|all`: Alias to `/forceexit`
 - `/performance`: Show performance of each finished trade grouped by pair
@@ -166,6 +165,7 @@ Telegram is not mandatory. However, this is a great way to control your bot. Mor
 - `/daily <n>`: Shows profit or loss per day, over the last n days.
 - `/help`: Show help message.
 - `/version`: Show version.
+
 
 ## Development branches
 
@@ -232,7 +232,7 @@ To run this bot we recommend you a cloud instance with a minimum of:
 
 ### Software requirements
 
-- [Python >= 3.10](http://docs.python-guide.org/en/latest/starting/installation/)
+- [Python >= 3.11](http://docs.python-guide.org/en/latest/starting/installation/)
 - [pip](https://pip.pypa.io/en/stable/installing/)
 - [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - [TA-Lib](https://ta-lib.github.io/ta-lib-python/)

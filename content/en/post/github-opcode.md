@@ -1,9 +1,9 @@
 ---
 title: opcode
-date: 2025-09-21T15:23:47+08:00
+date: 2025-09-23T15:30:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1659773792982-d0767da2440e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg0MzkzOTB8&ixlib=rb-4.1.0
-tags: ['github',opcode,Claude Code,GUI,AI-assisted development,custom agents,session management,usage analytics,MCP server management,timeline,checkpoints]
+image: https://images.unsplash.com/photo-1630484790258-fa675debd10a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2MTI0NzN8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
