@@ -1,8 +1,8 @@
 ---
 title: AI-Researcher
-date: 2025-09-22T15:32:04+08:00
+date: 2025-09-24T15:29:10+08:00
 draft: False
-image: https://images.unsplash.com/photo-1539206263626-8e1342ad1c60?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg1MjYxOTV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1591601071123-bd42d5373669?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2OTg4NDR8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

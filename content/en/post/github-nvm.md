@@ -1,9 +1,9 @@
 ---
 title: nvm
-date: 2025-06-20T15:29:45+08:00
+date: 2025-09-24T15:28:27+08:00
 draft: False
-image: https://images.unsplash.com/photo-1619029903335-d95dc6acab2d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA0MDQ1MTR8&ixlib=rb-4.1.0
-tags: ['github',Node,npm,nvm,version,manager,install,uninstall,update]
+image: https://images.unsplash.com/photo-1688019983766-216c6a06fe0d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2OTg4NDR8&ixlib=rb-4.1.0
+tags: ['github',Node,nvm,npm,installation,version,manager,nodejs,Linux,macOS]
 categories: ['github']
 ---
 
@@ -161,7 +161,7 @@ RUN touch "${BASH_ENV}"
 RUN echo '. "${BASH_ENV}"' >> ~/.bashrc
 
 # Download and install nvm
-RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | PROFILE="${BASH_ENV}" bash
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | PROFILE="${BASH_ENV}" bash
 RUN echo node > .nvmrc
 RUN nvm install
 ```

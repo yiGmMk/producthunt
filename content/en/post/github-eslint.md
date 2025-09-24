@@ -1,8 +1,8 @@
 ---
 title: eslint
-date: 2025-09-23T15:29:16+08:00
+date: 2025-09-24T15:28:00+08:00
 draft: False
-image: https://images.unsplash.com/photo-1590147074903-b9ad6ba9eb5a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2MTI0NzN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1573470271783-0054dcd317fd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2OTg4NDR8&ixlib=rb-4.1.0
 tags: ['github',ESLint,JavaScript,ECMAScript,code,linting,plugin,rules,configuration,parsing]
 categories: ['github']
 ---
