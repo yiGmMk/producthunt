@@ -1,9 +1,9 @@
 ---
 title: ladybird
-date: 2025-09-24T15:27:43+08:00
+date: 2025-09-25T15:28:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1560507063-5ea26eec6f53?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2OTg4NDR8&ixlib=rb-4.1.0
-tags: ['github',web browser,Ladybird,web standards,multi-process architecture,SerenityOS,LibWeb,JavaScript engine,WebAssembly]
+image: https://images.unsplash.com/photo-1590091593981-c514698110b1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg3ODUyNzd8&ixlib=rb-4.1.0
+tags: ['github',web browser,Ladybird,LibWeb,SerenityOS,JavaScript,WebAssembly]
 categories: ['github']
 ---
 

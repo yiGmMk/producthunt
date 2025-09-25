@@ -1,9 +1,9 @@
 ---
 title: freqtrade
-date: 2025-09-23T15:30:28+08:00
+date: 2025-09-25T15:29:06+08:00
 draft: False
-image: https://images.unsplash.com/photo-1630484790258-fa675debd10a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2MTI0NzN8&ixlib=rb-4.1.0
-tags: ['github',crypto trading bot,Python,machine learning,backtesting,exchange,Binance,Telegram,strategy optimization,FreqAI,webUI]
+image: https://images.unsplash.com/photo-1590083948592-a5a1f0310d0e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg3ODUyNzd8&ixlib=rb-4.1.0
+tags: ['github',Freqtrade,crypto trading bot,Python,Binance,exchange,backtesting,machine learning,Telegram,webUI]
 categories: ['github']
 ---
 

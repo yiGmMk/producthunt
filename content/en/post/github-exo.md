@@ -1,9 +1,9 @@
 ---
 title: exo
-date: 2025-08-10T15:27:54+08:00
+date: 2025-09-25T15:30:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1670893495039-c377cc7fb97f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ4MTA4MjN8&ixlib=rb-4.1.0
-tags: ['github',exo, AI cluster, distributed inference, model partitioning, device discovery, ChatGPT-compatible API, MLX, tinygrad, Llama, Mistral, LlaVA, Qwen, DeepSeek]
+image: https://images.unsplash.com/photo-1543208599-418629a2d6c8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg3ODUyNzd8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

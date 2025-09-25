@@ -1,9 +1,9 @@
 ---
 title: CookLikeHOC
-date: 2025-09-24T15:28:45+08:00
+date: 2025-09-25T15:29:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1537301696988-4a82a4959466?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2OTg4NDR8&ixlib=rb-4.1.0
-tags: ['github',Laoxiangji,CookLikeHOC,recipe,cooking,food,Chinese cuisine,website,report]
+image: https://images.unsplash.com/photo-1675191475318-d2bf6bad1200?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg3ODUyNzd8&ixlib=rb-4.1.0
+tags: ['github',Laoxiangji,recipes,cooking,food,website,AI,GitHub,repository,CookLikeHOC]
 categories: ['github']
 ---
 
@@ -19,9 +19,15 @@ categories: ['github']
 
 **新更新**
 
-- 炖菜已上线部分由ai配图的菜品，但更欢迎大家来贡献实拍图
+- 欢迎大家来贡献实拍图
 
 - 现已上线网页端，[点击访问](https://cooklikehoc.soilzhu.su)
+
+- Run with Docker? Check it out [here](https://github.com/Gar-b-age/CookLikeHOC/tree/main/docker_support), supported by [@honestAnt](https://github.com/honestAnt) in [PR #141](https://github.com/Gar-b-age/CookLikeHOC/pull/141)
+
+- AI 绘制的手绘图版及AI配图流程版网页： [点击访问](https://ai.cooklikehoc.soilzhu.su), 手绘图由 [@liucongg](https://github.com/liucongg) 贡献，见 [PR #143](https://github.com/Gar-b-age/CookLikeHOC/pull/143)
+
+---
 
 [![link](/tg.png)](https://t.me/cooklikehoc)
 

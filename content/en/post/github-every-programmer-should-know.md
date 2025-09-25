@@ -1,9 +1,9 @@
 ---
 title: every-programmer-should-know
-date: 2025-09-24T15:28:17+08:00
+date: 2025-09-25T15:29:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1587930778465-0697740bd998?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2OTg4NDR8&ixlib=rb-4.1.0
-tags: ['github',Algorithms,Data Structures,Software Engineering,Computer Science,Distributed Systems,Security,Programming Practices,Software Design]
+image: https://images.unsplash.com/photo-1495548511040-c155ad62ad28?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg3ODUyNzd8&ixlib=rb-4.1.0
+tags: ['github',Algorithms, Data Structures, Distributed Systems, Security, Software Engineering, Programming Practices, Computer Science,  Architecture]
 categories: ['github']
 ---
 
