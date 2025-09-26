@@ -1,9 +1,9 @@
 ---
 title: capnweb
-date: 2025-09-25T15:28:05+08:00
+date: 2025-09-26T15:28:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1721493156764-cc3019ceabd6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg3ODUyNzd8&ixlib=rb-4.1.0
-tags: ['github',Cap'n Proto, JavaScript, RPC, object-capability, WebSocket, HTTP, TypeScript, Cloudflare Workers, JSON,  promise pipelining,  bidirectional calling]
+image: https://images.unsplash.com/photo-1698695249949-d10a60c0be1c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg4NzE2MTF8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -184,7 +184,7 @@ import { newWebSocketRpcSession } from "capnweb";
 // feature, part of the "explicit resource management" spec. Alternatively,
 // we could declare `api` with `let` or `const` and make sure to call
 // `api[Symbol.dispose]()` to dispose it and close the connection later.
-using api = newWebSocketRpcSession<PublicApi>("https://example.com/api");
+using api = newWebSocketRpcSession<PublicApi>("wss://example.com/api");
 
 // Usage is exactly the same, except we don't have to await all the promises
 // at once.

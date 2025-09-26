@@ -1,9 +1,9 @@
 ---
 title: Python
-date: 2025-09-19T15:26:43+08:00
+date: 2025-09-26T15:27:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1686178274108-f47a1f560aed?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgyNjY3ODh8&ixlib=rb-4.1.0
-tags: ['github',Python,algorithms,programming,education,data structures,computer science,GitHub,implementation]
+image: https://images.unsplash.com/photo-1547473069-111db0e65131?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg4NzE2MTF8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
