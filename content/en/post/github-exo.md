@@ -1,8 +1,8 @@
 ---
 title: exo
-date: 2025-09-25T15:30:19+08:00
+date: 2025-09-27T15:24:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1543208599-418629a2d6c8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg3ODUyNzd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1545064579-43204e278895?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg5NTc3Njh8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

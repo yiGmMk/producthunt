@@ -1,8 +1,8 @@
 ---
 title: cookbook
-date: 2025-06-29T15:29:32+08:00
+date: 2025-09-27T15:24:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1677611998429-1baa4371456b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTExODIwNTJ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1671835085851-f93474174a95?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg5NTc3Njh8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -32,11 +32,14 @@ Here are the recent additions and updates to the Gemini API and the Cookbook:
 
 * **Gemini 2.5 models:** Explore the capabilities of the latest Gemini 2.5 models (Flash and Pro)! See the [Get Started Guide](./quickstarts/Get_started.ipynb) and the [thinking guide](./quickstarts/Get_started_thinking.ipynb) as they'll all be thinking ones.
 * **Imagen and Veo**: Get started with our media generation model with this brand new [Veo guide](./quickstarts/Get_started_Veo.ipynb) and [Imagen guide](./quickstarts/Get_started_imagen.ipynb)!
+* **Gemini Robotics-ER 1.5**: Learn about this new Gemini model specifically for spatial understanding and reasoning for [robotics applications](./quickstarts/gemini-robotics-er.ipynb).
 * **Lyria and TTS**: Get started with podcast and music generation with the [TTS](./quickstarts/Get_started_TTS.ipynb) and [Lyria RealTime](./quickstarts/Get_started_LyriaRealTime.ipynb) models.
 * **LiveAPI**: Get started with the [multimodal Live API](./quickstarts/Get_started_LiveAPI.ipynb) and unlock new interactivity with Gemini.
 * **Recently Added Guides:**
-  * [Browser as a tool](./examples/Browser_as_a_tool.ipynb): Use a web browser for live and internal (intranet) web interactions
-  * [Grounding](./quickstarts/Grounding.ipynb): Discover different ways to ground Gemini's answer using different tools, from Google Search to Youtube and the new url context tool.
+  * [Image-out](./quickstarts/Image_out.ipynb): Use Gemini's native image generation capabilities to edit images with high consistency or generate visual stories.
+  * [Grounding](./quickstarts/Grounding.ipynb): Discover different ways to ground Gemini's answer using different tools, from Google Search to Youtube and the new **url context** tool.
+  * [Batch-mode](./quickstarts/Batch_mode.ipynb): Use Batch-mode to send large volume of non-time-sensitive requests to the model and get a 50% discount.
+
   
 <br><br>
 
@@ -68,6 +71,7 @@ Then, explore the other quickstarts tutorials to learn about individual features
 ## 2. Examples (Practical Use Cases)
 
 These examples demonstrate how to combine multiple Gemini API features or 3rd-party tools to build more complex applications.
+*  [Browser as a tool](./examples/Browser_as_a_tool.ipynb): Use a web browser for live and internal (intranet) web interactions
 *  [Illustrate a book](./examples/Book_illustration.ipynb): Use Gemini and Imagen to create illustration for an open-source book
 *  [Animated Story Generation](./examples/Animated_Story_Video_Generation_gemini.ipynb): Create animated videos by combining Gemini's story generation, Imagen, and audio synthesis
 *  [Plotting and mapping Live](./examples/LiveAPI_plotting_and_mapping.ipynb): Mix *Live API* and *Code execution* to solve complex tasks live
@@ -111,7 +115,7 @@ improved tool usage (
 [Google search grounding](https://ai.google.dev/gemini-api/docs/grounding?lang=python)),
 and media generation ([Imagen](https://ai.google.dev/gemini-api/docs/imagen) and [Veo](https://ai.google.dev/gemini-api/docs/video)).
 This SDK allows you to connect to the Gemini API through either
-[Google AI Studio](https://aistudio.google.com/prompts/new_chat?model=gemini-2.0-flash-exp) or
+[Google AI Studio](https://aistudio.google.com/prompts/new_chat?model=gemini-2.5-flash) or
 [Vertex AI](https://cloud.google.com/vertex-ai/generative-ai/docs/gemini-v2).
 
 The <code>[google-generativeai](https://pypi.org/project/google-generativeai)</code>
@@ -135,3 +139,5 @@ For enterprise developers, the Gemini API is also available on Google Cloud Vert
 Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 Thank you for developing with the Gemini API! We're excited to see what you create.
+
+
