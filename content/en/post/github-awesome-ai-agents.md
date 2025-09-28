@@ -1,9 +1,9 @@
 ---
 title: awesome-ai-agents
-date: 2025-08-09T15:29:04+08:00
+date: 2025-09-28T15:25:57+08:00
 draft: False
-image: https://images.unsplash.com/photo-1666627830631-4e3d18bb9f73?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ3MjQ0NTR8&ixlib=rb-4.1.0
-tags: ['github',AI agent, LLM, multi-agent, coding, productivity, general purpose, open source, framework, data analysis, business intelligence]
+image: https://images.unsplash.com/photo-1616666720106-c0d8fc22c891?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkwNDQyMTd8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

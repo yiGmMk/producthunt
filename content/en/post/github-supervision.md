@@ -1,9 +1,9 @@
 ---
 title: supervision
-date: 2025-07-31T15:34:13+08:00
+date: 2025-09-28T15:25:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1565104165703-0777aab1b278?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM5NDcyMTB8&ixlib=rb-4.1.0
-tags: ['github',computer vision, object detection, annotation, datasets, model connectors, Roboflow, supervision, Ultralytics, YOLO, Python]
+image: https://images.unsplash.com/photo-1544760110-fd7d2f7e93c3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkwNDQyMTd8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
