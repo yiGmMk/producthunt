@@ -1,9 +1,9 @@
 ---
 title: opencode
-date: 2025-09-18T15:32:24+08:00
+date: 2025-09-29T15:29:03+08:00
 draft: False
-image: https://images.unsplash.com/photo-1656872626422-d1e812e0e28e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgxODA2MTF8&ixlib=rb-4.1.0
-tags: ['github',AI coding agent,terminal,open source,LLM,OpenAI,Google,Anthropic,TUI,client/server architecture,neovim,terminal.shop]
+image: https://images.unsplash.com/photo-1696017461920-620068c34a0a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkxMzA4NzZ8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

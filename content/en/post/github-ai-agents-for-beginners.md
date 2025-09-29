@@ -1,9 +1,9 @@
 ---
 title: ai-agents-for-beginners
-date: 2025-09-11T15:29:56+08:00
+date: 2025-09-29T15:30:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1643461438363-14386fe7a1de?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc1NzU3Mzd8&ixlib=rb-4.1.0
-tags: ['github',AI Agents,Microsoft,course,tutorial,beginners,Azure,AI Foundry,Semantic Kernel,AutoGen,GitHub]
+image: https://images.unsplash.com/photo-1538426923164-6869f58ccae5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkxMzA4NzZ8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -96,7 +96,7 @@ Do you have suggestions or found spelling or code errors? [Raise an issue](https
 | AI Agents in Production                      | [Link](./10-ai-agents-production/README.md)        | [Video](https://youtu.be/l4TP6IyJxmQ?si=31dnhexRo6yLRJDl)  | [Link](https://aka.ms/ai-agents-beginners/collection?WT.mc_id=academic-105485-koreyst) |
 | Using Agentic Protocols (MCP, A2A and NLWeb) | [Link](./11-agentic-protocols/README.md)           | [Video](https://youtu.be/X-Dh9R3Opn8)                                 | [Link](https://aka.ms/ai-agents-beginners/collection?WT.mc_id=academic-105485-koreyst) |
 | Context Engineering for AI Agents            | [Link](./12-context-engineering/README.md)         | [Video](https://youtu.be/F5zqRV7gEag)                                 | [Link](https://aka.ms/ai-agents-beginners/collection?WT.mc_id=academic-105485-koreyst) |
-| Managing Agentic Memory                      | Coming - September 11th                            |                                                            |                                                                                        |
+| Managing Agentic Memory                      | [Link](./13-agent-memory/README.md)     |                                                            |                                                                                        |
 | Evaluating AI Agents                         | Coming - September 18th                            |                                                            |                                                                                        |
 | Building Computer Use Agents (CUA)           | Coming - September 25th                            |                                                            |                                                                                        |
 | Deploying Scalable Agents                    | Coming - September 25th                            |                                                            |                                                                                        |

@@ -1,9 +1,9 @@
 ---
 title: qlib
-date: 2025-07-15T15:32:36+08:00
+date: 2025-09-29T15:28:58+08:00
 draft: False
-image: https://images.unsplash.com/photo-1698417749491-72bba47caf07?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI1NjQ3MTl8&ixlib=rb-4.1.0
-tags: ['github',quantitative investment, machine learning, reinforcement learning, Qlib, financial data, algorithmic trading, portfolio optimization, risk modeling]
+image: https://images.unsplash.com/photo-1636114673156-052a83459fc1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkxMzA4NzZ8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -240,10 +240,10 @@ Load and prepare data by running the following code:
 ### Get with module
   ```bash
   # get 1d data
-  python -m qlib.run.get_data qlib_data --target_dir ~/.qlib/qlib_data/cn_data --region cn
+  python -m qlib.cli.data qlib_data --target_dir ~/.qlib/qlib_data/cn_data --region cn
 
   # get 1min data
-  python -m qlib.run.get_data qlib_data --target_dir ~/.qlib/qlib_data/cn_data_1min --region cn --interval 1min
+  python -m qlib.cli.data qlib_data --target_dir ~/.qlib/qlib_data/cn_data_1min --region cn --interval 1min
 
   ```
 
@@ -335,12 +335,12 @@ We recommend users to prepare their own data if they have a high-quality dataset
     ```
 2. Start a new Docker container
     ```bash
-    docker run -it --name <container name> -v <Mounted local directory>:/app qlib_image_stable
+    docker run -it --name <container name> -v <Mounted local directory>:/app pyqlib/qlib_image_stable:stable
     ```
 3. At this point you are in the docker environment and can run the qlib scripts. An example:
     ```bash
     >>> python scripts/get_data.py qlib_data --name qlib_data_simple --target_dir ~/.qlib/qlib_data/cn_data --interval 1d --region cn
-    >>> python qlib/workflow/cli.py examples/benchmarks/LightGBM/workflow_config_lightgbm_Alpha158.yaml
+    >>> python qlib/cli/run.py examples/benchmarks/LightGBM/workflow_config_lightgbm_Alpha158.yaml
     ```
 4. Exit the container
     ```bash
@@ -370,7 +370,7 @@ Qlib provides a tool named `qrun` to run the whole workflow automatically (inclu
     ```
     If users want to use `qrun` under debug mode, please use the following command:
     ```bash
-    python -m pdb qlib/workflow/cli.py examples/benchmarks/LightGBM/workflow_config_lightgbm_Alpha158.yaml
+    python -m pdb qlib/cli/run.py examples/benchmarks/LightGBM/workflow_config_lightgbm_Alpha158.yaml
     ```
     The result of `qrun` is as follows, please refer to [docs](https://qlib.readthedocs.io/en/latest/component/strategy.html#result) for more explanations about the result. 
 

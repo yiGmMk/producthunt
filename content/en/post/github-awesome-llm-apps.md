@@ -1,9 +1,9 @@
 ---
 title: awesome-llm-apps
-date: 2025-08-20T15:29:32+08:00
+date: 2025-09-29T15:28:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1635964972147-97ef93d92a53?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU2NzQ5MDF8&ixlib=rb-4.1.0
-tags: ['github',LLM, AI Agents, Multi-agent Teams, RAG,  OpenAI, Anthropic, Google, DeepSeek, Qwen, Llama]
+image: https://images.unsplash.com/photo-1715010895566-32db124e83e5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkxMzA4NzZ8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -40,7 +40,7 @@ categories: ['github']
 
 # 🌟 Awesome LLM Apps
 
-A curated collection of **Awesome LLM apps built with RAG, AI Agents, Multi-agent Teams, MCP, Voice Agents, and more.** This repository features LLM apps that use models from OpenAI, Anthropic, Google, and open-source models like DeepSeek, Qwen or Llama that you can run locally on your computer.
+A curated collection of **Awesome LLM apps built with RAG, AI Agents, Multi-agent Teams, MCP, Voice Agents, and more.** This repository features LLM apps that use models from <img src="https://cdn.simpleicons.org/openai"  alt="openai logo" width="25" height="15">**OpenAI** , <img src="https://cdn.simpleicons.org/anthropic"  alt="anthropic logo" width="25" height="15">**Anthropic**, <img src="https://cdn.simpleicons.org/googlegemini"  alt="google logo" width="25" height="18">**Google**, <img src="https://cdn.simpleicons.org/x"  alt="X logo" width="25" height="15">**xAI** and open-source models like <img src="https://cdn.simpleicons.org/alibabacloud"  alt="alibaba logo" width="25" height="15">**Qwen** or  <img src="https://cdn.simpleicons.org/meta"  alt="meta logo" width="25" height="15">**Llama** that you can run locally on your computer.
 
 <p align="center">
   <a href="https://trendshift.io/repositories/9876" target="_blank">
@@ -53,6 +53,31 @@ A curated collection of **Awesome LLM apps built with RAG, AI Agents, Multi-agen
 - 💡 Discover practical and creative ways LLMs can be applied across different domains, from code repositories to email inboxes and more.
 - 🔥 Explore apps that combine LLMs from OpenAI, Anthropic, Gemini, and open-source alternatives with AI Agents, Agent Teams, MCP & RAG.
 - 🎓 Learn from well-documented projects and contribute to the growing open-source ecosystem of LLM-powered applications.
+
+## 🙏 Thanks to our sponsors
+
+<table align="center" cellpadding="16" cellspacing="12">
+  <tr>
+    <td align="center">
+      <a href="https://getunblocked.com/unblocked-mcp/?utm_source=oss&utm_medium=sponsorship&utm_campaign=awesome-llm-apps" target="_blank" rel="noopener" title="Unblocked">
+        <img src="docs/banner/sponsors/unblocked.png" alt="Unblocked" width="6000">
+      </a>
+      <br>
+      <a href="https://getunblocked.com/unblocked-mcp/?utm_source=oss&utm_medium=sponsorship&utm_campaign=awesome-llm-apps" target="_blank" rel="noopener" style="text-decoration: none; color: #333; font-weight: bold; font-size: 18px;">
+        Unblocked
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://sponsorunwindai.com/" title="Sponsor Awesome LLM Apps Repo">
+        <img src="docs/banner/sponsor_awesome_llm_apps.png" alt="Sponsor Awesome LLM Apps Repo" width="6000">
+      </a>
+      <br>
+      <a href="https://sponsorunwindai.com/" style="text-decoration: none; color: #333; font-weight: bold; font-size: 18px;">
+        Become a Sponsor
+      </a>
+    </td>
+  </tr>
+</table>
 
 ## 📂 Featured AI Projects
 
@@ -118,7 +143,7 @@ A curated collection of **Awesome LLM apps built with RAG, AI Agents, Multi-agen
 *   [🔊 Voice RAG Agent (OpenAI SDK)](voice_ai_agents/voice_rag_openaisdk/)
 
 
-### 🌐 MCP AI Agents
+### <img src="https://cdn.simpleicons.org/modelcontextprotocol"  alt="mcp logo" width="25" height="20"> MCP AI Agents 
 
 *   [♾️ Browser MCP Agent](mcp_ai_agents/browser_mcp_agent/)
 *   [🐙 GitHub MCP Agent](mcp_ai_agents/github_mcp_agent/)
@@ -126,10 +151,11 @@ A curated collection of **Awesome LLM apps built with RAG, AI Agents, Multi-agen
 *   [🌍 AI Travel Planner MCP Agent](mcp_ai_agents/ai_travel_planner_mcp_agent_team)
 
 ### 📀 RAG (Retrieval Augmented Generation)
-*   [🔗 Agentic RAG](rag_tutorials/agentic_rag/)
+*   [🔥 Agentic RAG with Embedding Gemma](rag_tutorials/agentic_rag_embedding_gemma)
 *   [🧐 Agentic RAG with Reasoning](rag_tutorials/agentic_rag_with_reasoning/)
 *   [📰 AI Blog Search (RAG)](rag_tutorials/ai_blog_search/)
 *   [🔍 Autonomous RAG](rag_tutorials/autonomous_rag/)
+*   [🔄 Contextual AI RAG Agent](rag_tutorials/contextualai_rag_agent/)
 *   [🔄 Corrective RAG (CRAG)](rag_tutorials/corrective_rag/)
 *   [🐋 Deepseek Local RAG Agent](rag_tutorials/deepseek_local_rag_agent/)
 *   [🤔 Gemini Agentic RAG](rag_tutorials/gemini_agentic_rag/)
@@ -164,16 +190,25 @@ A curated collection of **Awesome LLM apps built with RAG, AI Agents, Multi-agen
 
 ### 🔧 LLM Fine-tuning Tutorials
 
-*   [🔧 Llama 3.2 Fine-tuning](advanced_llm_apps/llm_finetuning_tutorials/llama3.2_finetuning/)
+* <img src="https://cdn.simpleicons.org/google"  alt="google logo" width="20" height="15"> [Gemma 3 Fine-tuning](advanced_llm_apps/llm_finetuning_tutorials/gemma3_finetuning/)
+* <img src="https://cdn.simpleicons.org/meta"  alt="meta logo" width="25" height="15"> [Llama 3.2 Fine-tuning](advanced_llm_apps/llm_finetuning_tutorials/llama3.2_finetuning/)
+
 
 ### 🧑‍🏫 AI Agent Framework Crash Course
 
-- [Google ADK Crash Course](ai_agent_framework_crash_course/google_adk_crash_course/)
+<img src="https://cdn.simpleicons.org/google"  alt="google logo" width="25" height="15"> [Google ADK Crash Course](ai_agent_framework_crash_course/google_adk_crash_course/)
   - Starter agent; model‑agnostic (OpenAI, Claude)
   - Structured outputs (Pydantic)
   - Tools: built‑in, function, third‑party, MCP tools
   - Memory; callbacks; Plugins
   - Simple multi‑agent; Multi‑agent patterns
+
+<img src="https://cdn.simpleicons.org/openai"  alt="openai logo" width="25" height="15"> [OpenAI Agents SDK Crash Course](ai_agent_framework_crash_course/openai_sdk_crash_course/)
+  - Starter agent; function calling; structured outputs
+  - Tools: built‑in, function, third‑party integrations
+  - Memory; callbacks; evaluation
+  - Multi‑agent patterns; agent handoffs
+  - Swarm orchestration; routing logic
 
 ## 🚀 Getting Started
 
@@ -197,11 +232,8 @@ A curated collection of **Awesome LLM apps built with RAG, AI Agents, Multi-agen
 
 4. **Follow the project-specific instructions** in each project's `README.md` file to set up and run the app.
 
-## 🤝 Contributing to Open Source
 
-Contributions are welcome! If you have any ideas, improvements, or new apps to add, please create a new [GitHub Issue](https://github.com/Shubhamsaboo/awesome-llm-apps/issues) or submit a pull request. Make sure to follow the existing project structure and include a detailed `README.md` for each new app.
-
-### Thank You, Community, for the Support! 🙏
+### <img src="https://cdn.simpleicons.org/github"  alt="github logo" width="25" height="20"> Thank You, Community, for the Support! 🙏
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Shubhamsaboo/awesome-llm-apps&type=Date)](https://star-history.com/#Shubhamsaboo/awesome-llm-apps&Date)
 
