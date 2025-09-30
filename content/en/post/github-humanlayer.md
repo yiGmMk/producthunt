@@ -1,8 +1,8 @@
 ---
 title: humanlayer
-date: 2025-09-29T15:28:31+08:00
+date: 2025-09-30T15:28:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1536152179149-db2dfaa2db9b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkxMzA4NzZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1490713230272-bf236b61ad43?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkyMTcyNjR8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -17,7 +17,7 @@ categories: ['github']
 
 <div align="center">
 
-# Close your editor forever.
+## The best way to get Coding Agents to solve hard problems in complex codebases
 
 **CodeLayer is an open source IDE that lets you orchestrate AI coding agents.**
 

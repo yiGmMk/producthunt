@@ -1,8 +1,8 @@
 ---
 title: ai-agents-for-beginners
-date: 2025-09-29T15:30:15+08:00
+date: 2025-09-30T15:28:57+08:00
 draft: False
-image: https://images.unsplash.com/photo-1538426923164-6869f58ccae5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkxMzA4NzZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1490713230272-bf236b61ad43?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkyMTcyNjR8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -107,7 +107,8 @@ Do you have suggestions or found spelling or code errors? [Raise an issue](https
 
 Our team produces other courses! Check out:
 
-- [**NEW** Model Context Protocol (MCP) For Beginners](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
+- [**NEW** Edge AI for Beginners](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
+- [Model Context Protocol (MCP) For Beginners](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
 - [Generative AI for Beginners using .NET](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 - [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 - [Generative AI for Beginners using Java](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)

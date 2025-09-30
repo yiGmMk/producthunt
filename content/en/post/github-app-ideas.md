@@ -1,8 +1,8 @@
 ---
 title: app-ideas
-date: 2025-07-09T15:32:15+08:00
+date: 2025-09-30T15:29:24+08:00
 draft: False
-image: https://images.unsplash.com/photo-1593026238203-90a4fc78cba5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIwNDYyMzF8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1555759446-cf7598d7c14c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkyMTcyNjR8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
