@@ -1,9 +1,9 @@
 ---
 title: devops-exercises
-date: 2025-07-06T15:27:41+08:00
+date: 2025-10-01T15:29:24+08:00
 draft: False
-image: https://images.unsplash.com/photo-1543414535-5da1098bf8c2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3ODY3OTR8&ixlib=rb-4.1.0
-tags: ['github',DevOps,Git,Kubernetes,AWS,Azure,Linux,CI/CD,Containers,Ansible,Terraform]
+image: https://images.unsplash.com/photo-1643531897762-e9c1101c0c06?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzMDM2NDl8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -1130,7 +1130,7 @@ With <code>var x int = 2</code> we are setting the variable type to integer whil
 <details>
 <summary>True or False? In Go we can redeclare variables and once declared we must use it.</summary>
 
-False. We can't redeclare variables but yes, we must used declared variables.
+False. We can't redeclare variables but yes, we must use declared variables.
 </b></details>
 
 <details>

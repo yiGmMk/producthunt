@@ -1,8 +1,8 @@
 ---
 title: LLMs-from-scratch
-date: 2025-09-29T15:28:23+08:00
+date: 2025-10-01T15:29:10+08:00
 draft: False
-image: https://images.unsplash.com/photo-1636114673156-052a83459fc1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkxMzA4NzZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1690029670479-9fee2fa120eb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzMDM2NDl8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

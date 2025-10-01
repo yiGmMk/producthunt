@@ -1,9 +1,9 @@
 ---
 title: guia-entrevistas-de-programacion
-date: 2025-08-31T15:26:27+08:00
+date: 2025-10-01T15:28:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1594835139718-6918945f2c56?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY2MjUxMDd8&ixlib=rb-4.1.0
-tags: ['github',Software Engineering,Technical Interviews,Algorithms,Data Structures,Design Patterns,System Design,Databases,Software Architecture,Clean Code,SOLID Principles]
+image: https://images.unsplash.com/photo-1690029670479-9fee2fa120eb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzMDM2NDl8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

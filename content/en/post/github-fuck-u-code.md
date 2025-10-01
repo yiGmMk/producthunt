@@ -1,8 +1,8 @@
 ---
 title: fuck-u-code
-date: 2025-09-30T15:28:12+08:00
+date: 2025-10-01T15:28:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1619639522705-d416aabbc3d8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkyMTcyNjR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1639402478527-615f5eaf4112?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzMDM2NDl8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

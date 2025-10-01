@@ -1,8 +1,8 @@
 ---
 title: awesome-llm-apps
-date: 2025-09-29T15:28:48+08:00
+date: 2025-10-01T15:29:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1715010895566-32db124e83e5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkxMzA4NzZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1580184482029-94fdccd86f85?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzMDM2NDl8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

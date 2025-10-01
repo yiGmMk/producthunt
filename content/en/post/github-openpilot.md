@@ -1,8 +1,8 @@
 ---
 title: openpilot
-date: 2025-09-30T15:28:00+08:00
+date: 2025-10-01T15:28:10+08:00
 draft: False
-image: https://images.unsplash.com/photo-1512987415479-85f370bca602?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkyMTcyNjR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1551336731-71813ee30e9d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzMDM2NDl8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
