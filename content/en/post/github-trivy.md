@@ -1,9 +1,9 @@
 ---
 title: trivy
-date: 2025-09-07T15:24:01+08:00
+date: 2025-10-02T15:27:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1733169312713-fd0c6963487a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcyMjk4MjZ8&ixlib=rb-4.1.0
-tags: ['github',Trivy,security,scanner,container,vulnerabilities,software,dependencies,misconfigurations,secrets,IaC]
+image: https://images.unsplash.com/photo-1618001429658-033064f07494?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzODk5NTh8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

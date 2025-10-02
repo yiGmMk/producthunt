@@ -1,8 +1,8 @@
 ---
 title: llm-course
-date: 2025-08-30T15:26:43+08:00
+date: 2025-10-02T15:27:06+08:00
 draft: False
-image: https://images.unsplash.com/photo-1682345334042-3b4b8ab0c29a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY1Mzg2NDl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1586521995659-4204fe01d104?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzODk5NTh8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

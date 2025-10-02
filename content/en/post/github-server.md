@@ -1,8 +1,8 @@
 ---
 title: server
-date: 2025-10-01T15:27:48+08:00
+date: 2025-10-02T15:26:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1583532040316-05adf0d7f14b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzMDM2NDl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1712865085068-29b6a390936a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzODk5NTh8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

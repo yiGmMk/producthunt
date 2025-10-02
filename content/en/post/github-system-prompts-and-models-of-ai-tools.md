@@ -1,9 +1,9 @@
 ---
 title: system-prompts-and-models-of-ai-tools
-date: 2025-09-22T15:30:46+08:00
+date: 2025-10-02T15:28:00+08:00
 draft: False
-image: https://images.unsplash.com/photo-1590024229925-4c7bc9d982ef?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg1MjYxOTV8&ixlib=rb-4.1.0
-tags: ['github',AI tools,system prompts,models,GitHub repository,open source,AI engineering,agents,prompts,Latitude,Discord,LeaksLab,Trendshift,Cloudback,DeepWiki,PayPal,BTC,LTC,ETH,Patreon,Ko-fi]
+image: https://images.unsplash.com/photo-1720729587534-adff86c53fd4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzODk5NTh8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -41,6 +41,8 @@ categories: ['github']
 <a href="https://trendshift.io/repositories/14084" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14084" alt="x1xhlol%2Fsystem-prompts-and-models-of-ai-tools | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
 📜 Over **20,000+ lines** of insights into their structure and functionality.  
+
+⭐ **Star to follow updates**
 
 [![Build Status](https://app.cloudback.it/badge/x1xhlol/system-prompts-and-models-of-ai-tools)](https://cloudback.it)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/x1xhlol/system-prompts-and-models-of-ai-tools)
@@ -111,6 +113,9 @@ You can show your support via:
   - [Gemini CLI](./Open%20Source%20prompts/Gemini%20CLI/)
 - [**CodeBuddy**](./CodeBuddy%20Prompts/)
 - [**Poke**](./Poke/)
+- [**Comet Assistant**](./Comet%20Assistant/)
+- [**Anthropic**](./Anthropic/)
+- [**Amp**](./AMp/)
 
 ---
 
@@ -118,7 +123,7 @@ You can show your support via:
 
 > Open an issue.
 
-> **Latest Update:** 16/09/2025
+> **Latest Update:** 29/09/2025
 
 ---
 

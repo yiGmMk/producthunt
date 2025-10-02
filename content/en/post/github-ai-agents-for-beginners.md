@@ -1,8 +1,8 @@
 ---
 title: ai-agents-for-beginners
-date: 2025-10-01T15:29:02+08:00
+date: 2025-10-02T15:27:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1590506531492-94148059066c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzMDM2NDl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1618001429658-033064f07494?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzODk5NTh8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -61,9 +61,11 @@ The code example in these exercises, utilize Azure AI Foundry and GitHub Model C
 
 This course also uses the following AI Agent frameworks and services from Microsoft:
 
+- [Microsoft Agent Framework (MAF) - New!](https://aka.ms/ai-agents-beginners/agent-framewrok)
 - [Azure AI Agent Service](https://aka.ms/ai-agents-beginners/ai-agent-service)
 - [Semantic Kernel](https://aka.ms/ai-agents-beginners/semantic-kernel)
 - [AutoGen](https://aka.ms/ai-agents/autogen)
+
 
 For more information on running the code for this course, go to the [Course Setup](./00-course-setup/README.md).
 
@@ -96,12 +98,12 @@ Do you have suggestions or found spelling or code errors? [Raise an issue](https
 | AI Agents in Production                      | [Link](./10-ai-agents-production/README.md)        | [Video](https://youtu.be/l4TP6IyJxmQ?si=31dnhexRo6yLRJDl)  | [Link](https://aka.ms/ai-agents-beginners/collection?WT.mc_id=academic-105485-koreyst) |
 | Using Agentic Protocols (MCP, A2A and NLWeb) | [Link](./11-agentic-protocols/README.md)           | [Video](https://youtu.be/X-Dh9R3Opn8)                                 | [Link](https://aka.ms/ai-agents-beginners/collection?WT.mc_id=academic-105485-koreyst) |
 | Context Engineering for AI Agents            | [Link](./12-context-engineering/README.md)         | [Video](https://youtu.be/F5zqRV7gEag)                                 | [Link](https://aka.ms/ai-agents-beginners/collection?WT.mc_id=academic-105485-koreyst) |
-| Managing Agentic Memory                      | [Link](./13-agent-memory/README.md)     |                                                            |                                                                                        |
-| Evaluating AI Agents                         | Coming - September 18th                            |                                                            |                                                                                        |
-| Building Computer Use Agents (CUA)           | Coming - September 25th                            |                                                            |                                                                                        |
-| Deploying Scalable Agents                    | Coming - September 25th                            |                                                            |                                                                                        |
-| Creating Local AI Agents                     | Coming - October 3rd                               |                                                            |                                                                                        |
-| Securing AI Agents                           | Coming - October 10th                               |                                                            |                                                                                        |
+| Managing Agentic Memory                      | [Link](./13-agent-memory/README.md)     |      [Video](https://youtu.be/QrYbHesIxpw?si=vZkVwKrQ4ieCcIPx)                                                      |                                                                                        |
+| Exploring Microsoft Agent Framework                         | [Link](./14-microsoft-agent-framework/README.md)                            |                                                            |                                                                                        |
+| Building Computer Use Agents (CUA)           | Coming Soon                            |                                                            |                                                                                        |
+| Deploying Scalable Agents                    | Coming Soon                            |                                                            |                                                                                        |
+| Creating Local AI Agents                     | Coming Soon                               |                                                            |                                                                                        |
+| Securing AI Agents                           | Coming Soon                               |                                                            |                                                                                        |
 
 ## 🎒 Other Courses
 

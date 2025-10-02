@@ -1,15 +1,15 @@
 ---
 title: fuck-u-code
-date: 2025-10-01T15:28:52+08:00
+date: 2025-10-02T15:26:22+08:00
 draft: False
-image: https://images.unsplash.com/photo-1639402478527-615f5eaf4112?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzMDM2NDl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1638453692050-c4849349a8c7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzODk5NTh8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
 
 # [Done-0/fuck-u-code](https://github.com/Done-0/fuck-u-code)
 
-# fuck-u-code [![中文](https://img.shields.io/badge/文档-简体中文-blue?style=flat-square)](README.md) [![English](https://img.shields.io/badge/Docs-English-red?style=flat-square)](README_EN.md)
+# fuck-u-code [![中文](https://img.shields.io/badge/文档-简体中文-blue?style=flat-square)](README.md) [![English](https://img.shields.io/badge/Docs-English-red?style=flat-square)](README_EN.md) [![Русский](https://img.shields.io/badge/Docs-Русский-blue?style=flat-square)](README_RU.md)
 
 > [!Important]
 > 📢 记住这个命令：fuck-u-code - 让代码不再烂到发指！
@@ -68,7 +68,7 @@ fuck-u-code analyze
 | `--issues N`  | `-i` | 每文件显示 N 个问题        |
 | `--summary`   | `-s` | 只看总结，不看过程          |
 | `--markdown`  | `-m` | 输出 Markdown 格式报告   |
-| `--lang`      | `-l` | 报告语言 (zh-CN/en-US) |
+| `--lang`      | `-l` | 报告语言 (zh-CN/en-US/ru-RU) |
 | `--exclude`   | `-e` | 排除指定目录或文件          |
 | `--skipindex` | `-x` | 跳过 index.js/ts 文件  |
 
