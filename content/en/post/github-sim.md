@@ -1,8 +1,8 @@
 ---
 title: sim
-date: 2025-08-25T15:31:21+08:00
+date: 2025-10-03T15:27:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1642251715719-c4711e4d1ae4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxMDY5Mjh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1665308980870-1c0e13a92758?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk0NzYzNTB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -138,8 +138,20 @@ DATABASE_URL="postgresql://postgres:your_password@localhost:5432/simstudio"
 
 4. Set up the database:
 
+First, configure the database package environment:
 ```bash
-bunx drizzle-kit migrate 
+cd packages/db
+cp .env.example .env 
+```
+
+Update your `packages/db/.env` file with the database URL:
+```bash
+DATABASE_URL="postgresql://postgres:your_password@localhost:5432/simstudio"
+```
+
+Then run the migrations:
+```bash
+bunx drizzle-kit migrate --config=./drizzle.config.ts
 ```
 
 5. Start the development servers:
@@ -170,8 +182,7 @@ bun run dev:sockets
 Copilot is a Sim-managed service. To use Copilot on a self-hosted instance:
 
 - Go to https://sim.ai → Settings → Copilot and generate a Copilot API key
-- Set `COPILOT_API_KEY` in your self-hosted environment to that value
-- Host Sim on a publicly available DNS and set NEXT_PUBLIC_APP_URL and BETTER_AUTH_URL to that value ([ngrok](https://ngrok.com/))
+- Set `COPILOT_API_KEY` environment variable in your self-hosted apps/sim/.env file to that value
 
 ## Tech Stack
 
@@ -186,6 +197,7 @@ Copilot is a Sim-managed service. To use Copilot on a self-hosted instance:
 - **Monorepo**: [Turborepo](https://turborepo.org/)
 - **Realtime**: [Socket.io](https://socket.io/)
 - **Background Jobs**: [Trigger.dev](https://trigger.dev/)
+- **Remote Code Execution**: [E2B](https://www.e2b.dev/)
 
 ## Contributing
 

@@ -1,8 +1,8 @@
 ---
 title: MoneyPrinterTurbo
-date: 2025-10-02T15:26:08+08:00
+date: 2025-10-03T15:27:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1638453692050-c4849349a8c7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzODk5NTh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1584995124038-f6fe4fe869f0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk0NzYzNTB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

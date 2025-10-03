@@ -1,8 +1,8 @@
 ---
 title: immich
-date: 2025-09-10T15:29:23+08:00
+date: 2025-10-03T15:27:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1667506692319-36d9830cf98e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0ODkyMzB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1627328561499-a3584d4ee4f7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk0NzYzNTB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -49,26 +49,25 @@ categories: ['github']
   <a href="readme_i18n/README_th_TH.md">ภาษาไทย</a>
 </p>
 
-## Disclaimer
 
-- ⚠️ The project is under **very active** development.
-- ⚠️ Expect bugs and breaking changes.
-- ⚠️ **Do not use the app as the only way to store your photos and videos.**
-- ⚠️ Always follow [3-2-1](https://www.backblaze.com/blog/the-3-2-1-backup-strategy/) backup plan for your precious photos and videos!
+> [!WARNING]
+> ⚠️ Always follow [3-2-1](https://www.backblaze.com/blog/the-3-2-1-backup-strategy/) backup plan for your precious photos and videos!
+> 
+ 
 
 > [!NOTE]
 > You can find the main documentation, including installation guides, at https://immich.app/.
 
 ## Links
 
-- [Documentation](https://immich.app/docs)
-- [About](https://immich.app/docs/overview/introduction)
-- [Installation](https://immich.app/docs/install/requirements)
+- [Documentation](https://docs.immich.app/)
+- [About](https://docs.immich.app/overview/introduction)
+- [Installation](https://docs.immich.app/install/requirements)
 - [Roadmap](https://immich.app/roadmap)
 - [Demo](#demo)
 - [Features](#features)
-- [Translations](https://immich.app/docs/developer/translations)
-- [Contributing](https://immich.app/docs/overview/support-the-project)
+- [Translations](https://docs.immich.app/developer/translations)
+- [Contributing](https://docs.immich.app/overview/support-the-project)
 
 ## Demo
 
@@ -117,7 +116,7 @@ Access the demo [here](https://demo.immich.app). For the mobile app, you can use
 
 ## Translations
 
-Read more about translations [here](https://immich.app/docs/developer/translations).
+Read more about translations [here](https://docs.immich.app/developer/translations).
 
 <a href="https://hosted.weblate.org/engage/immich/">
 <img src="https://hosted.weblate.org/widget/immich/immich/multi-auto.svg" alt="Translation status" />

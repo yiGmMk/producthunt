@@ -1,9 +1,9 @@
 ---
 title: awesome-n8n-templates
-date: 2025-08-19T15:28:48+08:00
+date: 2025-10-03T15:28:27+08:00
 draft: False
-image: https://images.unsplash.com/photo-1639468599871-184271aa14fb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU1ODg0ODJ8&ixlib=rb-4.1.0
-tags: ['github',n8n, automation, templates, AI, workflow, Gmail, Telegram, GoogleDrive, GoogleSheets, WordPress, PDF, Discord, Airtable, Notion, Slack, OpenAI, WhatsApp, Instagram, Twitter, social media, database]
+image: https://images.unsplash.com/photo-1443734276910-ba691f3f7f79?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk0NzYzNTB8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -352,3 +352,4 @@ If you would like to contribute additional templates or suggest new categories, 
 
 ### **Sponsors**
 - [mahezsh](https://github.com/mahezsh)
+- [Dumpling AI](https://github.com/Dumpling-AI)

@@ -1,8 +1,8 @@
 ---
 title: LTX-Video
-date: 2025-07-20T15:29:50+08:00
+date: 2025-10-03T15:26:57+08:00
 draft: False
-image: https://images.unsplash.com/photo-1566066055109-3792a5bd2590?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI5OTY0NzF8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1543063279-253319bffd64?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk0NzYzNTB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

@@ -1,9 +1,9 @@
 ---
 title: kestra
-date: 2025-09-06T15:25:04+08:00
+date: 2025-10-03T15:28:33+08:00
 draft: False
-image: https://images.unsplash.com/photo-1656890300047-17b87ee5f27b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcxNDM0MTJ8&ixlib=rb-4.1.0
-tags: ['github',workflow orchestration,event-driven,scheduled workflows,YAML,plugins,CI/CD,workflows as code]
+image: https://images.unsplash.com/photo-1571744453115-064572a431ba?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk0NzYzNTB8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -44,10 +44,10 @@ categories: ['github']
 
 <p align="center">
     <a href="https://go.kestra.io/video/product-overview" target="_blank">
-        <img src="https://kestra.io/startvideo.png" alt="Get started in 4 minutes with Kestra" width="640px" />
+        <img src="https://kestra.io/startvideo.png" alt="Get started in 3 minutes with Kestra" width="640px" />
     </a>
 </p>
-<p align="center" style="color:grey;"><i>Click on the image to learn how to get started with Kestra in 4 minutes.</i></p>
+<p align="center" style="color:grey;"><i>Click on the image to learn how to get started with Kestra in 3 minutes.</i></p>
 
 
 ## 🌟 What is Kestra?

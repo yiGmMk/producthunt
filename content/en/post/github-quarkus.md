@@ -1,9 +1,9 @@
 ---
 title: quarkus
-date: 2025-09-07T15:25:03+08:00
+date: 2025-10-03T15:28:11+08:00
 draft: False
-image: https://images.unsplash.com/photo-1669457818072-362120e870cb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcyMjk4MjZ8&ixlib=rb-4.1.0
-tags: ['github',Quarkus,Java,Kubernetes,Microservices,Cloud Native,Container,Framework,RESTEasy,Hibernate]
+image: https://images.unsplash.com/photo-1443734276910-ba691f3f7f79?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk0NzYzNTB8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
