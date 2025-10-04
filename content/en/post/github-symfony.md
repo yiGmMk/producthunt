@@ -1,9 +1,9 @@
 ---
 title: symfony
-date: 2025-04-05T15:25:46+08:00
+date: 2025-10-04T15:25:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1458777494317-654abe82b4d7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDM4Mzc4ODJ8&ixlib=rb-4.0.3
-tags: ['github',Symfony,PHP,framework,web applications,PHP components,Composer,semantic versioning,LTS,Sulu,Rector]
+image: https://images.unsplash.com/photo-1710006968045-1e342cc5f5b9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk1NjI2MDJ8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -28,20 +28,13 @@ Installation
 Sponsor
 -------
 
-Symfony 7.2 is [backed][27] by
-- [Sulu][29]
-- [Rector][30]
+Symfony 7.3 is [backed][27] by
+- [Les-Tilleuls.coop][29]
 
-**Sulu** is the CMS for Symfony developers. It provides pre-built content-management
-features while giving developers the freedom to build, deploy, and maintain custom
-solutions using full-stack Symfony. Sulu is ideal for creating complex websites,
-integrating external tools, and building custom-built solutions.
-
-**Rector** helps successful and growing companies to get the most of the code
-they already have. Including upgrading to the latest Symfony LTS. They deliver
-automated refactoring, reduce maintenance costs, speed up feature delivery, and
-transform legacy code into a strategic asset. They can handle the dirty work,
-so you can focus on the features.
+**Les-Tilleuls.coop** is a team of 70+ Symfony experts who can help you design, develop and
+fix your projects. They provide a wide range of professional services including development,
+consulting, coaching, training and audits. They also are highly skilled in JS, Go and DevOps.
+They are a worker cooperative!
 
 Help Symfony by [sponsoring][28] its development!
 
@@ -107,5 +100,4 @@ and supported by [Symfony contributors][19].
 [26]: https://symfony.com/book
 [27]: https://symfony.com/backers
 [28]: https://symfony.com/sponsor
-[29]: https://sulu.io
-[30]: https://getrector.com
+[29]: https://les-tilleuls.coop

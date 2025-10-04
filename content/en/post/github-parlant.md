@@ -1,9 +1,9 @@
 ---
 title: parlant
-date: 2025-09-10T15:27:19+08:00
+date: 2025-10-04T15:24:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1667506692319-36d9830cf98e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0ODkyMzB8&ixlib=rb-4.1.0
-tags: ['github',AI agent,Parlant,LLM,instruction following,agent development,guidelines,tools,compliance,conversational AI,production AI]
+image: https://images.unsplash.com/photo-1658577804724-05c15d342ede?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk1NjI2MDJ8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -78,7 +78,9 @@ await agent.create_guideline(
 )
 ```
 
-[✅ Blog: How Parlant Ensures Agent Compliance](https://www.parlant.io/blog/how-parlant-guarantees-compliance)
+- ✅ [Blog: How Parlant Ensures Agent Compliance](https://www.parlant.io/blog/how-parlant-guarantees-compliance)
+- 🆚 [Blog: Parlant vs DSPy](https://www.parlant.io/blog/parlant-vs-dspy)
+
 
 #### Parlant gives you all the structure you need to build customer-facing agents that behave exactly as your business requires:
 
