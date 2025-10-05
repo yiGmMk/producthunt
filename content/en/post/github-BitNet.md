@@ -1,9 +1,9 @@
 ---
 title: BitNet
-date: 2025-09-08T15:29:05+08:00
+date: 2025-10-05T15:24:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1728660977084-93ebeb6f5c87?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTczMTY0NTl8&ixlib=rb-4.1.0
-tags: ['github',BitNet,1-bit LLMs,inference framework,CPU,GPU,NPU,lossless inference,energy consumption,LLMs,Hugging Face,model,performance,benchmark,Apple M2,x86,ARM,technical report,quantization,kernels,I2_S,TL1,TL2,llama.cpp,T-MAC]
+image: https://images.unsplash.com/photo-1593525274739-e220ab8411f3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk2NDkwMTF8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

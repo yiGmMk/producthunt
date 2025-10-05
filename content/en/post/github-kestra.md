@@ -1,8 +1,8 @@
 ---
 title: kestra
-date: 2025-10-04T15:24:04+08:00
+date: 2025-10-05T15:24:34+08:00
 draft: False
-image: https://images.unsplash.com/photo-1658577804724-05c15d342ede?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk1NjI2MDJ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1583329372216-552fca1c027a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk2NDkwMTF8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -30,9 +30,12 @@ categories: ['github']
 <br />
 
 <p align="center">
-    <a href="https://x.com/kestra_io"><img height="25" src="https://kestra.io/twitter.svg" alt="X(formerly Twitter)" /></a> &nbsp;
-    <a href="https://www.linkedin.com/company/kestra/"><img height="25" src="https://kestra.io/linkedin.svg" alt="linkedin" /></a> &nbsp;
-<a href="https://www.youtube.com/@kestra-io"><img height="25" src="https://kestra.io/youtube.svg" alt="youtube" /></a> &nbsp;
+  <a href="https://twitter.com/kestra_io" style="margin: 0 10px;">
+        <img height="25" src="https://kestra.io/twitter.svg" alt="twitter" width="35" height="25" /></a>
+  <a href="https://www.linkedin.com/company/kestra/" style="margin: 0 10px;">
+        <img height="25" src="https://kestra.io/linkedin.svg" alt="linkedin" width="35" height="25" /></a> 
+  <a href="https://www.youtube.com/@kestra-io" style="margin: 0 10px;">
+        <img height="25" src="https://kestra.io/youtube.svg" alt="youtube" width="35" height="25" /></a>
 </p>
 
 <p align="center">

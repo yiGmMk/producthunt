@@ -1,9 +1,9 @@
 ---
 title: llm-app
-date: 2025-09-10T15:28:21+08:00
+date: 2025-10-05T15:25:56+08:00
 draft: False
-image: https://images.unsplash.com/photo-1595675585284-64eefe2d9d46?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0ODkyMzB8&ixlib=rb-4.1.0
-tags: ['github',AI Pipelines,LLM,Large Language Model,RAG,vector search,hybrid search,full-text search,data indexing,application templates]
+image: https://images.unsplash.com/photo-1557319966-0b8b38cf57e8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk2NDkwMTF8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

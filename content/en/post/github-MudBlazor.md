@@ -1,8 +1,8 @@
 ---
 title: MudBlazor
-date: 2025-10-03T15:27:54+08:00
+date: 2025-10-05T15:25:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1543063279-253319bffd64?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk0NzYzNTB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1670751781380-6cb483187488?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk2NDkwMTF8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

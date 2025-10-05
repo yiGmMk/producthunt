@@ -1,8 +1,8 @@
 ---
 title: meshery
-date: 2025-10-04T15:24:56+08:00
+date: 2025-10-05T15:23:47+08:00
 draft: False
-image: https://images.unsplash.com/photo-1746189267093-cf829e8d2901?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk1NjI2MDJ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1688413708993-39da5ee59315?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk2NDkwMTF8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -93,7 +93,7 @@ A self-service engineering platform, <a href="https://meshery.io">Meshery</a>, i
 
 ## Infrastructure Lifecycle Management
 
-Meshery manages the configuration, deployment, and operation of your Cloud services and Kubernetes clusters while supporting hundreds of different types of cloud native infrastructure integrations. Meshery supports [300+ integrations](https//meshery.io/integrations).
+Meshery manages the configuration, deployment, and operation of your Cloud services and Kubernetes clusters while supporting hundreds of different types of cloud native infrastructure integrations. Meshery supports [300+ integrations](https://meshery.io/integrations).
 
 <!--
 <a href="https://www.youtube.com/watch?v=034nVaQUyME"><img alt="Meshery cloud native management" src="https://raw.githubusercontent.com/meshery/meshery/master/.github/assets/images/readme/meshmap.gif"  style="margin-left:10px; margin-bottom:10px;" width="100%" align="center" /></a>
@@ -104,7 +104,7 @@ Meshery manages the configuration, deployment, and operation of your Cloud servi
 
 Find infrastructure configuration patterns in Meshery's <a href="https://meshery.io/catalog">catalog of curated design templates</a> filled with configuration best practices.
 
-## Multiple Kubernetes Clusters and Multiple Clouds
+### Multiple Kubernetes Clusters and Multiple Clouds
 
 <img src ="https://meshery.io/assets/images/screens/multi-cluster-management.gif" width="50%" alt="Multi-cluster Kubernetes Manager" loading="lazy" align="center" /><br />
 
