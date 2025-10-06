@@ -1,8 +1,8 @@
 ---
 title: glide
-date: 2025-10-05T15:25:20+08:00
+date: 2025-10-06T15:28:27+08:00
 draft: False
-image: https://images.unsplash.com/photo-1593525274739-e220ab8411f3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk2NDkwMTF8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1510951366214-f8ce654864ac?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk3MzU2NjF8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

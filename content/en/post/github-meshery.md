@@ -1,8 +1,8 @@
 ---
 title: meshery
-date: 2025-10-05T15:23:47+08:00
+date: 2025-10-06T15:28:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1688413708993-39da5ee59315?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk2NDkwMTF8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1733866055327-762ba798ed48?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk3MzU2NjF8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -66,6 +66,9 @@ A self-service engineering platform, <a href="https://meshery.io">Meshery</a>, i
  <br />Try Meshery in your browser using the <a href="https://play.meshery.io">Cloud Native Playground</a> (<a href="https://www.youtube.com/watch?v=034nVaQUyME&list=PL3A-A6hPO2IO_yzN83wSJJUNQActzCJvO&index=9">teaser video</a>)
 </div>
 
+<p align="center">
+<h4 align="center">Open Meshery extension, Kanvas, in your browser: https://kanvas.new</h4>
+</p>
 <br />
 <!--
 - [Functionality](#functionality)
