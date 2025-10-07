@@ -1,8 +1,8 @@
 ---
 title: audacity
-date: 2025-10-06T15:29:27+08:00
+date: 2025-10-07T15:27:22+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592238429977-b612b99165bc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk3MzU2NjF8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1650107823490-b7c24a5d5575?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk4MjE5OTB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

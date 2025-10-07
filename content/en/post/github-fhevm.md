@@ -1,9 +1,9 @@
 ---
 title: fhevm
-date: 2025-09-09T15:27:58+08:00
+date: 2025-10-07T15:28:05+08:00
 draft: False
-image: https://images.unsplash.com/photo-1688890239467-c43da335fe7e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0MDI4NTR8&ixlib=rb-4.1.0
-tags: ['github',FHEVM,Fully Homomorphic Encryption,confidential smart contracts,EVM-compatible blockchains,Solidity,privacy,blockchain]
+image: https://images.unsplash.com/photo-1650107823490-b7c24a5d5575?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk4MjE5OTB8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 

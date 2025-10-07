@@ -1,8 +1,8 @@
 ---
 title: infisical
-date: 2025-10-06T15:30:01+08:00
+date: 2025-10-07T15:26:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1510951366214-f8ce654864ac?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk3MzU2NjF8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1706696648779-aace52d2d443?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk4MjE5OTB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

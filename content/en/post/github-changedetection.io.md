@@ -1,9 +1,9 @@
 ---
 title: changedetection.io
-date: 2025-07-29T15:36:37+08:00
+date: 2025-10-07T15:27:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1666362132684-607fd1f81c6e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM3NzQ1NTF8&ixlib=rb-4.1.0
-tags: ['github',website monitoring, web page changes, price change alerts, notification services, website change detection,  JSON API monitoring,  web scraping,  proxy support]
+image: https://images.unsplash.com/photo-1597511880205-2d599e0c95ff?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk4MjE5OTB8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -291,7 +291,10 @@ Excel import is recommended - that way you can better organise tags/groups of we
 
 ## API Support
 
-Supports managing the website watch list [via our API](https://changedetection.io/docs/api_v1/index.html)
+Full REST API for programmatic management of watches, tags, notifications and more. 
+
+- **[Interactive API Documentation](https://changedetection.io/docs/api_v1/index.html)** - Complete API reference with live testing
+- **[OpenAPI Specification](docs/api-spec.yaml)** - Generate SDKs for any programming language
 
 ## Support us
 
