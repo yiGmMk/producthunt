@@ -1,8 +1,8 @@
 ---
 title: BitNet
-date: 2025-10-07T15:27:06+08:00
+date: 2025-10-08T15:27:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1696933196080-7c89f3171b3d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk4MjE5OTB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1673970825861-3469f8fe01d3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk5MDgzNjl8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

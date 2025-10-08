@@ -1,8 +1,8 @@
 ---
 title: register
-date: 2025-09-27T15:24:40+08:00
+date: 2025-10-08T15:28:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1545064579-43204e278895?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg5NTc3Njh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1680304262801-8ac03ef93ece?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk5MDgzNjl8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -28,7 +28,7 @@ categories: ['github']
 Please join our [Discord server](https://discord.gg/is-a-dev-830872854677422150) for announcements, updates & upgrades, and downtime notifications regarding the service.
 Not all of these will be posted on GitHub[^1], however they will always be posted in our Discord server.
 
-[^1]: We usually only post announcements on GitHub in the case of a serious incident. In that case, you'll likely see it at the top of this README file.
+[^1]: We only post announcements on GitHub in the case of a serious incident, which you'll see at the top of this README.
 
 <a href="https://discord.gg/is-a-dev-830872854677422150"><img alt="Discord Server" src="https://invidget.api.hrsn.dev/is-a-dev-830872854677422150"></a>
 

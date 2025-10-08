@@ -1,8 +1,8 @@
 ---
 title: stremio-web
-date: 2025-10-07T15:26:59+08:00
+date: 2025-10-08T15:26:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1597511880205-2d599e0c95ff?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk4MjE5OTB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1605595043738-8bc10e1b3363?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk5MDgzNjl8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

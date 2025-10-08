@@ -1,8 +1,8 @@
 ---
 title: zen-mcp-server
-date: 2025-10-07T15:26:51+08:00
+date: 2025-10-08T15:26:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1719496177607-c6f9834ba8e2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk4MjE5OTB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1601362771608-a9d7430c066d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk5MDgzNjl8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -33,8 +33,8 @@ Gemini · OpenAI · Anthropic · Grok · Azure · Ollama · OpenRouter · DIAL �
 
 The new **[`clink`](docs/tools/clink.md)** (CLI + Link) tool connects external AI CLIs directly into your workflow:
 
-- **Connect external CLIs** like [Gemini CLI](https://github.com/google-gemini/gemini-cli) and [Codex CLI](https://github.com/openai/codex) directly into your workflow
-- **Codex Subagents** - Launch isolated Codex instances from _within_ Codex itself! Offload heavy tasks (code reviews, bug hunting) to fresh contexts while your main session's context window remains unpolluted. Each subagent returns only final results.
+- **Connect external CLIs** like [Gemini CLI](https://github.com/google-gemini/gemini-cli), [Codex CLI](https://github.com/openai/codex), and [Claude Code](https://www.anthropic.com/claude-code) directly into your workflow
+- **CLI Subagents** - Launch isolated CLI instances from _within_ your current CLI! Claude Code can spawn Codex subagents, Codex can spawn Gemini CLI subagents, etc. Offload heavy tasks (code reviews, bug hunting) to fresh contexts while your main session's context window remains unpolluted. Each subagent returns only final results.
 - **Context Isolation** - Run separate investigations without polluting your primary workspace
 - **Role Specialization** - Spawn `planner`, `codereviewer`, or custom role agents with specialized system prompts
 - **Full CLI Capabilities** - Web search, file inspection, MCP tool access, latest documentation lookups
@@ -136,7 +136,7 @@ and review into consideration to aid with its final pre-commit review.
 For best results when using [Claude Code](https://claude.ai/code):  
 
 - **Sonnet 4.5** - All agentic work and orchestration
-- **Gemini 2.5 Pro** - Deep thinking, additional code reviews, debugging and validations, pre-commit analysis
+- **Gemini 2.5 Pro** OR **GPT-5-Pro** - Deep thinking, additional code reviews, debugging and validations, pre-commit analysis
 </details>
 
 <details>
@@ -145,7 +145,7 @@ For best results when using [Claude Code](https://claude.ai/code):
 For best results when using [Codex CLI](https://developers.openai.com/codex/cli):  
 
 - **GPT-5 Codex Medium** - All agentic work and orchestration
-- **Gemini 2.5 Pro** - Deep thinking, additional code reviews, debugging and validations, pre-commit analysis
+- **Gemini 2.5 Pro** OR **GPT-5-Pro** - Deep thinking, additional code reviews, debugging and validations, pre-commit analysis
 </details>
 
 ## Quick Start (5 minutes)
@@ -216,7 +216,7 @@ Zen activates any provider that has credentials in your `.env`. See `.env.exampl
 
 **Collaboration & Planning** *(Enabled by default)*
 - **[`clink`](docs/tools/clink.md)** - Bridge requests to external AI CLIs (Gemini planner, codereviewer, etc.)
-- **[`chat`](docs/tools/chat.md)** - Brainstorm ideas, get second opinions, validate approaches
+- **[`chat`](docs/tools/chat.md)** - Brainstorm ideas, get second opinions, validate approaches. With capable models (GPT-5 Pro, Gemini 2.5 Pro), generates complete code / implementation
 - **[`thinkdeep`](docs/tools/thinkdeep.md)** - Extended reasoning, edge case analysis, alternative perspectives
 - **[`planner`](docs/tools/planner.md)** - Break down complex projects into structured, actionable plans
 - **[`consensus`](docs/tools/consensus.md)** - Get expert opinions from multiple AI models with stance steering
