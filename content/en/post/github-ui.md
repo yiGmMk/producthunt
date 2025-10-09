@@ -1,8 +1,8 @@
 ---
 title: ui
-date: 2025-10-07T15:28:59+08:00
+date: 2025-10-09T15:27:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1597511880205-2d599e0c95ff?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk4MjE5OTB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1651598335167-a77ab62737aa?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk5OTQ3OTB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

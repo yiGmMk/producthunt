@@ -1,8 +1,8 @@
 ---
 title: openemr
-date: 2025-10-08T15:28:03+08:00
+date: 2025-10-09T15:27:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592558944101-f82652d459a9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk5MDgzNjl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1596709373518-bb582562c26f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk5OTQ3OTB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

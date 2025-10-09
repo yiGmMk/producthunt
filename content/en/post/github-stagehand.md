@@ -1,9 +1,9 @@
 ---
 title: stagehand
-date: 2025-08-09T15:28:52+08:00
+date: 2025-10-09T15:26:53+08:00
 draft: False
-image: https://images.unsplash.com/photo-1572467112159-8e767608e0db?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ3MjQ0NTR8&ixlib=rb-4.1.0
-tags: ['github',browser automation, AI, Stagehand, Playwright, natural language, computer vision, OpenAI, Anthropic]
+image: https://images.unsplash.com/photo-1596709373518-bb582562c26f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk5OTQ3OTB8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -136,6 +136,7 @@ pnpm playwright install
 pnpm run build
 pnpm run example # run the blank script at ./examples/example.ts
 pnpm run example 2048 # run the 2048 example at ./examples/2048.ts
+pnpm run evals -man # see evaluation suite options
 ```
 
 Stagehand is best when you have an API key for an LLM provider and Browserbase credentials. To add these to your project, run:

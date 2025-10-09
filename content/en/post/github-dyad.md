@@ -1,8 +1,8 @@
 ---
 title: dyad
-date: 2025-10-08T15:28:18+08:00
+date: 2025-10-09T15:27:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1673970825861-3469f8fe01d3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk5MDgzNjl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1466345959838-d8def85dbc73?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk5OTQ3OTB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
