@@ -1,8 +1,8 @@
 ---
 title: stagehand
-date: 2025-10-09T15:26:53+08:00
+date: 2025-10-10T15:27:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1596709373518-bb582562c26f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk5OTQ3OTB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1617571736695-5127086fb2af?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAwODExNzV8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -111,7 +111,7 @@ Visit [docs.stagehand.dev](https://docs.stagehand.dev) to view the full document
 
 ## Getting Started
 
-Start with Stagehand with one line of code, or check out our [Quickstart Guide](https://docs.stagehand.dev/get_started/quickstart) for more information:
+Start with Stagehand with one line of code, or check out our [Quickstart Guide](https://docs.stagehand.dev/first-steps/quickstart) for more information:
 
 ```bash
 npx create-browser-app

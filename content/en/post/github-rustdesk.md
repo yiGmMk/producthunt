@@ -1,9 +1,9 @@
 ---
 title: rustdesk
-date: 2025-09-05T15:26:53+08:00
+date: 2025-10-10T15:27:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1635054961796-be9cd02f8797?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcwNTcxODl8&ixlib=rb-4.1.0
-tags: ['github',RustDesk,remote desktop,screen sharing,file transfer,open source,Rust,cross-platform,remote access,video codec,TCP tunneling]
+image: https://images.unsplash.com/photo-1617571736695-5127086fb2af?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAwODExNzV8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
