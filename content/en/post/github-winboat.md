@@ -1,8 +1,8 @@
 ---
 title: winboat
-date: 2025-10-10T15:26:48+08:00
+date: 2025-10-11T15:24:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1734543920039-76b0778dbe8e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAwODExNzV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1693239592571-70ab1363ee58?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAxNjc0MjB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -50,7 +50,7 @@ Before running WinBoat, ensure your system meets the following requirements:
 
 - **RAM**: At least 4 GB of RAM
 - **CPU**: At least 2 CPU threads  
-- **Storage**: At least 32 GB free space in `/var`
+- **Storage**: At least 32 GB free space on the drive your selected install folder corresponds to
 - **Virtualization**: KVM enabled in BIOS/UEFI
   - [How to enable virtualization](https://duckduckgo.com/?t=h_&q=how+to+enable+virtualization+in+%3Cmotherboard+brand%3E+bios&ia=web)
 - **Docker**: Required for containerization

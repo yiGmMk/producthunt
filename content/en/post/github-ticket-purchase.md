@@ -1,9 +1,9 @@
 ---
 title: ticket-purchase
-date: 2025-09-24T15:29:02+08:00
+date: 2025-10-11T15:25:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1688019983766-216c6a06fe0d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2OTg4NDR8&ixlib=rb-4.1.0
-tags: ['github',python, selenium, appium, damai, ticket, purchase, automation, web scraping]
+image: https://images.unsplash.com/photo-1735746693895-6650cf2cee98?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAxNjc0MjB8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
