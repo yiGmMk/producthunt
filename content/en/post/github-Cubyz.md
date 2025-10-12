@@ -1,8 +1,8 @@
 ---
 title: Cubyz
-date: 2025-10-11T15:25:24+08:00
+date: 2025-10-12T15:24:53+08:00
 draft: False
-image: https://images.unsplash.com/photo-1735746693895-6650cf2cee98?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAxNjc0MjB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1648567451040-f7cd2c60fd35?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAyNTM4Mzl8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

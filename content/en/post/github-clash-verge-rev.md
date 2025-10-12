@@ -1,9 +1,9 @@
 ---
 title: clash-verge-rev
-date: 2025-08-24T15:27:26+08:00
+date: 2025-10-12T15:25:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1551958941-658e0532724a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYwMjAzODF8&ixlib=rb-4.1.0
-tags: ['github',Clash,Tauri,GUI,Clash.Meta,mihomo,proxy,VPN,Windows,macOS,Linux]
+image: https://images.unsplash.com/photo-1638965789478-1fc29ced8f16?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAyNTM4Mzl8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -34,11 +34,11 @@ Supports Windows (x64/x86), Linux (x64/arm64) and macOS 10.15+ (intel/apple).
 
 #### 我应当怎样选择发行版
 
-| 版本      | 特征                                     | 链接                                                                                   |
-| :-------- | :--------------------------------------- | :------------------------------------------------------------------------------------- |
-| Stable    | 正式版，高可靠性，适合日常使用。         | [Release](https://github.com/clash-verge-rev/clash-verge-rev/releases)                 |
-| Alpha     | 早期测试版，功能未完善，可能存在缺陷。   | [Alpha](https://github.com/clash-verge-rev/clash-verge-rev/releases/tag/alpha)         |
-| AutoBuild | 滚动更新版，持续集成更新，适合开发测试。 | [AutoBuild](https://github.com/clash-verge-rev/clash-verge-rev/releases/tag/autobuild) |
+| 版本        | 特征                                     | 链接                                                                                   |
+| :---------- | :--------------------------------------- | :------------------------------------------------------------------------------------- |
+| Stable      | 正式版，高可靠性，适合日常使用。         | [Release](https://github.com/clash-verge-rev/clash-verge-rev/releases)                 |
+| Alpha(废弃) | 测试发布流程。                           | [Alpha](https://github.com/clash-verge-rev/clash-verge-rev/releases/tag/alpha)         |
+| AutoBuild   | 滚动更新版，适合测试反馈，可能存在缺陷。 | [AutoBuild](https://github.com/clash-verge-rev/clash-verge-rev/releases/tag/autobuild) |
 
 #### 安装说明和常见问题，请到 [文档页](https://clash-verge-rev.github.io/) 查看
 
