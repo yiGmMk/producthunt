@@ -1,8 +1,8 @@
 ---
 title: lobe-chat
-date: 2025-10-02T15:26:39+08:00
+date: 2025-10-13T15:30:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1586521995659-4204fe01d104?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzODk5NTh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1750779940923-8d6cf0867df7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAzNDA1MTB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

@@ -1,8 +1,8 @@
 ---
 title: ticket-purchase
-date: 2025-10-11T15:25:41+08:00
+date: 2025-10-13T15:29:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1735746693895-6650cf2cee98?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAxNjc0MjB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1703984383479-5c643a3cfbc0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAzNDA1MTF8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

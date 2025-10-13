@@ -1,9 +1,9 @@
 ---
 title: daytona
-date: 2025-05-05T15:29:50+08:00
+date: 2025-10-13T15:29:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1554602337-bcb0d619e511?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY0MzAxMDl8&ixlib=rb-4.0.3
-tags: ['github',AI-generated code,secure infrastructure,elastic infrastructure,sandbox,Daytona SDK,Python SDK,TypeScript SDK,OCI/Docker,API key]
+image: https://images.unsplash.com/photo-1660596171619-03ac14f3cc69?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAzNDA1MTF8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -44,6 +44,11 @@ categories: ['github']
     <a href="https://x.com/daytonaio"> Connect on X </a>
 </p>
 
+<p align="center">
+    <a href="https://www.producthunt.com/posts/daytona-2?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-daytona&#0045;2" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=957617&theme=neutral&period=daily&t=1746176740150" alt="Daytona&#0032; - Secure&#0032;and&#0032;elastic&#0032;infra&#0032;for&#0032;running&#0032;your&#0032;AI&#0045;generated&#0032;code&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+    <a href="https://www.producthunt.com/posts/daytona-2?embed=true&utm_source=badge-top-post-topic-badge&utm_medium=badge&utm_souce=badge-daytona&#0045;2" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-topic-badge.svg?post_id=957617&theme=neutral&period=monthly&topic_id=237&t=1746176740150" alt="Daytona&#0032; - Secure&#0032;and&#0032;elastic&#0032;infra&#0032;for&#0032;running&#0032;your&#0032;AI&#0045;generated&#0032;code&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+</p>
+
 ---
 
 ## Installation
@@ -51,7 +56,7 @@ categories: ['github']
 ### Python SDK
 
 ```bash
-pip install daytona-sdk
+pip install daytona
 ```
 
 ### TypeScript SDK
@@ -84,13 +89,13 @@ npm install @daytonaio/sdk
 ### Python SDK
 
 ```py
-from daytona_sdk import Daytona, DaytonaConfig, CreateSandboxParams
+from daytona import Daytona, DaytonaConfig, CreateSandboxBaseParams
 
 # Initialize the Daytona client
 daytona = Daytona(DaytonaConfig(api_key="YOUR_API_KEY"))
 
 # Create the Sandbox instance
-sandbox = daytona.create(CreateSandboxParams(language="python"))
+sandbox = daytona.create(CreateSandboxBaseParams(language="python"))
 
 # Run code securely inside the Sandbox
 response = sandbox.process.code_run('print("Sum of 3 and 4 is " + str(3 + 4))')
@@ -100,7 +105,7 @@ else:
     print(response.result)
 
 # Clean up the Sandbox
-daytona.remove(sandbox)
+daytona.delete(sandbox)
 ```
 
 ### Typescript SDK
@@ -118,10 +123,10 @@ async function main() {
   try {
     // Create the Sandbox instance
     sandbox = await daytona.create({
-      language: 'python',
+      language: 'typescript',
     })
     // Run code securely inside the Sandbox
-    const response = await sandbox.process.codeRun('print("Sum of 3 and 4 is " + str(3 + 4))')
+    const response = await sandbox.process.codeRun('console.log("Sum of 3 and 4 is " + (3 + 4))')
     if (response.exitCode !== 0) {
       console.error('Error running code:', response.exitCode, response.result)
     } else {
@@ -130,7 +135,7 @@ async function main() {
   } catch (error) {
     console.error('Sandbox flow error:', error)
   } finally {
-    if (sandbox) await daytona.remove(sandbox)
+    if (sandbox) await daytona.delete(sandbox)
   }
 }
 
@@ -141,4 +146,4 @@ main().catch(console.error)
 
 ## Contributing
 
-Daytona is Open Source under the [GNU GENERAL PUBLIC LICENSE](LICENSE), and is the [copyright of its contributors](NOTICE). If you would like to contribute to the software, read the Developer Certificate of Origin Version 1.1 (https://developercertificate.org/). Afterwards, navigate to the [contributing guide](CONTRIBUTING.md) to get started.
+Daytona is Open Source under the [GNU AFFERO GENERAL PUBLIC LICENSE](LICENSE), and is the [copyright of its contributors](NOTICE). If you would like to contribute to the software, read the Developer Certificate of Origin Version 1.1 (https://developercertificate.org/). Afterwards, navigate to the [contributing guide](CONTRIBUTING.md) to get started.

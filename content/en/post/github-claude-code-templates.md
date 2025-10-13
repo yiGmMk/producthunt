@@ -1,8 +1,8 @@
 ---
 title: claude-code-templates
-date: 2025-10-12T15:24:35+08:00
+date: 2025-10-13T15:28:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1652427019217-3ded1a356f10?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAyNTM4Mzl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1660796988367-04c82284be53?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAzNDA1MTF8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
