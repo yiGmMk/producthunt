@@ -99,7 +99,7 @@ class SaveToMD:
             keywords = call_openai(extra_keywork, content)
         except Exception as e:
             print("Error in generating markdown content")
-
+        keywords = keywords.replace("```", "")
         # 定义 YAML 头部信息和正文内容
         yaml_header = {
             "title": filename,
