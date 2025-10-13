@@ -1,9 +1,10 @@
 ---
 title: public-apis
-date: 2025-08-06T15:37:17+08:00
+date: 2025-10-13T21:09:55+08:00
 draft: False
-image: https://images.unsplash.com/photo-1526288606198-7496432f9a8a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ0NjU3NTF8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1675526193131-83c24921f33c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAzNjA5NDV8&ixlib=rb-4.1.0
+tags: ['github',```text
+public APIs, API, open data, weather, weather data, quotes, weather forecast, weather information,  weather API,  movie data,  video,  Star Wars,  Game of Thrones,  quotes API,  open government,  government data,  open data,  jobs,  job search,  sports data,  sports,  finance,  stock data,  currency exchange,  cryptocurrency,  blockchain,  authentication,  authorization,  art]
 categories: ['github']
 ---
 

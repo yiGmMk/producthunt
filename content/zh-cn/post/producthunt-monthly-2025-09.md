@@ -1,138 +1,138 @@
 ---
 title: Product Hunt 本月热榜 | 2025-09
-date: 2025-10-01 00:56:37+0000
+date: 2025-10-13 13:18:55+0000
 image: 
-tags: ["无关键词"]
-categories: ["月榜"]
+tags: ["AI", "data analysis", "API"]
+categories: ["人工智能", "开发", "月榜"]
 ---
 
 ## 1. VidAU - AI Video  
-**标语**: Turn Product Images into Scroll-Stopping Video Ads  
-**介绍**: Transform product photos into high-converting videos in minutes with VidAU's AI. Upload images and instantly get TikTok and Instagram ready ads no studio, no stress, just scroll-stopping content that sells.  
+**标语**: 将产品图片转化为引人入胜的滚动视频广告  
+**介绍**: 使用 VidAU 的 AI，在几分钟内将产品照片转化为高转化的视频。上传图片，立即获得适合 TikTok 和 Instagram 的广告，无需工作室，没有压力，只需能吸引眼球、促进销售的内容。  
 **网站**: [立即访问](https://www.producthunt.com/r/3DSPXUIZJDKEEB?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/vidau?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![VidAU - AI Video]()  
-**关键词**: 无关键词  
-**票数**: 🔺1461  
+**关键词**: AI Video, Video Ads, Product Video, TikTok Ads, Instagram Ads, AI, Video Creation, Marketing, Content Creation, Automated Video  
+**票数**: 🔺1541  
 **是否精选**: 是  
 **发布时间**: 2025年09月08日 PM03:01 (北京时间)  
 
 ---  
 
 ## 2. Ada  
-**标语**: Your own AI data analyst  
-**介绍**: Ada is the world's first AI data analyst creating professional reports from any dataset. Automate data tasks, speed up analysis, and skip manual work in one click — no code or expertise needed. Effortless reporting for analysts and business pros.  
+**标语**: 你自己的 AI 数据分析师  
+**介绍**: Ada 是世界上第一个 AI 数据分析师，可以从任何数据集创建专业报告。一键自动化数据任务，加速分析，并跳过手动工作——无需代码或专业知识。为分析师和商业专家提供轻松的报告。  
 **网站**: [立即访问](https://www.producthunt.com/r/PQKKTIDISFHQT5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/ada-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Ada]()  
-**关键词**: 无关键词  
-**票数**: 🔺1393  
+**关键词**: Ada, AI data analyst, data analysis, automated reporting, no-code, data tasks, business intelligence, professional reports, effortless reporting, AI, analytics  
+**票数**: 🔺1456  
 **是否精选**: 是  
 **发布时间**: 2025年09月03日 PM03:01 (北京时间)  
 
 ---  
 
 ## 3. Capalyze  
-**标语**: ChatGPT for datavores: scrape → ask → visualize  
-**介绍**: Scrape real data from websites in real-time into Univers (our spreadsheet engine with 27.5k stars on GitHub!). Ask questions, visualize with interactive tables & charts, and then slice, dice, and export — all in one place.  
+**标语**: ChatGPT for 数据狂人：抓取 → 提问 → 可视化  
+**介绍**: 从网站实时抓取真实数据，导入 Univers（我们的电子表格引擎，在 GitHub 上有 27.5k 星标！）。提出问题，通过交互式表格和图表进行可视化，然后进行切片、切块和导出——所有操作都在一个地方完成。  
 **网站**: [立即访问](https://www.producthunt.com/r/IBIPH3NHSLSAII?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/capalyze?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Capalyze]()  
-**关键词**: 无关键词  
-**票数**: 🔺1176  
+**关键词**: Capalyze, ChatGPT, datavores, data scraping, data visualization, interactive tables, charts, Univers, spreadsheet engine, real-time data, data analysis  
+**票数**: 🔺1228  
 **是否精选**: 是  
 **发布时间**: 2025年09月17日 PM03:01 (北京时间)  
 
 ---  
 
 ## 4. Person search API  
-**标语**: Find anyone with just one API call  
-**介绍**: The ultimate search for people data on the web for AI agents and platforms - comprehensive, targeted, and programmatic With 60+ filters (& unlimited ways to combine them), you can find exactly who you need to sell to, hire, or invest in with one API call  
+**标语**: 仅需一次 API 调用即可找到任何人  
+**介绍**: 为 AI 代理和平台在网络上进行人员数据终极搜索 - 全面、精准、可编程。通过 60 多个筛选器（以及无限的组合方式），您只需一个 API 调用，就能找到您需要销售、招聘或投资的理想人选。  
 **网站**: [立即访问](https://www.producthunt.com/r/FIDWHFSK2AYCID?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/crustdata-3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Person search API]()  
-**关键词**: 无关键词  
-**票数**: 🔺1078  
+**关键词**: Person search, API, people data, AI, filters, programmatic, target audience, lead generation, hiring, investment  
+**票数**: 🔺1125  
 **是否精选**: 是  
 **发布时间**: 2025年09月17日 PM03:01 (北京时间)  
 
 ---  
 
 ## 5. CREAO  
-**标语**: Infinitely personalized software for every team member  
-**介绍**: Teams get stuck with one-size-fits-all SaaS that doesn’t fit anyone perfectly. CREAO lets anyone build custom AI apps with natural language, each one with a built-in copilot. Build the right tools for any job.  
+**标语**: 为每个团队成员量身定制的无限个性化软件  
+**介绍**: 团队受困于千篇一律的 SaaS，无法完美契合任何人的需求。CREAO 允许任何人使用自然语言构建自定义 AI 应用，每个应用都内置一个副驾驶。为任何工作构建合适的工具。  
 **网站**: [立即访问](https://www.producthunt.com/r/E4IEGOFDEOS2HY?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/creao-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![CREAO]()  
-**关键词**: 无关键词  
-**票数**: 🔺1054  
+**关键词**: CREAO, AI software, personalized software, custom AI apps, natural language, copilot, team tools, SaaS alternative  
+**票数**: 🔺1123  
 **是否精选**: 是  
 **发布时间**: 2025年09月09日 PM03:01 (北京时间)  
 
 ---  
 
 ## 6. YouMind  
-**标语**: The first AI creation studio where learning meets writing  
-**介绍**: YouMind helps anyone start creating, from capturing ideas to drafting and polishing articles, podcasts, videos, and more. With YouMind, everyone can turn curiosity into creation.  
+**标语**: 首个将学习与写作相结合的人工智能创作工作室  
+**介绍**: YouMind 帮助任何人开始创作，从捕捉想法到撰写和润色文章、播客、视频等。 有了 YouMind，每个人都能将好奇心转化为创作。  
 **网站**: [立即访问](https://www.producthunt.com/r/7E5DIGQSMJROEQ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/youmind?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![YouMind]()  
-**关键词**: 无关键词  
-**票数**: 🔺1046  
+**关键词**: AI creation studio, learning and writing, content creation, idea to creation, article drafting, podcast creation, video creation, AI assistant, creative platform  
+**票数**: 🔺1099  
 **是否精选**: 是  
 **发布时间**: 2025年09月09日 PM03:01 (北京时间)  
 
 ---  
 
 ## 7. Snapdeck  
-**标语**: Lovable for Slides. No more wrestling with PowerPoint.  
-**介绍**: Build a winning deck in a snap. Create professional presentations effortlessly with AI-powered slide generation, intuitive editing, and beautiful, customizable designs.  
+**标语**: 爱上 Slides。告别与 PowerPoint 的斗争。  
+**介绍**: 瞬间打造制胜牌组。借助 AI 驱动的幻灯片生成、直观的编辑和美观的可定制设计，轻松创建专业的演示文稿。  
 **网站**: [立即访问](https://www.producthunt.com/r/VPH5GXEMXHIJSL?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/snapdeck-beta?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Snapdeck]()  
-**关键词**: 无关键词  
-**票数**: 🔺990  
+**关键词**: AI presentation, slide generation, PowerPoint alternative, presentation design, easy presentations, customizable designs, professional presentations, Snapdeck  
+**票数**: 🔺1055  
 **是否精选**: 是  
 **发布时间**: 2025年09月22日 PM03:01 (北京时间)  
 
 ---  
 
-## 8. Magiclight  
-**标语**: Intelligent story creation agent that creates long videos  
-**介绍**: MagicLight gives you the power to turn any script into a cinematic story video—within minutes. Whether you’re creating YouTube content, children’s stories, ads, or brand films, MagicLight is the AI Story Video Agent that makes storytelling effortless.  
+## 8. C1 by Thesys  
+**标语**: 让 AI 应用实时响应，并提供交互式用户界面。  
+**介绍**: C1 是一个生成式 UI API，它增强了 LLM，使其能够实时响应交互式 UI，例如图表、表单、卡片等。它只需两行代码即可与任何 LLM、框架或 MCP 无缝集成。使用它，您可以以快 10 倍的速度交付 AI 应用，UI 方面的开销减少 80%。  
+**网站**: [立即访问](https://www.producthunt.com/r/6ZB72OU36DIYQL?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/thesys?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![C1 by Thesys]()  
+**关键词**: C1, Generative UI, AI apps, Real-time UI, LLM, API, Interactive UI, Charts, Forms, Cards, UI framework, Low code, Rapid development  
+**票数**: 🔺992  
+**是否精选**: 是  
+**发布时间**: 2025年09月30日 PM03:01 (北京时间)  
+
+---  
+
+## 9. Aikido Security  
+**标语**: 保护你构建、托管和运行的一切。  
+**介绍**: 您的核心代码、云和运行时安全平台。通过 AI 自动修复和自动分类，自动修复漏洞。减少 85% 的误报。安全是每个人的问题。所以，搞定安全，让开发人员专注于构建。  
+**网站**: [立即访问](https://www.producthunt.com/r/CNNH4NU7GRQJM3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/aikido-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Aikido Security]()  
+**关键词**: Aikido Security, Code Security, Cloud Security, Runtime Security, AI AutoFix, AutoTriage, Vulnerability Management, False Positives, Developer Security, Security Platform  
+**票数**: 🔺975  
+**是否精选**: 是  
+**发布时间**: 2025年09月11日 PM03:01 (北京时间)  
+
+---  
+
+## 10. Magiclight  
+**标语**: 智能故事创作代理，制作长视频  
+**介绍**: MagicLight 让你能够在几分钟内将任何脚本转化为电影故事视频。无论您是创作 YouTube 内容、儿童故事、广告还是品牌电影，MagicLight 都是 AI 故事视频代理，让讲故事变得毫不费力。  
 **网站**: [立即访问](https://www.producthunt.com/r/TNTT6JA3H7ES3I?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/magiclight-3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Magiclight]()  
-**关键词**: 无关键词  
-**票数**: 🔺936  
+**关键词**: AI video creation, story video, video generation, YouTube content, AI storytelling, brand films, script to video, cinematic video, effortless storytelling, intelligent agent  
+**票数**: 🔺961  
 **是否精选**: 是  
 **发布时间**: 2025年09月19日 PM03:01 (北京时间)  
-
----  
-
-## 9. Tripo AI 3.0  
-**标语**: Create AI 3D model with text and image in seconds for free  
-**介绍**: Tripo is a generative AI model that turns text or images into production-ready 3D assets. Tripo 3.0, built with tens of billions of parameters, delivers sharper geometry, cleaner topology, and richer textures for higher-quality results.  
-**网站**: [立即访问](https://www.producthunt.com/r/UXVXARNMHEWCAO?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
-**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/tripo-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
-![Tripo AI 3.0]()  
-**关键词**: 无关键词  
-**票数**: 🔺918  
-**是否精选**: 是  
-**发布时间**: 2025年09月08日 PM03:01 (北京时间)  
-
----  
-
-## 10. CapCut AI Suite  
-**标语**: Create, edit, or remix content with AI in a simple editor  
-**介绍**: Introducing CapCut AI Editing - Your smart editing partner for camera + prompt-led creation. From auto edits to avatars, smart cuts, and asset generation, it’s AI editing the CapCut way: simple, powerful, smart.  
-**网站**: [立即访问](https://www.producthunt.com/r/TAX5HVD5J327DO?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
-**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/capcut-ai-suite?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
-![CapCut AI Suite]()  
-**关键词**: 无关键词  
-**票数**: 🔺878  
-**是否精选**: 是  
-**发布时间**: 2025年09月05日 PM03:01 (北京时间)  
 
 ---  
 

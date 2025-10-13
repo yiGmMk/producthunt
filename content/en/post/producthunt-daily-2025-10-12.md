@@ -1,8 +1,9 @@
 ---
 title: Product Hunt Daily | 2025-10-13
-date: 2025-10-13 07:28:28+0000
+date: 2025-10-13 13:09:03+0000
 image: 
-tags: ["No keywords"]
+tags: ["AI", "Deployment", "iOS"]
+categories: ["AI"]
 ---
 
 ## 1. Meku  
@@ -11,8 +12,8 @@ tags: ["No keywords"]
 **Website**: [open](https://www.producthunt.com/r/UEDDQDR2ASWYKW?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/meku?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Meku]()  
-**Keyword**: No keywords  
-**VotesCount**: 🔺366  
+**Keyword**: AI Web App Builder, Site Builder, AI, Web App, Full-Stack, Developer Tools, Deployment, Hosting, MVP, Meku.dev, AI Prompts  
+**VotesCount**: 🔺384  
 **Featured**: Yes  
 **CreatedAt**: 2025-10-12 07:01 AM (UTC)  
 
@@ -24,8 +25,8 @@ tags: ["No keywords"]
 **Website**: [open](https://www.producthunt.com/r/5QTWF4SISAQQ3M?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/open-saas?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Open SaaS 2.0]()  
-**Keyword**: No keywords  
-**VotesCount**: 🔺315  
+**Keyword**: SaaS, open-source, React, Node.js, starter kit, free, auth, payments, AI, admin dashboard  
+**VotesCount**: 🔺335  
 **Featured**: Yes  
 **CreatedAt**: 2025-10-12 07:01 AM (UTC)  
 
@@ -37,8 +38,8 @@ tags: ["No keywords"]
 **Website**: [open](https://www.producthunt.com/r/SQP6L5JD7CBUI4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/undoomed?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![UNDOOMED]()  
-**Keyword**: No keywords  
-**VotesCount**: 🔺251  
+**Keyword**: doomscrolling, mute button, Reels, Shorts, feeds, iOS, Android, productivity, time management, social media, focus  
+**VotesCount**: 🔺258  
 **Featured**: Yes  
 **CreatedAt**: 2025-10-12 07:01 AM (UTC)  
 
@@ -50,8 +51,8 @@ tags: ["No keywords"]
 **Website**: [open](https://www.producthunt.com/r/A2AB3CIFDMVRWL?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/get-illustrations-premium-illustrations-for-website-and-app-ui-design?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Getillustrations Figma Plugin]()  
-**Keyword**: No keywords  
-**VotesCount**: 🔺183  
+**Keyword**: Figma plugin, vector illustrations, UI illustrations, app illustrations, website illustrations, editable illustrations, ready-to-use illustrations, Getillustrations  
+**VotesCount**: 🔺193  
 **Featured**: Yes  
 **CreatedAt**: 2025-10-12 07:01 AM (UTC)  
 
@@ -63,8 +64,8 @@ tags: ["No keywords"]
 **Website**: [open](https://www.producthunt.com/r/IJRSDEKOGLLYG2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/thumblifyai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![AI Ultra Editing by Thumblify]()  
-**Keyword**: No keywords  
-**VotesCount**: 🔺165  
+**Keyword**: AI Editing, Image Editing, Background Removal, AI, Creative Editing, Thumblify, Ultra Editing, Easy Editing, Fast Editing, AI Tools  
+**VotesCount**: 🔺173  
 **Featured**: Yes  
 **CreatedAt**: 2025-10-12 07:01 AM (UTC)  
 
@@ -76,7 +77,7 @@ tags: ["No keywords"]
 **Website**: [open](https://www.producthunt.com/r/ZEJ3WCSUZCJKJF?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/seo-monitoro?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Monitoro]()  
-**Keyword**: No keywords  
+**Keyword**: AI traffic, SEO traffic, Google traffic, Bing traffic, traffic tracking, monitor  
 **VotesCount**: 🔺62  
 **Featured**: No  
 **CreatedAt**: 2025-10-12 07:01 AM (UTC)  
@@ -89,8 +90,8 @@ tags: ["No keywords"]
 **Website**: [open](https://www.producthunt.com/r/AXTFSKCTB6PBKM?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/flow-tabs-pro?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Flow Tabs Pro]()  
-**Keyword**: No keywords  
-**VotesCount**: 🔺42  
+**Keyword**: Chrome, tab management, memory saver, tab suspension, RAM optimization, Flow Tabs Pro, productivity, free trial, Super Focus Mode, session switching  
+**VotesCount**: 🔺40  
 **Featured**: No  
 **CreatedAt**: 2025-10-12 07:01 AM (UTC)  
 
@@ -102,33 +103,33 @@ tags: ["No keywords"]
 **Website**: [open](https://www.producthunt.com/r/BWHARV4VSHGECD?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/minarah-prayer-reminder-app?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Minarah - Prayer Reminder App]()  
-**Keyword**: No keywords  
-**VotesCount**: 🔺24  
+**Keyword**: Prayer reminder, macOS, Salah, alerts, countdown, focus mode, Islamic app, prayer times  
+**VotesCount**: 🔺25  
 **Featured**: No  
 **CreatedAt**: 2025-10-12 07:01 AM (UTC)  
 
 ---  
 
-## 9. Strayl  
-**Tagline**: Build everywhere  
-**Description**: Strayl is a mobile AI coding agent - like Claude Code, but built for iOS. Edit, refactor, and preview your projects with AI. It connects to GitHub, indexes your codebase, connects to MCP servers to use their tools, and can spin up instant preview deployments.  
-**Website**: [open](https://www.producthunt.com/r/SVUDZA2LA6C362?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
-**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/strayl?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
-![Strayl]()  
-**Keyword**: No keywords  
+## 9. AI Financial Report (10K, Q, etc)   
+**Tagline**: Fast, clear annual report with smart financial metrics  
+**Description**: Delivers instant, comprehensive financial report summaries with one click. Upload statements and get a clear breakdown of key metrics business, finance statement, growth all displayed in a modern UI. Save hours, work smarter, and make informed decisions.  
+**Website**: [open](https://www.producthunt.com/r/JYNEFFTGZAQURO?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/ai-financial-report-10k-q-etc?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![AI Financial Report (10K, Q, etc) ]()  
+**Keyword**: AI Financial Report, financial summaries, annual reports, 10K, Q reports, financial metrics, business analysis, fast reporting, modern UI, informed decisions, data analysis  
 **VotesCount**: 🔺19  
 **Featured**: No  
 **CreatedAt**: 2025-10-12 07:01 AM (UTC)  
 
 ---  
 
-## 10. AI Financial Report (10K, Q, etc)   
-**Tagline**: Fast, clear annual report with smart financial metrics  
-**Description**: Delivers instant, comprehensive financial report summaries with one click. Upload statements and get a clear breakdown of key metrics business, finance statement, growth all displayed in a modern UI. Save hours, work smarter, and make informed decisions.  
-**Website**: [open](https://www.producthunt.com/r/JYNEFFTGZAQURO?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
-**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/ai-financial-report-10k-q-etc?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
-![AI Financial Report (10K, Q, etc) ]()  
-**Keyword**: No keywords  
+## 10. Strayl  
+**Tagline**: Build everywhere  
+**Description**: Strayl is a mobile AI coding agent - like Claude Code, but built for iOS. Edit, refactor, and preview your projects with AI. It connects to GitHub, indexes your codebase, connects to MCP servers to use their tools, and can spin up instant preview deployments.  
+**Website**: [open](https://www.producthunt.com/r/SVUDZA2LA6C362?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/strayl?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Strayl]()  
+**Keyword**: AI coding agent, iOS, Code editing, Refactoring, AI-powered, GitHub integration, Instant preview, Deployment, Mobile coding, Strayl  
 **VotesCount**: 🔺19  
 **Featured**: No  
 **CreatedAt**: 2025-10-12 07:01 AM (UTC)  
