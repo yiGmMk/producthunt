@@ -1,9 +1,9 @@
 ---
 title: claude-code-templates
-date: 2025-10-13T15:28:48+08:00
+date: 2025-10-13T21:10:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1660796988367-04c82284be53?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAzNDA1MTF8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1503932953040-b6085c4fd82e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAzNjA5NDV8&ixlib=rb-4.1.0
+tags: ['github',claude code templates, ai agents, commands, mcp, settings, hooks, development workflow, aitmpl.com, installation, claude code analytics, conversation monitor, health check, documentation, contributing, mit license]
 categories: ['github']
 ---
 

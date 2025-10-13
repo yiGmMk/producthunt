@@ -1,9 +1,9 @@
 ---
 title: claude-code
-date: 2025-10-13T15:28:41+08:00
+date: 2025-10-13T21:09:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1702724760235-b1d4cced890f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAzNDA1MTF8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1562123406-1c9eec240eb2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAzNjA5NDV8&ixlib=rb-4.1.0
+tags: ['github',Claude Code, agentic coding tool, terminal, natural language commands, git workflows, documentation, reporting bugs, Discord, data collection, usage, privacy safeguards]
 categories: ['github']
 ---
 
