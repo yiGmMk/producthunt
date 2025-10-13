@@ -2,10 +2,10 @@ import os
 from time import sleep
 import requests
 from datetime import datetime, timedelta, timezone
-from openai import OpenAI
 from bs4 import BeautifulSoup
 import pytz
 from collections import Counter
+from xlib.gpt import call_openai
 
 # Language-related configurations
 LANGUAGE_SETTINGS = {
@@ -56,68 +56,12 @@ LANGUAGE_SETTINGS = {
         "created_at_label": "CreatedAt",
         "keyword_prompt": "Generate suitable short keywords based on the product information provided, separated by commas.\n\nName: {name}\nTagline: {tagline}\nDescription: {description}",
         "default_keyword": "No keywords",
-    },
-    "es": {
-        "title": "Tendencias de Hoy",
-        "file_path": "content/es/post",
-        "translate_task": "Translate the following text to Spanish,only return the translation:",
-        "category_mapping": {
-            "Inteligencia Artificial": ["AI", "Inteligencia Artificial", "aprendizaje automático"],
-            "Herramientas": ["herramienta", "productividad", "eficiencia", "Notion"],
-            "Desarrollo": ["API", "base de datos", "REST API", "SQL"]
-        },
-        "time_format": '%Y-%m-%d %I:%M %p (UTC)',
-        "timezone": 'Europe/Madrid',
-        "tagline_label": "Lema",
-        "description_label": "Descripción",
-        "website_label": "Sitio web",
-        "website_label2": "Visitar",
-        "product_hunt_label": "Ver en Product Hunt",
-        "keyword_label": "Palabras clave",
-        "votes_count_label": "Votos",
-        "featured_label": "Destacado",
-        "featured_mapping": {"yes": "Sí", "no": "No"},
-        "created_at_label": "Fecha de creación",
-        "keyword_prompt": "Generate suitable short keywords using Spanish based on the product information provided, separated by commas.\n\nName: {name}\nTagline: {tagline}\nDescription: {description}",
-        "default_keyword": "Sin palabras clave"
-    },
-    "ar": {
-        "title": "الأكثر رواجًا اليوم",
-        "file_path": "content/ar/post",
-        "translate_task": "将以下内容翻译成阿拉伯语,只返回译文:",
-        "category_mapping": {
-            "الذكاء الاصطناعي": ["الذكاء الاصطناعي", "AI", "تعلم الآلة"],
-            "الأدوات": ["أداة", "إنتاجية", "كفاءة", "Notion"],
-            "التطوير": ["API", "قاعدة بيانات", "REST API", "SQL"]
-        },
-        "time_format": '%Y-%m-%d %I:%M %p (UTC)',
-        "timezone": 'Asia/Riyadh',
-        "tagline_label": "الشعار",
-        "description_label": "الوصف",
-        "website_label": "الموقع الإلكتروني",
-        "website_label2": "زيارة",
-        "product_hunt_label": "عرض على Product Hunt",
-        "keyword_label": "الكلمات المفتاحية",
-        "votes_count_label": "عدد الأصوات",
-        "featured_label": "مميز",
-        "featured_mapping": {"yes": "نعم", "no": "لا"},
-        "created_at_label": "تاريخ الإنشاء",
-        "keyword_prompt": "根据以下内容生成简短的适合的阿拉伯语关键词，用英文逗号分隔开：\n\n产品名称：{name}\n\n标语：{tagline}\n\n描述：{description}",
-        "default_keyword": "لا توجد كلمات مفتاحية"
     }
 }
-
-# Configure OpenAI client
-api_key = os.getenv('OPENAI_API_KEY')
-base_url = os.getenv('OPENAI_BASE_URL')
-client = OpenAI(api_key=api_key, base_url=base_url) if base_url else OpenAI(api_key=api_key)
 
 producthunt_client_id = os.getenv('PRODUCTHUNT_CLIENT_ID')
 producthunt_client_secret = os.getenv('PRODUCTHUNT_CLIENT_SECRET')
 top_num = 10
-model = "gemini-1.5-flash" 
-#model = "gpt-4o-mini" 
-#model = "deepseek-ai/DeepSeek-V2.5" 
 lang = os.getenv('LANGUAGE')
 
 class Product:
@@ -132,7 +76,7 @@ class Product:
         self.createdAt = kwargs.get('createdAt')
         self.website = kwargs.get('website')
         self.url = kwargs.get('url')
-        
+
         self.is_en = (language == 'en')
         self.featured = self.settings["featured_mapping"]["yes"] if self.featuredAt else self.settings["featured_mapping"]["no"]
         self.created_at = self.convert_to_local_time(self.createdAt)
@@ -162,14 +106,8 @@ class Product:
         )
 
         try:
-            response = client.chat.completions.create(
-                model=model,
-                messages=[{"role": "system", "content": prompt}],
-                max_tokens=100,
-                temperature=0.7,
-                timeout=600,
-            )
-            keywords = response.choices[0].message.content.strip()
+            response = call_openai("", prompt)
+            keywords = response
             return ', '.join(keywords.split()) if ',' not in keywords else keywords
         except Exception as e:
             print(f"Error occurred during keyword generation: {e}")
@@ -177,14 +115,8 @@ class Product:
 
     def translate_text(self, text: str) -> str:
         try:
-            response = client.chat.completions.create(
-                model=model,
-                messages=[{"role": "system", "content": self.settings['translate_task']}, {"role": "user", "content": text}],
-                max_tokens=500,
-                temperature=0.7,
-                timeout=600,
-            )
-            return response.choices[0].message.content.strip()
+            response = call_openai(self.settings['translate_task'], text)
+            return response
         except Exception as e:
             print(f"Error occurred during translation: {e}")
             return text

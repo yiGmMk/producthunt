@@ -22,9 +22,10 @@ producthunt_client_secret = os.getenv('PRODUCTHUNT_CLIENT_SECRET')
 # 只取前 10 条数据
 top_num=10
 
-model = "gemini-1.5-flash" 
-#model = "gpt-4o-mini" 
-#model = "deepseek-ai/DeepSeek-V2.5" 
+# model = "gemini-1.5-flash"
+# model = "gpt-4o-mini"
+# model = "deepseek-ai/DeepSeek-V2.5"
+model = os.getenv("MODEL")
 
 # Define category to keywords mapping
 # Add more categories and corresponding keywords as needed

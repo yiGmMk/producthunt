@@ -2,11 +2,12 @@ import os
 from time import sleep
 import requests
 from datetime import datetime, timedelta, timezone
-from openai import OpenAI
+# from openai import OpenAI
 from bs4 import BeautifulSoup
 import pytz
 from collections import Counter
 from multi_language import get_producthunt_token
+from xlib.gpt import call_openai
 
 # Language-related configurations
 LANGUAGE_SETTINGS = {
@@ -112,19 +113,15 @@ LANGUAGE_SETTINGS = {
     }
 }
 
-# Configure OpenAI client
-api_key = os.getenv('OPENAI_API_KEY')
-base_url = os.getenv('OPENAI_BASE_URL')
-client = OpenAI(api_key=api_key, base_url=base_url) if base_url else OpenAI(api_key=api_key)
-
 producthunt_client_id = os.getenv('PRODUCTHUNT_CLIENT_ID')
 producthunt_client_secret = os.getenv('PRODUCTHUNT_CLIENT_SECRET')
 top_num = 10
 
-#model = "Qwen/Qwen2.5-7B-Instruct" 
-model = "gemini-1.5-flash" 
-#model = "gpt-4o-mini" 
-#model = "deepseek-ai/DeepSeek-V2.5" 
+# model = "Qwen/Qwen2.5-7B-Instruct"
+# model = "gemini-1.5-flash"
+# model = "gpt-4o-mini"
+# model = "deepseek-ai/DeepSeek-V2.5"
+# model = os.getenv("MODEL")
 
 lang = os.getenv('LANGUAGE')
 
@@ -170,14 +167,8 @@ class Product:
         )
 
         try:
-            response = client.chat.completions.create(
-                model=model,
-                messages=[{"role": "system", "content": prompt}],
-                max_tokens=100,
-                temperature=0.7,
-                timeout=600,
-            )
-            keywords = response.choices[0].message.content.strip()
+            response = call_openai("", prompt)
+            keywords = response
             return ', '.join(keywords.split()) if ',' not in keywords else keywords
         except Exception as e:
             print(f"Error occurred during keyword generation: {e}")
@@ -185,14 +176,8 @@ class Product:
 
     def translate_text(self, text: str) -> str:
         try:
-            response = client.chat.completions.create(
-                model=model,
-                messages=[{"role": "system", "content": self.settings['translate_task']}, {"role": "user", "content": text}],
-                max_tokens=500,
-                temperature=0.7,
-                timeout=600,
-            )
-            return response.choices[0].message.content.strip()
+            response = call_openai(self.settings['translate_task'], text)
+            return response
         except Exception as e:
             print(f"Error occurred during translation: {e}")
             return text
