@@ -3,9 +3,8 @@ title: Win11Debloat
 date: 2025-10-13T21:10:54+08:00
 draft: False
 image: https://images.unsplash.com/photo-1583350042774-0beebf1d15da?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAzNjA5NDV8&ixlib=rb-4.1.0
-tags: ['github',```text
-Win11Debloat, PowerShell script, Windows, bloatware removal, telemetry, interface elements, system administrators, audit mode, user input, command-line parameters, app removal, telemetry disabling, Bing search, Copilot, AI features, personalization, file explorer, taskbar, start menu, Xbox game recording, Fast Start-up, Modern Standby, Sysprep mode
-```]
+tags: ['github',text
+Win11Debloat, PowerShell script, Windows, bloatware removal, telemetry, interface elements, system administrators, audit mode, user input, command-line parameters, app removal, telemetry disabling, Bing search, Copilot, AI features, personalization, file explorer, taskbar, start menu, Xbox game recording, Fast Start-up, Modern Standby, Sysprep mode]
 categories: ['github']
 ---
 
