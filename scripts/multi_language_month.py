@@ -271,6 +271,11 @@ def fetch_product_hunt_data():
           featuredAt
           website
           url
+          media {
+            url
+            type
+            videoUrl
+          }
         }
         pageInfo {
           hasNextPage
@@ -291,8 +296,8 @@ def fetch_product_hunt_data():
         all_posts.extend(posts)
         has_next_page = data['pageInfo']['hasNextPage']
         cursor = data['pageInfo']['endCursor']
-    
-     # 只进行一次排序
+
+    # 只进行一次排序
     sorted_posts = sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:top_num]
     return sorted_posts      
 def extract_keywords(products):

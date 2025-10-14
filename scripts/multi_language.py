@@ -223,6 +223,11 @@ def fetch_product_hunt_data():
           featuredAt
           website
           url
+          media {
+            url
+            type
+            videoUrl
+          }
         }
         pageInfo {
           hasNextPage
