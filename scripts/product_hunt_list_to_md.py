@@ -42,7 +42,7 @@ category_mapping_en = {
 }
 
 class Product:
-    def __init__(self, id: str, name: str, tagline: str, description: str, votesCount: int, createdAt: str, featuredAt: str, website: str, url: str,en: bool, **kwargs):
+    def __init__(self, id: str, name: str, tagline: str, description: str, votesCount: int, createdAt: str, featuredAt: str, website: str, url: str,en: bool,media=None, **kwargs):
         self.name = name
         self.tagline = tagline
         self.description = description
@@ -60,7 +60,7 @@ class Product:
             self.translated_description = self.translate_text(self.description)
         self.website = website
         self.url = url
-        self.og_image_url = self.fetch_og_image_url()
+        self.og_image_url = self.get_image_url_from_media(self,media)
         self.keyword = self.generate_keywords()
 
     def fetch_og_image_url(self) -> str:
@@ -72,14 +72,36 @@ class Product:
             if og_image:
                 return og_image["content"]
         return ""
+    def get_image_url_from_media(self, media):
+        """从API返回的media字段中获取图片URL"""
+        try:
+            if media and isinstance(media, list) and len(media) > 0:
+                # 优先使用第一张图片
+                image_url = media[0].get('url', '')
+                if image_url:
+                    print(f"成功从API获取图片URL: {self.name}")
+                    return image_url
 
+            # 如果API没有返回图片，尝试使用备用方法
+            print(f"API未返回图片，尝试使用备用方法: {self.name}")
+            backup_url = self.fetch_og_image_url()
+            if backup_url:
+                print(f"使用备用方法获取图片URL成功: {self.name}")
+                return backup_url
+            else:
+                print(f"无法获取图片URL: {self.name}")
+
+            return ""
+        except Exception as e:
+            print(f"获取图片URL时出错: {self.name}, 错误: {e}")
+            return ""
     def generate_keywords(self) -> str:
         """生成产品的关键词，显示在一行，用逗号分隔"""
         if self.en:
             prompt = f"根据以下内容生成适合的英文关键词，用英文逗号分隔开：\n\n产品名称：{self.name}\n\n标语：{self.tagline}\n\n描述：{self.description}"
         else:
             prompt = f"根据以下内容生成适合的中文关键词，用英文逗号分隔开：\n\n产品名称：{self.name}\n\n标语：{self.tagline}\n\n描述：{self.description}"
-        
+
         try:
             response = client.chat.completions.create(
                 model=model,
@@ -201,6 +223,11 @@ def fetch_product_hunt_data():
           featuredAt
           website
           url
+          media {
+            url
+            type
+            videoUrl
+          }
         }
         pageInfo {
           hasNextPage
