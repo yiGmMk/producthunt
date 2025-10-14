@@ -1,9 +1,9 @@
 ---
 title: Prompt-Engineering-Guide
-date: 2025-10-14T14:18:38+08:00
+date: 2025-10-14T15:01:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1748367138805-c2e3acedc384?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjI1ODh8&ixlib=rb-4.1.0
-tags: ['github',prompt engineering, LLMs, language models, techniques, guide, applications, models, DAIR.AI, prompt, AI]
+image: https://images.unsplash.com/photo-1737392402963-a489a17826eb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjUxNDd8&ixlib=rb-4.1.0
+tags: ['github',prompt engineering, language models, LLMs, AI, techniques, applications, guide, courses, resources]
 categories: ['github']
 ---
 

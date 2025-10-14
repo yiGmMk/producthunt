@@ -1,11 +1,9 @@
 ---
 title: Archon
-date: 2025-10-14T14:16:49+08:00
+date: 2025-10-14T14:59:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1650718821025-38e7679ac34a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjI1ODh8&ixlib=rb-4.1.0
-tags: ['github',text
-Archon, AI coding assistants, knowledge base, task management, MCP server, Model Context Protocol, documentation, smart search, real-time updates, web crawling, document processing, vector search, AI integration, multi-LLM support, RAG strategies, project management, collaborative editing, WebSocket updates, microservices, Docker, Supabase, FastAPI, React, TypeScript, TailwindCSS,  OpenAI, Ollama, Google Gemini
-]
+image: https://images.unsplash.com/photo-1672857663219-0de23c859504?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjUxNDd8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
