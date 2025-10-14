@@ -1,15 +1,34 @@
 ---
 title: public-apis
-date: 2025-10-13T21:09:55+08:00
+date: 2025-10-14T14:17:27+08:00
 draft: False
-image: "https://images.unsplash.com/photo-1675526193131-83c24921f33c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAzNjA5NDV8&ixlib=rb-4.1.0"
-tags: ['github',"text public APIs", "API", "open data"]
+image: https://images.unsplash.com/photo-1675250349765-d076de3265e2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjI1ODh8&ixlib=rb-4.1.0
+tags: ['github',text
+public APIs, API, weather, currency exchange, cryptocurrency, anime, books, video, music, news, open data, machine learning, art, development, games
+]
 categories: ['github']
 ---
 
-[public-apis/public-apis](https://github.com/public-apis/public-apis)
+# [public-apis/public-apis](https://github.com/public-apis/public-apis)
+
+# Try Public APIs for free
+The Public APIs repository is manually curated by community members like you and folks working at [APILayer](https://apilayer.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo). It includes an extensive list of public APIs from many domains that you can use for your own products. Consider it a treasure trove of APIs well-managed by the community over the years.
+
+<br >
+
+<p>
+    <a href="https://apilayer.com">
+        <div>
+            <img src=".github/cs1586-APILayerLogoUpdate2022-LJ_v2-HighRes.png" width="100%" alt="APILayer Logo" />
+        </div>
+    </a>
+  </p>
 
 APILayer is the fastest way to integrate APIs into any product. Explore [APILayer APIs](https://apilayer.com/products/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo) here for your next project.
+
+Join our [Discord server](https://discord.com/invite/hgjA78638n/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo) to get updates, ask questions, get answers, random community calls, and more.
+
+<br >
 
 ## APILayer APIs
 | API | Description | Call this API |
@@ -37,61 +56,58 @@ APILayer is the fastest way to integrate APIs into any product. Explore [APILaye
 
 ## Index
 
-- [APILayer APIs](#apilayer-apis)
-- [Learn more about Public APIs](#learn-more-about-public-apis)
-- [Index](#index)
-  - [Animals](#animals)
-  - [Anime](#anime)
-  - [Anti-Malware](#anti-malware)
-  - [Art \& Design](#art--design)
-  - [Authentication \& Authorization](#authentication--authorization)
-  - [Blockchain](#blockchain)
-  - [Books](#books)
-  - [Business](#business)
-  - [Calendar](#calendar)
-  - [Cloud Storage \& File Sharing](#cloud-storage--file-sharing)
-  - [Continuous Integration](#continuous-integration)
-  - [Cryptocurrency](#cryptocurrency)
-  - [Currency Exchange](#currency-exchange)
-  - [Data Validation](#data-validation)
-  - [Development](#development)
-  - [Dictionaries](#dictionaries)
-  - [Documents \& Productivity](#documents--productivity)
-  - [Email](#email)
-  - [Entertainment](#entertainment)
-  - [Environment](#environment)
-  - [Events](#events)
-  - [Finance](#finance)
-  - [Food \& Drink](#food--drink)
-  - [Games \& Comics](#games--comics)
-  - [Geocoding](#geocoding)
-  - [Government](#government)
-  - [Health](#health)
-  - [Jobs](#jobs)
-  - [Machine Learning](#machine-learning)
-  - [Music](#music)
-  - [News](#news)
-  - [Open Data](#open-data)
-  - [Open Source Projects](#open-source-projects)
-  - [Patent](#patent)
-  - [Personality](#personality)
-  - [Phone](#phone)
-  - [Photography](#photography)
-  - [Programming](#programming)
-  - [Science \& Math](#science--math)
-  - [Security](#security)
-  - [Shopping](#shopping)
-  - [Social](#social)
-  - [Sports \& Fitness](#sports--fitness)
-  - [Test Data](#test-data)
-  - [Text Analysis](#text-analysis)
-  - [Tracking](#tracking)
-  - [Transportation](#transportation)
-  - [URL Shorteners](#url-shorteners)
-  - [Vehicle](#vehicle)
-  - [Video](#video)
-  - [Weather](#weather)
-- [License](#license)
+* [Animals](#animals)
+* [Anime](#anime)
+* [Anti-Malware](#anti-malware)
+* [Art & Design](#art--design)
+* [Authentication & Authorization](#authentication--authorization)
+* [Blockchain](#blockchain)
+* [Books](#books)
+* [Business](#business)
+* [Calendar](#calendar)
+* [Cloud Storage & File Sharing](#cloud-storage--file-sharing)
+* [Continuous Integration](#continuous-integration)
+* [Cryptocurrency](#cryptocurrency)
+* [Currency Exchange](#currency-exchange)
+* [Data Validation](#data-validation)
+* [Development](#development)
+* [Dictionaries](#dictionaries)
+* [Documents & Productivity](#documents--productivity)
+* [Email](#email)
+* [Entertainment](#entertainment)
+* [Environment](#environment)
+* [Events](#events)
+* [Finance](#finance)
+* [Food & Drink](#food--drink)
+* [Games & Comics](#games--comics)
+* [Geocoding](#geocoding)
+* [Government](#government)
+* [Health](#health)
+* [Jobs](#jobs)
+* [Machine Learning](#machine-learning)
+* [Music](#music)
+* [News](#news)
+* [Open Data](#open-data)
+* [Open Source Projects](#open-source-projects)
+* [Patent](#patent)
+* [Personality](#personality)
+* [Phone](#phone)
+* [Photography](#photography)
+* [Programming](#programming)
+* [Science & Math](#science--math)
+* [Security](#security)
+* [Shopping](#shopping)
+* [Social](#social)
+* [Sports & Fitness](#sports--fitness)
+* [Test Data](#test-data)
+* [Text Analysis](#text-analysis)
+* [Tracking](#tracking)
+* [Transportation](#transportation)
+* [URL Shorteners](#url-shorteners)
+* [Vehicle](#vehicle)
+* [Video](#video)
+* [Weather](#weather)
+<br >
 
 ### Animals
 API | Description | Auth | HTTPS | CORS 
@@ -1878,6 +1894,11 @@ API | Description | Auth | HTTPS | CORS |
 | [Weatherbit](https://www.weatherbit.io/api) | Weather | `apiKey` | Yes | Unknown |
 | [Yandex.Weather](https://yandex.com/dev/weather/) | Assesses weather condition in specific locations | `apiKey` | Yes | No |
 
-## License
+**[⬆ Back to Index](#index)**
+<br >
+<br >
 
+<br>
+
+## License
 [MIT](LICENSE) (c) 2022 public-apis
