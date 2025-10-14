@@ -17,7 +17,7 @@ def main():
 
     img_list = imgurl_list()
     github_content = GithubContent(hugo_workdir)
-    for project in project_list:
+    for project in project_list[:5]:
         filename = project[1]
         url = project[2]
         author = project[0]
