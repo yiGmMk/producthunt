@@ -2,6 +2,8 @@
 
 使用Product Hunt API 获取每日产品热榜,bing使用LLM翻译成多语言版本
 
+参考: https://github.com/ViggoZ/producthunt-daily-hot
+
 ## LLM
 
 - [自部署gpt-4o接口](https://gpt4o.programnotes.cn/docs),使用https://github.com/yiGmMk/free-unoficial-gpt4o-mini-api 部署
