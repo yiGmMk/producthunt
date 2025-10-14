@@ -1,9 +1,11 @@
 ---
 title: Archon
-date: 2025-10-14T14:59:28+08:00
+date: 2025-10-14T15:28:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1672857663219-0de23c859504?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjUxNDd8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1683567936098-c7341e859233?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjY4ODR8&ixlib=rb-4.1.0
+tags: ['github',text
+Archon, AI coding assistants, knowledge management, MCP server, Model Context Protocol, documentation, task management, web crawling, vector search, multi-LLM support, project management, real-time collaboration
+]
 categories: ['github']
 ---
 

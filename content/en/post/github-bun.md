@@ -1,9 +1,9 @@
 ---
 title: bun
-date: 2025-10-14T15:00:26+08:00
+date: 2025-10-14T15:29:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1737392402963-a489a17826eb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjUxNDd8&ixlib=rb-4.1.0
-tags: ['github',JavaScript, TypeScript, Bun, Node.js, package manager, runtime, test runner, installation, CLI, bundler, APIs]
+image: https://images.unsplash.com/photo-1546922164-5dc6801a8ae0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjY4ODR8&ixlib=rb-4.1.0
+tags: ['github',JavaScript, TypeScript, runtime, package manager, Node.js, test runner, CLI, bundler, installation, documentation]
 categories: ['github']
 ---
 

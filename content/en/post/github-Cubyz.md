@@ -1,9 +1,9 @@
 ---
 title: Cubyz
-date: 2025-10-14T15:00:47+08:00
+date: 2025-10-14T15:29:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1539807134273-f97ed182b488?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjUxNDd8&ixlib=rb-4.1.0
-tags: ['github',voxel sandbox game, Cubyz, Zig, 3D chunks, procedural crafting, level of detail, game development, contributing, textures, pixel art, open source]
+image: https://images.unsplash.com/photo-1543619758-d8b9dc137421?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjY4ODR8&ixlib=rb-4.1.0
+tags: ['github',voxel sandbox game, 3D chunks, procedural crafting, Zig, level of detail, Cubyz, open source, contributing, textures, gameplay additions, pixel art]
 categories: ['github']
 ---
 

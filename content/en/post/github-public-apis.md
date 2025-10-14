@@ -1,9 +1,9 @@
 ---
 title: public-apis
-date: 2025-10-14T15:00:09+08:00
+date: 2025-10-14T15:28:56+08:00
 draft: False
-image: https://images.unsplash.com/photo-1593507377427-517837375cca?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjUxNDd8&ixlib=rb-4.1.0
-tags: ['github',natural language processing, public APIs, API, open data,  weather,  geolocation,  image,  weather data,  weather forecast,  currency exchange,  stock data,  currency,  anime,  movie,  quotes,  text,  video,  government,  text analysis,  weather information,  weather forecast data,  exchange rates]
+image: https://images.unsplash.com/photo-1599568723850-14196ee0f991?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjY4ODR8&ixlib=rb-4.1.0
+tags: ['github',natural language processing, public APIs, API,  weather,  currency exchange,  video,  music,  cryptocurrency,  weather data,  movie]
 categories: ['github']
 ---
 

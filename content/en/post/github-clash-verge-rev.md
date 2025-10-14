@@ -1,9 +1,9 @@
 ---
 title: clash-verge-rev
-date: 2025-10-14T15:00:16+08:00
+date: 2025-10-14T15:29:05+08:00
 draft: False
-image: https://images.unsplash.com/photo-1737392402963-a489a17826eb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjUxNDd8&ixlib=rb-4.1.0
-tags: ['github',Clash Verge Rev, Tauri, Clash Meta GUI, proxy, Windows, macOS, Linux, features, installation, configuration, development, donation.]
+image: https://images.unsplash.com/photo-1683567936098-c7341e859233?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjY4ODR8&ixlib=rb-4.1.0
+tags: ['github',clash-verge-rev, Clash Meta GUI, Tauri, proxy, Windows, macOS, Linux, configuration management, system proxy, TUN mode, WebDav]
 categories: ['github']
 ---
 

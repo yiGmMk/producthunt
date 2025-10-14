@@ -1,9 +1,9 @@
 ---
 title: prompt-eng-interactive-tutorial
-date: 2025-10-14T14:59:18+08:00
+date: 2025-10-14T15:28:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1597354482974-ba9eb017fb4b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjUxNDd8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1546922164-5dc6801a8ae0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjY4ODR8&ixlib=rb-4.1.0
+tags: ['github',prompt engineering, Claude, tutorial, prompts, Anthropic, course, exercises, basic prompt structure, advanced prompts, use cases]
 categories: ['github']
 ---
 

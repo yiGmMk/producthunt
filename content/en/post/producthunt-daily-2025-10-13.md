@@ -1,8 +1,8 @@
 ---
 title: Product Hunt Daily | 2025-10-14
-date: 2025-10-14 06:59:04+0000
+date: 2025-10-14 07:28:01+0000
 image: https://ph-files.imgix.net/b9a8f351-febe-48d6-a5a0-5a325b9ea287.png?auto=format
-tags: ["AI", "productivity", "AI Engineer"]
+tags: ["productivity", "AI", "distraction-free"]
 categories: ["AI"]
 ---
 
@@ -12,7 +12,7 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/INTET5M7VWBWZK?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/orchids?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Orchids](https://ph-files.imgix.net/b9a8f351-febe-48d6-a5a0-5a325b9ea287.png?auto=format)  
-**Keyword**: AI Engineer, Full Stack, App Builder, Website Builder, AI, Orchids, Chatbot, Development  
+**Keyword**: AI Engineer, Full Stack, App Builder, Website Builder, AI, Orchids, Chatbot, Development, Software  
 **VotesCount**: 🔺528  
 **Featured**: Yes  
 **CreatedAt**: 2025-10-13 07:01 AM (UTC)  
@@ -26,7 +26,7 @@ categories: ["AI"]
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/replyke?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Replyke](https://ph-files.imgix.net/b6cf309f-aacb-40ac-a731-6e54b684f101.png?auto=format)  
 **Keyword**: Replyke, APIs, user content, social graphs, moderation, open-source, threaded comments, comment section, Reddit-style, speed, quality  
-**VotesCount**: 🔺308  
+**VotesCount**: 🔺313  
 **Featured**: Yes  
 **CreatedAt**: 2025-10-13 07:01 AM (UTC)  
 
@@ -38,8 +38,8 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/J3GIKUFEOX2S7Q?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/planehq?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Plane](https://ph-files.imgix.net/d80b9681-6df0-470f-bdc3-1dc1d42e6ee2.png?auto=format)  
-**Keyword**: Project management, AI, workspace, collaboration, productivity, projects, docs, AI-native  
-**VotesCount**: 🔺302  
+**Keyword**: Project management, AI, workspace, collaboration, productivity, projects, documentation, AI-powered  
+**VotesCount**: 🔺304  
 **Featured**: Yes  
 **CreatedAt**: 2025-10-13 07:01 AM (UTC)  
 
@@ -51,7 +51,7 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/BG7LXO4KM75ULI?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/traycer-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Traycer AI](https://ph-files.imgix.net/bed62c16-5110-43bb-b9ef-2d03a5e5ca35.png?auto=format)  
-**Keyword**: AI coding, spec-driven development, code planning, code generation, AI agent, codebase management, software development, developer tools, code verification, Traycer AI  
+**Keyword**: AI coding, plan-first, spec-driven development, code generation, codebase, AI agent, development tools, software development, Traycer AI  
 **VotesCount**: 🔺277  
 **Featured**: Yes  
 **CreatedAt**: 2025-10-13 07:01 AM (UTC)  
@@ -64,8 +64,8 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/73JWMYMV2OWUNT?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/trupeer?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Trupeer: Knowledge Base with AI Search](https://ph-files.imgix.net/475febd5-a0ba-4a85-b43b-e66e6e9e3a20.png?auto=format)  
-**Keyword**: knowledge base, AI search, video search, AI video, timestamped answers, drag-and-drop, auto-indexing, custom domain, team collaboration  
-**VotesCount**: 🔺255  
+**Keyword**: knowledge base, AI search, video search, AI video search, timestamped answers, drag-and-drop builder, auto-indexing, custom domain hosting, team collaboration  
+**VotesCount**: 🔺257  
 **Featured**: Yes  
 **CreatedAt**: 2025-10-13 07:01 AM (UTC)  
 
@@ -77,7 +77,7 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/XYNLD2PPHW7YMY?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/bloxie?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Bloxie](https://ph-files.imgix.net/d572ac65-f29a-4fef-9541-577bf0f43ca4.png?auto=format)  
-**Keyword**: Self-control, phone addiction, focus, productivity, time management, app blocker, distraction-free, Bloxie  
+**Keyword**: Bloxie, self-control, phone addiction, productivity, focus, time management, app blocker, distraction-free  
 **VotesCount**: 🔺181  
 **Featured**: Yes  
 **CreatedAt**: 2025-10-13 07:01 AM (UTC)  
@@ -90,8 +90,8 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/P674VYHMJKIBHO?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/sigma-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![SigmaMind AI](https://ph-files.imgix.net/5f104d78-6463-4055-94a5-bf15061c82b9.png?auto=format)  
-**Keyword**: AI agents, conversational AI, voice AI, chat AI, no-code, agent builder, enterprise AI, integrations, custom tools, SigmaMind, YC-backed, deployment  
-**VotesCount**: 🔺178  
+**Keyword**: AI agents, conversational AI, voice AI, chat AI, no-code, agent builder, enterprise AI, integrations, custom tools, SigmaMind AI  
+**VotesCount**: 🔺179  
 **Featured**: Yes  
 **CreatedAt**: 2025-10-13 07:01 AM (UTC)  
 
@@ -103,7 +103,7 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/3DSYE2YCA3IQMC?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/celaro?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Celaro](https://ph-files.imgix.net/bb441b17-8c42-43c4-893c-4c7b36a2db89.png?auto=format)  
-**Keyword**: Project Management, Creative Teams, Task Tracking, Planning, Forecasting, Minimalist, Fast, Keyboard-Friendly, Distraction-Free, Celaro  
+**Keyword**: Project tracker, creative teams, planning, tracking, forecasting, minimal, fast, keyboard-friendly, distraction-free, Celaro  
 **VotesCount**: 🔺162  
 **Featured**: Yes  
 **CreatedAt**: 2025-10-13 07:01 AM (UTC)  
@@ -116,7 +116,7 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/QE6PWS6Y4IIIMV?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/inputlock?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![InputLock](https://ph-files.imgix.net/d61cc933-b510-4887-903f-3169ec066739.png?auto=format)  
-**Keyword**: macOS, input method, IME, lock, input source, auto-restore  
+**Keyword**: macOS, input method, IME, lock, input source, auto-restore, productivity, keyboard, macOS utility  
 **VotesCount**: 🔺120  
 **Featured**: Yes  
 **CreatedAt**: 2025-10-13 07:01 AM (UTC)  
@@ -129,7 +129,7 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/PGJWDZRSKA7IBW?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/salesecho?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![SalesEcho](https://ph-files.imgix.net/2cf83fa2-f077-49af-9eec-9737a6ccd9c4.png?auto=format)  
-**Keyword**: No keywords  
+**Keyword**: SalesEcho, AI sales assistant, real-time, sales co-pilot, call guidance, sales insights, sales research  
 **VotesCount**: 🔺62  
 **Featured**: No  
 **CreatedAt**: 2025-10-13 07:01 AM (UTC)  

@@ -1,9 +1,9 @@
 ---
 title: klavis
-date: 2025-10-14T14:59:57+08:00
+date: 2025-10-14T15:28:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1737392402963-a489a17826eb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjUxNDd8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1603571435000-ed4fe8acecd5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjY4ODR8&ixlib=rb-4.1.0
+tags: ['github',Klavis, AI, Strata, MCP Integrations, AI agents, documentation, Discord, open source, SDK, REST API]
 categories: ['github']
 ---
 

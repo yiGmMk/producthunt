@@ -1,9 +1,9 @@
 ---
 title: nitro
-date: 2025-10-14T15:01:25+08:00
+date: 2025-10-14T15:30:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1672857663219-0de23c859504?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjUxNDd8&ixlib=rb-4.1.0
-tags: ['github',Nitro, Vite app, production-ready server, server routes, zero-config, contributing, MIT License, deployment]
+image: https://images.unsplash.com/photo-1599568723850-14196ee0f991?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjY4ODR8&ixlib=rb-4.1.0
+tags: ['github',Nitro, Vite app, production-ready server, server routes, zero-config, contributing, MIT License, v3 Alpha]
 categories: ['github']
 ---
 
