@@ -2,6 +2,7 @@ import os
 from time import sleep
 import requests
 from datetime import datetime, timedelta, timezone
+
 # from openai import OpenAI
 from bs4 import BeautifulSoup
 import pytz
@@ -18,10 +19,10 @@ LANGUAGE_SETTINGS = {
         "category_mapping": {
             "人工智能": ["AI", "人工智能", "机器学习"],
             "工具": ["工具", "生产力工具", "效率", "Notion"],
-            "开发": ["API", "数据库", "REST API", "SQL"]
+            "开发": ["API", "数据库", "REST API", "SQL"],
         },
-        "time_format": '%Y年%m月%d日 %p%I:%M (北京时间)',
-        "timezone": 'Asia/Shanghai',
+        "time_format": "%Y年%m月%d日 %p%I:%M (北京时间)",
+        "timezone": "Asia/Shanghai",
         "tagline_label": "标语",
         "description_label": "介绍",
         "website_label": "网站",
@@ -30,7 +31,7 @@ LANGUAGE_SETTINGS = {
         "keyword_label": "关键词",
         "votes_count_label": "票数",
         "featured_label": "是否精选",
-        "featured_mapping":  {"yes": "是", "no": "否"},
+        "featured_mapping": {"yes": "是", "no": "否"},
         "created_at_label": "发布时间",
         "keyword_prompt": "根据以下内容生成适合的简短中文关键词，用英文逗号分隔开：\n\n产品名称：{name}\n\n标语：{tagline}\n\n描述：{description}",
         "default_keyword": "无关键词",
@@ -43,10 +44,10 @@ LANGUAGE_SETTINGS = {
         "category_mapping": {
             "AI": ["AI", "Artificial intelligence", "machine learning", "AI agent"],
             "Tools": ["tool", "效率"],
-            "Develop": ["API", "Database", "REST API", "SQL"]
+            "Develop": ["API", "Database", "REST API", "SQL"],
         },
-        "time_format": '%Y-%m-%d %I:%M %p (UTC)',
-        "timezone": 'UTC',
+        "time_format": "%Y-%m-%d %I:%M %p (UTC)",
+        "timezone": "UTC",
         "tagline_label": "Tagline",
         "description_label": "Description",
         "website_label": "Website",
@@ -55,7 +56,7 @@ LANGUAGE_SETTINGS = {
         "keyword_label": "Keyword",
         "votes_count_label": "VotesCount",
         "featured_label": "Featured",
-        "featured_mapping":  {"yes": "Yes", "no": "No"},
+        "featured_mapping": {"yes": "Yes", "no": "No"},
         "created_at_label": "CreatedAt",
         "keyword_prompt": "Generate suitable short keywords based on the product information provided, separated by commas.\n\nName: {name}\nTagline: {tagline}\nDescription: {description}",
         "default_keyword": "No keywords",
@@ -66,12 +67,16 @@ LANGUAGE_SETTINGS = {
         "file_path": "content/es/post",
         "translate_task": "Translate the following text to Spanish,only return the translation:",
         "category_mapping": {
-            "Inteligencia Artificial": ["AI", "Inteligencia Artificial", "aprendizaje automático"],
+            "Inteligencia Artificial": [
+                "AI",
+                "Inteligencia Artificial",
+                "aprendizaje automático",
+            ],
             "Herramientas": ["herramienta", "productividad", "eficiencia", "Notion"],
-            "Desarrollo": ["API", "base de datos", "REST API", "SQL"]
+            "Desarrollo": ["API", "base de datos", "REST API", "SQL"],
         },
-        "time_format": '%Y-%m-%d %I:%M %p (UTC)',
-        "timezone": 'Europe/Madrid',
+        "time_format": "%Y-%m-%d %I:%M %p (UTC)",
+        "timezone": "Europe/Madrid",
         "tagline_label": "Lema",
         "description_label": "Descripción",
         "website_label": "Sitio web",
@@ -93,10 +98,10 @@ LANGUAGE_SETTINGS = {
         "category_mapping": {
             "الذكاء الاصطناعي": ["الذكاء الاصطناعي", "AI", "تعلم الآلة"],
             "الأدوات": ["أداة", "إنتاجية", "كفاءة", "Notion"],
-            "التطوير": ["API", "قاعدة بيانات", "REST API", "SQL"]
+            "التطوير": ["API", "قاعدة بيانات", "REST API", "SQL"],
         },
-        "time_format": '%Y-%m-%d %I:%M %p (UTC)',
-        "timezone": 'Asia/Riyadh',
+        "time_format": "%Y-%m-%d %I:%M %p (UTC)",
+        "timezone": "Asia/Riyadh",
         "tagline_label": "الشعار",
         "description_label": "الوصف",
         "website_label": "الموقع الإلكتروني",
@@ -110,11 +115,11 @@ LANGUAGE_SETTINGS = {
         "keyword_prompt": "根据以下内容生成简短的适合的阿拉伯语关键词，用英文逗号分隔开：\n\n产品名称：{name}\n\n标语：{tagline}\n\n描述：{description}",
         "default_keyword": "لا توجد كلمات مفتاحية",
         "monthly_label": "التصنيف الشهري",
-    }
+    },
 }
 
-producthunt_client_id = os.getenv('PRODUCTHUNT_CLIENT_ID')
-producthunt_client_secret = os.getenv('PRODUCTHUNT_CLIENT_SECRET')
+producthunt_client_id = os.getenv("PRODUCTHUNT_CLIENT_ID")
+producthunt_client_secret = os.getenv("PRODUCTHUNT_CLIENT_SECRET")
 top_num = 10
 
 # model = "Qwen/Qwen2.5-7B-Instruct"
@@ -123,36 +128,45 @@ top_num = 10
 # model = "deepseek-ai/DeepSeek-V2.5"
 # model = os.getenv("MODEL")
 
-lang = os.getenv('LANGUAGE')
+lang = os.getenv("LANGUAGE")
+
 
 class Product:
     def __init__(self, language: str, **kwargs):
         self.language = language
         self.settings = LANGUAGE_SETTINGS[language]
-        self.name = kwargs.get('name')
-        self.tagline = kwargs.get('tagline')
-        self.description = kwargs.get('description')
-        self.votes_count = kwargs.get('votesCount')
-        self.featuredAt = kwargs.get('featuredAt')
-        self.createdAt = kwargs.get('createdAt')
-        self.website = kwargs.get('website')
-        self.url = kwargs.get('url')
+        self.name = kwargs.get("name")
+        self.tagline = kwargs.get("tagline")
+        self.description = kwargs.get("description")
+        self.votes_count = kwargs.get("votesCount")
+        self.featuredAt = kwargs.get("featuredAt")
+        self.createdAt = kwargs.get("createdAt")
+        self.website = kwargs.get("website")
+        self.url = kwargs.get("url")
 
-        self.is_en = (language == 'en')
-        self.featured = self.settings["featured_mapping"]["yes"] if self.featuredAt else self.settings["featured_mapping"]["no"]
+        self.is_en = language == "en"
+        self.featured = (
+            self.settings["featured_mapping"]["yes"]
+            if self.featuredAt
+            else self.settings["featured_mapping"]["no"]
+        )
         self.created_at = self.convert_to_local_time(self.createdAt)
-        self.translated_tagline = self.tagline if self.is_en else self.translate_text(self.tagline)
-        self.translated_description = self.description if self.is_en else self.translate_text(self.description)
-        self.og_image_url = self.get_image_url_from_media(self, kwargs.get("media"))
+        self.translated_tagline = (
+            self.tagline if self.is_en else self.translate_text(self.tagline)
+        )
+        self.translated_description = (
+            self.description if self.is_en else self.translate_text(self.description)
+        )
+        self.og_image_url = self.get_image_url_from_media(kwargs.get("media"))
         self.keyword = self.generate_keywords()
 
     def fetch_og_image_url(self) -> str:
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
         }
-        response = requests.get(self.url,headers=headers)
+        response = requests.get(self.url, headers=headers)
         if response.status_code == 200:
-            soup = BeautifulSoup(response.text, 'html.parser')
+            soup = BeautifulSoup(response.text, "html.parser")
             og_image = soup.find("meta", property="og:image")
             if og_image:
                 return og_image["content"]
@@ -186,31 +200,31 @@ class Product:
         lang_settings = self.settings
 
         # Use language-specific prompt for keyword generation
-        prompt = lang_settings['keyword_prompt'].format(
+        prompt = lang_settings["keyword_prompt"].format(
             name=self.name, tagline=self.tagline, description=self.description
         )
 
         try:
             response = call_openai("", prompt)
             keywords = response
-            return ', '.join(keywords.split()) if ',' not in keywords else keywords
+            return ", ".join(keywords.split()) if "," not in keywords else keywords
         except Exception as e:
             print(f"Error occurred during keyword generation: {e}")
-            return lang_settings['default_keyword']
+            return lang_settings["default_keyword"]
 
     def translate_text(self, text: str) -> str:
         try:
-            response = call_openai(self.settings['translate_task'], text)
+            response = call_openai(self.settings["translate_task"], text)
             return response
         except Exception as e:
             print(f"Error occurred during translation: {e}")
             return text
 
     def convert_to_local_time(self, utc_time_str: str) -> str:
-        utc_time = datetime.strptime(utc_time_str, '%Y-%m-%dT%H:%M:%SZ')
-        local_tz = pytz.timezone(self.settings['timezone'])
+        utc_time = datetime.strptime(utc_time_str, "%Y-%m-%dT%H:%M:%SZ")
+        local_tz = pytz.timezone(self.settings["timezone"])
         local_time = utc_time.replace(tzinfo=pytz.utc).astimezone(local_tz)
-        return local_time.strftime(self.settings['time_format'])
+        return local_time.strftime(self.settings["time_format"])
 
     def to_markdown(self, rank: int) -> str:
         lang_settings = self.settings
@@ -218,12 +232,12 @@ class Product:
         # Use language-specific keywords for markdown content
         markdown_labels = {
             "rank": f"{rank}. {self.name}",
-            "tagline":  lang_settings["tagline_label"],
+            "tagline": lang_settings["tagline_label"],
             "description": lang_settings["description_label"],
             "website": lang_settings["website_label"],
             "website2": lang_settings["website_label2"],
             "product_hunt": lang_settings["product_hunt_label"],
-            "keyword":  lang_settings["keyword_label"],
+            "keyword": lang_settings["keyword_label"],
             "votes_count": lang_settings["votes_count_label"],
             "featured": lang_settings["featured_label"],
             "created_at": lang_settings["created_at_label"],
@@ -240,23 +254,27 @@ class Product:
             f"**{markdown_labels['votes_count']}**: 🔺{self.votes_count}",
             f"**{markdown_labels['featured']}**: {self.featured}",
             f"**{markdown_labels['created_at']}**: {self.created_at}",
-            "\n"
-            "---"
+            "\n" "---",
         ]
         return "  \n".join(fields) + "  \n\n"
 
+
 from dateutil.relativedelta import relativedelta
+
+
 def fetch_product_hunt_data():
     token = get_producthunt_token()
     # 获取当前日期
     today = datetime.today()
-    first_day_of_this_month = today.replace(day=1).strftime('%Y-%m-%d')
-    first_day_of_last_month = (today.replace(day=1) - relativedelta(months=1)).strftime('%Y-%m-%d')
+    first_day_of_this_month = today.replace(day=1).strftime("%Y-%m-%d")
+    first_day_of_last_month = (today.replace(day=1) - relativedelta(months=1)).strftime(
+        "%Y-%m-%d"
+    )
     url = "https://api.producthunt.com/v2/api/graphql"
     headers = {
         "Authorization": f"Bearer {token}",
         "Content-Type": "application/json",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"           
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36",
     }
     base_query = """
     {
@@ -291,40 +309,53 @@ def fetch_product_hunt_data():
         query = base_query % (first_day_of_last_month, first_day_of_this_month, cursor)
         response = requests.post(url, headers=headers, json={"query": query})
         response.raise_for_status()
-        data = response.json()['data']['posts']
-        posts = data['nodes']
+        data = response.json()["data"]["posts"]
+        posts = data["nodes"]
         all_posts.extend(posts)
-        has_next_page = data['pageInfo']['hasNextPage']
-        cursor = data['pageInfo']['endCursor']
+        has_next_page = data["pageInfo"]["hasNextPage"]
+        cursor = data["pageInfo"]["endCursor"]
 
     # 只进行一次排序
-    sorted_posts = sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:top_num]
-    return sorted_posts      
+    sorted_posts = sorted(all_posts, key=lambda x: x["votesCount"], reverse=True)[
+        :top_num
+    ]
+    return sorted_posts
+
+
 def extract_keywords(products):
-    keywords = [keyword.strip() for product in products for keyword in product.keyword.split(',') if keyword.strip()]
+    keywords = [
+        keyword.strip()
+        for product in products
+        for keyword in product.keyword.split(",")
+        if keyword.strip()
+    ]
     return keywords
+
 
 def count_and_sort_keywords(keywords):
     keyword_counts = Counter(keywords)
     return keyword_counts.most_common()
 
+
 # 月报,标题为上月月份
 def generate_markdown(products, date_str: str, language: str):
     today = datetime.now(timezone.utc)
-    first_day_of_last_month = (today.replace(day=1) - relativedelta(months=1)).strftime('%Y-%m')
-    date = today.strftime('%Y-%m-%d %H:%M:%S%z')
+    first_day_of_last_month = (today.replace(day=1) - relativedelta(months=1)).strftime(
+        "%Y-%m"
+    )
+    date = today.strftime("%Y-%m-%d %H:%M:%S%z")
     keywords = extract_keywords(products)
     top_keywords = count_and_sort_keywords(keywords)
-    
+
     settings = LANGUAGE_SETTINGS[language]
-    path = settings['file_path']
-    category_mapping = settings['category_mapping']
+    path = settings["file_path"]
+    category_mapping = settings["category_mapping"]
 
     os.makedirs(path, exist_ok=True)
     markdown_content = f"---\ntitle: {settings['title']} | {first_day_of_last_month}\ndate: {date}\nimage: {products[0].og_image_url}\n"
 
     if top_keywords:
-        hugo_keywords = ', '.join([f'"{keyword}"' for keyword, _ in top_keywords[:3]])
+        hugo_keywords = ", ".join([f'"{keyword}"' for keyword, _ in top_keywords[:3]])
         markdown_content += f"tags: [{hugo_keywords}]\n"
         categories = set()
         categories.add(settings["monthly_label"])
@@ -333,18 +364,23 @@ def generate_markdown(products, date_str: str, language: str):
             if any(keyword in keyword_set for keyword in keywords):
                 categories.add(category)
         if categories:
-            formatted_categories = ', '.join(f'"{category}"' for category in sorted(categories))
-            markdown_content += f'categories: [{formatted_categories}]\n'
-    markdown_content += "---\n\n" + ''.join(product.to_markdown(rank) for rank, product in enumerate(products, 1))
+            formatted_categories = ", ".join(
+                f'"{category}"' for category in sorted(categories)
+            )
+            markdown_content += f"categories: [{formatted_categories}]\n"
+    markdown_content += "---\n\n" + "".join(
+        product.to_markdown(rank) for rank, product in enumerate(products, 1)
+    )
 
     file_name = f"{path}/producthunt-monthly-{first_day_of_last_month}.md"
-    with open(file_name, 'w', encoding='utf-8') as file:
+    with open(file_name, "w", encoding="utf-8") as file:
         file.write(markdown_content)
     print(f"文件 {file_name} 生成成功并已覆盖。")
 
+
 def main():
     yesterday = datetime.now(timezone.utc) - timedelta(days=1)
-    date_str = yesterday.strftime('%Y-%m-%d')
+    date_str = yesterday.strftime("%Y-%m-%d")
     posts = fetch_product_hunt_data()
     products = []
     # https://ai.google.dev/pricing?hl=zh-cn#1_5flash , gemini-1.5-flash 限制了15RPM(每分钟15个请求)
@@ -353,6 +389,7 @@ def main():
         products.append(Product(language=lang, **post))
         sleep(15)  # 每5秒钟生成一个Product对象
     generate_markdown(products, date_str, language=lang)
+
 
 if __name__ == "__main__":
     main()
