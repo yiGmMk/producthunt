@@ -1,9 +1,11 @@
 ---
 title: llama.cpp
-date: 2025-10-13T21:10:23+08:00
+date: 2025-10-14T14:17:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1675526193131-83c24921f33c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAzNjA5NDV8&ixlib=rb-4.1.0
-tags: ['github',natural language processing, LLM inference, C/C++, GGUF, model quantization, Hugging Face, llama.cpp, text completion, OpenAI API, multimodal, Metal]
+image: https://images.unsplash.com/photo-1675250349765-d076de3265e2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjI1ODh8&ixlib=rb-4.1.0
+tags: ['github',text
+llama.cpp, LLM inference, C/C++, GGUF, model quantization, CUDA, Metal, AVX, multimodal support, llama-cli, llama-server, Hugging Face, API server
+]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: claude-code-templates
-date: 2025-10-13T21:10:46+08:00
+date: 2025-10-14T14:18:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1503932953040-b6085c4fd82e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAzNjA5NDV8&ixlib=rb-4.1.0
-tags: ['github',claude code templates, ai agents, commands, mcp, settings, hooks, development workflow, aitmpl.com, installation, claude code analytics, conversation monitor, health check, documentation, contributing, mit license]
+image: https://images.unsplash.com/photo-1650718821025-38e7679ac34a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjI1ODh8&ixlib=rb-4.1.0
+tags: ['github',claude code templates, AI agents, Claude Code, development workflow, commands, MCPs, settings, hooks, installation, templates, documentation, contributing, analytics, conversation monitor, plugin dashboard]
 categories: ['github']
 ---
 
@@ -34,17 +34,17 @@ categories: ['github']
 
 ```bash
 # Install a complete development stack
-npx claude-code-templates@latest --agent frontend-developer --command generate-tests --mcp github-integration
+npx claude-code-templates@latest --agent development-team/frontend-developer --command testing/generate-tests --mcp development/github-integration
 
 # Browse and install interactively
 npx claude-code-templates@latest
 
 # Install specific components
-npx claude-code-templates@latest --agent security-auditor
-npx claude-code-templates@latest --command optimize-bundle
-npx claude-code-templates@latest --setting mcp-timeouts
-npx claude-code-templates@latest --hook pre-commit-validation
-npx claude-code-templates@latest --mcp postgresql-integration
+npx claude-code-templates@latest --agent business-marketing/security-auditor
+npx claude-code-templates@latest --command performance/optimize-bundle
+npx claude-code-templates@latest --setting performance/mcp-timeouts
+npx claude-code-templates@latest --hook git/pre-commit-validation
+npx claude-code-templates@latest --mcp database/postgresql-integration
 ```
 
 ## What You Get
@@ -85,6 +85,13 @@ Comprehensive diagnostics to ensure your Claude Code installation is optimized.
 
 ```bash
 npx claude-code-templates@latest --health-check
+```
+
+### 🔌 Plugin Dashboard
+View marketplaces, installed plugins, and manage permissions from a unified interface.
+
+```bash
+npx claude-code-templates@latest --plugins
 ```
 
 ## 📖 Documentation
