@@ -1,9 +1,9 @@
 ---
 title: claude-code-templates
-date: 2025-10-14T14:18:20+08:00
+date: 2025-10-14T15:29:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1650718821025-38e7679ac34a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjI1ODh8&ixlib=rb-4.1.0
-tags: ['github',claude code templates, AI agents, Claude Code, development workflow, commands, MCPs, settings, hooks, installation, templates, documentation, contributing, analytics, conversation monitor, plugin dashboard]
+image: https://images.unsplash.com/photo-1599568723850-14196ee0f991?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjY4ODR8&ixlib=rb-4.1.0
+tags: ['github',claude code templates, AI agents, Claude Code, development workflow, custom commands, MCPs, settings, hooks, project templates, GitHub, PostgreSQL, documentation, contributing]
 categories: ['github']
 ---
 

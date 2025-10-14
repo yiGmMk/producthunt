@@ -9,7 +9,7 @@ categories: ['github']
 
 # [anthropics/prompt-eng-interactive-tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial)
 
-# Welcome to Anthropic's Prompt Engineering Interactive Tutorial
+Welcome to Anthropic's Prompt Engineering Interactive Tutorial
 
 ## Course introduction and goals
 

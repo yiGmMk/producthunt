@@ -7,30 +7,6 @@ tags: ['github',archon, AI coding, knowledge management]
 categories: ['github']
 ---
 
-# [coleam00/Archon](https://github.com/coleam00/Archon)
-
-<p align="center">
-  <img src="./archon-ui-main/public/archon-main-graphic.png" alt="Archon Main Graphic" width="853" height="422">
-</p>
-
-<p align="center">
-   <a href="https://trendshift.io/repositories/13964" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13964" alt="coleam00%2FArchon | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-</p>
-
-<p align="center">
-  <em>Power up your AI coding assistants with your own custom knowledge base and task management as an MCP server</em>
-</p>
-
-<p align="center">
-  <a href="#quick-start">Quick Start</a> •
-  <a href="#upgrading">Upgrading</a> •
-  <a href="#whats-included">What's Included</a> •
-  <a href="#architecture">Architecture</a> •
-  <a href="#troubleshooting">Troubleshooting</a>
-</p>
-
----
-
 ## 🎯 What is Archon?
 
 > Archon is currently in beta! Expect things to not work 100%, and please feel free to share any feedback and contribute with fixes/new features! Thank you to everyone for all the excitement we have for Archon already, as well as the bug reports, PRs, and discussions. It's a lot for our small team to get through but we're committed to addressing everything and making Archon into the best tool it possibly can be!
