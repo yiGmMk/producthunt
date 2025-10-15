@@ -1,9 +1,9 @@
 ---
 title: spring-ai-alibaba
-date: 2025-10-13T15:30:44+08:00
+date: 2025-10-15T15:29:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1702724760235-b1d4cced890f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAzNDA1MTF8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1713970700051-556d05c59fce?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA1MTMzNTN8&ixlib=rb-4.1.0
+tags: ['github',Spring AI Alibaba,Multi-agent,Chatbot]
 categories: ['github']
 ---
 

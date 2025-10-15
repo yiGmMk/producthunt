@@ -1,15 +1,15 @@
 ---
 title: prompt-eng-interactive-tutorial
-date: 2025-10-14T15:36:15+08:00
+date: 2025-10-15T15:29:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1578345535735-09226fffe7d6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjczNjh8&ixlib=rb-4.1.0
-tags: ['github',Prompt Engineering,Claude,Tutorial]
+image: https://images.unsplash.com/photo-1678637409763-7cdcd683ba9f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA1MTMzNTN8&ixlib=rb-4.1.0
+tags: ['github',Prompt Engineering, Claude, Tutorial]
 categories: ['github']
 ---
 
 # [anthropics/prompt-eng-interactive-tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial)
 
-Welcome to Anthropic's Prompt Engineering Interactive Tutorial
+# Welcome to Anthropic's Prompt Engineering Interactive Tutorial
 
 ## Course introduction and goals
 
