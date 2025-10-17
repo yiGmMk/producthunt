@@ -1,8 +1,8 @@
 ---
 title: nanoGPT
-date: 2025-10-16T15:28:54+08:00
+date: 2025-10-17T15:39:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1708809972172-b25fe745427e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA1OTk2ODh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1653573986346-8222474c3f8a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA2ODY3NDR8&ixlib=rb-4.1.0
 tags: ['github',nanoGPT, GPT-2, finetuning]
 categories: ['github']
 ---

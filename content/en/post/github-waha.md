@@ -1,9 +1,9 @@
 ---
 title: waha
-date: 2025-08-02T15:28:51+08:00
+date: 2025-10-17T15:39:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1719865632422-2dc7ada8d84b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQxMTk3MDd8&ixlib=rb-4.1.0
-tags: ['github',WhatsApp,HTTP API,Docker,REST API,QR code,text message,session,chat,screenshot]
+image: https://images.unsplash.com/photo-1597877774402-d04cad0b7596?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA2ODY3NDR8&ixlib=rb-4.1.0
+tags: ['github',WAHA, WhatsApp, REST API]
 categories: ['github']
 ---
 
