@@ -1,10 +1,9 @@
 ---
 title: minimind
-date: 2025-10-16T15:28:30+08:00
+date: 2025-10-18T15:24:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1474302770737-173ee21bab63?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA1OTk2ODh8&ixlib=rb-4.1.0
-tags: ['github',text
-MiniMind,开源,轻量级]
+image: https://images.unsplash.com/photo-1503340594342-af4df7e12ca1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA3NzIyNzJ8&ixlib=rb-4.1.0
+tags: ['github',minimind, large language model, PyTorch]
 categories: ['github']
 ---
 
