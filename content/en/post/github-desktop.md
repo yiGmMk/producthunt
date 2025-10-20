@@ -1,9 +1,9 @@
 ---
 title: desktop
-date: 2025-10-03T15:26:40+08:00
+date: 2025-10-20T15:29:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1627328561499-a3584d4ee4f7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk0NzYzNTB8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1638825794622-4c3bb400cdef?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA5NDUzMjN8&ixlib=rb-4.1.0
+tags: ['github',Atuin Desktop,runbooks,terminal]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: free-programming-books
-date: 2025-10-07T15:28:41+08:00
+date: 2025-10-20T15:29:27+08:00
 draft: False
-image: https://images.unsplash.com/photo-1650107823490-b7c24a5d5575?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk4MjE5OTB8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1638825794622-4c3bb400cdef?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA5NDUzMjN8&ixlib=rb-4.1.0
+tags: ['github',free programming books, learning resources, GitHub]
 categories: ['github']
 ---
 
@@ -14,7 +14,7 @@ categories: ['github']
 <div align="center" markdown="1">
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)&#160;
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)&#160;
+[![License: CC BY 4.0](https://img.shields.io/github/license/EbookFoundation/free-programming-books)](https://creativecommons.org/licenses/by/4.0/)&#160;
 [![Hacktoberfest 2025 stats](https://img.shields.io/github/hacktoberfest/2025/EbookFoundation/free-programming-books?label=Hacktoberfest+2025)](https://github.com/EbookFoundation/free-programming-books/pulls?q=is%3Apr+is%3Amerged+created%3A2025-10-01..2025-10-31)
 
 </div>
@@ -98,7 +98,7 @@ This project lists books and other resources grouped by genres:
 + [Burmese / မြန်မာဘာသာ](books/free-programming-books-my.md)
 + [Chinese / 中文](books/free-programming-books-zh.md)
 + [Czech / čeština / český jazyk](books/free-programming-books-cs.md)
-+ [Catalan / catalan/ català](books/free-programming-books-ca.md)
++ [Catalan / catalan / català](books/free-programming-books-ca.md)
 + [Danish / dansk](books/free-programming-books-da.md)
 + [Dutch / Nederlands](books/free-programming-books-nl.md)
 + [Estonian / eesti keel](books/free-programming-books-et.md)
@@ -131,6 +131,7 @@ This project lists books and other resources grouped by genres:
 + [Thai / ไทย](books/free-programming-books-th.md)
 + [Turkish / Türkçe](books/free-programming-books-tr.md)
 + [Ukrainian / Українська](books/free-programming-books-uk.md)
++ [Urdu / اردو](books/free-programming-books-ur.md)
 + [Vietnamese / Tiếng Việt](books/free-programming-books-vi.md)
 
 ### Cheat Sheets
@@ -154,7 +155,7 @@ This project lists books and other resources grouped by genres:
 + [Indonesian / Bahasa Indonesia](courses/free-courses-id.md)
 + [Italian / italiano](courses/free-courses-it.md)
 + [Japanese / 日本語](courses/free-courses-ja.md)
-+ [Kannada/ಕನ್ನಡ](courses/free-courses-kn.md)
++ [Kannada / ಕನ್ನಡ](courses/free-courses-kn.md)
 + [Kazakh / қазақша](courses/free-courses-kk.md)
 + [Khmer / ភាសាខ្មែរ](courses/free-courses-km.md)
 + [Korean / 한국어](courses/free-courses-ko.md)
@@ -166,6 +167,8 @@ This project lists books and other resources grouped by genres:
 + [Polish / polski / język polski / polszczyzna](courses/free-courses-pl.md)
 + [Portuguese (Brazil)](courses/free-courses-pt_BR.md)
 + [Portuguese (Portugal)](courses/free-courses-pt_PT.md)
++ [Punjabi / ਪੰਜਾਬੀ / پنجابی](courses/free-courses-pa.md)
++ [Romanian (Romania) / limba română / român](courses/free-courses-ro.md)
 + [Russian / Русский язык](courses/free-courses-ru.md)
 + [Sinhala / සිංහල](courses/free-courses-si.md)
 + [Spanish / español / castellano](courses/free-courses-es.md)

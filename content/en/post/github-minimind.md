@@ -1,9 +1,9 @@
 ---
 title: minimind
-date: 2025-10-19T15:24:29+08:00
+date: 2025-10-20T15:29:10+08:00
 draft: False
-image: https://images.unsplash.com/photo-1689784731248-c35b56d0300b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA4NTg2NDd8&ixlib=rb-4.1.0
-tags: ['github',MiniMind,开源项目,超小语言模型]
+image: https://images.unsplash.com/photo-1638187849666-22db40e2a0fd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA5NDUzMjN8&ixlib=rb-4.1.0
+tags: ['github',minimind,开源,LLM]
 categories: ['github']
 ---
 
