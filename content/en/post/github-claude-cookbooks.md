@@ -1,9 +1,9 @@
 ---
 title: claude-cookbooks
-date: 2025-10-20T15:28:51+08:00
+date: 2025-10-21T15:30:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592227361629-8e83b605f9c4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA5NDUzMjN8&ixlib=rb-4.1.0
-tags: ['github',Claude Cookbooks, Anthropic API, code snippets]
+image: https://images.unsplash.com/photo-1674313989706-b51001c6bbca?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwMzE4Mzh8&ixlib=rb-4.1.0
+tags: ['github',Claude Cookbooks, API, Anthropic]
 categories: ['github']
 ---
 

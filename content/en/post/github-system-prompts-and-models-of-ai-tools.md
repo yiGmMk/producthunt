@@ -1,9 +1,9 @@
 ---
 title: system-prompts-and-models-of-ai-tools
-date: 2025-10-02T15:28:00+08:00
+date: 2025-10-21T15:31:10+08:00
 draft: False
-image: https://images.unsplash.com/photo-1720729587534-adff86c53fd4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzODk5NTh8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1659332709449-41e852d3621f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwMzE4Mzh8&ixlib=rb-4.1.0
+tags: ['github',AI tools, system prompts, open source]
 categories: ['github']
 ---
 
@@ -16,18 +16,17 @@ categories: ['github']
 </p>
 
 <p align="center">
-  <a href="https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship">
+  <a href="https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">
     <img src="assets/Latitude_logo.png" alt="Latitude Logo" width="700"/>
   </a>
 </p>
 
 <div align="center" markdown="1">
 
-### [The tools you need for building reliable Agents and Prompts](https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship)  
-[Open Source AI Engineering Platform](https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship)<br>
+### <a href="https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">The tools you need for building reliable Agents and Prompts</a>  
+<a href="https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">Open Source AI Engineering Platform</a><br>
 
 </div>
-
 
 ---
 
@@ -40,7 +39,7 @@ categories: ['github']
 
 <a href="https://trendshift.io/repositories/14084" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14084" alt="x1xhlol%2Fsystem-prompts-and-models-of-ai-tools | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
-📜 Over **20,000+ lines** of insights into their structure and functionality.  
+📜 Over **30,000+ lines** of insights into their structure and functionality.  
 
 ⭐ **Star to follow updates**
 
@@ -64,6 +63,16 @@ You can show your support via:
 - **Ko-fi:** https://ko-fi.com/lucknite
 
 🙏 Thank you for your support!
+
+---
+
+# Sponsors
+
+## Support the Future of AI Development
+
+Sponsor the most comprehensive collection of AI system prompts and reach thousands of developers building the next generation of AI applications.
+
+[Get Started](mailto:lucknitelol@proton.me)
 
 ---
 
@@ -123,7 +132,7 @@ You can show your support via:
 
 > Open an issue.
 
-> **Latest Update:** 29/09/2025
+> **Latest Update:** 19/10/2025
 
 ---
 
