@@ -1,8 +1,8 @@
 ---
 title: ebook2audiobook
-date: 2025-10-21T15:31:03+08:00
+date: 2025-10-22T15:28:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1659332709449-41e852d3621f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwMzE4Mzh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1708000590735-6aee991a7b29?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjExMTgwNzZ8&ixlib=rb-4.1.0
 tags: ['github',ebook2audiobook, text-to-speech, voice cloning]
 categories: ['github']
 ---

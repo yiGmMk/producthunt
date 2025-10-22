@@ -1,9 +1,9 @@
 ---
 title: claude-cookbooks
-date: 2025-10-21T15:30:45+08:00
+date: 2025-10-22T15:28:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1674313989706-b51001c6bbca?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEwMzE4Mzh8&ixlib=rb-4.1.0
-tags: ['github',Claude Cookbooks, API, Anthropic]
+image: https://images.unsplash.com/photo-1705412155482-4edcc784c19b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjExMTgwNzZ8&ixlib=rb-4.1.0
+tags: ['github',Claude, Cookbooks, Anthropic]
 categories: ['github']
 ---
 
@@ -55,7 +55,6 @@ If you have ideas for new examples or guides, share them on the [issues page](ht
   - [Vector databases (Pinecone)](https://github.com/anthropics/anthropic-cookbook/blob/main/third_party/Pinecone/rag_using_pinecone.ipynb)
   - [Wikipedia](https://github.com/anthropics/anthropic-cookbook/blob/main/third_party/Wikipedia/wikipedia-search-cookbook.ipynb/)
   - [Web pages](https://github.com/anthropics/anthropic-cookbook/blob/main/misc/read_web_pages_with_haiku.ipynb)
-  - [Internet search (Brave)](https://github.com/anthropics/anthropic-cookbook/blob/main/third_party/Brave/web_search_using_brave.ipynb)
 - [Embeddings with Voyage AI](https://github.com/anthropics/anthropic-cookbook/blob/main/third_party/VoyageAI/how_to_create_embeddings.md)
 
 ### Multimodal Capabilities
