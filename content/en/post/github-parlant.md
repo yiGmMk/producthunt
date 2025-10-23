@@ -1,9 +1,9 @@
 ---
 title: parlant
-date: 2025-10-04T15:24:21+08:00
+date: 2025-10-23T15:28:53+08:00
 draft: False
-image: https://images.unsplash.com/photo-1658577804724-05c15d342ede?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk1NjI2MDJ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1614761064736-ce11c09670f8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEyMDQ1MTB8&ixlib=rb-4.1.0
+tags: ['github',AI Agent, Guidelines, Tool Integration]
 categories: ['github']
 ---
 

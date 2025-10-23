@@ -1,9 +1,9 @@
 ---
 title: yaak
-date: 2025-10-22T15:28:06+08:00
+date: 2025-10-23T15:28:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1536634743320-4a08d3be77e4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjExMTgwNzZ8&ixlib=rb-4.1.0
-tags: ['github',API client, Tauri, REST]
+image: https://images.unsplash.com/photo-1452174344330-c4343dc1cb8f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEyMDQ1MTB8&ixlib=rb-4.1.0
+tags: ['github',API client, Tauri, Rust]
 categories: ['github']
 ---
 

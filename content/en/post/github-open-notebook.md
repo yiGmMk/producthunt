@@ -1,9 +1,9 @@
 ---
 title: open-notebook
-date: 2025-10-22T15:28:32+08:00
+date: 2025-10-23T15:29:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1542550371427-311e1b0427cc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjExMTgwNzZ8&ixlib=rb-4.1.0
-tags: ['github',open source, privacy, AI models]
+image: https://images.unsplash.com/photo-1654704001943-293056a5893e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEyMDQ1MTB8&ixlib=rb-4.1.0
+tags: ['github',Open Notebook, privacy, podcast generation]
 categories: ['github']
 ---
 
