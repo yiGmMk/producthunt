@@ -1,8 +1,8 @@
 ---
 title: minio
-date: 2025-10-24T15:29:02+08:00
+date: 2025-10-25T15:25:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1706370416547-0b7f02e6ec34?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEyOTA5MzR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1547534601-862c877b1923?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEzNzcwOTR8&ixlib=rb-4.1.0
 tags: ['github',MinIO,S3,object storage]
 categories: ['github']
 ---

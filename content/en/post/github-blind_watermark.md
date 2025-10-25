@@ -1,9 +1,9 @@
 ---
 title: blind_watermark
-date: 2025-10-24T15:29:11+08:00
+date: 2025-10-25T15:25:10+08:00
 draft: False
-image: https://images.unsplash.com/photo-1703793493901-a19e5555e5a4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEyOTA5MzR8&ixlib=rb-4.1.0
-tags: ['github',blind watermark, image, embed]
+image: https://images.unsplash.com/photo-1508233620467-f79f1e317a05?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEzNzcwOTR8&ixlib=rb-4.1.0
+tags: ['github',blind-watermark, watermark, embed]
 categories: ['github']
 ---
 

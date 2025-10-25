@@ -1,9 +1,9 @@
 ---
 title: ladybird
-date: 2025-10-24T15:29:31+08:00
+date: 2025-10-25T15:25:01+08:00
 draft: False
-image: https://images.unsplash.com/photo-1638444571710-9f0f31aca511?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEyOTA5MzR8&ixlib=rb-4.1.0
-tags: ['github',web browser, web standards, multi-process architecture]
+image: https://images.unsplash.com/photo-1679365132923-8880aebede7b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEzNzcwOTR8&ixlib=rb-4.1.0
+tags: ['github',Ladybird,web browser,web rendering]
 categories: ['github']
 ---
 
