@@ -1,9 +1,9 @@
 ---
 title: x402
-date: 2025-09-28T15:24:01+08:00
+date: 2025-10-26T15:25:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1587621012232-4a61354d2719?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkwNDQyMTd8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1595265795606-5c2a09e965bb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE0NjM1MTF8&ixlib=rb-4.1.0
+tags: ['github',x402, payments, protocol]
 categories: ['github']
 ---
 

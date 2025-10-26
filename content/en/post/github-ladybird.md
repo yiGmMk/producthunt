@@ -1,9 +1,9 @@
 ---
 title: ladybird
-date: 2025-10-25T15:25:01+08:00
+date: 2025-10-26T15:25:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1679365132923-8880aebede7b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEzNzcwOTR8&ixlib=rb-4.1.0
-tags: ['github',Ladybird,web browser,web rendering]
+image: https://images.unsplash.com/photo-1544625918-077d1305c2a9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE0NjM1MTF8&ixlib=rb-4.1.0
+tags: ['github',Ladybird,web browser,web standards]
 categories: ['github']
 ---
 

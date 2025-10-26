@@ -1,8 +1,8 @@
 ---
 title: paperless-ngx
-date: 2025-10-24T15:29:42+08:00
+date: 2025-10-26T15:25:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1663179210720-44e742e20a02?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEyOTA5MzR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE0NjM1MTF8&ixlib=rb-4.1.0
 tags: ['github',document management system, paperless, document scanning]
 categories: ['github']
 ---
