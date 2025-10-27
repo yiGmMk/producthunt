@@ -1,9 +1,9 @@
 ---
 title: awesome-llm-apps
-date: 2025-10-01T15:29:31+08:00
+date: 2025-10-27T15:28:36+08:00
 draft: False
-image: https://images.unsplash.com/photo-1580184482029-94fdccd86f85?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzMDM2NDl8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1535730480175-8f43dbb6f894?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE1NTAwODR8&ixlib=rb-4.1.0
+tags: ['github',LLM apps, AI Agents, RAG]
 categories: ['github']
 ---
 
@@ -60,7 +60,7 @@ A curated collection of **Awesome LLM apps built with RAG, AI Agents, Multi-agen
   <tr>
     <td align="center">
       <a href="https://getunblocked.com/unblocked-mcp/?utm_source=oss&utm_medium=sponsorship&utm_campaign=awesome-llm-apps" target="_blank" rel="noopener" title="Unblocked">
-        <img src="docs/banner/sponsors/unblocked.png" alt="Unblocked" width="6000">
+        <img src="docs/banner/sponsors/unblocked.png" alt="Unblocked" width="500">
       </a>
       <br>
       <a href="https://getunblocked.com/unblocked-mcp/?utm_source=oss&utm_medium=sponsorship&utm_campaign=awesome-llm-apps" target="_blank" rel="noopener" style="text-decoration: none; color: #333; font-weight: bold; font-size: 18px;">
@@ -68,8 +68,8 @@ A curated collection of **Awesome LLM apps built with RAG, AI Agents, Multi-agen
       </a>
     </td>
     <td align="center">
-      <a href="https://sponsorunwindai.com/" title="Sponsor Awesome LLM Apps Repo">
-        <img src="docs/banner/sponsor_awesome_llm_apps.png" alt="Sponsor Awesome LLM Apps Repo" width="6000">
+      <a href="https://sponsorunwindai.com/" title="Parlant">
+        <img src="docs/banner/sponsor_awesome_llm_apps.png" alt="Parlant" width="500">
       </a>
       <br>
       <a href="https://sponsorunwindai.com/" style="text-decoration: none; color: #333; font-weight: bold; font-size: 18px;">
@@ -100,7 +100,7 @@ A curated collection of **Awesome LLM apps built with RAG, AI Agents, Multi-agen
 *   [🕸️ Web Scrapping AI Agent (Local & Cloud)](starter_ai_agents/web_scrapping_ai_agent/)
 
 ### 🚀 Advanced AI Agents
-
+*   [🏚️ 🍌 AI Home Renovation Agent with Nano Banana](advanced_ai_agents/multi_agent_apps/ai_home_renovation_agent)
 *   [🔍 AI Deep Research Agent](advanced_ai_agents/single_agent_apps/ai_deep_research_agent/)
 *   [🤝 AI Consultant Agent](advanced_ai_agents/single_agent_apps/ai_consultant_agent)
 *   [🏗️ AI System Architect Agent](advanced_ai_agents/single_agent_apps/ai_system_architect_r1/)
@@ -134,6 +134,7 @@ A curated collection of **Awesome LLM apps built with RAG, AI Agents, Multi-agen
 *   [👨‍🏫 AI Teaching Agent Team](advanced_ai_agents/multi_agent_apps/agent_teams/ai_teaching_agent_team/)
 *   [💻 Multimodal Coding Agent Team](advanced_ai_agents/multi_agent_apps/agent_teams/multimodal_coding_agent_team/)
 *   [✨ Multimodal Design Agent Team](advanced_ai_agents/multi_agent_apps/agent_teams/multimodal_design_agent_team/)
+*   [🎨 🍌 Multimodal UI/UX Feedback Agent Team with Nano Banana](advanced_ai_agents/multi_agent_apps/agent_teams/multimodal_uiux_feedback_agent_team/)
 *   [🌏 AI Travel Planner Agent Team](/advanced_ai_agents/multi_agent_apps/agent_teams/ai_travel_planner_agent_team/)
 
 ### 🗣️ Voice AI Agents

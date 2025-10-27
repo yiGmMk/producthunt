@@ -1,13 +1,28 @@
 ---
 title: cursor-free-vip
-date: 2025-07-25T15:33:04+08:00
+date: 2025-10-27T15:28:22+08:00
 draft: False
-image: https://images.unsplash.com/photo-1702576179843-73c378fc4c2d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM0Mjg3NDh8&ixlib=rb-4.1.0
-tags: ['github',Cursor,Windows,macOS,Linux,automation,script,config,installation,support]
+image: https://images.unsplash.com/photo-1708516376463-ec90eda5d54b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE1NTAwODR8&ixlib=rb-4.1.0
+tags: ['github',cursor-free-vip, Windows, macOS]
 categories: ['github']
 ---
 
 # [yeongpin/cursor-free-vip](https://github.com/yeongpin/cursor-free-vip)
+
+<div align="center" markdown="1">
+   <sup>Special thanks to:</sup>
+   <br>
+   <br>
+   <a href="http://go.warp.dev/cursor-free-vip">
+      <img alt="Warp sponsorship" width="400" src="https://github.com/user-attachments/assets/ab8dd143-b0fd-4904-bdc5-dd7ecac94eae">
+   </a>
+
+### [Warp, built for coding with multiple agents.](http://go.warp.dev/cursor-free-vip)
+[Available for MacOS, Linux, & Windows](http://go.warp.dev/cursor-free-vip)<br>
+
+</div>
+
+---
 
 # ➤ Cursor Free VIP
 
@@ -30,10 +45,6 @@ categories: ['github']
 
 <a href="https://trendshift.io/repositories/13425" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13425" alt="yeongpin%2Fcursor-free-vip | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 <br>
-<a href="https://www.buymeacoffee.com/yeongpin" target="_blank">
-      <img src="https://img.buymeacoffee.com/button-api/?text=buy me a coffee&emoji=☕&slug=yeongpin&button_colour=ffda33&font_colour=000000&font_family=Bree&outline_colour=000000&coffee_colour=FFDD00&latest=2" width="160" height='55' alt="Buy Me a Coffee"/>
-</a>
-
 
 <h4>Support Latest 0.49.x Version | 支持最新 0.49.x 版本</h4>
 
