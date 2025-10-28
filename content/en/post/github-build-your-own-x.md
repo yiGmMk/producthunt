@@ -1,9 +1,9 @@
 ---
 title: build-your-own-x
-date: 2025-08-17T15:27:51+08:00
+date: 2025-10-28T15:28:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591388561505-ea5f5a146339?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU0MTU2Mzd8&ixlib=rb-4.1.0
-tags: ['github',programming language,operating system,web server,database,neural network,game,blockchain,3d renderer,emulator,bot]
+image: https://images.unsplash.com/photo-1602771419163-f139753be189?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE2MzY0NjZ8&ixlib=rb-4.1.0
+tags: ['github',build your own, tutorials, programming language]
 categories: ['github']
 ---
 
@@ -398,7 +398,6 @@ It's a great way to learn.
 #### Build your own `Voxel Engine`
 
 * [**C++**: _Let's Make a Voxel Engine_](https://sites.google.com/site/letsmakeavoxelengine/home)
-* [**Java**: _Java Voxel Engine Tutorial_](https://www.youtube.com/watch?v=QZ4Vk2PkPZk&list=PL80Zqpd23vJfyWQi-8FKDbeO_ZQamLKJL) [video]
 
 #### Build your own `Web Browser`
 
@@ -422,6 +421,7 @@ It's a great way to learn.
 #### Uncategorized
 
 * [**(any)**: _From NAND to Tetris: Building a Modern Computer From First Principles_](http://nand2tetris.org/)
+* [**(any)**:  build-your-own-x-vibe-coding: BYOX-style tutorials adapted for vibe coding](https://github.com/inFaaa/build-your-own-x-vibe-coding)
 * [**Alloy**: _The Same-Origin Policy_](http://aosabook.org/en/500L/the-same-origin-policy.html)
 * [**C**: _How to Write a Video Player in Less Than 1000 Lines_](http://dranger.com/ffmpeg/ffmpeg.html)
 * [**C**: _Learn how to write a hash table in C_](https://github.com/jamesroutley/write-a-hash-table)

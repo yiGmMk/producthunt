@@ -1,9 +1,9 @@
 ---
 title: AFFiNE
-date: 2025-07-05T15:27:45+08:00
+date: 2025-10-28T15:27:54+08:00
 draft: False
-image: https://images.unsplash.com/photo-1605260300160-97b082c200a6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3MDA0MTV8&ixlib=rb-4.1.0
-tags: ['github',AFFiNE, Notion, Miro, open-source, workspace, collaborative, local-first, AI, canvas]
+image: https://images.unsplash.com/photo-1671588463100-f7f25aa439db?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE2MzY0NjZ8&ixlib=rb-4.1.0
+tags: ['github',AFFiNE, open-source, Notion]
 categories: ['github']
 ---
 
@@ -17,7 +17,7 @@ categories: ['github']
     <br>
 </h1>
 <a href="https://affine.pro/download">
-    <img alt="affine logo" src="https://cdn.affine.pro/Github_hero_image1.png" style="width: 100%">
+    <img alt="affine logo" src="https://cdn.affine.pro/Github_hero_image2.png" style="width: 100%">
 </a>
 <br/>
 <p align="center">
@@ -92,7 +92,7 @@ Star us, and you will receive all release notifications from GitHub without any 
 
 **Multimodal AI partner ready to kick in any work**
 
-- Write up professional work report? Turn an outline into expressive and presentable slides? Summary an article into a well-structured mindmap? Sorting your job plan and backlog for tasks? Or... draw and code prototype apps and web pages directly all with one prompt? With you, [AFFiNE AI](https://affine.pro/ai) pushes your creativity to the edge of your imagination,just like [Canvas AI](https://affine.pro/blog/best-canvas-ai) to generate mind map for brainstorming.
+- Write up professional work report? Turn an outline into expressive and presentable slides? Summary an article into a well-structured mindmap? Sorting your job plan and backlog for tasks? Or... draw and code prototype apps and web pages directly all with one prompt? With you, [AFFiNE AI](https://affine.pro/ai) pushes your creativity to the edge of your imagination, just like [Canvas AI](https://affine.pro/blog/best-canvas-ai) to generate mind map for brainstorming.
 
 **Local-first & Real-time collaborative**
 
