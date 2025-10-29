@@ -1,8 +1,8 @@
 ---
 title: AFFiNE
-date: 2025-10-28T15:27:54+08:00
+date: 2025-10-29T15:28:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1671588463100-f7f25aa439db?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE2MzY0NjZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1604618407942-46fba682d34a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE3MjI4OTR8&ixlib=rb-4.1.0
 tags: ['github',AFFiNE, open-source, Notion]
 categories: ['github']
 ---

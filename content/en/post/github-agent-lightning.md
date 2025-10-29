@@ -1,8 +1,8 @@
 ---
 title: agent-lightning
-date: 2025-10-28T15:28:15+08:00
+date: 2025-10-29T15:28:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1720378042271-60aff1e1c538?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE2MzY0NjZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1682795176020-1752b4446818?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE3MjI4OTR8&ixlib=rb-4.1.0
 tags: ['github',Agent Lightning, AI agents, reinforcement learning]
 categories: ['github']
 ---
