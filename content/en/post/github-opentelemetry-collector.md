@@ -1,9 +1,9 @@
 ---
 title: opentelemetry-collector
-date: 2025-08-14T15:31:22+08:00
+date: 2025-10-30T15:27:56+08:00
 draft: False
-image: https://images.unsplash.com/photo-1584247740245-23dfe7d9a125?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUxNTY2MDV8&ixlib=rb-4.1.0
-tags: ['github',OpenTelemetry,Collector,Telemetry,Metrics,Traces,Logs,Observability,Go]
+image: https://images.unsplash.com/photo-1591376595258-79f5cbfd14af?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE4MDkyNDZ8&ixlib=rb-4.1.0
+tags: ['github',OpenTelemetry Collector, telemetry data, OpenTelemetry]
 categories: ['github']
 ---
 
@@ -175,7 +175,7 @@ Here is a list of community roles with current and previous members:
 ### Maintainers
 
 - [Alex Boten](https://github.com/codeboten), Honeycomb
-- [Bogdan Drutu](https://github.com/BogdanDrutu), Snowflake
+- [Bogdan Drutu](https://github.com/bogdandrutu), Snowflake
 - [Dmitrii Anoshin](https://github.com/dmitryax), Splunk
 - [Pablo Baeyens](https://github.com/mx-psi), DataDog
 
@@ -198,6 +198,7 @@ the role of the [release manager](./docs/release.md#release-manager).
 
 ### Triagers
 
+- [Andrew Wilkins](https://github.com/axw), Elastic
 - [Andrzej Stencel](https://github.com/andrzej-stencel), Elastic
 - [Chao Weng](https://github.com/sincejune), AppDynamics
 - [Vihas Makwana](https://github.com/VihasMakwana), Elastic

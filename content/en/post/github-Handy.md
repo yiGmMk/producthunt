@@ -1,8 +1,8 @@
 ---
 title: Handy
-date: 2025-10-27T15:28:29+08:00
+date: 2025-10-30T15:27:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1698213120340-3fd8fca285ea?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE1NTAwODR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1571657370423-23ee8d7fd497?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE4MDkyNDZ8&ixlib=rb-4.1.0
 tags: ['github',speech-to-text, offline, open source]
 categories: ['github']
 ---

@@ -1,9 +1,9 @@
 ---
 title: chainlink
-date: 2025-09-26T15:28:54+08:00
+date: 2025-10-30T15:27:33+08:00
 draft: False
-image: https://images.unsplash.com/photo-1665591239173-4082ebb9af2b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg4NzE2MTF8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1600884540504-337c78addb29?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE4MDkyNDZ8&ixlib=rb-4.1.0
+tags: ['github',chainlink, smart contracts, oracle network]
 categories: ['github']
 ---
 
