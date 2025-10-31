@@ -1,8 +1,8 @@
 ---
 title: opentelemetry-collector
-date: 2025-10-30T15:27:56+08:00
+date: 2025-10-31T15:27:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591376595258-79f5cbfd14af?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE4MDkyNDZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1600423942562-3e6f7c6efa1f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE4OTU2MzZ8&ixlib=rb-4.1.0
 tags: ['github',OpenTelemetry Collector, telemetry data, OpenTelemetry]
 categories: ['github']
 ---

@@ -1,9 +1,9 @@
 ---
 title: social-analyzer
-date: 2025-10-30T15:27:49+08:00
+date: 2025-10-31T15:27:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1587572216308-c3ae99a2213b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE4MDkyNDZ8&ixlib=rb-4.1.0
-tags: ['github',social media, OSINT, profile analysis]
+image: https://images.unsplash.com/photo-1640926558879-b25d5496fb1c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE4OTU2MzZ8&ixlib=rb-4.1.0
+tags: ['github',social analyzer,OSINT tool,profile analysis]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: helm
-date: 2025-09-24T15:29:39+08:00
+date: 2025-10-31T15:27:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1645557236538-12d8419e79a4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2OTg4NDR8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1542758554-f3aab709b0da?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE4OTU2MzZ8&ixlib=rb-4.1.0
+tags: ['github',Helm, Kubernetes, Charts]
 categories: ['github']
 ---
 
