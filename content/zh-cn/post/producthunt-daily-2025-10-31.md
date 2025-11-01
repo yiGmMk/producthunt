@@ -1,0 +1,138 @@
+---
+title: Product Hunt 今日热榜 | 2025-11-01
+date: 2025-11-01 07:22:37+0000
+image: https://ph-files.imgix.net/65552609-b231-4583-bd48-7f98305ebca3.png?auto=format
+tags: ["AI Agent", "Social Media Scheduling", "Multi-Channel Posting"]
+categories: ["人工智能"]
+---
+
+## 1. Postiz  
+**标语**: AI 助手和 MCP 用于将社交帖子安排到 20 多个频道  
+**介绍**: Postiz 助手来啦！最大的社交媒体 AI 助手，可将您的帖子安排发布到 20 多个社交渠道，也支持 MCP。将您的 MCP 连接到任何东西：ChatGPT / Claude / Cursor / n8n 您的专属私有应用！  
+**网站**: [立即访问](https://www.producthunt.com/r/BGQ2FN6AXMJOCN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/postiz?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Postiz](https://ph-files.imgix.net/65552609-b231-4583-bd48-7f98305ebca3.png?auto=format)  
+**关键词**: AI Agent, Social Media Scheduling, Multi-Channel Posting, MCP, Postiz, ChatGPT, Claude, Cursor, n8n, Social Media AI  
+**票数**: 🔺455  
+**是否精选**: 是  
+**发布时间**: 2025年10月31日 PM03:01 (北京时间)  
+
+---  
+
+## 2. Superinbox  
+**标语**: 在你的 Gmail / Outlook 中感受邮件的氛围  
+**介绍**: SuperInbox 为所有人解锁邮件体验。AI 学习你的写作风格，起草完美的邮件回复，并自动整理你的 Gmail/Outlook 收件箱。无需新应用。繁忙的专业人士每天可以节省 2 个小时以上的时间，轻松处理他们的邮件。  
+**网站**: [立即访问](https://www.producthunt.com/r/YATLZHVGRIA4US?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/superinbox?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Superinbox](https://ph-files.imgix.net/e8836f68-89e0-47a9-8d0d-dfa67e401920.png?auto=format)  
+**关键词**: Email vibing, AI email, Gmail, Outlook, email management, auto-reply, inbox organization, productivity, time saving  
+**票数**: 🔺425  
+**是否精选**: 是  
+**发布时间**: 2025年10月31日 PM03:01 (北京时间)  
+
+---  
+
+## 3. Perplexity Patents  
+**标语**: 人人可用的AI专利检索  
+**介绍**: Perplexity Patents 是一款新型 AI 智能体，让 IP 智能变得触手可及。使用自然语言搜索专利、学术论文和代码库。它理解复杂查询，查找现有技术，并提供引用的答案，就像核心的 Perplexity 体验一样。  
+**网站**: [立即访问](https://www.producthunt.com/r/UZD5IFSFHHTSQK?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/perplexity-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Perplexity Patents](https://ph-files.imgix.net/88fa120a-cd8c-4c77-b20e-372c3eb70a37.jpeg?auto=format)  
+**关键词**: Perplexity Patents, AI Patent Search, Patent Search, IP Intelligence, Natural Language Search, Prior Art, Cited Answers  
+**票数**: 🔺299  
+**是否精选**: 是  
+**发布时间**: 2025年10月31日 PM03:01 (北京时间)  
+
+---  
+
+## 4. ScaryStories Live  
+**标语**: 实时展开的AI生成故事世界  
+**介绍**: 体验前所未有的故事讲述方式。ScaryStories Live 将你的想法转化为实时的、由 AI 生成的故事场景，并随着你的引导而发展。非常适合创作者、主播或任何探索互动故事未来的人。  
+**网站**: [立即访问](https://www.producthunt.com/r/IXTZESPMVNWPJL?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/scarystories-live-3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![ScaryStories Live](https://ph-files.imgix.net/87d5d0a4-daaa-469a-b4ee-019889160632.jpeg?auto=format)  
+**关键词**: AI Storytelling, Interactive Storytelling, Real-time Story, AI Generation, Scary Stories, Live Story, Story Worlds, Creators, Streamers  
+**票数**: 🔺275  
+**是否精选**: 是  
+**发布时间**: 2025年10月31日 PM03:01 (北京时间)  
+
+---  
+
+## 5. Canva’s Creative Operating System  
+**标语**: 可视化套件，用于在画布上编辑视频、电子邮件、网站和文档。  
+**介绍**: 我们迄今为止规模最大的产品发布——创意操作系统，汇集了超强视觉套件、世界首创的设计人工智能，以及助力业务增长和品牌扩张的强大工具。  
+**网站**: [立即访问](https://www.producthunt.com/r/Q3PEU74ZMTWBQA?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/canva?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Canva’s Creative Operating System](https://ph-files.imgix.net/06f167f0-b9d4-4ed1-83f3-fb7933c68d1d.octet-stream?auto=format)  
+**关键词**: Canva, Creative Operating System, Visual Suite, Design AI, Brand Scaling, Video Editing, Website Design, Document Editing  
+**票数**: 🔺213  
+**是否精选**: 是  
+**发布时间**: 2025年10月31日 PM03:01 (北京时间)  
+
+---  
+
+## 6. Affinity by Canva  
+**标语**: 免费的矢量、像素和印刷创意软件。  
+**介绍**: 所有你需要的设计和照片编辑工具，尽在一个应用中——免费。立即在 macOS 或 Windows 上下载 Affinity。  
+**网站**: [立即访问](https://www.producthunt.com/r/MJCCVV5CTHONRN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/affinity-5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Affinity by Canva](https://ph-files.imgix.net/8a4e7493-b681-4541-8801-a5903a3e6919.jpeg?auto=format)  
+**关键词**: Affinity by Canva, free design software, vector, pixel, print, photo editing, macOS, Windows  
+**票数**: 🔺195  
+**是否精选**: 是  
+**发布时间**: 2025年10月31日 PM03:01 (北京时间)  
+
+---  
+
+## 7. Tweek  
+**标语**: 简约周计划  
+**介绍**: 超级简单的规划工具，摆脱繁琐。Tweek用起来就像笔和纸一样自然。  
+**网站**: [立即访问](https://www.producthunt.com/r/K3PCAPDYZ3Z54E?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/tweek?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Tweek](https://ph-files.imgix.net/ef7cb03d-570d-4f64-91ab-5fa8075a9911.png?auto=format)  
+**关键词**: Planner, Minimal, Weekly, Simple, Pen and paper  
+**票数**: 🔺165  
+**是否精选**: 是  
+**发布时间**: 2025年10月31日 PM03:01 (北京时间)  
+
+---  
+
+## 8. Skyvern  
+**标语**: 在浏览器中自动化任何操作  
+**介绍**: Skyvern 帮助公司使用 LLM 和计算机视觉自动化基于浏览器的流程，用 AI 生成和维护的脚本取代手动工作。我们刚刚赋予 Skyvern 编写和维护自身代码的能力，使其比以前便宜 2.7 倍，速度快 2.3 倍。 给它一个提示（或一系列提示），AI 将在运行时生成和维护 Playwright 代码。通过开源或云端试用。  
+**网站**: [立即访问](https://www.producthunt.com/r/QX55ZMMOFQ3YUS?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/skyvern?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Skyvern](https://ph-files.imgix.net/b5bd0b83-f1e7-4bb9-a5af-0f771172a842.png?auto=format)  
+**关键词**: Skyvern, browser automation, LLM, computer vision, AI, playwright, automation, workflow, AI script, open source, cloud  
+**票数**: 🔺149  
+**是否精选**: 是  
+**发布时间**: 2025年10月31日 PM03:01 (北京时间)  
+
+---  
+
+## 9. Is it down?  
+**标语**: 在菜单栏上监控你的 API 和网站  
+**介绍**: 您的网站、API 或在线服务宕机了吗？希望没有。但万一发生，使用“Is It Down?”，直接在 macOS 菜单栏中获取即时答案。  
+**网站**: [立即访问](https://www.producthunt.com/r/B7WDQWOEODJCNZ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/is-it-down-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Is it down?](https://ph-files.imgix.net/17a51fff-d5c7-4b81-b27c-bc2a5b355dbb.png?auto=format)  
+**关键词**: Website monitoring, API monitoring, macOS menubar, uptime, downtime, status check  
+**票数**: 🔺142  
+**是否精选**: 是  
+**发布时间**: 2025年10月31日 PM03:01 (北京时间)  
+
+---  
+
+## 10. Espresso v25.10  
+**标语**: 配备下一代智能的 Mac 网络编辑器  
+**介绍**: 这次更新非常重大。它为 Espresso 带来了新一代智能功能，并大大增强了编辑能力——同时保持了 Espresso 快速、优雅、真正 Mac 原生的特性。  
+**网站**: [立即访问](https://www.producthunt.com/r/SXX7S44IUFMHC5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/espresso-for-mac-v3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Espresso v25.10](https://ph-files.imgix.net/a1c433e8-ada3-4718-90fa-49c62ba35d89.jpeg?auto=format)  
+**关键词**: Espresso, web editor, Mac, next-gen intelligence, editing power, Mac-native  
+**票数**: 🔺122  
+**是否精选**: 是  
+**发布时间**: 2025年10月31日 PM03:01 (北京时间)  
+
+---  
+

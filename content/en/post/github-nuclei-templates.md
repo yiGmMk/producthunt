@@ -1,9 +1,9 @@
 ---
 title: nuclei-templates
-date: 2025-09-03T15:28:02+08:00
+date: 2025-11-01T15:26:54+08:00
 draft: False
-image: https://images.unsplash.com/photo-1612738072307-3a48bbc7fd80?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY4ODQzNjh8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1641994843735-e961df61ae30?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE5ODE5Mzl8&ixlib=rb-4.1.0
+tags: ['github',nuclei templates, security vulnerabilities, community]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: fmt
-date: 2025-09-24T15:28:07+08:00
+date: 2025-11-01T15:27:06+08:00
 draft: False
-image: https://images.unsplash.com/photo-1639673806257-954838b3ec6f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2OTg4NDR8&ixlib=rb-4.1.0
-tags: ['github',fmt, formatting, C++, library, printf, iostreams,  std::format, std::print,  performance]
+image: https://images.unsplash.com/photo-1610369268771-ff123ba90a0a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE5ODE5Mzl8&ixlib=rb-4.1.0
+tags: ['github',fmt, formatting library, C++]
 categories: ['github']
 ---
 
