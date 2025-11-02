@@ -1,8 +1,8 @@
 ---
 title: Web-Dev-For-Beginners
-date: 2025-10-30T15:28:06+08:00
+date: 2025-11-02T15:27:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1571657370423-23ee8d7fd497?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE4MDkyNDZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1639486970692-0a4f469f59e5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjIwNjgzODR8&ixlib=rb-4.1.0
 tags: ['github',web development, beginners, curriculum]
 categories: ['github']
 ---
