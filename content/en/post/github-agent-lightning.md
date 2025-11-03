@@ -1,8 +1,8 @@
 ---
 title: agent-lightning
-date: 2025-10-29T15:28:45+08:00
+date: 2025-11-03T15:30:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1682795176020-1752b4446818?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE3MjI4OTR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1634615776206-c312722d0221?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjIxNTUwMDR8&ixlib=rb-4.1.0
 tags: ['github',Agent Lightning, AI agents, reinforcement learning]
 categories: ['github']
 ---
@@ -101,7 +101,7 @@ If you find Agent Lightning useful in your research or projects, please cite our
 
 ## ⚡ Contributing
 
-This project welcomes contributions and suggestions. Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+This project welcomes contributions and suggestions. Start by reading the [Contributing Guide](docs/community/contributing.md) for environment setup, branching conventions, and pull request expectations. Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
 
 When you submit a pull request, a CLA bot will automatically determine whether you need to provide a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions provided by the bot. You will only need to do this once across all repos using our CLA.
 
