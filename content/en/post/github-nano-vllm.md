@@ -1,13 +1,21 @@
 ---
 title: nano-vllm
-date: 2025-11-03T15:31:06+08:00
+date: 2025-11-04T15:29:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1707170630725-e7d46a0f0c7b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjIxNTUwMDR8&ixlib=rb-4.1.0
-tags: ['github',Nano-vLLM,vLLM,inference]
+image: https://images.unsplash.com/photo-1640012319937-e96339aa1120?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjIyNDEzMzB8&ixlib=rb-4.1.0
+tags: ['github',nano-vLLM, vLLM, lightweight]
 categories: ['github']
 ---
 
 # [GeeeekExplorer/nano-vllm](https://github.com/GeeeekExplorer/nano-vllm)
+
+<p align="center">
+<img width="300" src="assets/logo.png">
+</p>
+
+<p align="center">
+<a href="https://trendshift.io/repositories/15323" target="_blank"><img src="https://trendshift.io/api/badge/repositories/15323" alt="GeeeekExplorer%2Fnano-vllm | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+</p>
 
 # Nano-vLLM
 
@@ -25,9 +33,9 @@ A lightweight vLLM implementation built from scratch.
 pip install git+https://github.com/GeeeekExplorer/nano-vllm.git
 ```
 
-## Manual Download
+## Model Download
 
-If you prefer to download the model weights manually, use the following command:
+To download the model weights manually, use the following command:
 ```bash
 huggingface-cli download --resume-download Qwen/Qwen3-0.6B \
   --local-dir ~/huggingface/Qwen3-0.6B/ \

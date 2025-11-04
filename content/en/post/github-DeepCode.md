@@ -1,9 +1,9 @@
 ---
 title: DeepCode
-date: 2025-11-03T15:30:58+08:00
+date: 2025-11-04T15:29:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1699901569916-b1c4572cf6bd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjIxNTUwMDR8&ixlib=rb-4.1.0
-tags: ['github',DeepCode, Open Agentic Coding, Paper2Code]
+image: https://images.unsplash.com/photo-1591330916681-74c37e5539c7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjIyNDEzMzB8&ixlib=rb-4.1.0
+tags: ['github',DeepCode, Open Agentic Coding, Multi-Agent]
 categories: ['github']
 ---
 

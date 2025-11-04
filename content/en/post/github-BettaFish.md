@@ -1,8 +1,8 @@
 ---
 title: BettaFish
-date: 2025-11-03T15:30:12+08:00
+date: 2025-11-04T15:28:58+08:00
 draft: False
-image: https://images.unsplash.com/photo-1680984580142-37e1ad42ea83?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjIxNTUwMDR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1599362924603-10466096914e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjIyNDEzMzB8&ixlib=rb-4.1.0
 tags: ['github',舆情分析, AI驱动, 社媒]
 categories: ['github']
 ---
@@ -33,7 +33,7 @@ categories: ['github']
 </div>
 
 > [!IMPORTANT]
-> 周一（11.3）会上**在线一键部署体验**，欢迎持续关注！
+> 抱歉出了点状况，周二（11.4）会上**在线一键部署体验**，欢迎持续关注！
 
 ## ⚡ 项目概述
 
@@ -262,9 +262,7 @@ INSIGHT_ENGINE_MODEL_NAME = "kimi-k2-0711-preview"
 
 **选择1：使用本地数据库**
 
-> MindSpider爬虫系统跟舆情系统是各自独立的，所以需要再去`MindSpider\config.py`配置一下
-
-配置模板可以参考`MindSpider\config.py\config.py.example`，可以复制该文件并命名为`config.py`
+> MindSpider爬虫系统跟舆情系统是各自独立的，所以需要再去`MindSpider\config.py`配置一下，复制`MindSpider`文件夹下的 `config.py.example` 文件，命名为 `config.py`
 
 ```bash
 # 本地MySQL数据库初始化
@@ -320,7 +318,7 @@ streamlit run SingleEngineApp/insight_engine_streamlit_app.py --server.port 8501
 
 #### 5.3 爬虫系统单独使用
 
-这部分有详细的配置文档：[MindeSpider使用说明](./MindSpider/README.md)
+这部分有详细的配置文档：[MindSpider使用说明](./MindSpider/README.md)
 
 <div align="center">
 <img src="MindSpider\img\example.png" alt="banner" width="600">
