@@ -1,9 +1,9 @@
 ---
 title: MaxKB
-date: 2025-09-11T15:32:45+08:00
+date: 2025-11-05T15:29:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1637090405093-0bc0a607b441?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc1NzU3Mzd8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1541712418856-92230f08b6d7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjIzMjc3MzF8&ixlib=rb-4.1.0
+tags: ['github',MaxKB,open-source,RAG]
 categories: ['github']
 ---
 

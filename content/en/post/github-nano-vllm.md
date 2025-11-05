@@ -1,8 +1,8 @@
 ---
 title: nano-vllm
-date: 2025-11-04T15:29:09+08:00
+date: 2025-11-05T15:29:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1640012319937-e96339aa1120?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjIyNDEzMzB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1582575633518-b2b7d205a386?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjIzMjc3MzF8&ixlib=rb-4.1.0
 tags: ['github',nano-vLLM, vLLM, lightweight]
 categories: ['github']
 ---
