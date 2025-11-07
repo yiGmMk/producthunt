@@ -1,9 +1,9 @@
 ---
 title: LocalAI
-date: 2025-11-06T15:29:08+08:00
+date: 2025-11-07T15:29:08+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592373636179-38e6377d756a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI0MTQxMDZ8&ixlib=rb-4.1.0
-tags: ['github',LocalAI, Open Source, OpenAI]
+image: https://images.unsplash.com/photo-1596700561945-74687b62672e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDA1MTV8&ixlib=rb-4.1.0
+tags: ['github',LocalAI, OpenAI, GPU]
 categories: ['github']
 ---
 

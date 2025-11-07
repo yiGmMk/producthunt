@@ -1,8 +1,8 @@
 ---
 title: opentui
-date: 2025-11-05T15:29:12+08:00
+date: 2025-11-07T15:29:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1684959975705-6ca171f2fca8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjIzMjc3MzF8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1730578725261-0138f9a0da41?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDA1MTV8&ixlib=rb-4.1.0
 tags: ['github',OpenTUI, terminal user interfaces, TypeScript]
 categories: ['github']
 ---
@@ -10,6 +10,12 @@ categories: ['github']
 # [sst/opentui](https://github.com/sst/opentui)
 
 # OpenTUI
+
+<div align="center">
+    <a href="https://www.npmjs.com/package/@opentui/core"><img alt="npm" src="https://img.shields.io/npm/v/@opentui/core?style=flat-square" /></a>
+    <a href="https://github.com/sst/opentui/actions/workflows/build-core.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/sst/opentui/build-core.yml?style=flat-square&branch=main" /></a>
+    <a href="https://github.com/msmps/awesome-opentui"><img alt="awesome opentui list" src="https://awesome.re/badge-flat.svg" /></a>
+</div>
 
 OpenTUI is a TypeScript library for building terminal user interfaces (TUIs). It is currently in
 development and is not ready for production use. It will be the foundational TUI framework for both
@@ -92,3 +98,7 @@ This will link `@opentui/core` to your target project.
 - By default, the script links to the source packages, allowing hot-reloading of changes
 - Use `--dist` when you need to test the built artifacts
 - Use `--copy` mode when working in environments that don't support symlinks well (e.g., Docker containers, Windows)
+
+## Showcase
+
+Consider showcasing your work on the [awesome-opentui](https://github.com/msmps/awesome-opentui) list. A curated list of awesome resources and terminal user interfaces built with OpenTUI.

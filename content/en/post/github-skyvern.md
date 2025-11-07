@@ -1,8 +1,8 @@
 ---
 title: skyvern
-date: 2025-11-06T15:28:43+08:00
+date: 2025-11-07T15:28:55+08:00
 draft: False
-image: https://images.unsplash.com/photo-1666117639235-808490e82a1c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI0MTQxMDZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1596700561945-74687b62672e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDA1MTV8&ixlib=rb-4.1.0
 tags: ['github',browser automation, LLMs, computer vision]
 categories: ['github']
 ---
