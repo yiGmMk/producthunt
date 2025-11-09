@@ -1,9 +1,9 @@
 ---
 title: alertmanager
-date: 2025-11-08T15:25:56+08:00
+date: 2025-11-09T15:26:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1720183861441-189bd56d8913?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1ODY3NDd8&ixlib=rb-4.1.0
-tags: ['github',alertmanager, Prometheus, API]
+image: https://images.unsplash.com/photo-1612182303983-4ad9ab6006ad?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI2NzMxNTN8&ixlib=rb-4.1.0
+tags: ['github',Alertmanager, Prometheus, Docker]
 categories: ['github']
 ---
 

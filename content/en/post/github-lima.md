@@ -1,8 +1,8 @@
 ---
 title: lima
-date: 2025-11-08T15:26:23+08:00
+date: 2025-11-09T15:26:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1658071372366-8a658d8a9835?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1ODY3NDd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1536872825520-f5673b8e7217?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI2NzMxNTR8&ixlib=rb-4.1.0
 tags: ['github',Lima, Linux, virtual machines]
 categories: ['github']
 ---
