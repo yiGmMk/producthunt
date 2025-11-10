@@ -1,9 +1,9 @@
 ---
 title: strix
-date: 2025-11-09T15:26:04+08:00
+date: 2025-11-10T15:28:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1661189655438-ef18f0b29faa?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI2NzMxNTR8&ixlib=rb-4.1.0
-tags: ['github',Strix,AI,security]
+image: https://images.unsplash.com/photo-1682028904073-c920037f1d17?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3NTk3MDh8&ixlib=rb-4.1.0
+tags: ['github',Strix, AI, security]
 categories: ['github']
 ---
 
