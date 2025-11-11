@@ -1,8 +1,8 @@
 ---
 title: umami
-date: 2025-11-10T15:28:46+08:00
+date: 2025-11-11T15:29:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1682028904073-c920037f1d17?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3NTk3MDh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1748376289304-1abb3eff8040?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI4NDYxNTN8&ixlib=rb-4.1.0
 tags: ['github',Umami, web analytics, privacy]
 categories: ['github']
 ---

@@ -1,9 +1,9 @@
 ---
 title: ChinaTextbook
-date: 2025-10-13T15:29:22+08:00
+date: 2025-11-11T15:29:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1542991214-df0aa5950676?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAzNDA1MTF8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1597273745549-4c72ca6cca88?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI4NDYxNTN8&ixlib=rb-4.1.0
+tags: ['github',义务教育,小学数学,教材]
 categories: ['github']
 ---
 
@@ -91,6 +91,10 @@ categories: ['github']
 如果这个项目帮助您免费获取教育资源，请考虑支持我们推广开放教育的努力！您的捐献将帮助我们维护和扩展这个资源库。
 
 加入我们的 Telegram 社区，获取最新动态并分享您的想法：https://t.me/+1V6WjEq8WEM4MDM1
+
+## Star History
+
+[![Star History](https://api.star-history.com/svg?repos=TapXWorld/ChinaTextbook&type=Date)](https://star-history.com/#TapXWorld/ChinaTextbook&Date)
 
 
 ## 支持我

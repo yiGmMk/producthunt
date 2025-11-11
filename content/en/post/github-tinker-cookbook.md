@@ -1,9 +1,9 @@
 ---
 title: tinker-cookbook
-date: 2025-11-10T15:28:55+08:00
+date: 2025-11-11T15:29:57+08:00
 draft: False
-image: https://images.unsplash.com/photo-1498972041884-05fb671a8828?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3NTk3MDh8&ixlib=rb-4.1.0
-tags: ['github',Tinker Cookbook, language models, fine-tuning]
+image: https://images.unsplash.com/photo-1652932420117-0055d554e60f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI4NDYxNTN8&ixlib=rb-4.1.0
+tags: ['github',Tinker,Tinker Cookbook,language models]
 categories: ['github']
 ---
 
