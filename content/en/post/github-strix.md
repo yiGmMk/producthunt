@@ -1,9 +1,9 @@
 ---
 title: strix
-date: 2025-11-11T15:29:34+08:00
+date: 2025-11-12T15:29:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1597273745549-4c72ca6cca88?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI4NDYxNTN8&ixlib=rb-4.1.0
-tags: ['github',Strix, AI, security]
+image: https://images.unsplash.com/photo-1466446230056-1fc585e55d7d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI5MzI1NjB8&ixlib=rb-4.1.0
+tags: ['github',AI agents, security testing, vulnerability detection]
 categories: ['github']
 ---
 
