@@ -3,8 +3,7 @@ title: llama.cpp
 date: 2025-10-14T15:29:21+08:00
 draft: False
 image: https://images.unsplash.com/photo-1641738876363-a0728bf25a8d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjY4ODR8&ixlib=rb-4.1.0
-tags: ['github',text
-llama.cpp, LLM inference, C/C++, GGUF, model quantization, CUDA, Metal, AVX, multimodal support, OpenAI API, llama-cli, llama-server
+tags: ['github',llama.cpp,LLM, C/C++, GGUF, model quantization, CUDA, Metal, AVX, multimodal support, OpenAI API, llama-cli, llama-server
 ]
 categories: ['github']
 ---

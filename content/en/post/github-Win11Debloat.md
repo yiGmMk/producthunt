@@ -3,8 +3,7 @@ title: Win11Debloat
 date: 2025-10-14T15:29:56+08:00
 draft: False
 image: https://images.unsplash.com/photo-1543619758-d8b9dc137421?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjY4ODR8&ixlib=rb-4.1.0
-tags: ['github',text
-Win11Debloat, PowerShell script, Windows, bloatware, telemetry, features, app removal, personalization, taskbar, start menu
+tags: ['github',textWin11Debloat, PowerShell script, Windows, bloatware, telemetry, features, app removal, personalization, taskbar, start menu
 ]
 categories: ['github']
 ---
