@@ -1,0 +1,138 @@
+---
+title: Product Hunt 今日热榜 | 2025-11-17
+date: 2025-11-17 07:26:35+0000
+image: https://ph-files.imgix.net/4c1a72a8-2934-466e-a5bb-e2a0c512f9b5.png?auto=format
+tags: ["platform", "API", "AI"]
+categories: ["人工智能", "开发"]
+---
+
+## 1. Swytchcode  
+**标语**: 将你的 API 转化为 AI 体验。  
+**介绍**: Swytchcode 让你 API 能够自我阐释。将静态文档转化为一个 AI 游乐场，开发者可以在其中即时聊天、测试和生成工作流程。专为 API 优先的团队而构建。  
+**网站**: [立即访问](https://www.producthunt.com/r/TDR3KHCWV6EZ2Q?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/swytchcode?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Swytchcode](https://ph-files.imgix.net/4c1a72a8-2934-466e-a5bb-e2a0c512f9b5.png?auto=format)  
+**关键词**: API, AI, 开发者体验, 工作流程, 聊天, 测试, 文档, 生成, Swytchcode, API-first  
+**票数**: 🔺396  
+**是否精选**: 是  
+**发布时间**: 2025年11月16日 PM04:01 (北京时间)  
+
+---  
+
+## 2. RBD  
+**标语**: 庆祝独立开发者及其最佳应用  
+**介绍**: RBD 是一个赞扬独立开发者及其辛勤工作的平台。它也是一个开源社区，并肯定了那些为了推出改变世界的精美应用程序而付出的辛勤努力！  
+**网站**: [立即访问](https://www.producthunt.com/r/DOQSN6N4NG5ICH?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/rare-big-deal?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![RBD](https://ph-files.imgix.net/aacb015f-2d92-4ae8-a3a5-06daaaae9278.png?auto=format)  
+**关键词**: RBD, indie makers, apps, open source, community, platform  
+**票数**: 🔺328  
+**是否精选**: 是  
+**发布时间**: 2025年11月16日 PM04:01 (北京时间)  
+
+---  
+
+## 3. 2pr v.2.0  
+**标语**: 触手可及的您的专属LinkedIn内容机构  
+**介绍**: 2PR 不仅仅是 AI 写作，还能处理您整个 LinkedIn 内容工作流程。它分析数百万篇病毒式传播的帖子，向您展示有效内容，从 Reddit 和 X 上提取热门话题，并生成与您真实声音相符的内容。一次获得 3 个帖子版本，每行都有 AI 指导，专业的轮播图，以及通过 LinkedIn 官方 API (100% 安全) 提供的性能分析。当其他产品仅仅撰写帖子时  
+**网站**: [立即访问](https://www.producthunt.com/r/SAWAWGVSU5KCTY?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/2pr-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![2pr v.2.0](https://ph-files.imgix.net/4d2e6c6e-94f3-411b-b735-2e229df65cee.png?auto=format)  
+**关键词**: LinkedIn content, AI content, content workflow, viral posts, trending topics, content generation, AI coaching, LinkedIn analytics  
+**票数**: 🔺317  
+**是否精选**: 是  
+**发布时间**: 2025年11月16日 PM04:01 (北京时间)  
+
+---  
+
+## 4. Koyal  
+**标语**: 使用 AI 将您的音频转化为个性化电影  
+**介绍**: Koyal 一键将任何音频转化为端到端的电影级视频，拥有一致的设置、故事情节和角色（包括你）。不同于直接使用原始模型并得到 AI 视频垃圾，Koyal 通过智能代理处理所有复杂性，让你专注于你的故事。你不再需要摄像机来制作电影。  
+**网站**: [立即访问](https://www.producthunt.com/r/MIJ2VZ55DKPUHW?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/koyal?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Koyal](https://ph-files.imgix.net/c60d3c46-928a-481d-b245-8258e060b885.gif?auto=format)  
+**关键词**: AI video creation, audio to video, personalized films, cinematic video, AI filmmaking, no camera needed, Koyal  
+**票数**: 🔺282  
+**是否精选**: 是  
+**发布时间**: 2025年11月16日 PM04:01 (北京时间)  
+
+---  
+
+## 5. Gubb.net  
+**标语**: 一个应用，包罗万象  
+**介绍**: Gubb 是一款帮你提高效率的应用程序，助你完成任务。它包含笔记、语音转文本、计时器、剪贴板历史、待办事项等功能。  
+**网站**: [立即访问](https://www.producthunt.com/r/OSP47LRKEZ76LD?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/gubb?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Gubb.net](https://ph-files.imgix.net/d1ad3fdd-27b9-4601-b2d1-c6df8445f87d.jpeg?auto=format)  
+**关键词**: Productivity app, Notes, Voice-To-Text, Timers, Clipboard History, To-dos, One app for everything  
+**票数**: 🔺239  
+**是否精选**: 是  
+**发布时间**: 2025年11月16日 PM04:01 (北京时间)  
+
+---  
+
+## 6. ZenCommunity  
+**标语**: 在一个地方构建社区、支持和实时聊天。  
+**介绍**: ZenCommunity 是首个 WordPress 社区插件，它将实时社区构建、支持工单和实时聊天功能整合到一个原生强大工具中。创建高级的 Facebook 风格群组，拥有实时聊天、帖子、媒体、提及、评论等功能。无论是 LMS 社区、客户门户网站还是团队协作中心，ZenCommunity 都能通过闪电般快速、完全可控的实时互动，让每个人保持联系。  
+**网站**: [立即访问](https://www.producthunt.com/r/KJMVLUXIV7ORTH?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/zencommunity?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![ZenCommunity](https://ph-files.imgix.net/7a756b32-cb9c-408c-8f9e-4b46f84bb4d6.jpeg?auto=format)  
+**关键词**: WordPress plugin, community building, support ticketing, live chat, real-time interaction, Facebook-style groups, LMS community, customer portal, team collaboration  
+**票数**: 🔺152  
+**是否精选**: 是  
+**发布时间**: 2025年11月16日 PM04:01 (北京时间)  
+
+---  
+
+## 7. NotiSprite  
+**标语**: 用可爱的通知精灵让你的 Mac 焕发生机  
+**介绍**: 用 NotiSprite 让你的 Mac 焕发生机！这是一个令人愉悦、提振心情、可自定义的桌面伴侣，在你工作时以迷人的方式提供智能通知。无需登录，无跟踪，无广告，只有纯粹的快乐！🐾 自定义你的精灵如何移动、互动，以及提供关于休息、天气、日历、名言等等的通知。手工绘制，充满爱意，旨在让生产力变得有趣，让你保持专注并微笑。  
+**网站**: [立即访问](https://www.producthunt.com/r/3V2NIOY3JPV2WD?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/notisprite?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![NotiSprite](https://ph-files.imgix.net/88f544b7-9b93-41d1-92d6-dd016f46b57e.png?auto=format)  
+**关键词**: NotiSprite, Mac, Notification, Sprite, Customisable, Desktop Companion, Productivity, Joy, Hand-drawn, Fun, No Tracking, No Ads  
+**票数**: 🔺136  
+**是否精选**: 是  
+**发布时间**: 2025年11月16日 PM04:01 (北京时间)  
+
+---  
+
+## 8. Prometora  
+**标语**: 提示你的市场  
+**介绍**: Prometora 允许任何人通过一个提示词构建一个完整的在线市场。无需模板，无需编码，只需描述您的想法，即可获得一个即用平台，内置列表、支付、消息传递和评论（以及更多功能）。非常适合希望快速启动、验证想法并扩展其市场的创始人、创作者和企业家，一切尽在一个地方。在几小时而非几周内启动您的在线市场。  
+**网站**: [立即访问](https://www.producthunt.com/r/DF63Y4V6PB7P3Q?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/prometora?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Prometora](https://ph-files.imgix.net/dc4e65b3-a33b-4d43-a70d-dd24dce1ddcc.png?auto=format)  
+**关键词**: marketplace, platform, no-code, launch, online marketplace, prompt, listings, payments, messaging, reviews, fast, founders, creators, entrepreneurs  
+**票数**: 🔺134  
+**是否精选**: 是  
+**发布时间**: 2025年11月16日 PM04:01 (北京时间)  
+
+---  
+
+## 9. Elsie AI  
+**标语**: 为你的独立电商业务注入强大动力。  
+**介绍**: Elsie 通过处理繁琐的工作来帮助独立创始人更智能地运营他们的业务，让他们能够专注于最重要的事情。在免费测试版中，Elsie 允许你： - 生成美观、符合品牌形象的营销创意 - 运行可操作的网站健康检查 - 与 AI 业务伙伴聊天，该伙伴会从你的数据中学习并记住你的上下文。 与每天都在奋斗的独立创业者共同设计。 我们一起正在构建一个真正帮助你完成任务的  
+**网站**: [立即访问](https://www.producthunt.com/r/7GCBAD77UYSVD3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/elsie-ai-beta?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Elsie AI](https://ph-files.imgix.net/b7235421-e5f9-4a40-bc65-b22968120423.png?auto=format)  
+**关键词**: Elsie AI, e-commerce, AI assistant, solopreneur, marketing, website health, business partner, free beta, 1848 Ventures  
+**票数**: 🔺124  
+**是否精选**: 是  
+**发布时间**: 2025年11月16日 PM04:01 (北京时间)  
+
+---  
+
+## 10. WoofSheet  
+**标语**: 狗狗护理简单化：日志、提醒、3D 身体地图  
+**介绍**: 在一个地方追踪您爱犬的散步、饮食、药物、症状和兽医记录。 WoofSheet 包括 Pet Atlas 3D 用于身体问题，与家人实时同步，提醒、分析和多宠物支持。专为忙碌的狗爸狗妈打造。  
+**网站**: [立即访问](https://www.producthunt.com/r/Y32JRVOGY5BOGU?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/woofsheet-smart-dog-care-tracker?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![WoofSheet](https://ph-files.imgix.net/c4aa9e30-440b-4886-940f-548a200fbc6b.jpeg?auto=format)  
+**关键词**: Dog care, dog health, pet tracker, dog app, 3D body map, reminders, analytics, multi-pet, dog walks, dog meals, vet notes, WoofSheet  
+**票数**: 🔺120  
+**是否精选**: 是  
+**发布时间**: 2025年11月16日 PM04:01 (北京时间)  
+
+---  
+
