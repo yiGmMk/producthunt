@@ -1,9 +1,9 @@
 ---
 title: adk-go
-date: 2025-11-18T15:31:16+08:00
+date: 2025-11-19T15:29:27+08:00
 draft: False
-image: https://images.unsplash.com/photo-1610050062210-afc2df76cb55?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjM0NTEwNjB8&ixlib=rb-4.1.0
-tags: ['github',Agent Development Kit, Go, AI agents]
+image: https://images.unsplash.com/photo-1553427009-2a3db6677ae1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjM1MzczNTF8&ixlib=rb-4.1.0
+tags: ['github',Agent Development Kit,Go,AI agents]
 categories: ['github']
 ---
 
