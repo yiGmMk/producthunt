@@ -1,9 +1,9 @@
 ---
 title: TrendRadar
-date: 2025-11-20T15:29:17+08:00
+date: 2025-11-21T15:30:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1728394955735-9633a690ab17?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjM2MjM3NDZ8&ixlib=rb-4.1.0
-tags: ['github',热点助手,新闻资讯,GitHub]
+image: https://images.unsplash.com/photo-1636539451018-044700d22d5d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjM3MTAxOTR8&ixlib=rb-4.1.0
+tags: ['github',热点助手,新闻资讯,智能推送]
 categories: ['github']
 ---
 
@@ -908,12 +908,16 @@ frequency_words.txt 文件增加了一个【必须词】功能，使用 + 号
    | **126邮箱** | 126.com | smtp.126.com | 465 | SSL |
    | **新浪邮箱** | sina.com | smtp.sina.com | 465 | SSL |
    | **搜狐邮箱** | sohu.com | smtp.sohu.com | 465 | SSL |
+   | **天翼邮箱** | 189.cn | smtp.189.cn | 465 | SSL |
 
    > **自动识别**：使用以上邮箱时，无需手动配置 `EMAIL_SMTP_SERVER` 和 `EMAIL_SMTP_PORT`，系统会自动识别。
    >
    > **反馈说明**：
    > - 如果你使用**其他邮箱**测试成功，欢迎开 [Issues](https://github.com/sansan0/TrendRadar/issues) 告知，我会添加到支持列表
    > - 如果上述邮箱配置有误或无法使用，也请开 [Issues](https://github.com/sansan0/TrendRadar/issues) 反馈，帮助改进项目
+   >
+   > **特别感谢**：
+   > - 感谢 [@DYZYD](https://github.com/DYZYD) 贡献天翼邮箱（189.cn）配置并完成自发自收测试 ([#291](https://github.com/sansan0/TrendRadar/issues/291))
 
    **常见邮箱设置：**
 
