@@ -1,9 +1,9 @@
 ---
 title: ChinaTextbook
-date: 2025-11-22T15:26:54+08:00
+date: 2025-11-23T15:27:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1624350716587-ff77031affd3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjM3OTYzODN8&ixlib=rb-4.1.0
-tags: ['github',义务教育,教材,数学]
+image: https://images.unsplash.com/photo-1541417904950-b855846fe074?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjM4ODI4MTV8&ixlib=rb-4.1.0
+tags: ['github',义务教育,数学,教材]
 categories: ['github']
 ---
 
