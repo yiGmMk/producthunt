@@ -1,9 +1,9 @@
 ---
 title: cursor-free-vip
-date: 2025-11-23T15:27:35+08:00
+date: 2025-11-24T15:30:00+08:00
 draft: False
-image: https://images.unsplash.com/photo-1540967092250-81841896175c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjM4ODI4MTV8&ixlib=rb-4.1.0
-tags: ['github',cursor-free-vip, Windows, macOS]
+image: https://images.unsplash.com/photo-1745369633109-a8f61b78b4d7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjM5NjkzNTl8&ixlib=rb-4.1.0
+tags: ['github',cursor free vip, windows, macOS]
 categories: ['github']
 ---
 

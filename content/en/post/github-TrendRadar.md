@@ -1,8 +1,8 @@
 ---
 title: TrendRadar
-date: 2025-11-23T15:27:08+08:00
+date: 2025-11-24T15:29:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1544166094-d2b74a1f7667?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjM4ODI4MTV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1610620746460-de78cf3d1705?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjM5NjkzNTl8&ixlib=rb-4.1.0
 tags: ['github',热点助手,新闻资讯,GitHub]
 categories: ['github']
 ---
@@ -19,12 +19,13 @@ categories: ['github']
 
 <a href="https://trendshift.io/repositories/14726" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14726" alt="sansan0%2FTrendRadar | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
-<a href="https://share.302.ai/mEOUzG" target="_blank"><img src="_image/302ai.png" alt="302.AI logo" height="60"/></a>
+<a href="https://share.302.ai/mEOUzG" target="_blank" title="一站式 AI 模型和 API 平台"><img src="_image/302ai.png" alt="302.AI logo" height="52"/></a>
+<a href="https://shandianshuo.cn" target="_blank" title="AI 语音输入，比打字快 4 倍 ⚡"><img src="_image/shandianshuo.png" alt="闪电说 logo" height="53"/></a>
 
 [![GitHub Stars](https://img.shields.io/github/stars/sansan0/TrendRadar?style=flat-square&logo=github&color=yellow)](https://github.com/sansan0/TrendRadar/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/sansan0/TrendRadar?style=flat-square&logo=github&color=blue)](https://github.com/sansan0/TrendRadar/network/members)
 [![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg?style=flat-square)](LICENSE)
-[![Version](https://img.shields.io/badge/version-v3.2.0-blue.svg)](https://github.com/sansan0/TrendRadar)
+[![Version](https://img.shields.io/badge/version-v3.3.0-blue.svg)](https://github.com/sansan0/TrendRadar)
 [![MCP](https://img.shields.io/badge/MCP-v1.0.2-green.svg)](https://github.com/sansan0/TrendRadar)
 
 [![企业微信通知](https://img.shields.io/badge/企业微信-通知-00D4AA?style=flat-square)](https://work.weixin.qq.com/)
@@ -34,6 +35,7 @@ categories: ['github']
 [![飞书通知](https://img.shields.io/badge/飞书-通知-00D4AA?style=flat-square)](https://www.feishu.cn/)
 [![邮件通知](https://img.shields.io/badge/Email-通知-00D4AA?style=flat-square)](#) 
 [![ntfy通知](https://img.shields.io/badge/ntfy-通知-00D4AA?style=flat-square)](https://github.com/binwiederhier/ntfy)
+[![Bark通知](https://img.shields.io/badge/Bark-通知-00D4AA?style=flat-square)](https://github.com/Finb/Bark)
 
 
 [![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-自动化-2088FF?style=flat-square&logo=github-actions&logoColor=white)](https://github.com/sansan0/TrendRadar)
@@ -338,6 +340,33 @@ GitHub 一键 Fork 即可使用，无需编程基础。
 - **大版本升级**：从 v1.x 升级到 v2.y，建议删除现有 fork 后重新 fork，这样更省力且避免配置冲突
 
 
+### 2025/11/24 - v3.3.0
+
+**🎉 新增 Bark 推送支持**
+
+1. **iOS 专属推送渠道**
+   - 支持 Bark 推送（基于 APNs，iOS 平台）
+   - 免费开源，简洁高效，无广告干扰
+   - 支持官方服务器和自建服务器两种方式
+
+2. **多种部署方式**
+   - GitHub Actions：配置 `BARK_URL` Secret
+   - Docker：环境变量 `BARK_URL`
+   - 本地运行：`config/config.yaml` 配置文件
+
+> 📖 **详细配置教程**：[快速开始 - Bark 推送](#-快速开始)
+
+**🐛 Bug 修复**
+- 修复 `config.yaml` 中 `ntfy_server_url` 配置不生效的问题 ([#345](https://github.com/sansan0/TrendRadar/issues/345))
+
+**🔧 升级说明**：
+- **GitHub Fork 用户**：更新 `main.py`、`config/config.yaml`、`.github/workflows/crawler.yml`
+
+
+<details>
+<summary>👉 点击展开：<strong>历史更新</strong></summary>
+
+
 ### 2025/11/23 - v3.2.0
 
 **🎯 新增高级定制功能**
@@ -360,10 +389,6 @@ GitHub 一键 Fork 即可使用，无需编程基础。
 
   **MCP 模块更新:**
   - 优化查询今日新闻却可能错误返回过去日期的情况
-
-
-<details>
-<summary>👉 点击展开：<strong>历史更新</strong></summary>
 
 
 ### 2025/11/22 - v3.1.1
@@ -949,6 +974,7 @@ frequency_words.txt 文件增加了一个【必须词】功能，使用 + 号
    | **新浪邮箱** | sina.com | smtp.sina.com | 465 | SSL |
    | **搜狐邮箱** | sohu.com | smtp.sohu.com | 465 | SSL |
    | **天翼邮箱** | 189.cn | smtp.189.cn | 465 | SSL |
+   | **阿里云邮箱** | aliyun.com | smtp.aliyun.com | 465 | TLS |
 
    > **自动识别**：使用以上邮箱时，无需手动配置 `EMAIL_SMTP_SERVER` 和 `EMAIL_SMTP_PORT`，系统会自动识别。
    >
@@ -958,6 +984,7 @@ frequency_words.txt 文件增加了一个【必须词】功能，使用 + 号
    >
    > **特别感谢**：
    > - 感谢 [@DYZYD](https://github.com/DYZYD) 贡献天翼邮箱（189.cn）配置并完成自发自收测试 ([#291](https://github.com/sansan0/TrendRadar/issues/291))
+   > - 感谢 [@longzhenren](https://github.com/longzhenren) 贡献阿里云邮箱（aliyun.com）配置并完成测试 ([#344](https://github.com/sansan0/TrendRadar/issues/344))
 
    **常见邮箱设置：**
 
@@ -1106,6 +1133,64 @@ frequency_words.txt 文件增加了一个【必须词】功能，使用 + 号
    - [ntfy 官方文档](https://docs.ntfy.sh/)
    - [自托管教程](https://docs.ntfy.sh/install/)
    - [GitHub 仓库](https://github.com/binwiederhier/ntfy)
+
+   </details>
+
+   <details>
+   <summary>👉 点击展开：<strong>Bark 推送</strong>（iOS 专属，简洁高效）</summary>
+   <br>
+
+   **GitHub Secret 配置（⚠️ Name 名称必须严格一致）：**
+   - **Name（名称）**：`BARK_URL`（请复制粘贴此名称，不要手打）
+   - **Secret（值）**：你的 Bark 推送 URL
+
+   <br>
+
+   **Bark 简介：**
+
+   Bark 是一款 iOS 平台的免费开源推送工具，特点是简单、快速、无广告。
+
+   **使用方式：**
+
+   ### 方式一：使用官方服务器（推荐新手） 🆓
+
+   1. **下载 Bark App**：
+      - iOS：[App Store](https://apps.apple.com/cn/app/bark-给你的手机发推送/id1403753865)
+
+   2. **获取推送 URL**：
+      - 打开 Bark App
+      - 复制首页显示的推送 URL（格式如：`https://api.day.app/your_device_key`）
+      - 将 URL 配置到 GitHub Secrets 中的 `BARK_URL`
+
+   ### 方式二：自建服务器（完全隐私控制） 🔒
+
+   **适合人群**：有服务器、追求完全隐私、技术能力强
+
+   **Docker 一键部署**：
+   ```bash
+   docker run -d \
+     --name bark-server \
+     -p 8080:8080 \
+     finab/bark-server
+   ```
+
+   **配置 TrendRadar**：
+   ```yaml
+   BARK_URL: http://your-server-ip:8080/your_device_key
+   ```
+
+   ---
+
+   **注意事项：**
+   - ✅ Bark 使用 APNs 推送，单条消息最大 4KB
+   - ✅ 支持自动分批推送，无需担心消息过长
+   - ✅ 推送格式为纯文本（自动去除 Markdown 语法）
+   - ⚠️ 仅支持 iOS 平台
+
+   **相关链接：**
+   - [Bark 官方网站](https://bark.day.app/)
+   - [Bark GitHub 仓库](https://github.com/Finb/Bark)
+   - [Bark Server 自建教程](https://github.com/Finb/bark-server)
 
    </details>
 
@@ -2217,21 +2302,19 @@ MCP Inspector 是官方调试工具，用于测试 MCP 连接：
 
 <div align="center">
 
+[![注册领取](https://img.shields.io/badge/注册_302.AI-领取_1_美元免费测试额度-8B5CF6?style=for-the-badge&logo=openai&logoColor=white)](https://share.302.ai/mEOUzG)
 <a href="https://share.302.ai/mEOUzG" target="_blank">
-  <img src="_image/banner-302ai-zh.jpg" alt="302.AI" width="800"/>
+  <img src="_image/banner-302ai-zh.jpg" alt="302.AI" width="700"/>
 </a>
 </div>
 
-### 💰 302.AI 新用户福利
-
-> 领取的 1 美元可用于调用各种 AI 大模型（如 Claude、GPT 等）      
-> 本项目 AI 分析功能需配置大模型使用，配置教程详见 [AI 智能分析](#-ai-智能分析)
-
-[![注册领取](https://img.shields.io/badge/注册_302.AI-领取_1_美元免费测试额度-FF6B6B?style=for-the-badge&logo=openai&logoColor=white)](https://share.302.ai/mEOUzG)
 
 <details id="sponsor-tutorial">
 <summary>👉 点击展开：<b>302.AI 使用教程</b></summary>
+<br>
 
+> 领取的 1 美元可用于调用各种 AI 大模型（如 Claude、GPT 等）
+> 本项目 AI 分析功能需配置大模型使用，配置教程详见 [AI 智能分析](#-ai-智能分析)
 
 ### 第 1 步：获取 API Key
 
@@ -2251,17 +2334,29 @@ MCP Inspector 是官方调试工具，用于测试 MCP 连接：
 **提示：** Cherry Studio 已原生集成 302.AI，配置后即可看到完整模型列表。
 
 
-**Q: 1 美元免费额度能用多久？**    
+**Q: 1 美元免费额度能用多久？**
 A: 取决于使用频率和模型选择，可以进行多次测试体验。
 
-**Q: 免费额度用完后怎么办？**    
+**Q: 免费额度用完后怎么办？**
 A: 可以按需充值，按量付费。目前大厂模型价格已相对亲民。
 
 </details>
 
----
 
-<br>
+> 每天追踪这么多热点，写报告、回复消息是否让手腕疲惫？        
+> 试试「闪电说」AI 语音输入法 —— 用说的，比打字快 4 倍 ⚡ 。从看热点到输出内容，让效率翻倍 👇
+
+<div align="center">
+
+[![Mac下载](https://img.shields.io/badge/Mac-免费下载-FF6B6B?style=for-the-badge&logo=apple&logoColor=white)](https://shandianshuo.cn) [![Windows下载](https://img.shields.io/badge/Windows-免费下载-FF6B6B?style=for-the-badge&logo=lightning&logoColor=white)](https://shandianshuo.cn)
+<a href="https://shandianshuo.cn" target="_blank">
+  <img src="_image/banner-shandianshuo.png" alt="闪电说" width="700"/>
+</a>
+</div>
+
+
+
+---
 
 ### 项目相关
 
