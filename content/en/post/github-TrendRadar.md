@@ -1,9 +1,9 @@
 ---
 title: TrendRadar
-date: 2025-11-24T15:29:29+08:00
+date: 2025-11-25T15:29:34+08:00
 draft: False
-image: https://images.unsplash.com/photo-1610620746460-de78cf3d1705?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjM5NjkzNTl8&ixlib=rb-4.1.0
-tags: ['github',热点助手,新闻资讯,GitHub]
+image: https://images.unsplash.com/photo-1720037207455-78dab39ca372?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjQwNTU3NjN8&ixlib=rb-4.1.0
+tags: ['github',热点助手,新闻资讯,智能推送]
 categories: ['github']
 ---
 
@@ -19,8 +19,8 @@ categories: ['github']
 
 <a href="https://trendshift.io/repositories/14726" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14726" alt="sansan0%2FTrendRadar | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
-<a href="https://share.302.ai/mEOUzG" target="_blank" title="一站式 AI 模型和 API 平台"><img src="_image/302ai.png" alt="302.AI logo" height="52"/></a>
-<a href="https://shandianshuo.cn" target="_blank" title="AI 语音输入，比打字快 4 倍 ⚡"><img src="_image/shandianshuo.png" alt="闪电说 logo" height="53"/></a>
+<a href="https://share.302.ai/mEOUzG" target="_blank" title="一站式 AI 模型和 API 平台"><img src="_image/302ai.png" alt="302.AI logo" height="50"/></a>
+<a href="https://shandianshuo.cn" target="_blank" title="AI 语音输入，比打字快 4 倍 ⚡"><img src="_image/shandianshuo.png" alt="闪电说 logo" height="51"/></a>
 
 [![GitHub Stars](https://img.shields.io/github/stars/sansan0/TrendRadar?style=flat-square&logo=github&color=yellow)](https://github.com/sansan0/TrendRadar/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/sansan0/TrendRadar?style=flat-square&logo=github&color=blue)](https://github.com/sansan0/TrendRadar/network/members)
@@ -71,13 +71,15 @@ categories: ['github']
 
 </details>
 
+<br>
+
 ## 📑 快速导航
 
 <div align="center">
 
 | [🚀 快速开始](#-快速开始) | [🤖 AI 智能分析](#-ai-智能分析) | [⚙️ 配置详解](#配置详解) | [📝 更新日志](#-更新日志) | [❓ 答疑与交流](#问题答疑与交流) |
 |:---:|:---:|:---:|:---:|:---:|
-| [🐳 Docker部署](#-docker-部署) | [🔌 MCP客户端](#-mcp-客户端) | [⭐ 项目相关](#项目相关) | [🪄 赞助商](#-赞助商) | |
+| [🐳 Docker部署](#6-docker-部署) | [🔌 MCP客户端](#-mcp-客户端) | [📚 项目相关](#-项目相关) | [🪄 赞助商](#-赞助商) | |
 
 </div>
 
@@ -86,7 +88,7 @@ categories: ['github']
 - 感谢**关注[公众号](#问题答疑与交流)** 的读者们，你们的留言、点赞、分享和推荐等积极互动让内容更有温度😎。  
 
 <details>
-<summary>👉 点击展开：<strong>致谢名单</strong> (当前 <strong>🔥72🔥</strong> 位)</summary>
+<summary>👉 点击展开：<strong>致谢名单</strong> (当前 <strong>🔥73🔥</strong> 位)</summary>
 
 ### 基础设施支持
 
@@ -113,9 +115,12 @@ categories: ['github']
 > 感谢**给予资金支持**的朋友们，你们的慷慨已化身为键盘旁的零食饮料，陪伴着项目的每一次迭代。
 >
 > **"一元点赞"已暂停**，如仍想支持作者，可前往[公众号](#问题答疑与交流)文章底部点击"喜欢作者"。
+>
+> 一位可爱猫头像的朋友，不知你从哪个角落翻到了我的收款码，三连了 1.8，心意已收到，感谢厚爱
 
 |           点赞人            |  金额  |  日期  |             备注             |
 | :-------------------------: | :----: | :----: | :-----------------------: |
+|           D*5          |  1.8 * 3 | 2025.11.24  |    | 
 |           *鬼          |  1 | 2025.11.17  |    | 
 |           *超          |  10 | 2025.11.17  |    | 
 |           R*w          |  10 | 2025.11.17  | 这 agent 做的牛逼啊,兄弟    | 
@@ -188,6 +193,7 @@ categories: ['github']
 
 </details>
 
+<br>
 
 ## ✨ 核心功能
 
@@ -330,6 +336,7 @@ GitHub 一键 Fork 即可使用，无需编程基础。
 |:---:|:---:|
 | ![Github Pages效果](_image/github-pages.png) | ![飞书推送效果](_image/feishu.jpg) |
 
+<br>
 
 ## 📝 更新日志
 
@@ -690,6 +697,7 @@ frequency_words.txt 文件增加了一个【必须词】功能，使用 + 号
 
 </details>
 
+<br>
 
 ## 🚀 快速开始
 
@@ -1220,8 +1228,8 @@ frequency_words.txt 文件增加了一个【必须词】功能，使用 + 号
 
     > 💡 默认配置已可正常使用，如需个性化调整，可参考以下选项
 
-    - **推送设置**：在 [config/config.yaml](config/config.yaml) 中配置推送模式和通知选项
-    - **关键词设置**：在 [config/frequency_words.txt](config/frequency_words.txt) 中添加你关心的关键词
+    - **推送设置**：在 [config/config.yaml](config/config.yaml) 中配置推送模式和通知选项 → [推送模式详解](#3-推送模式详解)
+    - **关键词设置**：在 [config/frequency_words.txt](config/frequency_words.txt) 中添加你关心的关键词 → [关键词配置教程](#2-关键词配置)
     - **推送频率调整**：在 [.github/workflows/crawler.yml](.github/workflows/crawler.yml) 请谨慎调整，别贪心
 
     **注意**：建议只调整文档中明确说明的配置项,其他选项主要供作者开发时测试使用
@@ -1251,6 +1259,7 @@ frequency_words.txt 文件增加了一个【必须词】功能，使用 + 号
 
    👉 **了解更多**：[AI 智能分析](#-ai-智能分析) — 解锁项目的隐藏能力，让热点追踪更高效！
 
+<br>
 
 <a name="配置详解"></a>
 
@@ -1550,6 +1559,22 @@ report:
 > - **原因**：你可能选择了 `daily`（当日汇总）或 `current`（当前榜单）模式
 > - **解决**：改用 `incremental`（增量监控）模式，只推送新增内容
 
+#### ⚠️ 增量模式重要提示
+
+> **选择了 `incremental`（增量监控）模式的用户请注意：**
+>
+> 📌 **增量模式只在有新增匹配新闻时才会推送**
+>
+> **如果长时间没有收到推送，可能是因为：**
+> 1. 当前时段没有符合你关键词的新热点出现
+> 2. 关键词配置过于严格或过于宽泛
+> 3. 监控平台数量较少
+>
+> **解决方案：**
+> - 方案1：👉 [优化关键词配置](#2-关键词配置) - 调整关键词的精准度，增加或修改监控词汇
+> - 方案2：切换推送模式 - 改用 `current` 或 `daily` 模式，可以定时接收推送
+> - 方案3：👉 [增加监控平台](#1-平台配置) - 添加更多新闻平台，扩大信息来源
+
 </details>
 
 ### 4. 热点权重调整
@@ -1649,7 +1674,11 @@ weight:
 </details>
 
 
-## 🐳 Docker 部署
+### 6. Docker 部署
+
+<details>
+<summary>👉 点击展开：<strong>Docker 部署完整指南</strong></summary>
+<br>
 
 #### 方式一：快速体验（一行命令）
 
@@ -1699,11 +1728,11 @@ docker run -d --name trend-radar \
    # 创建目录结构
    mkdir -p trendradar/{config,docker}
    cd trendradar
-   
+
    # 下载配置文件模板
    wget https://raw.githubusercontent.com/sansan0/TrendRadar/master/config/config.yaml -P config/
    wget https://raw.githubusercontent.com/sansan0/TrendRadar/master/config/frequency_words.txt -P config/
-   
+
    # 下载 docker-compose 配置
    wget https://raw.githubusercontent.com/sansan0/TrendRadar/master/docker/.env
    wget https://raw.githubusercontent.com/sansan0/TrendRadar/master/docker/docker-compose.yml
@@ -1758,7 +1787,7 @@ docker run -d --name trend-radar \
    ```bash
    # 查看日志
    docker logs -f trend-radar
-   
+
    # 查看容器状态
    docker ps | grep trend-radar
    ```
@@ -1849,6 +1878,9 @@ docker exec -it trend-radar /bin/bash
 docker exec -it trend-radar ls -la /app/config/
 ```
 
+</details>
+
+<br>
 
 ## 🤖 AI 智能分析
 
@@ -1876,7 +1908,6 @@ AI 分析功能**不是**直接查询网络实时数据，而是分析你**本�
    - 按照 [快速开始](#-快速开始) 部署运行项目
    - 等待至少 1 天积累新闻数据后，即可查询最新热点
 
----
 
 ### 1. 快速部署
 
@@ -1892,10 +1923,17 @@ Cherry Studio 提供 GUI 配置界面， 5 分钟快速部署， 复杂的部分
 
 **提问效果**：
 
-> 实际不建议一次性问多个问题。如果你选择的 ai 模型连下图的按顺序调用都无法做到，建议换一个。
+<details>
+<summary>👉 点击展开：<strong>查看 AI 对话示例图</strong></summary>
+<br>
+
+> 💡 **提示**：实际不建议一次性问多个问题。如果你选择的 AI 模型连下图的按顺序调用都无法做到，建议换一个。
 
 
 
+</details>
+
+<br>
 
 ## 🔌 MCP 客户端
 
@@ -2271,6 +2309,7 @@ MCP Inspector 是官方调试工具，用于测试 MCP 连接：
 
 </details>
 
+<br>
 
 ## ☕问题答疑与交流
 
@@ -2293,7 +2332,6 @@ MCP Inspector 是官方调试工具，用于测试 MCP 连接：
 
 <br>
 
----
 
 ## 🪄 赞助商
 
@@ -2358,7 +2396,9 @@ A: 可以按需充值，按量付费。目前大厂模型价格已相对亲民�
 
 ---
 
-### 项目相关
+<br>
+
+## 📚 项目相关
 
 > **4 篇文章**：
 
@@ -2437,6 +2477,7 @@ flowchart TD
 
 [![Star History Chart](https://api.star-history.com/svg?repos=sansan0/TrendRadar&type=Date)](https://www.star-history.com/#sansan0/TrendRadar&Date)
 
+<br>
 
 ## 📄 许可证
 
