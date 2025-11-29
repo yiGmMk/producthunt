@@ -1,9 +1,9 @@
 ---
 title: TrendRadar
-date: 2025-11-28T15:29:30+08:00
+date: 2025-11-29T15:27:36+08:00
 draft: False
-image: https://images.unsplash.com/photo-1722778610349-e3c02e277ec2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjQzMTQ5NjB8&ixlib=rb-4.1.0
-tags: ['github',AI, ChatGPT, 趋势分析]
+image: https://images.unsplash.com/photo-1653147373926-378caddb5ecc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjQ0MDEyMzl8&ixlib=rb-4.1.0
+tags: ['github',热点助手,新闻资讯,智能推送]
 categories: ['github']
 ---
 
