@@ -1,28 +1,13 @@
 ---
 title: cursor-free-vip
-date: 2025-12-02T15:32:01+08:00
+date: 2025-12-03T15:37:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1633099647233-7cad0374ea1d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjQ2NjA2ODR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1591788115195-6873a66dfb65?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjQ3NDczOTV8&ixlib=rb-4.1.0
 tags: ['github',Cursor Free VIP, Windows, macOS]
 categories: ['github']
 ---
 
 # [yeongpin/cursor-free-vip](https://github.com/yeongpin/cursor-free-vip)
-
-<div align="center" markdown="1">
-   <sup>Special thanks to:</sup>
-   <br>
-   <br>
-   <a href="http://go.warp.dev/cursor-free-vip">
-      <img alt="Warp sponsorship" width="400" src="https://github.com/user-attachments/assets/ab8dd143-b0fd-4904-bdc5-dd7ecac94eae">
-   </a>
-
-### [Warp, built for coding with multiple agents.](http://go.warp.dev/cursor-free-vip)
-[Available for MacOS, Linux, & Windows](http://go.warp.dev/cursor-free-vip)<br>
-
-</div>
-
----
 
 # ➤ Cursor Free VIP
 

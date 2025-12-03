@@ -1,8 +1,8 @@
 ---
 title: nvm
-date: 2025-12-02T15:32:08+08:00
+date: 2025-12-03T15:37:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1605777800582-3555d4e887f8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjQ2NjA2ODR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1642089633537-7335c0c8e868?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjQ3NDczOTV8&ixlib=rb-4.1.0
 tags: ['github',nvm, node, install]
 categories: ['github']
 ---
