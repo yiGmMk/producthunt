@@ -1,8 +1,8 @@
 ---
 title: cursor-free-vip
-date: 2025-12-03T15:37:19+08:00
+date: 2025-12-04T15:33:00+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591788115195-6873a66dfb65?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjQ3NDczOTV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1739996698574-30dfcdaa64b8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjQ4MzM1NDd8&ixlib=rb-4.1.0
 tags: ['github',Cursor Free VIP, Windows, macOS]
 categories: ['github']
 ---
