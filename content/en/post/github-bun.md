@@ -1,9 +1,9 @@
 ---
 title: bun
-date: 2025-10-14T15:29:14+08:00
+date: 2025-12-05T15:31:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1546922164-5dc6801a8ae0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA0MjY4ODR8&ixlib=rb-4.1.0
-tags: ['github',JavaScript, TypeScript, runtime, package manager, Node.js, test runner, CLI, bundler, installation, documentation]
+image: https://images.unsplash.com/photo-1558251513-052aeb9a830b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjQ5MTk4Njl8&ixlib=rb-4.1.0
+tags: ['github',Bun, JavaScript, TypeScript]
 categories: ['github']
 ---
 
@@ -65,7 +65,7 @@ Bun supports Linux (x64 & arm64), macOS (x64 & Apple Silicon) and Windows (x64).
 curl -fsSL https://bun.com/install | bash
 
 # on windows
-powershell -c "irm bun.com/install.ps1 | iex"
+powershell -c "irm bun.sh/install.ps1 | iex"
 
 # with npm
 npm install -g bun
@@ -115,13 +115,13 @@ bun upgrade --canary
   - [File types (Loaders)](https://bun.com/docs/runtime/loaders)
   - [TypeScript](https://bun.com/docs/runtime/typescript)
   - [JSX](https://bun.com/docs/runtime/jsx)
-  - [Environment variables](https://bun.com/docs/runtime/env)
+  - [Environment variables](https://bun.com/docs/runtime/environment-variables)
   - [Bun APIs](https://bun.com/docs/runtime/bun-apis)
   - [Web APIs](https://bun.com/docs/runtime/web-apis)
-  - [Node.js compatibility](https://bun.com/docs/runtime/nodejs-apis)
+  - [Node.js compatibility](https://bun.com/docs/runtime/nodejs-compat)
   - [Single-file executable](https://bun.com/docs/bundler/executables)
   - [Plugins](https://bun.com/docs/runtime/plugins)
-  - [Watch mode / Hot Reloading](https://bun.com/docs/runtime/hot)
+  - [Watch mode / Hot Reloading](https://bun.com/docs/runtime/watch-mode)
   - [Module resolution](https://bun.com/docs/runtime/modules)
   - [Auto-install](https://bun.com/docs/runtime/autoimport)
   - [bunfig.toml](https://bun.com/docs/runtime/bunfig)
@@ -241,7 +241,7 @@ bun upgrade --canary
 
 - Ecosystem
   - [Use React and JSX](https://bun.com/guides/ecosystem/react)
-  - [Use EdgeDB with Bun](https://bun.com/guides/ecosystem/edgedb)
+  - [Use Gel with Bun](https://bun.com/guides/ecosystem/gel)
   - [Use Prisma with Bun](https://bun.com/guides/ecosystem/prisma)
   - [Add Sentry to a Bun app](https://bun.com/guides/ecosystem/sentry)
   - [Create a Discord bot](https://bun.com/guides/ecosystem/discordjs)
