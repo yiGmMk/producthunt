@@ -1,9 +1,9 @@
 ---
 title: ai-engineering-hub
-date: 2025-10-31T15:27:58+08:00
+date: 2025-12-07T15:29:05+08:00
 draft: False
-image: https://images.unsplash.com/photo-1504656738986-9387b6a8acc9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE4OTU2MzZ8&ixlib=rb-4.1.0
-tags: ['github',AI Engineering Hub, Projects, RAG]
+image: https://images.unsplash.com/photo-1737365506116-ef7eba797492?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjUwOTI0OTh8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
