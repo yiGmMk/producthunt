@@ -1,8 +1,8 @@
 ---
 title: VibeVoice
-date: 2025-12-07T15:28:27+08:00
+date: 2025-12-08T15:34:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1737365506116-ef7eba797492?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjUwOTI0OTh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1596535285368-7df7ab5c67a9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjUxNzkyMzN8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
