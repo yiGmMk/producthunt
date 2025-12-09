@@ -1,8 +1,8 @@
 ---
 title: fresh
-date: 2025-12-07T15:28:57+08:00
+date: 2025-12-09T15:32:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1625704578395-215f8d370a3f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjUwOTI0OTh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1729830374690-879915af264d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjUyNjU1MTh8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -25,9 +25,9 @@ Fresh is designed for discovery. It features native UIs, a full Menu system, and
 
 Extend Fresh easily using modern tools. Plugins are written in TypeScript and run securely in a sandboxed Deno environment, providing access to a modern JavaScript ecosystem without compromising stability.
 
-## Zero-Latency Performance
+## Low-Latency Performance
 
-Fresh is engineered for speed. It delivers a near zero-latency experience, with text appearing instantly. The editor is designed to be light and fast, reliably opening and editing huge files up to multi-gigabyte sizes without slowdown.
+Fresh is engineered for speed. It delivers a low-latency experience, with text appearing instantly. The editor is designed to be light and fast, reliably opening and editing [huge files up to multi-gigabyte sizes](https://noamlewis.com/blog/2025/12/09/how-fresh-loads-huge-files-fast) without slowdown.
 
 ## Comprehensive Feature Set
 
