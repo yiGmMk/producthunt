@@ -1,8 +1,8 @@
 ---
 title: cutile-python
-date: 2025-12-08T15:34:12+08:00
+date: 2025-12-10T15:33:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1464846539327-f23d0038c19e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjUxNzkyMzN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1638444571710-9f0f31aca511?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjUzNTE5NjR8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

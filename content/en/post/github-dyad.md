@@ -1,8 +1,8 @@
 ---
 title: dyad
-date: 2025-10-09T15:27:41+08:00
+date: 2025-12-10T15:33:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1466345959838-d8def85dbc73?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk5OTQ3OTB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1622837172115-5bcf625e7945?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjUzNTE5NjR8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -13,9 +13,9 @@ categories: ['github']
 
 Dyad is a local, open-source AI app builder. It's fast, private, and fully under your control — like Lovable, v0, or Bolt, but running right on your machine.
 
-[![Image](https://github.com/user-attachments/assets/f6c83dfc-6ffd-4d32-93dd-4b9c46d17790)](http://dyad.sh/)
+[![Image](https://github.com/user-attachments/assets/f6c83dfc-6ffd-4d32-93dd-4b9c46d17790)](https://dyad.sh/)
 
-More info at: [http://dyad.sh/](http://dyad.sh/)
+More info at: [https://dyad.sh/](https://dyad.sh/)
 
 ## 🚀 Features
 
@@ -38,3 +38,8 @@ Join our growing community of AI app builders on **Reddit**: [r/dyadbuilders](ht
 **Dyad** is open-source (Apache 2.0 licensed).
 
 If you're interested in contributing to dyad, please read our [contributing](./CONTRIBUTING.md) doc.
+
+## License
+
+- All the code in this repo outside of `src/pro` is open-source and licensed under Apache 2.0 - see [LICENSE](./LICENSE).
+- All the code in this repo within `src/pro` is fair-source and licensed under [Functional Source License 1.1 Apache 2.0](https://fsl.software/) - see [LICENSE](./src/pro/LICENSE).
