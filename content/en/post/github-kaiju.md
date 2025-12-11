@@ -1,8 +1,8 @@
 ---
 title: kaiju
-date: 2025-12-10T15:32:53+08:00
+date: 2025-12-11T15:34:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1714468831140-2f688671761b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjUzNTE5NjR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1700539945152-30da5981ba60?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjU0Mzg0NDJ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -54,6 +54,8 @@ For the latest updates, please join the [Discord](https://discord.gg/HYj7Dh7ke3)
 Please review the Ad-Hoc [editor readme](https://github.com/KaijuEngine/kaiju/blob/master/src/editor/README.md)
 
 ## Compiling the engine
+> **Windows developers must install the 64-bit Go toolchain (`windows-amd64`).**
+> The 32-bit (`windows-386`) Go distribution will not compile Kaiju’s Vulkan backend.
 Please see the [documentation](https://kaijuengine.org/engine_developers/build_from_source/) on how to get started and compile the engine
 
 ## Editor previews

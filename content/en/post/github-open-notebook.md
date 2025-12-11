@@ -1,9 +1,9 @@
 ---
 title: open-notebook
-date: 2025-10-23T15:29:15+08:00
+date: 2025-12-11T15:34:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1654704001943-293056a5893e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEyMDQ1MTB8&ixlib=rb-4.1.0
-tags: ['github',Open Notebook, privacy, podcast generation]
+image: https://images.unsplash.com/photo-1596709372674-c34ef34b56d7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjU0Mzg0NDJ8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -44,6 +44,10 @@ categories: ['github']
     <a href="docs/deployment/index.md">🚀 Deploy</a>
   </p>
 </div>
+
+<p align="center">
+<a href="https://trendshift.io/repositories/14536" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14536" alt="lfnovo%2Fopen-notebook | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+</p>
 
 <div align="center">
   <!-- Keep these links. Translations will automatically update with the README. -->
@@ -252,13 +256,13 @@ open-notebook/
                  ▼
          ┌───────────────┐
          │   Port 8502   │  ← Next.js Frontend (what you see)
-         │   Frontend    │
+         │   Frontend    │    Also proxies API requests internally!
          └───────┬───────┘
-                 │ needs to call ↓
+                 │ proxies /api/* requests ↓
                  ▼
          ┌───────────────┐
          │   Port 5055   │  ← FastAPI Backend (handles requests)
-         │     API       │     This is why you need API_URL!
+         │     API       │
          └───────┬───────┘
                  │
                  ▼
@@ -268,7 +272,11 @@ open-notebook/
          └───────────────┘
 ```
 
-**Key Point:** Your browser loads the frontend from port 8502, but that frontend needs to know where to find the API (port 5055). When accessing remotely, you must tell it explicitly: `API_URL=http://your-server-ip:5055`
+**Key Points:**
+- **v1.1+**: Next.js automatically proxies `/api/*` requests to the backend, simplifying reverse proxy setup
+- Your browser loads the frontend from port 8502
+- The frontend needs to know where to find the API - when accessing remotely, set: `API_URL=http://your-server-ip:5055`
+- **Behind reverse proxy?** You only need to proxy to port 8502 now! See [Reverse Proxy Guide](docs/deployment/reverse-proxy.md)
 
 ## Star History
 
