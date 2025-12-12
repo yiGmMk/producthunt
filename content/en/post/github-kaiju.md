@@ -1,8 +1,8 @@
 ---
 title: kaiju
-date: 2025-12-11T15:34:20+08:00
+date: 2025-12-12T15:34:06+08:00
 draft: False
-image: https://images.unsplash.com/photo-1700539945152-30da5981ba60?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjU0Mzg0NDJ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1655461782503-0d16f94d430f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjU1MjQ4MDZ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -62,6 +62,9 @@ Please see the [documentation](https://kaijuengine.org/engine_developers/build_f
 ⚠️⚠️⚠️ **Please note, this video is not professional at all. It's one I made to aid in the [Mac port pull request](https://github.com/KaijuEngine/kaiju/pull/489), but shows many features.**
 
 [(YouTube) Compatibility requirements video for Mac](https://www.youtube.com/watch?v=B36gYYSNRDc)
+
+### Physics
+[full-project-run-cycle.mp4](https://github.com/user-attachments/assets/306f069a-ed4e-4e78-9336-b5a62c48289f)
 
 ### Older videos
 [full-project-run-cycle.mp4](https://github.com/user-attachments/assets/04c75879-23af-40fa-9773-33cd22cc9552)
