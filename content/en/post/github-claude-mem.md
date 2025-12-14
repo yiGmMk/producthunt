@@ -1,8 +1,8 @@
 ---
 title: claude-mem
-date: 2025-12-13T15:31:09+08:00
+date: 2025-12-14T15:29:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1632058881090-d3162045b12a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjU2MTEwNTh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1593151831030-497c6481ce23?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjU2OTczMjZ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -408,6 +408,10 @@ If you're experiencing issues, describe the problem to Claude and the troublesho
 - Search not working → Check FTS5 tables exist
 
 See [Troubleshooting Guide](https://docs.claude-mem.ai/troubleshooting) for complete solutions.
+
+### Windows Known Issues
+
+**Console Window Visibility**: On Windows, a console window may briefly appear when the worker service starts. This is a cosmetic issue that we're working to resolve. We've prioritized stability by removing a workaround that was causing libuv crashes. The window does not affect functionality and will be addressed in a future release when the MCP SDK provides proper window hiding support.
 
 ---
 

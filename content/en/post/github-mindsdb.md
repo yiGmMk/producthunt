@@ -1,8 +1,8 @@
 ---
 title: mindsdb
-date: 2025-09-22T15:32:37+08:00
+date: 2025-12-14T15:29:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1600626721022-33a0113e144d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg1MjYxOTV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1603988274110-e082e7b3326e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjU2OTczMjZ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -15,7 +15,7 @@ categories: ['github']
 
 <div align="center">
 	<a href="https://pypi.org/project/MindsDB/" target="_blank"><img src="https://badge.fury.io/py/MindsDB.svg" alt="MindsDB Release"></a>
-	<a href="https://www.python.org/downloads/" target="_blank"><img src="https://img.shields.io/badge/python-3.10.x%7C%203.11.x-brightgreen.svg" alt="Python supported"></a>
+	<a href="https://www.python.org/downloads/" target="_blank"><img src="https://img.shields.io/badge/python-3.10.x%7C%203.11.x%7C%203.12.x%7C%203.13.x-brightgreen.svg" alt="Python supported"></a>
 	<a href="https://hub.docker.com/u/mindsdb" target="_blank"><img src="https://img.shields.io/docker/pulls/mindsdb/mindsdb" alt="Docker pulls"></a>
 
   <br />
