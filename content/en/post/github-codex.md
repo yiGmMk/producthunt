@@ -1,9 +1,9 @@
 ---
 title: codex
-date: 2025-12-05T15:31:42+08:00
+date: 2025-12-15T15:34:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1663138941814-c2d35bb7f224?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjQ5MTk4Njl8&ixlib=rb-4.1.0
-tags: ['github',Codex CLI, OpenAI, ChatGPT]
+image: https://images.unsplash.com/photo-1487525219605-eadb39ae229c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjU3ODQwNzV8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
