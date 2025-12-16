@@ -1,8 +1,8 @@
 ---
 title: ui
-date: 2025-10-09T15:27:48+08:00
+date: 2025-12-16T15:33:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1651598335167-a77ab62737aa?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk5OTQ3OTB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1671552693120-955d0f2a0172?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjU4NzAzOTB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -11,9 +11,9 @@ categories: ['github']
 
 # shadcn/ui
 
-Accessible and customizable components that you can copy and paste into your apps. Free. Open Source. **Use this to build your own component library**.
+A set of beautifully designed components that you can customize, extend, and build on. Start here then make it your own. Open Source. Open Code. **Use this to build your own component library**.
 
-![hero](apps/www/public/og.jpg)
+![hero](apps/v4/public/opengraph-image.png)
 
 ## Documentation
 

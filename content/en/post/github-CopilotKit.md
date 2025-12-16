@@ -1,8 +1,8 @@
 ---
 title: CopilotKit
-date: 2025-12-14T15:28:56+08:00
+date: 2025-12-16T15:33:54+08:00
 draft: False
-image: https://images.unsplash.com/photo-1674592267814-bc42ef585817?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjU2OTczMjZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1608440581653-52fa35500d0f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjU4NzAzOTB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

@@ -1,8 +1,8 @@
 ---
 title: sim
-date: 2025-12-15T15:34:44+08:00
+date: 2025-12-16T15:33:22+08:00
 draft: False
-image: https://images.unsplash.com/photo-1676018526182-fcb4ae27e24c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjU3ODQwNzV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1658439133464-c9837b44a217?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjU4NzAzOTB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -141,6 +141,7 @@ When running with Docker, use `host.docker.internal` if vLLM is on your host mac
 
 **Requirements:**
 - [Bun](https://bun.sh/) runtime
+- [Node.js](https://nodejs.org/) v20+ (required for sandboxed code execution)
 - PostgreSQL 12+ with [pgvector extension](https://github.com/pgvector/pgvector) (required for AI embeddings)
 
 **Note:** Sim uses vector embeddings for AI features like knowledge bases and semantic search, which requires the `pgvector` PostgreSQL extension.
@@ -198,6 +199,7 @@ DATABASE_URL="postgresql://postgres:your_password@localhost:5432/simstudio"
 
 Then run the migrations:
 ```bash
+cd apps/sim # Required so drizzle picks correct .env file
 bunx drizzle-kit migrate --config=./drizzle.config.ts
 ```
 
