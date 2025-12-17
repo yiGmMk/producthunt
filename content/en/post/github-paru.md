@@ -1,8 +1,8 @@
 ---
 title: paru
-date: 2025-12-15T15:35:10+08:00
+date: 2025-12-17T15:33:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1595876730500-373b0230beff?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjU3ODQwNzV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1662117063467-9589bbe9f2a3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjU5NTY3NTZ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
