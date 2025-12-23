@@ -1,8 +1,8 @@
 ---
 title: exo
-date: 2025-12-22T15:34:23+08:00
+date: 2025-12-23T15:34:01+08:00
 draft: False
-image: https://images.unsplash.com/photo-1682613269321-ddaade6ea1f9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjYzODg4NTZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1729654055276-7243f95138e4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjY0NzUyMzF8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -12,7 +12,7 @@ categories: ['github']
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="/docs/exo-logo-black-bg.jpg">
+  <source media="(prefers-color-scheme: light)" srcset="/docs/imgs/exo-logo-black-bg.jpg">
   
 </picture>
 
@@ -75,13 +75,23 @@ There are two ways to run exo:
 ### Run from Source (Mac & Linux)
 
 **Prerequisites:**
-- [uv](https://github.com/astral-sh/uv) (for Python dependency management)
+- [brew](https://github.com/Homebrew/brew) (for simple package management on MacOS)
+  
   ```bash
-  brew install uv
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   ```
+- [uv](https://github.com/astral-sh/uv) (for Python dependency management)
 - [macmon](https://github.com/vladkens/macmon) (for hardware monitoring on Apple Silicon)
+- [node](https://github.com/nodejs/node) (for building the dashboard)
+  
   ```bash
-  brew install macmon
+  brew install uv macmon node
+  ```
+- [rust](https://github.com/rust-lang/rustup) (to build Rust bindings, nightly for now)
+
+  ```bash
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  rustup toolchain install nightly
   ```
 
 Clone the repo, build the dashboard, and run exo:
@@ -103,7 +113,7 @@ This starts the exo dashboard and API at http://localhost:52415/
 
 exo ships a macOS app that runs in the background on your Mac.
 
-<img src="docs/macos-app-one-macbook.png" alt="exo macOS App - running on a MacBook" width="35%" />
+<img src="docs/imgs/macos-app-one-macbook.png" alt="exo macOS App - running on a MacBook" width="35%" />
 
 The macOS app requires macOS Tahoe 26.2 or later.
 
