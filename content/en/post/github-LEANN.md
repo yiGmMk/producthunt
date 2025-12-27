@@ -1,8 +1,8 @@
 ---
 title: LEANN
-date: 2025-12-26T15:32:51+08:00
+date: 2025-12-27T15:29:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1488572749058-7f52dd70e0fa?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjY3MzQzMzJ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1609528027551-f5b4a1958ec1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjY4MjA1MTV8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
