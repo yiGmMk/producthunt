@@ -1,8 +1,8 @@
 ---
 title: Python
-date: 2025-12-28T15:30:24+08:00
+date: 2025-12-29T15:36:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1616523817014-5b6166099db4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjY5MDcwMTR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1620159486133-579fb1ae1004?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjY5OTM3NjZ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
