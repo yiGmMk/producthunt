@@ -1,19 +1,13 @@
 ---
 title: postiz-app
-date: 2025-06-05T15:29:01+08:00
+date: 2025-12-30T15:33:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1669560085006-95124f1a901b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDkxMDg1MjN8&ixlib=rb-4.1.0
-tags: ['github',social media, scheduling, AI, analytics, collaboration, Postiz, marketing, social media management, team collaboration]
+image: https://images.unsplash.com/photo-1615401318613-4fa7172ca826?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjcwNzk5NzR8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
 # [gitroomhq/postiz-app](https://github.com/gitroomhq/postiz-app)
-
-<p align="center">
-  <a href="https://affiliate.postiz.com">
-    <img src="https://github.com/user-attachments/assets/af9f47b3-e20c-402b-bd11-02f39248d738" />
-  </a>
-</p>
 
 <p align="center">
   <a href="https://postiz.com/" target="_blank">
@@ -25,15 +19,15 @@ categories: ['github']
 </p>
 
 <p align="center">
-<a href="https://opensource.org/licenses/Apache-2.0">
-  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License">
+<a href="https://opensource.org/license/agpl-v3">
+  <img src="https://img.shields.io/badge/License-AGPL%203.0-blue.svg" alt="License">
 </a>
 </p>
 
 <div align="center">
   <strong>
   <h2>Your ultimate AI social media scheduling tool</h2><br />
-  <a href="https://postiz.com">Postiz</a>: An alternative to: Buffer.com, Hypefury, Twitter Hunter, Etc...<br /><br />
+  <a href="https://postiz.com">Postiz</a>: An alternative to: Buffer.com, Hypefury, Twitter Hunter, etc...<br /><br />
   </strong>
   Postiz offers everything you need to manage your social media posts,<br />build an audience, capture leads, and grow your business.
 </div>
@@ -50,10 +44,10 @@ categories: ['github']
   <img alt="Pinterest" src="https://postiz.com/svgs/socials/Pinterest.svg" width="32">
   <img alt="Threads" src="https://postiz.com/svgs/socials/Threads.svg" width="32">
   <img alt="X" src="https://postiz.com/svgs/socials/X.svg" width="32">
-  <img alt="X" src="https://postiz.com/svgs/socials/Slack.svg" width="32">
-  <img alt="X" src="https://postiz.com/svgs/socials/Discord.svg" width="32">
-  <img alt="X" src="https://postiz.com/svgs/socials/Mastodon.svg" width="32">
-  <img alt="X" src="https://postiz.com/svgs/socials/Bluesky.svg" width="32">
+  <img alt="Slack" src="https://postiz.com/svgs/socials/Slack.svg" width="32">
+  <img alt="Discord" src="https://postiz.com/svgs/socials/Discord.svg" width="32">
+  <img alt="Mastodon" src="https://postiz.com/svgs/socials/Mastodon.svg" width="32">
+  <img alt="Bluesky" src="https://postiz.com/svgs/socials/Bluesky.svg" width="32">
 </div>
 
 <p align="center">
@@ -64,18 +58,23 @@ categories: ['github']
   <br />
   <a href="https://youtube.com/@postizofficial" rel="dofollow"><strong>Watch the YouTube Tutorials»</strong></a>
   <br />
+</p>
 
-  <br/>
-    <a href="https://platform.postiz.com">Register</a>
-    ·
-    <a href="https://discord.postiz.com">Join Our Discord (devs only)</a>
-    ·
-    <a href="https://twitter.com/getpostiz">X</a>
-    ·
-    <a href="https://gitroom.com">Gitroom</a>
-    ·
-    <a href="https://git.sn/telegram">Telegram (Crypto)</a>
-  </p>
+<p align="center">
+  <a href="https://platform.postiz.com">Register</a>
+  ·
+  <a href="https://discord.postiz.com">Join Our Discord (devs only)</a>
+  ·
+  <a href="https://docs.postiz.com/public-api">Public API</a><br />
+</p>
+<p align="center">
+  <a href="https://www.npmjs.com/package/@postiz/node">NodeJS SDK</a>
+  ·
+  <a href="https://www.npmjs.com/package/n8n-nodes-postiz">N8N custom node</a>
+  ·
+  <a href="https://apps.make.com/postiz">Make.com integration</a>
+</p>
+
 
 <br />
 
@@ -96,6 +95,7 @@ categories: ['github']
 - Collaborate with other team members to exchange or buy posts.
 - Invite your team members to collaborate, comment, and schedule posts.
 - At the moment there is no difference between the hosted version to the self-hosted version
+- Perfect for automation (API) with platforms like N8N, Make.com, Zapier, etc.
 
 ## Tech Stack
 
@@ -110,11 +110,29 @@ categories: ['github']
 
 To have the project up and running, please follow the [Quick Start Guide](https://docs.postiz.com/quickstart)
 
-## Invest in the Postiz Coin :)
+## Sponsor Postiz
 
-DMsTbeCfX1crgAse5tver98KAMarPWeP3d6U3Gmmpump
+We now give a few options to Sponsor Postiz:
+- Just a donation: You like what we are building, and want to buy us some coffees so we can build faster.
+- Main Repository: Get your logo with a backlink from the main Postiz repository. Postiz has almost 3m downloads and 20k views per month.
+- Main Repository + Website: Get your logo on the central repository and the main website. Here are some metrics: - Website has 20k hits per month + 65 DR (strong backlink) - Repository has 20k hits per month + Almost 3m docker downloads.
 
-# License
+Link: https://opencollective.com/postiz
+
+## Postiz Compliance
+
+- Postiz is an open-source, self-hosted social media scheduling tool that supports platforms like X (formerly Twitter), Bluesky, Mastodon, Discord, and others.
+- Postiz hosted service uses official, platform-approved OAuth flows.
+- Postiz does not automate or scrape content from social media platforms.
+- Postiz does not collect, store, or proxy API keys or access tokens from users.
+- Postiz never ask users to paste API keys into our hosted product.
+- Postiz Users always authenticate directly with the social platform (e.g., X, Discord, etc.), ensuring platform compliance and data privacy.
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=gitroomhq/postiz-app&type=Date)](https://www.star-history.com/#gitroomhq/postiz-app&Date)
+
+## License
 
 This repository's source code is available under the [AGPL-3.0 license](LICENSE).
 

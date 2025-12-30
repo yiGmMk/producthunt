@@ -1,8 +1,8 @@
 ---
 title: vibe-kanban
-date: 2025-12-29T15:36:49+08:00
+date: 2025-12-30T15:33:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1660262470772-f53275dd4fdf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjY5OTM3NjZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1595288239170-f19eac7187b2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjcwNzk5NzR8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -101,11 +101,10 @@ cd frontend
 pnpm build
 ```
 
-### Build from source
+### Build from source (macOS)
 
-1. Run `build-npm-package.sh`
-2. In the `npx-cli` folder run `npm pack`
-3. You can run your build with `npx [GENERATED FILE].tgz`
+1. Run `./local-build.sh`
+2. Test with `cd npx-cli && node bin/cli.js`
 
 
 ### Environment Variables
