@@ -1,8 +1,8 @@
 ---
 title: vibe-kanban
-date: 2025-12-31T15:33:51+08:00
+date: 2026-01-01T15:33:56+08:00
 draft: False
-image: https://images.unsplash.com/photo-1589524702008-c4b06515988b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjcxNjY0MjF8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1604051189201-700f955d1cf8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjcyNTI4MDN8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

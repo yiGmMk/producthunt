@@ -1,8 +1,8 @@
 ---
 title: pg-aiguide
-date: 2025-12-31T15:34:24+08:00
+date: 2026-01-01T15:34:05+08:00
 draft: False
-image: https://images.unsplash.com/photo-1502639625928-9e0198ae7dfb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjcxNjY0MjF8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1598759804922-bd12b4cd2ae9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjcyNTI4MDN8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

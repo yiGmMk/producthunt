@@ -1,19 +1,19 @@
 ---
 title: computer-use-preview
-date: 2025-10-10T15:26:40+08:00
+date: 2026-01-01T15:33:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1593746299512-5bf6a074bc00?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjAwODExNzV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1593473718457-4c37af5a52a9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjcyNTI4MDN8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
 
-# [google/computer-use-preview](https://github.com/google/computer-use-preview)
+# [google-gemini/computer-use-preview](https://github.com/google-gemini/computer-use-preview)
 
 # Computer Use Preview
 
 ## Quick Start
 
-This section will guide you through setting up and running the Computer Use Preview model. Follow these steps to get started.
+This section will guide you through setting up and running the Computer Use Preview model, either the Gemini Developer API or Vertex AI. Follow these steps to get started.
 
 ### 1. Installation
 
@@ -148,3 +148,27 @@ The `main.py` script is the command-line interface (CLI) for running the browser
 | GEMINI_API_KEY | Your API key for the Gemini model. | Yes |
 | BROWSERBASE_API_KEY | Your API key for Browserbase. | Yes (when using the browserbase environment) |
 | BROWSERBASE_PROJECT_ID | Your Project ID for Browserbase. | Yes (when using the browserbase environment) |
+
+## Known Issues
+
+### Playwright Dropdown Menu
+
+On certain operating systems, the Playwright browser is unable to capture `<select>` elements because they are rendered by the operating system. As a result, the agent is unable to send the correct screenshot to the model.
+
+There are several ways to mitigate this.
+
+1. Use the Browserbase option instead of Playwright.
+2. Inject a script like [proxy-select](https://github.com/amitamb/proxy-select) to render a custom `<select>` element. You must inject `proxy-select.css` and `proxy-select.js` into each page that has a non-custom `<select>` element. You can do this in the [`Playwright.__enter__`](https://github.com/google-gemini/computer-use-preview/blob/main/computers/playwright/playwright.py#L100) method by adding a few lines of code, like the following (replacing `PROXY_SELECT_JS` and `PROXY_SELECT_CSS` with the appropriate variables):
+
+```python
+self._page.add_init_script(PROXY_SELECT_JS)
+def inject_style(page):
+    try:
+        page.add_style_tag(content=PROXY_SELECT_CSS)
+    except Exception as e:
+        print(f"Error injecting style: {e}")
+
+self._page.on('domcontentloaded', inject_style)
+```
+
+Note, option 2 does not work 100% of the time, but is a temporary workaround for certain websites. The better option is to use Browserbase.
