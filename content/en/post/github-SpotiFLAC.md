@@ -1,8 +1,8 @@
 ---
 title: SpotiFLAC
-date: 2026-01-01T15:33:32+08:00
+date: 2026-01-02T15:35:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1593473718457-4c37af5a52a9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjcyNTI4MDN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1570486862600-69999539da09?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjczMzkyNjR8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -29,10 +29,12 @@ Get Spotify tracks in true FLAC from Tidal, Qobuz & Amazon Music — no account 
 
 ![Image](https://github.com/user-attachments/assets/afe01529-bcf0-4486-8792-62af26adafee)
 
-## Other project
+## Other projects
+
+### [SpotiFLAC Mobile](https://github.com/zarzet/SpotiFLAC-Mobile)
+Mobile port of SpotiFLAC for Android & iOS — maintained by [@zarzet](https://github.com/zarzet)
 
 ### [SpotiDownloader](https://github.com/afkarxyz/SpotiDownloader) 
-
 Get Spotify tracks in MP3 and FLAC via the spotidownloader.com API
 
 [![Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/afkarxyz)
