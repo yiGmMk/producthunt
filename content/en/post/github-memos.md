@@ -1,8 +1,8 @@
 ---
 title: memos
-date: 2026-01-02T15:34:52+08:00
+date: 2026-01-04T15:31:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1540643394757-fa1f15be5013?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjczMzkyNjR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1754040151334-38c3dc8978a6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njc1MTE4NzF8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -15,9 +15,9 @@ categories: ['github']
 
 An open-source, self-hosted note-taking service. Your thoughts, your data, your control — no tracking, no ads, no subscription fees.
 
-[![Home](https://img.shields.io/badge/🏠-usememos.com-blue?style=flat-square)](https://www.usememos.com)
+[![Home](https://img.shields.io/badge/🏠-usememos.com-blue?style=flat-square)](https://usememos.com)
 [![Live Demo](https://img.shields.io/badge/✨-Try%20Demo-orange?style=flat-square)](https://demo.usememos.com/)
-[![Docs](https://img.shields.io/badge/📚-Documentation-green?style=flat-square)](https://www.usememos.com/docs)
+[![Docs](https://img.shields.io/badge/📚-Documentation-green?style=flat-square)](https://usememos.com/docs)
 [![Discord](https://img.shields.io/badge/💬-Discord-5865f2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/tfPJa4UmAv)
 [![Docker Pulls](https://img.shields.io/docker/pulls/neosmemo/memos?style=flat-square&logo=docker)](https://hub.docker.com/r/neosmemo/memos)
 
@@ -111,7 +111,7 @@ Don't want to install yet? Try our [live demo](https://demo.usememos.com/) first
 - **Kubernetes** - Helm charts and manifests available
 - **Build from Source** - For development and customization
 
-See our [installation guide](https://www.usememos.com/docs/installation) for detailed instructions.
+See our [installation guide](https://usememos.com/docs/installation) for detailed instructions.
 
 ## Contributing
 
@@ -137,9 +137,13 @@ Love Memos? [Sponsor us on GitHub](https://github.com/sponsors/usememos) to help
 
 Memos is open-source software licensed under the [MIT License](LICENSE).
 
+## Privacy Policy
+
+Memos is built with privacy as a core principle. As a self-hosted application, all your data stays on your infrastructure. There is no telemetry, no tracking, and no data collection. See our [Privacy Policy](https://usememos.com/privacy) for details.
+
 ---
 
-**[Website](https://www.usememos.com)** • **[Documentation](https://www.usememos.com/docs)** • **[Demo](https://demo.usememos.com/)** • **[Discord](https://discord.gg/tfPJa4UmAv)** • **[X/Twitter](https://x.com/usememos)**
+**[Website](https://usememos.com)** • **[Documentation](https://usememos.com/docs)** • **[Demo](https://demo.usememos.com/)** • **[Discord](https://discord.gg/tfPJa4UmAv)** • **[X/Twitter](https://x.com/usememos)**
 
 <a href="https://vercel.com/oss">
   <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
