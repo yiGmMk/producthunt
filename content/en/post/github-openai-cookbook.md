@@ -1,8 +1,8 @@
 ---
 title: openai-cookbook
-date: 2026-01-03T15:29:24+08:00
+date: 2026-01-05T15:38:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1761402174471-65c4fb686ec5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njc0MjUzMzR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1693478134665-f8921620dbd4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njc1OTg3MTZ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

@@ -1,8 +1,8 @@
 ---
 title: nocodb
-date: 2026-01-03T15:29:13+08:00
+date: 2026-01-05T15:39:00+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592064590974-5b3c17ac2095?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njc0MjUzMzR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1597609490757-5fc92ead5cb1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njc1OTg3MTZ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
