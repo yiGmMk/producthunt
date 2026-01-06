@@ -1,8 +1,8 @@
 ---
 title: OpenBB
-date: 2026-01-05T15:38:44+08:00
+date: 2026-01-06T15:36:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1634014154417-39199ca4fbcc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njc1OTg3MTZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1591706938443-b757f69022b9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njc2ODQ5NTR8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

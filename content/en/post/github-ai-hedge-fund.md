@@ -1,8 +1,8 @@
 ---
 title: ai-hedge-fund
-date: 2025-12-19T15:32:27+08:00
+date: 2026-01-06T15:36:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1727452167456-76c2feecc03e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjYxMjk1Mjh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1681288102976-18700aae1581?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njc2ODQ5NTR8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
