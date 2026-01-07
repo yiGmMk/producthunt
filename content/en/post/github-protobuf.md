@@ -1,9 +1,9 @@
 ---
 title: protobuf
-date: 2025-09-14T15:25:23+08:00
+date: 2026-01-07T15:35:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1663857061296-b12bf002a6be?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc4MzQ2NTB8&ixlib=rb-4.1.0
-tags: ['github',Protocol Buffers,protobuf,data interchange format,serialization,structured data,Google,protoc,runtime,programming language,installation]
+image: https://images.unsplash.com/photo-1597206232492-d19c982276c8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njc3NzEzNDF8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -14,7 +14,7 @@ Protocol Buffers - Google's data interchange format
 
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/protocolbuffers/protobuf/badge)](https://securityscorecards.dev/viewer/?uri=github.com/protocolbuffers/protobuf)
 
-Copyright 2023 Google LLC
+Copyright 2008 Google LLC
 
 Overview
 --------
