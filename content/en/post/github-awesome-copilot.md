@@ -1,8 +1,8 @@
 ---
 title: awesome-copilot
-date: 2025-12-21T15:30:07+08:00
+date: 2026-01-11T15:31:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1732029062012-9030cfd21549?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjYzMDIxNzF8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1681056943589-4db67093fd6d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjgxMTY2NDl8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
