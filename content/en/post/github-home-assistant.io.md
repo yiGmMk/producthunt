@@ -1,9 +1,9 @@
 ---
 title: home-assistant.io
-date: 2025-07-07T15:31:47+08:00
+date: 2026-01-14T15:37:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1736452221254-ae8d76bf3c79?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE4NzM0MjZ8&ixlib=rb-4.1.0
-tags: ['github',Home-Assistant,website,documentation,developer,contribution,pull requests,blog posts,site generation,Open Home Foundation]
+image: https://images.unsplash.com/photo-1674756142722-14266beb51d6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjgzNzYxODB8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -17,6 +17,16 @@ categories: ['github']
 # Home Assistant website
 
 This is the source for the [Home-Assistant.io website](https://home-assistant.io).
+
+## Access
+
+You can access the site at the following URLs, depending on the target branch:
+
+- **Production** (`current` branch): https://www.home-assistant.io
+- **Beta** (`rc` branch): https://rc.home-assistant.io
+- **Development** (`next` branch): https://next.home-assistant.io
+
+Additionally, Netlify provides a preview deployment for every pull request, linked in the first PR comment.
 
 ## Setup
 
