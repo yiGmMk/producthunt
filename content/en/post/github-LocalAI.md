@@ -1,9 +1,9 @@
 ---
 title: LocalAI
-date: 2025-11-07T15:29:08+08:00
+date: 2026-01-15T15:36:08+08:00
 draft: False
-image: https://images.unsplash.com/photo-1596700561945-74687b62672e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI1MDA1MTV8&ixlib=rb-4.1.0
-tags: ['github',LocalAI, OpenAI, GPU]
+image: https://images.unsplash.com/photo-1670502368091-7ecb110e2fe5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njg0NjI1Mjl8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -44,7 +44,7 @@ categories: ['github']
 <img src="https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white&label=LocalAI_API" alt="Follow LocalAI_API"/>
 </a>
 <a href="https://discord.gg/uJAeKSAGDy" target="blank">
-<img src="https://dcbadge.vercel.app/api/server/uJAeKSAGDy?style=flat-square&theme=default-inverted" alt="Join LocalAI Discord Community"/>
+<img src="https://img.shields.io/badge/dynamic/json?color=blue&label=Discord&style=for-the-badge&query=approximate_member_count&url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FuJAeKSAGDy%3Fwith_counts%3Dtrue&logo=discord" alt="Join LocalAI Discord Community"/>
 </a>
 </p>
 
@@ -54,7 +54,7 @@ categories: ['github']
 
 > :bulb: Get help - [❓FAQ](https://localai.io/faq/) [💭Discussions](https://github.com/go-skynet/LocalAI/discussions) [:speech_balloon: Discord](https://discord.gg/uJAeKSAGDy) [:book: Documentation website](https://localai.io/)
 >
-> [💻 Quickstart](https://localai.io/basics/getting_started/) [🖼️ Models](https://models.localai.io/) [🚀 Roadmap](https://github.com/mudler/LocalAI/issues?q=is%3Aissue+is%3Aopen+label%3Aroadmap) [🌍 Explorer](https://explorer.localai.io) [🛫 Examples](https://github.com/mudler/LocalAI-examples) Try on 
+> [💻 Quickstart](https://localai.io/basics/getting_started/) [🖼️ Models](https://models.localai.io/) [🚀 Roadmap](https://github.com/mudler/LocalAI/issues?q=is%3Aissue+is%3Aopen+label%3Aroadmap) [🛫 Examples](https://github.com/mudler/LocalAI-examples) Try on 
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/localaiofficial_bot)
 
 [![tests](https://github.com/go-skynet/LocalAI/actions/workflows/test.yml/badge.svg)](https://github.com/go-skynet/LocalAI/actions/workflows/test.yml)[![Build and Release](https://github.com/go-skynet/LocalAI/actions/workflows/release.yaml/badge.svg)](https://github.com/go-skynet/LocalAI/actions/workflows/release.yaml)[![build container images](https://github.com/go-skynet/LocalAI/actions/workflows/image.yml/badge.svg)](https://github.com/go-skynet/LocalAI/actions/workflows/image.yml)[![Bump dependencies](https://github.com/go-skynet/LocalAI/actions/workflows/bump_deps.yaml/badge.svg)](https://github.com/go-skynet/LocalAI/actions/workflows/bump_deps.yaml)[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/localai)](https://artifacthub.io/packages/search?repo=localai)
@@ -91,8 +91,18 @@ categories: ['github']
   </tr>
 </table>
 
-## Screenshots
+## Screenshots / Video
 
+### Youtube video
+
+<h1 align="center">
+  <br>
+  <a href="https://www.youtube.com/watch?v=PDqYhB9nNHA" target="_blank"> <img width="300" src="https://img.youtube.com/vi/PDqYhB9nNHA/0.jpg"> </a><br>
+<br>
+</h1>
+
+
+### Screenshots
 
 | Talk Interface | Generate Audio |
 | --- | --- |
@@ -112,6 +122,8 @@ categories: ['github']
 
 ## 💻 Quickstart
 
+> ⚠️ **Note:** The `install.sh` script is currently experiencing issues due to the heavy changes currently undergoing in LocalAI and may produce broken or misconfigured installations. Please use Docker installation (see below) or manual binary installation until [issue #8032](https://github.com/mudler/LocalAI/issues/8032) is resolved.
+
 Run the installer script:
 
 ```bash
@@ -119,7 +131,7 @@ Run the installer script:
 curl https://localai.io/install.sh | sh
 ```
 
-For more installation options, see [Installer Options](https://localai.io/docs/advanced/installer/).
+For more installation options, see [Installer Options](https://localai.io/installation/).
 
 ### macOS Download:
 
@@ -129,7 +141,7 @@ For more installation options, see [Installer Options](https://localai.io/docs/a
 
 > Note: the DMGs are not signed by Apple as quarantined. See https://github.com/mudler/LocalAI/issues/6268 for a workaround, fix is tracked here: https://github.com/mudler/LocalAI/issues/6244
 
-Or run with docker:
+### Containers (Docker, podman, ...)
 
 > **💡 Docker Run vs Docker Start**
 > 
@@ -138,54 +150,58 @@ Or run with docker:
 > 
 > If you've already run LocalAI before and want to start it again, use: `docker start -i local-ai`
 
-### CPU only image:
+#### CPU only image:
 
 ```bash
 docker run -ti --name local-ai -p 8080:8080 localai/localai:latest
 ```
 
-### NVIDIA GPU Images:
+#### NVIDIA GPU Images:
 
 ```bash
+# CUDA 13.0
+docker run -ti --name local-ai -p 8080:8080 --gpus all localai/localai:latest-gpu-nvidia-cuda-13
+
 # CUDA 12.0
 docker run -ti --name local-ai -p 8080:8080 --gpus all localai/localai:latest-gpu-nvidia-cuda-12
 
-# CUDA 11.7
-docker run -ti --name local-ai -p 8080:8080 --gpus all localai/localai:latest-gpu-nvidia-cuda-11
-
 # NVIDIA Jetson (L4T) ARM64
+# CUDA 12 (for Nvidia AGX Orin and similar platforms)
 docker run -ti --name local-ai -p 8080:8080 --gpus all localai/localai:latest-nvidia-l4t-arm64
+
+# CUDA 13 (for Nvidia DGX Spark)
+docker run -ti --name local-ai -p 8080:8080 --gpus all localai/localai:latest-nvidia-l4t-arm64-cuda-13
 ```
 
-### AMD GPU Images (ROCm):
+#### AMD GPU Images (ROCm):
 
 ```bash
 docker run -ti --name local-ai -p 8080:8080 --device=/dev/kfd --device=/dev/dri --group-add=video localai/localai:latest-gpu-hipblas
 ```
 
-### Intel GPU Images (oneAPI):
+#### Intel GPU Images (oneAPI):
 
 ```bash
 docker run -ti --name local-ai -p 8080:8080 --device=/dev/dri/card1 --device=/dev/dri/renderD128 localai/localai:latest-gpu-intel
 ```
 
-### Vulkan GPU Images:
+#### Vulkan GPU Images:
 
 ```bash
 docker run -ti --name local-ai -p 8080:8080 localai/localai:latest-gpu-vulkan
 ```
 
-### AIO Images (pre-downloaded models):
+#### AIO Images (pre-downloaded models):
 
 ```bash
 # CPU version
 docker run -ti --name local-ai -p 8080:8080 localai/localai:latest-aio-cpu
 
+# NVIDIA CUDA 13 version
+docker run -ti --name local-ai -p 8080:8080 --gpus all localai/localai:latest-aio-gpu-nvidia-cuda-13
+
 # NVIDIA CUDA 12 version
 docker run -ti --name local-ai -p 8080:8080 --gpus all localai/localai:latest-aio-gpu-nvidia-cuda-12
-
-# NVIDIA CUDA 11 version
-docker run -ti --name local-ai -p 8080:8080 --gpus all localai/localai:latest-aio-gpu-nvidia-cuda-11
 
 # Intel GPU version
 docker run -ti --name local-ai -p 8080:8080 localai/localai:latest-aio-gpu-intel
@@ -213,10 +229,12 @@ local-ai run oci://localai/phi-2:latest
 
 > ⚡ **Automatic Backend Detection**: When you install models from the gallery or YAML files, LocalAI automatically detects your system's GPU capabilities (NVIDIA, AMD, Intel) and downloads the appropriate backend. For advanced configuration options, see [GPU Acceleration](https://localai.io/features/gpu-acceleration/#automatic-backend-detection).
 
-For more information, see [💻 Getting started](https://localai.io/basics/getting_started/index.html)
+For more information, see [💻 Getting started](https://localai.io/basics/getting_started/index.html), if you are interested in our roadmap items and future enhancements, you can see the [Issues labeled as Roadmap here](https://github.com/mudler/LocalAI/issues?q=is%3Aissue+is%3Aopen+label%3Aroadmap)
 
 ## 📰 Latest project news
 
+- December 2025: [Dynamic Memory Resource reclaimer](https://github.com/mudler/LocalAI/pull/7583), [Automatic fitting of models to multiple GPUS(llama.cpp)](https://github.com/mudler/LocalAI/pull/7584), [Added Vibevoice backend](https://github.com/mudler/LocalAI/pull/7494)
+- November 2025: Major improvements to the UX. Among these: [Import models via URL](https://github.com/mudler/LocalAI/pull/7245) and [Multiple chats and history](https://github.com/mudler/LocalAI/pull/7325)
 - October 2025: 🔌 [Model Context Protocol (MCP)](https://localai.io/docs/features/mcp/) support added for agentic capabilities with external tools
 - September 2025: New Launcher application for MacOS and Linux, extended support to many backends for Mac and Nvidia L4T devices. Models: Added MLX-Audio, WAN 2.2. WebUI improvements and Python-based backends now ships portable python environments.
 - August 2025: MLX, MLX-VLM, Diffusers and llama.cpp are now supported on Mac M1/M2/M3+ chips ( with `development` suffix in the gallery ): https://github.com/mudler/LocalAI/pull/6049 https://github.com/mudler/LocalAI/pull/6119 https://github.com/mudler/LocalAI/pull/6121 https://github.com/mudler/LocalAI/pull/6060
@@ -268,39 +286,41 @@ LocalAI supports a comprehensive range of AI backends with multiple acceleration
 ### Text Generation & Language Models
 | Backend | Description | Acceleration Support |
 |---------|-------------|---------------------|
-| **llama.cpp** | LLM inference in C/C++ | CUDA 11/12, ROCm, Intel SYCL, Vulkan, Metal, CPU |
-| **vLLM** | Fast LLM inference with PagedAttention | CUDA 12, ROCm, Intel |
-| **transformers** | HuggingFace transformers framework | CUDA 11/12, ROCm, Intel, CPU |
-| **exllama2** | GPTQ inference library | CUDA 12 |
+| **llama.cpp** | LLM inference in C/C++ | CUDA 12/13, ROCm, Intel SYCL, Vulkan, Metal, CPU |
+| **vLLM** | Fast LLM inference with PagedAttention | CUDA 12/13, ROCm, Intel |
+| **transformers** | HuggingFace transformers framework | CUDA 12/13, ROCm, Intel, CPU |
+| **exllama2** | GPTQ inference library | CUDA 12/13 |
 | **MLX** | Apple Silicon LLM inference | Metal (M1/M2/M3+) |
 | **MLX-VLM** | Apple Silicon Vision-Language Models | Metal (M1/M2/M3+) |
 
 ### Audio & Speech Processing
 | Backend | Description | Acceleration Support |
 |---------|-------------|---------------------|
-| **whisper.cpp** | OpenAI Whisper in C/C++ | CUDA 12, ROCm, Intel SYCL, Vulkan, CPU |
-| **faster-whisper** | Fast Whisper with CTranslate2 | CUDA 12, ROCm, Intel, CPU |
-| **bark** | Text-to-audio generation | CUDA 12, ROCm, Intel |
+| **whisper.cpp** | OpenAI Whisper in C/C++ | CUDA 12/13, ROCm, Intel SYCL, Vulkan, CPU |
+| **faster-whisper** | Fast Whisper with CTranslate2 | CUDA 12/13, ROCm, Intel, CPU |
+| **bark** | Text-to-audio generation | CUDA 12/13, ROCm, Intel |
 | **bark-cpp** | C++ implementation of Bark | CUDA, Metal, CPU |
-| **coqui** | Advanced TTS with 1100+ languages | CUDA 12, ROCm, Intel, CPU |
-| **kokoro** | Lightweight TTS model | CUDA 12, ROCm, Intel, CPU |
-| **chatterbox** | Production-grade TTS | CUDA 11/12, CPU |
+| **coqui** | Advanced TTS with 1100+ languages | CUDA 12/13, ROCm, Intel, CPU |
+| **kokoro** | Lightweight TTS model | CUDA 12/13, ROCm, Intel, CPU |
+| **chatterbox** | Production-grade TTS | CUDA 12/13, CPU |
 | **piper** | Fast neural TTS system | CPU |
 | **kitten-tts** | Kitten TTS models | CPU |
 | **silero-vad** | Voice Activity Detection | CPU |
-| **neutts** | Text-to-speech with voice cloning | CUDA 12, ROCm, CPU |
+| **neutts** | Text-to-speech with voice cloning | CUDA 12/13, ROCm, CPU |
+| **vibevoice** | Real-time TTS with voice cloning | CUDA 12/13, ROCm, Intel, CPU |
+| **pocket-tts** | Lightweight CPU-based TTS | CUDA 12/13, ROCm, Intel, CPU |
 
 ### Image & Video Generation
 | Backend | Description | Acceleration Support |
 |---------|-------------|---------------------|
-| **stablediffusion.cpp** | Stable Diffusion in C/C++ | CUDA 12, Intel SYCL, Vulkan, CPU |
-| **diffusers** | HuggingFace diffusion models | CUDA 11/12, ROCm, Intel, Metal, CPU |
+| **stablediffusion.cpp** | Stable Diffusion in C/C++ | CUDA 12/13, Intel SYCL, Vulkan, CPU |
+| **diffusers** | HuggingFace diffusion models | CUDA 12/13, ROCm, Intel, Metal, CPU |
 
 ### Specialized AI Tasks
 | Backend | Description | Acceleration Support |
 |---------|-------------|---------------------|
-| **rfdetr** | Real-time object detection | CUDA 12, Intel, CPU |
-| **rerankers** | Document reranking API | CUDA 11/12, ROCm, Intel, CPU |
+| **rfdetr** | Real-time object detection | CUDA 12/13, Intel, CPU |
+| **rerankers** | Document reranking API | CUDA 12/13, ROCm, Intel, CPU |
 | **local-store** | Vector database | CPU |
 | **huggingface** | HuggingFace API integration | API-based |
 
@@ -308,13 +328,14 @@ LocalAI supports a comprehensive range of AI backends with multiple acceleration
 
 | Acceleration Type | Supported Backends | Hardware Support |
 |-------------------|-------------------|------------------|
-| **NVIDIA CUDA 11** | llama.cpp, whisper, stablediffusion, diffusers, rerankers, bark, chatterbox | Nvidia hardware |
 | **NVIDIA CUDA 12** | All CUDA-compatible backends | Nvidia hardware |
-| **AMD ROCm** | llama.cpp, whisper, vllm, transformers, diffusers, rerankers, coqui, kokoro, bark, neutts | AMD Graphics |
-| **Intel oneAPI** | llama.cpp, whisper, stablediffusion, vllm, transformers, diffusers, rfdetr, rerankers, exllama2, coqui, kokoro, bark | Intel Arc, Intel iGPUs |
+| **NVIDIA CUDA 13** | All CUDA-compatible backends | Nvidia hardware |
+| **AMD ROCm** | llama.cpp, whisper, vllm, transformers, diffusers, rerankers, coqui, kokoro, bark, neutts, vibevoice, pocket-tts | AMD Graphics |
+| **Intel oneAPI** | llama.cpp, whisper, stablediffusion, vllm, transformers, diffusers, rfdetr, rerankers, exllama2, coqui, kokoro, bark, vibevoice, pocket-tts | Intel Arc, Intel iGPUs |
 | **Apple Metal** | llama.cpp, whisper, diffusers, MLX, MLX-VLM, bark-cpp | Apple M1/M2/M3+ |
 | **Vulkan** | llama.cpp, whisper, stablediffusion | Cross-platform GPUs |
-| **NVIDIA Jetson** | llama.cpp, whisper, stablediffusion, diffusers, rfdetr | ARM64 embedded AI |
+| **NVIDIA Jetson (CUDA 12)** | llama.cpp, whisper, stablediffusion, diffusers, rfdetr | ARM64 embedded AI (AGX Orin, etc.) |
+| **NVIDIA Jetson (CUDA 13)** | llama.cpp, whisper, stablediffusion, diffusers, rfdetr | ARM64 embedded AI (DGX Spark) |
 | **CPU Optimized** | All backends | AVX/AVX2/AVX512, quantization support |
 
 ### 🔗 Community and integrations
@@ -406,6 +427,10 @@ A huge thank you to our generous sponsors who support this project covering CI e
     <img height="200" src="https://github.com/mudler/LocalAI/assets/2420543/42e4ca83-661e-4f79-8e46-ae43689683d6"> <br>
   </a>
 </p>
+
+### Individual sponsors
+
+A special thanks to individual sponsors that contributed to the project, a full list is in [Github](https://github.com/sponsors/mudler) and [buymeacoffee](https://buymeacoffee.com/mudler), a special shout out goes to [drikster80](https://github.com/drikster80) for being generous. Thank you everyone!
 
 ## 🌟 Star history
 
