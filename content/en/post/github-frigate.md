@@ -1,8 +1,8 @@
 ---
 title: frigate
-date: 2026-01-14T15:36:50+08:00
+date: 2026-01-16T15:35:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1674756142722-14266beb51d6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjgzNzYxODB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1663546422566-5407c7a5ef30?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njg1NDg4OTJ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
