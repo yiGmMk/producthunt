@@ -1,8 +1,8 @@
 ---
 title: puck
-date: 2025-08-25T15:31:29+08:00
+date: 2026-01-17T15:30:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591241900019-b4a4c6d1cb61?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxMDY5Mjh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1547208474-c8ac5020d8e2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njg2MzQ5NzV8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -45,15 +45,15 @@ Puck is also [licensed under MIT](https://github.com/puckeditor/puck?tab=MIT-1-o
 Install the package:
 
 ```sh
-npm i @measured/puck --save # or npx create-puck-app my-app
+npm i @puckeditor/core --save # or npx create-puck-app my-app
 ```
 
 Render the editor:
 
 ```jsx
 // Editor.jsx
-import { Puck } from "@measured/puck";
-import "@measured/puck/puck.css";
+import { Puck } from "@puckeditor/core";
+import "@puckeditor/core/puck.css";
 
 // Create Puck component config
 const config = {
@@ -87,8 +87,8 @@ Render the page:
 
 ```jsx
 // Page.jsx
-import { Render } from "@measured/puck";
-import "@measured/puck/puck.css";
+import { Render } from "@puckeditor/core";
+import "@puckeditor/core/puck.css";
 
 export function Page() {
   return <Render config={config} data={data} />;

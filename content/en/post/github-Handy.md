@@ -1,9 +1,9 @@
 ---
 title: Handy
-date: 2025-10-30T15:27:42+08:00
+date: 2026-01-17T15:30:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1571657370423-23ee8d7fd497?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE4MDkyNDZ8&ixlib=rb-4.1.0
-tags: ['github',speech-to-text, offline, open source]
+image: https://images.unsplash.com/photo-1673292066499-16f753734767?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njg2MzQ5NzV8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -36,6 +36,7 @@ Handy isn't trying to be the best speech-to-text app—it's trying to be the mos
 4. **Get** your transcribed text pasted directly into whatever app you're using
 
 The process is entirely local:
+
 - Silence is filtered using VAD (Voice Activity Detection) with Silero
 - Transcription uses your choice of models:
   - **Whisper models** (Small/Medium/Turbo/Large) with GPU acceleration when available
@@ -73,6 +74,7 @@ Handy is built as a Tauri application combining:
 ### Debug Mode
 
 Handy includes an advanced debug mode for development and troubleshooting. Access it by pressing:
+
 - **macOS**: `Cmd+Shift+D`
 - **Windows/Linux**: `Ctrl+Shift+D`
 
@@ -80,7 +82,51 @@ Handy includes an advanced debug mode for development and troubleshooting. Acces
 
 This project is actively being developed and has some [known issues](https://github.com/cjpais/Handy/issues). We believe in transparency about the current state:
 
+### Major Issues (Help Wanted)
+
+**Whisper Model Crashes:**
+
+- Whisper models crash on certain system configurations (Windows and Linux)
+- Does not affect all systems - issue is configuration-dependent
+  - If you experience crashes and are a developer, please help to fix and provide debug logs!
+
+**Wayland Support (Linux):**
+
+- Limited support for Wayland display server
+- Requires [`wtype`](https://github.com/atx/wtype) or [`dotool`](https://sr.ht/~geb/dotool/) for text input to work correctly (see [Linux Notes](#linux-notes) below for installation)
+
+### Linux Notes
+
+**Text Input Tools:**
+
+For reliable text input on Linux, install the appropriate tool for your display server:
+
+| Display Server | Recommended Tool | Install Command                                    |
+| -------------- | ---------------- | -------------------------------------------------- |
+| X11            | `xdotool`        | `sudo apt install xdotool`                         |
+| Wayland        | `wtype`          | `sudo apt install wtype`                           |
+| Both           | `dotool`         | `sudo apt install dotool` (requires `input` group) |
+
+- **X11**: Install `xdotool` for both direct typing and clipboard paste shortcuts
+- **Wayland**: Install `wtype` (preferred) or `dotool` for text input to work correctly
+- **dotool setup**: Requires adding your user to the `input` group: `sudo usermod -aG input $USER` (then log out and back in)
+
+Without these tools, Handy falls back to enigo which may have limited compatibility, especially on Wayland.
+
+**Other Notes:**
+
+- The recording overlay is disabled by default on Linux (`Overlay Position: None`) because certain compositors treat it as the active window. When the overlay is visible it can steal focus, which prevents Handy from pasting back into the application that triggered transcription. If you enable the overlay anyway, be aware that clipboard-based pasting might fail or end up in the wrong window.
+- If you are having trouble with the app, running with the environment variable `WEBKIT_DISABLE_DMABUF_RENDERER=1` may help
+- You can manage global shortcuts outside of Handy and still control the app via signals. Sending `SIGUSR2` to the Handy process toggles recording on/off, which lets Wayland window managers or other hotkey daemons keep ownership of keybindings. Example (Sway):
+
+  ```ini
+  bindsym $mod+o exec pkill -USR2 -n handy
+  ```
+
+  `pkill` here simply delivers the signal—it does not terminate the process.
+
 ### Platform Support
+
 - **macOS (both Intel and Apple Silicon)**
 - **x64 Windows**
 - **x64 Linux**
@@ -90,16 +136,143 @@ This project is actively being developed and has some [known issues](https://git
 The following are recommendations for running Handy on your own machine. If you don't meet the system requirements, the performance of the application may be degraded. We are working on improving the performance across all kinds of computers and hardware.
 
 **For Whisper Models:**
+
 - **macOS**: M series Mac, Intel Mac
 - **Windows**: Intel, AMD, or NVIDIA GPU
 - **Linux**: Intel, AMD, or NVIDIA GPU
-  * Ubuntu 22.04, 24.04
+  - Ubuntu 22.04, 24.04
 
 **For Parakeet V3 Model:**
+
 - **CPU-only operation** - runs on a wide variety of hardware
 - **Minimum**: Intel Skylake (6th gen) or equivalent AMD processors
 - **Performance**: ~5x real-time speed on mid-range hardware (tested on i5)
 - **Automatic language detection** - no manual language selection required
+
+## Roadmap & Active Development
+
+We're actively working on several features and improvements. Contributions and feedback are welcome!
+
+### In Progress
+
+**Debug Logging:**
+
+- Adding debug logging to a file to help diagnose issues
+
+**macOS Keyboard Improvements:**
+
+- Support for Globe key as transcription trigger
+- A rewrite of global shortcut handling for MacOS, and potentially other OS's too.
+
+**Opt-in Analytics:**
+
+- Collect anonymous usage data to help improve Handy
+- Privacy-first approach with clear opt-in
+
+**Settings Refactoring:**
+
+- Cleanup and refactor settings system which is becoming bloated and messy
+- Implement better abstractions for settings management
+
+**Tauri Commands Cleanup:**
+
+- Abstract and organize Tauri command patterns
+- Investigate tauri-specta for improved type safety and organization
+
+## Troubleshooting
+
+### Manual Model Installation (For Proxy Users or Network Restrictions)
+
+If you're behind a proxy, firewall, or in a restricted network environment where Handy cannot download models automatically, you can manually download and install them. The URLs are publicly accessible from any browser.
+
+#### Step 1: Find Your App Data Directory
+
+1. Open Handy settings
+2. Navigate to the **About** section
+3. Copy the "App Data Directory" path shown there, or use the shortcuts:
+   - **macOS**: `Cmd+Shift+D` to open debug menu
+   - **Windows/Linux**: `Ctrl+Shift+D` to open debug menu
+
+The typical paths are:
+
+- **macOS**: `~/Library/Application Support/com.pais.handy/`
+- **Windows**: `C:\Users\{username}\AppData\Roaming\com.pais.handy\`
+- **Linux**: `~/.config/com.pais.handy/`
+
+#### Step 2: Create Models Directory
+
+Inside your app data directory, create a `models` folder if it doesn't already exist:
+
+```bash
+# macOS/Linux
+mkdir -p ~/Library/Application\ Support/com.pais.handy/models
+
+# Windows (PowerShell)
+New-Item -ItemType Directory -Force -Path "$env:APPDATA\com.pais.handy\models"
+```
+
+#### Step 3: Download Model Files
+
+Download the models you want from below
+
+**Whisper Models (single .bin files):**
+
+- Small (487 MB): `https://blob.handy.computer/ggml-small.bin`
+- Medium (492 MB): `https://blob.handy.computer/whisper-medium-q4_1.bin`
+- Turbo (1600 MB): `https://blob.handy.computer/ggml-large-v3-turbo.bin`
+- Large (1100 MB): `https://blob.handy.computer/ggml-large-v3-q5_0.bin`
+
+**Parakeet Models (compressed archives):**
+
+- V2 (473 MB): `https://blob.handy.computer/parakeet-v2-int8.tar.gz`
+- V3 (478 MB): `https://blob.handy.computer/parakeet-v3-int8.tar.gz`
+
+#### Step 4: Install Models
+
+**For Whisper Models (.bin files):**
+
+Simply place the `.bin` file directly into the `models` directory:
+
+```
+{app_data_dir}/models/
+├── ggml-small.bin
+├── whisper-medium-q4_1.bin
+├── ggml-large-v3-turbo.bin
+└── ggml-large-v3-q5_0.bin
+```
+
+**For Parakeet Models (.tar.gz archives):**
+
+1. Extract the `.tar.gz` file
+2. Place the **extracted directory** into the `models` folder
+3. The directory must be named exactly as follows:
+   - **Parakeet V2**: `parakeet-tdt-0.6b-v2-int8`
+   - **Parakeet V3**: `parakeet-tdt-0.6b-v3-int8`
+
+Final structure should look like:
+
+```
+{app_data_dir}/models/
+├── parakeet-tdt-0.6b-v2-int8/     (directory with model files inside)
+│   ├── (model files)
+│   └── (config files)
+└── parakeet-tdt-0.6b-v3-int8/     (directory with model files inside)
+    ├── (model files)
+    └── (config files)
+```
+
+**Important Notes:**
+
+- For Parakeet models, the extracted directory name **must** match exactly as shown above
+- Do not rename the `.bin` files for Whisper models—use the exact filenames from the download URLs
+- After placing the files, restart Handy to detect the new models
+
+#### Step 5: Verify Installation
+
+1. Restart Handy
+2. Open Settings → Models
+3. Your manually installed models should now appear as "Downloaded"
+4. Select the model you want to use and test transcription
 
 ### How to Contribute
 
@@ -144,4 +317,4 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 
-*"Your search for the right speech-to-text tool can end here—not because Handy is perfect, but because you can make it perfect for you."*
+_"Your search for the right speech-to-text tool can end here—not because Handy is perfect, but because you can make it perfect for you."_
