@@ -1,8 +1,8 @@
 ---
 title: the-algorithm
-date: 2026-01-15T15:35:49+08:00
+date: 2026-01-22T15:38:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1593180538519-e8823b3a9ff0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njg0NjI1Mjl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1626171617945-2067f6c577b6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjkwNjc0OTl8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
