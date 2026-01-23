@@ -1,8 +1,8 @@
 ---
 title: grok-1
-date: 2026-01-22T15:38:57+08:00
+date: 2026-01-23T15:36:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1613451411927-49444b8f3f2f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjkwNjc0OTl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1735759865375-4404b6c506e2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjkxNTM3NTR8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
