@@ -1,8 +1,8 @@
 ---
 title: browser-use
-date: 2026-01-24T15:30:55+08:00
+date: 2026-01-25T15:32:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1642603823587-645010fdf162?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjkyMzk4MDd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1598759804830-c2b2ee821d91?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjkzMjYzMDR8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
