@@ -1,8 +1,8 @@
 ---
 title: UltraRAG
-date: 2026-01-25T15:32:10+08:00
+date: 2026-01-26T15:39:01+08:00
 draft: False
-image: https://images.unsplash.com/photo-1624049837289-a2edfd7d0457?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjkzMjYzMDR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1576675047450-dcb18bb19131?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk0MTMwOTV8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
