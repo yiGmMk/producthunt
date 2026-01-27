@@ -1,8 +1,8 @@
 ---
 title: goose
-date: 2026-01-25T15:32:27+08:00
+date: 2026-01-27T15:39:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1745922968123-1573f7f0d8e2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjkzMjYzMDR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1684178905156-53b167db1b57?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk0OTk1MDZ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

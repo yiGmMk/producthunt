@@ -1,8 +1,8 @@
 ---
 title: mlx-audio
-date: 2026-01-26T15:38:23+08:00
+date: 2026-01-27T15:38:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1532234604265-fe9ed3175d5a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk0MTMwOTV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1684178905156-53b167db1b57?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk0OTk1MDZ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -57,16 +57,16 @@ pip install -e ".[dev]"
 
 ```bash
 # Basic TTS generation
-mlx_audio.tts.generate --model mlx-community/Kokoro-82M-bf16 --text "Hello, world!" --lang_code a
+mlx_audio.tts.generate --model mlx-community/Kokoro-82M-bf16 --text 'Hello, world!' --lang_code a
 
 # With voice selection and speed adjustment
-mlx_audio.tts.generate --model mlx-community/Kokoro-82M-bf16 --text "Hello!" --voice af_heart --speed 1.2 --lang_code a
+mlx_audio.tts.generate --model mlx-community/Kokoro-82M-bf16 --text 'Hello!' --voice af_heart --speed 1.2 --lang_code a
 
 # Play audio immediately
-mlx_audio.tts.generate --model mlx-community/Kokoro-82M-bf16 --text "Hello!" --play  --lang_code a
+mlx_audio.tts.generate --model mlx-community/Kokoro-82M-bf16 --text 'Hello!' --play  --lang_code a
 
 # Save to a specific directory
-mlx_audio.tts.generate --model mlx-community/Kokoro-82M-bf16 --text "Hello!" --output_path ./my_audio  --lang_code a
+mlx_audio.tts.generate --model mlx-community/Kokoro-82M-bf16 --text 'Hello!' --output_path ./my_audio  --lang_code a
 ```
 
 ### Python API
