@@ -1,8 +1,8 @@
 ---
 title: IPTV
-date: 2025-12-18T15:33:08+08:00
+date: 2026-01-28T15:37:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1688621388073-3a293ba30f16?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjYwNDMxNDJ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1755502046743-78265e184cc3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk1ODU4Mjl8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
