@@ -1,8 +1,8 @@
 ---
 title: memU
-date: 2026-01-11T15:31:28+08:00
+date: 2026-01-29T15:49:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1544297787-43ce4f544585?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjgxMTY2NDl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1653324464531-3b5208b26826?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk2NzI5MDh8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -13,9 +13,9 @@ categories: ['github']
 
 <div align="center">
 
-# MemU
+# memU
 
-### A Future-Oriented Agentic Memory System
+### Always-On Proactive Memory for AI Agents
 
 [![PyPI version](https://badge.fury.io/py/memu-py.svg)](https://badge.fury.io/py/memu-py)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -25,11 +25,17 @@ categories: ['github']
 
 <a href="https://trendshift.io/repositories/17374" target="_blank"><img src="https://trendshift.io/api/badge/repositories/17374" alt="NevaMind-AI%2FmemU | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
+**[English](readme/README_en.md) | [中文](readme/README_zh.md) | [日本語](readme/README_ja.md) | [한국어](readme/README_ko.md) | [Español](readme/README_es.md) | [Français](readme/README_fr.md)**
+
 </div>
 
 ---
 
-MemU is an agentic memory framework for LLM and AI agent backends. It receives **multimodal inputs** (conversations, documents, images), extracts them into structured memory, and organizes them into a **hierarchical file system** that supports both **embedding-based (RAG)** and **non-embedding (LLM)** retrieval.
+memU is a memory framework built for **24/7 proactive agents**.
+It is designed for long-running use and greatly **reduces the LLM token cost** of keeping agents always online, making always-on, evolving agents practical in production systems.
+memU **continuously captures and understands user intent**. Even without a command, the agent can tell what you are about to do and act on it by itself.
+
+check our [memU bot](https://memu.bot)
 
 ---
 
@@ -40,51 +46,147 @@ If you find memU useful or interesting, a GitHub Star ⭐️ would be greatly ap
 
 ---
 
-MemU is collaborating with four open-source projects to launch the 2026 New Year Challenge. 🎉Between January 8–18, contributors can submit PRs to memU and earn cash rewards, community recognition, and platform credits. 🎁[Learn more & get involved](https://discord.gg/KaWy6SBAsx)
 
 ## ✨ Core Features
 
-| Feature | Description |
-|---------|-------------|
-| 🗂️ **Hierarchical File System** | Three-layer architecture: Resource → Item → Category with full traceability |
-| 🔍 **Dual Retrieval Methods** | RAG (embedding-based) for speed, LLM (non-embedding) for deep semantic understanding |
-| 🎨 **Multimodal Support** | Process conversations, documents, images, audio, and video |
-| 🔄 **Self-Evolving Memory** | Memory structure adapts and improves based on usage patterns |
+| Capability | Description |
+|------------|-------------|
+| 🤖 **24/7 Proactive Agent** | Always-on memory agent that works continuously in the background—never sleeps, never forgets |
+| 🎯 **User Intention Capture** | Understands and remembers user goals, preferences, and context across sessions automatically |
+| 💰 **Cost Efficient** | Reduces long-running token costs by caching insights and avoiding redundant LLM calls |
+---
+
+## 🔄 How Proactive Memory Works
+
+```bash
+
+cd examples/proactive
+python proactive.py
+
+```
 
 ---
 
-## 🗂️ Hierarchical File System
+### Proactive Memory Lifecycle
+```
+┌─────────────────────────────────────────────────┐
+│  1. USER INITIAL QUERY                          │
+│  └─ User input, context, or any trigger event   │
+│     Conversation starts here                    │
+└─────────────────────────────────────────────────┘
+                      ↓
+    ┌─────────────────────────────────────────────────┐
+    │  2. AGENT PLANNING / ACTIONS                    │
+    │  └─ Analyze request, execute tasks              │
+    │     Retrieve relevant memories for context      │
+    └─────────────────────────────────────────────────┘
+                          ↓
+    ┌─────────────────────────────────────────────────┐
+    │  3. MEMORIZE & UPDATE TODOLIST                  │
+    │  └─ Store new insights, facts, preferences      │
+    │     Modify task list based on progress          │
+    └─────────────────────────────────────────────────┘
+                          ↓
+    ┌─────────────────────────────────────────────────┐
+    │  4. PREDICT USER INTENT                         │
+    │  └─ Anticipate next steps and needs             │
+    │     Proactively prepare relevant context        │
+    └─────────────────────────────────────────────────┘
+                          ↓
+    ┌─────────────────────────────────────────────────┐
+    │  5. LOOP (2 → 4)                                │
+    │  └─ Continuous iteration until task complete    │
+    │     Agent-driven proactive workflow             │
+    └─────────────────────────────────────────────────┘
+```
 
-MemU organizes memory using a **three-layer architecture** inspired by hierarchical storage systems:
+---
+
+## 🎯 Proactive Use Cases
+
+### 1. **Information Recommendation**
+*Agent monitors interests and proactively surfaces relevant content*
+```python
+# User has been researching AI topics
+MemU tracks: reading history, saved articles, search queries
+
+# When new content arrives:
+Agent: "I found 3 new papers on RAG optimization that align with
+        your recent research on retrieval systems. One author
+        (Dr. Chen) you've cited before published yesterday."
+
+# Proactive behaviors:
+- Learns topic preferences from browsing patterns
+- Tracks author/source credibility preferences
+- Filters noise based on engagement history
+- Times recommendations for optimal attention
+```
+
+### 2. **Email Management**
+*Agent learns communication patterns and handles routine correspondence*
+```python
+# MemU observes email patterns over time:
+- Response templates for common scenarios
+- Priority contacts and urgent keywords
+- Scheduling preferences and availability
+- Writing style and tone variations
+
+# Proactive email assistance:
+Agent: "You have 12 new emails. I've drafted responses for 3 routine
+        requests and flagged 2 urgent items from your priority contacts.
+        Should I also reschedule tomorrow's meeting based on the
+        conflict John mentioned?"
+
+# Autonomous actions:
+✓ Draft context-aware replies
+✓ Categorize and prioritize inbox
+✓ Detect scheduling conflicts
+✓ Summarize long threads with key decisions
+```
+
+### 3. **Trading & Financial Monitoring**
+*Agent tracks market context and user investment behavior*
+```python
+# MemU learns trading preferences:
+- Risk tolerance from historical decisions
+- Preferred sectors and asset classes
+- Response patterns to market events
+- Portfolio rebalancing triggers
+
+# Proactive alerts:
+Agent: "NVDA dropped 5% in after-hours trading. Based on your past
+        behavior, you typically buy tech dips above 3%. Your current
+        allocation allows for $2,000 additional exposure while
+        maintaining your 70/30 equity-bond target."
+
+# Continuous monitoring:
+- Track price alerts tied to user-defined thresholds
+- Correlate news events with portfolio impact
+- Learn from executed vs. ignored recommendations
+- Anticipate tax-loss harvesting opportunities
+```
+
+
+...
+
+---
+
+## 🗂️ Hierarchical Memory Architecture
+
+MemU's three-layer system enables both **reactive queries** and **proactive context loading**:
 
 <img width="100%" alt="structure" src="assets/structure.png" />
 
-| Layer | Description | Examples |
-|-------|-------------|----------|
-| **Resource** | Raw multimodal data warehouse | JSON conversations, text documents, images, videos |
-| **Item** | Discrete extracted memory units | Individual preferences, skills, opinions, habits |
-| **Category** | Aggregated textual memory with summaries | `preferences.md`, `work_life.md`, `relationships.md` |
+| Layer | Reactive Use | Proactive Use |
+|-------|--------------|---------------|
+| **Resource** | Direct access to original data | Background monitoring for new patterns |
+| **Item** | Targeted fact retrieval | Real-time extraction from ongoing interactions |
+| **Category** | Summary-level overview | Automatic context assembly for anticipation |
 
-**Key Benefits:**
-- **Full Traceability**: Track from raw data → items → categories and back
-- **Progressive Summarization**: Each layer provides increasingly abstracted views
-- **Flexible Organization**: Categories evolve based on content patterns
-
----
-
-## 🎨 Multimodal Support
-
-MemU processes diverse content types into unified memory:
-
-| Modality | Input | Processing |
-|----------|-------|------------|
-| `conversation` | JSON chat logs | Extract preferences, opinions, habits, relationships |
-| `document` | Text files (.txt, .md) | Extract knowledge, skills, facts |
-| `image` | PNG, JPG, etc. | Vision model extracts visual concepts and descriptions |
-| `video` | Video files | Frame extraction + vision analysis |
-| `audio` | Audio files | Transcription + text processing |
-
-All modalities are unified into the same three-layer hierarchy, enabling cross-modal retrieval.
+**Proactive Benefits:**
+- **Auto-categorization**: New memories self-organize into topics
+- **Pattern Detection**: System identifies recurring themes
+- **Context Prediction**: Anticipates what information will be needed next
 
 ---
 
@@ -92,11 +194,11 @@ All modalities are unified into the same three-layer hierarchy, enabling cross-m
 
 ### Option 1: Cloud Version
 
-Try MemU instantly without any setup:
+Experience proactive memory instantly:
 
-👉 **[memu.so](https://memu.so)** - Hosted cloud service with full API access
+👉 **[memu.so](https://memu.so)** - Hosted service with 7×24 continuous learning
 
-For enterprise deployment and custom solutions, contact **info@nevamind.ai**
+For enterprise deployment with custom proactive workflows, contact **info@nevamind.ai**
 
 #### Cloud API (v3)
 
@@ -106,10 +208,10 @@ For enterprise deployment and custom solutions, contact **info@nevamind.ai**
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `POST` | `/api/v3/memory/memorize` | Register a memorization task |
-| `GET` | `/api/v3/memory/memorize/status/{task_id}` | Get task status |
-| `POST` | `/api/v3/memory/categories` | List memory categories |
-| `POST` | `/api/v3/memory/retrieve` | Retrieve memories (semantic search) |
+| `POST` | `/api/v3/memory/memorize` | Register continuous learning task |
+| `GET` | `/api/v3/memory/memorize/status/{task_id}` | Check real-time processing status |
+| `POST` | `/api/v3/memory/categories` | List auto-generated categories |
+| `POST` | `/api/v3/memory/retrieve` | Query memory (supports proactive context loading) |
 
 📚 **[Full API Documentation](https://memu.pro/docs#cloud-version)**
 
@@ -118,7 +220,6 @@ For enterprise deployment and custom solutions, contact **info@nevamind.ai**
 ### Option 2: Self-Hosted
 
 #### Installation
-
 ```bash
 pip install -e .
 ```
@@ -127,16 +228,14 @@ pip install -e .
 
 > **Requirements**: Python 3.13+ and an OpenAI API key
 
-**Test with In-Memory Storage** (no database required):
-
+**Test Continuous Learning** (in-memory):
 ```bash
 export OPENAI_API_KEY=your_api_key
 cd tests
 python test_inmemory.py
 ```
 
-**Test with PostgreSQL Storage** (requires pgvector):
-
+**Test with Persistent Storage** (PostgreSQL):
 ```bash
 # Start PostgreSQL with pgvector
 docker run -d \
@@ -147,25 +246,24 @@ docker run -d \
   -p 5432:5432 \
   pgvector/pgvector:pg16
 
-# Run the test
+# Run continuous learning test
 export OPENAI_API_KEY=your_api_key
 cd tests
 python test_postgres.py
 ```
 
-Both examples demonstrate the complete workflow:
-1. **Memorize**: Process a conversation file and extract structured memory
-2. **Retrieve (RAG)**: Fast embedding-based search
-3. **Retrieve (LLM)**: Deep semantic understanding search
+Both examples demonstrate **proactive memory workflows**:
+1. **Continuous Ingestion**: Process multiple files sequentially
+2. **Auto-Extraction**: Immediate memory creation
+3. **Proactive Retrieval**: Context-aware memory surfacing
 
-See [`tests/test_inmemory.py`](tests/test_inmemory.py) and [`tests/test_postgres.py`](tests/test_postgres.py) for the full source code.
+See [`tests/test_inmemory.py`](tests/test_inmemory.py) and [`tests/test_postgres.py`](tests/test_postgres.py) for implementation details.
 
 ---
 
 ### Custom LLM and Embedding Providers
 
 MemU supports custom LLM and embedding providers beyond OpenAI. Configure them via `llm_profiles`:
-
 ```python
 from memu import MemUService
 
@@ -191,14 +289,70 @@ service = MemUService(
 
 ---
 
+### OpenRouter Integration
+
+MemU supports [OpenRouter](https://openrouter.ai) as a model provider, giving you access to multiple LLM providers through a single API.
+
+#### Configuration
+```python
+from memu import MemoryService
+
+service = MemoryService(
+    llm_profiles={
+        "default": {
+            "provider": "openrouter",
+            "client_backend": "httpx",
+            "base_url": "https://openrouter.ai",
+            "api_key": "your_openrouter_api_key",
+            "chat_model": "anthropic/claude-3.5-sonnet",  # Any OpenRouter model
+            "embed_model": "openai/text-embedding-3-small",  # Embedding model
+        },
+    },
+    database_config={
+        "metadata_store": {"provider": "inmemory"},
+    },
+)
+```
+
+#### Environment Variables
+
+| Variable | Description |
+|----------|-------------|
+| `OPENROUTER_API_KEY` | Your OpenRouter API key from [openrouter.ai/keys](https://openrouter.ai/keys) |
+
+#### Supported Features
+
+| Feature | Status | Notes |
+|---------|--------|-------|
+| Chat Completions | Supported | Works with any OpenRouter chat model |
+| Embeddings | Supported | Use OpenAI embedding models via OpenRouter |
+| Vision | Supported | Use vision-capable models (e.g., `openai/gpt-4o`) |
+
+#### Running OpenRouter Tests
+```bash
+export OPENROUTER_API_KEY=your_api_key
+
+# Full workflow test (memorize + retrieve)
+python tests/test_openrouter.py
+
+# Embedding-specific tests
+python tests/test_openrouter_embedding.py
+
+# Vision-specific tests
+python tests/test_openrouter_vision.py
+```
+
+See [`examples/example_4_openrouter_memory.py`](examples/example_4_openrouter_memory.py) for a complete working example.
+
+---
+
 ## 📖 Core APIs
 
-### `memorize()` - Extract and Store Memory
+### `memorize()` - Continuous Learning Pipeline
 
-Processes input resources and extracts structured memory:
+Processes inputs in real-time and immediately updates memory:
 
 <img width="100%" alt="memorize" src="assets/memorize.png" />
-
 ```python
 result = await service.memorize(
     resource_url="path/to/file.json",  # File path or URL
@@ -206,140 +360,139 @@ result = await service.memorize(
     user={"user_id": "123"}             # Optional: scope to a user
 )
 
-# Returns:
+# Returns immediately with extracted memory:
 {
     "resource": {...},      # Stored resource metadata
-    "items": [...],         # Extracted memory items
-    "categories": [...]     # Updated category summaries
+    "items": [...],         # Extracted memory items (available instantly)
+    "categories": [...]     # Auto-updated category structure
 }
 ```
 
-### `retrieve()` - Query Memory
+**Proactive Features:**
+- Zero-delay processing—memories available immediately
+- Automatic categorization without manual tagging
+- Cross-reference with existing memories for pattern detection
 
-Retrieves relevant memory based on queries. MemU supports **two retrieval strategies**:
+### `retrieve()` - Dual-Mode Intelligence
+
+MemU supports both **proactive context loading** and **reactive querying**:
 
 <img width="100%" alt="retrieve" src="assets/retrieve.png" />
 
 #### RAG-based Retrieval (`method="rag"`)
 
-Fast **embedding vector search** using cosine similarity:
+Fast **proactive context assembly** using embeddings:
 
-- ✅ **Fast**: Pure vector computation
-- ✅ **Scalable**: Efficient for large memory stores
-- ✅ **Returns scores**: Each result includes similarity score
+- ✅ **Instant context**: Sub-second memory surfacing
+- ✅ **Background monitoring**: Can run continuously without LLM costs
+- ✅ **Similarity scoring**: Identifies most relevant memories automatically
 
 #### LLM-based Retrieval (`method="llm"`)
 
-Deep **semantic understanding** through direct LLM reasoning:
+Deep **anticipatory reasoning** for complex contexts:
 
-- ✅ **Deep understanding**: LLM comprehends context and nuance
-- ✅ **Query rewriting**: Automatically refines query at each tier
-- ✅ **Adaptive**: Stops early when sufficient information is found
+- ✅ **Intent prediction**: LLM infers what user needs before they ask
+- ✅ **Query evolution**: Automatically refines search as context develops
+- ✅ **Early termination**: Stops when sufficient context is gathered
 
 #### Comparison
 
-| Aspect | RAG | LLM |
-|--------|-----|-----|
-| **Speed** | ⚡ Fast | 🐢 Slower |
-| **Cost** | 💰 Low | 💰💰 Higher |
-| **Semantic depth** | Medium | Deep |
-| **Tier 2 scope** | All items | Only items in relevant categories |
-| **Output** | With similarity scores | Ranked by LLM reasoning |
-
-Both methods support:
-- **Context-aware rewriting**: Resolves pronouns using conversation history
-- **Progressive search**: Categories → Items → Resources
-- **Sufficiency checking**: Stops when enough information is retrieved
+| Aspect | RAG (Fast Context) | LLM (Deep Reasoning) |
+|--------|-------------------|---------------------|
+| **Speed** | ⚡ Milliseconds | 🐢 Seconds |
+| **Cost** | 💰 Embedding only | 💰💰 LLM inference |
+| **Proactive use** | Continuous monitoring | Triggered context loading |
+| **Best for** | Real-time suggestions | Complex anticipation |
 
 #### Usage
-
 ```python
+# Proactive retrieval with context history
 result = await service.retrieve(
     queries=[
         {"role": "user", "content": {"text": "What are their preferences?"}},
         {"role": "user", "content": {"text": "Tell me about work habits"}}
     ],
-    where={"user_id": "123"}  # Optional: scope filter
+    where={"user_id": "123"},  # Optional: scope filter
+    method="rag"  # or "llm" for deeper reasoning
 )
 
-# Returns:
+# Returns context-aware results:
 {
-    "categories": [...],     # Relevant categories (with scores for RAG)
-    "items": [...],          # Relevant memory items
-    "resources": [...],      # Related raw resources
-    "next_step_query": "..." # Rewritten query for follow-up (if applicable)
+    "categories": [...],     # Relevant topic areas (auto-prioritized)
+    "items": [...],          # Specific memory facts
+    "resources": [...],      # Original sources for traceability
+    "next_step_query": "..." # Predicted follow-up context
 }
 ```
 
-**Scope Filtering**: Use `where` to filter by user model fields:
-- `where={"user_id": "123"}` - exact match
-- `where={"agent_id__in": ["1", "2"]}` - match any in list
-- Omit `where` to retrieve across all scopes
+**Proactive Filtering**: Use `where` to scope continuous monitoring:
+- `where={"user_id": "123"}` - User-specific context
+- `where={"agent_id__in": ["1", "2"]}` - Multi-agent coordination
+- Omit `where` for global context awareness
 
-> 📚 **For complete API documentation**, see [SERVICE_API.md](docs/SERVICE_API.md) - includes all methods, CRUD operations, pipeline configuration, and configuration types.
+> 📚 **For complete API documentation**, see [SERVICE_API.md](docs/SERVICE_API.md) - includes proactive workflow patterns, pipeline configuration, and real-time update handling.
 
 ---
 
-## 💡 Use Cases
+## 💡 Proactive Scenarios
 
-### Example 1: Conversation Memory
+### Example 1: Always-Learning Assistant
 
-Extract and organize memory from multi-turn conversations:
-
+Continuously learns from every interaction without explicit memory commands:
 ```bash
 export OPENAI_API_KEY=your_api_key
 python examples/example_1_conversation_memory.py
 ```
 
-**What it does:**
-- Processes multiple conversation JSON files
-- Extracts memory items (preferences, habits, opinions, relationships)
-- Generates category markdown files (`preferences.md`, `work_life.md`, etc.)
+**Proactive Behavior:**
+- Automatically extracts preferences from casual mentions
+- Builds relationship models from interaction patterns
+- Surfaces relevant context in future conversations
+- Adapts communication style based on learned preferences
 
-**Best for:** Personal AI assistants, customer support bots, social chatbots
+**Best for:** Personal AI assistants, customer support that remembers, social chatbots
 
 ---
 
-### Example 2: Skill Extraction from Logs
+### Example 2: Self-Improving Agent
 
-Extract skills and lessons learned from agent execution logs:
-
+Learns from execution logs and proactively suggests optimizations:
 ```bash
 export OPENAI_API_KEY=your_api_key
 python examples/example_2_skill_extraction.py
 ```
 
-**What it does:**
-- Processes agent logs sequentially
-- Extracts actions, outcomes, and lessons learned
-- Demonstrates **incremental learning** - memory evolves with each file
-- Generates evolving skill guides (`log_1.md` → `log_2.md` → `skill.md`)
+**Proactive Behavior:**
+- Monitors agent actions and outcomes continuously
+- Identifies patterns in successes and failures
+- Auto-generates skill guides from experience
+- Proactively suggests strategies for similar future tasks
 
-**Best for:** DevOps teams, agent self-improvement, knowledge management
+**Best for:** DevOps automation, agent self-improvement, knowledge capture
 
 ---
 
-### Example 3: Multimodal Memory
+### Example 3: Multimodal Context Builder
 
-Process diverse content types into unified memory:
-
+Unifies memory across different input types for comprehensive context:
 ```bash
 export OPENAI_API_KEY=your_api_key
 python examples/example_3_multimodal_memory.py
 ```
 
-**What it does:**
-- Processes documents and images together
-- Extracts memory from different content types
-- Unifies into cross-modal categories (`technical_documentation`, `visual_diagrams`, etc.)
+**Proactive Behavior:**
+- Cross-references text, images, and documents automatically
+- Builds unified understanding across modalities
+- Surfaces visual context when discussing related topics
+- Anticipates information needs by combining multiple sources
 
-**Best for:** Documentation systems, learning platforms, research tools
+**Best for:** Documentation systems, learning platforms, research assistants
 
 ---
 
 ## 📊 Performance
 
-MemU achieves **92.09% average accuracy** on the Locomo benchmark across all reasoning tasks.
+MemU achieves **92.09% average accuracy** on the Locomo benchmark across all reasoning tasks, demonstrating reliable proactive memory operations.
 
 <img width="100%" alt="benchmark" src="https://github.com/user-attachments/assets/6fec4884-94e5-4058-ad5c-baac3d7e76d9" />
 
@@ -349,11 +502,11 @@ View detailed experimental data: [memU-experiment](https://github.com/NevaMind-A
 
 ## 🧩 Ecosystem
 
-| Repository | Description | Use Case |
-|------------|-------------|----------|
-| **[memU](https://github.com/NevaMind-AI/memU)** | Core algorithm engine | Embed AI memory into your product |
-| **[memU-server](https://github.com/NevaMind-AI/memU-server)** | Backend service with CRUD, user system, RBAC | Self-host a memory backend |
-| **[memU-ui](https://github.com/NevaMind-AI/memU-ui)** | Visual dashboard | Ready-to-use memory console |
+| Repository | Description | Proactive Features |
+|------------|-------------|-------------------|
+| **[memU](https://github.com/NevaMind-AI/memU)** | Core proactive memory engine | 7×24 learning pipeline, auto-categorization |
+| **[memU-server](https://github.com/NevaMind-AI/memU-server)** | Backend with continuous sync | Real-time memory updates, webhook triggers |
+| **[memU-ui](https://github.com/NevaMind-AI/memU-ui)** | Visual memory dashboard | Live memory evolution monitoring |
 
 **Quick Links:**
 - 🚀 [Try MemU Cloud](https://app.memu.so/quick-start)
@@ -393,7 +546,6 @@ To start contributing to MemU, you'll need to set up your development environmen
 - Git
 
 #### Setup Development Environment
-
 ```bash
 # 1. Fork and clone the repository
 git clone https://github.com/YOUR_USERNAME/memU.git
@@ -411,7 +563,6 @@ The `make install` command will:
 #### Running Quality Checks
 
 Before submitting your contribution, ensure your code passes all quality checks:
-
 ```bash
 make check
 ```
