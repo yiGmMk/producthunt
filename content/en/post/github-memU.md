@@ -1,8 +1,8 @@
 ---
 title: memU
-date: 2026-01-29T15:49:15+08:00
+date: 2026-01-30T15:49:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1653324464531-3b5208b26826?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk2NzI5MDh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1585584008107-7c0507d26438?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk3NTkzMTV8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -15,7 +15,7 @@ categories: ['github']
 
 # memU
 
-### Always-On Proactive Memory for AI Agents
+### 24/7 Always-On Proactive Memory for AI Agents
 
 [![PyPI version](https://badge.fury.io/py/memu-py.svg)](https://badge.fury.io/py/memu-py)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -35,7 +35,17 @@ memU is a memory framework built for **24/7 proactive agents**.
 It is designed for long-running use and greatly **reduces the LLM token cost** of keeping agents always online, making always-on, evolving agents practical in production systems.
 memU **continuously captures and understands user intent**. Even without a command, the agent can tell what you are about to do and act on it by itself.
 
-check our [memU bot](https://memu.bot)
+---
+
+## 🤖 [OpenClaw (Moltbot, Clawdbot) Alternative](https://memu.bot)
+
+<img width="100%" src="https://github.com/NevaMind-AI/memU/blob/main/assets/memUbot.png" />
+
+- **Download-and-use and simple** to get started.
+- Builds long-term memory to **understand user intent** and act proactively.
+- **Cuts LLM token cost** with smaller context.
+
+Try now: [memU bot](https://memu.bot)
 
 ---
 
@@ -69,35 +79,53 @@ python proactive.py
 
 ### Proactive Memory Lifecycle
 ```
-┌─────────────────────────────────────────────────┐
-│  1. USER INITIAL QUERY                          │
-│  └─ User input, context, or any trigger event   │
-│     Conversation starts here                    │
-└─────────────────────────────────────────────────┘
-                      ↓
-    ┌─────────────────────────────────────────────────┐
-    │  2. AGENT PLANNING / ACTIONS                    │
-    │  └─ Analyze request, execute tasks              │
-    │     Retrieve relevant memories for context      │
-    └─────────────────────────────────────────────────┘
-                          ↓
-    ┌─────────────────────────────────────────────────┐
-    │  3. MEMORIZE & UPDATE TODOLIST                  │
-    │  └─ Store new insights, facts, preferences      │
-    │     Modify task list based on progress          │
-    └─────────────────────────────────────────────────┘
-                          ↓
-    ┌─────────────────────────────────────────────────┐
-    │  4. PREDICT USER INTENT                         │
-    │  └─ Anticipate next steps and needs             │
-    │     Proactively prepare relevant context        │
-    └─────────────────────────────────────────────────┘
-                          ↓
-    ┌─────────────────────────────────────────────────┐
-    │  5. LOOP (2 → 4)                                │
-    │  └─ Continuous iteration until task complete    │
-    │     Agent-driven proactive workflow             │
-    └─────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                         USER QUERY                                               │
+└──────────────────────────────────────────────────────────────────────────────────────────────────┘
+                 │                                                           │
+                 ▼                                                           ▼
+┌────────────────────────────────────────┐         ┌────────────────────────────────────────────────┐
+│         🤖 MAIN AGENT                  │         │              🧠 MEMU BOT                       │
+│                                        │         │                                                │
+│  Handle user queries & execute tasks   │  ◄───►  │  Monitor, memorize & proactive intelligence   │
+├────────────────────────────────────────┤         ├────────────────────────────────────────────────┤
+│                                        │         │                                                │
+│  ┌──────────────────────────────────┐  │         │  ┌──────────────────────────────────────────┐  │
+│  │  1. RECEIVE USER INPUT           │  │         │  │  1. MONITOR INPUT/OUTPUT                 │  │
+│  │     Parse query, understand      │  │   ───►  │  │     Observe agent interactions           │  │
+│  │     context and intent           │  │         │  │     Track conversation flow              │  │
+│  └──────────────────────────────────┘  │         │  └──────────────────────────────────────────┘  │
+│                 │                      │         │                    │                           │
+│                 ▼                      │         │                    ▼                           │
+│  ┌──────────────────────────────────┐  │         │  ┌──────────────────────────────────────────┐  │
+│  │  2. PLAN & EXECUTE               │  │         │  │  2. MEMORIZE & EXTRACT                   │  │
+│  │     Break down tasks             │  │   ◄───  │  │     Store insights, facts, preferences   │  │
+│  │     Call tools, retrieve data    │  │  inject │  │     Extract skills & knowledge           │  │
+│  │     Generate responses           │  │  memory │  │     Update user profile                  │  │
+│  └──────────────────────────────────┘  │         │  └──────────────────────────────────────────┘  │
+│                 │                      │         │                    │                           │
+│                 ▼                      │         │                    ▼                           │
+│  ┌──────────────────────────────────┐  │         │  ┌──────────────────────────────────────────┐  │
+│  │  3. RESPOND TO USER              │  │         │  │  3. PREDICT USER INTENT                  │  │
+│  │     Deliver answer/result        │  │   ───►  │  │     Anticipate next steps                │  │
+│  │     Continue conversation        │  │         │  │     Identify upcoming needs              │  │
+│  └──────────────────────────────────┘  │         │  └──────────────────────────────────────────┘  │
+│                 │                      │         │                    │                           │
+│                 ▼                      │         │                    ▼                           │
+│  ┌──────────────────────────────────┐  │         │  ┌──────────────────────────────────────────┐  │
+│  │  4. LOOP                         │  │         │  │  4. RUN PROACTIVE TASKS                  │  │
+│  │     Wait for next user input     │  │   ◄───  │  │     Pre-fetch relevant context           │  │
+│  │     or proactive suggestions     │  │  suggest│  │     Prepare recommendations              │  │
+│  └──────────────────────────────────┘  │         │  │     Update todolist autonomously         │  │
+│                                        │         │  └──────────────────────────────────────────┘  │
+└────────────────────────────────────────┘         └────────────────────────────────────────────────┘
+                 │                                                           │
+                 └───────────────────────────┬───────────────────────────────┘
+                                             ▼
+                              ┌──────────────────────────────┐
+                              │     CONTINUOUS SYNC LOOP     │
+                              │  Agent ◄──► MemU Bot ◄──► DB │
+                              └──────────────────────────────┘
 ```
 
 ---
@@ -353,6 +381,7 @@ See [`examples/example_4_openrouter_memory.py`](examples/example_4_openrouter_me
 Processes inputs in real-time and immediately updates memory:
 
 <img width="100%" alt="memorize" src="assets/memorize.png" />
+
 ```python
 result = await service.memorize(
     resource_url="path/to/file.json",  # File path or URL
