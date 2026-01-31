@@ -1,8 +1,8 @@
 ---
 title: kimi-cli
-date: 2026-01-30T15:49:03+08:00
+date: 2026-01-31T15:39:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1720446983083-10ba2f82fc69?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk3NTkzMTV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1676047871081-733dc414cbac?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk4NDUxMzJ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -35,6 +35,12 @@ Kimi Code CLI is not only a coding agent, but also a shell. You can switch the s
 
 > [!NOTE]
 > Built-in shell commands like `cd` are not supported yet.
+
+### VS Code extension
+
+Kimi Code CLI can be integrated with [Visual Studio Code](https://code.visualstudio.com/) via the [Kimi Code VS Code Extension](https://marketplace.visualstudio.com/items?itemName=moonshot-ai.kimi-code).
+
+
 
 ### IDE integration via ACP
 
@@ -176,7 +182,3 @@ make help  # show all make targets
 ```
 
 Note: `make build` and `make build-bin` automatically run `make build-web` to embed the web UI.
-
-## Contributing
-
-We welcome contributions to Kimi Code CLI! Please refer to [CONTRIBUTING.md](./CONTRIBUTING.md) for more information.

@@ -1,8 +1,8 @@
 ---
 title: ext-apps
-date: 2026-01-30T15:49:15+08:00
+date: 2026-01-31T15:39:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1743102776026-e3819eb0ed06?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk3NTkzMTV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1671568596752-c7ec7a123d70?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk4NDUxMzJ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -184,16 +184,6 @@ To use these examples with MCP clients that support the stdio transport (such as
         "--silent",
         "--registry=https://registry.npmjs.org/",
         "@modelcontextprotocol/server-basic-solid",
-        "--stdio"
-      ]
-    },
-    "arcade": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "--silent",
-        "--registry=https://registry.npmjs.org/",
-        "@modelcontextprotocol/server-arcade",
         "--stdio"
       ]
     },
@@ -412,13 +402,6 @@ Then configure your MCP client to build and run the local server. Replace `~/cod
       "args": [
         "-c",
         "cd ~/code/ext-apps/examples/basic-server-solid && npm run build >&2 && node dist/index.js --stdio"
-      ]
-    },
-    "arcade": {
-      "command": "bash",
-      "args": [
-        "-c",
-        "cd ~/code/ext-apps/examples/arcade-server && npm run build >&2 && node dist/index.js --stdio"
       ]
     },
     "budget-allocator": {
