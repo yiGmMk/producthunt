@@ -1,8 +1,8 @@
 ---
 title: netbird
-date: 2026-01-10T15:30:00+08:00
+date: 2026-02-03T15:52:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1589978400705-0d2a206b016c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjgwMzAxNTR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1768329189984-5c3a71ae3592?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzAxMDUwOTR8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -49,6 +49,11 @@ categories: ['github']
  
 </strong>
 <br>
+<strong>
+  🚀 <a href="https://careers.netbird.io">We are hiring! Join us at careers.netbird.io</a>
+</strong>
+<br>
+<br>
 <a href="https://registry.terraform.io/providers/netbirdio/netbird/latest">
     New: NetBird terraform provider
   </a> 
@@ -66,8 +71,8 @@ categories: ['github']
 
 https://github.com/user-attachments/assets/10cec749-bb56-4ab3-97af-4e38850108d2
 
-### NetBird on Lawrence Systems (Video)
-[![Watch the video](https://img.youtube.com/vi/Kwrff6h0rEw/0.jpg)](https://www.youtube.com/watch?v=Kwrff6h0rEw)
+### Self-Host NetBird (Video)
+[![Watch the video](https://img.youtube.com/vi/bZAgpT6nzaQ/0.jpg)](https://youtu.be/bZAgpT6nzaQ)
 
 ### Key features
 
