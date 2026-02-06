@@ -1,8 +1,8 @@
 ---
 title: claude-mem
-date: 2026-02-05T15:57:52+08:00
+date: 2026-02-06T15:55:53+08:00
 draft: False
-image: https://images.unsplash.com/photo-1633432695306-69604c95e2c6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzAyNzgyNjJ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1679238391464-295a8f5597f5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzAzNjQ1MjZ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -33,6 +33,7 @@ categories: ['github']
 
 <p align="center">
   <a href="docs/i18n/README.zh.md">🇨🇳 中文</a> •
+  <a href="docs/i18n/README.zh-tw.md">🇹🇼 繁體中文</a> •
   <a href="docs/i18n/README.ja.md">🇯🇵 日本語</a> •
   <a href="docs/i18n/README.pt-br.md">🇧🇷 Português</a> •
   <a href="docs/i18n/README.ko.md">🇰🇷 한국어</a> •
@@ -52,6 +53,7 @@ categories: ['github']
   <a href="docs/i18n/README.th.md">🇹🇭 ไทย</a> •
   <a href="docs/i18n/README.hi.md">🇮🇳 हिन्दी</a> •
   <a href="docs/i18n/README.bn.md">🇧🇩 বাংলা</a> •
+  <a href="docs/i18n/README.ur.md">🇵🇰 اردو</a> •
   <a href="docs/i18n/README.ro.md">🇷🇴 Română</a> •
   <a href="docs/i18n/README.sv.md">🇸🇪 Svenska</a> •
   <a href="docs/i18n/README.it.md">🇮🇹 Italiano</a> •
@@ -120,9 +122,9 @@ categories: ['github']
 Start a new Claude Code session in the terminal and enter the following commands:
 
 ```
-> /plugin marketplace add thedotmack/claude-mem
+/plugin marketplace add thedotmack/claude-mem
 
-> /plugin install claude-mem
+/plugin install claude-mem
 ```
 
 Restart Claude Code. Context from previous sessions will automatically appear in new sessions.
@@ -144,7 +146,7 @@ Restart Claude Code. Context from previous sessions will automatically appear in
 
 ## Documentation
 
-📚 **[View Full Documentation](docs/)** - Browse markdown docs on GitHub
+📚 **[View Full Documentation](https://docs.claude-mem.ai/)** - Browse on official website
 
 ### Getting Started
 
@@ -246,6 +248,17 @@ See **[Beta Features Documentation](https://docs.claude-mem.ai/beta-features)** 
 - **Bun**: JavaScript runtime and process manager (auto-installed if missing)
 - **uv**: Python package manager for vector search (auto-installed if missing)
 - **SQLite 3**: For persistent storage (bundled)
+
+---
+### Windows Setup Notes
+
+If you see an error like:
+
+```powershell
+npm : The term 'npm' is not recognized as the name of a cmdlet
+```
+
+Make sure Node.js and npm are installed and added to your PATH. Download the latest Node.js installer from https://nodejs.org and restart your terminal after installation.
 
 ---
 
