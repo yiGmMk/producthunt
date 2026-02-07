@@ -1,8 +1,8 @@
 ---
 title: UI-TARS-desktop
-date: 2026-02-06T15:55:36+08:00
+date: 2026-02-07T15:41:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1673050460660-2bd7b3bb25a4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzAzNjQ1MjZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1645378198905-bca326a21167?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzA0NTAwNzN8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
