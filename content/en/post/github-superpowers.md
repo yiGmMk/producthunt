@@ -1,8 +1,8 @@
 ---
 title: superpowers
-date: 2026-02-04T15:53:50+08:00
+date: 2026-02-08T15:47:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1487088678257-3a541e6e3922?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzAxOTE1ODV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1691254236797-aa0a724b1b51?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzA1MzY3OTd8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -55,18 +55,7 @@ Then install the plugin from this marketplace:
 
 ### Verify Installation
 
-Check that commands appear:
-
-```bash
-/help
-```
-
-```
-# Should see:
-# /superpowers:brainstorm - Interactive design refinement
-# /superpowers:write-plan - Create implementation plan
-# /superpowers:execute-plan - Execute plan in batches
-```
+Start a new session and ask Claude to help with something that would trigger a skill (e.g., "help me plan this feature" or "let's debug this issue"). Claude should automatically invoke the relevant superpowers skill.
 
 ### Codex
 
