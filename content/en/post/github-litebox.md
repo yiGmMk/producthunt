@@ -1,8 +1,8 @@
 ---
 title: litebox
-date: 2026-02-08T15:47:02+08:00
+date: 2026-02-09T16:06:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1751315574558-d185d266b16d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzA1MzY3OTd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1762893548502-58bd1f1aaa3a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzA2MjQzMjV8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
