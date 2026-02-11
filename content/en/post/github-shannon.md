@@ -1,8 +1,8 @@
 ---
 title: shannon
-date: 2026-02-10T16:06:00+08:00
+date: 2026-02-11T16:03:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1634315100015-1f7c32816acf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzA3MTA3NTB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1608501773255-d8cd9e5ba968?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzA3OTY5ODN8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -130,12 +130,10 @@ cd shannon
 
 # Option A: Export environment variables
 export ANTHROPIC_API_KEY="your-api-key"              # or CLAUDE_CODE_OAUTH_TOKEN
-export CLAUDE_CODE_MAX_OUTPUT_TOKENS=64000           # recommended
 
 # Option B: Create a .env file
 cat > .env << 'EOF'
 ANTHROPIC_API_KEY=your-api-key
-CLAUDE_CODE_MAX_OUTPUT_TOKENS=64000
 EOF
 
 # 3. Run a pentest

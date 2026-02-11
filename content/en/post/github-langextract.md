@@ -1,8 +1,8 @@
 ---
 title: langextract
-date: 2026-01-21T15:40:02+08:00
+date: 2026-02-11T16:03:11+08:00
 draft: False
-image: https://images.unsplash.com/photo-1729858445581-82386c16aaa8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njg5ODExNzJ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1608501773255-d8cd9e5ba968?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzA3OTY5ODN8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
