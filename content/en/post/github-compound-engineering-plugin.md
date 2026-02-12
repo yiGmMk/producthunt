@@ -1,8 +1,8 @@
 ---
 title: compound-engineering-plugin
-date: 2026-02-11T16:03:44+08:00
+date: 2026-02-12T16:01:43+08:00
 draft: False
-image: https://images.unsplash.com/photo-1608501773255-d8cd9e5ba968?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzA3OTY5ODN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1654950715530-147fc070584e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzA4ODMyNTd8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -23,9 +23,9 @@ A Claude Code plugin marketplace featuring the **Compound Engineering Plugin** �
 /plugin install compound-engineering
 ```
 
-## OpenCode + Codex (experimental) Install
+## OpenCode, Codex & Droid (experimental) Install
 
-This repo includes a Bun/TypeScript CLI that converts Claude Code plugins to OpenCode and Codex.
+This repo includes a Bun/TypeScript CLI that converts Claude Code plugins to OpenCode, Codex, and Factory Droid.
 
 ```bash
 # convert the compound-engineering plugin into OpenCode format
@@ -33,6 +33,9 @@ bunx @every-env/compound-plugin install compound-engineering --to opencode
 
 # convert to Codex format
 bunx @every-env/compound-plugin install compound-engineering --to codex
+
+# convert to Factory Droid format
+bunx @every-env/compound-plugin install compound-engineering --to droid
 ```
 
 Local dev:
@@ -42,8 +45,10 @@ bun run src/index.ts install ./plugins/compound-engineering --to opencode
 ```
 
 OpenCode output is written to `~/.config/opencode` by default, with `opencode.json` at the root and `agents/`, `skills/`, and `plugins/` alongside it.
-Both provider targets are experimental and may change as the formats evolve.
 Codex output is written to `~/.codex/prompts` and `~/.codex/skills`, with each Claude command converted into both a prompt and a skill (the prompt instructs Codex to load the corresponding skill). Generated Codex skill descriptions are truncated to 1024 characters (Codex limit).
+Droid output is written to `~/.factory/` with commands, droids (agents), and skills. Claude tool names are mapped to Factory equivalents (`Bash` → `Execute`, `Write` → `Create`, etc.) and namespace prefixes are stripped from commands.
+
+All provider targets are experimental and may change as the formats evolve.
 
 ## Sync Personal Config
 
