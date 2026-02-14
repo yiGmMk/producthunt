@@ -1,8 +1,8 @@
 ---
 title: Personal_AI_Infrastructure
-date: 2026-02-13T15:59:02+08:00
+date: 2026-02-14T15:43:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1720329461017-d6ed9f66beb5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzA5Njk1Mjd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1625465809518-56046973ecbf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzEwNTQ5OTN8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
