@@ -1,8 +1,8 @@
 ---
 title: tambo
-date: 2026-02-13T15:58:54+08:00
+date: 2026-02-15T15:46:00+08:00
 draft: False
-image: https://images.unsplash.com/photo-1604430456280-43f652c497aa?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzA5Njk1Mjd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1675208985060-78a2d4a28dc8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzExNDE1NTN8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

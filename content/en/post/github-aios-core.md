@@ -1,8 +1,8 @@
 ---
 title: aios-core
-date: 2026-02-14T15:43:21+08:00
+date: 2026-02-15T15:46:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1713243185601-4827325d18f6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzEwNTQ5OTN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1530061598182-a0cdcbc7e596?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzExNDE1NTN8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

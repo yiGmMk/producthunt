@@ -1,8 +1,8 @@
 ---
 title: chrome-devtools-mcp
-date: 2026-02-14T15:43:29+08:00
+date: 2026-02-15T15:46:33+08:00
 draft: False
-image: https://images.unsplash.com/photo-1721367631547-b1f591529511?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzEwNTQ5OTN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1592657345905-d149d4b49925?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzExNDE1NTN8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
