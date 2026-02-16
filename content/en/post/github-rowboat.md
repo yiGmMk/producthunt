@@ -1,8 +1,8 @@
 ---
 title: rowboat
-date: 2026-02-15T15:46:16+08:00
+date: 2026-02-16T16:03:01+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592657345905-d149d4b49925?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzExNDE1NTN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1660427974110-0e0aa0d1c597?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzEyMjg5NTJ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -77,7 +77,12 @@ To enable voice notes (optional), add a Deepgram API key in ~/.rowboat/config/de
   "apiKey": "<key>"
 }
 ```
+### Web search
+To use Brave web search (optional), add the Brave API key in ~/.rowboat/config/brave-search.json.
 
+To use Exa research search (optional), add the Exa API key in ~/.rowboat/config/exa-search.json.
+
+(same format as above)
 
 ## What it does
 

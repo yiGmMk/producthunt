@@ -1,8 +1,8 @@
 ---
 title: nautilus_trader
-date: 2026-01-20T15:39:23+08:00
+date: 2026-02-16T16:02:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1596779845699-dc72d45a3a5b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njg4OTQ3MTh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1726092691643-2a7923d36d87?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzEyMjg5NTJ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
