@@ -1,8 +1,8 @@
 ---
 title: gogcli
-date: 2026-02-17T15:59:00+08:00
+date: 2026-02-18T16:00:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1633966067870-fda3ca0d6af6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzEzMTUxMDF8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1605445457891-49696cba2d68?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0MDE1Nzl8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

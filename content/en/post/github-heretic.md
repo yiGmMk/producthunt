@@ -1,22 +1,24 @@
 ---
 title: heretic
-date: 2026-02-08T15:47:11+08:00
+date: 2026-02-18T15:59:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1740568440433-7a57c7898c08?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzA1MzY3OTd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1532280890521-ae453267a714?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0MDE1Nzl8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
 
 # [p-e-w/heretic](https://github.com/p-e-w/heretic)
 
-# Heretic: Fully automatic censorship removal for language models
+<img width="128" height="128" align="right" alt="Logo" src="https://github.com/user-attachments/assets/df5f2840-2f92-4991-aa57-252747d7182e" />
 
-[![Discord](https://img.shields.io/discord/1447831134212984903?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/gdXc48gSyT)
+# Heretic: Fully automatic censorship removal for language models<br><br>[![Discord](https://img.shields.io/discord/1447831134212984903?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/gdXc48gSyT) [![Follow us on Hugging Face](https://huggingface.co/datasets/huggingface/badges/resolve/main/follow-us-on-hf-md-dark.svg)](https://huggingface.co/heretic-org)
 
 Heretic is a tool that removes censorship (aka "safety alignment") from
 transformer-based language models without expensive post-training.
 It combines an advanced implementation of directional ablation, also known
-as "abliteration" ([Arditi et al. 2024](https://arxiv.org/abs/2406.11717)),
+as "abliteration" ([Arditi et al. 2024](https://arxiv.org/abs/2406.11717),
+Lai 2025 ([1](https://huggingface.co/blog/grimjim/projected-abliteration),
+[2](https://huggingface.co/blog/grimjim/norm-preserving-biprojected-abliteration))),
 with a TPE-based parameter optimizer powered by [Optuna](https://optuna.org/).
 
 This approach enables Heretic to work **completely automatically.** Heretic
@@ -76,8 +78,11 @@ Heretic supports most dense models, including many multimodal models, and
 several different MoE architectures. It does not yet support SSMs/hybrid models,
 models with inhomogeneous layers, and certain novel attention systems.
 
-You can find a collection of models that have been decensored using Heretic
-[on Hugging Face](https://huggingface.co/collections/p-e-w/the-bestiary).
+You can find a small collection of models that have been decensored using Heretic
+[on Hugging Face](https://huggingface.co/collections/p-e-w/the-bestiary),
+and the community has created and published
+[well over 1,000](https://huggingface.co/models?other=heretic)
+Heretic models in addition to those.
 
 
 ## Usage
@@ -100,8 +105,10 @@ a configuration file.
 
 At the start of a program run, Heretic benchmarks the system to determine
 the optimal batch size to make the most of the available hardware.
-On an RTX 3090, with the default configuration, decensoring Llama-3.1-8B
-takes about 45 minutes.
+On an RTX 3090, with the default configuration, decensoring Llama-3.1-8B-Instruct
+takes about 45 minutes. Note that Heretic supports model quantization with
+bitsandbytes, which can drastically reduce the amount of VRAM required to process
+models. Set the `quantization` option to `bnb_4bit` to enable quantization.
 
 After Heretic has finished decensoring a model, you are given the option to
 save the model, upload it to Hugging Face, chat with it to test how well it works,
@@ -253,7 +260,8 @@ The development of Heretic was informed by:
 * [The original abliteration paper (Arditi et al. 2024)](https://arxiv.org/abs/2406.11717)
 * [Maxime Labonne's article on abliteration](https://huggingface.co/blog/mlabonne/abliteration),
   as well as some details from the model cards of his own abliterated models (see above)
-* [Jim Lai's article describing "projected abliteration"](https://huggingface.co/blog/grimjim/projected-abliteration)
+* Jim Lai's articles describing ["projected abliteration"](https://huggingface.co/blog/grimjim/projected-abliteration)
+  and ["norm-preserving biprojected abliteration"](https://huggingface.co/blog/grimjim/norm-preserving-biprojected-abliteration)
 
 
 ## Citation
@@ -274,7 +282,7 @@ If you use Heretic for your research, please cite it using the following BibTeX 
 
 ## License
 
-Copyright &copy; 2025  Philipp Emanuel Weidmann (<pew@worldwidemann.com>)
+Copyright &copy; 2025-2026  Philipp Emanuel Weidmann (<pew@worldwidemann.com>) + contributors
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
