@@ -1,8 +1,8 @@
 ---
 title: heretic
-date: 2026-02-18T15:59:49+08:00
+date: 2026-02-19T15:57:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1532280890521-ae453267a714?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0MDE1Nzl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1639801517400-092a958be2fe?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0ODc4NDd8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
