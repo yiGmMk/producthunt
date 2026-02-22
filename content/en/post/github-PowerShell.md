@@ -1,8 +1,8 @@
 ---
 title: PowerShell
-date: 2025-09-17T15:30:05+08:00
+date: 2026-02-22T15:45:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1653309687132-335175966dd5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgwOTQwODd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1725815980441-468dc5ca0d72?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE3NDYyODd8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -67,25 +67,9 @@ Want to chat with other members of the PowerShell community?
 
 There are dozens of topic-specific channels on our community-driven PowerShell Virtual User Group, which you can join on:
 
-* [Gitter](https://gitter.im/PowerShell/PowerShell)
 * [Discord](https://discord.gg/PowerShell)
 * [IRC](https://web.libera.chat/#powershell) on Libera.Chat
 * [Slack](https://aka.ms/psslack)
-
-### Build status of nightly builds
-
-| Azure CI (Windows)                       | Azure CI (Linux)                               | Azure CI (macOS)                               | CodeFactor Grade         |
-|:-----------------------------------------|:-----------------------------------------------|:-----------------------------------------------|:-------------------------|
-| [![windows-nightly-image][]][windows-nightly-site] | [![linux-nightly-image][]][linux-nightly-site] | [![macOS-nightly-image][]][macos-nightly-site] | [![cf-image][]][cf-site] |
-
-[windows-nightly-site]: https://powershell.visualstudio.com/PowerShell/_build?definitionId=32
-[linux-nightly-site]: https://powershell.visualstudio.com/PowerShell/_build?definitionId=23
-[macos-nightly-site]: https://powershell.visualstudio.com/PowerShell/_build?definitionId=24
-[windows-nightly-image]: https://powershell.visualstudio.com/PowerShell/_apis/build/status/PowerShell-CI-Windows-daily
-[linux-nightly-image]: https://powershell.visualstudio.com/PowerShell/_apis/build/status/PowerShell-CI-linux-daily?branchName=master
-[macOS-nightly-image]: https://powershell.visualstudio.com/PowerShell/_apis/build/status/PowerShell-CI-macos-daily?branchName=master
-[cf-site]: https://www.codefactor.io/repository/github/powershell/powershell
-[cf-image]: https://www.codefactor.io/repository/github/powershell/powershell/badge
 
 ## Developing and Contributing
 
