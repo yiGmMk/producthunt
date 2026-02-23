@@ -1,32 +1,58 @@
 ---
 title: system-prompts-and-models-of-ai-tools
-date: 2025-12-31T15:34:00+08:00
+date: 2026-02-23T16:04:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1589524702008-c4b06515988b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjcxNjY0MjF8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1522657032572-4f67691c63e2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE4MzM4MTB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
 
 # [x1xhlol/system-prompts-and-models-of-ai-tools](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools)
 
-# **System Prompts and Models of AI Tools**  
+<p align="center">
+  Support my work here: 
+  <a href="https://bags.fm/DEffWzJyaFRNyA4ogUox631hfHuv3KLeCcpBh2ipBAGS">Bags.fm</a> •
+  <a href="https://jup.ag/tokens/DEffWzJyaFRNyA4ogUox631hfHuv3KLeCcpBh2ipBAGS">Jupiter</a> •
+  <a href="https://photon-sol.tinyastro.io/en/lp/Qa5ZCCwrWoPYckNXXMCAhCsw8gafgYFAu1Qes3Grgv5?handle=">Photon</a> •
+  <a href="https://dexscreener.com/solana/qa5zccwrwopycknxxmcahcsw8gafgyfau1qes3grgv5">DEXScreener</a>
+</p>
+
+<p align="center">Official CA: DEffWzJyaFRNyA4ogUox631hfHuv3KLeCcpBh2ipBAGS (on Solana)</p>
+
 ---
 <p align="center">
   <sub>Special thanks to</sub>  
-</p> 
-
-<p align="center">
-  <a href="https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">
-    <img src="assets/Latitude_logo.png" alt="Latitude Logo" width="700"/>
-  </a>
 </p>
 
-<div align="center" markdown="1">
-
-### <a href="https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">Make your LLM predictable in production</a>  
-<a href="https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">Open Source AI Engineering Platform</a><br>
-
-</div>
+<table width="100%">
+  <tr>
+    <td align="center" valign="top">
+      <a href="https://www.tembo.io/?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship#gh-light-mode-only" target="_blank">
+        <img src="assets/tembo-dark.png#gh-light-mode-only" alt="Tembo Logo" width="750" height="210"/>
+      </a>
+      <a href="https://www.tembo.io/?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship#gh-dark-mode-only" target="_blank">
+        <img src="assets/tembo-light.png#gh-dark-mode-only" alt="Tembo Logo" width="750" height="210"/>
+      </a>
+      <br><br>
+      <strong><a href="https://www.tembo.io/?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">Put any coding agent to work while you sleep</a></strong>
+      <br>
+      <a href="https://www.tembo.io/?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">Tembo – The Background Coding Agents Company</a>
+      <br><br>
+      <a href="https://www.tembo.io/?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">[Get started for free]</a>
+    </td>
+    <td align="center" valign="top">
+      <a href="https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">
+        <img src="assets/Latitude_logo.png" alt="Latitude Logo" width="750" height="210"/>
+      </a>
+      <br><br>
+      <strong><a href="https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">Make your LLM predictable in production</a></strong>
+      <br>
+      <a href="https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">Open Source AI Engineering Platform</a>
+      <br><br>
+      &nbsp;
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -74,7 +100,7 @@ Sponsor the most comprehensive repository of AI system prompts and reach thousan
 
 > Open an issue.
 
-> **Latest Update:** 30/12/2025
+> **Latest Update:** 08/01/2026
 
 ---
 
@@ -91,7 +117,7 @@ Sponsor the most comprehensive repository of AI system prompts and reach thousan
 > ⚠️ **Warning:** If you're an AI startup, make sure your data is secure. Exposed prompts or AI models can easily become a target for hackers.
 
 > 🔐 **Important:** Interested in securing your AI systems?  
-> Check out **[ZeroLeaks](https://zeroleaks.io/)**, a service designed to help startups **identify and secure** leaks in system instructions, internal tools, and model configurations. **Get a free AI security audit** to ensure your AI is protected from vulnerabilities.
+> Check out **[ZeroLeaks](https://zeroleaks.ai/)**, a service designed to help startups **identify and secure** leaks in system instructions, internal tools, and model configurations. **Get a free AI security audit** to ensure your AI is protected from vulnerabilities.
 
 ---
 

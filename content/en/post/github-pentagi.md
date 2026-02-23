@@ -1,8 +1,8 @@
 ---
 title: pentagi
-date: 2026-02-22T15:44:56+08:00
+date: 2026-02-23T16:03:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1725815980441-468dc5ca0d72?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE3NDYyODd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1470165473874-023613603389?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE4MzM4MTB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

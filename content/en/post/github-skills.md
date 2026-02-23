@@ -1,8 +1,8 @@
 ---
 title: skills
-date: 2026-02-22T15:45:22+08:00
+date: 2026-02-23T16:03:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1626505699795-e716038f37e7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE3NDYyODd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1549783925-018d57d30a26?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE4MzM4MTB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
