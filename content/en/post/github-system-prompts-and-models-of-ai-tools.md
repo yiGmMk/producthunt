@@ -1,8 +1,8 @@
 ---
 title: system-prompts-and-models-of-ai-tools
-date: 2026-02-23T16:04:13+08:00
+date: 2026-02-24T15:59:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1522657032572-4f67691c63e2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE4MzM4MTB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1641888897639-c5036fdc390b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE5MTk5NTV8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
