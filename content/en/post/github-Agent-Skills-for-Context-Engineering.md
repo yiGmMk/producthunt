@@ -1,8 +1,8 @@
 ---
 title: Agent-Skills-for-Context-Engineering
-date: 2026-02-24T15:59:51+08:00
+date: 2026-02-26T15:59:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1600881686131-9855a11784bd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE5MTk5NTV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1511231123118-81b2a29ca4b2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzIwOTI3NDh8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -211,7 +211,7 @@ The [book-sft-pipeline](examples/book-sft-pipeline/) example demonstrates traini
 Integrates with context engineering skills: project-development, context-compression, multi-agent-patterns, evaluation.
 
 ## Star History
-<img width="3664" height="2648" alt="star-history-2026113" src="https://github.com/user-attachments/assets/c60fd73f-4a6c-4679-b7c6-bb8ebf2f3a48" />
+<img width="3664" height="2648" alt="star-history-2026224" src="https://github.com/user-attachments/assets/b3bdbf23-4b6a-4774-ae85-42ef4d9b2d79" />
 
 ## Structure
 
