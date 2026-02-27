@@ -1,8 +1,8 @@
 ---
 title: superpowers
-date: 2026-02-26T15:59:43+08:00
+date: 2026-02-27T15:55:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1629253343203-86978021f018?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzIwOTI3NDh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1574893156351-c2e3bbb5a5c9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzIxNzg5MTd8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

@@ -1,8 +1,8 @@
 ---
 title: Agent-Skills-for-Context-Engineering
-date: 2026-02-26T15:59:52+08:00
+date: 2026-02-27T15:55:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1511231123118-81b2a29ca4b2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzIwOTI3NDh8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1559200866-01e63948ca56?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzIxNzg5MTd8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
