@@ -1,8 +1,8 @@
 ---
 title: deer-flow
-date: 2026-02-27T15:56:02+08:00
+date: 2026-02-28T15:37:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592316158850-864dfef0426b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzIxNzg5MTd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1669752012473-a12e9a47883d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzIyNjQyMzR8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -246,6 +246,31 @@ DeerFlow is model-agnostic — it works with any LLM that implements the OpenAI-
 - **Reasoning capabilities** for adaptive planning and complex decomposition
 - **Multimodal inputs** for image understanding and video comprehension
 - **Strong tool-use** for reliable function calling and structured outputs
+
+## Embedded Python Client
+
+DeerFlow can be used as an embedded Python library without running the full HTTP services. The `DeerFlowClient` provides direct in-process access to all agent and Gateway capabilities:
+
+```python
+from src.client import DeerFlowClient
+
+client = DeerFlowClient()
+
+# Chat
+response = client.chat("Analyze this paper for me", thread_id="my-thread")
+
+# Streaming
+for event in client.stream("hello"):
+    print(event.type, event.data)
+
+# Configuration & management
+print(client.list_models())
+print(client.list_skills())
+client.update_skill("web-search", enabled=True)
+client.upload_files("thread-1", ["./report.pdf"])
+```
+
+See `backend/src/client.py` for full API documentation.
 
 ## Documentation
 
