@@ -1,8 +1,8 @@
 ---
 title: wifi-densepose
-date: 2026-03-01T15:41:54+08:00
+date: 2026-03-02T15:57:24+08:00
 draft: False
-image: https://images.unsplash.com/photo-1569511076988-72d2bc535d20?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzIzNTA5MDZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1683560848078-9be4ea8ef84e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI0MzgyMjN8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -21,6 +21,7 @@ WiFi DensePose turns commodity WiFi signals into real-time human pose estimation
 [![Docker: 132 MB](https://img.shields.io/badge/docker-132%20MB-blue.svg)](https://hub.docker.com/r/ruvnet/wifi-densepose)
 [![Vital Signs](https://img.shields.io/badge/vital%20signs-breathing%20%2B%20heartbeat-red.svg)](#vital-sign-detection)
 [![ESP32 Ready](https://img.shields.io/badge/ESP32--S3-CSI%20streaming-purple.svg)](#esp32-s3-hardware-pipeline)
+[![crates.io](https://img.shields.io/crates/v/wifi-densepose-ruvector.svg)](https://crates.io/crates/wifi-densepose-ruvector)
 
 > | What | How | Speed |
 > |------|-----|-------|
@@ -46,7 +47,7 @@ docker run -p 3000:3000 ruvnet/wifi-densepose:latest
 > |--------|----------|------|----------|-------------|
 > | **ESP32 Mesh** (recommended) | 3-6x ESP32-S3 + WiFi router | ~$54 | Yes | Pose, breathing, heartbeat, motion, presence |
 > | **Research NIC** | Intel 5300 / Atheros AR9580 | ~$50-100 | Yes | Full CSI with 3x3 MIMO |
-> | **Any WiFi** | Windows/Linux laptop | $0 | No | RSSI-only: coarse presence and motion |
+> | **Any WiFi** | Windows, macOS, or Linux laptop | $0 | No | RSSI-only: coarse presence and motion |
 >
 > No hardware? Verify the signal processing pipeline with the deterministic reference signal: `python v1/data/proof/verify.py`
 
@@ -59,23 +60,66 @@ docker run -p 3000:3000 ruvnet/wifi-densepose:latest
 | [User Guide](docs/user-guide.md) | Step-by-step guide: installation, first run, API usage, hardware setup, training |
 | [WiFi-Mat User Guide](docs/wifi-mat-user-guide.md) | Disaster response module: search & rescue, START triage |
 | [Build Guide](docs/build-guide.md) | Building from source (Rust and Python) |
-| [Architecture Decisions](docs/adr/) | 24 ADRs covering signal processing, training, hardware, security |
+| [Architecture Decisions](docs/adr/) | 27 ADRs covering signal processing, training, hardware, security, domain generalization |
 
 ---
 
 ## 🚀 Key Features
 
+### Sensing
+
+See people, breathing, and heartbeats through walls — using only WiFi signals already in the room.
+
 | | Feature | What It Means |
 |---|---------|---------------|
 | 🔒 | **Privacy-First** | Tracks human pose using only WiFi signals — no cameras, no video, no images stored |
-| ⚡ | **Real-Time** | Analyzes WiFi signals in under 100 microseconds per frame — fast enough for live monitoring |
 | 💓 | **Vital Signs** | Detects breathing rate (6-30 breaths/min) and heart rate (40-120 bpm) without any wearable |
 | 👥 | **Multi-Person** | Tracks multiple people simultaneously, each with independent pose and vitals — no hard software limit (physics: ~3-5 per AP with 56 subcarriers, more with multi-AP) |
 | 🧱 | **Through-Wall** | WiFi passes through walls, furniture, and debris — works where cameras cannot |
 | 🚑 | **Disaster Response** | Detects trapped survivors through rubble and classifies injury severity (START triage) |
+
+### Intelligence
+
+The system learns on its own and gets smarter over time — no hand-tuning, no labeled data required.
+
+| | Feature | What It Means |
+|---|---------|---------------|
+| 🧠 | **Self-Learning** | Teaches itself from raw WiFi data — no labeled training sets, no cameras needed to bootstrap ([ADR-024](docs/adr/ADR-024-contrastive-csi-embedding-model.md)) |
+| 🎯 | **AI Signal Processing** | Attention networks, graph algorithms, and smart compression replace hand-tuned thresholds — adapts to each room automatically ([RuVector](https://github.com/ruvnet/ruvector)) |
+| 🌍 | **Works Everywhere** | Train once, deploy in any room — adversarial domain generalization strips environment bias so models transfer across rooms, buildings, and hardware ([ADR-027](docs/adr/ADR-027-cross-environment-domain-generalization.md)) |
+
+### Performance & Deployment
+
+Fast enough for real-time use, small enough for edge devices, simple enough for one-command setup.
+
+| | Feature | What It Means |
+|---|---------|---------------|
+| ⚡ | **Real-Time** | Analyzes WiFi signals in under 100 microseconds per frame — fast enough for live monitoring |
+| 🦀 | **810x Faster** | Complete Rust rewrite: 54,000 frames/sec pipeline, 132 MB Docker image, 542+ tests |
 | 🐳 | **One-Command Setup** | `docker pull ruvnet/wifi-densepose:latest` — live sensing in 30 seconds, no toolchain needed |
 | 📦 | **Portable Models** | Trained models package into a single `.rvf` file — runs on edge, cloud, or browser (WASM) |
-| 🦀 | **810x Faster** | Complete Rust rewrite: 54,000 frames/sec pipeline, 132 MB Docker image, 542+ tests |
+
+---
+
+## 🔬 How It Works
+
+WiFi routers flood every room with radio waves. When a person moves — or even breathes — those waves scatter differently. WiFi DensePose reads that scattering pattern and reconstructs what happened:
+
+```
+WiFi Router → radio waves pass through room → hit human body → scatter
+    ↓
+ESP32 / WiFi NIC captures 56+ subcarrier amplitudes & phases (CSI) at 20 Hz
+    ↓
+Signal Processing cleans noise, removes interference, extracts motion signatures
+    ↓
+AI Backbone (RuVector) applies attention, graph algorithms, and compression
+    ↓
+Neural Network maps processed signals → 17 body keypoints + vital signs
+    ↓
+Output: real-time pose, breathing rate, heart rate, presence, room fingerprint
+```
+
+No training cameras required — the [Self-Learning system (ADR-024)](docs/adr/ADR-024-contrastive-csi-embedding-model.md) bootstraps from raw WiFi data alone. [MERIDIAN (ADR-027)](docs/adr/ADR-027-cross-environment-domain-generalization.md) ensures the model works in any room, not just the one it trained in.
 
 ---
 
@@ -173,7 +217,7 @@ Every WiFi signal that passes through a room creates a unique fingerprint of tha
 - Turns any WiFi signal into a 128-number "fingerprint" that uniquely describes what's happening in a room
 - Learns entirely on its own from raw WiFi data — no cameras, no labeling, no human supervision needed
 - Recognizes rooms, detects intruders, identifies people, and classifies activities using only WiFi
-- Runs on an $8 ESP32 chip (the entire model fits in 60 KB of memory)
+- Runs on an $8 ESP32 chip (the entire model fits in 55 KB of memory)
 - Produces both body pose tracking AND environment fingerprints in a single computation
 
 **Key Capabilities**
@@ -238,7 +282,98 @@ cargo run -p wifi-densepose-sensing-server -- --model model.rvf --build-index en
 | Per-room MicroLoRA adapter | ~1,800 | 2 KB |
 | **Total** | **~55,000** | **55 KB** (of 520 KB available) |
 
+The self-learning system builds on the [AI Backbone (RuVector)](#ai-backbone-ruvector) signal-processing layer — attention, graph algorithms, and compression — adding contrastive learning on top.
+
 See [`docs/adr/ADR-024-contrastive-csi-embedding-model.md`](docs/adr/ADR-024-contrastive-csi-embedding-model.md) for full architectural details.
+
+</details>
+
+<details>
+<summary><a id="cross-environment-generalization-adr-027"></a><strong>🌍 Cross-Environment Generalization (ADR-027 — Project MERIDIAN)</strong> — Train once, deploy in any room without retraining</summary>
+
+WiFi pose models trained in one room lose 40-70% accuracy when moved to another — even in the same building. The model memorizes room-specific multipath patterns instead of learning human motion. MERIDIAN forces the network to forget which room it's in while retaining everything about how people move.
+
+**What it does in plain terms:**
+- Models trained in Room A work in Room B, C, D — without any retraining or calibration data
+- Handles different WiFi hardware (ESP32, Intel 5300, Atheros) with automatic chipset normalization
+- Knows where the WiFi transmitters are positioned and compensates for layout differences
+- Generates synthetic "virtual rooms" during training so the model sees thousands of environments
+- At deployment, adapts to a new room in seconds using a handful of unlabeled WiFi frames
+
+**Key Components**
+
+| What | How it works | Why it matters |
+|------|-------------|----------------|
+| **Gradient Reversal Layer** | An adversarial classifier tries to guess which room the signal came from; the main network is trained to fool it | Forces the model to discard room-specific shortcuts |
+| **Geometry Encoder (FiLM)** | Transmitter/receiver positions are Fourier-encoded and injected as scale+shift conditioning on every layer | The model knows *where* the hardware is, so it doesn't need to memorize layout |
+| **Hardware Normalizer** | Resamples any chipset's CSI to a canonical 56-subcarrier format with standardized amplitude | Intel 5300 and ESP32 data look identical to the model |
+| **Virtual Domain Augmentation** | Generates synthetic environments with random room scale, wall reflections, scatterers, and noise profiles | Training sees 1000s of rooms even with data from just 2-3 |
+| **Rapid Adaptation (TTT)** | Contrastive test-time training with LoRA weight generation from a few unlabeled frames | Zero-shot deployment — the model self-tunes on arrival |
+| **Cross-Domain Evaluator** | Leave-one-out evaluation across all training environments with per-environment PCK/OKS metrics | Proves generalization, not just memorization |
+
+**Architecture**
+
+```
+CSI Frame [any chipset]
+    │
+    ▼
+HardwareNormalizer ──→ canonical 56 subcarriers, N(0,1) amplitude
+    │
+    ▼
+CSI Encoder (existing) ──→ latent features
+    │
+    ├──→ Pose Head ──→ 17-joint pose (environment-invariant)
+    │
+    ├──→ Gradient Reversal Layer ──→ Domain Classifier (adversarial)
+    │         λ ramps 0→1 via cosine/exponential schedule
+    │
+    └──→ Geometry Encoder ──→ FiLM conditioning (scale + shift)
+              Fourier positional encoding → DeepSets → per-layer modulation
+```
+
+**Security hardening:**
+- Bounded calibration buffer (max 10,000 frames) prevents memory exhaustion
+- `adapt()` returns `Result<_, AdaptError>` — no panics on bad input
+- Atomic instance counter ensures unique weight initialization across threads
+- Division-by-zero guards on all augmentation parameters
+
+See [`docs/adr/ADR-027-cross-environment-domain-generalization.md`](docs/adr/ADR-027-cross-environment-domain-generalization.md) for full architectural details.
+
+</details>
+
+---
+
+<details>
+<summary><strong>🔍 Independent Capability Audit (ADR-028)</strong> — 1,031 tests, SHA-256 proof, self-verifying witness bundle</summary>
+
+A [3-agent parallel audit](docs/adr/ADR-028-esp32-capability-audit.md) independently verified every claim in this repository — ESP32 hardware, signal processing, neural networks, training pipeline, deployment, and security. Results:
+
+```
+Rust tests:     1,031 passed, 0 failed
+Python proof:   VERDICT: PASS (SHA-256: 8c0680d7...)
+Bundle verify:  7/7 checks PASS
+```
+
+**33-row attestation matrix:** 31 capabilities verified YES, 2 not measured at audit time (benchmark throughput, Kubernetes deploy).
+
+**Verify it yourself** (no hardware needed):
+```bash
+# Run all tests
+cd rust-port/wifi-densepose-rs && cargo test --workspace --no-default-features
+
+# Run the deterministic proof
+python v1/data/proof/verify.py
+
+# Generate + verify the witness bundle
+bash scripts/generate-witness-bundle.sh
+cd dist/witness-bundle-ADR028-*/ && bash VERIFY.sh
+```
+
+| Document | What it contains |
+|----------|-----------------|
+| [ADR-028](docs/adr/ADR-028-esp32-capability-audit.md) | Full audit: ESP32 specs, signal algorithms, NN architectures, training phases, deployment infra |
+| [Witness Log](docs/WITNESS-LOG-028.md) | 11 reproducible verification steps + 33-row attestation matrix with evidence per row |
+| [`generate-witness-bundle.sh`](scripts/generate-witness-bundle.sh) | Creates self-contained tar.gz with test logs, proof output, firmware hashes, crate versions, VERIFY.sh |
 
 </details>
 
@@ -342,7 +477,7 @@ docker run --rm -v $(pwd):/out ruvnet/wifi-densepose:latest --export-rvf /out/mo
 <details>
 <summary><strong>Rust Crates</strong> — Individual crates on crates.io</summary>
 
-The Rust workspace consists of 14 crates, all published to [crates.io](https://crates.io/):
+The Rust workspace consists of 15 crates, all published to [crates.io](https://crates.io/):
 
 ```bash
 # Add individual crates to your Cargo.toml
@@ -354,6 +489,7 @@ cargo add wifi-densepose-mat        # Disaster response (MAT survivor detection)
 cargo add wifi-densepose-hardware   # ESP32, Intel 5300, Atheros sensors
 cargo add wifi-densepose-train      # Training pipeline (MM-Fi dataset)
 cargo add wifi-densepose-wifiscan   # Multi-BSSID WiFi scanning
+cargo add wifi-densepose-ruvector   # RuVector v2.0.4 integration layer (ADR-017)
 ```
 
 | Crate | Description | RuVector | crates.io |
@@ -363,9 +499,10 @@ cargo add wifi-densepose-wifiscan   # Multi-BSSID WiFi scanning
 | [`wifi-densepose-nn`](https://crates.io/crates/wifi-densepose-nn) | Multi-backend inference (ONNX, PyTorch, Candle) | -- | [![crates.io](https://img.shields.io/crates/v/wifi-densepose-nn.svg)](https://crates.io/crates/wifi-densepose-nn) |
 | [`wifi-densepose-train`](https://crates.io/crates/wifi-densepose-train) | Training pipeline with MM-Fi dataset (NeurIPS 2023) | **All 5** | [![crates.io](https://img.shields.io/crates/v/wifi-densepose-train.svg)](https://crates.io/crates/wifi-densepose-train) |
 | [`wifi-densepose-mat`](https://crates.io/crates/wifi-densepose-mat) | Mass Casualty Assessment Tool (disaster survivor detection) | `solver`, `temporal-tensor` | [![crates.io](https://img.shields.io/crates/v/wifi-densepose-mat.svg)](https://crates.io/crates/wifi-densepose-mat) |
+| [`wifi-densepose-ruvector`](https://crates.io/crates/wifi-densepose-ruvector) | RuVector v2.0.4 integration layer — 7 signal+MAT integration points (ADR-017) | **All 5** | [![crates.io](https://img.shields.io/crates/v/wifi-densepose-ruvector.svg)](https://crates.io/crates/wifi-densepose-ruvector) |
 | [`wifi-densepose-vitals`](https://crates.io/crates/wifi-densepose-vitals) | Vital signs: breathing (6-30 BPM), heart rate (40-120 BPM) | -- | [![crates.io](https://img.shields.io/crates/v/wifi-densepose-vitals.svg)](https://crates.io/crates/wifi-densepose-vitals) |
 | [`wifi-densepose-hardware`](https://crates.io/crates/wifi-densepose-hardware) | ESP32, Intel 5300, Atheros CSI sensor interfaces | -- | [![crates.io](https://img.shields.io/crates/v/wifi-densepose-hardware.svg)](https://crates.io/crates/wifi-densepose-hardware) |
-| [`wifi-densepose-wifiscan`](https://crates.io/crates/wifi-densepose-wifiscan) | Multi-BSSID WiFi scanning (Windows-enhanced) | -- | [![crates.io](https://img.shields.io/crates/v/wifi-densepose-wifiscan.svg)](https://crates.io/crates/wifi-densepose-wifiscan) |
+| [`wifi-densepose-wifiscan`](https://crates.io/crates/wifi-densepose-wifiscan) | Multi-BSSID WiFi scanning (Windows, macOS, Linux) | -- | [![crates.io](https://img.shields.io/crates/v/wifi-densepose-wifiscan.svg)](https://crates.io/crates/wifi-densepose-wifiscan) |
 | [`wifi-densepose-wasm`](https://crates.io/crates/wifi-densepose-wasm) | WebAssembly bindings for browser deployment | -- | [![crates.io](https://img.shields.io/crates/v/wifi-densepose-wasm.svg)](https://crates.io/crates/wifi-densepose-wasm) |
 | [`wifi-densepose-sensing-server`](https://crates.io/crates/wifi-densepose-sensing-server) | Axum server: UDP ingestion, WebSocket broadcast | -- | [![crates.io](https://img.shields.io/crates/v/wifi-densepose-sensing-server.svg)](https://crates.io/crates/wifi-densepose-sensing-server) |
 | [`wifi-densepose-cli`](https://crates.io/crates/wifi-densepose-cli) | Command-line tool for MAT disaster scanning | -- | [![crates.io](https://img.shields.io/crates/v/wifi-densepose-cli.svg)](https://crates.io/crates/wifi-densepose-cli) |
@@ -373,7 +510,7 @@ cargo add wifi-densepose-wifiscan   # Multi-BSSID WiFi scanning
 | [`wifi-densepose-config`](https://crates.io/crates/wifi-densepose-config) | Configuration management | -- | [![crates.io](https://img.shields.io/crates/v/wifi-densepose-config.svg)](https://crates.io/crates/wifi-densepose-config) |
 | [`wifi-densepose-db`](https://crates.io/crates/wifi-densepose-db) | Database persistence (PostgreSQL, SQLite, Redis) | -- | [![crates.io](https://img.shields.io/crates/v/wifi-densepose-db.svg)](https://crates.io/crates/wifi-densepose-db) |
 
-All crates integrate with [RuVector v2.0.4](https://github.com/ruvnet/ruvector) for graph algorithms and neural network optimization.
+All crates integrate with [RuVector v2.0.4](https://github.com/ruvnet/ruvector) — see [AI Backbone](#ai-backbone-ruvector) below.
 
 </details>
 
@@ -453,7 +590,8 @@ The signal processing stack transforms raw WiFi Channel State Information into a
 
 | Section | Description | Docs |
 |---------|-------------|------|
-| [Key Features](#key-features) | Privacy-first sensing, real-time performance, multi-person tracking, Docker | — |
+| [Key Features](#key-features) | Sensing, Intelligence, and Performance & Deployment capabilities | — |
+| [How It Works](#how-it-works) | End-to-end pipeline: radio waves → CSI capture → signal processing → AI → pose + vitals | — |
 | [ESP32-S3 Hardware Pipeline](#esp32-s3-hardware-pipeline) | 20 Hz CSI streaming, binary frame parsing, flash & provision | [ADR-018](docs/adr/ADR-018-esp32-dev-implementation.md) · [Tutorial #34](https://github.com/ruvnet/wifi-densepose/issues/34) |
 | [Vital Sign Detection](#vital-sign-detection) | Breathing 6-30 BPM, heartbeat 40-120 BPM, FFT peak detection | [ADR-021](docs/adr/ADR-021-vital-sign-detection-rvdna-pipeline.md) |
 | [WiFi Scan Domain Layer](#wifi-scan-domain-layer) | 8-stage RSSI pipeline, multi-BSSID fingerprinting, Windows WiFi | [ADR-022](docs/adr/ADR-022-windows-wifi-enhanced-fidelity-ruvector.md) · [Tutorial #36](https://github.com/ruvnet/wifi-densepose/issues/36) |
@@ -472,6 +610,9 @@ The neural pipeline uses a graph transformer with cross-attention to map CSI fea
 | [RVF Model Container](#rvf-model-container) | Binary packaging with Ed25519 signing, progressive 3-layer loading, SIMD quantization | [ADR-023](docs/adr/ADR-023-trained-densepose-model-ruvector-pipeline.md) |
 | [Training & Fine-Tuning](#training--fine-tuning) | 8-phase pure Rust pipeline (7,832 lines), MM-Fi/Wi-Pose pre-training, 6-term composite loss, SONA LoRA | [ADR-023](docs/adr/ADR-023-trained-densepose-model-ruvector-pipeline.md) |
 | [RuVector Crates](#ruvector-crates) | 11 vendored Rust crates from [ruvector](https://github.com/ruvnet/ruvector): attention, min-cut, solver, GNN, HNSW, temporal compression, sparse inference | [GitHub](https://github.com/ruvnet/ruvector) · [Source](vendor/ruvector/) |
+| [AI Backbone (RuVector)](#ai-backbone-ruvector) | 5 AI capabilities replacing hand-tuned thresholds: attention, graph min-cut, sparse solvers, tiered compression | [crates.io](https://crates.io/crates/wifi-densepose-ruvector) |
+| [Self-Learning WiFi AI (ADR-024)](#self-learning-wifi-ai-adr-024) | Contrastive self-supervised learning, room fingerprinting, anomaly detection, 55 KB model | [ADR-024](docs/adr/ADR-024-contrastive-csi-embedding-model.md) |
+| [Cross-Environment Generalization (ADR-027)](docs/adr/ADR-027-cross-environment-domain-generalization.md) | Domain-adversarial training, geometry-conditioned inference, hardware normalization, zero-shot deployment | [ADR-027](docs/adr/ADR-027-cross-environment-domain-generalization.md) |
 
 </details>
 
@@ -520,7 +661,7 @@ WiFi DensePose is MIT-licensed open source, developed by [ruvnet](https://github
 
 | Section | Description | Link |
 |---------|-------------|------|
-| [Changelog](#changelog) | v2.3.0 (training pipeline + Docker), v2.2.0 (SOTA + WiFi-Mat), v2.1.0 (Rust port) | — |
+| [Changelog](#changelog) | v3.0.0 (AETHER AI + Docker), v2.0.0 (Rust port + SOTA + WiFi-Mat) | [CHANGELOG.md](CHANGELOG.md) |
 | [License](#license) | MIT License | [LICENSE](LICENSE) |
 | [Support](#support) | Bug reports, feature requests, community discussion | [Issues](https://github.com/ruvnet/wifi-densepose/issues) · [Discussions](https://github.com/ruvnet/wifi-densepose/discussions) |
 
@@ -617,7 +758,7 @@ See [ADR-021](docs/adr/ADR-021-vital-sign-detection-rvdna-pipeline.md).
 </details>
 
 <details>
-<summary><a id="wifi-scan-domain-layer"></a><strong>📡 WiFi Scan Domain Layer (ADR-022)</strong> — 8-stage RSSI pipeline for Windows WiFi</summary>
+<summary><a id="wifi-scan-domain-layer"></a><strong>📡 WiFi Scan Domain Layer (ADR-022/025)</strong> — 8-stage RSSI pipeline for Windows, macOS, and Linux WiFi</summary>
 
 | Stage | Purpose |
 |-------|---------|
@@ -706,6 +847,41 @@ See [ADR-014](docs/adr/ADR-014-sota-signal-processing.md) for full mathematical 
 ---
 
 ## 🧠 Models & Training
+
+<details>
+<summary><a id="ai-backbone-ruvector"></a><strong>🤖 AI Backbone: RuVector</strong> — Attention, graph algorithms, and edge-AI compression powering the sensing pipeline</summary>
+
+Raw WiFi signals are noisy, redundant, and environment-dependent. [RuVector](https://github.com/ruvnet/ruvector) is the AI intelligence layer that transforms them into clean, structured input for the DensePose neural network. It uses **attention mechanisms** to learn which signals to trust, **graph algorithms** that automatically discover which WiFi channels are sensitive to body motion, and **compressed representations** that make edge inference possible on an $8 microcontroller.
+
+Without RuVector, WiFi DensePose would need hand-tuned thresholds, brute-force matrix math, and 4x more memory — making real-time edge inference impossible.
+
+```
+Raw WiFi CSI (56 subcarriers, noisy)
+    |
+    +-- ruvector-mincut ---------- Which channels carry body-motion signal? (learned graph partitioning)
+    +-- ruvector-attn-mincut ----- Which time frames are signal vs noise? (attention-gated filtering)
+    +-- ruvector-attention ------- How to fuse multi-antenna data? (learned weighted aggregation)
+    |
+    v
+Clean, structured signal --> DensePose Neural Network --> 17-keypoint body pose
+                         --> FFT Vital Signs -----------> breathing rate, heart rate
+                         --> ruvector-solver ------------> physics-based localization
+```
+
+The [`wifi-densepose-ruvector`](https://crates.io/crates/wifi-densepose-ruvector) crate ([ADR-017](docs/adr/ADR-017-ruvector-signal-mat-integration.md)) connects all 7 integration points:
+
+| AI Capability | What It Replaces | RuVector Crate | Result |
+|--------------|-----------------|----------------|--------|
+| **Self-optimizing channel selection** | Hand-tuned thresholds that break when rooms change | `ruvector-mincut` | Graph min-cut adapts to any environment automatically |
+| **Attention-based signal cleaning** | Fixed energy cutoffs that miss subtle breathing | `ruvector-attn-mincut` | Learned gating amplifies body signals, suppresses noise |
+| **Learned signal fusion** | Simple averaging where one bad channel corrupts all | `ruvector-attention` | Transformer-style attention downweights corrupted channels |
+| **Physics-informed localization** | Expensive nonlinear solvers | `ruvector-solver` | Sparse least-squares Fresnel geometry in real-time |
+| **O(1) survivor triangulation** | O(N^3) matrix inversion | `ruvector-solver` | Neumann series linearization for instant position updates |
+| **75% memory compression** | 13.4 MB breathing buffers that overflow edge devices | `ruvector-temporal-tensor` | Tiered 3-8 bit quantization fits 60s of vitals in 3.4 MB |
+
+See [issue #67](https://github.com/ruvnet/wifi-densepose/issues/67) for a deep dive with code examples, or [`cargo add wifi-densepose-ruvector`](https://crates.io/crates/wifi-densepose-ruvector) to use it directly.
+
+</details>
 
 <details>
 <summary><a id="rvf-model-container"></a><strong>📦 RVF Model Container</strong> — Single-file deployment with progressive loading</summary>
@@ -1101,6 +1277,8 @@ WebSocket: `ws://localhost:3001/ws/sensing` (real-time sensing + vital signs)
 | Intel 5300 | Firmware mod | ~$15 | Linux `iwl-csi` |
 | Atheros AR9580 | ath9k patch | ~$20 | Linux only |
 | Any Windows WiFi | RSSI only | $0 | [Tutorial #36](https://github.com/ruvnet/wifi-densepose/issues/36) |
+| Any macOS WiFi | RSSI only (CoreWLAN) | $0 | [ADR-025](docs/adr/ADR-025-macos-corewlan-wifi-sensing.md) |
+| Any Linux WiFi | RSSI only (`iw`) | $0 | Requires `iw` + `CAP_NET_ADMIN` |
 
 </details>
 
@@ -1265,37 +1443,32 @@ pre-commit install
 <details>
 <summary><strong>Release history</strong></summary>
 
-### v2.3.0 — 2026-03-01
+### v3.0.0 — 2026-03-01
 
-The largest release to date — delivers the complete end-to-end training pipeline, Docker images, and vital sign detection. The Rust sensing server now supports full model training, RVF export, and progressive model loading from a single binary.
+Major release: AETHER contrastive embedding model, AI signal processing backbone, cross-platform adapters, Docker Hub images, and comprehensive README overhaul.
 
+- **Project AETHER (ADR-024)** — Self-supervised contrastive learning for WiFi CSI fingerprinting, similarity search, and anomaly detection; 55 KB model fits on ESP32
+- **AI Backbone (`wifi-densepose-ruvector`)** — 7 RuVector integration points replacing hand-tuned thresholds with attention, graph algorithms, and smart compression; [published to crates.io](https://crates.io/crates/wifi-densepose-ruvector)
+- **Cross-platform RSSI adapters** — macOS CoreWLAN and Linux `iw` Rust adapters with `#[cfg(target_os)]` gating (ADR-025)
 - **Docker images published** — `ruvnet/wifi-densepose:latest` (132 MB Rust) and `:python` (569 MB)
-- **8-phase DensePose training pipeline (ADR-023)** — Dataset loaders (MM-Fi, Wi-Pose), graph transformer with cross-attention, 6-term composite loss, cosine-scheduled SGD, PCK/OKS validation, SONA adaptation, sparse inference engine, RVF model packaging
-- **`--export-rvf` CLI flag** — Standalone RVF model container generation with vital config, training proof, and SONA profiles
-- **`--train` CLI flag** — Full training mode with best-epoch snapshotting and checkpoint saving
-- **Vital sign detection (ADR-021)** — FFT-based breathing (6-30 BPM) and heartbeat (40-120 BPM) extraction, 11,665 fps benchmark
-- **WiFi scan domain layer (ADR-022)** — 8-stage pure-Rust signal intelligence pipeline for Windows WiFi RSSI
-- **New crates** — `wifi-densepose-vitals` (1,863 lines) and `wifi-densepose-wifiscan` (4,829 lines)
-- **542+ Rust tests** — All passing, zero mocks
+- **Project MERIDIAN (ADR-027)** — Cross-environment domain generalization: gradient reversal, geometry-conditioned FiLM, virtual domain augmentation, contrastive test-time training; zero-shot room transfer
+- **10-phase DensePose training pipeline (ADR-023/027)** — Graph transformer, 6-term composite loss, SONA adaptation, RVF packaging, hardware normalization, domain-adversarial training
+- **Vital sign detection (ADR-021)** — FFT-based breathing (6-30 BPM) and heartbeat (40-120 BPM), 11,665 fps
+- **WiFi scan domain layer (ADR-022/025)** — 8-stage signal intelligence pipeline for Windows, macOS, and Linux
+- **700+ Rust tests** — All passing, zero mocks
 
-### v2.2.0 — 2026-02-28
+### v2.0.0 — 2026-02-28
 
-Introduced the guided installer, SOTA signal processing algorithms, and the WiFi-Mat disaster response module. This release established the ESP32 hardware path and security hardening.
+Complete Rust sensing server, SOTA signal processing, WiFi-Mat disaster response, ESP32 hardware, RuVector integration, guided installer, and security hardening.
 
-- **Guided installer** — `./install.sh` with 7-step hardware detection and 8 install profiles
-- **6 SOTA signal algorithms (ADR-014)** — SpotFi conjugate multiplication, Hampel filter, Fresnel zone model, CSI spectrogram, subcarrier selection, body velocity profile
-- **WiFi-Mat disaster response** — START triage, scan zones, 3D localization, priority alerts — 139 tests
-- **ESP32 CSI hardware parser** — Binary frame parsing with I/Q extraction — 28 tests
-- **Security hardening** — 10 vulnerabilities fixed (CVE remediation, input validation, path security)
-
-### v2.1.0 — 2026-02-28
-
-The foundational Rust release — ported the Python v1 pipeline to Rust with 810x speedup, integrated the RuVector signal intelligence crates, and added the Three.js real-time visualization.
-
-- **RuVector integration** — 11 vendored crates (ADR-002 through ADR-013) for HNSW indexing, attention, GNN, temporal compression, min-cut, solver
-- **ESP32 CSI sensor mesh** — $54 starter kit with 3-6 ESP32-S3 nodes streaming at 20 Hz
-- **Three.js visualization** — 3D body model with 17 joints, real-time WebSocket streaming
-- **CI verification pipeline** — Determinism checks and unseeded random scan across all signal operations
+- **Rust sensing server** — Axum REST API + WebSocket, 810x speedup over Python, 54K fps pipeline
+- **RuVector integration** — 11 vendored crates for HNSW, attention, GNN, temporal compression, min-cut, solver
+- **6 SOTA signal algorithms (ADR-014)** — SpotFi, Hampel, Fresnel, spectrogram, subcarrier selection, BVP
+- **WiFi-Mat disaster response** — START triage, 3D localization, priority alerts — 139 tests
+- **ESP32 CSI hardware** — Binary frame parsing, $54 starter kit, 20 Hz streaming
+- **Guided installer** — 7-step hardware detection, 8 install profiles
+- **Three.js visualization** — 3D body model, 17 joints, real-time WebSocket
+- **Security hardening** — 10 vulnerabilities fixed
 
 </details>
 

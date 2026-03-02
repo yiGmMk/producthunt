@@ -1,8 +1,8 @@
 ---
 title: deer-flow
-date: 2026-02-28T15:37:21+08:00
+date: 2026-03-02T15:57:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1669752012473-a12e9a47883d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzIyNjQyMzR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1682258576679-c6012a5f860e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI0MzgyMjN8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -11,6 +11,9 @@ categories: ['github']
 
 # 🦌 DeerFlow - 2.0
 
+<a href="https://trendshift.io/repositories/14699" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14699" alt="bytedance%2Fdeer-flow | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+> On February 28th, 2026, DeerFlow claimed the 🏆 #1 spot on GitHub Trending following the launch of version 2. Thanks a million to our incredible community — you made this happen! 💪🔥
+
 DeerFlow (**D**eep **E**xploration and **E**fficient **R**esearch **Flow**) is an open-source **super agent harness** that orchestrates **sub-agents**, **memory**, and **sandboxes** to do almost anything — powered by **extensible skills**.
 
 https://github.com/user-attachments/assets/a8bcadc4-e040-4cf2-8fda-dd768b999c18
@@ -18,7 +21,7 @@ https://github.com/user-attachments/assets/a8bcadc4-e040-4cf2-8fda-dd768b999c18
 > [!NOTE]
 > **DeerFlow 2.0 is a ground-up rewrite.** It shares no code with v1. If you're looking for the original Deep Research framework, it's maintained on the [`1.x` branch](https://github.com/bytedance/deer-flow/tree/main-1.x) — contributions there are still welcome. Active development has moved to 2.0.
 
-## Offiical Website
+## Official Website
 
 Learn more and see **real demos** on our official website.
 
@@ -28,21 +31,31 @@ Learn more and see **real demos** on our official website.
 
 ## Table of Contents
 
-- [Quick Start](#quick-start)
-- [Sandbox Mode](#sandbox-mode)
-- [From Deep Research to Super Agent Harness](#from-deep-research-to-super-agent-harness)
-- [Core Features](#core-features)
-  - [Skills & Tools](#skills--tools)
-  - [Sub-Agents](#sub-agents)
-  - [Sandbox & File System](#sandbox--file-system)
-  - [Context Engineering](#context-engineering)
-  - [Long-Term Memory](#long-term-memory)
-- [Recommended Models](#recommended-models)
-- [Documentation](#documentation)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
-- [Star History](#star-history)
+- [🦌 DeerFlow - 2.0](#-deerflow---20)
+  - [Offiical Website](#offiical-website)
+  - [Table of Contents](#table-of-contents)
+  - [Quick Start](#quick-start)
+    - [Configuration](#configuration)
+    - [Running the Application](#running-the-application)
+      - [Option 1: Docker (Recommended)](#option-1-docker-recommended)
+      - [Option 2: Local Development](#option-2-local-development)
+    - [Advanced](#advanced)
+      - [Sandbox Mode](#sandbox-mode)
+      - [MCP Server](#mcp-server)
+  - [From Deep Research to Super Agent Harness](#from-deep-research-to-super-agent-harness)
+  - [Core Features](#core-features)
+    - [Skills \& Tools](#skills--tools)
+    - [Sub-Agents](#sub-agents)
+    - [Sandbox \& File System](#sandbox--file-system)
+    - [Context Engineering](#context-engineering)
+    - [Long-Term Memory](#long-term-memory)
+  - [Recommended Models](#recommended-models)
+  - [Documentation](#documentation)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Acknowledgments](#acknowledgments)
+    - [Key Contributors](#key-contributors)
+  - [Star History](#star-history)
 
 ## Quick Start
 
@@ -163,6 +176,7 @@ See the [Sandbox Configuration Guide](backend/docs/CONFIGURATION.md#sandbox) to 
 #### MCP Server
 
 DeerFlow supports configurable MCP servers and skills to extend its capabilities.
+For HTTP/SSE MCP servers, OAuth token flows are supported (`client_credentials`, `refresh_token`).
 See the [MCP Server Guide](backend/docs/MCP_SERVER.md) for detailed instructions.
 
 ## From Deep Research to Super Agent Harness
@@ -249,7 +263,7 @@ DeerFlow is model-agnostic — it works with any LLM that implements the OpenAI-
 
 ## Embedded Python Client
 
-DeerFlow can be used as an embedded Python library without running the full HTTP services. The `DeerFlowClient` provides direct in-process access to all agent and Gateway capabilities:
+DeerFlow can be used as an embedded Python library without running the full HTTP services. The `DeerFlowClient` provides direct in-process access to all agent and Gateway capabilities, returning the same response schemas as the HTTP Gateway API:
 
 ```python
 from src.client import DeerFlowClient
@@ -259,18 +273,19 @@ client = DeerFlowClient()
 # Chat
 response = client.chat("Analyze this paper for me", thread_id="my-thread")
 
-# Streaming
+# Streaming (LangGraph SSE protocol: values, messages-tuple, end)
 for event in client.stream("hello"):
-    print(event.type, event.data)
+    if event.type == "messages-tuple" and event.data.get("type") == "ai":
+        print(event.data["content"])
 
-# Configuration & management
-print(client.list_models())
-print(client.list_skills())
+# Configuration & management — returns Gateway-aligned dicts
+models = client.list_models()        # {"models": [...]}
+skills = client.list_skills()        # {"skills": [...]}
 client.update_skill("web-search", enabled=True)
-client.upload_files("thread-1", ["./report.pdf"])
+client.upload_files("thread-1", ["./report.pdf"])  # {"success": True, "files": [...]}
 ```
 
-See `backend/src/client.py` for full API documentation.
+All dict-returning methods are validated against Gateway Pydantic response models in CI (`TestGatewayConformance`), ensuring the embedded client stays in sync with the HTTP API schemas. See `backend/src/client.py` for full API documentation.
 
 ## Documentation
 
