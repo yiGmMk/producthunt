@@ -1,9 +1,9 @@
 ---
 title: prompt-eng-interactive-tutorial
-date: 2025-10-16T15:28:18+08:00
+date: 2026-03-03T15:51:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1729073020496-b3a52dd6f497?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA1OTk2ODh8&ixlib=rb-4.1.0
-tags: ['github',prompt engineering, Claude, tutorial]
+image: https://images.unsplash.com/photo-1506862901492-54099e5a4445?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI1MjQyODV8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
