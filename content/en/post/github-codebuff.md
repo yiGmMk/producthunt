@@ -1,9 +1,9 @@
 ---
 title: codebuff
-date: 2025-09-14T15:25:13+08:00
+date: 2026-03-04T15:47:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1673208128281-eabef9c6f259?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc4MzQ2NTB8&ixlib=rb-4.1.0
-tags: ['github',AI coding assistant,codebase,natural language instructions,specialized agents,multi-agent approach,OpenRouter,custom agents,TypeScript,SDK]
+image: https://images.unsplash.com/photo-1661250136420-56b685db54f1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI2MTAzODh8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -20,12 +20,11 @@ Codebuff is an **open-source AI coding assistant** that edits your codebase thro
 Codebuff beats Claude Code at 61% vs 53% on [our evals](evals/README.md) across 175+ coding tasks over multiple open-source repos that simulate real-world tasks.
 
 
-
 ## How it works
 
 When you ask Codebuff to "add authentication to my API," it might invoke:
 
-1. A **File Explorer Agent** to scan your codebase to understand the architecture and find relevant files
+1. A **File Picker Agent** to scan your codebase to understand the architecture and find relevant files
 2. A **Planner Agent** to plan which files need changes and in what order
 3. An **Editor Agent** to make precise edits
 4. A **Reviewer Agent** to validate changes
@@ -61,10 +60,26 @@ Codebuff will find the right files, makes changes across your codebase, and runs
 
 ## Create custom agents
 
-To get started building your own agents, run:
+To get started building your own agents, start Codebuff and run the `/init` command:
 
 ```bash
-codebuff init-agents
+codebuff
+```
+
+Then inside the CLI:
+
+```
+/init
+```
+
+This creates:
+```
+knowledge.md               # Project context for Codebuff
+.agents/
+└── types/                 # TypeScript type definitions
+    ├── agent-definition.ts
+    ├── tools.ts
+    └── util-types.ts
 ```
 
 You can write agent definition files that give you maximum control over agent behavior.
@@ -117,7 +132,7 @@ const client = new CodebuffClient({
 // 2. Do a coding task...
 const result = await client.run({
   agent: 'base', // Codebuff's base coding agent
-  prompt: 'Add comprehensive error handling to all API endpoints',
+  prompt: 'Add error handling to all API endpoints',
   handleEvent: (event) => {
     console.log('Progress', event)
   },
@@ -127,7 +142,7 @@ const result = await client.run({
 const myCustomAgent: AgentDefinition = {
   id: 'greeter',
   displayName: 'Greeter',
-  model: 'openai/gpt-5',
+  model: 'openai/gpt-5.1',
   instructionsPrompt: 'Say hello!',
 }
 await client.run({
@@ -145,19 +160,44 @@ Learn more about the SDK [here](https://www.npmjs.com/package/@codebuff/sdk).
 
 ## Why choose Codebuff
 
-**Deep customizability**: Create sophisticated agent workflows with TypeScript generators that mix AI generation with programmatic control. Define custom agents that spawn subagents, implement conditional logic, and orchestrate complex multi-step processes that adapt to your specific use cases.
+**Custom workflows**: TypeScript generators let you mix AI generation with programmatic control. Agents can spawn subagents, branch on conditions, and run multi-step processes.
 
 **Any model on OpenRouter**: Unlike Claude Code which locks you into Anthropic's models, Codebuff supports any model available on [OpenRouter](https://openrouter.ai/models) - from Claude and GPT to specialized models like Qwen, DeepSeek, and others. Switch models for different tasks or use the latest releases without waiting for platform updates.
 
-**Reuse any published agent**: Compose existing [published agents](https://www.codebuff.com/agents) to get a leg up. Codebuff agents are the new MCP!
+**Reuse any published agent**: Compose existing [published agents](https://www.codebuff.com/store) to get a leg up. Codebuff agents are the new MCP!
 
-**Fully customizable SDK**: Build Codebuff's capabilities directly into your applications with a complete TypeScript SDK. Create custom tools, integrate with your CI/CD pipeline, build AI-powered development environments, or embed intelligent coding assistance into your products.
+**SDK**: Build Codebuff into your applications. Create custom tools, integrate with CI/CD, or embed coding assistance into your products.
 
 ## Contributing to Codebuff
 
 We ❤️ contributions from the community - whether you're fixing bugs, tweaking our agents, or improving documentation.
 
 **Want to contribute?** Check out our [Contributing Guide](./CONTRIBUTING.md) to get started.
+
+### Running Tests
+
+To run the test suite:
+
+```bash
+cd cli
+bun test
+```
+
+**For interactive E2E testing**, install tmux:
+
+```bash
+# macOS
+brew install tmux
+
+# Ubuntu/Debian
+sudo apt-get install tmux
+
+# Windows (via WSL)
+wsl --install
+sudo apt-get install tmux
+```
+
+See [cli/src/__tests__/README.md](cli/src/__tests__/README.md) for comprehensive testing documentation.
 
 Some ways you can help:
 
@@ -178,7 +218,7 @@ Some ways you can help:
 
 **Documentation**: [codebuff.com/docs](https://codebuff.com/docs)
 
-**Community**: [Discord](https://codebuff.com/discord) - Join our friendly community
+**Community**: [Discord](https://codebuff.com/discord)
 
 **Issues & Ideas**: [GitHub Issues](https://github.com/CodebuffAI/codebuff/issues)
 
