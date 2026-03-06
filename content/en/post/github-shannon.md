@@ -1,8 +1,8 @@
 ---
 title: shannon
-date: 2026-03-05T15:51:20+08:00
+date: 2026-03-06T15:47:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1605098096512-f980b1ac818d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI2OTcwNzJ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1591992265637-469ff7c13310?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI3ODMyMjJ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -25,7 +25,9 @@ It analyzes your source code, identifies attack vectors, and executes real explo
 
 ---
 
-[Keygraph Website](https://keygraph.io) • [Announcements](https://github.com/KeygraphHQ/shannon/discussions/categories/announcements) • [Discord](https://discord.gg/KAqzSHHpRt)
+<a href="https://github.com/KeygraphHQ/shannon/discussions/categories/announcements"><img src="./assets/announcements.png" height="40" alt="Announcements"></a>
+<a href="https://discord.gg/9ZqQPuhJB7"><img src="./assets/discord.png" height="40" alt="Join Discord"></a>
+<a href="https://www.linkedin.com/company/keygraph/"><img src="./assets/linkedin.png" height="40" alt="Follow Us on Linkedin"></a>
 
 ---
 </div>

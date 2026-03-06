@@ -1,8 +1,8 @@
 ---
 title: trivy
-date: 2026-03-05T15:51:37+08:00
+date: 2026-03-06T15:47:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1637278643503-3a49c91b7000?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI2OTcwNzJ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1571231986806-3492a15e2c50?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI3ODMyMjJ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
