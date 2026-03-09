@@ -1,8 +1,8 @@
 ---
 title: ui
-date: 2025-12-16T15:33:46+08:00
+date: 2026-03-09T15:58:23+08:00
 draft: False
-image: https://images.unsplash.com/photo-1671552693120-955d0f2a0172?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjU4NzAzOTB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1712865007854-9011c37858c2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzMwNDMwNzV8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -17,7 +17,7 @@ A set of beautifully designed components that you can customize, extend, and bui
 
 ## Documentation
 
-Visit http://ui.shadcn.com/docs to view the documentation.
+Visit https://ui.shadcn.com/docs to view the documentation.
 
 ## Contributing
 
@@ -25,4 +25,4 @@ Please read the [contributing guide](/CONTRIBUTING.md).
 
 ## License
 
-Licensed under the [MIT license](https://github.com/shadcn/ui/blob/main/LICENSE.md).
+Licensed under the [MIT license](./LICENSE.md).

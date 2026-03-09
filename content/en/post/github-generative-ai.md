@@ -1,8 +1,8 @@
 ---
 title: generative-ai
-date: 2026-03-08T15:40:25+08:00
+date: 2026-03-09T15:58:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1553991562-5ee67c3adc35?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI5NTU1ODN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1623543870049-7addf35040d4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzMwNDMwNzV8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
