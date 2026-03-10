@@ -1,8 +1,8 @@
 ---
 title: openclaw
-date: 2026-03-09T15:58:34+08:00
+date: 2026-03-10T15:50:03+08:00
 draft: False
-image: https://images.unsplash.com/photo-1623543870049-7addf35040d4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzMwNDMwNzV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1696247835110-32a6a6629252?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzMxMjg5ODJ8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
