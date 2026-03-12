@@ -1,8 +1,8 @@
 ---
 title: promptfoo
-date: 2026-03-11T15:53:31+08:00
+date: 2026-03-12T15:55:25+08:00
 draft: False
-image: https://images.unsplash.com/photo-1546345414-16d37d6baa05?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzMyMTU1NzN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1621669638331-b6924a5ad300?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzMzMDIxMDN8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
