@@ -1,8 +1,8 @@
 ---
 title: BitNet
-date: 2026-02-01T15:45:44+08:00
+date: 2026-03-13T15:54:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1631785641419-eef018e28ef9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk5MzE5Mjd8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1639815188498-e23242c9c796?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzMzODg0NDB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -15,7 +15,7 @@ categories: ['github']
 
 [<img src="./assets/header_model_release.png" alt="BitNet Model on Hugging Face" width="800"/>](https://huggingface.co/microsoft/BitNet-b1.58-2B-4T)
 
-Try it out via this [demo](https://bitnet-demo.azurewebsites.net/), or build and run it on your own [CPU](https://github.com/microsoft/BitNet?tab=readme-ov-file#build-from-source) or [GPU](https://github.com/microsoft/BitNet/blob/main/gpu/README.md).
+Try it out via this [demo](https://demo-bitnet-h0h8hcfqeqhrf5gf.canadacentral-01.azurewebsites.net/), or build and run it on your own [CPU](https://github.com/microsoft/BitNet?tab=readme-ov-file#build-from-source) or [GPU](https://github.com/microsoft/BitNet/blob/main/gpu/README.md).
 
 bitnet.cpp is the official inference framework for 1-bit LLMs (e.g., BitNet b1.58). It offers a suite of optimized kernels, that support **fast** and **lossless** inference of 1.58-bit models on CPU and GPU (NPU support will coming next).
 

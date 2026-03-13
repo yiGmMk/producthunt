@@ -1,8 +1,8 @@
 ---
 title: fish-speech
-date: 2026-03-12T15:55:42+08:00
+date: 2026-03-13T15:54:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1650202314632-b335212bce05?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzMzMDIxMDN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1671212694375-1fdafb36ee4c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzMzODg0NDB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---
@@ -48,7 +48,7 @@ categories: ['github']
         <img alt="Fish Audio Blog" src="https://img.shields.io/badge/Blog-Fish_Audio_S2-1f7a8c?style=flat-square&logo=readme&logoColor=white"/>
     </a>
     <a target="_blank" href="https://github.com/fishaudio/fish-speech/blob/main/FishAudioS2TecReport.pdf">
-        <img alt="Paper | Technical Report" src="https://img.shields.io/badge/Paper-Tecnical_Report-b31b1b?style=flat-square"/>
+        <img alt="Paper | Technical Report" src="https://img.shields.io/badge/Paper-Technical_Report-b31b1b?style=flat-square"/>
     </a>
 </div>
 
@@ -88,7 +88,7 @@ Fish Audio S2 is the latest model developed by [Fish Audio](https://fish.audio/)
 
 S2 supports fine-grained inline control of prosody and emotion using natural-language tags like `[laugh]`, `[whispers]`, and `[super happy]`, as well as native multi-speaker and multi-turn generation.
 
-Visit the [Fish Audio website](https://fish.audio/) for live playground. Read the [blog post](https://fish.audio/blog/fish-audio-open-sources-s2/) and [tecnical report](https://github.com/fishaudio/fish-speech/blob/main/FishAudioS2TecReport.pdf) for more details.
+Visit the [Fish Audio website](https://fish.audio/) for live playground. Read the [blog post](https://fish.audio/blog/fish-audio-open-sources-s2/) and [technical report](https://github.com/fishaudio/fish-speech/blob/main/FishAudioS2TecReport.pdf) for more details.
 
 ### Model Variants
 
