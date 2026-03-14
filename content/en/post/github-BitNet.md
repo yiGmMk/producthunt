@@ -1,9 +1,9 @@
 ---
 title: BitNet
-date: 2026-03-14T16:09:31+08:00
+date: 2026-03-14T16:17:02+08:00
 draft: False
-image: https://images.unsplash.com/photo-1670328592688-83708188bb26?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM0NzU3NjB8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1456408786436-37ace5840ee5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM0NzYyMTF8&ixlib=rb-4.1.0
+tags: ['github',BitNet,1bit LLMs,inference framework]
 categories: ['github']
 ---
 

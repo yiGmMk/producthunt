@@ -1,9 +1,9 @@
 ---
 title: public-apis
-date: 2026-03-14T16:10:15+08:00
+date: 2026-03-14T16:17:47+08:00
 draft: False
-image: https://images.unsplash.com/photo-1631765049337-d08c2bbcf918?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM0NzU3NjB8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1700253741639-f051c1a2e859?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM0NzYyMTF8&ixlib=rb-4.1.0
+tags: ['github',public APIs, community curated, API repository]
 categories: ['github']
 ---
 

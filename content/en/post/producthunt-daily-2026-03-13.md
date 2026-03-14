@@ -1,8 +1,9 @@
 ---
 title: Product Hunt Daily | 2026-03-14
-date: 2026-03-14 08:09:18+0000
+date: 2026-03-14 08:16:49+0000
 image: https://ph-files.imgix.net/859029f8-50d1-4061-8804-55e90a7474e1.png?auto=format
-tags: ["Fowel"]
+tags: ["productivity tool", "code review automation", "Perplexity"]
+categories: ["AI"]
 ---
 
 ## 1. Perplexity Computer Skills  
@@ -11,7 +12,7 @@ tags: ["Fowel"]
 **Website**: [open](https://www.producthunt.com/r/HFTULLHPO6EX3A?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/perplexity-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Perplexity Computer Skills](https://ph-files.imgix.net/859029f8-50d1-4061-8804-55e90a7474e1.png?auto=format)  
-**Keyword**:   
+**Keyword**: Perplexity, Computer Skills, automation, workflow, AI agents, SKILL.md, import, Claude, Codex, multi-model, context-aware, instructions, builders, developers, no-code, low-code, execution, capabilities, repeatable, integration  
 **VotesCount**: 🔺427  
 **Featured**: Yes  
 **CreatedAt**: 2026-03-13 07:01 AM (UTC)  
@@ -24,7 +25,7 @@ tags: ["Fowel"]
 **Website**: [open](https://www.producthunt.com/r/3RHO6C6RJJ6HLA?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/ask-maps-by-google?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Ask Maps by Google](https://ph-files.imgix.net/41cf542f-5379-4829-b12d-7440a0611c6b.png?auto=format)  
-**Keyword**:   
+**Keyword**: Google Maps AI, immersive navigation, Gemini AI, 3D routes, lane guidance, landmark navigation, voice search maps, US India launch, smart driving assistant, personalized travel answers  
 **VotesCount**: 🔺377  
 **Featured**: Yes  
 **CreatedAt**: 2026-03-13 07:01 AM (UTC)  
@@ -37,8 +38,8 @@ tags: ["Fowel"]
 **Website**: [open](https://www.producthunt.com/r/F63DN2WF7ASVO5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/gstack?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![GStack](https://ph-files.imgix.net/f50fe007-23ff-41f8-a507-eddaf6c1ebfb.png?auto=format)  
-**Keyword**:   
-**VotesCount**: 🔺355  
+**Keyword**: Garry Tan Claude setup, Claude Code specialists, slash command workflows, AI coding team, developer workflow automation, code review automation, browser automation coding, engineering retrospectives, one-command shipping  
+**VotesCount**: 🔺356  
 **Featured**: Yes  
 **CreatedAt**: 2026-03-13 07:01 AM (UTC)  
 
@@ -50,7 +51,7 @@ tags: ["Fowel"]
 **Website**: [open](https://www.producthunt.com/r/OAXP2EP2SGFCTI?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/pinnacle?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Pinnacle](https://ph-files.imgix.net/6b443694-5c22-496c-989d-a0fcffe937da.png?auto=format)  
-**Keyword**:   
+**Keyword**: brain training app, AI coach, cognitive performance, focus improvement, mental resilience, iPhone sensors, neuroscience app, productivity tool, mental fitness, personalized training, neurofeedback, brain health  
 **VotesCount**: 🔺336  
 **Featured**: Yes  
 **CreatedAt**: 2026-03-13 07:01 AM (UTC)  
@@ -63,7 +64,7 @@ tags: ["Fowel"]
 **Website**: [open](https://www.producthunt.com/r/DF2BM2NRE4AHO4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/perfectly?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Perfectly](https://ph-files.imgix.net/c6bcbeb3-1ae1-4d67-849a-23542c5baf56.png?auto=format)  
-**Keyword**:   
+**Keyword**: AI recruiting, automated sourcing, AI recruitment agency, fast hiring, candidate screening, Slack integration, interview-ready candidates, startup hiring, talent acquisition, recruitment automation  
 **VotesCount**: 🔺195  
 **Featured**: Yes  
 **CreatedAt**: 2026-03-13 07:01 AM (UTC)  
@@ -76,7 +77,7 @@ tags: ["Fowel"]
 **Website**: [open](https://www.producthunt.com/r/ZUT3BCZCSHT7BB?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/parker-by-perfectly?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Parker by Perfectly](https://ph-files.imgix.net/721a8d8c-540b-47f6-ab92-3e37b0293c2d.jpeg?auto=format)  
-**Keyword**:   
+**Keyword**: AI job search, career networking, referral jobs, personalized outreach, iMessage WhatsApp job assistant, tech recruitment, hidden job market, AI career coach, job referral platform, direct hiring, tech opportunities, networking automation  
 **VotesCount**: 🔺156  
 **Featured**: Yes  
 **CreatedAt**: 2026-03-13 07:01 AM (UTC)  
@@ -89,7 +90,7 @@ tags: ["Fowel"]
 **Website**: [open](https://www.producthunt.com/r/IA4U5PYSUQMTBX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/pre-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Pre](https://ph-files.imgix.net/cfb538c3-3724-40d4-a72d-3439ee47152b.png?auto=format)  
-**Keyword**:   
+**Keyword**: YC, startup momentum, AI agent, North Star, weekly goals, accountability, progress report, focus, productivity, operator, connected data, no excuses  
 **VotesCount**: 🔺139  
 **Featured**: Yes  
 **CreatedAt**: 2026-03-13 07:01 AM (UTC)  
@@ -102,7 +103,7 @@ tags: ["Fowel"]
 **Website**: [open](https://www.producthunt.com/r/PBJC3XAVDZNMHC?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/hackmamba?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Fowel by Hackmamba](https://ph-files.imgix.net/5b6c8347-899c-48f8-bc9e-6557a0dda723.png?auto=format)  
-**Keyword**: Fowel  
+**Keyword**: documentation review, GitHub pull request, code review automation, accuracy check, outdated code detection, developer tools, productivity software, instant installation, scalable, time-saving  
 **VotesCount**: 🔺126  
 **Featured**: Yes  
 **CreatedAt**: 2026-03-13 07:01 AM (UTC)  
@@ -115,7 +116,7 @@ tags: ["Fowel"]
 **Website**: [open](https://www.producthunt.com/r/WEKGWUEKLA5C5L?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/replylessai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![ReplylessAI](https://ph-files.imgix.net/db3ab186-0972-42a3-9af9-f0f29f301e5a.png?auto=format)  
-**Keyword**:   
+**Keyword**: AI email app, affordable, inbox zero, email sorting, email categories, cheap alternative, Superhuman alternative, email management, productivity tool, AI inbox, email triage  
 **VotesCount**: 🔺122  
 **Featured**: Yes  
 **CreatedAt**: 2026-03-13 07:01 AM (UTC)  
@@ -128,7 +129,7 @@ tags: ["Fowel"]
 **Website**: [open](https://www.producthunt.com/r/CG4GU674RDY7DT?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/doxmind?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![doXmind](https://ph-files.imgix.net/c9999163-4890-4f20-93ee-9091fd5c50f2.png?auto=format)  
-**Keyword**:   
+**Keyword**: AI note-taking, collaborative editor, Notion alternative, database blocks, inline comments, multi-column layout, AI Thinking Mode, productivity tool, Pro plan, Max plan, workspace, content organization  
 **VotesCount**: 🔺110  
 **Featured**: Yes  
 **CreatedAt**: 2026-03-13 07:01 AM (UTC)  

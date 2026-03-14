@@ -1,9 +1,9 @@
 ---
 title: browser
-date: 2026-03-14T16:09:49+08:00
+date: 2026-03-14T16:17:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592060456825-db77a2df7610?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM0NzU3NjB8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1763793926409-c5714bfe1de4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM0NzYyMTF8&ixlib=rb-4.1.0
+tags: ['github',headless browser,web automation,Javascript execution]
 categories: ['github']
 ---
 
