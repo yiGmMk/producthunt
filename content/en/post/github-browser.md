@@ -1,8 +1,8 @@
 ---
 title: browser
-date: 2026-03-14T15:57:35+08:00
+date: 2026-03-14T16:09:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1606762803100-5b4833aaccc0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM0NzUwMjV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1592060456825-db77a2df7610?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM0NzU3NjB8&ixlib=rb-4.1.0
 tags: ['github',]
 categories: ['github']
 ---

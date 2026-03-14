@@ -1,9 +1,8 @@
 ---
 title: Product Hunt Daily | 2026-03-14
-date: 2026-03-14 07:57:01+0000
+date: 2026-03-14 08:09:18+0000
 image: https://ph-files.imgix.net/859029f8-50d1-4061-8804-55e90a7474e1.png?auto=format
-tags: ["GStack", "Claude Code", "Garry"]
-categories: ["AI"]
+tags: ["Fowel"]
 ---
 
 ## 1. Perplexity Computer Skills  
@@ -38,8 +37,8 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/F63DN2WF7ASVO5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/gstack?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![GStack](https://ph-files.imgix.net/f50fe007-23ff-41f8-a507-eddaf6c1ebfb.png?auto=format)  
-**Keyword**: GStack, Claude Code, Garry  
-**VotesCount**: 🔺353  
+**Keyword**:   
+**VotesCount**: 🔺355  
 **Featured**: Yes  
 **CreatedAt**: 2026-03-13 07:01 AM (UTC)  
 
@@ -77,7 +76,7 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/ZUT3BCZCSHT7BB?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/parker-by-perfectly?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Parker by Perfectly](https://ph-files.imgix.net/721a8d8c-540b-47f6-ab92-3e37b0293c2d.jpeg?auto=format)  
-**Keyword**: AI  
+**Keyword**:   
 **VotesCount**: 🔺156  
 **Featured**: Yes  
 **CreatedAt**: 2026-03-13 07:01 AM (UTC)  
@@ -103,7 +102,7 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/PBJC3XAVDZNMHC?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/hackmamba?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Fowel by Hackmamba](https://ph-files.imgix.net/5b6c8347-899c-48f8-bc9e-6557a0dda723.png?auto=format)  
-**Keyword**:   
+**Keyword**: Fowel  
 **VotesCount**: 🔺126  
 **Featured**: Yes  
 **CreatedAt**: 2026-03-13 07:01 AM (UTC)  

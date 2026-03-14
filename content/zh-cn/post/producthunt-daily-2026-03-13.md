@@ -1,12 +1,11 @@
 ---
 title: Product Hunt 今日热榜 | 2026-03-14
-date: 2026-03-14 07:54:16+0000
+date: 2026-03-14 08:06:20+0000
 image: https://ph-files.imgix.net/859029f8-50d1-4061-8804-55e90a7474e1.png?auto=format
-tags: ["AI邮件应用", "低价高效", "Inbox Zero"]
 ---
 
 ## 1. Perplexity Computer Skills  
-**标语**:   
+**标语**: 使用可  
 **介绍**:   
 **网站**: [立即访问](https://www.producthunt.com/r/HFTULLHPO6EX3A?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/perplexity-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
@@ -32,13 +31,13 @@ tags: ["AI邮件应用", "低价高效", "Inbox Zero"]
 ---  
 
 ## 3. GStack  
-**标语**:   
+**标语**: 使用 Garry Tan 的完整 Claude Code 设置  
 **介绍**:   
 **网站**: [立即访问](https://www.producthunt.com/r/F63DN2WF7ASVO5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/gstack?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![GStack](https://ph-files.imgix.net/f50fe007-23ff-41f8-a507-eddaf6c1ebfb.png?auto=format)  
 **关键词**:   
-**票数**: 🔺353  
+**票数**: 🔺355  
 **是否精选**: 是  
 **发布时间**: 2026年03月13日 PM03:01 (北京时间)  
 
@@ -58,7 +57,7 @@ tags: ["AI邮件应用", "低价高效", "Inbox Zero"]
 ---  
 
 ## 5. Perfectly  
-**标语**:   
+**标语**: 首家 AI 原生招聘机构  
 **介绍**:   
 **网站**: [立即访问](https://www.producthunt.com/r/DF2BM2NRE4AHO4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/perfectly?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
@@ -84,7 +83,7 @@ tags: ["AI邮件应用", "低价高效", "Inbox Zero"]
 ---  
 
 ## 7. Pre  
-**标语**:   
+**标语**: Pre 让任何人都成为操作员。  
 **介绍**:   
 **网站**: [立即访问](https://www.producthunt.com/r/IA4U5PYSUQMTBX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/pre-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
@@ -115,7 +114,7 @@ tags: ["AI邮件应用", "低价高效", "Inbox Zero"]
 **网站**: [立即访问](https://www.producthunt.com/r/WEKGWUEKLA5C5L?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/replylessai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![ReplylessAI](https://ph-files.imgix.net/db3ab186-0972-42a3-9af9-f0f29f301e5a.png?auto=format)  
-**关键词**: AI邮件应用,低价高效,Inbox Zero,邮件分类,智能邮件管理,无订  
+**关键词**:   
 **票数**: 🔺122  
 **是否精选**: 是  
 **发布时间**: 2026年03月13日 PM03:01 (北京时间)  
