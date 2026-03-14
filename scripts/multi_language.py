@@ -326,7 +326,7 @@ def main():
     # 每个post需要3次
     for post in posts:
         products.append(Product(language=lang, **post))
-        sleep(15)  # 每5秒钟生成一个Product对象
+        sleep(1)  # 每5秒钟生成一个Product对象
     generate_markdown(products, date_str, language=lang)
 
 
