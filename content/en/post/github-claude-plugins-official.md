@@ -1,9 +1,9 @@
 ---
 title: claude-plugins-official
-date: 2026-02-01T15:46:13+08:00
+date: 2026-03-15T15:50:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1631785641419-eef018e28ef9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njk5MzE5Mjd8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1581924498057-96568f743589?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM1NjEwMjB8&ixlib=rb-4.1.0
+tags: ['github',Claude Code, plugins, directory]
 categories: ['github']
 ---
 
@@ -52,6 +52,10 @@ plugin-name/
 ├── skills/              # Skill definitions (optional)
 └── README.md            # Documentation
 ```
+
+## License
+
+Please see each linked plugin for the relevant LICENSE file.
 
 ## Documentation
 
