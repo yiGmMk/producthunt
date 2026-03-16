@@ -1,8 +1,8 @@
 ---
 title: OpenViking
-date: 2026-03-15T15:50:32+08:00
+date: 2026-03-16T16:12:30+08:00
 draft: False
-image: https://images.unsplash.com/photo-1601158858548-e2098d2efd7d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM1NjEwMjB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1468206539365-d7b0b2be033e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM2NDg3MjB8&ixlib=rb-4.1.0
 tags: ['github',OpenViking, AI Agents, context database]
 categories: ['github']
 ---
