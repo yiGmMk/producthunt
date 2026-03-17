@@ -1,23 +1,13 @@
 ---
 title: claude-mem
-date: 2026-02-06T15:55:53+08:00
+date: 2026-03-17T15:58:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1679238391464-295a8f5597f5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzAzNjQ1MjZ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1541078561702-8b4f0854971c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM3MzQyNzZ8&ixlib=rb-4.1.0
+tags: ['github',Claude-Mem, memory compression, persistent context]
 categories: ['github']
 ---
 
 # [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem)
-
-<p align="center">
-  Official $CMEM Links: 
-  <a href="https://bags.fm/2TsmuYUrsctE57VLckZBYEEzdokUF8j8e1GavekWBAGS">Bags.fm</a> •
-  <a href="https://jup.ag/tokens/2TsmuYUrsctE57VLckZBYEEzdokUF8j8e1GavekWBAGS">Jupiter</a> •
-  <a href="https://photon-sol.tinyastro.io/en/lp/6MzFAkWnac6GSK1EdFX93dZeukGfzrFq4UHWarhGSQyd">Photon</a> •
-  <a href="https://dexscreener.com/solana/6mzfakwnac6gsk1edfx93dzeukgfzrfq4uhwarhgsqyd">DEXScreener</a>
-</p>
-
-<p align="center">Official CA: 2TsmuYUrsctE57VLckZBYEEzdokUF8j8e1GavekWBAGS (on Solana)</p>
 
 <h1 align="center">
   <br>
@@ -35,11 +25,12 @@ categories: ['github']
   <a href="docs/i18n/README.zh.md">🇨🇳 中文</a> •
   <a href="docs/i18n/README.zh-tw.md">🇹🇼 繁體中文</a> •
   <a href="docs/i18n/README.ja.md">🇯🇵 日本語</a> •
+  <a href="docs/i18n/README.pt.md">🇵🇹 Português</a> •
   <a href="docs/i18n/README.pt-br.md">🇧🇷 Português</a> •
   <a href="docs/i18n/README.ko.md">🇰🇷 한국어</a> •
   <a href="docs/i18n/README.es.md">🇪🇸 Español</a> •
   <a href="docs/i18n/README.de.md">🇩🇪 Deutsch</a> •
-  <a href="docs/i18n/README.fr.md">🇫🇷 Français</a>
+  <a href="docs/i18n/README.fr.md">🇫🇷 Français</a> •
   <a href="docs/i18n/README.he.md">🇮🇱 עברית</a> •
   <a href="docs/i18n/README.ar.md">🇸🇦 العربية</a> •
   <a href="docs/i18n/README.ru.md">🇷🇺 Русский</a> •
@@ -49,6 +40,7 @@ categories: ['github']
   <a href="docs/i18n/README.tr.md">🇹🇷 Türkçe</a> •
   <a href="docs/i18n/README.uk.md">🇺🇦 Українська</a> •
   <a href="docs/i18n/README.vi.md">🇻🇳 Tiếng Việt</a> •
+  <a href="docs/i18n/README.tl.md">🇵🇭 Tagalog</a> •
   <a href="docs/i18n/README.id.md">🇮🇩 Indonesia</a> •
   <a href="docs/i18n/README.th.md">🇹🇭 ไทย</a> •
   <a href="docs/i18n/README.hi.md">🇮🇳 हिन्दी</a> •
@@ -128,6 +120,18 @@ Start a new Claude Code session in the terminal and enter the following commands
 ```
 
 Restart Claude Code. Context from previous sessions will automatically appear in new sessions.
+
+> **Note:** Claude-Mem is also published on npm, but `npm install -g claude-mem` installs the **SDK/library only** — it does not register the plugin hooks or set up the worker service. To use Claude-Mem as a plugin, always install via the `/plugin` commands above.
+
+### 🦞 OpenClaw Gateway
+
+Install claude-mem as a persistent memory plugin on [OpenClaw](https://openclaw.ai) gateways with a single command:
+
+```bash
+curl -fsSL https://install.cmem.ai/openclaw.sh | bash
+```
+
+The installer handles dependencies, plugin setup, AI provider configuration, worker startup, and optional real-time observation feeds to Telegram, Discord, Slack, and more. See the [OpenClaw Integration Guide](https://docs.claude-mem.ai/openclaw-integration) for details.
 
 **Key Features:**
 
@@ -215,7 +219,6 @@ Claude-Mem provides intelligent memory search through **4 MCP tools** following 
 1. **`search`** - Search memory index with full-text queries, filters by type/date/project
 2. **`timeline`** - Get chronological context around a specific observation or query
 3. **`get_observations`** - Fetch full observation details by IDs (always batch multiple IDs)
-4. **`__IMPORTANT`** - Workflow documentation (always visible to Claude)
 
 **Example Usage:**
 
@@ -338,3 +341,9 @@ See the [LICENSE](LICENSE) file for full details.
 ---
 
 **Built with Claude Agent SDK** | **Powered by Claude Code** | **Made with TypeScript**
+
+---
+
+### What About $CMEM?
+
+$CMEM is a solana token created by a 3rd party without Claude-Mem's prior consent, but officially embraced by the creator of Claude-Mem (Alex Newman, @thedotmack). The token acts as a community catalyst for growth and a vehicle for bringing real-time agent data to the developers and knowledge workers that need it most. $CMEM: 2TsmuYUrsctE57VLckZBYEEzdokUF8j8e1GavekWBAGS

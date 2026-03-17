@@ -1,8 +1,8 @@
 ---
 title: project-nomad
-date: 2026-03-16T16:12:17+08:00
+date: 2026-03-17T15:58:25+08:00
 draft: False
-image: https://images.unsplash.com/photo-1664448010557-cd3c22c21335?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM2NDg3MjB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1540940046315-20e42773d0d6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM3MzQyNzZ8&ixlib=rb-4.1.0
 tags: ['github',offline knowledge server, AI chat, education platform]
 categories: ['github']
 ---

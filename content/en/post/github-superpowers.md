@@ -1,9 +1,9 @@
 ---
 title: superpowers
-date: 2026-03-16T16:12:52+08:00
+date: 2026-03-17T15:58:36+08:00
 draft: False
-image: https://images.unsplash.com/photo-1561403938-b604fb9b9147?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM2NDg3MjB8&ixlib=rb-4.1.0
-tags: ['github',Superpowers,software development,skills library]
+image: https://images.unsplash.com/photo-1690147022157-5fdfaa28cd6d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM3MzQyNzZ8&ixlib=rb-4.1.0
+tags: ['github',software development, coding agents, skills library]
 categories: ['github']
 ---
 
@@ -185,7 +185,14 @@ Skills update automatically when you update the plugin:
 
 MIT License - see LICENSE file for details
 
+## Community
+
+Superpowers is built by [Jesse Vincent](https://blog.fsck.com) and the rest of the folks at [Prime Radiant](https://primeradiant.com).
+
+For community support, questions, and sharing what you're building with Superpowers, join us on [Discord](https://discord.gg/Jd8Vphy9jq).
+
 ## Support
 
+- **Discord**: [Join us on Discord](https://discord.gg/Jd8Vphy9jq)
 - **Issues**: https://github.com/obra/superpowers/issues
 - **Marketplace**: https://github.com/obra/superpowers-marketplace
