@@ -1,9 +1,9 @@
 ---
 title: GitNexus
-date: 2026-03-17T15:58:49+08:00
+date: 2026-03-18T15:58:54+08:00
 draft: False
-image: https://images.unsplash.com/photo-1602828889956-45ec6cee6758?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM3MzQyNzZ8&ixlib=rb-4.1.0
-tags: ['github',GitNexus, AI agents, code analysis]
+image: https://images.unsplash.com/photo-1634110927431-5c8ed402e7ad?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM4MjA3MDB8&ixlib=rb-4.1.0
+tags: ['github',GitNexus, knowledge graph, code analysis]
 categories: ['github']
 ---
 
