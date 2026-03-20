@@ -1,9 +1,9 @@
 ---
 title: claude-hud
-date: 2026-03-19T15:52:27+08:00
+date: 2026-03-20T15:52:06+08:00
 draft: False
-image: https://images.unsplash.com/photo-1466837838619-c8f5b8f0c166?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM5MDY3MzZ8&ixlib=rb-4.1.0
-tags: ['github',Claude HUD,plugin,statusline]
+image: https://images.unsplash.com/photo-1453324044162-a4e5f32b7d6c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM5OTMwNzd8&ixlib=rb-4.1.0
+tags: ['github',Claude HUD,plugin,Claude Code]
 categories: ['github']
 ---
 
@@ -55,7 +55,7 @@ Then run the install command below in that session. This is a [Claude Code platf
 /claude-hud:setup
 ```
 
-Done! The HUD appears immediately — no restart needed.
+Done! Restart Claude Code to load the new statusLine config, then the HUD will appear.
 
 ---
 
@@ -261,6 +261,10 @@ To disable, set `display.showUsage` to `false`.
 **Tool/agent/todo lines missing?**
 - These are hidden by default — enable with `showTools`, `showAgents`, `showTodos` in config
 - They also only appear when there's activity to show
+
+**HUD not appearing after setup?**
+- Restart Claude Code so it picks up the new statusLine config
+- On macOS, fully quit Claude Code and run `claude` again in your terminal
 
 ---
 

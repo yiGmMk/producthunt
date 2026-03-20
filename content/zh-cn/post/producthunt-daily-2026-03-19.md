@@ -1,0 +1,139 @@
+---
+title: Product Hunt 今日热榜 | 2026-03-20
+date: 2026-03-20 07:50:20+0000
+image: https://ph-files.imgix.net/bf776ea0-d07e-468b-80d9-4dd6712a639a.png?auto=format
+tags: ["Google Stitch 2.0", "AI设计工具", "自然语言UI设计"]
+---
+
+## 1. Stitch 2.0 by Google  
+**标语**: Vibe设计 秒速打造精美、生产就绪的用户界面  
+**介绍**: 遇见Stitch，你的AI原生设计伙伴。使用自然语言、语音和情境感知代理，在高保真UI上实现创作、迭代与协作。在同一画布中跨越图像、代码与文本进行设计，即时生成原型，并借助内置设计系统和DESIGN.md保持一致性。从灵感到界面，仅需数秒——比以往更快速、更智能、更直观。  
+**网站**: [立即访问](https://www.producthunt.com/r/FCKF6O6HKHV32R?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/stitch-2-0-by-google-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Stitch 2.0 by Google](https://ph-files.imgix.net/bf776ea0-d07e-468b-80d9-4dd6712a639a.png?auto=format)  
+**关键词**: Google Stitch 2.0, AI设计工具, 自然语言UI设计, 高保真界面, 实时原型生成, 多模态设计画布, 设计系统一致性, 快速界面开发  
+**票数**: 🔺608  
+**是否精选**: 是  
+**发布时间**: 2026年03月19日 PM03:01 (北京时间)  
+
+---  
+
+## 2. MiniMax-M2.7  
+**标语**: 自主智能体驱动的自进化人工智能模型  
+**介绍**: MiniMax M2.7是一款自我进化的AI模型，它帮助构建了自身的能力。该模型能够创建代理工具，通过代理团队进行协作，并处理编码、调试和研究等复杂任务。凭借出色的SWE-Pro性能以及缩短的干预时间，它超越了静态AI，成为能够持续学习、适应并在最少人工干预下执行复杂工作的系统。通过API和MiniMax Agent，可供致力于推动AI原生工作流程的开发人员使用。  
+**网站**: [立即访问](https://www.producthunt.com/r/QWPGVYW4USQ4SJ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/minimax-agent?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![MiniMax-M2.7](https://ph-files.imgix.net/154ab794-a7af-4642-8f28-ff60933f2a51.png?auto=format)  
+**关键词**: MiniMax-M2.7, 自进化AI模型, 自主智能体, Agent团队协作, 复杂任务处理, SWE-Pro性能, API接口, AI原生工作流  
+**票数**: 🔺347  
+**是否精选**: 是  
+**发布时间**: 2026年03月19日 PM03:01 (北京时间)  
+
+---  
+
+## 3. InfrOS  
+**标语**: 在发布前预测和验证云架构  
+**介绍**: 对于构建云系统的团队而言，InfrOS能够设计并验证与您的优先事项相匹配、本质优化的架构。它不仅预测结果，更在部署前通过仿真进行验证，帮助您随时间推移，在可控状态下持续演进基础设施。  
+**网站**: [立即访问](https://www.producthunt.com/r/JMODKEWNZJOEM5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/infros?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![InfrOS](https://ph-files.imgix.net/e760b1e5-9a52-447c-8702-a08a597ca3d2.png?auto=format)  
+**关键词**: InfrOS,云架构预测,架构验证,云端模拟,基础设施优化,部署前测试  
+**票数**: 🔺311  
+**是否精选**: 是  
+**发布时间**: 2026年03月19日 PM03:01 (北京时间)  
+
+---  
+
+## 4. Netlify.new  
+**标语**: 在 Netlify 上仅需一个提示即可启动项目。  
+**介绍**: 仅需一个提示即可在Netlify启动项目——无需代码库或本地设置！描述你的应用程序，选择AI助手（Claude、Gemini或Codex），即可立即获得可运行的生产环境实时URL。在真实的Netlify基础设施上进行就地迭代，内置表单和无服务器功能支持。传统方法依然可用，但现在你可以从提示直接生成真实产品，无需后续迁移。当你准备好的时候，Git功能随时可用。最快体验方式：netlify.new  
+**网站**: [立即访问](https://www.producthunt.com/r/X4EY7ZAP7OYZHK?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/netlify?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Netlify.new](https://ph-files.imgix.net/7585f49d-3700-4a2f-964d-6daba1fdf75f.png?auto=format)  
+**关键词**: Netlify.new, AI项目启动, 无代码设置, 实时生产URL, AI代理选择, 即时迭代, Netlify基础设施, 无服务器函数, 快速原型  
+**票数**: 🔺287  
+**是否精选**: 是  
+**发布时间**: 2026年03月19日 PM03:01 (北京时间)  
+
+---  
+
+## 5. OctoClaw  
+**标语**: 为营销、销售、支持等领域聘请人工智能专家。  
+**介绍**: OctoClaw为您提供AI专家，实际执行商业任务——撰写内容、筛选潜在客户、回复客户咨询，并在您的各工具间协调工作流程。  
+**网站**: [立即访问](https://www.producthunt.com/r/B6QI56ORHI6MW3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/octoclaw?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![OctoClaw](https://ph-files.imgix.net/a733cc8c-9a7f-4433-8d0c-6858f2c648fa.png?auto=format)  
+**关键词**: OctoClaw, AI专家, 营销, 销售, 支持, 内容撰写, 潜在客户筛选, 客户回复, 工作流协调  
+**票数**: 🔺241  
+**是否精选**: 是  
+**发布时间**: 2026年03月19日 PM03:01 (北京时间)  
+
+---  
+
+## 6. Comet for iOS  
+**标语**: Perplexity推出的移动端智能AI浏览器与助手  
+**介绍**: Comet是首款为移动端打造的智能AI浏览器——跨标签页总结、语音对话聊天、整理浏览内容、屏蔽干扰信息，让AI助手在您掌控下执行操作。这是移动浏览的至臻之选。Comet iOS版现已登陆苹果应用商店。  
+**网站**: [立即访问](https://www.producthunt.com/r/U4SOBCCNE6I4ER?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/perplexity-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Comet for iOS](https://ph-files.imgix.net/48a98ace-e7ff-4f5a-95cb-c0a25391e7a2.webp?auto=format)  
+**关键词**: Comet iOS,Perplexity,AI浏览器,移动助手,语音交互,网页摘要,多标签管理,浏览防干扰,AI代理操作,App Store发布  
+**票数**: 🔺190  
+**是否精选**: 是  
+**发布时间**: 2026年03月19日 PM03:01 (北京时间)  
+
+---  
+
+## 7. Cimanote  
+**标语**: 快速、简洁的笔记应用Evernote曾经是  
+**介绍**: 印象笔记价格翻了三倍，免费版仅限一台设备，每次更新都变得更慢。受够了。Cimanote正是印象笔记曾经的模样：快速、简洁、无冗余。即刻加载 · 全设备支持 · 富文本编辑器 · 支持导入印象笔记数据（笔记、笔记本、标签、附件，完整保留） · 实时协作 · 您的数据随时可导出。前500名用户首年完全免费。无需绑定银行卡。之后每月仅6美元  
+**网站**: [立即访问](https://www.producthunt.com/r/PD44QI4PNYVON4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/cimanote?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Cimanote](https://ph-files.imgix.net/74c0d831-3ca5-4d7a-9ca3-e62b9313d336.png?auto=format)  
+**关键词**: Cimanote,快速简洁笔记应用,替代Evernote,即时加载,全设备同步,富文本编辑器,Evernote数据导入,实时协作,数据可导出,首年免费  
+**票数**: 🔺161  
+**是否精选**: 是  
+**发布时间**: 2026年03月19日 PM03:01 (北京时间)  
+
+---  
+
+## 8. PixelClaw  
+**标语**: 栖息于你Dock栏上的小小像素螃蟹  
+**介绍**: PixelClaw是一只生活在Mac Dock上的微型动画螃蟹，当Claude Code在后台工作时，它能为您带来有趣的观赏和互动体验。它会打盹、跳跃，还能追逐您投喂的苹果。  
+**网站**: [立即访问](https://www.producthunt.com/r/VKEHNPPUAYEI2W?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/pixelclaw?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![PixelClaw](https://ph-files.imgix.net/a51c2fbd-4422-450f-ba15-62b73516c203.jpeg?auto=format)  
+**关键词**: PixelClaw, Mac Dock, 动态螃蟹, 桌面宠物, 动画, 互动娱乐, 苹果追逐, 背景运行  
+**票数**: 🔺153  
+**是否精选**: 是  
+**发布时间**: 2026年03月19日 PM03:01 (北京时间)  
+
+---  
+
+## 9. Lucent  
+**标语**: AI监控您的会话回放并识别问题  
+**介绍**: Lucent是一款全天候监控会话回放的AI，能够实时自动检测用户遇到的各类问题。Reducto、Browser Use以及Productlane等领先的工程团队均信赖其服务。
+
+注：以上译文基于用户提供的英文信息进行翻译与润色，其中"Reducto"、"Browser Use"和"Productlane"为保留原名的企业名称。  
+**网站**: [立即访问](https://www.producthunt.com/r/3GWVDBDDKSSM2H?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/lucent-3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Lucent](https://ph-files.imgix.net/cb6bc341-8bb7-4572-87df-0fa8e98ac61a.png?auto=format)  
+**关键词**: AI会话监控,实时问题检测,用户会话回放,工程团队信赖,自动化问题发现  
+**票数**: 🔺134  
+**是否精选**: 是  
+**发布时间**: 2026年03月19日 PM03:01 (北京时间)  
+
+---  
+
+## 10. talat  
+**标语**: 实时会议记录，仅限您的Mac使用。  
+**介绍**: Talat 能够捕捉您的麦克风和系统音频，实时转录对话双方内容，并将会议转化为可搜索、可编辑的笔记。它完全由您的 Mac 神经引擎驱动：您的音频数据绝不会离开您的设备。您可以选择自定义 LLM 供应商，编写自定义总结提示，自动导出至 Obsidian，通过 webhooks 推送会议数据，或通过 MCP 服务器查询历史记录。它可以与 Granola 及其他工具并行运行，因此您可以无需切换即可试用。  
+**网站**: [立即访问](https://www.producthunt.com/r/YMCHBNLELUWCYI?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/talat?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![talat](https://ph-files.imgix.net/22405103-14a7-40ca-a356-d4bd28baeb72.png?auto=format)  
+**关键词**: talat, 实时会议笔记, Mac本地转录, 音频不离设备, 自定义LLM, 自动总结, Obsidian导出, Webhook推送, MCP服务器查询, Granola兼容  
+**票数**: 🔺127  
+**是否精选**: 是  
+**发布时间**: 2026年03月19日 PM03:01 (北京时间)  
+
+---  
+
