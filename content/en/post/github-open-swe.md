@@ -1,9 +1,9 @@
 ---
 title: open-swe
-date: 2026-03-20T15:51:49+08:00
+date: 2026-03-21T15:38:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1611521178062-d4a7ca75ae8c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM5OTMwNzd8&ixlib=rb-4.1.0
-tags: ['github',open source, coding agent, framework]
+image: https://images.unsplash.com/photo-1717324425621-e5a380013379?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwNzg2NzN8&ixlib=rb-4.1.0
+tags: ['github',open source, coding agent, internal framework]
 categories: ['github']
 ---
 

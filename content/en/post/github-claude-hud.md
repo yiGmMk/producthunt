@@ -1,9 +1,9 @@
 ---
 title: claude-hud
-date: 2026-03-20T15:52:06+08:00
+date: 2026-03-21T15:38:03+08:00
 draft: False
-image: https://images.unsplash.com/photo-1453324044162-a4e5f32b7d6c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM5OTMwNzd8&ixlib=rb-4.1.0
-tags: ['github',Claude HUD,plugin,Claude Code]
+image: https://images.unsplash.com/photo-1715390321213-c8d88b3e024a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwNzg2NzN8&ixlib=rb-4.1.0
+tags: ['github',Claude HUD, plugin, statusline]
 categories: ['github']
 ---
 
