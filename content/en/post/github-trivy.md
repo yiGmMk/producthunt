@@ -1,9 +1,9 @@
 ---
 title: trivy
-date: 2026-03-06T15:47:37+08:00
+date: 2026-03-22T15:42:57+08:00
 draft: False
-image: https://images.unsplash.com/photo-1571231986806-3492a15e2c50?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI3ODMyMjJ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1530598554585-ee355b518dc9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQxNjUzNDl8&ixlib=rb-4.1.0
+tags: ['github',security scanner, vulnerability detection, container security]
 categories: ['github']
 ---
 

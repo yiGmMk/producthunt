@@ -1,9 +1,9 @@
 ---
 title: opendataloader-pdf
-date: 2026-03-21T15:38:37+08:00
+date: 2026-03-22T15:43:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1657615873009-20729d827eb9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwNzg2NzN8&ixlib=rb-4.1.0
-tags: ['github',PDF extraction, accessibility automation, data parsing]
+image: https://images.unsplash.com/photo-1641112388801-91993a4ac9a9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQxNjUzNDl8&ixlib=rb-4.1.0
+tags: ['github',PDF extraction, accessibility automation, open source]
 categories: ['github']
 ---
 
