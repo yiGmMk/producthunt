@@ -1,9 +1,9 @@
 ---
 title: MoneyPrinterV2
-date: 2026-03-22T15:42:39+08:00
+date: 2026-03-23T16:06:27+08:00
 draft: False
-image: https://images.unsplash.com/photo-1540309659131-410b4d012fca?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQxNjUzNDl8&ixlib=rb-4.1.0
-tags: ['github',MoneyPrinterV2,automation,online income]
+image: https://images.unsplash.com/photo-1685450371886-00bb6757c200?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQyNTMxNTN8&ixlib=rb-4.1.0
+tags: ['github',Twitter bot, YouTube shorts, affiliate marketing]
 categories: ['github']
 ---
 
@@ -11,6 +11,8 @@ categories: ['github']
 
 # MoneyPrinter V2
 
+> **Have an idea?** Let’s build it — [reach out](https://forms.gle/bFGvhbYpDJZeoVDRA)
+> 
 > ♥︎ **Sponsor**: The Best AI Chat App: [shiori.ai](https://www.shiori.ai)
 
 ---
