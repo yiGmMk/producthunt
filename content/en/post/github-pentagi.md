@@ -1,9 +1,9 @@
 ---
 title: pentagi
-date: 2026-03-23T16:06:49+08:00
+date: 2026-03-24T15:59:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1685450371886-00bb6757c200?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQyNTMxNTN8&ixlib=rb-4.1.0
-tags: ['github',penetration testing,artificial intelligence,security automation]
+image: https://images.unsplash.com/photo-1505299413771-74d1b455dcaf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQzMzkxMzF8&ixlib=rb-4.1.0
+tags: ['github',PentAGI,penetration testing,artificial intelligence]
 categories: ['github']
 ---
 
@@ -1291,9 +1291,29 @@ OLLAMA_SERVER_API_KEY=your_ollama_cloud_api_key
 OLLAMA_SERVER_MODEL=gpt-oss:120b  # Example: OpenAI OSS 120B model
 ```
 
-**Paid Tier Setup (Multi-Model with Custom Configuration)**
+**Paid Tier Setup (Multi-Model with Pre-built Configuration)**
 
-For paid tiers supporting multiple concurrent models, use custom agent configuration:
+For paid tiers supporting multiple concurrent models, use the pre-built Ollama Cloud configuration:
+
+```bash
+# Using pre-built Ollama Cloud configuration (included in Docker image)
+OLLAMA_SERVER_URL=https://ollama.com
+OLLAMA_SERVER_API_KEY=your_ollama_cloud_api_key
+OLLAMA_SERVER_CONFIG_PATH=/opt/pentagi/conf/ollama-cloud.provider.yml
+```
+
+The pre-built `ollama-cloud.provider.yml` configuration includes optimized model assignments for all agent types:
+- **Simple/Assistant**: `nemotron-3-super:cloud` - Fast general-purpose model
+- **Primary Agent**: `qwen3-coder-next:cloud` - Advanced reasoning with high effort mode
+- **Coder/Pentester**: `qwen3-coder-next:cloud` - Specialized coding models
+- **Searcher**: `qwen3.5:397b-cloud` - Large context for information gathering
+- **Refiner/Refactor**: `glm-5:cloud` - High-quality text refinement
+- **Adviser/Enricher**: `minimax-m2.7:cloud` - Efficient advisory tasks
+- **Installer**: `devstral-2:123b-cloud` - Installation and setup tasks
+
+**Custom Configuration (Advanced)**
+
+To create your own agent configuration, mount a custom file from your host filesystem:
 
 ```bash
 # Using custom provider configuration
@@ -1305,20 +1325,18 @@ OLLAMA_SERVER_CONFIG_PATH=/opt/pentagi/conf/ollama.provider.yml
 PENTAGI_OLLAMA_SERVER_CONFIG_PATH=/path/on/host/my-ollama-config.yml
 ```
 
-The `PENTAGI_OLLAMA_SERVER_CONFIG_PATH` environment variable maps your host configuration file to `/opt/pentagi/conf/ollama.provider.yml` inside the container. Create a custom configuration file defining models for each agent type (simple, primary_agent, coder, etc.) and reference it using this variable.
+The `PENTAGI_OLLAMA_SERVER_CONFIG_PATH` environment variable maps your host configuration file to `/opt/pentagi/conf/ollama.provider.yml` inside the container.
 
 **Example custom configuration** (`my-ollama-config.yml`):
 
 ```yaml
-simple:
-  model: "llama3.1:8b-instruct-q8_0"
-  temperature: 0.6
-  max_tokens: 4096
-
 primary_agent:
-  model: "gpt-oss:120b"
+  model: "qwen3-coder-next:cloud"
   temperature: 1.0
-  max_tokens: 16384
+  top_p: 0.9
+  max_tokens: 32768
+  reasoning:
+    effort: high
 
 coder:
   model: "qwen3-coder:32b"
