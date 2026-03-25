@@ -1,9 +1,9 @@
 ---
 title: MoneyPrinterV2
-date: 2026-03-24T15:59:00+08:00
+date: 2026-03-25T15:58:55+08:00
 draft: False
-image: https://images.unsplash.com/photo-1761744172160-1e261ed121de?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQzMzkxMzF8&ixlib=rb-4.1.0
-tags: ['github',MoneyPrinterV2, automation, online income]
+image: https://images.unsplash.com/photo-1489493512598-d08130f49bea?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ0MjU0Nzl8&ixlib=rb-4.1.0
+tags: ['github',MoneyPrinterV2, automation, GitHub]
 categories: ['github']
 ---
 

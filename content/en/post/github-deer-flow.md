@@ -1,9 +1,9 @@
 ---
 title: deer-flow
-date: 2026-03-24T15:59:13+08:00
+date: 2026-03-25T15:58:33+08:00
 draft: False
-image: https://images.unsplash.com/photo-1600673389204-3f131b16f52e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQzMzkxMzF8&ixlib=rb-4.1.0
-tags: ['github',DeerFlow, super agent, open source]
+image: https://images.unsplash.com/photo-1711330980173-f308124e153d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ0MjU0Nzl8&ixlib=rb-4.1.0
+tags: ['github',deerflow, super agent harness, open source]
 categories: ['github']
 ---
 
@@ -11,7 +11,7 @@ categories: ['github']
 
 # 🦌 DeerFlow - 2.0
 
-English | [中文](./README_zh.md) | [日本語](./README_ja.md)
+English | [中文](./README_zh.md) | [日本語](./README_ja.md) | [Français](./README_fr.md) | [Русский](./README_ru.md)
 
 [
 [
@@ -214,6 +214,9 @@ make docker-start   # Start services (auto-detects sandbox mode from config.yaml
 
 `make docker-start` starts `provisioner` only when `config.yaml` uses provisioner mode (`sandbox.use: deerflow.community.aio_sandbox:AioSandboxProvider` with `provisioner_url`).
 Backend processes automatically pick up `config.yaml` changes on the next config access, so model metadata updates do not require a manual restart during development.
+
+> [!TIP]
+> On Linux, if Docker-based commands fail with `permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock`, add your user to the `docker` group and re-login before retrying. See [CONTRIBUTING.md](CONTRIBUTING.md#linux-docker-daemon-permission-denied) for the full fix.
 
 **Production** (builds images locally, mounts runtime config and data):
 
