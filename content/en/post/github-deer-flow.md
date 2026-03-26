@@ -1,9 +1,9 @@
 ---
 title: deer-flow
-date: 2026-03-25T15:58:33+08:00
+date: 2026-03-26T16:06:05+08:00
 draft: False
-image: https://images.unsplash.com/photo-1711330980173-f308124e153d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ0MjU0Nzl8&ixlib=rb-4.1.0
-tags: ['github',deerflow, super agent harness, open source]
+image: https://images.unsplash.com/photo-1660495373272-44b21e183be7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ1MTIzNDF8&ixlib=rb-4.1.0
+tags: ['github',DeerFlow, super agent, open source]
 categories: ['github']
 ---
 
@@ -162,6 +162,7 @@ DeerFlow has newly integrated the intelligent search and crawling toolset indepe
    - Codex CLI reads `~/.codex/auth.json`
    - The Codex Responses endpoint currently rejects `max_tokens` and `max_output_tokens`, so `CodexChatModel` does not expose a request-level token cap
    - Claude Code accepts `CLAUDE_CODE_OAUTH_TOKEN`, `ANTHROPIC_AUTH_TOKEN`, `CLAUDE_CODE_OAUTH_TOKEN_FILE_DESCRIPTOR`, `CLAUDE_CODE_CREDENTIALS_PATH`, or plaintext `~/.claude/.credentials.json`
+   - ACP agent entries are separate from model providers. If you configure `acp_agents.codex`, point it at a Codex ACP adapter such as `npx -y @zed-industries/codex-acp`; the standard `codex` CLI binary is not ACP-compatible by itself
    - On macOS, DeerFlow does not probe Keychain automatically. Export Claude Code auth explicitly if needed:
 
    ```bash
@@ -213,6 +214,7 @@ make docker-start   # Start services (auto-detects sandbox mode from config.yaml
 ```
 
 `make docker-start` starts `provisioner` only when `config.yaml` uses provisioner mode (`sandbox.use: deerflow.community.aio_sandbox:AioSandboxProvider` with `provisioner_url`).
+
 Backend processes automatically pick up `config.yaml` changes on the next config access, so model metadata updates do not require a manual restart during development.
 
 > [!TIP]
