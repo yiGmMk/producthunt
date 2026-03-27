@@ -1,9 +1,9 @@
 ---
 title: last30days-skill
-date: 2026-03-26T16:05:56+08:00
+date: 2026-03-27T16:03:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1713196310873-c9ae4382f859?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ1MTIzNDF8&ixlib=rb-4.1.0
-tags: ['github',last30days, keyword extraction, research tool]
+image: https://images.unsplash.com/photo-1660061260870-e379b650825b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ1OTg2MDV8&ixlib=rb-4.1.0
+tags: ['github',last30days, research tool, Claude Code]
 categories: ['github']
 ---
 
