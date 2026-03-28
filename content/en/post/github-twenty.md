@@ -1,26 +1,13 @@
 ---
 title: twenty
-date: 2025-07-02T15:30:05+08:00
+date: 2026-03-28T15:52:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1651097514002-683b2ff49c66?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE0NDEzNTl8&ixlib=rb-4.1.0
-tags: ['github',Open-Source,CRM,Twenty,self-hosting,workflow automation,customizable,permissions,Kanban]
+image: https://images.unsplash.com/photo-1584170468686-9a996d0e406e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ2ODQzMTZ8&ixlib=rb-4.1.0
+tags: ['github',open source CRM, customizable, workflow automation]
 categories: ['github']
 ---
 
 # [twentyhq/twenty](https://github.com/twentyhq/twenty)
-
-<br />
-
-<p align="center">
-  <a href="https://www.producthunt.com/products/twenty-crm">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/twentyhq/twenty/refs/heads/main/packages/twenty-website/public/images/readme/product-hunt-banner-light.png" />
-      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/twentyhq/twenty/refs/heads/main/packages/twenty-website/public/images/readme/product-hunt-banner-light.png" />
-      <img src="./packages/twenty-website/public/images/readme/product-hunt-banner-light.png" alt="Product Hunt Banner" />
-    </picture>
-  </a>
-</p>
-<br />
 
 <p align="center">
   <a href="https://www.twenty.com">
@@ -30,7 +17,7 @@ categories: ['github']
 
 <h2 align="center" >The #1 Open-Source CRM </h2>
 
-<p align="center"><a href="https://twenty.com">🌐 Website</a> · <a href="https://twenty.com/developers">📚 Documentation</a> · <a href="https://github.com/orgs/twentyhq/projects/1"><img src="./packages/twenty-website/public/images/readme/planner-icon.svg" width="12" height="12"/> Roadmap </a> · <a href="https://discord.gg/cx5n4Jzs57"><img src="./packages/twenty-website/public/images/readme/discord-icon.svg" width="12" height="12"/> Discord</a> · <a href="https://www.figma.com/file/xt8O9mFeLl46C5InWwoMrN/Twenty"><img src="./packages/twenty-website/public/images/readme/figma-icon.png"  width="12" height="12"/>  Figma</a></p> 
+<p align="center"><a href="https://twenty.com">🌐 Website</a> · <a href="https://docs.twenty.com">📚 Documentation</a> · <a href="https://github.com/orgs/twentyhq/projects/1"><img src="./packages/twenty-website/public/images/readme/planner-icon.svg" width="12" height="12"/> Roadmap </a> · <a href="https://discord.gg/cx5n4Jzs57"><img src="./packages/twenty-website/public/images/readme/discord-icon.svg" width="12" height="12"/> Discord</a> · <a href="https://www.figma.com/file/xt8O9mFeLl46C5InWwoMrN/Twenty"><img src="./packages/twenty-website/public/images/readme/figma-icon.png"  width="12" height="12"/>  Figma</a></p>
 <br />
 
 
@@ -46,13 +33,13 @@ categories: ['github']
 
 <br />
 
-# Installation 
+# Installation
 
-See:  
-🚀 [Self-hosting](https://twenty.com/developers/section/self-hosting)  
-🖥️ [Local Setup](https://twenty.com/developers/local-setup)  
+See:
+🚀 [Self-hosting](https://docs.twenty.com/developers/self-host/capabilities/docker-compose)
+🖥️ [Local Setup](https://docs.twenty.com/developers/contribute/capabilities/local-setup)
 
-# Does the world need another CRM?
+# Why Twenty
 
 We built Twenty for three reasons:
 
@@ -60,13 +47,13 @@ We built Twenty for three reasons:
 
 **A fresh start is required to build a better experience.** We can learn from past mistakes and craft a cohesive experience inspired by new UX patterns from tools like Notion, Airtable or Linear.
 
-**We believe in Open-source and community.** Hundreds of developers are already building Twenty together. Once we have plugin capabilities, a whole ecosystem will grow around it.
+**We believe in open-source and community.** Hundreds of developers are already building Twenty together. Once we have plugin capabilities, a whole ecosystem will grow around it.
 
 <br />
 
 # What You Can Do With Twenty
 
-Please feel free to flag any specific needs you have by creating an issue.   
+Please feel free to flag any specific needs you have by creating an issue.
 
 Below are a few features we have implemented to date:
 
@@ -133,7 +120,7 @@ Below are a few features we have implemented to date:
 - [TypeScript](https://www.typescriptlang.org/)
 - [Nx](https://nx.dev/)
 - [NestJS](https://nestjs.com/), with [BullMQ](https://bullmq.io/), [PostgreSQL](https://www.postgresql.org/), [Redis](https://redis.io/)
-- [React](https://reactjs.org/), with [Recoil](https://recoiljs.org/), [Emotion](https://emotion.sh/) and [Lingui](https://lingui.dev/)
+- [React](https://reactjs.org/), with [Jotai](https://jotai.org/), [Linaria](https://linaria.dev/) and [Lingui](https://lingui.dev/)
 
 
 
@@ -144,6 +131,7 @@ Below are a few features we have implemented to date:
   <a href="https://greptile.com"><img src="./packages/twenty-website/public/images/readme/greptile.png" height="30" alt="Greptile" /></a>
   <a href="https://sentry.io/"><img src="./packages/twenty-website/public/images/readme/sentry.png" height="30" alt="Sentry" /></a>
   <a href="https://crowdin.com/"><img src="./packages/twenty-website/public/images/readme/crowdin.png" height="30" alt="Crowdin" /></a>
+  <a href="https://e2b.dev/"><img src="./packages/twenty-website/public/images/readme/e2b.svg" height="30" alt="E2B" /></a>
 </p>
 
   Thanks to these amazing services that we use and recommend for UI testing (Chromatic), code review (Greptile), catching bugs (Sentry) and translating (Crowdin).
@@ -153,7 +141,7 @@ Below are a few features we have implemented to date:
 
 - Star the repo
 - Subscribe to releases (watch -> custom -> releases)
-- Follow us on [Twitter](https://twitter.com/twentycrm) or [LinkedIn](https://www.linkedin.com/company/twenty/) 
+- Follow us on [Twitter](https://twitter.com/twentycrm) or [LinkedIn](https://www.linkedin.com/company/twenty/)
 - Join our [Discord](https://discord.gg/cx5n4Jzs57)
-- Improve translations on [Crowdin](https://twenty.crowdin.com/twenty) 
-- [Contributions](https://github.com/twentyhq/twenty/contribute) are, of course, most welcome! 
+- Improve translations on [Crowdin](https://twenty.crowdin.com/twenty)
+- [Contributions](https://github.com/twentyhq/twenty/contribute) are, of course, most welcome!
