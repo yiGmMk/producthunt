@@ -1,9 +1,9 @@
 ---
 title: AI-Scientist-v2
-date: 2026-03-28T15:52:26+08:00
+date: 2026-03-29T15:56:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1546236634-dc83339d6167?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ2ODQzMTZ8&ixlib=rb-4.1.0
-tags: ['github',AI Scientist, automated research, agentic tree search]
+image: https://images.unsplash.com/photo-1617605875475-3e903abae832?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ3NzA5Mzd8&ixlib=rb-4.1.0
+tags: ['github',AI Scientist, automated discovery, agentic tree search]
 categories: ['github']
 ---
 

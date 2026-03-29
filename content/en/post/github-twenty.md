@@ -1,9 +1,9 @@
 ---
 title: twenty
-date: 2026-03-28T15:52:44+08:00
+date: 2026-03-29T15:56:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1584170468686-9a996d0e406e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ2ODQzMTZ8&ixlib=rb-4.1.0
-tags: ['github',open source CRM, customizable, workflow automation]
+image: https://images.unsplash.com/photo-1593301705585-247f85703787?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ3NzA5Mzd8&ixlib=rb-4.1.0
+tags: ['github',open source CRM,customer relationship management,customization]
 categories: ['github']
 ---
 

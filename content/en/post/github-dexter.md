@@ -1,9 +1,9 @@
 ---
 title: dexter
-date: 2026-03-27T16:03:59+08:00
+date: 2026-03-29T15:56:27+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591050125494-34637aa07dc7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ1OTg2MDV8&ixlib=rb-4.1.0
-tags: ['github',financial research agent, autonomous agent, financial data analysis]
+image: https://images.unsplash.com/photo-1539780884365-f4eb65052467?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ3NzA5Mzd8&ixlib=rb-4.1.0
+tags: ['github',autonomous financial research, intelligent task planning, realtime market data]
 categories: ['github']
 ---
 
