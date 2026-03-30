@@ -1,9 +1,9 @@
 ---
 title: OpenBB
-date: 2026-02-24T15:59:42+08:00
+date: 2026-03-30T16:25:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1695760010535-3168399f38cc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE5MTk5NTV8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1653659995710-334e7b8e8cb6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ4NTkwODZ8&ixlib=rb-4.1.0
+tags: ['github',OpenBB,finance,data platform]
 categories: ['github']
 ---
 
