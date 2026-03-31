@@ -1,9 +1,9 @@
 ---
 title: Deep-Live-Cam
-date: 2026-03-29T15:55:57+08:00
+date: 2026-03-31T16:14:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1579767659275-e0964c3ac91f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ3NzA5Mzd8&ixlib=rb-4.1.0
-tags: ['github',deepfake, face swap, real-time]
+image: https://images.unsplash.com/photo-1500993855538-c6a99f437aa7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ5NDQ4MzN8&ixlib=rb-4.1.0
+tags: ['github',face swap, deepfake, realtime]
 categories: ['github']
 ---
 
