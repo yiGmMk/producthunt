@@ -1,9 +1,9 @@
 ---
 title: oh-my-claudecode
-date: 2026-03-30T16:25:08+08:00
+date: 2026-04-01T16:20:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1693928803328-48ca657b4caa?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ4NTkwODZ8&ixlib=rb-4.1.0
-tags: ['github',Claude Code orchestration multiagent automation]
+image: https://images.unsplash.com/photo-1677247191557-4abd28b7c387?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUwMzE2MDh8&ixlib=rb-4.1.0
+tags: ['github',oh-my-claudecode, Claude Code orchestration, multi-agent workflows]
 categories: ['github']
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: hermes-agent
-date: 2026-03-30T16:25:28+08:00
+date: 2026-04-01T16:21:11+08:00
 draft: False
-image: https://images.unsplash.com/photo-1625914613269-e22736627546?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ4NTkwODZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1594897030264-ab7d87efc473?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUwMzE2MDh8&ixlib=rb-4.1.0
 tags: ['github',Hermes Agent, AI agent, Nous Research]
 categories: ['github']
 ---

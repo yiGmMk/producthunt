@@ -1,9 +1,9 @@
 ---
 title: claude-howto
-date: 2026-03-31T16:14:17+08:00
+date: 2026-04-01T16:20:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1711409785043-17c7ae9ab8ff?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ5NDQ4MzN8&ixlib=rb-4.1.0
-tags: ['github',Claude Code, tutorial guide, GitHub repository]
+image: https://images.unsplash.com/photo-1650361128424-00e941139e5d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUwMzE2MDh8&ixlib=rb-4.1.0
+tags: ['github',Claude Code, tutorial, automation]
 categories: ['github']
 ---
 
@@ -13,6 +13,12 @@ categories: ['github']
   <source media="(prefers-color-scheme: dark)" srcset="resources/logos/claude-howto-logo-dark.svg">
   <img alt="Claude How To" src="resources/logos/claude-howto-logo.svg">
 </picture>
+
+<p align="center">
+  <a href="https://github.com/trending">
+    <img src="https://img.shields.io/badge/GitHub-🔥%20%231%20Trending-purple?style=for-the-badge&logo=github"/>
+  </a>
+</p>
 
 [![GitHub Stars](https://img.shields.io/github/stars/luongnv89/claude-howto?style=flat&color=gold)](https://github.com/luongnv89/claude-howto/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/luongnv89/claude-howto?style=flat)](https://github.com/luongnv89/claude-howto/network/members)
