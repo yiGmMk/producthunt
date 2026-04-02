@@ -1,9 +1,9 @@
 ---
 title: VibeVoice
-date: 2026-04-01T16:20:27+08:00
+date: 2026-04-02T16:14:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1594897030264-ab7d87efc473?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUwMzE2MDh8&ixlib=rb-4.1.0
-tags: ['github',VibeVoice, speech AI, open source]
+image: https://images.unsplash.com/photo-1564982547455-b9e810ae9223?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxMTc2MzJ8&ixlib=rb-4.1.0
+tags: ['github',VibeVoice, speech recognition, text to speech]
 categories: ['github']
 ---
 
