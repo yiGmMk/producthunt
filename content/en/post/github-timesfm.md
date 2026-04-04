@@ -1,9 +1,9 @@
 ---
 title: timesfm
-date: 2026-04-02T16:14:24+08:00
+date: 2026-04-04T15:53:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1744105874825-f72b712ab662?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxMTc2MzJ8&ixlib=rb-4.1.0
-tags: ['github',time series forecasting, foundation model, decoder only]
+image: https://images.unsplash.com/photo-1689878211075-168d5358753d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUyODkxNTJ8&ixlib=rb-4.1.0
+tags: ['github',time series forecasting, foundation model, TimesFM]
 categories: ['github']
 ---
 
@@ -35,7 +35,7 @@ This open version is not an officially supported Google product.
 
 ## Update - Mar. 19, 2026
 
-Huge shoutout to [@borealBytes](https://github.com/borealBytes)! TimesFM [SKILLS.md](https://github.com/google-research/timesfm/tree/master/timesfm-forecasting) is out.
+Huge shoutout to [@borealBytes](https://github.com/borealBytes) for adding the support for [AGENTS](https://github.com/google-research/timesfm/blob/master/AGENTS.md)! TimesFM [SKILL.md](https://github.com/google-research/timesfm/tree/master/timesfm-forecasting) is out.
 
 ## Update - Oct. 29, 2025
 

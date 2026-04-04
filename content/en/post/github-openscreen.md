@@ -1,9 +1,9 @@
 ---
 title: openscreen
-date: 2026-04-03T16:06:34+08:00
+date: 2026-04-04T15:53:25+08:00
 draft: False
-image: https://images.unsplash.com/photo-1582516011693-04e5c7be8817?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUyMDM1ODZ8&ixlib=rb-4.1.0
-tags: ['github',screen recording, video editing, open source]
+image: https://images.unsplash.com/photo-1471279766165-2fc3b49bd06f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUyODkxNTJ8&ixlib=rb-4.1.0
+tags: ['github',OpenScreen, screen recording, open source]
 categories: ['github']
 ---
 
