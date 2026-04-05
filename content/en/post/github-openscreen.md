@@ -1,9 +1,9 @@
 ---
 title: openscreen
-date: 2026-04-04T15:53:25+08:00
+date: 2026-04-05T15:59:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1471279766165-2fc3b49bd06f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUyODkxNTJ8&ixlib=rb-4.1.0
-tags: ['github',OpenScreen, screen recording, open source]
+image: https://images.unsplash.com/photo-1592679377566-43b866644aae?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUzNzU5Mzh8&ixlib=rb-4.1.0
+tags: ['github',openscreen, screen studio, recording software]
 categories: ['github']
 ---
 
@@ -18,6 +18,10 @@ categories: ['github']
   <br />
   <a href="https://deepwiki.com/siddharthvaddem/openscreen">
     <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki" />
+  </a>
+  &nbsp;
+  <a href="https://discord.gg/yAQQhRaEeg">
+    <img src="https://img.shields.io/discord/pHAUbcqNd?logo=discord&label=Discord&color=5865F2" alt="Join Discord" />
   </a>
 </p>
 

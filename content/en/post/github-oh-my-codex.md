@@ -1,9 +1,9 @@
 ---
 title: oh-my-codex
-date: 2026-04-04T15:52:44+08:00
+date: 2026-04-05T15:59:27+08:00
 draft: False
-image: https://images.unsplash.com/photo-1642425149556-b6f90e946859?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUyODkxNTJ8&ixlib=rb-4.1.0
-tags: ['github',multi-agent orchestration, codex cli, workflow skills]
+image: https://images.unsplash.com/photo-1540200882611-31297ad57e00?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUzNzU5Mzh8&ixlib=rb-4.1.0
+tags: ['github',oh-my-codex, multi-agent orchestration, Codex CLI]
 categories: ['github']
 ---
 
