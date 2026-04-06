@@ -1,9 +1,9 @@
 ---
 title: onyx
-date: 2026-04-05T15:59:17+08:00
+date: 2026-04-06T16:26:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1470485661945-c52d58c91f51?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUzNzU5Mzh8&ixlib=rb-4.1.0
-tags: ['github',Onyx, AI Platform, LLMs]
+image: https://images.unsplash.com/photo-1614714099415-1d66b69d9297?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU0NjM5MzF8&ixlib=rb-4.1.0
+tags: ['github',AI platform,LLM application,RAG]
 categories: ['github']
 ---
 

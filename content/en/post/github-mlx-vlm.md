@@ -1,9 +1,9 @@
 ---
 title: mlx-vlm
-date: 2026-04-05T15:59:08+08:00
+date: 2026-04-06T16:25:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1601541620646-095f69f81b99?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUzNzU5Mzh8&ixlib=rb-4.1.0
-tags: ['github',MLX-VLM, Vision Language Models, fine-tuning]
+image: https://images.unsplash.com/photo-1723747970651-d992cdef15e3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU0NjM5MzF8&ixlib=rb-4.1.0
+tags: ['github',MLX VLM, vision language models, fine tuning]
 categories: ['github']
 ---
 

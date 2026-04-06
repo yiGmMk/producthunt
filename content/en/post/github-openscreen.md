@@ -1,9 +1,9 @@
 ---
 title: openscreen
-date: 2026-04-05T15:59:39+08:00
+date: 2026-04-06T16:25:59+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592679377566-43b866644aae?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUzNzU5Mzh8&ixlib=rb-4.1.0
-tags: ['github',openscreen, screen studio, recording software]
+image: https://images.unsplash.com/photo-1614714099415-1d66b69d9297?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU0NjM5MzF8&ixlib=rb-4.1.0
+tags: ['github',OpenScreen, screen recording, open source]
 categories: ['github']
 ---
 
@@ -36,21 +36,20 @@ Screen Studio is an awesome product and this is definitely not a 1:1 clone. Open
 OpenScreen is 100% free for personal and commercial use. Use it, modify it, distribute it. (Just be cool 😁 and give a shoutout if you feel like it !)
 
 <p align="center">
-	<img src="public/preview3.png" alt="OpenScreen App Preview 3" style="height: 320px; margin-right: 12px;" />
-	<img src="public/preview4.png" alt="OpenScreen App Preview 4" style="height: 320px; margin-right: 12px;" />
+	<img src="public/preview3.png" alt="OpenScreen App Preview 3" style="height: 0.2467; margin-right: 12px;" />
+	<img src="public/preview4.png" alt="OpenScreen App Preview 4" style="height: 0.1678; margin-right: 12px;" />
 </p>
 
 ## Core Features
-- Record your whole screen or specific windows.
-- Add Automatic zooms or manual zooms (customizable depth levels).
-- Record microphone audio and system audio capture.
-- Customize the duration and position of zooms however you please.
+- Record specific windows or your whole screen.
+- Add automatic or manual zooms (adjustable depth levels) and customize their durarion and position.
+- Record microphone and system audio.
 - Crop video recordings to hide parts.
 - Choose between wallpapers, solid colors, gradients or a custom background.
 - Motion blur for smoother pan and zoom effects.
 - Add annotations (text, arrows, images).
 - Trim sections of the clip.
-- Customize speed at different segments.
+- Customize the speed of different segments.
 - Export in different aspect ratios and resolutions.
 
 ## Installation
@@ -89,9 +88,9 @@ You may need to grant screen recording permissions depending on your desktop env
 
 System audio capture relies on Electron's [desktopCapturer](https://www.electronjs.org/docs/latest/api/desktop-capturer) and has some platform-specific quirks:
 
-- **macOS**: Requires macOS 13+. On macOS 14.2+ you'll be prompted to grant audio capture permission. macOS 12 and below does not support system audio (mic still work).
+- **macOS**: Requires macOS 13+. On macOS 14.2+ you'll be prompted to grant audio capture permission. macOS 12 and below does not support system audio (mic still works).
 - **Windows**: Works out of the box.
-- **Linux**: Needs PipeWire (default on Ubuntu 22.04+, Fedora 34+). Older PulseAudio-only setups may not support system audio (mic should still works).
+- **Linux**: Needs PipeWire (default on Ubuntu 22.04+, Fedora 34+). Older PulseAudio-only setups may not support system audio (mic should still work).
 
 ## Built with
 - Electron
