@@ -1,9 +1,9 @@
 ---
 title: gallery
-date: 2026-04-06T16:25:40+08:00
+date: 2026-04-07T16:19:23+08:00
 draft: False
-image: https://images.unsplash.com/photo-1614714099415-1d66b69d9297?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU0NjM5MzF8&ixlib=rb-4.1.0
-tags: ['github',on-device AI, generative AI, large language models]
+image: https://images.unsplash.com/photo-1705170392971-83e0a18f0fa3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU1NDk5Mzl8&ixlib=rb-4.1.0
+tags: ['github',on-device Generative AI, Large Language Models, Gemma]
 categories: ['github']
 ---
 

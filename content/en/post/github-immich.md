@@ -1,9 +1,9 @@
 ---
 title: immich
-date: 2025-10-04T15:25:23+08:00
+date: 2026-04-07T16:20:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1647970632361-5235c3acbeb6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTk1NjI2MDJ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1685207740297-4c6c4cbf1d60?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU1NDk5Mzl8&ixlib=rb-4.1.0
+tags: ['github',selfhosted, photo management, video management]
 categories: ['github']
 ---
 
@@ -39,7 +39,8 @@ categories: ['github']
   <a href="readme_i18n/README_de_DE.md">Deutsch</a>
   <a href="readme_i18n/README_nl_NL.md">Nederlands</a>
   <a href="readme_i18n/README_tr_TR.md">Türkçe</a>
-  <a href="readme_i18n/README_zh_CN.md">中文</a>
+  <a href="readme_i18n/README_zh_CN.md">简体中文</a>
+  <a href="readme_i18n/README_zh_TW.md">正體中文</a>
   <a href="readme_i18n/README_uk_UA.md">Українська</a>
   <a href="readme_i18n/README_ru_RU.md">Русский</a>
   <a href="readme_i18n/README_pt_BR.md">Português Brasileiro</a>
@@ -128,16 +129,16 @@ Read more about translations [here](https://docs.immich.app/developer/translatio
 
 ## Star history
 
-<a href="https://star-history.com/#immich-app/immich&Date">
+<a href="https://star-history.com/#immich-app/immich&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=immich-app/immich&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=immich-app/immich&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=immich-app/immich&type=Date" width="100%" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=immich-app/immich&type=date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=immich-app/immich&type=date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=immich-app/immich&type=date" width="100%" />
  </picture>
 </a>
 
 ## Contributors
 
-<a href="https://github.com/alextran1502/immich/graphs/contributors">
+<a href="https://github.com/immich-app/immich/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=immich-app/immich" width="100%"/>
 </a>
