@@ -1,9 +1,9 @@
 ---
 title: gallery
-date: 2026-04-08T16:17:00+08:00
+date: 2026-04-09T16:24:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1725921874109-79d1057c7e72?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU2MzYyMTJ8&ixlib=rb-4.1.0
-tags: ['github',Google AI Edge,ondevice generative AI,mobile LLM]
+image: https://images.unsplash.com/photo-1514418197935-e0cac2bb695a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU3MjMwNDR8&ixlib=rb-4.1.0
+tags: ['github',AI Edge Gallery, ondevice generative AI, Gemma 4]
 categories: ['github']
 ---
 

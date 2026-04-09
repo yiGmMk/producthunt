@@ -1,9 +1,9 @@
 ---
 title: LiteRT-LM
-date: 2026-04-08T16:17:09+08:00
+date: 2026-04-09T16:25:02+08:00
 draft: False
-image: https://images.unsplash.com/photo-1544798309-1d60f8594c26?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU2MzYyMTJ8&ixlib=rb-4.1.0
-tags: ['github',LiteRT-LM, edge devices, inference framework]
+image: https://images.unsplash.com/photo-1514418197935-e0cac2bb695a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU3MjMwNDR8&ixlib=rb-4.1.0
+tags: ['github',LiteRT-LM, inference framework, edge devices]
 categories: ['github']
 ---
 

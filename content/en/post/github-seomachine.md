@@ -1,9 +1,9 @@
 ---
 title: seomachine
-date: 2026-03-06T15:47:20+08:00
+date: 2026-04-09T16:24:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1545727527-27672e80532c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI3ODMyMjJ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1599163174357-f9a8bcd20653?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU3MjMwNDR8&ixlib=rb-4.1.0
+tags: ['github',SEO content creation, blog writing, keyword optimization]
 categories: ['github']
 ---
 

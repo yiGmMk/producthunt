@@ -1,9 +1,9 @@
 ---
 title: personaplex
-date: 2026-04-08T16:17:17+08:00
+date: 2026-04-09T16:24:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1664450631808-146f4feca397?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU2MzYyMTJ8&ixlib=rb-4.1.0
-tags: ['github',speech-to-speech, conversational AI, persona control]
+image: https://images.unsplash.com/photo-1685714628080-356a7cddcf66?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU3MjMwNDR8&ixlib=rb-4.1.0
+tags: ['github',PersonaPlex, conversational speech, voice control]
 categories: ['github']
 ---
 
