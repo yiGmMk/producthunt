@@ -1,9 +1,9 @@
 ---
 title: andrej-karpathy-skills
-date: 2026-04-09T16:24:18+08:00
+date: 2026-04-10T16:25:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1599163174357-f9a8bcd20653?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU3MjMwNDR8&ixlib=rb-4.1.0
-tags: ['github',LLM programming guidelines, code simplicity, goal-driven execution]
+image: https://images.unsplash.com/photo-1603808523691-a2f471d415f0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU4MDk0ODd8&ixlib=rb-4.1.0
+tags: ['github',Claude Code, Guidelines, Simplicity]
 categories: ['github']
 ---
 
