@@ -1,9 +1,9 @@
 ---
 title: rowboat
-date: 2026-02-17T15:58:49+08:00
+date: 2026-04-11T15:56:36+08:00
 draft: False
-image: https://images.unsplash.com/photo-1710242549854-e65b4dc782f8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzEzMTUxMDF8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1601917717704-28a5801b9901?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU4OTQxMzB8&ixlib=rb-4.1.0
+tags: ['github',Rowboat,AI coworker,knowledge graph]
 categories: ['github']
 ---
 
@@ -46,18 +46,18 @@ Rowboat connects to your email and meeting notes, builds a long-lived knowledge 
 You can do things like:
 - `Build me a deck about our next quarter roadmap` → generates a PDF using context from your knowledge graph
 - `Prep me for my meeting with Alex` → pulls past decisions, open questions, and relevant threads into a crisp brief (or a voice note)
+- Track a person, company or topic through live notes
 - Visualize, edit, and update your knowledge graph anytime (it’s just Markdown)
 - Record voice memos that automatically capture and update key takeaways in the graph
 
 Download latest for Mac/Windows/Linux: [Download](https://www.rowboatlabs.com/downloads)
 
+⭐ If you find Rowboat useful, please star the repo. It helps more people find it.
 
 ## Demo
+[![Demo](https://github.com/user-attachments/assets/8b9a859b-d4f1-47ca-9d1d-9d26d982e15d)](https://www.youtube.com/watch?v=7xTpciZCfpw)
 
-
-[![Demo](https://github.com/user-attachments/assets/3f560bcf-d93c-4064-81eb-75a9fae31742)](https://www.youtube.com/watch?v=5AWoGo-L16I)
-
-[Watch the full video](https://www.youtube.com/watch?v=5AWoGo-L16I)
+[Watch the full video](https://www.youtube.com/watch?v=7xTpciZCfpw)
 
 ---
 
@@ -70,19 +70,27 @@ Download latest for Mac/Windows/Linux: [Download](https://www.rowboatlabs.com/do
 ### Google setup
 To connect Google services (Gmail, Calendar, and Drive), follow [Google setup](https://github.com/rowboatlabs/rowboat/blob/main/google-setup.md).
 
-### Voice notes
-To enable voice notes (optional), add a Deepgram API key in ~/.rowboat/config/deepgram.json:
+### Voice input
+To enable voice input and voice notes (optional), add a Deepgram API key in `~/.rowboat/config/deepgram.json`
+
+### Voice output
+
+To enable voice output (optional), add an ElevenLabs API key in `~/.rowboat/config/elevenlabs.json`
+
+### Web search
+
+To use Exa research search (optional), add the Exa API key in `~/.rowboat/config/exa-search.json`
+
+### External tools
+
+To enable external tools (optional), you can add any MCP server or use Composio tools by adding an API key in `~/.rowboat/config/composio.json`
+
+All API key files use the same format:
 ```
 {
   "apiKey": "<key>"
 }
 ```
-### Web search
-To use Brave web search (optional), add the Brave API key in ~/.rowboat/config/brave-search.json.
-
-To use Exa research search (optional), add the Exa API key in ~/.rowboat/config/exa-search.json.
-
-(same format as above)
 
 ## What it does
 
@@ -97,8 +105,10 @@ Under the hood, Rowboat maintains an **Obsidian-compatible vault** of plain Mark
 
 Rowboat builds memory from the work you already do, including:
 - **Gmail** (email)
-- **Granola** (meeting notes)
-- **Fireflies** (meeting notes)
+- **Google Calendar** 
+- **Rowboat meeting notes** or **Fireflies**
+
+It also contains a library of product integrations through Composio.dev
 
 ## How it’s different
 
@@ -120,17 +130,15 @@ The result is memory that compounds, rather than retrieval that starts cold ever
 - **Follow-ups**: capture decisions, action items, and owners so nothing gets dropped
 - **On-your-machine help**: create files, summarize into notes, and run workflows using local tools (with explicit, reviewable actions)
 
-## Background agents
+## Live notes
 
-Rowboat can spin up **background agents** to do repeatable work automatically - so routine tasks happen without you having to ask every time.
+Live notes are notes that stay updated automatically. You can create one by typing '@rowboat' on a note. 
 
-Examples:
-- Draft email replies in the background (grounded in your past context and commitments)
-- Generate a daily voice note each morning (agenda, priorities, upcoming meetings)
-- Create recurring project updates from the latest emails/notes
-- Keep your knowledge graph up to date as new information comes in
+- Track a competitor or market topic across X, Reddit, and the news
+- Monitor a person, project, or deal across web or your communications
+- Keep a running summary of any subject you care about
 
-You control what runs, when it runs, and what gets written back into your local Markdown vault.
+Everything is written back into your local Markdown vault. You control what runs and when.
 
 ## Bring your own model
 
@@ -151,11 +159,6 @@ Examples: Exa (web search), Twitter/X, ElevenLabs (voice), Slack, Linear/Jira, G
 - All data is stored locally as plain Markdown
 - No proprietary formats or hosted lock-in
 - You can inspect, edit, back up, or delete everything at any time
-
-
-## Looking for Rowboat Web Studio?
-
-If you’re looking for Rowboat web Studio, start [here](https://docs.rowboatlabs.com/). 
 
 ---
 <div align="center">

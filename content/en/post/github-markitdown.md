@@ -1,9 +1,9 @@
 ---
 title: markitdown
-date: 2026-03-02T15:57:43+08:00
+date: 2026-04-11T15:55:43+08:00
 draft: False
-image: https://images.unsplash.com/photo-1671417722838-3fbaa7f66203?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI0MzgyMjN8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1677057021789-a7a64948aeb5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU4OTQxMzB8&ixlib=rb-4.1.0
+tags: ['github',markitdown, file conversion, markdown]
 categories: ['github']
 ---
 
@@ -20,7 +20,7 @@ categories: ['github']
 
 > [!IMPORTANT]
 > Breaking changes between 0.0.1 to 0.1.0:
-> * Dependencies are now organized into optional feature-groups (further details below). Use `pip install 'markitdown[all]'` to have backward-compatible behavior. 
+> * Dependencies are now organized into optional feature-groups (further details below). Use `pip install 'markitdown[all]'` to have backward-compatible behavior.
 > * convert\_stream() now requires a binary file-like object (e.g., a file opened in binary mode, or an io.BytesIO object). This is a breaking change from the previous version, where it previously also accepted text file-like objects, like io.StringIO.
 > * The DocumentConverter class interface has changed to read from file-like streams rather than file paths. *No temporary files are created anymore*. If you are the maintainer of a plugin, or custom DocumentConverter, you likely need to update your code. Otherwise, if only using the MarkItDown class or CLI (as in these examples), you should not need to change anything.
 
@@ -142,6 +142,38 @@ markitdown --use-plugins path-to-file.pdf
 ```
 
 To find available plugins, search GitHub for the hashtag `#markitdown-plugin`. To develop a plugin, see `packages/markitdown-sample-plugin`.
+
+#### markitdown-ocr Plugin
+
+The `markitdown-ocr` plugin adds OCR support to PDF, DOCX, PPTX, and XLSX converters, extracting text from embedded images using LLM Vision — the same `llm_client` / `llm_model` pattern that MarkItDown already uses for image descriptions. No new ML libraries or binary dependencies required.
+
+**Installation:**
+
+```bash
+pip install markitdown-ocr
+pip install openai  # or any OpenAI-compatible client
+```
+
+**Usage:**
+
+Pass the same `llm_client` and `llm_model` you would use for image descriptions:
+
+```python
+from markitdown import MarkItDown
+from openai import OpenAI
+
+md = MarkItDown(
+    enable_plugins=True,
+    llm_client=OpenAI(),
+    llm_model="gpt-4o",
+)
+result = md.convert("document_with_images.pdf")
+print(result.text_content)
+```
+
+If no `llm_client` is provided the plugin still loads, but OCR is silently skipped and the standard built-in converter is used instead.
+
+See [`packages/markitdown-ocr/README.md`](packages/markitdown-ocr/README.md) for detailed documentation.
 
 ### Azure Document Intelligence
 

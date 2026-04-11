@@ -1,9 +1,9 @@
 ---
 title: hermes-agent
-date: 2026-04-10T16:24:56+08:00
+date: 2026-04-11T15:56:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1660866837323-0565dfb71ca6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU4MDk0ODd8&ixlib=rb-4.1.0
-tags: ['github',Hermes Agent, AI agent, Nous Research]
+image: https://images.unsplash.com/photo-1616860895045-13553f397d64?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU4OTQxMzB8&ixlib=rb-4.1.0
+tags: ['github',AI agent, self-improving, learning loop]
 categories: ['github']
 ---
 
