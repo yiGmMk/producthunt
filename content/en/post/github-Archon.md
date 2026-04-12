@@ -1,9 +1,9 @@
 ---
 title: Archon
-date: 2026-04-11T15:56:15+08:00
+date: 2026-04-12T16:07:11+08:00
 draft: False
-image: https://images.unsplash.com/photo-1651608903386-8e918ff298f6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU4OTQxMzB8&ixlib=rb-4.1.0
-tags: ['github',AI coding, workflow engine, deterministic]
+image: https://images.unsplash.com/photo-1470115493989-233e397d5930?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU5ODExOTh8&ixlib=rb-4.1.0
+tags: ['github',AI coding, workflow engine, deterministic development]
 categories: ['github']
 ---
 
