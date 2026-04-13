@@ -1,9 +1,9 @@
 ---
 title: hermes-agent
-date: 2026-04-12T16:06:50+08:00
+date: 2026-04-13T17:06:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1680287327539-9467451a8b81?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU5ODExOTh8&ixlib=rb-4.1.0
-tags: ['github',AI agent, self improving, learning loop]
+image: https://images.unsplash.com/photo-1667644299860-c181b6f8f1d4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYwNzExMzV8&ixlib=rb-4.1.0
+tags: ['github',AI agent, self-improving, learning loop]
 categories: ['github']
 ---
 
@@ -178,6 +178,7 @@ python -m pytest tests/ -q
 - 📚 [Skills Hub](https://agentskills.io)
 - 🐛 [Issues](https://github.com/NousResearch/hermes-agent/issues)
 - 💡 [Discussions](https://github.com/NousResearch/hermes-agent/discussions)
+- 🔌 [HermesClaw](https://github.com/AaronWong1999/hermesclaw) — Community WeChat bridge: Run Hermes Agent and OpenClaw on the same WeChat account.
 
 ---
 

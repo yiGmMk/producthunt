@@ -1,9 +1,9 @@
 ---
 title: multica
-date: 2026-04-12T16:07:31+08:00
+date: 2026-04-13T17:06:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1470115493989-233e397d5930?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU5ODExOTh8&ixlib=rb-4.1.0
-tags: ['github',managed agents, coding agents, open source platform]
+image: https://images.unsplash.com/photo-1596221448144-fd7a7c7d2488?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYwNzExMzV8&ixlib=rb-4.1.0
+tags: ['github',Multica,agents,platform]
 categories: ['github']
 ---
 
@@ -31,7 +31,7 @@ Turn coding agents into real teammates — assign tasks, track progress, compoun
 [![CI](https://github.com/multica-ai/multica/actions/workflows/ci.yml/badge.svg)](https://github.com/multica-ai/multica/actions/workflows/ci.yml)
 [![GitHub stars](https://img.shields.io/github/stars/multica-ai/multica?style=flat)](https://github.com/multica-ai/multica/stargazers)
 
-[Website](https://multica.ai) · [Cloud](https://multica.ai/app) · [X](https://x.com/multica_hq) · [Self-Hosting](SELF_HOSTING.md) · [Contributing](CONTRIBUTING.md)
+[Website](https://multica.ai) · [Cloud](https://multica.ai/app) · [X](https://x.com/MulticaAI) · [Self-Hosting](SELF_HOSTING.md) · [Contributing](CONTRIBUTING.md)
 
 **English | [简体中文](README.zh-CN.md)**
 
