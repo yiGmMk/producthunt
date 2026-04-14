@@ -1,9 +1,9 @@
 ---
 title: Kronos
-date: 2026-04-13T17:06:16+08:00
+date: 2026-04-14T16:32:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1522745896797-99532aa8dd48?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYwNzExMzV8&ixlib=rb-4.1.0
-tags: ['github',financial markets foundation model candlesticks forecasting]
+image: https://images.unsplash.com/photo-1683544716690-6cce82d85e4b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYxNTU0OTJ8&ixlib=rb-4.1.0
+tags: ['github',financial markets, foundation model, Klines]
 categories: ['github']
 ---
 

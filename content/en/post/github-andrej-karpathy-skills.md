@@ -1,15 +1,17 @@
 ---
 title: andrej-karpathy-skills
-date: 2026-04-13T17:06:28+08:00
+date: 2026-04-14T16:31:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1588591451327-d1101da36a5a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYwNzExMzV8&ixlib=rb-4.1.0
-tags: ['github',LLM coding guidelines, software development principles, code simplicity]
+image: https://images.unsplash.com/photo-1612109609929-0535616c28d4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYxNTU0OTJ8&ixlib=rb-4.1.0
+tags: ['github',LLM coding guidelines, simplicity, surgical changes]
 categories: ['github']
 ---
 
 # [forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills)
 
 # Karpathy-Inspired Claude Code Guidelines
+
+> **Looking for a managed agents platform?** Check out [Multica](https://github.com/multica-ai/multica) — an open-source platform for running and managing coding agents with reusable skills.
 
 A single `CLAUDE.md` file to improve Claude Code behavior, derived from [Andrej Karpathy's observations](https://x.com/karpathy/status/2015883857489522876) on LLM coding pitfalls.
 

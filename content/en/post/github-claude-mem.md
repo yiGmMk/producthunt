@@ -1,9 +1,9 @@
 ---
 title: claude-mem
-date: 2026-03-17T15:58:18+08:00
+date: 2026-04-14T16:32:22+08:00
 draft: False
-image: https://images.unsplash.com/photo-1541078561702-8b4f0854971c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM3MzQyNzZ8&ixlib=rb-4.1.0
-tags: ['github',Claude-Mem, memory compression, persistent context]
+image: https://images.unsplash.com/photo-1683544716690-6cce82d85e4b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYxNTU0OTJ8&ixlib=rb-4.1.0
+tags: ['github',ClaudeMem,persistent memory,context preservation]
 categories: ['github']
 ---
 
@@ -85,13 +85,40 @@ categories: ['github']
 
 <br>
 
-<p align="center">
-  <a href="https://github.com/thedotmack/claude-mem">
-    <picture>
-      <img src="https://raw.githubusercontent.com/thedotmack/claude-mem/main/docs/public/cm-preview.gif" alt="Claude-Mem Preview" width="800">
-    </picture>
-  </a>
-</p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://github.com/thedotmack/claude-mem">
+        <picture>
+          <img
+            src="https://raw.githubusercontent.com/thedotmack/claude-mem/main/docs/public/cm-preview.gif"
+            alt="Claude-Mem Preview"
+            width="500"
+          >
+        </picture>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.star-history.com/#thedotmack/claude-mem&Date">
+        <picture>
+          <source
+            media="(prefers-color-scheme: dark)"
+            srcset="https://api.star-history.com/image?repos=thedotmack/claude-mem&type=date&theme=dark&legend=top-left"
+          />
+          <source
+            media="(prefers-color-scheme: light)"
+            srcset="https://api.star-history.com/image?repos=thedotmack/claude-mem&type=date&legend=top-left"
+          />
+          <img
+            alt="Star History Chart"
+            src="https://api.star-history.com/image?repos=thedotmack/claude-mem&type=date&legend=top-left"
+            width="500"
+          />
+        </picture>
+      </a>
+    </td>
+  </tr>
+</table>
 
 <p align="center">
   <a href="#quick-start">Quick Start</a> •
@@ -111,17 +138,29 @@ categories: ['github']
 
 ## Quick Start
 
-Start a new Claude Code session in the terminal and enter the following commands:
+Install with a single command:
 
+```bash
+npx claude-mem install
 ```
+
+Or install for Gemini CLI (auto-detects `~/.gemini`):
+
+```bash
+npx claude-mem install --ide gemini-cli
+```
+
+Or install from the plugin marketplace inside Claude Code:
+
+```bash
 /plugin marketplace add thedotmack/claude-mem
 
 /plugin install claude-mem
 ```
 
-Restart Claude Code. Context from previous sessions will automatically appear in new sessions.
+Restart Claude Code or Gemini CLI. Context from previous sessions will automatically appear in new sessions.
 
-> **Note:** Claude-Mem is also published on npm, but `npm install -g claude-mem` installs the **SDK/library only** — it does not register the plugin hooks or set up the worker service. To use Claude-Mem as a plugin, always install via the `/plugin` commands above.
+> **Note:** Claude-Mem is also published on npm, but `npm install -g claude-mem` installs the **SDK/library only** — it does not register the plugin hooks or set up the worker service. Always install via `npx claude-mem install` or the `/plugin` commands above.
 
 ### 🦞 OpenClaw Gateway
 
@@ -155,6 +194,7 @@ The installer handles dependencies, plugin setup, AI provider configuration, wor
 ### Getting Started
 
 - **[Installation Guide](https://docs.claude-mem.ai/installation)** - Quick start & advanced installation
+- **[Gemini CLI Setup](https://docs.claude-mem.ai/gemini-cli/setup)** - Dedicated guide for Google's Gemini CLI integration
 - **[Usage Guide](https://docs.claude-mem.ai/usage/getting-started)** - How Claude-Mem works automatically
 - **[Search Tools](https://docs.claude-mem.ai/usage/search-tools)** - Query your project history with natural language
 - **[Beta Features](https://docs.claude-mem.ai/beta-features)** - Try experimental features like Endless Mode
