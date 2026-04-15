@@ -1,9 +1,9 @@
 ---
 title: editor
-date: 2026-03-26T16:06:26+08:00
+date: 2026-04-15T16:51:59+08:00
 draft: False
-image: https://images.unsplash.com/photo-1713196310873-c9ae4382f859?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ1MTIzNDF8&ixlib=rb-4.1.0
-tags: ['github',React Three Fiber,WebGPU,building editor]
+image: https://images.unsplash.com/photo-1537563626051-5a6859a8d099?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYyNDMwNjN8&ixlib=rb-4.1.0
+tags: ['github',3D building editor, React Three Fiber, WebGPU]
 categories: ['github']
 ---
 
@@ -14,9 +14,9 @@ categories: ['github']
 A 3D building editor built with React Three Fiber and WebGPU.
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![npm @pascal-app/core](https://img.shields.io/npm/v/@pascal-app/core?label=%40pascal-app%2Fcore&color=cb3837)](https://www.npmjs.com/package/@pascal-app/core)
-[![npm @pascal-app/viewer](https://img.shields.io/npm/v/@pascal-app/viewer?label=%40pascal-app%2Fviewer&color=cb3837)](https://www.npmjs.com/package/@pascal-app/viewer)
-[![Discord](https://img.shields.io/discord/1430943778449002577?label=Discord&logo=discord&logoColor=white&color=5865F2)](https://discord.gg/SaBRA9t2)
+[![npm @pascal-app/core](https://img.shields.io/npm/v/@pascal-app/core?label=%40pascal-app%2Fcore)](https://www.npmjs.com/package/@pascal-app/core)
+[![npm @pascal-app/viewer](https://img.shields.io/npm/v/@pascal-app/viewer?label=%40pascal-app%2Fviewer)](https://www.npmjs.com/package/@pascal-app/viewer)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white)](https://discord.gg/SaBRA9t2)
 [![X (Twitter)](https://img.shields.io/badge/follow-%40pascal__app-black?logo=x&logoColor=white)](https://x.com/pascal_app)
 
 https://github.com/user-attachments/assets/8b50e7cf-cebe-4579-9cf3-8786b35f7b6b
