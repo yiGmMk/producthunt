@@ -1,9 +1,9 @@
 ---
 title: ai-hedge-fund
-date: 2026-01-06T15:36:38+08:00
+date: 2026-04-16T16:50:47+08:00
 draft: False
-image: https://images.unsplash.com/photo-1681288102976-18700aae1581?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Njc2ODQ5NTR8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1609764657221-c4dfad3c0ca2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYzMjkzODh8&ixlib=rb-4.1.0
+tags: ['github',AI hedge fund, educational purposes, trading decisions]
 categories: ['github']
 ---
 
@@ -22,17 +22,18 @@ This system employs several agents working together:
 5. Charlie Munger Agent - Warren Buffett's partner, only buys wonderful businesses at fair prices
 6. Michael Burry Agent - The Big Short contrarian who hunts for deep value
 7. Mohnish Pabrai Agent - The Dhandho investor, who looks for doubles at low risk
-8. Peter Lynch Agent - Practical investor who seeks "ten-baggers" in everyday businesses
-9. Phil Fisher Agent - Meticulous growth investor who uses deep "scuttlebutt" research 
-10. Rakesh Jhunjhunwala Agent - The Big Bull of India
-11. Stanley Druckenmiller Agent - Macro legend who hunts for asymmetric opportunities with growth potential
-12. Warren Buffett Agent - The oracle of Omaha, seeks wonderful companies at a fair price
-13. Valuation Agent - Calculates the intrinsic value of a stock and generates trading signals
-14. Sentiment Agent - Analyzes market sentiment and generates trading signals
-15. Fundamentals Agent - Analyzes fundamental data and generates trading signals
-16. Technicals Agent - Analyzes technical indicators and generates trading signals
-17. Risk Manager - Calculates risk metrics and sets position limits
-18. Portfolio Manager - Makes final trading decisions and generates orders
+8. Nassim Taleb Agent - The Black Swan risk analyst, focuses on tail risk, antifragility, and asymmetric payoffs
+9. Peter Lynch Agent - Practical investor who seeks "ten-baggers" in everyday businesses
+10. Phil Fisher Agent - Meticulous growth investor who uses deep "scuttlebutt" research 
+11. Rakesh Jhunjhunwala Agent - The Big Bull of India
+12. Stanley Druckenmiller Agent - Macro legend who hunts for asymmetric opportunities with growth potential
+13. Warren Buffett Agent - The oracle of Omaha, seeks wonderful companies at a fair price
+14. Valuation Agent - Calculates the intrinsic value of a stock and generates trading signals
+15. Sentiment Agent - Analyzes market sentiment and generates trading signals
+16. Fundamentals Agent - Analyzes fundamental data and generates trading signals
+17. Technicals Agent - Analyzes technical indicators and generates trading signals
+18. Risk Manager - Calculates risk metrics and sets position limits
+19. Portfolio Manager - Makes final trading decisions and generates orders
 
 <img width="1042" alt="Screenshot 2025-03-22 at 6 19 07 PM" src="https://github.com/user-attachments/assets/cbae3dcf-b571-490d-b0ad-3f0f035ac0d4" />
 
@@ -90,8 +91,6 @@ FINANCIAL_DATASETS_API_KEY=your-financial-datasets-api-key
 ```
 
 **Important**: You must set at least one LLM API key (e.g. `OPENAI_API_KEY`, `GROQ_API_KEY`, `ANTHROPIC_API_KEY`, or `DEEPSEEK_API_KEY`) for the hedge fund to work. 
-
-**Financial Data**: Data for AAPL, GOOGL, MSFT, NVDA, and TSLA is free and does not require an API key. For any other ticker, you will need to set the `FINANCIAL_DATASETS_API_KEY` in the .env file.
 
 ## How to Run
 

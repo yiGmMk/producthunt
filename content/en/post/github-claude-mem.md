@@ -1,9 +1,9 @@
 ---
 title: claude-mem
-date: 2026-04-15T16:51:41+08:00
+date: 2026-04-16T16:50:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1595523894269-c87700b94d91?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYyNDMwNjN8&ixlib=rb-4.1.0
-tags: ['github',Claude Mem, memory compression, persistent context]
+image: https://images.unsplash.com/photo-1587451527975-ce1f6218418f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYzMjkzODh8&ixlib=rb-4.1.0
+tags: ['github',persistent memory,claude code,keyword extraction]
 categories: ['github']
 ---
 

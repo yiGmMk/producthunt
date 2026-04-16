@@ -1,9 +1,9 @@
 ---
 title: editor
-date: 2026-04-15T16:51:59+08:00
+date: 2026-04-16T16:50:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1537563626051-5a6859a8d099?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYyNDMwNjN8&ixlib=rb-4.1.0
-tags: ['github',3D building editor, React Three Fiber, WebGPU]
+image: https://images.unsplash.com/photo-1653573985426-7612c5898560?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYzMjkzODh8&ixlib=rb-4.1.0
+tags: ['github',React Three Fiber WebGPU Editor]
 categories: ['github']
 ---
 
