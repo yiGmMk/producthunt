@@ -1,9 +1,9 @@
 ---
 title: voicebox
-date: 2026-04-15T16:51:50+08:00
+date: 2026-04-17T16:31:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1476337662444-3de4ef24637a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYyNDMwNjN8&ixlib=rb-4.1.0
-tags: ['github',voice synthesis,voice cloning,local first]
+image: https://images.unsplash.com/photo-1726182875049-a8283fed88da?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY0MTQ2NDF8&ixlib=rb-4.1.0
+tags: ['github',voice synthesis, voice cloning, TTS engines]
 categories: ['github']
 ---
 

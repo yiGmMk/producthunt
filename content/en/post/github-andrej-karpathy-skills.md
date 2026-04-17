@@ -1,9 +1,9 @@
 ---
 title: andrej-karpathy-skills
-date: 2026-04-16T16:50:04+08:00
+date: 2026-04-17T16:30:50+08:00
 draft: False
-image: https://images.unsplash.com/photo-1554189280-4ebfe0b02294?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYzMjkzODh8&ixlib=rb-4.1.0
-tags: ['github',Claude Code, guidelines, principles]
+image: https://images.unsplash.com/photo-1714548838581-664c081a86f4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY0MTQ2NDF8&ixlib=rb-4.1.0
+tags: ['github',coding guidelines,LLM behavior,software development]
 categories: ['github']
 ---
 
