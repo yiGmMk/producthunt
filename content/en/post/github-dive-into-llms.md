@@ -1,9 +1,9 @@
 ---
 title: dive-into-llms
-date: 2026-04-16T16:50:32+08:00
+date: 2026-04-18T16:05:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1704639739041-952cf91bdd00?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYzMjkzODh8&ixlib=rb-4.1.0
-tags: ['github',large language models, programming tutorials, artificial intelligence]
+image: https://images.unsplash.com/photo-1593086439822-bcebf2f1e052?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY0OTk0NDV8&ixlib=rb-4.1.0
+tags: ['github',large models, programming practice, tutorial]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: GenericAgent
-date: 2026-04-17T16:31:08+08:00
+date: 2026-04-18T16:04:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1521380119896-a63bbcf9b954?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY0MTQ2NDF8&ixlib=rb-4.1.0
-tags: ['github',autonomous agent, self-evolving framework, minimal codebase]
+image: https://images.unsplash.com/photo-1572593685472-e0721d6c1bac?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY0OTk0NDV8&ixlib=rb-4.1.0
+tags: ['github',autonomous agent, self evolving, minimal codebase]
 categories: ['github']
 ---
 
@@ -11,10 +11,13 @@ categories: ['github']
 
 <div align="center">
 <img src="assets/images/bar.jpg" width="880"/>
+
+<a href="https://trendshift.io/repositories/25944" target="_blank"><img src="https://trendshift.io/api/badge/repositories/25944" alt="lsdefine%2FGenericAgent | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+
 </div>
 
 <p align="center">
-  <a href="#english">English</a> | <a href="#chinese">中文</a>
+  <a href="#english">English</a> | <a href="#chinese">中文</a> | 📄 <a href="assets/GenericAgent_Technical_Report.pdf">Technical Report</a>
 </p>
 
 ---
