@@ -1,9 +1,9 @@
 ---
 title: omi
-date: 2026-04-18T16:05:03+08:00
+date: 2026-04-19T16:10:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1593086439822-bcebf2f1e052?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY0OTk0NDV8&ixlib=rb-4.1.0
-tags: ['github',AI wearable open source]
+image: https://images.unsplash.com/photo-1674505681324-3ef7edf8415b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY1ODYyMDZ8&ixlib=rb-4.1.0
+tags: ['github',screen capture, real-time transcription, AI chat]
 categories: ['github']
 ---
 
