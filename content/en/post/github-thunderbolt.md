@@ -1,8 +1,8 @@
 ---
 title: thunderbolt
-date: 2026-04-19T16:10:18+08:00
+date: 2026-04-20T17:12:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1709835937106-834331305f73?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY1ODYyMDZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1582137363701-90dfd38fe801?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY2NzYzMzZ8&ixlib=rb-4.1.0
 tags: ['github',Thunderbolt, AI client, open source]
 categories: ['github']
 ---

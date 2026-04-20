@@ -1,0 +1,137 @@
+---
+title: Product Hunt 今日热榜 | 2026-04-20
+date: 2026-04-20 09:11:26+0000
+image: https://ph-files.imgix.net/3395620d-8bfa-46f0-b695-e06c92b32290.png?auto=format
+tags: ["Gemini for Mac", "Option+Space", "快捷键启动"]
+---
+
+## 1. Gemini app for Mac  
+**标语**: Option + 空格键，Gemini 即刻呈现。  
+**介绍**: 官方Gemini应用现已原生登陆macOS平台。只需使用快捷键（Option + Space）即可立即唤醒Gemini。您可分享当前窗口以获取情境帮助、分析本地文件，并能直接生成内容，无需切换任何标签页。  
+**网站**: [立即访问](https://www.producthunt.com/r/BCWSGWYERAX6G6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/gemini-6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Gemini app for Mac](https://ph-files.imgix.net/3395620d-8bfa-46f0-b695-e06c92b32290.png?auto=format)  
+**关键词**: Gemini for Mac,Option+Space,快捷键启动,上下文帮助,文件分析,内容生成,原生macOS应用  
+**票数**: 🔺288  
+**是否精选**: 是  
+**发布时间**: 2026年04月19日 PM03:01 (北京时间)  
+
+---  
+
+## 2. Vantage in Google Labs  
+**标语**: 通过AI模拟团队练习与评估面向未来的技能。  
+**介绍**: Vantage是谷歌研究部门的一项实验性项目，利用生成式人工智能评估协作、批判性思维和创造力等面向未来的技能。AI虚拟化身模拟真实场景，为你的表现评分，并提供个性化技能图谱。现已登陆Google Labs平台。  
+**网站**: [立即访问](https://www.producthunt.com/r/H37MDVAN5OB4LU?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/google?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Vantage in Google Labs](https://ph-files.imgix.net/fbe0f411-6ee7-4ba0-84ab-1bc324bd04b8.png?auto=format)  
+**关键词**: Google Labs Vantage,AI模拟团队,未来技能评估,协作能力,批判性思维,创造力,技能图谱,生成式AI,虚拟角色,场景模拟,技能测评  
+**票数**: 🔺275  
+**是否精选**: 是  
+**发布时间**: 2026年04月19日 PM03:01 (北京时间)  
+
+---  
+
+## 3. Verdent 2.0  
+**标语**: 你的AI技术联合创始人  
+**介绍**: Verdent 是您的 AI 技术联合创始人，助您将创意转化为可运营的业务。只需用通俗语言描述您的构想，它便能规划工作、推进执行，并依托项目背景交付真实的产品进展。与大多数代码生成工具不同，Verdent 能端到端地推动整个产品发展，记忆项目进程，持续优化升级，即使您离线时它也能继续工作。  
+**网站**: [立即访问](https://www.producthunt.com/r/BBQ3OP2SS35GG5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/verdent-deck?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Verdent 2.0](https://ph-files.imgix.net/56b89756-1aad-4144-af01-e3b8cc43725e.png?auto=format)  
+**关键词**: AI技术联合创始人, 端到端产品开发, 离线工作, 项目记忆, 持续改进  
+**票数**: 🔺225  
+**是否精选**: 是  
+**发布时间**: 2026年04月19日 PM03:01 (北京时间)  
+
+---  
+
+## 4. Perplexity Personal Computer  
+**标语**: 本地文件。原生应用。语音控制。始终在线。  
+**介绍**: Perplexity AI推出的“个人计算机”是一款人工智能驱动系统，可将您的设备转变为智能指挥中心。该系统能够跨本地文件、原生应用、连接器及网络协同工作，完成复杂工作流、整理数据并端到端执行任务。通过安全可审计的操作与用户自主控制，它将本地与云端环境无缝融合，在提升工作效率的同时，能处理那些过于繁琐或重复性的人工操作。  
+**网站**: [立即访问](https://www.producthunt.com/r/KDSAWWSJ4OSOEQ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/perplexity-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Perplexity Personal Computer](https://ph-files.imgix.net/ac1f5d29-b24b-4662-a660-d8102940d2a8.webp?auto=format)  
+**关键词**: Perplexity PC, AI个人电脑, 本地文件处理, 原生应用集成, 语音控制, 持续运行, AI智能编排, 复杂工作流, 数据整理, 任务自动化, 本地云端融合, 生产力提升  
+**票数**: 🔺204  
+**是否精选**: 是  
+**发布时间**: 2026年04月19日 PM03:01 (北京时间)  
+
+---  
+
+## 5. Avina  
+**标语**: GTM代理助您寻找并触达下一位客户  
+**介绍**: 发掘并触达需要您产品的潜在客户。明确定义您的理想客户画像与购买触发点，艾薇娜将为您追踪全网信号，包括领英、招聘信息、网站访客（内置RB2B、Vector和Clearbit）等多渠道数据。系统为每条线索匹配目标联系人，并根据您的客户画像进行评分，最终形成每日更新的实时受众群。随后，艾薇娜将自动启动个性化AI邮件及ABM营销活动，与您现有  
+**网站**: [立即访问](https://www.producthunt.com/r/7P5YI2HVI7WADA?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/avina-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Avina](https://ph-files.imgix.net/a9ceb23e-ccdf-47f3-ab3d-0d235c6fbdf6.png?auto=format)  
+**关键词**: 潜在客户挖掘,客户画像定义,多渠道信号追踪,线索评分与丰富,自动化营销活动,AI个性化邮件,ABM策略,实时受众更新,工具集成  
+**票数**: 🔺197  
+**是否精选**: 是  
+**发布时间**: 2026年04月19日 PM03:01 (北京时间)  
+
+---  
+
+## 6. Creator OS  
+**标语**: 别再错过Instagram上的评论了。  
+**介绍**: AI智能缩略图、视频处理流水线、品牌合作对接、方案提案套装、数据分析与集成——专为YouTube、Instagram及Twitch创作者打造的一站式平台。每月仅需4.90美元起。  
+**网站**: [立即访问](https://www.producthunt.com/r/7JT2HBCSUHYOEX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/creator-os-3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Creator OS](https://ph-files.imgix.net/cffc2e68-a2a1-45ff-a10b-fbd894bec2a2.webp?auto=format)  
+**关键词**: Instagram评论管理,AI缩略图,视频流程,品牌合作,创作者平台,YouTube,Twitch,多合一工具,数据分析,集成功能,付费订阅  
+**票数**: 🔺119  
+**是否精选**: 是  
+**发布时间**: 2026年04月19日 PM03:01 (北京时间)  
+
+---  
+
+## 7. Paperweight  
+**标语**: 清理您的电子邮件并管理您的数字足迹。  
+**介绍**: 你创建的每个账户、注册的每种服务、进行的每次在线购物都与你的电子邮件地址相关联。大多数人都有超过100个已被遗忘的账户，这不仅带来安全隐患，也暴露了个人隐私。Paperweight扫描你的收件箱，绘制你的数字足迹图谱，助你重新掌控并删除个人数据。功能包括——批量退订、泄露警报、账户清单、GDPR合规删除、隐私优先、开源设计。尊重你的隐私，所有数据都储存在你的本地设备上  
+**网站**: [立即访问](https://www.producthunt.com/r/CKRXU3VVACEVSK?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/paperweight?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Paperweight](https://ph-files.imgix.net/e42b7e3d-4963-4e4e-a70a-4674f167e8e9.png?auto=format)  
+**关键词**: 电子邮件管理,数字足迹,批量退订,数据安全,隐私保护,开源工具  
+**票数**: 🔺114  
+**是否精选**: 是  
+**发布时间**: 2026年04月19日 PM03:01 (北京时间)  
+
+---  
+
+## 8. Tell  
+**标语**: Mac小组件，玩出乐趣。  
+**介绍**: 这是一款原生macOS应用，能将系统数据转化为交互式3D对象。通过桌面上流畅的动画可视化效果，实时监控网速、CPU使用率、电池状态等信息。设计追求快速、极简且富有活力——与传统小组件截然不同。更多主题合集、动画对象以及用于深度洞察的新系统模块已在开发中，即将推出。  
+**网站**: [立即访问](https://www.producthunt.com/r/KDCFPKYUUCDS7I?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/tell-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Tell](https://ph-files.imgix.net/55a4283b-52ca-4661-a771-0691fd2109c5.jpeg?auto=format)  
+**关键词**: Mac widgets, 3D桌面工具, 系统监控, 互动可视化, CPU使用率, 网络速度, 电池监控, 动态桌面, macOS应用, 极简设计  
+**票数**: 🔺113  
+**是否精选**: 是  
+**发布时间**: 2026年04月19日 PM03:01 (北京时间)  
+
+---  
+
+## 9. Fixa.dev  
+**标语**: 云原生AI代理，无所不能的构建者。  
+**介绍**: Fixa是网络上最强大的自主人工智能代理，它在完整的云端开发环境中运行，能够构建真实的软件。它依托前沿模型驱动，能够自主浏览网络以读取实时文档，并动态安装应用程序所需的各种依赖项。Fixa能够编写可直接投入生产的后端代码，并支持一键集成Stripe、Supabase、Clerk和Vercel。通过我们的通用MCP连接器，您可以链接任何MCP服务器，从而与您的工作流程实现深度集成。  
+**网站**: [立即访问](https://www.producthunt.com/r/M7JEDPMEZXOHID?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/fixa-dev?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Fixa.dev](https://ph-files.imgix.net/1ae2bd85-b929-4ce1-9564-b2f9e4c537cb.png?auto=format)  
+**关键词**: AI agent, cloud-native, autonomous development, production-ready backend, MCP connector, web browsing, dynamic dependencies, one-click integrations  
+**票数**: 🔺103  
+**是否精选**: 是  
+**发布时间**: 2026年04月19日 PM03:01 (北京时间)  
+
+---  
+
+## 10. Nibbo  
+**标语**: 家庭中心配备3D宠物，随着任务完成而成长。  
+**介绍**: Nibbo用一个宁静空间取代了家庭群聊的混乱——任务、日历、餐食计划、购物清单和预算，全在这里共享。其核心是Nibby：一个专属于您家庭的活生生的3D吉祥物，由您的活动DNA生成。它会根据您的行为做出反应，积累经验值，温和地激励每位成员——无需唠叨。孩子与成人共享同一份计划。责任清晰明确。温馨时光随之增加。完全免费。由一位独自抚养孩子的父亲  
+**网站**: [立即访问](https://www.producthunt.com/r/QMKOQHIBQPEFU7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/nibbo?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Nibbo](https://ph-files.imgix.net/c76a5545-fa26-4e46-8b28-c3bc54229152.png?auto=format)  
+**关键词**: 家庭任务管理,3D宠物养成,共享日历,家庭预算,亲子协作,免费应用,个人开发,家庭组织工具  
+**票数**: 🔺94  
+**是否精选**: 是  
+**发布时间**: 2026年04月19日 PM03:01 (北京时间)  
+
+---  
+

@@ -1,9 +1,9 @@
 ---
 title: openai-agents-python
-date: 2026-04-19T16:10:39+08:00
+date: 2026-04-20T17:13:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591388701179-b799610cf80a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY1ODYyMDZ8&ixlib=rb-4.1.0
-tags: ['github',OpenAI Agents SDK, multiagent workflows, Python framework]
+image: https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY2NzYzMzZ8&ixlib=rb-4.1.0
+tags: ['github',OpenAI Agents SDK, multi-agent workflows, Python]
 categories: ['github']
 ---
 
