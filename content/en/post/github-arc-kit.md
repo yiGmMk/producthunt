@@ -1,9 +1,9 @@
 ---
 title: arc-kit
-date: 2026-04-20T17:12:54+08:00
+date: 2026-04-21T16:58:23+08:00
 draft: False
-image: https://images.unsplash.com/photo-1746730251085-34132b6dcec5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY2NzYzMzZ8&ixlib=rb-4.1.0
-tags: ['github',enterprise architecture, governance toolkit, AI-assisted workflow]
+image: https://images.unsplash.com/photo-1586788630595-bbd71f6f8646?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY3NjE4MjF8&ixlib=rb-4.1.0
+tags: ['github',enterprise architecture, governance toolkit, AI assisted workflow]
 categories: ['github']
 ---
 
@@ -103,7 +103,7 @@ uv tool install arckit-cli --from git+https://github.com/tractorjuice/arc-kit.gi
 uvx --from git+https://github.com/tractorjuice/arc-kit.git arckit init my-project
 ```
 
-**Latest Release**: [v4.7.2](https://github.com/tractorjuice/arc-kit/releases/tag/v4.7.2)
+**Latest Release**: [v4.8.0](https://github.com/tractorjuice/arc-kit/releases/tag/v4.8.0)
 
 ### Platform Support
 
@@ -257,9 +257,9 @@ See the demo repositories for end-to-end examples, especially `arckit-test-proje
 
 ---
 
-## EU & French Regulatory Compliance (Community)
+## EU, French & Austrian Regulatory Compliance (Community)
 
-> ⚠️ **Community-contributed — domain-maintained by [@thomas-jardinet](https://github.com/thomas-jardinet).** The 18 commands below cover EU regulations (GDPR, NIS2, AI Act, DORA, CRA, DSA, Data Act) and French government standards (SecNumCloud, ANSSI, EBIOS, CNIL, DINUM, etc.). They are not part of the officially-maintained baseline — output should be reviewed by qualified DPO / RSSI / legal counsel before reliance, and citations to ANSSI / CNIL / EU regulations may lag current source text. Each command surfaces with a `[COMMUNITY]` prefix in `/help` listings and renders a warning banner before generating.
+> ⚠️ **Community-contributed.** EU and French commands are domain-maintained by [@thomas-jardinet](https://github.com/thomas-jardinet); Austrian commands are a seed contribution inviting an Austrian domain maintainer. The 21 commands below cover EU regulations (GDPR, NIS2, AI Act, DORA, CRA, DSA, Data Act), French government standards (SecNumCloud, ANSSI, EBIOS, CNIL, DINUM, etc.), and Austrian government standards (DSG, NISG 2024, BVergG 2018). They are not part of the officially-maintained baseline — output should be reviewed by qualified DPO / CISO / Vergabejurist / legal counsel before reliance, and citations may lag current source text. Each command surfaces with a `[COMMUNITY]` prefix in `/help` listings and renders a warning banner before generating.
 
 **EU regulations** (member-state-neutral baselines, applicable across EU/EEA):
 
@@ -285,7 +285,13 @@ See the demo repositories for end-to-end examples, especially `arckit-test-proje
 - `/arckit.fr-pssi` — Information System Security Policy (PSSI) per ANSSI / RGS
 - `/arckit.fr-code-reuse` — Public code reuse assessment (code.gouv.fr, SILL, EUPL) — build-vs-reuse decision matrix
 
-These layer cleanly on the existing baseline — `fr-rgpd` extends `eu-rgpd`, `fr-pssi` references `eu-nis2`, and `fr-secnumcloud` integrates with `arckit.research` and `arckit.evaluate` for procurement workflows.
+**Austrian government** (apply on top of the EU baseline for Austrian deployments — seed contribution pending a domain maintainer):
+
+- `/arckit.at-dsgvo` — Austrian DSG layer on GDPR (§§12–13 image processing, ELGA/GTelG health, §96a ArbVG employee monitoring, age 14 consent, DSB enforcement)
+- `/arckit.at-nisg` — Austrian NISG 2024 (NIS2 transposition) — Essential/Important designation, GovCERT reporting, KSÖ, AT sectoral authorities
+- `/arckit.at-bvergg` — Bundesvergabegesetz 2018 procurement — Oberschwellen/Unterschwellen, ANKÖ publication, Bestbieterprinzip, BVwG review
+
+These layer cleanly on the existing baseline — `fr-rgpd` / `at-dsgvo` extend `eu-rgpd`, `fr-pssi` / `at-nisg` reference `eu-nis2`, and `fr-secnumcloud` integrates with `arckit.research` and `arckit.evaluate` for procurement workflows. Austrian commands carry extra `[NEEDS VERIFICATION]` markers reflecting their seed status — a future domain maintainer is expected to tighten the citations.
 
 ---
 
@@ -1605,7 +1611,7 @@ arckit init .
 
 - **Issues**: [GitHub Issues](https://github.com/tractorjuice/arc-kit/issues)
 - **Releases**: [GitHub Releases](https://github.com/tractorjuice/arc-kit/releases)
-- **Latest Version**: [v4.7.2](https://github.com/tractorjuice/arc-kit/releases/tag/v4.7.2)
+- **Latest Version**: [v4.8.0](https://github.com/tractorjuice/arc-kit/releases/tag/v4.8.0)
 
 ---
 
