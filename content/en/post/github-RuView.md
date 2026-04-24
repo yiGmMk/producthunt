@@ -1,9 +1,9 @@
 ---
 title: RuView
-date: 2026-04-22T16:52:45+08:00
+date: 2026-04-24T17:06:57+08:00
 draft: False
-image: https://images.unsplash.com/photo-1535191198992-fe460a2d0af1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY4NDc5MTh8&ixlib=rb-4.1.0
-tags: ['github',WiFi sensing,ESP32 CSI,human pose]
+image: https://images.unsplash.com/photo-1727804105297-ceca2f094c09?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzcwMjE1MDh8&ixlib=rb-4.1.0
+tags: ['github',WiFi sensing, CSI, DensePose]
 categories: ['github']
 ---
 
