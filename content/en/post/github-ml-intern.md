@@ -1,9 +1,9 @@
 ---
 title: ml-intern
-date: 2026-04-24T17:05:19+08:00
+date: 2026-04-25T16:09:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1645973183895-dc16de2d50f3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzcwMjE1MDh8&ixlib=rb-4.1.0
-tags: ['github',ML intern, Hugging Face, agentic loop]
+image: https://images.unsplash.com/photo-1641669435674-969d75884847?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzcxMDQ1NjJ8&ixlib=rb-4.1.0
+tags: ['github',ML intern, Hugging Face, autonomous code]
 categories: ['github']
 ---
 

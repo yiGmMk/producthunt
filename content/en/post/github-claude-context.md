@@ -1,9 +1,9 @@
 ---
 title: claude-context
-date: 2026-04-24T17:05:31+08:00
+date: 2026-04-25T16:10:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1606003684265-09653e2af786?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzcwMjE1MDh8&ixlib=rb-4.1.0
-tags: ['github',semantic code search,Claude Context,MCP plugin]
+image: https://images.unsplash.com/photo-1656599504403-25bcd91bd8c8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzcxMDQ1NjJ8&ixlib=rb-4.1.0
+tags: ['github',Claude Context, MCP plugin, semantic code search]
 categories: ['github']
 ---
 
