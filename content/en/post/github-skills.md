@@ -1,51 +1,122 @@
 ---
 title: skills
-date: 2026-03-08T15:40:04+08:00
+date: 2026-04-26T16:19:36+08:00
 draft: False
-image: https://images.unsplash.com/photo-1681023833500-d3f4993a71be?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI5NTU1ODN8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1723429967943-ea902654f421?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzcxOTE1NTd8&ixlib=rb-4.1.0
+tags: ['github',agent skills, planning development, tooling writing]
 categories: ['github']
 ---
 
-# [openai/skills](https://github.com/openai/skills)
+# [mattpocock/skills](https://github.com/mattpocock/skills)
 
 # Agent Skills
 
-Agent Skills are folders of instructions, scripts, and resources that AI agents can discover and use to perform at specific tasks. Write once, use everywhere.
+A collection of agent skills that extend capabilities across planning, development, and tooling.
 
-Codex uses skills to help package capabilities that teams and individuals can use to complete specific tasks in a repeatable way. This repository catalogs skills for use and distribution with Codex.
+## Planning & Design
 
-Learn more:
-- [Using skills in Codex](https://developers.openai.com/codex/skills)
-- [Create custom skills in Codex](https://developers.openai.com/codex/skills/create-skill)
-- [Agent Skills open standard](https://agentskills.io)
+These skills help you think through problems before writing code.
 
-## Installing a skill
+- **to-prd** — Turn the current conversation context into a PRD and submit it as a GitHub issue. No interview — just synthesizes what you've already discussed.
 
-Skills in [`.system`](skills/.system/) are automatically installed in the latest version of Codex.
+  ```
+  npx skills@latest add mattpocock/skills/to-prd
+  ```
 
-To install [curated](skills/.curated/) or [experimental](skills/.experimental/) skills, you can use the `$skill-installer` inside Codex.
+- **to-issues** — Break any plan, spec, or PRD into independently-grabbable GitHub issues using vertical slices.
 
-Curated skills can be installed by name (defaults to `skills/.curated`):
+  ```
+  npx skills@latest add mattpocock/skills/to-issues
+  ```
 
-```
-$skill-installer gh-address-comments
-```
+- **grill-me** — Get relentlessly interviewed about a plan or design until every branch of the decision tree is resolved.
 
-For experimental skills, specify the skill folder. For example:
+  ```
+  npx skills@latest add mattpocock/skills/grill-me
+  ```
 
-```
-$skill-installer install the create-plan skill from the .experimental folder
-```
+- **design-an-interface** — Generate multiple radically different interface designs for a module using parallel sub-agents.
 
-Or provide the GitHub directory URL:
+  ```
+  npx skills@latest add mattpocock/skills/design-an-interface
+  ```
 
-```
-$skill-installer install https://github.com/openai/skills/tree/main/skills/.experimental/create-plan
-```
+- **request-refactor-plan** — Create a detailed refactor plan with tiny commits via user interview, then file it as a GitHub issue.
 
-After installing a skill, restart Codex to pick up new skills.
+  ```
+  npx skills@latest add mattpocock/skills/request-refactor-plan
+  ```
 
-## License
+## Development
 
-The license of an individual skill can be found directly inside the skill's directory inside the `LICENSE.txt` file.
+These skills help you write, refactor, and fix code.
+
+- **tdd** — Test-driven development with a red-green-refactor loop. Builds features or fixes bugs one vertical slice at a time.
+
+  ```
+  npx skills@latest add mattpocock/skills/tdd
+  ```
+
+- **triage-issue** — Investigate a bug by exploring the codebase, identify the root cause, and file a GitHub issue with a TDD-based fix plan.
+
+  ```
+  npx skills@latest add mattpocock/skills/triage-issue
+  ```
+
+- **improve-codebase-architecture** — Find deepening opportunities in a codebase, informed by the domain language in `CONTEXT.md` and the decisions in `docs/adr/`.
+
+  ```
+  npx skills@latest add mattpocock/skills/improve-codebase-architecture
+  ```
+
+- **migrate-to-shoehorn** — Migrate test files from `as` type assertions to @total-typescript/shoehorn.
+
+  ```
+  npx skills@latest add mattpocock/skills/migrate-to-shoehorn
+  ```
+
+- **scaffold-exercises** — Create exercise directory structures with sections, problems, solutions, and explainers.
+
+  ```
+  npx skills@latest add mattpocock/skills/scaffold-exercises
+  ```
+
+## Tooling & Setup
+
+- **setup-pre-commit** — Set up Husky pre-commit hooks with lint-staged, Prettier, type checking, and tests.
+
+  ```
+  npx skills@latest add mattpocock/skills/setup-pre-commit
+  ```
+
+- **git-guardrails-claude-code** — Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, etc.) before they execute.
+
+  ```
+  npx skills@latest add mattpocock/skills/git-guardrails-claude-code
+  ```
+
+## Writing & Knowledge
+
+- **write-a-skill** — Create new skills with proper structure, progressive disclosure, and bundled resources.
+
+  ```
+  npx skills@latest add mattpocock/skills/write-a-skill
+  ```
+
+- **edit-article** — Edit and improve articles by restructuring sections, improving clarity, and tightening prose.
+
+  ```
+  npx skills@latest add mattpocock/skills/edit-article
+  ```
+
+- **ubiquitous-language** — Extract a DDD-style ubiquitous language glossary from the current conversation.
+
+  ```
+  npx skills@latest add mattpocock/skills/ubiquitous-language
+  ```
+
+- **obsidian-vault** — Search, create, and manage notes in an Obsidian vault with wikilinks and index notes.
+
+  ```
+  npx skills@latest add mattpocock/skills/obsidian-vault
+  ```
