@@ -1,9 +1,9 @@
 ---
 title: posthog
-date: 2026-04-26T16:20:01+08:00
+date: 2026-04-27T17:26:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1644176050951-a1826dd6920c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzcxOTE1NTd8&ixlib=rb-4.1.0
-tags: ['github',product analytics, open source, session replays]
+image: https://images.unsplash.com/photo-1669738343314-4b6499a9930b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzcyODE5MjZ8&ixlib=rb-4.1.0
+tags: ['github',product analytics,open source,software development]
 categories: ['github']
 ---
 

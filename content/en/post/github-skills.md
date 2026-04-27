@@ -1,17 +1,21 @@
 ---
 title: skills
-date: 2026-04-26T16:19:36+08:00
+date: 2026-04-27T17:25:34+08:00
 draft: False
-image: https://images.unsplash.com/photo-1723429967943-ea902654f421?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzcxOTE1NTd8&ixlib=rb-4.1.0
-tags: ['github',agent skills, planning development, tooling writing]
+image: https://images.unsplash.com/photo-1647971526596-322175bbfc9d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzcyODE5MjZ8&ixlib=rb-4.1.0
+tags: ['github',agent skills, engineering tools, development workflow]
 categories: ['github']
 ---
 
 # [mattpocock/skills](https://github.com/mattpocock/skills)
 
-# Agent Skills
+# Agent Skills For Real Engineers
 
-A collection of agent skills that extend capabilities across planning, development, and tooling.
+My agent skills that I use every day to do real engineering - not vibe coding.
+
+If you want to keep up with changes to these skills, and any new ones I create, you can join ~60,000 other devs on my newsletter:
+
+[Sign Up To The Newsletter](https://www.aihero.dev/s/skills-newsletter)
 
 ## Planning & Design
 
