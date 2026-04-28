@@ -1,0 +1,137 @@
+---
+title: Product Hunt 今日热榜 | 2026-04-28
+date: 2026-04-28 09:27:47+0000
+image: https://ph-files.imgix.net/fb35d8bc-342a-45d2-8533-8da2ec7b0e1e.png?auto=format
+tags: ["AI销售自动化", "市场工作流", "潜在客户开发"]
+---
+
+## 1. Orange Slice  
+**标语**: 利用人工智能自动化任何销售任务  
+**介绍**: 利用AI构建市场推广工作流。在Orange Slice中实现潜在客户开发、信息完善、资格审核以及推广执行自动化。  
+**网站**: [立即访问](https://www.producthunt.com/r/ZAMTQWNV2NKJIN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/orange-slice?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Orange Slice](https://ph-files.imgix.net/fb35d8bc-342a-45d2-8533-8da2ec7b0e1e.png?auto=format)  
+**关键词**: AI销售自动化,市场工作流,潜在客户开发,客户丰富化,销售流程自动化,GTM执行,Orange Slice  
+**票数**: 🔺429  
+**是否精选**: 是  
+**发布时间**: 2026年04月27日 PM03:01 (北京时间)  
+
+---  
+
+## 2.  Jet AI Agents  
+**标语**: 几分钟内构建商业AI助手  
+**介绍**: Jet AI Agents 是一款无需代码的AI构建平台，让团队能够在200多种工具基础上创建商业应用和AI智能体。您可以直接在Slack、WhatsApp或Telegram中像与队友协作一样使用这些智能体。市场、销售、运营和支持团队利用Jet构建的AI智能体、AI工作流和应用不仅能展示数据，更能主动执行任务。团队借助Jet实现核心工作流程自动化。您团队将信赖这些AI智能体——因为它们由团队亲手打造  
+**网站**: [立即访问](https://www.producthunt.com/r/3FWOO35SRXZ3FG?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/jet-admin?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![ Jet AI Agents](https://ph-files.imgix.net/98471e35-3328-444d-bb2e-7b615cbae7c7.jpeg?auto=format)  
+**关键词**: Jet AI Agents,无代码AI构建,企业AI助手,自动化工作流,多平台集成,团队协作,AI应用开发,智能营销,销售运营,支持自动化  
+**票数**: 🔺304  
+**是否精选**: 是  
+**发布时间**: 2026年04月27日 PM03:01 (北京时间)  
+
+---  
+
+## 3. Logic  
+**标语**: 构建与运营代理集群  
+**介绍**: 部署一个真正的AI智能体，通常意味着要花费数周时间编写提示、设置重试机制、搭建评估框架和日志系统，才能投入生产。Logic解决了这一难题。您只需编写一份结构化规范来描述智能体的功能，Logic便会为您提供一个全托管的智能体，内置评估、可观测性、模型路由等功能，随时可从任何地方调用。  
+**网站**: [立即访问](https://www.producthunt.com/r/BHVF4YXQZYKB75?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/logic-ship-an-agent?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Logic](https://ph-files.imgix.net/0d301e98-50da-4637-8800-1dacbf61c620.png?auto=format)  
+**关键词**: AI agent平台,构建代理舰队,结构化规范,全托管代理,评估与可观测性,模型路由,生产就绪  
+**票数**: 🔺269  
+**是否精选**: 是  
+**发布时间**: 2026年04月27日 PM03:01 (北京时间)  
+
+---  
+
+## 4. Waitlister  
+**标语**: 推出产品的候补名单软件  
+**介绍**: 几分钟内创建病毒式候补名单。免费着陆页、推荐系统和邮件自动化——无需编码。免费开始，无需信用卡。  
+**网站**: [立即访问](https://www.producthunt.com/r/5GOOLU6RCSY5YM?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/waitlister?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Waitlister](https://ph-files.imgix.net/1dcb8558-ace2-4ce0-803b-90be7a5b6b93.webp?auto=format)  
+**关键词**: Waitlister软件, 产品候补名单, 无代码启动, 免费着陆页, 推荐系统, 邮件自动化  
+**票数**: 🔺253  
+**是否精选**: 是  
+**发布时间**: 2026年04月27日 PM03:01 (北京时间)  
+
+---  
+
+## 5. VIDEO AI ME  
+**标语**: 用AI演员制作声音和外观逼真的视频  
+**介绍**: 利用逼真演员打造惊艳AI视频。无论是自拍、提示词、产品照片、脚本还是参考片段，只需向平台提供任意素材，即可生成广告、解说视频、谈话内容、课程、短视频广告及病毒式传播内容，支持70多种语言。  
+**网站**: [立即访问](https://www.producthunt.com/r/7226TDHR4QPWZ3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/video-ai-me?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![VIDEO AI ME](https://ph-files.imgix.net/bc5f920d-437e-4c58-a15b-5809d1d9e7de.jpeg?auto=format)  
+**关键词**: AI视频制作,虚拟演员,多语言内容,AI视频生成,真人模拟,视频广告,短视频创作,智能脚本,AI数字人  
+**票数**: 🔺195  
+**是否精选**: 是  
+**发布时间**: 2026年04月27日 PM03:01 (北京时间)  
+
+---  
+
+## 6. Atech  
+**标语**: 通过聊天搭建的拼合式电子元件。  
+**介绍**: 硬件制造仍沿用着几十甚至上百年前的工艺。软件早在几十年前就实现了层层抽象，而硬件却从未迈出这一步。Atech如同实体电子领域的乐高——只需拼接模块、描述功能，我们便能生成固件。从构想到实际设备，只需几分钟。无需深究数据手册，无需焊接，更不必苦思“为何无法运行？”。  
+**网站**: [立即访问](https://www.producthunt.com/r/YK6JO5TJYLMSY2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/atech?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Atech](https://ph-files.imgix.net/bada34d6-f9b3-463e-a3b2-9c2ae0d40583.jpeg?auto=format)  
+**关键词**: Atech,模块化电子,即插即用,固件自动生成,快速原型,无焊接,硬件抽象化  
+**票数**: 🔺157  
+**是否精选**: 是  
+**发布时间**: 2026年04月27日 PM03:01 (北京时间)  
+
+---  
+
+## 7. Brew Finder  
+**标语**: 探索您附近最适合工作的咖啡馆。  
+**介绍**: 发现附近最佳咖啡店。实时查看人流与座位情况、WiFi质量及电源可用性。  
+**网站**: [立即访问](https://www.producthunt.com/r/NEOOBMKSSJPIUA?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/brew-finder?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Brew Finder](https://ph-files.imgix.net/e361b72c-72cc-4f24-a263-5fcb028e9179.png?auto=format)  
+**关键词**: 咖啡店推荐,实时人群,座位可用性,WiFi质量,电源插座,附近搜索  
+**票数**: 🔺142  
+**是否精选**: 是  
+**发布时间**: 2026年04月27日 PM03:01 (北京时间)  
+
+---  
+
+## 8. GitBar  
+**标语**: 每个拉取请求，一个菜单栏。GitHub、GitLab 和 Azure  
+**介绍**: GitBar是一款专为拉取请求设计的macOS菜单栏应用程序。它支持连接GitHub、GitLab（云端或自托管版本）以及Azure DevOps，可同时管理多个账户，所有您关注的拉取请求均可一键访问。清晰查看属于您的请求、待您审核的请求以及团队中的动态进展。状态徽章实时显示批准状态、草稿标识、冲突提示与检查结果，一目了然。实时更新的拉取请求数量常驻于菜单栏。  
+**网站**: [立即访问](https://www.producthunt.com/r/ASEXZJ4WEQTBCD?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/gitbar-3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![GitBar](https://ph-files.imgix.net/68fbffa1-3f0a-4e95-b440-749c52c31250.png?auto=format)  
+**关键词**: GitBar, macOS菜单栏应用, 拉取请求管理, GitHub, GitLab, Azure DevOps, 多账户集成, PR状态追踪, 代码审查, React Native开发, Mac App Store免费  
+**票数**: 🔺123  
+**是否精选**: 是  
+**发布时间**: 2026年04月27日 PM03:01 (北京时间)  
+
+---  
+
+## 9. Odyssey-2 Max  
+**标语**: 世界模型的物理准确性取得飞跃。  
+**介绍**: Odyssey-2 Max 是 Odyssey 迄今最大的通用世界模型，专为实时交互式模拟构建。它采用自回归下一状态预测技术，以提升物理精度、长时程稳定性，以及在用户行动驱动下不断演化的开放世界中的开放式交互体验。  
+**网站**: [立即访问](https://www.producthunt.com/r/ODLA4BSYGYFI2C?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/odyssey-5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Odyssey-2 Max](https://ph-files.imgix.net/d76bc724-856c-4ecc-8a7a-ea9a6d8f7c54.jpeg?auto=format)  
+**关键词**: Odyssey-2 Max, 世界模型, 物理精度, 实时交互仿真, 自回归状态预测, 长时稳定性, 开放式交互  
+**票数**: 🔺121  
+**是否精选**: 是  
+**发布时间**: 2026年04月27日 PM03:01 (北京时间)  
+
+---  
+
+## 10. SNEWPapers  
+**标语**: 全球首个AI报纸档案库  
+**介绍**: 我曾教会机器阅读报纸，为它们提供了250年的数据，提取了所有内容（迄今超过600万篇报道），将广告与正文分离并进行分类整理。你可以通过语义搜索或使用专属AI研究助手进行查询，获取包含全文提取的实际文章，还能创建和分享个人收藏集。据我所知，这项工作前所未有——这些数据不在谷歌或任何大型语言模型中，仅存于SNEWPAPERS平台。  
+**网站**: [立即访问](https://www.producthunt.com/r/74QRCZZSP3M4N6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/snewpapers?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![SNEWPapers](https://ph-files.imgix.net/53fd6e45-19b0-4aec-bbf8-321640c17296.png?auto=format)  
+**关键词**: AI报纸档案, 世界首个, 250年数据, 语义搜索, AI研究助理, 全文提取, 独家数据  
+**票数**: 🔺119  
+**是否精选**: 是  
+**发布时间**: 2026年04月27日 PM03:01 (北京时间)  
+
+---  
+
