@@ -1,9 +1,9 @@
 ---
 title: claude-code-templates
-date: 2026-04-26T16:20:11+08:00
+date: 2026-04-29T17:16:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1772470792144-3227a550234b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzcxOTE1NTd8&ixlib=rb-4.1.0
-tags: ['github',Claude Code Templates, AI development workflow, GitHub repository]
+image: https://images.unsplash.com/photo-1675895874435-a569080b0723?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc0NTQxMjd8&ixlib=rb-4.1.0
+tags: ['github',Claude Code, templates, development workflow]
 categories: ['github']
 ---
 

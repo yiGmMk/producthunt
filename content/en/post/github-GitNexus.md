@@ -1,9 +1,9 @@
 ---
 title: GitNexus
-date: 2026-04-28T17:29:12+08:00
+date: 2026-04-29T17:16:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1705321791621-f0548129282a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzczNjg1Mjd8&ixlib=rb-4.1.0
-tags: ['github',GitNexus, codebase analysis, AI agents]
+image: https://images.unsplash.com/photo-1689794480798-e176a5633fc1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc0NTQxMjd8&ixlib=rb-4.1.0
+tags: ['github',GitNexus, AI agents, code analysis]
 categories: ['github']
 ---
 
@@ -335,19 +335,21 @@ flowchart TD
 
 ## Web UI (browser-based)
 
-A fully client-side graph explorer and AI chat. No server, no install — your code never leaves the browser.
+A client-side graph explorer and AI chat — your code never leaves your machine.
 
-**Try it now:** [gitnexus.vercel.app](https://gitnexus.vercel.app) — drag & drop a ZIP and start exploring.
+**Try it now:** [gitnexus.vercel.app](https://gitnexus.vercel.app) — run `npx gitnexus@latest serve` locally and the page auto-connects to your local backend.
 
 <img width="2550" height="1343" alt="gitnexus_img" src="https://github.com/user-attachments/assets/cc5d637d-e0e5-48e6-93ff-5bcfdb929285" />
 
-Or run locally:
+Or run the frontend locally:
 
 ```bash
 git clone https://github.com/abhigyanpatwari/gitnexus.git
 cd gitnexus/gitnexus-shared && npm install && npm run build
 cd ../gitnexus-web && npm install
 npm run dev
+# Then in another terminal, start the backend the frontend connects to:
+npx gitnexus@latest serve
 ```
 
 ## Docker

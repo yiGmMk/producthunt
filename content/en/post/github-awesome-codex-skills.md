@@ -1,9 +1,9 @@
 ---
 title: awesome-codex-skills
-date: 2026-04-28T17:29:24+08:00
+date: 2026-04-29T17:16:27+08:00
 draft: False
-image: https://images.unsplash.com/photo-1669630814501-9b0dd220a763?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzczNjg1MjZ8&ixlib=rb-4.1.0
-tags: ['github',Codex skills,automation workflows,developer tools]
+image: https://images.unsplash.com/photo-1600521605615-a8d3a23d8262?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc0NTQxMjd8&ixlib=rb-4.1.0
+tags: ['github',Codex skills, automation, workflows]
 categories: ['github']
 ---
 
