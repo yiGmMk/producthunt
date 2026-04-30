@@ -1,9 +1,9 @@
 ---
 title: GhostTrack
-date: 2025-08-26T15:28:56+08:00
+date: 2026-04-30T17:22:08+08:00
 draft: False
-image: https://images.unsplash.com/photo-1469599898013-056a11a139cb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxOTMyOTR8&ixlib=rb-4.1.0
-tags: ['github',location tracking,mobile number tracking,OSINT,information gathering,IP tracker,phone tracker,username tracker,social media]
+image: https://images.unsplash.com/photo-1758883019110-04c79dc56a71?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc1NDA5MDF8&ixlib=rb-4.1.0
+tags: ['github',GhostTrack,OSINT,information gathering]
 categories: ['github']
 ---
 
