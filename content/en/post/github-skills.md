@@ -1,9 +1,9 @@
 ---
 title: skills
-date: 2026-04-30T17:21:59+08:00
+date: 2026-05-01T17:07:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1689578986022-34a7c470e12a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc1NDA5MDF8&ixlib=rb-4.1.0
-tags: ['github',agent skills, engineering fundamentals, software development]
+image: https://images.unsplash.com/photo-1547502753-71b6a49c8fb2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc2MjY0Mjd8&ixlib=rb-4.1.0
+tags: ['github',AI skills, software engineering, productivity]
 categories: ['github']
 ---
 
