@@ -1,9 +1,9 @@
 ---
 title: skills
-date: 2026-05-01T17:07:35+08:00
+date: 2026-05-02T16:25:53+08:00
 draft: False
-image: https://images.unsplash.com/photo-1547502753-71b6a49c8fb2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc2MjY0Mjd8&ixlib=rb-4.1.0
-tags: ['github',AI skills, software engineering, productivity]
+image: https://images.unsplash.com/photo-1581609201084-97dfcf22900d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc3MTAzMDl8&ixlib=rb-4.1.0
+tags: ['github',AI skills, engineering, software development]
 categories: ['github']
 ---
 

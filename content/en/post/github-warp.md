@@ -1,9 +1,9 @@
 ---
 title: warp
-date: 2026-05-01T17:07:19+08:00
+date: 2026-05-02T16:25:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1547502753-71b6a49c8fb2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc2MjY0Mjd8&ixlib=rb-4.1.0
-tags: ['github',agentic development environment, terminal, open source]
+image: https://images.unsplash.com/photo-1685076758081-18faa98ba51e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc3MTAzMDl8&ixlib=rb-4.1.0
+tags: ['github',development environment, terminal, open source]
 categories: ['github']
 ---
 
