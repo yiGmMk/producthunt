@@ -1,9 +1,9 @@
 ---
 title: maigret
-date: 2026-05-02T16:25:26+08:00
+date: 2026-05-03T16:52:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1681138234408-8043904669a5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc3MTAzMDl8&ixlib=rb-4.1.0
-tags: ['github',username search, OSINT tool, social media investigation]
+image: https://images.unsplash.com/photo-1748367959778-12d026a20a99?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc3OTgzMDV8&ixlib=rb-4.1.0
+tags: ['github',maigret, OSINT, username search]
 categories: ['github']
 ---
 
@@ -32,6 +32,10 @@ categories: ['github']
   <br>
   <div>
     <img src="https://raw.githubusercontent.com/soxoj/maigret/main/static/maigret.png" height="300" alt="Maigret logo"/>
+  </div>
+  <br>
+  <div>
+    <b>English</b> · <a href="README.zh-CN.md">简体中文</a>
   </div>
   <br>
 </div>
