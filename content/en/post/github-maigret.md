@@ -1,9 +1,9 @@
 ---
 title: maigret
-date: 2026-05-03T16:52:26+08:00
+date: 2026-05-04T17:27:01+08:00
 draft: False
-image: https://images.unsplash.com/photo-1748367959778-12d026a20a99?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc3OTgzMDV8&ixlib=rb-4.1.0
-tags: ['github',maigret, OSINT, username search]
+image: https://images.unsplash.com/photo-1651132139424-0d236b06408c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc4ODY3OTB8&ixlib=rb-4.1.0
+tags: ['github',OSINT, username search, social media analysis]
 categories: ['github']
 ---
 
