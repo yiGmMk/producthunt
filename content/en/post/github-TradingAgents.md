@@ -1,9 +1,9 @@
 ---
 title: TradingAgents
-date: 2026-05-04T17:26:51+08:00
+date: 2026-05-05T17:12:30+08:00
 draft: False
-image: https://images.unsplash.com/photo-1634766742722-ae97676d7563?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc4ODY3OTB8&ixlib=rb-4.1.0
-tags: ['github',TradingAgents, MultiAgents, FinancialTrading]
+image: https://images.unsplash.com/photo-1615705255313-eba35dd523c7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5NzIzMDV8&ixlib=rb-4.1.0
+tags: ['github',TradingAgents,multi-agent,LLM]
 categories: ['github']
 ---
 

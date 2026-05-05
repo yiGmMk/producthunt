@@ -1,9 +1,9 @@
 ---
 title: skills
-date: 2026-05-03T16:52:14+08:00
+date: 2026-05-05T17:12:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1513039235271-5937eefe2959?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc3OTgzMDV8&ixlib=rb-4.1.0
-tags: ['github',browser automation,Claude Code,Browserbase Skills]
+image: https://images.unsplash.com/photo-1614861926941-7a9155c1b6a7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5NzIzMDV8&ixlib=rb-4.1.0
+tags: ['github',Browserbase,browser automation,skills]
 categories: ['github']
 ---
 

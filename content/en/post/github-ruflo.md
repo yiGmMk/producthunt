@@ -1,9 +1,9 @@
 ---
 title: ruflo
-date: 2026-05-04T17:26:41+08:00
+date: 2026-05-05T17:11:58+08:00
 draft: False
-image: https://images.unsplash.com/photo-1527856263669-12c3a0af2aa6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc4ODY3OTB8&ixlib=rb-4.1.0
-tags: ['github',Ruflo, AI orchestration, Claude Code]
+image: https://images.unsplash.com/photo-1749421386581-eb5808fc3028?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5NzIzMDV8&ixlib=rb-4.1.0
+tags: ['github',multi-agent orchestration,Claude Code plugin,self-learning AI]
 categories: ['github']
 ---
 
