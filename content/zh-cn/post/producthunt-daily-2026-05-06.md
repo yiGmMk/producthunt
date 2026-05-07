@@ -1,0 +1,137 @@
+---
+title: Product Hunt 今日热榜 | 2026-05-07
+date: 2026-05-07 09:39:21+0000
+image: https://ph-files.imgix.net/8cb54eb6-549b-4e46-a9b6-e221c6f3d341.png?auto=format
+tags: ["AI代理", "Kanwas", "开源大脑"]
+---
+
+## 1. Kanwas  
+**标语**: 为你的团队提供开源智能  
+**介绍**: 为你、你的智能代理、你的同事及其智能代理而设计。它承载着团队的核心知识、研究、决策与数据。但它并非静态存储库，而是一个能让上下文信息对人类与智能代理都高效可用的工作空间。  
+**网站**: [立即访问](https://www.producthunt.com/r/B4UPX2JVYGVZFJ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/kanwas?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Kanwas](https://ph-files.imgix.net/8cb54eb6-549b-4e46-a9b6-e221c6f3d341.png?auto=format)  
+**关键词**: Kanwas,开源大脑,团队协作,知识库,智能代理,工作空间,人机协同,数据管理,决策支持,开源工具  
+**票数**: 🔺466  
+**是否精选**: 是  
+**发布时间**: 2026年05月06日 PM03:01 (北京时间)  
+
+---  
+
+## 2. Shadow 2.0  
+**标语**: 会议结束前，你们要完成会议产生的工作。  
+**介绍**: 每次线上会议都会产生一堆待办事项。Shadow实时处理它们——它能理解对话内容、追踪待办事项，并在会议结束前实时执行任务：生成PDF、制作幻灯片、更新客户关系管理系统、安排后续跟进及日程等。我们的目标是让您会后零收尾工作，只需专注会议本身，其余交给Shadow在后台处理。从核心工作流开始，逐步覆盖会议产生的所有事务。  
+**网站**: [立即访问](https://www.producthunt.com/r/6DYONUBX4ZQVHY?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/shadow-6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Shadow 2.0](https://ph-files.imgix.net/1d5af0b2-19d4-46e4-979d-8eabbd5b5478.png?auto=format)  
+**关键词**: 实时任务执行,会议自动化,无会后工作,后台处理,工作流自动化  
+**票数**: 🔺459  
+**是否精选**: 是  
+**发布时间**: 2026年05月06日 PM03:01 (北京时间)  
+
+---  
+
+## 3. Superset 2.0  
+**标语**: 从任意设备随时随地运行数百个编程代理。  
+**介绍**: 运行上百个并行编程代理，将它们分配到不同的机器上。完全重写以支持远程工作空间。与团队成员实时分享和协作。适用于任何命令行界面代理。  
+**网站**: [立即访问](https://www.producthunt.com/r/DLXL3IV2Y7S2VX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/superset-5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Superset 2.0](https://ph-files.imgix.net/4eff094b-687d-4ced-b20f-3d4add937bb6.png?auto=format)  
+**关键词**: Superset 2.0, 并行编码代理, 远程工作空间, 实时协作, CLI代理, 负载分配  
+**票数**: 🔺400  
+**是否精选**: 是  
+**发布时间**: 2026年05月06日 PM03:01 (北京时间)  
+
+---  
+
+## 4. pay.sh  
+**标语**: 自主发现、访问并支付任何API服务  
+**介绍**: 我们正与谷歌云携手，共同构建开源实时支付基础设施，旨在让AI智能体能够按调用次数发现并支付任何API服务。  
+**网站**: [立即访问](https://www.producthunt.com/r/OC7YL7YNUEQWUP?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/solanafndn?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![pay.sh](https://ph-files.imgix.net/6dfbe0c2-d140-483c-9933-eaacaefb04c2.png?auto=format)  
+**关键词**: pay.sh,Google Cloud,开源,实时支付,AI代理,API发现,按需支付  
+**票数**: 🔺307  
+**是否精选**: 是  
+**发布时间**: 2026年05月06日 PM03:01 (北京时间)  
+
+---  
+
+## 5. Gyro Autopilot  
+**标语**: 上百美元可能就在你的邮箱里 📥  
+**介绍**: 扫描您的收件箱，寻找因航班延误、取消、超额预订等情况而未被索赔的补偿款项。Gyro Autopilot会自动识别您应得的赔偿并代为申领。不成功不收费，无需承诺，无需信用卡。  
+**网站**: [立即访问](https://www.producthunt.com/r/O3FI3XMXVFLPBR?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/gyro-autopilot?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Gyro Autopilot](https://ph-files.imgix.net/c76cdd43-8128-40d3-9bde-b9868e075fb1.png?auto=format)  
+**关键词**: 航班赔偿,自动索赔,邮箱扫描,延误补偿,未领退款,无预付费用  
+**票数**: 🔺254  
+**是否精选**: 是  
+**发布时间**: 2026年05月06日 PM03:01 (北京时间)  
+
+---  
+
+## 6. Custom Integrations by Databox  
+**标语**: 无需编写代码，将缺失数据导入Databox。  
+**介绍**: 自定义集成功能让您无需编写代码，即可将几乎所有API连接到Databox。将API响应转化为结构化数据集，并与其他数据源整合分析，从而全面掌握绩效表现。  
+**网站**: [立即访问](https://www.producthunt.com/r/RYM7QLUSFPSIEN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/databox?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Custom Integrations by Databox](https://ph-files.imgix.net/2de1673f-1d43-4e7c-ba3b-92152fd85232.png?auto=format)  
+**关键词**: 无代码集成,API连接,数据整合,性能分析  
+**票数**: 🔺213  
+**是否精选**: 是  
+**发布时间**: 2026年05月06日 PM03:01 (北京时间)  
+
+---  
+
+## 7. Alumni Founder  
+**标语**: 为任何公司绘制创始人网络图谱的工具  
+**介绍**: 输入任意公司或高校名称，即可查看其完整的创始人关系网络。谁曾独立创业、他们之间如何连接、这些联系的紧密程度如何，以及他们筹集了多少资金——所有这些都将以实时可视化图谱呈现。风险投资机构借此寻找交易机会，销售团队用以获取内推机会，创始人们则在此寻找联合创始人伙伴。  
+**网站**: [立即访问](https://www.producthunt.com/r/ND23TL2JPB5YK4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/alumni-founder?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Alumni Founder](https://ph-files.imgix.net/0dae3969-4305-4c4d-9371-23787144f8b4.png?auto=format)  
+**关键词**: 校友创始人网络图谱,创始人关系分析,创业网络可视化,企业校友图谱,VC项目发现,销售团队预热介绍,寻找联合创始人  
+**票数**: 🔺188  
+**是否精选**: 是  
+**发布时间**: 2026年05月06日 PM03:01 (北京时间)  
+
+---  
+
+## 8. WOZCODE  
+**标语**: 削减Claude Code成本高达50%  
+**介绍**: WOZCODE是Claude Code的高效辅助层。它帮助开发者减少令牌消耗、加速任务完成并提升代理性能，无需切换IDE、订阅服务或改变工作流程。只需两行命令即可安装，让每次Claude Code会话创造更多价值。  
+**网站**: [立即访问](https://www.producthunt.com/r/IVDIEGU2INHVQ7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/wozcode?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![WOZCODE](https://ph-files.imgix.net/5dfb8384-f036-4c6c-aa2d-a319f04f9f90.png?auto=format)  
+**关键词**: 成本降低,效率提升,任务提速,性能优化,无缝集成,快速安装  
+**票数**: 🔺176  
+**是否精选**: 是  
+**发布时间**: 2026年05月06日 PM03:01 (北京时间)  
+
+---  
+
+## 9. Contrario  
+**标语**: 由专业招聘人员驱动的AI招聘平台  
+**介绍**: 招聘工具无法确保成功招聘，而优秀的团队可以。Contrario 将专业招聘顾问网络与专为招聘设计的人工智能助手相结合。我们的顾问和人工智能助手能处理90%的工作——从人才寻访、筛选、协调到最终录用，全部通过自然语言在Slack中完成。系统会在每次决策中学习您的标准，随时间推移为您呈现更合适的候选人。  
+**网站**: [立即访问](https://www.producthunt.com/r/JNUH7PXL56W6MY?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/contrario?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Contrario](https://ph-files.imgix.net/9d804029-54b3-40be-adfe-b5c6db6b010c.png?auto=format)  
+**关键词**: AI招聘平台,专家招聘团队,招聘工具,AI代理,Slack集成,自然语言处理,候选人筛选,招聘流程自动化,招聘网络,系统学习  
+**票数**: 🔺164  
+**是否精选**: 是  
+**发布时间**: 2026年05月06日 PM03:01 (北京时间)  
+
+---  
+
+## 10. Ads in ChatGPT  
+**标语**: 创建、管理和衡量您的ChatGPT广告活动  
+**介绍**: OpenAI正扩展ChatGPT广告功能，面向美国广告商推出测试版自助广告管理器，支持基于合作伙伴的广告购买、按点击付费竞价、千次展示成本广告活动、转化效果衡量及汇总报告功能，同时确保广告清晰标注并与ChatGPT回答内容明确区分。  
+**网站**: [立即访问](https://www.producthunt.com/r/VYJAW7OMYVFKMS?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/chatgpt?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Ads in ChatGPT](https://ph-files.imgix.net/fc5ba01c-240e-4add-9209-ebb2a7028d9c.png?auto=format)  
+**关键词**: ChatGPT广告管理平台,自助式广告投放,美国市场Beta测试,CPC竞价,CPM广告,转化测量,聚合报告,广告标签管理  
+**票数**: 🔺154  
+**是否精选**: 是  
+**发布时间**: 2026年05月06日 PM03:01 (北京时间)  
+
+---  
+
