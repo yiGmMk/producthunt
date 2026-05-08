@@ -1,9 +1,9 @@
 ---
 title: local-deep-research
-date: 2026-05-07T17:41:47+08:00
+date: 2026-05-08T16:26:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1600193043751-2f5f2222f58b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgxNDY4MjJ8&ixlib=rb-4.1.0
-tags: ['github',local, AI research, deep research]
+image: https://images.unsplash.com/photo-1650938769377-f29dbd449f81?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgyMjg3MTd8&ixlib=rb-4.1.0
+tags: ['github',AI research,local,privacy]
 categories: ['github']
 ---
 
