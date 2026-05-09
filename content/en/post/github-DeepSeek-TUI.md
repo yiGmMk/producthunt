@@ -1,9 +1,9 @@
 ---
 title: DeepSeek-TUI
-date: 2026-05-08T16:25:35+08:00
+date: 2026-05-09T16:46:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1633024404059-440db23c9a29?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgyMjg3MTd8&ixlib=rb-4.1.0
-tags: ['github',DeepSeek TUI, terminal coding agent, Rust]
+image: https://images.unsplash.com/photo-1497345172581-5c2da4d00663?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzMTYzNzh8&ixlib=rb-4.1.0
+tags: ['github',DeepSeek TUI, terminal coding agent, Rust binaries]
 categories: ['github']
 ---
 
@@ -236,40 +236,44 @@ deepseek --provider ollama --model deepseek-coder:1.3b
 
 ---
 
-## What's New In v0.8.20
+## What's New In v0.8.24
 
-A hotfix release for Chinese reasoning language, DeepSeek endpoint defaults,
-and the v0.8.18 TUI/runtime/install polish.
-[Full changelog](CHANGELOG.md).
+A community-focused bugfix release picking up the backlog after the v0.8.23
+security release. [Full changelog](CHANGELOG.md).
 
-- **Chinese reasoning stays Chinese** - when the latest user message is in
-  Simplified Chinese, V4 `reasoning_content` and the final reply are prompted
-  to stay in Simplified Chinese even on an English system locale.
-- **DeepSeek beta endpoint stays default worldwide** - Chinese locales and
-  legacy `deepseek-cn` configs now use `https://api.deepseek.com/beta`, so
-  strict tool mode and other beta-gated features remain available.
-- **`deepseek-cn` is legacy-only** - it is no longer advertised as a separate
-  provider. Existing configs still parse it as a backwards-compatible alias for
-  `deepseek`.
-- **Plain `deepseek` starts fresh** - opening a second terminal in the same
-  folder now creates a new session instead of silently re-entering the same
-  interrupted checkpoint. Use `deepseek --continue` when you want recovery.
-- **Docker is a supported install path** - release builds publish
-  `ghcr.io/hmbown/deepseek-tui` images with `latest`, semver, and `vX.Y.Z`
-  tags; Docker publishing is part of the release gate.
-- **Chinese destructive approval dialogs are localized** - zh-Hans approval
-  copy keeps explicit destructive-risk wording while English defaults stay
-  unchanged.
-- **Transcript scrollbar dragging** - with mouse capture enabled, drag the
-  transcript scrollbar thumb to move through long sessions.
-- **Viewport drift fix** - terminal scroll margins and origin mode are reset
-  before key repaints, with a PTY regression for the blank-top-rows bug.
-- **npm installs are more resilient** - transient release-download failures
-  are recoverable at postinstall time, while checksum, platform, glibc, and
-  runtime failures remain fatal.
-- **Plus**: FreeBSD secrets-crate compile fallback, Docker Buildx cache-race
-  fix, readable light-theme toggles, softer long-session text colors, Windows
-  sandbox guarantee cleanup, and rustup mirror/install troubleshooting updates.
+- **Cache-aware prompt diagnostics + payload optimization** (#1196, thanks
+  **wplll**) — new `/cache inspect` and `/cache warmup` commands, layered
+  prompt classification (static / history / dynamic) with per-layer SHA-256
+  hashes, wire-payload dedup for repeated tool outputs, and a footer cache-hit
+  % chip from the DeepSeek API response. A new **Project Context Pack** is
+  injected into the stable prefix by default to improve cache hit rates;
+  disable with `[context] project_pack = false` if you'd rather keep prompts
+  minimal.
+- **Workspace-local slash commands** (#1259) — drop a `.deepseek/commands/foo.md`
+  in any project and `/foo` works there. Also scans `.cursor/commands/` and
+  `.claude/commands/`. Project-local shadows global by name.
+- **`@`-mention completion finds AI-tool dot-directories** — files inside
+  `.deepseek/`, `.cursor/`, `.claude/`, and `.agents/` are now discoverable
+  via `@` completion even when those dirs are in `.gitignore`.
+- **MCP paginated discovery** (#1250, thanks **Liu-Vince**) — MCP servers that
+  paginate `tools/list` (e.g., gbrain at 5 per page) now have all their tools
+  discovered via `nextCursor`.
+- **Snapshot disk cap** (#1112) — the snapshot side repo enforces a 500 MB
+  hard limit, pruning oldest first when it's hit. Guards against the reported
+  1.2 TB blowup. Thanks **@Giggitycountless** for the PR #1131 proposal.
+- **`/clear` resets the Todos sidebar** (#1258) — was only clearing the Plan
+  panel before.
+- **Mouse-wheel survives focus toggles** — re-arms `EnableMouseCapture` on
+  `FocusGained` so wheel scroll keeps working after Cmd+Tab or screenshot
+  workflows.
+- **i18n: prompts in English get English replies** (#1118) — Chinese
+  filenames in a project tree no longer bias the model toward Chinese
+  responses.
+- **Plus**: language-directive strengthening, MCP error-message clarity
+  improvements (PR #1196), and assorted polish.
+
+⚠️ **Known issue:** v0.8.22+ have a Windows 10 conhost flicker regression
+(#1260) tracked for v0.8.25. v0.8.20 works correctly if you're affected.
 
 ---
 
@@ -293,7 +297,7 @@ deepseek resume <SESSION_ID>                     # resume a specific session by 
 deepseek fork <SESSION_ID>                       # fork a session at a chosen turn
 deepseek serve --http                            # HTTP/SSE API server
 deepseek serve --acp                             # ACP stdio adapter for Zed/custom agents
-deepseek pr <N>                                  # fetch PR and pre-seed review prompt
+deepseek run pr <N>                              # fetch PR and pre-seed review prompt
 deepseek mcp list                                # list configured MCP servers
 deepseek mcp validate                            # validate MCP config/connectivity
 deepseek mcp-server                              # run dispatcher MCP stdio server
@@ -303,9 +307,11 @@ deepseek update                                  # check for and apply binary up
 Docker images are published to GHCR for release builds:
 
 ```bash
+docker volume create deepseek-tui-home
+
 docker run --rm -it \
   -e DEEPSEEK_API_KEY="$DEEPSEEK_API_KEY" \
-  -v ~/.deepseek:/home/deepseek/.deepseek \
+  -v deepseek-tui-home:/home/deepseek/.deepseek \
   ghcr.io/hmbown/deepseek-tui:latest
 ```
 

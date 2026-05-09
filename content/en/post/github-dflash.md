@@ -1,9 +1,9 @@
 ---
 title: dflash
-date: 2026-05-08T16:25:50+08:00
+date: 2026-05-09T16:46:59+08:00
 draft: False
-image: https://images.unsplash.com/photo-1654525235038-50cd282eb5d2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgyMjg3MTd8&ixlib=rb-4.1.0
-tags: ['github',DFlash, speculative decoding, block diffusion]
+image: https://images.unsplash.com/photo-1758461479768-bdbce375e005?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzMTYzNzh8&ixlib=rb-4.1.0
+tags: ['github',block diffusion, speculative decoding, parallel drafting]
 categories: ['github']
 ---
 
