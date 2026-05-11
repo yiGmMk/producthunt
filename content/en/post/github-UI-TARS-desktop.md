@@ -1,9 +1,9 @@
 ---
 title: UI-TARS-desktop
-date: 2026-05-10T17:00:12+08:00
+date: 2026-05-11T18:42:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1690922515498-820b007028bb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MDM1OTN8&ixlib=rb-4.1.0
-tags: ['github',multimodal AI agent, GUI automation, computer control]
+image: https://images.unsplash.com/photo-1610889861788-eb2d605df004?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0OTYxMjd8&ixlib=rb-4.1.0
+tags: ['github',AI Agent, GUI automation, multimodal]
 categories: ['github']
 ---
 
