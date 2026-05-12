@@ -1,9 +1,9 @@
 ---
 title: CloakBrowser
-date: 2026-05-11T18:42:39+08:00
+date: 2026-05-12T17:46:58+08:00
 draft: False
-image: https://images.unsplash.com/photo-1660311435744-0fa4d0ea186a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0OTYxMjd8&ixlib=rb-4.1.0
-tags: ['github',stealth browser, bot detection, Chromium patches]
+image: https://images.unsplash.com/photo-1568904924166-1dec5d529cb1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg1NzkxOTB8&ixlib=rb-4.1.0
+tags: ['github',stealth, Chromium, bot detection]
 categories: ['github']
 ---
 
@@ -581,6 +581,7 @@ Access the original un-patched Playwright page at `page._original` if you need r
 | `CLOAKBROWSER_DOWNLOAD_URL` | `cloakbrowser.dev` | Custom download URL for binary |
 | `CLOAKBROWSER_AUTO_UPDATE` | `true` | Set to `false` to disable background update checks |
 | `CLOAKBROWSER_SKIP_CHECKSUM` | `false` | Set to `true` to skip SHA-256 verification after download |
+| `CLOAKBROWSER_GEOIP_TIMEOUT_SECONDS` | `5` | Max seconds for GeoIP resolution before continuing without it |
 
 ## Fingerprint Management
 
@@ -1204,6 +1205,6 @@ Issues and PRs welcome. If something isn't working, [open an issue](https://gith
 - [@yahooguntu](https://github.com/yahooguntu) — persistent contexts
 - [@kitiho](https://github.com/kitiho) — null viewport fix
 - [@eofreternal](https://github.com/eofreternal) — humanConfig type fix, humanized method option types
-- [@manaskarra](https://github.com/manaskarra) — iframe scope fix for humanized frame actions
+- [@manaskarra](https://github.com/manaskarra) — iframe scope fix for humanized frame actions, GeoIP timeout guard
 - [@Youhai020616](https://github.com/Youhai020616) — SOCKS5 credential encoding logging
 - [@AlexTech314](https://github.com/AlexTech314) — AWS Lambda integration

@@ -1,9 +1,9 @@
 ---
 title: AiToEarn
-date: 2026-05-11T18:42:47+08:00
+date: 2026-05-12T17:47:24+08:00
 draft: False
-image: https://images.unsplash.com/photo-1655220602514-a12640150bc4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0OTYxMjd8&ixlib=rb-4.1.0
-tags: ['github',AiToEarn, content monetization, AI automation]
+image: https://images.unsplash.com/photo-1568904924166-1dec5d529cb1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg1NzkxOTB8&ixlib=rb-4.1.0
+tags: ['github',AI automation, content monetization, multi-platform publishing]
 categories: ['github']
 ---
 
@@ -354,7 +354,7 @@ Electron 项目为 AiToEarn 提供桌面客户端。
 <img src="presentation/wechat.jpg" alt="微信二维码" width="200">
 
 ## 推荐
-
+- [AtomGit托管](https://atomgit.com/yikart/AitoEarn)
 - [MuseTalk](https://github.com/TMElyralab/MuseTalk)
 - [video_spider](https://github.com/5ime/video_spider)
 - [CosyVoice](https://github.com/FunAudioLLM/CosyVoice?tab=readme-ov-file)

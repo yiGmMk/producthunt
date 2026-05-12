@@ -1,9 +1,9 @@
 ---
 title: easy-vibe
-date: 2026-05-11T18:43:11+08:00
+date: 2026-05-12T17:47:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1655220602514-a12640150bc4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0OTYxMjd8&ixlib=rb-4.1.0
-tags: ['github',AI programming,learning platform,vibe coding]
+image: https://images.unsplash.com/photo-1595087242606-ecf4d9dd2545?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg1NzkxOTB8&ixlib=rb-4.1.0
+tags: ['github',AI programming, learning path, product prototype]
 categories: ['github']
 ---
 

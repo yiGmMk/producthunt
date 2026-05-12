@@ -1,9 +1,9 @@
 ---
 title: supersplat
-date: 2026-05-11T18:42:57+08:00
+date: 2026-05-12T17:47:36+08:00
 draft: False
-image: https://images.unsplash.com/photo-1660311435744-0fa4d0ea186a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0OTYxMjd8&ixlib=rb-4.1.0
-tags: ['github',SuperSplat Editor, Gaussian Splats, web technologies]
+image: https://images.unsplash.com/photo-1632425422799-286dc4325dbb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg1NzkxOTB8&ixlib=rb-4.1.0
+tags: ['github',SuperSplat Editor, Gaussian Splatting, 3D editing]
 categories: ['github']
 ---
 
