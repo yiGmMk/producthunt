@@ -1,9 +1,9 @@
 ---
 title: CloakBrowser
-date: 2026-05-12T17:46:58+08:00
+date: 2026-05-13T17:50:06+08:00
 draft: False
-image: https://images.unsplash.com/photo-1568904924166-1dec5d529cb1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg1NzkxOTB8&ixlib=rb-4.1.0
-tags: ['github',stealth, Chromium, bot detection]
+image: https://images.unsplash.com/photo-1590005298234-fdc7ff540468?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg2NjU3NzZ8&ixlib=rb-4.1.0
+tags: ['github',cloakbrowser, chromium stealth, browser fingerprint]
 categories: ['github']
 ---
 
