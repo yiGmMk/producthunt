@@ -1,9 +1,9 @@
 ---
 title: AiToEarn
-date: 2026-05-12T17:47:24+08:00
+date: 2026-05-14T17:39:47+08:00
 draft: False
-image: https://images.unsplash.com/photo-1568904924166-1dec5d529cb1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg1NzkxOTB8&ixlib=rb-4.1.0
-tags: ['github',AI automation, content monetization, multi-platform publishing]
+image: https://images.unsplash.com/photo-1753604145306-5b7826c326c8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg3NTE1NDJ8&ixlib=rb-4.1.0
+tags: ['github',AI automation, content monetization, social media publishing]
 categories: ['github']
 ---
 
@@ -21,10 +21,10 @@ categories: ['github']
 
 **Monetize · Publish · Engage · Create —— 一站式平台。**
 
-AiToEarn 通过 **AI 自动化**，帮助 OPC（一人公司）、创作者、品牌与企业在全球主流平台上构建、分发并变现内容。
+AiToEarn 通过 **AI Agent自动化**，帮助 OPC（一人公司）、创作者、品牌与企业在全球主流平台上构建、分发并变现内容。
 
 支持渠道：
-抖音、小红书（Rednote）、快手、哔哩哔哩、TikTok、YouTube、Facebook、Instagram、Threads、Twitter（X）、Pinterest、LinkedIn
+抖音、小红书（Rednote）、快手、哔哩哔哩、视频号、微信公众号、TikTok、YouTube、Facebook、Instagram、Threads、Twitter（X）、Pinterest、LinkedIn
 
 ## 🚀 快速使用 AiToEarn（5 种方式）
 
@@ -91,7 +91,7 @@ AiToEarn 最核心的目标：**帮助每一位创作者赚钱**。
 
 一键将内容分发到全球 10+ 主流平台，告别逐个平台手动发布。
 
-- **全网分发**：覆盖抖音、快手、B站、小红书、TikTok、YouTube、Facebook、Instagram、Threads、X（Twitter）、Pinterest、LinkedIn
+- **全网分发**：覆盖抖音、快手、B站、小红书、视频号、微信公众号、TikTok、YouTube、Facebook、Instagram、Threads、X（Twitter）、Pinterest、LinkedIn
 - **日历排期**：像排日程一样统一规划所有平台的内容发布时间
 
 <img src="presentation/publish-cn.png" width="30%"> <img src="presentation/channel-cn.png" width="30%">
@@ -354,6 +354,7 @@ Electron 项目为 AiToEarn 提供桌面客户端。
 <img src="presentation/wechat.jpg" alt="微信二维码" width="200">
 
 ## 推荐
+- [AI中转站](https://aihubmix.com/?aff=hWRL)
 - [AtomGit托管](https://atomgit.com/yikart/AitoEarn)
 - [MuseTalk](https://github.com/TMElyralab/MuseTalk)
 - [video_spider](https://github.com/5ime/video_spider)

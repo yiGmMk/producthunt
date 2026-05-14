@@ -1,9 +1,9 @@
 ---
 title: openhuman
-date: 2026-05-13T17:49:44+08:00
+date: 2026-05-14T17:39:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1568961656559-ea30134003b6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg2NjU3NzZ8&ixlib=rb-4.1.0
-tags: ['github',OpenHuman, AI assistant, memory tree]
+image: https://images.unsplash.com/photo-1592893658769-5da16cb93236?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg3NTE1NDJ8&ixlib=rb-4.1.0
+tags: ['github',OpenHuman, AI assistant, open source]
 categories: ['github']
 ---
 
@@ -69,7 +69,15 @@ OpenHuman is an open-source agentic assistant designed to integrate with you in 
 
 - **[Messaging channels](https://tinyhumans.gitbook.io/openhuman/features/integrations#messaging-channels)** and **[privacy & security](https://tinyhumans.gitbook.io/openhuman/features/privacy-and-security)**: inbound/outbound across the channels you already use, with workflow data that stays on device, encrypted locally, treated as yours.
 
-For contributors: Read the [Architecture](https://tinyhumans.gitbook.io/openhuman/developing/architecture) · [Getting Set Up](https://tinyhumans.gitbook.io/openhuman/developing/getting-set-up) · [Cloud Deploy](https://tinyhumans.gitbook.io/openhuman/developing/cloud-deploy) · [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+## Contributing from source
+
+New contributor? Start with [`CONTRIBUTING.md`](./CONTRIBUTING.md) for the fork/PR workflow and local validation commands. The short path is:
+
+1. Install Git, Node.js 24+, pnpm 10.10.0, Rust 1.93.0 (`rustfmt` + `clippy`), CMake, and the platform desktop build prerequisites.
+2. Fork and clone the repo, then run `git submodule update --init --recursive` before `pnpm install` so the vendored Tauri/CEF sources are present.
+3. Use `pnpm dev` for web-only UI work, `pnpm --filter openhuman-app dev:app` for the desktop shell, and focused checks such as `pnpm typecheck`, `pnpm format:check`, and `cargo check -p openhuman --lib` before opening a PR.
+
+Deeper docs: [Architecture](https://tinyhumans.gitbook.io/openhuman/developing/architecture) · [Getting Set Up](https://tinyhumans.gitbook.io/openhuman/developing/getting-set-up) · [Cloud Deploy](./gitbooks/features/cloud-deploy.md).
 
 ## Context in minutes, not weeks
 
