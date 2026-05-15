@@ -1,9 +1,9 @@
 ---
 title: agentmemory
-date: 2026-05-14T17:39:30+08:00
+date: 2026-05-15T17:57:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1658910332023-3b1d1a4761fc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg3NTE1NDJ8&ixlib=rb-4.1.0
-tags: ['github',agentmemory, persistent memory, AI coding agents]
+image: https://images.unsplash.com/photo-1701111595038-6ecb742048b0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg4MzkwMTR8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
@@ -564,6 +564,44 @@ npx -y @agentmemory/mcp
 
 ---
 
+<h2 id="deploy">Deploy</h2>
+
+One-click templates for managed hosts. Each one ships a self-contained
+Dockerfile that pulls `@agentmemory/agentmemory` from npm and copies
+the iii engine binary in from the official `iiidev/iii` Docker Hub
+image — no pre-built agentmemory image required. Persistent storage
+mounts at `/data`; the first-boot entrypoint overwrites the
+npm-bundled iii config (which binds `127.0.0.1`) with a deploy-tuned
+one that binds `0.0.0.0` and uses absolute `/data` paths, generates
+the HMAC secret, then drops privileges from `root` to `node` via
+`gosu` before exec'ing the agentmemory CLI.
+
+<p>
+  <a href="https://fly.io/launch?repo=https://github.com/rohitg00/agentmemory&path=deploy/fly"><img src="https://img.shields.io/badge/Deploy%20to-fly.io-8b5cf6?style=for-the-badge&logo=fly.io&logoColor=white" alt="Deploy to fly.io" /></a>
+  <a href="https://railway.com/new/template?template=https%3A%2F%2Fgithub.com%2Frohitg00%2Fagentmemory&rootDirectory=deploy%2Frailway"><img src="https://img.shields.io/badge/Deploy%20to-Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white" alt="Deploy to Railway" /></a>
+</p>
+
+Render's one-click deploy button requires `render.yaml` at the repository root, which we deliberately keep clean. Use the Render Blueprint flow documented in [`deploy/render/`](./deploy/render/README.md) to point at the in-repo blueprint manually.
+
+Full setup details (HMAC capture, viewer SSH tunnel, rotation, backup,
+cost floors) live in [`deploy/`](./deploy/README.md):
+
+- [`deploy/fly`](./deploy/fly/README.md) — single machine with
+  `auto_stop_machines = "stop"`; cheapest idle.
+- [`deploy/railway`](./deploy/railway/README.md) — Hobby plan flat fee,
+  volume in the dashboard.
+- [`deploy/render`](./deploy/render/README.md) — Blueprint flow,
+  automatic disk snapshots on paid plans.
+- [`deploy/coolify`](./deploy/coolify/README.md) — self-hosted on your
+  own VPS via [Coolify](https://coolify.io/self-hosted); same Docker
+  Compose stack, you own the host and the data.
+
+Only port `3111` is published. The viewer on `3113` stays bound to
+loopback inside the container — every template's README documents the
+SSH-tunnel pattern for reaching it.
+
+---
+
 <h2 id="why-agentmemory"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/tags/light/section-why.svg"><img src="assets/tags/section-why.svg" alt="Why agentmemory" height="32" /></picture></h2>
 
 Every coding agent forgets everything when the session ends. You waste the first 5 minutes of every session re-explaining your stack. agentmemory runs in the background and eliminates that entirely.
@@ -692,7 +730,7 @@ npm install @xenova/transformers
 | Provider | Model | Cost | Notes |
 |---|---|---|---|
 | **Local (recommended)** | `all-MiniLM-L6-v2` | Free | Offline, +8pp recall over BM25-only |
-| Gemini | `text-embedding-004` | Free tier | 1500 RPM |
+| Gemini | `gemini-embedding-001` | Free tier | 100+ languages, 768/1536/3072 dims (MRL), 2048-token input. Replaces `text-embedding-004` ([deprecated, shutdown Jan 14, 2026](https://ai.google.dev/gemini-api/docs/deprecations)) |
 | OpenAI | `text-embedding-3-small` | $0.02/1M | Highest quality |
 | Voyage AI | `voyage-code-3` | Paid | Optimized for code |
 | Cohere | `embed-english-v3.0` | Free trial | General purpose |
