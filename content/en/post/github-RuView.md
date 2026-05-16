@@ -1,9 +1,9 @@
 ---
 title: RuView
-date: 2026-05-15T17:57:09+08:00
+date: 2026-05-16T17:00:33+08:00
 draft: False
-image: https://images.unsplash.com/photo-1778090887585-b27fae5b6f03?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg4MzkwMTR8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1593263746028-1023d9b943fe?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg5MjE5MzV8&ixlib=rb-4.1.0
+tags: ['github',WiFi sensing, CSI, ESP32]
 categories: ['github']
 ---
 

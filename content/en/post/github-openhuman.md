@@ -1,9 +1,9 @@
 ---
 title: openhuman
-date: 2026-05-15T17:57:22+08:00
+date: 2026-05-16T16:59:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1604356590040-a740d1949d4c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg4MzkwMTR8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1675842645853-b492c640416f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg5MjE5MzV8&ixlib=rb-4.1.0
+tags: ['github',open source, personal AI assistant, memory tree]
 categories: ['github']
 ---
 
@@ -18,11 +18,12 @@ categories: ['github']
 <p align="center" style="display: inline-block">
  <a href="https://trendshift.io/repositories/23680" target="_blank" style="display: inline-block">
   <img src="https://trendshift.io/api/badge/repositories/23680" alt="tinyhumansai%2Fopenhuman | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
+ </a> 
+ &nbsp;
+ <a href="https://www.producthunt.com/products/openhuman?embed=true&amp;utm_source=badge-top-post-badge&amp;utm_medium=badge&amp;utm_campaign=badge-openhuman" target="_blank" rel="noopener noreferrer">
+  <img alt="OpenHuman - An open source AI harness built with the human in mind | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=1136902&amp;theme=light&amp;period=daily&amp;t=1778916022823">
  </a>
-</p>
-
-<p align="center" style="display: inline-block">
- <a href="https://www.producthunt.com/products/openhuman?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-openhuman" target="_blank" rel="noopener noreferrer"><img alt="OpenHuman - An open source AI harness built with the human in mind | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1136902&amp;theme=light&amp;t=1778829432446"></a>
+ 
 </p>
  
 <p align="center">
@@ -39,8 +40,16 @@ categories: ['github']
 </p>
 
 <p align="center">
+  🇺🇸 <a href="./README.md">English</a> | 🇨🇳 <a href="./README.zh-CN.md">简体中文</a>
+</p>
+
+
+<p align="center">
  <img src="https://img.shields.io/badge/status-early%20beta-orange" alt="Early Beta" />
  <a href="https://github.com/tinyhumansai/openhuman/releases/latest"><img src="https://img.shields.io/github/v/release/tinyhumansai/openhuman?label=latest" alt="Latest Release" /></a>
+ <a href="https://github.com/tinyhumansai/openhuman/stargazers"><img src="https://img.shields.io/github/stars/tinyhumansai/openhuman?style=flat" alt="GitHub Stars" /></a>
+ <a href="./LICENSE"><img src="https://img.shields.io/github/license/tinyhumansai/openhuman" alt="License" /></a>
+ <a href="./README.zh-CN.md"><img src="https://img.shields.io/badge/lang-简体中文-blue" alt="简体中文" /></a>
 </p>
 
 > **Early Beta**: Under active development. Expect rough edges.
@@ -48,7 +57,7 @@ categories: ['github']
 To install or get started, either download from the website over at [tinyhumans.ai/openhuman](https://tinyhumans.ai/openhuman?utm_source=github&utm_medium=readme) or run
 
 ```
-# Download DMG, EXEs over at https://tinyhumans.ai/openhuman?utm_source=github&utm_medium=readme or run in from your terminal
+# Download DMG, EXEs over at https://tinyhumans.ai/openhuman or run in from your terminal
 
 # For macOS or Linux x64
 curl -fsSL https://raw.githubusercontent.com/tinyhumansai/openhuman/main/scripts/install.sh | bash
@@ -77,7 +86,7 @@ OpenHuman is an open-source agentic assistant designed to integrate with you in 
 
 New contributor? Start with [`CONTRIBUTING.md`](./CONTRIBUTING.md) for the fork/PR workflow and local validation commands. The short path is:
 
-1. Install Git, Node.js 24+, pnpm 10.10.0, Rust 1.93.0 (`rustfmt` + `clippy`), CMake, and the platform desktop build prerequisites.
+1. Install Git, Node.js 24+, pnpm 10.10.0, Rust 1.93.0 (`rustfmt` + `clippy`), CMake, Ninja, ripgrep, and the platform desktop build prerequisites.
 2. Fork and clone the repo, then run `git submodule update --init --recursive` before `pnpm install` so the vendored Tauri/CEF sources are present.
 3. Use `pnpm dev` for web-only UI work, `pnpm --filter openhuman-app dev:app` for the desktop shell, and focused checks such as `pnpm typecheck`, `pnpm format:check`, and `cargo check -p openhuman --lib` before opening a PR.
 
