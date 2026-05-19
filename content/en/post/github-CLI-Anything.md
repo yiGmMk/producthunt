@@ -1,9 +1,9 @@
 ---
 title: CLI-Anything
-date: 2026-05-18T19:17:42+08:00
+date: 2026-05-19T18:50:33+08:00
 draft: False
-image: https://images.unsplash.com/photo-1664903463556-6c51f79b168a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzkxMDI5OTF8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1628313388780-fb046760ef1a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzkxODc2ODZ8&ixlib=rb-4.1.0
+tags: ['github',agent-native software, CLI generation, AI agents]
 categories: ['github']
 ---
 

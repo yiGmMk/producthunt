@@ -1,8 +1,8 @@
 ---
 title: claude-plugins-official
-date: 2026-03-15T15:50:42+08:00
+date: 2026-05-19T18:53:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1581924498057-96568f743589?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM1NjEwMjB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1552598715-7eeb9232a2ac?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzkxODc2ODZ8&ixlib=rb-4.1.0
 tags: ['github',Claude Code, plugins, directory]
 categories: ['github']
 ---
@@ -24,7 +24,7 @@ A curated directory of high-quality plugins for Claude Code.
 
 Plugins can be installed directly from this marketplace via Claude Code's plugin system.
 
-To install, run `/plugin install {plugin-name}@claude-plugin-directory`
+To install, run `/plugin install {plugin-name}@claude-plugins-official`
 
 or browse for the plugin in `/plugin > Discover`
 

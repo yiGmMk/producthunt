@@ -1,9 +1,9 @@
 ---
 title: openhuman
-date: 2026-05-18T19:17:14+08:00
+date: 2026-05-19T18:50:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1666632000754-3eb0e1e59c32?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzkxMDI5OTF8&ixlib=rb-4.1.0
-tags: ['github',OpenHuman, AI assistant, open source]
+image: https://images.unsplash.com/photo-1717505502284-a34a71a82630?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzkxODc2ODZ8&ixlib=rb-4.1.0
+tags: ['github',open-source, AI agent, memory tree]
 categories: ['github']
 ---
 
