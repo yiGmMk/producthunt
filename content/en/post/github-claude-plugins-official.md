@@ -1,8 +1,8 @@
 ---
 title: claude-plugins-official
-date: 2026-05-20T18:37:44+08:00
+date: 2026-05-22T18:33:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1736452221254-ae8d76bf3c79?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzkyNzMyNjZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1512554533657-0f11f53cde5a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk0NDYwMDJ8&ixlib=rb-4.1.0
 tags: ['github',Claude Code, plugins, directory]
 categories: ['github']
 ---

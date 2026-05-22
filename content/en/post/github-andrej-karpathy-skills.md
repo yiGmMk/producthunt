@@ -1,13 +1,13 @@
 ---
 title: andrej-karpathy-skills
-date: 2026-04-17T16:30:50+08:00
+date: 2026-05-22T18:35:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1714548838581-664c081a86f4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY0MTQ2NDF8&ixlib=rb-4.1.0
-tags: ['github',coding guidelines,LLM behavior,software development]
+image: https://images.unsplash.com/photo-1716276590903-f7703efa9177?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk0NDYwMDJ8&ixlib=rb-4.1.0
+tags: ['github',Claude Code, LLM coding, guidelines]
 categories: ['github']
 ---
 
-# [forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills)
+# [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills)
 
 # Karpathy-Inspired Claude Code Guidelines
 
@@ -16,6 +16,8 @@ categories: ['github']
 > Follow me on X: [https://x.com/jiayuan_jy](https://x.com/jiayuan_jy)
 
 A single `CLAUDE.md` file to improve Claude Code behavior, derived from [Andrej Karpathy's observations](https://x.com/karpathy/status/2015883857489522876) on LLM coding pitfalls.
+
+English | [简体中文](./README.zh.md)
 
 ## The Problems
 
@@ -133,6 +135,10 @@ Existing project (append):
 echo "" >> CLAUDE.md
 curl https://raw.githubusercontent.com/forrestchang/andrej-karpathy-skills/main/CLAUDE.md >> CLAUDE.md
 ```
+
+## Using with Cursor
+
+This repository includes a committed Cursor project rule ([`.cursor/rules/karpathy-guidelines.mdc`](.cursor/rules/karpathy-guidelines.mdc)) so the same guidelines apply when you open the project in Cursor. See **[CURSOR.md](CURSOR.md)** for setup, using the rule in other projects, and how this relates to Claude Code.
 
 ## Key Insight
 
