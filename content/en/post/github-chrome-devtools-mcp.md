@@ -1,22 +1,23 @@
 ---
 title: chrome-devtools-mcp
-date: 2026-02-16T16:03:15+08:00
+date: 2026-05-23T17:18:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1728652964451-3bfd513b3527?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzEyMjg5NTJ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1643444313954-fe3a6a8b835d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk1Mjc3MDB8&ixlib=rb-4.1.0
+tags: ['github',Chrome DevTools, MCP, browser automation]
 categories: ['github']
 ---
 
 # [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)
 
-# Chrome DevTools MCP
+# Chrome DevTools for agents
 
 [![npm chrome-devtools-mcp package](https://img.shields.io/npm/v/chrome-devtools-mcp.svg)](https://npmjs.org/package/chrome-devtools-mcp)
 
-`chrome-devtools-mcp` lets your coding agent (such as Gemini, Claude, Cursor or Copilot)
+Chrome DevTools for agents (`chrome-devtools-mcp`) lets your coding agent (such as Antigravity, Claude, Cursor or Copilot)
 control and inspect a live Chrome browser. It acts as a Model-Context-Protocol
 (MCP) server, giving your AI coding assistant access to the full power of
 Chrome DevTools for reliable automation, in-depth debugging, and performance analysis.
+A [CLI](docs/cli.md) is also provided for use without MCP.
 
 ## [Tool reference](./docs/tool-reference.md) | [Changelog](./CHANGELOG.md) | [Contributing](./CONTRIBUTING.md) | [Troubleshooting](./docs/troubleshooting.md) | [Design Principles](./docs/design-principles.md)
 
@@ -38,6 +39,10 @@ allowing them to inspect, debug, and modify any data in the browser or DevTools.
 Avoid sharing sensitive or personal information that you don't want to share with
 MCP clients.
 
+`chrome-devtools-mcp` officially supports Google Chrome and [Chrome for Testing](https://developer.chrome.com/blog/chrome-for-testing/) only.
+Other Chromium-based browsers may work, but this is not guaranteed, and you may encounter unexpected behavior. Use at your own discretion.
+We are committed to providing fixes and support for the latest version of [Extended Stable Chrome](https://chromiumdash.appspot.com/schedule).
+
 Performance tools may send trace URLs to the Google CrUX API to fetch real-user
 experience data. This helps provide a holistic performance picture by
 presenting field data alongside lab data. This data is collected by the [Chrome
@@ -58,13 +63,18 @@ Google handles this data in accordance with the [Google Privacy Policy](https://
 
 Google's collection of usage statistics for Chrome DevTools MCP is independent from the Chrome browser's usage statistics. Opting out of Chrome metrics does not automatically opt you out of this tool, and vice-versa.
 
-Collection is disabled if CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS or CI env variables are set.
+Collection is disabled if `CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS` or `CI` env variables are set.
+
+## Update checks
+
+By default, the server periodically checks the npm registry for updates and logs a notification when a newer version is available.
+You can disable these update checks by setting the `CHROME_DEVTOOLS_MCP_NO_UPDATE_CHECKS` environment variable.
 
 ## Requirements
 
-- [Node.js](https://nodejs.org/) v20.19 or a newer [latest maintenance LTS](https://github.com/nodejs/Release#release-schedule) version.
+- [Node.js](https://nodejs.org/) [LTS](https://github.com/nodejs/Release#release-schedule) version.
 - [Chrome](https://www.google.com/chrome/) current stable version or newer.
-- [npm](https://www.npmjs.com/).
+- [npm](https://www.npmjs.com/)
 
 ## Getting started
 
@@ -81,8 +91,23 @@ Add the following config to your MCP client:
 }
 ```
 
-> [!NOTE]  
+> [!NOTE]
 > Using `chrome-devtools-mcp@latest` ensures that your MCP client will always use the latest version of the Chrome DevTools MCP server.
+
+If you are interested in doing only basic browser tasks, use the `--slim` mode:
+
+```json
+{
+  "mcpServers": {
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp@latest", "--slim", "--headless"]
+    }
+  }
+}
+```
+
+See [Slim tool reference](./docs/slim-tool-reference.md).
 
 ### MCP Client configuration
 
@@ -118,7 +143,7 @@ To use the Chrome DevTools MCP server follow the instructions from <a href="http
 
 This will make the Chrome DevTools MCP server automatically connect to the browser that Antigravity is using. If you are not using port 9222, make sure to adjust accordingly.
 
-Chrome DevTools MCP will not start the browser instance automatically using this approach as as the Chrome DevTools MCP server runs in Antigravity's built-in browser. If the browser is not already running, you have to start it first by clicking the Chrome icon at the top right corner.
+Chrome DevTools MCP will not start the browser instance automatically using this approach because the Chrome DevTools MCP server connects to Antigravity's built-in browser. If the browser is not already running, you have to start it first by clicking the Chrome icon at the top right corner.
 
 </details>
 
@@ -135,6 +160,9 @@ claude mcp add chrome-devtools --scope user npx chrome-devtools-mcp@latest
 
 **Install as a Plugin (MCP + Skills)**
 
+> [!NOTE]
+> If you already had Chrome DevTools MCP installed previously for Claude Code, make sure to remove it first from your installation and configuration files.
+
 To install Chrome DevTools MCP with skills, add the marketplace registry in Claude Code:
 
 ```sh
@@ -144,10 +172,13 @@ To install Chrome DevTools MCP with skills, add the marketplace registry in Clau
 Then, install the plugin:
 
 ```sh
-/plugin install chrome-devtools-mcp
+/plugin install chrome-devtools-mcp@chrome-devtools-plugins
 ```
 
 Restart Claude Code to have the MCP server and skills load (check with `/skills`).
+
+> [!TIP]
+> If the plugin installation fails with a `Failed to clone repository` error (e.g., HTTPS connectivity issues behind a corporate firewall), see the [troubleshooting guide](./docs/troubleshooting.md#claude-code-plugin-installation-fails-with-failed-to-clone-repository) for workarounds, or use the CLI installation method above instead.
 
 </details>
 
@@ -158,7 +189,7 @@ Restart Claude Code to have the MCP server and skills load (check with `/skills`
 
 <details>
   <summary>Codex</summary>
-  Follow the <a href="https://github.com/openai/codex/blob/main/docs/advanced.md#model-context-protocol-mcp">configure MCP guide</a>
+  Follow the <a href="https://developers.openai.com/codex/mcp/#configure-with-the-cli">configure MCP guide</a>
   using the standard config from above. You can also install the Chrome DevTools MCP server using the Codex CLI:
 
 ```bash
@@ -180,6 +211,17 @@ args = [
 ]
 env = { SystemRoot="C:\\Windows", PROGRAMFILES="C:\\Program Files" }
 startup_timeout_ms = 20_000
+```
+
+</details>
+
+<details>
+  <summary>Command Code</summary>
+
+Use the Command Code CLI to add the Chrome DevTools MCP server (<a href="https://commandcode.ai/docs/mcp">MCP guide</a>):
+
+```bash
+cmd mcp add chrome-devtools --scope user npx chrome-devtools-mcp@latest
 ```
 
 </details>
@@ -210,6 +252,22 @@ Configure the following fields and press `CTRL+S` to save the configuration:
 <details>
   <summary>Copilot / VS Code</summary>
 
+**Install as a Plugin (Recommended)**
+
+The easiest way to get up and running is to install `chrome-devtools-mcp` as an agent plugin.
+This bundles the **MCP server** and all **skills** together, so your agent gets both the tools
+and the expert guidance it needs to use them effectively.
+
+1.  Open the **Command Palette** (`Cmd+Shift+P` on macOS or `Ctrl+Shift+P` on Windows/Linux).
+2.  Search for and run the **Chat: Install Plugin From Source** command.
+3.  Paste in our repository name: `ChromeDevTools/chrome-devtools-mcp`.
+
+That's it! Your agent is now supercharged with Chrome DevTools capabilities.
+
+---
+
+**Install as an MCP Server (MCP only)**
+
 **Click the button to install:**
 
 [<img src="https://img.shields.io/badge/VS_Code-VS_Code?style=flat-square&label=Install%20Server&color=0098FF" alt="Install in VS Code">](https://vscode.dev/redirect/mcp/install?name=io.github.ChromeDevTools%2Fchrome-devtools-mcp&config=%7B%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22chrome-devtools-mcp%22%5D%2C%22env%22%3A%7B%7D%7D)
@@ -218,11 +276,18 @@ Configure the following fields and press `CTRL+S` to save the configuration:
 
 **Or install manually:**
 
-Follow the MCP install <a href="https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_add-an-mcp-server">guide</a>,
-with the standard config from above. You can also install the Chrome DevTools MCP server using the VS Code CLI:
+Follow the VS Code [MCP configuration guide](https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_add-an-mcp-server) using the standard config from above, or use the CLI:
+
+For macOS and Linux:
 
 ```bash
 code --add-mcp '{"name":"io.github.ChromeDevTools/chrome-devtools-mcp","command":"npx","args":["-y","chrome-devtools-mcp"],"env":{}}'
+```
+
+For Windows (PowerShell):
+
+```powershell
+code --add-mcp '{"""name""":"""io.github.ChromeDevTools/chrome-devtools-mcp""","""command""":"""npx""","""args""":["""-y""","""chrome-devtools-mcp"""]}'
 ```
 
 </details>
@@ -321,6 +386,21 @@ Once connected, the Chrome DevTools MCP tools will be available in StudioAssist.
 </details>
 
 <details>
+  <summary>Mistral Vibe</summary>
+
+Add in ~/.vibe/config.toml:
+
+```toml
+[[mcp_servers]]
+name = "chrome-devtools"
+transport = "stdio"
+command = "npx"
+args = ["chrome-devtools-mcp@latest"]
+```
+
+</details>
+
+<details>
   <summary>OpenCode</summary>
 
 Add the following configuration to your `opencode.json` file. If you don't have one, create it at `~/.config/opencode/opencode.json` (<a href="https://opencode.ai/docs/mcp-servers">guide</a>):
@@ -351,7 +431,7 @@ Alternatively, follow the <a href="https://docs.qoder.com/user-guide/chat/model-
 <details>
   <summary>Qoder CLI</summary>
 
-Install the Chrome DevTools MCP server using the Qoder CLI (<a href="https://docs.qoder.com/cli/using-cli#mcp-servsers">guide</a>):
+Install the Chrome DevTools MCP server using the Qoder CLI (<a href="https://docs.qoder.com/cli/using-cli#mcp-servers">guide</a>):
 
 **Project wide:**
 
@@ -369,10 +449,11 @@ qodercli mcp add -s user chrome-devtools -- npx chrome-devtools-mcp@latest
 
 <details>
   <summary>Visual Studio</summary>
-  
-  **Click the button to install:**
-  
-  [<img src="https://img.shields.io/badge/Visual_Studio-Install-C16FDE?logo=visualstudio&logoColor=white" alt="Install in Visual Studio">](https://vs-open.link/mcp-install?%7B%22name%22%3A%22chrome-devtools%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22chrome-devtools-mcp%40latest%22%5D%7D)
+
+**Click the button to install:**
+
+[<img src="https://img.shields.io/badge/Visual_Studio-Install-C16FDE?logo=visualstudio&logoColor=white" alt="Install in Visual Studio">](https://vs-open.link/mcp-install?%7B%22name%22%3A%22chrome-devtools%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22chrome-devtools-mcp%40latest%22%5D%7D)
+
 </details>
 
 <details>
@@ -398,7 +479,7 @@ Check the performance of https://developers.chrome.com
 
 Your MCP client should open the browser and record a performance trace.
 
-> [!NOTE]  
+> [!NOTE]
 > The MCP server will start the browser automatically once the MCP client uses a tool that requires a running browser instance. Connecting to the Chrome DevTools MCP server on its own will not automatically start the browser.
 
 ## Tools
@@ -407,7 +488,7 @@ If you run into any issues, checkout our [troubleshooting guide](./docs/troubles
 
 <!-- BEGIN AUTO GENERATED TOOLS -->
 
-- **Input automation** (8 tools)
+- **Input automation** (10 tools)
   - [`click`](docs/tool-reference.md#click)
   - [`drag`](docs/tool-reference.md#drag)
   - [`fill`](docs/tool-reference.md#fill)
@@ -415,7 +496,9 @@ If you run into any issues, checkout our [troubleshooting guide](./docs/troubles
   - [`handle_dialog`](docs/tool-reference.md#handle_dialog)
   - [`hover`](docs/tool-reference.md#hover)
   - [`press_key`](docs/tool-reference.md#press_key)
+  - [`type_text`](docs/tool-reference.md#type_text)
   - [`upload_file`](docs/tool-reference.md#upload_file)
+  - [`click_at`](docs/tool-reference.md#click_at)
 - **Navigation automation** (6 tools)
   - [`close_page`](docs/tool-reference.md#close_page)
   - [`list_pages`](docs/tool-reference.md#list_pages)
@@ -433,12 +516,33 @@ If you run into any issues, checkout our [troubleshooting guide](./docs/troubles
 - **Network** (2 tools)
   - [`get_network_request`](docs/tool-reference.md#get_network_request)
   - [`list_network_requests`](docs/tool-reference.md#list_network_requests)
-- **Debugging** (5 tools)
+- **Debugging** (8 tools)
   - [`evaluate_script`](docs/tool-reference.md#evaluate_script)
   - [`get_console_message`](docs/tool-reference.md#get_console_message)
+  - [`lighthouse_audit`](docs/tool-reference.md#lighthouse_audit)
   - [`list_console_messages`](docs/tool-reference.md#list_console_messages)
   - [`take_screenshot`](docs/tool-reference.md#take_screenshot)
   - [`take_snapshot`](docs/tool-reference.md#take_snapshot)
+  - [`screencast_start`](docs/tool-reference.md#screencast_start)
+  - [`screencast_stop`](docs/tool-reference.md#screencast_stop)
+- **Memory** (5 tools)
+  - [`take_heapsnapshot`](docs/tool-reference.md#take_heapsnapshot)
+  - [`get_heapsnapshot_class_nodes`](docs/tool-reference.md#get_heapsnapshot_class_nodes)
+  - [`get_heapsnapshot_details`](docs/tool-reference.md#get_heapsnapshot_details)
+  - [`get_heapsnapshot_retainers`](docs/tool-reference.md#get_heapsnapshot_retainers)
+  - [`get_heapsnapshot_summary`](docs/tool-reference.md#get_heapsnapshot_summary)
+- **Extensions** (5 tools)
+  - [`install_extension`](docs/tool-reference.md#install_extension)
+  - [`list_extensions`](docs/tool-reference.md#list_extensions)
+  - [`reload_extension`](docs/tool-reference.md#reload_extension)
+  - [`trigger_extension_action`](docs/tool-reference.md#trigger_extension_action)
+  - [`uninstall_extension`](docs/tool-reference.md#uninstall_extension)
+- **Third-party** (2 tools)
+  - [`execute_3p_developer_tool`](docs/tool-reference.md#execute_3p_developer_tool)
+  - [`list_3p_developer_tools`](docs/tool-reference.md#list_3p_developer_tools)
+- **WebMCP** (2 tools)
+  - [`execute_webmcp_tool`](docs/tool-reference.md#execute_webmcp_tool)
+  - [`list_webmcp_tools`](docs/tool-reference.md#list_webmcp_tools)
 
 <!-- END AUTO GENERATED TOOLS -->
 
@@ -449,7 +553,7 @@ The Chrome DevTools MCP server supports the following configuration option:
 <!-- BEGIN AUTO GENERATED OPTIONS -->
 
 - **`--autoConnect`/ `--auto-connect`**
-  If specified, automatically connects to a browser (Chrome 144+) running in the user data directory identified by the channel param. Requires the remoted debugging server to be started in the Chrome instance via chrome://inspect/#remote-debugging.
+  If specified, automatically connects to a browser (Chrome 144+) running locally from the user data directory identified by the channel param (default channel is stable). Requires the remote debugging server to be started in the Chrome instance via chrome://inspect/#remote-debugging.
   - **Type:** boolean
   - **Default:** `false`
 
@@ -485,7 +589,7 @@ The Chrome DevTools MCP server supports the following configuration option:
 - **`--channel`**
   Specify a different Chrome channel that should be used. The default is the stable channel version.
   - **Type:** string
-  - **Choices:** `stable`, `canary`, `beta`, `dev`
+  - **Choices:** `canary`, `dev`, `beta`, `stable`
 
 - **`--logFile`/ `--log-file`**
   Path to a file to write debug logs to. Set the env variable `DEBUG` to `*` to enable verbose logs. Useful for submitting bug reports.
@@ -501,6 +605,42 @@ The Chrome DevTools MCP server supports the following configuration option:
 
 - **`--acceptInsecureCerts`/ `--accept-insecure-certs`**
   If enabled, ignores errors relative to self-signed and expired certificates. Use with caution.
+  - **Type:** boolean
+
+- **`--experimentalPageIdRouting`/ `--experimental-page-id-routing`**
+  Whether to expose pageId on page-scoped tools and route requests by page ID (useful for concurrent agent sessions).
+  - **Type:** boolean
+
+- **`--experimentalDevtools`/ `--experimental-devtools`**
+  Whether to enable automation over DevTools targets
+  - **Type:** boolean
+
+- **`--experimentalVision`/ `--experimental-vision`**
+  Whether to enable coordinate-based tools such as click_at(x,y). Usually requires a computer-use model able to produce accurate coordinates by looking at screenshots.
+  - **Type:** boolean
+
+- **`--experimentalMemory`/ `--experimental-memory`**
+  Whether to enable experimental memory tools.
+  - **Type:** boolean
+
+- **`--experimentalStructuredContent`/ `--experimental-structured-content`**
+  Whether to output structured formatted content.
+  - **Type:** boolean
+
+- **`--experimentalIncludeAllPages`/ `--experimental-include-all-pages`**
+  Whether to include all kinds of pages such as webviews or background pages as pages.
+  - **Type:** boolean
+
+- **`--experimentalScreencast`/ `--experimental-screencast`**
+  Exposes experimental screencast tools (requires ffmpeg). Install ffmpeg https://www.ffmpeg.org/download.html and ensure it is available in the MCP server PATH.
+  - **Type:** boolean
+
+- **`--experimentalFfmpegPath`/ `--experimental-ffmpeg-path`**
+  Path to ffmpeg executable for screencast recording.
+  - **Type:** string
+
+- **`--categoryExperimentalWebmcp`/ `--category-experimental-webmcp`**
+  Set to true to enable debugging WebMCP tools. Requires Chrome 149+ with the following flags: `--enable-features=WebMCPTesting,DevToolsWebMCPSupport`
   - **Type:** boolean
 
 - **`--chromeArg`/ `--chrome-arg`**
@@ -526,15 +666,34 @@ The Chrome DevTools MCP server supports the following configuration option:
   - **Type:** boolean
   - **Default:** `true`
 
+- **`--categoryExtensions`/ `--category-extensions`**
+  Set to true to include tools related to extensions. Note: This feature is currently only supported with a pipe connection. autoConnect, browserUrl, and wsEndpoint are not supported with this feature until 149 will be released.
+  - **Type:** boolean
+  - **Default:** `false`
+
+- **`--categoryExperimentalThirdParty`/ `--category-experimental-third-party`**
+  Set to true to enable third-party developer tools exposed by the inspected page itself
+  - **Type:** boolean
+  - **Default:** `false`
+
 - **`--performanceCrux`/ `--performance-crux`**
   Set to false to disable sending URLs from performance traces to CrUX API to get field performance data.
   - **Type:** boolean
   - **Default:** `true`
 
 - **`--usageStatistics`/ `--usage-statistics`**
-  Set to false to opt-out of usage statistics collection. Google collects usage data to improve the tool, handled under the Google Privacy Policy (https://policies.google.com/privacy). This is independent from Chrome browser metrics. Disabled if CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS or CI env variables are set.
+  Set to false to opt-out of usage statistics collection. Google collects usage data to improve the tool, handled under the Google Privacy Policy (https://policies.google.com/privacy). This is independent from Chrome browser metrics. Disabled if `CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS` or `CI` env variables are set.
   - **Type:** boolean
   - **Default:** `true`
+
+- **`--slim`**
+  Exposes a "slim" set of 3 tools covering navigation, script execution and screenshots only. Useful for basic browser tasks.
+  - **Type:** boolean
+
+- **`--redactNetworkHeaders`/ `--redact-network-headers`**
+  If true, redacts some of the network headers considered sensitive before returning to the client.
+  - **Type:** boolean
+  - **Default:** `false`
 
 <!-- END AUTO GENERATED OPTIONS -->
 
@@ -580,6 +739,34 @@ To get the WebSocket endpoint from a running Chrome instance, visit `http://127.
 You can also run `npx chrome-devtools-mcp@latest --help` to see all available configuration options.
 
 ## Concepts
+
+### Concurrent sessions
+
+Most MCP clients start one Chrome DevTools MCP server per conversation. If your
+client shares a single server instance across concurrent agents or subagents,
+start the server with `--experimentalPageIdRouting`. This exposes `pageId` on
+page-scoped tools so each agent can route tool calls to the tab it is working
+with.
+
+```json
+{
+  "mcpServers": {
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--experimentalPageIdRouting"
+      ]
+    }
+  }
+}
+```
+
+If you run multiple independent MCP client sessions and want each session to
+launch its own temporary Chrome profile, also pass `--isolated`. This avoids
+sharing the default Chrome DevTools MCP user data directory between those
+server instances.
 
 ### User data directory
 
@@ -642,7 +829,7 @@ Make sure your browser is running. Open gemini-cli and run the following prompt:
 Check the performance of https://developers.chrome.com
 ```
 
-> [!NOTE]  
+> [!NOTE]
 > The <code>autoConnect</code> option requires the user to start Chrome. If the user has multiple active profiles, the MCP server will connect to the default profile (as determined by Chrome). The MCP server has access to all open windows for the selected profile.
 
 The Chrome DevTools MCP server will try to connect to your running Chrome
@@ -678,7 +865,7 @@ Add the `--browser-url` option to your MCP client configuration. The value of th
 
 **Step 2: Start the Chrome browser**
 
-> [!WARNING]  
+> [!WARNING]
 > Enabling the remote debugging port opens up a debugging port on the running browser instance. Any application on your machine can connect to this port and control the browser. Make sure that you are not browsing any sensitive websites while the debugging port is open.
 
 Start the Chrome browser with the remote debugging port enabled. Make sure to close any running Chrome instances before starting a new one with the debugging port enabled. The port number you choose must be the same as the one you specified in the `--browser-url` option in your MCP client configuration.
