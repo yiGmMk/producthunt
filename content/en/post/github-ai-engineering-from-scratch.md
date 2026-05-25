@@ -1,9 +1,9 @@
 ---
 title: ai-engineering-from-scratch
-date: 2026-05-23T17:17:44+08:00
+date: 2026-05-25T19:24:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1666410017173-091dce1b9e7d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk1Mjc3MDB8&ixlib=rb-4.1.0
-tags: ['github',AI Engineering, Machine Learning, Large Language Models]
+image: https://images.unsplash.com/photo-1593532847221-003b37578812?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk3MDgyMDF8&ixlib=rb-4.1.0
+tags: ['github',AI engineering, machine learning, deep learning]
 categories: ['github']
 ---
 
@@ -884,7 +884,8 @@ copies the matching files into a target directory in the layout your agent
 expects.
 
 ```bash
-python3 scripts/install_skills.py ~/.claude/skills                 # every skill, nested layout
+python3 scripts/install_skills.py ~/.claude/skills                 # every skill, default --layout skills (nested)
+python3 scripts/install_skills.py ~/.claude/skills --layout skills # same as above, explicit
 python3 scripts/install_skills.py ./out --type all                 # skills + prompts + agents
 python3 scripts/install_skills.py ./out --phase 14                 # one phase only
 python3 scripts/install_skills.py ./out --tag rag                  # filter by tag
@@ -1057,6 +1058,8 @@ Free, MIT-licensed, 435 lessons. The curriculum is maintained on sponsorship alo
 
 **Reach (verified 2026-05-14):** 55,593 monthly visitors · 90,709 page views · 7.5K stars ·
 Twitter/X is the #1 acquisition channel.
+
+**Current sponsors:** [CodeRabbit](https://coderabbit.link/rohit-ghumare) · [iii](https://iii.dev?utm_source=ai-engineering-from-scratch&utm_medium=readme&utm_campaign=sponsor)
 
 | Tier | $/mo | What you get |
 |------|------|---|
