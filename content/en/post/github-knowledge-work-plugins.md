@@ -1,9 +1,9 @@
 ---
 title: knowledge-work-plugins
-date: 2026-05-25T19:24:03+08:00
+date: 2026-05-27T19:07:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1586890662737-9f107825e147?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk3MDgyMDF8&ixlib=rb-4.1.0
-tags: ['github',plugins, Claude, knowledge work]
+image: https://images.unsplash.com/photo-1659788597626-19bc1e95e3d4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk4Nzk5Mzh8&ixlib=rb-4.1.0
+tags: ['github',plugins, Claude, customization]
 categories: ['github']
 ---
 
