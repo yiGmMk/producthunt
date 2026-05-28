@@ -1,9 +1,9 @@
 ---
 title: stop-slop
-date: 2026-05-27T19:06:20+08:00
+date: 2026-05-28T19:09:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1659788597626-19bc1e95e3d4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk4Nzk5Mzh8&ixlib=rb-4.1.0
-tags: ['github',AI writing, text cleanup, writing improvement]
+image: https://images.unsplash.com/photo-1725921874109-79d1057c7e72?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk5NjY0NTJ8&ixlib=rb-4.1.0
+tags: ['github',AI writing, pattern removal, prose improvement]
 categories: ['github']
 ---
 

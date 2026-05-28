@@ -1,9 +1,9 @@
 ---
 title: taste-skill
-date: 2026-05-27T19:08:28+08:00
+date: 2026-05-28T19:09:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1733424114724-2d718fb07948?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk4Nzk5Mzh8&ixlib=rb-4.1.0
-tags: ['github',Taste Skill, frontend framework, AI agents]
+image: https://images.unsplash.com/photo-1478766318990-362013e9cd01?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk5NjY0NTJ8&ixlib=rb-4.1.0
+tags: ['github',AI agent skills, frontend design, anti-slop UI]
 categories: ['github']
 ---
 

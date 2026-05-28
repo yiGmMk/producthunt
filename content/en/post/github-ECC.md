@@ -1,9 +1,9 @@
 ---
 title: ECC
-date: 2026-05-27T19:07:09+08:00
+date: 2026-05-28T19:08:55+08:00
 draft: False
-image: https://images.unsplash.com/photo-1608644139016-4b938587ff67?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk4Nzk5Mzh8&ixlib=rb-4.1.0
-tags: ['github',ECC, agentic, ClaudeCode]
+image: https://images.unsplash.com/photo-1620611824637-d33a5c34dec8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk5NjY0NTJ8&ixlib=rb-4.1.0
+tags: ['github',ECC, Claude Code, agentic work]
 categories: ['github']
 ---
 
