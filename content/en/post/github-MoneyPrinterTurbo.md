@@ -1,9 +1,9 @@
 ---
 title: MoneyPrinterTurbo
-date: 2026-05-28T19:08:13+08:00
+date: 2026-05-29T18:57:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1620611824637-d33a5c34dec8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk5NjY0NTJ8&ixlib=rb-4.1.0
-tags: ['github',automated video generation, AI content creation, multimedia automation]
+image: https://images.unsplash.com/photo-1603736186753-fc8933a905a1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAwNTIyMzl8&ixlib=rb-4.1.0
+tags: ['github',video generation, artificial intelligence, automation]
 categories: ['github']
 ---
 

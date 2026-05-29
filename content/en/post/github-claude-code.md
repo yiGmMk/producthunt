@@ -1,9 +1,9 @@
 ---
 title: claude-code
-date: 2026-04-02T16:14:02+08:00
+date: 2026-05-29T19:00:47+08:00
 draft: False
-image: https://images.unsplash.com/photo-1715764549327-66d2e5dc72b2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUxMTc2MzJ8&ixlib=rb-4.1.0
-tags: ['github',Claude Code, terminal coding, natural language commands]
+image: https://images.unsplash.com/photo-1684282806798-2e71b3aa3a18?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAwNTIyMzl8&ixlib=rb-4.1.0
+tags: ['github',claude code, terminal tool, coding assistant]
 categories: ['github']
 ---
 

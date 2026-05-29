@@ -1,9 +1,9 @@
 ---
 title: twenty
-date: 2026-05-28T19:10:10+08:00
+date: 2026-05-29T18:59:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1518715179561-57faf0b9fd37?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk5NjY0NTJ8&ixlib=rb-4.1.0
-tags: ['github',CRM,OpenSource,Customizable]
+image: https://images.unsplash.com/photo-1684128169215-dd47a48fc295?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAwNTIyMzl8&ixlib=rb-4.1.0
+tags: ['github',CRM, open source, custom]
 categories: ['github']
 ---
 
