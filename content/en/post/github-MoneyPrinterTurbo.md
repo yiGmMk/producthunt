@@ -1,9 +1,9 @@
 ---
 title: MoneyPrinterTurbo
-date: 2026-05-29T18:57:32+08:00
+date: 2026-05-30T17:29:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1603736186753-fc8933a905a1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAwNTIyMzl8&ixlib=rb-4.1.0
-tags: ['github',video generation, artificial intelligence, automation]
+image: https://images.unsplash.com/photo-1715464542634-d30d5f28d2e6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAxMzMzMzB8&ixlib=rb-4.1.0
+tags: ['github',MoneyPrinterTurbo, automatic video generation, AI content creation]
 categories: ['github']
 ---
 
@@ -172,7 +172,7 @@ docker-compose up
 
 #### ② 访问Web界面
 
-打开浏览器，访问 http://0.0.0.0:8501
+打开浏览器，访问 http://127.0.0.1:8501
 
 #### ③ 访问API文档
 
@@ -236,15 +236,13 @@ pip install -r requirements.txt
 
 ###### Windows
 
-```shell
-uv run streamlit run ./webui/Main.py --browser.gatherUsageStats=False
+```powershell
+.\webui.bat
 ```
 
-如果你已经手动激活了虚拟环境，也可以直接执行：
-
-```bat
-webui.bat
-```
+在 CMD 中也可以执行 `webui.bat`。
+`webui.bat` 会优先使用项目 `.venv` 或一键包内置 Python；如果没有找到项目 Python，但已安装 `uv`，会自动切换为 `uv run streamlit`。
+如需允许局域网内其他设备访问 WebUI，可以先执行 `set MPT_WEBUI_HOST=0.0.0.0`，再运行 `webui.bat`。
 
 ###### MacOS or Linux
 

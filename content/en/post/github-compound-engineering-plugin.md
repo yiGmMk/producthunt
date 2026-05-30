@@ -1,9 +1,9 @@
 ---
 title: compound-engineering-plugin
-date: 2026-05-29T18:58:37+08:00
+date: 2026-05-30T17:30:27+08:00
 draft: False
-image: https://images.unsplash.com/photo-1593978949508-0d5e989d97b1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAwNTIyMzl8&ixlib=rb-4.1.0
-tags: ['github',compound engineering, AI, skills]
+image: https://images.unsplash.com/photo-1633993364598-50b082282d88?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAxMzMzMzB8&ixlib=rb-4.1.0
+tags: ['github',compound engineering, AI agents, development workflow]
 categories: ['github']
 ---
 
