@@ -1,0 +1,137 @@
+---
+title: Product Hunt Daily | 2026-05-31
+date: 2026-05-31 09:57:42+0000
+image: https://ph-files.imgix.net/71b79a02-1eb0-46ed-9f5e-da99561b43a0.png?auto=format
+tags: ["AI app builder", "no-code AI", "AI desktop"]
+---
+
+## 1. Wandesk  
+**Tagline**: Build Your Own AI Desktop   
+**Description**: Wandesk is an AI desktop. Build the apps you need just by describing them. Plug in Claude Code, Codex, DeepSeek, OpenAI, Kimi, Qwen — anything OpenAI-compatible. Apps share context. AI remembers you. All local. No signup.  
+**Website**: [open](https://www.producthunt.com/r/5A3ODZHHI5HVA6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/wandesk-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Wandesk](https://ph-files.imgix.net/71b79a02-1eb0-46ed-9f5e-da99561b43a0.png?auto=format)  
+**Keyword**: AI desktop, AI app builder, no-code AI, local AI, multi-model AI, OpenAI-compatible, context-aware AI, AI memory, privacy-first AI, desktop AI assistant, no signup AI  
+**VotesCount**: 🔺405  
+**Featured**: Yes  
+**CreatedAt**: 2026-05-30 07:01 AM (UTC)  
+
+---  
+
+## 2. Wingbits AI  
+**Tagline**: AI agents for real-time aircraft monitoring and alerts  
+**Description**: Create agents that monitor airspace activity 24/7 - military aircraft in a region, private or government jets, a GPS-jamming spike, or a travelling friend or family member - and get alerts the moment something relevant happens. Or just ask anything about what's flying right now. Powered by our own independent network of 5,600+ antennas across 120 countries. No code, no data engineering, no terabytes to store.  
+**Website**: [open](https://www.producthunt.com/r/YHETQGWHA4NYM6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/wingbits-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Wingbits AI](https://ph-files.imgix.net/279df08f-4128-4484-828d-e5601ef2d982.png?auto=format)  
+**Keyword**: Wingbits, AI agents, real-time aircraft monitoring, airspace alerts, flight tracking, no-code aviation, global antenna network, aircraft alerts, military aircraft tracking, private jet monitoring, GPS jamming detection, live flight data  
+**VotesCount**: 🔺224  
+**Featured**: Yes  
+**CreatedAt**: 2026-05-30 07:01 AM (UTC)  
+
+---  
+
+## 3. Exstats  
+**Tagline**: Track your browser extensions and competitors in one place  
+**Description**: Exstats unifies browser extension analytics and market research across Chrome, Edge, and Firefox. Track your products, competitors, reviews, rankings, keywords, and store trends in one place, with daily updates, history, exports, and alerts.  
+**Website**: [open](https://www.producthunt.com/r/NFCC7LFF4BSTGX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/exstats?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Exstats](https://ph-files.imgix.net/2d4241b6-3fd3-4ae2-b1ac-f60b42244349.jpeg?auto=format)  
+**Keyword**: extension analytics, extension tracker, competitor monitoring, Chrome extensions, Edge extensions, Firefox extensions, extension market research, extension reviews, extension rankings, extension keywords, store trends, daily updates, analytics platform  
+**VotesCount**: 🔺202  
+**Featured**: Yes  
+**CreatedAt**: 2026-05-30 07:01 AM (UTC)  
+
+---  
+
+## 4. Openstatus MCP Health Checker     
+**Tagline**: Test MCP servers like a real AI client, not just a ping  
+**Description**: Most monitors just send an HTTP ping. But a 200 OK is useless if the JSON-RPC handshake fails. Our tool is different because it performs a true protocol-level check, acting exactly like a real AI client. Key features: Full Handshake: Executes the spec-defined initialize, ping, and tools/list sequence. Deep Visibility: Inspect exact JSON-RPC payloads and negotiated versions. Smart Auth: Parses RFC 9728 headers on 401s to surface exact token requirements.  
+**Website**: [open](https://www.producthunt.com/r/JMCEEBGQ3PMHF4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/openstatus-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Openstatus MCP Health Checker   ](https://ph-files.imgix.net/d3eb6dc9-29bf-4cea-aaf6-544828ba01e8.png?auto=format)  
+**Keyword**: MCP health check, AI client simulation, protocol validation, JSON-RPC testing, server monitoring, handshake verification, authentication testing, token validation, payload inspection, version negotiation  
+**VotesCount**: 🔺192  
+**Featured**: Yes  
+**CreatedAt**: 2026-05-30 07:01 AM (UTC)  
+
+---  
+
+## 5. Step 3.7 Flash  
+**Tagline**: Flash-speed agents model that can see and act  
+**Description**: An Apache 2.0 open-weight Flash model for real-world agents. Step 3.7 Flash combines vision, coding, search, tool use, 256K context, ~11B active params, and up to 400 TPS.  
+**Website**: [open](https://www.producthunt.com/r/VAWQFMEA3FMTG3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/step-3-5-flash?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Step 3.7 Flash](https://ph-files.imgix.net/ba3df7fa-39eb-4ea2-a18f-da48c18b7877.jpeg?auto=format)  
+**Keyword**: flash-speed agents model, vision, coding, search, tool use, 256K context, 11B parameters, 400 TPS, Apache 2.0, open-weight, multimodal AI, real-world agents  
+**VotesCount**: 🔺173  
+**Featured**: Yes  
+**CreatedAt**: 2026-05-30 07:01 AM (UTC)  
+
+---  
+
+## 6. 99xDev  
+**Tagline**: Build Fullstack Web Apps using AI  
+**Description**: 99xDev is an AI app builder for full-stack apps with built-in database and storage, custom domains, and code you can download to self-host.  
+**Website**: [open](https://www.producthunt.com/r/RZA77D56MKYYNR?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/99xdev?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![99xDev](https://ph-files.imgix.net/290005b1-bd77-49ed-aa2a-93b427eafdee.jpeg?auto=format)  
+**Keyword**: AI app builder, full-stack development, no-code AI, low-code platform, web app development, built-in database, cloud storage, custom domains, self-hosting, rapid prototyping, AI code generation, backend as a service  
+**VotesCount**: 🔺16  
+**Featured**: No  
+**CreatedAt**: 2026-05-30 07:01 AM (UTC)  
+
+---  
+
+## 7. Sleek Analytics  
+**Tagline**: Privacy-first Google Analytics alternative for modern web  
+**Description**: Sleek Analytics is a privacy-first Google Analytics alternative for the modern web. Real-time website analytics, cookieless tracking, and fast dashboards.  
+**Website**: [open](https://www.producthunt.com/r/QMZ67YPNZEMDIX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/sleek-analytics-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Sleek Analytics](https://ph-files.imgix.net/2421a20f-7503-4241-8645-2ead7adc0971.png?auto=format)  
+**Keyword**: Sleek Analytics, privacy-first analytics, Google Analytics alternative, cookieless tracking, real-time analytics, website analytics tool, data privacy, GDPR compliant analytics, ethical analytics, web analytics software, fast dashboards, no cookies analytics  
+**VotesCount**: 🔺16  
+**Featured**: No  
+**CreatedAt**: 2026-05-30 07:01 AM (UTC)  
+
+---  
+
+## 8. InkieAI  
+**Tagline**: AI SEO Agent on Autopilot  
+**Description**: World's 1st AI agent for blog SEO. InkieAI is an all-in-one SEO AI agent that saves you time and effort with automated keyword research, SEO articles, and content publishing.  
+**Website**: [open](https://www.producthunt.com/r/EGMIJR7WAUO4D6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/inkieai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![InkieAI](https://ph-files.imgix.net/691e85b1-da32-4e4c-8033-77bb07b49a6a.png?auto=format)  
+**Keyword**: InkieAI, AI SEO Agent, autopilot SEO, automated keyword research, SEO articles, AI content publishing, blog SEO automation, all-in-one SEO AI, AI content agent  
+**VotesCount**: 🔺15  
+**Featured**: No  
+**CreatedAt**: 2026-05-30 07:01 AM (UTC)  
+
+---  
+
+## 9. Niyam AI  
+**Tagline**: Build Discipline - Get Direction - Attain Consistency.  
+**Description**: Niyam AI is a Slack-based time tracking tool that helps teams build and follow schedules without any friction. People don’t log time accurately. They either forget, batch hours at end of day, or have to switch into a separate tool (timers, spreadsheets, project software). Niyam AI lives inside Slack. You message it like you normally would — describe what you’re working on — and it automatically extracts the task and time spent. No forms, no timers, no context switching.  
+**Website**: [open](https://www.producthunt.com/r/NK722MXUHBKXOS?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/niyam-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Niyam AI](https://ph-files.imgix.net/67d1d539-2689-46ee-b4a3-1f4bf0d90a97.png?auto=format)  
+**Keyword**: Slack time tracking, automated time logging, team productivity, schedule discipline, seamless workflow, remote work tool, no manual entry, AI task extraction, consistency tool, frictionless tracking  
+**VotesCount**: 🔺11  
+**Featured**: No  
+**CreatedAt**: 2026-05-30 07:01 AM (UTC)  
+
+---  
+
+## 10. SnapZoom -  AI Auto-Zoom on Click  
+**Tagline**: AI auto-zoom screen recorder for Chrome. No editing.  
+**Description**: Free Chrome screen recorder with AI cinematic auto-zoom on every click. 12x faster exports, pro webcam overlays, local privacy. Best Loom & Screencastify alternative for product demos & tutorials.  
+**Website**: [open](https://www.producthunt.com/r/FONVXR54JQSYNI?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/snapzoom?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![SnapZoom -  AI Auto-Zoom on Click](https://ph-files.imgix.net/206a2863-90c6-4a4a-bacf-08204cf60083.png?auto=format)  
+**Keyword**: AI screen recorder, Chrome extension, auto-zoom, cinematic zoom, screen recording, click tracking, fast exports, webcam overlay, local privacy, Loom alternative, Screencastify alternative, product demos, tutorials, no editing required  
+**VotesCount**: 🔺11  
+**Featured**: No  
+**CreatedAt**: 2026-05-30 07:01 AM (UTC)  
+
+---  
+
