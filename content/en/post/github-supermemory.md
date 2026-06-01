@@ -1,9 +1,9 @@
 ---
 title: supermemory
-date: 2026-03-25T15:58:42+08:00
+date: 2026-06-01T20:50:43+08:00
 draft: False
-image: https://images.unsplash.com/photo-1660866838212-df428c885827?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ0MjU0Nzl8&ixlib=rb-4.1.0
-tags: ['github',memory engine, AI context, user profiles]
+image: https://images.unsplash.com/photo-1573578160998-4f4c7b023aec?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAzMTgxMTZ8&ixlib=rb-4.1.0
+tags: ['github',Supermemory, memory, AI]
 categories: ['github']
 ---
 
@@ -18,7 +18,7 @@ categories: ['github']
 </p>
 
 <p align="center">
-  <strong>State-of-the-art memory and context engine for AI.</strong>
+  <strong>State-of-the-art memory and context engine for AI. And yes - you can use it as a company/personal brain.</strong>
 </p>
 
 <p align="center">
@@ -106,7 +106,7 @@ It also comes with an agent embedded inside, which we call Nova.
 
 ### Supermemory Plugins
 
-Supermemory comes built with Plugins for Claude Code, OpenCode and OpenClaw.
+Supermemory comes built with Plugins for Claude Code, OpenCode, OpenClaw, and Hermes.
 
 <img width="844" height="484" alt="image" src="https://github.com/user-attachments/assets/ecb879a2-8652-495d-9228-f305a97ba603" />
 
@@ -117,6 +117,7 @@ You can find them here:
 - Openclaw plugin: https://github.com/supermemoryai/openclaw-supermemory
 - Claude code plugin: https://github.com/supermemoryai/claude-supermemory
 - OpenCode plugin: https://github.com/supermemoryai/opencode-supermemory
+- Hermes agent (Supermemory memory provider): https://github.com/NousResearch/hermes-agent
 
 ### MCP - Quick install
 
@@ -148,7 +149,7 @@ Memory is scoped with **projects** (container tags) so you can separate work and
 
 ### Supported clients
 
-**Claude Desktop** · **Cursor** · **Windsurf** · **VS Code** · **Claude Code** · **OpenCode** · **OpenClaw**
+**Claude Desktop** · **Cursor** · **Windsurf** · **VS Code** · **Claude Code** · **OpenCode** · **OpenClaw** · **Hermes**
 
 The MCP server is open source — [view the source](https://supermemory.ai/docs/supermemory-mcp/mcp).
 
@@ -242,7 +243,7 @@ Drop-in wrappers for every major AI framework:
 ```typescript
 // Vercel AI SDK
 import { withSupermemory } from "@supermemory/tools/ai-sdk";
-const model = withSupermemory(openai("gpt-4o"), "user_123");
+const model = withSupermemory(openai("gpt-4o"), { containerTag: "user_123", customId: "conv-1" });
 
 // Mastra
 import { withSupermemory } from "@supermemory/tools/mastra";

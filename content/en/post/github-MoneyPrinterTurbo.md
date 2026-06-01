@@ -1,9 +1,9 @@
 ---
 title: MoneyPrinterTurbo
-date: 2026-05-31T17:58:21+08:00
+date: 2026-06-01T20:50:56+08:00
 draft: False
-image: https://images.unsplash.com/photo-1641555130479-473595f33bd2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAyMjE0NjV8&ixlib=rb-4.1.0
-tags: ['github',video generation, AI automation, short video]
+image: https://images.unsplash.com/photo-1537191072641-5e19cc173c6a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAzMTgxMTZ8&ixlib=rb-4.1.0
+tags: ['github',MoneyPrinterTurbo,video generation,automation]
 categories: ['github']
 ---
 
@@ -19,13 +19,20 @@ categories: ['github']
   <a href="https://github.com/harry0703/MoneyPrinterTurbo/blob/main/LICENSE"><img src="https://img.shields.io/github/license/harry0703/MoneyPrinterTurbo.svg?style=for-the-badge" alt="License"></a>
 </p>
 <br>
-<h3>简体中文 | <a href="README-en.md">English</a></h3>
+<h3>简体中文 | <a href="README-en.md">English</a> | <a href="README-ar.md">العربية</a></h3>
 <div align="center">
   <a href="https://trendshift.io/repositories/8731" target="_blank"><img src="https://trendshift.io/api/badge/repositories/8731" alt="harry0703%2FMoneyPrinterTurbo | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </div>
+
 <br>
 只需提供一个视频 <b>主题</b> 或 <b>关键词</b> ，就可以全自动生成视频文案、视频素材、视频字幕、视频背景音乐，然后合成一个高清的短视频。
 <br>
+
+<p align="center">
+  <sub>
+    感谢 <a href="https://aihubmix.com/?aff=CEve">AIHubMix</a> 对本项目的赞助。AIHubMix 深度适配 OpenAI、Claude、Gemini、DeepSeek、智谱、千问等全球顶级最新模型，一站式快速接入 GPT-5.5、deepseek-v4-flash 等 700+ 模型（含多个免费模型），提供企业级生产稳定性保障。
+  </sub>
+</p>
 
 <h4>Web界面</h4>
 
@@ -42,8 +49,8 @@ categories: ['github']
 - [x] 完整的 **MVC架构**，代码 **结构清晰**，易于维护，支持 `API` 和 `Web界面`
 - [x] 支持视频文案 **AI自动生成**，也可以**自定义文案**
 - [x] 支持多种 **高清视频** 尺寸
-    - [x] 竖屏 9:16，`1080x1920`
-    - [x] 横屏 16:9，`1920x1080`
+  - [x] 竖屏 9:16，`1080x1920`
+  - [x] 横屏 16:9，`1920x1080`
 - [x] 支持 **批量视频生成**，可以一次生成多个视频，然后选择一个最满意的
 - [x] 支持 **视频片段时长** 设置，方便调节素材切换频率
 - [x] 支持 **中文** 和 **英文** 视频文案
@@ -51,8 +58,7 @@ categories: ['github']
 - [x] 支持 **字幕生成**，可以调整 `字体`、`位置`、`颜色`、`大小`，同时支持`字幕描边`设置
 - [x] 支持 **背景音乐**，随机或者指定音乐文件，可设置`背景音乐音量`
 - [x] 视频素材来源 **高清**，而且 **无版权**，也可以使用自己的 **本地素材**
-- [x] 支持 **OpenAI**、**Moonshot**、**Azure**、**gpt4free**、**one-api**、**通义千问**、**Google Gemini**、**Ollama**、**DeepSeek**、**MiniMax**、 **文心一言**, **Pollinations**、**ModelScope** 等多种模型接入
-    - 中国用户建议使用 **DeepSeek** 或 **Moonshot** 作为大模型提供商（国内可直接访问，不需要VPN。注册就送额度，基本够用）
+- [x] 支持 **OpenAI**、**AIHubMix**、**Moonshot**、**Azure**、**gpt4free**、**one-api**、**通义千问**、**Google Gemini**、**Ollama**、**DeepSeek**、**MiniMax**、 **文心一言**, **Pollinations**、**ModelScope** 等多种模型接入
 
 ## 视频演示 📺
 
@@ -97,15 +103,14 @@ categories: ['github']
 - 建议系统：Windows 10 或 MacOS 11.0 以上，或主流 Linux 发行版
 - GPU 不是必需项，但如果你希望本地转录、更快的视频处理或更顺畅的批量生成体验，建议使用带显存的独立显卡
 
-| 项目 | 最低配置 | 推荐配置 | 理想配置 |
-| --- | --- | --- | --- |
-| CPU | 4 核 | 6 到 8 核 | 8 核及以上 |
-| RAM | 4 GB | 8 GB | 16 GB 及以上 |
-| GPU | 非必须 | 4 GB 显存及以上 | 8 GB 显存及以上 |
+| 项目 | 最低配置 | 推荐配置        | 理想配置        |
+| ---- | -------- | --------------- | --------------- |
+| CPU  | 4 核     | 6 到 8 核       | 8 核及以上      |
+| RAM  | 4 GB     | 8 GB            | 16 GB 及以上    |
+| GPU  | 非必须   | 4 GB 显存及以上 | 8 GB 显存及以上 |
 
 - 如果你主要依赖云端 LLM、云端 TTS 和在线素材源，CPU 与内存比 GPU 更重要
 - 如果你启用 `faster-whisper`、批量生成或更重的本地处理链路，GPU 会明显提升速度
-
 
 ## 快速开始 🚀
 
@@ -116,10 +121,10 @@ categories: ['github']
 - 想要隔离运行环境：优先使用 Docker 部署
 
 ### 在 Google Colab 中运行
+
 免去本地环境配置，点击直接在 Google Colab 中快速体验 MoneyPrinterTurbo
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/harry0703/MoneyPrinterTurbo/blob/main/docs/MoneyPrinterTurbo.ipynb)
-
 
 ### Windows一键启动包
 
@@ -151,6 +156,7 @@ git clone https://github.com/harry0703/MoneyPrinterTurbo.git
 - 将 `config.example.toml` 文件复制一份，命名为 `config.toml`
 - 按照 `config.toml` 文件中的说明，配置好 `pexels_api_keys` 和 `llm_provider`，并根据 llm_provider 对应的服务商，配置相关的
   API Key
+- 如果希望使用推荐的大模型平台，也可以将 `llm_provider` 设置为 `aihubmix`，并填写对应的 API Key。
 
 ### Docker部署 🐳
 
@@ -205,6 +211,7 @@ pip install -r requirements.txt
 ```
 
 说明：
+
 - `pyproject.toml` 是主依赖定义文件
 - `uv.lock` 是锁文件，建议默认执行 `uv sync --frozen`
 - `requirements.txt` 仅保留给旧的 `pip` 安装方式兼容使用
@@ -212,15 +219,15 @@ pip install -r requirements.txt
 #### ② 安装好 ImageMagick
 
 - Windows:
-    - 下载 https://imagemagick.org/script/download.php 选择Windows版本，切记一定要选择 **静态库** 版本，比如
-      ImageMagick-7.1.1-32-Q16-x64-**static**.exe
-    - 安装下载好的 ImageMagick，**注意不要修改安装路径**
-    - 修改 `配置文件 config.toml` 中的 `imagemagick_path` 为你的 **实际安装路径**
+  - 下载 https://imagemagick.org/script/download.php 选择Windows版本，切记一定要选择 **静态库** 版本，比如
+    ImageMagick-7.1.1-32-Q16-x64-**static**.exe
+  - 安装下载好的 ImageMagick，**注意不要修改安装路径**
+  - 修改 `配置文件 config.toml` 中的 `imagemagick_path` 为你的 **实际安装路径**
 
 - MacOS:
   ```shell
   brew install imagemagick
-  ````
+  ```
 - Ubuntu
   ```shell
   sudo apt-get install imagemagick
@@ -323,7 +330,7 @@ python main.py
 最终的文件路径应该是这样: `.\MoneyPrinterTurbo\models\whisper-large-v3`
 
 ```
-MoneyPrinterTurbo  
+MoneyPrinterTurbo
   ├─models
   │   └─whisper-large-v3
   │          config.json
@@ -336,6 +343,7 @@ MoneyPrinterTurbo
 ## 背景音乐 🎵
 
 用于视频的背景音乐，位于项目的 `resource/songs` 目录下。
+
 > 当前项目里面放了一些默认的音乐，来自于 YouTube 视频，如有侵权，请删除。
 
 ## 字幕字体 🅰
