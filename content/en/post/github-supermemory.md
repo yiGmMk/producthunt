@@ -1,9 +1,9 @@
 ---
 title: supermemory
-date: 2026-06-01T20:50:43+08:00
+date: 2026-06-02T19:29:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1573578160998-4f4c7b023aec?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAzMTgxMTZ8&ixlib=rb-4.1.0
-tags: ['github',Supermemory, memory, AI]
+image: https://images.unsplash.com/photo-1516911588919-bf6b970eaf32?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAzOTk2NTN8&ixlib=rb-4.1.0
+tags: ['github',AI memory, context engine, user profiles]
 categories: ['github']
 ---
 

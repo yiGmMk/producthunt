@@ -1,9 +1,9 @@
 ---
 title: hermes-webui
-date: 2026-06-01T20:50:02+08:00
+date: 2026-06-02T19:29:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1578650495876-6bc48a037f40?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAzMTgxMTZ8&ixlib=rb-4.1.0
-tags: ['github',Hermes Web UI, Hermes Agent, web interface]
+image: https://images.unsplash.com/photo-1636850642710-6153d2e764e1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAzOTk2NTN8&ixlib=rb-4.1.0
+tags: ['github',Hermes Web UI, Hermes Agent, autonomous agent]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: markitdown
-date: 2026-06-01T20:49:31+08:00
+date: 2026-06-02T19:28:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1576877071774-0323d48de9cc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAzMTgxMTZ8&ixlib=rb-4.1.0
-tags: ['github',MarkItDown, Markdown, file conversion]
+image: https://images.unsplash.com/photo-1636850642710-6153d2e764e1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAzOTk2NTN8&ixlib=rb-4.1.0
+tags: ['github',Markdown, document conversion, LLM]
 categories: ['github']
 ---
 
