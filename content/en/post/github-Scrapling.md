@@ -1,8 +1,8 @@
 ---
 title: Scrapling
-date: 2026-06-02T19:30:05+08:00
+date: 2026-06-03T20:08:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1757918637010-214f0a48ee2d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODAzOTk2NTN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1449103552284-f455a4479fc4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA0ODgzODN8&ixlib=rb-4.1.0
 tags: ['github',web scraping, framework, adaptive]
 categories: ['github']
 ---
