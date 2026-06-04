@@ -1,9 +1,9 @@
 ---
 title: trivy
-date: 2026-03-22T15:42:57+08:00
+date: 2026-06-04T18:49:50+08:00
 draft: False
-image: https://images.unsplash.com/photo-1530598554585-ee355b518dc9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQxNjUzNDl8&ixlib=rb-4.1.0
-tags: ['github',security scanner, vulnerability detection, container security]
+image: https://images.unsplash.com/photo-1430353602645-76d3731b8eeb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA1NzAwNjB8&ixlib=rb-4.1.0
+tags: ['github',security scanner, vulnerability scanning, container image]
 categories: ['github']
 ---
 
@@ -83,7 +83,7 @@ trivy image python:3.4-alpine
 <details>
 <summary>Result</summary>
 
-https://user-images.githubusercontent.com/1161307/171013513-95f18734-233d-45d3-aaf5-d6aec687db0e.mov
+https://github.com/user-attachments/assets/af1c11e7-d9c5-48af-8e05-cb34dfd6352a
 
 </details>
 
@@ -94,7 +94,7 @@ trivy fs --scanners vuln,secret,misconfig myproject/
 <details>
 <summary>Result</summary>
 
-https://user-images.githubusercontent.com/1161307/171013917-b1f37810-f434-465c-b01a-22de036bd9b3.mov
+https://github.com/user-attachments/assets/6b3894b7-77c5-4ffc-ac94-ffe6648a30dc
 
 </details>
 

@@ -1,9 +1,9 @@
 ---
 title: ECC
-date: 2026-06-03T20:08:04+08:00
+date: 2026-06-04T18:48:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1508151320989-03bc63351215?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA0ODgzODN8&ixlib=rb-4.1.0
-tags: ['github',agentic,cross-harness,skills]
+image: https://images.unsplash.com/photo-1664907933800-4a949153ce69?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA1NzAwNjB8&ixlib=rb-4.1.0
+tags: ['github',AI coding, agentic system, cross-platform]
 categories: ['github']
 ---
 

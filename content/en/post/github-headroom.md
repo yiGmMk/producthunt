@@ -1,9 +1,9 @@
 ---
 title: headroom
-date: 2026-06-03T20:07:16+08:00
+date: 2026-06-04T18:48:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1612440385022-734b8dfd34a0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA0ODgzODN8&ixlib=rb-4.1.0
-tags: ['github',context compression, AI agents, reversible compression]
+image: https://images.unsplash.com/photo-1430353602645-76d3731b8eeb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA1NzAwNjB8&ixlib=rb-4.1.0
+tags: ['github',compression, AI agents, tokens]
 categories: ['github']
 ---
 
@@ -106,7 +106,7 @@ headroom proxy --port 8787              # drop-in proxy, zero code changes
 # or: from headroom import compress      # inline library
 
 # 3 — See the savings
-headroom stats
+headroom perf
 ```
 
 Granular extras: `[proxy]`, `[mcp]`, `[ml]`, `[agno]`, `[langchain]`, `[evals]`. Requires **Python 3.10+**.
@@ -145,6 +145,18 @@ Reproduce: `python -m headroom.evals suite --tier 1` · [Full benchmarks & metho
 | OpenClaw    | ●               | installs as ContextEngine plugin |
 
 Any OpenAI-compatible client works via `headroom proxy`. MCP-native: `headroom mcp install`.
+
+### GitHub Copilot CLI subscription mode
+
+Headroom can route GitHub Copilot CLI subscription traffic through the local proxy:
+
+```bash
+headroom wrap copilot --subscription -- --model gpt-4o
+```
+
+This lets Headroom intercept OpenAI-compatible Copilot CLI requests and apply the same proxy compression pipeline before forwarding to GitHub Copilot's hosted API. The wrapper resolves the account-specific Copilot API endpoint and prints it as `COPILOT_PROVIDER_API_URL=...` during launch.
+
+Platform support note: macOS auth reuse via Copilot CLI Keychain storage has been smoke-tested. Windows Credential Manager, Linux Secret Service / `secret-tool`, and Docker/CI token-injection paths are implemented or planned as auth-discovery paths, but still need real OS validation before they should be considered fully vetted. For Docker and CI, prefer passing an explicit `GITHUB_COPILOT_TOKEN` or `GITHUB_COPILOT_GITHUB_TOKEN` rather than relying on host keychain access.
 
 ## When to use · When to skip
 
