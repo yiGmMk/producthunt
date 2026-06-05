@@ -1,15 +1,15 @@
 ---
 title: headroom
-date: 2026-06-04T18:48:16+08:00
+date: 2026-06-05T18:58:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1430353602645-76d3731b8eeb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA1NzAwNjB8&ixlib=rb-4.1.0
-tags: ['github',compression, AI agents, tokens]
+image: https://images.unsplash.com/photo-1679136996655-ca68686f689a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA2NTcxMDl8&ixlib=rb-4.1.0
+tags: ['github',context compression, AI agents, token reduction]
 categories: ['github']
 ---
 
 # [chopratejas/headroom](https://github.com/chopratejas/headroom)
 
-```
+<div align="center"><pre>
   ██╗  ██╗███████╗ █████╗ ██████╗ ██████╗  ██████╗  ██████╗ ███╗   ███╗
   ██║  ██║██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔═══██╗██╔═══██╗████╗ ████║
   ███████║█████╗  ███████║██║  ██║██████╔╝██║   ██║██║   ██║██╔████╔██║
@@ -17,7 +17,7 @@ categories: ['github']
   ██║  ██║███████╗██║  ██║██████╔╝██║  ██║╚██████╔╝╚██████╔╝██║ ╚═╝ ██║
   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝     ╚═╝
                   The context compression layer for AI agents
-```
+</pre></div>
 
 <p align="center"><strong>60–95% fewer tokens · library · proxy · MCP · 6 algorithms · local-first · reversible</strong></p>
 
@@ -37,7 +37,8 @@ categories: ['github']
   <a href="#proof">Proof</a> ·
   <a href="#agent-compatibility-matrix">Agents</a> ·
   <a href="https://discord.gg/yRmaUNpsPJ">Discord</a> ·
-  <a href="llms.txt">llms.txt</a>
+  <a href="llms.txt">llms.txt</a> ·
+  <a href="ENTERPRISE.md">Enterprise</a>
 </p>
 
 <p align="center"><sub>
@@ -45,9 +46,9 @@ categories: ['github']
 </sub></p>
 
 ---
-<a href="https://trendshift.io/repositories/20881" target="_blank"><img src="https://trendshift.io/api/badge/repositories/20881" alt="chopratejas%2Fheadroom | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+<p align="center"><a href="https://trendshift.io/repositories/20881" target="_blank"><img src="https://trendshift.io/api/badge/repositories/20881" alt="chopratejas%2Fheadroom | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a></p>
 
-> Headroom compresses everything your AI agent reads — tool outputs, logs, RAG chunks, files, and conversation history — before it reaches the LLM. Same answers, fraction of the tokens.
+Headroom compresses everything your AI agent reads — tool outputs, logs, RAG chunks, files, and conversation history — before it reaches the LLM. Same answers, fraction of the tokens.
 
 <p align="center">
   <img src="HeadroomDemo-Fast.gif" alt="Headroom in action" width="820">
@@ -109,7 +110,7 @@ headroom proxy --port 8787              # drop-in proxy, zero code changes
 headroom perf
 ```
 
-Granular extras: `[proxy]`, `[mcp]`, `[ml]`, `[agno]`, `[langchain]`, `[evals]`. Requires **Python 3.10+**.
+Granular extras: `[proxy]`, `[mcp]`, `[ml]`, `[code]`, `[memory]`, `[relevance]`, `[image]`, `[agno]`, `[langchain]`, `[evals]`. Requires **Python 3.10+**.
 
 ## Proof
 
@@ -232,7 +233,7 @@ npm install headroom-ai                 # TypeScript / Node
 docker pull ghcr.io/chopratejas/headroom:latest
 ```
 
-Granular extras: `[proxy]`, `[mcp]`, `[ml]` (Kompress-base), `[agno]`, `[langchain]`, `[evals]`. Requires **Python 3.10+**.
+Granular extras: `[proxy]`, `[mcp]`, `[ml]` (Kompress-base), `[code]`, `[memory]`, `[relevance]`, `[image]`, `[agno]`, `[langchain]`, `[evals]`. Requires **Python 3.10+**.
 
 Using `pipx`? Choose a supported interpreter explicitly:
 
