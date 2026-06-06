@@ -1,8 +1,8 @@
 ---
 title: headroom
-date: 2026-06-05T18:58:44+08:00
+date: 2026-06-06T17:35:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1679136996655-ca68686f689a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA2NTcxMDl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1701636911624-637c97496874?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA3Mzg0NzN8&ixlib=rb-4.1.0
 tags: ['github',context compression, AI agents, token reduction]
 categories: ['github']
 ---
@@ -134,16 +134,22 @@ Granular extras: `[proxy]`, `[mcp]`, `[ml]`, `[code]`, `[memory]`, `[relevance]`
 
 Reproduce: `python -m headroom.evals suite --tier 1` · [Full benchmarks & methodology](https://headroom-docs.vercel.app/docs/benchmarks)
 
+<a href="https://www.star-history.com/?repos=chopratejas%2Fheadroom&type=date&legend=top-left">
+ <picture>
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=chopratejas/headroom&type=date&legend=top-left" />
+ </picture>
+</a>
+
 ## Agent compatibility matrix
 
 | Agent       | `headroom wrap` | Notes                            |
 |-------------|:---------------:|----------------------------------|
-| Claude Code | ●               | `--memory` · `--code-graph`      |
-| Codex       | ●               | shares memory with Claude        |
-| Cursor      | ●               | prints config — paste once       |
-| Aider       | ●               | starts proxy + launches          |
-| Copilot CLI | ●               | starts proxy + launches          |
-| OpenClaw    | ●               | installs as ContextEngine plugin |
+| Claude Code | ✅              | `--memory` · `--code-graph`      |
+| Codex       | ✅              | shares memory with Claude        |
+| Cursor      | ✅              | prints config — paste once       |
+| Aider       | ✅              | starts proxy + launches          |
+| Copilot CLI | ✅              | starts proxy + launches          |
+| OpenClaw    | ✅              | installs as ContextEngine plugin |
 
 Any OpenAI-compatible client works via `headroom proxy`. MCP-native: `headroom mcp install`.
 

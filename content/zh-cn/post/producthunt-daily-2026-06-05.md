@@ -1,0 +1,137 @@
+---
+title: Product Hunt 今日热榜 | 2026-06-06
+date: 2026-06-06 09:32:48+0000
+image: https://ph-files.imgix.net/4cb6a984-3d4f-454b-ab7e-79de4c6f8e20.png?auto=format
+tags: ["复杂任务处理", "AI代理团队", "自动化商店运营"]
+---
+
+## 1. SellerClaw  
+**标语**: 一支AI代理团队，运营您的跨渠道店铺。  
+**介绍**: 运营一家网店已是全职工作，而SellerClaw的AI代理团队能为您代劳——通过专业代理负责产品采购、店铺管理与广告投放，所有环节都由您指挥的监督代理协调运作。您只需决定销售品类，代理们就会在Shopify、eBay等平台自动创建商品页面、管理广告定价、处理订单履约与客户支持。全程掌控不缺席：每个操作透明可见且需经您批准，自动化运行程度由您设定。即刻免费开始  
+**网站**: [立即访问](https://www.producthunt.com/r/7EVPIJ3T3Q6YW2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/sellerclaw?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![SellerClaw](https://ph-files.imgix.net/4cb6a984-3d4f-454b-ab7e-79de4c6f8e20.png?auto=format)  
+**关键词**: AI代理团队,自动化商店运营,跨渠道管理,用户控制,免费开始  
+**票数**: 🔺496  
+**是否精选**: 是  
+**发布时间**: 2026年06月05日 PM03:01 (北京时间)  
+
+---  
+
+## 2. Minimi  
+**标语**: 克劳德的环境记忆  
+**介绍**: 每一次出色的Claude回应都始于完整的背景信息。Minimi在您的Mac上全面监听——文档、通话、消息、浏览器标签——为Claude提供全景视角。无需手动操作。所有处理均在本地设备完成，确保私密性。  
+**网站**: [立即访问](https://www.producthunt.com/r/SIMPLUAHCBBLII?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/shram?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Minimi](https://ph-files.imgix.net/a620a4e0-e814-4817-bc77-3b64de305485.png?auto=format)  
+**关键词**: 环境记忆,自动收集上下文,多源信息,本地隐私,Claude助手  
+**票数**: 🔺467  
+**是否精选**: 是  
+**发布时间**: 2026年06月05日 PM03:01 (北京时间)  
+
+---  
+
+## 3. Leni  
+**标语**: 全球最精准的投资AI  
+**介绍**: 莱尼是严肃投资工作中最准确且可验证的人工智能。基于超过21,000条决策痕迹构建，每日处理1亿多行数据，它通过来源链接、时间戳和扎实比对提供完全可审计的金融级输出。在准确性、建模和估值等独立基准测试中，莱尼的表现优于GPT、Claude和Manus，当数百万资金面临风险时，为团队提供所需的信任保障。莱尼隶属于谷歌初创公司计划，是投资者的专业利器。  
+**网站**: [立即访问](https://www.producthunt.com/r/FFWCFWSDY3ELXY?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/leni?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Leni](https://ph-files.imgix.net/0cc77175-bf74-412d-9882-428247aa87c1.png?auto=format)  
+**关键词**: AI投资工具, 金融准确性, 可审计AI, 高性能模型, 投资者专用, Google Startups  
+**票数**: 🔺379  
+**是否精选**: 是  
+**发布时间**: 2026年06月05日 PM03:01 (北京时间)  
+
+---  
+
+## 4. Veltrix AI  
+**标语**: 面向现金流、利润率与增长的AI金融助手  
+**介绍**: Veltrix AI为创始人和财务团队即时厘清现金流、盈利状况、资金消耗速度及业务表现。连接QuickBooks、Xero、Shopify、Square和HubSpot后，只需用日常英语提问即可获得来源可靠的答案、异常提示及建议后续步骤。这款实时财务智能工具能助您更快做出明智的商业决策，彻底告别电子表格的混乱和静态仪表盘的局限。  
+**网站**: [立即访问](https://www.producthunt.com/r/E7KCWCLG4TE4Y5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/veltrix-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Veltrix AI](https://ph-files.imgix.net/9610b4ff-c8c3-405d-974d-905439cc1c7b.png?auto=format)  
+**关键词**: AI财务助手,现金流分析,利润优化,实时财务智能,多平台集成,智能财务决策,创始人财务工具,财务团队效率  
+**票数**: 🔺280  
+**是否精选**: 是  
+**发布时间**: 2026年06月05日 PM03:01 (北京时间)  
+
+---  
+
+## 5. Ideogram 4.0  
+**标语**: 生成具有开放权重、布局可控的设计就绪图像  
+**介绍**: Ideogram 4.0是一款从头开始训练的开源权重文本转图像模型，具备边界框布局控制、多语言文本渲染和原生2K输出功能，专为在视觉AI领域开发的开发者与企业而设计。  
+**网站**: [立即访问](https://www.producthunt.com/r/OJNQHSZUNTKVUF?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/ideogram-4-0?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Ideogram 4.0](https://ph-files.imgix.net/7d309261-c17d-4ff3-8ea6-ded457b0432f.webp?auto=format)  
+**关键词**: 文生图模型, 开放权重, 布局控制, 多语言文本渲染, 2K输出, 视觉AI, 开发者, 企业  
+**票数**: 🔺238  
+**是否精选**: 是  
+**发布时间**: 2026年06月05日 PM03:01 (北京时间)  
+
+---  
+
+## 6. Agent Mode on Arena  
+**标语**: 通过自主AI代理完成现实世界任务  
+**介绍**: 大多数AI基准测试在受控环境中评估模型。智能体模式则通过复杂任务测试模型，以完成更多实际工作。运行能够自主浏览、研究、编码、使用文件，并能根据单一指令完成多步骤工作流的智能体。随后可逐步观察每个工作流的执行过程。每次运行结果都将计入智能体竞技场排行榜，该榜单根据模型在实际场景中的智能体表现对前沿模型进行排名。  
+**网站**: [立即访问](https://www.producthunt.com/r/DMA3X24N4FESP7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/arena-5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Agent Mode on Arena](https://ph-files.imgix.net/8c8e5e76-1a6d-4b41-836b-540456c36287.png?auto=format)  
+**关键词**: 代理模式, 自主AI代理, 真实世界任务, 复杂任务处理, 多步骤工作流程, Agent Arena排行榜  
+**票数**: 🔺171  
+**是否精选**: 是  
+**发布时间**: 2026年06月05日 PM03:01 (北京时间)  
+
+---  
+
+## 7. Nemotron 3 Ultra by NVIDIA  
+**标语**: 赋能长时间运行代理的更快速高效推理  
+**介绍**: 这是一款专为长时运行智能体设计的5500亿参数混合专家前沿智能开源模型。相比其他前沿开源模型，其推理速度提升5倍，且复杂智能体任务成本降低高达30%。该模型在编程与深度研究等复杂任务上表现卓越。长时运行智能体会持续进行任务规划、工具调用、故障恢复及下一步决策。  
+**网站**: [立即访问](https://www.producthunt.com/r/FRQKMP7ZDQB4RR?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/nvidia?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Nemotron 3 Ultra by NVIDIA](https://ph-files.imgix.net/3510c708-7531-485b-bed4-2530fcbcdd03.webp?auto=format)  
+**关键词**: Nemotron 3 Ultra, NVIDIA, 推理加速, 成本降低, 长运行代理, 复杂任务处理, 前沿智能模型  
+**票数**: 🔺155  
+**是否精选**: 是  
+**发布时间**: 2026年06月05日 PM03:01 (北京时间)  
+
+---  
+
+## 8. Moodloom  
+**标语**: 具备AI内容过滤功能的无广告Pinterest替代方案  
+**介绍**: Moodloom是一款免广告的视觉探索平台，专为厌倦了Pinterest的用户设计。在这里，您可以收藏并探索时尚、家居装饰和艺术作品——远离一切干扰。其独特之处在于：纯净的信息流——无广告、无推广内容；人工智能内容筛选——可自主选择隐藏或展示AI生成的图像。 专为渴望更好体验的时尚爱好者、室内装饰师和数字艺术家打造。我们还开发了“保存至Moodloom”浏览器扩展程序，您可以通过  
+**网站**: [立即访问](https://www.producthunt.com/r/KABC3NRR6GO7HB?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/moodloom?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Moodloom](https://ph-files.imgix.net/bae5030a-87ad-412a-b75f-adb3ea3f7556.png?auto=format)  
+**关键词**: 无广告视觉平台,AI内容过滤,Pinterest替代品,时尚艺术发现,导入Pinterest内容  
+**票数**: 🔺124  
+**是否精选**: 是  
+**发布时间**: 2026年06月05日 PM03:01 (北京时间)  
+
+---  
+
+## 9. LocalClicky  
+**标语**: 使用本地语音控制你的Mac  
+**介绍**: LocalClicky是一款Mac菜单栏应用，让你能与电脑进行真正的离线对话。说“Computer”即可开始会话，它会持续聆听。你可以连续发出多个指令，结束时说“goodbye”即可。所有功能均在本地运行：语音转文字、大语言多模型、VAD（语音活动检测）、macOS语音合成。无需API密钥，无需订阅，数据永不离开你的Mac。采用MIT开源许可证。  
+**网站**: [立即访问](https://www.producthunt.com/r/UREOXFHYYUMZVN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/localclicky?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![LocalClicky](https://ph-files.imgix.net/d8699719-6125-418a-a85e-a4217ebbd998.jpeg?auto=format)  
+**关键词**: 语音控制,本地离线,Mac应用,开源,隐私保护  
+**票数**: 🔺123  
+**是否精选**: 是  
+**发布时间**: 2026年06月05日 PM03:01 (北京时间)  
+
+---  
+
+## 10. FloatPic  
+**标语**: 极简无边框的macOS原生图片查看器  
+**介绍**: FloatPic是一款极致简约的MacOS原生图像查看器。无边框悬浮窗口、原生手势操作、疾速加载，支持30多种图像格式。让软件隐于无形，让图像浮于眼前。  
+**网站**: [立即访问](https://www.producthunt.com/r/ZQLUO2KBKHPFI4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/floatpic?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![FloatPic](https://ph-files.imgix.net/f8f408bf-fbbf-47e4-ae33-bb2600d80add.png?auto=format)  
+**关键词**: macOS图片查看器,极简主义,无边框浮动窗口,原生手势,快速加载,多格式支持,浮动图片查看器,轻量级  
+**票数**: 🔺115  
+**是否精选**: 是  
+**发布时间**: 2026年06月05日 PM03:01 (北京时间)  
+
+---  
+
