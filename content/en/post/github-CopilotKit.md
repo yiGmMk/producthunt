@@ -1,9 +1,9 @@
 ---
 title: CopilotKit
-date: 2026-06-06T17:35:57+08:00
+date: 2026-06-07T18:15:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1595378699744-69ae794fb108?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA3Mzg0NzN8&ixlib=rb-4.1.0
-tags: ['github',agentic applications, Generative UI, AG-UI Protocol]
+image: https://images.unsplash.com/photo-1749731630653-d9b3f00573ed?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA4MjcyOTh8&ixlib=rb-4.1.0
+tags: ['github',CopilotKit, agent-native applications, Generative UI]
 categories: ['github']
 ---
 
