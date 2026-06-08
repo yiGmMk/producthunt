@@ -1,109 +1,72 @@
 ---
 title: skills
-date: 2026-05-22T18:35:45+08:00
+date: 2026-06-08T20:11:33+08:00
 draft: False
-image: https://images.unsplash.com/photo-1622283104327-a77ac57646dd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk0NDYwMDJ8&ixlib=rb-4.1.0
-tags: ['github',dotnet, agent skills, plugins]
+image: https://images.unsplash.com/photo-1737952513328-fcbbf6fb3a21?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA5MjA1OTh8&ixlib=rb-4.1.0
+tags: ['github',Agent Skills, Google Cloud, GitHub]
 categories: ['github']
 ---
 
-# [dotnet/skills](https://github.com/dotnet/skills)
+# [google/skills](https://github.com/google/skills)
 
-# .NET Agent Skills
+# Agent Skills
 
-[![Dashboard](https://github.com/dotnet/skills/actions/workflows/pages/pages-build-deployment/badge.svg)](https://dotnet.github.io/skills/)
+[![Install via skills.sh](https://img.shields.io/badge/skills.sh-install-green)](https://skills.sh/google/skills)
 
-This repository contains the .NET team's curated set of core skills and custom agents for coding agents. For information about the Agent Skills standard, see [agentskills.io](https://agentskills.io).
+This repository contains [Agent Skills](https://agentskills.io/home) for Google
+products and technologies, including [Google Cloud](https://cloud.google.com).
 
-[**📊 Dashboard**](https://dotnet.github.io/skills/) - Accuracy and efficiency scoring trends for contained plugins (https://dotnet.github.io/skills/)
-
-## What's Included
-
-| Plugin | Description |
-|--------|-------------|
-| [dotnet](plugins/dotnet/) | Collection of core .NET skills for handling common .NET coding tasks. |
-| [dotnet-data](plugins/dotnet-data/) | Skills for .NET data access and Entity Framework related tasks. |
-| [dotnet-diag](plugins/dotnet-diag/) | Skills for .NET performance investigations, debugging, and incident analysis. |
-| [dotnet-msbuild](plugins/dotnet-msbuild/) | Comprehensive MSBuild and .NET build skills: failure diagnosis, performance optimization, code quality, and modernization. |
-| [dotnet-nuget](plugins/dotnet-nuget/) | NuGet and .NET package management: dependency management and modernization. |
-| [dotnet-upgrade](plugins/dotnet-upgrade/) | Skills for migrating and upgrading .NET projects across framework versions, language features, and compatibility targets. |
-| [dotnet-maui](plugins/dotnet-maui/) | Skills for .NET MAUI development: environment setup, diagnostics, and troubleshooting. |
-| [dotnet-ai](plugins/dotnet-ai/) | AI and ML skills for .NET: technology selection, LLM integration, agentic workflows, RAG pipelines, MCP, and classic ML with ML.NET. |
-| [dotnet-template-engine](plugins/dotnet-template-engine/) | .NET Template Engine skills: template discovery, project scaffolding, and template authoring. |
-| [dotnet-test](plugins/dotnet-test/) | Skills for running, diagnosing, and migrating .NET tests: test execution, filtering, platform detection, and MSTest workflows. |
-| [dotnet-aspnet](plugins/dotnet-aspnet/) | ASP.NET Core web development skills including middleware, endpoints, real-time communication, and API patterns. |
-| [dotnet11](plugins/dotnet11/) | Skills for new .NET 11 APIs and language features. |
+> [!NOTE]
+> This repository is under active development.
 
 ## Installation
 
-### 🚀 Plugins - Copilot CLI / Claude Code
-
-1. Launch Copilot CLI or Claude Code
-2. Add the marketplace:
-   ```
-   /plugin marketplace add dotnet/skills
-   ```
-3. Install a plugin:
-   ```
-   /plugin install <plugin>@dotnet-agent-skills
-   ```
-4. Restart to load the new plugins
-5. View available skills:
-   ```
-   /skills
-   ```
-6. View available agents:
-   ```
-   /agents
-   ```
-7. Update plugin (on demand):
-   ```
-   /plugin update <plugin>@dotnet-agent-skills
-   ```
-
-### VS Code / VS Code Insiders (Preview)
-
-> [!IMPORTANT]  
-> VS Code plugin support is a preview feature and subject to change. You may need to enable it first.
-
-```jsonc
-// settings.json
-{
-  "chat.plugins.enabled": true,
-  "chat.plugins.marketplaces": ["dotnet/skills"]
-}
-```
-
-Once configured, type `/plugins` in Copilot Chat or use the `@agentPlugins` filter in Extensions to browse and install plugins from the marketplace.
-
-### Cursor
-
-This repository is a [Cursor plugin marketplace](https://cursor.com/docs/plugins). You can discover and install published plugins directly in Cursor:
-
-1. Open the marketplace panel in Cursor
-2. Search for `.NET` or browse [cursor.com/marketplace](https://cursor.com/marketplace)
-3. Install the desired plugins
-
-For local development or unpublished changes, import plugins from a local checkout:
-
-1. Copy or symlink your local checkout to `~/.cursor/plugins/local/dotnet-agent-skills`
-2. Restart Cursor or run **Developer: Reload Window**
-
-### Codex CLI
-
-Skills in this repository follow the [agentskills.io](https://agentskills.io) open standard
-and are compatible with [OpenAI Codex](https://developers.openai.com/codex/skills).
-
-Install individual skills using the `skill-installer` CLI with the GitHub URL:
-
 ```bash
-$ skill-installer install https://github.com/dotnet/skills/tree/main/plugins/<plugin>/skills/<skill-name>
+npx skills add google/skills
 ```
+
+From the `npx install` command, you can select the specific skills from this
+repo to install.
+
+## Available Skills
+
+-   [**Gemini API on Agent Platform**](./skills/cloud/gemini-api)
+-   [**Gemini Interactions API on Agent Platform**](./skills/cloud/gemini-api)
+-   [**Managed Agents API on Agent Platform**](./skills/cloud/gemini-agents-api)
+-   [**Skill Registry API on Agent Platform**](./skills/cloud/agent-platform-skill-registry)
+-   [**AlloyDB Basics**](./skills/cloud/alloydb-basics)
+-   [**BigQuery Basics**](./skills/cloud/bigquery-basics)
+-   [**Cloud Run Basics**](./skills/cloud/cloud-run-basics)
+-   [**Cloud SQL Basics**](./skills/cloud/cloud-sql-basics)
+-   [**Firebase Basics**](./skills/cloud/firebase-basics)
+-   [**Kubernetes Engine (GKE) Basics**](./skills/cloud/gke-basics)
+-   [**Recipe: Onboarding to Google Cloud**](./skills/cloud/google-cloud-recipe-onboarding)
+-   [**Recipe: Authenticating to Google Cloud**](./skills/cloud/google-cloud-recipe-auth)
+-   [**Recipe: Google Cloud Network Observability**](./skills/cloud/google-cloud-networking-observability)
+-   **Google Cloud Well-Architected Framework**:
+    - [Security](./skills/cloud/google-cloud-waf-security)
+    - [Reliability](./skills/cloud/google-cloud-waf-reliability)
+    - [Cost optimization](./skills/cloud/google-cloud-waf-cost-optimization)
+    - [Operational excellence](./skills/cloud/google-cloud-waf-operational-excellence)
+    - [Performance optimization](./skills/cloud/google-cloud-waf-performance-optimization)
+    - [Sustainability](./skills/cloud/google-cloud-waf-sustainability)
+
+## Support
+
+If you need help or encounter issues with these skills, search for existing
+issues or open a new one in the
+[GitHub Issue Tracker](https://github.com/google/skills/issues).
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines and how to add a new plugin.
+We welcome contributions to improve our skills. You can help by:
+
+*   [Reporting bugs or inaccuracies](https://github.com/google/skills/issues) in
+    the skill Markdown files.
+*   Suggesting new skills to add to this repository (for example, Google
+    technologies or recipes) by filing a feature request.
 
 ## License
 
-See [LICENSE](LICENSE) for details.
+You are free to copy, modify, and distribute these skills under the terms of the
+Apache 2.0 license. See the `LICENSE` file for details.
