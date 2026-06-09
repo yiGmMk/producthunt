@@ -1,9 +1,9 @@
 ---
 title: skills
-date: 2026-06-08T20:11:33+08:00
+date: 2026-06-09T18:45:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1737952513328-fcbbf6fb3a21?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA5MjA1OTh8&ixlib=rb-4.1.0
-tags: ['github',Agent Skills, Google Cloud, GitHub]
+image: https://images.unsplash.com/photo-1674108016830-5e47f8cedb6e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODEwMDE4MjB8&ixlib=rb-4.1.0
+tags: ['github',Agent Skills, Google Cloud, Skills list]
 categories: ['github']
 ---
 

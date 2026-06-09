@@ -1,9 +1,9 @@
 ---
 title: turbovec
-date: 2026-06-08T20:10:30+08:00
+date: 2026-06-09T18:44:23+08:00
 draft: False
-image: https://images.unsplash.com/photo-1540966531224-dfb02d2f5967?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA5MjA1OTh8&ixlib=rb-4.1.0
-tags: ['github',turbovec,TurboQuant,vector search]
+image: https://images.unsplash.com/photo-1714548474517-32d19fdc0df6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODEwMDE4MjB8&ixlib=rb-4.1.0
+tags: ['github',TurboQuant,vector search,quantization]
 categories: ['github']
 ---
 

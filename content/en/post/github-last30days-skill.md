@@ -1,9 +1,9 @@
 ---
 title: last30days-skill
-date: 2026-06-08T20:10:11+08:00
+date: 2026-06-09T18:43:59+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592114266491-69a2b228d818?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA5MjA1OTh8&ixlib=rb-4.1.0
-tags: ['github',multi-source research, engagement scoring, AI agent]
+image: https://images.unsplash.com/photo-1714548474517-32d19fdc0df6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODEwMDE4MjB8&ixlib=rb-4.1.0
+tags: ['github',last30days-skill, AI agent, search engine]
 categories: ['github']
 ---
 
