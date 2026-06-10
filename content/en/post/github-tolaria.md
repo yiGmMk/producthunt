@@ -1,9 +1,9 @@
 ---
 title: tolaria
-date: 2026-06-09T18:46:03+08:00
+date: 2026-06-10T19:09:43+08:00
 draft: False
-image: https://images.unsplash.com/photo-1755745360285-0633c972b0fd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODEwMDE4MjB8&ixlib=rb-4.1.0
-tags: ['github',markdown, knowledge base, desktop app]
+image: https://images.unsplash.com/photo-1740137660835-8a755519b9ed?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODEwODk2MzB8&ixlib=rb-4.1.0
+tags: ['github',markdown knowledge base, desktop app, open source]
 categories: ['github']
 ---
 

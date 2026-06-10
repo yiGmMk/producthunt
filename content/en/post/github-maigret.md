@@ -1,9 +1,9 @@
 ---
 title: maigret
-date: 2026-05-05T17:12:56+08:00
+date: 2026-06-10T19:10:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1723008496138-16c36176e038?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzc5NzIzMDV8&ixlib=rb-4.1.0
-tags: ['github',username search,OSINT tool,account discovery]
+image: https://images.unsplash.com/photo-1672136304058-19e555fdf64e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODEwODk2MzB8&ixlib=rb-4.1.0
+tags: ['github',username investigation, account discovery, OSINT tool]
 categories: ['github']
 ---
 
@@ -16,8 +16,9 @@ categories: ['github']
     <a href="https://pypi.org/project/maigret/">
         <img alt="PyPI version badge for Maigret" src="https://img.shields.io/pypi/v/maigret?style=flat-square" />
     </a>
-    <a href="https://pypi.org/project/maigret/">  
-        <img alt="PyPI download count for Maigret" src="https://img.shields.io/pypi/dw/maigret?style=flat-square" />
+    <a href="https://pepy.tech/project/maigret">
+      <img alt="Downloads/month" src="https://static.pepy.tech/badge/maigret/month" />
+      <img alt="Total downloads" src="https://static.pepy.tech/badge/maigret" />
     </a>
     <a href="https://github.com/soxoj/maigret">
         <img alt="Minimum Python version required: 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-brightgreen?style=flat-square" />
@@ -40,7 +41,36 @@ categories: ['github']
   <br>
 </div>
 
-**Maigret** collects a dossier on a person **by username only**, checking for accounts on a huge number of sites and gathering all the available information from web pages. No API keys required.
+**Maigret** collects a dossier on a person **by username only**, checking for accounts on a huge number of sites and gathering all the available information from web pages. No API keys required. **[AI profiling (demo)](#ai-analysis)**. 
+
+## Sponsors
+
+<table>
+  <tr>
+    <td width="250" align="center">
+      <a href="https://www.rapidproxy.io/?ref=soxoj">
+        <img src="https://github.com/user-attachments/assets/1b4ad463-c6eb-448b-8e14-5792ee3d4181" height="100px" alt="RapidProxy" />
+      </a>
+    </td>
+    <td>
+      <a href="https://www.rapidproxy.io/?ref=soxoj"><b>RapidProxy</b></a> provides high-performance residential proxies for Twitter scraping, Selenium automation, and web data extraction.<br>
+      90M+ IPs • Smart rotation • Anti-block • Non-expiring traffic<br>
+      <b>Special Offer:</b> Try it free — Plans from $0.65/GB. Use code <code>RAPID10</code> for 10% off.
+    </td>
+  </tr>
+  <tr>
+    <td width="250" align="center">
+      <a href="https://vaultproxies.net/?utm_source=maigret&utm_medium=readme">
+        <img src="https://i.imgur.com/TF165pP.gif" width="180" alt="VaultProxies" />
+      </a>
+    </td>
+    <td>
+      <a href="https://vaultproxies.net/?utm_source=maigret&utm_medium=readme"><b>VaultProxies</b></a> — The proxy network ops teams reach for when they're tired of getting throttled, flagged, or guessed.<br>
+      Enterprise-grade rotation • High uptime • Throttle-resistant routing<br>
+      <b>Special Offer:</b> Plans from $1/GB — as low as $0.50/GB. Use code <code>50OFF</code> for 50% off.
+    </td>
+  </tr>
+</table>
 
 ## Contents
 
@@ -63,7 +93,7 @@ pip install maigret
 maigret YOUR_USERNAME
 ```
 
-No install? Try the [Telegram bot](https://t.me/maigret_search_bot) or a [Cloud Shell](#cloud-shells). 
+No install? Try the [community Telegram bot](https://sites.google.com/view/maigret-bot-link) or a [Cloud Shell](#cloud-shells). 
 
 Want a web UI? See [how to launch it](#web-interface).
 
@@ -80,6 +110,7 @@ See also: [Quick start](https://maigret.readthedocs.io/en/latest/quick-start.htm
 - Fetches an [auto-updated site database](https://maigret.readthedocs.io/en/latest/settings.html#database-auto-update) from GitHub each run (once per 24 hours), and falls back to the built-in database if offline.
 - Works with Tor and I2P websites; able to check domains.
 - Ships with a [web interface](#web-interface) for browsing results as a graph and downloading reports in every format from a single page.
+- Optional [AI analysis mode](#ai-analysis) (`--ai`) that turns raw findings into a short investigation summary using an OpenAI-compatible API.
 
 For the complete feature list, see the [features documentation](https://maigret.readthedocs.io/en/latest/features.html).
 
@@ -113,11 +144,23 @@ Professional OSINT and social-media analysis tools built on Maigret:
 
 Already ran the [In one minute](#one-minute) steps? You're set. Below are alternative methods.
 
-Don't want to install anything? Use the [Telegram bot](https://t.me/maigret_search_bot).
+Don't want to install anything? Use the [community Telegram bot](https://sites.google.com/view/maigret-bot-link).
 
 ### Windows
 
-Download a standalone EXE from [Releases](https://github.com/soxoj/maigret/releases). Video guide: https://youtu.be/qIgwTZOmMmM.
+Download `maigret_standalone.exe` from [Releases](https://github.com/soxoj/maigret/releases). You can launch it two ways:
+
+- **Double-click it** — Maigret will ask for a username, run a default search, and wait at the end so the report links stay visible.
+- **Run it from a terminal** — open Command Prompt (press `Win+R`, type `cmd`, hit Enter) or PowerShell to pass extra options:
+
+```cmd
+cd %USERPROFILE%\Downloads
+maigret_standalone.exe USERNAME
+maigret_standalone.exe USERNAME --html       :: also save an HTML report
+maigret_standalone.exe --help                :: list all options
+```
+
+Video guide: https://youtu.be/qIgwTZOmMmM.
 
 <a id="cloud-shells"></a>
 ### Cloud Shells
@@ -182,6 +225,8 @@ docker build --target web -t maigret-web . # Web UI image
 
 Build errors? See the [troubleshooting guide](https://maigret.readthedocs.io/en/latest/installation.html#troubleshooting).
 
+PDF reports (`--pdf`) are an optional extra — install with `pip install 'maigret[pdf]'`. They need system-level graphics libraries on Linux/macOS; see the [PDF reports section](https://maigret.readthedocs.io/en/latest/installation.html#optional-pdf-reports-maigret-pdf) for per-OS install steps.
+
 ## Usage
 
 ### Examples
@@ -204,8 +249,15 @@ maigret user --tags photo,dating
 # search on sites marked with tag us
 maigret user --tags us
 
+# highlight sites whose page also mentions specific keywords
+maigret user --keywords python rust
+# keyword-matched sites are shown with "[++]" in bright green
+
 # search for three usernames on all available sites
 maigret user1 user2 user3 -a
+
+# AI-assisted investigation summary (needs OPENAI_API_KEY)
+maigret user --ai
 ```
 
 Run `maigret --help` for all options. Docs: [CLI options](https://maigret.readthedocs.io/en/latest/command-line-options.html), [more examples](https://maigret.readthedocs.io/en/latest/usage-examples.html). Running into 403s or timeouts? See [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
@@ -241,6 +293,24 @@ See the full [library usage guide](https://maigret.readthedocs.io/en/latest/libr
 - `--parse URL` — parse a profile page, extract IDs/usernames, and use them to kick off a recursive search.
 - `--permute` — generate likely username variants from two or more inputs (e.g. `john doe` → `johndoe`, `j.doe`, …) and search for all of them.
 - `--self-check [--auto-disable]` — verify `usernameClaimed` / `usernameUnclaimed` pairs against live sites for maintainers auditing the database.
+- `--ai` / `--ai-model` — run the [AI analysis](#ai-analysis) over the search results and stream a short investigation summary to the terminal.
+
+<a id="ai-analysis"></a>
+### AI analysis
+
+[![asciicast](https://asciinema.org/a/979404.svg)](https://asciinema.org/a/979404)
+
+`--ai` collects the search results, builds an internal Markdown report, and sends it to an OpenAI-compatible chat completion endpoint to produce a short, neutral investigation summary (likely real name, location, occupation, interests, languages, confidence, follow-up leads). Per-site progress is suppressed and the model's output is streamed to stdout.
+
+```bash
+export OPENAI_API_KEY=sk-...
+maigret user --ai
+
+# pick a different model
+maigret user --ai --ai-model gpt-4o-mini
+```
+
+The key can also be set as `openai_api_key` in `settings.json`. The endpoint defaults to `https://api.openai.com/v1`, but `openai_api_base_url` in `settings.json` can point to any OpenAI-compatible API (Azure OpenAI, OpenRouter, a local server, …). See the [settings docs](https://maigret.readthedocs.io/en/latest/settings.html) for the full list of options.
 
 ### Tor / I2P / proxies
 
@@ -258,6 +328,19 @@ maigret user --i2p-proxy http://127.0.0.1:4444
 ```
 
 Start your Tor / I2P daemon before running the command — Maigret does not manage these gateways.
+
+### Cloudflare bypass
+
+> **Experimental.** The Cloudflare webgate is under active development; the configuration schema, CLI behaviour, and the set of routed sites may change without backwards-compatibility guarantees.
+
+A subset of sites in the database require a real browser to solve a JavaScript challenge. Maigret can offload these checks to a local [FlareSolverr](https://github.com/FlareSolverr/FlareSolverr) instance:
+
+```bash
+docker run -d -p 8191:8191 --name flaresolverr ghcr.io/flaresolverr/flaresolverr:latest
+maigret --cloudflare-bypass <username>
+```
+
+The bypass is opt-in (`--cloudflare-bypass` or `cloudflare_bypass.enabled` in `settings.json`) and only fires for sites whose `protection` field matches. See the [feature docs](https://maigret.readthedocs.io/en/latest/features.html#cloudflare-bypass) for backend options and configuration.
 
 ## Contributing
 
