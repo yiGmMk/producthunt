@@ -1,0 +1,137 @@
+---
+title: Product Hunt 今日热榜 | 2026-06-11
+date: 2026-06-11 11:29:04+0000
+image: https://ph-files.imgix.net/712e199b-0dbc-44f3-8668-f02d03d35df6.png?auto=format
+tags: ["无订阅", "Publora", "发布API"]
+---
+
+## 1. Publora  
+**标语**: 为代理提供在10个社交平台发布内容的API接口。  
+**介绍**: Publora是一个面向10个社交平台的发布API。一次REST API调用即可处理多网络分发——无需SDK，无需OAuth配置。其原生MCP服务器提供18种工具，为Claude和Cursor等AI代理实现了完整的互动闭环：发布、评论、互动、获取分析数据——覆盖LinkedIn、X、Instagram、Threads、TikTok、YouTube、Facebook、Bluesky、Mastodon和Telegram平台。  
+**网站**: [立即访问](https://www.producthunt.com/r/FFFDHH6IKSRQWU?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/publora?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Publora](https://ph-files.imgix.net/712e199b-0dbc-44f3-8668-f02d03d35df6.png?auto=format)  
+**关键词**: Publora,发布API,多平台发布,社交媒体集成,免SDK/OAuth,AI代理工具,MCP服务器,社交互动管理  
+**票数**: 🔺546  
+**是否精选**: 是  
+**发布时间**: 2026年06月10日 PM03:01 (北京时间)  
+
+---  
+
+## 2. TypingMind  
+**标语**: 按使用付费，无需订阅，支持18个模型提供商。  
+**介绍**: TypingMind是使用API密钥访问LLM AI模型最受欢迎的应用程序。它将来自18家供应商的所有顶尖模型汇聚于一个强大的AI工作空间，无需为每个模型单独支付订阅费用。TypingMind还提供了前所未有的最佳AI体验，专注于专业用户的功能如项目管理、分支/并行聊天、插件/MCP/技能支持，以及一系列其他平台绝无仅有的高度可定制选项！快来www.typingmind.com试试吧 :)  
+**网站**: [立即访问](https://www.producthunt.com/r/AET65KN4Y36CK3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/typing-mind?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![TypingMind](https://ph-files.imgix.net/816c019e-6d5a-44c2-ab67-ef208d2c2d66.png?auto=format)  
+**关键词**: TypingMind,按使用付费,无订阅,支持18家模型提供商,AI应用,LLM客户端,聚合平台,API密钥管理,专业功能,自定义选项  
+**票数**: 🔺428  
+**是否精选**: 是  
+**发布时间**: 2026年06月10日 PM03:01 (北京时间)  
+
+---  
+
+## 3. Spotlight by Backplanes  
+**标语**: 为Claude Code和Codex提交会话报告以改进您的代码。  
+**介绍**: 实时追踪您的智能体动态。Spotlight能够读取您的Claude Code和Codex会话记录，直观展示智能体的实际运行轨迹，并提供每轮迭代的优化路径：即刻可修复的问题、下次可改进的部署方案、值得分享的亮点经验。无论您使用单一工具还是多种框架，独立开发还是团队协作，皆可免费使用。  
+**网站**: [立即访问](https://www.producthunt.com/r/YZAQ4A3CS6KC4V?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/backplanes?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Spotlight by Backplanes](https://ph-files.imgix.net/a2850ace-7f2f-4967-9125-61956176e870.png?auto=format)  
+**关键词**: Spotlight, 会话报告, Claude Code, Codex, 代码改进, 代理跟踪, 递归改进, 团队协作, 免费  
+**票数**: 🔺384  
+**是否精选**: 是  
+**发布时间**: 2026年06月10日 PM03:01 (北京时间)  
+
+---  
+
+## 4. Screen Charm  
+**标语**: 为您的屏幕录制增添更多魅力  
+**介绍**: 录制屏幕，瞬间将原始素材转化为精致、可直接演示的视频：智能缩放特效、流畅运动模糊、摄像头叠加画面、背景音乐及内置编辑器一应俱全。无需复杂剪辑工具，告别订阅制。短短几分钟即可生成清晰高品质的演示视频。支持最高4K画质导出，无论是产品展示、用户引导还是教程录制，都能呈现专业级效果。一次性购买，无订阅费用。一劳永逸，唯ScreenCharm。  
+**网站**: [立即访问](https://www.producthunt.com/r/HIDAJHE7G4FAB3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/screen-charm?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Screen Charm](https://ph-files.imgix.net/c2c359ad-9bdd-4313-b72a-fd3c48d33e72.png?auto=format)  
+**关键词**: 屏幕录制,视频编辑,智能特效,快速生成,无订阅,一次性购买,4K导出,专业演示,产品展示,用户引导,教程录制  
+**票数**: 🔺297  
+**是否精选**: 是  
+**发布时间**: 2026年06月10日 PM03:01 (北京时间)  
+
+---  
+
+## 5. Gemini 3.5 Live Translate  
+**标语**: 实时语音到语音翻译的最新音频模型  
+**介绍**: Gemini 3.5 Live Translate 为 Google AI Studio、Google 翻译和 Google Meet 带来近乎实时的自然语音翻译功能。  
+**网站**: [立即访问](https://www.producthunt.com/r/63A6YZZ2WCUVFU?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/gemini-3-5-live-translate?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Gemini 3.5 Live Translate](https://ph-files.imgix.net/030714c7-401e-48fd-9258-1ddd0bde5d61.png?auto=format)  
+**关键词**: Gemini,实时翻译,语音翻译,音频模型,Google AI Studio,Google翻译,Google Meet,近乎实时  
+**票数**: 🔺234  
+**是否精选**: 是  
+**发布时间**: 2026年06月10日 PM03:01 (北京时间)  
+
+---  
+
+## 6. iArt.ai  
+**标语**: 将想法与设计转化为精美的视频/动画。  
+**介绍**:   
+**网站**: [立即访问](https://www.producthunt.com/r/BVZIMZTBT2CLGG?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/iart-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![iArt.ai](https://ph-files.imgix.net/d2420746-a4a6-4a6b-aad6-797157aa49a6.jpeg?auto=format)  
+**关键词**: AI视频生成,快速视频制作,宣传视频制作,动态图形设计,AE/PR替代工具,聊天优化视频  
+**票数**: 🔺211  
+**是否精选**: 是  
+**发布时间**: 2026年06月10日 PM03:01 (北京时间)  
+
+---  
+
+## 7. Incorruptible by Eric Ries  
+**标语**: 优秀公司走向衰败的原因及卓越企业保持长青的秘诀  
+**介绍**: 《精益创业》创始人埃里克·莱斯再推力作《永葆初心》，甫出版即登《纽约时报》畅销榜。本书揭示那些令卓越企业偏离创立初心的结构性力量（"财务引力"），并剖析顶尖企业如何通过治理设计抵御这种侵蚀。书中为组织提供持续成长、繁荣且不丢失灵魂的蓝图架构。💬 参与埃里克在线问答 📘 获取Product Hunt专属免费实施指南：incorruptible.co/resources  
+**网站**: [立即访问](https://www.producthunt.com/r/O2SPCGELEUD5BO?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/incorruptible-by-eric-ries?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Incorruptible by Eric Ries](https://ph-files.imgix.net/a609c3f6-599d-4645-864a-2c1b35338ae3.jpeg?auto=format)  
+**关键词**: Eric Ries, 精益创业, 企业腐败, 治理设计, 财务重力, 企业持久性, 免费指南, AMA  
+**票数**: 🔺182  
+**是否精选**: 是  
+**发布时间**: 2026年06月10日 PM03:01 (北京时间)  
+
+---  
+
+## 8. Napkin Math  
+**标语**: 个性化智能饮食日志与营养教练  
+**介绍**: 餐巾纸计算是一款个性化AI食物记录工具，助您轻松达成健康目标。只需随手拍下美食照，可爱到忍不住分享给朋友！  
+**网站**: [立即访问](https://www.producthunt.com/r/SS55DMUBMZCXE7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/napkin-math?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Napkin Math](https://ph-files.imgix.net/99f1ba24-c8e5-463b-a7ef-b9ff2acdcb33.png?auto=format)  
+**关键词**: AI食品日记, 营养教练, 拍照记录, 个性化, 健康管理, 社交分享  
+**票数**: 🔺174  
+**是否精选**: 是  
+**发布时间**: 2026年06月10日 PM03:01 (北京时间)  
+
+---  
+
+## 9. Monako Glass  
+**标语**: 通过平视显示器免手持运行人工智能编码代理。  
+**介绍**: Monako Glass是一款48克的可穿戴设备，运行Buildroot Linux系统，配备波导显示屏、骨传导麦克风和手势输入功能。它能让开发者通过眼镜无需双手操作，运行Claude Code、Codex或任何编码助手。该产品仅限预订，将于2026年7月至8月发货。  
+**网站**: [立即访问](https://www.producthunt.com/r/EBDEG4ZUBC45CC?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/monako-glass?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Monako Glass](https://ph-files.imgix.net/c971b884-ea2a-44a1-8953-bebf6ed73b52.jpeg?auto=format)  
+**关键词**: Monako Glass,智能眼镜,开发者工具,AI编程助手,免提操作,波导显示,骨传导,手势输入,预约制,2026发货  
+**票数**: 🔺150  
+**是否精选**: 是  
+**发布时间**: 2026年06月10日 PM03:01 (北京时间)  
+
+---  
+
+## 10. Axol  
+**标语**: 用强大的机器人自动化体力劳动  
+**介绍**: Axol是一款专为团队实现物理AI自动化而设计的双臂机器人。它具备简便的数据收集能力、广阔的工作范围和高度的运动灵活性，这意味着您可以自动化处理那些至关重要的任务。  
+**网站**: [立即访问](https://www.producthunt.com/r/MA2XPJNWOIIKHL?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/axol?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Axol](https://ph-files.imgix.net/c7a976ed-d3da-49dd-bf28-63bde1beb977.png?auto=format)  
+**关键词**: 自动化,双臂机器人,物理AI,数据收集,灵活运动,团队应用  
+**票数**: 🔺127  
+**是否精选**: 是  
+**发布时间**: 2026年06月10日 PM03:01 (北京时间)  
+
+---  
+

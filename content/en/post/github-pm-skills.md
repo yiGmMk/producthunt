@@ -1,9 +1,9 @@
 ---
 title: pm-skills
-date: 2026-06-10T19:09:18+08:00
+date: 2026-06-11T19:33:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1540544266-f4f1a5f82180?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODEwODk2MzB8&ixlib=rb-4.1.0
-tags: ['github',product management, ai operating system, skills marketplace]
+image: https://images.unsplash.com/photo-1698847179188-b2c6ac026a71?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODExNzc0Mzl8&ixlib=rb-4.1.0
+tags: ['github',AI, product management, skills marketplace]
 categories: ['github']
 ---
 
