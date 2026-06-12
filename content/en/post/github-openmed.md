@@ -1,9 +1,9 @@
 ---
 title: openmed
-date: 2026-06-11T19:33:20+08:00
+date: 2026-06-12T19:12:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592910077495-c8db8f0c2335?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODExNzc0Mzl8&ixlib=rb-4.1.0
-tags: ['github',local-first healthcare AI, entity extraction, PII de-identification]
+image: https://images.unsplash.com/photo-1598388981627-c6b9556c1708?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODEyNjI2NDF8&ixlib=rb-4.1.0
+tags: ['github',local-first, healthcare AI, clinical text]
 categories: ['github']
 ---
 

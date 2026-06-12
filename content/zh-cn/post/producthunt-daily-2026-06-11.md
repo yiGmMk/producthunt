@@ -1,0 +1,137 @@
+---
+title: Product Hunt 今日热榜 | 2026-06-12
+date: 2026-06-12 11:09:04+0000
+image: https://ph-files.imgix.net/48c7311f-c697-48cf-b57f-806feda15896.png?auto=format
+tags: ["AI助手", "自动待办事项", "任务管理"]
+---
+
+## 1. Bond  
+**标语**: 自动完成的AI待办清单  
+**介绍**: Bond是一款为高管服务的AI行政主管。它能连接您的各类工具，学习公司运作模式，将零散任务转化为自我管理的待办事项清单——始终明确您下一步该做什么。您可以要求Bond为您准备会议、起草跟进邮件、发送电子邮件、创建行动项、识别阻碍因素、呈现潜在风险，或将任务委派给团队成员。  
+**网站**: [立即访问](https://www.producthunt.com/r/7SFOLQBBWUEQXW?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/bond-12?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Bond](https://ph-files.imgix.net/48c7311f-c697-48cf-b57f-806feda15896.png?auto=format)  
+**关键词**: AI助手, 自动待办事项, 任务管理, 高管支持, 工作流优化  
+**票数**: 🔺633  
+**是否精选**: 是  
+**发布时间**: 2026年06月11日 PM03:01 (北京时间)  
+
+---  
+
+## 2. Asmi AI  
+**标语**: 在现实世界中处理你个人事务的人工智能  
+**介绍**: Asmi每天早晨都会来电。你们交谈——它会帮你处理一天的事务。它会致电各类服务机构（牙医、美发沙龙、水管工、银行、保险）或联系相关人员（朋友、同事）进行协调、预约或解决问题。完成后通过iMessage或WhatsApp向你汇报。它能够熟练应对交互式语音应答系统、长时间等待转接，并妥善处理复杂对话。  
+**网站**: [立即访问](https://www.producthunt.com/r/Y5YVSLCZJ7BZ6I?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/asmi-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Asmi AI](https://ph-files.imgix.net/cde4952f-f13d-4c28-8150-9f0c93fc9b5c.png?auto=format)  
+**关键词**: Asmi AI, 智能助手, 琐事处理, 自动呼叫, 协调预订, 消息通知, IVRS导航, 复杂对话处理  
+**票数**: 🔺438  
+**是否精选**: 是  
+**发布时间**: 2026年06月11日 PM03:01 (北京时间)  
+
+---  
+
+## 3. Respan Gateway  
+**标语**: 一体化AI网关，内置可观测性与评估功能。  
+**介绍**: Respan AI网关通过单一端点将您的应用连接至千余个AI模型。路由只是基础功能，Respan更通过备用方案、重试机制、缓存、支出限额、警报系统及每次调用的完整追踪，确保生产环境中AI的可靠性与可控性。网关、可观测性、评估、提示词管理、监控及成本控制全部集成于同一平台，让您在调试生产环境时无需整合多个工具。  
+**网站**: [立即访问](https://www.producthunt.com/r/PZT5PPTBVKBPVT?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/keywords-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Respan Gateway](https://ph-files.imgix.net/05db4247-1a7c-4b77-a887-829412bd5a18.png?auto=format)  
+**关键词**: AI网关,可观测性,评估,生产可靠性,成本控制,一体化平台  
+**票数**: 🔺430  
+**是否精选**: 是  
+**发布时间**: 2026年06月11日 PM03:01 (北京时间)  
+
+---  
+
+## 4. Terminal Mode by Even Realities  
+**标语**: 保持编码代理始终可见  
+**介绍**: Even Realities的终端模式为Even G2智能眼镜解锁了一个环境终端。当编码代理停滞时，你能立即察觉：查看当前需要你介入的代理，提供指引，并在笔记本电脑处理长时任务时批准关键步骤。这让追求代币最大化者每次运行获得更多产出，  
+**网站**: [立即访问](https://www.producthunt.com/r/JP725UN73VRUJN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/terminal-mode-by-even-realities?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Terminal Mode by Even Realities](https://ph-files.imgix.net/f52dc32e-6714-4e66-843b-2e97fe34e4e9.png?auto=format)  
+**关键词**: 智能眼镜终端模式,编程助手监控,实时效率提升,编程状态保持  
+**票数**: 🔺393  
+**是否精选**: 是  
+**发布时间**: 2026年06月11日 PM03:01 (北京时间)  
+
+---  
+
+## 5. Journey Now  
+**标语**: 通过逐步计划为人类雄心提供学习辅助  
+**介绍**: 即刻启程将任何你想要学习或精通的领域，转变为个性化、分步式的学习计划——配以每日指导、反思环节，并让你看到朋友的进展。当你的学习节奏或目标发生变化时，计划也会自动调整，确保进度不会因错过截止日期而停滞。  
+**网站**: [立即访问](https://www.producthunt.com/r/TM6F4IDMAQBU2P?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/journey-now?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Journey Now](https://ph-files.imgix.net/53987777-2aab-4578-ba0b-2435f7af7936.png?auto=format)  
+**关键词**: 学习助手,分步计划,个性化规划,每日指导,进度反思,社交学习,动态调整,防拖延  
+**票数**: 🔺363  
+**是否精选**: 是  
+**发布时间**: 2026年06月11日 PM03:01 (北京时间)  
+
+---  
+
+## 6. Slashspace AI  
+**标语**: Canvas首次AI体验，适用于持续且复杂的工作。  
+**介绍**: 如今，AI原生用户需要在十几个应用间复制粘贴提示词，这对任何有意义的工作来说都是糟糕的体验。每个新聊天框都会将上下文清零。Slashspace通过AI画布解决了这一问题：AI驻留在画布上，您可以将多个聊天作为节点运行。画布成为上下文空间，所有智能体都能相互可见。画布以文件形式存储在您的电脑上。经过超过1.5年与1600名资深用户共同构建，我们是市场上最成熟的画布  
+**网站**: [立即访问](https://www.producthunt.com/r/JNQC7JLKLXZB3X?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/slashspace-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Slashspace AI](https://ph-files.imgix.net/77bec8c2-3703-4238-9638-603888e2af87.png?auto=format)  
+**关键词**: AI画布, 画布为先, 上下文共享, 多聊天节点, 智能体协作, 本地文件存储, 成熟平台, 持续复杂工作  
+**票数**: 🔺354  
+**是否精选**: 是  
+**发布时间**: 2026年06月11日 PM03:00 (北京时间)  
+
+---  
+
+## 7. CrustRecruiter  
+**标语**: 将克劳德打造成像你一样思考的招聘助手  
+**介绍**: 招聘工作一半靠判断，一半是体力活。Claude提供判断力——即推理与记忆能力，而Crustdata则通过MCP提供超8亿候选人才库及5项人才寻访技能。这意味着繁琐工作可自动化处理，让您在单一聊天界面中实现真正个性化的大  
+**网站**: [立即访问](https://www.producthunt.com/r/6UER3KDCF4DEER?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/crustdata-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![CrustRecruiter](https://ph-files.imgix.net/b292f61e-f8ae-45a6-af29-e01973988231.png?auto=format)  
+**关键词**: CrustRecruiter, AI招聘, 个性化招聘, 招聘自动化, 候选人数据库  
+**票数**: 🔺221  
+**是否精选**: 是  
+**发布时间**: 2026年06月11日 PM03:01 (北京时间)  
+
+---  
+
+## 8. Tabstack Structured Extraction  
+**标语**: 无需爬虫，将网页数据提取为结构化JSON。  
+**介绍**: 定义架构，传入URL，即可获取匹配的JSON数据。Tabstack的提取端点能将任何网页转为结构化输出，无需编写解析代码，也无需维护LLM调用。生成端点则支持添加AI指令以获得经过推理的答案，而非原始字段。两项服务均会在每次调用时严格执行您的架  
+**网站**: [立即访问](https://www.producthunt.com/r/AE3CWZQGRROXKK?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/tabstack?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Tabstack Structured Extraction](https://ph-files.imgix.net/e2fdc320-d420-4947-bdbe-d0b006b0181f.jpeg?auto=format)  
+**关键词**: 无需爬虫,结构化JSON提取,网页数据转换,AI增强端点,地理定位,数据隐私保护,免费额度  
+**票数**: 🔺183  
+**是否精选**: 是  
+**发布时间**: 2026年06月11日 PM03:01 (北京时间)  
+
+---  
+
+## 9. Juno  
+**标语**: AI慢性疾病健康助手  
+**介绍**: Juno帮助慢性病患者减轻症状、发现规律并缩短诊断路径。该产品基于我们在牛津的研究成果及对1000多名患者的访谈。  
+**网站**: [立即访问](https://www.producthunt.com/r/ONMBUHRI6CS6OZ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/juno-13?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Juno](https://ph-files.imgix.net/cb502763-a9c1-4f1c-b78c-59aa1f3b2c0e.png?auto=format)  
+**关键词**: Juno, AI健康伴侣, 慢性疾病, 症状管理, 模式识别, 诊断加速, 牛津研究  
+**票数**: 🔺143  
+**是否精选**: 是  
+**发布时间**: 2026年06月11日 PM03:01 (北京时间)  
+
+---  
+
+## 10. Nodey  
+**标语**: 您的n8n控制中心，现已登陆手机  
+**介绍**: Nodey是n8n的移动端伴侣。通过手机即可实时监控工作流运行状态、借助AI诊断失败任务、根据提示快速创建工作流，还能通过NFC标签或地理围栏触发自动化流程。  
+**网站**: [立即访问](https://www.producthunt.com/r/WV3N3G32P5KL74?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/nodey-n8n-in-your-pocket?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Nodey](https://ph-files.imgix.net/63c443ba-1d1b-4f45-b4ba-cbde23a3d967.png?auto=format)  
+**关键词**: n8n移动应用,工作流监控,AI错误诊断,移动端自动化,NFC触发,地理围栏,手机控制中心  
+**票数**: 🔺142  
+**是否精选**: 是  
+**发布时间**: 2026年06月11日 PM03:01 (北京时间)  
+
+---  
+
