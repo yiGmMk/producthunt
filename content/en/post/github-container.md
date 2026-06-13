@@ -1,9 +1,9 @@
 ---
 title: container
-date: 2026-06-12T19:11:06+08:00
+date: 2026-06-13T18:06:23+08:00
 draft: False
-image: https://images.unsplash.com/photo-1666018091853-cb65cc599d33?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODEyNjI2NDF8&ixlib=rb-4.1.0
-tags: ['github',container, Linux containers, Mac]
+image: https://images.unsplash.com/photo-1527219002998-9e1b7ebedcb5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODEzNDUwNDd8&ixlib=rb-4.1.0
+tags: ['github',container, macOS, Apple silicon]
 categories: ['github']
 ---
 
