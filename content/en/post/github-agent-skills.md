@@ -1,9 +1,9 @@
 ---
 title: agent-skills
-date: 2026-06-13T18:04:38+08:00
+date: 2026-06-14T18:36:43+08:00
 draft: False
-image: https://images.unsplash.com/photo-1719228322698-ef56efd6d9cf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODEzNDUwNDd8&ixlib=rb-4.1.0
-tags: ['github',AI, agents, skills]
+image: https://images.unsplash.com/photo-1708845538385-85822401fce6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE0MzMzNDN8&ixlib=rb-4.1.0
+tags: ['github',ai coding agents, engineering skills, production-grade]
 categories: ['github']
 ---
 
