@@ -1,9 +1,9 @@
 ---
 title: Agent-Reach
-date: 2026-06-09T18:46:30+08:00
+date: 2026-06-15T21:27:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1599036495549-20448a080ca4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODEwMDE4MjB8&ixlib=rb-4.1.0
-tags: ['github',AI Agent, internet access, tool integration]
+image: https://images.unsplash.com/photo-1509948408774-3bbe12bc2102?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE1Mjk5NzN8&ixlib=rb-4.1.0
+tags: ['github',Agent Reach, internet access, AI Agent]
 categories: ['github']
 ---
 
@@ -16,9 +16,18 @@ categories: ['github']
 </p>
 
 <p align="center">
+  当下最稳的接入方式，替你选好、装好、体检好——接入方式会换代，你不用操心
+</p>
+
+<p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License"></a>
-  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10+-green.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.8+"></a>
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10+-green.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.10+"></a>
   <a href="https://github.com/Panniantong/agent-reach/stargazers"><img src="https://img.shields.io/github/stars/Panniantong/agent-reach?style=for-the-badge" alt="GitHub Stars"></a>
+  <a href="https://atomgit.com/qq_51337814/Agent-Reach"><img src="https://atomgit.com/qq_51337814/Agent-Reach/star/badge.svg" alt="AtomGit Stars"></a>
+</p>
+
+<p align="center">
+  🇨🇳 国内访问：本项目托管于 <a href="https://atomgit.com/qq_51337814/Agent-Reach">AtomGit 镜像</a>（与 GitHub 自动同步，克隆更快）
 </p>
 
 <p align="center">
@@ -35,7 +44,7 @@ AI Agent 已经能帮你写代码、改文档、管项目——但你让它去�
 - 🐦 "帮我搜一下推特上大家怎么评价这个产品" → **搜不了**，Twitter API 要付费
 - 📖 "去 Reddit 上看看有没有人遇到过同样的 bug" → **403 被封**，服务器 IP 被拒
 - 📕 "帮我看看小红书上这个品的口碑" → **打不开**，必须登录才能看
-- 📺 "B站上有个技术视频，帮我总结一下" → **连不上**，海外/服务器 IP 被屏蔽
+- 📺 "B站上有个技术视频，帮我总结一下" → **拿不到**，通用下载工具被 B站风控全面拦截
 - 🔍 "帮我在网上搜一下最新的 LLM 框架对比" → **没有好用的搜索**，要么付费要么质量差
 - 🌐 "帮我看看这个网页写了啥" → **抓回来一堆 HTML 标签**，根本没法读
 - 📦 "这个 GitHub 仓库是干嘛的？Issue 里说了什么？" → 能用，但认证配置很麻烦
@@ -67,7 +76,7 @@ AI Agent 已经能帮你写代码、改文档、管项目——但你让它去�
 |---|---|
 | 💰 **完全免费** | 所有工具开源、所有 API 免费。唯一可能花钱的是服务器代理（$1/月），本地电脑不需要 |
 | 🔒 **隐私安全** | Cookie 只存在你本地，不上传不外传。代码完全开源，随时可审查 |
-| 🔄 **持续更新** | 底层工具（yt-dlp、twitter-cli、rdt-cli、Jina Reader 等）定期追踪更新到最新版，你不用自己盯 |
+| 🔄 **持续换代** | 每个平台都是「首选 + 备选」多后端路由。某个接入方式失效了，我们换下一个，你无感（2026-06 实例：yt-dlp 被 B站风控封死 → 已切换 bili-cli，用户零操作） |
 | 🤖 **兼容所有 Agent** | Claude Code、OpenClaw、Cursor、Windsurf……任何能跑命令行的 Agent 都能用 |
 | 🩺 **自带诊断** | `agent-reach doctor` 一条命令告诉你哪个通、哪个不通、怎么修 |
 
@@ -82,14 +91,11 @@ AI Agent 已经能帮你写代码、改文档、管项目——但你让它去�
 | 📡 **RSS** | 阅读任意 RSS/Atom 源 | — | 无需配置 |
 | 🔍 **全网搜索** | — | 全网语义搜索 | 自动配置（MCP 接入，免费无需 Key） |
 | 📦 **GitHub** | 读公开仓库 + 搜索 | 私有仓库、提 Issue/PR、Fork | 告诉 Agent「帮我登录 GitHub」 |
-| 🐦 **Twitter/X** | 读单条推文 | 搜索推文、浏览时间线、发推 | 告诉 Agent「帮我配 Twitter」 |
-| 📺 **B站** | 本地：字幕提取 + 搜索 | 服务器也能用 | 告诉 Agent「帮我配代理」 |
-| 📖 **Reddit** | 搜索 + 读帖子和评论（通过 rdt-cli） | Cookie | 需要登录认证（`rdt login`），详见 [rdt-cli](https://github.com/public-clis/rdt-cli) |
-| 📕 **小红书** | — | 阅读、搜索、发帖、评论、点赞 | 告诉 Agent「帮我配小红书」 |
-| 🎵 **抖音** | — | 视频解析、无水印下载链接获取 | 告诉 Agent「帮我配抖音」 |
+| 🐦 **Twitter/X** | 读单条推文 | 搜索推文、浏览时间线、读长文 | 告诉 Agent「帮我配 Twitter」 |
+| 📺 **B站** | 搜索 + 视频详情（bili-cli，无需登录） | 字幕（OpenCLI） | 告诉 Agent「帮我配 B站」 |
+| 📖 **Reddit** | —（没有零配置路径：匿名接口已被封） | 搜索 + 读帖子和评论 | 桌面装 OpenCLI 用浏览器登录态；或 rdt-cli + Cookie |
+| 📕 **小红书** | — | 搜索、阅读、评论 | 桌面装 OpenCLI（刷过小红书即可用）；服务器用 xiaohongshu-mcp 扫码 |
 | 💼 **LinkedIn** | Jina Reader 读公开页面 | Profile 详情、公司页面、职位搜索 | 告诉 Agent「帮我配 LinkedIn」 |
-| 💬 **微信公众号** | 搜索 + 阅读公众号文章（全文 Markdown） | — | 无需配置 |
-| 📰 **微博** | 热搜、搜索内容/用户/话题、用户动态、评论 | — | 无需配置 |
 | 💻 **V2EX** | 热门帖子、节点帖子、帖子详情+回复、用户信息 | — | 无需配置 |
 | 📈 **雪球** | 股票行情、搜索股票、热门帖子、热门股票排行 | — | 告诉 Agent「帮我配雪球」 |
 | 🎙️ **小宇宙播客** | — | 播客音频转文字（Whisper 转录，免费 Key） | 告诉 Agent「帮我配小宇宙播客」 |
@@ -137,13 +143,14 @@ AI Agent 已经能帮你写代码、改文档、管项目——但你让它去�
 <details>
 <summary>它会做什么？（点击展开）</summary>
 
-1. **安装 CLI 工具** — `pip install` 装好 `agent-reach` 命令行
-2. **安装系统依赖** — 自动检测并安装 Node.js、gh CLI、mcporter、twitter-cli、rdt-cli 等
+1. **安装 CLI 工具** — `pip install` 装好 `agent-reach` 命令行（自带 yt-dlp、feedparser）
+2. **安装系统基建** — 自动检测并安装 Node.js、gh CLI、mcporter
 3. **配置搜索引擎** — 通过 MCP 接入 Exa（免费，无需 API Key）
 4. **检测环境** — 判断是本地电脑还是服务器，给出对应的配置建议
-5. **注册 SKILL.md** — 在 Agent 的 skills 目录安装使用指南，以后 Agent 遇到"搜推特"、"看视频"这类需求，会自动知道该调哪个上游工具
+5. **注册 SKILL.md** — 在 Agent 的 skills 目录安装使用指南，以后 Agent 遇到"全网调研"、"搜推特"、"看视频"这类需求，会自动知道该调哪个上游工具
+6. **问你要不要更多** — 默认只激活 6 个零配置渠道；小红书、Twitter、Reddit 这些需要登录的，Agent 会列菜单问你要哪些，点名才装
 
-安装完之后，`agent-reach doctor` 一条命令告诉你每个渠道的状态。
+安装完之后，`agent-reach doctor` 一条命令告诉你每个渠道的状态、当前走哪条路。
 </details>
 
 ---
@@ -154,92 +161,68 @@ AI Agent 已经能帮你写代码、改文档、管项目——但你让它去�
 
 - "帮我看看这个链接" → `curl https://r.jina.ai/URL` 读任意网页
 - "这个 GitHub 仓库是做什么的" → `gh repo view owner/repo`
-- "这个视频讲了什么" → `yt-dlp --dump-json URL` 提取字幕
-- "帮我看看这条推文" → `twitter tweet URL`
+- "这个 YouTube 视频讲了什么" → `yt-dlp` 提取字幕
+- "B站搜一下 AI 教程" → `bili search`（无需登录）
+- "全网搜一下 LLM 框架对比" → Exa 语义搜索
 - "订阅这个 RSS" → `feedparser` 解析
-- "搜一下 GitHub 上有什么 LLM 框架" → `gh search repos "LLM framework"`
 
-**不需要记命令。** Agent 读了 SKILL.md 之后自己知道该调什么。
+**不需要记命令。** Agent 读了 SKILL.md 之后自己知道该调什么。需要登录的平台（小红书、Twitter、Reddit），告诉 Agent「帮我配 XXX」即可解锁。
+
+---
+
+## 能力边界：读内容 vs 操作网页
+
+Agent Reach 解决的是让 Agent **读到和搜到** 互联网上的内容，不替代用户完成登录后的网页操作、表单提交、多账号隔离、并行浏览器会话等流程。
+
+如果自动化流程中遇到登录、验证、风控提示等高摩擦环节，需要人工接手或真实浏览器会话，可以配合 [BrowserAct](https://browseract.com) 这类浏览器自动化工具：30+ 预制平台技能，支持 Claude Code / OpenClaw / Cursor 等主流 Agent。
 
 ---
 
 ## 设计理念
 
-**Agent Reach 是一个脚手架（scaffolding），不是框架。**
+**Agent Reach 是一个能力层（capability layer），不是又一个工具。**
 
-你给一个新 Agent 装环境的时候，总要花时间去找工具、装依赖、调配置——Twitter 用什么读？Reddit 怎么绕封？YouTube 字幕怎么提取？每次都要重新踩一遍。
+它比任何具体实现高一层——负责**选型、安装、体检、路由**，不负责底层读取本身。读取由 Agent 直接调用上游工具完成，没有包装层。
 
-Agent Reach 做的事情很简单：**帮你把这些选型和配置的活儿做完了。**
+你给一个新 Agent 装环境的时候，总要花时间去找工具、装依赖、调配置——Twitter 用什么读？Reddit 怎么登录？小红书的 CLI 停更了换什么？每次都要重新踩一遍。Agent Reach 做的事情很简单：**当下最稳的接入方式，我们替你选好、装好、体检好。接入方式会换代（2026 年 3 月一批单平台 CLI 集体停更，我们换了路由），你不用操心。**
 
-安装完成后，Agent 直接调用上游工具（twitter-cli、rdt-cli、xhs-cli、yt-dlp、mcporter、gh CLI 等），不需要经过 Agent Reach 的包装层。
+### 🔌 每个平台 = 首选 + 备选的有序后端列表
 
-### 🔌 每个渠道都是可插拔的
-
-每个平台背后是一个独立的上游工具。**不满意？换掉就行。**
+换接入方式 = 调整列表顺序，不是重写代码。`agent-reach doctor` 会告诉你每个平台**当前在用哪个后端**。
 
 ```
 channels/
-├── web.py          → Jina Reader     ← 可以换成 Firecrawl、Crawl4AI……
-├── twitter.py      → twitter-cli       ← 可以换成官方 API……
-├── youtube.py      → yt-dlp          ← 可以换成 YouTube API、Whisper……
-├── github.py       → gh CLI          ← 可以换成 REST API、PyGithub……
-├── bilibili.py     → yt-dlp          ← 可以换成 bilibili-api……
-├── reddit.py       → rdt-cli         ← 搜索+阅读，需 Cookie 认证
-├── xiaohongshu.py  → mcporter MCP    ← 可以换成其他 XHS 工具……
-├── douyin.py       → mcporter MCP    ← 可以换成其他抖音工具……
-├── linkedin.py     → linkedin-mcp    ← 可以换成 LinkedIn API……
-├── wechat.py       → Exa (+ Camoufox) ← 搜索+阅读微信公众号文章
-├── rss.py          → feedparser      ← 可以换成 atoma……
-├── exa_search.py   → mcporter MCP    ← 可以换成 Tavily、SerpAPI……
+├── web.py          → Jina Reader
+├── twitter.py      → twitter-cli ▸ OpenCLI ▸ bird
+├── youtube.py      → yt-dlp
+├── github.py       → gh CLI
+├── bilibili.py     → bili-cli ▸ OpenCLI ▸ 搜索 API（yt-dlp 已被 B站风控封死，退役）
+├── reddit.py       → OpenCLI ▸ rdt-cli（无零配置路径，必须登录态）
+├── xiaohongshu.py  → OpenCLI ▸ xiaohongshu-mcp ▸ xhs-cli
+├── linkedin.py     → linkedin-mcp ▸ Jina Reader
+├── rss.py          → feedparser
+├── exa_search.py   → Exa via mcporter
 └── __init__.py     → 渠道注册（doctor 检测用）
 ```
 
-每个渠道文件只负责检测对应上游工具是否可用（`check()` 方法），给 `agent-reach doctor` 提供状态信息。实际的读取和搜索由 Agent 直接调用上游工具完成。
+每个渠道文件按序**真实探测**各候选后端（不只是看命令存不存在），第一个完整可用的当选；坏掉的会给出修复处方。实际的读取和搜索由 Agent 直接调用上游工具完成。
 
 ### 当前选型
 
-| 场景 | 选型 | 为什么选它 |
-|------|------|-----------|
-| 读网页 | [Jina Reader](https://github.com/jina-ai/reader) | 9.8K Star，免费，不需要 API Key |
-| 读推特 | [twitter-cli](https://github.com/public-clis/twitter-cli) | 2.1K Star，Cookie 登录，搜索/读推文/时间线/长文 |
-| Reddit | [rdt-cli](https://github.com/public-clis/rdt-cli) | 304 Star，Cookie 认证，搜索+全文+评论 |
-| 视频字幕 + 搜索 | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | 154K Star，YouTube + B站 + 1800 站通吃 |
-| B站增强 | [bili-cli](https://github.com/public-clis/bilibili-cli) | 590 Star，热门/排行/搜索/动态 |
-| 搜全网 | [Exa](https://exa.ai) via [mcporter](https://github.com/nicobailon/mcporter) | AI 语义搜索，MCP 接入免 Key |
-| GitHub | [gh CLI](https://cli.github.com) | 官方工具，认证后完整 API 能力 |
-| 读 RSS | [feedparser](https://github.com/kurtmckee/feedparser) | Python 生态标准选择，2.3K Star |
-| 小红书 | [xhs-cli](https://github.com/jackwener/xiaohongshu-cli) | 1.5K Star，pipx 一行安装，搜索/阅读/评论/发帖 |
-| 抖音 | [douyin-mcp-server](https://github.com/yzfly/douyin-mcp-server) | MCP 服务，无需登录，视频解析 + 无水印下载 |
-| LinkedIn | [linkedin-scraper-mcp](https://github.com/stickerdaniel/linkedin-mcp-server) | ⭐1.2K，MCP 服务，浏览器自动化 |
-| 微信公众号 | [Exa](https://exa.ai)（搜索+阅读）+ [Camoufox](https://github.com/daijro/camoufox)（可选） | 零配置搜索+全文阅读，Camoufox 可选增强 |
+| 场景 | 首选 | 备选 | 为什么这么选 |
+|------|------|------|-----------|
+| 读网页 | [Jina Reader](https://github.com/jina-ai/reader) | — | 免费，不需要 API Key |
+| 读推特 | [twitter-cli](https://github.com/public-clis/twitter-cli) | [OpenCLI](https://github.com/jackwener/opencli) | 实测搜索稳定；OpenCLI 走浏览器登录态兜底 |
+| Reddit | [OpenCLI](https://github.com/jackwener/opencli)（桌面） | [rdt-cli](https://github.com/public-clis/rdt-cli) | 匿名接口已被封、官方 API 审批制——只剩登录态路线 |
+| YouTube 字幕 + 搜索 | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | — | 154K Star，YouTube 仍是最佳（注意：不再用于 B站） |
+| B站 | [bili-cli](https://github.com/public-clis/bilibili-cli) | OpenCLI ▸ 搜索 API | yt-dlp 被 B站风控 412 封死（2026-06 实测），bili-cli 无登录可搜可读 |
+| 搜全网 | [Exa](https://exa.ai) via [mcporter](https://github.com/nicobailon/mcporter) | — | AI 语义搜索，MCP 接入免 Key |
+| GitHub | [gh CLI](https://cli.github.com) | — | 官方工具，认证后完整 API 能力 |
+| 读 RSS | [feedparser](https://github.com/kurtmckee/feedparser) | — | Python 生态标准选择 |
+| 小红书 | [OpenCLI](https://github.com/jackwener/opencli)（桌面） | [xiaohongshu-mcp](https://github.com/xpzouying/xiaohongshu-mcp)（服务器）▸ xhs-cli | xhs-cli 作者已转投 OpenCLI（24K Star）；浏览器登录态零摩擦 |
+| LinkedIn | [linkedin-scraper-mcp](https://github.com/stickerdaniel/linkedin-mcp-server) | Jina Reader | MCP 服务，浏览器自动化 |
 
-> 📌 这些都是「当前选型」。不满意？换掉对应文件就行。这正是脚手架的意义。
-
-### 抖音 / 小红书脚本提取的可选实现
-
-如果你不只是想“解析抖音视频信息”，还想统一处理：
-
-- 抖音视频脚本提取
-- 小红书视频笔记脚本提取
-- 小红书图文笔记正文 + 图片文字提取
-- 固定输出 `script.md` 和 `info.json`
-
-可以把 `douyin` 这个 mcporter alias 指向另一个兼容实现：
-
-- [social-post-extractor-mcp](https://github.com/JNHFlow21/social-post-extractor-mcp)
-
-这个实现保留了旧工具名兼容性：
-
-- `parse_douyin_video_info`
-- `get_douyin_download_link`
-- `extract_douyin_text`
-
-同时新增统一工具：
-
-- `parse_social_post_info`
-- `extract_social_post_script`
-
-所以从 Agent Reach 的视角看，它依然只是一个 `mcporter` 里的 `douyin` server，只是能力更完整。
+> 📌 这些都是「当前选型」，基于真机实测定期复核。某条路失效了我们换下一条——`agent-reach doctor` 永远告诉你现在走的是哪条。
 
 ---
 
@@ -334,7 +317,7 @@ Agent Reach uses twitter-cli with cookie auth — zero API fees. Install with `p
 <details>
 <summary><strong>Reddit 返回 403 怎么办？</strong></summary>
 
-Agent Reach 使用 [rdt-cli](https://github.com/public-clis/rdt-cli) 访问 Reddit。Reddit 自 2024 年起要求认证，安装后需运行 `rdt login` 登录。安装：`pipx install rdt-cli`，然后 `rdt login`（自动从浏览器提取 Cookie）。之后 Agent 可以用 `rdt search "关键词"` 搜索、`rdt read POST_ID` 读帖子全文和评论。
+Reddit 所有访问都需要登录态（匿名接口已被全面封锁，官方 API 需人工审批）。桌面首选 **OpenCLI**：浏览器里登录过 reddit.com 即可直接 `opencli reddit search "关键词"`。备选 [rdt-cli](https://github.com/public-clis/rdt-cli)：`pipx install 'git+https://github.com/public-clis/rdt-cli.git@5e4fb3720d5c174e976cd425ccc3b879d52cac66'`（与代码同一钉定版本，PyPI 落后），然后 `rdt login`。中国大陆网络访问 Reddit 需要代理。
 </details>
 
 <details>
@@ -346,13 +329,7 @@ Agent Reach 使用 [rdt-cli](https://github.com/public-clis/rdt-cli) 访问 Redd
 <details>
 <summary><strong>怎么让 AI Agent 读小红书？</strong></summary>
 
-安装 `pipx install xiaohongshu-cli`，然后 `xhs login`（自动从浏览器提取 Cookie）。之后 Agent 就能用 `xhs search "关键词"` 搜索笔记、`xhs read NOTE_ID` 阅读详情、`xhs comments NOTE_ID` 查看评论了。不需要 Docker。
-</details>
-
-<details>
-<summary><strong>怎么让 AI Agent 解析抖音视频？</strong></summary>
-
-安装 douyin-mcp-server 后，Agent 就能用 `mcporter call 'douyin.parse_douyin_video_info(share_link: "分享链接")'` 解析视频信息、获取无水印下载链接。不需要登录，把抖音分享链接发给 Agent 就行。详见 https://github.com/yzfly/douyin-mcp-server
+桌面电脑首选 **OpenCLI**（`agent-reach install --channels opencli`）——它复用你浏览器里的登录态，平时刷过小红书就直接能用，零配置；装完在 Chrome 商店点一次「添加扩展」即可。之后 Agent 用 `opencli xiaohongshu search "关键词"` 搜索、`opencli xiaohongshu note URL` 读笔记。服务器上用 [xiaohongshu-mcp](https://github.com/xpzouying/xiaohongshu-mcp)（自带无头浏览器，扫码登录）。已装过 xhs-cli 的老用户不受影响，它仍是备选后端（上游 2026-03 起停更，不推荐新装）。
 </details>
 
 <details>
@@ -366,14 +343,14 @@ Yes! Agent Reach is an installer + configuration tool — any AI coding agent th
 <details>
 <summary><strong>Is this free? Any API costs?</strong></summary>
 
-100% free. All backends are open-source tools (twitter-cli, rdt-cli, xhs-cli, yt-dlp, Jina Reader, Exa, etc.) that don't require paid API keys. The only optional cost is a residential proxy (~$1/month) if you need Bilibili access from an overseas server.
+100% free. All backends are open-source tools (OpenCLI, twitter-cli, bili-cli, rdt-cli, yt-dlp, Jina Reader, Exa, xiaohongshu-mcp, etc.) that don't require paid API keys. The only optional cost is a residential proxy (~$1/month) if your network blocks Reddit/Twitter (e.g. mainland China).
 </details>
 
 ---
 
 ## 致谢
 
-[twitter-cli](https://github.com/public-clis/twitter-cli) · [rdt-cli](https://github.com/public-clis/rdt-cli) · [xhs-cli](https://github.com/jackwener/xiaohongshu-cli) · [bili-cli](https://github.com/public-clis/bilibili-cli) · [yt-dlp](https://github.com/yt-dlp/yt-dlp) · [Jina Reader](https://github.com/jina-ai/reader) · [Exa](https://exa.ai) · [mcporter](https://github.com/nicobailon/mcporter) · [feedparser](https://github.com/kurtmckee/feedparser) · [douyin-mcp-server](https://github.com/yzfly/douyin-mcp-server) · [linkedin-scraper-mcp](https://github.com/stickerdaniel/linkedin-mcp-server)
+[OpenCLI](https://github.com/jackwener/opencli) · [twitter-cli](https://github.com/public-clis/twitter-cli) · [rdt-cli](https://github.com/public-clis/rdt-cli) · [xiaohongshu-mcp](https://github.com/xpzouying/xiaohongshu-mcp) · [xhs-cli](https://github.com/jackwener/xiaohongshu-cli) · [bili-cli](https://github.com/public-clis/bilibili-cli) · [yt-dlp](https://github.com/yt-dlp/yt-dlp) · [Jina Reader](https://github.com/jina-ai/reader) · [Exa](https://exa.ai) · [mcporter](https://github.com/nicobailon/mcporter) · [feedparser](https://github.com/kurtmckee/feedparser) · [linkedin-scraper-mcp](https://github.com/stickerdaniel/linkedin-mcp-server)
 
 ## 联系
 
@@ -393,10 +370,6 @@ Yes! Agent Reach is an installer + configuration tool — any AI coding agent th
 [MIT](LICENSE)
 
 ## 友情链接
-
-[FluxNode](https://fluxnode.org) — 低价 AI API 中转站，官方一折，可按量或按套餐付费。可用于 OpenClaw、Claude Code 等一切 Agent。
-
-[OpenClaw for Enterprise](https://github.com/littleben/openclaw-for-enterprise) — 企业级 OpenClaw 多用户部署方案，飞书里直接用 AI，容器隔离，一条命令管理。
 
 [腾讯云 OpenClaw](https://www.tencentcloud.com/act/pro/intl-openclaw?referral_code=G76Y819A&lang=zh&pg=) — 在腾讯云Lighthouse秒级部署OpenClaw全能助手，可通过对话丝滑接入Agent Reach，给你的OpenClaw一键装上互联网能力。
 

@@ -1,8 +1,8 @@
 ---
 title: iptv
-date: 2026-06-14T18:36:03+08:00
+date: 2026-06-15T21:26:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1719949391460-4147d0c1f71b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE0MzMzNDN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1508924445640-6ab6b79bce04?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE1Mjk5NzN8&ixlib=rb-4.1.0
 tags: ['github',IPTV, channels, playlists]
 categories: ['github']
 ---

@@ -1,9 +1,9 @@
 ---
 title: chatwoot
-date: 2026-06-14T18:37:21+08:00
+date: 2026-06-15T21:28:00+08:00
 draft: False
-image: https://images.unsplash.com/photo-1622023035954-7d1cc182e43b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE0MzMzNDN8&ixlib=rb-4.1.0
-tags: ['github',customer support, open source, omnichannel]
+image: https://images.unsplash.com/photo-1546709164-75b669c6271f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE1Mjk5NzN8&ixlib=rb-4.1.0
+tags: ['github',customer support, open source, platform]
 categories: ['github']
 ---
 
