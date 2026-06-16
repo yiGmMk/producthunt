@@ -1,9 +1,9 @@
 ---
 title: teslamate
-date: 2026-06-15T21:26:56+08:00
+date: 2026-06-16T20:23:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1509948408774-3bbe12bc2102?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE1Mjk5NzN8&ixlib=rb-4.1.0
-tags: ['github',Tesla data logger,self-hosted,open source]
+image: https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE2MTI0NzF8&ixlib=rb-4.1.0
+tags: ['github',self-hosted, data logger, Tesla]
 categories: ['github']
 ---
 
