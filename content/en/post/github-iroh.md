@@ -1,9 +1,9 @@
 ---
 title: iroh
-date: 2025-07-30T15:45:45+08:00
+date: 2026-06-17T20:01:59+08:00
 draft: False
-image: https://images.unsplash.com/photo-1724649398952-1bf7d608effb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM4NjE1MTR8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1456081445129-830eb8d4bfc6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE2OTc2NTR8&ixlib=rb-4.1.0
+tags: ['github',iroh,hole-punching,QUIC]
 categories: ['github']
 ---
 
@@ -50,7 +50,7 @@ To ensure these connections are as fast as possible, we [continuously measure ir
 
 ### Built on [QUIC]
 
-Iroh uses [Quinn] to establish [QUIC] connections between nodes.
+Iroh uses [noq] to establish [QUIC] connections between endpoints.
 This way you get authenticated encryption, concurrent streams with stream priorities, a datagram transport and avoid head-of-line-blocking out of the box.
 
 ## Compose Protocols
@@ -59,7 +59,6 @@ Use pre-existing protocols built on iroh instead of writing your own:
 - [iroh-blobs] for [BLAKE3]-based content-addressed blob transfer scaling from kilobytes to terabytes
 - [iroh-gossip] for establishing publish-subscribe overlay networks that scale, requiring only resources that your average phone can handle
 - [iroh-docs] for an eventually-consistent key-value store of [iroh-blobs] blobs
-- [iroh-willow] for an (in-construction) implementation of the [willow protocol]
 
 ## Getting Started
 
@@ -71,9 +70,9 @@ Install it using `cargo add iroh`, then on the connecting side:
 ```rs
 const ALPN: &[u8] = b"iroh-example/echo/0";
 
-let endpoint = Endpoint::builder().discovery_n0().bind().await?;
+let endpoint = Endpoint::bind().await?;
 
-// Open a connection to the accepting node
+// Open a connection to the accepting endpoint
 let conn = endpoint.connect(addr, ALPN).await?;
 
 // Open a bidirectional QUIC stream
@@ -96,7 +95,7 @@ endpoint.close().await;
 
 And on the accepting side:
 ```rs
-let endpoint = Endpoint::builder().discovery_n0().bind().await?;
+let endpoint = Endpoint::bind().await?;
 
 let router = Router::builder(endpoint)
     .accept(ALPN.to_vec(), Arc::new(Echo))
@@ -141,14 +140,13 @@ If you want to use iroh from other languages, make sure to check out [iroh-ffi],
 
 This repository contains a workspace of crates:
 - `iroh`: The core library for hole-punching & communicating with relays.
-- `iroh-relay`: The relay server implementation. This is the code we run in production (and you can, too!).
-- `iroh-base`: Common types like `Hash`, key types or `RelayUrl`.
-- `iroh-dns-server`: DNS server implementation powering the `n0_discovery` for NodeIds, running at dns.iroh.link.
-- `iroh-net-report`: Analyzes your host's networking ability & NAT.
+- `iroh-relay`: The relay client and server implementation. This is the code we run in production for the public relays (and you can, too!).
+- `iroh-base`: Common types like `EndpointId` or `RelayUrl`.
+- `iroh-dns-server`: DNS server implementation powering the DNS/Pkarr address lookup for EndpointIds, running at dns.iroh.link.
 
 ## License
 
-Copyright 2024 N0, INC.
+Copyright 2025 N0, INC.
 
 This project is licensed under either of
 
@@ -165,11 +163,10 @@ Unless you explicitly state otherwise, any contribution intentionally submitted 
 
 [QUIC]: https://en.wikipedia.org/wiki/QUIC
 [BLAKE3]: https://github.com/BLAKE3-team/BLAKE3
-[Quinn]: https://github.com/quinn-rs/quinn
+[noq]: https://github.com/n0-computer/noq
 [iroh-blobs]: https://github.com/n0-computer/iroh-blobs
 [iroh-gossip]: https://github.com/n0-computer/iroh-gossip
 [iroh-docs]: https://github.com/n0-computer/iroh-docs
-[iroh-willow]: https://github.com/n0-computer/iroh-willow
 [iroh-doctor]: https://github.com/n0-computer/iroh-doctor
 [willow protocol]: https://willowprotocol.org
 [iroh-ffi]: https://github.com/n0-computer/iroh-ffi
@@ -178,4 +175,4 @@ Unless you explicitly state otherwise, any contribution intentionally submitted 
 [Iroh Experiments]: https://github.com/n0-computer/iroh-experiments
 [echo-rs]: /iroh/examples/echo.rs
 [iroh-perf]: https://perf.iroh.computer
-[docs]: https://iroh.computer/docs
+[docs]: https://docs.iroh.computer

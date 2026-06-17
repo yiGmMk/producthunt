@@ -1,9 +1,9 @@
 ---
 title: Agent-Reach
-date: 2026-06-15T21:27:14+08:00
+date: 2026-06-17T20:02:22+08:00
 draft: False
-image: https://images.unsplash.com/photo-1509948408774-3bbe12bc2102?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE1Mjk5NzN8&ixlib=rb-4.1.0
-tags: ['github',Agent Reach, internet access, AI Agent]
+image: https://images.unsplash.com/photo-1607335801051-9ae198dd4bb7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE2OTc2NTR8&ixlib=rb-4.1.0
+tags: ['github',AI Agent, internet access, content reading]
 categories: ['github']
 ---
 
@@ -23,11 +23,7 @@ categories: ['github']
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10+-green.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.10+"></a>
   <a href="https://github.com/Panniantong/agent-reach/stargazers"><img src="https://img.shields.io/github/stars/Panniantong/agent-reach?style=for-the-badge" alt="GitHub Stars"></a>
-  <a href="https://atomgit.com/qq_51337814/Agent-Reach"><img src="https://atomgit.com/qq_51337814/Agent-Reach/star/badge.svg" alt="AtomGit Stars"></a>
-</p>
-
-<p align="center">
-  🇨🇳 国内访问：本项目托管于 <a href="https://atomgit.com/qq_51337814/Agent-Reach">AtomGit 镜像</a>（与 GitHub 自动同步，克隆更快）
+  <a href="https://trendshift.io/repositories/24387"><img src="https://trendshift.io/api/badge/repositories/24387" alt="Trendshift GitHub Trending #1 Repository of the Day"></a>
 </p>
 
 <p align="center">
@@ -172,9 +168,7 @@ AI Agent 已经能帮你写代码、改文档、管项目——但你让它去�
 
 ## 能力边界：读内容 vs 操作网页
 
-Agent Reach 解决的是让 Agent **读到和搜到** 互联网上的内容，不替代用户完成登录后的网页操作、表单提交、多账号隔离、并行浏览器会话等流程。
-
-如果自动化流程中遇到登录、验证、风控提示等高摩擦环节，需要人工接手或真实浏览器会话，可以配合 [BrowserAct](https://browseract.com) 这类浏览器自动化工具：30+ 预制平台技能，支持 Claude Code / OpenClaw / Cursor 等主流 Agent。
+有些任务超出"读"的范围：登录后的网页操作、表单提交、多账号隔离、并行浏览器会话、自动化流程中的登录、验证、风控提示等高摩擦环节的人工接手。这类"动手"场景，可以配合 [BrowserAct](https://www.browseract.ai/Agent) 这类浏览器自动化工具——30+ 预制平台技能，支持 Claude Code / OpenClaw / Cursor 等主流 Agent。
 
 ---
 
@@ -372,6 +366,8 @@ Yes! Agent Reach is an installer + configuration tool — any AI coding agent th
 ## 友情链接
 
 [腾讯云 OpenClaw](https://www.tencentcloud.com/act/pro/intl-openclaw?referral_code=G76Y819A&lang=zh&pg=) — 在腾讯云Lighthouse秒级部署OpenClaw全能助手，可通过对话丝滑接入Agent Reach，给你的OpenClaw一键装上互联网能力。
+
+[AtomGit 镜像](https://atomgit.com/qq_51337814/Agent-Reach) — Agent Reach 的 AtomGit 同步镜像，便于国内访问与克隆。
 
 ## Star History
 
