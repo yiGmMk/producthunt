@@ -1,9 +1,9 @@
 ---
 title: meshery
-date: 2026-06-17T20:03:02+08:00
+date: 2026-06-18T19:20:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1604780534777-88002f081732?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE2OTc2NTR8&ixlib=rb-4.1.0
-tags: ['github',cloud native management, Kubernetes infrastructure, multi cluster]
+image: https://images.unsplash.com/photo-1457140072488-87e5ffde2d77?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE3ODE0Mzl8&ixlib=rb-4.1.0
+tags: ['github',cloud native, Kubernetes, infrastructure management]
 categories: ['github']
 ---
 

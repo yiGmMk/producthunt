@@ -1,9 +1,9 @@
 ---
 title: Agent-Reach
-date: 2026-06-17T20:02:22+08:00
+date: 2026-06-18T19:19:25+08:00
 draft: False
-image: https://images.unsplash.com/photo-1607335801051-9ae198dd4bb7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE2OTc2NTR8&ixlib=rb-4.1.0
-tags: ['github',AI Agent, internet access, content reading]
+image: https://images.unsplash.com/photo-1543190617-5b39b5eeb546?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE3ODE0Mzl8&ixlib=rb-4.1.0
+tags: ['github',AI Agent, internet access, multi-platform]
 categories: ['github']
 ---
 

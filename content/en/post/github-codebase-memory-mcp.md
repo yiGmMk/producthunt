@@ -1,9 +1,9 @@
 ---
 title: codebase-memory-mcp
-date: 2026-06-17T20:01:33+08:00
+date: 2026-06-18T19:17:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1614082164181-ff8380557f60?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE2OTc2NTR8&ixlib=rb-4.1.0
-tags: ['github',code intelligence, knowledge graph, tree-sitter]
+image: https://images.unsplash.com/photo-1457140072488-87e5ffde2d77?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE3ODE0Mzl8&ixlib=rb-4.1.0
+tags: ['github',code intelligence, knowledge graph, AI agents]
 categories: ['github']
 ---
 
