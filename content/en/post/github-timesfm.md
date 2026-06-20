@@ -1,9 +1,9 @@
 ---
 title: timesfm
-date: 2026-06-19T19:35:04+08:00
+date: 2026-06-20T18:21:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1714547509056-8873c83d03b0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE4Njg4Nzl8&ixlib=rb-4.1.0
-tags: ['github',TimesFM, time series, forecasting]
+image: https://images.unsplash.com/photo-1683085809775-d9ac53fcbe21?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE5NTA3OTh8&ixlib=rb-4.1.0
+tags: ['github',TimesFM, time series forecasting, foundation model]
 categories: ['github']
 ---
 
