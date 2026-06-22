@@ -1,9 +1,9 @@
 ---
 title: penpot
-date: 2026-06-21T18:41:04+08:00
+date: 2026-06-22T21:02:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1596527200106-c6a0dd1d5485?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIwMzg0MTB8&ixlib=rb-4.1.0
-tags: ['github',open source, design platform, self hosting]
+image: https://images.unsplash.com/photo-1670837301082-87c8561b12f3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMzMxMzl8&ixlib=rb-4.1.0
+tags: ['github',open-source, design platform, collaboration]
 categories: ['github']
 ---
 
