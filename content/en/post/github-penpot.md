@@ -1,8 +1,8 @@
 ---
 title: penpot
-date: 2026-06-22T21:02:09+08:00
+date: 2026-06-23T18:49:03+08:00
 draft: False
-image: https://images.unsplash.com/photo-1670837301082-87c8561b12f3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMzMxMzl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1764778905931-e5798cf8c42a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIyMTE2MTd8&ixlib=rb-4.1.0
 tags: ['github',open-source, design platform, collaboration]
 categories: ['github']
 ---

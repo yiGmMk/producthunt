@@ -1,8 +1,8 @@
 ---
 title: palmier-pro
-date: 2026-06-22T21:00:23+08:00
+date: 2026-06-23T18:47:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1667555351964-f8503f35e3eb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMzMxMzl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1636744534523-0f110a9c5d63?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIyMTE2MTd8&ixlib=rb-4.1.0
 tags: ['github',video editor, AI, macOS]
 categories: ['github']
 ---

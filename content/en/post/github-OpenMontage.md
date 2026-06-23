@@ -1,9 +1,9 @@
 ---
 title: OpenMontage
-date: 2026-06-22T20:59:25+08:00
+date: 2026-06-23T18:47:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1667555351964-f8503f35e3eb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMzMxMzl8&ixlib=rb-4.1.0
-tags: ['github',open-source, agentic, video production]
+image: https://images.unsplash.com/photo-1627840935425-3d333bb627f8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIyMTE2MTd8&ixlib=rb-4.1.0
+tags: ['github',open-source, video production, AI agent]
 categories: ['github']
 ---
 
@@ -29,6 +29,10 @@ categories: ['github']
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-AGPLv3-blue.svg" alt="License"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/trending"><img src="https://img.shields.io/badge/%F0%9F%8F%86%20%231%20on%20GitHub%20Trending-Repository%20of%20the%20Day-8957E5?style=for-the-badge&labelColor=1a1a2e" alt="#1 on GitHub Trending — Repository of the Day"></a>
 </p>
 
 <p align="center"><strong>Follow The Build</strong></p>

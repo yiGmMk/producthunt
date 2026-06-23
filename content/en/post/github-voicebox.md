@@ -1,9 +1,9 @@
 ---
 title: voicebox
-date: 2026-06-22T21:00:58+08:00
+date: 2026-06-23T18:47:59+08:00
 draft: False
-image: https://images.unsplash.com/photo-1703984383588-c2522031bd35?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMzMxMzl8&ixlib=rb-4.1.0
-tags: ['github',Voicebox, AI voice studio, open source]
+image: https://images.unsplash.com/photo-1764778905931-e5798cf8c42a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIyMTE2MTd8&ixlib=rb-4.1.0
+tags: ['github',AI voice studio,voice cloning,open-source]
 categories: ['github']
 ---
 
