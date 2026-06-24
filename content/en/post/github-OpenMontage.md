@@ -1,9 +1,9 @@
 ---
 title: OpenMontage
-date: 2026-06-23T18:47:29+08:00
+date: 2026-06-24T18:32:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1627840935425-3d333bb627f8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIyMTE2MTd8&ixlib=rb-4.1.0
-tags: ['github',open-source, video production, AI agent]
+image: https://images.unsplash.com/photo-1662925438215-0230610a9d28?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIyOTcwOTZ8&ixlib=rb-4.1.0
+tags: ['github',video production, open source, agentic system]
 categories: ['github']
 ---
 
@@ -678,4 +678,6 @@ make test
 
 **OpenMontage** — Production-grade video with real quality enforcement, orchestrated by your AI assistant.
 
-If this project looks useful to you, a star would really mean a lot — it helps others discover it too.
+If this project looks useful to you, a ⭐ would really mean a lot — it helps others discover it too.
+
+If you'd like to go further, [sponsor the project](https://github.com/sponsors/calesthio) — OpenMontage is built nights and weekends, and your support makes that sustainable.
