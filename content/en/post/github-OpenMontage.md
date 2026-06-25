@@ -1,9 +1,9 @@
 ---
 title: OpenMontage
-date: 2026-06-24T18:32:14+08:00
+date: 2026-06-25T18:24:54+08:00
 draft: False
-image: https://images.unsplash.com/photo-1662925438215-0230610a9d28?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIyOTcwOTZ8&ixlib=rb-4.1.0
-tags: ['github',video production, open source, agentic system]
+image: https://images.unsplash.com/photo-1645596065141-2a9b8944346c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIzODMwNTN8&ixlib=rb-4.1.0
+tags: ['github',open-source, agentic, video production]
 categories: ['github']
 ---
 
@@ -24,6 +24,7 @@ categories: ['github']
   <a href="#pipelines">Pipelines</a> &nbsp;·&nbsp;
   <a href="#how-it-works">How It Works</a> &nbsp;·&nbsp;
   <a href="docs/PROVIDERS.md">Providers</a> &nbsp;·&nbsp;
+  <a href="docs/PR_REVIEW_GUIDE.md">Review Guide</a> &nbsp;·&nbsp;
   <a href="AGENT_GUIDE.md">Agent Guide</a>
 </p>
 

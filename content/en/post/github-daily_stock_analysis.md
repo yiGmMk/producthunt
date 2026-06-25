@@ -1,8 +1,8 @@
 ---
 title: daily_stock_analysis
-date: 2026-06-24T18:32:56+08:00
+date: 2026-06-25T18:25:06+08:00
 draft: False
-image: https://images.unsplash.com/photo-1729870992117-3b110756954f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIyOTcwOTZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1524515725116-3fcfdc50969f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIzODMwNTN8&ixlib=rb-4.1.0
 tags: ['github',stock analysis, AI, automation]
 categories: ['github']
 ---
