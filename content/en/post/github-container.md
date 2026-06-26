@@ -1,9 +1,9 @@
 ---
 title: container
-date: 2026-06-25T18:25:44+08:00
+date: 2026-06-26T18:35:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1546984575-757f4f7c13cf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIzODMwNTN8&ixlib=rb-4.1.0
-tags: ['github',container, OCI, Swift]
+image: https://images.unsplash.com/photo-1688534482869-91efe865a07f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI0Njk5Nzh8&ixlib=rb-4.1.0
+tags: ['github',container, Linux containers, Apple silicon]
 categories: ['github']
 ---
 

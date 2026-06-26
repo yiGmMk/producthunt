@@ -1,9 +1,9 @@
 ---
 title: OpenMontage
-date: 2026-06-25T18:24:54+08:00
+date: 2026-06-26T18:34:10+08:00
 draft: False
-image: https://images.unsplash.com/photo-1645596065141-2a9b8944346c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIzODMwNTN8&ixlib=rb-4.1.0
-tags: ['github',open-source, agentic, video production]
+image: https://images.unsplash.com/photo-1680266179692-a21c915b0b53?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI0Njk5Nzh8&ixlib=rb-4.1.0
+tags: ['github',video production, AI agent, open source]
 categories: ['github']
 ---
 
