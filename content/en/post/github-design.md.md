@@ -1,9 +1,9 @@
 ---
 title: design.md
-date: 2026-06-26T18:33:18+08:00
+date: 2026-06-27T17:38:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1572568722714-31d53db97794?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI0Njk5Nzh8&ixlib=rb-4.1.0
-tags: ['github',designmd, design tokens, coding agents]
+image: https://images.unsplash.com/photo-1749219815845-9b82777436d7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI1NTMwNTl8&ixlib=rb-4.1.0
+tags: ['github',DESIGNmd, design tokens, coding agents]
 categories: ['github']
 ---
 
