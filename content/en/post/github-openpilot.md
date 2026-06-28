@@ -1,9 +1,9 @@
 ---
 title: openpilot
-date: 2026-06-27T17:38:31+08:00
+date: 2026-06-28T18:17:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1702594369985-163331c12097?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI1NTMwNTl8&ixlib=rb-4.1.0
-tags: ['github',openpilot, robotics operating system, driver assistance system]
+image: https://images.unsplash.com/photo-1779376851024-8b64ff9e256c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI2NDE2NjN8&ixlib=rb-4.1.0
+tags: ['github',openpilot, robotics, driver assistance]
 categories: ['github']
 ---
 
