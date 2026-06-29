@@ -1,9 +1,9 @@
 ---
 title: simplex-chat
-date: 2026-06-28T18:15:14+08:00
+date: 2026-06-29T20:10:00+08:00
 draft: False
-image: https://images.unsplash.com/photo-1585773329219-6606fa01bb39?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI2NDE2NjN8&ixlib=rb-4.1.0
-tags: ['github',privacy, chat, encryption]
+image: https://images.unsplash.com/photo-1526849875464-471c91f5ecae?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI3MzQ5NjJ8&ixlib=rb-4.1.0
+tags: ['github',privacy, security, encryption]
 categories: ['github']
 ---
 

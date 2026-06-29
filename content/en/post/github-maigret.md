@@ -1,9 +1,9 @@
 ---
 title: maigret
-date: 2026-06-10T19:10:13+08:00
+date: 2026-06-29T20:11:43+08:00
 draft: False
-image: https://images.unsplash.com/photo-1672136304058-19e555fdf64e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODEwODk2MzB8&ixlib=rb-4.1.0
-tags: ['github',username investigation, account discovery, OSINT tool]
+image: https://images.unsplash.com/photo-1593151831030-497c6481ce23?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI3MzQ5NjJ8&ixlib=rb-4.1.0
+tags: ['github',OSINT, username search, data extraction]
 categories: ['github']
 ---
 
@@ -17,8 +17,13 @@ categories: ['github']
         <img alt="PyPI version badge for Maigret" src="https://img.shields.io/pypi/v/maigret?style=flat-square" />
     </a>
     <a href="https://pepy.tech/project/maigret">
-      <img alt="Downloads/month" src="https://static.pepy.tech/badge/maigret/month" />
       <img alt="Total downloads" src="https://static.pepy.tech/badge/maigret" />
+      <img alt="Downloads/month" src="https://static.pepy.tech/badge/maigret/month" />
+    </a>
+  </div>
+  <div>
+    <a href="https://github.com/soxoj/maigret">
+        <img alt="View count for Maigret project" src="https://komarev.com/ghpvc/?username=maigret&color=brightgreen&label=views&style=flat-square" />
     </a>
     <a href="https://github.com/soxoj/maigret">
         <img alt="Minimum Python version required: 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-brightgreen?style=flat-square" />
@@ -26,13 +31,19 @@ categories: ['github']
     <a href="https://github.com/soxoj/maigret/blob/main/LICENSE">
         <img alt="License badge for Maigret" src="https://img.shields.io/github/license/soxoj/maigret?style=flat-square" />
     </a>
-    <a href="https://github.com/soxoj/maigret">
-        <img alt="View count for Maigret project" src="https://komarev.com/ghpvc/?username=maigret&color=brightgreen&label=views&style=flat-square" />
-    </a>
   </div>
   <br>
   <div>
     <img src="https://raw.githubusercontent.com/soxoj/maigret/main/static/maigret.png" height="300" alt="Maigret logo"/>
+  </div>
+  <br>
+  <div>
+    <a href="https://codewiki.google/github.com/soxoj/maigret">
+        <img alt="Ask Code Wiki about Maigret" src="https://img.shields.io/badge/Code_Wiki-ask_about_repo-yellow?logo=googlegemini" />
+    </a>
+    <a href="https://deepwiki.com/soxoj/maigret">
+        <img alt="Ask DeepWiki about Maigret" src="https://img.shields.io/badge/DeepWiki-ask_about_repo-yellow" />
+    </a>
   </div>
   <br>
   <div>
@@ -45,32 +56,43 @@ categories: ['github']
 
 ## Sponsors
 
-<table>
-  <tr>
-    <td width="250" align="center">
-      <a href="https://www.rapidproxy.io/?ref=soxoj">
-        <img src="https://github.com/user-attachments/assets/1b4ad463-c6eb-448b-8e14-5792ee3d4181" height="100px" alt="RapidProxy" />
-      </a>
-    </td>
-    <td>
-      <a href="https://www.rapidproxy.io/?ref=soxoj"><b>RapidProxy</b></a> provides high-performance residential proxies for Twitter scraping, Selenium automation, and web data extraction.<br>
-      90M+ IPs • Smart rotation • Anti-block • Non-expiring traffic<br>
-      <b>Special Offer:</b> Try it free — Plans from $0.65/GB. Use code <code>RAPID10</code> for 10% off.
-    </td>
-  </tr>
-  <tr>
-    <td width="250" align="center">
-      <a href="https://vaultproxies.net/?utm_source=maigret&utm_medium=readme">
-        <img src="https://i.imgur.com/TF165pP.gif" width="180" alt="VaultProxies" />
-      </a>
-    </td>
-    <td>
-      <a href="https://vaultproxies.net/?utm_source=maigret&utm_medium=readme"><b>VaultProxies</b></a> — The proxy network ops teams reach for when they're tired of getting throttled, flagged, or guessed.<br>
-      Enterprise-grade rotation • High uptime • Throttle-resistant routing<br>
-      <b>Special Offer:</b> Plans from $1/GB — as low as $0.50/GB. Use code <code>50OFF</code> for 50% off.
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://www.rapidproxy.io/?ref=soxoj">
+    <img src="https://github.com/user-attachments/assets/1b4ad463-c6eb-448b-8e14-5792ee3d4181" width="220" alt="RapidProxy">
+  </a>
+</p>
+
+<p>
+  <a href="https://www.rapidproxy.io/?ref=soxoj"><b>RapidProxy</b></a> provides high-performance residential proxies for Twitter scraping, Selenium automation, and web data extraction.<br>
+  90M+ IPs • Smart rotation • Anti-block • Non-expiring traffic<br>
+  <b>Special Offer:</b> Try it free — Plans from $0.65/GB. Use code <code>RAPID10</code> for 10% off.
+</p>
+
+<br>
+
+<p align="center">
+  <a href="https://vaultproxies.net/?utm_source=maigret&utm_medium=readme">
+    <img src="https://i.imgur.com/TF165pP.gif" width="320" alt="VaultProxies">
+  </a>
+</p>
+
+<p>
+  <a href="https://vaultproxies.net/?utm_source=maigret&utm_medium=readme"><b>VaultProxies</b></a> — The proxy network ops teams reach for when they're tired of getting throttled, flagged, or guessed.<br>
+  Enterprise-grade rotation • High uptime • Throttle-resistant routing<br>
+  <b>Special Offer:</b> Plans from $1/GB — as low as $0.50/GB. Use code <code>50OFF</code> for 50% off.
+</p>
+
+<br>
+
+<p align="center">
+  <a href="https://9proxy.com/?utm_source=Github&utm_campaign=obscura">
+    <img src="https://i.imgur.com/FleHdvu.gif" width="250" alt="9Proxy">
+  </a>
+</p>
+
+<p>
+  <a href="https://9proxy.com/?utm_source=Github&utm_campaign=obscura"><b>9Proxy</b></a> provides residential proxies from just <b>$0.018/IP or $0.68/GB</b>. 20M+ IPs across 90+ countries. Sticky or rotating sessions, managed from desktop or mobile app.
+</p>
 
 ## Contents
 
