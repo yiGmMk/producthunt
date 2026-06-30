@@ -1,9 +1,9 @@
 ---
 title: cupy
-date: 2026-06-29T20:10:48+08:00
+date: 2026-06-30T18:43:50+08:00
 draft: False
-image: https://images.unsplash.com/photo-1705736046503-f99a7f35efb7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI3MzQ5NjJ8&ixlib=rb-4.1.0
-tags: ['github',CuPy,GPU,NumPy]
+image: https://images.unsplash.com/photo-1543619599-f3842d9a1f32?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI4MTYxMTl8&ixlib=rb-4.1.0
+tags: ['github',CuPy, GPU, NumPy]
 categories: ['github']
 ---
 

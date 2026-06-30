@@ -1,9 +1,9 @@
 ---
 title: simplex-chat
-date: 2026-06-29T20:10:00+08:00
+date: 2026-06-30T18:42:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1526849875464-471c91f5ecae?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI3MzQ5NjJ8&ixlib=rb-4.1.0
-tags: ['github',privacy, security, encryption]
+image: https://images.unsplash.com/photo-1690722410513-ff89e9ceb825?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI4MTYxMTl8&ixlib=rb-4.1.0
+tags: ['github',chat, privacy, security]
 categories: ['github']
 ---
 
@@ -17,7 +17,9 @@ categories: ['github']
 
 | 30/03/2023 | EN, [FR](/docs/lang/fr/README.md), [CZ](/docs/lang/cs/README.md), [PL](/docs/lang/pl/README.md) |
 
-<img src="images/simplex-chat-logo.svg" alt="SimpleX logo" width="100%">
+<img src="images/github-banner.jpg" alt="SimpleX logo" width="100%">
+
+Invest in SimpleX Chat. [Register now](https://simplexchat.typeform.com/crowdfunding).
 
 # SimpleX - the first messaging platform that has no user identifiers of any kind - 100% private by design!
 

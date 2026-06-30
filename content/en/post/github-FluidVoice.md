@@ -1,9 +1,9 @@
 ---
 title: FluidVoice
-date: 2026-06-29T20:11:04+08:00
+date: 2026-06-30T18:45:05+08:00
 draft: False
-image: https://images.unsplash.com/photo-1526849875464-471c91f5ecae?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI3MzQ5NjJ8&ixlib=rb-4.1.0
-tags: ['github',Fluid Intelligence, ondevice, macOS dictation]
+image: https://images.unsplash.com/photo-1543619599-f3842d9a1f32?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI4MTYxMTl8&ixlib=rb-4.1.0
+tags: ['github',FluidVoice, voice to text dictation, on device AI]
 categories: ['github']
 ---
 

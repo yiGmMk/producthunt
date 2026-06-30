@@ -1,9 +1,9 @@
 ---
 title: maigret
-date: 2026-06-29T20:11:43+08:00
+date: 2026-06-30T18:45:53+08:00
 draft: False
-image: https://images.unsplash.com/photo-1593151831030-497c6481ce23?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI3MzQ5NjJ8&ixlib=rb-4.1.0
-tags: ['github',OSINT, username search, data extraction]
+image: https://images.unsplash.com/photo-1542464035-59ec39c44a27?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI4MTYxMTl8&ixlib=rb-4.1.0
+tags: ['github',OSINT, username search, information gathering]
 categories: ['github']
 ---
 
@@ -264,6 +264,7 @@ maigret user --json ndjson   # newline-delimited JSON (also: --json simple)
 maigret user --csv
 maigret user --txt
 maigret user --graph         # interactive D3 graph (HTML)
+maigret user --neo4j         # Neo4j Cypher script (graph database)
 
 # search on sites marked with tags photo & dating
 maigret user --tags photo,dating
@@ -281,6 +282,8 @@ maigret user1 user2 user3 -a
 # AI-assisted investigation summary (needs OPENAI_API_KEY)
 maigret user --ai
 ```
+
+`--neo4j` writes a `*_neo4j.cypher` script of the results graph; import it with `cypher-shell -u neo4j -p <password> < report_user_neo4j.cypher` or paste it into the Neo4j Browser. Re-imports are idempotent. See the [Neo4j export docs](https://maigret.readthedocs.io/en/latest/command-line-options.html#neo4j-export).
 
 Run `maigret --help` for all options. Docs: [CLI options](https://maigret.readthedocs.io/en/latest/command-line-options.html), [more examples](https://maigret.readthedocs.io/en/latest/usage-examples.html). Running into 403s or timeouts? See [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
 
