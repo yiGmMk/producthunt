@@ -1,9 +1,9 @@
 ---
 title: Vibe-Trading
-date: 2026-07-01T18:56:54+08:00
+date: 2026-07-02T18:20:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1590091593981-c514698110b1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI5MDMyODh8&ixlib=rb-4.1.0
-tags: ['github',trading agent, backtesting, market data]
+image: https://images.unsplash.com/photo-1669397113508-144240b7479a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI5ODc1Mzd8&ixlib=rb-4.1.0
+tags: ['github',trading agent, backtesting, financial research]
 categories: ['github']
 ---
 
@@ -61,14 +61,16 @@ categories: ['github']
 
 ## 📰 News
 
+- **2026-07-02** ⚡ **Factor acceleration + safer runtime boundaries**: hot rolling factor operators now use `bottleneck`/NumPy fast paths, alpha bench parallelism avoids repeated large-panel worker payloads, and base equity math has regression coverage ([#376](https://github.com/HKUDS/Vibe-Trading/pull/376), closes [#339](https://github.com/HKUDS/Vibe-Trading/issues/339), original work from [#342](https://github.com/HKUDS/Vibe-Trading/pull/342) by @shadowinlife). Upload and Shadow report routes moved out of the monolithic `api_server.py` as the first narrow API modularization slice while [#331](https://github.com/HKUDS/Vibe-Trading/issues/331) stays open ([#375](https://github.com/HKUDS/Vibe-Trading/pull/375), based on [#358](https://github.com/HKUDS/Vibe-Trading/pull/358), thanks @shadowinlife). Generated backtests now inherit only an allowlisted subprocess environment instead of the parent secrets surface ([#374](https://github.com/HKUDS/Vibe-Trading/pull/374), closes [#332](https://github.com/HKUDS/Vibe-Trading/issues/332)), and IM channels gained `/new` session reset plus case-insensitive pairing commands ([#372](https://github.com/HKUDS/Vibe-Trading/pull/372), closes [#371](https://github.com/HKUDS/Vibe-Trading/issues/371), thanks @shadowinlife).
+
 - **2026-07-01** 🧹 **Security polish + tracker cleanup**: tightened API/Docker/frontend dev defaults, stabilized Settings channel and `zh-CN` edges, cleared frontend dependency/CSP alerts, and closed stale WhatsApp + paper-trading tracker items ([#338](https://github.com/HKUDS/Vibe-Trading/pull/338), [#351](https://github.com/HKUDS/Vibe-Trading/pull/351), [#349](https://github.com/HKUDS/Vibe-Trading/pull/349), [#365](https://github.com/HKUDS/Vibe-Trading/pull/365), [#367](https://github.com/HKUDS/Vibe-Trading/pull/367), [#350](https://github.com/HKUDS/Vibe-Trading/pull/350), [#335](https://github.com/HKUDS/Vibe-Trading/pull/335), [#283](https://github.com/HKUDS/Vibe-Trading/issues/283)).
 
 - **2026-06-30** 💬 **IM channel runtime for research delivery**: Vibe-Trading can now attach the same agent session runtime to 16 built-in message adapters — WebSocket, Telegram, Slack, Discord, Matrix, WhatsApp, Signal, QQ/NapCat, WeChat/WeCom, Feishu/Lark, DingTalk, Teams, email, and Mochat. CLI (`vibe-trading channels status/start/stop/login/pairing`), REST (`/channels/status`, `/channels/start`, `/channels/stop`, `/channels/pairing/command`), and the Web UI Settings panel expose status, recovery hints, start/stop, and sender pairing; SDK-backed adapters stay behind extras such as `vibe-trading-ai[telegram]` or `vibe-trading-ai[channels]` ([#341](https://github.com/HKUDS/Vibe-Trading/pull/341)).
 
-- **2026-06-29** 🛡️ **Live advisory safety + Trading 212 read-only connector + Windows/Gemini fixes**: live order guards now have an opt-in, broker-agnostic `PreTradeAdvisoryInterface` that records advisory reviews without bypassing the mandate gate, kill switch, or audit trail ([#328](https://github.com/HKUDS/Vibe-Trading/pull/328), closes [#317](https://github.com/HKUDS/Vibe-Trading/issues/317), thanks @shadowinlife). Trading 212 joins the connector layer with read-only account, positions, orders, history, and instrument-metadata support; `place_order` / `cancel_order` still hard-refuse until a structural paper/live boundary exists ([#321](https://github.com/HKUDS/Vibe-Trading/pull/321), closes [#309](https://github.com/HKUDS/Vibe-Trading/issues/309), thanks @mvanhorn). Windows startup avoids the pandas 3.0 `Timestamp` crash via the `<3.0.0` constraint ([#329](https://github.com/HKUDS/Vibe-Trading/pull/329), closes [#324](https://github.com/HKUDS/Vibe-Trading/issues/324), thanks @hannibal-lee); Gemini `thought_signature` dict-history replay was verified/fixed on `main` ([#318](https://github.com/HKUDS/Vibe-Trading/issues/318)); `.US` financial statements now route to SEC EDGAR instead of Eastmoney ([#325](https://github.com/HKUDS/Vibe-Trading/issues/325)); and the Alpha Library landing page got cache/date/selector/noscript/DNS-prefetch hardening while heavier CSP and social-card follow-ups stay tracked ([#323](https://github.com/HKUDS/Vibe-Trading/issues/323)).
-
 <details>
 <summary>Earlier news</summary>
+
+- **2026-06-29** 🛡️ **Live advisory safety + Trading 212 read-only connector + Windows/Gemini fixes**: live order guards now have an opt-in, broker-agnostic `PreTradeAdvisoryInterface` that records advisory reviews without bypassing the mandate gate, kill switch, or audit trail ([#328](https://github.com/HKUDS/Vibe-Trading/pull/328), closes [#317](https://github.com/HKUDS/Vibe-Trading/issues/317), thanks @shadowinlife). Trading 212 joins the connector layer with read-only account, positions, orders, history, and instrument-metadata support; `place_order` / `cancel_order` still hard-refuse until a structural paper/live boundary exists ([#321](https://github.com/HKUDS/Vibe-Trading/pull/321), closes [#309](https://github.com/HKUDS/Vibe-Trading/issues/309), thanks @mvanhorn). Windows startup avoids the pandas 3.0 `Timestamp` crash via the `<3.0.0` constraint ([#329](https://github.com/HKUDS/Vibe-Trading/pull/329), closes [#324](https://github.com/HKUDS/Vibe-Trading/issues/324), thanks @hannibal-lee); Gemini `thought_signature` dict-history replay was verified/fixed on `main` ([#318](https://github.com/HKUDS/Vibe-Trading/issues/318)); `.US` financial statements now route to SEC EDGAR instead of Eastmoney ([#325](https://github.com/HKUDS/Vibe-Trading/issues/325)); and the Alpha Library landing page got cache/date/selector/noscript/DNS-prefetch hardening while heavier CSP and social-card follow-ups stay tracked ([#323](https://github.com/HKUDS/Vibe-Trading/issues/323)).
 
 - **2026-06-28** 🧰 **Cross-platform setup/dev + runtime and file-tool hardening**: `vibe-trading setup` and `vibe-trading dev` now handle Windows TypeScript builds, launch the backend from the right cwd, use the Vite 5899 port, and shut child processes down cleanly ([#292](https://github.com/HKUDS/Vibe-Trading/pull/292), thanks @digger-yu). Runtime status polling now degrades instead of crashing ([#322](https://github.com/HKUDS/Vibe-Trading/issues/322)); MCP OAuth cache keys are sanitized ([#313](https://github.com/HKUDS/Vibe-Trading/issues/313)); OpenAI defaults and Robinhood `agent.json` validation were tightened ([#319](https://github.com/HKUDS/Vibe-Trading/pull/319), [#320](https://github.com/HKUDS/Vibe-Trading/pull/320), thanks @mvanhorn); and file tools got isolated read/write roots plus broader sandbox tests ([#299](https://github.com/HKUDS/Vibe-Trading/pull/299), thanks @skloxo).
 - **2026-06-27** 🧯 **Content-filter resilience + Shadow Account feature contract cleanup**: event-driven and swarm runs now skip individual LLM content-moderation hits, warn in run cards when filter rates are high, and recognize Gemini safety finish reasons instead of aborting an entire analysis ([#308](https://github.com/HKUDS/Vibe-Trading/pull/308), closes [#307](https://github.com/HKUDS/Vibe-Trading/issues/307), thanks @shadowinlife). Shadow Account extraction/codegen now share one `PRICE_FEATURES` contract and keep four-decimal return bounds, preventing rule/codegen drift and precision loss on `prior_5d_return` ([#316](https://github.com/HKUDS/Vibe-Trading/pull/316), thanks @Robin1987China).
@@ -695,6 +697,17 @@ vibe-trading channels pairing --channel telegram list
 
 The built-in adapters cover `websocket`, `telegram`, `slack`, `discord`, `matrix`, `whatsapp`, `signal`, `qq`, `napcat`, `weixin`, `wecom`, `feishu`, `dingtalk`, `msteams`, `email`, and `mochat`. Use narrow extras such as `pip install "vibe-trading-ai[telegram]"`, or install the full channel set with `pip install "vibe-trading-ai[channels]"`.
 
+**In-chat slash commands** (channel-agnostic, work in all 16 adapters):
+
+| Command | Description |
+|---------|-------------|
+| `/new` | Reset the current session — the next message starts a fresh conversation |
+| `/reset` | Alias for `/new` |
+| `/newsession` | Alias for `/new` |
+| `/pairing list` | Show pending sender-pairing requests |
+
+Commands are case-insensitive and must be sent as the entire message (e.g. `hello /new` is treated as a regular message, not a reset).
+
 </details>
 
 ---
@@ -829,6 +842,8 @@ Interactive docs: `http://localhost:8899/docs`
 For localhost development, `vibe-trading serve` keeps the browser workflow simple. For any non-local client, sensitive API endpoints require `API_AUTH_KEY`; use `Authorization: Bearer <key>` for JSON/upload requests. Browser EventSource streams are handled by the Web UI after you enter the same key once in Settings.
 
 Shell-capable tools are available to local CLI and trusted localhost workflows, but are not exposed to remote API sessions unless you explicitly set `VIBE_TRADING_ENABLE_SHELL_TOOLS=1`. Document and journal readers are limited to upload/import roots by default; place files under `agent/uploads`, `agent/runs`, `./uploads`, `./data`, `~/.vibe-trading/uploads`, or `~/.vibe-trading/imports`, or add a dedicated directory through `VIBE_TRADING_ALLOWED_FILE_ROOTS`.
+
+Generated backtest code runs as a local Python subprocess and can make network requests through the configured market-data loaders. Its environment is intentionally narrow: the runner keeps OS/Python basics, proxy/certificate settings, `VIBE_TRADING_ALLOWED_RUN_ROOTS`, and read-only market-data keys such as `TUSHARE_TOKEN`, `FMP_API_KEY`, `FRED_API_KEY`, and `VIBE_TRADING_IWENCAI_KEY`. It does not pass LLM provider keys, API auth tokens, shell-tool switches, broker trading secrets, or live/advisory toggles to generated strategy code by default.
 
 ### Web UI Settings
 
@@ -1211,8 +1226,8 @@ Vibe-Trading is part of the **[HKUDS](https://github.com/HKUDS)** agent ecosyste
 <table>
   <tr>
     <td align="center" width="20%">
-      <a href="https://github.com/HKUDS"><b>HKUDS Agents</b></a><br>
-      <sub>Open Agent Infrastructure</sub>
+      <a href="https://github.com/HKUDS/nanobot"><b>NanoBot</b></a><br>
+      <sub>Ultra-Lightweight Personal AI Assistant</sub>
     </td>
     <td align="center" width="20%">
       <a href="https://github.com/HKUDS/AI-Trader"><b>AI-Trader</b></a><br>

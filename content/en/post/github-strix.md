@@ -1,9 +1,9 @@
 ---
 title: strix
-date: 2026-07-01T18:56:25+08:00
+date: 2026-07-02T18:19:50+08:00
 draft: False
-image: https://images.unsplash.com/photo-1633483408137-87f2b1de542f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI5MDMyODh8&ixlib=rb-4.1.0
-tags: ['github',AI pentesting, vulnerability scanning, autonomous agents]
+image: https://images.unsplash.com/photo-1615015456178-ae6bb600b7ef?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI5ODc1Mzd8&ixlib=rb-4.1.0
+tags: ['github',AI penetration testing, vulnerability scanner, open source tool]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: agency-agents
-date: 2026-07-01T18:55:38+08:00
+date: 2026-07-02T18:19:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592552912391-5e028125a2f5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI5MDMyODh8&ixlib=rb-4.1.0
-tags: ['github',AI agents, workflow, specialization]
+image: https://images.unsplash.com/photo-1456933668996-e22c62d53b14?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI5ODc1Mzd8&ixlib=rb-4.1.0
+tags: ['github',AI agents, specialized experts, workflow automation]
 categories: ['github']
 ---
 
