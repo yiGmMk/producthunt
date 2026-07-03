@@ -1,9 +1,9 @@
 ---
 title: exercises-dataset
-date: 2026-07-02T18:20:53+08:00
+date: 2026-07-03T18:16:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1691335902865-3b038d0515c2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI5ODc1Mzd8&ixlib=rb-4.1.0
-tags: ['github',fitness exercises dataset, developer setup, multilingual instructions]
+image: https://images.unsplash.com/photo-1611849362103-5c99622adf18?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODMwNzM3MTB8&ixlib=rb-4.1.0
+tags: ['github',fitness exercises, dataset, workout applications]
 categories: ['github']
 ---
 
