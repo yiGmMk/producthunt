@@ -1,9 +1,9 @@
 ---
 title: checkout
-date: 2025-08-13T15:33:15+08:00
+date: 2026-07-04T17:31:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1488543882437-49f6f714ad05?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUwNzAyNDF8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1540760647190-be47b2b4d2ae?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODMxNTczOTZ8&ixlib=rb-4.1.0
+tags: ['github',GitHub Actions,checkout,repository]
 categories: ['github']
 ---
 
