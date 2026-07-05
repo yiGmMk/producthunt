@@ -1,9 +1,9 @@
 ---
 title: caveman
-date: 2026-07-04T17:31:19+08:00
+date: 2026-07-05T17:52:23+08:00
 draft: False
-image: https://images.unsplash.com/photo-1736166908102-ace1978ca746?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODMxNTczOTZ8&ixlib=rb-4.1.0
-tags: ['github',AI coding agent, token compression, brevity optimization]
+image: https://images.unsplash.com/photo-1675929970731-11970d723740?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODMyNDUwOTJ8&ixlib=rb-4.1.0
+tags: ['github',Caveman, token reduction, AI coding agent]
 categories: ['github']
 ---
 

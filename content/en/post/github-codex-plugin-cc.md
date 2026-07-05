@@ -1,9 +1,9 @@
 ---
 title: codex-plugin-cc
-date: 2026-07-04T17:31:08+08:00
+date: 2026-07-05T17:51:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1649089904798-5599be97a39d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODMxNTczOTZ8&ixlib=rb-4.1.0
-tags: ['github',Codex plugin, Claude Code, code reviews]
+image: https://images.unsplash.com/photo-1505168125601-4ddfdea4c7e7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODMyNDUwOTJ8&ixlib=rb-4.1.0
+tags: ['github',Codex, Claude, plugin]
 categories: ['github']
 ---
 
