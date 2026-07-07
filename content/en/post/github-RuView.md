@@ -1,9 +1,9 @@
 ---
 title: RuView
-date: 2026-07-06T19:47:23+08:00
+date: 2026-07-07T18:37:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1650280335766-e420794655ad?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODMzMzgzNzN8&ixlib=rb-4.1.0
-tags: ['github',WiFi sensing, human detection, pose estimation]
+image: https://images.unsplash.com/photo-1496161341410-90ce6ad8b390?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM0MjA1ODB8&ixlib=rb-4.1.0
+tags: ['github',WiFi sensing,pose estimation,privacy preserving]
 categories: ['github']
 ---
 

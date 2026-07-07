@@ -1,9 +1,9 @@
 ---
 title: agent-skills
-date: 2026-07-06T19:46:46+08:00
+date: 2026-07-07T18:36:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1650280335766-e420794655ad?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODMzMzgzNzN8&ixlib=rb-4.1.0
-tags: ['github',AI agents,engineering skills,workflows]
+image: https://images.unsplash.com/photo-1604915384518-262d981d5677?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM0MjA1ODB8&ixlib=rb-4.1.0
+tags: ['github',AI coding agents, engineering workflows, software development]
 categories: ['github']
 ---
 
@@ -52,6 +52,23 @@ Skills also activate automatically based on what you're doing — designing an A
 ---
 
 ## Quick Start
+
+**Fastest path — any agent, one command.** The open [skills CLI](https://github.com/vercel-labs/skills) installs into 70+ agents (Claude Code, Cursor, Codex, Copilot, Cline, and more):
+
+```bash
+npx skills add addyosmani/agent-skills            # install all 24 skills
+npx skills add addyosmani/agent-skills --list     # browse before installing
+```
+
+Or grab individual skills:
+
+```bash
+npx skills add addyosmani/agent-skills --skill code-review-and-quality   # five-axis review before merge
+npx skills add addyosmani/agent-skills --skill interview-me              # requirements interrogation, one question at a time
+npx skills add addyosmani/agent-skills --skill test-driven-development   # red-green-refactor, enforced
+```
+
+Prefer a native integration? Pick your tool below.
 
 <details>
 <summary><b>Claude Code (recommended)</b></summary>

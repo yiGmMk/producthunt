@@ -1,9 +1,9 @@
 ---
 title: meetily
-date: 2026-07-06T19:46:58+08:00
+date: 2026-07-07T18:36:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1691104379620-d28ca4afc336?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODMzMzgzNzN8&ixlib=rb-4.1.0
-tags: ['github',AI meeting assistant, privacy first, local transcription]
+image: https://images.unsplash.com/photo-1618472609777-b038f1f04b8d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM0MjA1ODB8&ixlib=rb-4.1.0
+tags: ['github',privacy, meeting assistant, transcription]
 categories: ['github']
 ---
 
