@@ -1,9 +1,9 @@
 ---
 title: system_prompts_leaks
-date: 2026-07-07T18:36:29+08:00
+date: 2026-07-08T17:36:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1545396872-74c79639cc76?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM0MjA1ODB8&ixlib=rb-4.1.0
-tags: ['github',system prompts, AI chatbots, GitHub repository]
+image: https://images.unsplash.com/photo-1683641967671-196309483093?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM1MDMyMjF8&ixlib=rb-4.1.0
+tags: ['github',system prompts, AI chatbots, leaks]
 categories: ['github']
 ---
 
