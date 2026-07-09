@@ -1,9 +1,9 @@
 ---
 title: agent-skills
-date: 2026-07-08T17:35:17+08:00
+date: 2026-07-09T18:36:23+08:00
 draft: False
-image: https://images.unsplash.com/photo-1497122123454-d63853ca2d39?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM1MDMyMjF8&ixlib=rb-4.1.0
-tags: ['github',agent skills, AI coding agents, engineering workflows]
+image: https://images.unsplash.com/photo-1642946541141-8f1bfd39eebf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM1OTMzMDl8&ixlib=rb-4.1.0
+tags: ['github',AI agents, engineering skills, development workflows]
 categories: ['github']
 ---
 
@@ -170,7 +170,20 @@ Use agent definitions from `agents/` as Copilot personas and skill content in `.
 </details>
 
 <details>
-<summary><b>Codex / Other Agents</b></summary>
+<summary><b>Codex</b></summary>
+
+Install as a native Codex plugin (Codex CLI v0.122+):
+
+```bash
+codex plugin marketplace add addyosmani/agent-skills
+```
+
+Codex reads the root `skills/` directory directly through `.codex-plugin/plugin.json`. Once installed, invoke skills in chat using `@` (e.g., `@spec-driven-development`). See [docs/codex-setup.md](docs/codex-setup.md) for local installation and troubleshooting.
+
+</details>
+
+<details>
+<summary><b>Other Agents</b></summary>
 
 Skills are plain Markdown - they work with any agent that accepts system prompts or instruction files. See [docs/getting-started.md](docs/getting-started.md).
 

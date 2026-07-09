@@ -1,9 +1,9 @@
 ---
 title: RuView
-date: 2026-07-08T17:35:27+08:00
+date: 2026-07-09T18:36:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1767727239153-8bf7f6be90e6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM1MDMyMjF8&ixlib=rb-4.1.0
-tags: ['github',WiFi sensing,ESP32,human pose]
+image: https://images.unsplash.com/photo-1607130338836-c965c801a4c5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM1OTMzMDl8&ixlib=rb-4.1.0
+tags: ['github',WiFi sensing, spatial intelligence, through-wall sensing]
 categories: ['github']
 ---
 
