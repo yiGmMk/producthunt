@@ -1,9 +1,9 @@
 ---
 title: agent-skills
-date: 2026-07-10T18:31:15+08:00
+date: 2026-07-11T16:58:56+08:00
 draft: False
-image: https://images.unsplash.com/photo-1761597327650-fa885c49bef4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM2Nzk0MTB8&ixlib=rb-4.1.0
-tags: ['github',agent skills, ai coding agents, engineering workflows]
+image: https://images.unsplash.com/photo-1593551646156-6051bfeecb83?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM3NjAxNzh8&ixlib=rb-4.1.0
+tags: ['github',AI coding agents,engineering workflows,software development]
 categories: ['github']
 ---
 
@@ -387,6 +387,18 @@ Wondering how this stacks up against [Superpowers](https://github.com/obra/super
 Skills should be **specific** (actionable steps, not vague advice), **verifiable** (clear exit criteria with evidence requirements), **battle-tested** (based on real workflows), and **minimal** (only what's needed to guide the agent).
 
 See [docs/skill-anatomy.md](docs/skill-anatomy.md) for the format specification and [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+---
+
+## Team
+
+agent-skills is built and maintained by:
+
+| | Name | GitHub | Role |
+|---|------|--------|------|
+| <img src="https://github.com/addyosmani.png?size=120" width="60" height="60" alt="Addy Osmani"> | **Addy Osmani** | [@addyosmani](https://github.com/addyosmani) | Creator |
+| <img src="https://github.com/federicobartoli.png?size=120" width="60" height="60" alt="Federico Bartoli"> | **Federico Bartoli** | [@federicobartoli](https://github.com/federicobartoli) | Collaborator |
+| <img src="https://github.com/nucliweb.png?size=120" width="60" height="60" alt="Joan León"> | **Joan León** | [@nucliweb](https://github.com/nucliweb) | Collaborator |
 
 ---
 

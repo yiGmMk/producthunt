@@ -1,9 +1,9 @@
 ---
 title: bun
-date: 2026-05-17T17:13:49+08:00
+date: 2026-07-11T16:57:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1628615315488-14ec7d02daaf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzkwMDkyMTV8&ixlib=rb-4.1.0
-tags: ['github',JavaScript runtime,toolkit,Node.js replacement]
+image: https://images.unsplash.com/photo-1593551646156-6051bfeecb83?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM3NjAxNzh8&ixlib=rb-4.1.0
+tags: ['github',Bun, JavaScript, TypeScript]
 categories: ['github']
 ---
 
@@ -37,7 +37,7 @@ categories: ['github']
 
 Bun is an all-in-one toolkit for JavaScript and TypeScript apps. It ships as a single executable called `bun`.
 
-At its core is the _Bun runtime_, a fast JavaScript runtime designed as **a drop-in replacement for Node.js**. It's written in Zig and powered by JavaScriptCore under the hood, dramatically reducing startup times and memory usage.
+At its core is the _Bun runtime_, a fast JavaScript runtime designed as **a drop-in replacement for Node.js**. It's written in Rust and powered by JavaScriptCore under the hood, dramatically reducing startup times and memory usage.
 
 ```bash
 bun run index.tsx             # TS and JSX supported out-of-the-box
