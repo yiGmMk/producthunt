@@ -1,9 +1,9 @@
 ---
 title: DesktopCommanderMCP
-date: 2026-07-11T16:56:29+08:00
+date: 2026-07-12T21:50:00+08:00
 draft: False
-image: https://images.unsplash.com/photo-1506260408121-e353d10b87c7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM3NjAxNzh8&ixlib=rb-4.1.0
-tags: ['github',Desktop Commander MCP, file management, terminal automation]
+image: https://images.unsplash.com/photo-1588204784390-d3b85c298e29?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM4NjMzNzd8&ixlib=rb-4.1.0
+tags: ['github',]
 categories: ['github']
 ---
 
