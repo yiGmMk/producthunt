@@ -1,9 +1,9 @@
 ---
 title: destructive_command_guard
-date: 2026-07-12T21:43:06+08:00
+date: 2026-07-13T18:37:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1682070367570-bc4165cfd488?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM4NjMzNzd8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1651438034551-971f7cc8f2bd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM5Mzg5OTV8&ixlib=rb-4.1.0
+tags: ['github',dcg, hook, AI coding agents]
 categories: ['github']
 ---
 

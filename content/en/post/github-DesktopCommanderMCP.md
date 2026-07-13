@@ -1,9 +1,9 @@
 ---
 title: DesktopCommanderMCP
-date: 2026-07-12T21:50:00+08:00
+date: 2026-07-13T18:37:36+08:00
 draft: False
-image: https://images.unsplash.com/photo-1588204784390-d3b85c298e29?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM4NjMzNzd8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1467745484408-7b06bd4c1b88?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM5Mzg5OTV8&ixlib=rb-4.1.0
+tags: ['github',Desktop Commander MCP, AI automation, filesystem operations]
 categories: ['github']
 ---
 

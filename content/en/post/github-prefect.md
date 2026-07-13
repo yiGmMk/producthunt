@@ -1,9 +1,9 @@
 ---
 title: prefect
-date: 2026-07-12T22:03:48+08:00
+date: 2026-07-13T18:38:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1581944327118-426e478df927?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM4NjMzNzd8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1467745484408-7b06bd4c1b88?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM5Mzg5OTV8&ixlib=rb-4.1.0
+tags: ['github',Prefect, workflow management, data engineering]
 categories: ['github']
 ---
 
