@@ -1,9 +1,9 @@
 ---
 title: destructive_command_guard
-date: 2026-07-13T18:37:26+08:00
+date: 2026-07-14T17:15:23+08:00
 draft: False
-image: https://images.unsplash.com/photo-1651438034551-971f7cc8f2bd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM5Mzg5OTV8&ixlib=rb-4.1.0
-tags: ['github',dcg, hook, AI coding agents]
+image: https://images.unsplash.com/photo-1596482261333-a273e56bfa76?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQwMjA0MzN8&ixlib=rb-4.1.0
+tags: ['github',destructive command guard, AI coding agents, hook]
 categories: ['github']
 ---
 
@@ -124,9 +124,16 @@ disabled_packs = ["kubernetes"]
 # Restrict unknown agents — extra rules, no allowlist bypass
 [agents.unknown]
 trust_level = "low"
-extra_packs = ["paranoid"]
+extra_packs = ["strict_git", "database"]  # real pack / category IDs (see `dcg packs`)
 disabled_allowlist = true
 ```
+
+> `extra_packs`/`disabled_packs` take the same pack and category IDs as
+> `[packs] enabled`/`disabled` — a **category ID** like `"database"` expands to
+> every `database.*` sub-pack. Use IDs listed by `dcg packs` or in
+> `docs/packs/README.md`; `"paranoid"` is a
+> [graduation mode](docs/graduated-response.md), not a pack, so enable the real
+> `strict_git` pack for stricter git rules.
 
 See [docs/agents.md](docs/agents.md) for full documentation on supported agents,
 trust levels, and configuration options.
@@ -179,6 +186,14 @@ If dcg is blocking something you genuinely need to run:
 ## Modular Pack System
 
 dcg uses a modular "pack" system to organize destructive command patterns by category. Packs can be enabled or disabled in the configuration file.
+
+**Category IDs expand to their sub-packs.** Listing a bare category in `enabled`
+turns on every pack under it: `enabled = ["database"]` activates
+`database.postgresql`, `database.mysql`, and the rest of that category. You can
+still drop a single sub-pack with `disabled = ["database.redis"]`. The same
+expansion applies to agent-profile `extra_packs` / `disabled_packs`. Always use
+real pack or category IDs from `dcg packs` / `docs/packs/README.md` — a name like
+`"paranoid"` is a [graduation mode](docs/graduated-response.md), not a pack.
 
 - Full pack ID index: `docs/packs/README.md`
 - Canonical descriptions + pattern counts: `dcg packs --verbose`
@@ -2240,6 +2255,7 @@ While dcg provides comprehensive protection across many tools and platforms, som
 - **Committed but unpushed work**: The hook doesn't prevent loss of local-only commits
 - **Bugs in allowed commands**: A `git commit` that accidentally includes wrong files
 - **Commands in scripts**: If an agent runs `./deploy.sh`, we don't inspect what's inside the script
+- **Stdin/pipe/redirection data-flow into REPL binaries** ([#191](https://github.com/Dicklesworthstone/destructive_command_guard/issues/191)): dcg evaluates the *command line*, and heredocs / here-strings (`redis-cli <<< FLUSHALL`) / inline-code flags (`bash -c`, `python -c`). It does **not** yet trace a dangerous payload that reaches a stdin-driven REPL tool (`redis-cli`, `psql`, `mysql`, `mongosh`, `sqlite3`, …) indirectly — via a pipe from another producer (`echo FLUSHALL | redis-cli`), input redirection (`redis-cli < file`), or command substitution used as an argument (`redis-cli $(echo FLUSHALL)`). The direct forms (`redis-cli FLUSHALL`) and here-strings are still blocked. Extending context classification to follow this data flow is tracked for a focused fix; until then, treat stdin-fed REPL invocations as unguarded.
 
 ### Threat Model
 
