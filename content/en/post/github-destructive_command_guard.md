@@ -1,9 +1,9 @@
 ---
 title: destructive_command_guard
-date: 2026-07-14T17:15:23+08:00
+date: 2026-07-16T17:34:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1596482261333-a273e56bfa76?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQwMjA0MzN8&ixlib=rb-4.1.0
-tags: ['github',destructive command guard, AI coding agents, hook]
+image: https://images.unsplash.com/photo-1730213129209-2d5e1c7a6cd8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQxOTQyNDF8&ixlib=rb-4.1.0
+tags: ['github',dcg, AI coding agents, command blocking]
 categories: ['github']
 ---
 
@@ -18,7 +18,7 @@ categories: ['github']
 <div align="center">
 
 [![Coverage](https://img.shields.io/codecov/c/github/Dicklesworthstone/destructive_command_guard?label=coverage)](https://codecov.io/gh/Dicklesworthstone/destructive_command_guard)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: custom](https://img.shields.io/badge/license-custom-blue.svg)](LICENSE)
 
 </div>
 
@@ -41,7 +41,7 @@ curl -fsSL "https://raw.githubusercontent.com/Dicklesworthstone/destructive_comm
 & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/Dicklesworthstone/destructive_command_guard/main/install.ps1"))) -EasyMode -Verify
 ```
 
-<p><em>Installs native <code>dcg.exe</code>, verifies the SHA256 checksum (and the Sigstore/cosign signature when <code>cosign</code> is present), adds it to your User <code>PATH</code> (<code>-EasyMode</code>), runs a self-test (<code>-Verify</code>), and configures detected agent hooks for Claude Code, Codex CLI, Gemini CLI, GitHub Copilot CLI, Cursor IDE, and Hermes Agent. Copilot is configured at the user level under <code>%COPILOT_HOME%\hooks</code> (or <code>%USERPROFILE%\.copilot\hooks</code>) so every workspace is protected. On Windows the <code>windows.filesystem</code> and <code>windows.system</code> packs are on by default, so <code>del /s</code>, <code>rd /s</code>, <code>Remove-Item -Recurse -Force</code>, <code>format</code>, and <code>vssadmin delete shadows</code> are blocked out of the box. Pin a version with <code>-Version vX.Y.Z</code>.</em></p>
+<p><em>Installs native <code>dcg.exe</code>, verifies the mandatory SHA256 checksum, verifies the release's long-lived minisign signature when <code>minisign</code> is available, and verifies Sigstore/cosign provenance when both <code>cosign</code> and a trusted bundle are available. It adds dcg to your User <code>PATH</code> (<code>-EasyMode</code>), runs a self-test (<code>-Verify</code>), and configures detected agent hooks for Claude Code, Codex CLI, Gemini CLI, GitHub Copilot CLI, Cursor IDE, and Hermes Agent. Copilot is configured at the user level under <code>%COPILOT_HOME%\hooks</code> (or <code>%USERPROFILE%\.copilot\hooks</code>) so every workspace is protected. On Windows the <code>windows.filesystem</code> and <code>windows.system</code> packs are on by default, so <code>del /s</code>, <code>rd /s</code>, <code>Remove-Item -Recurse -Force</code>, <code>format</code>, and <code>vssadmin delete shadows</code> are blocked out of the box. Pin a version with <code>-Version vX.Y.Z</code>; use <code>-RequireMinisign</code> to fail closed if the sidecar or verifier is unavailable.</em></p>
 </div>
 
 ---
@@ -793,7 +793,7 @@ curl -fsSL "https://raw.githubusercontent.com/Dicklesworthstone/destructive_comm
 Install specific version:
 
 ```bash
-curl -fsSL "https://raw.githubusercontent.com/Dicklesworthstone/destructive_command_guard/main/install.sh?$(date +%s)" | bash -s -- --version v0.5.0
+curl -fsSL "https://raw.githubusercontent.com/Dicklesworthstone/destructive_command_guard/main/install.sh?$(date +%s)" | bash -s -- --version v0.6.8
 ```
 
 Install to /usr/local/bin (system-wide, requires sudo):
@@ -816,7 +816,14 @@ curl -fsSL "https://raw.githubusercontent.com/Dicklesworthstone/destructive_comm
 
 > **Note:** If you have [gum](https://github.com/charmbracelet/gum) installed, the installer will use it for fancy terminal formatting.
 
-The installer also verifies Sigstore cosign bundles when available (falls back to checksum-only), falls back to building from source if no prebuilt is available, and removes the legacy Python predecessor (`git_safety_guard.py`) if present.
+The installer verifies each adjacent `.minisig` with the embedded release public
+key when `minisign` is available. A present but invalid signature is always fatal;
+`--require-minisign` also makes a missing sidecar or verifier fatal. The pinned key
+ID is `36B847D11BA5A0D0`. Trusted Sigstore cosign bundles are checked independently
+when available (manual releases may omit an Actions-OIDC bundle), and the SHA256
+checksum remains mandatory. The installer falls back to building from source if
+no prebuilt is available and removes the legacy Python predecessor
+(`git_safety_guard.py`) if present.
 
 <details>
 <summary>Agent-specific notes</summary>
@@ -837,16 +844,18 @@ The installer also verifies Sigstore cosign bundles when available (falls back t
 
 > **Recommended:** After installing, run `dcg setup` to add a [shell startup check](#hook-silently-removed-recommended-add-shell-startup-check) that warns you if the dcg hook is ever silently removed from `~/.claude/settings.json`.
 
-### From source (requires Rust nightly)
+### From source (Rust 1.95+; pinned nightly recommended)
 
-This project uses Rust Edition 2024 features and requires the nightly toolchain. The repository includes a `rust-toolchain.toml` that automatically selects the correct toolchain.
+The locked dependency graph requires Rust 1.95 or newer. Release builds use the
+repository's known-good `nightly-2026-06-06` pin; the included
+`rust-toolchain.toml` selects it automatically inside a checkout.
 
 ```bash
-# Install Rust nightly if you don't have it
-rustup install nightly
+# Install the release toolchain if you don't have it
+rustup toolchain install nightly-2026-06-06
 
-# Install directly from GitHub
-cargo +nightly install --git https://github.com/Dicklesworthstone/destructive_command_guard destructive_command_guard
+# Install the tagged source reproducibly
+cargo +nightly-2026-06-06 install --locked --git https://github.com/Dicklesworthstone/destructive_command_guard --tag v0.6.8 destructive_command_guard
 ```
 
 ### Manual build
@@ -854,7 +863,7 @@ cargo +nightly install --git https://github.com/Dicklesworthstone/destructive_co
 ```bash
 git clone https://github.com/Dicklesworthstone/destructive_command_guard
 cd destructive_command_guard
-# rust-toolchain.toml automatically selects nightly
+# rust-toolchain.toml automatically selects the pinned release nightly
 cargo build --release
 cp target/release/dcg ~/.local/bin/
 ```
@@ -870,7 +879,7 @@ dcg update
 Optional flags mirror the installer scripts (examples):
 
 ```bash
-dcg update --version v0.2.7
+dcg update --version v0.6.8
 dcg update --system
 dcg update --verify
 ```
@@ -880,7 +889,7 @@ You can always re-run `install.sh` / `install.ps1` directly if preferred.
 ### Prebuilt Binaries
 
 Prebuilt binaries are available for:
-- Linux x86_64 (`x86_64-unknown-linux-gnu`)
+- Linux x86_64, statically linked with musl (`x86_64-unknown-linux-musl`)
 - Linux ARM64 (`aarch64-unknown-linux-gnu`)
 - macOS Intel (`x86_64-apple-darwin`)
 - macOS Apple Silicon (`aarch64-apple-darwin`)
@@ -888,7 +897,21 @@ Prebuilt binaries are available for:
 - Windows ARM64 (`aarch64-pc-windows-msvc`)
 
 Download from [GitHub Releases](https://github.com/Dicklesworthstone/destructive_command_guard/releases) and verify the SHA256 checksum.
-If you have cosign installed, each release also includes a Sigstore bundle (`.sigstore.json`) so you can verify provenance with `cosign verify-blob`.
+Starting with v0.6.7, each manually published artifact also has an adjacent
+`.minisig`, verifiable with the embedded public key (key ID
+`36B847D11BA5A0D0`). The installers do this
+automatically when `minisign` is installed; pass `--require-minisign` on Unix or
+`-RequireMinisign` on Windows to require that verification path.
+
+```bash
+minisign -Vm dcg-<target>.<archive> \
+  -x dcg-<target>.<archive>.minisig \
+  -P 'RWTQoKUb0Ue4NsqTpPWnABCrIU0+m25zsMlbv6UcRClQ7jmRP3A7NmTB'
+```
+
+Actions-OIDC releases may also include a trusted Sigstore bundle (`.sigstore.json`)
+for provenance verification with `cosign verify-blob`. Manually built releases may
+omit that bundle; the per-artifact SHA256 checksum remains mandatory in either case.
 
 ## Uninstalling
 
@@ -1224,7 +1247,7 @@ The `--version` output includes build metadata for debugging:
 dcg 0.1.0
   Built: 2026-01-07T22:13:10.413872881Z
   Rustc: 1.94.0-nightly
-  Target: x86_64-unknown-linux-gnu
+  Target: x86_64-unknown-linux-musl
 ```
 
 This metadata is embedded at compile time via [vergen](https://github.com/rustyhorde/vergen), making it easy to identify exactly which build is running when troubleshooting.
@@ -1713,7 +1736,7 @@ Every Bash command passes through this hook. Performance is critical:
 
 ### Safe Patterns (Whitelist)
 
-The safe pattern list contains 34 patterns covering:
+The safe pattern list contains narrowly scoped patterns covering:
 
 | Category | Patterns | Purpose |
 |----------|----------|---------|
@@ -1721,14 +1744,14 @@ The safe pattern list contains 34 patterns covering:
 | Staged-only | `restore --staged`, `restore -S` | Unstaging doesn't touch working tree |
 | Dry run | `clean -n`, `clean --dry-run` | Preview mode, no actual deletion |
 | Temp cleanup | `rm -rf /tmp/*`, `rm -rf /var/tmp/*` | Ephemeral directories are safe |
-| Variable expansion | `rm -rf $TMPDIR/*`, `rm -rf ${TMPDIR}/*` | Shell variable forms |
-| Quoted paths | `rm -rf "$TMPDIR/*"` | Quoted variable forms |
-| Separate flags | `rm -r -f /tmp/*`, `rm -r -f $TMPDIR/*` | Flag ordering variants |
-| Long flags | `rm --recursive --force /tmp/*`, `$TMPDIR/*` | GNU-style long options |
+| Dynamic temp roots | `rm -rf $TMPDIR/*`, `rm -rf ${TMPDIR}/*` | Blocked for review because the caller controls the variable |
+| Quoted paths | `rm -rf "/tmp/build"` | Literal quoted temp paths are recognized safely |
+| Separate flags | `rm -r -f /tmp/*`, `rm -f -r /var/tmp/*` | Flag ordering variants |
+| Long flags | `rm --recursive --force /tmp/*`, `/var/tmp/*` | GNU-style long options |
 
 ### Destructive Patterns (Blacklist)
 
-The destructive pattern list contains 16 patterns covering:
+The destructive pattern list covers:
 
 | Category | Pattern | Reason |
 |----------|---------|--------|
@@ -1792,14 +1815,17 @@ All variants are handled by flexible regex patterns.
 
 ### Shell Variable Expansion
 
-Temp directory variables come in multiple forms:
+`TMPDIR` is controlled by the calling environment and can point anywhere.
+DCG therefore reviews variable-rooted destructive commands instead of assuming
+they resolve beneath `/tmp`:
 
 ```bash
-rm -rf $TMPDIR/build           # Unquoted, simple
-rm -rf ${TMPDIR}/build         # Unquoted, braced
-rm -rf "$TMPDIR/build"         # Quoted, simple
-rm -rf "${TMPDIR}/build"       # Quoted, braced
-rm -rf "${TMPDIR:-/tmp}/build" # With default value
+rm -rf $TMPDIR/build           # Blocked: ambient root is unknown
+rm -rf ${TMPDIR}/build         # Blocked: ambient root is unknown
+rm -rf "$TMPDIR/build"         # Blocked even when quoted
+rm -rf "${TMPDIR}/build"       # Blocked even when quoted
+rm -rf "${TMPDIR:-/tmp}/build" # Blocked: environment may override default
+rm -rf /tmp/build              # Allowed: literal temp subtree
 ```
 
 ### Git Flag Combinations
@@ -2255,7 +2281,7 @@ While dcg provides comprehensive protection across many tools and platforms, som
 - **Committed but unpushed work**: The hook doesn't prevent loss of local-only commits
 - **Bugs in allowed commands**: A `git commit` that accidentally includes wrong files
 - **Commands in scripts**: If an agent runs `./deploy.sh`, we don't inspect what's inside the script
-- **Stdin/pipe/redirection data-flow into REPL binaries** ([#191](https://github.com/Dicklesworthstone/destructive_command_guard/issues/191)): dcg evaluates the *command line*, and heredocs / here-strings (`redis-cli <<< FLUSHALL`) / inline-code flags (`bash -c`, `python -c`). It does **not** yet trace a dangerous payload that reaches a stdin-driven REPL tool (`redis-cli`, `psql`, `mysql`, `mongosh`, `sqlite3`, …) indirectly — via a pipe from another producer (`echo FLUSHALL | redis-cli`), input redirection (`redis-cli < file`), or command substitution used as an argument (`redis-cli $(echo FLUSHALL)`). The direct forms (`redis-cli FLUSHALL`) and here-strings are still blocked. Extending context classification to follow this data flow is tracked for a focused fix; until then, treat stdin-fed REPL invocations as unguarded.
+- **Dynamic stdin producers for protected REPL binaries** ([#191](https://github.com/Dicklesworthstone/destructive_command_guard/issues/191)): dcg traces bounded literal `echo`/`printf` pipelines, single-file `cat` pipelines, `< file` redirects, and literal command substitutions into `redis-cli`, `psql`, `mysql`/`mariadb`, `mongosh`/`mongo`, and `sqlite3`; the reconstructed payload is evaluated by the consumer's own pack. It deliberately does not execute arbitrary producers to discover their output. An unknown/dynamic producer, missing or non-regular file, non-UTF-8 file, or payload over 256 KiB therefore fails closed as the stable high-severity rule `<pack>:stdin-unverified` (which can be explicitly allowlisted after review) instead of silently recreating the bypass. Direct arguments, heredocs, and here-strings remain covered by their existing paths. `kubectl delete -f -` / `--filename=-` is blocked directly unless it is a genuine client/server dry-run.
 
 ### Threat Model
 
@@ -2510,7 +2536,7 @@ Runs on every push and pull request:
 Triggered on version tags (`v*`):
 
 - Builds optimized binaries for 6 platforms:
-  - Linux x86_64 (`x86_64-unknown-linux-gnu`)
+  - Linux x86_64, statically linked with musl (`x86_64-unknown-linux-musl`)
   - Linux ARM64 (`aarch64-unknown-linux-gnu`)
   - macOS Intel (`x86_64-apple-darwin`)
   - macOS Apple Silicon (`aarch64-apple-darwin`)
@@ -2563,4 +2589,5 @@ dcg includes 50+ packs covering all of these. See the [Modular Pack System](#mod
 
 ## License
 
-MIT
+Custom source license based on MIT with an OpenAI/Anthropic rider. See
+[LICENSE](LICENSE) for the complete terms.
