@@ -1,9 +1,9 @@
 ---
 title: OpenCut
-date: 2026-07-16T17:31:35+08:00
+date: 2026-07-17T17:24:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1548967136-609936a3088b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQxOTQyNDF8&ixlib=rb-4.1.0
-tags: ['github',video editor, open source, Rust]
+image: https://images.unsplash.com/photo-1644176545426-e228b0bd3455?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQyODAwOTR8&ixlib=rb-4.1.0
+tags: ['github',video editor, open source, cross platform]
 categories: ['github']
 ---
 
