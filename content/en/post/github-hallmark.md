@@ -1,9 +1,9 @@
 ---
 title: hallmark
-date: 2026-07-17T17:24:04+08:00
+date: 2026-07-18T17:00:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1637762046888-1e0ab956a31b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQyODAwOTR8&ixlib=rb-4.1.0
-tags: ['github',Hallmark, design skill, AI generated]
+image: https://images.unsplash.com/photo-1715465115598-086887a43221?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQzNjUwOTZ8&ixlib=rb-4.1.0
+tags: ['github',design generation, AI code editors, skill]
 categories: ['github']
 ---
 

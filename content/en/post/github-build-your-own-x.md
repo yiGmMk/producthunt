@@ -1,9 +1,9 @@
 ---
 title: build-your-own-x
-date: 2026-03-18T15:58:45+08:00
+date: 2026-07-18T16:58:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1642520175002-90a1168a0d57?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM4MjA3MDB8&ixlib=rb-4.1.0
-tags: ['github',codecraftersio,buildyourownx,stepbystepguides]
+image: https://images.unsplash.com/photo-1644354567105-2f1c85198773?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQzNjUwOTZ8&ixlib=rb-4.1.0
+tags: ['github',build your own,tutorials,from scratch]
 categories: ['github']
 ---
 
@@ -20,7 +20,7 @@ This repository is a compilation of well-written, step-by-step guides for re-cre
 It's a great way to learn.
 
 * [3D Renderer](#build-your-own-3d-renderer)
-* [AI Model](#ai-model)
+* [AI Model](#build-your-own-ai-model)
 * [Augmented Reality](#build-your-own-augmented-reality)
 * [BitTorrent Client](#build-your-own-bittorrent-client)
 * [Blockchain / Cryptocurrency](#build-your-own-blockchain--cryptocurrency)
@@ -275,6 +275,7 @@ It's a great way to learn.
 * [**JavaScript / Java**: _Neural Networks - The Nature of Code_](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aCibgK1PTWWu9by6XFdCfh) [video]
 * [**JavaScript**: _Neural networks from scratch for JavaScript linguists (Part1 — The Perceptron)_](https://hackernoon.com/neural-networks-from-scratch-for-javascript-linguists-part1-the-perceptron-632a4d1fbad2)
 * [**Python**: _A Neural Network in 11 lines of Python_](https://iamtrask.github.io/2015/07/12/basic-python-network/)
+* [**Python**: _Build Deep Learning From Scratch (reimplement PyTorch internals across 34 stages)_](https://github.com/roiamiel1/Build-Deep-Learning-From-Scratch)
 * [**Python**: _Implement a Neural Network from Scratch_](https://victorzhou.com/blog/intro-to-neural-networks/)
 * [**Python**: _Optical Character Recognition (OCR)_](http://aosabook.org/en/500L/optical-character-recognition-ocr.html)
 * [**Python**: _Traffic signs classification with a convolutional network_](https://navoshta.com/traffic-signs-classification/)

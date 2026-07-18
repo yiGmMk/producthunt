@@ -1,9 +1,9 @@
 ---
 title: posthog
-date: 2026-07-17T17:25:21+08:00
+date: 2026-07-18T16:59:22+08:00
 draft: False
-image: https://images.unsplash.com/photo-1644176545426-e228b0bd3455?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQyODAwOTR8&ixlib=rb-4.1.0
-tags: ['github',PostHog, open source platform, product analytics]
+image: https://images.unsplash.com/photo-1725347740938-73127ed5d91c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQzNjUwOTZ8&ixlib=rb-4.1.0
+tags: ['github',open source, product analytics, self-driving]
 categories: ['github']
 ---
 
