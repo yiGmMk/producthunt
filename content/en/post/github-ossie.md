@@ -1,9 +1,9 @@
 ---
 title: ossie
-date: 2026-07-17T17:22:26+08:00
+date: 2026-07-19T17:14:47+08:00
 draft: False
-image: https://images.unsplash.com/photo-1581368249182-39673f3067b9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQyODAwOTR8&ixlib=rb-4.1.0
-tags: ['github',semantic model, standardization, interoperability]
+image: https://images.unsplash.com/photo-1554110397-9bac083977c6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ0NTI0NDR8&ixlib=rb-4.1.0
+tags: ['github',semantic model exchange, standardization, open-source]
 categories: ['github']
 ---
 
