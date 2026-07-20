@@ -1,9 +1,9 @@
 ---
 title: ai-engineering-from-scratch
-date: 2026-07-19T17:16:29+08:00
+date: 2026-07-20T18:28:05+08:00
 draft: False
-image: https://images.unsplash.com/photo-1675208986290-a72414630bbe?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ0NTI0NDR8&ixlib=rb-4.1.0
-tags: ['github',ai engineering, curriculum, from scratch]
+image: https://images.unsplash.com/photo-1642970047680-c940bb0bcf03?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ1NDMxMzl8&ixlib=rb-4.1.0
+tags: ['github',AI engineering, curriculum, from scratch]
 categories: ['github']
 ---
 
