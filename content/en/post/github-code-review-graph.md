@@ -1,9 +1,9 @@
 ---
 title: code-review-graph
-date: 2026-07-21T17:41:21+08:00
+date: 2026-07-22T17:43:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1708757857744-e09c74dce11e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ2MjY3OTN8&ixlib=rb-4.1.0
-tags: ['github',code review, graph, AI]
+image: https://images.unsplash.com/photo-1649185916280-04fd06789b0d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ3MTMyNjd8&ixlib=rb-4.1.0
+tags: ['github',code review graph, AI assistant, token reduction]
 categories: ['github']
 ---
 
