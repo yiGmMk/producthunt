@@ -1,9 +1,9 @@
 ---
 title: i-have-adhd
-date: 2026-07-22T17:44:09+08:00
+date: 2026-07-23T17:39:25+08:00
 draft: False
-image: https://images.unsplash.com/photo-1601120103207-78398c2e8e6a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ3MTMyNjd8&ixlib=rb-4.1.0
-tags: ['github',ADHD, coding assistant, rules]
+image: https://images.unsplash.com/photo-1605126394901-72eba9bf67f4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ3OTk0NDB8&ixlib=rb-4.1.0
+tags: ['github',ADHD, coding assistant, skill]
 categories: ['github']
 ---
 
@@ -17,6 +17,12 @@ categories: ['github']
 </p>
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/github/license/ayghri/i-have-adhd?style=flat" alt="License"></a>
+</p>
+
+<p align="center">
+  <strong>English</strong> ·
+  <a href="README.zh-CN.md">简体中文</a> ·
+  <a href="README.ja.md">日本語</a>
 </p>
 
 

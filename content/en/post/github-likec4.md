@@ -1,9 +1,9 @@
 ---
 title: likec4
-date: 2026-02-07T15:41:52+08:00
+date: 2026-07-23T17:40:30+08:00
 draft: False
-image: https://images.unsplash.com/photo-1692269133365-7516bed17020?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzA0NTAwNzN8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1611500730051-15bdb77a30dc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ3OTk0NDB8&ixlib=rb-4.1.0
+tags: ['github',LikeC4,software architecture,modeling language]
 categories: ['github']
 ---
 
