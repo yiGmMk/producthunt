@@ -1,8 +1,8 @@
 ---
 title: Pumpkin
-date: 2026-07-24T17:35:02+08:00
+date: 2026-07-25T17:15:24+08:00
 draft: False
-image: https://images.unsplash.com/photo-1728843737593-b339127a7779?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ4ODU1NDR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1725132901046-4290700f69b7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ5NzA3OTZ8&ixlib=rb-4.1.0
 tags: ['github',Minecraft, server, Rust]
 categories: ['github']
 ---
@@ -123,4 +123,4 @@ Consider joining [our Discord server](https://discord.gg/wT8XjrjKkf) to stay up-
 
 ## Funding
 
-If you want to fund me and help the project, check out my [GitHub sponsors](https://github.com/sponsors/Pumpkin-MC).
+If you want to fund me and help the project, check out the [Donation Page](https://pumpkinmc.org/donate/).

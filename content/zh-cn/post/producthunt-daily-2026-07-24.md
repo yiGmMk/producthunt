@@ -1,0 +1,141 @@
+---
+title: Product Hunt 今日热榜 | 2026-07-25
+date: 2026-07-25 09:10:15+0000
+image: https://ph-files.imgix.net/10af38df-6a20-4276-a2a0-38b5492fdccc.png?auto=format
+tags: ["AI代理", "社交媒体管理", "创作者工具"]
+---
+
+## 1. Fedica 2.0  
+**标语**: 在社交应用中发布内容，拓展您的个人资料影响力。  
+**介绍**: 面向粉丝分散在多平台却渴望成功的创作者。通过深度受众细分与人口统计特征分析，了解互动用户身份、关注内容及地域分布。在12+平台上发布定制化内容。通过统一收件箱与互动者连接。基于Tweepsmap地理定位技术构建的十五年受众洞察经  
+**网站**: [立即访问](https://www.producthunt.com/r/BUIW56GARKIM77?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/fedica?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Fedica 2.0](https://ph-files.imgix.net/10af38df-6a20-4276-a2a0-38b5492fdccc.png?auto=format)  
+**关键词**: 社交媒体管理, 创作者工具, 受众分析, 多平台发布, 地理细分, 智能分析, 统一收件箱  
+**票数**: 🔺398  
+**是否精选**: 是  
+**发布时间**: 2026年07月24日 PM03:01 (北京时间)  
+
+---  
+
+## 2. Pushary  
+**标语**: 从你的锁屏界面批准AI请求  
+**介绍**: 让一个指令将您的AI助手与锁屏功能相连。当Claude Code、Codex、Cursor、Gemini CLI、Hermes或Claude Cowork暂停询问时，您只需在手机上点击确认，任务便能继续运行。本次发布新增：原生iPhone和Android应用程序。配对方式为扫描终端显示的二维码，无需粘贴密钥。每款工具的策略会安全读取数据时自动批准，所有操作决策都会记录在审计追踪中。  
+**网站**: [立即访问](https://www.producthunt.com/r/FVVAIY5OGI5VVM?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/pushary?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Pushary](https://ph-files.imgix.net/52816f01-91c8-4950-b919-de2b73f86806.png?auto=format)  
+**关键词**: Pushary, AI批准, 锁屏操作, 手机应用, QR码配对, 自动策略, 审计跟踪, AI代理  
+**票数**: 🔺375  
+**是否精选**: 是  
+**发布时间**: 2026年07月24日 PM03:01 (北京时间)  
+
+---  
+
+## 3. Fluree AI  
+**标语**: 赋予每个AI代理可信的上下文  
+**介绍**: Fluree AI为每个应用和AI智能体提供来自企业数据的统一可信背景。通过单一动态数据层进行提问，即可获得带引用、可验证的答案，每个请求都经过权限验证。无需重构提示词或依赖RAG猜测，Fluree直接查询结构化数据，并能快速连接  
+**网站**: [立即访问](https://www.producthunt.com/r/Y6SGXQZUGTMKAT?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/fluree?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Fluree AI](https://ph-files.imgix.net/fe03f189-f049-4b0e-bff5-fd1e1ac447a1.png?auto=format)  
+**关键词**: Fluree AI, 可信上下文, 实时数据层, 结构化数据查询, 权限检查, 可验证答案, AI代理, MCP就绪, 数据引用, 企业数据整合  
+**票数**: 🔺310  
+**是否精选**: 是  
+**发布时间**: 2026年07月24日 PM03:01 (北京时间)  
+
+---  
+
+## 4. The new Firecrawl /search  
+**标语**: 面向AI代理的最准确搜索API。  
+**介绍**: 搜索是AI代理从网络获取信息的方式，但为每次查询阅读完整网页会快速消耗大量令牌。我们训练了一个模型，能从每个搜索结果中返回最能解答您查询的摘要，为您的AI代理提供每页高度相关的上下文。它在处理完整网页时表现更优，同时减少90%的  
+**网站**: [立即访问](https://www.producthunt.com/r/H7JTV6NB7D5IKG?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/extract-by-firecrawl?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![The new Firecrawl /search](https://ph-files.imgix.net/48bb3cae-1b7e-4bc9-b684-f22d5ff59783.webp?auto=format)  
+**关键词**: Firecrawl搜索, AI代理, 准确搜索API, 摘要提取, 节省tokens, 高性能, SimpleQA高分  
+**票数**: 🔺267  
+**是否精选**: 是  
+**发布时间**: 2026年07月24日 PM03:01 (北京时间)  
+
+---  
+
+## 5. HarnessRouter  
+**标语**: 将世界顶级的AI代理融入您的应用，仅需一个API。  
+**介绍**: 自行构建AI代理后端耗时数月：沙盒环境、流程编排、重试机制、成本控制。HarnessRouter为您代劳。只需接入一个API，即可输出完整成果：代码、文件、视频、游戏。已获顶尖医学研究机构、领先医疗企业及多领域前沿初创公司信  
+**网站**: [立即访问](https://www.producthunt.com/r/U5TRDBVG3MM4NB?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/epsilla?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![HarnessRouter](https://ph-files.imgix.net/5a40a134-c66b-4515-a39b-42ad38f27007.png?auto=format)  
+**关键词**: AI代理, 单一API, 应用集成, 后端自动化, 多领域信任  
+**票数**: 🔺246  
+**是否精选**: 是  
+**发布时间**: 2026年07月24日 PM03:01 (北京时间)  
+
+---  
+
+## 6. YC has it  
+**标语**: 描述您的问题，找到解决它的YC创业公司
+
+请简要说明您遇到的挑战或需求，我将根据Y Combinator（YC）投资过的初创公司数据库，为您匹配可能提供解决方案的创业公司。例如：
+- **行业领域**：电商、教育、医疗、金融科技等
+- **具体  
+**介绍**: 用简洁的中文描述你的问题。ychasit 将搜索超过4000家活跃的YC公司，为你找到能解决该问题的初创企业，并提供相关分析、定价与集成信息。永久免费，无需登录，无需注册。  
+**网站**: [立即访问](https://www.producthunt.com/r/36VKV5LHKG2KDV?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/yc-has-it?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![YC has it](https://ph-files.imgix.net/a2162d2d-6868-4014-8729-ac74620117dd.jpeg?auto=format)  
+**关键词**: YC初创公司搜索, 问题描述匹配, 免费工具, 无需注册, 解决方案查找  
+**票数**: 🔺243  
+**是否精选**: 是  
+**发布时间**: 2026年07月24日 PM03:01 (北京时间)  
+
+---  
+
+## 7. MinkNote  
+**标语**: 基于纯Markdown文件的私人macOS笔记工具  
+**介绍**: MinkNote是一款原生macOS笔记与日记应用，基于您个人所有的纯Markdown文件构建。无需数据库、无需账户、杜绝供应商锁定。通过项目化管理、日记标签、快速搜索、富文本/Markdown双模式编辑，以及自动图片整理功能，在私密安全的本地优先工作  
+**网站**: [立即访问](https://www.producthunt.com/r/JLXQXAVZDMLZCN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/minknote?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![MinkNote](https://ph-files.imgix.net/aa57b0f1-6e16-4238-85fa-e315101968e3.png?auto=format)  
+**关键词**: 私有笔记, macOS应用, Markdown文件, 本地优先, 无账户锁定, 项目管理, 日记功能, 标签管理, 快速搜索, 富文本编辑  
+**票数**: 🔺165  
+**是否精选**: 是  
+**发布时间**: 2026年07月24日 PM03:01 (北京时间)  
+
+---  
+
+## 8. Buzz  
+**标语**: 您的团队、您的代理、您的项目——尽在一处。  
+**介绍**: 专为各类规模团队与智能体打造的全新群聊平台，旨在减少对Slack和GitHub的依赖。具备模型无关、去中心化、自主主权及开源特性。🐝  
+**网站**: [立即访问](https://www.producthunt.com/r/BFW52QCN3WIT5K?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/buzz-3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Buzz](https://ph-files.imgix.net/f444708b-13dd-4bec-81e5-bedb9436f682.png?auto=format)  
+**关键词**: 群聊平台,去中心化,开源,自治理,模型无关,团队协作,代理集成,一体化管理  
+**票数**: 🔺160  
+**是否精选**: 是  
+**发布时间**: 2026年07月24日 PM03:01 (北京时间)  
+
+---  
+
+## 9. Freesolo Flash  
+**标语**: 训练小语言模型的全栈平台  
+**介绍**: Freesolo助力企业团队将通用模型能力转化为产品中的专属AI功能。我们致力于让强化学习技术普及化，使任何团队都能针对自身任务训练出小型专用模型。  
+**网站**: [立即访问](https://www.producthunt.com/r/3F6N33YNAJCLHF?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/freesolo-flash?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Freesolo Flash](https://ph-files.imgix.net/ea0b2657-ca2a-42de-9859-5ff2441fed16.jpeg?auto=format)  
+**关键词**: 全栈平台, 小型语言模型训练, 企业AI, 强化学习商品化, AI功能集成  
+**票数**: 🔺135  
+**是否精选**: 是  
+**发布时间**: 2026年07月24日 PM03:01 (北京时间)  
+
+---  
+
+## 10. HealthyNotch  
+**标语**: 工作不该付出健康代价  
+**介绍**: 你在桌前坐了六个小时。早餐后再没喝过水。脖子僵在一个角度，眼睛也因为屏幕发干。直到现在才意识到这些。HealthyNotch软件在Mac的刘海里安静居住，在情况恶化前适时提醒你：起身、喝水、眨眼、伸展。没有程序坞图标，没有记录追踪，没有数据面板。一次性付费，终身使用，无需订阅。  
+**网站**: [立即访问](https://www.producthunt.com/r/2API5V7TIKUQTH?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/healthynotch?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![HealthyNotch](https://ph-files.imgix.net/38aff906-cb04-490b-b4c4-e846e0e4ebb4.jpeg?auto=format)  
+**关键词**: 健康提醒, 工作健康平衡, Mac应用, 无声提示, 一次性支付, 无订阅, 休息管理  
+**票数**: 🔺130  
+**是否精选**: 是  
+**发布时间**: 2026年07月24日 PM03:01 (北京时间)  
+
+---  
+

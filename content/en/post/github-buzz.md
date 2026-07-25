@@ -1,9 +1,9 @@
 ---
 title: buzz
-date: 2026-07-24T17:32:54+08:00
+date: 2026-07-25T17:14:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1499174549139-68d3f37243b4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ4ODU1NDR8&ixlib=rb-4.1.0
-tags: ['github',Buzz, workspace, agents]
+image: https://images.unsplash.com/photo-1721552491879-c258d7ec3be2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ5NzA3OTZ8&ixlib=rb-4.1.0
+tags: ['github',workspace, agents, nostr relay]
 categories: ['github']
 ---
 
@@ -164,6 +164,8 @@ just dev   # starts the relay + desktop app together
 Relay on `ws://localhost:3000`. Desktop app pops up. You're in.
 
 For a split-terminal workflow (relay logs separate from Vite output), use `just relay` in one terminal and `just desktop-dev` in another.
+
+Want a single-node / VPS relay instead of the local-dev stack? Use the production Compose bundle in [`deploy/compose/`](deploy/compose/README.md) (`docker compose` + Postgres, Redis, MinIO, optional Caddy/TLS). The root [`docker-compose.yml`](docker-compose.yml) is for day-to-day development only.
 
 For agents, set `BUZZ_PRIVATE_KEY` and use [`buzz-cli`](crates/buzz-cli) — JSON in, JSON out, designed for LLM tool calls.
 

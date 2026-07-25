@@ -1,9 +1,9 @@
 ---
 title: worldmonitor
-date: 2026-07-24T17:33:41+08:00
+date: 2026-07-25T17:14:34+08:00
 draft: False
-image: https://images.unsplash.com/photo-1675981004381-6305f7dd07fe?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ4ODU1NDR8&ixlib=rb-4.1.0
-tags: ['github',world monitor, artificial intelligence, news aggregation]
+image: https://images.unsplash.com/photo-1470214203634-e436a8848e23?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ5NzA3OTZ8&ixlib=rb-4.1.0
+tags: ['github',World Monitor, real-time intelligence, AI-powered]
 categories: ['github']
 ---
 
