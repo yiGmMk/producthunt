@@ -1,9 +1,9 @@
 ---
 title: ego-lite
-date: 2026-07-24T17:36:14+08:00
+date: 2026-07-26T17:30:55+08:00
 draft: False
-image: https://images.unsplash.com/photo-1728843737593-b339127a7779?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ4ODU1NDR8&ixlib=rb-4.1.0
-tags: ['github',AI agents, web automation, parallel workspaces]
+image: https://images.unsplash.com/photo-1707926015479-cc723418afc6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUwNTgxMDh8&ixlib=rb-4.1.0
+tags: ['github',ai agents, browser automation, spaces]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: awesome-claude-skills
-date: 2026-07-25T17:15:03+08:00
+date: 2026-07-26T17:31:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1472114864173-39596323454f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ5NzA3OTZ8&ixlib=rb-4.1.0
-tags: ['github',Claude Skills, AI agents, automation]
+image: https://images.unsplash.com/photo-1707926015479-cc723418afc6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUwNTgxMDh8&ixlib=rb-4.1.0
+tags: ['github',Claude Skills, AI Agents, Automation]
 categories: ['github']
 ---
 

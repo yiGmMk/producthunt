@@ -1,9 +1,9 @@
 ---
 title: buzz
-date: 2026-07-25T17:14:16+08:00
+date: 2026-07-26T17:29:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1721552491879-c258d7ec3be2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ5NzA3OTZ8&ixlib=rb-4.1.0
-tags: ['github',workspace, agents, nostr relay]
+image: https://images.unsplash.com/photo-1661305761966-b3056a063f7b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUwNTgxMDh8&ixlib=rb-4.1.0
+tags: ['github',workspace, agents, Nostr relay]
 categories: ['github']
 ---
 
@@ -199,7 +199,7 @@ If you'd rather point buzz at a different bash-compatible shell, set `BUZZ_SHELL
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                          buzz-relay                                     │
 │  NIP-01 · NIP-42 auth · channel/DM/media/workflow/git REST · audit log  │
-└───┬──────────────────────────┬──────────────────────────┬──────────────┘
+└───┬──────────────────────────┬──────────────────────────┬───────────────┘
     │                          │                          │
  ┌──▼───────────┐       ┌──────▼──────┐           ┌───────▼─────┐
  │   Postgres   │       │    Redis    │           │   S3/MinIO  │
