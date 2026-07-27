@@ -1,9 +1,9 @@
 ---
 title: airi
-date: 2026-07-16T17:33:22+08:00
+date: 2026-07-27T18:58:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592691783336-456a70dd9be4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQxOTQyNDF8&ixlib=rb-4.1.0
-tags: ['github',AI virtual character, Neuro-sama, Web technologies]
+image: https://images.unsplash.com/photo-1673032413639-f2ebc0a82c3f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUxNDk3NTN8&ixlib=rb-4.1.0
+tags: ['github',AI, VTuber, gaming]
 categories: ['github']
 ---
 
