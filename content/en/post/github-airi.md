@@ -1,9 +1,9 @@
 ---
 title: airi
-date: 2026-07-27T18:58:19+08:00
+date: 2026-07-28T17:52:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1673032413639-f2ebc0a82c3f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUxNDk3NTN8&ixlib=rb-4.1.0
-tags: ['github',AI, VTuber, gaming]
+image: https://images.unsplash.com/photo-1683386478393-432ce81a8dd2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUyMzIxMjN8&ixlib=rb-4.1.0
+tags: ['github',AI, virtual character, gaming]
 categories: ['github']
 ---
 

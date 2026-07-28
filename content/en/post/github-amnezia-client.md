@@ -1,9 +1,9 @@
 ---
 title: amnezia-client
-date: 2026-07-27T18:57:25+08:00
+date: 2026-07-28T17:50:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1486122676632-ad1b5681fe33?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUxNDk3NTN8&ixlib=rb-4.1.0
-tags: ['github',VPN, client, self-hosted]
+image: https://images.unsplash.com/photo-1622122883297-56c00387c7ba?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUyMzIxMjN8&ixlib=rb-4.1.0
+tags: ['github',VPN, open-source, self-hosted]
 categories: ['github']
 ---
 

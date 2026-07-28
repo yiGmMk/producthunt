@@ -1,9 +1,9 @@
 ---
 title: bitchat
-date: 2026-07-27T18:56:46+08:00
+date: 2026-07-28T17:49:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1673032413639-f2ebc0a82c3f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUxNDk3NTN8&ixlib=rb-4.1.0
-tags: ['github',decentralized, peer-to-peer, messaging]
+image: https://images.unsplash.com/photo-1692056400583-a4245403f45b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUyMzIxMjN8&ixlib=rb-4.1.0
+tags: ['github',decentralized messaging, Bluetooth mesh, Nostr protocol]
 categories: ['github']
 ---
 
