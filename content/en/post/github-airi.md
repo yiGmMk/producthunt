@@ -1,8 +1,8 @@
 ---
 title: airi
-date: 2026-07-28T17:52:31+08:00
+date: 2026-07-29T17:54:56+08:00
 draft: False
-image: https://images.unsplash.com/photo-1683386478393-432ce81a8dd2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUyMzIxMjN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1543848089-530aad06491a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUzMTg3NTV8&ixlib=rb-4.1.0
 tags: ['github',AI, virtual character, gaming]
 categories: ['github']
 ---

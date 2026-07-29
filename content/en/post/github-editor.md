@@ -1,9 +1,9 @@
 ---
 title: editor
-date: 2026-04-16T16:50:12+08:00
+date: 2026-07-29T17:53:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1653573985426-7612c5898560?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzYzMjkzODh8&ixlib=rb-4.1.0
-tags: ['github',React Three Fiber WebGPU Editor]
+image: https://images.unsplash.com/photo-1706425278316-a9f44c03c00a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUzMTg3NTV8&ixlib=rb-4.1.0
+tags: ['github',3D building editor, React Three Fiber, Nodes]
 categories: ['github']
 ---
 
@@ -21,28 +21,50 @@ A 3D building editor built with React Three Fiber and WebGPU.
 
 https://github.com/user-attachments/assets/8b50e7cf-cebe-4579-9cf3-8786b35f7b6b
 
+## Using Published Packages
+
+The viewer runtime and built-in node definitions are separate packages. Install the full built-in
+viewer set, then load the built-in plugin once before mounting `<Viewer>`:
+
+```bash
+npm install @pascal-app/core @pascal-app/viewer @pascal-app/editor @pascal-app/nodes
+```
+
+```typescript
+import { loadPlugin } from '@pascal-app/core'
+import { builtinPlugin } from '@pascal-app/nodes'
+
+await loadPlugin(builtinPlugin)
+```
+
+See the [`@pascal-app/viewer` quick start](packages/viewer/README.md#usage) for a React example.
 
 
 ## Repository Architecture
 
-This is a Turborepo monorepo with three main packages:
+This is a Turborepo monorepo with four main runtime packages:
 
 ```
-editor-v2/
+editor/
 ├── apps/
 │   └── editor/          # Next.js application
 ├── packages/
-│   ├── core/            # Schema definitions, state management, systems
-│   └── viewer/          # 3D rendering components
+│   ├── core/            # Schemas, scene state, and registry contracts
+│   ├── viewer/          # 3D rendering runtime and shared systems
+│   ├── editor/          # Editing tools and UI components
+│   ├── nodes/           # Built-in node definitions, renderers, and systems
+│   └── ui/              # Shared UI components
 ```
 
 ### Separation of Concerns
 
 | Package | Responsibility |
 |---------|---------------|
-| **@pascal-app/core** | Node schemas, scene state (Zustand), systems (geometry generation), spatial queries, event bus |
-| **@pascal-app/viewer** | 3D rendering via React Three Fiber, default camera/controls, post-processing |
-| **apps/editor** | UI components, tools, custom behaviors, editor-specific systems |
+| **@pascal-app/core** | Node schemas, scene state (Zustand), registry contracts, spatial queries, and event bus |
+| **@pascal-app/viewer** | 3D rendering via React Three Fiber, shared render systems, default camera/controls, and post-processing |
+| **@pascal-app/editor** | Editing tools, panels, selection, and direct-manipulation UI |
+| **@pascal-app/nodes** | Built-in registry plugin with node definitions, renderers, geometry, and systems |
+| **apps/editor** | Standalone Next.js host for the editor packages |
 
 The **viewer** renders the scene with sensible defaults. The **editor** extends it with interactive tools, selection management, and editing capabilities.
 
@@ -345,6 +367,15 @@ Clears dirty flag
 
 ---
 
+## Building a Plugin
+
+The editor is extensible: a plugin ships node kinds (schema, 3D/2D rendering, placement tools, inspector parametrics) and left-rail panels through the same `Plugin` manifest the built-ins use — there is no separate internal API.
+
+- **Developer guide** — [Create a plugin](https://editor.pascal.app/docs/developers/plugins): the `Plugin` shape, panel contributions, discovery, lifecycle, and what's in/out of v1.
+- **Worked example** — [`pascalorg/plugin-trees`](https://github.com/pascalorg/plugin-trees): a standalone plugin with procedural trees, flowers, grass, and a presets panel. Clone it as a starting point.
+
+---
+
 ## Technology Stack
 
 - **React 19** + **Next.js 16**
@@ -376,7 +407,7 @@ bun dev
 # 1. Build @pascal-app/core and @pascal-app/viewer
 # 2. Start watching both packages for changes
 # 3. Start the Next.js editor dev server
-# Open http://localhost:3000
+# Open http://localhost:3002
 ```
 
 **Important:** Always run `bun dev` from the root directory to ensure the package watchers are running. This enables hot reload when you edit files in `packages/core/src/` or `packages/viewer/src/`.
@@ -423,6 +454,7 @@ npm publish --workspace=@pascal-app/viewer --access public
 
 <a href="https://github.com/Aymericr"><img src="https://avatars.githubusercontent.com/u/4444492?v=4" width="60" height="60" alt="Aymeric Rabot" style="border-radius:50%"></a>
 <a href="https://github.com/wass08"><img src="https://avatars.githubusercontent.com/u/6551176?v=4" width="60" height="60" alt="Wassim Samad" style="border-radius:50%"></a>
+<a href="https://github.com/sudhir9297"><img src="https://avatars.githubusercontent.com/sudhir9297?v=4" width="60" height="60" alt="Sudhir" style="border-radius:50%"></a>
 
 ---
 
