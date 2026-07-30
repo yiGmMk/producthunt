@@ -1,9 +1,9 @@
 ---
 title: jcode
-date: 2026-07-21T17:41:44+08:00
+date: 2026-07-30T17:49:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1503795558777-38b60c1e5009?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ2MjY3OTN8&ixlib=rb-4.1.0
-tags: ['github',jcode,coding agent,performance]
+image: https://images.unsplash.com/photo-1768590342504-32f94fe434fb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU0MDQ3ODd8&ixlib=rb-4.1.0
+tags: ['github',jcode,framework,performance]
 categories: ['github']
 ---
 
@@ -20,10 +20,8 @@ categories: ['github']
 [![GitHub Stars](https://badgen.net/github/stars/1jehuang/jcode?icon=github)](https://github.com/1jehuang/jcode/stargazers)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/nBe9vGyK9a)
 
-The next generation coding agent harness to raise the skill ceiling. <br>
-Built for multi-session workflows, infinite customizability, and performance. 
-
-<br>
+The most RAM efficient harness <br>
+The most most intelligent harness
 
 <a href="https://github.com/1jehuang/jcode/releases/download/readme-assets/jcode-memory-demo.mp4">
   <img src="https://github.com/1jehuang/jcode/releases/download/readme-assets/jcode-memory-demo.webp" alt="jcode memory demonstration" width="800">
@@ -31,7 +29,7 @@ Built for multi-session workflows, infinite customizability, and performance.
 
 <br>
 
-[Website](https://jcode.sh) · [Features](#features) · [Install](#installation) · [Quick Start](#quick-start) · [Further Reading](#further-reading) · [Contributing](CONTRIBUTING.md)
+[Website](https://jcode.sh) · [Docs](https://jcode.sh/docs) · [Benchmarks](https://jcode.sh/bench) · [Features](#features) · [Install](#installation) · [Quick Start](#quick-start) · [Further Reading](#further-reading) · [Contributing](CONTRIBUTING.md)
 
 </div>
 
@@ -315,6 +313,8 @@ The custom scrollback implementation of jcode allows it to do much more than a n
 
 Jcode is left-aligned by default. You can switch to centered mode with the `Alt+C` hotkey, with the `/alignment` command, or in the config.
 
+To disable emoji globally in TUI and CLI output, set `emoji = false` under `[display]` in `~/.jcode/config.toml`, or launch with `JCODE_NO_EMOJI=1`. Jcode replaces emoji with compact ASCII markers while preserving other Unicode text.
+
 ---
 
 ## Swarm
@@ -382,7 +382,7 @@ There are two ways to set one up:
 
 Useful environment overrides for these endpoints:
 
-- `JCODE_STREAM_IDLE_TIMEOUT_SECS` — raise the streaming idle timeout (default 180s) for slow reasoning models that think silently before emitting tokens. Also settable as `[provider] stream_idle_timeout_secs` in `config.toml`.
+- `JCODE_STREAM_IDLE_TIMEOUT_SECS` — raise the base streaming idle timeout (default 180s) for slow reasoning models that think silently before emitting tokens. High reasoning efforts scale this automatically (high 2x, xhigh 3x, max 4x). Also settable as `[provider] stream_idle_timeout_secs` in `config.toml`.
 - Per-model `context_window` (alias `context_limit`) in a `[[providers.<name>.models]]` entry — set the context window when the endpoint has no usable `/v1/models` response, so jcode does not fall back to the generic 200k default.
 - `extra_body` — inject non-standard top-level fields into every chat/completions request body for backends that require them. See [Extra request-body fields](#extra-request-body-fields-extra_body) below.
 
@@ -715,6 +715,9 @@ Notes:
 
 ## Further Reading
 
+- [jcode.sh/docs](https://jcode.sh/docs) — install, providers, configuration, keybindings
+- [jcode.sh/swarm](https://jcode.sh/swarm) — many coding agents in one repository
+- [jcode.sh/bench](https://jcode.sh/bench) — benchmark methodology and results
 - [Ambient Mode / OpenClaw](docs/AMBIENT_MODE.md)
 - [Browser Provider Protocol](docs/BROWSER_PROVIDER_PROTOCOL.md)
 - [Memory Architecture](docs/MEMORY_ARCHITECTURE.md)

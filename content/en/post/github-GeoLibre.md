@@ -1,8 +1,8 @@
 ---
 title: GeoLibre
-date: 2026-07-28T17:53:27+08:00
+date: 2026-07-30T17:47:08+08:00
 draft: False
-image: https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUyMzIxMjN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1664050358061-ca854b846f4b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU0MDQ3ODd8&ixlib=rb-4.1.0
 tags: ['github',GIS, cloud-native, open-source]
 categories: ['github']
 ---
@@ -20,6 +20,7 @@ categories: ['github']
 [![Conda Recipe](https://img.shields.io/badge/recipe-geolibre-green.svg)](https://github.com/conda-forge/geolibre-feedstock)
 [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?logo=codesandbox)](https://codesandbox.io/p/github/opengeos/geolibre)
 [![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-GeoLibre-0078D4?logo=windows)](https://apps.microsoft.com/detail/9nwt67rv531x)
+[![Google Play](https://img.shields.io/badge/Google%20Play-GeoLibre-01875F?logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=org.geolibre.app)
 [![AUR version](https://img.shields.io/aur/version/geolibre-bin?logo=archlinux&label=AUR)](https://aur.archlinux.org/packages/geolibre-bin)
 [![FlatPark](https://img.shields.io/badge/FlatPark-GeoLibre-4A90D9?logo=flatpak)](https://flatpark.org/apps/app.geolibre.GeoLibre/)
 [![image](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -31,6 +32,7 @@ GeoLibre is built with **Tauri v2**, **React**, **TypeScript**, **MapLibre GL JS
 
 - **[Launch GeoLibre Web](https://web.geolibre.app/)** — the full app in your browser, nothing to install
 - **[Download the desktop app](https://geolibre.app/downloads/)** — Windows, macOS, and Linux installers
+- **[Get it on Google Play](https://play.google.com/store/apps/details?id=org.geolibre.app)** — the native Android app
 - **[Get started](https://geolibre.app/getting-started/)** — install, run from source, and configure
 - **[Features](https://geolibre.app/features/)** — the complete feature list
 
