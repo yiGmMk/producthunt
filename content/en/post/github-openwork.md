@@ -1,8 +1,8 @@
 ---
 title: openwork
-date: 2026-07-31T18:02:50+08:00
+date: 2026-08-01T17:21:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1698765093212-92fb2bb130e8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU0OTIwMDN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1524841433756-7c3cb3f30ef7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU1NzYwMDh8&ixlib=rb-4.1.0
 tags: ['github',OpenWork, AI workflows, MCP]
 categories: ['github']
 ---

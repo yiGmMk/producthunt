@@ -1,9 +1,9 @@
 ---
 title: awesome-systematic-trading
-date: 2026-07-31T18:01:46+08:00
+date: 2026-08-01T17:22:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1698765093212-92fb2bb130e8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU0OTIwMDN8&ixlib=rb-4.1.0
-tags: ['github',systematic trading, quantitative trading, algorithmic trading]
+image: https://images.unsplash.com/photo-1652820731513-4ee2f3e8a5f9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU1NzYwMDh8&ixlib=rb-4.1.0
+tags: ['github',systematic trading, quantitative trading, backtesting]
 categories: ['github']
 ---
 
