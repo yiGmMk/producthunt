@@ -1,4 +1,5 @@
 import os
+import json
 from time import sleep
 import requests
 from datetime import datetime, timedelta, timezone
@@ -77,6 +78,7 @@ class Product:
         self.createdAt = kwargs.get("createdAt")
         self.website = kwargs.get("website")
         self.url = kwargs.get("url")
+        self.media = kwargs.get("media") or []
 
         self.is_en = language == "en"
         self.featured = (
@@ -91,7 +93,7 @@ class Product:
         self.translated_description = (
             self.description if self.is_en else self.translate_text(self.description)
         )
-        self.og_image_url = self.get_image_url_from_media(kwargs.get("media"))
+        self.og_image_url = self.get_image_url_from_media(self.media)
         self.keyword = self.generate_keywords()
 
     def fetch_og_image_url(self) -> str:
@@ -191,6 +193,31 @@ class Product:
             "\n" "---",
         ]
         return "  \n".join(fields) + "  \n\n"
+
+    def to_dict(self, rank: int) -> dict:
+        return {
+            "rank": rank,
+            "language": self.language,
+            "producthunt": {
+                "name": self.name,
+                "tagline": self.tagline,
+                "description": self.description,
+                "votesCount": self.votes_count,
+                "featuredAt": self.featuredAt,
+                "createdAt": self.createdAt,
+                "website": self.website,
+                "url": self.url,
+                "media": self.media,
+            },
+            "ai_generated": {
+                "translated_tagline": self.translated_tagline,
+                "translated_description": self.translated_description,
+                "keyword": self.keyword,
+                "og_image_url": self.og_image_url,
+                "featured": self.featured,
+                "created_at_local": self.created_at,
+            },
+        }
 
 
 def get_producthunt_token():
@@ -317,6 +344,28 @@ def generate_markdown(products, date_str: str, language: str):
     print(f"文件 {file_name} 生成成功并已覆盖。")
 
 
+def save_json_data(products, raw_posts, date_str: str, language: str):
+    data_dir = os.path.join("static", "data", language)
+    os.makedirs(data_dir, exist_ok=True)
+
+    payload = {
+        "date": date_str,
+        "language": language,
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "source": {
+            "name": "Product Hunt",
+            "top_num": top_num,
+        },
+        "raw_posts": raw_posts,
+        "products": [product.to_dict(rank) for rank, product in enumerate(products, 1)],
+    }
+
+    file_name = os.path.join(data_dir, f"{date_str}.json")
+    with open(file_name, "w", encoding="utf-8") as file:
+        json.dump(payload, file, ensure_ascii=False, indent=2)
+    print(f"文件 {file_name} 生成成功并已覆盖。")
+
+
 def main():
     yesterday = datetime.now(timezone.utc) - timedelta(days=1)
     date_str = yesterday.strftime("%Y-%m-%d")
@@ -325,9 +374,11 @@ def main():
     # https://ai.google.dev/pricing?hl=zh-cn#1_5flash , gemini-1.5-flash 限制了15RPM(每分钟15个请求)
     # 每个post需要3次
     for post in posts:
+        post_copy = dict(post)
         products.append(Product(language=lang, **post))
         sleep(1)  # 每5秒钟生成一个Product对象
     generate_markdown(products, date_str, language=lang)
+    save_json_data(products, posts, date_str, language=lang)
 
 
 def save_csv():
