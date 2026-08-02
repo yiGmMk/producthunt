@@ -1,9 +1,9 @@
 ---
 title: reverse-skill
-date: 2026-08-01T17:20:57+08:00
+date: 2026-08-02T15:53:53+08:00
 draft: False
-image: https://images.unsplash.com/photo-1683350919521-b1f8e0733ef6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU1NzYwMDh8&ixlib=rb-4.1.0
-tags: ['github',cybersecurity, reverse engineering, routing]
+image: https://images.unsplash.com/photo-1592985791547-d64ed6e40189?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU2NTcwODZ8&ixlib=rb-4.1.0
+tags: ['github',cybersecurity, reverse engineering, skill routing]
 categories: ['github']
 ---
 
@@ -28,11 +28,11 @@ categories: ['github']
 </p>
 
 <p align="center">
+<a href="https://trendshift.io/repositories/43969?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-43969" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/43969" alt="zhaoxuya520%2Freverse-skill | Trendshift" width="250" height="55"/></a>
   <a href="https://trendshift.io/repositories/43969?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-43969" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/43969/daily" alt="zhaoxuya520%2Freverse-skill | Trendshift" width="250" height="55"/></a>
 </p>
 
 <br/>
-
 <p align="center">
   <a href="#about">About</a> ·
   <a href="#getting-started">Getting Started</a> ·
