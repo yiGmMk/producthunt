@@ -1,9 +1,9 @@
 ---
 title: AI-For-Beginners
-date: 2026-08-02T15:52:13+08:00
+date: 2026-08-02T17:23:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1661793854938-d937946c6204?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU2NTcwODZ8&ixlib=rb-4.1.0
-tags: ['github',Artificial Intelligence, Beginners, Curriculum]
+image: https://images.unsplash.com/photo-1511109960862-d982b5977f96?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU2NjI1ODR8&ixlib=rb-4.1.0
+tags: ['github',Artificial Intelligence,Beginners,Curriculum]
 categories: ['github']
 ---
 

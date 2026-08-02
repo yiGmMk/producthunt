@@ -1,9 +1,9 @@
 ---
 title: kaneo
-date: 2026-08-02T15:53:23+08:00
+date: 2026-08-02T17:24:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1671738423108-32c0ed3684bd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU2NTcwODZ8&ixlib=rb-4.1.0
-tags: ['github',project management, open source, self-hosted]
+image: https://images.unsplash.com/photo-1623150502742-6a849aa94be4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU2NjI1ODR8&ixlib=rb-4.1.0
+tags: ['github',project management, self-hosted, open source]
 categories: ['github']
 ---
 
