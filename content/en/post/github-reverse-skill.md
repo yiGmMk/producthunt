@@ -1,9 +1,9 @@
 ---
 title: reverse-skill
-date: 2026-08-02T17:25:32+08:00
+date: 2026-08-03T18:56:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1584303532810-a6c0dcba5bcd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU2NjI1ODR8&ixlib=rb-4.1.0
-tags: ['github',cybersecurity, reverse engineering, AI agent]
+image: https://images.unsplash.com/photo-1602515676930-0f94ad941d54?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU3NTQ1NTJ8&ixlib=rb-4.1.0
+tags: ['github',reverse engineering, cybersecurity, skill routing]
 categories: ['github']
 ---
 
@@ -145,7 +145,7 @@ Platform-specific docs:
 | .NET / C# | `skills/dotnet-reverse/` |
 | Frontend JS / encrypted params | `skills/js-reverse/` |
 | DSL VM / custom JS opcode VM | `skills/reverse-engineering/dsl-vm-reverse/` |
-| HTTP capture / request replay | anything-analyzer + `js-reverse/` |
+| HTTP capture / request replay | anything-analyzer, Reqable MCP + `js-reverse/` |
 | Malware / YARA | `skills/malware-analysis/` |
 | Penetration testing / scanning | `skills/pentest-tools/` |
 | Attack chain / red-team orchestration | `skills/attack-chain/` |
@@ -258,5 +258,6 @@ Special thanks to the OLLVM deobfuscation ecosystem contributors and everyone wh
 ## Contact
 
 - **Email:** [24781737@qq.com](mailto:24781737@qq.com)
+- **QQ Group:** 942400892
 - **Discord:**
 [reverse-skill](https://discord.gg/TECd3bMRR)
