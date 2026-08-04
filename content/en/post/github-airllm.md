@@ -1,9 +1,9 @@
 ---
 title: airllm
-date: 2026-08-03T18:56:32+08:00
+date: 2026-08-04T17:52:34+08:00
 draft: False
-image: https://images.unsplash.com/photo-1588511640396-2384ec0976f2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU3NTQ1NTJ8&ixlib=rb-4.1.0
-tags: ['github',AirLLM, memory efficiency, large language models]
+image: https://images.unsplash.com/photo-1543876739-ffff1164ecf3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU4MzcxMjN8&ixlib=rb-4.1.0
+tags: ['github',AirLLM, large language models, memory optimization]
 categories: ['github']
 ---
 

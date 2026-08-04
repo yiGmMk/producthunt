@@ -1,9 +1,9 @@
 ---
 title: reverse-skill
-date: 2026-08-03T18:56:44+08:00
+date: 2026-08-04T17:53:06+08:00
 draft: False
-image: https://images.unsplash.com/photo-1602515676930-0f94ad941d54?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU3NTQ1NTJ8&ixlib=rb-4.1.0
-tags: ['github',reverse engineering, cybersecurity, skill routing]
+image: https://images.unsplash.com/photo-1597227773439-a76837427a69?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU4MzcxMjN8&ixlib=rb-4.1.0
+tags: ['github',cybersecurity,reverse-engineering,skill-routing]
 categories: ['github']
 ---
 

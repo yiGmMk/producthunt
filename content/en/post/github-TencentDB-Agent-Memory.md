@@ -1,9 +1,9 @@
 ---
 title: TencentDB-Agent-Memory
-date: 2026-08-03T18:58:27+08:00
+date: 2026-08-04T17:55:00+08:00
 draft: False
-image: https://images.unsplash.com/photo-1596486935250-3ca1fb5c45b8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU3NTQ1NTJ8&ixlib=rb-4.1.0
-tags: ['github',team memory, agent memory, experience sharing]
+image: https://images.unsplash.com/photo-1650752341875-22c940d08824?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU4MzcxMjN8&ixlib=rb-4.1.0
+tags: ['github',agent memory, team collaboration, skill library]
 categories: ['github']
 ---
 
@@ -53,7 +53,7 @@ $EDITOR .env       # Fill in two sets of LLM parameters (memory group + proxy gr
 
 Open the panel: [http://localhost:8125](http://localhost:8125).
 
-Complete installation documentation (standalone Memory Hub deployment, Proxy + Claude Code usage, stop and cleanup, port reference, etc.) is available in [**INSTALL.md**](./INSTALL.md) (中文: [INSTALL_CN.md](./INSTALL_CN.md)).
+Complete installation documentation (standalone Memory Hub deployment, Proxy + Claude Code / CodeBuddy usage, stop and cleanup, port reference, etc.) is available in [**INSTALL.md**](./INSTALL.md) (中文: [INSTALL_CN.md](./INSTALL_CN.md)).
 
 ### Migrating data from an older version
 
@@ -119,6 +119,7 @@ Existing information → Reusable memory assets → Fewer turns → Less rework 
 - Create teams and Agents in Memory Hub; review, share, and equip memory assets.
 - Manage ownership, versions, status, visibility, usage counts, and Agent bindings in one place.
 - `private` belongs strictly to the Owner; `team` is visible to all team members; `restricted` grants precise access via User / Role / Agent ACLs.
+- Two role layers: **global System Admin** manages users and teams (creating teams, adding members) and can also use Wiki, CodeGraph, Skill, and other asset management features; **Team-level roles** include Admin (team manager) and Member (regular member), responsible for asset collaboration and access control within a team. Asset ownership is tracked via Owner — the Owner automatically has management permissions for their assets.
 
 <img width="" src="assets/images/asset.cn.png" alt="image.png" />
 
@@ -266,13 +267,13 @@ PersonaMem tests whether an Agent can correctly understand and apply user inform
 - Wiki and CodeGraph are built asynchronously; allow some processing time before they reach `ready` status.
 - CodeGraph currently prioritizes public HTTPS repositories; support for private repositories and SSH credentials is still being refined.
 - The Hub supports manual asset binding; fully automated memory routing is still under iteration.
-- TencentDB Agent Memory currently supports OpenClaw, Hermes, and SDK integration; broader cross-framework migration is on the roadmap.
+- TencentDB Agent Memory currently supports OpenClaw, Hermes, Claude Code, CodeBuddy, and SDK integration; broader cross-framework migration is on the roadmap.
 
 ## Related Documentation
 
 - [Full Installation Guide](./INSTALL.md) (Memory Core + Hub + Proxy one-click deployment)
 - [Data Migration Tool (v2 → v3)](./MemoryCore/scripts/migrate-v2-to-v3/README.md) (if you're on an older release and want to migrate existing data)
-- [Knowledge OpenAPI](./MemoryKnowledge/docs/api/openapi.yaml)
+- [Knowledge OpenAPI](./MemoryKnowledge/openapi.yaml)
 - [Contributing Guide](./CONTRIBUTING.md)
 
 Agent Memory doesn't have a settled standard yet. Bug reports, documentation, benchmarks, new framework adapters, and more creative Memory Hub use cases are all welcome.
