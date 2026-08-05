@@ -1,8 +1,8 @@
 ---
 title: pdf-inspector
-date: 2026-08-04T17:53:48+08:00
+date: 2026-08-05T17:50:05+08:00
 draft: False
-image: https://images.unsplash.com/photo-1650752341875-22c940d08824?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU4MzcxMjN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1612386649724-e5f64fc8ca3e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU5MjMzMjB8&ixlib=rb-4.1.0
 tags: ['github',PDF classification, text extraction, Markdown conversion]
 categories: ['github']
 ---
@@ -249,7 +249,7 @@ The converter handles:
 |---|---|
 | Headings (H1-H4) | Font size tiers relative to body text, with 0.5pt clustering |
 | Bold/italic | Font name patterns (Bold, Italic, Oblique) |
-| Bullet lists | `*`, `-`, `*`, `○`, `●`, `◦` prefixes |
+| Bullet lists | `•`, `-`, `*`, `○`, `●`, `◦` prefixes |
 | Numbered lists | `1.`, `1)`, `(1)` patterns |
 | Letter lists | `a.`, `a)`, `(a)` patterns |
 | Code blocks | Monospace fonts (Courier, Consolas, Monaco, Menlo, Fira Code, JetBrains Mono) and keyword detection |

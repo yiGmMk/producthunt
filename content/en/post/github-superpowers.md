@@ -1,9 +1,9 @@
 ---
 title: superpowers
-date: 2026-06-19T19:37:06+08:00
+date: 2026-08-05T17:51:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1633624875787-ec89de82324f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE4Njg4Nzl8&ixlib=rb-4.1.0
-tags: ['github',Superpowers, coding agents, skills]
+image: https://images.unsplash.com/photo-1698507960719-f5e72c98121a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU5MjMzMjB8&ixlib=rb-4.1.0
+tags: ['github',Superpowers, coding agents, software development]
 categories: ['github']
 ---
 
@@ -13,12 +13,6 @@ categories: ['github']
 
 Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them.
 
-
-## We're Hiring!
-
-We're hiring someone to help out full time with Superpowers community and code work. 
-You can read about the job at https://primeradiant.com/jobs/superpowers-community-engineer/
-If this sounds like someone you know, definitely send them our way.
 
 ## Quickstart
 

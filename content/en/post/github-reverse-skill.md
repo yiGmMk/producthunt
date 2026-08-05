@@ -1,9 +1,9 @@
 ---
 title: reverse-skill
-date: 2026-08-04T17:53:06+08:00
+date: 2026-08-05T17:49:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1597227773439-a76837427a69?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU4MzcxMjN8&ixlib=rb-4.1.0
-tags: ['github',cybersecurity,reverse-engineering,skill-routing]
+image: https://images.unsplash.com/photo-1587754296335-e9bf5454306c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU5MjMzMjB8&ixlib=rb-4.1.0
+tags: ['github',reverse engineering, cybersecurity, AI agent]
 categories: ['github']
 ---
 
@@ -201,6 +201,7 @@ Platform-specific docs:
 <a id="sponsors"></a>
 
 ## Sponsors
+<a href="https://www.atlascloud.ai/?ref=W3Q77C"><img src="https://www.atlascloud.ai/oss-program/powered-by-atlas-cloud.svg" alt="Powered by Atlas Cloud" height="28" /></a>
 
 For sponsorship or business inquiries:
 
