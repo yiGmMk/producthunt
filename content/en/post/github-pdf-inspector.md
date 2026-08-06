@@ -1,9 +1,9 @@
 ---
 title: pdf-inspector
-date: 2026-08-05T17:50:05+08:00
+date: 2026-08-06T17:59:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1612386649724-e5f64fc8ca3e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU5MjMzMjB8&ixlib=rb-4.1.0
-tags: ['github',PDF classification, text extraction, Markdown conversion]
+image: https://images.unsplash.com/photo-1718887834656-dce1bce83df5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODYwMTAxMjB8&ixlib=rb-4.1.0
+tags: ['github',PDF classification, text extraction, Markdown]
 categories: ['github']
 ---
 
