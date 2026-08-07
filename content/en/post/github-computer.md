@@ -1,8 +1,8 @@
 ---
 title: computer
-date: 2026-08-06T17:56:09+08:00
+date: 2026-08-07T16:33:01+08:00
 draft: False
-image: https://images.unsplash.com/photo-1703984383479-5c643a3cfbc0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODYwMTAxMjB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1679451997617-bf5852f0795b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODYwOTEzODJ8&ixlib=rb-4.1.0
 tags: ['github',Cloudflare Computer, virtual filesystem, Durable Object]
 categories: ['github']
 ---
