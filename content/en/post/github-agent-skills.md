@@ -1,8 +1,8 @@
 ---
 title: agent-skills
-date: 2026-08-07T16:31:55+08:00
+date: 2026-08-08T16:04:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1636381284874-065d9d35e275?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODYwOTEzODJ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1761449779811-33f7c48ed367?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODYxNzYyMTF8&ixlib=rb-4.1.0
 tags: ['github',agent skills, AI coding agents, engineering workflows]
 categories: ['github']
 ---
