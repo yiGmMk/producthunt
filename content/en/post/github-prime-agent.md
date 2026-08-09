@@ -1,9 +1,9 @@
 ---
 title: prime-agent
-date: 2026-08-08T16:04:21+08:00
+date: 2026-08-09T16:08:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1512441933491-7b8cc442ed32?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODYxNzYyMTF8&ixlib=rb-4.1.0
-tags: ['github',prime agent, rlm, continual harness]
+image: https://images.unsplash.com/photo-1532175315125-4f6763b82c1c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODYyNjI4NTB8&ixlib=rb-4.1.0
+tags: ['github',self-improving agent, RLM, Continual Harness]
 categories: ['github']
 ---
 
