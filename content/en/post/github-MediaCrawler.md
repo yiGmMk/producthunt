@@ -1,9 +1,9 @@
 ---
 title: MediaCrawler
-date: 2026-07-27T18:59:13+08:00
+date: 2026-08-11T16:24:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1717406038728-53b8ba62490f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUxNDk3NTN8&ixlib=rb-4.1.0
-tags: ['github',media crawler, social media, data extraction]
+image: https://images.unsplash.com/photo-1581458757326-85b0f873caa9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY0MzY1NTB8&ixlib=rb-4.1.0
+tags: ['github',MediaCrawler,social media,data scraping]
 categories: ['github']
 ---
 
@@ -396,7 +396,7 @@ MediaCrawler 支持多种数据存储方式，包括 CSV、JSON、JSONL、Excel�
 
 如果这个项目对您有帮助，请给个 ⭐ Star 支持一下，让更多的人看到 MediaCrawler！
 
-[![Star History Chart](https://api.star-history.com/svg?repos=NanmiCoder/MediaCrawler&type=Date)](https://star-history.com/#NanmiCoder/MediaCrawler&Date)
+[![Star History Chart](https://www.repostars.dev/api/embed?repo=NanmiCoder%2FMediaCrawler&theme=ocean)](https://www.repostars.dev/?repos=NanmiCoder%2FMediaCrawler&theme=ocean)
 
 
 ## 📚 参考
