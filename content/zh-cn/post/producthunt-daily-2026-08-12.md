@@ -1,0 +1,137 @@
+---
+title: Product Hunt 今日热榜 | 2026-08-13
+date: 2026-08-13 08:32:40+0000
+image: https://ph-files.imgix.net/3e786432-ae63-4c7f-8096-185d60bbfd2b.jpeg?auto=format
+tags: ["开源", "一键部署", "VAPI替代"]
+---
+
+## 1. Dograh  
+**标语**: 开源的VAPI替代方案  
+**介绍**: 封闭式语音平台让您只能租用代理。而Dograh完全开源——没有任何限制。可视化流程构建器、支持30多种集成或本地模型添加密钥、电话系统、人工转接以及高级质量保证与监控功能——均可通过一条命令免费自主托管。您还可以将Claude代码与  
+**网站**: [立即访问](https://www.producthunt.com/r/DAII3FVF5KT5VU?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/dograh?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Dograh](https://ph-files.imgix.net/3e786432-ae63-4c7f-8096-185d60bbfd2b.jpeg?auto=format)  
+**关键词**: 开源, VAPI替代, 免费自托管, 可视化构建器, 集成支持, 本地模型, 电话功能, 人工转移, QA监控, 一键部署, Claude集成, MCP连接, 语音代理, 通话录音  
+**票数**: 🔺521  
+**是否精选**: 是  
+**发布时间**: 2026年08月12日 PM03:01 (北京时间)  
+
+---  
+
+## 2. Grok Bot  
+**标语**: 可以分配实际工作的AI队友  
+**介绍**: 介绍Grok Bot：可以委派真实工作的AI伙伴。这些机器人能登录您的工具，像您一样使用它们，并带着完成的工作回来。像对待队友一样与它们沟通。它们在专属云计算机上保持上下文、处理多任务，并自主学习您的工作风格。可以请它们通宵处理外  
+**网站**: [立即访问](https://www.producthunt.com/r/QE45KIR5XX72OH?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/grok?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Grok Bot](https://ph-files.imgix.net/3d40497c-8d0e-45c1-a28c-d3f198c06b33.png?auto=format)  
+**关键词**: AI队友, 工作自动化, 工具集成, 云AI, 多任务处理, 自适应学习, 审批触发  
+**票数**: 🔺457  
+**是否精选**: 是  
+**发布时间**: 2026年08月12日 PM03:01 (北京时间)  
+
+---  
+
+## 3. Lettertrace  
+**标语**: 免费追踪您的AI影响力（使用您自己的API密钥！）  
+**介绍**: Lettertrace追踪Claude、ChatGPT和Gemini提及贵公司的频率。但关键在于：它免费、以开发者为先、支持自带密钥且开源。  
+**网站**: [立即访问](https://www.producthunt.com/r/PERZM7L6ETGORE?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/lettertrace?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Lettertrace](https://ph-files.imgix.net/ebbabf40-d179-47e3-b0d3-25f5384ba709.png?auto=format)  
+**关键词**: AI可见性追踪, 免费监控, 自带API密钥, 开发者优先, 开源工具, 公司提及分析, AI模型监测  
+**票数**: 🔺376  
+**是否精选**: 是  
+**发布时间**: 2026年08月12日 PM03:01 (北京时间)  
+
+---  
+
+## 4. Assembly Studio  
+**标语**: 助您增收的AI应用构建平台  
+**介绍**: Assembly Studio 是专为专业服务公司打造的AI应用构建平台。只需描述您的需求：入职助手、分析仪表盘、社区中心等，即可在数分钟内获得生产级应用程序。提供20余款可自由组合的模板，支持连接任何第三方工具。完美复刻那些按席位收费的昂贵  
+**网站**: [立即访问](https://www.producthunt.com/r/BHXHHSAE44JNNA?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/assembly-7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Assembly Studio](https://ph-files.imgix.net/f6580cc8-1c1d-48e4-bfa7-d747fc37061d.png?auto=format)  
+**关键词**: AI应用构建器, 增加收入, 专业服务公司, 快速生成应用, 模板混搭, 第三方工具集成, 克隆昂贵应用, 永久免费计划, 自定义软件, 停止付费软件  
+**票数**: 🔺247  
+**是否精选**: 是  
+**发布时间**: 2026年08月12日 PM03:01 (北京时间)  
+
+---  
+
+## 5. Unsloth Desktop  
+**标语**: 在本地桌面环境运行和训练AI模型  
+**介绍**: Unsloth Desktop是一款开源应用程序，可在本地运行和训练AI模型。它能处理大语言模型、图像/视频扩散及音频任务。只需一条命令，即可将Claude Code或Codex等智能代理连接到本地显卡，并通过无代码工作流对模型进行微调。  
+**网站**: [立即访问](https://www.producthunt.com/r/V5SG67QSMWW4I2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/unsloth?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Unsloth Desktop](https://ph-files.imgix.net/eca600ff-cf8f-4a7b-ab7f-3da948d306b3.png?auto=format)  
+**关键词**: 本地AI运行, 桌面AI训练, 开源应用, 大语言模型, 图像视频扩散, 音频AI, GPU连接, 一键命令, 无代码工作流, AI模型微调  
+**票数**: 🔺225  
+**是否精选**: 是  
+**发布时间**: 2026年08月12日 PM03:01 (北京时间)  
+
+---  
+
+## 6. BearDrive  
+**标语**: 您团队AI智能体的开源共享文件夹  
+**介绍**: 您的AI代理在本地创建真实文件：报告、演示文稿、CSV数据表、研究资料。BearDrive同步它们已有的工作文件夹，让每个文件一经生成即实现共享：版本可追溯、归属可精确到代理会话，且生成仅限团队访问的链接。与Notion或Drive不同  
+**网站**: [立即访问](https://www.producthunt.com/r/M5MZKVAGCTAZLN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/beardrive?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![BearDrive](https://ph-files.imgix.net/a6dcda96-fb00-4db8-a639-cab79250cdff.png?auto=format)  
+**关键词**: 开源, AI代理, 共享文件夹, 团队协作, 本地同步, 版本控制, 自托管, 免费测试  
+**票数**: 🔺173  
+**是否精选**: 是  
+**发布时间**: 2026年08月12日 PM03:01 (北京时间)  
+
+---  
+
+## 7. LaraCopilot  
+**标语**: 构建真实应用的智能体AI工程师  
+**介绍**: LaraCopilot 是一位智能AI工程师，能够构建真实、生产就绪的应用程序。只需用您的语言描述想法，它便能完成全部搭建工作：用户界面、后端、数据库、认证系统和API，并将它们完整连接，随时可部署。支持一键云端部署或自有服务器部署，提  
+**网站**: [立即访问](https://www.producthunt.com/r/7NRE4MBHHDCUWM?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/laracopilot?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![LaraCopilot](https://ph-files.imgix.net/f4246fa3-08c7-412b-84da-8237afd0ab00.jpeg?auto=format)  
+**关键词**: AI工程师, 应用构建, 全栈开发, 自然语言编程, 一键部署, 生产就绪, 无锁定, 代码所有权  
+**票数**: 🔺144  
+**是否精选**: 是  
+**发布时间**: 2026年08月12日 PM03:01 (北京时间)  
+
+---  
+
+## 8. Swipe  
+**标语**: 向右滑动，选择下一位客户  
+**介绍**: 明确您的目标客户群体。滑动卡片浏览真实公司的排序列表，保留值得邮件联系的公司，跳过其余，导出为CSV文件。无需注册、无需点数、不抓取收件箱。  
+**网站**: [立即访问](https://www.producthunt.com/r/GQEYPG4ZF2HMVQ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/swipe-9?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Swipe](https://ph-files.imgix.net/8c0a7e65-70a7-4c7d-a0eb-7eba8053afd0.png?auto=format)  
+**关键词**: 滑动选择客户, 公司排名, 导出CSV, 无需注册, 销售工具  
+**票数**: 🔺142  
+**是否精选**: 是  
+**发布时间**: 2026年08月12日 PM03:01 (北京时间)  
+
+---  
+
+## 9. Click  
+**标语**: ChatGPT和Claude的实时研究背景  
+**介绍**: Click是一款MCP工具，通过提供广泛的研究连接器，补充内置网络搜索所缺失的外部信息。它能从专业及社交平台、市场数据、金融资讯等渠道获取实时信息。只需在ChatGPT或Claude中简单安装1分钟，即可在聊天中实现更多功能。  
+**网站**: [立即访问](https://www.producthunt.com/r/LPBGWEQU47MYOU?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/click-6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Click](https://ph-files.imgix.net/fb011c6b-b23e-4306-a5a8-381e3b95f749.png?auto=format)  
+**关键词**: 实时研究, ChatGPT, Claude, MCP, 研究连接器, 外部上下文, 专业平台, 社交平台, 市场数据, 财务信息, 快速安装, 聊天增强  
+**票数**: 🔺131  
+**是否精选**: 是  
+**发布时间**: 2026年08月12日 PM03:01 (北京时间)  
+
+---  
+
+## 10. RightCard  
+**标语**: 诚信信用卡选择工具——无需登录银行账户  
+**介绍**: RightCard能告诉你在任何商店该使用哪张信用卡，并自动添加你容易忘记激活的银行优惠（美国运通、大通银行、花旗银行、富国银行）。它会自动处理5%消费类别的轮换，无需你费心记忆，并在信用卡返现和年费续  
+**网站**: [立即访问](https://www.producthunt.com/r/QBAV2SQH3UB2NZ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/rightcard?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![RightCard](https://ph-files.imgix.net/de90fd57-a7cc-4893-b9ea-256b82bee584.jpeg?auto=format)  
+**关键词**: 信用卡推荐, 无需银行登录, 自动优惠激活, 费用警告, 离线计算, 免费无广告  
+**票数**: 🔺115  
+**是否精选**: 是  
+**发布时间**: 2026年08月12日 PM03:01 (北京时间)  
+
+---  
+
