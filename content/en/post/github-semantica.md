@@ -1,8 +1,8 @@
 ---
 title: semantica
-date: 2026-08-13T16:37:41+08:00
+date: 2026-08-14T16:30:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1772551577749-7e911e2d4515?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY2MTAwODV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1580773219254-c6c9b825db29?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY2OTYxNjF8&ixlib=rb-4.1.0
 tags: ['github',Context Graphs, Decision Intelligence, Knowledge Graphs]
 categories: ['github']
 ---
