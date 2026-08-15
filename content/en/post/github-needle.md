@@ -1,9 +1,9 @@
 ---
 title: needle
-date: 2026-08-14T16:32:20+08:00
+date: 2026-08-15T15:46:30+08:00
 draft: False
-image: https://images.unsplash.com/photo-1761536257349-2f32381749fc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY2OTYxNjF8&ixlib=rb-4.1.0
-tags: ['github',Needle 2, tool calling, Simple Attention Network]
+image: https://images.unsplash.com/photo-1759058240375-30729c9db8b4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY3Nzk5MDl8&ixlib=rb-4.1.0
+tags: ['github',Needle 2, tool calling, structured extraction]
 categories: ['github']
 ---
 
@@ -15,7 +15,7 @@ categories: ['github']
 
 Needle 2 is an open 45M-parameter model for tool calling, device use and structured extraction. The whole model is a single 14MB binary that runs a full session in about 28MB of RAM. It is built on our Simple Attention Network findings, compressed to CQ2-bit with Cactus Quants, and baked into its own engine. On the benchmarks below, Needle 2 trades wins with other small models like FunctionGemma 270M, LFM2.5 230M and Apple FM, at 5x to 70x smaller, and 2 bits against their f16.
 
-This repository is the Python package: inference, LoRA fine-tuning, and export. `pip install cactus-needle`, describe your tools, and call them from Python. The inference engine is fetched once from Hugging Face and cached; there is nothing else to build.
+This repository is the Python package: inference, LoRA fine-tuning, and export. `pip install cactus-needle`, describe your tools, and call them from Python. The inference engine is fetched once from Hugging Face and cached; there is nothing else to build, and offline setup for air gapped devices is covered in [doc/apis.md](doc/apis.md).
 
 - **Self-contained**: weights baked into a single 14MB engine; no separate model files to manage, and inference does no network.
 - **Simple contract**: tool calls come back as structured data, text in, JSON out; a byte-level grammar compiled from your schemas constrains every token.
@@ -132,7 +132,7 @@ pip install "cactus-needle[metal]"
 needle build checkpoints/needle2.pkl --lora checkpoints/needle_lora.pkl --out my_needle.cact
 ```
 
-Add `--bits 2` (default 4) for a smaller model, or set `NEEDLE_HF_REPO=<you>/<model>` and pass `--upload` to publish the `.cact`.
+Add `--bits 2` (default 4) for a smaller model, or set `NEEDLE_HF_REPO=<you>/<model>` and pass `--upload` to publish the `.cact`. The counterpart `needle download <you>/<model>/my_needle.cact` pulls a published archive on any machine.
 
 **4. Run it.** The engine is weights-agnostic, so a tuned `.cact` runs on it directly - no recompilation:
 

@@ -1,9 +1,9 @@
 ---
 title: macro
-date: 2026-08-13T16:37:04+08:00
+date: 2026-08-15T15:48:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1722641277081-7077c4eaedac?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY2MTAwODV8&ixlib=rb-4.1.0
-tags: ['github',all in one workspace, bidirectional linking, team memory]
+image: https://images.unsplash.com/photo-1542040349543-dfde36e9f746?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY3Nzk5MDl8&ixlib=rb-4.1.0
+tags: ['github',all-in-one workspace, agents, team collaboration]
 categories: ['github']
 ---
 
