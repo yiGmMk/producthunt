@@ -1,9 +1,9 @@
 ---
 title: diagram-design
-date: 2026-08-15T15:45:44+08:00
+date: 2026-08-16T15:46:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1706013789961-6a8c10adde5e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY3Nzk5MDl8&ixlib=rb-4.1.0
-tags: ['github',diagram design, agent skill, brand onboarding]
+image: https://images.unsplash.com/photo-1594841406726-a8325eda9f5e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY4NjYyOTB8&ixlib=rb-4.1.0
+tags: ['github',diagram, editorial, skill]
 categories: ['github']
 ---
 

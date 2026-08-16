@@ -1,9 +1,9 @@
 ---
 title: needle
-date: 2026-08-15T15:46:30+08:00
+date: 2026-08-16T15:47:22+08:00
 draft: False
-image: https://images.unsplash.com/photo-1759058240375-30729c9db8b4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY3Nzk5MDl8&ixlib=rb-4.1.0
-tags: ['github',Needle 2, tool calling, structured extraction]
+image: https://images.unsplash.com/photo-1486625703180-884c5c453194?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY4NjYyOTB8&ixlib=rb-4.1.0
+tags: ['github',Needle 2, tool calling, Simple Attention Network]
 categories: ['github']
 ---
 
@@ -132,7 +132,7 @@ pip install "cactus-needle[metal]"
 needle build checkpoints/needle2.pkl --lora checkpoints/needle_lora.pkl --out my_needle.cact
 ```
 
-Add `--bits 2` (default 4) for a smaller model, or set `NEEDLE_HF_REPO=<you>/<model>` and pass `--upload` to publish the `.cact`. The counterpart `needle download <you>/<model>/my_needle.cact` pulls a published archive on any machine.
+Add `--bits 2` for a smaller model (by default the export follows the checkpoint's declared per-layer bit map, falling back to 4 when the checkpoint declares none), or set `NEEDLE_HF_REPO=<you>/<model>` and pass `--upload` to publish the `.cact`. The counterpart `needle download <you>/<model>/my_needle.cact` pulls a published archive on any machine.
 
 **4. Run it.** The engine is weights-agnostic, so a tuned `.cact` runs on it directly - no recompilation:
 
