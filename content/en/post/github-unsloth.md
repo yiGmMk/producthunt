@@ -1,9 +1,9 @@
 ---
 title: unsloth
-date: 2026-08-16T15:48:12+08:00
+date: 2026-08-17T16:08:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1637355524881-e4feaa046817?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY4NjYyOTB8&ixlib=rb-4.1.0
-tags: ['github',AI models, local training, desktop app]
+image: https://images.unsplash.com/photo-1545238555-e05bd47dc881?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY5NTM5ODN8&ixlib=rb-4.1.0
+tags: ['github',Unsloth, desktop app, model training]
 categories: ['github']
 ---
 
@@ -94,7 +94,7 @@ Unsloth lets you run, train, and deploy AI models locally, with support for all 
 
 
 ### Train & Deploy
-* **Fine-tuning:** Train LLMs, diffusion, TTS, and embedding models 2× faster with 70% less VRAM
+* **Fine-tuning:** Train LLMs, diffusion, TTS, and embedding models 2× faster with 70% less VRAM with [no accuracy loss](https://unsloth.ai/blog#training)
 * **Complete support:** Supports [reinforcement learning](https://unsloth.ai/docs/get-started/reinforcement-learning-rl-guide), LoRA, QLoRA, full fine tuning, pretraining, RL, GRPO, DPO, and FP8.
 * **Export & Deploy:** [Export](https://unsloth.ai/docs/new/studio/export) or Deploy models with including [GGUF](https://unsloth.ai/docs/basics/inference-and-deployment/saving-to-gguf), NVFP4, FP8 and more formats.
 * **Datasets:** Build datasets from PDFs, CSVs, DOCX files, and more with [Data Recipes](https://unsloth.ai/docs/new/studio/data-recipe).

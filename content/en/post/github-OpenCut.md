@@ -1,8 +1,8 @@
 ---
 title: OpenCut
-date: 2026-07-17T17:24:48+08:00
+date: 2026-08-17T16:08:47+08:00
 draft: False
-image: https://images.unsplash.com/photo-1644176545426-e228b0bd3455?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQyODAwOTR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1653276616125-2aa5d51469bb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY5NTM5ODN8&ixlib=rb-4.1.0
 tags: ['github',video editor, open source, cross platform]
 categories: ['github']
 ---
@@ -42,8 +42,22 @@ You can still find the previous version at [opencut-app/opencut-classic](https:/
 
 Install [proto](https://moonrepo.dev/proto) if you haven't already:
 
+**Linux, macOS, WSL:**
+
 ```sh
 bash <(curl -fsSL https://moonrepo.dev/install/proto.sh)
+```
+
+**Windows (PowerShell):**
+
+```powershell
+irm https://moonrepo.dev/install/proto.ps1 | iex
+```
+
+If shims fail to run, allow local scripts for your user:
+
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 ```
 
 From the repo root:
