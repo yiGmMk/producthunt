@@ -1,9 +1,9 @@
 ---
 title: strix
-date: 2026-07-05T17:53:28+08:00
+date: 2026-08-18T15:53:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1559998551-19a349e9677b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODMyNDUwOTJ8&ixlib=rb-4.1.0
-tags: ['github',AI pentesting tool, security vulnerabilities, penetration testing]
+image: https://images.unsplash.com/photo-1503324351938-3f8eb86f111e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODcwMzk1MzN8&ixlib=rb-4.1.0
+tags: ['github',AI pentesting, vulnerability scanning, autonomous agents]
 categories: ['github']
 ---
 
@@ -38,6 +38,7 @@ categories: ['github']
 <a href="https://x.com/strix_ai"><img src="https://github.com/usestrix/.github/raw/main/imgs/X.png" height="40" alt="Follow on X"></a>
 
 
+<a href="https://trendshift.io/repositories/15362?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-15362" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/15362/weekly" alt="usestrix%2Fstrix | Trendshift" width="250" height="55"/></a>
 <a href="https://trendshift.io/repositories/15362" target="_blank"><img src="https://trendshift.io/api/badge/repositories/15362" alt="usestrix/strix | Trendshift" width="250" height="55"/></a>
 
 </div>
@@ -118,6 +119,18 @@ Try the Strix full-stack penetration testing platform at **[app.strix.ai](https:
 
 ---
 
+## 🤖 Use Strix from Your Coding Agent
+
+Strix is agent-ready. Give Claude Code, Cursor, Codex, or any [SKILL.md-compatible](https://agentskills.io) agent the ability to run pentests, fix findings, and set up CI scanning:
+
+```bash
+npx skills add usestrix/strix
+```
+
+This installs four skills: **penetration-testing-with-strix** (run headless scans and read results), **managed-pentesting-with-strix** (drive the managed [app.strix.ai](https://app.strix.ai) platform via REST — no local Docker or LLM key), **fix-security-vulnerabilities-with-strix** (remediate + re-scan to verify), and **ci-security-scanning-with-strix** (PR scanning in CI). Agents can run Strix two ways with the same engine — the open-source CLI locally, or the managed cloud when there's no local infra — and read [`AGENTS.md`](AGENTS.md) for a quick reference, [docs.strix.ai/llms.txt](https://docs.strix.ai/llms.txt) for the CLI docs, and [docs.app.strix.ai](https://docs.app.strix.ai) for the API.
+
+---
+
 ## ✨ Features
 
 ### Agentic Pentesting Tools
@@ -155,6 +168,31 @@ Advanced multi-agent orchestration for comprehensive automated penetration testi
 
 ---
 
+## 🖥️ Local Web Viewer
+
+Every scan writes its results to disk as it runs. Bring them up in a local dashboard with a single command:
+
+```bash
+# Open the most recent run
+strix view
+
+# ...or open a specific run by name
+strix view my-run-name
+```
+
+`strix view` starts a lightweight local server (bound to `127.0.0.1` on a random port) and opens your browser to a private, tokened link. Nothing leaves your machine: the dashboard reads the run's files straight off disk, with no cloud account or upload required. The UI ships prebuilt with Strix, so there is no extra install and no JS build step.
+
+### What's in the dashboard
+
+- **Overview**: run status, target, and a severity breakdown of everything found so far.
+- **Vulnerabilities**: each validated finding with its severity, details, and reproduction steps.
+- **Agent graph**: a live map of the multi-agent team, showing which agent is doing what.
+- **Steering**: send instructions to a live scan from the browser to redirect the agents mid-run.
+- **History**: browse past runs on this machine and jump between them.
+- **Reports**: generate a shareable report and email it to yourself or your team.
+
+---
+
 ## Usage Examples
 
 ### Basic Usage
@@ -170,6 +208,28 @@ strix --target https://github.com/org/repo
 strix --target https://your-app.com
 ```
 
+### API Testing (OpenAPI / Swagger / Postman)
+
+Point Strix at an API contract and it tests every declared endpoint instead of
+having to discover them by crawling. Pair the spec with the live base URL so the
+agent knows where to send traffic:
+
+```bash
+# OpenAPI / Swagger file (.json / .yaml)
+strix --target ./openapi.yaml --target https://api.your-app.com
+
+# Postman collection export
+strix --target ./collection.postman_collection.json --target https://api.your-app.com
+
+# Postman collection pulled live by id (no manual export)
+export POSTMAN_API_KEY="PMAK-..."
+strix --target postman://<collection-uuid>
+
+# ...with a Postman environment to resolve {{baseUrl}} / token variables
+strix --target "postman://<collection-uuid>?env=<environment-uuid>"
+```
+
+
 ### Advanced Testing Scenarios
 
 ```bash
@@ -178,6 +238,9 @@ strix --target https://your-app.com --instruction "Perform authenticated testing
 
 # Multi-target testing (source code + deployed app)
 strix -t https://github.com/org/app -t https://your-app.com
+
+# Targets from a file, one target per non-empty, non-comment line
+strix --target-list ./targets.txt
 
 # White-box source-aware scan (local repository)
 strix --target ./app-directory --scan-mode standard
@@ -249,6 +312,20 @@ export STRIX_REASONING_EFFORT="high"  # control thinking effort (default: high, 
 > [!NOTE]
 > Strix automatically saves your configuration to `~/.strix/cli-config.json`, so you don't have to re-enter it on every run.
 
+#### Sign in with a ChatGPT subscription
+
+Instead of a metered API key, you can run Strix on your ChatGPT Plus/Pro subscription:
+
+```bash
+strix auth login chatgpt      # sign in with your ChatGPT account
+
+export STRIX_LLM="chatgpt/gpt-5.4"   # chatgpt/<model> runs on the subscription
+strix --target ./app-directory
+
+strix auth status             # show the active sign-in
+strix auth logout             # forget the sign-in
+```
+
 **Recommended models for best results:**
 
 - [OpenAI GPT-5.4](https://openai.com/api/) - `openai/gpt-5.4`
@@ -279,10 +356,11 @@ Have questions? Found a bug? Want to contribute? **[Join our Discord!](https://d
 
 ## Acknowledgements
 
-Strix builds on the incredible work of open-source projects like [LiteLLM](https://github.com/BerriAI/litellm), [Caido](https://github.com/caido/caido), [Nuclei](https://github.com/projectdiscovery/nuclei), [Playwright](https://github.com/microsoft/playwright), and [Textual](https://github.com/Textualize/textual). Huge thanks to their maintainers!
+Strix builds on the incredible work of open-source projects like [LiteLLM](https://github.com/BerriAI/litellm), [Caido](https://github.com/caido/caido), [Nuclei](https://github.com/projectdiscovery/nuclei), [Playwright](https://github.com/microsoft/playwright), and [Bubble Tea](https://github.com/charmbracelet/bubbletea). Huge thanks to their maintainers!
 
 
 > [!WARNING]
-> Only test apps you own or have permission to test. You are responsible for using Strix ethically and legally.
+> **Authorized use only.** Strix actively tests the targets you point it at, so only run it against systems you own or have **explicit, written permission** to test, and stay within the agreed scope. Unauthorized testing is illegal in most jurisdictions.
+> You alone are responsible for obtaining authorization and complying with the law. Strix is provided "as is" with no warranty or liability for misuse.
 
 </div>

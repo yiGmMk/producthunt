@@ -1,9 +1,9 @@
 ---
 title: Anthropic-Cybersecurity-Skills
-date: 2026-06-24T18:33:52+08:00
+date: 2026-08-18T15:54:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1693760946158-1486b5456ed3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIyOTcwOTZ8&ixlib=rb-4.1.0
-tags: ['github',cybersecurity, AI agents, open-source]
+image: https://images.unsplash.com/photo-1653238523968-467e036bb15f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODcwMzk1MzN8&ixlib=rb-4.1.0
+tags: ['github',cybersecurity, skills, AI agents]
 categories: ['github']
 ---
 
@@ -37,34 +37,36 @@ categories: ['github']
 
 **817 production-grade cybersecurity skills · 29 security domains · 6 framework mappings · 26+ AI platforms**
 
-[Get Started](#quick-start) · [What's Inside](#whats-inside--29-security-domains) · [Frameworks](#five-frameworks-one-skill-library) · [Platforms](#compatible-platforms) · [Contributing](#contributing)
+[Get Started](#quick-start) · [What's Inside](#whats-inside--29-security-domains) · [Frameworks](#six-frameworks-one-skill-library) · [Platforms](#compatible-platforms) · [Contributing](#contributing)
 
 </div>
 
 ---
 
-> ⚠️ **Community Project** — This is an independent, community-created project. Not affiliated with Anthropic PBC. 
+> ⚠️ **Community Project** — This is an independent, community-created project. Not affiliated with Anthropic PBC.
+>
+> 🔐 **Authorized & lawful use only.** This library includes offensive and dual-use techniques (e.g. red-team C2, phishing simulation, exploitation) intended for **authorized penetration testing, security research, defense, and education**. Only use them against systems you own or have **explicit written permission** to test, and comply with all applicable laws and rules of engagement. You are solely responsible for how you use these skills. See [SECURITY.md](SECURITY.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
 ## Give any AI agent the security skills of a senior analyst
 
 A junior analyst knows which Volatility3 plugin to run on a suspicious memory dump, which Sigma rules catch Kerberoasting, and how to scope a cloud breach across three providers. **Your AI agent doesn't — unless you give it these skills.**
 
-This repo contains **817 structured cybersecurity skills** spanning **29 security domains**, each following the [agentskills.io](https://agentskills.io) open standard.  Every skill is mapped to **six industry frameworks** — MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, MITRE D3FEND, NIST AI RMF, and the MITRE Fight Fraud Framework (F3) — making this the only open-source skills library with unified cross-framework coverage.  Clone it, point your agent at it, and your next security investigation gets expert-level guidance in seconds.
+This repo contains **817 structured cybersecurity skills** spanning **29 security domains**, each following the [agentskills.io](https://agentskills.io) open standard.  The library maps across **six industry frameworks** — MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, MITRE D3FEND, NIST AI RMF, and the MITRE Fight Fraud Framework (F3) — with each skill mapped to the frameworks **relevant to its type** (a forensics skill carries ATT&CK + CSF; an AI-security skill adds ATLAS and AI RMF).  Clone it, point your agent at it, and your next security investigation gets expert-level guidance in seconds.
 
 ## Six frameworks, one skill library
 
-No other open-source skills library maps every skill to all of these frameworks.  One skill, six compliance checkboxes. 
+Each skill maps to the frameworks that fit its subject — ATT&CK and NIST CSF are near-universal, while ATLAS, AI RMF, D3FEND, and F3 apply where they're relevant. **Framework coverage across the 817 skills:** MITRE ATT&CK **805** · NIST CSF 2.0 **804** · MITRE D3FEND **139** · NIST AI RMF **97** · MITRE F3 **94** · MITRE ATLAS **93**.
 
-| Framework | Version | Scope in this repo | What it maps |
+| Framework | Version | Framework scope | What it maps |
 |---|---|---|---|
-| [MITRE ATT&CK](https://attack.mitre.org) | v19.1 | 15 tactics · 286 techniques | Adversary behaviors and TTPs |
-| [NIST CSF 2.0](https://www.nist.gov/cyberframework) | 2.0 | 6 functions · 22 categories | Organizational security posture |
-| [MITRE ATLAS](https://atlas.mitre.org) | v5.4 | 16 tactics · 84 techniques | AI/ML adversarial threats |
-| [MITRE D3FEND](https://d3fend.mitre.org) | v1.3 | 7 categories · 267 techniques | Defensive countermeasures |
-| [NIST AI RMF](https://airc.nist.gov/AI_RMF) | 1.0 | 4 functions · 72 subcategories | AI risk management |
+| [MITRE ATT&CK](https://attack.mitre.org) | v19.1 | 15 tactics · Enterprise/Mobile/ICS | Adversary behaviors and TTPs |
+| [NIST CSF 2.0](https://www.nist.gov/cyberframework) | 2.0 | 6 functions · 22 categories · 106 subcategories | Organizational security posture |
+| [MITRE ATLAS](https://atlas.mitre.org) | 2026.07 | 101 techniques · 77 sub-techniques | AI/ML adversarial threats |
+| [MITRE D3FEND](https://d3fend.mitre.org) | v1.4.0 | 270 techniques | Defensive countermeasures |
+| [NIST AI RMF](https://airc.nist.gov/AI_RMF) | 1.0 | 4 functions (Govern/Map/Measure/Manage) | AI risk management |
 | [MITRE F3 (Fight Fraud Framework)](https://ctid.mitre.org/fraud/) | v1.1 (2026-04-09) | 8 tactics · 123 techniques · 94 fraud-relevant skills | Cyber-enabled financial fraud TTPs |
 
-**Example — a single skill maps across all six:**
+**Example — each skill maps only to the frameworks relevant to it (one may hit all six, another just a couple):**
 
 | Skill | ATT&CK | NIST CSF | ATLAS | D3FEND | AI RMF | F3 |
 |---|---|---|---|---|---|---|
@@ -83,9 +85,9 @@ F3 v1.1 adds **two fraud-specific tactics** that ATT&CK does not enumerate:
 
 Fraud-specific techniques use `F1XXX` IDs (e.g. `F1005.003` Add Beneficiary, `F1025.003` Wire Transfer, `F1007` Adversary-in-the-Browser); reused ATT&CK techniques keep their `T1XXX` IDs. Mappings live in each skill's `mitre_f3:` frontmatter block — all 123 F3 v1.1 technique IDs were verified against the upstream STIX bundle. See [`docs/mitre-f3-mapping.md`](docs/mitre-f3-mapping.md) for the schema.
 
-### MITRE ATT&CK v19.1 — 754/754 skills mapped
+### MITRE ATT&CK v19.1 — 805/817 skills mapped
 
-Every skill carries a `mitre_attack` frontmatter list validated against **MITRE ATT&CK v19.1** (the latest release) using the official `mitreattack-python` library — 286 distinct techniques across all 15 Enterprise tactics, plus ICS and Mobile techniques where relevant. Zero revoked or deprecated IDs. v19.1's restructured Defense Evasion (now split into **Stealth** and **Defense Impairment**) is reflected below.
+Every skill carries a `mitre_attack` frontmatter list validated against **MITRE ATT&CK v19.1** (the latest release) using the official `mitreattack-python` library — 290 distinct techniques and sub-techniques (146 base + 144 sub) across Enterprise, ICS, and Mobile. Zero revoked or deprecated IDs. v19.1's restructured Defense Evasion (now split into **Stealth** and **Defense Impairment**) is reflected below.
 
 | Tactic | ID | Skills |
 |--------|----|--------|
@@ -273,7 +275,7 @@ How to confirm the skill was executed successfully.
 Frontmatter fields: `name` (kebab-case, 1–64 chars), `description` (keyword-rich for agent discovery), `domain`, `subdomain`, `tags`,  `atlas_techniques` (MITRE ATLAS IDs), `d3fend_techniques` (MITRE D3FEND IDs), `nist_ai_rmf` (NIST AI RMF references), `nist_csf` (NIST CSF 2.0 categories).  MITRE ATT&CK technique mappings are documented in each skill's `references/standards.md` file and in the ATT&CK Navigator layer included with releases. 
 
 <details>
-<summary><strong>📊 MITRE ATT&CK Enterprise coverage — all 14 tactics</strong></summary>
+<summary><strong>📊 MITRE ATT&CK Enterprise coverage — all 15 tactics</strong></summary>
 
 &nbsp;
 
@@ -285,7 +287,8 @@ Frontmatter fields: `name` (kebab-case, 1–64 chars), `description` (keyword-ri
 | Execution | TA0002 | Strong | PowerShell analysis, fileless malware, script block logging |
 | Persistence | TA0003 | Strong | Scheduled tasks, registry, service accounts, LOTL |
 | Privilege Escalation | TA0004 | Strong | Kerberoasting, AD attacks, cloud privilege escalation |
-| Defense Evasion | TA0005 | Strong | Obfuscation, rootkit analysis, evasion detection |
+| Stealth | TA0005 | Strong | Obfuscation, rootkit analysis, evasion detection |
+| Defense Impairment | TA0112 | Moderate | Impair Defenses (T1562), log/indicator removal, EDR tampering |
 | Credential Access | TA0006 | Strong | Mimikatz detection, pass-the-hash, credential dumping |
 | Discovery | TA0007 | Moderate | BloodHound, AD enumeration, network scanning |
 | Lateral Movement | TA0008 | Strong | SMB exploits, lateral movement detection with Splunk |
@@ -323,11 +326,11 @@ NIST CSF 2.0 (February 2024) added the **Govern** function  and expanded scope f
 
 &nbsp;
 
-### MITRE ATLAS v5.4 — AI/ML adversarial threats
-ATLAS maps adversarial tactics, techniques, and case studies specific to AI and machine learning systems. Version 5.4 covers **16 tactics and 84 techniques** including agentic AI attack vectors added in late 2025: AI agent context poisoning, tool invocation abuse, MCP server compromises, and malicious agent deployment.  Skills mapped to ATLAS help agents identify and defend against threats to ML pipelines, model weights, inference APIs, and autonomous workflows. 
+### MITRE ATLAS 2026.07 — AI/ML adversarial threats
+ATLAS maps adversarial tactics, techniques, and case studies specific to AI and machine learning systems. Release 2026.07 covers **101 techniques and 77 sub-techniques** including agentic AI attack vectors added in late 2025: AI agent context poisoning, tool invocation abuse, MCP server compromises, and malicious agent deployment.  Skills mapped to ATLAS help agents identify and defend against threats to ML pipelines, model weights, inference APIs, and autonomous workflows. 
 
-### MITRE D3FEND v1.3 — Defensive countermeasures
-D3FEND is an NSA-funded knowledge graph of **267 defensive techniques** organized across 7 tactical categories: Model, Harden, Detect, Isolate, Deceive, Evict, and Restore.  Built on OWL 2 ontology, it uses a shared Digital Artifact layer to bidirectionally map defensive countermeasures to ATT&CK offensive techniques.  Skills tagged with D3FEND identifiers let agents recommend specific countermeasures for detected threats.
+### MITRE D3FEND v1.4.0 — Defensive countermeasures
+D3FEND is an NSA-funded knowledge graph of **270 defensive techniques** organized across 7 tactical categories: Model, Harden, Detect, Isolate, Deceive, Evict, and Restore.  Built on OWL 2 ontology, it uses a shared Digital Artifact layer to bidirectionally map defensive countermeasures to ATT&CK offensive techniques.  Skills tagged with D3FEND identifiers let agents recommend specific countermeasures for detected threats.
 
 ### NIST AI RMF 1.0 + GenAI Profile (AI 600-1)
 The AI Risk Management Framework defines 4 core functions — Govern, Map, Measure, Manage — with **72 subcategories** for trustworthy AI development.  The GenAI Profile (AI 600-1, July 2024) adds **12 risk categories** specific to generative AI, from confabulation and data privacy to prompt injection and supply chain risks.  Colorado's AI Act (effective February 2026) provides a **legal safe harbor** for organizations complying with NIST AI RMF, making these mappings directly relevant to regulatory compliance.
@@ -400,6 +403,23 @@ This project grows through community contributions. Here is how to get involved:
 Every PR is reviewed for technical accuracy and agentskills.io standard compliance within 48 hours.  Check [good first issues](https://github.com/mukul975/Anthropic-Cybersecurity-Skills/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) for a starting point.
 
 This project follows the [Contributor Covenant](https://www.contributor-covenant.org/). By participating, you agree to uphold this code. 
+
+## 🙏 Thanks to our contributors
+
+This library is built by the community. Thank you to everyone who has contributed:
+
+<p align="center">
+<a href="https://github.com/mukul975" title="mukul975 — maintainer"><img src="https://github.com/mukul975.png?size=100" width="72" height="72" alt="@mukul975"></a>
+<a href="https://github.com/juliosuas" title="juliosuas"><img src="https://github.com/juliosuas.png?size=100" width="72" height="72" alt="@juliosuas"></a>
+<a href="https://github.com/andrewibrah" title="andrewibrah"><img src="https://github.com/andrewibrah.png?size=100" width="72" height="72" alt="@andrewibrah"></a>
+<a href="https://github.com/Bortlesboat" title="Bortlesboat"><img src="https://github.com/Bortlesboat.png?size=100" width="72" height="72" alt="@Bortlesboat"></a>
+<a href="https://github.com/DevRedious" title="DevRedious"><img src="https://github.com/DevRedious.png?size=100" width="72" height="72" alt="@DevRedious"></a>
+<a href="https://github.com/ioxoi" title="ioxoi"><img src="https://github.com/ioxoi.png?size=100" width="72" height="72" alt="@ioxoi"></a>
+<a href="https://github.com/shanujans" title="shanujans"><img src="https://github.com/shanujans.png?size=100" width="72" height="72" alt="@shanujans"></a>
+<a href="https://github.com/nyxst4ck" title="nyxst4ck"><img src="https://github.com/nyxst4ck.png?size=100" width="72" height="72" alt="@nyxst4ck"></a>
+</p>
+
+<p align="center"><sub>Ordered by contribution count · see the full <a href="https://github.com/mukul975/Anthropic-Cybersecurity-Skills/graphs/contributors">contributor graph</a></sub></p>
 
 ## Community
 
