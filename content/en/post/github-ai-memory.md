@@ -1,9 +1,9 @@
 ---
 title: ai-memory
-date: 2026-08-18T15:54:10+08:00
+date: 2026-08-19T15:53:33+08:00
 draft: False
-image: https://images.unsplash.com/photo-1619786369154-a5b99b1222ca?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODcwMzk1MzN8&ixlib=rb-4.1.0
-tags: ['github',AI memory, coding agents, markdown wiki]
+image: https://images.unsplash.com/photo-1695071373721-e2beb2732011?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODcxMjU5MTJ8&ixlib=rb-4.1.0
+tags: ['github',ai-memory, long-term memory, coding agents]
 categories: ['github']
 ---
 
@@ -911,7 +911,7 @@ Recommended defaults:
 | `openai-oauth` | `gpt-5.5` | ChatGPT Pro/Plus/Codex backend via `ai-memory auth login openai-oauth`; no Platform API key. |
 | `copilot` | `gpt-5.5` | GitHub Copilot Chat backend via `ai-memory auth login copilot` or `COPILOT_GITHUB_TOKEN`; requires a Copilot subscription. |
 | `gemini` | `gemini-2.5-flash` | Google-hosted option with a generous free tier. |
-| `openai-compat` | no default | OpenRouter, Atlas Cloud, Ollama, vLLM, LM Studio, and other compatible endpoints. |
+| `openai-compat` | no default | OpenRouter, Atlas Cloud, OrcaRouter, Ollama, vLLM, LM Studio, and other compatible endpoints. |
 
 `openai-oauth` stores a refresh token in `<data_dir>/auth.json` and talks to
 the ChatGPT/Codex Responses backend, not `api.openai.com`. For Docker quick
@@ -1000,7 +1000,7 @@ bounded page-authority adjustment after candidate generation; embeddings
 improve relevance recall but do not decide which source is canonical.
 
 See [`docs/install.md#llm-provider-tiers`](docs/install.md#llm-provider-tiers)
-for env vars and Ollama/OpenRouter/Atlas Cloud examples, and
+for env vars and Ollama/OpenRouter/Atlas Cloud/OrcaRouter examples, and
 [`docs/llm-provider-comparison.md`](docs/llm-provider-comparison.md)
 for the empirical model comparison.
 
