@@ -1,9 +1,9 @@
 ---
 title: nautilus_trader
-date: 2026-08-18T15:53:28+08:00
+date: 2026-08-20T15:58:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1692545052324-12e7e39a9871?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODcwMzk1MzN8&ixlib=rb-4.1.0
-tags: ['github',trading engine,Rust native,backtesting]
+image: https://images.unsplash.com/photo-1423530990185-af7dde1155fb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODcyMTI1MDV8&ixlib=rb-4.1.0
+tags: ['github',trading engine, Rust, Python]
 categories: ['github']
 ---
 

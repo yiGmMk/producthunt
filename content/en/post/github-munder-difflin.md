@@ -1,9 +1,9 @@
 ---
 title: munder-difflin
-date: 2026-08-19T15:52:43+08:00
+date: 2026-08-20T15:57:10+08:00
 draft: False
-image: https://images.unsplash.com/photo-1590725116310-5bc61b73974e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODcxMjU5MTJ8&ixlib=rb-4.1.0
-tags: ['github',multi-agent system, desktop application, AI agents]
+image: https://images.unsplash.com/photo-1696762932825-2737db830bbe?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODcyMTI1MDV8&ixlib=rb-4.1.0
+tags: ['github',multi-agent, harness, office]
 categories: ['github']
 ---
 

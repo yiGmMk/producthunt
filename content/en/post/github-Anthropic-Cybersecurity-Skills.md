@@ -1,9 +1,9 @@
 ---
 title: Anthropic-Cybersecurity-Skills
-date: 2026-08-19T15:54:14+08:00
+date: 2026-08-20T15:58:00+08:00
 draft: False
-image: https://images.unsplash.com/photo-1722347982066-2ec47264500a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODcxMjU5MTJ8&ixlib=rb-4.1.0
-tags: ['github',cybersecurity, AI agents, skills library]
+image: https://images.unsplash.com/photo-1748636704840-c6aa921f97e0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODcyMTI1MDV8&ixlib=rb-4.1.0
+tags: ['github',cybersecurity skills, AI agents, open-source]
 categories: ['github']
 ---
 
