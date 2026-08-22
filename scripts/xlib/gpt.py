@@ -16,7 +16,7 @@ def call_openai(prompt: str, content: str) -> str:
             {"role": "system", "content": prompt},
             {"role": "user", "content": content},
         ],
-        max_tokens=100,
+        max_tokens=1500,
         temperature=0.7,
         timeout=600,
     )
