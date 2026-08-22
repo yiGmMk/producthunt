@@ -1,9 +1,9 @@
 ---
 title: TypeScript
-date: 2025-09-24T15:29:30+08:00
+date: 2026-08-22T15:49:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1587930778465-0697740bd998?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg2OTg4NDR8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1592237892617-4320f8042f03?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODczODQ3NDd8&ixlib=rb-4.1.0
+tags: ['github',TypeScript,JavaScript,types]
 categories: ['github']
 ---
 

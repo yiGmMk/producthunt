@@ -1,9 +1,9 @@
 ---
 title: posthog
-date: 2026-07-19T17:15:24+08:00
+date: 2026-08-22T15:48:54+08:00
 draft: False
-image: https://images.unsplash.com/photo-1677826863798-ea5c426d0ca5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ0NTI0NDR8&ixlib=rb-4.1.0
-tags: ['github',PostHog, open source, product analytics]
+image: https://images.unsplash.com/photo-1656360542295-e6b25b4e40e6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODczODQ3NDd8&ixlib=rb-4.1.0
+tags: ['github',open source, product analytics, self-driving products]
 categories: ['github']
 ---
 
@@ -48,7 +48,7 @@ categories: ['github']
 - [AI observability](https://posthog.com/docs/ai-observability): Capture traces, generations, latency, and cost for your LLM-powered app.
 - [Workflows](https://posthog.com/docs/workflows): Create workflows that automate actions or send messages to your users.
 
-You can steer it all from [Slack](https://posthog.com/slack), [web](https://posthog.com/ai), desktop ([PostHog Code](https://posthog.com/code)), or your own editor via [the MCP](https://posthog.com/mcp).
+You can steer it all from [Slack](https://posthog.com/slack), [web](https://posthog.com/ai), desktop ([PostHog Desktop](https://posthog.com/desktop)), or your own editor via [the MCP](https://posthog.com/mcp).
 
 Best of all, all of this is free to use with a [generous monthly free tier](https://posthog.com/pricing) for each tool. Get started by signing up for [PostHog Cloud US](https://us.posthog.com/signup) or [PostHog Cloud EU](https://eu.posthog.com/signup).
 
@@ -112,7 +112,7 @@ We <3 contributions big and small:
 
 - Vote on features or get early access to beta functionality in our [roadmap](https://posthog.com/roadmap)
 - Open a PR (see our instructions on [developing PostHog locally](https://posthog.com/handbook/engineering/developing-locally))
-- Submit a [feature request](https://github.com/PostHog/posthog/issues/new?assignees=&labels=enhancement%2C+feature&template=feature_request.yml) or [bug report](https://github.com/PostHog/posthog/issues/new?assignees=&labels=bug&template=bug_report.yml)
+- Submit a feature request on [our roadmap](https://posthog.com/roadmap) or a [bug report](https://github.com/PostHog/posthog/issues/new?assignees=&labels=bug&template=bug_report.yml)
 
 For an overview of the codebase structure, see [monorepo layout](docs/internal/monorepo-layout.md) and [products](products/README.md).
 

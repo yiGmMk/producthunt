@@ -1,8 +1,8 @@
 ---
 title: OpenLogi
-date: 2026-08-21T15:58:47+08:00
+date: 2026-08-22T15:48:05+08:00
 draft: False
-image: https://images.unsplash.com/photo-1751716534768-7341d7f2a427?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODcyOTkwMDZ8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1592237892617-4320f8042f03?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODczODQ3NDd8&ixlib=rb-4.1.0
 tags: ['github',OpenLogi,Logitech,Rust]
 categories: ['github']
 ---
