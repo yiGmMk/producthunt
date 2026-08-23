@@ -1,9 +1,9 @@
 ---
 title: superpowers
-date: 2026-08-21T16:00:05+08:00
+date: 2026-08-23T15:50:59+08:00
 draft: False
-image: https://images.unsplash.com/photo-1682705978262-481da6a04653?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODcyOTkwMDZ8&ixlib=rb-4.1.0
-tags: ['github',coding agents, software development methodology, skills]
+image: https://images.unsplash.com/photo-1721777068175-89419e48a1c7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc0NzEyMTd8&ixlib=rb-4.1.0
+tags: ['github',Superpowers, coding agents, development methodology]
 categories: ['github']
 ---
 
