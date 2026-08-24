@@ -1,9 +1,9 @@
 ---
 title: omarchy
-date: 2026-08-17T16:07:36+08:00
+date: 2026-08-24T16:13:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1681532639984-edb0790487d0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY5NTM5ODN8&ixlib=rb-4.1.0
-tags: ['github',Omarchy, Linux distribution, opinionated]
+image: https://images.unsplash.com/photo-1740402065396-aa6f2bcd4b7d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc1NTkwNTl8&ixlib=rb-4.1.0
+tags: ['github',Omarchy, Linux distribution, DHH]
 categories: ['github']
 ---
 

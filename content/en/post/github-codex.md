@@ -1,9 +1,9 @@
 ---
 title: codex
-date: 2026-08-23T15:47:38+08:00
+date: 2026-08-24T16:11:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1566827356772-d38a71b8ae93?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc0NzEyMTd8&ixlib=rb-4.1.0
-tags: ['github',Codex CLI, OpenAI, coding agent]
+image: https://images.unsplash.com/photo-1662887443662-9fde845e3de8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc1NTkwNTl8&ixlib=rb-4.1.0
+tags: ['github',OpenAI, Codex, CLI]
 categories: ['github']
 ---
 

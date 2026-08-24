@@ -1,16 +1,16 @@
 ---
 title: OpenLogi
-date: 2026-08-22T15:48:05+08:00
+date: 2026-08-24T16:14:54+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592237892617-4320f8042f03?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODczODQ3NDd8&ixlib=rb-4.1.0
-tags: ['github',OpenLogi,Logitech,Rust]
+image: https://images.unsplash.com/photo-1637004704091-e62de7e78081?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc1NTkwNTl8&ixlib=rb-4.1.0
+tags: ['github',OpenLogi, Rust, Logitech]
 categories: ['github']
 ---
 
 # [AprilNEA/OpenLogi](https://github.com/AprilNEA/OpenLogi)
 
-> [!WARNING]
-> **OpenLogi is under active development** and not yet stable — features and config may still change. Give the repo a **Star** ⭐ and **Watch** 👀 it to get notified when a new release lands.
+> [!NOTE]
+> 🚀 **OpenLogi is live on Product Hunt!** If you find it useful, we'd really appreciate your [support and feedback](https://www.producthunt.com/products/openlogi).
 
 <h4 align="right"><strong>English</strong> | <a href="docs/README.zh-CN.md">简体中文</a> | <a href="docs/README.ja.md">日本語</a> | <a href="docs/README.de.md">Deutsch</a> | <a href="docs/README.fr.md">Français</a> | <a href="docs/README.ko.md">한국어</a></h4>
 
@@ -21,6 +21,8 @@ categories: ['github']
 <h1 align="center">OpenLogi</h1>
 <p align="center"><strong>⚡️ A native, local-first alternative to Logitech Options+, written in Rust 🦀<br/>Unlock the full capabilities of Logitech mice, keyboards, and webcams over HID++ and UVC</strong></p>
 
+> [!WARNING]
+> **OpenLogi is under active development** and not yet stable — features and config may still change. Give the repo a **Star** ⭐ and **Watch** 👀 it to get notified when a new release lands.
 
 <div align="center">
     <a href="https://twitter.com/AprilNEA" target="_blank">
@@ -37,6 +39,8 @@ categories: ['github']
 <p align="center">
     <a href="https://trendshift.io/repositories/42303" target="_blank">
     <img src="https://trendshift.io/api/badge/repositories/42303" alt="AprilNEA%2FOpenLogi | Trendshift" width="250" height="55"/></a>
+    <a href="https://www.producthunt.com/products/openlogi?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-openlogi" target="_blank" rel="noopener noreferrer">
+    <img alt="OpenLogi - A local-first alternative to Logitech Options+ | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1229381&amp;theme=light&amp;t=1787483638149"></a>
 </p>
 
 > **Fed up with Options+? Try OpenLogi.**
@@ -80,7 +84,7 @@ Things OpenLogi does that Options+ won't:
 
 - Any Logitech UVC webcam (Brio, StreamCam, the C920 series, …), plug and play
 - Live preview that opens the camera only while you watch — leaving it releases the camera entirely and the LED goes off
-- Image controls written straight to the UVC hardware — zoom, focus, exposure, brightness, contrast, saturation, sharpness, white balance, tint, with auto-mode toggles for focus / exposure / white balance — so changes apply in Meet / Zoom / OBS and every other app using the camera
+- Image controls written straight to the UVC hardware — zoom, focus, exposure, brightness, contrast, saturation, sharpness, white balance, tint, anti-flicker, and low-light compensation, with auto-mode toggles for focus / exposure / white balance — so changes apply in Meet / Zoom / OBS and every other app using the camera
 - One-click profiles: built-in Default / Streaming / Video call plus custom snapshots; settings persist per camera and are written back to the hardware on the next view
 
 ¹ Media key actions use D-Bus MPRIS on Linux; a handful of macOS-specific actions have no universal Linux equivalent and are no-ops. Windows maps platform actions to native equivalents where available.
