@@ -1,9 +1,9 @@
 ---
 title: codex
-date: 2026-08-24T16:11:32+08:00
+date: 2026-08-25T15:59:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1662887443662-9fde845e3de8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc1NTkwNTl8&ixlib=rb-4.1.0
-tags: ['github',OpenAI, Codex, CLI]
+image: https://images.unsplash.com/photo-1704642783129-d50efbdfc037?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc2NDQ2ODZ8&ixlib=rb-4.1.0
+tags: ['github',Codex CLI, OpenAI, installation]
 categories: ['github']
 ---
 
