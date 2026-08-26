@@ -1,9 +1,9 @@
 ---
 title: ai-job-search
-date: 2026-08-25T16:00:12+08:00
+date: 2026-08-26T16:03:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1704642783129-d50efbdfc037?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc2NDQ2ODZ8&ixlib=rb-4.1.0
-tags: ['github',AI job search, job application framework, Claude Code]
+image: https://images.unsplash.com/photo-1673970825861-3469f8fe01d3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc3MzEyOTF8&ixlib=rb-4.1.0
+tags: ['github',AI job search, job application automation, interview preparation]
 categories: ['github']
 ---
 
@@ -229,9 +229,14 @@ ai-job-search/
 ├── .github/workflows/ci.yml           # CI: LaTeX smoke compiles, skill lint, CLI typechecks
 ├── salary_lookup.py                   # Salary benchmarking tool (BYO data)
 ├── tools/
+│   ├── check_framework_version.py     # CI check: framework_version bumped when skill files change
+│   ├── check_upstream_updates.py      # Preview which personalized files an upstream update touches
 │   ├── convert_salary_excel.py        # Convert salary Excel to JSON
 │   ├── lint_skills.py                 # CI lint for skills, commands, settings.json
+│   ├── robots_check.py                # Gate the browser-header retry against robots.txt
 │   ├── security_guards.py             # CI guards: permission allowlist, gitignore rules, manifests
+│   ├── upstream_triage.py             # Sort upstream commits into worth-reviewing vs probably-skip
+│   ├── verify_pdf.py                  # Verify a compiled PDF's page count and extractable text
 │   └── README_SALARY_TOOL.md          # Salary tool setup instructions
 ├── job_scraper/                       # Scraper state (seen jobs, results)
 ├── gmail_sync/                        # /gmail-sync state (processed message IDs, last sync date)

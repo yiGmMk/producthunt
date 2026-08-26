@@ -1,0 +1,137 @@
+---
+title: Product Hunt 今日热榜 | 2026-08-26
+date: 2026-08-26 07:59:28+0000
+image: https://ph-files.imgix.net/37968db6-2d1b-4496-b860-f96d27b11af9.png?auto=format
+tags: ["私有公司数据", "信号API", "代理经济"]
+---
+
+## 1. akta.pro  
+**标语**: 面向代理经济的私有公司数据与信号API  
+**介绍**: 专有公司数据深度达PitchBook的四倍，覆盖范围是其两倍，并提供涵盖企业、行业及主题的100多种事件信号与新闻动态。可用于挖掘交易机会、开展尽职调查，亦可生成外联清单并触发主动触达。专为金融服务与市场拓展团队打造，支持按需付费模式。  
+**网站**: [立即访问](https://www.producthunt.com/r/7VLENQJQZQK4EG?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/akta-pro?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![akta.pro](https://ph-files.imgix.net/37968db6-2d1b-4496-b860-f96d27b11af9.png?auto=format)  
+**关键词**: 私有公司数据, 信号API, 代理经济, 事件信号, 新闻数据, 金融服务, GTM团队, 按需付费, 深度覆盖, 交易尽职调查  
+**票数**: 🔺405  
+**是否精选**: 是  
+**发布时间**: 2026年08月25日 PM03:01 (北京时间)  
+
+---  
+
+## 2. Diet Claude  
+**标语**: 别再让Claude的使用限制搞得措手不及  
+**介绍**: 用Claude时突然达到使用上限真是烦死了。Diet Claude提供了实时用量表，能显示当前会话已用量、剩余时间以及限制重置时间。它通过修剪上下文、精简提示词、推荐合适模型来优化代币使用量。即使真的用尽额度，它也会自动将对话和上下文迁移到另一个大语言模型，无需从头开始。  
+**网站**: [立即访问](https://www.producthunt.com/r/FBBFOTHWP2O4QH?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/diet-claude?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Diet Claude](https://ph-files.imgix.net/a91b20f7-2789-4ffb-bb85-3bd54ce276f1.png?auto=format)  
+**关键词**: 使用监控, 令牌优化, 上下文修剪, 提示优化, 模型推荐, 会话转移, 限制预警  
+**票数**: 🔺390  
+**是否精选**: 是  
+**发布时间**: 2026年08月25日 PM03:01 (北京时间)  
+
+---  
+
+## 3. Agnost AI  
+**标语**: 捕捉评估过程中遗漏的代理故障  
+**介绍**: Agnost AI分析用户与生产环境AI智能体之间的对话，并发现以下问题：静默故障、智能体行为漂移、幻觉现象、用户挫败感、隐藏功能需求及流失信号。系统会将这些问题归类为重复出现的模式，展示每个洞察背后的具体用户与会话记录，并将其转化为评估与修复方案。  
+**网站**: [立即访问](https://www.producthunt.com/r/ETAPVE6UI3URIT?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/agnost-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Agnost AI](https://ph-files.imgix.net/363740f2-46a8-4f9f-b3a5-2ae32f3ec54e.png?auto=format)  
+**关键词**: 对话分析, 故障检测, 行为漂移, 用户挫败感, 隐藏请求, 流失信号, 模式识别, 评估修复  
+**票数**: 🔺282  
+**是否精选**: 是  
+**发布时间**: 2026年08月25日 PM03:01 (北京时间)  
+
+---  
+
+## 4. Jotform AI Data Assistant  
+**标语**: 利用AI将表单数据转化为洞察和行动  
+**介绍**: Jotform数据助手将您收集的数据转化为答案、洞察与行动。只需简单指令，即可创建或整理表格、分析提交内容、发现趋势、生成图表、汇总反馈或批量更新记录。该功能直接内置在Jotform表格和收件箱中，通过自然对话帮助您管理整个提交后工作流程，无需公式、复杂筛选或重复手动操作。  
+**网站**: [立即访问](https://www.producthunt.com/r/2IXJ3KDUVPWSJK?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/jotform?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Jotform AI Data Assistant](https://ph-files.imgix.net/49deccb3-2007-438d-a0a5-aad6750c04d6.png?auto=format)  
+**关键词**: AI 数据助手, 表单数据分析, 自动化洞察, 智能表格管理, 趋势发现, 图表生成, 响应总结, 批量更新, 自然对话, 工作流程管理  
+**票数**: 🔺234  
+**是否精选**: 是  
+**发布时间**: 2026年08月25日 PM03:01 (北京时间)  
+
+---  
+
+## 5. Nimbia  
+**标语**: 用户引导的AI屏幕共享通话  
+**介绍**: Nimbia是一款通过屏幕共享通话来引导和培训软件产品新用户的AI助手。它能说会听，还能实际点击用户屏幕，因此能提供真正有效的帮助。首家使用Nimbia的公司因此实现了40%的增速提升。在与原有上手培训方案进行的A/B测试中，Nimbia使用户首周激活率和试用版转付费版转化率均提高了1.4倍。  
+**网站**: [立即访问](https://www.producthunt.com/r/5GM7KP7RMUFRD6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/nimbia?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Nimbia](https://ph-files.imgix.net/f25e53bd-acff-48fd-97c9-a73a436087ff.jpeg?auto=format)  
+**关键词**: Nimbia, AI屏幕共享, 用户引导, 新用户培训, 智能点击, 增长加速, 激活提升, 转化优化  
+**票数**: 🔺169  
+**是否精选**: 是  
+**发布时间**: 2026年08月25日 PM03:01 (北京时间)  
+
+---  
+
+## 6. Memoria  
+**标语**: 通过文字、语音、物体及人脸搜索照片。100%离线操作。  
+**介绍**: 厌倦了无休止的滑动浏览？Memoria是专为您的相册打造的本地搜索引擎。它利用设备端AI转录视频音频、读取截图文字、识别人脸与物体。无需云端支持，无需订阅付费。只需输入曾说过或写下的内容，即可精准定位对应媒体。  
+**网站**: [立即访问](https://www.producthunt.com/r/2LUVN6DSPZLZVG?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/memoria-5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Memoria](https://ph-files.imgix.net/29e37da4-3cc6-4db5-9d45-a71408562816.png?auto=format)  
+**关键词**: Memoria, 照片搜索, 文本搜索, 语音搜索, 物体识别, 人脸识别, 离线搜索, 本地AI, 无云服务, 无订阅  
+**票数**: 🔺149  
+**是否精选**: 是  
+**发布时间**: 2026年08月25日 PM03:01 (北京时间)  
+
+---  
+
+## 7. coolplugz  
+**标语**: 一个能为开发者节省大量时间的Claude编排器  
+**介绍**: 一个编排层，指导Claude Code自动完成您的编码任务，无需持续监督。它能从Jira、Github、Notion和Slack获取上下文信息，自动生成提示指令，并验证Claude Code是否正确完成任务。  
+**网站**: [立即访问](https://www.producthunt.com/r/YMM5QLG2OGVHU6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/coolplugz?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![coolplugz](https://ph-files.imgix.net/944e9e31-c857-4f42-8943-c352a654cd87.jpeg?auto=format)  
+**关键词**: AI编排,编码自动化,时间节省,工具集成,任务验证  
+**票数**: 🔺134  
+**是否精选**: 是  
+**发布时间**: 2026年08月25日 PM03:01 (北京时间)  
+
+---  
+
+## 8. Purchase API by Agentcard  
+**标语**: 只需一次API调用，您的代理即可在线购买任何东西。  
+**介绍**: 您的智能助手现在可以通过一次API调用完成购物。只需告诉它“从Y处购买X”，Agentcard便会自动查找商品、运行结账流程并使用单次使用卡完成支付。目前已支持DoorDash、Amazon以及大多数Shopify和Stripe商店。即刻访问agentcard.sh尝试体验，首单免费！  
+**网站**: [立即访问](https://www.producthunt.com/r/XZKGFALU5JJJ4O?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/agent-card?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Purchase API by Agentcard](https://ph-files.imgix.net/c36bf996-a9eb-4704-a066-fc27f3769d37.png?auto=format)  
+**关键词**: Agentcard购买API, 一键API调用, 代理自动购物, 在线支付集成, 虚拟卡支付, 多平台电商支持, 免费试用首单  
+**票数**: 🔺131  
+**是否精选**: 是  
+**发布时间**: 2026年08月25日 PM03:01 (北京时间)  
+
+---  
+
+## 9. Altar II  
+**标语**: 苹果从未制造的机械键盘  
+**介绍**: 薄得惊人，全机械结构。Altar II将卓越的打字体验与不可思议的设计融为一体。  
+**网站**: [立即访问](https://www.producthunt.com/r/AJSTJ4ISNT6DBT?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/electronic-materials-office-altar-i?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Altar II](https://ph-files.imgix.net/70de107c-5df7-4b4c-9840-a18ca9fe70de.jpeg?auto=format)  
+**关键词**: Altar II, 机械键盘, 超薄设计, 苹果风格, 卓越打字体验, 惊艳设计  
+**票数**: 🔺122  
+**是否精选**: 是  
+**发布时间**: 2026年08月25日 PM03:01 (北京时间)  
+
+---  
+
+## 10. Ninjō AI  
+**标语**: 可在任何渠道上运行的AI销售代理，基于Claude Code。  
+**介绍**: Ninjō是面向Instagram、WhatsApp及所有销售渠道的AI销售代理基础设施。通过MCP与Claude、ChatGPT、Claude Code或Codex对话，即可创建、测试、分析并优化销售代理——该系统采用经过150多个实际创收代理验证的模板（已为客户创造75万美元收入）。支持版本化变更与即时回滚、合成对话测试、自动跟进、关键词触发及内置CRM功能。几分钟内即可上线。免费版包含1000条消息额度。  
+**网站**: [立即访问](https://www.producthunt.com/r/5OOMHTQENABQUM?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/ninjo-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Ninjō AI](https://ph-files.imgix.net/75c033d7-8958-4cfb-9791-8d9eea89df32.png?auto=format)  
+**关键词**: AI销售代理, 多渠道基础设施, MCP集成, AI对话平台, 验证模板, 收入生成, 版本控制, 即时回滚, 合成测试, 后续跟进, 关键词触发, 内置CRM, 快速部署, 免费试用  
+**票数**: 🔺121  
+**是否精选**: 是  
+**发布时间**: 2026年08月25日 PM03:01 (北京时间)  
+
+---  
+

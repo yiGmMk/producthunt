@@ -1,9 +1,9 @@
 ---
 title: awesome-gpt-image-2
-date: 2026-08-24T16:11:54+08:00
+date: 2026-08-26T16:01:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1660085680472-1f35f1e5a056?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc1NTkwNTl8&ixlib=rb-4.1.0
-tags: ['github',GPT-Image2, prompt, template]
+image: https://images.unsplash.com/photo-1542573084-6d433757f46c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc3MzEyOTF8&ixlib=rb-4.1.0
+tags: ['github',GPT-Image2,prompt engineering,template library]
 categories: ['github']
 ---
 
@@ -41,11 +41,11 @@ Use the live site at [gpt-image2.canghe.ai](https://gpt-image2.canghe.ai/) to br
   </a>
 </p>
 
-## Paid Community
+## Community 交流群
 
-The GPT-Image2 discussion group is now a paid community. Sign in on the [community page](https://gpt-image2.canghe.ai/community), make a one-time **¥9.90** Alipay payment, and the protected group QR will appear only after the server confirms payment.
+Join the GPT-Image2 discussion group to exchange prompts, workflows, and creative ideas with other users. Visit the [community page](https://gpt-image2.canghe.ai/community) to join.
 
-For payment, access, refund, or product questions, follow the WeChat official account **苍何** or scan the card below and send a message.
+Follow the WeChat official account **苍何** or scan the QR code below to receive project updates, new cases, and practical tutorials.
 
 <p align="center">
   <img src="src/assets/canghe-official-account.png" alt="苍何 WeChat official account QR code and search card" width="760">
@@ -60,7 +60,6 @@ For payment, access, refund, or product questions, follow the WeChat official ac
 | <a href="https://apimart.ai/register?aff=oQgzUQ"><img src="data/images/sponsors/apimart.jpg" alt="APIMart" width="240"></a> | Thanks to APIMart for sponsoring this project! APIMart is a low-cost API platform for AI image & video generation — GPT-Image-2 from `$0.006/image`, 160+ images per dollar. One async API covers both image and video: submit a task, get an ID, fetch results via polling or callback. Batch tens of thousands of images without timeouts, switch models without changing code. Pay-as-you-go with no monthly fee — [sign up here](https://apimart.ai/register?aff=oQgzUQ) to get started. |
 | <a href="https://www.hiapi.ai/zh/register?aff=DzuH"><img src="data/images/sponsors/hiapi.jpg" alt="hiapi" width="240"></a> | Thanks to hiapi for sponsoring this project! hiapi is an AI image & video generation API platform — GPT-Image-2 (text-to-image, image edit, 1K–4K) alongside video models like Seedance, Kling and Wan, all through one unified async API: submit a task, get a `task_id`, fetch results by polling or callback, batch without timeouts, switch models without code changes. Every result is stored on hiapi's own CDN with **persistent storage**, so your image/video URLs stay available long-term and can be fetched anytime — no rushing to download and back them up yourself. Native Remote MCP and Agent Skills plug straight into Claude Code & Cursor. Chinese UI & docs, WeChat Pay, pay-as-you-go with no monthly fee — new users get $1 free credit (~50 images). [Sign up here](https://www.hiapi.ai/en/register?aff=DzuH&utm_source=github&utm_medium=sponsor&utm_campaign=awesome-gpt-image-2). |
 | <a href="https://www.packyapi.ai/register?aff=CV0c"><img src="data/images/sponsors/packycode.png" alt="PackyCode" width="240"></a> | Thanks to PackyCode for sponsoring this project! PackyCode is a stable, high-performance API relay provider for Claude Code, Codex, Gemini, and more. Automatic failover, smart routing, and unlimited concurrency help turn AI coding into a reliable productivity tool. [Register here](https://www.packyapi.ai/register?aff=CV0c) to get started. |
-| <a href="https://doloffer.com/friend/HuHEKQOk"><img src="data/images/sponsors/doloffer.jpg" alt="DolOffer" width="240"></a> | Thank you to DolOffer for supporting this project. DolOffer is a platform focused on digital product recommendations and deal sharing, helping users quickly discover useful tools, services, and limited-time benefits. It offers popular subscriptions including YouTube Premium, Claude, ChatGPT Plus, Spotify, and Apple Music at prices as low as 30% of official pricing or even lower, with genuine stable service and worry-free support. Register through our [exclusive link](https://doloffer.com/friend/HuHEKQOk) and enter promo code `AI8888` when topping up to get an extra 10% off. |
 | <a href="https://pptoken.cc/"><img src="data/images/sponsors/pptoken.png" alt="PPToken" width="240"></a> | Project sponsor. PPToken provides API relay and key distribution for ChatGPT, Claude, Gemini, and other mainstream AI models, with low-latency access, high availability, pay-as-you-go billing, and flexible subscription plans. |
 
 <a name="section-vision"></a>
