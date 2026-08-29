@@ -1,9 +1,9 @@
 ---
 title: archify
-date: 2026-08-29T03:28:55+08:00
+date: 2026-08-29T21:15:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1546374005-a326eb8fe257?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc5NDUzMDV8&ixlib=rb-4.1.0
-tags: ['github',architecture, visualization, validation]
+image: https://images.unsplash.com/photo-1617089398992-7499a0813246?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODgwMDkyNjh8&ixlib=rb-4.1.0
+tags: ['github',system mapping, architecture diagrams, interactive visualization]
 categories: ['github']
 ---
 

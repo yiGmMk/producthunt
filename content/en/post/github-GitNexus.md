@@ -1,9 +1,9 @@
 ---
 title: GitNexus
-date: 2026-08-29T03:30:55+08:00
+date: 2026-08-29T21:17:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1711603108728-1e76cb8ca3d6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc5NDUzMDV8&ixlib=rb-4.1.0
-tags: ['github',knowledge graph, code analysis, AI integration]
+image: https://images.unsplash.com/photo-1746311421259-97faba8c0bed?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODgwMDkyNjh8&ixlib=rb-4.1.0
+tags: ['github',knowledge graph, AI agents, code analysis]
 categories: ['github']
 ---
 
@@ -395,6 +395,7 @@ Everyday commands:
 ```bash
 gitnexus setup                   # Configure MCP for detected editors (one-time; -c to select)
 gitnexus analyze [path]          # Index a repository (or update a stale index)
+gitnexus analyze [path] --watch  # Watch local files and serialize incremental refreshes
 gitnexus mcp                     # Start MCP server (stdio) — serves all indexed repos
 gitnexus serve                   # Start local HTTP server (multi-repo) for web UI connection
 gitnexus eval-server             # Start lightweight evaluation HTTP tools (loopback by default)
@@ -406,6 +407,28 @@ gitnexus uninstall               # Preview removal of GitNexus MCP/skills/hooks 
 ```
 
 You can also query the graph directly from the terminal — `gitnexus query`, `context`, `impact`, `trace`, `cypher`, `detect-changes`, and `check` mirror the MCP tools of the same names, and `gitnexus doctor` prints runtime platform capabilities.
+
+`gitnexus analyze --watch` requires a Git repository. It runs one initial
+analysis, then debounces scanner-admitted working-tree changes for 300 ms by
+default and applies serialized incremental refreshes. Events arriving during a
+refresh remain queued, and retryable failures retain the same batch with bounded
+backoff. Invalid `.gitnexusrc` or ignore-file reloads pause ordinary refreshes
+until the control file is fixed. Stop the watcher with Ctrl+C.
+
+Watch mode accepts `--debounce`, `--workers`, `--worker-timeout`,
+`--max-file-size`, `--branch`, `--pdg`, `--name`, `--allow-duplicate-name`, and
+`--verbose`. Explicit one-shot options such as `--force`, `--repair-fts`,
+embedding flags, `--skills`, `--self-commit`, `--index-only`, and `--skip-git`
+are rejected. Unsupported defaults from `.gitnexusrc` are ignored with a
+warning rather than making an otherwise valid repository unwatchable.
+
+POSIX requests clone-first copy-and-swap publication when the live index has no
+orphan sidecars. Windows and sidecar fallback runs update in place: failures
+known to occur before writes are retried, while a failure that may have mutated
+the live index stops the watcher. Watch mode does not pull remotes. Running MCP
+and `serve` processes reopen a newly published index automatically; MCP observes
+the replacement on its next tool call, typically within five seconds, so no
+restart is required.
 
 <details>
 <summary><strong>Authenticated <code>eval-server</code> binding</strong></summary>
@@ -778,6 +801,7 @@ gitnexus wiki
 # Use a custom model or provider (default model: minimax/minimax-m2.5)
 gitnexus wiki --model gpt-4o
 gitnexus wiki --base-url https://api.anthropic.com/v1
+gitnexus wiki --provider grok   # local Grok Build CLI (uses `grok login`, no API key)
 
 # Force full regeneration
 gitnexus wiki --force

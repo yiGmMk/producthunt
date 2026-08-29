@@ -1,9 +1,9 @@
 ---
 title: gods-eye-view
-date: 2026-08-29T03:30:39+08:00
+date: 2026-08-29T21:17:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1754215683705-ee0a731d7288?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc5NDUzMDV8&ixlib=rb-4.1.0
-tags: ['github',real-time data, 3D globe, voice control]
+image: https://images.unsplash.com/photo-1545369209-9f3e83cd2af3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODgwMDkyNjh8&ixlib=rb-4.1.0
+tags: ['github',spy satellite simulator, real-time data, open source]
 categories: ['github']
 ---
 
