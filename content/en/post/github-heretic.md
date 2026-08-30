@@ -1,17 +1,17 @@
 ---
 title: heretic
-date: 2026-03-15T15:50:59+08:00
+date: 2026-08-30T20:54:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1643240337036-fa77dbc87c13?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM1NjEwMjB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1645675093776-4237cdd2d98e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODgwOTQyNDd8&ixlib=rb-4.1.0
 tags: ['github',censorship removal, language models, abliteration]
 categories: ['github']
 ---
 
 # [p-e-w/heretic](https://github.com/p-e-w/heretic)
 
-<img width="128" height="128" align="right" alt="Logo" src="https://github.com/user-attachments/assets/df5f2840-2f92-4991-aa57-252747d7182e" />
+<img width="128" align="right" alt="Logo" src="https://github.com/user-attachments/assets/df5f2840-2f92-4991-aa57-252747d7182e" />
 
-# Heretic: Fully automatic censorship removal for language models<br><br>[![Discord](https://img.shields.io/discord/1447831134212984903?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/gdXc48gSyT) [![Follow us on Hugging Face](https://huggingface.co/datasets/huggingface/badges/resolve/main/follow-us-on-hf-md-dark.svg)](https://huggingface.co/heretic-org)
+# Heretic: Fully automatic censorship removal for language models<br><br>[![Discord](https://img.shields.io/discord/1447831134212984903?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/gdXc48gSyT) [![Matrix](https://img.shields.io/badge/Matrix-black?logo=matrix&style=for-the-badge)](https://matrix.to/#/#heretic:matrix.org) [![Follow us on Hugging Face](https://huggingface.co/datasets/huggingface/badges/resolve/main/follow-us-on-hf-md-dark.svg)](https://huggingface.co/heretic-org) [![Codeberg mirror](https://img.shields.io/badge/Codeberg%20mirror-black?logo=codeberg&style=for-the-badge)](https://codeberg.org/p-e-w/heretic)
 
 [![#1 Repository of the Day](https://trendshift.io/api/badge/repositories/20538)](https://trendshift.io/repositories/20538)
 
@@ -30,6 +30,11 @@ decensored model that retains as much of the original model's intelligence
 as possible. Using Heretic does not require an understanding of transformer
 internals. In fact, anyone who knows how to run a command-line program
 can use Heretic to decensor language models.
+
+Heretic supports most dense models, including many multimodal models,
+several different MoE architectures, and even some hybrid models like Qwen3.5.
+Pure state-space models and certain other research architectures are not yet
+supported out of the box.
 
 <img width="650" height="715" alt="Screenshot" src="https://github.com/user-attachments/assets/d71a5efa-d6be-4705-a817-63332afb2d15" />
 
@@ -76,15 +81,15 @@ Heretic have been well-received by users (links and emphasis added):
 > Has been the best unquantized abliterated model that I have been able to run on 16gb vram."
 > [*(Link to comment)*](https://old.reddit.com/r/LocalLLaMA/comments/1phjxca/im_calling_these_people_out_right_now/nt06tji/)
 
-Heretic supports most dense models, including many multimodal models, and
-several different MoE architectures. It does not yet support SSMs/hybrid models,
-models with inhomogeneous layers, and certain novel attention systems.
+Heretic models have also been independently benchmarked using standard metrics
+like MMLU and GSM8K, and have been found to compare favorably with models
+produced by competing abliteration tools:
+[1](https://old.reddit.com/r/LocalLLaMA/comments/1sojjoc/abliterlitics_benchmark_and_tensor_analysis/),
+[2](https://old.reddit.com/r/LocalLLaMA/comments/1sy18lx/abliterlitics_benchmarks_and_tensor_comparison/).
 
-You can find a small collection of models that have been decensored using Heretic
-[on Hugging Face](https://huggingface.co/collections/p-e-w/the-bestiary),
-and the community has created and published
-[well over 1,000](https://huggingface.co/models?other=heretic)
-Heretic models in addition to those.
+The community has created and published
+[well over 5000](https://huggingface.co/models?other=heretic)
+models with Heretic.
 
 
 ## Usage
@@ -92,12 +97,27 @@ Heretic models in addition to those.
 Prepare a Python 3.10+ environment with PyTorch 2.2+ installed as appropriate
 for your hardware. Then run:
 
-```
+```sh
 pip install -U heretic-llm
 heretic Qwen/Qwen3-4B-Instruct-2507
 ```
 
 Replace `Qwen/Qwen3-4B-Instruct-2507` with whatever model you want to decensor.
+
+> [!IMPORTANT]
+>
+> While PyTorch 2.2 is the minimum version of PyTorch needed for Heretic to work,
+> some models and configurations might require features only found in
+> later versions. For example, loading MXFP4-quantized models like gpt-oss
+> uses `torch.accelerator`, which was added in PyTorch 2.6.
+
+> [!TIP]
+>
+> Heretic uses [uv](https://docs.astral.sh/uv/) for dependency management,
+> and the repository includes a `uv.lock` file pinning every package version.
+> If you already use uv (and you probably should!), you can just clone the repo
+> and run Heretic with `uv run heretic`, which ensures that your dependencies
+> match those used by the developers, improving reliability and security.
 
 The process is fully automatic and does not require configuration; however,
 Heretic has a variety of configuration parameters that can be changed for
@@ -107,14 +127,15 @@ a configuration file.
 
 At the start of a program run, Heretic benchmarks the system to determine
 the optimal batch size to make the most of the available hardware.
-On an RTX 3090, with the default configuration, decensoring Llama-3.1-8B-Instruct
-takes about 45 minutes. Note that Heretic supports model quantization with
+On an RTX 3090, with the default configuration, decensoring
+[Qwen3-4B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507)
+takes about 20-30 minutes. Note that Heretic supports model quantization with
 bitsandbytes, which can drastically reduce the amount of VRAM required to process
 models. Set the `quantization` option to `bnb_4bit` to enable quantization.
 
 After Heretic has finished decensoring a model, you are given the option to
 save the model, upload it to Hugging Face, chat with it to test how well it works,
-or any combination of those actions.
+run standard benchmarks on it, or any combination of those actions.
 
 
 ## Research features
@@ -124,8 +145,8 @@ provides features designed to support research into the semantics of model inter
 (interpretability). To use those features, you need to install Heretic with the
 optional `research` extra:
 
-```
-pip install -U heretic-llm[research]
+```sh
+pip install -U 'heretic-llm[research]'
 ```
 
 This gives you access to the following functionality:
@@ -190,8 +211,8 @@ g = mean of residual vectors for good prompts
 g* = geometric median of residual vectors for good prompts
 b = mean of residual vectors for bad prompts
 b* = geometric median of residual vectors for bad prompts
-r = refusal direction for means (i.e., b - g)
-r* = refusal direction for geometric medians (i.e., b* - g*)
+r = residual direction for means (i.e., b - g)
+r* = residual direction for geometric medians (i.e., b* - g*)
 S(x,y) = cosine similarity of x and y
 |x| = L2 norm of x
 Silh = Mean silhouette coefficient of residuals for good/bad clusters
@@ -203,18 +224,18 @@ Silh = Mean silhouette coefficient of residuals for good/bad clusters
 Heretic implements a parametrized variant of directional ablation. For each
 supported transformer component (currently, attention out-projection and
 MLP down-projection), it identifies the associated matrices in each transformer
-layer, and orthogonalizes them with respect to the relevant "refusal direction",
+layer, and orthogonalizes them with respect to the relevant "residual direction",
 inhibiting the expression of that direction in the result of multiplications
 with that matrix.
 
-Refusal directions are computed for each layer as a difference-of-means between
+Residual directions are computed for each layer as a difference-of-means between
 the first-token residuals for "harmful" and "harmless" example prompts.
 
 The ablation process is controlled by several optimizable parameters:
 
-* `direction_index`: Either the index of a refusal direction, or the special
+* `direction_index`: Either the index of a residual direction, or the special
   value `per layer`, indicating that each layer should be ablated using the
-  refusal direction associated with that layer.
+  residual direction associated with that layer.
 * `max_weight`, `max_weight_position`, `min_weight`, and `min_weight_distance`:
   For each component, these parameters describe the shape and position of the
   ablation weight kernel over the layers. The following diagram illustrates this:
@@ -229,8 +250,8 @@ Heretic's main innovations over existing abliteration systems are:
   automatic parameter optimization, can improve the compliance/quality tradeoff.
   Non-constant ablation weights were previously explored by Maxime Labonne in
   [gemma-3-12b-it-abliterated-v2](https://huggingface.co/mlabonne/gemma-3-12b-it-abliterated-v2).
-* The refusal direction index is a float rather than an integer. For non-integral
-  values, the two nearest refusal direction vectors are linearly interpolated.
+* The residual direction index is a float rather than an integer. For non-integral
+  values, the two nearest residual direction vectors are linearly interpolated.
   This unlocks a vast space of additional directions beyond the ones identified
   by the difference-of-means computation, and often enables the optimization
   process to find a better direction than that belonging to any individual layer.
