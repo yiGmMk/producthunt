@@ -1,9 +1,9 @@
 ---
 title: scientific-agent-skills
-date: 2026-08-30T20:52:13+08:00
+date: 2026-08-31T23:07:34+08:00
 draft: False
-image: https://images.unsplash.com/photo-1645675093776-4237cdd2d98e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODgwOTQyNDd8&ixlib=rb-4.1.0
-tags: ['github',scientific agent skills, AI agents, scientific research]
+image: https://images.unsplash.com/photo-1582390494081-de023fffb7df?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODgxODg3NTF8&ixlib=rb-4.1.0
+tags: ['github',scientific agent skills, AI agent, research]
 categories: ['github']
 ---
 

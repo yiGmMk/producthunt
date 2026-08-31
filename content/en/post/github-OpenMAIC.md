@@ -1,9 +1,9 @@
 ---
 title: OpenMAIC
-date: 2026-08-30T20:51:09+08:00
+date: 2026-08-31T23:06:25+08:00
 draft: False
-image: https://images.unsplash.com/photo-1731957721436-794574693931?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODgwOTQyNDd8&ixlib=rb-4.1.0
-tags: ['github',multi-agent, interactive classroom, AI platform]
+image: https://images.unsplash.com/photo-1650909114368-f49e88e71dce?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODgxODg3NTF8&ixlib=rb-4.1.0
+tags: ['github',OpenMAIC, multi-agent, interactive classroom]
 categories: ['github']
 ---
 
