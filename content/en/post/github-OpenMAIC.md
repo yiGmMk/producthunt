@@ -1,9 +1,9 @@
 ---
 title: OpenMAIC
-date: 2026-08-31T23:06:25+08:00
+date: 2026-09-01T20:40:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1650909114368-f49e88e71dce?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODgxODg3NTF8&ixlib=rb-4.1.0
-tags: ['github',OpenMAIC, multi-agent, interactive classroom]
+image: https://images.unsplash.com/photo-1728653866452-bcd57e3267da?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODgyNjYzMDF8&ixlib=rb-4.1.0
+tags: ['github',OpenMAIC, multi-agent, AI education]
 categories: ['github']
 ---
 
@@ -22,9 +22,9 @@ categories: ['github']
 </p>
 
 <p align="center">
-  <a href="https://my.feishu.cn/wiki/UIfKw9Knti0LcKkTxDNcqlUrnzh"><img src="https://img.shields.io/badge/%F0%9F%93%98%20User%20Guide-v1.0.0%20%C2%B7%20English-4F8EF7?style=for-the-badge" alt="v1.0.0 User Guide (English)"/></a>
+  <a href="https://lcn6dqn3m0yr.feishu.cn/wiki/CkQSwHFdzibQFvkGzwPcmUOfnXg"><img src="https://img.shields.io/badge/%F0%9F%93%98%20User%20Guide-v1.0.0%20%C2%B7%20English-4F8EF7?style=for-the-badge" alt="v1.0.0 User Guide (English)"/></a>
   &nbsp;&nbsp;
-  <a href="https://lcn6dqn3m0yr.feishu.cn/wiki/CkQSwHFdzibQFvkGzwPcmUOfnXg"><img src="https://img.shields.io/badge/%F0%9F%93%99%20%E4%BD%93%E9%AA%8C%E6%8C%87%E5%8D%97-v1.0.0%20%C2%B7%20%E4%B8%AD%E6%96%87-FF6B35?style=for-the-badge" alt="v1.0.0 体验指南（中文）"/></a>
+  <a href="https://my.feishu.cn/wiki/UIfKw9Knti0LcKkTxDNcqlUrnzh"><img src="https://img.shields.io/badge/%F0%9F%93%99%20%E4%BD%93%E9%AA%8C%E6%8C%87%E5%8D%97-v1.0.0%20%C2%B7%20%E4%B8%AD%E6%96%87-FF6B35?style=for-the-badge" alt="v1.0.0 体验指南（中文）"/></a>
 </p>
 
 <p align="center">
