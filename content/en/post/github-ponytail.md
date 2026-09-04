@@ -1,9 +1,9 @@
 ---
 title: ponytail
-date: 2026-09-03T20:15:38+08:00
+date: 2026-09-04T20:16:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1746003288323-89dba68721f6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg0Mzc1ODB8&ixlib=rb-4.1.0
-tags: ['github',Ponytail, AI agent, code reduction]
+image: https://images.unsplash.com/photo-1689327379660-d7d25550d5ba?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg1MjQxNDF8&ixlib=rb-4.1.0
+tags: ['github',Ponytail, AI agent, minimal code]
 categories: ['github']
 ---
 
