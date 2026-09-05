@@ -1,9 +1,9 @@
 ---
 title: hermes-agent
-date: 2026-09-03T20:15:06+08:00
+date: 2026-09-05T19:25:00+08:00
 draft: False
-image: https://images.unsplash.com/photo-1667841647551-8d01153a2b0a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg0Mzc1ODB8&ixlib=rb-4.1.0
-tags: ['github',Hermes Agent, self-improving agent, messaging platforms]
+image: https://images.unsplash.com/photo-1627664002236-956249eb5433?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg2MDczMzN8&ixlib=rb-4.1.0
+tags: ['github',Hermes Agent, AI agent, self-improving]
 categories: ['github']
 ---
 
