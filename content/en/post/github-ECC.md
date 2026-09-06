@@ -1,9 +1,9 @@
 ---
 title: ECC
-date: 2026-09-05T19:23:49+08:00
+date: 2026-09-06T19:48:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1627664002236-956249eb5433?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg2MDczMzN8&ixlib=rb-4.1.0
-tags: ['github',ecc, agent harness, operating system]
+image: https://images.unsplash.com/photo-1589129230246-1aa19d2f7519?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg2OTUyMDl8&ixlib=rb-4.1.0
+tags: ['github',agent harness operating system, skills, workflows]
 categories: ['github']
 ---
 
