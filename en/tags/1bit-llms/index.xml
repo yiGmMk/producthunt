@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>1bit LLMs on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/1bit-llms/</link>
+        <description>Recent content in 1bit LLMs on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sat, 14 Mar 2026 16:17:02 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/1bit-llms/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>BitNet</title>
+        <link>https://producthunt.programnotes.cn/en/p/bitnet/</link>
+        <pubDate>Sat, 14 Mar 2026 16:17:02 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/bitnet/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1456408786436-37ace5840ee5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM0NzYyMTF8&amp;ixlib=rb-4.1.0" alt="Featured image of post BitNet" /&gt;&lt;h1 id=&#34;microsoftbitnet&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/microsoft/BitNet&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;microsoft/BitNet&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;bitnetcpp&#34;&gt;bitnet.cpp
+&lt;/h1&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://opensource.org/licenses/MIT&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/license-MIT-blue.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;License: MIT&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;img src=&#34;https://img.shields.io/badge/version-1.0-blue&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;version&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/microsoft/BitNet-b1.58-2B-4T&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;./assets/header_model_release.png&#34; alt=&#34;BitNet Model on Hugging Face&#34; width=&#34;800&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Try it out via this &lt;a class=&#34;link&#34; href=&#34;https://demo-bitnet-h0h8hcfqeqhrf5gf.canadacentral-01.azurewebsites.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;demo&lt;/a&gt;, or build and run it on your own &lt;a class=&#34;link&#34; href=&#34;https://github.com/microsoft/BitNet?tab=readme-ov-file#build-from-source&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CPU&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;https://github.com/microsoft/BitNet/blob/main/gpu/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GPU&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;bitnet.cpp is the official inference framework for 1-bit LLMs (e.g., BitNet b1.58). It offers a suite of optimized kernels, that support &lt;strong&gt;fast&lt;/strong&gt; and &lt;strong&gt;lossless&lt;/strong&gt; inference of 1.58-bit models on CPU and GPU (NPU support will coming next).&lt;/p&gt;
+&lt;p&gt;The first release of bitnet.cpp is to support inference on CPUs. bitnet.cpp achieves speedups of &lt;strong&gt;1.37x&lt;/strong&gt; to &lt;strong&gt;5.07x&lt;/strong&gt; on ARM CPUs, with larger models experiencing greater performance gains. Additionally, it reduces energy consumption by &lt;strong&gt;55.4%&lt;/strong&gt; to &lt;strong&gt;70.0%&lt;/strong&gt;, further boosting overall efficiency. On x86 CPUs, speedups range from &lt;strong&gt;2.37x&lt;/strong&gt; to &lt;strong&gt;6.17x&lt;/strong&gt; with energy reductions between &lt;strong&gt;71.9%&lt;/strong&gt; to &lt;strong&gt;82.2%&lt;/strong&gt;. Furthermore, bitnet.cpp can run a 100B BitNet b1.58 model on a single CPU, achieving speeds comparable to human reading (5-7 tokens per second), significantly enhancing the potential for running LLMs on local devices. Please refer to the &lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2410.16144&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;technical report&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Latest optimization&lt;/strong&gt; introduces parallel kernel implementations with configurable tiling and embedding quantization support, achieving &lt;strong&gt;1.15x to 2.1x&lt;/strong&gt; additional speedup over the original implementation across different hardware platforms and workloads. For detailed technical information, see the &lt;a class=&#34;link&#34; href=&#34;src/README.md&#34; &gt;optimization guide&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&#34;./assets/performance.png&#34; alt=&#34;performance_comparison&#34; width=&#34;800&#34;/&gt;
+&lt;h2 id=&#34;demo&#34;&gt;Demo
+&lt;/h2&gt;&lt;p&gt;A demo of bitnet.cpp running a BitNet b1.58 3B model on Apple M2:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/user-attachments/assets/7f46b736-edec-4828-b809-4be780a3e5b1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/user-attachments/assets/7f46b736-edec-4828-b809-4be780a3e5b1&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;whats-new&#34;&gt;What&amp;rsquo;s New:
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;01/15/2026 &lt;a class=&#34;link&#34; href=&#34;https://github.com/microsoft/BitNet/blob/main/src/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BitNet CPU Inference Optimization&lt;/a&gt; &lt;img src=&#34;https://img.shields.io/badge/NEW-red&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;NEW&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;05/20/2025 &lt;a class=&#34;link&#34; href=&#34;https://github.com/microsoft/BitNet/blob/main/gpu/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BitNet Official GPU inference kernel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;04/14/2025 &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/microsoft/BitNet-b1.58-2B-4T&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BitNet Official 2B Parameter Model on Hugging Face&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;02/18/2025 &lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2502.11880&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Bitnet.cpp: Efficient Edge Inference for Ternary LLMs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;11/08/2024 &lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2411.04965&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BitNet a4.8: 4-bit Activations for 1-bit LLMs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;10/21/2024 &lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2410.16144&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;1-bit AI Infra: Part 1.1, Fast and Lossless BitNet b1.58 Inference on CPUs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;10/17/2024 bitnet.cpp 1.0 released.&lt;/li&gt;
+&lt;li&gt;03/21/2024 &lt;a class=&#34;link&#34; href=&#34;https://github.com/microsoft/unilm/blob/master/bitnet/The-Era-of-1-bit-LLMs__Training_Tips_Code_FAQ.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The-Era-of-1-bit-LLMs__Training_Tips_Code_FAQ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;02/27/2024 &lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2402.17764&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;10/17/2023 &lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2310.11453&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BitNet: Scaling 1-bit Transformers for Large Language Models&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;acknowledgements&#34;&gt;Acknowledgements
+&lt;/h2&gt;&lt;p&gt;This project is based on the &lt;a class=&#34;link&#34; href=&#34;https://github.com/ggerganov/llama.cpp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;llama.cpp&lt;/a&gt; framework. We would like to thank all the authors for their contributions to the open-source community. Also, bitnet.cpp&amp;rsquo;s kernels are built on top of the Lookup Table methodologies pioneered in &lt;a class=&#34;link&#34; href=&#34;https://github.com/microsoft/T-MAC/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;T-MAC&lt;/a&gt;. For inference of general low-bit LLMs beyond ternary models, we recommend using T-MAC.&lt;/p&gt;
+&lt;h2 id=&#34;official-models&#34;&gt;Official Models
+&lt;/h2&gt;&lt;table&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th rowspan=&#34;2&#34;&gt;Model&lt;/th&gt;
+        &lt;th rowspan=&#34;2&#34;&gt;Parameters&lt;/th&gt;
+        &lt;th rowspan=&#34;2&#34;&gt;CPU&lt;/th&gt;
+        &lt;th colspan=&#34;3&#34;&gt;Kernel&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;I2_S&lt;/th&gt;
+        &lt;th&gt;TL1&lt;/th&gt;
+        &lt;th&gt;TL2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td rowspan=&#34;2&#34;&gt;&lt;a href=&#34;https://huggingface.co/microsoft/BitNet-b1.58-2B-4T&#34;&gt;BitNet-b1.58-2B-4T&lt;/a&gt;&lt;/td&gt;
+        &lt;td rowspan=&#34;2&#34;&gt;2.4B&lt;/td&gt;
+        &lt;td&gt;x86&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+        &lt;td&gt;&amp;#10060;&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;ARM&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+        &lt;td&gt;&amp;#10060;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;supported-models&#34;&gt;Supported Models
+&lt;/h2&gt;&lt;p&gt;❗️&lt;strong&gt;We use existing 1-bit LLMs available on &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugging Face&lt;/a&gt; to demonstrate the inference capabilities of bitnet.cpp. We hope the release of bitnet.cpp will inspire the development of 1-bit LLMs in large-scale settings in terms of model size and training tokens.&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th rowspan=&#34;2&#34;&gt;Model&lt;/th&gt;
+        &lt;th rowspan=&#34;2&#34;&gt;Parameters&lt;/th&gt;
+        &lt;th rowspan=&#34;2&#34;&gt;CPU&lt;/th&gt;
+        &lt;th colspan=&#34;3&#34;&gt;Kernel&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;I2_S&lt;/th&gt;
+        &lt;th&gt;TL1&lt;/th&gt;
+        &lt;th&gt;TL2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td rowspan=&#34;2&#34;&gt;&lt;a href=&#34;https://huggingface.co/1bitLLM/bitnet_b1_58-large&#34;&gt;bitnet_b1_58-large&lt;/a&gt;&lt;/td&gt;
+        &lt;td rowspan=&#34;2&#34;&gt;0.7B&lt;/td&gt;
+        &lt;td&gt;x86&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+        &lt;td&gt;&amp;#10060;&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;ARM&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+        &lt;td&gt;&amp;#10060;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td rowspan=&#34;2&#34;&gt;&lt;a href=&#34;https://huggingface.co/1bitLLM/bitnet_b1_58-3B&#34;&gt;bitnet_b1_58-3B&lt;/a&gt;&lt;/td&gt;
+        &lt;td rowspan=&#34;2&#34;&gt;3.3B&lt;/td&gt;
+        &lt;td&gt;x86&lt;/td&gt;
+        &lt;td&gt;&amp;#10060;&lt;/td&gt;
+        &lt;td&gt;&amp;#10060;&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;ARM&lt;/td&gt;
+        &lt;td&gt;&amp;#10060;&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+        &lt;td&gt;&amp;#10060;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td rowspan=&#34;2&#34;&gt;&lt;a href=&#34;https://huggingface.co/HF1BitLLM/Llama3-8B-1.58-100B-tokens&#34;&gt;Llama3-8B-1.58-100B-tokens&lt;/a&gt;&lt;/td&gt;
+        &lt;td rowspan=&#34;2&#34;&gt;8.0B&lt;/td&gt;
+        &lt;td&gt;x86&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+        &lt;td&gt;&amp;#10060;&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;ARM&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+        &lt;td&gt;&amp;#10060;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td rowspan=&#34;2&#34;&gt;&lt;a href=&#34;https://huggingface.co/collections/tiiuae/falcon3-67605ae03578be86e4e87026&#34;&gt;Falcon3 Family&lt;/a&gt;&lt;/td&gt;
+        &lt;td rowspan=&#34;2&#34;&gt;1B-10B&lt;/td&gt;
+        &lt;td&gt;x86&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+        &lt;td&gt;&amp;#10060;&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;ARM&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+        &lt;td&gt;&amp;#10060;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td rowspan=&#34;2&#34;&gt;&lt;a href=&#34;https://huggingface.co/collections/tiiuae/falcon-edge-series-6804fd13344d6d8a8fa71130&#34;&gt;Falcon-E Family&lt;/a&gt;&lt;/td&gt;
+        &lt;td rowspan=&#34;2&#34;&gt;1B-3B&lt;/td&gt;
+        &lt;td&gt;x86&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+        &lt;td&gt;&amp;#10060;&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;ARM&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+        &lt;td&gt;&amp;#9989;&lt;/td&gt;
+        &lt;td&gt;&amp;#10060;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation
+&lt;/h2&gt;&lt;h3 id=&#34;requirements&#34;&gt;Requirements
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;python&amp;gt;=3.9&lt;/li&gt;
+&lt;li&gt;cmake&amp;gt;=3.22&lt;/li&gt;
+&lt;li&gt;clang&amp;gt;=18
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;For Windows users, install &lt;a class=&#34;link&#34; href=&#34;https://visualstudio.microsoft.com/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Visual Studio 2022&lt;/a&gt;. In the installer, toggle on at least the following options(this also automatically installs the required additional tools like CMake):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Desktop-development with C++&lt;/li&gt;
+&lt;li&gt;C++-CMake Tools for Windows&lt;/li&gt;
+&lt;li&gt;Git for Windows&lt;/li&gt;
+&lt;li&gt;C++-Clang Compiler for Windows&lt;/li&gt;
+&lt;li&gt;MS-Build Support for LLVM-Toolset (clang)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For Debian/Ubuntu users, you can download with &lt;a class=&#34;link&#34; href=&#34;https://apt.llvm.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Automatic installation script&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bash -c &amp;quot;$(wget -O - https://apt.llvm.org/llvm.sh)&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;conda (highly recommend)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;build-from-source&#34;&gt;Build from source
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;[!IMPORTANT]
+If you are using Windows, please remember to always use a Developer Command Prompt / PowerShell for VS2022 for the following commands. Please refer to the FAQs below if you see any issues.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;Clone the repo&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone --recursive https://github.com/microsoft/BitNet.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; BitNet
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Install the dependencies&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# (Recommended) Create a new conda environment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda create -n bitnet-cpp &lt;span class=&#34;nv&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3.9
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda activate bitnet-cpp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -r requirements.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Build the project&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Manually download the model and run with local path&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;huggingface-cli download microsoft/BitNet-b1.58-2B-4T-gguf --local-dir models/BitNet-b1.58-2B-4T
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python setup_env.py -md models/BitNet-b1.58-2B-4T -q i2_s
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre&gt;
+usage: setup_env.py [-h] [--hf-repo {1bitLLM/bitnet_b1_58-large,1bitLLM/bitnet_b1_58-3B,HF1BitLLM/Llama3-8B-1.58-100B-tokens,tiiuae/Falcon3-1B-Instruct-1.58bit,tiiuae/Falcon3-3B-Instruct-1.58bit,tiiuae/Falcon3-7B-Instruct-1.58bit,tiiuae/Falcon3-10B-Instruct-1.58bit}] [--model-dir MODEL_DIR] [--log-dir LOG_DIR] [--quant-type {i2_s,tl1}] [--quant-embd]
+                    [--use-pretuned]
+
+Setup the environment for running inference
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --hf-repo {1bitLLM/bitnet_b1_58-large,1bitLLM/bitnet_b1_58-3B,HF1BitLLM/Llama3-8B-1.58-100B-tokens,tiiuae/Falcon3-1B-Instruct-1.58bit,tiiuae/Falcon3-3B-Instruct-1.58bit,tiiuae/Falcon3-7B-Instruct-1.58bit,tiiuae/Falcon3-10B-Instruct-1.58bit}, -hr {1bitLLM/bitnet_b1_58-large,1bitLLM/bitnet_b1_58-3B,HF1BitLLM/Llama3-8B-1.58-100B-tokens,tiiuae/Falcon3-1B-Instruct-1.58bit,tiiuae/Falcon3-3B-Instruct-1.58bit,tiiuae/Falcon3-7B-Instruct-1.58bit,tiiuae/Falcon3-10B-Instruct-1.58bit}
+                        Model used for inference
+  --model-dir MODEL_DIR, -md MODEL_DIR
+                        Directory to save/load the model
+  --log-dir LOG_DIR, -ld LOG_DIR
+                        Directory to save the logging info
+  --quant-type {i2_s,tl1}, -q {i2_s,tl1}
+                        Quantization type
+  --quant-embd          Quantize the embeddings to f16
+  --use-pretuned, -p    Use the pretuned kernel parameters
+&lt;/pre&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage
+&lt;/h2&gt;&lt;h3 id=&#34;basic-usage&#34;&gt;Basic usage
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Run inference with the quantized model&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python run_inference.py -m models/BitNet-b1.58-2B-4T/ggml-model-i2_s.gguf -p &lt;span class=&#34;s2&#34;&gt;&amp;#34;You are a helpful assistant&amp;#34;&lt;/span&gt; -cnv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre&gt;
+usage: run_inference.py [-h] [-m MODEL] [-n N_PREDICT] -p PROMPT [-t THREADS] [-c CTX_SIZE] [-temp TEMPERATURE] [-cnv]
+
+Run inference
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -m MODEL, --model MODEL
+                        Path to model file
+  -n N_PREDICT, --n-predict N_PREDICT
+                        Number of tokens to predict when generating text
+  -p PROMPT, --prompt PROMPT
+                        Prompt to generate text from
+  -t THREADS, --threads THREADS
+                        Number of threads to use
+  -c CTX_SIZE, --ctx-size CTX_SIZE
+                        Size of the prompt context
+  -temp TEMPERATURE, --temperature TEMPERATURE
+                        Temperature, a hyperparameter that controls the randomness of the generated text
+  -cnv, --conversation  Whether to enable chat mode or not (for instruct models.)
+                        (When this option is turned on, the prompt specified by -p will be used as the system prompt.)
+&lt;/pre&gt;
+&lt;h3 id=&#34;benchmark&#34;&gt;Benchmark
+&lt;/h3&gt;&lt;p&gt;We provide scripts to run the inference benchmark providing a model.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;usage: e2e_benchmark.py -m MODEL [-n N_TOKEN] [-p N_PROMPT] [-t THREADS]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Setup the environment for running the inference  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;required arguments:  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -m MODEL, --model MODEL  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        Path to the model file. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;optional arguments:  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -h, --help  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        Show this help message and exit. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -n N_TOKEN, --n-token N_TOKEN  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        Number of generated tokens. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -p N_PROMPT, --n-prompt N_PROMPT  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        Prompt to generate text from. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -t THREADS, --threads THREADS  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        Number of threads to use. 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Here&amp;rsquo;s a brief explanation of each argument:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-m&lt;/code&gt;, &lt;code&gt;--model&lt;/code&gt;: The path to the model file. This is a required argument that must be provided when running the script.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-n&lt;/code&gt;, &lt;code&gt;--n-token&lt;/code&gt;: The number of tokens to generate during the inference. It is an optional argument with a default value of 128.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-p&lt;/code&gt;, &lt;code&gt;--n-prompt&lt;/code&gt;: The number of prompt tokens to use for generating text. This is an optional argument with a default value of 512.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-t&lt;/code&gt;, &lt;code&gt;--threads&lt;/code&gt;: The number of threads to use for running the inference. It is an optional argument with a default value of 2.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-h&lt;/code&gt;, &lt;code&gt;--help&lt;/code&gt;: Show the help message and exit. Use this argument to display usage information.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python utils/e2e_benchmark.py -m /path/to/model -n &lt;span class=&#34;m&#34;&gt;200&lt;/span&gt; -p &lt;span class=&#34;m&#34;&gt;256&lt;/span&gt; -t &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This command would run the inference benchmark using the model located at &lt;code&gt;/path/to/model&lt;/code&gt;, generating 200 tokens from a 256 token prompt, utilizing 4 threads.&lt;/p&gt;
+&lt;p&gt;For the model layout that do not supported by any public model, we provide scripts to generate a dummy model with the given model layout, and run the benchmark on your machine:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python utils/generate-dummy-bitnet-model.py models/bitnet_b1_58-large --outfile models/dummy-bitnet-125m.tl1.gguf --outtype tl1 --model-size 125M
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Run benchmark with the generated model, use -m to specify the model path, -p to specify the prompt processed, -n to specify the number of token to generate&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python utils/e2e_benchmark.py -m models/dummy-bitnet-125m.tl1.gguf -p &lt;span class=&#34;m&#34;&gt;512&lt;/span&gt; -n &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;convert-from-safetensors-checkpoints&#34;&gt;Convert from &lt;code&gt;.safetensors&lt;/code&gt; Checkpoints
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Prepare the .safetensors model file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;huggingface-cli download microsoft/bitnet-b1.58-2B-4T-bf16 --local-dir ./models/bitnet-b1.58-2B-4T-bf16
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Convert to gguf model&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python ./utils/convert-helper-bitnet.py ./models/bitnet-b1.58-2B-4T-bf16
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;faq-frequently-asked-questions&#34;&gt;FAQ (Frequently Asked Questions)📌
+&lt;/h3&gt;&lt;h4 id=&#34;q1-the-build-dies-with-errors-building-llamacpp-due-to-issues-with-stdchrono-in-logcpp&#34;&gt;Q1: The build dies with errors building llama.cpp due to issues with std::chrono in log.cpp?
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt;
+This is an issue introduced in recent version of llama.cpp. Please refer to this &lt;a class=&#34;link&#34; href=&#34;https://github.com/tinglou/llama.cpp/commit/4e3db1e3d78cc1bcd22bcb3af54bd2a4628dd323&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;commit&lt;/a&gt; in the &lt;a class=&#34;link&#34; href=&#34;https://github.com/abetlen/llama-cpp-python/issues/1942&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;discussion&lt;/a&gt; to fix this issue.&lt;/p&gt;
+&lt;h4 id=&#34;q2-how-to-build-with-clang-in-conda-environment-on-windows&#34;&gt;Q2: How to build with clang in conda environment on windows?
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt;
+Before building the project, verify your clang installation and access to Visual Studio tools by running:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;clang -v
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This command checks that you are using the correct version of clang and that the Visual Studio tools are available. If you see an error message such as:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#39;clang&amp;#39; is not recognized as an internal or external command, operable program or batch file.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;It indicates that your command line window is not properly initialized for Visual Studio tools.&lt;/p&gt;
+&lt;p&gt;• If you are using Command Prompt, run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\Tools\VsDevCmd.bat&amp;#34; -startdir=none -arch=x64 -host_arch=x64
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;• If you are using Windows PowerShell, run the following commands:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Import-Module &amp;#34;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\Tools\Microsoft.VisualStudio.DevShell.dll&amp;#34; Enter-VsDevShell 3f0e31ad -SkipAutomaticLocation -DevCmdArguments &amp;#34;-arch=x64 -host_arch=x64&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;These steps will initialize your environment and allow you to use the correct Visual Studio tools.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,2484 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="milvus-io/milvus What is Milvus? 🐦 Milvus is a high-performance vector database built for scale. It powers AI applications by efficiently organizing and searching vast amounts of unstructured data, such as text, images, and multi-modal information.\n🧑\u200d💻 Written in Go and C++, Milvus implements hardware accelaration for CPU/GPU to achieve best-in-class vector search performance. Thanks to its fully-distributed and K8s-native architecture, Milvus can scale horizontally, handle tens of thousands of search queries on billions of vectors, and keep data fresh with real-time streaming updates. Milvus also supports Standalone mode for single machine deployment. Milvus Lite is a lightweight version good for quickstart in python with pip install.\n">
+<title>milvus</title>
+
+<link rel='canonical' href='https://producthunt.programnotes.cn/en/p/milvus/'>
+
+<link rel="stylesheet" href="/scss/style.min.7003b7ac1a9c42e0b19aae00dfd2f4ca1ca01ad9fe44120e4e9e79d16f0188d6.css"><meta property='og:title' content="milvus">
+<meta property='og:description' content="milvus-io/milvus What is Milvus? 🐦 Milvus is a high-performance vector database built for scale. It powers AI applications by efficiently organizing and searching vast amounts of unstructured data, such as text, images, and multi-modal information.\n🧑\u200d💻 Written in Go and C++, Milvus implements hardware accelaration for CPU/GPU to achieve best-in-class vector search performance. Thanks to its fully-distributed and K8s-native architecture, Milvus can scale horizontally, handle tens of thousands of search queries on billions of vectors, and keep data fresh with real-time streaming updates. Milvus also supports Standalone mode for single machine deployment. Milvus Lite is a lightweight version good for quickstart in python with pip install.\n">
+<meta property='og:url' content='https://producthunt.programnotes.cn/en/p/milvus/'>
+<meta property='og:site_name' content='Producthunt daily'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='github' /><meta property='article:tag' content='Milvus' /><meta property='article:tag' content='vector database' /><meta property='article:tag' content='vector search' /><meta property='article:tag' content='AI applications' /><meta property='article:tag' content='high-performance' /><meta property='article:tag' content='scalable' /><meta property='article:tag' content='unstructured data' /><meta property='article:tag' content='distributed architecture' /><meta property='article:tag' content='hardware acceleration' /><meta property='article:published_time' content='2025-09-13T15:24:43&#43;08:00'/><meta property='article:modified_time' content='2025-09-13T15:24:43&#43;08:00'/><meta property='og:image' content='https://images.unsplash.com/photo-1729433272880-a697791721e7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc3NDgxOTF8&amp;ixlib=rb-4.1.0' />
+<meta name="twitter:title" content="milvus">
+<meta name="twitter:description" content="milvus-io/milvus What is Milvus? 🐦 Milvus is a high-performance vector database built for scale. It powers AI applications by efficiently organizing and searching vast amounts of unstructured data, such as text, images, and multi-modal information.\n🧑\u200d💻 Written in Go and C++, Milvus implements hardware accelaration for CPU/GPU to achieve best-in-class vector search performance. Thanks to its fully-distributed and K8s-native architecture, Milvus can scale horizontally, handle tens of thousands of search queries on billions of vectors, and keep data fresh with real-time streaming updates. Milvus also supports Standalone mode for single machine deployment. Milvus Lite is a lightweight version good for quickstart in python with pip install.\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://images.unsplash.com/photo-1729433272880-a697791721e7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc3NDgxOTF8&amp;ixlib=rb-4.1.0' />
+    <link rel="shortcut icon" href="/favicon.png" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-KGCNFWCDTR"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-KGCNFWCDTR');
+        }
+      </script><meta name="msvalidate.01" content="B6FE76A783A1770409EC903DE2C7AC6A">
+<meta name="baidu-site-verification" content="codeva-QyG5AHEYbU" />
+<meta name="shenma-site-verification" content="9266d91a096820488e830bfe1e237090_1731993487">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3614504270218797"
+    crossorigin="anonymous"></script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/en/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_6985297a43351d05.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/en">Producthunt daily</a></h1>
+            <h2 class="site-description">Share Product Hunt&#39;s hottest content daily</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/en/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/en/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/en/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/en/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://h5.lot-ml.com/ProductEn/Index/3b72ee43a871a8cc' target="_blank">
+                
+                
+                
+                    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="400px" height="400px" viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">  <image id="image0" width="400" height="400" x="0" y="0"
+    xlink:href="data:image/png;base64,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
+DAwMDAwMDAz/wAARCACgAKADASIAAhEBAxEB/90ABAAK/8QBPwAAAQUBAQEBAQEAAAAAAAAAAwAB
+AgQFBgcICQoLAQABBQEBAQEBAQAAAAAAAAABAAIDBAUGBwgJCgsQAAEEAQMCBAIFBwYIBQMMMwEA
+AhEDBCESMQVBUWETInGBMgYUkaGxQiMkFVLBYjM0coLRQwclklPw4fFjczUWorKDJkSTVGRFwqN0
+NhfSVeJl8rOEw9N14/NGJ5SkhbSVxNTk9KW1xdXl9VZmdoaWprbG1ub2N0dXZ3eHl6e3x9fn9xEA
+AgIBAgQEAwQFBgcHBgU1AQACEQMhMRIEQVFhcSITBTKBkRShsUIjwVLR8DMkYuFygpJDUxVjczTx
+JQYWorKDByY1wtJEk1SjF2RFVTZ0ZeLys4TD03Xj80aUpIW0lcTU5PSltcXV5fVWZnaGlqa2xtbm
+9ic3R1dnd4eXp7fH/9oADAMBAAIRAxEAPwCinTJ11rgqSSSSUpOmTpqVJ0ydBSkkkkClSdMnQUpO
+mTpqVJJJIKUnTJ0EqSSSQU//0KKdMnXWuCpJJJJSk6ZOmpUnTJIKXSSSQKVJ0ydBSk6ZOmpUkkkg
+pSSSSCV0kkkCp//RopJJLrnBXSSSQUpOmToJUkkkmqXTsa57211tL7HmGMYC5zj4MY33OVzpHR8z
+q+T6GKNrGx617h7KwfH9+x3+Dp/89sXoXR+g9P6RVtx2brnCLch+tj/7X5jP+CZ+jVTmucx4NPmy
+fuD/ALpsYOWll1+WP73/AHryPT/qR1bKAflOZg1n8136Sz/ttjm1s/7d/sLWd9S+g4WO/Jzsi51d
+Td1r3PDGgDypYx3/AEl1K4D639dOflnAof8AqeK6HEcWXDQ/9bod7Gf8L+k/0So4c/M8zk4RL24D
+WXAK4Y/3vmbOTFhwwsx45bDi6lxMp+LZkPdh0uoxpiqt7i98D8+1zy73v/c/waGmSWrVCu3fVoXe
+q6SSSRUpJJJNSukkkgp//9KikkkuucFdJJJBSk6ZOgUqV3pHScnq2a3Eo9ojddceK2cb/wCU930a
+mf8Aov1FRJDQSeAvS/qz0ZvSumsa9sZd8WZLu+4jSqf3KG/o/wDwT/CKpzvM+xjsfPL0w/bL/BZ+
+Ww+7Oj8sdZfwb3T+n4vTsVmJiM2VM+ZcT9Kyx3573qykkufkTIkk2TqSXVAAFDQBxfrX1c9M6U70
+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
+mSQS/wD/2dXzq5EAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjUtMDYtMDlUMDM6MzY6NDcrMDA6MDBv
+ad4DAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDI1LTA2LTA5VDAzOjM2OjQ3KzAwOjAwHjRmvwAAACh0
+RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyNS0wNi0wOVQwMzozNjo0NyswMDowMEkhR2AAAAAWdEVYdGV4
+aWY6Qml0c1BlclNhbXBsZQA4LCCYT2uCAAAAF3RFWHRleGlmOkNvbG9yU3BhY2UANjU1MzUsILj4
+LMsAAAAhdEVYdGV4aWY6RGF0ZVRpbWUAMjAyMjoxMToyOSAxMDoyODo1NYCIVlgAAAAVdEVYdGV4
+aWY6RXhpZk9mZnNldAAyMzIsILVnTacAAAAVdEVYdGV4aWY6RXhpZlZlcnNpb24AMDIyMeRcNS0A
+AAAWdEVYdGV4aWY6SW1hZ2VMZW5ndGgANDAwLCC0o8dZAAAAFXRFWHRleGlmOkltYWdlV2lkdGgA
+NDAwLCAnOeJHAAAAInRFWHRleGlmOlBob3RvbWV0cmljSW50ZXJwcmV0YXRpb24AMiwgoZI9+AAA
+ABp0RVh0ZXhpZjpQaXhlbFhEaW1lbnNpb24ANDAwLCAt6cShAAAAGnRFWHRleGlmOlBpeGVsWURp
+bWVuc2lvbgA0MDAsIIOBVTAAAAAYdEVYdGV4aWY6U2FtcGxlc1BlclBpeGVsADMsIPSdHuAAAAAq
+dEVYdGV4aWY6U29mdHdhcmUAQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKdFhpnAAAAAedEVY
+dGV4aWY6dGh1bWJuYWlsOkNvbXByZXNzaW9uADYsIOZ5GlMAAAAqdEVYdGV4aWY6dGh1bWJuYWls
+OkpQRUdJbnRlcmNoYW5nZUZvcm1hdAAzODIsICRAnw0AAAAxdEVYdGV4aWY6dGh1bWJuYWlsOkpQ
+RUdJbnRlcmNoYW5nZUZvcm1hdExlbmd0aAAzODEzLCAQx8TGAAAAIXRFWHRleGlmOnRodW1ibmFp
+bDpSZXNvbHV0aW9uVW5pdAAyLCBlQJb2AAAAH3RFWHRleGlmOnRodW1ibmFpbDpYUmVzb2x1dGlv
+bgA3Mi8x2ocYLAAAAB90RVh0ZXhpZjp0aHVtYm5haWw6WVJlc29sdXRpb24ANzIvMXTvib0AAAAA
+SUVORK5CYII=" />
+</svg>
+
+                
+                <span>流量卡</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    
+                        <li id="i18n-switch">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                
+                                    <option value="https://producthunt.programnotes.cn/" >中文</option>
+                                
+                                    <option value="https://producthunt.programnotes.cn/en/" selected>English</option>
+                                
+                                    <option value="https://producthunt.programnotes.cn/es/" >Español</option>
+                                
+                                    <option value="https://producthunt.programnotes.cn/ar/" >العربية</option>
+                                
+                            </select>
+                        </li>
+                    
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#what-is-milvus">What is Milvus?</a></li>
+    <li><a href="#quickstart">Quickstart</a></li>
+    <li><a href="#why-milvus">Why Milvus</a></li>
+    <li><a href="#demos-and-tutorials">Demos and Tutorials</a></li>
+    <li><a href="#ecosystem-and-integration">Ecosystem and Integration</a></li>
+    <li><a href="#documentation">Documentation</a></li>
+    <li><a href="#contributing">Contributing</a>
+      <ol>
+        <li><a href="#build-milvus-from-source-code">Build Milvus from Source Code</a></li>
+      </ol>
+    </li>
+    <li><a href="#community">Community</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/en/p/milvus/">
+                
+                    <img src="https://images.unsplash.com/photo-1729433272880-a697791721e7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc3NDgxOTF8&amp;ixlib=rb-4.1.0" loading="lazy" alt="Featured image of post milvus" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/en/categories/github/" style="background-color: hsl(146, 60%, 84%); color: hsl(146, 60%, 15%);">
+                Github
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/en/p/milvus/">milvus</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published" datetime='2025-09-13T15:24:43&#43;08:00'>Sep 13, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    8 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="milvus-iomilvus"><a class="link" href="https://github.com/milvus-io/milvus"  target="_blank" rel="noopener"
+    >milvus-io/milvus</a>
+</h1><img src="https://github.com/user-attachments/assets/51e33300-7f85-43ff-a05a-3a0317a961f3" alt="milvus banner">
+<div class="column" align="middle">
+  <a href="https://github.com/milvus-io/milvus/blob/master/LICENSE"><img height="20" src="https://img.shields.io/github/license/milvus-io/milvus" alt="license"/></a>
+  <a href="https://milvus.io/docs/install_standalone-docker.md"><img src="https://img.shields.io/docker/pulls/milvusdb/milvus" alt="docker-pull-count"/></a>
+  <a href="https://milvus.io/docs/roadmap.md"><img src="https://img.shields.io/badge/2025-roadmap-orange" alt="fully-managed-milvus"/></a>
+  <a href="https://cloud.zilliz.com/signup?utm_source=partner&utm_medium=referral&utm_campaign=2024-11-04_web_github-readme_global"><img src="https://img.shields.io/badge/fully_managed-milvus-blue" alt="fully-managed-milvus"/></a>
+  <a href="https://milvus.io/docs/tutorials-overview.md"><img src="https://img.shields.io/badge/tutorials-green" alt="tutorials"/></a>
+  <a href="https://discord.gg/mKc3R95yE5"><img height="20" src="https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white" alt="discord"/></a>
+  <a href="https://x.com/milvusio"><img src="https://img.shields.io/twitter/follow/milvusio" alt="twitter"/></a>
+</div>
+<h2 id="what-is-milvus">What is Milvus?
+</h2><p>🐦 <a class="link" href="https://milvus.io/"  target="_blank" rel="noopener"
+    >Milvus</a> is a high-performance vector database built for scale. It powers AI applications by efficiently organizing and searching vast amounts of unstructured data, such as text, images, and multi-modal information.</p>
+<p>🧑‍💻 Written in Go and C++, Milvus implements hardware accelaration for CPU/GPU to achieve best-in-class vector search performance. Thanks to its <a class="link" href="https://milvus.io/docs/overview.md#What-Makes-Milvus-so-Scalable"  target="_blank" rel="noopener"
+    >fully-distributed and K8s-native architecture</a>, Milvus can scale horizontally, handle tens of thousands of search queries on billions of vectors, and keep data fresh with real-time streaming updates. Milvus also supports <a class="link" href="https://milvus.io/docs/install_standalone-docker.md"  target="_blank" rel="noopener"
+    >Standalone mode</a> for single machine deployment. <a class="link" href="https://milvus.io/docs/milvus_lite.md"  target="_blank" rel="noopener"
+    >Milvus Lite</a> is a lightweight version good for quickstart in python with <code>pip install</code>.</p>
+<p>Want to use Milvus with zero setup? Try out <a class="link" href="https://cloud.zilliz.com/signup?utm_source=partner&amp;utm_medium=referral&amp;utm_campaign=2024-11-04_web_github-readme_global"  target="_blank" rel="noopener"
+    >Zilliz Cloud ☁️</a> for free. Milvus is available as a fully managed service on Zilliz Cloud, with <a class="link" href="https://zilliz.com/serverless?utm_source=partner&amp;utm_medium=referral&amp;utm_campaign=2024-11-04_web_github-readme_global"  target="_blank" rel="noopener"
+    >Serverless</a>, <a class="link" href="https://zilliz.com/cloud?utm_source=partner&amp;utm_medium=referral&amp;utm_campaign=2024-11-04_web_github-readme_global"  target="_blank" rel="noopener"
+    >Dedicated</a> and <a class="link" href="https://zilliz.com/bring-your-own-cloud?utm_source=partner&amp;utm_medium=referral&amp;utm_campaign=2024-11-04_web_github-readme_global"  target="_blank" rel="noopener"
+    >BYOC</a> options available.</p>
+<p>For questions about how to use Milvus, join the community on <a class="link" href="https://discord.gg/33mfvwep3J"  target="_blank" rel="noopener"
+    >Discord</a> to get help. For reporting problems, file bugs and feature requests in GitHub <a class="link" href="https://github.com/milvus-io/milvus/issues"  target="_blank" rel="noopener"
+    >Issues</a> or ask in <a class="link" href="https://github.com/milvus-io/milvus/discussions"  target="_blank" rel="noopener"
+    >Discussions</a>.</p>
+<p>The Milvus open-source project is
+under <a class="link" href="https://lfaidata.foundation/projects/milvus/"  target="_blank" rel="noopener"
+    >LF AI &amp; Data Foundation</a>, distributed with <a class="link" href="https://github.com/milvus-io/milvus/blob/master/LICENSE"  target="_blank" rel="noopener"
+    >Apache 2.0</a> License, with Zilliz as its major contributor.</p>
+<h2 id="quickstart">Quickstart
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">pymilvus</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This installs <code>pymilvus</code>, the Python SDK for Milvus. Use <code>MilvusClient</code> to create a client:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pymilvus</span> <span class="kn">import</span> <span class="n">MilvusClient</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p><code>pymilvus</code> also includes Milvus Lite for quickstart. To create a local vector database, simply instantiate a client with a local file name for persisting data:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">client</span> <span class="o">=</span> <span class="n">MilvusClient</span><span class="p">(</span><span class="s2">&#34;milvus_demo.db&#34;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>You can also specify the credentials to connect to your deployed <a class="link" href="https://milvus.io/docs/authenticate.md?tab=docker"  target="_blank" rel="noopener"
+    >Milvus server</a> or <a class="link" href="https://docs.zilliz.com/docs/quick-start"  target="_blank" rel="noopener"
+    >Zilliz Cloud</a>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">client</span> <span class="o">=</span> <span class="n">MilvusClient</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">uri</span><span class="o">=</span><span class="s2">&#34;&lt;endpoint_of_self_hosted_milvus_or_zilliz_cloud&gt;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">token</span><span class="o">=</span><span class="s2">&#34;&lt;username_and_password_or_zilliz_cloud_api_key&gt;&#34;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<p>With the client, you can create collection:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">client</span><span class="o">.</span><span class="n">create_collection</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">collection_name</span><span class="o">=</span><span class="s2">&#34;demo_collection&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dimension</span><span class="o">=</span><span class="mi">768</span><span class="p">,</span>  <span class="c1"># The vectors we will use in this demo have 768 dimensions</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Ingest data:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">res</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">collection_name</span><span class="o">=</span><span class="s2">&#34;demo_collection&#34;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Perform vector search:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">query_vectors</span> <span class="o">=</span> <span class="n">embedding_fn</span><span class="o">.</span><span class="n">encode_queries</span><span class="p">([</span><span class="s2">&#34;Who is Alan Turing?&#34;</span><span class="p">,</span> <span class="s2">&#34;What is AI?&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">res</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">collection_name</span><span class="o">=</span><span class="s2">&#34;demo_collection&#34;</span><span class="p">,</span>  <span class="c1"># target collection</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data</span><span class="o">=</span><span class="n">query_vectors</span><span class="p">,</span>  <span class="c1"># a list of one or more query vectors, supports batch</span>
+</span></span><span class="line"><span class="cl">    <span class="n">limit</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>  <span class="c1"># how many results to return (topK)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">output_fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;vector&#34;</span><span class="p">,</span> <span class="s2">&#34;text&#34;</span><span class="p">,</span> <span class="s2">&#34;subject&#34;</span><span class="p">],</span>  <span class="c1"># what fields to return</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="why-milvus">Why Milvus
+</h2><p>Milvus is designed to handle vector search at scale. It stores vectors, which are learned representations of unstructured data, together with other scalar data types such as integers, strings, and JSON objects. Users can conduct efficient vector search with metadata filtering or hybrid search. Here are why developers choose Milvus as the vector database for AI applications:</p>
+<p><strong>High Performance at Scale and High Availability</strong></p>
+<ul>
+<li>Milvus features a <a class="link" href="https://milvus.io/docs/architecture_overview.md"  target="_blank" rel="noopener"
+    >distributed architecture</a> that separates <a class="link" href="https://milvus.io/docs/data_processing.md#Data-query"  target="_blank" rel="noopener"
+    >compute</a> and <a class="link" href="https://milvus.io/docs/data_processing.md#Data-insertion"  target="_blank" rel="noopener"
+    >storage</a>. Milvus can horizontally scale and adapt to diverse traffic patterns, achieving optimal performance by independently increasing query nodes for read-heavy workload and data node for write-heavy workload. The stateless microservices on K8s allow <a class="link" href="https://milvus.io/docs/coordinator_ha.md#Coordinator-HA"  target="_blank" rel="noopener"
+    >quick recovery</a> from failure, ensuring high availability. The support for <a class="link" href="https://milvus.io/docs/replica.md"  target="_blank" rel="noopener"
+    >replicas</a> further enhances fault tolerance and throughput by loading data segments on multiple query nodes. See <a class="link" href="https://zilliz.com/vector-database-benchmark-tool"  target="_blank" rel="noopener"
+    >benchmark</a> for performance comparison.</li>
+</ul>
+<p><strong>Support for Various Vector Index Types and Hardware Acceleration</strong></p>
+<ul>
+<li>Milvus separates the system and core vector search engine, allowing it to support all major vector index types that are optimized for different scenarios, including HNSW, IVF, FLAT (brute-force), SCANN, and DiskANN, with <a class="link" href="https://milvus.io/docs/index.md?tab=floating#IVFPQ"  target="_blank" rel="noopener"
+    >quantization-based</a> variations and <a class="link" href="https://milvus.io/docs/mmap.md"  target="_blank" rel="noopener"
+    >mmap</a>. Milvus optimizes vector search for advanced features such as <a class="link" href="https://milvus.io/docs/scalar_index.md#Scalar-Index"  target="_blank" rel="noopener"
+    >metadata filtering</a> and <a class="link" href="https://milvus.io/docs/single-vector-search.md#Range-search"  target="_blank" rel="noopener"
+    >range search</a>. Additionally, Milvus implements hardware acceleration to enhance vector search performance and supports GPU indexing, such as NVIDIA&rsquo;s <a class="link" href="https://github.com/rapidsai/cuvs"  target="_blank" rel="noopener"
+    >CAGRA</a>.</li>
+</ul>
+<p><strong>Flexible Multi-tenancy and Hot/Cold Storage</strong></p>
+<ul>
+<li>Milvus supports <a class="link" href="https://milvus.io/docs/multi_tenancy.md#Multi-tenancy-strategies"  target="_blank" rel="noopener"
+    >multi-tenancy</a> through isolation at database, collection, partition, or partition key level. The flexible strategies allow a single cluster to handle hundreds to millions of tenants, also ensures optimized search performance and flexible access control. Milvus enhances cost-effectiveness with hot/cold storage. Frequently accessed hot data can be stored in memory or on SSDs for better performance, while less-accessed cold data is kept on slower, cost-effective storage. This mechanism can significantly reduce costs while maintaining high performance for critical tasks.</li>
+</ul>
+<p><strong>Sparse Vector for Full Text Search and Hybrid Search</strong></p>
+<ul>
+<li>In addition to semantic search through dense vector, Milvus also natively supports <a class="link" href="https://milvus.io/docs/full-text-search.md"  target="_blank" rel="noopener"
+    >full text search</a> with BM25 as well as learned sparse embedding such as SPLADE and BGE-M3. Users can store sparse vector and dense vector in the same collection, and define functions to rerank results from multiple search requests. See examples of <a class="link" href="https://milvus.io/docs/full_text_search_with_milvus.md"  target="_blank" rel="noopener"
+    >Hybrid Search with semantic search + full text search</a>.</li>
+</ul>
+<p><strong>Data Security and Fine-grain Access Control</strong></p>
+<ul>
+<li>Milvus ensures data security by implementing mandatory user authentication, TLS encryption, and Role-Based Access Control (RBAC). User authentication ensures that only authorized users with valid credentials can access the database, while TLS encryption secures all communications within the network. Additionally, RBAC allows for fine-grained access control by assigning specific permissions to users based on their roles. These features make Milvus a robust and secure choice for enterprise applications, protecting sensitive data from unauthorized access and potential breaches.</li>
+</ul>
+<p>Milvus is trusted by AI developers to build applications such as text and image search, Retrieval-Augmented Generation (RAG), and recommendation systems. Milvus powers <a class="link" href="%28https://milvus.io/use-cases%29" >many mission-critical business</a> for startups and enterprises.</p>
+<h2 id="demos-and-tutorials">Demos and Tutorials
+</h2><p>Here is a selection of demos and tutorials to show how to build various types of AI applications made with Milvus:</p>
+<p>You can explore a comprehensive <a class="link" href="https://milvus.io/docs/tutorials-overview.md"  target="_blank" rel="noopener"
+    >Tutorials Overview</a> covering topics such as Retrieval-Augmented Generation (RAG), Semantic Search, Hybrid Search, Question Answering, Recommendation Systems, and various quick-start guides. These resources are designed to help you get started quickly and efficiently.</p>
+<div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>Tutorial</th>
+					<th>Use Case</th>
+					<th>Related Milvus Features</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><a class="link" href="https://milvus.io/docs/build-rag-with-milvus.md"  target="_blank" rel="noopener"
+    >Build RAG with Milvus</a></td>
+					<td>RAG</td>
+					<td>vector search</td>
+			</tr>
+			<tr>
+					<td><a class="link" href="https://milvus.io/docs/how_to_enhance_your_rag.md"  target="_blank" rel="noopener"
+    >Advanced RAG Optimizations</a></td>
+					<td>RAG</td>
+					<td>vector search, full text search</td>
+			</tr>
+			<tr>
+					<td><a class="link" href="https://milvus.io/docs/full_text_search_with_milvus.md"  target="_blank" rel="noopener"
+    >Full Text Search with Milvus</a></td>
+					<td>Text Search</td>
+					<td>full text search</td>
+			</tr>
+			<tr>
+					<td><a class="link" href="https://milvus.io/docs/hybrid_search_with_milvus.md"  target="_blank" rel="noopener"
+    >Hybrid Search with Milvus</a></td>
+					<td>Hybrid Search</td>
+					<td>hybrid search, multi vector, dense embedding, sparse embedding</td>
+			</tr>
+			<tr>
+					<td><a class="link" href="https://milvus.io/docs/image_similarity_search.md"  target="_blank" rel="noopener"
+    >Image Search with Milvus</a></td>
+					<td>Semantic Search</td>
+					<td>vector search, dynamic field</td>
+			</tr>
+			<tr>
+					<td><a class="link" href="https://milvus.io/docs/multimodal_rag_with_milvus.md"  target="_blank" rel="noopener"
+    >Multimodal Search using Multi Vectors</a></td>
+					<td>Semantic Search</td>
+					<td>multi vector, hybrid search</td>
+			</tr>
+			<tr>
+					<td><a class="link" href="https://milvus.io/docs/movie_recommendation_with_milvus.md"  target="_blank" rel="noopener"
+    >Movie Recommendation with Milvus</a></td>
+					<td>Recommendation System</td>
+					<td>vector search</td>
+			</tr>
+			<tr>
+					<td><a class="link" href="https://milvus.io/docs/graph_rag_with_milvus.md"  target="_blank" rel="noopener"
+    >Graph RAG with Milvus</a></td>
+					<td>RAG</td>
+					<td>graph search</td>
+			</tr>
+			<tr>
+					<td><a class="link" href="https://milvus.io/docs/contextual_retrieval_with_milvus.md"  target="_blank" rel="noopener"
+    >Contextual Retrieval with Milvus</a></td>
+					<td>Quickstart</td>
+					<td>vector search</td>
+			</tr>
+			<tr>
+					<td><a class="link" href="https://milvus.io/docs/vector_visualization.md"  target="_blank" rel="noopener"
+    >Vector Visualization</a></td>
+					<td>Quickstart</td>
+					<td>vector search</td>
+			</tr>
+			<tr>
+					<td><a class="link" href="https://milvus.io/docs/hdbscan_clustering_with_milvus.md"  target="_blank" rel="noopener"
+    >HDBSCAN Clustering with Milvus</a></td>
+					<td>Quickstart</td>
+					<td>vector search</td>
+			</tr>
+			<tr>
+					<td><a class="link" href="https://milvus.io/docs/use_ColPali_with_milvus.md"  target="_blank" rel="noopener"
+    >Use ColPali for Multi-Modal Retrieval with Milvus</a></td>
+					<td>Quickstart</td>
+					<td>vector search</td>
+			</tr>
+	</tbody>
+</table></div>
+<div class="table-wrapper"><table>
+  <tr>
+    <td width="30%">
+      <a href="https://milvus.io/milvus-demos">
+        <img src="https://assets.zilliz.com/image_search_59a64e4f22.gif" />
+      </a>
+    </td>
+    <td width="30%">
+<a href="https://milvus.io/milvus-demos">
+<img src="https://assets.zilliz.com/qa_df5ee7bd83.gif" />
+</a>
+    </td>
+    <td width="30%">
+<a href="https://milvus.io/milvus-demos">
+<img src="https://assets.zilliz.com/mole_search_76f8340572.gif" />
+</a>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://milvus.io/milvus-demos">Image Search</a>
+    </th>
+    <th>
+      <a href="https://milvus.io/milvus-demos">RAG</a>
+    </th>
+    <th>
+      <a href="https://milvus.io/milvus-demos">Drug Discovery</a>
+    </th>
+  </tr>
+</table></div>
+<h2 id="ecosystem-and-integration">Ecosystem and Integration
+</h2><p>Milvus integrates with a comprehensive suite of <a class="link" href="https://milvus.io/docs/integrations_overview.md"  target="_blank" rel="noopener"
+    >AI development tools</a>, such as LangChain, LlamaIndex, OpenAI and HuggingFace, making it an ideal vector store for GenAI applications such as Retrieval-Augmented Generation (RAG). Milvus works with both open-source embedding models and embedding service, in text, image and video modalities. Milvus also provides a convenient util <a class="link" href="https://milvus.io/docs/embeddings.md"  target="_blank" rel="noopener"
+    ><code>pymilvus[model]</code></a>, users can use the simple wrapper code to transform unstructured data into vector embeddings and leverage reranking models for optimized search results. The Milvus ecosystem also includes <a class="link" href="https://github.com/zilliztech/attu?tab=readme-ov-file#attu"  target="_blank" rel="noopener"
+    >Attu</a> for GUI-based administration, <a class="link" href="https://milvus.io/docs/birdwatcher_overview.md"  target="_blank" rel="noopener"
+    >Birdwatcher</a> for system debugging, <a class="link" href="https://milvus.io/docs/monitor_overview.md"  target="_blank" rel="noopener"
+    >Prometheus/Grafana</a> for monitoring, <a class="link" href="https://milvus.io/docs/milvus-cdc-overview.md"  target="_blank" rel="noopener"
+    >Milvus CDC</a> for data synchronization, <a class="link" href="https://github.com/zilliztech/vts?tab=readme-ov-file#vts"  target="_blank" rel="noopener"
+    >VTS</a> for data migration and data connectors for <a class="link" href="https://milvus.io/docs/integrate_with_spark.md#Spark-Milvus-Connector-User-Guide"  target="_blank" rel="noopener"
+    >Spark</a>, <a class="link" href="https://github.com/zilliztech/kafka-connect-milvus?tab=readme-ov-file#kafka-connect-milvus-connector"  target="_blank" rel="noopener"
+    >Kafka</a>, <a class="link" href="https://fivetran.com/docs/destinations/milvus"  target="_blank" rel="noopener"
+    >Fivetran</a>, and <a class="link" href="https://milvus.io/docs/integrate_with_airbyte.md"  target="_blank" rel="noopener"
+    >Airbyte</a> to build search pipelines.</p>
+<p>Check out <a class="link" href="https://milvus.io/docs/integrations_overview.md"  target="_blank" rel="noopener"
+    >https://milvus.io/docs/integrations_overview.md</a> for more details.</p>
+<h2 id="documentation">Documentation
+</h2><p>For guidance on installation, usage, deployment, and administration, check out <a class="link" href="https://milvus.io/docs"  target="_blank" rel="noopener"
+    >Milvus Docs</a>. For technical milestones and enhancement proposals, check out <a class="link" href="https://github.com/milvus-io/milvus/issues"  target="_blank" rel="noopener"
+    >issues on GitHub</a>.</p>
+<h2 id="contributing">Contributing
+</h2><p>The Milvus open-source project accepts contribution from everyone. See <a class="link" href="https://github.com/milvus-io/milvus/blob/master/CONTRIBUTING.md"  target="_blank" rel="noopener"
+    >Guidelines for Contributing</a> for details on submitting patches and the development workflow. See our <a class="link" href="https://github.com/milvus-io/community"  target="_blank" rel="noopener"
+    >community repository</a> to learn about project governance and access more community resources.</p>
+<h3 id="build-milvus-from-source-code">Build Milvus from Source Code
+</h3><p>Requirements:</p>
+<ul>
+<li>
+<p>Linux systems (Ubuntu 20.04 or later recommended):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">go: &gt;<span class="o">=</span> 1.21
+</span></span><span class="line"><span class="cl">cmake: &gt;<span class="o">=</span> 3.26.4
+</span></span><span class="line"><span class="cl">gcc: 9.5
+</span></span><span class="line"><span class="cl">python: &gt; 3.8 and  &lt;<span class="o">=</span> 3.11
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>MacOS systems with x86_64 (Big Sur 11.5 or later recommended):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">go: &gt;<span class="o">=</span> 1.21
+</span></span><span class="line"><span class="cl">cmake: &gt;<span class="o">=</span> 3.26.4
+</span></span><span class="line"><span class="cl">llvm: &gt;<span class="o">=</span> <span class="m">15</span>
+</span></span><span class="line"><span class="cl">python: &gt; 3.8 and  &lt;<span class="o">=</span> 3.11
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>MacOS systems with Apple Silicon (Monterey 12.0.1 or later recommended):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">go: &gt;<span class="o">=</span> 1.21 <span class="o">(</span><span class="nv">Arch</span><span class="o">=</span>ARM64<span class="o">)</span>
+</span></span><span class="line"><span class="cl">cmake: &gt;<span class="o">=</span> 3.26.4
+</span></span><span class="line"><span class="cl">llvm: &gt;<span class="o">=</span> <span class="m">15</span>
+</span></span><span class="line"><span class="cl">python: &gt; 3.8 and  &lt;<span class="o">=</span> 3.11
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<p>Clone Milvus repo and build.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Clone github repository.</span>
+</span></span><span class="line"><span class="cl">$ git clone https://github.com/milvus-io/milvus.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Install third-party dependencies.</span>
+</span></span><span class="line"><span class="cl">$ <span class="nb">cd</span> milvus/
+</span></span><span class="line"><span class="cl">$ ./scripts/install_deps.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Compile Milvus.</span>
+</span></span><span class="line"><span class="cl">$ make
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>For full instructions, see <a class="link" href="https://github.com/milvus-io/milvus/blob/master/DEVELOPMENT.md"  target="_blank" rel="noopener"
+    >developer&rsquo;s documentation</a>.</p>
+<h2 id="community">Community
+</h2><p>Join the Milvus community on <a class="link" href="https://discord.gg/8uyFbECzPX"  target="_blank" rel="noopener"
+    >Discord</a> to share your suggestions, advice, and questions with our engineering team.</p>
+<p>To learn latest news about Milvus, follow us on social media:</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> (<a class="link" href="https://twitter.com/milvusio"  target="_blank" rel="noopener"
+    >https://twitter.com/milvusio</a>)</li>
+<li><a class="link" href="https://www.linkedin.com/company/the-milvus-project"  target="_blank" rel="noopener"
+    >LinkedIn</a></li>
+<li><a class="link" href="https://www.youtube.com/channel/UCMCo_F7pKjMHBlfyxwOPw-g"  target="_blank" rel="noopener"
+    >Youtube</a></li>
+<li><a class="link" href="https://medium.com/@milvusio"  target="_blank" rel="noopener"
+    >Medium</a></li>
+</ul>
+<p>You can also check out our <a class="link" href="https://milvus.io/docs/performance_faq.md"  target="_blank" rel="noopener"
+    >FAQ page</a> to discover solutions or answers to your issues or questions, and subscribe to Milvus mailing lists:</p>
+<ul>
+<li><a class="link" href="https://lists.lfai.foundation/g/milvus-tsc"  target="_blank" rel="noopener"
+    >Technical Steering Committee</a></li>
+<li><a class="link" href="https://lists.lfai.foundation/g/milvus-technical-discuss"  target="_blank" rel="noopener"
+    >Technical Discussions</a></li>
+<li><a class="link" href="https://lists.lfai.foundation/g/milvus-announce"  target="_blank" rel="noopener"
+    >Announcement</a></li>
+</ul>
+<h2 id="reference">Reference
+</h2><p>Reference to cite when you use Milvus in a research paper:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@inproceedings{2021milvus,
+</span></span><span class="line"><span class="cl">  title={Milvus: A Purpose-Built Vector Data Management System},
+</span></span><span class="line"><span class="cl">  author={Wang, Jianguo and Yi, Xiaomeng and Guo, Rentong and Jin, Hai and Xu, Peng and Li, Shengjun and Wang, Xiangyu and Guo, Xiangzhou and Li, Chengming and Xu, Xiaohai and others},
+</span></span><span class="line"><span class="cl">  booktitle={Proceedings of the 2021 International Conference on Management of Data},
+</span></span><span class="line"><span class="cl">  pages={2614--2627},
+</span></span><span class="line"><span class="cl">  year={2021}
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">@article{2022manu,
+</span></span><span class="line"><span class="cl">  title={Manu: a cloud native vector database management system},
+</span></span><span class="line"><span class="cl">  author={Guo, Rentong and Luan, Xiaofan and Xiang, Long and Yan, Xiao and Yi, Xiaomeng and Luo, Jigao and Cheng, Qianya and Xu, Weizhi and Luo, Jiarui and Liu, Frank and others},
+</span></span><span class="line"><span class="cl">  journal={Proceedings of the VLDB Endowment},
+</span></span><span class="line"><span class="cl">  volume={15},
+</span></span><span class="line"><span class="cl">  number={12},
+</span></span><span class="line"><span class="cl">  pages={3548--3561},
+</span></span><span class="line"><span class="cl">  year={2022},
+</span></span><span class="line"><span class="cl">  publisher={VLDB Endowment}
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><!-- Do not remove start of hero-bot -->
+<p><img src="https://img.shields.io/badge/all--contributors-414-orange"><br>
+<a href="https://github.com/0xflotus"><img src="https://avatars.githubusercontent.com/u/26602940?v=4" width="30px" /></a>
+<a href="https://github.com/9Eurydice9"><img src="https://avatars.githubusercontent.com/u/220225099?v=4" width="30px" /></a>
+<a href="https://github.com/ABNER-1"><img src="https://avatars.githubusercontent.com/u/24547351?v=4" width="30px" /></a>
+<a href="https://github.com/Abhijnan-Bajpai"><img src="https://avatars.githubusercontent.com/u/57059194?v=4" width="30px" /></a>
+<a href="https://github.com/Accagain2014"><img src="https://avatars.githubusercontent.com/u/9635216?v=4" width="30px" /></a>
+<a href="https://github.com/Ahmetyasin"><img src="https://avatars.githubusercontent.com/u/34247619?v=4" width="30px" /></a>
+<a href="https://github.com/Ald392"><img src="https://avatars.githubusercontent.com/u/166891594?v=4" width="30px" /></a>
+<a href="https://github.com/AliDotS"><img src="https://avatars.githubusercontent.com/u/33119433?v=4" width="30px" /></a>
+<a href="https://github.com/AllenYu1987"><img src="https://avatars.githubusercontent.com/u/12489985?v=4" width="30px" /></a>
+<a href="https://github.com/Anosh21"><img src="https://avatars.githubusercontent.com/u/90505226?v=4" width="30px" /></a>
+<a href="https://github.com/AnthonyTsu1984"><img src="https://avatars.githubusercontent.com/u/115786031?v=4" width="30px" /></a>
+<a href="https://github.com/Aredcap"><img src="https://avatars.githubusercontent.com/u/40494761?v=4" width="30px" /></a>
+<a href="https://github.com/ArenaSu"><img src="https://avatars.githubusercontent.com/u/21214629?v=4" width="30px" /></a>
+<a href="https://github.com/Armaggheddon"><img src="https://avatars.githubusercontent.com/u/47779194?v=4" width="30px" /></a>
+<a href="https://github.com/BUPTAnderson"><img src="https://avatars.githubusercontent.com/u/13449703?v=4" width="30px" /></a>
+<a href="https://github.com/Ben-Aaron-Bio-Rad"><img src="https://avatars.githubusercontent.com/u/54123439?v=4" width="30px" /></a>
+<a href="https://github.com/Bennu-Li"><img src="https://avatars.githubusercontent.com/u/53458891?v=4" width="30px" /></a>
+<a href="https://github.com/Biki-das"><img src="https://avatars.githubusercontent.com/u/72331432?v=4" width="30px" /></a>
+<a href="https://github.com/BossZou"><img src="https://avatars.githubusercontent.com/u/40255591?v=4" width="30px" /></a>
+<a href="https://github.com/CNLHC"><img src="https://avatars.githubusercontent.com/u/21005146?v=4" width="30px" /></a>
+<a href="https://github.com/CaoHaiNam"><img src="https://avatars.githubusercontent.com/u/47685795?v=4" width="30px" /></a>
+<a href="https://github.com/Chisdo"><img src="https://avatars.githubusercontent.com/u/36720318?v=4" width="30px" /></a>
+<a href="https://github.com/ChunelFeng"><img src="https://avatars.githubusercontent.com/u/37905059?v=4" width="30px" /></a>
+<a href="https://github.com/CocytusElias"><img src="https://avatars.githubusercontent.com/u/79587688?v=4" width="30px" /></a>
+<a href="https://github.com/CodeInDreams"><img src="https://avatars.githubusercontent.com/u/17664279?v=4" width="30px" /></a>
+<a href="https://github.com/CsterKuroi"><img src="https://avatars.githubusercontent.com/u/12230174?v=4" width="30px" /></a>
+<a href="https://github.com/Cupchen"><img src="https://avatars.githubusercontent.com/u/34762375?v=4" width="30px" /></a>
+<a href="https://github.com/DLT1412"><img src="https://avatars.githubusercontent.com/u/8294986?v=4" width="30px" /></a>
+<a href="https://github.com/DanielHuang1983"><img src="https://avatars.githubusercontent.com/u/4417873?v=4" width="30px" /></a>
+<a href="https://github.com/Deep1Shikha"><img src="https://avatars.githubusercontent.com/u/47516502?v=4" width="30px" /></a>
+<a href="https://github.com/DingQK"><img src="https://avatars.githubusercontent.com/u/58072531?v=4" width="30px" /></a>
+<a href="https://github.com/DiptoChakrabarty"><img src="https://avatars.githubusercontent.com/u/45638240?v=4" width="30px" /></a>
+<a href="https://github.com/EricStarer"><img src="https://avatars.githubusercontent.com/u/34002927?v=4" width="30px" /></a>
+<a href="https://github.com/Erzangel"><img src="https://avatars.githubusercontent.com/u/57399897?v=4" width="30px" /></a>
+<a href="https://github.com/Fierralin"><img src="https://avatars.githubusercontent.com/u/8857059?v=4" width="30px" /></a>
+<a href="https://github.com/FluorineDog"><img src="https://avatars.githubusercontent.com/u/15663612?v=4" width="30px" /></a>
+<a href="https://github.com/Gofastasf"><img src="https://avatars.githubusercontent.com/u/159963288?v=4" width="30px" /></a>
+<a href="https://github.com/Gracieeea"><img src="https://avatars.githubusercontent.com/u/50101579?v=4" width="30px" /></a>
+<a href="https://github.com/GuanyunFeng"><img src="https://avatars.githubusercontent.com/u/40229765?v=4" width="30px" /></a>
+<a href="https://github.com/GuoRentong"><img src="https://avatars.githubusercontent.com/u/57477222?v=4" width="30px" /></a>
+<a href="https://github.com/GuyKh"><img src="https://avatars.githubusercontent.com/u/3136012?v=4" width="30px" /></a>
+<a href="https://github.com/Hard-Coder05"><img src="https://avatars.githubusercontent.com/u/54059881?v=4" width="30px" /></a>
+<a href="https://github.com/Heisenberg-Y"><img src="https://avatars.githubusercontent.com/u/35055583?v=4" width="30px" /></a>
+<a href="https://github.com/HesterG"><img src="https://avatars.githubusercontent.com/u/17645053?v=4" width="30px" /></a>
+<a href="https://github.com/Hoyaspark"><img src="https://avatars.githubusercontent.com/u/88016041?v=4" width="30px" /></a>
+<a href="https://github.com/HuaSheng2000"><img src="https://avatars.githubusercontent.com/u/34791273?v=4" width="30px" /></a>
+<a href="https://github.com/HuangHua"><img src="https://avatars.githubusercontent.com/u/2274405?v=4" width="30px" /></a>
+<a href="https://github.com/HurSungYun"><img src="https://avatars.githubusercontent.com/u/8033896?v=4" width="30px" /></a>
+<a href="https://github.com/Ice-YcY"><img src="https://avatars.githubusercontent.com/u/85332705?v=4" width="30px" /></a>
+<a href="https://github.com/JackLCL"><img src="https://avatars.githubusercontent.com/u/53512883?v=4" width="30px" /></a>
+<a href="https://github.com/JadeFlute0127"><img src="https://avatars.githubusercontent.com/u/35321989?v=4" width="30px" /></a>
+<a href="https://github.com/Janglearnstocode"><img src="https://avatars.githubusercontent.com/u/204587742?v=4" width="30px" /></a>
+<a href="https://github.com/Javajava1"><img src="https://avatars.githubusercontent.com/u/29594737?v=4" width="30px" /></a>
+<a href="https://github.com/Jeri-jose"><img src="https://avatars.githubusercontent.com/u/72429659?v=4" width="30px" /></a>
+<a href="https://github.com/JinHai-CN"><img src="https://avatars.githubusercontent.com/u/33142505?v=4" width="30px" /></a>
+<a href="https://github.com/JsDove"><img src="https://avatars.githubusercontent.com/u/35839735?v=4" width="30px" /></a>
+<a href="https://github.com/Juneezee"><img src="https://avatars.githubusercontent.com/u/20135478?v=4" width="30px" /></a>
+<a href="https://github.com/KubrickLiu"><img src="https://avatars.githubusercontent.com/u/24795136?v=4" width="30px" /></a>
+<a href="https://github.com/KumaJie"><img src="https://avatars.githubusercontent.com/u/61139665?v=4" width="30px" /></a>
+<a href="https://github.com/LeoReeYang"><img src="https://avatars.githubusercontent.com/u/58654486?v=4" width="30px" /></a>
+<a href="https://github.com/Leslie-Wong-H"><img src="https://avatars.githubusercontent.com/u/27696701?v=4" width="30px" /></a>
+<a href="https://github.com/Light-City"><img src="https://avatars.githubusercontent.com/u/25699850?v=4" width="30px" /></a>
+<a href="https://github.com/Lin-gh-Saint"><img src="https://avatars.githubusercontent.com/u/64019322?v=4" width="30px" /></a>
+<a href="https://github.com/Linkwei"><img src="https://avatars.githubusercontent.com/u/30227152?v=4" width="30px" /></a>
+<a href="https://github.com/LionelDong"><img src="https://avatars.githubusercontent.com/u/7533395?v=4" width="30px" /></a>
+<a href="https://github.com/LocoRichard"><img src="https://avatars.githubusercontent.com/u/81553353?v=4" width="30px" /></a>
+<a href="https://github.com/LoveEachDay"><img src="https://avatars.githubusercontent.com/u/1573213?v=4" width="30px" /></a>
+<a href="https://github.com/MrPresent-Han"><img src="https://avatars.githubusercontent.com/u/116052805?v=4" width="30px" /></a>
+<a href="https://github.com/NavanshGoel"><img src="https://avatars.githubusercontent.com/u/74401713?v=4" width="30px" /></a>
+<a href="https://github.com/NicoYuan1986"><img src="https://avatars.githubusercontent.com/u/109071306?v=4" width="30px" /></a>
+<a href="https://github.com/NotRyan"><img src="https://avatars.githubusercontent.com/u/5742796?v=4" width="30px" /></a>
+<a href="https://github.com/OxalisCu"><img src="https://avatars.githubusercontent.com/u/64067746?v=4" width="30px" /></a>
+<a href="https://github.com/PahudPlus"><img src="https://avatars.githubusercontent.com/u/64403786?v=4" width="30px" /></a>
+<a href="https://github.com/PiercarloSlavazza"><img src="https://avatars.githubusercontent.com/u/3389306?v=4" width="30px" /></a>
+<a href="https://github.com/PowderLi"><img src="https://avatars.githubusercontent.com/u/135960789?v=4" width="30px" /></a>
+<a href="https://github.com/PwzXxm"><img src="https://avatars.githubusercontent.com/u/6563846?v=4" width="30px" /></a>
+<a href="https://github.com/QipengZhou"><img src="https://avatars.githubusercontent.com/u/5410298?v=4" width="30px" /></a>
+<a href="https://github.com/RangerCD"><img src="https://avatars.githubusercontent.com/u/6872198?v=4" width="30px" /></a>
+<a href="https://github.com/Raysilience"><img src="https://avatars.githubusercontent.com/u/45241093?v=4" width="30px" /></a>
+<a href="https://github.com/Reidddddd"><img src="https://avatars.githubusercontent.com/u/5352837?v=4" width="30px" /></a>
+<a href="https://github.com/ReigenAraka"><img src="https://avatars.githubusercontent.com/u/57280231?v=4" width="30px" /></a>
+<a href="https://github.com/Rijin-N"><img src="https://avatars.githubusercontent.com/u/181319057?v=4" width="30px" /></a>
+<a href="https://github.com/RosieZhang12"><img src="https://avatars.githubusercontent.com/u/106942883?v=4" width="30px" /></a>
+<a href="https://github.com/RyanWei"><img src="https://avatars.githubusercontent.com/u/9876551?v=4" width="30px" /></a>
+<a href="https://github.com/SCKCZJ2018"><img src="https://avatars.githubusercontent.com/u/29282370?v=4" width="30px" /></a>
+<a href="https://github.com/SarthakJain26"><img src="https://avatars.githubusercontent.com/u/45846277?v=4" width="30px" /></a>
+<a href="https://github.com/Shawnzheng011019"><img src="https://avatars.githubusercontent.com/u/88486803?v=4" width="30px" /></a>
+<a href="https://github.com/SimFG"><img src="https://avatars.githubusercontent.com/u/21985684?v=4" width="30px" /></a>
+<a href="https://github.com/SkyYang"><img src="https://avatars.githubusercontent.com/u/4702509?v=4" width="30px" /></a>
+<a href="https://github.com/SnowyOwl-KHY"><img src="https://avatars.githubusercontent.com/u/10348819?v=4" width="30px" /></a>
+<a href="https://github.com/SpadeA-Tang"><img src="https://avatars.githubusercontent.com/u/71589810?v=4" width="30px" /></a>
+<a href="https://github.com/Sunt-ing"><img src="https://avatars.githubusercontent.com/u/43040147?v=4" width="30px" /></a>
+<a href="https://github.com/SwaggySong"><img src="https://avatars.githubusercontent.com/u/36157116?v=4" width="30px" /></a>
+<a href="https://github.com/TheShubhendra"><img src="https://avatars.githubusercontent.com/u/37535104?v=4" width="30px" /></a>
+<a href="https://github.com/Thor-ChenBiao"><img src="https://avatars.githubusercontent.com/u/104345188?v=4" width="30px" /></a>
+<a href="https://github.com/ThreadDao"><img src="https://avatars.githubusercontent.com/u/27288593?v=4" width="30px" /></a>
+<a href="https://github.com/ThyeeZz"><img src="https://avatars.githubusercontent.com/u/41352919?v=4" width="30px" /></a>
+<a href="https://github.com/Tlincy"><img src="https://avatars.githubusercontent.com/u/11934432?v=4" width="30px" /></a>
+<a href="https://github.com/Tumao727"><img src="https://avatars.githubusercontent.com/u/20420181?v=4" width="30px" /></a>
+<a href="https://github.com/UnyieldingOrca"><img src="https://avatars.githubusercontent.com/u/11794047?v=4" width="30px" /></a>
+<a href="https://github.com/Writer-X"><img src="https://avatars.githubusercontent.com/u/80471801?v=4" width="30px" /></a>
+<a href="https://github.com/Writtic"><img src="https://avatars.githubusercontent.com/u/11371498?v=4" width="30px" /></a>
+<a href="https://github.com/Wuzhengda55"><img src="https://avatars.githubusercontent.com/u/47274057?v=4" width="30px" /></a>
+<a href="https://github.com/Xieql"><img src="https://avatars.githubusercontent.com/u/45359033?v=4" width="30px" /></a>
+<a href="https://github.com/XuPeng-SH"><img src="https://avatars.githubusercontent.com/u/39627130?v=4" width="30px" /></a>
+<a href="https://github.com/XuanYang-cn"><img src="https://avatars.githubusercontent.com/u/51370125?v=4" width="30px" /></a>
+<a href="https://github.com/YannFollet"><img src="https://avatars.githubusercontent.com/u/131855179?v=4" width="30px" /></a>
+<a href="https://github.com/YidaHu"><img src="https://avatars.githubusercontent.com/u/13404367?v=4" width="30px" /></a>
+<a href="https://github.com/YiyunNi"><img src="https://avatars.githubusercontent.com/u/74396087?v=4" width="30px" /></a>
+<a href="https://github.com/Yougigun"><img src="https://avatars.githubusercontent.com/u/9638997?v=4" width="30px" /></a>
+<a href="https://github.com/Yukikaze-CZR"><img src="https://avatars.githubusercontent.com/u/48198922?v=4" width="30px" /></a>
+<a href="https://github.com/Zach41"><img src="https://avatars.githubusercontent.com/u/3941604?v=4" width="30px" /></a>
+<a href="https://github.com/ZhaoBQ"><img src="https://avatars.githubusercontent.com/u/35092554?v=4" width="30px" /></a>
+<a href="https://github.com/aaronjin2010"><img src="https://avatars.githubusercontent.com/u/48044391?v=4" width="30px" /></a>
+<a href="https://github.com/abd-770"><img src="https://avatars.githubusercontent.com/u/92085834?v=4" width="30px" /></a>
+<a href="https://github.com/akihoni"><img src="https://avatars.githubusercontent.com/u/36330442?v=4" width="30px" /></a>
+<a href="https://github.com/alexanderguzhva"><img src="https://avatars.githubusercontent.com/u/10901481?v=4" width="30px" /></a>
+<a href="https://github.com/alwayslove2013"><img src="https://avatars.githubusercontent.com/u/22510720?v=4" width="30px" /></a>
+<a href="https://github.com/anchun"><img src="https://avatars.githubusercontent.com/u/2356895?v=4" width="30px" /></a>
+<a href="https://github.com/any35"><img src="https://avatars.githubusercontent.com/u/2082210?v=4" width="30px" /></a>
+<a href="https://github.com/aoiasd"><img src="https://avatars.githubusercontent.com/u/45024769?v=4" width="30px" /></a>
+<a href="https://github.com/arijit-chowdhury-genea"><img src="https://avatars.githubusercontent.com/u/104769013?v=4" width="30px" /></a>
+<a href="https://github.com/ashkrisk"><img src="https://avatars.githubusercontent.com/u/137368647?v=4" width="30px" /></a>
+<a href="https://github.com/ashyshyshyman"><img src="https://avatars.githubusercontent.com/u/50362613?v=4" width="30px" /></a>
+<a href="https://github.com/avats-dev"><img src="https://avatars.githubusercontent.com/u/35889327?v=4" width="30px" /></a>
+<a href="https://github.com/avsolatorio"><img src="https://avatars.githubusercontent.com/u/3009596?v=4" width="30px" /></a>
+<a href="https://github.com/balloon1995"><img src="https://avatars.githubusercontent.com/u/10573916?v=4" width="30px" /></a>
+<a href="https://github.com/become-nice"><img src="https://avatars.githubusercontent.com/u/56624819?v=4" width="30px" /></a>
+<a href="https://github.com/bigsheeper"><img src="https://avatars.githubusercontent.com/u/42060877?v=4" width="30px" /></a>
+<a href="https://github.com/binbin12580"><img src="https://avatars.githubusercontent.com/u/30914966?v=4" width="30px" /></a>
+<a href="https://github.com/binbinlv"><img src="https://avatars.githubusercontent.com/u/83755740?v=4" width="30px" /></a>
+<a href="https://github.com/bjzhjing"><img src="https://avatars.githubusercontent.com/u/46661806?v=4" width="30px" /></a>
+<a href="https://github.com/bo-huang"><img src="https://avatars.githubusercontent.com/u/24309515?v=4" width="30px" /></a>
+<a href="https://github.com/brandonbiggs"><img src="https://avatars.githubusercontent.com/u/34954680?v=4" width="30px" /></a>
+<a href="https://github.com/brcarry"><img src="https://avatars.githubusercontent.com/u/58139344?v=4" width="30px" /></a>
+<a href="https://github.com/brunocfnba"><img src="https://avatars.githubusercontent.com/u/7377163?v=4" width="30px" /></a>
+<a href="https://github.com/bryanwux"><img src="https://avatars.githubusercontent.com/u/17968665?v=4" width="30px" /></a>
+<a href="https://github.com/caesarjuly"><img src="https://avatars.githubusercontent.com/u/927521?v=4" width="30px" /></a>
+<a href="https://github.com/caosiyang"><img src="https://avatars.githubusercontent.com/u/2155120?v=4" width="30px" /></a>
+<a href="https://github.com/carawaylj"><img src="https://avatars.githubusercontent.com/u/69145751?v=4" width="30px" /></a>
+<a href="https://github.com/charleskakumanu"><img src="https://avatars.githubusercontent.com/u/62761315?v=4" width="30px" /></a>
+<a href="https://github.com/charlspjohn"><img src="https://avatars.githubusercontent.com/u/14850736?v=4" width="30px" /></a>
+<a href="https://github.com/chasingegg"><img src="https://avatars.githubusercontent.com/u/18375889?v=4" width="30px" /></a>
+<a href="https://github.com/chengpu"><img src="https://avatars.githubusercontent.com/u/2233492?v=4" width="30px" /></a>
+<a href="https://github.com/chenxingqiang"><img src="https://avatars.githubusercontent.com/u/12387235?v=4" width="30px" /></a>
+<a href="https://github.com/chinamcafee"><img src="https://avatars.githubusercontent.com/u/3439961?v=4" width="30px" /></a>
+<a href="https://github.com/chuangfengwang"><img src="https://avatars.githubusercontent.com/u/24692397?v=4" width="30px" /></a>
+<a href="https://github.com/chyezh"><img src="https://avatars.githubusercontent.com/u/20332315?v=4" width="30px" /></a>
+<a href="https://github.com/cjrh"><img src="https://avatars.githubusercontent.com/u/480395?v=4" width="30px" /></a>
+<a href="https://github.com/claireyuw"><img src="https://avatars.githubusercontent.com/u/83751381?v=4" width="30px" /></a>
+<a href="https://github.com/codacy-badger"><img src="https://avatars.githubusercontent.com/u/23704769?v=4" width="30px" /></a>
+<a href="https://github.com/codenoid"><img src="https://avatars.githubusercontent.com/u/14269809?v=4" width="30px" /></a>
+<a href="https://github.com/codingjaguar"><img src="https://avatars.githubusercontent.com/u/7064054?v=4" width="30px" /></a>
+<a href="https://github.com/congqixia"><img src="https://avatars.githubusercontent.com/u/84113973?v=4" width="30px" /></a>
+<a href="https://github.com/corest"><img src="https://avatars.githubusercontent.com/u/1071648?v=4" width="30px" /></a>
+<a href="https://github.com/counter2015"><img src="https://avatars.githubusercontent.com/u/13608862?v=4" width="30px" /></a>
+<a href="https://github.com/cqy123456"><img src="https://avatars.githubusercontent.com/u/39671710?v=4" width="30px" /></a>
+<a href="https://github.com/cuishuang"><img src="https://avatars.githubusercontent.com/u/15921519?v=4" width="30px" /></a>
+<a href="https://github.com/cxie"><img src="https://avatars.githubusercontent.com/u/653101?v=4" width="30px" /></a>
+<a href="https://github.com/cxytz01"><img src="https://avatars.githubusercontent.com/u/18002438?v=4" width="30px" /></a>
+<a href="https://github.com/cydrain"><img src="https://avatars.githubusercontent.com/u/3992404?v=4" width="30px" /></a>
+<a href="https://github.com/czpmango"><img src="https://avatars.githubusercontent.com/u/26356194?v=4" width="30px" /></a>
+<a href="https://github.com/czs007"><img src="https://avatars.githubusercontent.com/u/59249785?v=4" width="30px" /></a>
+<a href="https://github.com/dandv"><img src="https://avatars.githubusercontent.com/u/33569?v=4" width="30px" /></a>
+<a href="https://github.com/dariocurr"><img src="https://avatars.githubusercontent.com/u/48800335?v=4" width="30px" /></a>
+<a href="https://github.com/datenhahn"><img src="https://avatars.githubusercontent.com/u/13999666?v=4" width="30px" /></a>
+<a href="https://github.com/dd-He"><img src="https://avatars.githubusercontent.com/u/24242249?v=4" width="30px" /></a>
+<a href="https://github.com/dddddai"><img src="https://avatars.githubusercontent.com/u/41563853?v=4" width="30px" /></a>
+<a href="https://github.com/del-zhenwu"><img src="https://avatars.githubusercontent.com/u/56623710?v=4" width="30px" /></a>
+<a href="https://github.com/dengxiaohai"><img src="https://avatars.githubusercontent.com/u/137682492?v=4" width="30px" /></a>
+<a href="https://github.com/disflyer"><img src="https://avatars.githubusercontent.com/u/22723892?v=4" width="30px" /></a>
+<a href="https://github.com/divyaruhil"><img src="https://avatars.githubusercontent.com/u/117009486?v=4" width="30px" /></a>
+<a href="https://github.com/donno2048"><img src="https://avatars.githubusercontent.com/u/61805754?v=4" width="30px" /></a>
+<a href="https://github.com/drow931"><img src="https://avatars.githubusercontent.com/u/11514434?v=4" width="30px" /></a>
+<a href="https://github.com/dvzubarev"><img src="https://avatars.githubusercontent.com/u/14878830?v=4" width="30px" /></a>
+<a href="https://github.com/dyhyfu"><img src="https://avatars.githubusercontent.com/u/64584368?v=4" width="30px" /></a>
+<a href="https://github.com/eddumelendez"><img src="https://avatars.githubusercontent.com/u/1810547?v=4" width="30px" /></a>
+<a href="https://github.com/ehooi"><img src="https://avatars.githubusercontent.com/u/1306183?v=4" width="30px" /></a>
+<a href="https://github.com/elfisworking"><img src="https://avatars.githubusercontent.com/u/37609214?v=4" width="30px" /></a>
+<a href="https://github.com/eli-b"><img src="https://avatars.githubusercontent.com/u/834999?v=4" width="30px" /></a>
+<a href="https://github.com/elstic"><img src="https://avatars.githubusercontent.com/u/48523564?v=4" width="30px" /></a>
+<a href="https://github.com/emmanuel-ferdman"><img src="https://avatars.githubusercontent.com/u/35470921?v=4" width="30px" /></a>
+<a href="https://github.com/eolivelli"><img src="https://avatars.githubusercontent.com/u/9469110?v=4" width="30px" /></a>
+<a href="https://github.com/erdustiggen"><img src="https://avatars.githubusercontent.com/u/25433850?v=4" width="30px" /></a>
+<a href="https://github.com/feisiyicl"><img src="https://avatars.githubusercontent.com/u/64510805?v=4" width="30px" /></a>
+<a href="https://github.com/fengjun2016"><img src="https://avatars.githubusercontent.com/u/23044049?v=4" width="30px" /></a>
+<a href="https://github.com/filip-halt"><img src="https://avatars.githubusercontent.com/u/81822489?v=4" width="30px" /></a>
+<a href="https://github.com/filipecaixeta"><img src="https://avatars.githubusercontent.com/u/1094052?v=4" width="30px" /></a>
+<a href="https://github.com/fishpenguin"><img src="https://avatars.githubusercontent.com/u/49153041?v=4" width="30px" /></a>
+<a href="https://github.com/forsaken628"><img src="https://avatars.githubusercontent.com/u/18322364?v=4" width="30px" /></a>
+<a href="https://github.com/foxspy"><img src="https://avatars.githubusercontent.com/u/11503321?v=4" width="30px" /></a>
+<a href="https://github.com/franciscojavierarceo"><img src="https://avatars.githubusercontent.com/u/4163062?v=4" width="30px" /></a>
+<a href="https://github.com/freestsoul"><img src="https://avatars.githubusercontent.com/u/3909908?v=4" width="30px" /></a>
+<a href="https://github.com/gcmutator"><img src="https://avatars.githubusercontent.com/u/134900551?v=4" width="30px" /></a>
+<a href="https://github.com/ggaaooppeenngg"><img src="https://avatars.githubusercontent.com/u/4769989?v=4" width="30px" /></a>
+<a href="https://github.com/gifi-siby"><img src="https://avatars.githubusercontent.com/u/176461003?v=4" width="30px" /></a>
+<a href="https://github.com/git-hulk"><img src="https://avatars.githubusercontent.com/u/4987594?v=4" width="30px" /></a>
+<a href="https://github.com/godchen0212"><img src="https://avatars.githubusercontent.com/u/67679556?v=4" width="30px" /></a>
+<a href="https://github.com/gracezzzzz"><img src="https://avatars.githubusercontent.com/u/56617657?v=4" width="30px" /></a>
+<a href="https://github.com/grtoverflow"><img src="https://avatars.githubusercontent.com/u/8500564?v=4" width="30px" /></a>
+<a href="https://github.com/gruebel"><img src="https://avatars.githubusercontent.com/u/33207684?v=4" width="30px" /></a>
+<a href="https://github.com/guimou"><img src="https://avatars.githubusercontent.com/u/3944034?v=4" width="30px" /></a>
+<a href="https://github.com/gujun720"><img src="https://avatars.githubusercontent.com/u/53246671?v=4" width="30px" /></a>
+<a href="https://github.com/guoxiangzhou"><img src="https://avatars.githubusercontent.com/u/52496626?v=4" width="30px" /></a>
+<a href="https://github.com/hadim"><img src="https://avatars.githubusercontent.com/u/528003?v=4" width="30px" /></a>
+<a href="https://github.com/haorenfsa"><img src="https://avatars.githubusercontent.com/u/15938850?v=4" width="30px" /></a>
+<a href="https://github.com/hckex"><img src="https://avatars.githubusercontent.com/u/33862757?v=4" width="30px" /></a>
+<a href="https://github.com/hedane"><img src="https://avatars.githubusercontent.com/u/12457872?v=4" width="30px" /></a>
+<a href="https://github.com/henryoswald"><img src="https://avatars.githubusercontent.com/u/343366?v=4" width="30px" /></a>
+<a href="https://github.com/hishope"><img src="https://avatars.githubusercontent.com/u/153272819?v=4" width="30px" /></a>
+<a href="https://github.com/huanghaoyuanhhy"><img src="https://avatars.githubusercontent.com/u/103482615?v=4" width="30px" /></a>
+<a href="https://github.com/huangjincheng2022"><img src="https://avatars.githubusercontent.com/u/98305308?v=4" width="30px" /></a>
+<a href="https://github.com/ibrahimhaddad"><img src="https://avatars.githubusercontent.com/u/1656002?v=4" width="30px" /></a>
+<a href="https://github.com/im-ajaymeena"><img src="https://avatars.githubusercontent.com/u/19550841?v=4" width="30px" /></a>
+<a href="https://github.com/ireneontheway5"><img src="https://avatars.githubusercontent.com/u/75291211?v=4" width="30px" /></a>
+<a href="https://github.com/iynewz"><img src="https://avatars.githubusercontent.com/u/81401074?v=4" width="30px" /></a>
+<a href="https://github.com/izapolsk"><img src="https://avatars.githubusercontent.com/u/21039333?v=4" width="30px" /></a>
+<a href="https://github.com/jackyu2020"><img src="https://avatars.githubusercontent.com/u/64533877?v=4" width="30px" /></a>
+<a href="https://github.com/jaelgu"><img src="https://avatars.githubusercontent.com/u/86251631?v=4" width="30px" /></a>
+<a href="https://github.com/jaime0815"><img src="https://avatars.githubusercontent.com/u/4024711?v=4" width="30px" /></a>
+<a href="https://github.com/jeffoverflow"><img src="https://avatars.githubusercontent.com/u/24581746?v=4" width="30px" /></a>
+<a href="https://github.com/jenkoon"><img src="https://avatars.githubusercontent.com/u/27683687?v=4" width="30px" /></a>
+<a href="https://github.com/jennyli-z"><img src="https://avatars.githubusercontent.com/u/93511422?v=4" width="30px" /></a>
+<a href="https://github.com/jhonroxton"><img src="https://avatars.githubusercontent.com/u/105436184?v=4" width="30px" /></a>
+<a href="https://github.com/jiangke-sr"><img src="https://avatars.githubusercontent.com/u/68629395?v=4" width="30px" /></a>
+<a href="https://github.com/jiangyinzuo"><img src="https://avatars.githubusercontent.com/u/40995042?v=4" width="30px" /></a>
+<a href="https://github.com/jiaoew1991"><img src="https://avatars.githubusercontent.com/u/2297455?v=4" width="30px" /></a>
+<a href="https://github.com/jielinxu"><img src="https://avatars.githubusercontent.com/u/52057195?v=4" width="30px" /></a>
+<a href="https://github.com/jingkl"><img src="https://avatars.githubusercontent.com/u/34296482?v=4" width="30px" /></a>
+<a href="https://github.com/jjyaoao"><img src="https://avatars.githubusercontent.com/u/88936287?v=4" width="30px" /></a>
+<a href="https://github.com/jkx8fc"><img src="https://avatars.githubusercontent.com/u/31717785?v=4" width="30px" /></a>
+<a href="https://github.com/joeyjooste"><img src="https://avatars.githubusercontent.com/u/72280325?v=4" width="30px" /></a>
+<a href="https://github.com/john-h-luo"><img src="https://avatars.githubusercontent.com/u/67673717?v=4" width="30px" /></a>
+<a href="https://github.com/jperez999"><img src="https://avatars.githubusercontent.com/u/37191411?v=4" width="30px" /></a>
+<a href="https://github.com/juliens"><img src="https://avatars.githubusercontent.com/u/195661?v=4" width="30px" /></a>
+<a href="https://github.com/junjiejiangjjj"><img src="https://avatars.githubusercontent.com/u/14136703?v=4" width="30px" /></a>
+<a href="https://github.com/jyc4617"><img src="https://avatars.githubusercontent.com/u/3044583?v=4" width="30px" /></a>
+<a href="https://github.com/kartikcho"><img src="https://avatars.githubusercontent.com/u/48270786?v=4" width="30px" /></a>
+<a href="https://github.com/kateshaowanjou"><img src="https://avatars.githubusercontent.com/u/58837504?v=4" width="30px" /></a>
+<a href="https://github.com/klboke"><img src="https://avatars.githubusercontent.com/u/18591662?v=4" width="30px" /></a>
+<a href="https://github.com/laipz8200"><img src="https://avatars.githubusercontent.com/u/16485841?v=4" width="30px" /></a>
+<a href="https://github.com/laurazhao0611"><img src="https://avatars.githubusercontent.com/u/192320184?v=4" width="30px" /></a>
+<a href="https://github.com/lee-eve"><img src="https://avatars.githubusercontent.com/u/9720105?v=4" width="30px" /></a>
+<a href="https://github.com/lentitude2tk"><img src="https://avatars.githubusercontent.com/u/108672767?v=4" width="30px" /></a>
+<a href="https://github.com/leonardokidd"><img src="https://avatars.githubusercontent.com/u/14940941?v=4" width="30px" /></a>
+<a href="https://github.com/letian-jiang"><img src="https://avatars.githubusercontent.com/u/16740944?v=4" width="30px" /></a>
+<a href="https://github.com/letme5"><img src="https://avatars.githubusercontent.com/u/76860836?v=4" width="30px" /></a>
+<a href="https://github.com/leykun10"><img src="https://avatars.githubusercontent.com/u/45382760?v=4" width="30px" /></a>
+<a href="https://github.com/lhotari"><img src="https://avatars.githubusercontent.com/u/66864?v=4" width="30px" /></a>
+<a href="https://github.com/liliu-z"><img src="https://avatars.githubusercontent.com/u/105927039?v=4" width="30px" /></a>
+<a href="https://github.com/linhgao"><img src="https://avatars.githubusercontent.com/u/102851605?v=4" width="30px" /></a>
+<a href="https://github.com/liyun95"><img src="https://avatars.githubusercontent.com/u/105278390?v=4" width="30px" /></a>
+<a href="https://github.com/locustbaby"><img src="https://avatars.githubusercontent.com/u/21237232?v=4" width="30px" /></a>
+<a href="https://github.com/loguo"><img src="https://avatars.githubusercontent.com/u/15364733?v=4" width="30px" /></a>
+<a href="https://github.com/longjiquan"><img src="https://avatars.githubusercontent.com/u/31589260?v=4" width="30px" /></a>
+<a href="https://github.com/lowener"><img src="https://avatars.githubusercontent.com/u/9810050?v=4" width="30px" /></a>
+<a href="https://github.com/lsgrep"><img src="https://avatars.githubusercontent.com/u/3893940?v=4" width="30px" /></a>
+<a href="https://github.com/lwglgy"><img src="https://avatars.githubusercontent.com/u/26682620?v=4" width="30px" /></a>
+<a href="https://github.com/madogar"><img src="https://avatars.githubusercontent.com/u/36537062?v=4" width="30px" /></a>
+<a href="https://github.com/maksspace"><img src="https://avatars.githubusercontent.com/u/9841409?v=4" width="30px" /></a>
+<a href="https://github.com/matchyc"><img src="https://avatars.githubusercontent.com/u/57976772?v=4" width="30px" /></a>
+<a href="https://github.com/matrixji"><img src="https://avatars.githubusercontent.com/u/183388?v=4" width="30px" /></a>
+<a href="https://github.com/mausch"><img src="https://avatars.githubusercontent.com/u/95194?v=4" width="30px" /></a>
+<a href="https://github.com/mcamou"><img src="https://avatars.githubusercontent.com/u/87200?v=4" width="30px" /></a>
+<a href="https://github.com/michaelkl"><img src="https://avatars.githubusercontent.com/u/1443825?v=4" width="30px" /></a>
+<a href="https://github.com/mihailyanchev"><img src="https://avatars.githubusercontent.com/u/34907806?v=4" width="30px" /></a>
+<a href="https://github.com/mileyzjq"><img src="https://avatars.githubusercontent.com/u/37039827?v=4" width="30px" /></a>
+<a href="https://github.com/milvus-ci-robot"><img src="https://avatars.githubusercontent.com/u/87847967?v=4" width="30px" /></a>
+<a href="https://github.com/mimoning"><img src="https://avatars.githubusercontent.com/u/19261942?v=4" width="30px" /></a>
+<a href="https://github.com/moe-of-faith"><img src="https://avatars.githubusercontent.com/u/5696721?v=4" width="30px" /></a>
+<a href="https://github.com/mohitreddy1996"><img src="https://avatars.githubusercontent.com/u/11742913?v=4" width="30px" /></a>
+<a href="https://github.com/nameczz"><img src="https://avatars.githubusercontent.com/u/20559208?v=4" width="30px" /></a>
+<a href="https://github.com/natoka"><img src="https://avatars.githubusercontent.com/u/1751024?v=4" width="30px" /></a>
+<a href="https://github.com/ncover21"><img src="https://avatars.githubusercontent.com/u/30241297?v=4" width="30px" /></a>
+<a href="https://github.com/nexttonever"><img src="https://avatars.githubusercontent.com/u/31059690?v=4" width="30px" /></a>
+<a href="https://github.com/neza2017"><img src="https://avatars.githubusercontent.com/u/34152706?v=4" width="30px" /></a>
+<a href="https://github.com/nianliuu"><img src="https://avatars.githubusercontent.com/u/136299351?v=4" width="30px" /></a>
+<a href="https://github.com/nish112022"><img src="https://avatars.githubusercontent.com/u/148342058?v=4" width="30px" /></a>
+<a href="https://github.com/nustiueudinastea"><img src="https://avatars.githubusercontent.com/u/588327?v=4" width="30px" /></a>
+<a href="https://github.com/op-hunter"><img src="https://avatars.githubusercontent.com/u/5617677?v=4" width="30px" /></a>
+<a href="https://github.com/ownbylichaobao"><img src="https://avatars.githubusercontent.com/u/37684963?v=4" width="30px" /></a>
+<a href="https://github.com/panjf2000"><img src="https://avatars.githubusercontent.com/u/7496278?v=4" width="30px" /></a>
+<a href="https://github.com/pengjeck"><img src="https://avatars.githubusercontent.com/u/14035577?v=4" width="30px" /></a>
+<a href="https://github.com/phantom8548"><img src="https://avatars.githubusercontent.com/u/11576622?v=4" width="30px" /></a>
+<a href="https://github.com/pingliu"><img src="https://avatars.githubusercontent.com/u/6415493?v=4" width="30px" /></a>
+<a href="https://github.com/pj1987111"><img src="https://avatars.githubusercontent.com/u/6268414?v=4" width="30px" /></a>
+<a href="https://github.com/ponponon"><img src="https://avatars.githubusercontent.com/u/38725104?v=4" width="30px" /></a>
+<a href="https://github.com/preetham"><img src="https://avatars.githubusercontent.com/u/9149028?v=4" width="30px" /></a>
+<a href="https://github.com/presburger"><img src="https://avatars.githubusercontent.com/u/49336176?v=4" width="30px" /></a>
+<a href="https://github.com/proost"><img src="https://avatars.githubusercontent.com/u/34047134?v=4" width="30px" /></a>
+<a href="https://github.com/psc0606"><img src="https://avatars.githubusercontent.com/u/7888889?v=4" width="30px" /></a>
+<a href="https://github.com/punkerpunker"><img src="https://avatars.githubusercontent.com/u/54440025?v=4" width="30px" /></a>
+<a href="https://github.com/qbzenker"><img src="https://avatars.githubusercontent.com/u/51972064?v=4" width="30px" /></a>
+<a href="https://github.com/qixuan0212"><img src="https://avatars.githubusercontent.com/u/135136620?v=4" width="30px" /></a>
+<a href="https://github.com/rahulmistri1997"><img src="https://avatars.githubusercontent.com/u/58909377?v=4" width="30px" /></a>
+<a href="https://github.com/rashgaroth"><img src="https://avatars.githubusercontent.com/u/50513263?v=4" width="30px" /></a>
+<a href="https://github.com/richzw"><img src="https://avatars.githubusercontent.com/u/1590890?v=4" width="30px" /></a>
+<a href="https://github.com/ronnie-llamado"><img src="https://avatars.githubusercontent.com/u/35092029?v=4" width="30px" /></a>
+<a href="https://github.com/sachitolani"><img src="https://avatars.githubusercontent.com/u/146494073?v=4" width="30px" /></a>
+<a href="https://github.com/sageanya"><img src="https://avatars.githubusercontent.com/u/37909674?v=4" width="30px" /></a>
+<a href="https://github.com/saisona"><img src="https://avatars.githubusercontent.com/u/10884762?v=4" width="30px" /></a>
+<a href="https://github.com/saivarunk"><img src="https://avatars.githubusercontent.com/u/2976867?v=4" width="30px" /></a>
+<a href="https://github.com/sarah-inkeep"><img src="https://avatars.githubusercontent.com/u/129242944?v=4" width="30px" /></a>
+<a href="https://github.com/scipe"><img src="https://avatars.githubusercontent.com/u/3996622?v=4" width="30px" /></a>
+<a href="https://github.com/scsven"><img src="https://avatars.githubusercontent.com/u/100122127?v=4" width="30px" /></a>
+<a href="https://github.com/seo-jinBro"><img src="https://avatars.githubusercontent.com/u/17746814?v=4" width="30px" /></a>
+<a href="https://github.com/septemberfd"><img src="https://avatars.githubusercontent.com/u/40378371?v=4" width="30px" /></a>
+<a href="https://github.com/shana0325"><img src="https://avatars.githubusercontent.com/u/33335490?v=4" width="30px" /></a>
+<a href="https://github.com/shanghaikid"><img src="https://avatars.githubusercontent.com/u/185051?v=4" width="30px" /></a>
+<a href="https://github.com/shaoting-huang"><img src="https://avatars.githubusercontent.com/u/167743503?v=4" width="30px" /></a>
+<a href="https://github.com/shengjh"><img src="https://avatars.githubusercontent.com/u/46514371?v=4" width="30px" /></a>
+<a href="https://github.com/shengjun1985"><img src="https://avatars.githubusercontent.com/u/49774184?v=4" width="30px" /></a>
+<a href="https://github.com/shiyu09"><img src="https://avatars.githubusercontent.com/u/39143280?v=4" width="30px" /></a>
+<a href="https://github.com/shiyu22"><img src="https://avatars.githubusercontent.com/u/53459423?v=4" width="30px" /></a>
+<a href="https://github.com/shunjiezhao"><img src="https://avatars.githubusercontent.com/u/90906581?v=4" width="30px" /></a>
+<a href="https://github.com/siddarth99"><img src="https://avatars.githubusercontent.com/u/38921750?v=4" width="30px" /></a>
+<a href="https://github.com/sileht"><img src="https://avatars.githubusercontent.com/u/200878?v=4" width="30px" /></a>
+<a href="https://github.com/simonwei97"><img src="https://avatars.githubusercontent.com/u/119845914?v=4" width="30px" /></a>
+<a href="https://github.com/siriusctrl"><img src="https://avatars.githubusercontent.com/u/26541600?v=4" width="30px" /></a>
+<a href="https://github.com/slobentanzer"><img src="https://avatars.githubusercontent.com/u/13223629?v=4" width="30px" /></a>
+<a href="https://github.com/smackfu"><img src="https://avatars.githubusercontent.com/u/1723952?v=4" width="30px" /></a>
+<a href="https://github.com/smellthemoon"><img src="https://avatars.githubusercontent.com/u/64083300?v=4" width="30px" /></a>
+<a href="https://github.com/snyk-bot"><img src="https://avatars.githubusercontent.com/u/19733683?v=4" width="30px" /></a>
+<a href="https://github.com/songxianj"><img src="https://avatars.githubusercontent.com/u/107831450?v=4" width="30px" /></a>
+<a href="https://github.com/soothing-rain"><img src="https://avatars.githubusercontent.com/u/69466447?v=4" width="30px" /></a>
+<a href="https://github.com/soulteary"><img src="https://avatars.githubusercontent.com/u/1500781?v=4" width="30px" /></a>
+<a href="https://github.com/sparknack"><img src="https://avatars.githubusercontent.com/u/22293270?v=4" width="30px" /></a>
+<a href="https://github.com/sre-ci-robot"><img src="https://avatars.githubusercontent.com/u/56469371?v=4" width="30px" /></a>
+<a href="https://github.com/sre-ro"><img src="https://avatars.githubusercontent.com/u/93502486?v=4" width="30px" /></a>
+<a href="https://github.com/sreyan-ghosh"><img src="https://avatars.githubusercontent.com/u/60854658?v=4" width="30px" /></a>
+<a href="https://github.com/ss892714028"><img src="https://avatars.githubusercontent.com/u/34635663?v=4" width="30px" /></a>
+<a href="https://github.com/stacyli-0601"><img src="https://avatars.githubusercontent.com/u/218570478?v=4" width="30px" /></a>
+<a href="https://github.com/stephen37"><img src="https://avatars.githubusercontent.com/u/6506810?v=4" width="30px" /></a>
+<a href="https://github.com/stevetracvc"><img src="https://avatars.githubusercontent.com/u/70416691?v=4" width="30px" /></a>
+<a href="https://github.com/stuartjing"><img src="https://avatars.githubusercontent.com/u/3454260?v=4" width="30px" /></a>
+<a href="https://github.com/sunby"><img src="https://avatars.githubusercontent.com/u/9817127?v=4" width="30px" /></a>
+<a href="https://github.com/sutcalag"><img src="https://avatars.githubusercontent.com/u/83750738?v=4" width="30px" /></a>
+<a href="https://github.com/sworddish"><img src="https://avatars.githubusercontent.com/u/219938?v=4" width="30px" /></a>
+<a href="https://github.com/talentAN"><img src="https://avatars.githubusercontent.com/u/17634030?v=4" width="30px" /></a>
+<a href="https://github.com/tasty-gumi"><img src="https://avatars.githubusercontent.com/u/95212988?v=4" width="30px" /></a>
+<a href="https://github.com/taydy"><img src="https://avatars.githubusercontent.com/u/24822588?v=4" width="30px" /></a>
+<a href="https://github.com/tbickford"><img src="https://avatars.githubusercontent.com/u/814232?v=4" width="30px" /></a>
+<a href="https://github.com/tedxu"><img src="https://avatars.githubusercontent.com/u/152654?v=4" width="30px" /></a>
+<a href="https://github.com/tedyu"><img src="https://avatars.githubusercontent.com/u/235188?v=4" width="30px" /></a>
+<a href="https://github.com/testwill"><img src="https://avatars.githubusercontent.com/u/8717479?v=4" width="30px" /></a>
+<a href="https://github.com/thywdy"><img src="https://avatars.githubusercontent.com/u/56624359?v=4" width="30px" /></a>
+<a href="https://github.com/timothycarambat"><img src="https://avatars.githubusercontent.com/u/16845892?v=4" width="30px" /></a>
+<a href="https://github.com/tinkerlin"><img src="https://avatars.githubusercontent.com/u/13817362?v=4" width="30px" /></a>
+<a href="https://github.com/tinswzy"><img src="https://avatars.githubusercontent.com/u/30112657?v=4" width="30px" /></a>
+<a href="https://github.com/topikachu"><img src="https://avatars.githubusercontent.com/u/1520380?v=4" width="30px" /></a>
+<a href="https://github.com/trovwu"><img src="https://avatars.githubusercontent.com/u/89676996?v=4" width="30px" /></a>
+<a href="https://github.com/tuwchia"><img src="https://avatars.githubusercontent.com/u/13282807?v=4" width="30px" /></a>
+<a href="https://github.com/ulovecode"><img src="https://avatars.githubusercontent.com/u/30142181?v=4" width="30px" /></a>
+<a href="https://github.com/unfode"><img src="https://avatars.githubusercontent.com/u/95689995?v=4" width="30px" /></a>
+<a href="https://github.com/virgo-o"><img src="https://avatars.githubusercontent.com/u/138708600?v=4" width="30px" /></a>
+<a href="https://github.com/vladwa"><img src="https://avatars.githubusercontent.com/u/22994848?v=4" width="30px" /></a>
+<a href="https://github.com/vsanna"><img src="https://avatars.githubusercontent.com/u/7834445?v=4" width="30px" /></a>
+<a href="https://github.com/vtereshyn"><img src="https://avatars.githubusercontent.com/u/32247411?v=4" width="30px" /></a>
+<a href="https://github.com/wangting0128"><img src="https://avatars.githubusercontent.com/u/26307815?v=4" width="30px" /></a>
+<a href="https://github.com/water32"><img src="https://avatars.githubusercontent.com/u/13234561?v=4" width="30px" /></a>
+<a href="https://github.com/wayblink"><img src="https://avatars.githubusercontent.com/u/18096561?v=4" width="30px" /></a>
+<a href="https://github.com/weiliu1031"><img src="https://avatars.githubusercontent.com/u/108661493?v=4" width="30px" /></a>
+<a href="https://github.com/weishuo2"><img src="https://avatars.githubusercontent.com/u/27938020?v=4" width="30px" /></a>
+<a href="https://github.com/wg1026688210"><img src="https://avatars.githubusercontent.com/u/14267759?v=4" width="30px" /></a>
+<a href="https://github.com/wh201906"><img src="https://avatars.githubusercontent.com/u/62299611?v=4" width="30px" /></a>
+<a href="https://github.com/wscxyey"><img src="https://avatars.githubusercontent.com/u/48882296?v=4" width="30px" /></a>
+<a href="https://github.com/wwx441476"><img src="https://avatars.githubusercontent.com/u/28601121?v=4" width="30px" /></a>
+<a href="https://github.com/wxyucs"><img src="https://avatars.githubusercontent.com/u/12595343?v=4" width="30px" /></a>
+<a href="https://github.com/wxywb"><img src="https://avatars.githubusercontent.com/u/5432721?v=4" width="30px" /></a>
+<a href="https://github.com/wzymumon"><img src="https://avatars.githubusercontent.com/u/46886508?v=4" width="30px" /></a>
+<a href="https://github.com/xaxys"><img src="https://avatars.githubusercontent.com/u/28949072?v=4" width="30px" /></a>
+<a href="https://github.com/xiangzhouguo"><img src="https://avatars.githubusercontent.com/u/93316470?v=4" width="30px" /></a>
+<a href="https://github.com/xiaocai2333"><img src="https://avatars.githubusercontent.com/u/46207236?v=4" width="30px" /></a>
+<a href="https://github.com/xiaofan-luan"><img src="https://avatars.githubusercontent.com/u/83447078?v=4" width="30px" /></a>
+<a href="https://github.com/xiaohu4313888"><img src="https://avatars.githubusercontent.com/u/39088547?v=4" width="30px" /></a>
+<a href="https://github.com/xiaowshi"><img src="https://avatars.githubusercontent.com/u/45102896?v=4" width="30px" /></a>
+<a href="https://github.com/xiedeyantu"><img src="https://avatars.githubusercontent.com/u/49781471?v=4" width="30px" /></a>
+<a href="https://github.com/xige-16"><img src="https://avatars.githubusercontent.com/u/20124155?v=4" width="30px" /></a>
+<a href="https://github.com/xiyichan"><img src="https://avatars.githubusercontent.com/u/34647972?v=4" width="30px" /></a>
+<a href="https://github.com/xlyslr"><img src="https://avatars.githubusercontent.com/u/14070517?v=4" width="30px" /></a>
+<a href="https://github.com/xudalin0609"><img src="https://avatars.githubusercontent.com/u/35444753?v=4" width="30px" /></a>
+<a href="https://github.com/xuqiwe"><img src="https://avatars.githubusercontent.com/u/57252655?v=4" width="30px" /></a>
+<a href="https://github.com/xzshinan"><img src="https://avatars.githubusercontent.com/u/7299894?v=4" width="30px" /></a>
+<a href="https://github.com/yah01"><img src="https://avatars.githubusercontent.com/u/12216890?v=4" width="30px" /></a>
+<a href="https://github.com/yahorbarkouski"><img src="https://avatars.githubusercontent.com/u/94449298?v=4" width="30px" /></a>
+<a href="https://github.com/yamasite"><img src="https://avatars.githubusercontent.com/u/10089260?v=4" width="30px" /></a>
+<a href="https://github.com/yanliang567"><img src="https://avatars.githubusercontent.com/u/82361606?v=4" width="30px" /></a>
+<a href="https://github.com/yellow-shine"><img src="https://avatars.githubusercontent.com/u/149367927?v=4" width="30px" /></a>
+<a href="https://github.com/yelusion2"><img src="https://avatars.githubusercontent.com/u/97278661?v=4" width="30px" /></a>
+<a href="https://github.com/yhmo"><img src="https://avatars.githubusercontent.com/u/2282099?v=4" width="30px" /></a>
+<a href="https://github.com/yiuluchen"><img src="https://avatars.githubusercontent.com/u/23047684?v=4" width="30px" /></a>
+<a href="https://github.com/yiwangdr"><img src="https://avatars.githubusercontent.com/u/80064917?v=4" width="30px" /></a>
+<a href="https://github.com/yiwen92"><img src="https://avatars.githubusercontent.com/u/34636520?v=4" width="30px" /></a>
+<a href="https://github.com/yongpengli-z"><img src="https://avatars.githubusercontent.com/u/103410837?v=4" width="30px" /></a>
+<a href="https://github.com/youny626"><img src="https://avatars.githubusercontent.com/u/9016120?v=4" width="30px" /></a>
+<a href="https://github.com/yuyicai"><img src="https://avatars.githubusercontent.com/u/13033733?v=4" width="30px" /></a>
+<a href="https://github.com/yxm1536"><img src="https://avatars.githubusercontent.com/u/62009483?v=4" width="30px" /></a>
+<a href="https://github.com/zander-bobronnikov"><img src="https://avatars.githubusercontent.com/u/183726703?v=4" width="30px" /></a>
+<a href="https://github.com/zc2638"><img src="https://avatars.githubusercontent.com/u/28284116?v=4" width="30px" /></a>
+<a href="https://github.com/zc277584121"><img src="https://avatars.githubusercontent.com/u/17022025?v=4" width="30px" /></a>
+<a href="https://github.com/zengxy"><img src="https://avatars.githubusercontent.com/u/11961641?v=4" width="30px" /></a>
+<a href="https://github.com/zerowe-seven"><img src="https://avatars.githubusercontent.com/u/57790060?v=4" width="30px" /></a>
+<a href="https://github.com/zhagnlu"><img src="https://avatars.githubusercontent.com/u/11935707?v=4" width="30px" /></a>
+<a href="https://github.com/zhang787jun"><img src="https://avatars.githubusercontent.com/u/51014996?v=4" width="30px" /></a>
+<a href="https://github.com/zhanshuyou"><img src="https://avatars.githubusercontent.com/u/7420640?v=4" width="30px" /></a>
+<a href="https://github.com/zhanxu33"><img src="https://avatars.githubusercontent.com/u/16716445?v=4" width="30px" /></a>
+<a href="https://github.com/zhengbuqian"><img src="https://avatars.githubusercontent.com/u/12147173?v=4" width="30px" /></a>
+<a href="https://github.com/zhenwu-cn"><img src="https://avatars.githubusercontent.com/u/2993941?v=4" width="30px" /></a>
+<a href="https://github.com/zhikunyao"><img src="https://avatars.githubusercontent.com/u/129478994?v=4" width="30px" /></a>
+<a href="https://github.com/zhoubo0317"><img src="https://avatars.githubusercontent.com/u/51948620?v=4" width="30px" /></a>
+<a href="https://github.com/zhuwenxing"><img src="https://avatars.githubusercontent.com/u/12268675?v=4" width="30px" /></a>
+<a href="https://github.com/zhuyaguang"><img src="https://avatars.githubusercontent.com/u/8857976?v=4" width="30px" /></a>
+<a href="https://github.com/zjjzyl"><img src="https://avatars.githubusercontent.com/u/6939141?v=4" width="30px" /></a>
+<a href="https://github.com/zxf2017"><img src="https://avatars.githubusercontent.com/u/29620478?v=4" width="30px" /></a></p>
+<!-- Do not remove end of hero-bot -->
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/en/tags/github/">Github</a>
+        
+            <a href="/en/tags/milvus/">Milvus</a>
+        
+            <a href="/en/tags/vector-database/">Vector Database</a>
+        
+            <a href="/en/tags/vector-search/">Vector Search</a>
+        
+            <a href="/en/tags/ai-applications/">AI Applications</a>
+        
+            <a href="/en/tags/high-performance/">High Performance</a>
+        
+            <a href="/en/tags/scalable/">Scalable</a>
+        
+            <a href="/en/tags/unstructured-data/">Unstructured Data</a>
+        
+            <a href="/en/tags/distributed-architecture/">Distributed Architecture</a>
+        
+            <a href="/en/tags/hardware-acceleration/">Hardware Acceleration</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/en/p/turbovec/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://images.unsplash.com/photo-1714548474517-32d19fdc0df6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODEwMDE4MjB8&amp;ixlib=rb-4.1.0" loading="lazy" data-key="" data-hash="https://images.unsplash.com/photo-1714548474517-32d19fdc0df6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODEwMDE4MjB8&amp;ixlib=rb-4.1.0"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">turbovec</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/en/p/kotaemon/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://images.unsplash.com/photo-1676309973406-1153db3131ee?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0ODkyMzB8&amp;ixlib=rb-4.1.0" loading="lazy" data-key="" data-hash="https://images.unsplash.com/photo-1676309973406-1153db3131ee?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc0ODkyMzB8&amp;ixlib=rb-4.1.0"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">kotaemon</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/en/p/the-book-of-secret-knowledge/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://images.unsplash.com/photo-1645334710996-0d59a16768e4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQyMDYxMjV8&amp;ixlib=rb-4.1.0" loading="lazy" data-key="" data-hash="https://images.unsplash.com/photo-1645334710996-0d59a16768e4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQyMDYxMjV8&amp;ixlib=rb-4.1.0"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">the-book-of-secret-knowledge</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/en/p/wasmedge/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://images.unsplash.com/photo-1630231211819-a131d7538a41?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI4MjQwNDR8&amp;ixlib=rb-4.1.0" loading="lazy" data-key="" data-hash="https://images.unsplash.com/photo-1630231211819-a131d7538a41?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI4MjQwNDR8&amp;ixlib=rb-4.1.0"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">WasmEdge</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/en/p/vanna/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://images.unsplash.com/photo-1712952809507-8a83e68a3f31?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI4MjQwNDR8&amp;ixlib=rb-4.1.0" loading="lazy" data-key="" data-hash="https://images.unsplash.com/photo-1712952809507-8a83e68a3f31?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI4MjQwNDR8&amp;ixlib=rb-4.1.0"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">vanna</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="yiGmMk/comment_blog"
+    data-repo-id="MDEwOlJlcG9zaXRvcnkxOTcyMTY4NDA="
+    data-category="Announcements"
+    data-category-id="DIC_kwDOC8FKSM4CAcFc"
+    data-mapping="title"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2026 Producthunt daily
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.34.2">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+    
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

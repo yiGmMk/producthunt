@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>KVM on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/kvm/</link>
+        <description>Recent content in KVM on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sun, 31 Aug 2025 15:26:47 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/kvm/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>firecracker</title>
+        <link>https://producthunt.programnotes.cn/en/p/firecracker/</link>
+        <pubDate>Sun, 31 Aug 2025 15:26:47 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/firecracker/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1515799251528-8e14681f214e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY2MjUxMDd8&amp;ixlib=rb-4.1.0" alt="Featured image of post firecracker" /&gt;&lt;h1 id=&#34;firecracker-microvmfirecracker&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/firecracker-microvm/firecracker&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;firecracker-microvm/firecracker&lt;/a&gt;
+&lt;/h1&gt;&lt;picture&gt;
+   &lt;source media=&#34;(prefers-color-scheme: dark)&#34; srcset=&#34;docs/images/fc_logo_full_transparent-bg_white-fg.png&#34;&gt;
+   &lt;source media=&#34;(prefers-color-scheme: light)&#34; srcset=&#34;docs/images/fc_logo_full_transparent-bg.png&#34;&gt;
+   &lt;img alt=&#34;Firecracker Logo Title&#34; width=&#34;750&#34; src=&#34;docs/images/fc_logo_full_transparent-bg.png&#34;&gt;
+&lt;/picture&gt;
+&lt;p&gt;Our mission is to enable secure, multi-tenant, minimal-overhead execution of
+container and function workloads.&lt;/p&gt;
+&lt;p&gt;Read more about the Firecracker Charter &lt;a class=&#34;link&#34; href=&#34;CHARTER.md&#34; &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-firecracker&#34;&gt;What is Firecracker?
+&lt;/h2&gt;&lt;p&gt;Firecracker is an open source virtualization technology that is purpose-built
+for creating and managing secure, multi-tenant container and function-based
+services that provide serverless operational models. Firecracker runs workloads
+in lightweight virtual machines, called microVMs, which combine the security and
+isolation properties provided by hardware virtualization technology with the
+speed and flexibility of containers.&lt;/p&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview
+&lt;/h2&gt;&lt;p&gt;The main component of Firecracker is a virtual machine monitor (VMM) that uses
+the Linux Kernel Virtual Machine (KVM) to create and run microVMs. Firecracker
+has a minimalist design. It excludes unnecessary devices and guest-facing
+functionality to reduce the memory footprint and attack surface area of each
+microVM. This improves security, decreases the startup time, and increases
+hardware utilization. Firecracker has also been integrated in container
+runtimes, for example
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/kata-containers/kata-containers&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Kata Containers&lt;/a&gt; and
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/liquidmetal-dev/flintlock&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Flintlock&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Firecracker was developed at Amazon Web Services to accelerate the speed and
+efficiency of services like &lt;a class=&#34;link&#34; href=&#34;https://aws.amazon.com/lambda/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AWS Lambda&lt;/a&gt; and
+&lt;a class=&#34;link&#34; href=&#34;https://aws.amazon.com/fargate/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AWS Fargate&lt;/a&gt;. Firecracker is open sourced
+under &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;Apache version 2.0&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To read more about Firecracker, check out
+&lt;a class=&#34;link&#34; href=&#34;https://firecracker-microvm.github.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;firecracker-microvm.io&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started
+&lt;/h2&gt;&lt;p&gt;To get started with Firecracker, download the latest
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/firecracker-microvm/firecracker/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;release&lt;/a&gt; binaries
+or build it from source.&lt;/p&gt;
+&lt;p&gt;You can build Firecracker on any Unix/Linux system that has Docker running (we
+use a development container) and &lt;code&gt;bash&lt;/code&gt; installed, as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/firecracker-microvm/firecracker
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; firecracker
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tools/devtool build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;toolchain&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;uname -m&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;-unknown-linux-musl&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The Firecracker binary will be placed at
+&lt;code&gt;build/cargo_target/${toolchain}/debug/firecracker&lt;/code&gt;. For more information on
+building, testing, and running Firecracker, go to the
+&lt;a class=&#34;link&#34; href=&#34;docs/getting-started.md&#34; &gt;quickstart guide&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The overall security of Firecracker microVMs, including the ability to meet the
+criteria for safe multi-tenant computing, depends on a well configured Linux
+host operating system. A configuration that we believe meets this bar is
+included in &lt;a class=&#34;link&#34; href=&#34;docs/prod-host-setup.md&#34; &gt;the production host setup document&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;contributing&#34;&gt;Contributing
+&lt;/h2&gt;&lt;p&gt;Firecracker is already running production workloads within AWS, but it&amp;rsquo;s still
+Day 1 on the journey guided by our &lt;a class=&#34;link&#34; href=&#34;CHARTER.md&#34; &gt;mission&lt;/a&gt;. There&amp;rsquo;s a lot more to
+build and we welcome all contributions.&lt;/p&gt;
+&lt;p&gt;To contribute to Firecracker, check out the development setup section in the
+&lt;a class=&#34;link&#34; href=&#34;docs/getting-started.md&#34; &gt;getting started guide&lt;/a&gt; and then the Firecracker
+&lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;contribution guidelines&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;releases&#34;&gt;Releases
+&lt;/h2&gt;&lt;p&gt;New Firecracker versions are released via the GitHub repository
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/firecracker-microvm/firecracker/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;releases&lt;/a&gt; page,
+typically every two or three months. A history of changes is recorded in our
+&lt;a class=&#34;link&#34; href=&#34;CHANGELOG.md&#34; &gt;changelog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Firecracker release policy is detailed &lt;a class=&#34;link&#34; href=&#34;docs/RELEASE_POLICY.md&#34; &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;design&#34;&gt;Design
+&lt;/h2&gt;&lt;p&gt;Firecracker&amp;rsquo;s overall architecture is described in
+&lt;a class=&#34;link&#34; href=&#34;docs/design.md&#34; &gt;the design document&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;features--capabilities&#34;&gt;Features &amp;amp; Capabilities
+&lt;/h2&gt;&lt;p&gt;Firecracker consists of a single micro Virtual Machine Manager process that
+exposes an API endpoint to the host once started. The API is
+&lt;a class=&#34;link&#34; href=&#34;src/firecracker/swagger/firecracker.yaml&#34; &gt;specified in OpenAPI format&lt;/a&gt;. Read
+more about it in the &lt;a class=&#34;link&#34; href=&#34;docs/api_requests&#34; &gt;API docs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;API endpoint&lt;/strong&gt; can be used to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Configure the microvm by:
+&lt;ul&gt;
+&lt;li&gt;Setting the number of vCPUs (the default is 1).&lt;/li&gt;
+&lt;li&gt;Setting the memory size (the default is 128 MiB).&lt;/li&gt;
+&lt;li&gt;Configuring a &lt;a class=&#34;link&#34; href=&#34;docs/cpu_templates/cpu-templates.md&#34; &gt;CPU template&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add one or more network interfaces to the microVM.&lt;/li&gt;
+&lt;li&gt;Add one or more read-write or read-only disks to the microVM, each represented
+by a file-backed block device.&lt;/li&gt;
+&lt;li&gt;Trigger a block device re-scan while the guest is running. This enables the
+guest OS to pick up size changes to the block device&amp;rsquo;s backing file.&lt;/li&gt;
+&lt;li&gt;Change the backing file for a block device, before or after the guest boots.&lt;/li&gt;
+&lt;li&gt;Configure rate limiters for virtio devices which can limit the bandwidth,
+operations per second, or both.&lt;/li&gt;
+&lt;li&gt;Configure the logging and metric system.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[BETA]&lt;/code&gt; Configure the data tree of the guest-facing metadata service. The
+service is only available to the guest if this resource is configured.&lt;/li&gt;
+&lt;li&gt;Add a &lt;a class=&#34;link&#34; href=&#34;docs/vsock.md&#34; &gt;vsock socket&lt;/a&gt; to the microVM.&lt;/li&gt;
+&lt;li&gt;Add a &lt;a class=&#34;link&#34; href=&#34;docs/entropy.md&#34; &gt;entropy device&lt;/a&gt; to the microVM.&lt;/li&gt;
+&lt;li&gt;Start the microVM using a given kernel image, root file system, and boot
+arguments.&lt;/li&gt;
+&lt;li&gt;[x86_64 only] Stop the microVM.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Built-in Capabilities&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Demand fault paging and CPU oversubscription enabled by default.&lt;/li&gt;
+&lt;li&gt;Advanced, thread-specific seccomp filters for enhanced security.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/jailer.md&#34; &gt;Jailer&lt;/a&gt; process for starting Firecracker in production
+scenarios; applies a cgroup/namespace isolation barrier and then drops
+privileges.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tested-platforms&#34;&gt;Tested platforms
+&lt;/h2&gt;&lt;p&gt;We test all combinations of:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;Instance&lt;/th&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;Host OS &amp;amp; Kernel&lt;/th&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;Guest Rootfs&lt;/th&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;Guest Kernel&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;m5n.metal (Intel Cascade Lake)&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;al2 linux_5.10&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;ubuntu 24.04&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;linux_5.10&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;m6i.metal (Intel Ice Lake)&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;al2023 linux_6.1&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;linux_6.1&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;m7i.metal-24xl (Intel Sapphire Rapids)&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;m7i.metal-48xl (Intel Sapphire Rapids)&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;m6a.metal (AMD Milan)&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;m7a.metal-48xl (AMD Genoa)&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;m6g.metal (Graviton 2)&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;m7g.metal (Graviton 3)&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;m8g.metal-24xl (Graviton 4)&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;m8g.metal-48xl (Graviton 4)&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;known-issues-and-limitations&#34;&gt;Known issues and Limitations
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The &lt;code&gt;pl031&lt;/code&gt; RTC device on aarch64 does not support interrupts, so guest
+programs which use an RTC alarm (e.g. &lt;code&gt;hwclock&lt;/code&gt;) will not work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;performance&#34;&gt;Performance
+&lt;/h2&gt;&lt;p&gt;Firecracker&amp;rsquo;s performance characteristics are listed as part of the
+&lt;a class=&#34;link&#34; href=&#34;SPECIFICATION.md&#34; &gt;specification documentation&lt;/a&gt;. All specifications are a part
+of our commitment to supporting container and function workloads in serverless
+operational models, and are therefore enforced via continuous integration
+testing.&lt;/p&gt;
+&lt;h2 id=&#34;policy-for-security-disclosures&#34;&gt;Policy for Security Disclosures
+&lt;/h2&gt;&lt;p&gt;The security of Firecracker is our top priority. If you suspect you have
+uncovered a vulnerability, contact us privately, as outlined in our
+&lt;a class=&#34;link&#34; href=&#34;SECURITY.md&#34; &gt;security policy document&lt;/a&gt;; we will immediately prioritize your
+disclosure.&lt;/p&gt;
+&lt;h2 id=&#34;faq--contact&#34;&gt;FAQ &amp;amp; Contact
+&lt;/h2&gt;&lt;p&gt;Frequently asked questions are collected in our &lt;a class=&#34;link&#34; href=&#34;FAQ.md&#34; &gt;FAQ doc&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can get in touch with the Firecracker community in the following ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Security-related issues, see our &lt;a class=&#34;link&#34; href=&#34;SECURITY.md&#34; &gt;security policy document&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Chat with us on our
+&lt;a class=&#34;link&#34; href=&#34;https://join.slack.com/t/firecracker-microvm/shared_invite/zt-2tc0mfxpc-tU~HYAYSzLDl5XGGJU3YIg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Slack workspace&lt;/a&gt;
+&lt;em&gt;Note: most of the maintainers are on a European time zone.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Open a GitHub issue in this repository.&lt;/li&gt;
+&lt;li&gt;Email the maintainers at
+&lt;a class=&#34;link&#34; href=&#34;mailto:firecracker-maintainers@amazon.com&#34; &gt;firecracker-maintainers@amazon.com&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When communicating within the Firecracker community, please mind our
+&lt;a class=&#34;link&#34; href=&#34;CODE_OF_CONDUCT.md&#34; &gt;code of conduct&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

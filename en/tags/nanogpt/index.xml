@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>NanoGPT on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/nanogpt/</link>
+        <description>Recent content in NanoGPT on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 17 Oct 2025 15:39:49 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/nanogpt/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>nanoGPT</title>
+        <link>https://producthunt.programnotes.cn/en/p/nanogpt/</link>
+        <pubDate>Fri, 17 Oct 2025 15:39:49 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/nanogpt/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1653573986346-8222474c3f8a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjA2ODY3NDR8&amp;ixlib=rb-4.1.0" alt="Featured image of post nanoGPT" /&gt;&lt;h1 id=&#34;karpathynanogpt&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/karpathy/nanoGPT&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;karpathy/nanoGPT&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;nanogpt&#34;&gt;nanoGPT
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/assets/nanogpt.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;nanoGPT&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The simplest, fastest repository for training/finetuning medium-sized GPTs. It is a rewrite of &lt;a class=&#34;link&#34; href=&#34;https://github.com/karpathy/minGPT&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;minGPT&lt;/a&gt; that prioritizes teeth over education. Still under active development, but currently the file &lt;code&gt;train.py&lt;/code&gt; reproduces GPT-2 (124M) on OpenWebText, running on a single 8XA100 40GB node in about 4 days of training. The code itself is plain and readable: &lt;code&gt;train.py&lt;/code&gt; is a ~300-line boilerplate training loop and &lt;code&gt;model.py&lt;/code&gt; a ~300-line GPT model definition, which can optionally load the GPT-2 weights from OpenAI. That&amp;rsquo;s it.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/assets/gpt2_124M_loss.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;repro124m&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Because the code is so simple, it is very easy to hack to your needs, train new models from scratch, or finetune pretrained checkpoints (e.g. biggest one currently available as a starting point would be the GPT-2 1.3B model from OpenAI).&lt;/p&gt;
+&lt;h2 id=&#34;install&#34;&gt;install
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install torch numpy transformers datasets tiktoken wandb tqdm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Dependencies:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://pytorch.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pytorch&lt;/a&gt; &amp;lt;3&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://numpy.org/install/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;numpy&lt;/a&gt; &amp;lt;3&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;transformers&lt;/code&gt; for huggingface transformers &amp;lt;3 (to load GPT-2 checkpoints)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;datasets&lt;/code&gt; for huggingface datasets &amp;lt;3 (if you want to download + preprocess OpenWebText)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tiktoken&lt;/code&gt; for OpenAI&amp;rsquo;s fast BPE code &amp;lt;3&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wandb&lt;/code&gt; for optional logging &amp;lt;3&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tqdm&lt;/code&gt; for progress bars &amp;lt;3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;quick start
+&lt;/h2&gt;&lt;p&gt;If you are not a deep learning professional and you just want to feel the magic and get your feet wet, the fastest way to get started is to train a character-level GPT on the works of Shakespeare. First, we download it as a single (1MB) file and turn it from raw text into one large stream of integers:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python data/shakespeare_char/prepare.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This creates a &lt;code&gt;train.bin&lt;/code&gt; and &lt;code&gt;val.bin&lt;/code&gt; in that data directory. Now it is time to train your GPT. The size of it very much depends on the computational resources of your system:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;I have a GPU&lt;/strong&gt;. Great, we can quickly train a baby GPT with the settings provided in the &lt;a class=&#34;link&#34; href=&#34;config/train_shakespeare_char.py&#34; &gt;config/train_shakespeare_char.py&lt;/a&gt; config file:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python train.py config/train_shakespeare_char.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If you peek inside it, you&amp;rsquo;ll see that we&amp;rsquo;re training a GPT with a context size of up to 256 characters, 384 feature channels, and it is a 6-layer Transformer with 6 heads in each layer. On one A100 GPU this training run takes about 3 minutes and the best validation loss is 1.4697. Based on the configuration, the model checkpoints are being written into the &lt;code&gt;--out_dir&lt;/code&gt; directory &lt;code&gt;out-shakespeare-char&lt;/code&gt;. So once the training finishes we can sample from the best model by pointing the sampling script at this directory:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python sample.py --out_dir&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;out-shakespeare-char
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This generates a few samples, for example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ANGELO:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;And cowards it be strawn to my bed,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;And thrust the gates of my threats,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Because he that ale away, and hang&amp;#39;d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;An one with him.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DUKE VINCENTIO:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;I thank your eyes against it.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DUKE VINCENTIO:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Then will answer him to save the malm:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;And what have you tyrannous shall do this?
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DUKE VINCENTIO:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;If you have done evils of all disposition
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;To end his power, the day of thrust for a common men
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;That I leave, to fight with over-liking
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Hasting in a roseman.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;lol  &lt;code&gt;¯\_(ツ)_/¯&lt;/code&gt;. Not bad for a character-level model after 3 minutes of training on a GPU. Better results are quite likely obtainable by instead finetuning a pretrained GPT-2 model on this dataset (see finetuning section later).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;I only have a macbook&lt;/strong&gt; (or other cheap computer). No worries, we can still train a GPT but we want to dial things down a notch. I recommend getting the bleeding edge PyTorch nightly (&lt;a class=&#34;link&#34; href=&#34;https://pytorch.org/get-started/locally/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;select it here&lt;/a&gt; when installing) as it is currently quite likely to make your code more efficient. But even without it, a simple train run could look as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python train.py config/train_shakespeare_char.py --device&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;cpu --compile&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;False --eval_iters&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; --log_interval&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; --block_size&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;64&lt;/span&gt; --batch_size&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;12&lt;/span&gt; --n_layer&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; --n_head&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; --n_embd&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;128&lt;/span&gt; --max_iters&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2000&lt;/span&gt; --lr_decay_iters&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2000&lt;/span&gt; --dropout&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Here, since we are running on CPU instead of GPU we must set both &lt;code&gt;--device=cpu&lt;/code&gt; and also turn off PyTorch 2.0 compile with &lt;code&gt;--compile=False&lt;/code&gt;. Then when we evaluate we get a bit more noisy but faster estimate (&lt;code&gt;--eval_iters=20&lt;/code&gt;, down from 200), our context size is only 64 characters instead of 256, and the batch size only 12 examples per iteration, not 64. We&amp;rsquo;ll also use a much smaller Transformer (4 layers, 4 heads, 128 embedding size), and decrease the number of iterations to 2000 (and correspondingly usually decay the learning rate to around max_iters with &lt;code&gt;--lr_decay_iters&lt;/code&gt;). Because our network is so small we also ease down on regularization (&lt;code&gt;--dropout=0.0&lt;/code&gt;). This still runs in about ~3 minutes, but gets us a loss of only 1.88 and therefore also worse samples, but it&amp;rsquo;s still good fun:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python sample.py --out_dir&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;out-shakespeare-char --device&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;cpu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Generates samples like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GLEORKEN VINGHARD III:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Whell&amp;#39;s the couse, the came light gacks,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;And the for mought you in Aut fries the not high shee
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bot thou the sought bechive in that to doth groan you,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;No relving thee post mose the wear
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Not bad for ~3 minutes on a CPU, for a hint of the right character gestalt. If you&amp;rsquo;re willing to wait longer, feel free to tune the hyperparameters, increase the size of the network, the context length (&lt;code&gt;--block_size&lt;/code&gt;), the length of training, etc.&lt;/p&gt;
+&lt;p&gt;Finally, on Apple Silicon Macbooks and with a recent PyTorch version make sure to add &lt;code&gt;--device=mps&lt;/code&gt; (short for &amp;ldquo;Metal Performance Shaders&amp;rdquo;); PyTorch then uses the on-chip GPU that can &lt;em&gt;significantly&lt;/em&gt; accelerate training (2-3X) and allow you to use larger networks. See &lt;a class=&#34;link&#34; href=&#34;https://github.com/karpathy/nanoGPT/issues/28&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Issue 28&lt;/a&gt; for more.&lt;/p&gt;
+&lt;h2 id=&#34;reproducing-gpt-2&#34;&gt;reproducing GPT-2
+&lt;/h2&gt;&lt;p&gt;A more serious deep learning professional may be more interested in reproducing GPT-2 results. So here we go - we first tokenize the dataset, in this case the &lt;a class=&#34;link&#34; href=&#34;https://openwebtext2.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenWebText&lt;/a&gt;, an open reproduction of OpenAI&amp;rsquo;s (private) WebText:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python data/openwebtext/prepare.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This downloads and tokenizes the &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/datasets/openwebtext&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenWebText&lt;/a&gt; dataset. It will create a &lt;code&gt;train.bin&lt;/code&gt; and &lt;code&gt;val.bin&lt;/code&gt; which holds the GPT2 BPE token ids in one sequence, stored as raw uint16 bytes. Then we&amp;rsquo;re ready to kick off training. To reproduce GPT-2 (124M) you&amp;rsquo;ll want at least an 8X A100 40GB node and run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;torchrun --standalone --nproc_per_node&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt; train.py config/train_gpt2.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This will run for about 4 days using PyTorch Distributed Data Parallel (DDP) and go down to loss of ~2.85. Now, a GPT-2 model just evaluated on OWT gets a val loss of about 3.11, but if you finetune it it will come down to ~2.85 territory (due to an apparent domain gap), making the two models ~match.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re in a cluster environment and you are blessed with multiple GPU nodes you can make GPU go brrrr e.g. across 2 nodes like:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Run on the first (master) node with example IP 123.456.123.456:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;torchrun --nproc_per_node&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt; --nnodes&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; --node_rank&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; --master_addr&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;123.456.123.456 --master_port&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1234&lt;/span&gt; train.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Run on the worker node:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;torchrun --nproc_per_node&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt; --nnodes&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; --node_rank&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; --master_addr&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;123.456.123.456 --master_port&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1234&lt;/span&gt; train.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;It is a good idea to benchmark your interconnect (e.g. iperf3). In particular, if you don&amp;rsquo;t have Infiniband then also prepend &lt;code&gt;NCCL_IB_DISABLE=1&lt;/code&gt; to the above launches. Your multinode training will work, but most likely &lt;em&gt;crawl&lt;/em&gt;. By default checkpoints are periodically written to the &lt;code&gt;--out_dir&lt;/code&gt;. We can sample from the model by simply &lt;code&gt;python sample.py&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Finally, to train on a single GPU simply run the &lt;code&gt;python train.py&lt;/code&gt; script. Have a look at all of its args, the script tries to be very readable, hackable and transparent. You&amp;rsquo;ll most likely want to tune a number of those variables depending on your needs.&lt;/p&gt;
+&lt;h2 id=&#34;baselines&#34;&gt;baselines
+&lt;/h2&gt;&lt;p&gt;OpenAI GPT-2 checkpoints allow us to get some baselines in place for openwebtext. We can get the numbers as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ python train.py config/eval_gpt2.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ python train.py config/eval_gpt2_medium.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ python train.py config/eval_gpt2_large.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ python train.py config/eval_gpt2_xl.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;and observe the following losses on train and val:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;model&lt;/th&gt;
+					&lt;th&gt;params&lt;/th&gt;
+					&lt;th&gt;train loss&lt;/th&gt;
+					&lt;th&gt;val loss&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;gpt2&lt;/td&gt;
+					&lt;td&gt;124M&lt;/td&gt;
+					&lt;td&gt;3.11&lt;/td&gt;
+					&lt;td&gt;3.12&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;gpt2-medium&lt;/td&gt;
+					&lt;td&gt;350M&lt;/td&gt;
+					&lt;td&gt;2.85&lt;/td&gt;
+					&lt;td&gt;2.84&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;gpt2-large&lt;/td&gt;
+					&lt;td&gt;774M&lt;/td&gt;
+					&lt;td&gt;2.66&lt;/td&gt;
+					&lt;td&gt;2.67&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;gpt2-xl&lt;/td&gt;
+					&lt;td&gt;1558M&lt;/td&gt;
+					&lt;td&gt;2.56&lt;/td&gt;
+					&lt;td&gt;2.54&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;However, we have to note that GPT-2 was trained on (closed, never released) WebText, while OpenWebText is just a best-effort open reproduction of this dataset. This means there is a dataset domain gap. Indeed, taking the GPT-2 (124M) checkpoint and finetuning on OWT directly for a while reaches loss down to ~2.85. This then becomes the more appropriate baseline w.r.t. reproduction.&lt;/p&gt;
+&lt;h2 id=&#34;finetuning&#34;&gt;finetuning
+&lt;/h2&gt;&lt;p&gt;Finetuning is no different than training, we just make sure to initialize from a pretrained model and train with a smaller learning rate. For an example of how to finetune a GPT on new text go to &lt;code&gt;data/shakespeare&lt;/code&gt; and run &lt;code&gt;prepare.py&lt;/code&gt; to download the tiny shakespeare dataset and render it into a &lt;code&gt;train.bin&lt;/code&gt; and &lt;code&gt;val.bin&lt;/code&gt;, using the OpenAI BPE tokenizer from GPT-2. Unlike OpenWebText this will run in seconds. Finetuning can take very little time, e.g. on a single GPU just a few minutes. Run an example finetuning like:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python train.py config/finetune_shakespeare.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This will load the config parameter overrides in &lt;code&gt;config/finetune_shakespeare.py&lt;/code&gt; (I didn&amp;rsquo;t tune them much though). Basically, we initialize from a GPT2 checkpoint with &lt;code&gt;init_from&lt;/code&gt; and train as normal, except shorter and with a small learning rate. If you&amp;rsquo;re running out of memory try decreasing the model size (they are &lt;code&gt;{&#39;gpt2&#39;, &#39;gpt2-medium&#39;, &#39;gpt2-large&#39;, &#39;gpt2-xl&#39;}&lt;/code&gt;) or possibly decreasing the &lt;code&gt;block_size&lt;/code&gt; (context length). The best checkpoint (lowest validation loss) will be in the &lt;code&gt;out_dir&lt;/code&gt; directory, e.g. in &lt;code&gt;out-shakespeare&lt;/code&gt; by default, per the config file. You can then run the code in &lt;code&gt;sample.py --out_dir=out-shakespeare&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;THEODORE:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Thou shalt sell me to the highest bidder: if I die,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;I sell thee to the first; if I go mad,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;I sell thee to the second; if I
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;lie, I sell thee to the third; if I slay,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;I sell thee to the fourth: so buy or sell,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;I tell thee again, thou shalt not sell my
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;possession.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;JULIET:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;And if thou steal, thou shalt not sell thyself.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;THEODORE:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;I do not steal; I sell the stolen goods.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;THEODORE:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Thou know&amp;#39;st not what thou sell&amp;#39;st; thou, a woman,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Thou art ever a victim, a thing of no worth:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Thou hast no right, no right, but to be sold.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Whoa there, GPT, entering some dark place over there. I didn&amp;rsquo;t really tune the hyperparameters in the config too much, feel free to try!&lt;/p&gt;
+&lt;h2 id=&#34;sampling--inference&#34;&gt;sampling / inference
+&lt;/h2&gt;&lt;p&gt;Use the script &lt;code&gt;sample.py&lt;/code&gt; to sample either from pre-trained GPT-2 models released by OpenAI, or from a model you trained yourself. For example, here is a way to sample from the largest available &lt;code&gt;gpt2-xl&lt;/code&gt; model:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python sample.py &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --init_from&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;gpt2-xl &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --start&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;What is the answer to life, the universe, and everything?&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --num_samples&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; --max_new_tokens&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;100&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If you&amp;rsquo;d like to sample from a model you trained, use the &lt;code&gt;--out_dir&lt;/code&gt; to point the code appropriately. You can also prompt the model with some text from a file, e.g. &lt;code&gt;python sample.py --start=FILE:prompt.txt&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;efficiency-notes&#34;&gt;efficiency notes
+&lt;/h2&gt;&lt;p&gt;For simple model benchmarking and profiling, &lt;code&gt;bench.py&lt;/code&gt; might be useful. It&amp;rsquo;s identical to what happens in the meat of the training loop of &lt;code&gt;train.py&lt;/code&gt;, but omits much of the other complexities.&lt;/p&gt;
+&lt;p&gt;Note that the code by default uses &lt;a class=&#34;link&#34; href=&#34;https://pytorch.org/get-started/pytorch-2.0/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyTorch 2.0&lt;/a&gt;. At the time of writing (Dec 29, 2022) this makes &lt;code&gt;torch.compile()&lt;/code&gt; available in the nightly release. The improvement from the one line of code is noticeable, e.g. cutting down iteration time from ~250ms / iter to 135ms / iter. Nice work PyTorch team!&lt;/p&gt;
+&lt;h2 id=&#34;todos&#34;&gt;todos
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Investigate and add FSDP instead of DDP&lt;/li&gt;
+&lt;li&gt;Eval zero-shot perplexities on standard evals (e.g. LAMBADA? HELM? etc.)&lt;/li&gt;
+&lt;li&gt;Finetune the finetuning script, I think the hyperparams are not great&lt;/li&gt;
+&lt;li&gt;Schedule for linear batch size increase during training&lt;/li&gt;
+&lt;li&gt;Incorporate other embeddings (rotary, alibi)&lt;/li&gt;
+&lt;li&gt;Separate out the optim buffers from model params in checkpoints I think&lt;/li&gt;
+&lt;li&gt;Additional logging around network health (e.g. gradient clip events, magnitudes)&lt;/li&gt;
+&lt;li&gt;Few more investigations around better init etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;troubleshooting&#34;&gt;troubleshooting
+&lt;/h2&gt;&lt;p&gt;Note that by default this repo uses PyTorch 2.0 (i.e. &lt;code&gt;torch.compile&lt;/code&gt;). This is fairly new and experimental, and not yet available on all platforms (e.g. Windows). If you&amp;rsquo;re running into related error messages try to disable this by adding &lt;code&gt;--compile=False&lt;/code&gt; flag. This will slow down the code but at least it will run.&lt;/p&gt;
+&lt;p&gt;For some context on this repository, GPT, and language modeling it might be helpful to watch my &lt;a class=&#34;link&#34; href=&#34;https://karpathy.ai/zero-to-hero.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Zero To Hero series&lt;/a&gt;. Specifically, the &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=kCc8FmEb1nY&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GPT video&lt;/a&gt; is popular if you have some prior language modeling context.&lt;/p&gt;
+&lt;p&gt;For more questions/discussions feel free to stop by &lt;strong&gt;#nanoGPT&lt;/strong&gt; on Discord:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://discord.gg/3zy8kqD9Cp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://dcbadge.vercel.app/api/server/3zy8kqD9Cp?compact=true&amp;amp;style=flat&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgements&#34;&gt;acknowledgements
+&lt;/h2&gt;&lt;p&gt;All nanoGPT experiments are powered by GPUs on &lt;a class=&#34;link&#34; href=&#34;https://lambdalabs.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Lambda labs&lt;/a&gt;, my favorite Cloud GPU provider. Thank you Lambda labs for sponsoring nanoGPT!&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

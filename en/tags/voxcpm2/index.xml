@@ -1,0 +1,1889 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>VoxCPM2 on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/voxcpm2/</link>
+        <description>Recent content in VoxCPM2 on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 10 Apr 2026 16:25:39 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/voxcpm2/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>VoxCPM</title>
+        <link>https://producthunt.programnotes.cn/en/p/voxcpm/</link>
+        <pubDate>Fri, 10 Apr 2026 16:25:39 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/voxcpm/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1458682625221-3a45f8a844c7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzU4MDk0ODd8&amp;ixlib=rb-4.1.0" alt="Featured image of post VoxCPM" /&gt;&lt;h1 id=&#34;openbmbvoxcpm&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/OpenBMB/VoxCPM&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenBMB/VoxCPM&lt;/a&gt;
+&lt;/h1&gt;&lt;h2 align=&#34;center&#34;&gt;VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning&lt;/h2&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;b&gt;English&lt;/b&gt; | &lt;a href=&#34;./README_zh.md&#34;&gt;中文&lt;/a&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;a href=&#34;https://github.com/OpenBMB/VoxCPM/&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Project%20Page-GitHub-blue&#34; alt=&#34;Project Page&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://huggingface.co/spaces/OpenBMB/VoxCPM-Demo&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Live%20Playground-Demo-orange&#34; alt=&#34;Live Playground&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://voxcpm.readthedocs.io/en/latest/&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Docs-ReadTheDocs-8CA1AF&#34; alt=&#34;Documentation&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://huggingface.co/openbmb/VoxCPM2&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-VoxCPM2-yellow&#34; alt=&#34;Hugging Face&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://modelscope.cn/models/OpenBMB/VoxCPM2&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/ModelScope-VoxCPM2-purple&#34; alt=&#34;ModelScope&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://openbmb.github.io/voxcpm2-demopage/&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/DemoPage-Audio Samples-red&#34;&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+  &lt;img src=&#34;assets/voxcpm_logo.png&#34; alt=&#34;VoxCPM Logo&#34; width=&#34;35%&#34;&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;a href=&#34;https://trendshift.io/repositories/17704&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://trendshift.io/api/badge/repositories/17704&#34; alt=&#34;OpenBMB%2FVoxCPM | Trendshift&#34; style=&#34;width: 250px; height: 55px;&#34; width=&#34;250&#34; height=&#34;55&#34;/&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;p align=&#34;center&#34;&gt;
+  👋 Join our community for discussion and support!
+  &lt;br&gt;
+  &lt;a href=&#34;./assets/feishu-group.png&#34; style=&#34;display:inline-block;vertical-align:middle; margin-left: 10px;&#34;&gt;
+    &lt;img src=&#34;./assets/feishu-logo.png&#34; width=&#34;16&#34; height=&#34;16&#34; style=&#34;vertical-align:middle;&#34;&gt; Feishu
+  &lt;/a&gt;
+  &amp;nbsp;|&amp;nbsp;
+  &lt;a href=&#34;https://discord.gg/KZUx7tVNwz&#34; style=&#34;display:inline-block;vertical-align:middle;&#34;&gt;
+    &lt;img src=&#34;./assets/discord-logo.png&#34; width=&#34;16&#34; height=&#34;16&#34; style=&#34;vertical-align:middle;&#34;&gt; Discord
+  &lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;VoxCPM is a &lt;strong&gt;tokenizer-free&lt;/strong&gt; Text-to-Speech system that directly generates continuous speech representations via an end-to-end &lt;strong&gt;diffusion autoregressive architecture&lt;/strong&gt;, bypassing discrete tokenization to achieve highly natural and expressive synthesis.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;VoxCPM2&lt;/strong&gt; is the latest major release — a &lt;strong&gt;2B&lt;/strong&gt; parameter model trained on &lt;strong&gt;over 2 million hours&lt;/strong&gt; of multilingual speech data, now supporting &lt;strong&gt;30 languages&lt;/strong&gt;, &lt;strong&gt;Voice Design&lt;/strong&gt;, &lt;strong&gt;Controllable Voice Cloning&lt;/strong&gt;, and &lt;strong&gt;48kHz&lt;/strong&gt; studio-quality audio output. Built on a &lt;a class=&#34;link&#34; href=&#34;https://github.com/OpenBMB/MiniCPM&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MiniCPM-4&lt;/a&gt; backbone.&lt;/p&gt;
+&lt;h3 id=&#34;-highlights&#34;&gt;✨ Highlights
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;🌍 &lt;strong&gt;30-Language Multilingual&lt;/strong&gt; — Input text in any of the 30 supported languages and synthesize directly, no language tag needed&lt;/li&gt;
+&lt;li&gt;🎨 &lt;strong&gt;Voice Design&lt;/strong&gt; — Create a brand-new voice from a natural-language description alone (gender, age, tone, emotion, pace …), no reference audio required&lt;/li&gt;
+&lt;li&gt;🎛️ &lt;strong&gt;Controllable Cloning&lt;/strong&gt; — Clone any voice from a short reference clip, with optional style guidance to steer emotion, pace, and expression while preserving the original timbre&lt;/li&gt;
+&lt;li&gt;🎙️ &lt;strong&gt;Ultimate Cloning&lt;/strong&gt; — Reproduce every vocal nuance: provide both reference audio and its transcript, and the model continues seamlessly from the reference, faithfully preserving every vocal detail — timbre, rhythm, emotion, and style (same as VoxCPM1.5)&lt;/li&gt;
+&lt;li&gt;🔊 &lt;strong&gt;48kHz High-Quality Audio&lt;/strong&gt; — Accepts 16kHz reference audio and directly outputs 48kHz studio-quality audio via AudioVAE V2&amp;rsquo;s asymmetric encode/decode design, with built-in super-resolution — no external upsampler needed&lt;/li&gt;
+&lt;li&gt;🧠 &lt;strong&gt;Context-Aware Synthesis&lt;/strong&gt; — Automatically infers appropriate prosody and expressiveness from text content&lt;/li&gt;
+&lt;li&gt;⚡ &lt;strong&gt;Real-Time Streaming&lt;/strong&gt; — RTF as low as ~0.3 on NVIDIA RTX 4090, and ~0.13  accelerated by &lt;a class=&#34;link&#34; href=&#34;https://github.com/a710128/nanovllm-voxcpm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nano-VLLM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📜 &lt;strong&gt;Fully Open-Source &amp;amp; Commercial-Ready&lt;/strong&gt; — Weights and code released under the &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;Apache-2.0&lt;/a&gt; license, free for commercial use&lt;/li&gt;
+&lt;/ul&gt;
+&lt;summary&gt;&lt;b&gt;🌍 Supported Languages (30)&lt;/b&gt;&lt;/summary&gt;
+&lt;br&gt;
+Arabic, Burmese, Chinese, Danish, Dutch, English, Finnish, French, German, Greek, Hebrew, Hindi, Indonesian, Italian, Japanese, Khmer, Korean, Lao, Malay, Norwegian, Polish, Portuguese, Russian, Spanish, Swahili, Swedish, Tagalog, Thai, Turkish, Vietnamese
+&lt;p&gt;Chinese Dialect: 四川话, 粤语, 吴语, 东北话, 河南话, 陕西话, 山东话, 天津话, 闽南话&lt;/p&gt;
+&lt;h3 id=&#34;news&#34;&gt;News
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;[2026.04]&lt;/strong&gt; 🔥 We release &lt;strong&gt;VoxCPM2&lt;/strong&gt; — 2B, 30 languages, Voice Design &amp;amp; Controllable Voice Cloning, 48kHz audio output! &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/openbmb/VoxCPM2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Weights&lt;/a&gt; | &lt;a class=&#34;link&#34; href=&#34;https://voxcpm.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docs&lt;/a&gt; | &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/spaces/OpenBMB/VoxCPM-Demo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Playground&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;[2025.12]&lt;/strong&gt; 🎉 Open-source &lt;strong&gt;VoxCPM1.5&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/openbmb/VoxCPM1.5&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;weights&lt;/a&gt; with SFT &amp;amp; LoRA fine-tuning. (&lt;strong&gt;🏆 #1 GitHub Trending&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;[2025.09]&lt;/strong&gt; 🔥 Release VoxCPM &lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2509.24650&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Technical Report&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;[2025.09]&lt;/strong&gt; 🎉 Open-source &lt;strong&gt;VoxCPM-0.5B&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/openbmb/VoxCPM-0.5B&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;weights&lt;/a&gt; (&lt;strong&gt;🏆 #1 HuggingFace Trending&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;contents&#34;&gt;Contents
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#-quick-start&#34; &gt;Quick Start&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#installation&#34; &gt;Installation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#python-api&#34; &gt;Python API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#cli-usage&#34; &gt;CLI Usage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#web-demo&#34; &gt;Web Demo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#-production-deployment-nano-vllm&#34; &gt;Production Deployment&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#-models--versions&#34; &gt;Models &amp;amp; Versions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#-performance&#34; &gt;Performance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%EF%B8%8F-fine-tuning&#34; &gt;Fine-tuning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#-documentation&#34; &gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#-ecosystem--community&#34; &gt;Ecosystem &amp;amp; Community&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%EF%B8%8F-risks-and-limitations&#34; &gt;Risks and Limitations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#-citation&#34; &gt;Citation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-quick-start&#34;&gt;🚀 Quick Start
+&lt;/h2&gt;&lt;h3 id=&#34;installation&#34;&gt;Installation
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install voxcpm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Requirements:&lt;/strong&gt; Python ≥ 3.10 (&amp;lt;3.13), PyTorch ≥ 2.5.0, CUDA ≥ 12.0. See &lt;a class=&#34;link&#34; href=&#34;https://voxcpm.readthedocs.io/en/latest/quickstart.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Quick Start Docs&lt;/a&gt; for details.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;python-api&#34;&gt;Python API
+&lt;/h3&gt;&lt;h4 id=&#34;-text-to-speech&#34;&gt;🗣️ Text-to-Speech
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;voxcpm&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;VoxCPM&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;soundfile&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sf&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;model&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;VoxCPM&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_pretrained&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;openbmb/VoxCPM2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;load_denoiser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wav&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;VoxCPM2 is the current recommended release for realistic multilingual speech synthesis.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;cfg_value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;2.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;inference_timesteps&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;demo.wav&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wav&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tts_model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sample_rate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;saved: demo.wav&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If you prefer downloading from ModelScope first, you can use:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install modelscope
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;modelscope&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;snapshot_download&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;snapshot_download&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;OpenBMB/VoxCPM2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;local_dir&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;./pretrained_models/VoxCPM2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# specify the local directory to save the model&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;voxcpm&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;VoxCPM&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;soundfile&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sf&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;model&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;VoxCPM&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_pretrained&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;./pretrained_models/VoxCPM2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;load_denoiser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wav&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;VoxCPM2 is the current recommended release for realistic multilingual speech synthesis.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;cfg_value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;2.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;inference_timesteps&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;demo.wav&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wav&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tts_model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sample_rate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;-voice-design&#34;&gt;🎨 Voice Design
+&lt;/h4&gt;&lt;p&gt;Create a voice from a natural-language description — no reference audio needed. &lt;strong&gt;Format:&lt;/strong&gt; put the description in parentheses at the start of &lt;code&gt;text&lt;/code&gt;(e.g. &lt;code&gt;&amp;quot;(your voice description)The text to synthesize.&amp;quot;&lt;/code&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wav&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;(A young woman, gentle and sweet voice)Hello, welcome to VoxCPM2!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;cfg_value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;2.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;inference_timesteps&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;voice_design.wav&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wav&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tts_model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sample_rate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;-controllable-voice-cloning&#34;&gt;🎛️ Controllable Voice Cloning
+&lt;/h4&gt;&lt;p&gt;Upload a reference audio. The model clones the timbre, and you can still use control instructions to adjust speed, emotion, or style.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wav&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;This is a cloned voice generated by VoxCPM2.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;reference_wav_path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;path/to/voice.wav&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;clone.wav&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wav&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tts_model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sample_rate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wav&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;(slightly faster, cheerful tone)This is a cloned voice with style control.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;reference_wav_path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;path/to/voice.wav&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;cfg_value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;2.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;inference_timesteps&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;controllable_clone.wav&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wav&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tts_model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sample_rate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;-ultimate-cloning&#34;&gt;🎙️ Ultimate Cloning
+&lt;/h4&gt;&lt;p&gt;Provide both the reference audio and its exact transcript for audio-continuation-based cloning with every vocal nuance reproduced. For maximum cloning similarity, pass the same reference clip to both &lt;code&gt;reference_wav_path&lt;/code&gt; and &lt;code&gt;prompt_wav_path&lt;/code&gt; as shown below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wav&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;This is an ultimate cloning demonstration using VoxCPM2.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;prompt_wav_path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;path/to/voice.wav&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;prompt_text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;The transcript of the reference audio.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;reference_wav_path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;path/to/voice.wav&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# optional, for better simliarity &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;hifi_clone.wav&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wav&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tts_model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sample_rate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;details&gt;
+&lt;summary&gt;&lt;b&gt;🔄 Streaming API&lt;/b&gt;&lt;/summary&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;np&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;chunks&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;chunk&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generate_streaming&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Streaming text to speech is easy with VoxCPM!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;chunks&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;chunk&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wav&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;concatenate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;chunks&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;streaming.wav&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wav&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tts_model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sample_rate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;h3 id=&#34;cli-usage&#34;&gt;CLI Usage
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Voice design (no reference audio needed)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;voxcpm design &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --text &lt;span class=&#34;s2&#34;&gt;&amp;#34;VoxCPM2 brings studio-quality multilingual speech synthesis.&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --output out.wav
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Controllable voice cloning with style control&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;voxcpm design &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --text &lt;span class=&#34;s2&#34;&gt;&amp;#34;VoxCPM2 brings studio-quality multilingual speech synthesis.&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --control &lt;span class=&#34;s2&#34;&gt;&amp;#34;Young female voice, warm and gentle, slightly smiling&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --output out.wav
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Voice cloning (reference audio)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;voxcpm clone &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --text &lt;span class=&#34;s2&#34;&gt;&amp;#34;This is a voice cloning demo.&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --reference-audio path/to/voice.wav &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --output out.wav
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Ultimate cloning (prompt audio + transcript)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;voxcpm clone &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --text &lt;span class=&#34;s2&#34;&gt;&amp;#34;This is a voice cloning demo.&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --prompt-audio path/to/voice.wav &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --prompt-text &lt;span class=&#34;s2&#34;&gt;&amp;#34;reference transcript&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --reference-audio path/to/voice.wav &lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# optional, for better simliarity&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --output out.wav
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Batch processing&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;voxcpm batch --input examples/input.txt --output-dir outs
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Help&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;voxcpm --help
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;web-demo&#34;&gt;Web Demo
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python app.py --port &lt;span class=&#34;m&#34;&gt;8808&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# then open in browser: http://localhost:8808&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;-production-deployment-nano-vllm&#34;&gt;🚢 Production Deployment (Nano-vLLM)
+&lt;/h3&gt;&lt;p&gt;For high-throughput serving, use &lt;a class=&#34;link&#34; href=&#34;https://github.com/a710128/nanovllm-voxcpm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Nano-vLLM-VoxCPM&lt;/strong&gt;&lt;/a&gt; — a dedicated inference engine built on Nano-vLLM with concurrent request support and an async API.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install nano-vllm-voxcpm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;nanovllm_voxcpm&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;VoxCPM&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;soundfile&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sf&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;VoxCPM&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_pretrained&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/path/to/VoxCPM&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;devices&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;chunks&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;target_text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello from VoxCPM!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;out.wav&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;concatenate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;chunks&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;48000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;RTF as low as ~0.13 on NVIDIA RTX 4090&lt;/strong&gt; (vs ~0.3 with the standard PyTorch implementation), with support for batched concurrent requests and a FastAPI HTTP server. See the &lt;a class=&#34;link&#34; href=&#34;https://github.com/a710128/nanovllm-voxcpm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nano-vLLM-VoxCPM repo&lt;/a&gt; for deployment details.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Full parameter reference, multi-scenario examples, and voice cloning tips →&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://voxcpm.readthedocs.io/en/latest/quickstart.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Quick Start Guide&lt;/a&gt; | &lt;a class=&#34;link&#34; href=&#34;https://voxcpm.readthedocs.io/en/latest/usage_guide.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Usage Guide&lt;/a&gt; | &lt;a class=&#34;link&#34; href=&#34;https://voxcpm.readthedocs.io/en/latest/cookbook.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cookbook&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-models--versions&#34;&gt;📦 Models &amp;amp; Versions
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;&lt;strong&gt;VoxCPM2&lt;/strong&gt;&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;&lt;strong&gt;VoxCPM1.5&lt;/strong&gt;&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;&lt;strong&gt;VoxCPM-0.5B&lt;/strong&gt;&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Status&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;🟢 Latest&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Stable&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Legacy&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Backbone Parameters&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2B&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;0.6B&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;0.5B&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Audio Sample Rate&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;48kHz&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;44.1kHz&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;16kHz&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;LM Token Rate&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;6.25Hz&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;6.25Hz&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;12.5Hz&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Languages&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;30&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2 (zh, en)&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2 (zh, en)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Cloning Mode&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Isolated Reference &amp;amp; Continuation&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Continuation only&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Continuation only&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Voice Design&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;—&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;—&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Controllable Voice Cloning&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;—&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;—&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;SFT / LoRA&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;RTF (RTX 4090)&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;~0.30&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;~0.15&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;~0.17&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;RTF in Nano-VLLM (RTX 4090)&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;~0.13&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;~0.08&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;~0.10&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;VRAM&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;~8 GB&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;~6 GB&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;~5 GB&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Weights&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/openbmb/VoxCPM2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🤗 HF&lt;/a&gt; / &lt;a class=&#34;link&#34; href=&#34;https://modelscope.cn/models/OpenBMB/VoxCPM2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MS&lt;/a&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/openbmb/VoxCPM1.5&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🤗 HF&lt;/a&gt; / &lt;a class=&#34;link&#34; href=&#34;https://modelscope.cn/models/OpenBMB/VoxCPM1.5&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MS&lt;/a&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/openbmb/VoxCPM-0.5B&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🤗 HF&lt;/a&gt; / &lt;a class=&#34;link&#34; href=&#34;https://modelscope.cn/models/OpenBMB/VoxCPM-0.5B&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MS&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Technical Report&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Coming soon&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;—&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2509.24650&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;arXiv&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://openreview.net/forum?id=h5KLpGoqzC&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ICLR 2026&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Demo Page&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://openbmb.github.io/voxcpm2-demopage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Audio Samples&lt;/a&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;—&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://openbmb.github.io/VoxCPM-demopage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Audio Samples&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;VoxCPM2 is built on a &lt;strong&gt;tokenizer-free, diffusion autoregressive&lt;/strong&gt; paradigm. The model operates entirely in the latent space of &lt;strong&gt;AudioVAE V2&lt;/strong&gt;, following a four-stage pipeline: &lt;strong&gt;LocEnc → TSLM → RALM → LocDiT&lt;/strong&gt;, enabling rich expressiveness and 48kHz native audio output.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+  &lt;img src=&#34;assets/voxcpm_model.png&#34; alt=&#34;VoxCPM2 Model Architecture&#34; width=&#34;90%&#34;&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For full architectural details, VoxCPM2-specific upgrades, and a model comparison table, see the &lt;a class=&#34;link&#34; href=&#34;https://voxcpm.readthedocs.io/en/latest/models/architecture.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Architecture Design&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-performance&#34;&gt;📊 Performance
+&lt;/h2&gt;&lt;p&gt;VoxCPM2 achieves state-of-the-art or comparable results on public zero-shot and controllable TTS benchmarks.&lt;/p&gt;
+&lt;h3 id=&#34;seed-tts-eval&#34;&gt;Seed-TTS-eval
+&lt;/h3&gt;&lt;details&gt;
+&lt;summary&gt;&lt;b&gt;Seed-TTS-eval WER(⬇)&amp;SIM(⬆) Results (click to expand)&lt;/b&gt;&lt;/summary&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Model&lt;/th&gt;
+					&lt;th&gt;Parameters&lt;/th&gt;
+					&lt;th&gt;Open-Source&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;test-EN&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;test-ZH&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;test-Hard&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;WER/%⬇&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;SIM/%⬆&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;CER/%⬇&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;SIM/%⬆&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;CER/%⬇&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;SIM/%⬆&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;MegaTTS3&lt;/td&gt;
+					&lt;td&gt;0.5B&lt;/td&gt;
+					&lt;td&gt;❌&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.79&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;77.1&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.52&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;79.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;DiTAR&lt;/td&gt;
+					&lt;td&gt;0.6B&lt;/td&gt;
+					&lt;td&gt;❌&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.69&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;73.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.02&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;75.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;CosyVoice3&lt;/td&gt;
+					&lt;td&gt;0.5B&lt;/td&gt;
+					&lt;td&gt;❌&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.02&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;71.8&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.16&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;78.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;6.08&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;75.8&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;CosyVoice3&lt;/td&gt;
+					&lt;td&gt;1.5B&lt;/td&gt;
+					&lt;td&gt;❌&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.22&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;72.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.12&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;78.1&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;5.83&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;75.8&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Seed-TTS&lt;/td&gt;
+					&lt;td&gt;-&lt;/td&gt;
+					&lt;td&gt;❌&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.25&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;76.2&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.12&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;79.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;7.59&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;77.6&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;MiniMax-Speech&lt;/td&gt;
+					&lt;td&gt;-&lt;/td&gt;
+					&lt;td&gt;❌&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.65&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;69.2&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;0.83&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;78.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;F5-TTS&lt;/td&gt;
+					&lt;td&gt;0.3B&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.00&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;67.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.53&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;76.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;8.67&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;71.3&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;MaskGCT&lt;/td&gt;
+					&lt;td&gt;1B&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.62&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;71.7&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.27&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;77.4&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;CosyVoice&lt;/td&gt;
+					&lt;td&gt;0.3B&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;4.29&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;60.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;3.63&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;72.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;11.75&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;70.9&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;CosyVoice2&lt;/td&gt;
+					&lt;td&gt;0.5B&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;3.09&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;65.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.38&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;75.7&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;6.83&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;72.4&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;SparkTTS&lt;/td&gt;
+					&lt;td&gt;0.5B&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;3.14&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;57.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.54&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;66.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;FireRedTTS&lt;/td&gt;
+					&lt;td&gt;0.5B&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;3.82&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;46.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.51&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;63.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;17.45&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;62.1&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;FireRedTTS-2&lt;/td&gt;
+					&lt;td&gt;1.5B&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.95&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;66.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.14&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;73.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Qwen2.5-Omni&lt;/td&gt;
+					&lt;td&gt;7B&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.72&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;63.2&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.70&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;75.2&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;7.97&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;74.7&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Qwen3-Omni&lt;/td&gt;
+					&lt;td&gt;30B-A3B&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.39&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.07&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;OpenAudio-s1-mini&lt;/td&gt;
+					&lt;td&gt;0.5B&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.94&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;55.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.18&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;68.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;23.37&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;64.3&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;IndexTTS2&lt;/td&gt;
+					&lt;td&gt;1.5B&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.23&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;70.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.03&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;76.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;7.12&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;75.5&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;VibeVoice&lt;/td&gt;
+					&lt;td&gt;1.5B&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;3.04&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;68.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.16&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;74.4&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;HiggsAudio-v2&lt;/td&gt;
+					&lt;td&gt;3B&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.44&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;67.7&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.50&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;74.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;55.07&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;65.6&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;VoxCPM-0.5B&lt;/td&gt;
+					&lt;td&gt;0.6B&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.85&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;72.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;0.93&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;77.2&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;8.87&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;73.0&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;VoxCPM1.5&lt;/td&gt;
+					&lt;td&gt;0.8B&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.12&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;71.4&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.18&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;77.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;7.74&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;73.1&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;MOSS-TTS&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.85&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;73.4&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.20&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;78.8&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Qwen3-TTS&lt;/td&gt;
+					&lt;td&gt;1.7B&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.23&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;71.7&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.22&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;77.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;6.76&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;74.8&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;FishAudio S2&lt;/td&gt;
+					&lt;td&gt;4B&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;0.99&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;0.54&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;5.99&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;LongCat-Audio-DiT&lt;/td&gt;
+					&lt;td&gt;3.5B&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.50&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;78.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.09&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;81.8&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;6.04&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;79.7&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;VoxCPM2&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;2B&lt;/td&gt;
+					&lt;td&gt;✅&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.84&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;75.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;0.97&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;79.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;8.13&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;75.3&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/details&gt;
+&lt;h3 id=&#34;cv3-eval&#34;&gt;CV3-eval
+&lt;/h3&gt;&lt;details&gt;
+&lt;summary&gt;&lt;b&gt;CV3-eval Multilingual WER/CER(⬇) Results (click to expand)&lt;/b&gt;&lt;/summary&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Model&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;zh&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;en&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;hard-zh&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;hard-en&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;ja&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;ko&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;de&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;es&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;fr&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;it&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;ru&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;CosyVoice2&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;4.08&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;6.32&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;12.58&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;11.96&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;9.13&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;19.7&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;CosyVoice3-1.5B&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;3.91&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;4.99&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;9.77&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;10.55&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;7.57&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;5.69&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;6.43&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;4.47&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;11.8&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;10.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;6.64&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Fish Audio S2&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.65&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.43&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;9.10&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;4.40&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;3.96&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.76&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.22&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.00&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;6.26&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.04&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.78&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;VoxCPM2&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;3.65&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;5.00&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;8.55&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;8.48&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;5.96&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;5.69&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;4.77&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;3.80&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;9.85&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;4.25&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;5.21&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/details&gt;
+&lt;h3 id=&#34;minimax-multilingual-test&#34;&gt;MiniMax-Multilingual-Test
+&lt;/h3&gt;&lt;details&gt;
+&lt;summary&gt;&lt;b&gt;Minimax-MLS-test WER(⬇) Results (click to expand)&lt;/b&gt;&lt;/summary&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Language&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;Minimax&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;ElevenLabs&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;Qwen3-TTS&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;FishAudio S2&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;&lt;strong&gt;VoxCPM2&lt;/strong&gt;&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Arabic&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;1.665&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.666&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;3.500&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;13.046&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Cantonese&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;34.111&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;51.513&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;30.670&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;38.584&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Chinese&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.252&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;16.026&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;0.928&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;0.730&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.136&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Czech&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;3.875&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;2.108&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.840&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;24.132&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Dutch&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.143&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;0.803&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;0.990&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;0.913&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;English&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.164&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.339&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;0.934&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.620&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.289&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Finnish&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;4.666&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.964&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;3.330&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;2.632&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;French&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;4.099&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;5.216&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;2.858&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;3.050&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;4.534&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;German&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.906&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;0.572&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.235&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;0.550&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;0.679&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Greek&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.016&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;0.991&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;5.740&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.844&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Hindi&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;6.962&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;5.827&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;14.640&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;19.699&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Indonesian&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.237&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;1.059&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.460&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.084&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Italian&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.543&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.743&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;0.948&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.270&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.563&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Japanese&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;3.519&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;10.646&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;3.823&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;2.760&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;4.628&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Korean&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.747&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.865&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.755&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;1.180&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.962&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Polish&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.415&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;0.766&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.260&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.141&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Portuguese&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.877&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.331&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.526&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;1.140&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.938&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Romanian&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.878&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;1.347&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;10.740&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;21.577&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Russian&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;4.281&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;3.878&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;3.212&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;2.400&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;3.634&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Spanish&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.029&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.084&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.126&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;0.910&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.438&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Thai&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.701&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;73.936&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;4.230&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.961&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Turkish&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.52&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;0.699&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;0.870&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;0.817&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Ukrainian&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;1.082&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;0.997&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;2.300&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;6.316&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Vietnamese&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;0.88&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;73.415&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;7.410&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;3.307&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;&lt;b&gt;Minimax-MLS-test SIM(⬆) Results (click to expand)&lt;/b&gt;&lt;/summary&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Language&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;Minimax&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;ElevenLabs&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;Qwen3-TTS&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;FishAudio S2&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;&lt;strong&gt;VoxCPM2&lt;/strong&gt;&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Arabic&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;73.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;70.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;75.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;79.1&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Cantonese&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;77.8&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;67.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;80.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;83.5&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Chinese&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;78.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;67.7&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;79.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;81.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;82.5&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Czech&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;79.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;68.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;79.8&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;78.3&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Dutch&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;73.8&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;68.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;73.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;80.8&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;English&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;75.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;61.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;77.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;79.7&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;85.4&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Finnish&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;83.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;75.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;81.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;89.0&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;French&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;62.8&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;53.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;62.8&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;69.8&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;73.5&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;German&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;73.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;61.4&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;77.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;76.7&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;80.3&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Greek&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;82.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;73.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;79.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;86.0&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Hindi&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;81.8&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;73.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;82.1&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;85.6&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Indonesian&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;72.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;66.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;76.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;80.0&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Italian&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;69.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;57.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;81.7&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;74.7&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;78.0&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Japanese&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;77.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;73.8&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;78.8&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;79.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;82.8&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Korean&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;77.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;70.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;79.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;81.7&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;83.3&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Polish&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;80.2&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;72.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;81.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;88.4&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Portuguese&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;80.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;71.1&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;81.7&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;78.1&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;83.7&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Romanian&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;80.9&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;69.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;73.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;79.7&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Russian&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;76.1&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;67.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;79.2&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;79.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;81.1&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Spanish&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;76.2&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;61.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;81.4&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;77.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;83.1&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Thai&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;80.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;58.8&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;78.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;84.0&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Turkish&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;77.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;59.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;83.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;87.1&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Ukrainian&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;73.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;64.7&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;74.7&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;79.8&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Vietnamese&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;74.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;36.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;74.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;80.6&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/details&gt;
+&lt;h3 id=&#34;internal-30-language-asr-benchmark&#34;&gt;Internal 30-Language ASR Benchmark
+&lt;/h3&gt;&lt;p&gt;We additionally run an internal multilingual intelligibility benchmark with &lt;strong&gt;30 languages × 500 samples&lt;/strong&gt;. ASR transcription is evaluated via &lt;strong&gt;Gemini 3.1 Flash Lite API&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;&lt;b&gt;Internal 30-Language ASR Benchmark (click to expand)&lt;/b&gt;&lt;/summary&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Language&lt;/th&gt;
+					&lt;th style=&#34;text-align: right&#34;&gt;Metric&lt;/th&gt;
+					&lt;th style=&#34;text-align: right&#34;&gt;VoxCPM2&lt;/th&gt;
+					&lt;th style=&#34;text-align: right&#34;&gt;Fish S2-Pro&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ar (Arabic)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;CER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.23%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;0.30%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;da (Danish)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;WER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;2.70%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;3.52%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;de (German)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;WER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;0.96%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;0.64%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;el (Greek)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;WER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;3.17%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;4.61%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;en (English)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;WER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;0.42%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.03%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;es (Spanish)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;WER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.33%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;0.64%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;fi (Finnish)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;WER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;2.24%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;2.80%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;fr (French)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;WER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;2.16%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;2.34%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;he (Hebrew)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;CER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;2.98%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;15.27%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;hi (Hindi)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;CER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;0.79%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;0.91%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;id (Indonesian)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;WER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.36%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.68%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;it (Italian)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;WER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.65%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.08%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ja (Japanese)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;CER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;2.40%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.82%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;km (Khmer)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;CER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;2.05%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;75.15%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ko (Korean)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;CER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;0.95%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;0.29%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;lo (Lao)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;CER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.90%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;87.40%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ms (Malay)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;WER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.75%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.41%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;my (Burmese)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;CER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.42%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;85.27%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;nl (Dutch)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;WER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.25%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.68%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;no (Norwegian)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;WER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;2.49%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;3.76%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;pl (Polish)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;WER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.90%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.65%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;pt (Portuguese)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;WER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.48%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.49%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ru (Russian)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;WER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;0.90%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;0.86%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;sv (Swedish)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;WER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;2.22%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;2.63%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;sw (Swahili)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;CER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.07%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;2.02%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;th (Thai)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;CER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;0.94%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.92%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;tl (Tagalog)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;WER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;2.63%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;4.00%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;tr (Turkish)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;WER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.65%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.65%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;vi (Vietnamese)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;WER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.56%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;5.56%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;zh (Chinese)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;CER&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;0.92%&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.02%&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Average (30 languages)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;&lt;strong&gt;1.68%&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/details&gt;
+&lt;h3 id=&#34;instructttseval&#34;&gt;InstructTTSEval
+&lt;/h3&gt;&lt;details&gt;
+&lt;summary&gt;&lt;b&gt;Instruction-Guided Voice Design Results (click to expand)&lt;/b&gt;&lt;/summary&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Model&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;InstructTTSEval-ZH&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;InstructTTSEval-EN&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;APS⬆&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;DSD⬆&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;RP⬆&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;APS⬆&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;DSD⬆&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;RP⬆&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Hume&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;83.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;75.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;54.3&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;VoxInstruct&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;47.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;52.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;42.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;54.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;57.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;39.3&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Parler-tts-mini&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;63.4&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;48.7&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;28.6&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Parler-tts-large&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;60.0&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;45.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;31.2&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;PromptTTS&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;64.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;47.2&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;31.4&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;PromptStyle&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;57.4&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;46.4&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;30.9&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;VoiceSculptor&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;75.7&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;64.7&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;61.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;–&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Mimo-Audio-7B-Instruct&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;75.7&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;74.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;61.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;80.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;77.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;59.5&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Qwen3TTS-12Hz-1.7B-VD&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;85.2&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;81.1&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;65.1&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;82.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;82.4&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;68.4&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;VoxCPM2&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;85.2&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;71.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;60.8&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;84.2&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;83.2&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;strong&gt;71.4&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-fine-tuning&#34;&gt;⚙️ Fine-tuning
+&lt;/h2&gt;&lt;p&gt;VoxCPM supports both &lt;strong&gt;full fine-tuning (SFT)&lt;/strong&gt; and &lt;strong&gt;LoRA fine-tuning&lt;/strong&gt;. With as little as &lt;strong&gt;5–10 minutes&lt;/strong&gt; of audio, you can adapt to a specific speaker, language, or domain.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# LoRA fine-tuning (parameter-efficient, recommended)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python scripts/train_voxcpm_finetune.py &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --config_path conf/voxcpm_v2/voxcpm_finetune_lora.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Full fine-tuning&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python scripts/train_voxcpm_finetune.py &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --config_path conf/voxcpm_v2/voxcpm_finetune_all.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# WebUI for training &amp;amp; inference&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python lora_ft_webui.py   &lt;span class=&#34;c1&#34;&gt;# then open http://localhost:7860&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Full guide →&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://voxcpm.readthedocs.io/en/latest/finetuning/finetune.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Fine-tuning Guide&lt;/a&gt; (data preparation, configuration, training, LoRA hot-swapping, FAQ)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-documentation&#34;&gt;📚 Documentation
+&lt;/h2&gt;&lt;p&gt;Full documentation: &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://voxcpm.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;voxcpm.readthedocs.io&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Topic&lt;/th&gt;
+					&lt;th&gt;Link&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Quick Start &amp;amp; Installation&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://voxcpm.readthedocs.io/en/latest/quickstart.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Quick Start&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Usage Guide &amp;amp; Cookbook&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://voxcpm.readthedocs.io/en/latest/usage_guide.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;User Guide&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;VoxCPM Series&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://voxcpm.readthedocs.io/en/latest/models/version_history.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Models&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Fine-tuning (SFT &amp;amp; LoRA)&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://voxcpm.readthedocs.io/en/latest/finetuning/finetune.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Fine-tuning Guide&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;FAQ &amp;amp; Troubleshooting&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://voxcpm.readthedocs.io/en/latest/faq.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FAQ&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-ecosystem--community&#34;&gt;🌟 Ecosystem &amp;amp; Community
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Project&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/a710128/nanovllm-voxcpm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Nano-vLLM&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;High-throughput and Fast GPU serving&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/bluryar/VoxCPM.cpp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;VoxCPM.cpp&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;GGML/GGUF: CPU, CUDA, Vulkan inference&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/bluryar/VoxCPM-ONNX&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;VoxCPM-ONNX&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;ONNX export for CPU inference&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/0seba/VoxCPMANE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;VoxCPMANE&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Apple Neural Engine backend&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/madushan1000/voxcpm_rs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;voxcpm_rs&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Rust re-implementation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/wildminder/ComfyUI-VoxCPM&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;ComfyUI-VoxCPM&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;ComfyUI node-based workflows&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/1038lab/ComfyUI-VoxCPMTTS&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;ComfyUI-VoxCPMTTS&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;ComfyUI TTS extension&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/rsxdalv/tts_webui_extension.vox_cpm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;TTS WebUI&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Browser-based TTS extension&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;See the full &lt;a class=&#34;link&#34; href=&#34;https://voxcpm.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ecosystem&lt;/a&gt; in the docs. Community projects are not officially maintained by OpenBMB. Built something cool? &lt;a class=&#34;link&#34; href=&#34;https://github.com/OpenBMB/VoxCPM/issues&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Open an issue or PR&lt;/a&gt; to add it!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-risks-and-limitations&#34;&gt;⚠️ Risks and Limitations
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Potential for Misuse:&lt;/strong&gt; VoxCPM&amp;rsquo;s voice cloning can generate highly realistic synthetic speech. It is &lt;strong&gt;strictly forbidden&lt;/strong&gt; to use VoxCPM for impersonation, fraud, or disinformation. We strongly recommend clearly marking any AI-generated content.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Controllable Generation Stability:&lt;/strong&gt; Voice Design and Controllable Voice Cloning results can vary between runs — you may try to generate 1~3 times to obtain the desired voice or style. We are actively working on improving controllability consistency.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Language Coverage:&lt;/strong&gt; VoxCPM2 officially supports 30 languages. For languages not on the list, you are welcome to test directly or try fine-tuning on your own data. We plan to expand language coverage in future releases.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usage:&lt;/strong&gt; This model is released under the Apache-2.0 license. For production deployments, we recommend conducting thorough testing and safety evaluation tailored to your use case.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-citation&#34;&gt;📖 Citation
+&lt;/h2&gt;&lt;p&gt;If you find VoxCPM helpful, please consider citing our work and starring ⭐ the repository!&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bib&#34; data-lang=&#34;bib&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@article&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;voxcpm2_2026&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{VoxCPM Team}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;journal&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{GitHub}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{2026}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@article&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;voxcpm2025&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;             and True-to-Life Voice Cloning}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{Zhou, Yixuan and Zeng, Guoyang and Liu, Xin and Li, Xiang and
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;             Yu, Renjie and Wang, Ziyang and Ye, Runchuan and Sun, Weiyue and
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;             Gui, Jiancheng and Li, Kehan and Wu, Zhiyong and Liu, Zhiyuan}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;journal&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{arXiv preprint arXiv:2509.24650}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{2025}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;-license&#34;&gt;📄 License
+&lt;/h2&gt;&lt;p&gt;VoxCPM model weights and code are open-sourced under the &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;Apache-2.0&lt;/a&gt; license.&lt;/p&gt;
+&lt;h2 id=&#34;-acknowledgments&#34;&gt;🙏 Acknowledgments
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2502.03930&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DiTAR&lt;/a&gt; for the diffusion autoregressive backbone&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/OpenBMB/MiniCPM&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MiniCPM-4&lt;/a&gt; for the language model foundation&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/FunAudioLLM/CosyVoice&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CosyVoice&lt;/a&gt; for the Flow Matching-based LocDiT implementation&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/descriptinc/descript-audio-codec&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DAC&lt;/a&gt; for the Audio VAE backbone&lt;/li&gt;
+&lt;li&gt;Our community users for trying VoxCPM, reporting issues, sharing ideas, and contributing—your support helps the project keep getting better&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;institutions&#34;&gt;Institutions
+&lt;/h2&gt;&lt;p&gt;
+  &lt;a href=&#34;https://modelbest.cn/&#34;&gt;&lt;img src=&#34;assets/modelbest_logo.png&#34; width=&#34;28px&#34;&gt; ModelBest&lt;/a&gt;
+  &amp;nbsp;&amp;nbsp;&amp;nbsp;
+  &lt;a href=&#34;https://github.com/thuhcsi&#34;&gt;&lt;img src=&#34;assets/thuhcsi_logo.png&#34; width=&#34;28px&#34;&gt; THUHCSI&lt;/a&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;-star-history&#34;&gt;⭐ Star History
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://star-history.com/#OpenBMB/VoxCPM&amp;amp;Date&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://api.star-history.com/svg?repos=OpenBMB/VoxCPM&amp;amp;type=Date&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Star History Chart&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

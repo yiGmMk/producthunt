@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Minimal Codebase on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/minimal-codebase/</link>
+        <description>Recent content in Minimal Codebase on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sat, 18 Apr 2026 16:04:28 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/minimal-codebase/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>GenericAgent</title>
+        <link>https://producthunt.programnotes.cn/en/p/genericagent/</link>
+        <pubDate>Sat, 18 Apr 2026 16:04:28 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/genericagent/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1572593685472-e0721d6c1bac?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY0OTk0NDV8&amp;ixlib=rb-4.1.0" alt="Featured image of post GenericAgent" /&gt;&lt;h1 id=&#34;lsdefinegenericagent&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/lsdefine/GenericAgent&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;lsdefine/GenericAgent&lt;/a&gt;
+&lt;/h1&gt;&lt;div align=&#34;center&#34;&gt;
+&lt;img src=&#34;assets/images/bar.jpg&#34; width=&#34;880&#34;/&gt;
+&lt;p&gt;&lt;a href=&#34;https://trendshift.io/repositories/25944&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://trendshift.io/api/badge/repositories/25944&#34; alt=&#34;lsdefine%2FGenericAgent | Trendshift&#34; style=&#34;width: 250px; height: 55px;&#34; width=&#34;250&#34; height=&#34;55&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;a href=&#34;#english&#34;&gt;English&lt;/a&gt; | &lt;a href=&#34;#chinese&#34;&gt;中文&lt;/a&gt; | 📄 &lt;a href=&#34;assets/GenericAgent_Technical_Report.pdf&#34;&gt;Technical Report&lt;/a&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a name=&#34;english&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-overview&#34;&gt;🌟 Overview
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;GenericAgent&lt;/strong&gt; is a minimal, self-evolving autonomous agent framework. Its core is just &lt;strong&gt;~3K lines of code&lt;/strong&gt;. Through &lt;strong&gt;9 atomic tools + a ~100-line Agent Loop&lt;/strong&gt;, it grants any LLM system-level control over a local computer — covering browser, terminal, filesystem, keyboard/mouse input, screen vision, and mobile devices (ADB).&lt;/p&gt;
+&lt;p&gt;Its design philosophy: &lt;strong&gt;don&amp;rsquo;t preload skills — evolve them.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Every time GenericAgent solves a new task, it automatically crystallizes the execution path into an skill for direct reuse later. The longer you use it, the more skills accumulate — forming a skill tree that belongs entirely to you, grown from 3K lines of seed code.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;🤖 Self-Bootstrap Proof&lt;/strong&gt; — Everything in this repository, from installing Git and running &lt;code&gt;git init&lt;/code&gt; to every commit message, was completed autonomously by GenericAgent. The author never opened a terminal once.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;-core-features&#34;&gt;📋 Core Features
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Self-Evolving&lt;/strong&gt;: Automatically crystallizes each task into an skill. Capabilities grow with every use, forming your personal skill tree.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Minimal Architecture&lt;/strong&gt;: ~3K lines of core code. Agent Loop is ~100 lines. No complex dependencies, zero deployment overhead.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Strong Execution&lt;/strong&gt;: Injects into a real browser (preserving login sessions). 9 atomic tools take direct control of the system.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;High Compatibility&lt;/strong&gt;: Supports Claude / Gemini / Kimi / MiniMax and other major models. Cross-platform.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Token Efficient&lt;/strong&gt;: &amp;lt;30K context window — a fraction of the 200K–1M other agents consume. Layered memory ensures the right knowledge is always in scope. Less noise, fewer hallucinations, higher success rate — at a fraction of the cost.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-self-evolution-mechanism&#34;&gt;🧬 Self-Evolution Mechanism
+&lt;/h2&gt;&lt;p&gt;This is what fundamentally distinguishes GenericAgent from every other agent framework.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[New Task] --&amp;gt; [Autonomous Exploration] (install deps, write scripts, debug &amp;amp; verify) --&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Crystallize Execution Path into skill] --&amp;gt; [Write to Memory Layer] --&amp;gt; [Direct Recall on Next Similar Task]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;What you say&lt;/th&gt;
+					&lt;th&gt;What the agent does the first time&lt;/th&gt;
+					&lt;th&gt;Every time after&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;em&gt;&amp;ldquo;Read my WeChat messages&amp;rdquo;&lt;/em&gt;&lt;/td&gt;
+					&lt;td&gt;Install deps → reverse DB → write read script → save skill&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;one-line invoke&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;em&gt;&amp;ldquo;Monitor stocks and alert me&amp;rdquo;&lt;/em&gt;&lt;/td&gt;
+					&lt;td&gt;Install mootdx → build selection flow → configure cron → save skill&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;one-line start&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;em&gt;&amp;ldquo;Send this file via Gmail&amp;rdquo;&lt;/em&gt;&lt;/td&gt;
+					&lt;td&gt;Configure OAuth → write send script → save skill&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;ready to use&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;After a few weeks, your agent instance will have a skill tree no one else in the world has — all grown from 3K lines of seed code.&lt;/p&gt;
+&lt;h5 id=&#34;-demo-showcase&#34;&gt;🎯 Demo Showcase
+&lt;/h5&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;🧋 Food Delivery Order&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;📈 Quantitative Stock Screening&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;assets/demo/order_tea.gif&#34; width=&#34;100%&#34; alt=&#34;Order Tea&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;assets/demo/selectstock.gif&#34; width=&#34;100%&#34; alt=&#34;Stock Selection&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;em&gt;&amp;ldquo;Order me a milk tea&amp;rdquo;&lt;/em&gt; — Navigates the delivery app, selects items, and completes checkout automatically.&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;em&gt;&amp;ldquo;Find GEM stocks with EXPMA golden cross, turnover &amp;gt; 5%&amp;rdquo;&lt;/em&gt; — Screens stocks with quantitative conditions.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;🌐 Autonomous Web Exploration&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;💰 Expense Tracking&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;assets/demo/autonomous_explore.png&#34; width=&#34;100%&#34; alt=&#34;Web Exploration&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;assets/demo/alipay_expense.png&#34; width=&#34;100%&#34; alt=&#34;Alipay Expense&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Autonomously browses and periodically summarizes web content.&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;em&gt;&amp;ldquo;Find expenses over ¥2K in the last 3 months&amp;rdquo;&lt;/em&gt; — Drives Alipay via ADB.&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-latest-news&#34;&gt;📅 Latest News
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;2026-04-11:&lt;/strong&gt; Introduced &lt;strong&gt;L4 session archive memory&lt;/strong&gt; and scheduler cron integration&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-03-23:&lt;/strong&gt; Support personal WeChat as a bot frontend&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-03-10:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/s/q2gQ7YvWoiAcwxzaiwpuiQ?scene=1&amp;amp;click_id=7&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Released million-scale Skill Library&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-03-08:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/s/eiEhwo-j6S-WpLxgBnNxBg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Released &amp;ldquo;Dintal Claw&amp;rdquo; — a GenericAgent-powered government affairs bot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-03-01:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/s/uVWpTTF5I1yzAENV_qm7yg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GenericAgent featured by Jiqizhixin (机器之心)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-01-16:&lt;/strong&gt; GenericAgent V1.0 public release&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-quick-start&#34;&gt;🚀 Quick Start
+&lt;/h2&gt;&lt;h4 id=&#34;method-1-standard-installation&#34;&gt;Method 1: Standard Installation
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1. Clone the repo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/lsdefine/GenericAgent.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; GenericAgent
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2. Install minimal dependencies&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install streamlit pywebview
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 3. Configure API Key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp mykey_template.py mykey.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Edit mykey.py and fill in your LLM API Key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 4. Launch&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python launch.pyw
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Full guide: &lt;a class=&#34;link&#34; href=&#34;GETTING_STARTED.md&#34; &gt;GETTING_STARTED.md&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-bot-interface-optional&#34;&gt;🤖 Bot Interface (Optional)
+&lt;/h2&gt;&lt;h3 id=&#34;telegram-bot&#34;&gt;Telegram Bot
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# mykey.py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;tg_bot_token&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;YOUR_BOT_TOKEN&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;tg_allowed_users&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;YOUR_USER_ID&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python frontends/tgapp.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;alternative-app-frontends&#34;&gt;Alternative App Frontends
+&lt;/h3&gt;&lt;p&gt;Besides the default Streamlit web UI, you can also try other frontend styles:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python frontends/qtapp.py                &lt;span class=&#34;c1&#34;&gt;# Qt-based desktop app&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;streamlit run frontends/stapp2.py        &lt;span class=&#34;c1&#34;&gt;# Alternative Streamlit UI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;-comparison-with-similar-tools&#34;&gt;📊 Comparison with Similar Tools
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Feature&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;GenericAgent&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;OpenClaw&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;Claude Code&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Codebase&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;~3K lines&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;~530,000 lines&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Open-sourced (large)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Deployment&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;pip install&lt;/code&gt; + API Key&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Multi-service orchestration&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;CLI + subscription&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Browser Control&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Real browser (session preserved)&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Sandbox / headless browser&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Via MCP plugin&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;OS Control&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Mouse/kbd, vision, ADB&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Multi-agent delegation&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;File + terminal&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Self-Evolution&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Autonomous skill growth&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Plugin ecosystem&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Stateless between sessions&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Out of the Box&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;A few core files + starter skills&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Hundreds of modules&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Rich CLI toolset&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-how-it-works&#34;&gt;🧠 How It Works
+&lt;/h2&gt;&lt;p&gt;GenericAgent accomplishes complex tasks through &lt;strong&gt;Layered Memory × Minimal Toolset × Autonomous Execution Loop&lt;/strong&gt;, continuously accumulating experience during execution.&lt;/p&gt;
+&lt;p&gt;1️⃣ &lt;strong&gt;Layered Memory System&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Memory crystallizes throughout task execution, letting the agent build stable, efficient working patterns over time.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;L0 — Meta Rules&lt;/strong&gt;: Core behavioral rules and system constraints of the agent&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;L1 — Insight Index&lt;/strong&gt;: Minimal memory index for fast routing and recall&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;L2 — Global Facts&lt;/strong&gt;: Stable knowledge accumulated over long-term operation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;L3 — Task Skills / SOPs&lt;/strong&gt;: Reusable workflows for completing specific task types&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;L4 — Session Archive&lt;/strong&gt;: Archived task records distilled from finished sessions for long-horizon recall&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2️⃣ &lt;strong&gt;Autonomous Execution Loop&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Perceive environment state → Task reasoning → Execute tools → Write experience to memory → Loop&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The entire core loop is just &lt;strong&gt;~100 lines of code&lt;/strong&gt; (&lt;code&gt;agent_loop.py&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;3️⃣ &lt;strong&gt;Minimal Toolset&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;GenericAgent provides only &lt;strong&gt;9 atomic tools&lt;/strong&gt;, forming the foundational capabilities for interacting with the outside world.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Tool&lt;/th&gt;
+					&lt;th&gt;Function&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;code_run&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Execute arbitrary code&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_read&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Read files&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_write&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Write files&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_patch&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Patch / modify files&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;web_scan&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Perceive web content&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;web_execute_js&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Control browser behavior&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;ask_user&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Human-in-the-loop confirmation&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Additionally, 2 &lt;strong&gt;memory management tools&lt;/strong&gt; (&lt;code&gt;update_working_checkpoint&lt;/code&gt;, &lt;code&gt;start_long_term_update&lt;/code&gt;) allow the agent to persist context and accumulate experience across sessions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;4️⃣ &lt;strong&gt;Capability Extension Mechanism&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Capable of dynamically creating new tools.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Via &lt;code&gt;code_run&lt;/code&gt;, GenericAgent can dynamically install Python packages, write new scripts, call external APIs, or control hardware at runtime — crystallizing temporary abilities into permanent tools.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+  &lt;img src=&#34;assets/images/workflow.jpg&#34; alt=&#34;GenericAgent Workflow&#34; width=&#34;400&#34;/&gt;
+  &lt;br&gt;&lt;em&gt;GenericAgent Workflow Diagram&lt;/em&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;-support&#34;&gt;⭐ Support
+&lt;/h2&gt;&lt;p&gt;If this project helped you, please consider leaving a &lt;strong&gt;Star!&lt;/strong&gt; 🙏&lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;re also welcome to join our &lt;strong&gt;GenericAgent Community Group&lt;/strong&gt; for discussion, feedback, and co-building 👏&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;WeChat Group 5&lt;/strong&gt;&lt;br&gt;&lt;img src=&#34;assets/images/wechat_group5.jpg&#34; alt=&#34;WeChat Group 5 QR Code&#34; width=&#34;250&#34;/&gt;&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;WeChat Group 6&lt;/strong&gt;&lt;br&gt;&lt;img src=&#34;assets/images/wechat_group6.jpg&#34; alt=&#34;WeChat Group 6 QR Code&#34; width=&#34;250&#34;/&gt;&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;WeChat Group 7&lt;/strong&gt;&lt;br&gt;&lt;img src=&#34;assets/images/wechat_group7.jpg&#34; alt=&#34;WeChat Group 7 QR Code&#34; width=&#34;250&#34;/&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;-friendly-links&#34;&gt;🚩 Friendly Links
+&lt;/h2&gt;&lt;p&gt;Thanks for the support from the LinuxDo community!&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linux.do/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/%e7%a4%be%e5%8c%ba-LinuxDo-blue?style=for-the-badge&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;LinuxDo&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-license&#34;&gt;📄 License
+&lt;/h2&gt;&lt;p&gt;MIT License — see &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a name=&#34;chinese&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-项目简介&#34;&gt;🌟 项目简介
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;GenericAgent&lt;/strong&gt; 是一个极简、可自我进化的自主 Agent 框架。核心仅 &lt;strong&gt;~3K 行代码&lt;/strong&gt;，通过 &lt;strong&gt;9 个原子工具 + ~100 行 Agent Loop&lt;/strong&gt;，赋予任意 LLM 对本地计算机的系统级控制能力，覆盖浏览器、终端、文件系统、键鼠输入、屏幕视觉及移动设备。&lt;/p&gt;
+&lt;p&gt;它的设计哲学是：&lt;strong&gt;不预设技能，靠进化获得能力。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;每解决一个新任务，GenericAgent 就将执行路径自动固化为 Skill，供后续直接调用。使用时间越长，沉淀的技能越多，形成一棵完全属于你、从 3K 行种子代码生长出来的专属技能树。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;🤖 自举实证&lt;/strong&gt; — 本仓库的一切，从安装 Git、&lt;code&gt;git init&lt;/code&gt; 到每一条 commit message，均由 GenericAgent 自主完成。作者全程未打开过一次终端。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;-核心特性&#34;&gt;📋 核心特性
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;自我进化&lt;/strong&gt;: 每次任务自动沉淀 Skill，能力随使用持续增长，形成专属技能树&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;极简架构&lt;/strong&gt;: ~3K 行核心代码，Agent Loop 约百行，无复杂依赖，部署零负担&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;强执行力&lt;/strong&gt;: 注入真实浏览器（保留登录态），9 个原子工具直接接管系统&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;高兼容性&lt;/strong&gt;: 支持 Claude / Gemini / Kimi / MiniMax 等主流模型，跨平台运行&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;极致省 Token&lt;/strong&gt;: 上下文窗口不到 30K，是其他 Agent（200K–1M）的零头。分层记忆让关键信息始终在场——噪声更少，幻觉更低，成功率反而更高，而成本低一个数量级。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-自我进化机制&#34;&gt;🧬 自我进化机制
+&lt;/h2&gt;&lt;p&gt;这是 GenericAgent 区别于其他 Agent 框架的根本所在。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[遇到新任务]--&amp;gt;[自主摸索](安装依赖、编写脚本、调试验证)--&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[将执行路径固化为 Skill]--&amp;gt;[写入记忆层]--&amp;gt;[下次同类任务直接调用]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;你说的一句话&lt;/th&gt;
+					&lt;th&gt;Agent 第一次做了什么&lt;/th&gt;
+					&lt;th&gt;之后每次&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;em&gt;&amp;ldquo;监控股票并提醒我&amp;rdquo;&lt;/em&gt;&lt;/td&gt;
+					&lt;td&gt;安装 mootdx → 构建选股流程 → 配置定时任务 → 保存 Skill&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;一句话启动&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;em&gt;&amp;ldquo;用 Gmail 发这个文件&amp;rdquo;&lt;/em&gt;&lt;/td&gt;
+					&lt;td&gt;配置 OAuth → 编写发送脚本 → 保存 Skill&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;直接可用&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;用几周后，你的 Agent 实例将拥有一套任何人都没有的专属技能树，全部从 3K 行种子代码中生长而来。&lt;/p&gt;
+&lt;!-- | *&#34;帮我读取微信消息&#34;* | 安装依赖 → 逆向数据库 → 写读取脚本 → 保存 Skill | **一句话调用** | --&gt;
+&lt;h4 id=&#34;-实例展示&#34;&gt;🎯 实例展示
+&lt;/h4&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;🧋 外卖下单&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;📈 量化选股&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;assets/demo/order_tea.gif&#34; width=&#34;100%&#34; alt=&#34;Order Tea&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;assets/demo/selectstock.gif&#34; width=&#34;100%&#34; alt=&#34;Stock Selection&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;em&gt;&amp;ldquo;Order me a milk tea&amp;rdquo;&lt;/em&gt; — 自动导航外卖 App，选品并完成结账&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;em&gt;&amp;ldquo;Find GEM stocks with EXPMA golden cross, turnover &amp;gt; 5%&amp;rdquo;&lt;/em&gt; — 量化条件筛股&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;🌐 自主网页探索&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;💰 支出追踪&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;assets/demo/autonomous_explore.png&#34; width=&#34;100%&#34; alt=&#34;Web Exploration&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;assets/demo/alipay_expense.png&#34; width=&#34;100%&#34; alt=&#34;Alipay Expense&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;自主浏览并定时汇总网页信息&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;em&gt;&amp;ldquo;查找近 3 个月超 ¥2K 的支出&amp;rdquo;&lt;/em&gt; — 通过 ADB 驱动支付宝&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-最新动态&#34;&gt;📅 最新动态
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;2026-04-11:&lt;/strong&gt; 引入 &lt;strong&gt;L4 会话归档记忆&lt;/strong&gt;，并接入 scheduler cron 调度&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-03-23:&lt;/strong&gt; 支持个人微信接入作为 Bot 前端&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-03-10:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/s/q2gQ7YvWoiAcwxzaiwpuiQ?scene=1&amp;amp;click_id=7&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;发布百万级 Skill 库&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-03-08:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/s/eiEhwo-j6S-WpLxgBnNxBg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;发布以 GenericAgent 为核心的&amp;quot;政务龙虾&amp;quot; Dintal Claw&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-03-01:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/s/uVWpTTF5I1yzAENV_qm7yg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GenericAgent 被机器之心报道&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-01-16:&lt;/strong&gt; GenericAgent V1.0 公开版本发布&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-快速开始&#34;&gt;🚀 快速开始
+&lt;/h2&gt;&lt;h4 id=&#34;方法一标准安装&#34;&gt;方法一：标准安装
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1. 克隆仓库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/lsdefine/GenericAgent.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; GenericAgent
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2. 安装最小依赖&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install streamlit pywebview
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 3. 配置 API Key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp mykey_template.py mykey.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 编辑 mykey.py，填入你的 LLM API Key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 4. 启动&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python launch.pyw
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;完整引导流程见 &lt;a class=&#34;link&#34; href=&#34;GETTING_STARTED.md&#34; &gt;GETTING_STARTED.md&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;📖 新手使用指南（图文版）：&lt;a class=&#34;link&#34; href=&#34;https://my.feishu.cn/wiki/CGrDw0T76iNFuskmwxdcWrpinPb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;飞书文档&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-bot-接口可选&#34;&gt;🤖 Bot 接口（可选）
+&lt;/h2&gt;&lt;h3 id=&#34;微信-bot个人微信&#34;&gt;微信 Bot（个人微信）
+&lt;/h3&gt;&lt;p&gt;无需额外配置，扫码登录即可：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install pycryptodome qrcode requests
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python frontends/wechatapp.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;首次启动会弹出二维码，用微信扫码完成绑定。之后通过微信消息与 Agent 交互。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;qq-bot&#34;&gt;QQ Bot
+&lt;/h3&gt;&lt;p&gt;使用 &lt;code&gt;qq-botpy&lt;/code&gt; WebSocket 长连接，&lt;strong&gt;无需公网 webhook&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install qq-botpy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在 &lt;code&gt;mykey.py&lt;/code&gt; 中补充：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;qq_app_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;YOUR_APP_ID&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;qq_app_secret&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;YOUR_APP_SECRET&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;qq_allowed_users&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;YOUR_USER_OPENID&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 或 [&amp;#39;*&amp;#39;] 公开访问&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python frontends/qqapp.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;在 &lt;a class=&#34;link&#34; href=&#34;https://q.qq.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;QQ 开放平台&lt;/a&gt; 创建机器人获取 AppID / AppSecret。首次消息后，用户 openid 记录于 &lt;code&gt;temp/qqapp.log&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;飞书lark&#34;&gt;飞书（Lark）
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install lark-oapi
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python frontends/fsapp.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fs_app_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;cli_xxx&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fs_app_secret&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;xxx&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fs_allowed_users&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;ou_xxx&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 或 [&amp;#39;*&amp;#39;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;入站支持&lt;/strong&gt;：文本、富文本 post、图片、文件、音频、media、交互卡片 / 分享卡片&lt;br&gt;
+&lt;strong&gt;出站支持&lt;/strong&gt;：流式进度卡片、图片回传、文件 / media 回传&lt;br&gt;
+&lt;strong&gt;视觉模型&lt;/strong&gt;：图片首轮以真正的多模态输入发送给兼容 OpenAI Vision 的后端&lt;/p&gt;
+&lt;p&gt;详细配置见 &lt;a class=&#34;link&#34; href=&#34;assets/SETUP_FEISHU.md&#34; &gt;assets/SETUP_FEISHU.md&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;企业微信wecom&#34;&gt;企业微信（WeCom）
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install wecom_aibot_sdk
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python frontends/wecomapp.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wecom_bot_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;your_bot_id&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wecom_secret&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;your_bot_secret&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wecom_allowed_users&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;your_user_id&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wecom_welcome_message&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;你好，我在线上。&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;钉钉dingtalk&#34;&gt;钉钉（DingTalk）
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install dingtalk-stream
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python frontends/dingtalkapp.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dingtalk_client_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;your_app_key&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dingtalk_client_secret&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;your_app_secret&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dingtalk_allowed_users&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;your_staff_id&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 或 [&amp;#39;*&amp;#39;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;其他-app-前端&#34;&gt;其他 App 前端
+&lt;/h3&gt;&lt;p&gt;除默认的 Streamlit Web UI 外，还可以尝试不同风格的前端：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python frontends/qtapp.py                &lt;span class=&#34;c1&#34;&gt;# 基于 Qt 的桌面应用&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;streamlit run frontends/stapp2.py        &lt;span class=&#34;c1&#34;&gt;# 另一种 Streamlit 风格 UI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;-与同类产品对比&#34;&gt;📊 与同类产品对比
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;特性&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;GenericAgent&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;OpenClaw&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;Claude Code&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;代码量&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;~3K 行&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;~530,000 行&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;已开源（体量大）&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;部署方式&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;pip install&lt;/code&gt; + API Key&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;多服务编排&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;CLI + 订阅&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;浏览器控制&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;注入真实浏览器（保留登录态）&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;沙箱 / 无头浏览器&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;通过 MCP 插件&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;OS 控制&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;键鼠、视觉、ADB&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;多 Agent 委派&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;文件 + 终端&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;自我进化&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;自主生长 Skill 和工具&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;插件生态&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;会话间无状态&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;出厂配置&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;几个核心文件 + 少量初始 Skills&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;数百模块&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;丰富 CLI 工具集&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-工作机制&#34;&gt;🧠 工作机制
+&lt;/h2&gt;&lt;p&gt;GenericAgent 通过&lt;strong&gt;分层记忆 × 最小工具集 × 自主执行循环&lt;/strong&gt;完成复杂任务，并在执行过程中持续积累经验。&lt;/p&gt;
+&lt;p&gt;1️⃣ &lt;strong&gt;分层记忆系统&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;记忆在任务执行过程中持续沉淀，使 Agent 逐步形成稳定且高效的工作方式&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;L0 — 元规则（Meta Rules）&lt;/strong&gt;：Agent 的基础行为规则和系统约束&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;L1 — 记忆索引（Insight Index）&lt;/strong&gt;：极简索引层，用于快速路由与召回&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;L2 — 全局事实（Global Facts）&lt;/strong&gt;：在长期运行过程中积累的稳定知识&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;L3 — 任务 Skills / SOPs&lt;/strong&gt;：完成特定任务类型的可复用流程&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;L4 — 会话归档（Session Archive）&lt;/strong&gt;：从已完成任务中提炼出的归档记录，用于长程召回&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2️⃣ &lt;strong&gt;自主执行循环&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;感知环境状态  →  任务推理  →  调用工具执行  →  经验写入记忆  →  循环&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;整个核心循环仅 &lt;strong&gt;约百行代码&lt;/strong&gt;（&lt;code&gt;agent_loop.py&lt;/code&gt;）。&lt;/p&gt;
+&lt;p&gt;3️⃣ &lt;strong&gt;最小工具集&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GenericAgent 仅提供 &lt;strong&gt;9 个原子工具&lt;/strong&gt;，构成与外部世界交互的基础能力&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;工具&lt;/th&gt;
+					&lt;th&gt;功能&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;code_run&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;执行任意代码&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_read&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;读取文件&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_write&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;写入文件&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_patch&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;修改文件&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;web_scan&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;感知网页内容&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;web_execute_js&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;控制浏览器行为&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;ask_user&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;人机协作确认&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;此外，还有 2 个&lt;strong&gt;记忆管理工具&lt;/strong&gt;（&lt;code&gt;update_working_checkpoint&lt;/code&gt;、&lt;code&gt;start_long_term_update&lt;/code&gt;），使 Agent 能够跨会话积累经验、维持持久上下文。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;4️⃣ &lt;strong&gt;能力扩展机制&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;具备动态创建新的工具能力&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;通过 &lt;code&gt;code_run&lt;/code&gt;，GenericAgent 可在运行时动态安装 Python 包、编写新脚本、调用外部 API 或控制硬件，将临时能力固化为永久工具。&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+  &lt;img src=&#34;assets/images/workflow.jpg&#34; alt=&#34;GenericAgent 工作流程&#34; width=&#34;400&#34;/&gt;
+  &lt;br&gt;&lt;em&gt;GenericAgent 工作流程图&lt;/em&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;-支持&#34;&gt;⭐ 支持
+&lt;/h2&gt;&lt;p&gt;如果这个项目对您有帮助，欢迎点一个 &lt;strong&gt;Star!&lt;/strong&gt; 🙏&lt;/p&gt;
+&lt;p&gt;同时也欢迎加入我们的&lt;strong&gt;GenericAgent体验交流群&lt;/strong&gt;，一起交流、反馈和共建 👏&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;微信群 5&lt;/strong&gt;&lt;br&gt;&lt;img src=&#34;assets/images/wechat_group5.jpg&#34; alt=&#34;微信群 5 二维码&#34; width=&#34;250&#34;/&gt;&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;微信群 6&lt;/strong&gt;&lt;br&gt;&lt;img src=&#34;assets/images/wechat_group6.jpg&#34; alt=&#34;微信群 6 二维码&#34; width=&#34;250&#34;/&gt;&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;微信群 7&lt;/strong&gt;&lt;br&gt;&lt;img src=&#34;assets/images/wechat_group7.jpg&#34; alt=&#34;微信群 7 二维码&#34; width=&#34;250&#34;/&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;-友情链接&#34;&gt;🚩 友情链接
+&lt;/h2&gt;&lt;p&gt;感谢 &lt;strong&gt;LinuxDo&lt;/strong&gt; 社区的支持！&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linux.do/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/%e7%a4%be%e5%8c%ba-LinuxDo-blue?style=for-the-badge&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;LinuxDo&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-许可&#34;&gt;📄 许可
+&lt;/h2&gt;&lt;p&gt;MIT License — 详见 &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-star-history&#34;&gt;📈 Star History
+&lt;/h2&gt;&lt;a href=&#34;https://star-history.com/#lsdefine/GenericAgent&amp;Date&#34;&gt;
+ &lt;picture&gt;
+   &lt;source media=&#34;(prefers-color-scheme: dark)&#34; srcset=&#34;https://api.star-history.com/svg?repos=lsdefine/GenericAgent&amp;type=Date&amp;theme=dark&#34; /&gt;
+   &lt;source media=&#34;(prefers-color-scheme: light)&#34; srcset=&#34;https://api.star-history.com/svg?repos=lsdefine/GenericAgent&amp;type=Date&#34; /&gt;
+   &lt;img alt=&#34;Star History Chart&#34; src=&#34;https://api.star-history.com/svg?repos=lsdefine/GenericAgent&amp;type=Date&#34; /&gt;
+ &lt;/picture&gt;
+&lt;/a&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

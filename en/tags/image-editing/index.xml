@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Image Editing on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/image-editing/</link>
+        <description>Recent content in Image Editing on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sun, 29 Jun 2025 15:27:49 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/image-editing/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>flux</title>
+        <link>https://producthunt.programnotes.cn/en/p/flux/</link>
+        <pubDate>Sun, 29 Jun 2025 15:27:49 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/flux/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1668122989563-09152d286ff6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTExODIwNTJ8&amp;ixlib=rb-4.1.0" alt="Featured image of post flux" /&gt;&lt;h1 id=&#34;black-forest-labsflux&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/black-forest-labs/flux&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;black-forest-labs/flux&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;flux&#34;&gt;FLUX
+&lt;/h1&gt;&lt;p&gt;by Black Forest Labs: &lt;a class=&#34;link&#34; href=&#34;https://bfl.ai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://bfl.ai&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Documentation for our API can be found here: &lt;a class=&#34;link&#34; href=&#34;https://docs.bfl.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docs.bfl.ai&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/assets/grid.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;grid&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;This repo contains minimal inference code to run image generation &amp;amp; editing with our Flux open-weight models.&lt;/p&gt;
+&lt;h2 id=&#34;local-installation&#34;&gt;Local installation
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git clone https://github.com/black-forest-labs/flux
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;/flux
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python3.10 -m venv .venv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; .venv/bin/activate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -e &lt;span class=&#34;s2&#34;&gt;&amp;#34;.[all]&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;local-installation-with-tensorrt-support&#34;&gt;Local installation with TensorRT support
+&lt;/h3&gt;&lt;p&gt;If you would like to install the repository with &lt;a class=&#34;link&#34; href=&#34;https://github.com/NVIDIA/TensorRT&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;TensorRT&lt;/a&gt; support, you currently need to install a PyTorch image from NVIDIA instead. First install &lt;a class=&#34;link&#34; href=&#34;https://github.com/NVIDIA/enroot&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;enroot&lt;/a&gt;, next follow the steps below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git clone https://github.com/black-forest-labs/flux
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;enroot import &lt;span class=&#34;s1&#34;&gt;&amp;#39;docker://$oauthtoken@nvcr.io#nvidia/pytorch:25.01-py3&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;enroot create -n pti2501 nvidia+pytorch+25.01-py3.sqsh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;enroot start --rw -m &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PWD&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;/flux:/workspace/flux -r pti2501
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; flux
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -e &lt;span class=&#34;s2&#34;&gt;&amp;#34;.[tensorrt]&amp;#34;&lt;/span&gt; --extra-index-url https://pypi.nvidia.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;open-weight-models&#34;&gt;Open-weight models
+&lt;/h3&gt;&lt;p&gt;We are offering an extensive suite of open-weight models. For more information about the individual models, please refer to the link under &lt;strong&gt;Usage&lt;/strong&gt;.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Name&lt;/th&gt;
+					&lt;th&gt;Usage&lt;/th&gt;
+					&lt;th&gt;HuggingFace repo&lt;/th&gt;
+					&lt;th&gt;License&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;FLUX.1 [schnell]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/text-to-image.md&#34; &gt;Text to Image&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/black-forest-labs/FLUX.1-schnell&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://huggingface.co/black-forest-labs/FLUX.1-schnell&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;model_licenses/LICENSE-FLUX1-schnell&#34; &gt;apache-2.0&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;FLUX.1 [dev]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/text-to-image.md&#34; &gt;Text to Image&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/black-forest-labs/FLUX.1-dev&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://huggingface.co/black-forest-labs/FLUX.1-dev&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;model_licenses/LICENSE-FLUX1-dev&#34; &gt;FLUX.1-dev Non-Commercial License&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;FLUX.1 Fill [dev]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/fill.md&#34; &gt;In/Out-painting&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;model_licenses/LICENSE-FLUX1-dev&#34; &gt;FLUX.1-dev Non-Commercial License&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;FLUX.1 Canny [dev]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/structural-conditioning.md&#34; &gt;Structural Conditioning&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/black-forest-labs/FLUX.1-Canny-dev&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://huggingface.co/black-forest-labs/FLUX.1-Canny-dev&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;model_licenses/LICENSE-FLUX1-dev&#34; &gt;FLUX.1-dev Non-Commercial License&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;FLUX.1 Depth [dev]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/structural-conditioning.md&#34; &gt;Structural Conditioning&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;model_licenses/LICENSE-FLUX1-dev&#34; &gt;FLUX.1-dev Non-Commercial License&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;FLUX.1 Canny [dev] LoRA&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/structural-conditioning.md&#34; &gt;Structural Conditioning&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/black-forest-labs/FLUX.1-Canny-dev-lora&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://huggingface.co/black-forest-labs/FLUX.1-Canny-dev-lora&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;model_licenses/LICENSE-FLUX1-dev&#34; &gt;FLUX.1-dev Non-Commercial License&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;FLUX.1 Depth [dev] LoRA&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/structural-conditioning.md&#34; &gt;Structural Conditioning&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev-lora&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev-lora&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;model_licenses/LICENSE-FLUX1-dev&#34; &gt;FLUX.1-dev Non-Commercial License&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;FLUX.1 Redux [dev]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/image-variation.md&#34; &gt;Image variation&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;model_licenses/LICENSE-FLUX1-dev&#34; &gt;FLUX.1-dev Non-Commercial License&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;FLUX.1 Kontext [dev]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/image-editing.md&#34; &gt;Image editing&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;model_licenses/LICENSE-FLUX1-dev&#34; &gt;FLUX.1-dev Non-Commercial License&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The weights of the autoencoder are also released under &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/datasets/choosealicense/licenses/blob/main/markdown/apache-2.0.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;apache-2.0&lt;/a&gt; and can be found in the HuggingFace repos above.&lt;/p&gt;
+&lt;h2 id=&#34;api-usage&#34;&gt;API usage
+&lt;/h2&gt;&lt;p&gt;Our API offers access to all models including our Pro tier non-open weight models. Check out our API documentation &lt;a class=&#34;link&#34; href=&#34;https://docs.bfl.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docs.bfl.ai&lt;/a&gt; to learn more.&lt;/p&gt;
+&lt;h2 id=&#34;licensing-models-for-commercial-use&#34;&gt;Licensing models for commercial use
+&lt;/h2&gt;&lt;p&gt;You can license our models for commercial use here: &lt;a class=&#34;link&#34; href=&#34;https://bfl.ai/pricing/licensing&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://bfl.ai/pricing/licensing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;As the fee is based on a monthly usage, we provide code to automatically track your usage via the BFL API. To enable usage tracking please select &lt;em&gt;track_usage&lt;/em&gt; in the cli or click the corresponding checkmark in our provided demos.&lt;/p&gt;
+&lt;h3 id=&#34;example-using-flux1-kontext-with-usage-tracking&#34;&gt;Example: Using FLUX.1 Kontext with usage tracking
+&lt;/h3&gt;&lt;p&gt;We provide a reference implementation for running FLUX.1 with usage tracking enabled for commercial licensing.
+This can be customized as needed as long as the usage reporting is accurate.&lt;/p&gt;
+&lt;p&gt;For the reporting logic to work you will need to set your API key as an environment variable before running:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;BFL_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;your_api_key_here&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;You can call &lt;code&gt;FLUX.1 Kontext [dev]&lt;/code&gt; like this with tracking activated:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python -m flux kontext --track_usage --loop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For a single generation:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python -m flux kontext --track_usage --prompt &lt;span class=&#34;s2&#34;&gt;&amp;#34;replace the logo with the text &amp;#39;Black Forest Labs&amp;#39;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The above reporting logic works similarly for FLUX.1 [dev] and FLUX.1 Tools [dev].&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note that this is only required when using one or more of our open weights models commercially. More information on the commercial licensing can be found at the &lt;a class=&#34;link&#34; href=&#34;https://help.bfl.ai/collections/6939000511-licensing&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BFL Helpdesk&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation
+&lt;/h2&gt;&lt;p&gt;If you find the provided code or models useful for your research, consider citing them as:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bib&#34; data-lang=&#34;bib&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@misc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;labs2025flux1kontextflowmatching&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{FLUX.1 Kontext: Flow Matching for In-Context Image Generation and Editing in Latent Space}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{Black Forest Labs and Stephen Batifol and Andreas Blattmann and Frederic Boesel and Saksham Consul and Cyril Diagne and Tim Dockhorn and Jack English and Zion English and Patrick Esser and Sumith Kulal and Kyle Lacey and Yam Levi and Cheng Li and Dominik Lorenz and Jonas Müller and Dustin Podell and Robin Rombach and Harry Saini and Axel Sauer and Luke Smith}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{2025}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;eprint&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{2506.15742}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;archivePrefix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{arXiv}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;primaryClass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{cs.GR}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{https://arxiv.org/abs/2506.15742}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@misc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;flux2024&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{Black Forest Labs}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{FLUX}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{2024}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;howpublished&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{\url{https://github.com/black-forest-labs/flux}}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Product Hunt Daily | 2024-12-15</title>
+        <link>https://producthunt.programnotes.cn/en/p/product-hunt-daily-2024-12-15/</link>
+        <pubDate>Sun, 15 Dec 2024 07:20:19 +0000</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/product-hunt-daily-2024-12-15/</guid>
+        <description>&lt;img src="https://ph-files.imgix.net/78f9fe72-7d21-455c-9415-92340f1c393d.png?auto=format&amp;fit=crop&amp;frame=1&amp;h=512&amp;w=1024" alt="Featured image of post Product Hunt Daily | 2024-12-15" /&gt;&lt;h2 id=&#34;1-no-more-copyright&#34;&gt;1. No More Copyright
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Create copyright-free images instantly with GenAI&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: NoMoreCopyright uses GenAI to transform your images into unique, copyright-free versions instantly. Simply upload an image and get a fresh version in seconds, perfect for creative inspiration and exploration—no copyright worries, just freedom to create.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/IGOZHGNHOJSBM3?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/no-more-copyright-3?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/78f9fe72-7d21-455c-9415-92340f1c393d.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;No More Copyright&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: copyright-free, GenAI, image transformation, unique images, creative inspiration, instant creation, upload images, copyright worries, freedom to create, image editing&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺553&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2024-12-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-google-gemini-20&#34;&gt;2. Google Gemini 2.0
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Google&amp;rsquo;s new AI model for the agentic era&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Gemini 2.0 is Google&amp;rsquo;s most advanced AI model, enabling multimodal inputs and outputs like text, audio, and images. With faster performance, deep reasoning, and tool integration, it powers smarter apps and redefines AI-assisted tasks. Available now for devs.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/LYQHL4TSKIXWYQ?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/google-gemini-2-0?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/23b4748e-8e00-4b47-be73-61fd1c8c7860.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Google Gemini 2.0&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Google Gemini 2.0, AI model, agentic era, multimodal inputs, text, audio, images, advanced AI, faster performance, deep reasoning, tool integration, smarter apps, AI-assisted tasks, developers.&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺374&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2024-12-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-screencut-v20&#34;&gt;3. Screencut v2.0
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Screenshot editor #1 for iPhone&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Transform your screenshots in one click! Main features: ready-made templates, support for photos and videos, integration with Unsplash and Pexels, fast access via the share menu&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/BJKYJIMNMSUA4H?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/screencut-v2-0?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/b539ddef-d140-4752-b3a7-f3d50da01270.jpeg?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screencut v2.0&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Screencut, screenshot editor, iPhone app, screenshot transformation, ready-made templates, photo support, video support, Unsplash integration, Pexels integration, share menu access, quick editing, image editing, mobile app.&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺290&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2024-12-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-imerchai&#34;&gt;4. iMerch.ai
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Next-generation one-stop e-commerce platform&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: iMerch.ai is a next-gen AI E-commerce tool offering intelligent product recommendations and personalized product lists. With a lightweight, mobile-friendly storefront, it seamlessly integrates content and ecommerce to help users achieve faster, higher revenue.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/OHNWOZ7IAYB7FQ?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/imerch-ai?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/a70f9c1e-3eeb-4de7-af92-65e96402aea0.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;iMerch.ai&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: iMerch.ai, e-commerce platform, AI tool, product recommendations, personalized lists, mobile-friendly, lightweight storefront, content integration, revenue growth, next-gen technology&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺267&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2024-12-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-depth-ai&#34;&gt;5. Depth AI
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: AI that deeply understands your codebase&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Depth AI is a tool that helps you answer complex questions on large and messy codebases. It reduces time to onboard new engineers from months to days and enables teams to ship code faster. Use it wherever you work - our web app, Slack, GitHub Copilot and more.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/MIVHRKTXF66D34?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/depth-ai?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/075ec8f1-f484-418b-85d9-faeb030b952c.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Depth AI&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Depth AI, codebase understanding, AI tool, complex questions, onboarding engineers, faster shipping, web app, Slack integration, GitHub Copilot, software development, productivity, engineering teams, code analysis, developer support.&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺254&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2024-12-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-microsoft-phi-4&#34;&gt;6. Microsoft Phi-4
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Microsoft’s New Small Language Model For Complex Reasoning&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Phi-4 is Microsoft&amp;rsquo;s 14B-parameter small language model that excels in complex reasoning, particularly in math, while optimizing size &amp;amp; computational efficiency. Available on Azure AI Foundry &amp;amp; Hugging Face, it sets a new benchmark for AI performance at scale.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/ZDXBECOUMSI65B?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/microsoft-phi-4?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/f0599fcd-aa56-4d79-b85d-427d11901e63.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Microsoft Phi-4&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Microsoft Phi-4, small language model, complex reasoning, 14B parameters, math optimization, computational efficiency, Azure AI Foundry, Hugging Face, AI performance, benchmark.&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺208&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2024-12-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;7-mattebox&#34;&gt;7. Mattebox
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Make your photos &amp;amp; videos look amazing—without AI&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Mattebox is an image editing app focused on quality and speed. Edit RAW photos with pro-level processing modeled on analog film, and use beautiful filters that you can customize. Subscribe to Mattebox Pro to export filters to Lightroom, use Curves and more.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/JLP4MSLJMWUXZA?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/mattebox?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/8f612452-9222-4fe6-b57a-b9d02d3f0f57.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Mattebox&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Mattebox, image editing, photo editing, video editing, RAW processing, analog film, customizable filters, Mattebox Pro, Lightroom export, pro-level editing, quality, speed, photography app, video app.&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺168&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2024-12-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;8-just-gpt-it&#34;&gt;8. Just Gpt It
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Show others obnoxiously how to use ChatGPT&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Tired of people asking the most obvious questions? JustGptIt.com is here for you! Send these people an animation of &amp;ldquo;how to use ChatGPT&amp;rdquo;, as if they didn&amp;rsquo;t know. Be rude!&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/VPNREXZNA6EFRS?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/just-gpt-it?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/026f4c8e-a9d3-4dc6-ab8a-523aba9b9e56.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Just Gpt It&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Just Gpt It, ChatGPT tutorial, obnoxious guide, how to use ChatGPT, rude animations, obvious questions, user guide, ChatGPT help, funny tutorial, sarcastic advice&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺165&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2024-12-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;9-vesse-food-tracker&#34;&gt;9. Vesse Food Tracker
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Upload your photos, let our AI analyze and reveal insights!&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Vesse makes nutrition tracking effortless. Upload meal photos, and our AI instantly analyzes them to provide detailed nutritional insights. Stay informed, track your progress, and achieve your health goals with ease—your journey to better nutrition starts here&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/3R2TXKDUB4OOHW?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/vesse-food-tracker?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/acbaed32-a966-41ff-ab79-691f320daaad.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Vesse Food Tracker&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Vesse Food Tracker, nutrition tracking, AI analysis, meal photos, nutritional insights, health goals, effortless tracking, progress monitoring, better nutrition, food analysis&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺142&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2024-12-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;10-eigentbot&#34;&gt;10. EigentBot
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Build an AI community manager in seconds&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: EigentBot deploys an AI-powered community manager in seconds! - Seamlessly integrate with web links, files, Notion, GitHub, LinkedIn, and more. - Prioritizing privacy, we support local model deployment. - With one-click, get your bot running in just 3 seconds!&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/WPBPTWFGDETLZ5?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/eigentbot?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/de1ffb26-da0e-4db9-81f1-a11c7e1ac60a.jpeg?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;EigentBot&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: EigentBot, AI community manager, deploy AI, privacy-focused, local model deployment, seamless integration, web links, Notion, GitHub, LinkedIn, quick setup, one-click deployment, instant bot, community engagement.&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺81&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: No&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2024-12-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

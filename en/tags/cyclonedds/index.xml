@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>CycloneDDS on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/cyclonedds/</link>
+        <description>Recent content in CycloneDDS on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sun, 21 Sep 2025 15:24:57 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/cyclonedds/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>OM1</title>
+        <link>https://producthunt.programnotes.cn/en/p/om1/</link>
+        <pubDate>Sun, 21 Sep 2025 15:24:57 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/om1/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1675021278785-adc2f7d92173?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg0MzkzOTB8&amp;ixlib=rb-4.1.0" alt="Featured image of post OM1" /&gt;&lt;h1 id=&#34;openmindom1&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/OpenMind/OM1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenMind/OM1&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://github.com/user-attachments/assets/853153b7-351a-433d-9e1a-d257b781f93c&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;OM_Banner_X2 (1)&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;  &lt;a href=&#34;https://arxiv.org/abs/2412.18588&#34;&gt;Technical Paper&lt;/a&gt; |  &lt;a href=&#34;https://docs.openmind.org/&#34;&gt;Documentation&lt;/a&gt; |  &lt;a href=&#34;https://x.com/openmind_agi&#34;&gt;X&lt;/a&gt; | &lt;a href=&#34;https://discord.gg/VUjpg4ef5n&#34;&gt;Discord&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;OpenMind&amp;rsquo;s OM1 is a modular AI runtime that empowers developers to create and deploy multimodal AI agents across digital environments and physical robots&lt;/strong&gt;, including Humanoids, Phone Apps, websites, Quadrupeds, and educational robots such as TurtleBot 4. OM1 agents can process diverse inputs like web data, social media, camera feeds, and LIDAR, while enabling physical actions including motion, autonomous navigation, and natural conversations. The goal of OM1 is to make it easy to create highly capable human-focused robots, that are easy to upgrade and (re)configure to accommodate different physical form factors.&lt;/p&gt;
+&lt;h2 id=&#34;capabilities-of-om1&#34;&gt;Capabilities of OM1
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Modular Architecture&lt;/strong&gt;: Designed with Python for simplicity and seamless integration.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data Input&lt;/strong&gt;: Easily handles new data and sensors.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hardware Support via Plugins&lt;/strong&gt;: Supports new hardware through plugins for API endpoints and specific robot hardware connections to &lt;code&gt;ROS2&lt;/code&gt;, &lt;code&gt;Zenoh&lt;/code&gt;, and &lt;code&gt;CycloneDDS&lt;/code&gt;. (We recommend &lt;code&gt;Zenoh&lt;/code&gt; for all new development).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Web-Based Debugging Display&lt;/strong&gt;: Monitor the system in action with WebSim (available at http://localhost:8000/) for easy visual debugging.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pre-configured Endpoints&lt;/strong&gt;: Supports Voice-to-Speech, OpenAI’s &lt;code&gt;gpt-4o&lt;/code&gt;, DeepSeek, and multiple Visual Language Models (VLMs) with pre-configured endpoints for each service.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;architecture-overview&#34;&gt;Architecture Overview
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://github.com/user-attachments/assets/14e9b916-4df7-4700-9336-2983c85be311&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Artboard 1@4x 1 (1)&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;getting-started---hello-world&#34;&gt;Getting Started - Hello World
+&lt;/h2&gt;&lt;p&gt;To get started with OM1, let&amp;rsquo;s run the Spot agent. Spot uses your webcam to capture and label objects. These text captions are then sent to &lt;code&gt;OpenAI 4o&lt;/code&gt;, which returns &lt;code&gt;movement&lt;/code&gt;, &lt;code&gt;speech&lt;/code&gt; and &lt;code&gt;face&lt;/code&gt; action commands. These commands are displayed on WebSim along with basic timing and other debugging information.&lt;/p&gt;
+&lt;h3 id=&#34;package-management-and-venv&#34;&gt;Package Management and VENV
+&lt;/h3&gt;&lt;p&gt;You will need the &lt;a class=&#34;link&#34; href=&#34;https://docs.astral.sh/uv/getting-started/installation/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;uv&lt;/code&gt; package manager&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;clone-the-repo&#34;&gt;Clone the Repo
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/openmind/OM1.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; OM1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git submodule update --init
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uv venv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;install-dependencies&#34;&gt;Install Dependencies
+&lt;/h3&gt;&lt;p&gt;For MacOS&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install portaudio ffmpeg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For Linux&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install portaudio19-dev python-dev ffmpeg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;obtain-an-openmind-api-key&#34;&gt;Obtain an OpenMind API Key
+&lt;/h3&gt;&lt;p&gt;Obtain your API Key at &lt;a class=&#34;link&#34; href=&#34;https://portal.openmind.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenMind Portal&lt;/a&gt;. Copy it to &lt;code&gt;config/spot.json5&lt;/code&gt;, replacing the &lt;code&gt;openmind_free&lt;/code&gt; placeholder. Or, &lt;code&gt;cp env.example .env&lt;/code&gt; and add your key to the &lt;code&gt;.env&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;launching-om1&#34;&gt;Launching OM1
+&lt;/h3&gt;&lt;p&gt;Run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uv run src/run.py spot
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;After launching OM1, the Spot agent will interact with you and perform (simulated) actions. For more help connecting OM1 to your robot hardware, see &lt;a class=&#34;link&#34; href=&#34;https://docs.openmind.org/getting-started&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;getting started&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;whats-next&#34;&gt;What&amp;rsquo;s Next?
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Try out some &lt;a class=&#34;link&#34; href=&#34;https://docs.openmind.org/examples&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;examples&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add new &lt;code&gt;inputs&lt;/code&gt; and &lt;code&gt;actions&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Design custom agents and robots by creating your own &lt;code&gt;json5&lt;/code&gt; config files with custom combinations of inputs and actions.&lt;/li&gt;
+&lt;li&gt;Change the system prompts in the configuration files (located in &lt;code&gt;/config/&lt;/code&gt;) to create new behaviors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;interfacing-with-new-robot-hardware&#34;&gt;Interfacing with New Robot Hardware
+&lt;/h2&gt;&lt;p&gt;OM1 assumes that robot hardware provides a high-level SDK that accepts elemental movement and action commands such as &lt;code&gt;backflip&lt;/code&gt;, &lt;code&gt;run&lt;/code&gt;, &lt;code&gt;gently pick up the red apple&lt;/code&gt;, &lt;code&gt;move(0.37, 0, 0)&lt;/code&gt;, and &lt;code&gt;smile&lt;/code&gt;. An example is provided in &lt;code&gt;actions/move_safe/connector/ros2.py&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;elif&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;output_interface&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;action&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;shake paw&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sport_client&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sport_client&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Hello&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If your robot hardware does not yet provide a suitable HAL (hardware abstraction layer), traditional robotics approaches such as RL (reinforcement learning) in concert with suitable simulation environments (Unity, Gazebo), sensors (such as hand mounted ZED depth cameras), and custom VLAs will be needed for you to create one. It is further assumed that your HAL accepts motion trajectories, provides battery and thermal management/monitoring, and calibrates and tunes sensors such as IMUs, LIDARs, and magnetometers.&lt;/p&gt;
+&lt;p&gt;OM1 can interface with your HAL via USB, serial, ROS2, CycloneDDS, Zenoh, or websockets. For an example of an advanced humanoid HAL, please see &lt;a class=&#34;link&#34; href=&#34;https://github.com/unitreerobotics/unitree_sdk2/blob/adee312b081c656ecd0bb4e936eed96325546296/example/g1/high_level/g1_loco_client_example.cpp#L159&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Unitree&amp;rsquo;s C++ SDK&lt;/a&gt;. Frequently, a HAL, especially ROS2 code, will be dockerized and can then interface with OM1 through DDS middleware or websockets.&lt;/p&gt;
+&lt;h2 id=&#34;recommended-development-platforms&#34;&gt;Recommended Development Platforms
+&lt;/h2&gt;&lt;p&gt;OM1 is developed on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Jetson AGX Orin 64GB (running Ubuntu 22.04 and JetPack 6.1)&lt;/li&gt;
+&lt;li&gt;Mac Studio with Apple M2 Ultra with 48 GB unified memory (running MacOS Sequoia)&lt;/li&gt;
+&lt;li&gt;Mac Mini with Apple M4 Pro with 48 GB unified memory (running MacOS Sequoia)&lt;/li&gt;
+&lt;li&gt;Generic Linux machines (running Ubuntu 22.04)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;OM1 &lt;em&gt;should&lt;/em&gt; run on other platforms (such as Windows) and microcontrollers such as the Raspberry Pi 5 16GB.&lt;/p&gt;
+&lt;h2 id=&#34;full-autonomy-guidance&#34;&gt;Full Autonomy Guidance
+&lt;/h2&gt;&lt;p&gt;We&amp;rsquo;re excited to introduce &lt;strong&gt;full autonomy mode&lt;/strong&gt;, where three services work together in a loop without manual intervention:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;om1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;unitree_go2_ros2_sdk&lt;/strong&gt; – A ROS 2 package that provides SLAM (Simultaneous Localization and Mapping) capabilities for the Unitree Go2 robot using an RPLiDAR sensor, the SLAM Toolbox and the Nav2 stack.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;om1-avatar&lt;/strong&gt; – A modern React-based frontend application that provides the user interface and avatar display system for OM1 robotics software.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;intro-to-backpack&#34;&gt;Intro to Backpack?
+&lt;/h2&gt;&lt;p&gt;From research to real-world autonomy, a platform that learns, moves, and builds with you.
+We&amp;rsquo;ll shortly be releasing the &lt;strong&gt;BOM&lt;/strong&gt; and details on &lt;strong&gt;DIY&lt;/strong&gt; for the it.
+Stay tuned!&lt;/p&gt;
+&lt;p&gt;Clone the following repos -&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/OpenMind/OM1.git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/OpenMind/OM1.git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/OpenMind/unitree_go2_ros2_sdk.git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/OpenMind/unitree_go2_ros2_sdk.git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/OpenMind/OM1-avatar.git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/OpenMind/OM1-avatar.git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;starting-the-system&#34;&gt;Starting the system
+&lt;/h2&gt;&lt;p&gt;To start all services, run the following commands:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For OM1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; OM1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker-compose up om1 -d --no-build
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;For unitree_go2_ros2_sdk&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; unitree_go2_ros2_sdk
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker-compose up orchestrator -d --no-build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker-compose up om1_sensor -d --no-build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker-compose up watchdog -d --no-build
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;For OM1-avatar&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; OM1-avatar
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker-compose up om1_avatar -d --no-build
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;detailed-documentation&#34;&gt;Detailed Documentation
+&lt;/h2&gt;&lt;p&gt;More detailed documentation can be accessed at &lt;a class=&#34;link&#34; href=&#34;https://docs.openmind.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docs.openmind.org&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;contributing&#34;&gt;Contributing
+&lt;/h2&gt;&lt;p&gt;Please make sure to read the &lt;a class=&#34;link&#34; href=&#34;./CONTRIBUTING.md&#34; &gt;Contributing Guide&lt;/a&gt; before making a pull request.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;This project is licensed under the terms of the MIT License, which is a permissive free software license that allows users to freely use, modify, and distribute the software. The MIT License is a widely used and well-established license that is known for its simplicity and flexibility. By using the MIT License, this project aims to encourage collaboration, modification, and distribution of the software.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

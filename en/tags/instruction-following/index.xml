@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Instruction Following on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/instruction-following/</link>
+        <description>Recent content in Instruction Following on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 25 Jul 2025 15:33:27 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/instruction-following/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Qwen3</title>
+        <link>https://producthunt.programnotes.cn/en/p/qwen3/</link>
+        <pubDate>Fri, 25 Jul 2025 15:33:27 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/qwen3/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1537987571070-9df5420854b2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM0Mjg3NDh8&amp;ixlib=rb-4.1.0" alt="Featured image of post Qwen3" /&gt;&lt;h1 id=&#34;qwenlmqwen3&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/QwenLM/Qwen3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;QwenLM/Qwen3&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;qwen3&#34;&gt;Qwen3
+&lt;/h1&gt;&lt;p align=&#34;center&#34;&gt;
+    &lt;img src=&#34;https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/logo_qwen3.png&#34; width=&#34;400&#34;/&gt;
+&lt;p&gt;
+&lt;p align=&#34;center&#34;&gt;
+          💜 &lt;a href=&#34;https://chat.qwen.ai/&#34;&gt;&lt;b&gt;Qwen Chat&lt;/b&gt;&lt;/a&gt;&amp;nbsp&amp;nbsp | &amp;nbsp&amp;nbsp🤗 &lt;a href=&#34;https://huggingface.co/Qwen&#34;&gt;Hugging Face&lt;/a&gt;&amp;nbsp&amp;nbsp | &amp;nbsp&amp;nbsp🤖 &lt;a href=&#34;https://modelscope.cn/organization/qwen&#34;&gt;ModelScope&lt;/a&gt;&amp;nbsp&amp;nbsp | &amp;nbsp&amp;nbsp 📑 &lt;a href=&#34;https://arxiv.org/abs/2505.09388&#34;&gt;Paper&lt;/a&gt; &amp;nbsp&amp;nbsp | &amp;nbsp&amp;nbsp 📑 &lt;a href=&#34;https://qwenlm.github.io/blog/qwen3/&#34;&gt;Blog&lt;/a&gt; &amp;nbsp&amp;nbsp ｜ &amp;nbsp&amp;nbsp📖 &lt;a href=&#34;https://qwen.readthedocs.io/&#34;&gt;Documentation&lt;/a&gt;
+&lt;br&gt;
+🖥️ &lt;a href=&#34;https://huggingface.co/spaces/Qwen/Qwen3-Demo&#34;&gt;Demo&lt;/a&gt;&amp;nbsp&amp;nbsp | &amp;nbsp&amp;nbsp💬 &lt;a href=&#34;https://github.com/QwenLM/Qwen/blob/main/assets/wechat.png&#34;&gt;WeChat (微信)&lt;/a&gt;&amp;nbsp&amp;nbsp | &amp;nbsp&amp;nbsp🫨 &lt;a href=&#34;https://discord.gg/CV4E9rpNSD&#34;&gt;Discord&lt;/a&gt;&amp;nbsp&amp;nbsp
+&lt;/p&gt;
+&lt;p&gt;Visit our Hugging Face or ModelScope organization (click links above), search checkpoints with names starting with &lt;code&gt;Qwen3-&lt;/code&gt; or visit the &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/collections/Qwen/qwen3-67dd247413f0e2e4f653967f&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qwen3 collection&lt;/a&gt;, and you will find all you need! Enjoy!&lt;/p&gt;
+&lt;p&gt;To learn more about Qwen3, feel free to read our documentation &lt;/p&gt;
+\[[EN](https://qwen.readthedocs.io/en/latest/)|[ZH](https://qwen.readthedocs.io/zh-cn/latest/)\]&lt;p&gt;. Our documentation consists of the following sections:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Quickstart: the basic usages and demonstrations;&lt;/li&gt;
+&lt;li&gt;Inference: the guidance for the inference with Transformers, including batch inference, streaming, etc.;&lt;/li&gt;
+&lt;li&gt;Run Locally: the instructions for running LLM locally on CPU and GPU, with frameworks like llama.cpp and Ollama;&lt;/li&gt;
+&lt;li&gt;Deployment: the demonstration of how to deploy Qwen for large-scale inference with frameworks like SGLang, vLLM, TGI, etc.;&lt;/li&gt;
+&lt;li&gt;Quantization: the practice of quantizing LLMs with GPTQ, AWQ, as well as the guidance for how to make high-quality quantized GGUF files;&lt;/li&gt;
+&lt;li&gt;Training: the instructions for post-training, including SFT and RLHF (TODO) with frameworks like Axolotl, LLaMA-Factory, etc.&lt;/li&gt;
+&lt;li&gt;Framework: the usage of Qwen with frameworks for application, e.g., RAG, Agent, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction
+&lt;/h2&gt;&lt;p&gt;We are excited to introduce the updated version of the &lt;strong&gt;Qwen3-235B-A22B non-thinking mode&lt;/strong&gt;, named &lt;strong&gt;Qwen3-235B-A22B-Instruct-2507&lt;/strong&gt;, featuring the following key enhancements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Significant improvements&lt;/strong&gt; in general capabilities, including &lt;strong&gt;instruction following, logical reasoning, text comprehension, mathematics, science, coding and tool usage&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Substantial gains&lt;/strong&gt; in long-tail knowledge coverage across &lt;strong&gt;multiple languages&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Markedly better alignment&lt;/strong&gt; with user preferences in &lt;strong&gt;subjective and open-ended tasks&lt;/strong&gt;, enabling more helpful responses and higher-quality text generation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Enhanced capabilities&lt;/strong&gt; in &lt;strong&gt;256K-token long-context understanding&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3-235B-A22B-Instruct-2507.jpeg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Qwen3-235B-A22B-Instruct-2507&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The updated versions of &lt;strong&gt;more Qwen3 model sizes&lt;/strong&gt; and for &lt;strong&gt;thinking mode&lt;/strong&gt; are also expected to be released very soon. Stay tuned🚀&lt;/p&gt;
+&lt;details&gt;
+    &lt;summary&gt;&lt;b&gt;Previous News for Qwen3 Release&lt;/b&gt;&lt;/summary&gt;
+    &lt;p&gt;
+    We are excited to announce the release of Qwen3, the latest addition to the Qwen family of large language models. 
+    These models represent our most advanced and intelligent systems to date, improving from our experience in building QwQ and Qwen2.5.
+    We are making the weights of Qwen3 available to the public, including both dense and Mixture-of-Expert (MoE) models. 
+    &lt;br&gt;&lt;br&gt;
+    The highlights from Qwen3 include:
+        &lt;ul&gt;
+            &lt;li&gt;&lt;b&gt;Dense and Mixture-of-Experts (MoE) models of various sizes&lt;/b&gt;, available in 0.6B, 1.7B, 4B, 8B, 14B, 32B and 30B-A3B, 235B-A22B.&lt;/li&gt;
+            &lt;li&gt;&lt;b&gt;Seamless switching between thinking mode&lt;/b&gt; (for complex logical reasoning, math, and coding) and &lt;b&gt;non-thinking mode&lt;/b&gt; (for efficient, general-purpose chat), ensuring optimal performance across various scenarios.&lt;/li&gt;
+            &lt;li&gt;&lt;b&gt;Significantly enhancement in reasoning capabilities&lt;/b&gt;, surpassing previous QwQ (in thinking mode) and Qwen2.5 instruct models (in non-thinking mode) on mathematics, code generation, and commonsense logical reasoning.&lt;/li&gt;
+            &lt;li&gt;&lt;b&gt;Superior human preference alignment&lt;/b&gt;, excelling in creative writing, role-playing, multi-turn dialogues, and instruction following, to deliver a more natural, engaging, and immersive conversational experience.&lt;/li&gt;
+            &lt;li&gt;&lt;b&gt;Expertise in agent capabilities&lt;/b&gt;, enabling precise integration with external tools in both thinking and unthinking modes and achieving leading performance among open-source models in complex agent-based tasks.&lt;/li&gt;
+            &lt;li&gt;&lt;b&gt;Support of 100+ languages and dialects&lt;/b&gt; with strong capabilities for &lt;b&gt;multilingual instruction following&lt;/b&gt; and &lt;b&gt;translation&lt;/b&gt;.&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/p&gt;
+&lt;/details&gt;
+&lt;h2 id=&#34;news&#34;&gt;News
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;2025.07.21: We released the updated version of Qwen3-235B-A22B non-thinking mode, named Qwen3-235B-A22B-Instruct-2507, featuring significant enhancements over the previous version and supporting 256K-token long-context understanding. Check our &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;modelcard&lt;/a&gt; for more details!&lt;/li&gt;
+&lt;li&gt;2025.04.29: We released the Qwen3 series. Check our &lt;a class=&#34;link&#34; href=&#34;https://qwenlm.github.io/blog/qwen3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;blog&lt;/a&gt; for more details!&lt;/li&gt;
+&lt;li&gt;2024.09.19: We released the Qwen2.5 series. This time there are 3 extra model sizes: 3B, 14B, and 32B for more possibilities. Check our &lt;a class=&#34;link&#34; href=&#34;https://qwenlm.github.io/blog/qwen2.5&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;blog&lt;/a&gt; for more!&lt;/li&gt;
+&lt;li&gt;2024.06.06: We released the Qwen2 series. Check our &lt;a class=&#34;link&#34; href=&#34;https://qwenlm.github.io/blog/qwen2/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;blog&lt;/a&gt;!&lt;/li&gt;
+&lt;li&gt;2024.03.28: We released the first MoE model of Qwen: Qwen1.5-MoE-A2.7B! Temporarily, only HF transformers and vLLM support the model. We will soon add the support of llama.cpp, mlx-lm, etc. Check our &lt;a class=&#34;link&#34; href=&#34;https://qwenlm.github.io/blog/qwen-moe/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;blog&lt;/a&gt; for more information!&lt;/li&gt;
+&lt;li&gt;2024.02.05: We released the Qwen1.5 series.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;performance&#34;&gt;Performance
+&lt;/h2&gt;&lt;p&gt;Detailed evaluation results are reported in this &lt;a class=&#34;link&#34; href=&#34;https://qwenlm.github.io/blog/qwen3/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;📑 blog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For requirements on GPU memory and the respective throughput, see results &lt;a class=&#34;link&#34; href=&#34;https://qwen.readthedocs.io/en/latest/getting_started/speed_benchmark.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;run-qwen3&#34;&gt;Run Qwen3
+&lt;/h2&gt;&lt;h3 id=&#34;-transformers&#34;&gt;🤗 Transformers
+&lt;/h3&gt;&lt;p&gt;Transformers is a library of pretrained natural language processing for inference and training.
+The latest version of &lt;code&gt;transformers&lt;/code&gt; is recommended and &lt;code&gt;transformers&amp;gt;=4.51.0&lt;/code&gt; is required.&lt;/p&gt;
+&lt;p&gt;The following contains a code snippet illustrating how to use Qwen3-235B-A22B-Instruct-2507 to generate content based on given inputs.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;transformers&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AutoModelForCausalLM&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AutoTokenizer&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;model_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Qwen/Qwen3-235B-A22B-Instruct-2507&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# load the tokenizer and the model&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AutoTokenizer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_pretrained&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;model_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;model&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AutoModelForCausalLM&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_pretrained&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;model_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;torch_dtype&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;auto&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;device_map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;auto&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# prepare the model input&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;prompt&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Give me a short introduction to large language model.&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;messages&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;role&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;user&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prompt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;apply_chat_template&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;messages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;tokenize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;add_generation_prompt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;model_inputs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;return_tensors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;pt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;device&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# conduct text completion&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;generated_ids&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;model_inputs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;max_new_tokens&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;16384&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;output_ids&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;generated_ids&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;model_inputs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input_ids&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]):]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tolist&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;content&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;decode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;output_ids&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;skip_special_tokens&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;content:&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;content&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;[!Note]
+The updated version of Qwen3-235B-A22B, namely &lt;strong&gt;Qwen3-235B-A22B-Instruct-2507&lt;/strong&gt; supports &lt;strong&gt;only non-thinking mode&lt;/strong&gt; and &lt;strong&gt;does not generate &lt;code&gt;&amp;lt;think&amp;gt;&amp;lt;/think&amp;gt;&lt;/code&gt; blocks&lt;/strong&gt; in its output. Meanwhile, &lt;strong&gt;specifying &lt;code&gt;enable_thinking=False&lt;/code&gt; is no longer required&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;details&gt;
+    &lt;summary&gt;&lt;b&gt;Switching Thinking/Non-thinking Modes for Previous Qwen3 Hybrid Models&lt;/b&gt;&lt;/summary&gt;
+    &lt;p&gt;
+    By default, Qwen3 models will think before response.
+    This could be controlled by
+        &lt;ul&gt;
+            &lt;li&gt;&lt;code&gt;enable_thinking=False&lt;/code&gt;: Passing &lt;code&gt;enable_thinking=False&lt;/code&gt; to `tokenizer.apply_chat_template` will strictly prevent the model from generating thinking content.&lt;/li&gt;
+            &lt;li&gt;&lt;code&gt;/think&lt;/code&gt; and &lt;code&gt;/no_think&lt;/code&gt; instructions: Use those words in the system or user message to signify whether Qwen3 should think. In multi-turn conversations, the latest instruction is followed.&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/p&gt;
+&lt;/details&gt;
+&lt;h3 id=&#34;modelscope&#34;&gt;ModelScope
+&lt;/h3&gt;&lt;p&gt;We strongly advise users especially those in mainland China to use ModelScope.
+ModelScope adopts a Python API similar to Transformers.
+The CLI tool &lt;code&gt;modelscope download&lt;/code&gt; can help you solve issues concerning downloading checkpoints.&lt;/p&gt;
+&lt;h3 id=&#34;llamacpp&#34;&gt;llama.cpp
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ggml-org/llama.cpp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;llama.cpp&lt;/code&gt;&lt;/a&gt; enables LLM inference with minimal setup and state-of-the-art performance on a wide range of hardware.
+&lt;code&gt;llama.cpp&amp;gt;=b5092&lt;/code&gt; is required for the support of Qwen3 architecture.
+&lt;code&gt;llama.cpp&amp;gt;=b5401&lt;/code&gt; is recommended for the full support of the official Qwen3 chat template.&lt;/p&gt;
+&lt;p&gt;To use the CLI, run the following in a terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./llama-cli -hf Qwen/Qwen3-8B-GGUF:Q8_0 --jinja --color -ngl &lt;span class=&#34;m&#34;&gt;99&lt;/span&gt; -fa -sm row --temp 0.6 --top-k &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; --top-p 0.95 --min-p &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; -c &lt;span class=&#34;m&#34;&gt;40960&lt;/span&gt; -n &lt;span class=&#34;m&#34;&gt;32768&lt;/span&gt; --no-context-shift
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# CTRL+C to exit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To use the API server, run the following in a terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./llama-server -hf Qwen/Qwen3-8B-GGUF:Q8_0 --jinja --reasoning-format deepseek -ngl &lt;span class=&#34;m&#34;&gt;99&lt;/span&gt; -fa -sm row --temp 0.6 --top-k &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; --top-p 0.95 --min-p &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; -c &lt;span class=&#34;m&#34;&gt;40960&lt;/span&gt; -n &lt;span class=&#34;m&#34;&gt;32768&lt;/span&gt; --no-context-shift --port &lt;span class=&#34;m&#34;&gt;8080&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;A simple web front end will be at &lt;code&gt;http://localhost:8080&lt;/code&gt; and an OpenAI-compatible API will be at &lt;code&gt;http://localhost:8080/v1&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;For additional guides, please refer to &lt;a class=&#34;link&#34; href=&#34;https://qwen.readthedocs.io/en/latest/run_locally/llama.cpp.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;our documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!TIP]
+llama.cpp adopts &amp;ldquo;rotating context management&amp;rdquo; and infinite generation is made possible by evicting earlier tokens.
+It could configured by parameters and the commands above effectively disable it.
+For more details, please refer to &lt;a class=&#34;link&#34; href=&#34;https://qwen.readthedocs.io/en/latest/run_locally/llama.cpp.html#llama-cli&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;our documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;ollama&#34;&gt;Ollama
+&lt;/h3&gt;&lt;p&gt;After &lt;a class=&#34;link&#34; href=&#34;https://ollama.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;installing Ollama&lt;/a&gt;, you can initiate the Ollama service with the following command (Ollama v0.6.6 or higher is required):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ollama serve
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# You need to keep this service running whenever you are using ollama&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To pull a model checkpoint and run the model, use the &lt;code&gt;ollama run&lt;/code&gt; command. You can specify a model size by adding a suffix to &lt;code&gt;qwen3&lt;/code&gt;, such as &lt;code&gt;:8b&lt;/code&gt; or &lt;code&gt;:30b-a3b&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ollama run qwen3:8b
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Setting parameters, type &amp;#34;/set parameter num_ctx 40960&amp;#34; and &amp;#34;/set parameter num_predict 32768&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# To exit, type &amp;#34;/bye&amp;#34; and press ENTER&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;You can also access the Ollama service via its OpenAI-compatible API.
+Please note that you need to (1) keep &lt;code&gt;ollama serve&lt;/code&gt; running while using the API, and (2) execute &lt;code&gt;ollama run qwen3:8b&lt;/code&gt; before utilizing this API to ensure that the model checkpoint is prepared.
+The API is at &lt;code&gt;http://localhost:11434/v1/&lt;/code&gt; by default.&lt;/p&gt;
+&lt;p&gt;For additional details, please visit &lt;a class=&#34;link&#34; href=&#34;https://ollama.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ollama.ai&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!TIP]
+Ollama adopts the same &amp;ldquo;rotating context management&amp;rdquo; with llama.cpp.
+However, its default settings (&lt;code&gt;num_ctx&lt;/code&gt; 2048 and &lt;code&gt;num_predict&lt;/code&gt; -1), suggesting infinite generation with a 2048-token context,
+could lead to trouble for Qwen3 models.
+We recommend setting &lt;code&gt;num_ctx&lt;/code&gt; and &lt;code&gt;num_predict&lt;/code&gt; properly.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;lmstudio&#34;&gt;LMStudio
+&lt;/h3&gt;&lt;p&gt;Qwen3 has already been supported by &lt;a class=&#34;link&#34; href=&#34;https://lmstudio.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;lmstudio.ai&lt;/a&gt;. You can directly use LMStudio with our GGUF files.&lt;/p&gt;
+&lt;h3 id=&#34;executorch&#34;&gt;ExecuTorch
+&lt;/h3&gt;&lt;p&gt;To export and run on ExecuTorch (iOS, Android, Mac, Linux, and more), please follow this &lt;a class=&#34;link&#34; href=&#34;https://github.com/pytorch/executorch/blob/main/examples/models/qwen3/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;example&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;mnn&#34;&gt;MNN
+&lt;/h3&gt;&lt;p&gt;To export and run on MNN, which supports Qwen3 on mobile devices, please visit &lt;a class=&#34;link&#34; href=&#34;https://github.com/alibaba/MNN&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Alibaba MNN&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;mlx-lm&#34;&gt;MLX LM
+&lt;/h3&gt;&lt;p&gt;If you are running on Apple Silicon, &lt;a class=&#34;link&#34; href=&#34;https://github.com/ml-explore/mlx-lm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;mlx-lm&lt;/code&gt;&lt;/a&gt; also supports Qwen3 (&lt;code&gt;mlx-lm&amp;gt;=0.24.0&lt;/code&gt;).
+Look for models ending with MLX on Hugging Face Hub.&lt;/p&gt;
+&lt;h3 id=&#34;openvino&#34;&gt;OpenVINO
+&lt;/h3&gt;&lt;p&gt;If you are running on Intel CPU or GPU, &lt;a class=&#34;link&#34; href=&#34;https://github.com/openvinotoolkit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenVINO toolkit&lt;/a&gt; supports Qwen3.
+You can follow this &lt;a class=&#34;link&#34; href=&#34;https://github.com/openvinotoolkit/openvino_notebooks/blob/latest/notebooks/llm-chatbot/llm-chatbot.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;chatbot example&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- ### Text generation web UI
+
+You can directly use [`text-generation-webui`](https://github.com/oobabooga/text-generation-webui) for creating a web UI demo. If you use GGUF, remember to install the latest wheel of `llama.cpp` with the support of Qwen2.5. --&gt;
+&lt;!-- ### llamafile
+
+Clone [`llamafile`](https://github.com/Mozilla-Ocho/llamafile), run source install, and then create your own llamafile with the GGUF file following the guide [here](https://github.com/Mozilla-Ocho/llamafile?tab=readme-ov-file#creating-llamafiles). You are able to run one line of command, say `./qwen.llamafile`, to create a demo. --&gt;
+&lt;h2 id=&#34;deploy-qwen3&#34;&gt;Deploy Qwen3
+&lt;/h2&gt;&lt;p&gt;Qwen3 is supported by multiple inference frameworks.
+Here we demonstrate the usage of &lt;code&gt;SGLang&lt;/code&gt;, &lt;code&gt;vLLM&lt;/code&gt; and &lt;code&gt;TensorRT-LLM&lt;/code&gt;.
+You can also find Qwen3 models from various inference providers, e.g., &lt;a class=&#34;link&#34; href=&#34;https://www.alibabacloud.com/en/product/modelstudio&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Alibaba Cloud Model Studio&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;sglang&#34;&gt;SGLang
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/sgl-project/sglang&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SGLang&lt;/a&gt; is a fast serving framework for large language models and vision language models.
+SGLang could be used to launch a server with OpenAI-compatible API service.
+&lt;code&gt;sglang&amp;gt;=0.4.6.post1&lt;/code&gt; is required.
+It is as easy as&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python -m sglang.launch_server --model-path Qwen/Qwen3-8B --port &lt;span class=&#34;m&#34;&gt;30000&lt;/span&gt; --reasoning-parser qwen3
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;An OpenAI-compatible API will be available at &lt;code&gt;http://localhost:30000/v1&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;vllm&#34;&gt;vLLM
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vllm-project/vllm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vLLM&lt;/a&gt; is a high-throughput and memory-efficient inference and serving engine for LLMs.
+&lt;code&gt;vllm&amp;gt;=0.8.5&lt;/code&gt; is recommended.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vllm serve Qwen/Qwen3-8B --port &lt;span class=&#34;m&#34;&gt;8000&lt;/span&gt; --enable-reasoning --reasoning-parser deepseek_r1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;An OpenAI-compatible API will be available at &lt;code&gt;http://localhost:8000/v1&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;tensorrt-llm&#34;&gt;TensorRT-LLM
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NVIDIA/TensorRT-LLM&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;TensorRT-LLM&lt;/a&gt; is an open-source LLM inference engine from NVIDIA, which provides optimizations including custom attention kernels, quantization and more on NVIDIA GPUs. Qwen3 is supported in its re-architected &lt;a class=&#34;link&#34; href=&#34;https://nvidia.github.io/TensorRT-LLM/torch.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyTorch backend&lt;/a&gt;. &lt;code&gt;tensorrt_llm&amp;gt;=0.20.0rc3&lt;/code&gt; is recommended. Please refer to the &lt;a class=&#34;link&#34; href=&#34;https://github.com/NVIDIA/TensorRT-LLM/blob/main/examples/models/core/qwen/README.md#qwen3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt; page for more details.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;trtllm-serve Qwen/Qwen3-8B --host localhost --port &lt;span class=&#34;m&#34;&gt;8000&lt;/span&gt; --backend pytorch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;An OpenAI-compatible API will be available at &lt;code&gt;http://localhost:8000/v1&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;mindie&#34;&gt;MindIE
+&lt;/h3&gt;&lt;p&gt;For deployment on Ascend NPUs, please visit &lt;a class=&#34;link&#34; href=&#34;https://modelers.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Modelers&lt;/a&gt; and search for Qwen3.&lt;/p&gt;
+&lt;!-- 
+### OpenLLM
+
+[OpenLLM](https://github.com/bentoml/OpenLLM) allows you to easily run Qwen2.5 as OpenAI-compatible APIs. You can start a model server using `openllm serve`. For example:
+
+```bash
+openllm serve qwen2.5:7b
+```
+
+The server is active at `http://localhost:3000/`, providing OpenAI-compatible APIs. You can create an OpenAI client to call its chat API. For more information, refer to [our documentation](https://qwen.readthedocs.io/en/latest/deployment/openllm.html). --&gt;
+&lt;h2 id=&#34;build-with-qwen3&#34;&gt;Build with Qwen3
+&lt;/h2&gt;&lt;h3 id=&#34;tool-use&#34;&gt;Tool Use
+&lt;/h3&gt;&lt;p&gt;For tool use capabilities, we recommend taking a look at &lt;a class=&#34;link&#34; href=&#34;https://github.com/QwenLM/Qwen-Agent&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qwen-Agent&lt;/a&gt;, which provides a wrapper around these APIs to support tool use or function calling with MCP support.
+Tool use with Qwen3 can also be conducted with SGLang, vLLM, Transformers, llama.cpp, Ollama, etc.
+Follow guides in our documentation to see how to enable the support.&lt;/p&gt;
+&lt;h3 id=&#34;finetuning&#34;&gt;Finetuning
+&lt;/h3&gt;&lt;p&gt;We advise you to use training frameworks, including &lt;a class=&#34;link&#34; href=&#34;https://github.com/OpenAccess-AI-Collective/axolotl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Axolotl&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/unslothai/unsloth&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;UnSloth&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/modelscope/swift&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Swift&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/hiyouga/LLaMA-Factory&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Llama-Factory&lt;/a&gt;, etc., to finetune your models with SFT, DPO, GRPO, etc.&lt;/p&gt;
+&lt;h2 id=&#34;license-agreement&#34;&gt;License Agreement
+&lt;/h2&gt;&lt;p&gt;All our open-weight models are licensed under Apache 2.0.
+You can find the license files in the respective Hugging Face repositories.&lt;/p&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation
+&lt;/h2&gt;&lt;p&gt;If you find our work helpful, feel free to give us a cite.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@article&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;qwen3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{Qwen3 Technical Report}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{An Yang and Anfeng Li and Baosong Yang and Beichen Zhang and Binyuan Hui and Bo Zheng and Bowen Yu and Chang Gao and Chengen Huang and Chenxu Lv and Chujie Zheng and Dayiheng Liu and Fan Zhou and Fei Huang and Feng Hu and Hao Ge and Haoran Wei and Huan Lin and Jialong Tang and Jian Yang and Jianhong Tu and Jianwei Zhang and Jianxin Yang and Jiaxi Yang and Jing Zhou and Jingren Zhou and Junyang Lin and Kai Dang and Keqin Bao and Kexin Yang and Le Yu and Lianghao Deng and Mei Li and Mingfeng Xue and Mingze Li and Pei Zhang and Peng Wang and Qin Zhu and Rui Men and Ruize Gao and Shixuan Liu and Shuang Luo and Tianhao Li and Tianyi Tang and Wenbiao Yin and Xingzhang Ren and Xinyu Wang and Xinyu Zhang and Xuancheng Ren and Yang Fan and Yang Su and Yichang Zhang and Yinger Zhang and Yu Wan and Yuqiong Liu and Zekun Wang and Zeyu Cui and Zhenru Zhang and Zhipeng Zhou and Zihan Qiu}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;journal&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{arXiv preprint arXiv:2505.09388}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{2025}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@article&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;qwen2.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{Qwen2.5 Technical Report}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{An Yang and Baosong Yang and Beichen Zhang and Binyuan Hui and Bo Zheng and Bowen Yu and Chengyuan Li and Dayiheng Liu and Fei Huang and Haoran Wei and Huan Lin and Jian Yang and Jianhong Tu and Jianwei Zhang and Jianxin Yang and Jiaxi Yang and Jingren Zhou and Junyang Lin and Kai Dang and Keming Lu and Keqin Bao and Kexin Yang and Le Yu and Mei Li and Mingfeng Xue and Pei Zhang and Qin Zhu and Rui Men and Runji Lin and Tianhao Li and Tingyu Xia and Xingzhang Ren and Xuancheng Ren and Yang Fan and Yang Su and Yichang Zhang and Yu Wan and Yuqiong Liu and Zeyu Cui and Zhenru Zhang and Zihan Qiu}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;journal&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{arXiv preprint arXiv:2412.15115}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{2024}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@article&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;qwen2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{Qwen2 Technical Report}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{An Yang and Baosong Yang and Binyuan Hui and Bo Zheng and Bowen Yu and Chang Zhou and Chengpeng Li and Chengyuan Li and Dayiheng Liu and Fei Huang and Guanting Dong and Haoran Wei and Huan Lin and Jialong Tang and Jialin Wang and Jian Yang and Jianhong Tu and Jianwei Zhang and Jianxin Ma and Jin Xu and Jingren Zhou and Jinze Bai and Jinzheng He and Junyang Lin and Kai Dang and Keming Lu and Keqin Chen and Kexin Yang and Mei Li and Mingfeng Xue and Na Ni and Pei Zhang and Peng Wang and Ru Peng and Rui Men and Ruize Gao and Runji Lin and Shijie Wang and Shuai Bai and Sinan Tan and Tianhang Zhu and Tianhao Li and Tianyu Liu and Wenbin Ge and Xiaodong Deng and Xiaohuan Zhou and Xingzhang Ren and Xinyu Zhang and Xipin Wei and Xuancheng Ren and Yang Fan and Yang Yao and Yichang Zhang and Yu Wan and Yunfei Chu and Yuqiong Liu and Zeyu Cui and Zhenru Zhang and Zhihao Fan}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;journal&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{arXiv preprint arXiv:2407.10671}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{2024}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;contact-us&#34;&gt;Contact Us
+&lt;/h2&gt;&lt;p&gt;If you are interested to leave a message to either our research team or product team, join our &lt;a class=&#34;link&#34; href=&#34;https://discord.gg/z3GAxXZ9Ce&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Discord&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;assets/wechat.png&#34; &gt;WeChat groups&lt;/a&gt;!&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>ERNIE</title>
+        <link>https://producthunt.programnotes.cn/en/p/ernie/</link>
+        <pubDate>Thu, 03 Jul 2025 15:31:05 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/ernie/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1676818858676-6a8c7d8ec939?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE1Mjc3NDd8&amp;ixlib=rb-4.1.0" alt="Featured image of post ERNIE" /&gt;&lt;h1 id=&#34;paddlepaddleernie&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/PaddlePaddle/ERNIE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PaddlePaddle/ERNIE&lt;/a&gt;
+&lt;/h1&gt;&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://github.com/user-attachments/assets/9ad1ffce-2310-4f80-a3cd-7a117bfb4f17&#34; width=&#34;300px&#34;&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://ernie.baidu.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ERNIE Bot&lt;/a&gt; |  &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/baidu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🤗Hugging Face&lt;/a&gt; | &lt;a class=&#34;link&#34; href=&#34;https://aistudio.baidu.com/modelsoverview&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AI Studio&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;📑 &lt;a class=&#34;link&#34; href=&#34;https://yiyan.baidu.com/blog/posts/ernie4.5&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Blog&lt;/a&gt; | 📚 &lt;a class=&#34;link&#34; href=&#34;./cookbook/&#34; &gt;Cookbook&lt;/a&gt; | 📑 &lt;a class=&#34;link&#34; href=&#34;https://yiyan.baidu.com/blog/publication/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Paper&lt;/a&gt;  | 🛠️ &lt;a class=&#34;link&#34; href=&#34;./docs/erniekit.md&#34; &gt;Training&lt;/a&gt;  | ⚡️ &lt;a class=&#34;link&#34; href=&#34;https://github.com/PaddlePaddle/FastDeploy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Deploy&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;introduction-to-ernie-45&#34;&gt;Introduction to ERNIE 4.5
+&lt;/h2&gt;&lt;p&gt;We introduce ERNIE 4.5, a new family of large-scale multimodal models comprising 10 distinct variants. The model family consist of Mixture-of-Experts (MoE) models with 47B and 3B active parameters, with the largest model having 424B total parameters, as well as a 0.3B dense model. For the MoE architecture, we propose a novel heterogeneous modality structure, which supports parameter sharing across modalities while also allowing dedicated parameters for each individual modality.  This MoE architecture has the advantage to enhance multimodal understanding without compromising, and even improving, performance on text-related tasks. All of our models are trained with optimal efficiency using the &lt;a class=&#34;link&#34; href=&#34;https://github.com/PaddlePaddle/Paddle&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PaddlePaddle&lt;/a&gt; deep learning framework, which also enables high-performance inference and streamlined deployment for them. We achieve 47% Model FLOPs Utilization (MFU) in our largest ERNIE 4.5 language model pre-training. Experimental results show that our models achieve state-of-the-art performance across multiple text and multimodal benchmarks, especially in instruction following, world knowledge memorization, visual understanding and multimodal reasoning. All models are publicly accessible under Apache 2.0 to support future research and development in the field. Additionally, we open source the development toolkits for ERNIE 4.5, featuring industrial-grade capabilities, resource-efficient training and inference workflows, and multi-hardware compatibility.&lt;/p&gt;
+&lt;/br&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;p&gt;&lt;strong&gt;ERNIE 4.5&lt;/strong&gt;&lt;/p&gt;
+&lt;table style=&#34;table-layout: auto; border-collapse: collapse; border: 1px solid #ddd; text-align: center;&#34;&gt;
+  &lt;thead class=&#34;ant-table-thead&#34;&gt;
+    &lt;tr&gt;
+      &lt;th colspan=&#34;2&#34; style=&#34;border: 1px solid #ddd;text-align: center;background: lightgray;vertical-align: middle;color:black&#34; &gt;ERNIE 4.5 Models &lt;/th&gt;
+      &lt;th colspan=&#34;3&#34; style=&#34;border: 1px solid #ddd;text-align: center;background: lightgray;vertical-align: middle;color:black&#34;&gt;Model Information&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th style=&#34;border: 1px solid #ddd;width: 100px;text-align: center;background: lightgray;vertical-align: middle;color:black&#34;&gt;Model Category&lt;/th&gt;
+      &lt;th style=&#34;border: 1px solid #ddd;width: 250px;text-align: center;background: lightgray;vertical-align: middle;color:black&#34;&gt;Model&lt;/th&gt;
+      &lt;th style=&#34;border: 1px solid #ddd; width: 100px;text-align: center;background: lightgray;vertical-align: middle;color:black&#34;&gt;Input Modality&lt;/th&gt;
+      &lt;th style=&#34;border: 1px solid #ddd; width: 100px;text-align: center;background: lightgray;vertical-align: middle;color:black&#34;&gt;Output Modality&lt;/th&gt;
+      &lt;th style=&#34;border: 1px solid #ddd; width: 100px;text-align: center;background: lightgray;vertical-align: middle;color:black&#34;&gt;Context Window
+&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody class=&#34;ant-table-tbody&#34;&gt;
+    &lt;tr&gt;
+      &lt;td rowspan=&#34;4&#34; style=&#34;border: 1px solid #ddd;vertical-align: middle;&#34;&gt;Large Language Models (LLMs)&lt;/td&gt;
+      &lt;td style=&#34;border: 1px solid #ddd;&#34;&gt;ERNIE-4.5-300B-A47B-Base&lt;/td&gt;
+      &lt;td rowspan=&#34;4&#34;style=&#34;border: 1px solid #ddd;&#34;&gt;Text&lt;/td&gt;
+      &lt;td rowspan=&#34;4&#34;style=&#34;border: 1px solid #ddd;&#34;&gt;Text&lt;/td&gt;
+      &lt;td rowspan=&#34;10&#34; style=&#34;border: 1px solid #ddd;&#34;&gt;128K&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&#34;border: 1px solid #ddd;&#34;&gt;ERNIE-4.5-300B-A47B&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&#34;border: 1px solid #ddd;&#34;&gt;ERNIE-4.5-21B-A3B-Base&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&#34;border: 1px solid #ddd;&#34;&gt;ERNIE-4.5-21B-A3B&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td rowspan=&#34;4&#34; style=&#34;border: 1px solid #ddd;vertical-align: middle;&#34;&gt; Vision-Language Models (VLMs)&lt;/td&gt;
+      &lt;td style=&#34;border: 1px solid #ddd;&#34;&gt;ERNIE-4.5-VL-424B-A47B-Base&lt;/td&gt;
+      &lt;td rowspan=&#34;4&#34;style=&#34;border: 1px solid #ddd;&#34;&gt;Text/Image/Video&lt;/td&gt;
+      &lt;td rowspan=&#34;4&#34;style=&#34;border: 1px solid #ddd;&#34;&gt;Text&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&#34;border: 1px solid #ddd;&#34;&gt;ERNIE-4.5-VL-424B-A47B&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&#34;border: 1px solid #ddd;&#34;&gt;ERNIE-4.5-VL-28B-A3B-Base&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&#34;border: 1px solid #ddd;&#34;&gt;ERNIE-4.5-VL-28B-A3B&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td rowspan=&#34;2&#34; style=&#34;border: 1px solid #ddd;vertical-align: middle;&#34;&gt;Dense Models&lt;/td&gt;
+      &lt;td style=&#34;border: 1px solid #ddd;&#34;&gt;ERNIE-4.5-0.3B-Base&lt;/td&gt;
+      &lt;td rowspan=&#34;2&#34;style=&#34;border: 1px solid #ddd;&#34;&gt;Text&lt;/td&gt;
+      &lt;td rowspan=&#34;2&#34;style=&#34;border: 1px solid #ddd;&#34;&gt;Text&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&#34;border: 1px solid #ddd;&#34;&gt;ERNIE-4.5-0.3B&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;Note: All models (including pre-trained weights and inference code) have been released on &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/baidu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🤗Hugging Face&lt;/a&gt;, and &lt;a class=&#34;link&#34; href=&#34;https://aistudio.baidu.com/index&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AI Studio&lt;/a&gt;. Check our &lt;a class=&#34;link&#34; href=&#34;https://yiyan.baidu.com/blog/posts/ernie4.5&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;blog&lt;/a&gt; for more details.&lt;/em&gt;&lt;/p&gt;
+&lt;/br&gt;
+&lt;h2 id=&#34;highlights&#34;&gt;Highlights
+&lt;/h2&gt;&lt;p&gt;Our model family is characterized by three key innovations:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Multimodal Heterogeneous MoE Pre-Training:&lt;/strong&gt; Our models are jointly trained on both textual and visual modalities to better capture the nuances of multimodal information and improve performance on tasks involving text understanding and generation, image understanding, and cross-modal reasoning. To achieve this without one modality hindering the learning of another, we designed a &lt;em&gt;heterogeneous MoE structure&lt;/em&gt;, incorporated &lt;em&gt;modality-isolated routing&lt;/em&gt;, and employed &lt;em&gt;router orthogonal loss&lt;/em&gt; and &lt;em&gt;multimodal token-balanced loss&lt;/em&gt;. These architectural choices ensure that both modalities are effectively represented, allowing for mutual reinforcement during training.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Scaling-Efficient Infrastructure:&lt;/strong&gt; We propose a novel heterogeneous hybrid parallelism and hierarchical load balancing strategy for efficient training of ERNIE 4.5 models. By using intra-node expert parallelism, memory-efficient pipeline scheduling, FP8 mixed-precision training and finegrained recomputation methods, we achieve remarkable pre-training throughput. For inference, we propose &lt;em&gt;multi-expert parallel collaboration&lt;/em&gt; method and &lt;em&gt;convolutional code quantization&lt;/em&gt; algorithm to achieve 4-bit/2-bit lossless quantization. Furthermore, we introduce PD disaggregation with dynamic role switching for effective resource utilization to enhance inference performance for ERNIE 4.5 MoE models. Built on &lt;a class=&#34;link&#34; href=&#34;https://github.com/PaddlePaddle/Paddle&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PaddlePaddle&lt;/a&gt;, ERNIE 4.5 delivers high-performance inference across a wide range of hardware platforms.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Modality-Specific Post-Training:&lt;/strong&gt; To meet the diverse requirements of real-world applications, we fine-tuned variants of the pre-trained model for specific modalities. Our LLMs are optimized for general-purpose language understanding and generation. The VLMs focuses on visuallanguage understanding and supports both thinking and non-thinking modes. Each model employed a combination of &lt;em&gt;Supervised Fine-tuning (SFT)&lt;/em&gt;, &lt;em&gt;Direct Preference Optimization (DPO)&lt;/em&gt; or a modified reinforcement learning method named &lt;em&gt;Unified Preference Optimization (UPO)&lt;/em&gt; for post-training.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/br&gt;
+&lt;h2 id=&#34;performance-and-benchmark-results&#34;&gt;Performance and Benchmark Results
+&lt;/h2&gt;&lt;p&gt;ERNIE-4.5-300B-A47B-Base surpasses DeepSeek-V3-671B-A37B-Base on 22 out of 28 benchmarks, demonstrating leading performance across all major capability categories. This underscores the substantial improvements in generalization, reasoning, and knowledge-intensive tasks brought about by scaling up the ERNIE-4.5-Base model relative to other state-of-the-art large models. With a total parameter size of 21B (approximately 70% that of Qwen3-30B), ERNIE-4.5-21B-A3B-Base outperforms Qwen3-30B-A3B-Base on several math and reasoning benchmarks, including BBH and CMATH. ERNIE-4.5-21B-A3B-Base remains highly competitive given its significantly smaller model size, demonstrating notable parameter efficiency and favorable performance trade-offs.&lt;/p&gt;
+&lt;p&gt;ERNIE-4.5-300B-A47B, the post trained model, demonstrates significant strengths in instruction following and knowledge tasks, as evidenced by the state-of-the-art scores on benchmarks such as IFEval, Multi-IF, SimpleQA, and ChineseSimpleQA. The lightweight model ERNIE-4.5-21B-A3B achieves competitive performance compared to Qwen3-30B-A3B, despite having approximately 30% fewer total parameters.&lt;/p&gt;
+&lt;p&gt;In the non-thinking mode, ERNIE-4.5-VL exhibits outstanding proficiency in visual perception, document and chart understanding, and visual knowledge, performing strongly across a range of established benchmarks. Under the thinking mode, ERNIE-4.5-VL not only demonstrates enhanced reasoning abilities compared to the non-thinking mode, but also retains the strong perception capabilities of the latter. ERNIE-4.5-VL-424B-A47B delivers consistently strong results across the various multimodal evaluation benchmarks. Its thinking mode offers a distinct advantage on challenging benchmarks such as MathVista, MMMU, and VisualPuzzle, while maintaining competitive performance on perception-focused datasets like CV-Bench and RealWorldQA. The lightweight vision-language model ERNIE-4.5-28B-A3B achieves competitive or even superior performance compared to Qwen2.5-VL-7B and Qwen2.5-VL-32B across most benchmarks, despite using significantly fewer activation parameters. Notably, our lightweight model also supports both thinking and non-thinking modes, offering functionalities consistent with ERNIE-4.5-VL-424B-A47B.&lt;/p&gt;
+&lt;h3 id=&#34;performace-of-ernie-45-pre-trained-models&#34;&gt;Performace of ERNIE-4.5 pre-trained models
+&lt;/h3&gt;&lt;div align=&#34;center&#34;&gt;
+&lt;img src=&#34;https://yiyan.baidu.com/blog/posts/ernie4.5/base_model_benchmark.png&#34; style=&#34;max-width: 80%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;performance-of-post-trained-model-ernie-45-300b-a47b&#34;&gt;Performance of post-trained model ERNIE-4.5-300B-A47B
+&lt;/h3&gt;&lt;div align=&#34;center&#34;&gt;
+&lt;img src=&#34;https://yiyan.baidu.com/blog/posts/ernie4.5/chat_model_benchmark1.png&#34; style=&#34;max-width: 80%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;performance-of-post-trained-model-ernie-45-21b-a3b&#34;&gt;Performance of post-trained model ERNIE-4.5-21B-A3B
+&lt;/h3&gt;&lt;div align=&#34;center&#34;&gt;
+&lt;img src=&#34;https://github.com/user-attachments/assets/5bacaae8-ef27-494d-8c65-589ba187a084&#34; style=&#34;max-width: 80%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;performance-of-post-trained-multimodal-models-in-thinking-mode&#34;&gt;Performance of post-trained multimodal models in thinking mode
+&lt;/h3&gt;&lt;div align=&#34;center&#34;&gt;
+&lt;img src=&#34;https://yiyan.baidu.com/blog/posts/ernie4.5/vl_model_thinking_benchmark.png&#34; style=&#34;max-width: 80%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;performance-of-post-trained-multimodal-models-in-non-thinking-mode&#34;&gt;Performance of post-trained multimodal models in non-thinking mode
+&lt;/h3&gt;&lt;div align=&#34;center&#34;&gt;
+&lt;img src=&#34;https://github.com/user-attachments/assets/3ad69a9d-1233-48be-a7c4-b816d3aa17ca&#34; style=&#34;max-width: 80%; height: auto;&#34;&gt;
+&lt;/div&gt;
+&lt;/br&gt;
+&lt;h2 id=&#34;model-development&#34;&gt;Model Development
+&lt;/h2&gt;&lt;p&gt;ERNIE 4.5 models are trained and deployed for inference using the &lt;a class=&#34;link&#34; href=&#34;%28https://github.com/PaddlePaddle/Paddle%29&#34; &gt;PaddlePaddle&lt;/a&gt; framework. The full workflow of training, compression, and inference for ERNIE 4.5 is supported through the &lt;a class=&#34;link&#34; href=&#34;./docs/erniekit.md&#34; &gt;ERNIEKit&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://github.com/PaddlePaddle/FastDeploy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FastDeploy&lt;/a&gt; toolkit. The table below details the feature matrix of the ERNIE 4.5 model family for training and inference.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Model&lt;/th&gt;
+					&lt;th&gt;Training&lt;/th&gt;
+					&lt;th&gt;Inference&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ERNIE-4.5-300B-A47B-Base&lt;/td&gt;
+					&lt;td&gt;SFT/SFT-LoRA/DPO/DPO-LoRA&lt;/td&gt;
+					&lt;td&gt;BF16 / W4A16C16 / W8A16C16 / FP8&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ERNIE-4.5-300B-A47B&lt;/td&gt;
+					&lt;td&gt;SFT/SFT-LoRA/DPO/DPO-LoRA/QAT&lt;/td&gt;
+					&lt;td&gt;BF16 / W4A16C16 / W8A16C16 / W4A8C8 / FP8  / 2Bits&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ERNIE-4.5-21B-A3B-Base&lt;/td&gt;
+					&lt;td&gt;SFT/SFT-LoRA/DPO/DPO-LoRA&lt;/td&gt;
+					&lt;td&gt;BF16 / W4A16C16 / W8A16C16 / FP8&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ERNIE-4.5-21B-A3B&lt;/td&gt;
+					&lt;td&gt;SFT/SFT-LoRA/DPO/DPO-LoRA&lt;/td&gt;
+					&lt;td&gt;BF16 / W4A16C16 / W8A16C16 / FP8&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ERNIE-4.5-VL-424B-A47B-Base&lt;/td&gt;
+					&lt;td&gt;Coming Soon&lt;/td&gt;
+					&lt;td&gt;BF16 / W4A16C16 / W8A16C16 / FP8&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ERNIE-4.5-VL-424B-A47B&lt;/td&gt;
+					&lt;td&gt;Coming Soon&lt;/td&gt;
+					&lt;td&gt;BF16 / W4A16C16 / W8A16C16 / FP8&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ERNIE-4.5-VL-28B-A3B-Base&lt;/td&gt;
+					&lt;td&gt;Coming Soon&lt;/td&gt;
+					&lt;td&gt;BF16 / W4A16C16 / W8A16C16 / FP8&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ERNIE-4.5-VL-28B-A3B&lt;/td&gt;
+					&lt;td&gt;Coming Soon&lt;/td&gt;
+					&lt;td&gt;BF16 / W4A16C16 / W8A16C16 / FP8&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ERNIE-4.5-0.3B-Base&lt;/td&gt;
+					&lt;td&gt;SFT/SFT-LoRA/DPO/DPO-LoRA&lt;/td&gt;
+					&lt;td&gt;BF16 / W8A16C16 / FP8&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ERNIE-4.5-0.3B&lt;/td&gt;
+					&lt;td&gt;SFT/SFT-LoRA/DPO/DPO-LoRA&lt;/td&gt;
+					&lt;td&gt;BF16 / W8A16C16 / FP8&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;Note: For different ERNIE 4.5 model, we provide diverse quantization schemes using the notation WxAxCx, where: W indicates weight precision, A indicates activation precision, C indicates KV Cache precision, x represents numerical precision.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;erniekit-ernie-development-toolkit-based-on-paddlepaddle&#34;&gt;ERNIEKit: ERNIE Development Toolkit Based on PaddlePaddle
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;ERNIEKit&lt;/strong&gt; is an industrial-grade training and compression development toolkit for ERNIE models based on PaddlePaddle, offering full-cycle development support for the ERNIE 4.5 model family. Key capabilities include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;High-performance pre-training implementation&lt;/li&gt;
+&lt;li&gt;Full-parameter supervised fine-tuning (SFT)&lt;/li&gt;
+&lt;li&gt;Direct Preference Optimization (DPO)&lt;/li&gt;
+&lt;li&gt;Parameter-efficient fine-tuning and alignment (SFT-LoRA/DPO-LoRA)&lt;/li&gt;
+&lt;li&gt;Quantization-Aware Training (QAT)&lt;/li&gt;
+&lt;li&gt;Post-Training Quantization (PTQ) [WIP]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Minimum hardware requirements for training each model are documented &lt;a class=&#34;link&#34; href=&#34;./docs/erniekit.md&#34; &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;quick-start&#34;&gt;Quick Start
+&lt;/h4&gt;&lt;p&gt;When you install ERNIEKit successfully, you can start training ERNIE 4.5 models with the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# download model from huggingface&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;huggingface-cli download baidu/ERNIE-4.5-0.3B-Paddle --local-dir baidu/ERNIE-4.5-0.3B-Paddle
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 8K Sequence Length, SFT&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;erniekit train examples/configs/ERNIE-4.5-0.3B/sft/run_sft_8k.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For detailed guides on installation, CLI usage, WebUI, multi-node training, and advanced features, please refer to &lt;a class=&#34;link&#34; href=&#34;./docs/erniekit.md&#34; &gt;ERNIEKit Training Document&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ERNIEKit WebUI demo:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/user-attachments/assets/6d44cb92-0826-42df-aa80-7656445e0f73&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/user-attachments/assets/6d44cb92-0826-42df-aa80-7656445e0f73&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;fastdeployhigh-performance-inference-and-deployment-toolkit-for-llms-and-vlms-based-on-paddlepaddle&#34;&gt;FastDeploy：High-performance Inference and Deployment Toolkit for LLMs and VLMs Based on PaddlePaddle
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;FastDeploy&lt;/strong&gt; is an inference and deployment toolkit for large language models and visual language models, developed based on PaddlePaddle. It delivers production-ready, easy-to-use multi-hardware deployment solutions with multi-level load-balanced PD disaggregation, comprehensive quantization format support, OpenAI API server and vLLM compatible etc.&lt;/p&gt;
+&lt;p&gt;For installation please refer to &lt;a class=&#34;link&#34; href=&#34;https://github.com/PaddlePaddle/FastDeploy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FastDeploy&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;offline-inference&#34;&gt;Offline Inference
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;fastdeploy&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LLM&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SamplingParams&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;prompt&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Write me a poem about large language model.&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sampling_params&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SamplingParams&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;temperature&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;top_p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.95&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;llm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LLM&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;baidu/ERNIE-4.5-0.3B-Paddle&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;max_model_len&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;32768&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;outputs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;llm&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;prompt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sampling_params&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;online-serving&#34;&gt;Online Serving
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python -m fastdeploy.entrypoints.openai.api_server &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --model &lt;span class=&#34;s2&#34;&gt;&amp;#34;baidu/ERNIE-4.5-0.3B-Paddle&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --max-model-len &lt;span class=&#34;m&#34;&gt;32768&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --port &lt;span class=&#34;m&#34;&gt;9904&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For more inference and deployment guides, please refer to &lt;a class=&#34;link&#34; href=&#34;https://github.com/PaddlePaddle/FastDeploy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FastDeploy&lt;/a&gt;.&lt;/p&gt;
+&lt;/br&gt;
+&lt;h2 id=&#34;cookbooks&#34;&gt;Cookbooks
+&lt;/h2&gt;&lt;p&gt;Discover best-practice guides showcasing ERNIE’s capabilities across multiple domains:&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Cookbook&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+					&lt;th&gt;Gradio Demo&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/cookbook/notebook/conversation_demo_en.ipynb&#34; &gt;Conversation&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Building conversational applications.&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/cookbook/conversation_demo.py&#34; &gt;conversation_demo.py&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/cookbook/notebook/simple_ernie_bot_demo_en.ipynb&#34; &gt;Simple ERNIE Bot&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Creating a lightweight web-based ERNIE Bot.&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/cookbook/simple_ernie_bot_demo.py&#34; &gt;simple_ernie_bot_demo.py&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/cookbook/notebook/web_search_demo_en.ipynb&#34; &gt;Web-Search-Enhanced Conversation&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Building conversational apps with integrated web search.&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/cookbook/web_search_demo.py&#34; &gt;web_search_demo.py&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/cookbook/notebook/knowledge_retrieval_demo_en.ipynb&#34; &gt;Knowledge Retrieval-based Q&amp;amp;A&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Building intelligent Q&amp;amp;A systems with private knowledge bases.&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/cookbook/knowledge_retrieval_demo.py&#34; &gt;knowledge_retrieval_demo.py&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/cookbook/notebook/advanced_search_demo_en.ipynb&#34; &gt;Advanced Search&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Building article-generation applications using deep information extraction.&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/cookbook/advanced_search_demo.py&#34; &gt;advanced_search_demo.py&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/cookbook/notebook/sft_tutorial_en.ipynb&#34; &gt;SFT tutorial&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Optimizing task performance through supervised fine-tuning with ERNIEKit.&lt;/td&gt;
+					&lt;td&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/cookbook/notebook/dpo_tutorial_en.ipynb&#34; &gt;DPO tutorial&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Aligning models with human preferences using ERNIEKit.&lt;/td&gt;
+					&lt;td&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/cookbook/notebook/text_recognition_tutorial_en.ipynb&#34; &gt;Text Recognition&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;A Comprehensive Guide to Developing Text Recognition for Non-Chinese and Non-English Languages Using ERNIE and PaddleOCR.&lt;/td&gt;
+					&lt;td&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/cookbook/notebook/document_translation_tutorial_en.ipynb&#34; &gt;Document Translation&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Document Translation Practice Based on ERNIE and PaddleOCR.&lt;/td&gt;
+					&lt;td&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/cookbook/notebook/key_information_extraction_tutorial_en.ipynb&#34; &gt;Key Information Extraction&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Key Information Extraction in Contract Scenarios Based on ERNIE and PaddleOCR.&lt;/td&gt;
+					&lt;td&gt;-&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/br&gt;
+&lt;h2 id=&#34;community&#34;&gt;Community
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;PaddlePaddle WeChat official account&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;Join the tech discussion group&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;https://github.com/user-attachments/assets/864a45ec-0773-44b2-a2f1-c0e21e157792&#34; width=&#34;150&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;https://github.com/user-attachments/assets/52e05674-7143-4207-8b19-67247fe88f55&#34; width=&#34;150&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;The ERNIE 4.5 models are provided under the Apache License 2.0. This license permits commercial use, subject to its terms and conditions.
+&lt;/br&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation
+&lt;/h2&gt;&lt;p&gt;If you find ERNIE 4.5 useful or wish to use it in your projects, please kindly cite our technical report:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@misc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;ernie2025technicalreport&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{ERNIE 4.5 Technical Report}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{Baidu ERNIE Team}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{2025}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;eprint&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;archivePrefix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{arXiv}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;primaryClass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{cs.CL}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

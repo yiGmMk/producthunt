@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Compilation on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/compilation/</link>
+        <description>Recent content in Compilation on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 19 Sep 2025 15:27:28 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/compilation/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>monad</title>
+        <link>https://producthunt.programnotes.cn/en/p/monad/</link>
+        <pubDate>Fri, 19 Sep 2025 15:27:28 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/monad/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1694608108899-b70271860e86?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgyNjY3ODh8&amp;ixlib=rb-4.1.0" alt="Featured image of post monad" /&gt;&lt;h1 id=&#34;category-labsmonad&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/category-labs/monad&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;category-labs/monad&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;monad-execution&#34;&gt;Monad Execution
+&lt;/h1&gt;&lt;h2 id=&#34;overview&#34;&gt;Overview
+&lt;/h2&gt;&lt;p&gt;This repository contains the execution component of a Monad node. It
+handles the transaction processing for new blocks, and keeps track of
+the state of the blockchain. Consequently, this repository contains
+the source code for Category Labs&amp;rsquo; custom
+&lt;a class=&#34;link&#34; href=&#34;https://docs.monad.xyz/monad-arch/execution/native-compilation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;EVM implementation&lt;/a&gt;,
+its &lt;a class=&#34;link&#34; href=&#34;https://docs.monad.xyz/monad-arch/execution/monaddb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;database implementation&lt;/a&gt;,
+and the high-level &lt;a class=&#34;link&#34; href=&#34;https://docs.monad.xyz/monad-arch/execution/parallel-execution&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;transaction scheduling&lt;/a&gt;.
+The other main repository is &lt;a class=&#34;link&#34; href=&#34;https://github.com/category-labs/monad-bft&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;monad-bft&lt;/a&gt;,
+which contains the source code for the consensus component.&lt;/p&gt;
+&lt;h2 id=&#34;building-the-source-code&#34;&gt;Building the source code
+&lt;/h2&gt;&lt;h3 id=&#34;package-requirements&#34;&gt;Package requirements
+&lt;/h3&gt;&lt;p&gt;Execution has two kinds of dependencies on third-party libraries:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Self-managed&lt;/strong&gt;: execution&amp;rsquo;s CMake build system will checkout most of
+its third-party dependencies as git submodules, and build them as part
+of its own build process, as CMake subprojects; this will happen
+automatically during the build, but you must run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git submodule update --init --recursive
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;after checking out this repository.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;System&lt;/strong&gt;: some dependencies are expected to already be part of the
+system in a default location, i.e., they are expected to come from the
+system&amp;rsquo;s package manager. The primary development platform is Ubuntu, so
+the required packages use the Debian/Ubuntu package names; an up-to-date
+list of the required system dependencies can be found in the docker
+configuration file &lt;code&gt;docker/release.Dockerfile&lt;/code&gt; (you will need all
+the packages installed via the &lt;code&gt;apt install&lt;/code&gt; commands)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;minimum-development-tool-requirements&#34;&gt;Minimum development tool requirements
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;gcc-15 or clang-19&lt;/li&gt;
+&lt;li&gt;CMake 3.27&lt;/li&gt;
+&lt;li&gt;Even when using clang, the only standard library supported is libstdc++;
+libc++ may work but it is not a tested platform&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cpu-compilation-requirements&#34;&gt;CPU compilation requirements
+&lt;/h3&gt;&lt;p&gt;As explained in the &lt;a class=&#34;link&#34; href=&#34;https://docs.monad.xyz/monad-arch/hardware-requirements&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hardware requirements&lt;/a&gt;,
+a Monad node requires a relatively recent CPU. Execution explicitly
+requires this to compile: it needs to emit machine code that is only
+supported on recent CPU models, for fast cryptographic operations.&lt;/p&gt;
+&lt;p&gt;The minimum ISA support corresponds to the &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/X86-64#Microarchitecture_levels&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;x86-64-v3&lt;/a&gt;
+feature level. Consequently, the minimum flag you must pass to the compiler
+is &lt;code&gt;-march=x86-64-v3&lt;/code&gt;, or alternatively &lt;code&gt;-march=haswell&lt;/code&gt; (&amp;ldquo;Haswell&amp;rdquo; was
+the codename of the first Intel CPU to support all of these features).&lt;/p&gt;
+&lt;p&gt;You may also pass any higher architecture level if you wish, although
+the compiled binary may not work on older CPUs. The execution docker
+files use &lt;code&gt;-march=haswell&lt;/code&gt; because it tries to maximize the number of
+systems the resulting binary can run on. If you are only running locally
+(i.e., the binary does not need to run anywhere else) use &lt;code&gt;-march=native&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;compiling-the-execution-code&#34;&gt;Compiling the execution code
+&lt;/h3&gt;&lt;p&gt;First, change your working directory to the root directory of the execution
+git repository root and then run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;CC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;gcc-15 &lt;span class=&#34;nv&#34;&gt;CXX&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;g++-15 &lt;span class=&#34;nv&#34;&gt;CFLAGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;-march=haswell&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;CXXFLAGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;-march=haswell&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ASMFLAGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;-march=haswell&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./scripts/configure.sh &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; ./scripts/build.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The above command will do several things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Use gcc-15 instead of the system&amp;rsquo;s default compiler&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Emit machine code using Haswell-era CPU extensions&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run CMake, and generate a &lt;a class=&#34;link&#34; href=&#34;https://ninja-build.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ninja&lt;/a&gt; build
+system in the &lt;code&gt;&amp;lt;path-to-execution-repo&amp;gt;/build&lt;/code&gt; directory with
+the &lt;a class=&#34;link&#34; href=&#34;https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;CMAKE_BUILD_TYPE&lt;/code&gt;&lt;/a&gt;
+set to &lt;code&gt;RelWithDebInfo&lt;/code&gt; by default&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build the CMake &lt;code&gt;all&lt;/code&gt; target, which builds everything&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The compiler and CPU options are injected via environment variables that
+are read by CMake.  If you want debug binaries instead, you can also pass
+&lt;code&gt;CMAKE_BUILD_TYPE=Debug&lt;/code&gt; via the environment.&lt;/p&gt;
+&lt;p&gt;When finished, this will build all of the execution binaries. The main one is
+the execution daemon, &lt;code&gt;build/cmd/monad&lt;/code&gt;. This binary can provide block
+execution services for different EVM-compatible blockchains:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;When used as part of a Monad blockchain node, it behaves as the block
+execution service for the Category Labs consensus daemon (for details, see
+&lt;a class=&#34;link&#34; href=&#34;docs/overview.md#how-is-execution-used&#34; &gt;here&lt;/a&gt;); when running in this mode,
+Monad EVM extensions (e.g., Monad-style staking) are enabled&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It can also replay the history of other EVM-compatible blockchains, by
+executing their historical blocks as inputs; a common developer workflow
+(and a good full system test) is to replay the history of the original
+Ethereum mainnet and verify that the computed Merkle roots match after
+each block&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can also run the full test suite in parallel with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CTEST_PARALLEL_LEVEL=$(nproc) ctest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;a-tour-of-execution&#34;&gt;A tour of execution
+&lt;/h2&gt;&lt;p&gt;To understand how the source code is organized, you should start by reading
+the execution &lt;a class=&#34;link&#34; href=&#34;docs/overview.md&#34; &gt;developer overview&lt;/a&gt;, which explains how
+execution and consensus fit together, and where in the source tree you can
+find different pieces of functionality.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Telegram</title>
+        <link>https://producthunt.programnotes.cn/en/p/telegram/</link>
+        <pubDate>Wed, 25 Jun 2025 15:29:51 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/telegram/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1718887834656-dce1bce83df5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA4MzY1ODN8&amp;ixlib=rb-4.1.0" alt="Featured image of post Telegram" /&gt;&lt;h1 id=&#34;drklotelegram&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/DrKLO/Telegram&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DrKLO/Telegram&lt;/a&gt;
+&lt;/h1&gt;&lt;h2 id=&#34;telegram-messenger-for-android&#34;&gt;Telegram messenger for Android
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://telegram.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Telegram&lt;/a&gt; is a messaging app with a focus on speed and security. It’s superfast, simple and free.
+This repo contains the official source code for &lt;a class=&#34;link&#34; href=&#34;https://play.google.com/store/apps/details?id=org.telegram.messenger&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Telegram App for Android&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;creating-your-telegram-application&#34;&gt;Creating your Telegram Application
+&lt;/h2&gt;&lt;p&gt;We welcome all developers to use our API and source code to create applications on our platform.
+There are several things we require from &lt;strong&gt;all developers&lt;/strong&gt; for the moment.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://core.telegram.org/api/obtaining_api_id&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Obtain your own api_id&lt;/strong&gt;&lt;/a&gt; for your application.&lt;/li&gt;
+&lt;li&gt;Please &lt;strong&gt;do not&lt;/strong&gt; use the name Telegram for your app — or make sure your users understand that it is unofficial.&lt;/li&gt;
+&lt;li&gt;Kindly &lt;strong&gt;do not&lt;/strong&gt; use our standard logo (white paper plane in a blue circle) as your app&amp;rsquo;s logo.&lt;/li&gt;
+&lt;li&gt;Please study our &lt;a class=&#34;link&#34; href=&#34;https://core.telegram.org/mtproto/security_guidelines&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;security guidelines&lt;/strong&gt;&lt;/a&gt; and take good care of your users&amp;rsquo; data and privacy.&lt;/li&gt;
+&lt;li&gt;Please remember to publish &lt;strong&gt;your&lt;/strong&gt; code too in order to comply with the licences.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;api-protocol-documentation&#34;&gt;API, Protocol documentation
+&lt;/h3&gt;&lt;p&gt;Telegram API manuals: &lt;a class=&#34;link&#34; href=&#34;https://core.telegram.org/api&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://core.telegram.org/api&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;MTproto protocol manuals: &lt;a class=&#34;link&#34; href=&#34;https://core.telegram.org/mtproto&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://core.telegram.org/mtproto&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;compilation-guide&#34;&gt;Compilation Guide
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: In order to support &lt;a class=&#34;link&#34; href=&#34;https://core.telegram.org/reproducible-builds&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;reproducible builds&lt;/a&gt;, this repo contains dummy release.keystore,  google-services.json and filled variables inside BuildVars.java. Before publishing your own APKs please make sure to replace all these files with your own.&lt;/p&gt;
+&lt;p&gt;You will require Android Studio 3.4, Android NDK rev. 20 and Android SDK 8.1&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Download the Telegram source code from &lt;a class=&#34;link&#34; href=&#34;https://github.com/DrKLO/Telegram&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/DrKLO/Telegram&lt;/a&gt; ( git clone &lt;a class=&#34;link&#34; href=&#34;https://github.com/DrKLO/Telegram.git&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/DrKLO/Telegram.git&lt;/a&gt; )&lt;/li&gt;
+&lt;li&gt;Copy your release.keystore into TMessagesProj/config&lt;/li&gt;
+&lt;li&gt;Fill out RELEASE_KEY_PASSWORD, RELEASE_KEY_ALIAS, RELEASE_STORE_PASSWORD in gradle.properties to access your  release.keystore&lt;/li&gt;
+&lt;li&gt;Go to &lt;a class=&#34;link&#34; href=&#34;https://console.firebase.google.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://console.firebase.google.com/&lt;/a&gt;, create two android apps with application IDs org.telegram.messenger and org.telegram.messenger.beta, turn on firebase messaging and download google-services.json, which should be copied to the same folder as TMessagesProj.&lt;/li&gt;
+&lt;li&gt;Open the project in the Studio (note that it should be opened, NOT imported).&lt;/li&gt;
+&lt;li&gt;Fill out values in TMessagesProj/src/main/java/org/telegram/messenger/BuildVars.java – there’s a link for each of the variables showing where and which data to obtain.&lt;/li&gt;
+&lt;li&gt;You are ready to compile Telegram.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;localization&#34;&gt;Localization
+&lt;/h3&gt;&lt;p&gt;We moved all translations to &lt;a class=&#34;link&#34; href=&#34;https://translations.telegram.org/en/android/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://translations.telegram.org/en/android/&lt;/a&gt;. Please use it.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>isle</title>
+        <link>https://producthunt.programnotes.cn/en/p/isle/</link>
+        <pubDate>Mon, 12 May 2025 15:28:57 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/isle/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1647894335344-17e1f0a0c683?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcwMzQ4OTF8&amp;ixlib=rb-4.1.0" alt="Featured image of post isle" /&gt;&lt;h1 id=&#34;isledecompisle&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/isledecomp/isle&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;isledecomp/isle&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;lego-island-decompilation&#34;&gt;LEGO Island Decompilation
+&lt;/h1&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/playlist?list=PLbpl-gZkNl2Db4xcAsT_xOfOwRk-2DPHL&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Development Vlog&lt;/a&gt; | &lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/CONTRIBUTING.md&#34; &gt;Contributing&lt;/a&gt; | &lt;a class=&#34;link&#34; href=&#34;https://matrix.to/#/#isledecomp:matrix.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Matrix&lt;/a&gt; | &lt;a class=&#34;link&#34; href=&#34;https://forum.mattkc.com/viewforum.php?f=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Forums&lt;/a&gt; | &lt;a class=&#34;link&#34; href=&#34;https://www.patreon.com/mattkc&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Patreon&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is a functionally complete decompilation of LEGO Island (Version 1.1, English). It aims to be as accurate as possible, matching the recompiled instructions to the original machine code as much as possible. The goal is to provide a workable codebase that can be modified, improved, and ported to other platforms later on.&lt;/p&gt;
+&lt;h2 id=&#34;status&#34;&gt;Status
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://legoisland.org/progress/ISLEPROGRESS.SVG&#34; width=&#34;50%&#34;&gt;&lt;img src=&#34;https://legoisland.org/progress/LEGO1PROGRESS.SVG&#34; width=&#34;50%&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Both &lt;code&gt;ISLE.EXE&lt;/code&gt; and &lt;code&gt;LEGO1.DLL&lt;/code&gt; are completely decompiled and, to the best of our knowledge, are functionally identical to the originals. However, work is still ongoing to improve the accuracy, naming, documentation, and structure of the source code. While there may still be unresolved bugs that are not present in retail, the game should be fully playable with the binaries derived from this source code.&lt;/p&gt;
+&lt;p&gt;Due to various complexities with regard to the compiler, these binaries are not a byte-for-byte match of the original executables. We remain hopeful that this can be resolved at some point.&lt;/p&gt;
+&lt;h2 id=&#34;building&#34;&gt;Building
+&lt;/h2&gt;&lt;p&gt;This project uses the &lt;a class=&#34;link&#34; href=&#34;https://cmake.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CMake&lt;/a&gt; build system, which allows for a high degree of versatility regarding compilers and development environments. For the most accurate results, Microsoft Visual C++ 4.20 (the same compiler used to build the original game) is recommended. Since we&amp;rsquo;re trying to match the output of this code to the original executables as closely as possible, all contributions will be graded with the output of this compiler.&lt;/p&gt;
+&lt;p&gt;These instructions will outline how to compile this repository using Visual C++ 4.2 into highly-accurate binaries where the majority of functions are instruction-matching with retail. If you wish, you can try using other compilers, but this is at your own risk and won&amp;rsquo;t be covered in this guide.&lt;/p&gt;
+&lt;h4 id=&#34;prerequisites&#34;&gt;Prerequisites
+&lt;/h4&gt;&lt;p&gt;You will need the following software installed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Microsoft Visual C++ 4.2. This can be found on many abandonware sites, but the installer can be a little iffy on modern versions of Windows. For convenience, a &lt;a class=&#34;link&#34; href=&#34;https://github.com/itsmattkc/msvc420&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;portable version&lt;/a&gt; is available that can be downloaded and used quickly instead.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cmake.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CMake&lt;/a&gt;. A copy is often included with the &amp;ldquo;Desktop development with C++&amp;rdquo; workload in newer versions of Visual Studio; however, it can also be installed as a standalone app.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;compiling&#34;&gt;Compiling
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Open a Command Prompt (&lt;code&gt;cmd&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;From Visual C++ 4.2, run &lt;code&gt;BIN/VCVARS32.BAT x86&lt;/code&gt; to populate the path and other environment variables for compiling with MSVC.&lt;/li&gt;
+&lt;li&gt;Make a folder for compiled objects to go, such as a &lt;code&gt;build&lt;/code&gt; folder inside the source repository (the folder you cloned/downloaded to).&lt;/li&gt;
+&lt;li&gt;In your Command Prompt, &lt;code&gt;cd&lt;/code&gt; to the build folder.&lt;/li&gt;
+&lt;li&gt;Configure the project with CMake by running:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cmake &amp;lt;path-to-source&amp;gt; -G &amp;#34;NMake Makefiles&amp;#34; -DCMAKE_BUILD_TYPE=RelWithDebInfo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Visual C++ 4.2 has issues with paths containing spaces&lt;/strong&gt;. If you get configure or build errors, make sure neither CMake, the repository, nor Visual C++ 4.2 is in a path that contains spaces.&lt;/li&gt;
+&lt;li&gt;Be aware that long file paths (e.g., &lt;code&gt;C:\Users\LongUserName\LongerFolderName\isle&lt;/code&gt;) may be truncated by &lt;code&gt;make&lt;/code&gt;, resulting in “File not found” errors.&lt;/li&gt;
+&lt;li&gt;Replace &lt;code&gt;&amp;lt;path-to-source&amp;gt;&lt;/code&gt; with the source repository. This can be &lt;code&gt;..&lt;/code&gt; if your build folder is inside the source repository.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;RelWithDebInfo&lt;/code&gt; is recommended because it will produce debug symbols useful for further decompilation work. However, you can change this to &lt;code&gt;Release&lt;/code&gt; if you don&amp;rsquo;t need them. While &lt;code&gt;Debug&lt;/code&gt; builds can be compiled and used, they are not recommended as the primary goal is to match the code to the original binary. This is because the retail binaries were compiled as &lt;code&gt;Release&lt;/code&gt; builds.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;NMake Makefiles&lt;/code&gt; is most recommended because it will be immediately compatible with Visual C++ 4.2. For faster builds, you can use &lt;code&gt;Ninja&lt;/code&gt; (if you have it installed), however due to limitations in Visual C++ 4.2, you can only build &lt;code&gt;Release&lt;/code&gt; builds this way (debug symbols cannot be generated with &lt;code&gt;Ninja&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;Build the project by running &lt;code&gt;nmake&lt;/code&gt; or &lt;code&gt;cmake --build &amp;lt;build-folder&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;When this is done, there should be a recompiled &lt;code&gt;ISLE.EXE&lt;/code&gt; and &lt;code&gt;LEGO1.DLL&lt;/code&gt; in the build folder.&lt;/li&gt;
+&lt;li&gt;Note that &lt;code&gt;nmake&lt;/code&gt; must be run twice under certain conditions, so it is advisable to always (re-)compile using &lt;code&gt;nmake &amp;amp;&amp;amp; nmake&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If you have a CMake-compatible IDE, it should be pretty straightforward to use this repository, as long as you can use &lt;code&gt;VCVARS32.BAT&lt;/code&gt; and set the generator to &lt;code&gt;NMake Makefiles&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;docker&#34;&gt;Docker
+&lt;/h3&gt;&lt;p&gt;Alternatively, we support Docker as a method of compilation. This is ideal for users on Linux and macOS who do not wish to manually configure a Wine environment for compiling this project.&lt;/p&gt;
+&lt;p&gt;Compilation should be as simple as configuring and running the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	-e CMAKE_FLAGS=&amp;#34;-DCMAKE_BUILD_TYPE=RelWithDebInfo&amp;#34; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	-v &amp;lt;path-to-source&amp;gt;:/isle:rw \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	-v &amp;lt;build-folder&amp;gt;:/build:rw \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	ghcr.io/isledecomp/isle:latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;&amp;lt;path-to-source&amp;gt;&lt;/code&gt; should be replaced with the path to the source code directory (ie: the root of this repository).
+&lt;code&gt;&amp;lt;build-folder&amp;gt;&lt;/code&gt; should be replaced with the path to the build folder you&amp;rsquo;d like CMake to use during compilation.&lt;/p&gt;
+&lt;p&gt;You can pass as many CMake flags as you&amp;rsquo;d like in the &lt;code&gt;CMAKE_FLAGS&lt;/code&gt; environment variable, but the default configuration provided in the command is already ideal for building highly-accurate binaries.&lt;/p&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage
+&lt;/h2&gt;&lt;p&gt;The simplest way to use the recompiled binaries is to swap the original executables (&lt;code&gt;ISLE.EXE&lt;/code&gt;, &lt;code&gt;LEGO1.DLL&lt;/code&gt;, and &lt;code&gt;CONFIG.EXE&lt;/code&gt;) in LEGO Island&amp;rsquo;s installation directory for the ones that you&amp;rsquo;ve built from this source code. By default, LEGO Island is installed to &lt;code&gt;C:\Program Files\LEGO Island&lt;/code&gt; on 32-bit operating systems and &lt;code&gt;C:\Program Files (x86)\LEGO Island&lt;/code&gt; on 64-bit operating systems.&lt;/p&gt;
+&lt;p&gt;For advanced users, you can get LEGO Island to run from anywhere as long as &lt;code&gt;ISLE.EXE&lt;/code&gt; and &lt;code&gt;LEGO1.DLL&lt;/code&gt; are in the same directory and the &lt;code&gt;cdpath&lt;/code&gt; and &lt;code&gt;diskpath&lt;/code&gt; registry keys (usually found in &lt;code&gt;HKEY_LOCAL_MACHINE\Software\Mindscape\LEGO Island&lt;/code&gt; on 32-bit operating systems and &lt;code&gt;HKEY_LOCAL_MACHINE\Software\Wow6432Node\Mindscape\LEGO Island&lt;/code&gt; on 64-bit operating systems) point to the correct location for the asset files (the directory that contains the &lt;code&gt;LEGO&lt;/code&gt; folder).&lt;/p&gt;
+&lt;p&gt;If you see an error about &lt;code&gt;d3drm.dll&lt;/code&gt;, you will need to acquire a copy and place it in the same directory as the game executables, as it has not shipped with Windows since Windows XP. We have published a &lt;a class=&#34;link&#34; href=&#34;https://legoisland.org/download/d3drm.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;known good copy here&lt;/a&gt; that works with LEGO Island.&lt;/p&gt;
+&lt;h2 id=&#34;contributing&#34;&gt;Contributing
+&lt;/h2&gt;&lt;p&gt;If you&amp;rsquo;re interested in helping or contributing to this project, check out the &lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/CONTRIBUTING.md&#34; &gt;CONTRIBUTING&lt;/a&gt; page.&lt;/p&gt;
+&lt;h2 id=&#34;additional-information&#34;&gt;Additional Information
+&lt;/h2&gt;&lt;h3 id=&#34;which-version-of-lego-island-do-i-have&#34;&gt;Which version of LEGO Island do I have?
+&lt;/h3&gt;&lt;p&gt;Right click on &lt;code&gt;LEGO1.DLL&lt;/code&gt;, select &lt;code&gt;Properties&lt;/code&gt;, and switch to the &lt;code&gt;Details&lt;/code&gt; tab. Under &lt;code&gt;Version&lt;/code&gt; you should either see &lt;code&gt;1.0.0.0&lt;/code&gt; (1.0) or &lt;code&gt;1.1.0.0&lt;/code&gt; (1.1). Additionally, you can look at the game disc files; 1.0&amp;rsquo;s files will all say August 8, 1997, and 1.1&amp;rsquo;s files will all say September 8, 1997. Version 1.1 is by far the most common, especially if you&amp;rsquo;re not using the English or Japanese versions, so that&amp;rsquo;s most likely the version you have.&lt;/p&gt;
+&lt;p&gt;Please note that some localized versions of LEGO Island were recompiled with small changes despite maintaining a version number parallel with other versions; this decompilation specifically targets the English release of version 1.1 of LEGO Island. You can verify you have the correct version using the checksums below:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ISLE.EXE &lt;code&gt;md5: f6da12249e03eed1c74810cd23beb9f5&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;LEGO1.DLL &lt;code&gt;md5: 4e2f6d969ea2ef8655ba3fc221a0c8fe&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;CONFIG.EXE &lt;code&gt;md5: 92d958a64a273662c591c88b09100f4a&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

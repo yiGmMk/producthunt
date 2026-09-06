@@ -1,0 +1,1352 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Agentic AI on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/agentic-ai/</link>
+        <description>Recent content in Agentic AI on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Wed, 05 Aug 2026 17:50:47 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/agentic-ai/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ADR</title>
+        <link>https://producthunt.programnotes.cn/en/p/adr/</link>
+        <pubDate>Wed, 05 Aug 2026 17:50:47 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/adr/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1679881631944-38888f7aac81?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU5MjMzMjB8&amp;ixlib=rb-4.1.0" alt="Featured image of post ADR" /&gt;&lt;h1 id=&#34;uberadr&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/uber/ADR&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;uber/ADR&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;adr-agentic-ai-detection-and-response&#34;&gt;ADR: Agentic AI Detection and Response
+&lt;/h1&gt;&lt;p&gt;ADR (Agentic AI Detection and Response) is an enterprise security system for AI agents. It helps organizations secure employee-facing agents such as Cursor, Claude Code, and Codex, as well as customer-facing agents such as AI support agents.&lt;/p&gt;
+&lt;p&gt;ADR is &lt;strong&gt;deployed in production at Uber&lt;/strong&gt;, and the accompanying paper was accepted to &lt;strong&gt;MLSys 2026&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;docs/adr-paper.pdf&#34; &gt;Paper PDF&lt;/a&gt; · &lt;a class=&#34;link&#34; href=&#34;docs/adr-mlsys-2026-slides.pdf&#34; &gt;Slides PDF&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;how-adr-secures-enterprise-ai-agents&#34;&gt;How ADR secures enterprise AI agents
+&lt;/h2&gt;&lt;p&gt;ADR secures enterprise AI agents through four complementary capabilities: observing agent activity, evaluating defenses, detecting threats, and preventing unsafe actions.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;ADR Observability: Understand what AI agents are doing and why.&lt;/strong&gt; In production, ADR captures agent intent, tool use, and execution traces across 7+ AI coding tools on macOS, Linux, and Windows, as well as internal automation and customer-facing support agents.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ADR Benchmark: Test agent security under realistic enterprise conditions.&lt;/strong&gt; ADR-Bench includes 300+ tasks, 133 MCP servers, and coverage of all 17 agent attack techniques.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ADR Detection: Detect risky agent behavior efficiently.&lt;/strong&gt; Its two-tier architecture combines high-recall triage with deeper agentic reasoning for suspicious sessions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ADR Prevention: Stop unsafe actions before they cause harm.&lt;/strong&gt; This component is not included in the current open-source release. &lt;strong&gt;Stay tuned.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;repository-layout&#34;&gt;Repository layout
+&lt;/h2&gt;&lt;p&gt;This repository contains the open-source &lt;strong&gt;ADR Sensor&lt;/strong&gt;, &lt;strong&gt;ADR-Bench&lt;/strong&gt;, and &lt;strong&gt;ADR Detector&lt;/strong&gt; described in the paper. The offline &lt;strong&gt;ADR Explorer&lt;/strong&gt; engine, which hardens ADR Detection through pre-deployment red teaming, is not included here.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Path&lt;/th&gt;
+					&lt;th&gt;ADR component&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;Sensor/&#34; &gt;Sensor/&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;ADR Observability&lt;/td&gt;
+					&lt;td&gt;Collect and normalize agent telemetry from Claude Code, Cursor, Codex, and others&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;Detection/&#34; &gt;Detection/&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;ADR Benchmark + Detection&lt;/td&gt;
+					&lt;td&gt;Dual-agent detector, 133 MCP servers, 303 benchmark tasks, baselines, figure scripts&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/REPRODUCIBILITY.md&#34; &gt;docs/REPRODUCIBILITY.md&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Evaluation&lt;/td&gt;
+					&lt;td&gt;Step-by-step workflow to reproduce benchmark detection and paper figures&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;quick-start-adr-detection&#34;&gt;Quick start: ADR Detection
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/uber/ADR
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ADR/Detection
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uv sync
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ANTHROPIC_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;...&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;OPENAI_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Default detector is &lt;code&gt;adr&lt;/code&gt; (ADR dual-agent). For keyless smoke tests, use &lt;code&gt;--detector llamafirewall&lt;/code&gt; (see &lt;a class=&#34;link&#34; href=&#34;Detection/README.md&#34; &gt;Detection/README.md&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;See &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;docs/REPRODUCIBILITY.md&#34; &gt;docs/REPRODUCIBILITY.md&lt;/a&gt;&lt;/strong&gt; for the full evaluation workflow (inflate packed benchmark → run detectors → plot figures).&lt;/p&gt;
+&lt;p&gt;Component documentation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;Sensor/README.md&#34; &gt;Sensor/README.md&lt;/a&gt;: telemetry collection and unified schema&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;Detection/README.md&#34; &gt;Detection/README.md&lt;/a&gt;: ADR-Bench, detector baselines, MCP infrastructure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@inproceedings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;li2026adr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{ADR: An Agentic Detection System for Enterprise Agentic AI Security}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{Li, Chenning and Hu, Pan and Xu, Justin and Ozbas, Baris and Liu, Olivia and Van, Caroline and Li, Manxue and Zhou, Wei and Alizadeh, Mohammad and Zhang, Pengyu and Sriramadhesikan, KK and Zhang, Ming}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;booktitle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{Proceedings of the Ninth Conference on Machine Learning and Systems}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{2026}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Or use &lt;a class=&#34;link&#34; href=&#34;CITATION.cff&#34; &gt;CITATION.cff&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;Apache License 2.0. See &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt;. &lt;code&gt;Detection/benchmark/agentdojo/&lt;/code&gt; is vendored third-party code under its own &lt;a class=&#34;link&#34; href=&#34;Detection/benchmark/agentdojo/LICENSE&#34; &gt;LICENSE&lt;/a&gt; (MIT).&lt;/p&gt;
+&lt;h2 id=&#34;data-notice&#34;&gt;Data notice
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;Detection/&lt;/code&gt; includes &lt;strong&gt;synthetic&lt;/strong&gt; benchmark fixtures (fake credentials, emulated environments, prompt-injection scenarios) for defensive security research only. Details: &lt;a class=&#34;link&#34; href=&#34;docs/OPEN_SOURCE_REVIEW.md&#34; &gt;docs/OPEN_SOURCE_REVIEW.md&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Product Hunt Daily | 2026-06-06</title>
+        <link>https://producthunt.programnotes.cn/en/p/product-hunt-daily-2026-06-06/</link>
+        <pubDate>Sat, 06 Jun 2026 09:34:30 +0000</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/product-hunt-daily-2026-06-06/</guid>
+        <description>&lt;img src="https://ph-files.imgix.net/4cb6a984-3d4f-454b-ab7e-79de4c6f8e20.png?auto=format" alt="Featured image of post Product Hunt Daily | 2026-06-06" /&gt;&lt;h2 id=&#34;1-sellerclaw&#34;&gt;1. SellerClaw
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: A team of AI agents that runs your stores across channels&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Running even one online store is a full-time job. SellerClaw is a team of AI agents that runs it for you: specialized agents for product sourcing, store management, and advertising, coordinated by a supervisor you direct. Tell it what to sell — the agents build listings, manage ads and pricing, and handle fulfillment and support across Shopify, eBay, and more. You stay in control: every action is visible and approvable, and you set how much runs on its own. Free to start.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/7EVPIJ3T3Q6YW2?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/sellerclaw?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/4cb6a984-3d4f-454b-ab7e-79de4c6f8e20.png?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;SellerClaw&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: SellerClaw, AI agents, ecommerce automation, multi-channel management, product sourcing, store management, advertising automation, Shopify, eBay, fulfillment, support, automated selling, human oversight, freemium&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺496&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-06-05 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-minimi&#34;&gt;2. Minimi
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Your ambient memory for Claude&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Every great Claude response starts with context. Minimi listens across your Mac - docs, calls, messages, tabs - and gives Claude the full picture. No prompting. All on-device and private.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/SIMPLUAHCBBLII?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/shram?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/a620a4e0-e814-4817-bc77-3b64de305485.png?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Minimi&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: ambient memory, Claude context, private AI, offline AI, automatic context, cross-app, Mac app, on-device&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺467&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-06-05 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-leni&#34;&gt;3. Leni
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: The world’s most accurate AI for investors&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Leni is the most accurate and verifiable AI for serious investment work. Built on 21,000+ decision traces and processing 100M+ rows daily, it delivers finance-grade outputs with full auditability through source links, timestamps, and grounded comps. Leni outperforms GPT, Claude, and Manus on independent benchmarks for accuracy, modeling, and valuation while giving teams the trust they need when millions are on the line. Leni is part of Google Startups and a serious machine for investors.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/FFWCFWSDY3ELXY?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/leni?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/0cc77175-bf74-412d-9882-428247aa87c1.png?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Leni&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Leni, investment AI, finance-grade AI, accurate AI, auditability, source links, grounded comps, investment modeling, valuation AI, investor trust, financial accuracy, AI benchmarks, data-driven investing, Google Startups&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺379&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-06-05 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-veltrix-ai&#34;&gt;4. Veltrix AI
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: AI finance copilot for cash flow, margins, and growth&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Veltrix AI gives founders and finance teams instant clarity on cash flow, profitability, burn, and business performance. Connect QuickBooks, Xero, Shopify, Square, and HubSpot, then ask finance questions in plain English to get source-backed answers, anomalies, and recommended next steps. Replace spreadsheet chaos and static dashboards with real-time financial intelligence built to help you make faster, smarter business decisions.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/E7KCWCLG4TE4Y5?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/veltrix-ai?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/9610b4ff-c8c3-405d-974d-905439cc1c7b.png?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Veltrix AI&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AI finance, cash flow analysis, profitability insights, business performance, real-time financial intelligence, founder tools, finance teams, QuickBooks integration, Xero integration, Shopify analytics, Square reporting, HubSpot CRM, spreadsheet replacement, financial copilot, burn rate monitoring, plain English queries, financial anomalies, business growth, margin analysis, financial dashboards&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺280&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-06-05 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-ideogram-40&#34;&gt;5. Ideogram 4.0
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Generate design-ready image with open weight, layout control&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Ideogram 4.0 is an open-weight text-to-image model trained from scratch, with bounding-box layout control, multilingual text rendering, and native 2K output. For developers and enterprises building on visual AI.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/OJNQHSZUNTKVUF?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/ideogram-4-0?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/7d309261-c17d-4ff3-8ea6-ded457b0432f.webp?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Ideogram 4.0&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Ideogram, text-to-image, open-weight, layout control, bounding-box, multilingual, 2K output, developers, enterprises, AI model&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺238&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-06-05 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-agent-mode-on-arena&#34;&gt;6. Agent Mode on Arena
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Get real-world tasks done with autonomous AI agents&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Most AI benchmarks test models in controlled environments. Agent Mode tests them on complex tasks to get more work done. Run autonomous agents that browse, research, code, use files, and complete multi-step workflows from a single prompt. Then watch each workflow unfold step by step. Every run contributes to the Agent Arena Leaderboard, ranking frontier models by real-world agentic performance.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/DMA3X24N4FESP7?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/arena-5?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/8c8e5e76-1a6d-4b41-836b-540456c36287.png?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Agent Mode on Arena&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: autonomous AI agents, AI task automation, multi-step workflows, AI benchmarking, agent leaderboard, real-world AI performance, workflow automation, AI agents, agentic AI, AI productivity&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺171&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-06-05 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;7-nemotron-3-ultra-by-nvidia&#34;&gt;7. Nemotron 3 Ultra by NVIDIA
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Powers faster, efficient reasoning for long-running agents&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: A 550B MoE frontier-intelligence open model built for long-running agents. It delivers 5x faster inference and lowers the cost of complex agentic tasks by up to 30% versus other open frontier models.Ultra excels at complex tasks like coding and deep research. Long-running agents spend their time planning, using tools, recovering from failures, and deciding what to do next.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/FRQKMP7ZDQB4RR?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/nvidia?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/3510c708-7531-485b-bed4-2530fcbcdd03.webp?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Nemotron 3 Ultra by NVIDIA&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Nemotron 3 Ultra, NVIDIA, large language model, frontier AI, agentic AI, fast inference, cost-efficient, coding AI, research AI, long-running agents, 550B MoE, tool use, failure recovery&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺155&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-06-05 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;8-moodloom&#34;&gt;8. Moodloom
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Ad-free Pinterest Alternative with AI content filtering&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Moodloom is an ad-free visual discovery platform for those fed up of Pinterest. Save and explore fashion, decor, and art - without the noise. What makes it different: Clean feed - no ads, no sponsored posts AI content filter - hide or show AI-generated images For fashion lovers, decorators &amp;amp; digital artists who wish Pinterest were better. We have built Save to Moodloom Extension as well using which you can Import all your Pinterest pins/boards to Moodloom.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/KABC3NRR6GO7HB?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/moodloom?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/bae5030a-87ad-412a-b75f-adb3ea3f7556.png?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Moodloom&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Pinterest alternative, ad-free, visual discovery platform, AI content filter, save images, fashion inspiration, decor ideas, art curation, clean feed, import Pinterest pins, Moodloom extension&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺124&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-06-05 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;9-localclicky&#34;&gt;9. LocalClicky
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Control your Mac with your voice locally&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: LocalClicky is a Mac menubar app that lets you have a real conversation with your computer - completely offline. Say &amp;ldquo;Computer&amp;rdquo; to start a session. It stays listening. You chain commands back to back. Say &amp;ldquo;goodbye&amp;rdquo; when you&amp;rsquo;re done. Everything runs on your machine: voice transcription, LLM multi models, VAD, macOS say No API keys. No subscription. No data leaving your Mac. MIT licensed.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/UREOXFHYYUMZVN?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/localclicky?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/d8699719-6125-418a-a85e-a4217ebbd998.jpeg?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;LocalClicky&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: local, offline, voice control, macOS, privacy, open source&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺123&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-06-05 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;10-floatpic&#34;&gt;10. FloatPic
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Ultra-minimalist, borderless macOS native image viewer&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: FloatPic is the ultra-minimalist macOS native image viewer. Borderless floating window, native gestures, blazing-fast loading, supports 30+ image formats. Make the software disappear, let images float.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/ZQLUO2KBKHPFI4?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/floatpic?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/f8f408bf-fbbf-47e4-ae33-bb2600d80add.png?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;FloatPic&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: macOS, minimalist, borderless, floating window, native gestures, fast, lightweight, image viewer, format support, seamless&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺115&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-06-05 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
+        <title>Product Hunt Daily | 2025-09-11</title>
+        <link>https://producthunt.programnotes.cn/en/p/product-hunt-daily-2025-09-11/</link>
+        <pubDate>Thu, 11 Sep 2025 07:28:54 +0000</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/product-hunt-daily-2025-09-11/</guid>
+        <description>&lt;h2 id=&#34;1-genstoreai&#34;&gt;1. Genstore.ai
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Start selling online with just a prompt&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Create and launch a new store within minutes, and sell confidently with the support of your own team of AI agents that supports you from setup to design to launch. We handle marketing automation and campaign management so you can focus on selling.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/FMOQHHJ36SZBGX?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/genstore-ai-2?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Genstore.ai&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: e-commerce, AI, online store, store builder, marketing automation, AI agents, dropshipping, selling online, website builder, business automation&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺564&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-10 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-latitude-20&#34;&gt;2. Latitude 2.0
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: The 1st agent that builds agents&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Create an AI Agent from a single prompt. Instead of building agents by hand, describe what you need and Latte creates, connects, and runs them for you. From workflows to production-ready AI assistants, all it takes is one prompt.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/K65DDFR4FLM4WK?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/latitude-4?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Latitude 2.0&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AI Agent, Agent Builder, AI Creation, Prompt Engineering, AI Workflow, AI Assistant, Automated AI, Latte, Latitude 2.0&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺496&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-10 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-incredible-small-10-by-incredible&#34;&gt;3. Incredible Small 1.0 by Incredible
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Agentic AI Models that can take 1000+ actions at once&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: RESEARCH PREVIEW — Agentic AI Models that can take 1000+ actions at once, and work with large datasets. 100+ app connectors. Try the research preview assistant now at &lt;a class=&#34;link&#34; href=&#34;https://www.incredible.one&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;www.incredible.one&lt;/a&gt;. Built in Sweden, by Incredible 🇸🇪&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/3SS5QNG34KLJBI?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/incredible?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Incredible Small 1.0 by Incredible&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Agentic AI, AI Models, Large Language Model, 1000+ Actions,  Large Datasets, App Connectors, AI Assistant, Incredible, Incredible Small 1.0, Research Preview&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺475&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-10 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-buildkit-20&#34;&gt;4. BuildKit 2.0
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Build integration tools for MCPs &amp;amp; agents in minutes&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Introducing BuildKit 2.0 – Build fully customizable in-code AI tools &amp;amp; MCPs for integrations with a single prompt. Works with every development environment and AI framework.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/TBJ2FE5ABAY3IN?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/buildkit-2-0?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;BuildKit 2.0&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: BuildKit 2.0, AI integration tools, MCP tools, agent tools, customizable AI tools, in-code AI, rapid integration, AI framework, development tools&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺261&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-10 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-seedream-40&#34;&gt;5. Seedream 4.0
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: A new-generation image creation model from ByteDance&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Next‑gen image creation model unifying generation and editing in one architecture. It handles complex multimodal tasks (knowledge-based prompts, reasoning, and reference consistency) while delivering stunning 4K images with dramatically faster inference.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/RWYUDYOJUAY4WG?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/seedream-4-0?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Seedream 4.0&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Seedream 4.0, image generation, image editing, AI image creation, 4K image generation, multimodal AI, ByteDance, fast inference, knowledge-based prompts, image editing model&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺238&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-10 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-10x-ppc&#34;&gt;6. 10X PPC
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Launch PPC Campaigns 10X Faster&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Get the work of a seasoned PPC strategist - without the fees. This AI Agent finds, filters, and exports high converting keywords so you launch smarter campaigns 10X faster.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/EYFHCRXNY6YZPR?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/10x-ppc?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;10X PPC&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: PPC, AI, keywords, campaign, advertising, marketing, automation,  SEO,  SEM,  lead generation&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺205&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-10 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;7-yc-companies-map&#34;&gt;7. YC Companies Map
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: A map of yc companies around the world&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: A map of YC companies around the world. Discover YC startups by city, batch, and industry. This is a white label version of FoundersAround.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/YNLNRWF2RLS7GM?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/foundersaround?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;YC Companies Map&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: YC Companies, YC Map, Startup Map, YC Startups, FoundersAround, YC Directory,  Venture Capital,  Startups,  Tech Companies,  YC Portfolio&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺178&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-10 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;8-hudson-labs&#34;&gt;8. Hudson Labs
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: High-precision AI, purpose-built for investors&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: The Co-Analyst is built for institutional equity research - providing the precision of a terminal with the adaptability of AI. Get the data you need — fast, precise, and verifiable.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/6R7J5CW5SYSSSJ?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/bedrock-ai?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Hudson Labs&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AI, Equity Research, Institutional Investing, Co-Analyst, Hudson Labs, High-Precision AI, Financial AI, Investment Research, Data Analysis, Algorithmic Investing&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺133&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-10 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;9-tellers&#34;&gt;9. Tellers
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Cursor for video editing&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Vibe editing is here! You can now edit your videos just by chatting. Give your instructions, sit back, and watch your assistant work its magic. Tellers is a video editing app built from the ground up to leverage agentic AI workflows.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/2NDKJIKI4JGLTD?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/tellers-ai?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Tellers&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Video Editor, AI Video Editor, Chat Video Editor, Agentic AI, Video Editing App, Vibe Editing, AI Video Editing Assistant&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺133&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-10 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;10-modal-notebooks&#34;&gt;10. Modal Notebooks
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: High-performance, collaborative GPU notebooks in the cloud&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Modal Notebooks are a collaborative environment for high-performance interactive computing. They let you explore data, run code, and test ideas in a shared editor. Powered by a GPU-enabled Python kernel that launches in seconds on Modal’s AI infrastructure.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/TG5QOKITOZTMKO?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/modal?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Modal Notebooks&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: GPU Notebooks, Cloud Notebooks, Collaborative Notebooks, High-Performance Computing, AI Notebooks, Python Notebooks, Modal Notebooks, Interactive Computing, Shared Editor, GPU Computing&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺130&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-10 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
+        <title>Product Hunt Daily | 2025-07-22</title>
+        <link>https://producthunt.programnotes.cn/en/p/product-hunt-daily-2025-07-22/</link>
+        <pubDate>Tue, 22 Jul 2025 07:32:38 +0000</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/product-hunt-daily-2025-07-22/</guid>
+        <description>&lt;img src="https://ph-files.imgix.net/cc6dc6a8-e6f9-4305-b74c-a2bed99854a8.png?auto=format&amp;fit=crop&amp;frame=1&amp;h=512&amp;w=1024" alt="Featured image of post Product Hunt Daily | 2025-07-22" /&gt;&lt;h2 id=&#34;1-jeeva-20&#34;&gt;1. Jeeva 2.0
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Superhuman Sales, Powered By Agentic AI&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: From lead discovery to enrichment to personalized outreach, Jeeva handles it all so you can focus on closing, not chasing. With 2.0, Jeeva now sorts your inbox, preps you instantly for every call, manages your follow-ups, and even takes notes for you.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/S3D4WX4RY7Y5UR?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/jeeva-ai?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/cc6dc6a8-e6f9-4305-b74c-a2bed99854a8.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Jeeva 2.0&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Sales AI, Agentic AI, Sales Automation, Lead Generation, Lead Enrichment, Sales Engagement, Outreach Automation, Sales Productivity, CRM Integration, Inbox Management, Call Prep, Follow-up Automation, Sales Notes&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺661&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-07-21 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-levio-by-jupitrr-ai&#34;&gt;2. Levio by Jupitrr AI
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Your AI video editing agent&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Levio is your AI Video editing Agent that makes finetuning your videos as easy as chatting with ChatGPT. No editing skills or complex timelines needed, just attention grabbing personal branding videos in minutes.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/Q37K5SUS5IEUO5?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/jupitrr?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/ed8b3876-3d89-4ee6-a8be-5aa222eae36a.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Levio by Jupitrr AI&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AI video editor, AI video editing, video editing AI, AI video agent, automated video editing,  Levio, Jupitrr AI, personal branding video, easy video editing, fast video editing&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺652&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-07-21 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-trae-20&#34;&gt;3. Trae 2.0
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: SOLO: Context Engineer that delivers software end-to-end&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Trae 2.0 brings SOLO to everyone, which is your all-in-one Context Engineer that doesn’t just assist with code, but thinks, plans, builds, and ships complete features end-to-end, with the right information and tools.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/ZMG6AX55Q5W7VT?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/trae?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/8f7188fe-d0eb-477f-9886-f0d8a54647d6.jpeg?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Trae 2.0&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Trae 2.0, SOLO, Context Engineer, Software Development, AI, Code Assistance, End-to-End Development, Feature Engineering, Automation&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺520&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-07-21 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-the-gist-of&#34;&gt;4. the gist of
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Go beyond the link in bio. Tell a story.&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Share with the world the gist of who you are with the simplest, most beautiful, minimalistic personal site you can create in minutes. We are sure you have an amazing story to tell.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/3ZN4RJ67N5DJHH?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/the-gist-of?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/677d9681-83d6-4e8c-999d-cafd8a17e10a.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;the gist of&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: personal website, minimalist website, portfolio website, online portfolio, simple website, story website, bio link, link in bio, website builder, create website, personal branding&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺427&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-07-21 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-krepling-pay&#34;&gt;5. Krepling Pay
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;:  Boost sales with one-click checkout, no account required&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Krepling Pay is a white-labeled, platform-agnostic checkout engine that lets customers complete purchases in one click—no login or account needed. Reduce friction, build trust, and boost repeat sales with a fully branded, optimized flow.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/NHDRTT26LX4Q4I?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/krepling?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/2e70ddfc-468f-4a1b-ab59-de54278e11a9.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Krepling Pay&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: One-click checkout, checkout engine, white-label checkout, guest checkout, frictionless checkout, boost sales, increase conversions,  payment gateway,  e-commerce checkout,  Krepling Pay&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺338&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-07-21 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-stakpakdev&#34;&gt;6. Stakpak.dev
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Open-source DevOps agent to secure &amp;amp; manage production infra&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Stakpak.dev is an Open-source DevOps agent written in Rust, helps you secure, deploy, and maintain production-ready infrastructure. Try it now: curl -sSL &lt;a class=&#34;link&#34; href=&#34;https://stakpak.dev/install.sh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://stakpak.dev/install.sh&lt;/a&gt; | sh&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/2FJWFOBKZ3VVZO?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/stakpak-dev?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/a38e5ab7-d988-4419-9f1e-bb0dead0029a.jpeg?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Stakpak.dev&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: DevOps, agent, open-source, infrastructure, security, deployment, Rust, Stakpak, production, management&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺230&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-07-21 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;7-sampleappai&#34;&gt;7. sampleapp.ai
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Self-serve API &amp;amp; SDK onboarding—in 60 seconds. Skip docs.&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Nobody likes reading docs. Sampleapp.ai turns your API into interactive, live sandboxes—so developers get a working app and onboard in under 60 seconds. Used by leading unicorn, series A/B/C and high growth startups.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/DQQE7VAUY2IRUH?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/sampleapp-ai?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/2bf39ee5-3b76-4840-9ac8-819073b207c2.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;sampleapp.ai&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: API, SDK, Onboarding, Sandbox, Developer, Self-Serve, Documentation, API Integration, Rapid Onboarding, Interactive API&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺229&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-07-21 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;8-refgrow&#34;&gt;8. Refgrow
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Grow with referrals on autopilot&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Add an affiliate program to your product in minutes. Attract affiliates and get customers automatically right inside your app.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/INCLG7IBSB3VLD?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/refgrow?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/0ee76cd2-ee69-4b03-bc0e-85d02e0a5c91.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Refgrow&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Affiliate program, referral program, autopilot, affiliate marketing, referral marketing, customer acquisition, app integration, automated referrals, grow business&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺180&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-07-21 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;9-veo-3-api&#34;&gt;9. Veo 3 API
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Generate videos (with audio) using Veo 3 from Google&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Veo 3 is now available for scaled developer use in the Gemini API, with both audio generation and no audio generation as model options.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/EIC34UA4U5M5UA?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/google?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/cf429f8a-f47d-4891-8fdd-4b1a39a7d749.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Veo 3 API&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Veo 3, Gemini API, video generation, audio generation, video API, Gemini, Google AI, scaled video generation&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺167&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-07-21 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;10-brainfork&#34;&gt;10. Brainfork
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Own your AI knowledge | Personal MCP server&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Brainfork is a personal knowledge and decision MCP server that allows you to regain control of your knowledge and maximise the possibility of a personal RAG service.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/I6ZNXHH6YRCBP4?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/brainfork?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/1b242168-7597-459e-b977-9f18d388a670.jpeg?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Brainfork&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AI, knowledge, personal server, MCP, RAG, Brainfork, knowledge management, decision support, AI knowledge base&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺151&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-07-21 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
+        <title>agents</title>
+        <link>https://producthunt.programnotes.cn/en/p/agents/</link>
+        <pubDate>Thu, 10 Jul 2025 15:31:08 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/agents/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1508874343624-e697766fd01a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIxMzI2MjF8&amp;ixlib=rb-4.1.0" alt="Featured image of post agents" /&gt;&lt;h1 id=&#34;ed-donneragents&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ed-donner/agents&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ed-donner/agents&lt;/a&gt;
+&lt;/h1&gt;&lt;h2 id=&#34;master-ai-agentic-engineering----build-autonomous-ai-agents&#34;&gt;Master AI Agentic Engineering -  build autonomous AI Agents
+&lt;/h2&gt;&lt;h3 id=&#34;6-week-journey-to-code-and-deploy-ai-agents-with-openai-agents-sdk-crewai-langgraph-autogen-and-mcp&#34;&gt;6 week journey to code and deploy AI Agents with OpenAI Agents SDK, CrewAI, LangGraph, AutoGen and MCP
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/assets/autonomy.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Autonomous Agent&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;If you&amp;rsquo;re looking at this in Cursor, please right click on the filename in the Explorer on the left, and select &amp;ldquo;Open preview&amp;rdquo;, to view the formatted version.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I couldn&amp;rsquo;t be more excited to welcome you! This is the start of your 6 week adventure into the powerful, astonishing and often surreal world of Agentic AI.&lt;/p&gt;
+&lt;h3 id=&#34;before-you-begin&#34;&gt;Before you begin
+&lt;/h3&gt;&lt;p&gt;I&amp;rsquo;m here to help you be most successful! Please do reach out if I can help, either in the platform or by emailing me direct (&lt;a class=&#34;link&#34; href=&#34;mailto:ed@edwarddonner.com&#34; &gt;ed@edwarddonner.com&lt;/a&gt;). It&amp;rsquo;s always great to connect with people on LinkedIn to build up the community - you&amp;rsquo;ll find me here:&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.linkedin.com/in/eddonner/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.linkedin.com/in/eddonner/&lt;/a&gt;&lt;br&gt;
+And this is new to me, but I&amp;rsquo;m also trying out X/Twitter at &lt;a class=&#34;link&#34; href=&#34;https://x.com/edwarddonner&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@edwarddonner&lt;/a&gt; - if you&amp;rsquo;re on X, please show me how it&amp;rsquo;s done 😂&lt;/p&gt;
+&lt;h3 id=&#34;the-not-so-dreaded-setup-instructions&#34;&gt;The not-so-dreaded setup instructions
+&lt;/h3&gt;&lt;p&gt;Perhaps famous last words: but I really, truly hope that I&amp;rsquo;ve put together an environment that will be not too horrific to set up!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows people, your instructions are &lt;a class=&#34;link&#34; href=&#34;setup/SETUP-PC.md&#34; &gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mac people, yours are &lt;a class=&#34;link&#34; href=&#34;setup/SETUP-mac.md&#34; &gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Linux people, yours are &lt;a class=&#34;link&#34; href=&#34;setup/SETUP-linux.md&#34; &gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Any problems, please do contact me.&lt;/p&gt;
+&lt;h3 id=&#34;important-notes-for-crewai-week-week-3&#34;&gt;Important notes for CrewAI week (Week 3)
+&lt;/h3&gt;&lt;p&gt;Windows PC users: you will need to have checked the &amp;ldquo;gotcha #4&amp;rdquo; at the top of the &lt;a class=&#34;link&#34; href=&#34;setup/SETUP-PC.md&#34; &gt;SETUP-PC&lt;/a&gt; instructions &amp;ndash; installing Microsoft Build Tools.&lt;br&gt;
+If you don&amp;rsquo;t do this, then CrewAI will fail with an obscure error involving Chroma..&lt;/p&gt;
+&lt;p&gt;Then, you will need to run this command in a Cursor Terminal in the project root directory in order to run the Crew commands:&lt;br&gt;
+&lt;code&gt;uv tool install crewai&lt;/code&gt;&lt;br&gt;
+And in case you&amp;rsquo;ve used Crew before, it might be worth doing this to make sure you have the latest:&lt;br&gt;
+&lt;code&gt;uv tool upgrade crewai&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Then please keep in mind for Crew:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;There are two ways that you can work on the CrewAI project in week 3. Either review the code for each project while I build it, and then do &lt;code&gt;crewai run&lt;/code&gt; to see it in action. Or if you prefer to be more hands-on, then create your own Crew project from scratch to mirror mine; for example, create &lt;code&gt;my_debate&lt;/code&gt; to go alongside &lt;code&gt;debate&lt;/code&gt;, and write the code alongside me. Either approach works!&lt;/li&gt;
+&lt;li&gt;Windows users: there&amp;rsquo;s a new issue that was recently introduced by one of Crew&amp;rsquo;s libraries. Until this is fixed, you might get a &amp;ldquo;unicode&amp;rdquo; error when you try to run &lt;code&gt;crewai create crew&lt;/code&gt;.  If that happens, please try running this command in the Terminal first: &lt;code&gt;$env:PYTHONUTF8 = &amp;quot;1&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Gemini users: in addition to a key in your &lt;code&gt;.env&lt;/code&gt; file for &lt;code&gt;GOOGLE_API_KEY&lt;/code&gt;, you will need an identical key for &lt;code&gt;GEMINI_API_KEY&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;super-useful-resources&#34;&gt;Super useful resources
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;The course &lt;a class=&#34;link&#34; href=&#34;https://edwarddonner.com/2025/04/21/the-complete-agentic-ai-engineering-course/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;resources&lt;/a&gt; with videos&lt;/li&gt;
+&lt;li&gt;Many essential guides in the &lt;a class=&#34;link&#34; href=&#34;guides/01_intro.ipynb&#34; &gt;guides&lt;/a&gt; section&lt;/li&gt;
+&lt;li&gt;The &lt;a class=&#34;link&#34; href=&#34;setup/troubleshooting.ipynb&#34; &gt;troubleshooting&lt;/a&gt; notebook&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;api-costs---please-read-me&#34;&gt;API costs - please read me!
+&lt;/h3&gt;&lt;p&gt;This course does involve making calls to OpenAI and other frontier models, requiring an API key and a small spend, which we set up in the SETUP instructions. If you&amp;rsquo;d prefer not to spend on API calls, there are cheaper alternatives like DeepSeek and free alternatives like using Ollama!&lt;/p&gt;
+&lt;p&gt;Details are &lt;a class=&#34;link&#34; href=&#34;guides/09_ai_apis_and_ollama.ipynb&#34; &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Be sure to monitor your API costs to ensure you are totally happy with any spend. For OpenAI, the dashboard is &lt;a class=&#34;link&#34; href=&#34;https://platform.openai.com/usage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;above-all-else--&#34;&gt;ABOVE ALL ELSE -
+&lt;/h3&gt;&lt;p&gt;Be sure to have fun with the course! You could not have picked a better time to be learning about Agentic AI. I hope you enjoy every single minute! And if you get stuck at any point - &lt;a class=&#34;link&#34; href=&#34;https://www.linkedin.com/in/eddonner/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;contact me&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>learn-agentic-ai</title>
+        <link>https://producthunt.programnotes.cn/en/p/learn-agentic-ai/</link>
+        <pubDate>Tue, 17 Jun 2025 15:30:43 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/learn-agentic-ai/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1654483143648-cb97703e2979?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTAxNDUzNDN8&amp;ixlib=rb-4.1.0" alt="Featured image of post learn-agentic-ai" /&gt;&lt;h1 id=&#34;panaversitylearn-agentic-ai&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/panaversity/learn-agentic-ai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;panaversity/learn-agentic-ai&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;learn-agentic-ai-using-dapr-agentic-cloud-ascent-daca-design-pattern-from-start-to-scale&#34;&gt;Learn Agentic AI using Dapr Agentic Cloud Ascent (DACA) Design Pattern: From Start to Scale
+&lt;/h1&gt;&lt;p&gt;This repo is part of the &lt;a class=&#34;link&#34; href=&#34;https://docs.google.com/document/d/15usu1hkrrRLRjcq_3nCTT-0ljEcgiC44iSdvdqrCprk/edit?usp=sharing&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Panaversity Certified Agentic &amp;amp; Robotic AI Engineer&lt;/a&gt; program. It covers AI-201, AI-202 and AI-301 courses.&lt;/p&gt;
+&lt;p&gt;We have Two Hunches, the future of Pakistan depends on it, let&amp;rsquo;s make sure that we are not wrong:&lt;/p&gt;
+&lt;p&gt;It is very important for Pakistan that we bet on the right horses for the upcoming age of Agentic AI. We will be training millions of Agentic AI Developers all over Pakistan and online around the world and building startups, we cant afford to be wrong.&lt;/p&gt;
+&lt;p&gt;Hunch #1: Dapr
+We feel Dapr, Dapr Actors, Dapr Workflows, and Dapr Agents will be the core technology in building the next generation multi ai agentic systems, is my hunch correct?&lt;/p&gt;
+&lt;p&gt;Hunch #2: OpenAI Agents SDK
+We also have a hunch that OpenAI Agents SDK will be the go to framework for beginners to start learning Agentic AI?&lt;/p&gt;
+&lt;p&gt;Let us see what the best AI has to say about our hunches:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://chatgpt.com/share/6811b893-82cc-8001-9037-e45bcd91cc64&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://chatgpt.com/share/6811b893-82cc-8001-9037-e45bcd91cc64&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://g.co/gemini/share/1f31c876520b&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://g.co/gemini/share/1f31c876520b&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://grok.com/share/bGVnYWN5_4343d342-c7df-4b06-9174-487a64f59d53&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://grok.com/share/bGVnYWN5_4343d342-c7df-4b06-9174-487a64f59d53&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;this-panaversity-initiative-tackles-the-critical-challenge&#34;&gt;This Panaversity Initiative Tackles the Critical Challenge:
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;“How do we design AI Agents that can handle 10 million concurrent AI Agents without failing?”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Note: The challenge is intensified as we must guide our students to solve this issue with minimal financial resources available during training.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+&lt;img src=&#34;./img/cover.png&#34; width=&#34;600&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Kubernetes with Dapr can theoretically handle 10 million concurrent agents in an agentic AI system without failing, but achieving this requires extensive optimization, significant infrastructure, and careful engineering. While direct evidence at this scale is limited, logical extrapolation from existing benchmarks, Kubernetes’ scalability, and Dapr’s actor model supports feasibility, especially with rigorous tuning and resource allocation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Condensed Argument with Proof and Logic&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Kubernetes Scalability&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Evidence&lt;/strong&gt;: Kubernetes supports up to 5,000 nodes and 150,000 pods per cluster (Kubernetes docs), with real-world examples like PayPal scaling to 4,000 nodes and 200,000 pods (InfoQ, 2023) and KubeEdge managing 100,000 edge nodes and 1 million pods (KubeEdge case studies). OpenAI’s 2,500-node cluster for AI workloads (OpenAI blog, 2022) shows Kubernetes can handle compute-intensive tasks.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Logic&lt;/strong&gt;: For 10 million users, a cluster of 5,000–10,000 nodes (e.g., AWS g5 instances with GPUs) can distribute workloads. Each node can run hundreds of pods, and Kubernetes’ horizontal pod autoscaling (HPA) dynamically adjusts to demand. Bottlenecks (e.g., API server, networking) can be mitigated by tuning etcd, using high-performance CNIs like Cilium, and optimizing DNS.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Dapr’s Efficiency for Agentic AI&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Evidence&lt;/strong&gt;: Dapr’s actor model supports thousands of virtual actors per CPU core with double-digit millisecond latency (Dapr docs, 2024). Case studies show Dapr handling millions of events, e.g., Tempestive’s IoT platform processing billions of messages (Dapr blog, 2023) and DeFacto’s system managing 3,700 events/second (320 million daily) on Kubernetes with Kafka (Microsoft case study, 2022).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Logic&lt;/strong&gt;: Agentic AI relies on stateful, low-latency agents. Dapr Agents, built on the actor model, can represent 10 million users as actors, distributed across a Kubernetes cluster. Dapr’s state management (e.g., Redis) and pub/sub messaging (e.g., Kafka) ensure efficient coordination and resilience, with automatic retries preventing failures. Sharding state stores and message brokers scales to millions of operations/second.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Handling AI Workloads&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Evidence&lt;/strong&gt;: LLM inference frameworks like vLLM and TGI serve thousands of requests/second per GPU (vLLM benchmarks, 2024). Kubernetes orchestrates GPU workloads effectively, as seen  Kubernetes manages GPU workloads, as seen in NVIDIA’s AI platform scaling to thousands of GPUs (NVIDIA case study, 2023).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Logic&lt;/strong&gt;: Assuming each user generates 1 request/second requiring 0.01 GPU, 10 million users need ~100,000 GPUs. Batching, caching, and model parallelism reduce this to a feasible ~10,000–20,000 GPUs, achievable in hyperscale clouds (e.g., AWS). Kubernetes’ resource scheduling ensures optimal GPU utilization.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Networking and Storage&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Evidence&lt;/strong&gt;: EMQX on Kubernetes handled 1 million concurrent connections with tuning (EMQX blog, 2024). C10M benchmarks (2013) achieved 10 million connections using optimized stacks. Dapr’s state stores (e.g., Redis) support millions of operations/second (Redis benchmarks, 2024).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Logic&lt;/strong&gt;: 10 million connections require ~100–1,000 Gbps bandwidth, supported by modern clouds. High-throughput databases (e.g., CockroachDB) and caching (e.g., Redis Cluster) handle 10 TB of state data for 10 million users (1 KB/user). Kernel bypass (e.g., DPDK) and eBPF-based CNIs (e.g., Cilium) minimize networking latency.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Resilience and Monitoring&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Evidence&lt;/strong&gt;: Dapr’s resiliency policies (retries, circuit breakers) and Kubernetes’ self-healing (pod restarts) ensure reliability (Dapr docs, 2024). Dapr’s OpenTelemetry integration scales monitoring for millions of agents (Prometheus case studies, 2023).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Logic&lt;/strong&gt;: Real-time metrics (e.g., latency, error rates) and distributed tracing prevent cascading failures. Kubernetes’ liveness probes and Dapr’s workflow engine recover from crashes, ensuring 99.999% uptime.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Feasibility with Constraints&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Challenge&lt;/strong&gt;: No direct benchmark exists for 10 million concurrent users with Dapr/Kubernetes in an agentic AI context. Infrastructure costs (e.g., $10M–$100M for 10,000 nodes) are prohibitive for low-budget scenarios.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Solution&lt;/strong&gt;: Use open-source tools (e.g., Minikube, kind) for local testing and cloud credits (e.g., AWS Educate) for students. Simulate 10 million users with tools like Locust on smaller clusters (e.g., 100 nodes), extrapolating results. Optimize Dapr’s actor placement and Kubernetes’ resource quotas to maximize efficiency on limited hardware. Leverage free-tier databases (e.g., MongoDB Atlas) and message brokers (e.g., RabbitMQ).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;: Kubernetes with Dapr can handle 10 million concurrent users in an agentic AI system, supported by their proven scalability, real-world case studies, and logical extrapolation. For students with minimal budgets, small-scale simulations, open-source tools, and cloud credits make the problem tractable, though production-scale deployment requires hyperscale resources and expertise.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Agentic AI Top Trend of 2025&lt;/strong&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+&lt;img src=&#34;./img/toptrend.webp&#34; width=&#34;200&#34;&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;the-dapr-agentic-cloud-ascent-daca-design-pattern-addresses-10-million-ai-agents-challenge&#34;&gt;The Dapr Agentic Cloud Ascent (DACA) Design Pattern Addresses 10 Million AI Agents Challenge
+&lt;/h2&gt;&lt;p&gt;Let&amp;rsquo;s understand and learn about &amp;ldquo;Dapr Agentic Cloud Ascent (DACA)&amp;rdquo;, our winning design pattern for developing and deploying planet scale multi-agent systems.&lt;/p&gt;
+&lt;h3 id=&#34;executive-summary-dapr-agentic-cloud-ascent-daca&#34;&gt;Executive Summary: Dapr Agentic Cloud Ascent (DACA)
+&lt;/h3&gt;&lt;p&gt;The Dapr Agentic Cloud Ascent (DACA) guide introduces a strategic design pattern for building and deploying sophisticated, scalable, and resilient agentic AI systems. Addressing the complexities of modern AI development, DACA integrates the OpenAI Agents SDK for core agent logic with the Model Context Protocol (MCP) for standardized tool use and the Agent2Agent (A2A) protocol for seamless inter-agent communication, all underpinned by the distributed capabilities of Dapr. &lt;strong&gt;Grounded in AI-first and cloud-first principles&lt;/strong&gt;, DACA promotes the use of stateless, containerized applications deployed on platforms like Azure Container Apps (Serverless Containers) or Kubernetes, enabling efficient scaling from local development to planetary-scale production, potentially leveraging free-tier cloud services and self-hosted LLMs for cost optimization. The pattern emphasizes modularity, context-awareness, and standardized communication, envisioning an &lt;strong&gt;Agentia World&lt;/strong&gt; where diverse AI agents collaborate intelligently. Ultimately, DACA offers a robust, flexible, and cost-effective framework for developers and architects aiming to create complex, cloud-native agentic AI applications that are built for scalability and resilience from the ground up.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/panaversity/learn-agentic-ai/blob/main/comprehensive_guide_daca.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Comprehensive Guide to Dapr Agentic Cloud Ascent (DACA) Design Pattern&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+&lt;img src=&#34;./img/ascent.png&#34; width=&#34;500&#34;&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+&lt;img src=&#34;./img/architecture1.png&#34; width=&#34;400&#34;&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;target-user&#34;&gt;Target User
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Agentic AI Developer and AgentOps Professionals&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;why-openai-agents-sdk-should-be-the-main-framework-for-agentic-development-for-most-use-cases&#34;&gt;Why OpenAI Agents SDK should be the main framework for agentic development for most use cases?
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Table 1: Comparison of Abstraction Levels in AI Agent Frameworks&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;&lt;strong&gt;Framework&lt;/strong&gt;&lt;/th&gt;
+					&lt;th&gt;&lt;strong&gt;Abstraction Level&lt;/strong&gt;&lt;/th&gt;
+					&lt;th&gt;&lt;strong&gt;Key Characteristics&lt;/strong&gt;&lt;/th&gt;
+					&lt;th&gt;&lt;strong&gt;Learning Curve&lt;/strong&gt;&lt;/th&gt;
+					&lt;th&gt;&lt;strong&gt;Control Level&lt;/strong&gt;&lt;/th&gt;
+					&lt;th&gt;&lt;strong&gt;Simplicity&lt;/strong&gt;&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;OpenAI Agents SDK&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Minimal&lt;/td&gt;
+					&lt;td&gt;Python-first, core primitives (Agents, Handoffs, Guardrails), direct control&lt;/td&gt;
+					&lt;td&gt;Low&lt;/td&gt;
+					&lt;td&gt;High&lt;/td&gt;
+					&lt;td&gt;High&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;CrewAI&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Moderate&lt;/td&gt;
+					&lt;td&gt;Role-based agents, crews, tasks, focus on collaboration&lt;/td&gt;
+					&lt;td&gt;Low-Medium&lt;/td&gt;
+					&lt;td&gt;Medium&lt;/td&gt;
+					&lt;td&gt;Medium&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;AutoGen&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;High&lt;/td&gt;
+					&lt;td&gt;Conversational agents, flexible conversation patterns, human-in-the-loop support&lt;/td&gt;
+					&lt;td&gt;Medium&lt;/td&gt;
+					&lt;td&gt;Medium&lt;/td&gt;
+					&lt;td&gt;Medium&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Google ADK&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Moderate&lt;/td&gt;
+					&lt;td&gt;Multi-agent hierarchies, Google Cloud integration (Gemini, Vertex AI), rich tool ecosystem, bidirectional streaming&lt;/td&gt;
+					&lt;td&gt;Medium&lt;/td&gt;
+					&lt;td&gt;Medium-High&lt;/td&gt;
+					&lt;td&gt;Medium&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;LangGraph&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Low-Moderate&lt;/td&gt;
+					&lt;td&gt;Graph-based workflows, nodes, edges, explicit state management&lt;/td&gt;
+					&lt;td&gt;Very High&lt;/td&gt;
+					&lt;td&gt;Very High&lt;/td&gt;
+					&lt;td&gt;Low&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Dapr Agents&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Moderate&lt;/td&gt;
+					&lt;td&gt;Stateful virtual actors, event-driven multi-agent workflows, Kubernetes integration, 50+ data connectors, built-in resiliency&lt;/td&gt;
+					&lt;td&gt;Medium&lt;/td&gt;
+					&lt;td&gt;Medium-High&lt;/td&gt;
+					&lt;td&gt;Medium&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The table clearly identifies why OpenAI Agents SDK should be the main framework for agentic development for most use cases:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It excels in &lt;strong&gt;simplicity&lt;/strong&gt; and &lt;strong&gt;ease of use&lt;/strong&gt;, making it the best choice for rapid development and broad accessibility.&lt;/li&gt;
+&lt;li&gt;It offers &lt;strong&gt;high control&lt;/strong&gt; with &lt;strong&gt;minimal abstraction&lt;/strong&gt;, providing the flexibility needed for agentic development without the complexity of frameworks like LangGraph.&lt;/li&gt;
+&lt;li&gt;It outperforms most alternatives (CrewAI, AutoGen, Google ADK, Dapr Agents) in balancing usability and power, and while LangGraph offers more control, its complexity makes it less practical for general use.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If your priority is ease of use, flexibility, and quick iteration in agentic development, OpenAI Agents SDK is the clear winner based on the table. However, if your project requires enterprise-scale features (e.g., Dapr Agents) or maximum control for complex workflows (e.g., LangGraph), you might consider those alternatives despite their added complexity.&lt;/p&gt;
+&lt;h2 id=&#34;core-daca-agentic-ai-courses&#34;&gt;Core DACA Agentic AI Courses:
+&lt;/h2&gt;&lt;h3 id=&#34;ai-201--fundamentals-of-agentic-ai-and-daca-ai-first-development-14-weeks&#34;&gt;AI-201:  Fundamentals of Agentic AI and DACA AI-First Development (14 weeks)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;⁠Agentic &amp;amp; DACA Theory - 1 week&lt;/li&gt;
+&lt;li&gt;UV &amp;amp; ⁠OpenAI Agents SDK - 5 weeks&lt;/li&gt;
+&lt;li&gt;⁠Agentic Design Patterns - 2 weeks&lt;/li&gt;
+&lt;li&gt;⁠Memory [LangMem &amp;amp; mem0] 1 week&lt;/li&gt;
+&lt;li&gt;Postgres/Redis (Managed Cloud) - 1 week&lt;/li&gt;
+&lt;li&gt;FastAPI (Basic)  - 2 weeks&lt;/li&gt;
+&lt;li&gt;⁠Containerization (Rancher Desktop) - 1 week&lt;/li&gt;
+&lt;li&gt;Hugging Face Docker Spaces - 1 week&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/playlist?list=PL0vKVrkG4hWovpr0FX6Gs-06hfsPDEUe6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AI-201 Video Playlist&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Note: These videos are for additional learning, and do not cover all the material taught in the onsite classes.&lt;/p&gt;
+&lt;p&gt;Prerequisite: Successful completion of &lt;a class=&#34;link&#34; href=&#34;https://github.com/panaversity/learn-modern-ai-python&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AI-101: Modern AI Python Programming - Your Launchpad into Intelligent Systems&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;ai-202-daca-cloud-first-agentic-ai-development-14-weeks&#34;&gt;AI-202: DACA Cloud-First Agentic AI Development (14 weeks)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Rancher Desktop with Local Kubernetes - 4 weeks&lt;/li&gt;
+&lt;li&gt;Advanced FastAPI with Kubernetes - 2 weeks&lt;/li&gt;
+&lt;li&gt;Dapr [workflows, state, pubsub, secrets] - 3 Week&lt;/li&gt;
+&lt;li&gt;CockRoachdb &amp;amp; RabbitMQ Managed Services - 2 weeks&lt;/li&gt;
+&lt;li&gt;⁠Model Context Protocol -  2 weeks&lt;/li&gt;
+&lt;li&gt;⁠Serverless Containers Deployment (ACA) - 2 weeks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Prerequisite: Successful completion of AI-201&lt;/p&gt;
+&lt;h3 id=&#34;ai-301-daca-planet-scale-distributed-ai-agents-14-weeks&#34;&gt;AI-301 DACA Planet-Scale Distributed AI Agents (14 Weeks)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;⁠Certified Kubernetes Application Developer (CKAD) - 4 weeks&lt;/li&gt;
+&lt;li&gt;⁠A2A Protocol - 2 weeks&lt;/li&gt;
+&lt;li&gt;⁠Voice Agents - 2 weeks&lt;/li&gt;
+&lt;li&gt;⁠Dapr Agents/Google ADK - 2 weeks&lt;/li&gt;
+&lt;li&gt;⁠Self-LLMs Hosting - 1 week&lt;/li&gt;
+&lt;li&gt;Finetuning LLMs - 3 weeks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Prerequisite: Successful completion of AI-201 &amp;amp; AI-202&lt;/p&gt;
+&lt;h2 id=&#34;evaluations&#34;&gt;Evaluations
+&lt;/h2&gt;&lt;p&gt;Quizzes + Hackathons (Everything is Onsite)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Advanced Modern Python (including asyncio) [Q1]&lt;/li&gt;
+&lt;li&gt;OpenAI Agents SDK (48 MCQ in 2 hour) [01_ai_agents_first]&lt;/li&gt;
+&lt;li&gt;Protocols &amp;amp; Design Patterns (A2A and MCP) [05_ai_protocols]&lt;/li&gt;
+&lt;li&gt;Hackathon1 - 8 Hours (Using Above Quiz Stack)&lt;/li&gt;
+&lt;li&gt;Containerization + FastAPI [05_daca_agent_native_dev = 01 + 02 ]&lt;/li&gt;
+&lt;li&gt;Kubernetes (Rancher Desktop) [Stimulations] [05_daca_agent_native_dev = 02 ]&lt;/li&gt;
+&lt;li&gt;Dapr-1 - State, PubSub, Bindings, Invocation [05_daca_agent_native_dev = 03 ]&lt;/li&gt;
+&lt;li&gt;Dapr-2 - Workflows, Virtual Actors [04_agent_native = 04, 05, 06]&lt;/li&gt;
+&lt;li&gt;Hackathon2 - 8 Hours (Agent Native Startup)&lt;/li&gt;
+&lt;li&gt;CKAD + DAPR + ArgoCD (Simulations) [06_daca_deployment_guide + 07_ckad]&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;quiz-details&#34;&gt;Quiz Details
+&lt;/h2&gt;&lt;h3 id=&#34;fundamentals-of-agentic-ai-quiz&#34;&gt;Fundamentals of Agentic AI Quiz
+&lt;/h3&gt;&lt;p&gt;Total Questions: 48 MCQs&lt;/p&gt;
+&lt;p&gt;Duration: 120 Minutes&lt;/p&gt;
+&lt;p&gt;Difficulty Level: Intermediate or Advanced (NOT beginner-level)&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/playlist?list=PL0vKVrkG4hWr4V2I4P6GaDzMG_LijlGTm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Quiz Preparation Playlist&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is a well-constructed, comprehensive quiz that accurately tests deep knowledge of the OpenAI Agents SDK. However, it&amp;rsquo;s significantly more challenging than typical beginner-level assessments.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Difficulty Level for Beginners&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The quiz is challenging for beginners due to the following factors:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Technical Depth&lt;/strong&gt;: Questions require understanding the OpenAI Agents SDK’s architecture (e.g., Agents, Tools, Handoffs, Runner), Pydantic models, async programming, and prompt engineering. These are advanced topics for someone new to AI or Python.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Conceptual Complexity&lt;/strong&gt;: Topics like dynamic instructions, context management, error handling, and Chain-of-Thought prompting require familiarity with both theoretical and practical aspects of agentic AI.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Code Analysis&lt;/strong&gt;: Many questions involve analyzing code snippets, understanding execution paths, and predicting outcomes, which demand strong Python and debugging skills.
+Domain Knowledge: Questions on Markdown are simpler, but the majority focus on niche SDK features, making the quiz specialized.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Beginner Challenges&lt;/strong&gt;: Beginners (e.g., those with basic Python knowledge and minimal AI experience) would struggle with SDK-specific concepts like Runner.run_sync, tool_choice, and Pydantic validation, as well as async programming and multi-agent workflows.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Difficulty Rating&lt;/strong&gt;: Advanced (not beginner-friendly). Beginners would need foundational knowledge in Python, async programming, and LLMs, plus specific training on the OpenAI Agents SDK to perform well.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To excel in this quiz, focus on understanding the core components and philosophy of the OpenAI Agents SDK, such as its &amp;ldquo;Python-first&amp;rdquo; design for orchestration, the roles of Agents and Tools, and how primitives like &amp;ldquo;Handoffs&amp;rdquo; facilitate multi-agent collaboration. Pay close attention to how the SDK manages the agent loop, handles tool calls and Pydantic models for typed inputs/outputs, and uses context objects. Review concepts like dynamic instructions, agent cloning, error handling during tool execution, and the nuances of Runner.run_sync() versus streaming. Additionally, refresh your knowledge of prompt engineering techniques, including crafting clear instructions, guiding the agent&amp;rsquo;s reasoning (e.g., Chain-of-Thought), and managing sensitive data through persona and careful prompting. Finally, ensure you&amp;rsquo;re comfortable with basic Markdown syntax for links and images.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Preparation Guide for Beginner Students&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This OpenAI Agents SDK quiz is designed for intermediate to advanced learners and requires substantial preparation to succeed. Before attempting this assessment, ensure you have a solid foundation in Python programming, including object-oriented concepts, async/await patterns, decorators, and error handling. You&amp;rsquo;ll need to thoroughly study Pydantic models for data validation, understanding field definitions, default values, and validation behavior. Dedicate significant time to the OpenAI Agents SDK documentation (&lt;a class=&#34;link&#34; href=&#34;https://openai.github.io/openai-agents-python/%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://openai.github.io/openai-agents-python/)&lt;/a&gt;, focusing on core concepts like Agents, Tools, Handoffs, context management, and the agent execution loop. Practice writing and analyzing code that uses the @function_tool decorator, Runner.run_sync(), agent cloning, and multi-agent orchestration patterns. Review prompt engineering techniques from the OpenAI cookbook, particularly Chain-of-Thought prompting, system message design, and handling sensitive data. Finally, familiarize yourself with basic Markdown syntax for links and images. Plan to spend at least 2-3 weeks studying these materials, complete hands-on coding exercises with the SDK. Consider this quiz a capstone assessment that requires comprehensive understanding rather than a beginner-level introduction to the concepts.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Quiz Covers&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://openai.github.io/openai-agents-python/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://openai.github.io/openai-agents-python/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://cookbook.openai.com/examples/gpt4-1_prompting_guide&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://cookbook.openai.com/examples/gpt4-1_prompting_guide&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.markdownguide.org/basic-syntax/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.markdownguide.org/basic-syntax/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.markdownguide.org/cheat-sheet/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.markdownguide.org/cheat-sheet/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/panaversity/learn-agentic-ai/tree/main/01_ai_agents_first&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/panaversity/learn-agentic-ai/tree/main/01_ai_agents_first&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;You Can Generate Mock Quizzes for Practice using LLMs from this Prompt:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Create a comprehensive quiz covering OpenAI Agents SDK. It should include as many MCQ Quiz Questions as required to test the material, the questions should be difficult and at the graduate level and should test both concepts and include code were required. From the following following documentation:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://openai.github.io/openai-agents-python/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://openai.github.io/openai-agents-python/&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Product Hunt Daily | 2025-03-28</title>
+        <link>https://producthunt.programnotes.cn/en/p/product-hunt-daily-2025-03-28/</link>
+        <pubDate>Fri, 28 Mar 2025 07:26:59 +0000</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/product-hunt-daily-2025-03-28/</guid>
+        <description>&lt;img src="https://ph-files.imgix.net/684ea987-345c-4273-837d-a7580913d925.jpeg?auto=format&amp;fit=crop&amp;frame=1&amp;h=512&amp;w=1024" alt="Featured image of post Product Hunt Daily | 2025-03-28" /&gt;&lt;h2 id=&#34;1-simplai&#34;&gt;1. SimplAI
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: The simplest and fastest way to build and deploy Agentic AI&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: A single platform for building, deploying, and managing Agentic AI in any environment - on-prem, cloud, or hybrid. It provides robust governance, security, and scalability, so you can launch AI applications simpler and faster.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/3FPMCJ6E5P3J6A?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/simplai?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/684ea987-345c-4273-837d-a7580913d925.jpeg?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;SimplAI&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Agentic AI, AI Platform, AI Deployment, AI Management,  Simple AI, Fast AI, AI Governance, AI Security, AI Scalability, On-prem AI, Cloud AI, Hybrid AI&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺819&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-03-27 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-stripo-email-design-platform&#34;&gt;2. Stripo Email Design Platform
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: AI, teamwork, and a new era of email design&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Stripo leveled up! Our brand-new editor introduces AI Hub, real-time co-editing, commenting, and more—giving teams a seamless workflow for email creation. Whether you&amp;rsquo;re a marketer, designer, or enterprise team, collaborate and create emails faster than ever!&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/LFGJ5E6RFBXVWW?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/stripo-email-design-platform?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/784ee717-c3b0-4ae0-93fe-53121da7e996.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Stripo Email Design Platform&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Email design, email editor, AI email design, email collaboration, teamwork email, email marketing, Stripo,  co-editing emails, email template,  responsive email&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺774&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-03-27 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-scene-20---modular-ai-web-builder&#34;&gt;3. Scene 2.0 - Modular AI Web Builder
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: The smart way to build websites&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Scene is redefining the way modern websites are created—enabling designers and agency teams to ideate, build, and publish websites from a single canvas, with AI empowering their ideation process without limiting customization or creativity.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/ID73ESJ7JL6NZZ?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/scene-2-0-modular-ai-web-builder?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/00f89b47-64d4-42e1-95fe-10c552fa62f5.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Scene 2.0 - Modular AI Web Builder&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AI Website Builder, Modular Website Builder, AI Web Design, Website Design Tool, Scene 2.0, Webflow Alternative, AI-Powered Website,  No-Code Website Builder,  Website Builder Software&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺499&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-03-27 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-actionkit&#34;&gt;4. ActionKit
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Instantly add 1000+ integration actions to your AI agent&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: With a single API call, ActionKit (by Paragon) equips your product&amp;rsquo;s AI agents with 1000+ integration actions across CRMs, ticketing platforms, email, Slack, and more. Paragon is trusted by enterprise AI companies like AI21, You.com, and Copy.ai.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/Z6L2EPBYRW6NXC?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/actionkit?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/3bc58b5b-3997-4918-9efe-1ea288de467d.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;ActionKit&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AI integrations, ActionKit, Paragon, AI agent actions, API integrations, CRM integrations,  Slack integrations,  AI tools, Enterprise AI&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺477&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-03-27 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-kilo-code-for-vs-code&#34;&gt;5. Kilo Code for VS Code
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Lightning speed autonomous AI coding agent&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Kilo AI is an AI-powered extension for VS Code which writes, fixes and improves your code through simple chat. Tuned with the fastest models we could find, it can create and modify files, run command line prompts, and much more.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/RISGYBI2TPKAM5?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/kilo-code-for-vs-code?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/46428b76-afce-49f5-8082-65374b48e08e.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Kilo Code for VS Code &#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AI coding, VS Code extension, AI pair programmer, autonomous coding, code generation, code completion, code improvement, code fix, AI coding assistant, Kilo AI&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺450&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-03-27 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-moio&#34;&gt;6. Moio
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: The future app builder for designers&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Moio is a design tool that allows designers to build functional product design, not just static images. Design and test real user flows, eliminate the gap between mockups and final products, and streamline your product development process.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/YEIMRKSBJDVPV6?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/moio-2?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/db4302e0-97eb-45fd-8305-af468c5a0773.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Moio&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: app builder, design tool, prototyping, UX design, UI design, product design, user flow, mockup, wireframing, interactive design, design software, no-code, low-code&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺441&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-03-27 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;7-redactable&#34;&gt;7. Redactable
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Protect your sensitive data in documents before sharing them&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Redactable uses AI to find and permanently remove sensitive information from documents—unlike traditional methods that leave data vulnerable to bad actors. Save 98% of time while ensuring protection across legal, healthcare, and financial sectors.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/JPOB7SSSZEHU6A?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/redactable?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/ccd137ce-b06e-4fd4-a491-d8e552739105.jpeg?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Redactable&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Data Redaction, AI Redaction, Document Redaction, Sensitive Data Protection, Data Security, Privacy, Legal Tech, Healthcare Tech, FinTech, Time Saving Software, AI Software&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺400&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-03-27 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;8-docko&#34;&gt;8. Docko
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Your virtual pet in your macOS dock&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Your virtual pet in your macOS Dock&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/A7ULUU6KJGJA5H?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/docko?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/79629c89-56b3-4ff0-be2e-ea3136c0ee07.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Docko&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: macOS, virtual pet, dock pet, Docko, Mac app, desktop pet&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺295&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-03-27 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;9-atono&#34;&gt;9. Atono
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Plan, build, run, and improve your product in one place&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Atono is an all-in-one platform for agile, cross-functional teams building web apps. Get essential features like roadmapping, story writing, feature flagging, bug reporting, and usage tracking to plan, build, run, and improve your product – all in one place.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/BHPHEHXCK44THO?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/atono?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/0780c216-a116-4f98-801a-2d7b98aa6676.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Atono&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Product Management, Agile, Roadmapping, Feature Flagging, Bug Tracking, Web App Development, Product Development, Software Development, Cross-functional Teams, Atono&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺200&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-03-27 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;10-ememeai&#34;&gt;10. EmemeAI
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Create &amp;amp; Export AI characters to apps and games&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Bring your AI character to life♡ Without code, You can create 3D chat AI characters, and connect them to external apps, social media, metaverse and games to use as AI-NPCs. They generate not only chat, but also voices and animations. It&amp;rsquo;s free.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/3SVVIOQDPVSGAB?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/ememeai?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/d282cdf9-085d-4d1b-b6a5-172504d07d41.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;EmemeAI&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AI character creator, AI NPC, 3D chat AI, AI animation, Metaverse AI, Game AI, AI voice, no-code AI, free AI tools&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺188&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-03-27 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

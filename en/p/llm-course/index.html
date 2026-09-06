@@ -1,0 +1,2420 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="mlabonne/llm-course 𝕏 Follow me on X • 🤗 Hugging Face • 💻 Blog • 📙 LLM Engineer's Handbook The LLM course is divided into three parts:\n🧩 LLM Fundamentals is optional and covers fundamental knowledge about mathematics, Python, and neural networks. 🧑\u200d🔬 The LLM Scientist focuses on building the best possible LLMs using the latest techniques. 👷 The LLM Engineer focuses on creating LLM-based applications and deploying them. [!NOTE] Based on this course, I wrote the LLM Engineer&rsquo;s Handbook with Paul Iuzstin. It&rsquo;s a hands-on and detailed book that covers an end-to-end LLM application from design to deployment. The LLM course will always stay free but feel free to support my work by purchasing the book.\n">
+<title>llm-course</title>
+
+<link rel='canonical' href='https://producthunt.programnotes.cn/en/p/llm-course/'>
+
+<link rel="stylesheet" href="/scss/style.min.7003b7ac1a9c42e0b19aae00dfd2f4ca1ca01ad9fe44120e4e9e79d16f0188d6.css"><meta property='og:title' content="llm-course">
+<meta property='og:description' content="mlabonne/llm-course 𝕏 Follow me on X • 🤗 Hugging Face • 💻 Blog • 📙 LLM Engineer's Handbook The LLM course is divided into three parts:\n🧩 LLM Fundamentals is optional and covers fundamental knowledge about mathematics, Python, and neural networks. 🧑\u200d🔬 The LLM Scientist focuses on building the best possible LLMs using the latest techniques. 👷 The LLM Engineer focuses on creating LLM-based applications and deploying them. [!NOTE] Based on this course, I wrote the LLM Engineer&rsquo;s Handbook with Paul Iuzstin. It&rsquo;s a hands-on and detailed book that covers an end-to-end LLM application from design to deployment. The LLM course will always stay free but feel free to support my work by purchasing the book.\n">
+<meta property='og:url' content='https://producthunt.programnotes.cn/en/p/llm-course/'>
+<meta property='og:site_name' content='Producthunt daily'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='github' /><meta property='article:published_time' content='2025-10-02T15:27:06&#43;08:00'/><meta property='article:modified_time' content='2025-10-02T15:27:06&#43;08:00'/><meta property='og:image' content='https://images.unsplash.com/photo-1586521995659-4204fe01d104?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzODk5NTh8&amp;ixlib=rb-4.1.0' />
+<meta name="twitter:title" content="llm-course">
+<meta name="twitter:description" content="mlabonne/llm-course 𝕏 Follow me on X • 🤗 Hugging Face • 💻 Blog • 📙 LLM Engineer's Handbook The LLM course is divided into three parts:\n🧩 LLM Fundamentals is optional and covers fundamental knowledge about mathematics, Python, and neural networks. 🧑\u200d🔬 The LLM Scientist focuses on building the best possible LLMs using the latest techniques. 👷 The LLM Engineer focuses on creating LLM-based applications and deploying them. [!NOTE] Based on this course, I wrote the LLM Engineer&rsquo;s Handbook with Paul Iuzstin. It&rsquo;s a hands-on and detailed book that covers an end-to-end LLM application from design to deployment. The LLM course will always stay free but feel free to support my work by purchasing the book.\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://images.unsplash.com/photo-1586521995659-4204fe01d104?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzODk5NTh8&amp;ixlib=rb-4.1.0' />
+    <link rel="shortcut icon" href="/favicon.png" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-KGCNFWCDTR"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-KGCNFWCDTR');
+        }
+      </script><meta name="msvalidate.01" content="B6FE76A783A1770409EC903DE2C7AC6A">
+<meta name="baidu-site-verification" content="codeva-QyG5AHEYbU" />
+<meta name="shenma-site-verification" content="9266d91a096820488e830bfe1e237090_1731993487">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3614504270218797"
+    crossorigin="anonymous"></script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/en/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_6985297a43351d05.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/en">Producthunt daily</a></h1>
+            <h2 class="site-description">Share Product Hunt&#39;s hottest content daily</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/en/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/en/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/en/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/en/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://h5.lot-ml.com/ProductEn/Index/3b72ee43a871a8cc' target="_blank">
+                
+                
+                
+                    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="400px" height="400px" viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">  <image id="image0" width="400" height="400" x="0" y="0"
+    xlink:href="data:image/png;base64,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
+DAwMDAwMDAz/wAARCACgAKADASIAAhEBAxEB/90ABAAK/8QBPwAAAQUBAQEBAQEAAAAAAAAAAwAB
+AgQFBgcICQoLAQABBQEBAQEBAQAAAAAAAAABAAIDBAUGBwgJCgsQAAEEAQMCBAIFBwYIBQMMMwEA
+AhEDBCESMQVBUWETInGBMgYUkaGxQiMkFVLBYjM0coLRQwclklPw4fFjczUWorKDJkSTVGRFwqN0
+NhfSVeJl8rOEw9N14/NGJ5SkhbSVxNTk9KW1xdXl9VZmdoaWprbG1ub2N0dXZ3eHl6e3x9fn9xEA
+AgIBAgQEAwQFBgcHBgU1AQACEQMhMRIEQVFhcSITBTKBkRShsUIjwVLR8DMkYuFygpJDUxVjczTx
+JQYWorKDByY1wtJEk1SjF2RFVTZ0ZeLys4TD03Xj80aUpIW0lcTU5PSltcXV5fVWZnaGlqa2xtbm
+9ic3R1dnd4eXp7fH/9oADAMBAAIRAxEAPwCinTJ11rgqSSSSUpOmTpqVJ0ydBSkkkkClSdMnQUpO
+mTpqVJJJIKUnTJ0EqSSSQU//0KKdMnXWuCpJJJJSk6ZOmpUnTJIKXSSSQKVJ0ydBSk6ZOmpUkkkg
+pSSSSCV0kkkCp//RopJJLrnBXSSSQUpOmToJUkkkmqXTsa57211tL7HmGMYC5zj4MY33OVzpHR8z
+q+T6GKNrGx617h7KwfH9+x3+Dp/89sXoXR+g9P6RVtx2brnCLch+tj/7X5jP+CZ+jVTmucx4NPmy
+fuD/ALpsYOWll1+WP73/AHryPT/qR1bKAflOZg1n8136Sz/ttjm1s/7d/sLWd9S+g4WO/Jzsi51d
+Td1r3PDGgDypYx3/AEl1K4D639dOflnAof8AqeK6HEcWXDQ/9bod7Gf8L+k/0So4c/M8zk4RL24D
+WXAK4Y/3vmbOTFhwwsx45bDi6lxMp+LZkPdh0uoxpiqt7i98D8+1zy73v/c/waGmSWrVCu3fVoXe
+q6SSSRUpJJJNSukkkgp//9KikkkuucFdJJJBSk6ZOgUqV3pHScnq2a3Eo9ojddceK2cb/wCU930a
+mf8Aov1FRJDQSeAvS/qz0ZvSumsa9sZd8WZLu+4jSqf3KG/o/wDwT/CKpzvM+xjsfPL0w/bL/BZ+
+Ww+7Oj8sdZfwb3T+n4vTsVmJiM2VM+ZcT9Kyx3573qykkufkTIkk2TqSXVAAFDQBxfrX1c9M6U70
+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
+mSQS/wD/2dXzq5EAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjUtMDYtMDlUMDM6MzY6NDcrMDA6MDBv
+ad4DAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDI1LTA2LTA5VDAzOjM2OjQ3KzAwOjAwHjRmvwAAACh0
+RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyNS0wNi0wOVQwMzozNjo0NyswMDowMEkhR2AAAAAWdEVYdGV4
+aWY6Qml0c1BlclNhbXBsZQA4LCCYT2uCAAAAF3RFWHRleGlmOkNvbG9yU3BhY2UANjU1MzUsILj4
+LMsAAAAhdEVYdGV4aWY6RGF0ZVRpbWUAMjAyMjoxMToyOSAxMDoyODo1NYCIVlgAAAAVdEVYdGV4
+aWY6RXhpZk9mZnNldAAyMzIsILVnTacAAAAVdEVYdGV4aWY6RXhpZlZlcnNpb24AMDIyMeRcNS0A
+AAAWdEVYdGV4aWY6SW1hZ2VMZW5ndGgANDAwLCC0o8dZAAAAFXRFWHRleGlmOkltYWdlV2lkdGgA
+NDAwLCAnOeJHAAAAInRFWHRleGlmOlBob3RvbWV0cmljSW50ZXJwcmV0YXRpb24AMiwgoZI9+AAA
+ABp0RVh0ZXhpZjpQaXhlbFhEaW1lbnNpb24ANDAwLCAt6cShAAAAGnRFWHRleGlmOlBpeGVsWURp
+bWVuc2lvbgA0MDAsIIOBVTAAAAAYdEVYdGV4aWY6U2FtcGxlc1BlclBpeGVsADMsIPSdHuAAAAAq
+dEVYdGV4aWY6U29mdHdhcmUAQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKdFhpnAAAAAedEVY
+dGV4aWY6dGh1bWJuYWlsOkNvbXByZXNzaW9uADYsIOZ5GlMAAAAqdEVYdGV4aWY6dGh1bWJuYWls
+OkpQRUdJbnRlcmNoYW5nZUZvcm1hdAAzODIsICRAnw0AAAAxdEVYdGV4aWY6dGh1bWJuYWlsOkpQ
+RUdJbnRlcmNoYW5nZUZvcm1hdExlbmd0aAAzODEzLCAQx8TGAAAAIXRFWHRleGlmOnRodW1ibmFp
+bDpSZXNvbHV0aW9uVW5pdAAyLCBlQJb2AAAAH3RFWHRleGlmOnRodW1ibmFpbDpYUmVzb2x1dGlv
+bgA3Mi8x2ocYLAAAAB90RVh0ZXhpZjp0aHVtYm5haWw6WVJlc29sdXRpb24ANzIvMXTvib0AAAAA
+SUVORK5CYII=" />
+</svg>
+
+                
+                <span>流量卡</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    
+                        <li id="i18n-switch">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                
+                                    <option value="https://producthunt.programnotes.cn/" >中文</option>
+                                
+                                    <option value="https://producthunt.programnotes.cn/en/" selected>English</option>
+                                
+                                    <option value="https://producthunt.programnotes.cn/es/" >Español</option>
+                                
+                                    <option value="https://producthunt.programnotes.cn/ar/" >العربية</option>
+                                
+                            </select>
+                        </li>
+                    
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#-notebooks">📝 Notebooks</a>
+      <ol>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#fine-tuning">Fine-tuning</a></li>
+        <li><a href="#quantization">Quantization</a></li>
+        <li><a href="#other">Other</a></li>
+      </ol>
+    </li>
+    <li><a href="#-llm-fundamentals">🧩 LLM Fundamentals</a>
+      <ol>
+        <li><a href="#1-mathematics-for-machine-learning">1. Mathematics for Machine Learning</a></li>
+        <li><a href="#2-python-for-machine-learning">2. Python for Machine Learning</a></li>
+        <li><a href="#3-neural-networks">3. Neural Networks</a></li>
+        <li><a href="#4-natural-language-processing-nlp">4. Natural Language Processing (NLP)</a></li>
+      </ol>
+    </li>
+    <li><a href="#-the-llm-scientist">🧑‍🔬 The LLM Scientist</a>
+      <ol>
+        <li><a href="#1-the-llm-architecture">1. The LLM architecture</a></li>
+        <li><a href="#2-pre-training-models">2. Pre-training models</a></li>
+        <li><a href="#3-post-training-datasets">3. Post-training datasets</a></li>
+        <li><a href="#4-supervised-fine-tuning">4. Supervised Fine-Tuning</a></li>
+        <li><a href="#5-preference-alignment">5. Preference Alignment</a></li>
+        <li><a href="#6-evaluation">6. Evaluation</a></li>
+        <li><a href="#7-quantization">7. Quantization</a></li>
+        <li><a href="#8-new-trends">8. New Trends</a></li>
+      </ol>
+    </li>
+    <li><a href="#-the-llm-engineer">👷 The LLM Engineer</a>
+      <ol>
+        <li><a href="#1-running-llms">1. Running LLMs</a></li>
+        <li><a href="#2-building-a-vector-storage">2. Building a Vector Storage</a></li>
+        <li><a href="#3-retrieval-augmented-generation">3. Retrieval Augmented Generation</a></li>
+        <li><a href="#4-advanced-rag">4. Advanced RAG</a></li>
+        <li><a href="#5-agents">5. Agents</a></li>
+        <li><a href="#6-inference-optimization">6. Inference optimization</a></li>
+        <li><a href="#7-deploying-llms">7. Deploying LLMs</a></li>
+        <li><a href="#8-securing-llms">8. Securing LLMs</a></li>
+      </ol>
+    </li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/en/p/llm-course/">
+                
+                    <img src="https://images.unsplash.com/photo-1586521995659-4204fe01d104?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTkzODk5NTh8&amp;ixlib=rb-4.1.0" loading="lazy" alt="Featured image of post llm-course" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/en/categories/github/" style="background-color: hsl(146, 60%, 84%); color: hsl(146, 60%, 15%);">
+                Github
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/en/p/llm-course/">llm-course</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published" datetime='2025-10-02T15:27:06&#43;08:00'>Oct 02, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    27 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="mlabonnellm-course"><a class="link" href="https://github.com/mlabonne/llm-course"  target="_blank" rel="noopener"
+    >mlabonne/llm-course</a>
+</h1><div align="center">
+<img src="img/banner.png" alt="LLM Course">
+  <p align="center">
+    𝕏 <a href="https://twitter.com/maximelabonne">Follow me on X</a> • 
+    🤗 <a href="https://huggingface.co/mlabonne">Hugging Face</a> • 
+    💻 <a href="https://mlabonne.github.io/blog">Blog</a> • 
+    📙 <a href="https://packt.link/a/9781836200079">LLM Engineer's Handbook</a>
+  </p>
+</div>
+<br/>
+<p><a href="https://a.co/d/a2M67rE"><img align="right" width="25%" src="https://i.imgur.com/7iNjEq2.png" alt="LLM Engineer's Handbook Cover"/></a>The LLM course is divided into three parts:</p>
+<ol>
+<li>🧩 <strong>LLM Fundamentals</strong> is optional and covers fundamental knowledge about mathematics, Python, and neural networks.</li>
+<li>🧑‍🔬 <strong>The LLM Scientist</strong> focuses on building the best possible LLMs using the latest techniques.</li>
+<li>👷 <strong>The LLM Engineer</strong> focuses on creating LLM-based applications and deploying them.</li>
+</ol>
+<blockquote>
+<p>[!NOTE]
+Based on this course, I wrote the <a class="link" href="https://packt.link/a/9781836200079"  target="_blank" rel="noopener"
+    >LLM Engineer&rsquo;s Handbook</a> with Paul Iuzstin. It&rsquo;s a hands-on and detailed book that covers an end-to-end LLM application from design to deployment. The LLM course will always stay free but feel free to support my work by purchasing the book.</p>
+</blockquote>
+<p>For an interactive version of this course, I created an LLM assistant that will answer questions and test your knowledge in a personalized way on <a class="link" href="https://hf.co/chat/assistant/66029d2e5f4a884f7aabc9d1"  target="_blank" rel="noopener"
+    ><strong>HuggingChat</strong></a> or <a class="link" href="https://chat.openai.com/g/g-yviLuLqvI-llm-course"  target="_blank" rel="noopener"
+    ><strong>ChatGPT</strong></a>.</p>
+<h2 id="-notebooks">📝 Notebooks
+</h2><p>A list of notebooks and articles I wrote about LLMs.</p>
+<h3 id="tools">Tools
+</h3><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>Notebook</th>
+					<th>Description</th>
+					<th>Notebook</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>🧐 <a class="link" href="https://github.com/mlabonne/llm-autoeval"  target="_blank" rel="noopener"
+    >LLM AutoEval</a></td>
+					<td>Automatically evaluate your LLMs using RunPod</td>
+					<td><a href="https://colab.research.google.com/drive/1Igs3WZuXAIv9X0vwqiE90QlEPys8e8Oa?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+			<tr>
+					<td>🥱 LazyMergekit</td>
+					<td>Easily merge models using MergeKit in one click.</td>
+					<td><a href="https://colab.research.google.com/drive/1obulZ1ROXHjYLn6PPZJwRR6GzgQogxxb?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+			<tr>
+					<td>🦎 LazyAxolotl</td>
+					<td>Fine-tune models in the cloud using Axolotl in one click.</td>
+					<td><a href="https://colab.research.google.com/drive/1TsDKNo2riwVmU55gjuBgB1AXVtRRfRHW?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+			<tr>
+					<td>⚡ AutoQuant</td>
+					<td>Quantize LLMs in GGUF, GPTQ, EXL2, AWQ, and HQQ formats in one click.</td>
+					<td><a href="https://colab.research.google.com/drive/1b6nqC7UZVt8bx4MksX7s656GXPM-eWw4?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+			<tr>
+					<td>🌳 Model Family Tree</td>
+					<td>Visualize the family tree of merged models.</td>
+					<td><a href="https://colab.research.google.com/drive/1s2eQlolcI1VGgDhqWIANfkfKvcKrMyNr?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+			<tr>
+					<td>🚀 ZeroSpace</td>
+					<td>Automatically create a Gradio chat interface using a free ZeroGPU.</td>
+					<td><a href="https://colab.research.google.com/drive/1LcVUW5wsJTO2NGmozjji5CkC--646LgC"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+			<tr>
+					<td>✂️ AutoAbliteration</td>
+					<td>Automatically abliteration models with custom datasets.</td>
+					<td><a href="https://colab.research.google.com/drive/1RmLv-pCMBBsQGXQIM8yF-OdCNyoylUR1?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+			<tr>
+					<td>🧼 AutoDedup</td>
+					<td>Automatically deduplicate datasets using the Rensa library.</td>
+					<td><a href="https://colab.research.google.com/drive/1o1nzwXWAa8kdkEJljbJFW1VuI-3VZLUn?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+	</tbody>
+</table></div>
+<h3 id="fine-tuning">Fine-tuning
+</h3><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>Notebook</th>
+					<th>Description</th>
+					<th>Article</th>
+					<th>Notebook</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Fine-tune Llama 3.1 with Unsloth</td>
+					<td>Ultra-efficient supervised fine-tuning in Google Colab.</td>
+					<td><a class="link" href="https://mlabonne.github.io/blog/posts/2024-07-29_Finetune_Llama31.html"  target="_blank" rel="noopener"
+    >Article</a></td>
+					<td><a href="https://colab.research.google.com/drive/164cg_O7SV7G8kZr_JXqLd6VC7pd86-1Z?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+			<tr>
+					<td>Fine-tune Llama 3 with ORPO</td>
+					<td>Cheaper and faster fine-tuning in a single stage with ORPO.</td>
+					<td><a class="link" href="https://mlabonne.github.io/blog/posts/2024-04-19_Fine_tune_Llama_3_with_ORPO.html"  target="_blank" rel="noopener"
+    >Article</a></td>
+					<td><a href="https://colab.research.google.com/drive/1eHNWg9gnaXErdAa8_mcvjMupbSS6rDvi"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+			<tr>
+					<td>Fine-tune Mistral-7b with DPO</td>
+					<td>Boost the performance of supervised fine-tuned models with DPO.</td>
+					<td><a class="link" href="https://mlabonne.github.io/blog/posts/Fine_tune_Mistral_7b_with_DPO.html"  target="_blank" rel="noopener"
+    >Article</a></td>
+					<td><a href="https://colab.research.google.com/drive/15iFBr1xWgztXvhrj5I9fBv20c7CFOPBE?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+			<tr>
+					<td>Fine-tune Mistral-7b with QLoRA</td>
+					<td>Supervised fine-tune Mistral-7b in a free-tier Google Colab with TRL.</td>
+					<td></td>
+					<td><a href="https://colab.research.google.com/drive/1o_w0KastmEJNVwT5GoqMCciH-18ca5WS?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+			<tr>
+					<td>Fine-tune CodeLlama using Axolotl</td>
+					<td>End-to-end guide to the state-of-the-art tool for fine-tuning.</td>
+					<td><a class="link" href="https://mlabonne.github.io/blog/posts/A_Beginners_Guide_to_LLM_Finetuning.html"  target="_blank" rel="noopener"
+    >Article</a></td>
+					<td><a href="https://colab.research.google.com/drive/1Xu0BrCB7IShwSWKVcfAfhehwjDrDMH5m?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+			<tr>
+					<td>Fine-tune Llama 2 with QLoRA</td>
+					<td>Step-by-step guide to supervised fine-tune Llama 2 in Google Colab.</td>
+					<td><a class="link" href="https://mlabonne.github.io/blog/posts/Fine_Tune_Your_Own_Llama_2_Model_in_a_Colab_Notebook.html"  target="_blank" rel="noopener"
+    >Article</a></td>
+					<td><a href="https://colab.research.google.com/drive/1PEQyJO1-f6j0S_XJ8DV50NkpzasXkrzd?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+	</tbody>
+</table></div>
+<h3 id="quantization">Quantization
+</h3><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>Notebook</th>
+					<th>Description</th>
+					<th>Article</th>
+					<th>Notebook</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Introduction to Quantization</td>
+					<td>Large language model optimization using 8-bit quantization.</td>
+					<td><a class="link" href="https://mlabonne.github.io/blog/posts/Introduction_to_Weight_Quantization.html"  target="_blank" rel="noopener"
+    >Article</a></td>
+					<td><a href="https://colab.research.google.com/drive/1DPr4mUQ92Cc-xf4GgAaB6dFcFnWIvqYi?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+			<tr>
+					<td>4-bit Quantization using GPTQ</td>
+					<td>Quantize your own open-source LLMs to run them on consumer hardware.</td>
+					<td><a class="link" href="https://mlabonne.github.io/blog/4bit_quantization/"  target="_blank" rel="noopener"
+    >Article</a></td>
+					<td><a href="https://colab.research.google.com/drive/1lSvVDaRgqQp_mWK_jC9gydz6_-y6Aq4A?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+			<tr>
+					<td>Quantization with GGUF and llama.cpp</td>
+					<td>Quantize Llama 2 models with llama.cpp and upload GGUF versions to the HF Hub.</td>
+					<td><a class="link" href="https://mlabonne.github.io/blog/posts/Quantize_Llama_2_models_using_ggml.html"  target="_blank" rel="noopener"
+    >Article</a></td>
+					<td><a href="https://colab.research.google.com/drive/1pL8k7m04mgE5jo2NrjGi8atB0j_37aDD?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+			<tr>
+					<td>ExLlamaV2: The Fastest Library to Run LLMs</td>
+					<td>Quantize and run EXL2 models and upload them to the HF Hub.</td>
+					<td><a class="link" href="https://mlabonne.github.io/blog/posts/ExLlamaV2_The_Fastest_Library_to_Run%C2%A0LLMs.html"  target="_blank" rel="noopener"
+    >Article</a></td>
+					<td><a href="https://colab.research.google.com/drive/1yrq4XBlxiA0fALtMoT2dwiACVc77PHou?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+	</tbody>
+</table></div>
+<h3 id="other">Other
+</h3><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>Notebook</th>
+					<th>Description</th>
+					<th>Article</th>
+					<th>Notebook</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Merge LLMs with MergeKit</td>
+					<td>Create your own models easily, no GPU required!</td>
+					<td><a class="link" href="https://mlabonne.github.io/blog/posts/2024-01-08_Merge_LLMs_with_mergekit%20copy.html"  target="_blank" rel="noopener"
+    >Article</a></td>
+					<td><a href="https://colab.research.google.com/drive/1_JS7JKJAQozD48-LhYdegcuuZ2ddgXfr?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+			<tr>
+					<td>Create MoEs with MergeKit</td>
+					<td>Combine multiple experts into a single frankenMoE</td>
+					<td><a class="link" href="https://mlabonne.github.io/blog/posts/2024-03-28_Create_Mixture_of_Experts_with_MergeKit.html"  target="_blank" rel="noopener"
+    >Article</a></td>
+					<td><a href="https://colab.research.google.com/drive/1obulZ1ROXHjYLn6PPZJwRR6GzgQogxxb?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+			<tr>
+					<td>Uncensor any LLM with abliteration</td>
+					<td>Fine-tuning without retraining</td>
+					<td><a class="link" href="https://mlabonne.github.io/blog/posts/2024-06-04_Uncensor_any_LLM_with_abliteration.html"  target="_blank" rel="noopener"
+    >Article</a></td>
+					<td><a href="https://colab.research.google.com/drive/1VYm3hOcvCpbGiqKZb141gJwjdmmCcVpR?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+			<tr>
+					<td>Improve ChatGPT with Knowledge Graphs</td>
+					<td>Augment ChatGPT&rsquo;s answers with knowledge graphs.</td>
+					<td><a class="link" href="https://mlabonne.github.io/blog/posts/Article_Improve_ChatGPT_with_Knowledge_Graphs.html"  target="_blank" rel="noopener"
+    >Article</a></td>
+					<td><a href="https://colab.research.google.com/drive/1mwhOSw9Y9bgEaIFKT4CLi0n18pXRM4cj?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+			<tr>
+					<td>Decoding Strategies in Large Language Models</td>
+					<td>A guide to text generation from beam search to nucleus sampling</td>
+					<td><a class="link" href="https://mlabonne.github.io/blog/posts/2022-06-07-Decoding_strategies.html"  target="_blank" rel="noopener"
+    >Article</a></td>
+					<td><a href="https://colab.research.google.com/drive/19CJlOS5lI29g-B3dziNn93Enez1yiHk2?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a></td>
+			</tr>
+	</tbody>
+</table></div>
+<h2 id="-llm-fundamentals">🧩 LLM Fundamentals
+</h2><p>This section introduces essential knowledge about mathematics, Python, and neural networks. You might not want to start here but refer to it as needed.</p>
+<details>
+<summary>Toggle section (optional)</summary>
+<p><img src="/img/roadmap_fundamentals.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h3 id="1-mathematics-for-machine-learning">1. Mathematics for Machine Learning
+</h3><p>Before mastering machine learning, it is important to understand the fundamental mathematical concepts that power these algorithms.</p>
+<ul>
+<li><strong>Linear Algebra</strong>: This is crucial for understanding many algorithms, especially those used in deep learning. Key concepts include vectors, matrices, determinants, eigenvalues and eigenvectors, vector spaces, and linear transformations.</li>
+<li><strong>Calculus</strong>: Many machine learning algorithms involve the optimization of continuous functions, which requires an understanding of derivatives, integrals, limits, and series. Multivariable calculus and the concept of gradients are also important.</li>
+<li><strong>Probability and Statistics</strong>: These are crucial for understanding how models learn from data and make predictions. Key concepts include probability theory, random variables, probability distributions, expectations, variance, covariance, correlation, hypothesis testing, confidence intervals, maximum likelihood estimation, and Bayesian inference.</li>
+</ul>
+<p>📚 Resources:</p>
+<ul>
+<li><a class="link" href="https://www.youtube.com/watch?v=fNk_zzaMoSs&amp;list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"  target="_blank" rel="noopener"
+    >3Blue1Brown - The Essence of Linear Algebra</a>: Series of videos that give a geometric intuition to these concepts.</li>
+<li><a class="link" href="https://www.youtube.com/watch?v=qBigTkBLU6g&amp;list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9"  target="_blank" rel="noopener"
+    >StatQuest with Josh Starmer - Statistics Fundamentals</a>: Offers simple and clear explanations for many statistical concepts.</li>
+<li><a class="link" href="https://automata88.medium.com/list/cacc224d5e7d"  target="_blank" rel="noopener"
+    >AP Statistics Intuition by Ms Aerin</a>: List of Medium articles that provide the intuition behind every probability distribution.</li>
+<li><a class="link" href="https://immersivemath.com/ila/learnmore.html"  target="_blank" rel="noopener"
+    >Immersive Linear Algebra</a>: Another visual interpretation of linear algebra.</li>
+<li><a class="link" href="https://www.khanacademy.org/math/linear-algebra"  target="_blank" rel="noopener"
+    >Khan Academy - Linear Algebra</a>: Great for beginners as it explains the concepts in a very intuitive way.</li>
+<li><a class="link" href="https://www.khanacademy.org/math/calculus-1"  target="_blank" rel="noopener"
+    >Khan Academy - Calculus</a>: An interactive course that covers all the basics of calculus.</li>
+<li><a class="link" href="https://www.khanacademy.org/math/statistics-probability"  target="_blank" rel="noopener"
+    >Khan Academy - Probability and Statistics</a>: Delivers the material in an easy-to-understand format.</li>
+</ul>
+<hr>
+<h3 id="2-python-for-machine-learning">2. Python for Machine Learning
+</h3><p>Python is a powerful and flexible programming language that&rsquo;s particularly good for machine learning, thanks to its readability, consistency, and robust ecosystem of data science libraries.</p>
+<ul>
+<li><strong>Python Basics</strong>: Python programming requires a good understanding of the basic syntax, data types, error handling, and object-oriented programming.</li>
+<li><strong>Data Science Libraries</strong>: It includes familiarity with NumPy for numerical operations, Pandas for data manipulation and analysis, Matplotlib and Seaborn for data visualization.</li>
+<li><strong>Data Preprocessing</strong>: This involves feature scaling and normalization, handling missing data, outlier detection, categorical data encoding, and splitting data into training, validation, and test sets.</li>
+<li><strong>Machine Learning Libraries</strong>: Proficiency with Scikit-learn, a library providing a wide selection of supervised and unsupervised learning algorithms, is vital. Understanding how to implement algorithms like linear regression, logistic regression, decision trees, random forests, k-nearest neighbors (K-NN), and K-means clustering is important. Dimensionality reduction techniques like PCA and t-SNE are also helpful for visualizing high-dimensional data.</li>
+</ul>
+<p>📚 Resources:</p>
+<ul>
+<li><a class="link" href="https://realpython.com/"  target="_blank" rel="noopener"
+    >Real Python</a>: A comprehensive resource with articles and tutorials for both beginner and advanced Python concepts.</li>
+<li><a class="link" href="https://www.youtube.com/watch?v=rfscVS0vtbw"  target="_blank" rel="noopener"
+    >freeCodeCamp - Learn Python</a>: Long video that provides a full introduction into all of the core concepts in Python.</li>
+<li><a class="link" href="https://jakevdp.github.io/PythonDataScienceHandbook/"  target="_blank" rel="noopener"
+    >Python Data Science Handbook</a>: Free digital book that is a great resource for learning pandas, NumPy, Matplotlib, and Seaborn.</li>
+<li><a class="link" href="https://youtu.be/i_LwzRVP7bg"  target="_blank" rel="noopener"
+    >freeCodeCamp - Machine Learning for Everybody</a>: Practical introduction to different machine learning algorithms for beginners.</li>
+<li><a class="link" href="https://www.udacity.com/course/intro-to-machine-learning--ud120"  target="_blank" rel="noopener"
+    >Udacity - Intro to Machine Learning</a>: Free course that covers PCA and several other machine learning concepts.</li>
+</ul>
+<hr>
+<h3 id="3-neural-networks">3. Neural Networks
+</h3><p>Neural networks are a fundamental part of many machine learning models, particularly in the realm of deep learning. To utilize them effectively, a comprehensive understanding of their design and mechanics is essential.</p>
+<ul>
+<li><strong>Fundamentals</strong>: This includes understanding the structure of a neural network, such as layers, weights, biases, and activation functions (sigmoid, tanh, ReLU, etc.)</li>
+<li><strong>Training and Optimization</strong>: Familiarize yourself with backpropagation and different types of loss functions, like Mean Squared Error (MSE) and Cross-Entropy. Understand various optimization algorithms like Gradient Descent, Stochastic Gradient Descent, RMSprop, and Adam.</li>
+<li><strong>Overfitting</strong>: Understand the concept of overfitting (where a model performs well on training data but poorly on unseen data) and learn various regularization techniques (dropout, L1/L2 regularization, early stopping, data augmentation) to prevent it.</li>
+<li><strong>Implement a Multilayer Perceptron (MLP)</strong>: Build an MLP, also known as a fully connected network, using PyTorch.</li>
+</ul>
+<p>📚 Resources:</p>
+<ul>
+<li><a class="link" href="https://www.youtube.com/watch?v=aircAruvnKk"  target="_blank" rel="noopener"
+    >3Blue1Brown - But what is a Neural Network?</a>: This video gives an intuitive explanation of neural networks and their inner workings.</li>
+<li><a class="link" href="https://www.youtube.com/watch?v=VyWAvY2CF9c"  target="_blank" rel="noopener"
+    >freeCodeCamp - Deep Learning Crash Course</a>: This video efficiently introduces all the most important concepts in deep learning.</li>
+<li><a class="link" href="https://course.fast.ai/"  target="_blank" rel="noopener"
+    >Fast.ai - Practical Deep Learning</a>: Free course designed for people with coding experience who want to learn about deep learning.</li>
+<li><a class="link" href="https://www.youtube.com/playlist?list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4"  target="_blank" rel="noopener"
+    >Patrick Loeber - PyTorch Tutorials</a>: Series of videos for complete beginners to learn about PyTorch.</li>
+</ul>
+<hr>
+<h3 id="4-natural-language-processing-nlp">4. Natural Language Processing (NLP)
+</h3><p>NLP is a fascinating branch of artificial intelligence that bridges the gap between human language and machine understanding. From simple text processing to understanding linguistic nuances, NLP plays a crucial role in many applications like translation, sentiment analysis, chatbots, and much more.</p>
+<ul>
+<li><strong>Text Preprocessing</strong>: Learn various text preprocessing steps like tokenization (splitting text into words or sentences), stemming (reducing words to their root form), lemmatization (similar to stemming but considers the context), stop word removal, etc.</li>
+<li><strong>Feature Extraction Techniques</strong>: Become familiar with techniques to convert text data into a format that can be understood by machine learning algorithms. Key methods include Bag-of-words (BoW), Term Frequency-Inverse Document Frequency (TF-IDF), and n-grams.</li>
+<li><strong>Word Embeddings</strong>: Word embeddings are a type of word representation that allows words with similar meanings to have similar representations. Key methods include Word2Vec, GloVe, and FastText.</li>
+<li><strong>Recurrent Neural Networks (RNNs)</strong>: Understand the working of RNNs, a type of neural network designed to work with sequence data. Explore LSTMs and GRUs, two RNN variants that are capable of learning long-term dependencies.</li>
+</ul>
+<p>📚 Resources:</p>
+<ul>
+<li><a class="link" href="https://lena-voita.github.io/nlp_course/word_embeddings.html"  target="_blank" rel="noopener"
+    >Lena Voita - Word Embeddings</a>: Beginner-friendly course about concepts related to word embeddings.</li>
+<li><a class="link" href="https://realpython.com/natural-language-processing-spacy-python/"  target="_blank" rel="noopener"
+    >RealPython - NLP with spaCy in Python</a>: Exhaustive guide about the spaCy library for NLP tasks in Python.</li>
+<li><a class="link" href="https://www.kaggle.com/learn-guide/natural-language-processing"  target="_blank" rel="noopener"
+    >Kaggle - NLP Guide</a>: A few notebooks and resources for a hands-on explanation of NLP in Python.</li>
+<li><a class="link" href="https://jalammar.github.io/illustrated-word2vec/"  target="_blank" rel="noopener"
+    >Jay Alammar - The Illustration Word2Vec</a>: A good reference to understand the famous Word2Vec architecture.</li>
+<li><a class="link" href="https://jaketae.github.io/study/pytorch-rnn/"  target="_blank" rel="noopener"
+    >Jake Tae - PyTorch RNN from Scratch</a>: Practical and simple implementation of RNN, LSTM, and GRU models in PyTorch.</li>
+<li><a class="link" href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/"  target="_blank" rel="noopener"
+    >colah&rsquo;s blog - Understanding LSTM Networks</a>: A more theoretical article about the LSTM network.</li>
+</ul>
+</details>
+<h2 id="-the-llm-scientist">🧑‍🔬 The LLM Scientist
+</h2><p>This section of the course focuses on learning how to build the best possible LLMs using the latest techniques.</p>
+<p><img src="/img/roadmap_scientist.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h3 id="1-the-llm-architecture">1. The LLM architecture
+</h3><p>An in-depth knowledge of the Transformer architecture is not required, but it&rsquo;s important to understand the main steps of modern LLMs: converting text into numbers through tokenization, processing these tokens through layers including attention mechanisms, and finally generating new text through various sampling strategies.</p>
+<ul>
+<li><strong>Architectural Overview</strong>: Understand the evolution from encoder-decoder Transformers to decoder-only architectures like GPT, which form the basis of modern LLMs. Focus on how these models process and generate text at a high level.</li>
+<li><strong>Tokenization</strong>: Learn the principles of tokenization - how text is converted into numerical representations that LLMs can process. Explore different tokenization strategies and their impact on model performance and output quality.</li>
+<li><strong>Attention mechanisms</strong>: Master the core concepts of attention mechanisms, particularly self-attention and its variants. Understand how these mechanisms enable LLMs to process long-range dependencies and maintain context throughout sequences.</li>
+<li><strong>Sampling techniques</strong>: Explore various text generation approaches and their tradeoffs. Compare deterministic methods like greedy search and beam search with probabilistic approaches like temperature sampling and nucleus sampling.</li>
+</ul>
+<p>📚 <strong>References</strong>:</p>
+<ul>
+<li><a class="link" href="https://www.youtube.com/watch?v=wjZofJX0v4M"  target="_blank" rel="noopener"
+    >Visual intro to Transformers</a> by 3Blue1Brown: Visual introduction to Transformers for complete beginners.</li>
+<li><a class="link" href="https://bbycroft.net/llm"  target="_blank" rel="noopener"
+    >LLM Visualization</a> by Brendan Bycroft: Interactive 3D visualization of LLM internals.</li>
+<li><a class="link" href="https://www.youtube.com/watch?v=kCc8FmEb1nY"  target="_blank" rel="noopener"
+    >nanoGPT</a> by Andrej Karpathy: A 2h-long YouTube video to reimplement GPT from scratch (for programmers). He also made a video about <a class="link" href="https://www.youtube.com/watch?v=zduSFxRajkE"  target="_blank" rel="noopener"
+    >tokenization</a>.</li>
+<li><a class="link" href="https://lilianweng.github.io/posts/2018-06-24-attention/"  target="_blank" rel="noopener"
+    >Attention? Attention!</a> by Lilian Weng: Historical overview to introduce the need for attention mechanisms.</li>
+<li><a class="link" href="https://mlabonne.github.io/blog/posts/2023-06-07-Decoding_strategies.html"  target="_blank" rel="noopener"
+    >Decoding Strategies in LLMs</a> by Maxime Labonne: Provide code and a visual introduction to the different decoding strategies to generate text.</li>
+</ul>
+<hr>
+<h3 id="2-pre-training-models">2. Pre-training models
+</h3><p>Pre-training is a computationally intensive and expensive process. While it&rsquo;s not the focus of this course, it&rsquo;s important to have a solid understanding of how models are pre-trained, especially in terms of data and parameters. Pre-training can also be performed by hobbyists at a small scale with &lt;1B models.</p>
+<ul>
+<li><strong>Data preparation</strong>: Pre-training requires massive datasets (e.g., <a class="link" href="https://arxiv.org/abs/2307.09288"  target="_blank" rel="noopener"
+    >Llama 3.1</a> was trained on 15 trillion tokens) that need careful curation, cleaning, deduplication, and tokenization. Modern pre-training pipelines implement sophisticated filtering to remove low-quality or problematic content.</li>
+<li><strong>Distributed training</strong>: Combine different parallelization strategies: data parallel (batch distribution), pipeline parallel (layer distribution), and tensor parallel (operation splitting). These strategies require optimized network communication and memory management across GPU clusters.</li>
+<li><strong>Training optimization</strong>: Use adaptive learning rates with warm-up, gradient clipping, and normalization to prevent explosions, mixed-precision training for memory efficiency, and modern optimizers (AdamW, Lion) with tuned hyperparameters.</li>
+<li><strong>Monitoring</strong>: Track key metrics (loss, gradients, GPU stats) using dashboards, implement targeted logging for distributed training issues, and set up performance profiling to identify bottlenecks in computation and communication across devices.</li>
+</ul>
+<p>📚 <strong>References</strong>:</p>
+<ul>
+<li><a class="link" href="https://huggingface.co/spaces/HuggingFaceFW/blogpost-fineweb-v1"  target="_blank" rel="noopener"
+    >FineWeb</a> by Penedo et al.: Article to recreate a large-scale dataset for LLM pretraining (15T), including FineWeb-Edu, a high-quality subset.</li>
+<li><a class="link" href="https://www.together.ai/blog/redpajama-data-v2"  target="_blank" rel="noopener"
+    >RedPajama v2</a> by Weber et al.: Another article and paper about a large-scale pre-training dataset with a lot of interesting quality filters.</li>
+<li><a class="link" href="https://github.com/huggingface/nanotron"  target="_blank" rel="noopener"
+    >nanotron</a> by Hugging Face: Minimalistic LLM training codebase used to make <a class="link" href="https://github.com/huggingface/smollm"  target="_blank" rel="noopener"
+    >SmolLM2</a>.</li>
+<li><a class="link" href="https://www.andrew.cmu.edu/course/11-667/lectures/W10L2%20Scaling%20Up%20Parallel%20Training.pdf"  target="_blank" rel="noopener"
+    >Parallel training</a> by Chenyan Xiong: Overview of optimization and parallelism techniques.</li>
+<li><a class="link" href="https://arxiv.org/abs/2407.20018"  target="_blank" rel="noopener"
+    >Distributed training</a> by Duan et al.: A survey about efficient training of LLM on distributed architectures.</li>
+<li><a class="link" href="https://allenai.org/olmo"  target="_blank" rel="noopener"
+    >OLMo 2</a> by AI2: Open-source language model with model, data, training, and evaluation code.</li>
+<li><a class="link" href="https://www.llm360.ai/"  target="_blank" rel="noopener"
+    >LLM360</a> by LLM360: A framework for open-source LLMs with training and data preparation code, data, metrics, and models.</li>
+</ul>
+<hr>
+<h3 id="3-post-training-datasets">3. Post-training datasets
+</h3><p>Post-training datasets have a precise structure with instructions and answers (supervised fine-tuning) or instructions and chosen/rejected answers (preference alignment). Conversational structures are a lot rarer than the raw text used for pre-training, which is why we often need to process seed data and refine it to improve the accuracy, diversity, and complexity of the samples. More information and examples are available in my repo <a class="link" href="https://github.com/mlabonne/llm-datasets"  target="_blank" rel="noopener"
+    >💾 LLM Datasets</a>.</p>
+<ul>
+<li><strong>Storage &amp; chat templates</strong>: Because of the conversational structure, post-training datasets are stored in a specific format like ShareGPT or OpenAI/HF. Then, these formats are mapped to a chat template like ChatML or Alpaca to produce the final samples the model is trained on.</li>
+<li><strong>Synthetic data generation</strong>: Create instruction-response pairs based on seed data using frontier models like GPT-4o. This approach allows for flexible and scalable dataset creation with high-quality answers. Key considerations include designing diverse seed tasks and effective system prompts.</li>
+<li><strong>Data enhancement</strong>: Enhance existing samples using techniques like verified outputs (using unit tests or solvers), multiple answers with rejection sampling, <a class="link" href="https://arxiv.org/abs/2406.00770"  target="_blank" rel="noopener"
+    >Auto-Evol</a>, Chain-of-Thought, Branch-Solve-Merge, personas, etc.</li>
+<li><strong>Quality filtering</strong>: Traditional techniques involve rule-based filtering, removing duplicates or near-duplicates (with MinHash or embeddings), and n-gram decontamination. Reward models and judge LLMs complement this step with fine-grained and customizable quality control.</li>
+</ul>
+<p>📚 <strong>References</strong>:</p>
+<ul>
+<li><a class="link" href="https://huggingface.co/spaces/argilla/synthetic-data-generator"  target="_blank" rel="noopener"
+    >Synthetic Data Generator</a> by Argilla: Beginner-friendly way of building datasets using natural language in a Hugging Face space.</li>
+<li><a class="link" href="https://github.com/mlabonne/llm-datasets"  target="_blank" rel="noopener"
+    >LLM Datasets</a> by Maxime Labonne: Curated list of datasets and tools for post-training.</li>
+<li><a class="link" href="https://github.com/NVIDIA/NeMo-Curator"  target="_blank" rel="noopener"
+    >NeMo-Curator</a> by Nvidia: Dataset preparation and curation framework for pre- and post-training data.</li>
+<li><a class="link" href="https://distilabel.argilla.io/dev/sections/pipeline_samples/"  target="_blank" rel="noopener"
+    >Distilabel</a> by Argilla: Framework to generate synthetic data. It also includes interesting reproductions of papers like UltraFeedback.</li>
+<li><a class="link" href="https://github.com/MinishLab/semhash"  target="_blank" rel="noopener"
+    >Semhash</a> by MinishLab: Minimalistic library for near-deduplication and decontamination with a distilled embedding model.</li>
+<li><a class="link" href="https://huggingface.co/docs/transformers/main/en/chat_templating"  target="_blank" rel="noopener"
+    >Chat Template</a> by Hugging Face: Hugging Face&rsquo;s documentation about chat templates.</li>
+</ul>
+<hr>
+<h3 id="4-supervised-fine-tuning">4. Supervised Fine-Tuning
+</h3><p>SFT turns base models into helpful assistants, capable of answering questions and following instructions. During this process, they learn how to structure answers and reactivate a subset of knowledge learned during pre-training. Instilling new knowledge is possible but superficial: it cannot be used to learn a completely new language. Always prioritize data quality over parameter optimization.</p>
+<ul>
+<li><strong>Training techniques</strong>: Full fine-tuning updates all model parameters but requires significant compute. Parameter-efficient fine-tuning techniques like LoRA and QLoRA reduce memory requirements by training a small number of adapter parameters while keeping base weights frozen. QLoRA combines 4-bit quantization with LoRA to reduce VRAM usage. These techniques are all implemented in the most popular fine-tuning frameworks: <a class="link" href="https://huggingface.co/docs/trl/en/index"  target="_blank" rel="noopener"
+    >TRL</a>, <a class="link" href="https://docs.unsloth.ai/"  target="_blank" rel="noopener"
+    >Unsloth</a>, and <a class="link" href="https://axolotl.ai/"  target="_blank" rel="noopener"
+    >Axolotl</a>.</li>
+<li><strong>Training parameters</strong>: Key parameters include learning rate with schedulers, batch size, gradient accumulation, number of epochs, optimizer (like 8-bit AdamW), weight decay for regularization, and warmup steps for training stability. LoRA also adds three parameters: rank (typically 16-128), alpha (1-2x rank), and target modules.</li>
+<li><strong>Distributed training</strong>: Scale training across multiple GPUs using DeepSpeed or FSDP. DeepSpeed provides three ZeRO optimization stages with increasing levels of memory efficiency through state partitioning. Both methods support gradient checkpointing for memory efficiency.</li>
+<li><strong>Monitoring</strong>: Track training metrics including loss curves, learning rate schedules, and gradient norms. Monitor for common issues like loss spikes, gradient explosions, or performance degradation.</li>
+</ul>
+<p>📚 <strong>References</strong>:</p>
+<ul>
+<li><a class="link" href="https://huggingface.co/blog/mlabonne/sft-llama3"  target="_blank" rel="noopener"
+    >Fine-tune Llama 3.1 Ultra-Efficiently with Unsloth</a> by Maxime Labonne: Hands-on tutorial on how to fine-tune a Llama 3.1 model using Unsloth.</li>
+<li><a class="link" href="https://axolotl-ai-cloud.github.io/axolotl/"  target="_blank" rel="noopener"
+    >Axolotl - Documentation</a> by Wing Lian: Lots of interesting information related to distributed training and dataset formats.</li>
+<li><a class="link" href="https://parlance-labs.com/education/"  target="_blank" rel="noopener"
+    >Mastering LLMs</a> by Hamel Husain: Collection of educational resources about fine-tuning (but also RAG, evaluation, applications, and prompt engineering).</li>
+<li><a class="link" href="https://lightning.ai/pages/community/lora-insights/"  target="_blank" rel="noopener"
+    >LoRA insights</a> by Sebastian Raschka: Practical insights about LoRA and how to select the best parameters.</li>
+</ul>
+<hr>
+<h3 id="5-preference-alignment">5. Preference Alignment
+</h3><p>Preference alignment is a second stage in the post-training pipeline, focused on aligning generated answers with human preferences. This stage was designed to tune the tone of LLMs and reduce toxicity and hallucinations. However, it has become increasingly important to also boost their performance and improve usefulness. Unlike SFT, there are many preference alignment algorithms. Here, we&rsquo;ll focus on the three most important ones: DPO, GRPO, and PPO.</p>
+<ul>
+<li><strong>Rejection sampling</strong>: For each prompt, use the trained model to generate multiple responses, and score them to infer chosen/rejected answers. This creates on-policy data, where both responses come from the model being trained, improving alignment stability.</li>
+<li><strong><a class="link" href="https://arxiv.org/abs/2305.18290"  target="_blank" rel="noopener"
+    >Direct Preference Optimization</a></strong> Directly optimizes the policy to maximize the likelihood of chosen responses over rejected ones. It doesn&rsquo;t require reward modeling, which makes it more computationally efficient than RL techniques but slightly worse in terms of quality. Great for creating chat models.</li>
+<li><strong>Reward model</strong>: Train a reward model with human feedback to predict metrics like human preferences. It can leverage frameworks like <a class="link" href="https://huggingface.co/docs/trl/en/index"  target="_blank" rel="noopener"
+    >TRL</a>, <a class="link" href="https://github.com/volcengine/verl"  target="_blank" rel="noopener"
+    >verl</a>, and <a class="link" href="https://github.com/OpenRLHF/OpenRLHF"  target="_blank" rel="noopener"
+    >OpenRLHF</a> for scalable training.</li>
+<li><strong>Reinforcement Learning</strong>: RL techniques like <a class="link" href="https://arxiv.org/abs/2402.03300"  target="_blank" rel="noopener"
+    >GRPO</a> and <a class="link" href="https://arxiv.org/abs/1707.06347"  target="_blank" rel="noopener"
+    >PPO</a> iteratively update a policy to maximize rewards while staying close to the initial behavior. They can use a reward model or reward functions to score responses. They tend to be computationally expensive and require careful tuning of hyperparameters, including learning rate, batch size, and clip range. Ideal for creating reasoning models.</li>
+</ul>
+<p>📚 <strong>References</strong>:</p>
+<ul>
+<li><a class="link" href="https://huggingface.co/blog/rlhf"  target="_blank" rel="noopener"
+    >Illustrating RLHF</a> by Hugging Face: Introduction to RLHF with reward model training and fine-tuning with reinforcement learning.</li>
+<li><a class="link" href="https://magazine.sebastianraschka.com/p/llm-training-rlhf-and-its-alternatives"  target="_blank" rel="noopener"
+    >LLM Training: RLHF and Its Alternatives</a> by Sebastian Raschka: Overview of the RLHF process and alternatives like RLAIF.</li>
+<li><a class="link" href="https://huggingface.co/blog/pref-tuning"  target="_blank" rel="noopener"
+    >Preference Tuning LLMs</a> by Hugging Face: Comparison of the DPO, IPO, and KTO algorithms to perform preference alignment.</li>
+<li><a class="link" href="https://mlabonne.github.io/blog/posts/Fine_tune_Mistral_7b_with_DPO.html"  target="_blank" rel="noopener"
+    >Fine-tune with DPO</a> by Maxime Labonne: Tutorial to fine-tune a Mistral-7b model with DPO and reproduce <a class="link" href="https://huggingface.co/mlabonne/NeuralHermes-2.5-Mistral-7B"  target="_blank" rel="noopener"
+    >NeuralHermes-2.5</a>.</li>
+<li><a class="link" href="https://huggingface.co/learn/llm-course/en/chapter12/5"  target="_blank" rel="noopener"
+    >Fine-tune with GRPO</a> by Maxime Labonne: Practical exercise to fine-tune a small model with GRPO.</li>
+<li><a class="link" href="https://wandb.ai/alexander-vishnevskiy/dpo/reports/TRL-Original-DPO--Vmlldzo1NjI4MTc4"  target="_blank" rel="noopener"
+    >DPO Wandb logs</a> by Alexander Vishnevskiy: It shows you the main DPO metrics to track and the trends you should expect.</li>
+</ul>
+<hr>
+<h3 id="6-evaluation">6. Evaluation
+</h3><p>Reliably evaluating LLMs is a complex but essential task guiding data generation and training. It provides invaluable feedback about areas of improvement, which can be leveraged to modify the data mixture, quality, and training parameters. However, it&rsquo;s always good to remember Goodhart&rsquo;s law: &ldquo;When a measure becomes a target, it ceases to be a good measure.&rdquo;</p>
+<ul>
+<li><strong>Automated benchmarks</strong>: Evaluate models on specific tasks using curated datasets and metrics, like MMLU. It works well for concrete tasks but struggles with abstract and creative capabilities. It is also prone to data contamination.</li>
+<li><strong>Human evaluation</strong>: It involves humans prompting models and grading responses. Methods range from vibe checks to systematic annotations with specific guidelines and large-scale community voting (arena). It is more suited for subjective tasks and less reliable for factual accuracy.</li>
+<li><strong>Model-based evaluation</strong>: Use judge and reward models to evaluate model outputs. It highly correlates with human preferences but suffers from bias toward their own outputs and inconsistent scoring.</li>
+<li><strong>Feedback signal</strong>: Analyze error patterns to identify specific weaknesses, such as limitations in following complex instructions, lack of specific knowledge, or susceptibility to adversarial prompts. This can be improved with better data generation and training parameters.</li>
+</ul>
+<p>📚 <strong>References</strong>:</p>
+<ul>
+<li><a class="link" href="https://github.com/huggingface/evaluation-guidebook"  target="_blank" rel="noopener"
+    >Evaluation guidebook</a> by Clémentine Fourrier: Practical insights and theoretical knowledge about LLM evaluation.</li>
+<li><a class="link" href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard"  target="_blank" rel="noopener"
+    >Open LLM Leaderboard</a> by Hugging Face: Main leaderboard to compare LLMs in an open and reproducible way (automated benchmarks).</li>
+<li><a class="link" href="https://github.com/EleutherAI/lm-evaluation-harness"  target="_blank" rel="noopener"
+    >Language Model Evaluation Harness</a> by EleutherAI: A popular framework for evaluating LLMs using automated benchmarks.</li>
+<li><a class="link" href="https://github.com/huggingface/lighteval"  target="_blank" rel="noopener"
+    >Lighteval</a> by Hugging Face: Alternative evaluation framework that also includes model-based evaluations.</li>
+<li><a class="link" href="https://lmarena.ai/"  target="_blank" rel="noopener"
+    >Chatbot Arena</a> by LMSYS: Elo rating of general-purpose LLMs, based on comparisons made by humans (human evaluation).</li>
+</ul>
+<hr>
+<h3 id="7-quantization">7. Quantization
+</h3><p>Quantization is the process of converting the parameters and activations of a model using a lower precision. For example, weights stored using 16 bits can be converted into a 4-bit representation. This technique has become increasingly important to reduce the computational and memory costs associated with LLMs.</p>
+<ul>
+<li><strong>Base techniques</strong>: Learn the different levels of precision (FP32, FP16, INT8, etc.) and how to perform naïve quantization with absmax and zero-point techniques.</li>
+<li><strong>GGUF &amp; llama.cpp</strong>: Originally designed to run on CPUs, <a class="link" href="https://github.com/ggerganov/llama.cpp"  target="_blank" rel="noopener"
+    >llama.cpp</a> and the GGUF format have become the most popular tools to run LLMs on consumer-grade hardware. It supports storing special tokens, vocabulary, and metadata in a single file.</li>
+<li><strong>GPTQ &amp; AWQ</strong>: Techniques like <a class="link" href="https://arxiv.org/abs/2210.17323"  target="_blank" rel="noopener"
+    >GPTQ</a>/<a class="link" href="https://github.com/turboderp/exllamav2"  target="_blank" rel="noopener"
+    >EXL2</a> and <a class="link" href="https://arxiv.org/abs/2306.00978"  target="_blank" rel="noopener"
+    >AWQ</a> introduce layer-by-layer calibration that retains performance at extremely low bitwidths. They reduce catastrophic outliers using dynamic scaling, selectively skipping or re-centering the heaviest parameters.</li>
+<li><strong>SmoothQuant &amp; ZeroQuant</strong>: New quantization-friendly transformations (SmoothQuant) and compiler-based optimizations (ZeroQuant) help mitigate outliers before quantization. They also reduce hardware overhead by fusing certain ops and optimizing dataflow.</li>
+</ul>
+<p>📚 <strong>References</strong>:</p>
+<ul>
+<li><a class="link" href="https://mlabonne.github.io/blog/posts/Introduction_to_Weight_Quantization.html"  target="_blank" rel="noopener"
+    >Introduction to quantization</a> by Maxime Labonne: Overview of quantization, absmax and zero-point quantization, and LLM.int8() with code.</li>
+<li><a class="link" href="https://mlabonne.github.io/blog/posts/Quantize_Llama_2_models_using_ggml.html"  target="_blank" rel="noopener"
+    >Quantize Llama models with llama.cpp</a> by Maxime Labonne: Tutorial on how to quantize a Llama 2 model using llama.cpp and the GGUF format.</li>
+<li><a class="link" href="https://mlabonne.github.io/blog/posts/4_bit_Quantization_with_GPTQ.html"  target="_blank" rel="noopener"
+    >4-bit LLM Quantization with GPTQ</a> by Maxime Labonne: Tutorial on how to quantize an LLM using the GPTQ algorithm with AutoGPTQ.</li>
+<li><a class="link" href="https://medium.com/friendliai/understanding-activation-aware-weight-quantization-awq-boosting-inference-serving-efficiency-in-10bb0faf63a8"  target="_blank" rel="noopener"
+    >Understanding Activation-Aware Weight Quantization</a> by FriendliAI: Overview of the AWQ technique and its benefits.</li>
+<li><a class="link" href="https://github.com/mit-han-lab/smoothquant/blob/main/examples/smoothquant_llama_demo.ipynb"  target="_blank" rel="noopener"
+    >SmoothQuant on Llama 2 7B</a> by MIT HAN Lab: Tutorial on how to use SmoothQuant with a Llama 2 model in 8-bit precision.</li>
+<li><a class="link" href="https://www.deepspeed.ai/tutorials/model-compression/"  target="_blank" rel="noopener"
+    >DeepSpeed Model Compression</a> by DeepSpeed: Tutorial on how to use ZeroQuant and extreme compression (XTC) with DeepSpeed Compression.</li>
+</ul>
+<hr>
+<h3 id="8-new-trends">8. New Trends
+</h3><p>Here are notable topics that didn&rsquo;t fit into other categories. Some are established (model merging, multimodal) techniques, but others are more experimental (interpretability, test-time compute scaling) and the focus of numerous research papers.</p>
+<ul>
+<li><strong>Model merging</strong>: Merging trained models has become a popular way of creating performant models without any fine-tuning. The popular <a class="link" href="https://github.com/cg123/mergekit"  target="_blank" rel="noopener"
+    >mergekit</a> library implements the most popular merging methods, like SLERP, <a class="link" href="https://arxiv.org/abs/2311.03099"  target="_blank" rel="noopener"
+    >DARE</a>, and <a class="link" href="https://arxiv.org/abs/2311.03099"  target="_blank" rel="noopener"
+    >TIES</a>.</li>
+<li><strong>Multimodal models</strong>: These models (like <a class="link" href="https://openai.com/research/clip"  target="_blank" rel="noopener"
+    >CLIP</a>, <a class="link" href="https://stability.ai/stable-image"  target="_blank" rel="noopener"
+    >Stable Diffusion</a>, or <a class="link" href="https://llava-vl.github.io/"  target="_blank" rel="noopener"
+    >LLaVA</a>) process multiple types of inputs (text, images, audio, etc.) with a unified embedding space, which unlocks powerful applications like text-to-image.</li>
+<li><strong>Interpretability</strong>: Mechanistic interpretability techniques like Sparse Autoencoders (SAEs) have made remarkable progress to provide insights about the inner workings of LLMs. This has also been applied with techniques such as abliteration, which allow you to modify the behavior of models without training.</li>
+<li><strong>Test-time compute</strong>: Reasoning models trained with RL techniques can be further improved by scaling the compute budget during test time. It can involve multiple calls, MCTS, or specialized models like a Process Reward Model (PRM). Iterative steps with precise scoring significantly improve performance for complex reasoning tasks.</li>
+</ul>
+<p>📚 <strong>References</strong>:</p>
+<ul>
+<li><a class="link" href="https://mlabonne.github.io/blog/posts/2024-01-08_Merge_LLMs_with_mergekit.html"  target="_blank" rel="noopener"
+    >Merge LLMs with mergekit</a> by Maxime Labonne: Tutorial about model merging using mergekit.</li>
+<li><a class="link" href="https://github.com/merveenoyan/smol-vision"  target="_blank" rel="noopener"
+    >Smol Vision</a> by Merve Noyan: Collection of notebooks and scripts dedicated to small multimodal models.</li>
+<li><a class="link" href="https://huyenchip.com/2023/10/10/multimodal.html"  target="_blank" rel="noopener"
+    >Large Multimodal Models</a> by Chip Huyen: Overview of multimodal systems and the recent history of this field.</li>
+<li><a class="link" href="https://huggingface.co/blog/mlabonne/abliteration"  target="_blank" rel="noopener"
+    >Unsensor any LLM with abliteration</a> by Maxime Labonne: Direct application of interpretability techniques to modify the style of a model.</li>
+<li><a class="link" href="https://adamkarvonen.github.io/machine_learning/2024/06/11/sae-intuitions.html"  target="_blank" rel="noopener"
+    >Intuitive Explanation of SAEs</a> by Adam Karvonen: Article about how SAEs work and why they make sense for interpretability.</li>
+<li><a class="link" href="https://huggingface.co/spaces/HuggingFaceH4/blogpost-scaling-test-time-compute"  target="_blank" rel="noopener"
+    >Scaling test-time compute</a> by Beeching et al.: Tutorial and experiments to outperform Llama 3.1 70B on MATH-500 with a 3B model.</li>
+</ul>
+<h2 id="-the-llm-engineer">👷 The LLM Engineer
+</h2><p>This section of the course focuses on learning how to build LLM-powered applications that can be used in production, with a focus on augmenting models and deploying them.</p>
+<p><img src="/img/roadmap_engineer.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h3 id="1-running-llms">1. Running LLMs
+</h3><p>Running LLMs can be difficult due to high hardware requirements. Depending on your use case, you might want to simply consume a model through an API (like GPT-4) or run it locally. In any case, additional prompting and guidance techniques can improve and constrain the output for your applications.</p>
+<ul>
+<li><strong>LLM APIs</strong>: APIs are a convenient way to deploy LLMs. This space is divided between private LLMs (<a class="link" href="https://platform.openai.com/"  target="_blank" rel="noopener"
+    >OpenAI</a>, <a class="link" href="https://cloud.google.com/vertex-ai/docs/generative-ai/learn/overview"  target="_blank" rel="noopener"
+    >Google</a>, <a class="link" href="https://docs.anthropic.com/claude/reference/getting-started-with-the-api"  target="_blank" rel="noopener"
+    >Anthropic</a>, etc.) and open-source LLMs (<a class="link" href="https://openrouter.ai/"  target="_blank" rel="noopener"
+    >OpenRouter</a>, <a class="link" href="https://huggingface.co/inference-api"  target="_blank" rel="noopener"
+    >Hugging Face</a>, <a class="link" href="https://www.together.ai/"  target="_blank" rel="noopener"
+    >Together AI</a>, etc.).</li>
+<li><strong>Open-source LLMs</strong>: The <a class="link" href="https://huggingface.co/models"  target="_blank" rel="noopener"
+    >Hugging Face Hub</a> is a great place to find LLMs. You can directly run some of them in <a class="link" href="https://huggingface.co/spaces"  target="_blank" rel="noopener"
+    >Hugging Face Spaces</a>, or download and run them locally in apps like <a class="link" href="https://lmstudio.ai/"  target="_blank" rel="noopener"
+    >LM Studio</a> or through the CLI with <a class="link" href="https://github.com/ggerganov/llama.cpp"  target="_blank" rel="noopener"
+    >llama.cpp</a> or <a class="link" href="https://ollama.ai/"  target="_blank" rel="noopener"
+    >ollama</a>.</li>
+<li><strong>Prompt engineering</strong>: Common techniques include zero-shot prompting, few-shot prompting, chain of thought, and ReAct. They work better with bigger models, but can be adapted to smaller ones.</li>
+<li><strong>Structuring outputs</strong>: Many tasks require a structured output, like a strict template or a JSON format. Libraries like <a class="link" href="https://github.com/outlines-dev/outlines"  target="_blank" rel="noopener"
+    >Outlines</a> can be used to guide the generation and respect a given structure. Some APIs also support structured output generation natively using JSON schemas.</li>
+</ul>
+<p>📚 <strong>References</strong>:</p>
+<ul>
+<li><a class="link" href="https://www.kdnuggets.com/run-an-llm-locally-with-lm-studio"  target="_blank" rel="noopener"
+    >Run an LLM locally with LM Studio</a> by Nisha Arya: Short guide on how to use LM Studio.</li>
+<li><a class="link" href="https://www.promptingguide.ai/"  target="_blank" rel="noopener"
+    >Prompt engineering guide</a> by DAIR.AI: Exhaustive list of prompt techniques with examples</li>
+<li><a class="link" href="https://dottxt-ai.github.io/outlines/latest/quickstart/"  target="_blank" rel="noopener"
+    >Outlines - Quickstart</a>: List of guided generation techniques enabled by Outlines.</li>
+<li><a class="link" href="https://lmql.ai/docs/language/overview.html"  target="_blank" rel="noopener"
+    >LMQL - Overview</a>: Introduction to the LMQL language.</li>
+</ul>
+<hr>
+<h3 id="2-building-a-vector-storage">2. Building a Vector Storage
+</h3><p>Creating a vector storage is the first step to building a Retrieval Augmented Generation (RAG) pipeline. Documents are loaded, split, and relevant chunks are used to produce vector representations (embeddings) that are stored for future use during inference.</p>
+<ul>
+<li><strong>Ingesting documents</strong>: Document loaders are convenient wrappers that can handle many formats: PDF, JSON, HTML, Markdown, etc. They can also directly retrieve data from some databases and APIs (GitHub, Reddit, Google Drive, etc.).</li>
+<li><strong>Splitting documents</strong>: Text splitters break down documents into smaller, semantically meaningful chunks. Instead of splitting text after <em>n</em> characters, it&rsquo;s often better to split by header or recursively, with some additional metadata.</li>
+<li><strong>Embedding models</strong>: Embedding models convert text into vector representations. Picking task-specific models significantly improves performance for semantic search and RAG.</li>
+<li><strong>Vector databases</strong>: Vector databases (like <a class="link" href="https://www.trychroma.com/"  target="_blank" rel="noopener"
+    >Chroma</a>, <a class="link" href="https://www.pinecone.io/"  target="_blank" rel="noopener"
+    >Pinecone</a>, <a class="link" href="https://milvus.io/"  target="_blank" rel="noopener"
+    >Milvus</a>, <a class="link" href="https://faiss.ai/"  target="_blank" rel="noopener"
+    >FAISS</a>, <a class="link" href="https://github.com/spotify/annoy"  target="_blank" rel="noopener"
+    >Annoy</a>, etc.) are designed to store embedding vectors. They enable efficient retrieval of data that is &lsquo;most similar&rsquo; to a query based on vector similarity.</li>
+</ul>
+<p>📚 <strong>References</strong>:</p>
+<ul>
+<li><a class="link" href="https://python.langchain.com/docs/how_to/#text-splitters"  target="_blank" rel="noopener"
+    >LangChain - Text splitters</a>: List of different text splitters implemented in LangChain.</li>
+<li><a class="link" href="https://www.sbert.net/"  target="_blank" rel="noopener"
+    >Sentence Transformers library</a>: Popular library for embedding models.</li>
+<li><a class="link" href="https://huggingface.co/spaces/mteb/leaderboard"  target="_blank" rel="noopener"
+    >MTEB Leaderboard</a>: Leaderboard for embedding models.</li>
+<li><a class="link" href="https://www.datacamp.com/blog/the-top-5-vector-databases"  target="_blank" rel="noopener"
+    >The Top 7 Vector Databases</a> by Moez Ali: A comparison of the best and most popular vector databases.</li>
+</ul>
+<hr>
+<h3 id="3-retrieval-augmented-generation">3. Retrieval Augmented Generation
+</h3><p>With RAG, LLMs retrieve contextual documents from a database to improve the accuracy of their answers. RAG is a popular way of augmenting the model&rsquo;s knowledge without any fine-tuning.</p>
+<ul>
+<li><strong>Orchestrators</strong>: Orchestrators like <a class="link" href="https://python.langchain.com/docs/get_started/introduction"  target="_blank" rel="noopener"
+    >LangChain</a> and <a class="link" href="https://docs.llamaindex.ai/en/stable/"  target="_blank" rel="noopener"
+    >LlamaIndex</a> are popular frameworks to connect your LLMs with tools and databases. The Model Context Protocol (MCP) introduces a new standard to pass data and context to models across providers.</li>
+<li><strong>Retrievers</strong>: Query rewriters and generative retrievers like CoRAG and HyDE enhance search by transforming user queries. Multi-vector and hybrid retrieval methods combine embeddings with keyword signals to improve recall and precision.</li>
+<li><strong>Memory</strong>: To remember previous instructions and answers, LLMs and chatbots like ChatGPT add this history to their context window. This buffer can be improved with summarization (e.g., using a smaller LLM), a vector store + RAG, etc.</li>
+<li><strong>Evaluation</strong>: We need to evaluate both the document retrieval (context precision and recall) and generation stages (faithfulness and answer relevancy). It can be simplified with tools <a class="link" href="https://github.com/explodinggradients/ragas/tree/main"  target="_blank" rel="noopener"
+    >Ragas</a> and <a class="link" href="https://github.com/confident-ai/deepeval"  target="_blank" rel="noopener"
+    >DeepEval</a> (assessing quality).</li>
+</ul>
+<p>📚 <strong>References</strong>:</p>
+<ul>
+<li><a class="link" href="https://docs.llamaindex.ai/en/stable/getting_started/concepts.html"  target="_blank" rel="noopener"
+    >Llamaindex - High-level concepts</a>: Main concepts to know when building RAG pipelines.</li>
+<li><a class="link" href="https://modelcontextprotocol.io/introduction"  target="_blank" rel="noopener"
+    >Model Context Protocol</a>: Introduction to MCP with motivate, architecture, and quick starts.</li>
+<li><a class="link" href="https://www.pinecone.io/learn/series/langchain/langchain-retrieval-augmentation/"  target="_blank" rel="noopener"
+    >Pinecone - Retrieval Augmentation</a>: Overview of the retrieval augmentation process.</li>
+<li><a class="link" href="https://python.langchain.com/docs/tutorials/rag/"  target="_blank" rel="noopener"
+    >LangChain - Q&amp;A with RAG</a>: Step-by-step tutorial to build a typical RAG pipeline.</li>
+<li><a class="link" href="https://python.langchain.com/docs/how_to/chatbots_memory/"  target="_blank" rel="noopener"
+    >LangChain - Memory types</a>: List of different types of memories with relevant usage.</li>
+<li><a class="link" href="https://docs.ragas.io/en/stable/concepts/metrics/index.html"  target="_blank" rel="noopener"
+    >RAG pipeline - Metrics</a>: Overview of the main metrics used to evaluate RAG pipelines.</li>
+</ul>
+<hr>
+<h3 id="4-advanced-rag">4. Advanced RAG
+</h3><p>Real-life applications can require complex pipelines, including SQL or graph databases, as well as automatically selecting relevant tools and APIs. These advanced techniques can improve a baseline solution and provide additional features.</p>
+<ul>
+<li><strong>Query construction</strong>: Structured data stored in traditional databases requires a specific query language like SQL, Cypher, metadata, etc. We can directly translate the user instruction into a query to access the data with query construction.</li>
+<li><strong>Tools</strong>: Agents augment LLMs by automatically selecting the most relevant tools to provide an answer. These tools can be as simple as using Google or Wikipedia, or more complex like a Python interpreter or Jira.</li>
+<li><strong>Post-processing</strong>: Final step that processes the inputs that are fed to the LLM. It enhances the relevance and diversity of documents retrieved with re-ranking, <a class="link" href="https://github.com/Raudaschl/rag-fusion"  target="_blank" rel="noopener"
+    >RAG-fusion</a>, and classification.</li>
+<li><strong>Program LLMs</strong>: Frameworks like <a class="link" href="https://github.com/stanfordnlp/dspy"  target="_blank" rel="noopener"
+    >DSPy</a> allow you to optimize prompts and weights based on automated evaluations in a programmatic way.</li>
+</ul>
+<p>📚 <strong>References</strong>:</p>
+<ul>
+<li><a class="link" href="https://blog.langchain.dev/query-construction/"  target="_blank" rel="noopener"
+    >LangChain - Query Construction</a>: Blog post about different types of query construction.</li>
+<li><a class="link" href="https://python.langchain.com/docs/tutorials/sql_qa/"  target="_blank" rel="noopener"
+    >LangChain - SQL</a>: Tutorial on how to interact with SQL databases with LLMs, involving Text-to-SQL and an optional SQL agent.</li>
+<li><a class="link" href="https://www.pinecone.io/learn/series/langchain/langchain-agents/"  target="_blank" rel="noopener"
+    >Pinecone - LLM agents</a>: Introduction to agents and tools with different types.</li>
+<li><a class="link" href="https://lilianweng.github.io/posts/2023-06-23-agent/"  target="_blank" rel="noopener"
+    >LLM Powered Autonomous Agents</a> by Lilian Weng: A more theoretical article about LLM agents.</li>
+<li><a class="link" href="https://blog.langchain.dev/applying-openai-rag/"  target="_blank" rel="noopener"
+    >LangChain - OpenAI&rsquo;s RAG</a>: Overview of the RAG strategies employed by OpenAI, including post-processing.</li>
+<li><a class="link" href="https://dspy-docs.vercel.app/docs/building-blocks/solving_your_task"  target="_blank" rel="noopener"
+    >DSPy in 8 Steps</a>: General-purpose guide to DSPy introducing modules, signatures, and optimizers.</li>
+</ul>
+<hr>
+<h3 id="5-agents">5. Agents
+</h3><p>An LLM agent can autonomously perform tasks by taking actions based on reasoning about its environment, typically through the use of tools or functions to interact with external systems.</p>
+<ul>
+<li><strong>Agent fundamentals</strong>: Agents operate using thoughts (internal reasoning to decide what to do next), action (executing tasks, often by interacting with external tools), and observation (analyzing feedback or results to refine the next step).</li>
+<li><strong>Agent frameworks</strong>: Agent development can be streamlined using different frameworks like <a class="link" href="https://www.langchain.com/langgraph"  target="_blank" rel="noopener"
+    >LangGraph</a> (design and visualization of workflows), <a class="link" href="https://docs.llamaindex.ai/en/stable/use_cases/agents/"  target="_blank" rel="noopener"
+    >LlamaIndex</a> (data-augmented agents with RAG), or <a class="link" href="https://github.com/huggingface/smolagents"  target="_blank" rel="noopener"
+    >smolagents</a> (beginner-friendly, lightweight option).</li>
+<li><strong>Multi-agents</strong>: More experimental frameworks include collaboration between different agents, such as <a class="link" href="https://docs.crewai.com/introduction"  target="_blank" rel="noopener"
+    >CrewAI</a> (role-based team orchestration), <a class="link" href="https://github.com/microsoft/autogen"  target="_blank" rel="noopener"
+    >AutoGen</a> (conversation-driven multi-agent systems), and <a class="link" href="https://github.com/openai/openai-agents-python"  target="_blank" rel="noopener"
+    >OpenAI Agents SDK</a> (production-ready with strong OpenAI model integration).</li>
+</ul>
+<p>📚 <strong>References</strong>:</p>
+<ul>
+<li><a class="link" href="https://huggingface.co/learn/agents-course/unit0/introduction"  target="_blank" rel="noopener"
+    >Agents Course</a>: Popular course about AI agents made by Hugging Face.</li>
+<li><a class="link" href="https://langfuse.com/blog/2025-03-19-ai-agent-comparison"  target="_blank" rel="noopener"
+    >AI Agents Comparison</a> by Jannik Maierhöfer: Comparison of features across different open-source AI agent frameworks.</li>
+<li><a class="link" href="https://langchain-ai.github.io/langgraph/concepts/why-langgraph/"  target="_blank" rel="noopener"
+    >LangGraph</a>: Overview of how to build AI agents with LangGraph.</li>
+<li><a class="link" href="https://docs.llamaindex.ai/en/stable/use_cases/agents/"  target="_blank" rel="noopener"
+    >LlamaIndex Agents</a>: Uses cases and resources to build agents with LlamaIndex.</li>
+<li><a class="link" href="https://huggingface.co/docs/smolagents/index"  target="_blank" rel="noopener"
+    >smolagents</a>: Documentation with a guided tour, how-to guides, and more conceptual articles.</li>
+</ul>
+<hr>
+<h3 id="6-inference-optimization">6. Inference optimization
+</h3><p>Text generation is a costly process that requires expensive hardware. In addition to quantization, various techniques have been proposed to maximize throughput and reduce inference costs.</p>
+<ul>
+<li><strong>Flash Attention</strong>: Optimization of the attention mechanism to transform its complexity from quadratic to linear, speeding up both training and inference.</li>
+<li><strong>Key-value cache</strong>: Understand the key-value cache and the improvements introduced in <a class="link" href="https://arxiv.org/abs/1911.02150"  target="_blank" rel="noopener"
+    >Multi-Query Attention</a> (MQA) and <a class="link" href="https://arxiv.org/abs/2305.13245"  target="_blank" rel="noopener"
+    >Grouped-Query Attention</a> (GQA).</li>
+<li><strong>Speculative decoding</strong>: Use a small model to produce drafts that are then reviewed by a larger model to speed up text generation.</li>
+</ul>
+<p>📚 <strong>References</strong>:</p>
+<ul>
+<li><a class="link" href="https://huggingface.co/docs/transformers/main/en/perf_infer_gpu_one"  target="_blank" rel="noopener"
+    >GPU Inference</a> by Hugging Face: Explain how to optimize inference on GPUs.</li>
+<li><a class="link" href="https://www.databricks.com/blog/llm-inference-performance-engineering-best-practices"  target="_blank" rel="noopener"
+    >LLM Inference</a> by Databricks: Best practices for how to optimize LLM inference in production.</li>
+<li><a class="link" href="https://huggingface.co/docs/transformers/main/en/llm_tutorial_optimization"  target="_blank" rel="noopener"
+    >Optimizing LLMs for Speed and Memory</a> by Hugging Face: Explain three main techniques to optimize speed and memory, namely quantization, Flash Attention, and architectural innovations.</li>
+<li><a class="link" href="https://huggingface.co/blog/assisted-generation"  target="_blank" rel="noopener"
+    >Assisted Generation</a> by Hugging Face: HF&rsquo;s version of speculative decoding, it&rsquo;s an interesting blog post about how it works with code to implement it.</li>
+</ul>
+<hr>
+<h3 id="7-deploying-llms">7. Deploying LLMs
+</h3><p>Deploying LLMs at scale is an engineering feat that can require multiple clusters of GPUs. In other scenarios, demos and local apps can be achieved with a much lower complexity.</p>
+<ul>
+<li><strong>Local deployment</strong>: Privacy is an important advantage that open-source LLMs have over private ones. Local LLM servers (<a class="link" href="https://lmstudio.ai/"  target="_blank" rel="noopener"
+    >LM Studio</a>, <a class="link" href="https://ollama.ai/"  target="_blank" rel="noopener"
+    >Ollama</a>, <a class="link" href="https://github.com/oobabooga/text-generation-webui"  target="_blank" rel="noopener"
+    >oobabooga</a>, <a class="link" href="https://github.com/LostRuins/koboldcpp"  target="_blank" rel="noopener"
+    >kobold.cpp</a>, etc.) capitalize on this advantage to power local apps.</li>
+<li><strong>Demo deployment</strong>: Frameworks like <a class="link" href="https://www.gradio.app/"  target="_blank" rel="noopener"
+    >Gradio</a> and <a class="link" href="https://docs.streamlit.io/"  target="_blank" rel="noopener"
+    >Streamlit</a> are helpful to prototype applications and share demos. You can also easily host them online, for example using <a class="link" href="https://huggingface.co/spaces"  target="_blank" rel="noopener"
+    >Hugging Face Spaces</a>.</li>
+<li><strong>Server deployment</strong>: Deploy LLMs at scale requires cloud (see also <a class="link" href="https://skypilot.readthedocs.io/en/latest/"  target="_blank" rel="noopener"
+    >SkyPilot</a>) or on-prem infrastructure and often leverage optimized text generation frameworks like <a class="link" href="https://github.com/huggingface/text-generation-inference"  target="_blank" rel="noopener"
+    >TGI</a>, <a class="link" href="https://github.com/vllm-project/vllm/tree/main"  target="_blank" rel="noopener"
+    >vLLM</a>, etc.</li>
+<li><strong>Edge deployment</strong>: In constrained environments, high-performance frameworks like <a class="link" href="https://github.com/mlc-ai/mlc-llm"  target="_blank" rel="noopener"
+    >MLC LLM</a> and <a class="link" href="https://github.com/wangzhaode/mnn-llm/blob/master/README_en.md"  target="_blank" rel="noopener"
+    >mnn-llm</a> can deploy LLM in web browsers, Android, and iOS.</li>
+</ul>
+<p>📚 <strong>References</strong>:</p>
+<ul>
+<li><a class="link" href="https://docs.streamlit.io/knowledge-base/tutorials/build-conversational-apps"  target="_blank" rel="noopener"
+    >Streamlit - Build a basic LLM app</a>: Tutorial to make a basic ChatGPT-like app using Streamlit.</li>
+<li><a class="link" href="https://huggingface.co/blog/sagemaker-huggingface-llm"  target="_blank" rel="noopener"
+    >HF LLM Inference Container</a>: Deploy LLMs on Amazon SageMaker using Hugging Face&rsquo;s inference container.</li>
+<li><a class="link" href="https://www.philschmid.de/"  target="_blank" rel="noopener"
+    >Philschmid blog</a> by Philipp Schmid: Collection of high-quality articles about LLM deployment using Amazon SageMaker.</li>
+<li><a class="link" href="https://hamel.dev/notes/llm/inference/03_inference.html"  target="_blank" rel="noopener"
+    >Optimizing latence</a> by Hamel Husain: Comparison of TGI, vLLM, CTranslate2, and mlc in terms of throughput and latency.</li>
+</ul>
+<hr>
+<h3 id="8-securing-llms">8. Securing LLMs
+</h3><p>In addition to traditional security problems associated with software, LLMs have unique weaknesses due to the way they are trained and prompted.</p>
+<ul>
+<li><strong>Prompt hacking</strong>: Different techniques related to prompt engineering, including prompt injection (additional instruction to hijack the model&rsquo;s answer), data/prompt leaking (retrieve its original data/prompt), and jailbreaking (craft prompts to bypass safety features).</li>
+<li><strong>Backdoors</strong>: Attack vectors can target the training data itself, by poisoning the training data (e.g., with false information) or creating backdoors (secret triggers to change the model&rsquo;s behavior during inference).</li>
+<li><strong>Defensive measures</strong>: The best way to protect your LLM applications is to test them against these vulnerabilities (e.g., using red teaming and checks like <a class="link" href="https://github.com/leondz/garak/"  target="_blank" rel="noopener"
+    >garak</a>) and observe them in production (with a framework like <a class="link" href="https://github.com/langfuse/langfuse"  target="_blank" rel="noopener"
+    >langfuse</a>).</li>
+</ul>
+<p>📚 <strong>References</strong>:</p>
+<ul>
+<li><a class="link" href="https://owasp.org/www-project-top-10-for-large-language-model-applications/"  target="_blank" rel="noopener"
+    >OWASP LLM Top 10</a> by HEGO Wiki: List of the 10 most critical vulnerabilities seen in LLM applications.</li>
+<li><a class="link" href="https://github.com/jthack/PIPE"  target="_blank" rel="noopener"
+    >Prompt Injection Primer</a> by Joseph Thacker: Short guide dedicated to prompt injection for engineers.</li>
+<li><a class="link" href="https://llmsecurity.net/"  target="_blank" rel="noopener"
+    >LLM Security</a> by <a class="link" href="https://twitter.com/llm_sec"  target="_blank" rel="noopener"
+    >@llm_sec</a>: Extensive list of resources related to LLM security.</li>
+<li><a class="link" href="https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/red-teaming"  target="_blank" rel="noopener"
+    >Red teaming LLMs</a> by Microsoft: Guide on how to perform red teaming with LLMs.</li>
+</ul>
+<hr>
+<h2 id="acknowledgements">Acknowledgements
+</h2><p>This roadmap was inspired by the excellent <a class="link" href="https://github.com/milanm/DevOps-Roadmap"  target="_blank" rel="noopener"
+    >DevOps Roadmap</a> from Milan Milanović and Romano Roth.</p>
+<p>Special thanks to:</p>
+<ul>
+<li>Thomas Thelen for motivating me to create a roadmap</li>
+<li>André Frade for his input and review of the first draft</li>
+<li>Dino Dunn for providing resources about LLM security</li>
+<li>Magdalena Kuhn for improving the &ldquo;human evaluation&rdquo; part</li>
+<li>Odoverdose for suggesting 3Blue1Brown&rsquo;s video about Transformers</li>
+<li>Everyone who contributed to the educational references in this course :)</li>
+</ul>
+<p><em>Disclaimer: I am not affiliated with any sources listed here.</em></p>
+<hr>
+<p><a class="link" href="https://www.star-history.com/#mlabonne/llm-course&amp;Date"  target="_blank" rel="noopener"
+    ><img src="https://api.star-history.com/svg?repos=mlabonne/llm-course&amp;type=Date"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Star History Chart"
+	
+	
+></a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/en/tags/github/">Github</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/en/p/the-book-of-secret-knowledge/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://images.unsplash.com/photo-1645334710996-0d59a16768e4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQyMDYxMjV8&amp;ixlib=rb-4.1.0" loading="lazy" data-key="" data-hash="https://images.unsplash.com/photo-1645334710996-0d59a16768e4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQyMDYxMjV8&amp;ixlib=rb-4.1.0"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">the-book-of-secret-knowledge</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/en/p/fmt/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://images.unsplash.com/photo-1610529028371-8212c5a809de?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg2MDczMzN8&amp;ixlib=rb-4.1.0" loading="lazy" data-key="" data-hash="https://images.unsplash.com/photo-1610529028371-8212c5a809de?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg2MDczMzN8&amp;ixlib=rb-4.1.0"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">fmt</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/en/p/hermes-agent/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://images.unsplash.com/photo-1627664002236-956249eb5433?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg2MDczMzN8&amp;ixlib=rb-4.1.0" loading="lazy" data-key="" data-hash="https://images.unsplash.com/photo-1627664002236-956249eb5433?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg2MDczMzN8&amp;ixlib=rb-4.1.0"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">hermes-agent</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/en/p/ponytail/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://images.unsplash.com/photo-1627664002236-956249eb5433?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg2MDczMzN8&amp;ixlib=rb-4.1.0" loading="lazy" data-key="" data-hash="https://images.unsplash.com/photo-1627664002236-956249eb5433?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg2MDczMzN8&amp;ixlib=rb-4.1.0"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ponytail</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/en/p/ecc/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://images.unsplash.com/photo-1627664002236-956249eb5433?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg2MDczMzN8&amp;ixlib=rb-4.1.0" loading="lazy" data-key="" data-hash="https://images.unsplash.com/photo-1627664002236-956249eb5433?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg2MDczMzN8&amp;ixlib=rb-4.1.0"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">ECC</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="yiGmMk/comment_blog"
+    data-repo-id="MDEwOlJlcG9zaXRvcnkxOTcyMTY4NDA="
+    data-category="Announcements"
+    data-category-id="DIC_kwDOC8FKSM4CAcFc"
+    data-mapping="title"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2026 Producthunt daily
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.34.2">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+    
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

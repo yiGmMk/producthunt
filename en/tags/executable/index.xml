@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Executable on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/executable/</link>
+        <description>Recent content in Executable on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 09 May 2025 15:29:56 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/executable/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>docker2exe</title>
+        <link>https://producthunt.programnotes.cn/en/p/docker2exe/</link>
+        <pubDate>Fri, 09 May 2025 15:29:56 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/docker2exe/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1604521243587-401c06e1b6a1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY3NzU2Nzd8&amp;ixlib=rb-4.1.0" alt="Featured image of post docker2exe" /&gt;&lt;h1 id=&#34;rzanedocker2exe&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/rzane/docker2exe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;rzane/docker2exe&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;docker2exe&#34;&gt;docker2exe
+&lt;/h1&gt;&lt;p&gt;This tool can be used to convert a Docker image to an executable that you can send to your friends!&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation
+&lt;/h2&gt;&lt;p&gt;Download a binary from the &lt;a class=&#34;link&#34; href=&#34;https://github.com/rzane/docker2exe/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;releases page&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ mv docker2exe-darwin-amd64 docker2exe
+$ chmod +x docker2exe
+$ ./docker2exe --help
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;requirements-on-the-building-device&#34;&gt;Requirements on the building device
+&lt;/h3&gt;&lt;p&gt;Docker, GoLang and gzip are also required. Use your package manager to install them.&lt;/p&gt;
+&lt;h3 id=&#34;requirements-on-the-executing-device&#34;&gt;Requirements on the executing device
+&lt;/h3&gt;&lt;p&gt;Docker is required.&lt;/p&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage
+&lt;/h2&gt;&lt;p&gt;To create a new binary:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker2exe --name alpine --image alpine:3.9
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will create the following files:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dist
+├── alpine-darwin-amd64
+├── alpine-linux-amd64
+├── alpine-windows-amd64
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, you can run the executable:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ dist/alpine-darwin-amd64 cat /etc/alpine-release
+3.9.5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When the executable is run, we&amp;rsquo;ll check for the &lt;code&gt;alpine:3.9.5&lt;/code&gt; image on the user&amp;rsquo;s system. If it doesn&amp;rsquo;t exist, the executable will automatically run:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker pull alpine:3.9.5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;embedded-mode&#34;&gt;Embedded Mode
+&lt;/h3&gt;&lt;p&gt;In this mode, if the specified image doesn&amp;rsquo;t exist, we&amp;rsquo;ll attempt to load it from a tarball that is embeddded in the executable.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker2exe --name alpine --image alpine:3.9 --embed
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When creating the executable above, the image was dumped to a tarball and baked into the resulting executable:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker save alpine:3.9 | gzip &amp;gt; alpine.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When the executable runs, we&amp;rsquo;ll check for the &lt;code&gt;alpine:3.9&lt;/code&gt; image on the user&amp;rsquo;s system. If it doesn&amp;rsquo;t exist, the executable will automatically run:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ docker load alpine.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For small images, this approach works great. In the example above, the resulting executable was under 10MB.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

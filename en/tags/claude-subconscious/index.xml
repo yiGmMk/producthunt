@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Claude Subconscious on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/claude-subconscious/</link>
+        <description>Recent content in Claude Subconscious on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Thu, 26 Mar 2026 16:06:35 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/claude-subconscious/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>claude-subconscious</title>
+        <link>https://producthunt.programnotes.cn/en/p/claude-subconscious/</link>
+        <pubDate>Thu, 26 Mar 2026 16:06:35 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/claude-subconscious/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1697208659028-0315f7b060df?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ1MTIzNDF8&amp;ixlib=rb-4.1.0" alt="Featured image of post claude-subconscious" /&gt;&lt;h1 id=&#34;letta-aiclaude-subconscious&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/letta-ai/claude-subconscious&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;letta-ai/claude-subconscious&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;claude-subconscious&#34;&gt;Claude Subconscious
+&lt;/h1&gt;&lt;p&gt;A background agent that whispers to Claude Code. A &lt;a class=&#34;link&#34; href=&#34;https://letta.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Letta&lt;/a&gt; agent that watches your sessions, reads your files, builds up memory over time, and whispers guidance back.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!IMPORTANT]
+Claude Subconscious is an experimental way to extend Claude Code (a closed source / black box agent) with the power of Letta&amp;rsquo;s memory system, tool access, and context engineering.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re looking for a coding agent that&amp;rsquo;s memory-first, model agnostic, and fully open source, we recommend using &lt;a class=&#34;link&#34; href=&#34;https://github.com/letta-ai/letta-code&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Letta Code&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/assets/evil-claude.jpeg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;evil claude&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;what-is-this&#34;&gt;What Is This?
+&lt;/h2&gt;&lt;p&gt;Claude Code forgets everything between sessions. Claude Subconscious is a second agent running underneath — watching, learning, and whispering back:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Watches&lt;/strong&gt; every Claude Code session transcript&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reads your codebase&lt;/strong&gt; — explores files with Read, Grep, and Glob while processing transcripts&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Remembers&lt;/strong&gt; across sessions, projects, and time&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Whispers guidance&lt;/strong&gt; — surfaces context, patterns, and reminders before each prompt&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Never blocks&lt;/strong&gt; — runs in the background via the &lt;a class=&#34;link&#34; href=&#34;https://docs.letta.com/letta-code/sdk/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Letta Code SDK&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Not just a memory layer — a background agent with real tool access that gets smarter the more you use it.&lt;/p&gt;
+&lt;p&gt;Using Letta&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://docs.letta.com/guides/agents/conversations/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Conversations&lt;/a&gt; feature, a single agent can serve multiple Claude Code sessions in parallel with shared memory across all of them.&lt;/p&gt;
+&lt;h2 id=&#34;how-it-works&#34;&gt;How It Works
+&lt;/h2&gt;&lt;p&gt;After each response, the transcript is sent to a Letta agent via the Letta Code SDK. The agent reads files, searches the web, updates its memory — then whispers back before the next prompt. Nothing is written to CLAUDE.md.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;┌─────────────┐&lt;/span&gt;          &lt;span class=&#34;err&#34;&gt;┌──────────────────────────┐&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;│&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Claude&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Code&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;│◄────────►│&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Letta&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Agent&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;background&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;└─────────────┘&lt;/span&gt;          &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;                          &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;                 &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;Tools&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Read&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Grep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Glob&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;                 &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;Memory&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;persistent&lt;/span&gt;       &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;                 &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;Web&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;search&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fetch&lt;/span&gt;       &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;                 &lt;span class=&#34;err&#34;&gt;└──────────────────────────┘&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;                        &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;Session&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Start&lt;/span&gt;        &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;err&#34;&gt;├───────────────────────►│&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;New&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;session&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;notification&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;                        &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;Before&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;each&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prompt&lt;/span&gt;   &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;err&#34;&gt;│◄───────────────────────┤&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Whispers&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;guidance&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;→&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stdout&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;                        &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;Before&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;each&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;tool&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;use&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;err&#34;&gt;│◄───────────────────────┤&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Mid&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;workflow&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;updates&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;→&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stdout&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;                        &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;After&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;each&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;err&#34;&gt;├───────────────────────►│&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Transcript&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;→&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SDK&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;session&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;async&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;                        &lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;↳&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Reads&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;updates&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;memory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;installation&#34;&gt;Installation
+&lt;/h2&gt;&lt;p&gt;Install from GitHub:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/plugin marketplace add letta-ai/claude-subconscious
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/plugin install claude-subconscious@claude-subconscious
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;updating&#34;&gt;Updating
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/plugin marketplace update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/plugin update claude-subconscious@claude-subconscious
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;install-from-source&#34;&gt;Install from Source
+&lt;/h3&gt;&lt;p&gt;Clone the repository:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/letta-ai/claude-subconscious.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; claude-subconscious
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Enable the plugin (from inside the cloned directory):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/plugin enable .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Or enable globally for all projects:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/plugin enable --global .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If running from a different directory, use the full path to the cloned repo.&lt;/p&gt;
+&lt;h3 id=&#34;linux-tmpfs-workaround&#34;&gt;Linux: tmpfs Workaround
+&lt;/h3&gt;&lt;p&gt;If plugin installation fails with &lt;code&gt;EXDEV: cross-device link not permitted&lt;/code&gt;, your &lt;code&gt;/tmp&lt;/code&gt; is likely on a different filesystem (common on Ubuntu, Fedora, Arch). Set &lt;code&gt;TMPDIR&lt;/code&gt; to work around this &lt;a class=&#34;link&#34; href=&#34;https://github.com/anthropics/claude-code/issues/14799&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Claude Code bug&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir -p ~/.claude/tmp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TMPDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/.claude/tmp&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Add to your shell profile (&lt;code&gt;~/.bashrc&lt;/code&gt; or &lt;code&gt;~/.zshrc&lt;/code&gt;) to make permanent.&lt;/p&gt;
+&lt;h2 id=&#34;configuration&#34;&gt;Configuration
+&lt;/h2&gt;&lt;h3 id=&#34;required&#34;&gt;Required
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LETTA_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;your-api-key&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Get your API key from &lt;a class=&#34;link&#34; href=&#34;https://app.letta.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;app.letta.com&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;optional&#34;&gt;Optional
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LETTA_MODE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;whisper&amp;#34;&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;# Default. Or &amp;#34;full&amp;#34; for blocks + messages, &amp;#34;off&amp;#34; to disable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LETTA_AGENT_ID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;agent-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LETTA_BASE_URL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http://localhost:8283&amp;#34;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# For self-hosted Letta&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LETTA_MODEL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;anthropic/claude-sonnet-4-5&amp;#34;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# Model override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LETTA_CONTEXT_WINDOW&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;1048576&amp;#34;&lt;/span&gt;             &lt;span class=&#34;c1&#34;&gt;# Context window size (e.g. 1M tokens)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LETTA_HOME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;      &lt;span class=&#34;c1&#34;&gt;# Consolidate .letta state to ~/.letta/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LETTA_SDK_TOOLS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;read-only&amp;#34;&lt;/span&gt;       &lt;span class=&#34;c1&#34;&gt;# Or &amp;#34;full&amp;#34;, &amp;#34;off&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;LETTA_MODE&lt;/code&gt; - Controls what gets injected. &lt;code&gt;whisper&lt;/code&gt; (default, messages only), &lt;code&gt;full&lt;/code&gt; (blocks + messages), &lt;code&gt;off&lt;/code&gt; (disable). See &lt;a class=&#34;link&#34; href=&#34;#modes&#34; &gt;Modes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;LETTA_AGENT_ID&lt;/code&gt; - If not set, the plugin automatically imports a default &amp;ldquo;Subconscious&amp;rdquo; agent on first use.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;LETTA_BASE_URL&lt;/code&gt; - For self-hosted Letta servers. Defaults to &lt;code&gt;https://api.letta.com&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;LETTA_MODEL&lt;/code&gt; - Override the agent&amp;rsquo;s model. Optional - the plugin auto-detects and selects from available models. See &lt;a class=&#34;link&#34; href=&#34;#model-configuration&#34; &gt;Model Configuration&lt;/a&gt; below.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;LETTA_CONTEXT_WINDOW&lt;/code&gt; - Override the agent&amp;rsquo;s context window size (in tokens). Useful when &lt;code&gt;LETTA_MODEL&lt;/code&gt; is set to a model with a large context window that differs from the server default. Example: &lt;code&gt;1048576&lt;/code&gt; for 1M tokens.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;LETTA_HOME&lt;/code&gt; - Base directory for plugin state files. Creates &lt;code&gt;{LETTA_HOME}/.letta/claude/&lt;/code&gt; for session data and conversation mappings. Defaults to current working directory. Set to &lt;code&gt;$HOME&lt;/code&gt; to consolidate all state in one location.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;LETTA_SDK_TOOLS&lt;/code&gt; - Controls client-side tool access for the Subconscious agent. &lt;code&gt;read-only&lt;/code&gt; (default), &lt;code&gt;full&lt;/code&gt;, or &lt;code&gt;off&lt;/code&gt;. See &lt;a class=&#34;link&#34; href=&#34;#sdk-tools&#34; &gt;SDK Tools&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;modes&#34;&gt;Modes
+&lt;/h3&gt;&lt;p&gt;The &lt;code&gt;LETTA_MODE&lt;/code&gt; environment variable controls what gets injected into Claude&amp;rsquo;s context:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Mode&lt;/th&gt;
+					&lt;th&gt;What Claude sees&lt;/th&gt;
+					&lt;th&gt;Use case&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;code&gt;whisper&lt;/code&gt;&lt;/strong&gt; (default)&lt;/td&gt;
+					&lt;td&gt;Only messages from Sub&lt;/td&gt;
+					&lt;td&gt;Lightweight — Sub speaks when it has something to say&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;code&gt;full&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Memory blocks + messages&lt;/td&gt;
+					&lt;td&gt;Full context — blocks on first prompt, diffs after&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;code&gt;off&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Nothing&lt;/td&gt;
+					&lt;td&gt;Disable hooks temporarily&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Subconscious &lt;strong&gt;never writes to CLAUDE.md&lt;/strong&gt; in any mode. All content is injected via stdout into the prompt context. If you have an existing CLAUDE.md with &lt;code&gt;&amp;lt;letta&amp;gt;&lt;/code&gt; content from an older version, it will be cleaned up automatically.&lt;/p&gt;
+&lt;h3 id=&#34;agent-resolution-order&#34;&gt;Agent Resolution Order
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Environment variable&lt;/strong&gt; - &lt;code&gt;LETTA_AGENT_ID&lt;/code&gt; if set&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Saved config&lt;/strong&gt; - &lt;code&gt;~/.letta/claude-subconscious/config.json&lt;/code&gt; if exists&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Auto-import&lt;/strong&gt; - Imports bundled &lt;code&gt;Subconscious.af&lt;/code&gt; agent, saves ID for future use&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This means zero-config setup: just set &lt;code&gt;LETTA_API_KEY&lt;/code&gt; and the plugin handles the rest.&lt;/p&gt;
+&lt;h3 id=&#34;multi-project-usage&#34;&gt;Multi-Project Usage
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;One agent, many projects.&lt;/strong&gt; The Subconscious agent is stored globally at &lt;code&gt;~/.letta/claude-subconscious/config.json&lt;/code&gt;. When you use the plugin in different repos, they all share the same agent brain.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;~/.letta/claude-subconscious/config.json  →  ONE agent ID (shared brain)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                               ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;project-a/.letta/claude/                  →  Project A&amp;#39;s conversation threads
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;project-b/.letta/claude/                  →  Project B&amp;#39;s conversation threads
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;project-c/.letta/claude/                  →  Project C&amp;#39;s conversation threads
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The &lt;code&gt;.letta/claude/&lt;/code&gt; directories in each project are &lt;strong&gt;conversation bookkeeping&lt;/strong&gt; (mapping Claude Code sessions to Letta conversations), not separate agents. Memory blocks are shared across all projects.&lt;/p&gt;
+&lt;p&gt;To use a &lt;strong&gt;different agent per project&lt;/strong&gt;, set &lt;code&gt;LETTA_AGENT_ID&lt;/code&gt; in your shell or via &lt;a class=&#34;link&#34; href=&#34;https://direnv.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;direnv&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# .envrc in project directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LETTA_AGENT_ID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;agent-xxx-for-this-project&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;model-configuration&#34;&gt;Model Configuration
+&lt;/h3&gt;&lt;p&gt;The plugin &lt;strong&gt;automatically detects available models&lt;/strong&gt; on your Letta server and configures the agent appropriately:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Queries available models&lt;/strong&gt; from your Letta server (&lt;code&gt;GET /v1/models/&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Checks if the agent&amp;rsquo;s model is available&lt;/strong&gt; on that server&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Auto-selects a fallback&lt;/strong&gt; if the current model isn&amp;rsquo;t available&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;auto-selection-priority&#34;&gt;Auto-Selection Priority
+&lt;/h4&gt;&lt;p&gt;When the agent&amp;rsquo;s model isn&amp;rsquo;t available, the plugin selects from available models in this order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;anthropic/claude-sonnet-4-5&lt;/code&gt; (recommended - best for agents)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;openai/gpt-4.1-mini&lt;/code&gt; (good balance, 1M context, cheap)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;anthropic/claude-haiku-4-5&lt;/code&gt; (fast Claude option)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;openai/gpt-5.2&lt;/code&gt; (flagship fallback)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;google_ai/gemini-3-flash&lt;/code&gt; (Google&amp;rsquo;s balanced option)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;google_ai/gemini-2.5-flash&lt;/code&gt; (fallback)&lt;/li&gt;
+&lt;li&gt;First available model on the server&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;manual-override&#34;&gt;Manual Override
+&lt;/h4&gt;&lt;p&gt;To specify a particular model, set &lt;code&gt;LETTA_MODEL&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LETTA_MODEL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;anthropic/claude-sonnet-4-5&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The model handle format is &lt;code&gt;provider/model&lt;/code&gt;. Common options:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Provider&lt;/th&gt;
+					&lt;th&gt;Example Models&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;openai&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;gpt-5.2&lt;/code&gt;, &lt;code&gt;gpt-5-nano&lt;/code&gt;, &lt;code&gt;gpt-4.1-mini&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;anthropic&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;claude-sonnet-4-5&lt;/code&gt;, &lt;code&gt;claude-opus-4-5&lt;/code&gt;, &lt;code&gt;claude-haiku-4-5&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;google_ai&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;gemini-3-flash&lt;/code&gt;, &lt;code&gt;gemini-2.5-flash&lt;/code&gt;, &lt;code&gt;gemini-2.5-pro&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;zai&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;glm-5&lt;/code&gt; (Letta Cloud default, free)&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;If &lt;code&gt;LETTA_MODEL&lt;/code&gt; is set but not available on the server, the plugin will warn you and fall back to auto-selection.&lt;/p&gt;
+&lt;p&gt;The default bundled agent uses &lt;code&gt;zai/glm-5&lt;/code&gt; (free on Letta Cloud). For better tool usage and reasoning, consider switching to a stronger model. You can change the model at any time via the &lt;a class=&#34;link&#34; href=&#34;https://app.letta.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Agent Development Environment&lt;/a&gt; (ADE) or by setting &lt;code&gt;LETTA_MODEL&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Ensure your Letta server has the appropriate API key configured for your chosen provider (e.g., &lt;code&gt;OPENAI_API_KEY&lt;/code&gt; for OpenAI models).&lt;/p&gt;
+&lt;h2 id=&#34;default-subconscious-agent&#34;&gt;Default Subconscious Agent
+&lt;/h2&gt;&lt;p&gt;When no agent is configured, the plugin auto-imports a bundled &amp;ldquo;Subconscious&amp;rdquo; agent designed specifically for this use case.&lt;/p&gt;
+&lt;h3 id=&#34;what-it-does&#34;&gt;What It Does
+&lt;/h3&gt;&lt;p&gt;The default agent is a background agent that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Reads your code&lt;/strong&gt; — uses Read, Grep, and Glob to explore your codebase while processing transcripts&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Learns your preferences&lt;/strong&gt; from corrections, explicit statements, and patterns&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tracks project context&lt;/strong&gt; — architecture decisions, known gotchas, pending items&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Provides guidance&lt;/strong&gt; via the &lt;code&gt;&amp;lt;letta_message&amp;gt;&lt;/code&gt; block when it has something useful&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Searches the web&lt;/strong&gt; — can look things up to augment its context&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;memory-blocks&#34;&gt;Memory Blocks
+&lt;/h3&gt;&lt;p&gt;The default agent Subconscious maintains 8 memory blocks:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Block&lt;/th&gt;
+					&lt;th&gt;Purpose&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;core_directives&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Role definition and behavioral guidelines&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;guidance&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Active guidance for the next session (syncs to Claude Code before each prompt)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;user_preferences&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Learned coding style, tool preferences, communication style&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;project_context&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Codebase knowledge, architecture decisions, known gotchas&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;session_patterns&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Recurring behaviors, time-based patterns, common struggles&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;pending_items&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Unfinished work, explicit TODOs, follow-up items&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;self_improvement&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Guidelines for evolving memory architecture over time&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;tool_guidelines&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;How to use available tools (memory, filesystem, web search)&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;If you set an alternative agent using &lt;code&gt;LETTA_AGENT_ID&lt;/code&gt;, your agent will use its existing memory architecture.&lt;/p&gt;
+&lt;h3 id=&#34;communication-style&#34;&gt;Communication Style
+&lt;/h3&gt;&lt;p&gt;Subconscious is configured to be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Observational&lt;/strong&gt; - &amp;ldquo;I noticed&amp;hellip;&amp;rdquo; not &amp;ldquo;You should&amp;hellip;&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Concise&lt;/strong&gt; - Technical, no filler&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Present but not intrusive&lt;/strong&gt; - Empty guidance is fine; it won&amp;rsquo;t manufacture content&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;two-way-communication&#34;&gt;Two-Way Communication
+&lt;/h3&gt;&lt;p&gt;Claude Code can address the Subconscious agent directly in responses. The agent sees everything in the transcript and may respond on the next sync. It&amp;rsquo;s designed for ongoing dialogue, not just one-way observation.&lt;/p&gt;
+&lt;h2 id=&#34;hooks&#34;&gt;Hooks
+&lt;/h2&gt;&lt;p&gt;The plugin uses four Claude Code hooks:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Hook&lt;/th&gt;
+					&lt;th&gt;Script&lt;/th&gt;
+					&lt;th&gt;Timeout&lt;/th&gt;
+					&lt;th&gt;Purpose&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;SessionStart&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;session_start.ts&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;5s&lt;/td&gt;
+					&lt;td&gt;Notifies agent, cleans up legacy CLAUDE.md&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;UserPromptSubmit&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;sync_letta_memory.ts&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;10s&lt;/td&gt;
+					&lt;td&gt;Injects memory + messages via stdout&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;PreToolUse&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;pretool_sync.ts&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;5s&lt;/td&gt;
+					&lt;td&gt;Mid-workflow updates via &lt;code&gt;additionalContext&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;Stop&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;send_messages_to_letta.ts&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;120s&lt;/td&gt;
+					&lt;td&gt;Spawns SDK worker to send transcript (async)&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;sessionstart&#34;&gt;SessionStart
+&lt;/h3&gt;&lt;p&gt;When a new Claude Code session begins:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Creates a new Letta conversation (or reuses existing one for the session)&lt;/li&gt;
+&lt;li&gt;Sends session start notification with project path and timestamp&lt;/li&gt;
+&lt;li&gt;Cleans up any legacy &lt;code&gt;&amp;lt;letta&amp;gt;&lt;/code&gt; content from CLAUDE.md&lt;/li&gt;
+&lt;li&gt;Saves session state for other hooks to reference&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;userpromptsubmit&#34;&gt;UserPromptSubmit
+&lt;/h3&gt;&lt;p&gt;Before each prompt is processed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fetches agent&amp;rsquo;s current memory blocks and messages&lt;/li&gt;
+&lt;li&gt;In &lt;code&gt;full&lt;/code&gt; mode: injects all blocks on first prompt, diffs on subsequent prompts&lt;/li&gt;
+&lt;li&gt;In &lt;code&gt;whisper&lt;/code&gt; mode: injects only messages from Sub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;pretooluse&#34;&gt;PreToolUse
+&lt;/h3&gt;&lt;p&gt;Before each tool use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Checks for new messages or memory changes since last sync&lt;/li&gt;
+&lt;li&gt;If updates found, injects them via &lt;code&gt;additionalContext&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Silent no-op if nothing changed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sdk-tools&#34;&gt;SDK Tools
+&lt;/h3&gt;&lt;p&gt;By default, the Subconscious agent now gets &lt;strong&gt;client-side tool access&lt;/strong&gt; via the &lt;a class=&#34;link&#34; href=&#34;https://docs.letta.com/letta-code/sdk/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Letta Code SDK&lt;/a&gt;. Instead of being limited to memory operations, Sub can read your files, search the web, and explore your codebase while processing transcripts.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Configuration via &lt;code&gt;LETTA_SDK_TOOLS&lt;/code&gt;:&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Mode&lt;/th&gt;
+					&lt;th&gt;Tools Available&lt;/th&gt;
+					&lt;th&gt;Use Case&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;read-only&lt;/code&gt; (default)&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;Read&lt;/code&gt;, &lt;code&gt;Grep&lt;/code&gt;, &lt;code&gt;Glob&lt;/code&gt;, &lt;code&gt;web_search&lt;/code&gt;, &lt;code&gt;fetch_webpage&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Safe background research and file reading&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;full&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;All tools (Bash, Edit, Write, Task, etc.)&lt;/td&gt;
+					&lt;td&gt;Full autonomy — Sub can make changes and spawn sub-agents&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;off&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;None (memory-only)&lt;/td&gt;
+					&lt;td&gt;Listen-only — Sub processes transcripts but has no client-side tools&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;In &lt;code&gt;full&lt;/code&gt; mode, Sub can spawn sub-agents via the &lt;code&gt;Task&lt;/code&gt; tool — dispatching parallel research or delegating work to other agents while Claude Code continues working.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Requires &lt;code&gt;@letta-ai/letta-code-sdk&lt;/code&gt; (installed as a dependency).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;stop&#34;&gt;Stop
+&lt;/h3&gt;&lt;p&gt;Uses an &lt;strong&gt;async hook&lt;/strong&gt; pattern — runs in the background without blocking Claude Code:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Main hook (&lt;code&gt;send_messages_to_letta.ts&lt;/code&gt;) runs quickly:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Parses the session transcript (JSONL format)&lt;/li&gt;
+&lt;li&gt;Extracts user messages, assistant responses, thinking blocks, and tool usage&lt;/li&gt;
+&lt;li&gt;Writes payload to a temp file&lt;/li&gt;
+&lt;li&gt;Spawns detached background worker&lt;/li&gt;
+&lt;li&gt;Exits immediately&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Background worker (&lt;code&gt;send_worker_sdk.ts&lt;/code&gt;) runs independently:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Opens a Letta Code SDK session, giving Sub client-side tools&lt;/li&gt;
+&lt;li&gt;Sub processes the transcript and can use Read/Grep/Glob to explore the codebase&lt;/li&gt;
+&lt;li&gt;Updates state on success&lt;/li&gt;
+&lt;li&gt;Cleans up temp file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The Stop hook runs as an async hook, so it never blocks Claude Code.&lt;/p&gt;
+&lt;h2 id=&#34;state-management&#34;&gt;State Management
+&lt;/h2&gt;&lt;p&gt;The plugin stores state in two locations:&lt;/p&gt;
+&lt;h3 id=&#34;durable-state-lettaclaude&#34;&gt;Durable State (&lt;code&gt;.letta/claude/&lt;/code&gt;)
+&lt;/h3&gt;&lt;p&gt;Persisted in your project directory (this is &lt;strong&gt;conversation bookkeeping&lt;/strong&gt;, not a separate agent - see &lt;a class=&#34;link&#34; href=&#34;#multi-project-usage&#34; &gt;Multi-Project Usage&lt;/a&gt;):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;conversations.json&lt;/code&gt; - Maps Claude Code session IDs → Letta conversation IDs&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;session-{id}.json&lt;/code&gt; - Per-session state (last processed index, cached conversation ID)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;temporary-state-tmpdirletta-claude-sync-uid&#34;&gt;Temporary State (&lt;code&gt;$TMPDIR/letta-claude-sync-$UID/&lt;/code&gt;)
+&lt;/h3&gt;&lt;p&gt;Log files for debugging:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;session_start.log&lt;/code&gt; - Session initialization&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sync_letta_memory.log&lt;/code&gt; - Memory sync operations&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;send_messages.log&lt;/code&gt; - Main Stop hook&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;send_worker_sdk.log&lt;/code&gt; - SDK background worker&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-your-agent-receives&#34;&gt;What Your Agent Receives
+&lt;/h2&gt;&lt;h3 id=&#34;session-start-message&#34;&gt;Session Start Message
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Session Start]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Project: my-project
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Path: /Users/you/code/my-project
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Session: abc123
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Started: 2026-01-14T12:00:00Z
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;A new Claude Code session has begun. I&amp;#39;ll be sending you updates as the session progresses.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;conversation-transcript&#34;&gt;Conversation Transcript
+&lt;/h3&gt;&lt;p&gt;Full transcript with:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;User messages&lt;/li&gt;
+&lt;li&gt;Assistant responses (including thinking blocks)&lt;/li&gt;
+&lt;li&gt;Tool uses and results&lt;/li&gt;
+&lt;li&gt;Timestamps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-claude-sees&#34;&gt;What Claude Sees
+&lt;/h2&gt;&lt;p&gt;All content is injected via stdout — nothing is written to disk. What Claude receives depends on the mode.&lt;/p&gt;
+&lt;h3 id=&#34;messages-whisper--full-mode&#34;&gt;Messages (whisper + full mode)
+&lt;/h3&gt;&lt;p&gt;Messages from your Subconscious agent are injected before each prompt:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;letta_message&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;from=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Subconscious&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;timestamp=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2026-01-26T20:37:14+00:00&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;You&amp;#39;ve asked about error handling in async contexts three times this week.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Consider reviewing error handling architecture holistically.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/letta_message&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;memory-blocks-full-mode-only&#34;&gt;Memory Blocks (full mode only)
+&lt;/h3&gt;&lt;p&gt;On the first prompt of a session, all memory blocks are injected:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;letta_context&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Subconscious agent &amp;#34;herald&amp;#34; is observing this session.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Supervise: https://app.letta.com/agents/agent-xxx?conversation=conv-xxx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/letta_context&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;letta_memory_blocks&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;user_preferences&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;description=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Learned coding style and preferences.&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Prefers explicit type annotations. Uses pnpm, not npm.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/user_preferences&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;project_context&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;description=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Codebase knowledge and architecture.&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Working on claude-subconscious plugin. TypeScript, ESM modules.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/project_context&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/letta_memory_blocks&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;On subsequent prompts, only changed blocks are shown as diffs:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;letta_memory_update&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;pending_items&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;status=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;modified&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- Phase 1 test harness complete
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;+ Release prep complete: README fixed, .gitignore updated
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/pending_items&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/letta_memory_update&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;first-run&#34;&gt;First Run
+&lt;/h2&gt;&lt;p&gt;On first use, the agent starts with minimal context. It takes a few sessions before it has enough signal to provide useful guidance. Give it time — it reads your code, learns your patterns, and gets smarter the more it observes.&lt;/p&gt;
+&lt;h2 id=&#34;use-cases&#34;&gt;Use Cases
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Persistent project context&lt;/strong&gt; — Agent reads your codebase and remembers it across sessions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Learned preferences&lt;/strong&gt; — &amp;ldquo;This user always wants explicit type annotations&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cross-session continuity&lt;/strong&gt; — Pick up where you left off, with full context&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Background research&lt;/strong&gt; — Agent can search the web and read files while you work&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pattern detection&lt;/strong&gt; — &amp;ldquo;You&amp;rsquo;ve been debugging auth for 2 hours, maybe step back?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Proactive codebase awareness&lt;/strong&gt; — Agent explores relevant files when it sees you working on a feature&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;debugging&#34;&gt;Debugging
+&lt;/h2&gt;&lt;p&gt;Check the log files if hooks aren&amp;rsquo;t working. The log directory is user-specific (&lt;code&gt;$TMPDIR/letta-claude-sync-$UID/&lt;/code&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Watch all logs (macOS/Linux)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tail -f /tmp/letta-claude-sync-&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;id -u&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;/*.log
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Or specific logs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tail -f /tmp/letta-claude-sync-&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;id -u&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;/send_messages.log
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tail -f /tmp/letta-claude-sync-&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;id -u&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;/send_worker_sdk.log
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;api-notes&#34;&gt;API Notes
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Memory sync requires &lt;code&gt;?include=agent.blocks&lt;/code&gt; query parameter (Letta API doesn&amp;rsquo;t include relationship fields by default)&lt;/li&gt;
+&lt;li&gt;All transcript delivery uses the &lt;a class=&#34;link&#34; href=&#34;https://docs.letta.com/letta-code/sdk/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Letta Code SDK&lt;/a&gt; — no raw API calls for message sending&lt;/li&gt;
+&lt;li&gt;The SDK worker streams the agent&amp;rsquo;s full response before updating state&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;MIT&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
