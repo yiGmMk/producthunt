@@ -1,9 +1,9 @@
 ---
 title: hyperframes
-date: 2026-09-07T21:35:58+08:00
+date: 2026-09-08T20:22:59+08:00
 draft: False
-image: https://images.unsplash.com/photo-1592893658769-5da16cb93236?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg3ODgwOTl8&ixlib=rb-4.1.0
-tags: ['github',HyperFrames, HTML, video rendering]
+image: https://images.unsplash.com/photo-1608137146688-b2d2808b9ae4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg4Njk4ODR8&ixlib=rb-4.1.0
+tags: ['github',HyperFrames, video rendering, open source]
 categories: ['github']
 ---
 

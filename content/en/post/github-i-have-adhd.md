@@ -1,8 +1,8 @@
 ---
 title: i-have-adhd
-date: 2026-07-23T17:39:25+08:00
+date: 2026-09-08T20:19:03+08:00
 draft: False
-image: https://images.unsplash.com/photo-1605126394901-72eba9bf67f4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ3OTk0NDB8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1584607176890-ae4b727a0f33?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg4Njk4ODR8&ixlib=rb-4.1.0
 tags: ['github',ADHD, coding assistant, skill]
 categories: ['github']
 ---
@@ -20,41 +20,25 @@ categories: ['github']
 </p>
 
 <p align="center">
-  <strong>English</strong> ·
-  <a href="README.zh-CN.md">简体中文</a> ·
-  <a href="README.ja.md">日本語</a>
+  <strong title="English" aria-label="English">🇬🇧</strong> ·
+  <a href=".github/readme/README.zh-CN.md" title="简体中文" aria-label="简体中文">🇨🇳</a> ·
+  <a href=".github/readme/README.pt-BR.md" title="Português (Brasil)" aria-label="Português (Brasil)">🇧🇷</a> ·
+  <a href=".github/readme/README.ja.md" title="日本語" aria-label="日本語">🇯🇵</a> ·
+  <a href=".github/readme/README.vi.md" title="Tiếng Việt" aria-label="Tiếng Việt">🇻🇳</a> ·
+  <a href=".github/readme/README.ko.md" title="한국어" aria-label="한국어">🇰🇷</a> ·
+  <a href=".github/readme/README.th.md" title="ภาษาไทย" aria-label="ภาษาไทย">🇹🇭</a>
 </p>
 
 
 ## Install
 
-<details>
-<summary><strong>Claude Code</strong></summary>
+Copy/paste into your CLI prompt:
 
-```bash
-claude plugin marketplace add ayghri/i-have-adhd
-claude plugin install i-have-adhd@i-have-adhd
+```text
+Install the i-have-adhd skill/plugin from https://github.com/ayghri/i-have-adhd, refer to the repo's AGENTS.md for instructions.
 ```
 
-Then type `/i-have-adhd`. No local clone needed: Claude Code fetches the repo and keeps it updated.
-
-Want it on every session? `touch ~/.claude/.i-have-adhd-always` (see [INSTALL.md](./INSTALL.md)).
-
-</details>
-
-<details>
-<summary><strong>Codex</strong></summary>
-
-```bash
-codex plugin marketplace add ayghri/i-have-adhd --ref main
-codex plugin add i-have-adhd@i-have-adhd
-```
-
-Then type `$i-have-adhd` to apply the output style explicitly. The skill can also be invoked implicitly when Codex sees a task that benefits from it.
-
-</details>
-
-Install instructions for other coding agents live in [INSTALL.md](./INSTALL.md).
+Or 🔗 [check the installation instructions](INSTALL.md).
 
 ## What it does
 

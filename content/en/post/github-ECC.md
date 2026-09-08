@@ -1,9 +1,9 @@
 ---
 title: ECC
-date: 2026-09-06T19:48:20+08:00
+date: 2026-09-08T20:21:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1589129230246-1aa19d2f7519?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg2OTUyMDl8&ixlib=rb-4.1.0
-tags: ['github',agent harness operating system, skills, workflows]
+image: https://images.unsplash.com/photo-1512682479844-0fa51f42b4a4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg4Njk4ODR8&ixlib=rb-4.1.0
+tags: ['github',ECC, agent harness, skills]
 categories: ['github']
 ---
 
@@ -566,11 +566,14 @@ Do not copy the raw repo `hooks/hooks.json` into `~/.claude/settings.json` or `~
 bash ./install.sh --target claude --modules hooks-runtime --enable-hooks
 ```
 
-That writes resolved hooks to `~/.claude/hooks/hooks.json` and leaves any existing `~/.claude/settings.json` untouched.
+That installs the hook scripts under `~/.claude/` and registers the resolved
+hook entries in `~/.claude/settings.json`. Existing user settings and hooks are
+preserved; ECC-owned entries are tracked by stable ID for idempotent updates
+and safe uninstall.
 
 If you installed ECC via `/plugin install`, do not copy those hooks into `settings.json`. Claude Code v2.1+ already auto-loads plugin `hooks/hooks.json`, and duplicating them in `settings.json` causes duplicate execution and cross-platform hook conflicts.
 
-On Windows, Claude's config root is `%USERPROFILE%\\.claude`; install the hook runtime with:
+On Windows, Claude's config root is `%USERPROFILE%\.claude`; install the hook runtime with:
 
 ```powershell
 pwsh -File .\install.ps1 --target claude --modules hooks-runtime --enable-hooks
