@@ -1,9 +1,9 @@
 ---
 title: editor
-date: 2026-07-29T17:53:42+08:00
+date: 2026-09-09T20:28:08+08:00
 draft: False
-image: https://images.unsplash.com/photo-1706425278316-a9f44c03c00a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUzMTg3NTV8&ixlib=rb-4.1.0
-tags: ['github',3D building editor, React Three Fiber, Nodes]
+image: https://images.unsplash.com/photo-1591624294792-359a258eca6a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg5NTY2ODF8&ixlib=rb-4.1.0
+tags: ['github',3D building editor,React Three Fiber,WebGPU]
 categories: ['github']
 ---
 
@@ -16,18 +16,96 @@ A 3D building editor built with React Three Fiber and WebGPU.
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![npm @pascal-app/core](https://img.shields.io/npm/v/@pascal-app/core?label=%40pascal-app%2Fcore)](https://www.npmjs.com/package/@pascal-app/core)
 [![npm @pascal-app/viewer](https://img.shields.io/npm/v/@pascal-app/viewer?label=%40pascal-app%2Fviewer)](https://www.npmjs.com/package/@pascal-app/viewer)
-[![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white)](https://discord.gg/SaBRA9t2)
+[![npm @pascal-app/cli](https://img.shields.io/npm/v/@pascal-app/cli?label=%40pascal-app%2Fcli)](https://www.npmjs.com/package/@pascal-app/cli)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white)](https://discord.gg/XRKsDcpqgS)
 [![X (Twitter)](https://img.shields.io/badge/follow-%40pascal__app-black?logo=x&logoColor=white)](https://x.com/pascal_app)
 
 https://github.com/user-attachments/assets/8b50e7cf-cebe-4579-9cf3-8786b35f7b6b
 
+## Run the Editor Locally
+
+Node.js 22.13 or newer can create a persistent local Pascal installation without
+cloning this repository:
+
+```bash
+npx @pascal-app/cli editor
+```
+
+The CLI starts the editor and an authenticated MCP service in the background, selects
+collision-free loopback ports, and keeps projects in `~/.pascal/data/pascal.db`. Configure
+an agent to launch `pascal mcp connect`. See [Run Pascal locally](https://editor.pascal.app/docs/developers/local-editor)
+for pnpm/Bun commands, project management, MCP setup, updates, storage paths, and
+troubleshooting. The npm release is the older runtime described below; use the verified
+GitHub preview when a task needs the new read-only furniture candidate check.
+
+## Candidate-enabled CLI preview
+
+The npm `beta` tag currently resolves to `@pascal-app/cli@1.0.0-beta.1`, which predates the read-only furniture candidate input in this repository. To use that capability before the next npm release, install the verified GitHub prerelease built from commit `aa653f2f523f81f361ac20cb42b745faf7e46844`:
+
+```bash
+PASCAL_PREVIEW_VERSION='1.0.0-beta.1.agent-skills.0'
+PASCAL_PREVIEW_PREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/pascal-preview"
+PASCAL_PREVIEW_DOWNLOAD="$(mktemp -d)"
+cd "$PASCAL_PREVIEW_DOWNLOAD"
+
+curl --fail --location --remote-name \
+  "https://github.com/pascalorg/editor/releases/download/cli-v1.0.0-beta.1-agent-skills.0/pascal-app-cli-${PASCAL_PREVIEW_VERSION}.tgz"
+curl --fail --location --remote-name \
+  "https://github.com/pascalorg/editor/releases/download/cli-v1.0.0-beta.1-agent-skills.0/SHA256SUMS.txt"
+
+# macOS
+shasum -a 256 -c SHA256SUMS.txt
+# Linux: use `sha256sum -c SHA256SUMS.txt` instead.
+
+npm install --global --prefix "$PASCAL_PREVIEW_PREFIX" --ignore-scripts \
+  "./pascal-app-cli-${PASCAL_PREVIEW_VERSION}.tgz"
+export PATH="$PASCAL_PREVIEW_PREFIX/bin:$PATH"
+pascal --version
+pascal update --version "$PASCAL_PREVIEW_VERSION"
+pascal editor --no-open
+```
+
+The expected archive SHA-256 is `814ffa8c6f6a5fced73bf909c616d9a78feff18fd61fd0b4b7d65e74fad5a33d`. The same-version `update` command installs and activates this CLI's bundled runtime, restarting an older running service when necessary. Keep an existing `PASCAL_HOME` unchanged so stored projects remain in the same data directory; `pascal editor` alone reuses any healthy service, including an older one. Keep the preview prefix on the agent host's `PATH` before running `pascal mcp setup claude`, `pascal mcp setup codex`, or configuring `pascal mcp connect` manually. This GitHub prerelease is not an npm version.
+
+Use one active agent client per local CLI service. The standalone local HTTP runtime shares active scene state between clients; use separate `PASCAL_HOME` directories and service processes when independent concurrent work is required.
+
+## Agent skills
+
+Install Pascal's public agent workflows from this repository with [skills.sh](https://skills.sh):
+
+```bash
+npx skills add pascalorg/editor \
+  --skill pascal-3d \
+  --skill furniture-fit
+```
+
+Claude Code users can install the same canonical skill source as a plugin:
+
+```text
+/plugin marketplace add pascalorg/editor
+/plugin install pascal-agent-skills@pascal
+```
+
+Codex users can install the same plugin from the repository marketplace:
+
+```bash
+codex plugin marketplace add pascalorg/editor
+codex plugin add pascal-agent-skills@pascal
+```
+
+[`pascal-3d`](skills/pascal-3d/SKILL.md) covers safe local or hosted MCP setup and verified scene work. [`furniture-fit`](skills/furniture-fit/SKILL.md) produces a bounded, evidence-based footprint assessment without claiming unsupported height, swing, or delivery checks. See [skills/README.md](skills/README.md) for package details and validation.
+
+The skills inspect the connected MCP tool schemas before using optional fields. A capability present in this repository may be absent from an older installed or hosted release; the agent should report the narrower supported result instead of assuming source-only inputs are available.
+
 ## Using Published Packages
 
 The viewer runtime and built-in node definitions are separate packages. Install the full built-in
-viewer set, then load the built-in plugin once before mounting `<Viewer>`:
+viewer set, then load the built-in plugin once before mounting `<Viewer>`. Capture sessions are an
+optional transport-neutral extension:
 
 ```bash
 npm install @pascal-app/core @pascal-app/viewer @pascal-app/editor @pascal-app/nodes
+npm install @pascal-app/capture-protocol @pascal-app/capture-viewer
 ```
 
 ```typescript
@@ -42,7 +120,8 @@ See the [`@pascal-app/viewer` quick start](packages/viewer/README.md#usage) for 
 
 ## Repository Architecture
 
-This is a Turborepo monorepo with four main runtime packages:
+This is a Turborepo monorepo with the reusable editor packages, the standalone app,
+and the CLI that distributes it:
 
 ```
 editor/
@@ -51,8 +130,12 @@ editor/
 ├── packages/
 │   ├── core/            # Schemas, scene state, and registry contracts
 │   ├── viewer/          # 3D rendering runtime and shared systems
+│   ├── capture-protocol/ # Static/live capture-session contracts
+│   ├── capture-viewer/  # Capture source runtime and reference renderers
 │   ├── editor/          # Editing tools and UI components
 │   ├── nodes/           # Built-in node definitions, renderers, and systems
+│   ├── cli/             # Persistent local editor installer and process manager
+│   ├── mcp/             # Model Context Protocol server and scene storage
 │   └── ui/              # Shared UI components
 ```
 
@@ -62,8 +145,12 @@ editor/
 |---------|---------------|
 | **@pascal-app/core** | Node schemas, scene state (Zustand), registry contracts, spatial queries, and event bus |
 | **@pascal-app/viewer** | 3D rendering via React Three Fiber, shared render systems, default camera/controls, and post-processing |
+| **@pascal-app/capture-protocol** | Versioned capture manifests, normalized streams, and transport-neutral static/live sources |
+| **@pascal-app/capture-viewer** | Viewer child runtime and reference model, device-motion, and point-cloud layers |
 | **@pascal-app/editor** | Editing tools, panels, selection, and direct-manipulation UI |
 | **@pascal-app/nodes** | Built-in registry plugin with node definitions, renderers, geometry, and systems |
+| **@pascal-app/cli** | Installs and manages a versioned standalone editor runtime and persistent local data |
+| **@pascal-app/mcp** | Exposes scene tools, resources, prompts, and local storage to MCP-compatible AI hosts |
 | **apps/editor** | Standalone Next.js host for the editor packages |
 
 The **viewer** renders the scene with sensible defaults. The **editor** extends it with interactive tools, selection management, and editing capabilities.
@@ -447,6 +534,17 @@ npm publish --workspace=@pascal-app/viewer --access public
 | `packages/viewer/src/components/viewer/` | Main Viewer component |
 | `apps/editor/components/tools/` | Editor tools |
 | `apps/editor/store/` | Editor-specific state |
+
+---
+
+## Contributing
+
+Bug fixes, features, docs and ideas are all welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md) for setup, code style and the PR flow.
+
+- New node kinds and sidebar panels ship as [plugins](https://editor.pascal.app/docs/developers/plugins) rather than edits to the built-ins — [`pascalorg/plugin-trees`](https://github.com/pascalorg/plugin-trees) is a worked example
+- Questions and ideas go to [Discussions](https://github.com/pascalorg/editor/discussions); reproducible bugs go to [Issues](https://github.com/pascalorg/editor/issues)
+- Participation is covered by our [Code of Conduct](CODE_OF_CONDUCT.md)
+- Security problems go to [SECURITY.md](SECURITY.md), not a public issue
 
 ---
 
