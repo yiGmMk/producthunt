@@ -1,9 +1,9 @@
 ---
 title: teamai-cli
-date: 2026-09-09T20:26:39+08:00
+date: 2026-09-10T20:24:22+08:00
 draft: False
-image: https://images.unsplash.com/photo-1763911307513-02cf2f8b7c5d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg5NTY2ODF8&ixlib=rb-4.1.0
-tags: ['github',TeamAI, CLI, AI agents]
+image: https://images.unsplash.com/photo-1703925155551-715204609763?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkwNDI4MTd8&ixlib=rb-4.1.0
+tags: ['github',teamai, cli, knowledge management]
 categories: ['github']
 ---
 
@@ -102,6 +102,7 @@ Once initialized, every AI session automatically pulls the latest skills / rules
     <tr><td>Hermes</td><td align="center">✓</td><td align="center">—</td><td align="center">✓</td><td align="center">✓</td><td align="center">—</td><td align="center">—</td><td align="center">—</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">—</td><td align="center">—</td><td align="center">—</td></tr>
     <tr><td>DeepSeek Harness</td><td align="center">✓</td><td align="center">—</td><td align="center">✓</td><td align="center">—</td><td align="center">—</td><td align="center">—</td><td align="center">—</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">—</td><td align="center">—</td><td align="center">—</td></tr>
     <tr><td>Qoder</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td></tr>
+    <tr><td>ZCode</td><td align="center">✓</td><td align="center">—</td><td align="center">✓</td><td align="center">—</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td><td align="center">✓</td></tr>
   </tbody>
 </table>
 
@@ -201,6 +202,8 @@ Matched: conflict | Missing: port
 teamai import --from-repo https://github.com/org/repo
 teamai import --from-org myorg              # batch import all repos
 teamai codebase --extract /path/to/repo     # local extract into teamwiki/
+teamai codebase --deep-enrich --project my-service --output /path/to/repo # generate deep knowledge docs
+teamai codebase --reconcile --output /path/to/repo # map product docs to code pages
 teamai codebase --lint --output /path/to/repo # check the locally extracted graph
 ```
 
@@ -232,9 +235,9 @@ Insight into how the team actually uses its AI tools, and a starting point for t
 
 | Capability | Command | What it shows |
 |------------|---------|---------------|
-| **Usage** | `teamai digest` | Weekly team digest — token usage, conversation volume, and intervention rate. |
+| **Usage** | `teamai digest` | Weekly team digest — 7-day success, prompt, active-time, estimated cost, cache, and correction trends, plus lifetime totals. |
 | **Sessions** | `teamai session save` | Privacy-scrubbed per-session summaries (tool sequence, prompt turns, interventions) that feed the digest's Session Highlights. |
-| **Dashboard** | `teamai dashboard` | Web dashboard showing team members' live coding-session status, intervention count, and token usage. |
+| **Dashboard** | `teamai dashboard` | Web dashboard showing live sessions and local 7-day trends compared with the prior 7 days. |
 | **KB Health** | `teamai dashboard` → KB Health | Built-in dashboard page reporting knowledge-base usage & health — coverage by type, top recalled entries, silent entries, recall trend, author contributions, and a maintenance console. |
 
 ## Commands
@@ -253,6 +256,8 @@ Insight into how the team actually uses its AI tools, and a starting point for t
 | `teamai recall maintenance` | Maintain knowledge base health: prune low-confidence learnings, writeback confidence scores, flag stale entries |
 | `teamai import` | Import knowledge (`--dir`, `--from-repo`, `--from-org`, `--from-repo-list`, `--from-mr`) |
 | `teamai codebase --extract [path]` | Extract code facts and build the local graph under `teamwiki/` |
+| `teamai codebase --deep-enrich` | Generate deep knowledge docs from extracted evidence |
+| `teamai codebase --reconcile` | Reconcile product documentation with extracted code knowledge |
 | `teamai codebase --lint` | Knowledge graph health check |
 | `teamai ci extract-mr --url <url>` | CI: extract knowledge from MR, post comments, write after merge |
 | `teamai members` | List team members |

@@ -1,9 +1,9 @@
 ---
 title: i-have-adhd
-date: 2026-09-09T20:25:43+08:00
+date: 2026-09-10T20:21:15+08:00
 draft: False
-image: https://images.unsplash.com/photo-1638321928099-a55f6fe8b556?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODg5NTY2ODF8&ixlib=rb-4.1.0
-tags: ['github',adhd, coding assistant, skill]
+image: https://images.unsplash.com/photo-1605584367570-5549284d058a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkwNDI4MTd8&ixlib=rb-4.1.0
+tags: ['github',ADHD-friendly, coding assistant, action-first]
 categories: ['github']
 ---
 
@@ -87,7 +87,7 @@ A skill for your coding assistant that stops it from burying the answer. Action 
 6. Specific time estimates (minutes, not "a bit").
 7. Make wins visible.
 8. Matter-of-fact errors.
-9. Cap lists at 5 items.
+9. Cap lists to 5 items.
 10. No preamble. No recap. No closers.
 
 ## Tune it
