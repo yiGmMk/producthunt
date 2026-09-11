@@ -1,9 +1,9 @@
 ---
 title: gods-eye-view
-date: 2026-09-10T20:21:33+08:00
+date: 2026-09-11T20:19:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1561647784-2f9c43b07a0b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkwNDI4MTd8&ixlib=rb-4.1.0
-tags: ['github',3D globe, realtime data, OSINT]
+image: https://images.unsplash.com/photo-1624382754341-9a8720a31180?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkxMjkwNTV8&ixlib=rb-4.1.0
+tags: ['github',Gods Eye View, 3D globe, live data]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: i-have-adhd
-date: 2026-09-10T20:21:15+08:00
+date: 2026-09-11T20:18:34+08:00
 draft: False
-image: https://images.unsplash.com/photo-1605584367570-5549284d058a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkwNDI4MTd8&ixlib=rb-4.1.0
-tags: ['github',ADHD-friendly, coding assistant, action-first]
+image: https://images.unsplash.com/photo-1624382754341-9a8720a31180?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkxMjkwNTV8&ixlib=rb-4.1.0
+tags: ['github',ADHD, coding assistant, skill]
 categories: ['github']
 ---
 
