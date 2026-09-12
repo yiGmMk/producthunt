@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Elastic Security on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/elastic-security/</link>
+        <description>Recent content in Elastic Security on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 18 Apr 2025 15:29:14 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/elastic-security/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>detection-rules</title>
+        <link>https://producthunt.programnotes.cn/en/p/detection-rules/</link>
+        <pubDate>Fri, 18 Apr 2025 15:29:14 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/detection-rules/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1704200134547-38f2cf7919f5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ5NjEyNjh8&amp;ixlib=rb-4.0.3" alt="Featured image of post detection-rules" /&gt;&lt;h1 id=&#34;elasticdetection-rules&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/elastic/detection-rules&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;elastic/detection-rules&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/python-3.12&amp;#43;-yellow.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Supported Python versions&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/elastic/detection-rules/actions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/elastic/detection-rules/workflows/Unit%20Tests/badge.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Unit Tests&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://ela.st/slack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/chat-%23security--detection--rules-blueviolet&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Chat&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://ela.st/detection-rules-navigator-trade&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/ATT&amp;amp;CK-Navigator-red.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;ATT&amp;CK navigator coverage&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;detection-rules&#34;&gt;Detection Rules
+&lt;/h1&gt;&lt;p&gt;Detection Rules is the home for rules used by Elastic Security. This repository is used for the development, maintenance, testing, validation, and release of rules for Elastic Security’s Detection Engine.&lt;/p&gt;
+&lt;p&gt;This repository was first announced on Elastic&amp;rsquo;s blog post, &lt;a class=&#34;link&#34; href=&#34;https://elastic.co/blog/elastic-security-opens-public-detection-rules-repo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Elastic Security opens public detection rules repo&lt;/a&gt;. For additional content, see the accompanying webinar, &lt;a class=&#34;link&#34; href=&#34;https://www.elastic.co/webinars/introducing-the-public-repository-for-detection-rules&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Elastic Security: Introducing the public repository for detection rules&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#detection-rules&#34; &gt;Detection Rules&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#table-of-contents&#34; &gt;Table of Contents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#overview-of-this-repository&#34; &gt;Overview of this repository&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#getting-started&#34; &gt;Getting started&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#how-to-contribute&#34; &gt;How to contribute&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#detections-as-code-dac&#34; &gt;Detections as Code (DaC)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#rtas&#34; &gt;RTAs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#licensing&#34; &gt;Licensing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#questions-problems-suggestions&#34; &gt;Questions? Problems? Suggestions?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;overview-of-this-repository&#34;&gt;Overview of this repository
+&lt;/h2&gt;&lt;p&gt;Detection Rules contains more than just static rule files. This repository also contains code for building Detections-as-code pipelines, unit testing in Python and integrating with the Detection Engine in Kibana.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;folder&lt;/th&gt;
+					&lt;th&gt;description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;detection_rules&#34; &gt;&lt;code&gt;detection_rules/&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Python module for rule parsing, validating and packaging&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;detection_rules/etc&#34; &gt;&lt;code&gt;etc/&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Miscellaneous files, such as ECS and Beats schemas and configuration files&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;./hunting/&#34; &gt;&lt;code&gt;hunting/&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Root directory where threat hunting package and queries are stored&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;lib/kibana&#34; &gt;&lt;code&gt;kibana/&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Python library for handling the API calls to Kibana and the Detection Engine&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;lib/kql&#34; &gt;&lt;code&gt;kql/&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Python library for parsing and validating Kibana Query Language&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;rules&#34; &gt;&lt;code&gt;rules/&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Root directory where rules are stored&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;rules_building_block&#34; &gt;&lt;code&gt;rules_building_block/&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Root directory where building block rules are stored&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;tests&#34; &gt;&lt;code&gt;tests/&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Python code for unit testing rules&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting started
+&lt;/h2&gt;&lt;p&gt;Although rules can be added by manually creating &lt;code&gt;.toml&lt;/code&gt; files, we don&amp;rsquo;t recommend it. This repository also consists of a python module that aids rule creation and unit testing. Assuming you have Python 3.12+, run the below command to install the dependencies using the makefile:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;✗ make
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;python3.12 -m pip install --upgrade pip setuptools
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Looking in indexes: https://pypi.org/simple
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Requirement already satisfied: pip in /opt/homebrew/lib/python3.12/site-packages (24.0)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Requirement already satisfied: setuptools in /opt/homebrew/lib/python3.12/site-packages (69.1.1)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;python3.12 -m venv ./env/detection-rules-build
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;./env/detection-rules-build/bin/pip install --upgrade pip setuptools
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Looking in indexes: https://pypi.org/simple
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Requirement already satisfied: pip in ./env/detection-rules-build/lib/python3.12/site-packages (24.0)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Collecting setuptools
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  Using cached setuptools-69.1.1-py3-none-any.whl.metadata (6.2 kB)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Using cached setuptools-69.1.1-py3-none-any.whl (819 kB)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Installing collected packages: setuptools
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Successfully installed setuptools-69.1.1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Installing kql and kibana packages...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Or install the dependencies using the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt; pip3 install &lt;span class=&#34;s2&#34;&gt;&amp;#34;.[dev]&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Collecting jsl==0.2.4
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  Downloading jsl-0.2.4.tar.gz (21 kB)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Collecting jsonschema==3.2.0
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  Downloading jsonschema-3.2.0-py2.py3-none-any.whl (56 kB)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;     |████████████████████████████████| 56 kB 318 kB/s
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Collecting requests==2.22.0
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  Downloading requests-2.22.0-py2.py3-none-any.whl (57 kB)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;     |████████████████████████████████| 57 kB 1.2 MB/s
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Collecting Click==7.0
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  Downloading Click-7.0-py2.py3-none-any.whl (81 kB)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;     |████████████████████████████████| 81 kB 2.6 MB/s
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Note: The &lt;code&gt;kibana&lt;/code&gt; and &lt;code&gt;kql&lt;/code&gt; packages are not available on PyPI and must be installed from the &lt;code&gt;lib&lt;/code&gt; directory. The &lt;code&gt;hunting&lt;/code&gt; package has optional dependencies to be installed with &lt;code&gt;pip3 install &amp;quot;.[hunting]&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; Install from the repository
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;pip3 install git+https://github.com/elastic/detection-rules.git#subdirectory=kibana
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;pip3 install git+https://github.com/elastic/detection-rules.git#subdirectory=kql
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;#&lt;/span&gt; Or locally &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; development
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;pip3 install lib/kibana lib/kql
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Remember, make sure to activate your virtual environment if you are using one. If installed via &lt;code&gt;make&lt;/code&gt;, the associated virtual environment is created in &lt;code&gt;env/detection-rules-build/&lt;/code&gt;.
+If you are having trouble using a Python 3.12 environment, please see the relevant section in our &lt;a class=&#34;link&#34; href=&#34;./Troubleshooting.md&#34; &gt;troubleshooting guide&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To confirm that everything was properly installed, run with the &lt;code&gt;--help&lt;/code&gt; flag&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gp&#34;&gt;$&lt;/span&gt;  python -m detection_rules --help
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Usage: detection_rules [OPTIONS] COMMAND [ARGS]...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  Commands for detection-rules repository.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Options:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  -d, --debug / -n, --no-debug  Print full exception stacktrace on errors
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  -h, --help                    Show this message and exit.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;Commands:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  create-rule     Create a detection rule.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  dev             Commands for development and management by internal...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  es              Commands for integrating with Elasticsearch.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  import-rules    Import rules from json, toml, or Kibana exported rule...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  kibana          Commands for integrating with Kibana.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  mass-update     Update multiple rules based on eql results.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  normalize-data  Normalize Elasticsearch data timestamps and sort.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  rule-search     Use KQL or EQL to find matching rules.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  test            Run unit tests over all of the rules.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  toml-lint       Cleanup files with some simple toml formatting.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  validate-all    Check if all rules validates against a schema.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  validate-rule   Check if a rule staged in rules dir validates against a...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;  view-rule       View an internal rule or specified rule file.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Note:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you are using a virtual environment, make sure to activate it before running the above command.&lt;/li&gt;
+&lt;li&gt;If using Windows, you may have to also run &lt;code&gt;&amp;lt;venv_directory&amp;gt;\Scripts\pywin32_postinstall.py -install&lt;/code&gt; depending on your python version.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;contribution guide&lt;/a&gt; describes how to use the &lt;code&gt;create-rule&lt;/code&gt; and &lt;code&gt;test&lt;/code&gt; commands to create and test a new rule when contributing to Detection Rules.&lt;/p&gt;
+&lt;p&gt;For more advanced command line interface (CLI) usage, refer to the &lt;a class=&#34;link&#34; href=&#34;CLI.md&#34; &gt;CLI guide&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-contribute&#34;&gt;How to contribute
+&lt;/h2&gt;&lt;p&gt;We welcome your contributions to Detection Rules! Before contributing, please familiarize yourself with this repository, its &lt;a class=&#34;link&#34; href=&#34;#overview-of-this-repository&#34; &gt;directory structure&lt;/a&gt;, and our &lt;a class=&#34;link&#34; href=&#34;PHILOSOPHY.md&#34; &gt;philosophy&lt;/a&gt; about rule creation. When you&amp;rsquo;re ready to contribute, read the &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;contribution guide&lt;/a&gt; to learn how we turn detection ideas into production rules and validate with testing.&lt;/p&gt;
+&lt;h2 id=&#34;detections-as-code-dac&#34;&gt;Detections as Code (DaC)
+&lt;/h2&gt;&lt;p&gt;The Detection Rules repo includes a number of commands to help one manage rules with an &amp;ldquo;as code&amp;rdquo; philosophy. We recommend starting with our &lt;a class=&#34;link&#34; href=&#34;https://dac-reference.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DaC Specific Documentation&lt;/a&gt; for strategies and recommended setup information. However, if you would prefer to jump right in, please see our local &lt;a class=&#34;link&#34; href=&#34;docs-dev/detections-as-code.md&#34; &gt;detections as code documentation&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;docs-dev/custom-rules-management.md&#34; &gt;custom rules documentation&lt;/a&gt; for information on how to configure this repo for use with custom rules followed by our &lt;a class=&#34;link&#34; href=&#34;CLI.md&#34; &gt;CLI documentation&lt;/a&gt; for information on our commands to import and export rules.&lt;/p&gt;
+&lt;h2 id=&#34;rtas&#34;&gt;RTAs
+&lt;/h2&gt;&lt;p&gt;Red Team Automations (RTAs) used to emulate attacker techniques and verify the rules can be found in dedicated
+repository - &lt;a class=&#34;link&#34; href=&#34;https://github.com/elastic/cortado&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cortado&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;licensing&#34;&gt;Licensing
+&lt;/h2&gt;&lt;p&gt;Everything in this repository — rules, code, etc. — is licensed under the &lt;a class=&#34;link&#34; href=&#34;LICENSE.txt&#34; &gt;Elastic License v2&lt;/a&gt;. These rules are designed to be used in the context of the Detection Engine within the Elastic Security application. If you’re using our &lt;a class=&#34;link&#34; href=&#34;https://www.elastic.co/cloud/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Elastic Cloud managed service&lt;/a&gt; or the default distribution of the Elastic Stack software that includes the &lt;a class=&#34;link&#34; href=&#34;https://www.elastic.co/subscriptions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;full set of free features&lt;/a&gt;, you’ll get the latest rules the first time you navigate to the detection engine.&lt;/p&gt;
+&lt;p&gt;Occasionally, we may want to import rules from another repository that already have a license, such as MIT or Apache 2.0. This is welcome, as long as the license permits sublicensing under the Elastic License v2. We keep those license notices in &lt;code&gt;NOTICE.txt&lt;/code&gt; and sublicense as the Elastic License v2 with all other rules. We also require contributors to sign a &lt;a class=&#34;link&#34; href=&#34;https://www.elastic.co/contributor-agreement&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Contributor License Agreement&lt;/a&gt; before contributing code to any Elastic repositories.&lt;/p&gt;
+&lt;h2 id=&#34;questions-problems-suggestions&#34;&gt;Questions? Problems? Suggestions?
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Want to know more about the Detection Engine? Check out the &lt;a class=&#34;link&#34; href=&#34;https://www.elastic.co/guide/en/security/current/detection-engine-overview.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;overview&lt;/a&gt; in Kibana.&lt;/li&gt;
+&lt;li&gt;This repository includes new and updated rules that have not been released yet. To see the latest set of rules released with the stack, see the &lt;a class=&#34;link&#34; href=&#34;https://www.elastic.co/guide/en/security/current/prebuilt-rules-downloadable-updates.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Prebuilt rule reference&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;If you’d like to report a false positive or other type of bug, please create a GitHub issue and check if there&amp;rsquo;s an existing one first.&lt;/li&gt;
+&lt;li&gt;Need help with Detection Rules? Post an issue or ask away in our &lt;a class=&#34;link&#34; href=&#34;https://discuss.elastic.co/c/security/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Security Discuss Forum&lt;/a&gt; or the &lt;strong&gt;#security-detection-rules&lt;/strong&gt; channel within &lt;a class=&#34;link&#34; href=&#34;https://www.elastic.co/blog/join-our-elastic-stack-workspace-on-slack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Slack workspace&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;For DaC specific cases, pleases see our &lt;a class=&#34;link&#34; href=&#34;docs-dev/detections-as-code.md#support-and-scope&#34; &gt;support and scope documentation&lt;/a&gt; for more information.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

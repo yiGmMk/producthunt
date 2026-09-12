@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Transaction on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/transaction/</link>
+        <description>Recent content in Transaction on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 19 Sep 2025 15:27:28 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/transaction/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>monad</title>
+        <link>https://producthunt.programnotes.cn/en/p/monad/</link>
+        <pubDate>Fri, 19 Sep 2025 15:27:28 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/monad/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1694608108899-b70271860e86?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgyNjY3ODh8&amp;ixlib=rb-4.1.0" alt="Featured image of post monad" /&gt;&lt;h1 id=&#34;category-labsmonad&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/category-labs/monad&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;category-labs/monad&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;monad-execution&#34;&gt;Monad Execution
+&lt;/h1&gt;&lt;h2 id=&#34;overview&#34;&gt;Overview
+&lt;/h2&gt;&lt;p&gt;This repository contains the execution component of a Monad node. It
+handles the transaction processing for new blocks, and keeps track of
+the state of the blockchain. Consequently, this repository contains
+the source code for Category Labs&amp;rsquo; custom
+&lt;a class=&#34;link&#34; href=&#34;https://docs.monad.xyz/monad-arch/execution/native-compilation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;EVM implementation&lt;/a&gt;,
+its &lt;a class=&#34;link&#34; href=&#34;https://docs.monad.xyz/monad-arch/execution/monaddb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;database implementation&lt;/a&gt;,
+and the high-level &lt;a class=&#34;link&#34; href=&#34;https://docs.monad.xyz/monad-arch/execution/parallel-execution&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;transaction scheduling&lt;/a&gt;.
+The other main repository is &lt;a class=&#34;link&#34; href=&#34;https://github.com/category-labs/monad-bft&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;monad-bft&lt;/a&gt;,
+which contains the source code for the consensus component.&lt;/p&gt;
+&lt;h2 id=&#34;building-the-source-code&#34;&gt;Building the source code
+&lt;/h2&gt;&lt;h3 id=&#34;package-requirements&#34;&gt;Package requirements
+&lt;/h3&gt;&lt;p&gt;Execution has two kinds of dependencies on third-party libraries:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Self-managed&lt;/strong&gt;: execution&amp;rsquo;s CMake build system will checkout most of
+its third-party dependencies as git submodules, and build them as part
+of its own build process, as CMake subprojects; this will happen
+automatically during the build, but you must run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git submodule update --init --recursive
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;after checking out this repository.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;System&lt;/strong&gt;: some dependencies are expected to already be part of the
+system in a default location, i.e., they are expected to come from the
+system&amp;rsquo;s package manager. The primary development platform is Ubuntu, so
+the required packages use the Debian/Ubuntu package names; an up-to-date
+list of the required system dependencies can be found in the docker
+configuration file &lt;code&gt;docker/release.Dockerfile&lt;/code&gt; (you will need all
+the packages installed via the &lt;code&gt;apt install&lt;/code&gt; commands)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;minimum-development-tool-requirements&#34;&gt;Minimum development tool requirements
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;gcc-15 or clang-19&lt;/li&gt;
+&lt;li&gt;CMake 3.27&lt;/li&gt;
+&lt;li&gt;Even when using clang, the only standard library supported is libstdc++;
+libc++ may work but it is not a tested platform&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cpu-compilation-requirements&#34;&gt;CPU compilation requirements
+&lt;/h3&gt;&lt;p&gt;As explained in the &lt;a class=&#34;link&#34; href=&#34;https://docs.monad.xyz/monad-arch/hardware-requirements&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hardware requirements&lt;/a&gt;,
+a Monad node requires a relatively recent CPU. Execution explicitly
+requires this to compile: it needs to emit machine code that is only
+supported on recent CPU models, for fast cryptographic operations.&lt;/p&gt;
+&lt;p&gt;The minimum ISA support corresponds to the &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/X86-64#Microarchitecture_levels&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;x86-64-v3&lt;/a&gt;
+feature level. Consequently, the minimum flag you must pass to the compiler
+is &lt;code&gt;-march=x86-64-v3&lt;/code&gt;, or alternatively &lt;code&gt;-march=haswell&lt;/code&gt; (&amp;ldquo;Haswell&amp;rdquo; was
+the codename of the first Intel CPU to support all of these features).&lt;/p&gt;
+&lt;p&gt;You may also pass any higher architecture level if you wish, although
+the compiled binary may not work on older CPUs. The execution docker
+files use &lt;code&gt;-march=haswell&lt;/code&gt; because it tries to maximize the number of
+systems the resulting binary can run on. If you are only running locally
+(i.e., the binary does not need to run anywhere else) use &lt;code&gt;-march=native&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;compiling-the-execution-code&#34;&gt;Compiling the execution code
+&lt;/h3&gt;&lt;p&gt;First, change your working directory to the root directory of the execution
+git repository root and then run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;CC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;gcc-15 &lt;span class=&#34;nv&#34;&gt;CXX&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;g++-15 &lt;span class=&#34;nv&#34;&gt;CFLAGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;-march=haswell&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;CXXFLAGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;-march=haswell&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ASMFLAGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;-march=haswell&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./scripts/configure.sh &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; ./scripts/build.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The above command will do several things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Use gcc-15 instead of the system&amp;rsquo;s default compiler&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Emit machine code using Haswell-era CPU extensions&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run CMake, and generate a &lt;a class=&#34;link&#34; href=&#34;https://ninja-build.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ninja&lt;/a&gt; build
+system in the &lt;code&gt;&amp;lt;path-to-execution-repo&amp;gt;/build&lt;/code&gt; directory with
+the &lt;a class=&#34;link&#34; href=&#34;https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;CMAKE_BUILD_TYPE&lt;/code&gt;&lt;/a&gt;
+set to &lt;code&gt;RelWithDebInfo&lt;/code&gt; by default&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build the CMake &lt;code&gt;all&lt;/code&gt; target, which builds everything&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The compiler and CPU options are injected via environment variables that
+are read by CMake.  If you want debug binaries instead, you can also pass
+&lt;code&gt;CMAKE_BUILD_TYPE=Debug&lt;/code&gt; via the environment.&lt;/p&gt;
+&lt;p&gt;When finished, this will build all of the execution binaries. The main one is
+the execution daemon, &lt;code&gt;build/cmd/monad&lt;/code&gt;. This binary can provide block
+execution services for different EVM-compatible blockchains:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;When used as part of a Monad blockchain node, it behaves as the block
+execution service for the Category Labs consensus daemon (for details, see
+&lt;a class=&#34;link&#34; href=&#34;docs/overview.md#how-is-execution-used&#34; &gt;here&lt;/a&gt;); when running in this mode,
+Monad EVM extensions (e.g., Monad-style staking) are enabled&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It can also replay the history of other EVM-compatible blockchains, by
+executing their historical blocks as inputs; a common developer workflow
+(and a good full system test) is to replay the history of the original
+Ethereum mainnet and verify that the computed Merkle roots match after
+each block&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can also run the full test suite in parallel with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CTEST_PARALLEL_LEVEL=$(nproc) ctest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;a-tour-of-execution&#34;&gt;A tour of execution
+&lt;/h2&gt;&lt;p&gt;To understand how the source code is organized, you should start by reading
+the execution &lt;a class=&#34;link&#34; href=&#34;docs/overview.md&#34; &gt;developer overview&lt;/a&gt;, which explains how
+execution and consensus fit together, and where in the source tree you can
+find different pieces of functionality.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

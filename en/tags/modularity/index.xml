@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Modularity on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/modularity/</link>
+        <description>Recent content in Modularity on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Tue, 02 Sep 2025 15:29:59 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/modularity/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>cognitive-load</title>
+        <link>https://producthunt.programnotes.cn/en/p/cognitive-load/</link>
+        <pubDate>Tue, 02 Sep 2025 15:29:59 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/cognitive-load/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1642970047680-c940bb0bcf03?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY3OTgwOTd8&amp;ixlib=rb-4.1.0" alt="Featured image of post cognitive-load" /&gt;&lt;h1 id=&#34;zakirullincognitive-load&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/zakirullin/cognitive-load&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;zakirullin/cognitive-load&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;cognitive-load-is-what-matters&#34;&gt;Cognitive Load is what matters
+&lt;/h1&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://minds.md/zakirullin/cognitive&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Readable version&lt;/a&gt; | &lt;a class=&#34;link&#34; href=&#34;https://github.com/zakirullin/cognitive-load/blob/main/README.zh-cn.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chinese&lt;/a&gt; | &lt;a class=&#34;link&#34; href=&#34;README.ko.md&#34; &gt;Korean&lt;/a&gt; | &lt;a class=&#34;link&#34; href=&#34;README.tr.md&#34; &gt;Turkish&lt;/a&gt; | &lt;a class=&#34;link&#34; href=&#34;README.ja.md&#34; &gt;Japanese&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;It is a living document, last update: &lt;strong&gt;September 2025&lt;/strong&gt;. Your contributions are welcome!&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction
+&lt;/h2&gt;&lt;p&gt;There are so many buzzwords and best practices out there, but most of them have failed. We need something more fundamental, something that can&amp;rsquo;t be wrong.&lt;/p&gt;
+&lt;p&gt;Sometimes we feel confusion going through the code. Confusion costs time and money. Confusion is caused by high &lt;em&gt;cognitive load&lt;/em&gt;. It&amp;rsquo;s not some fancy abstract concept, but rather &lt;strong&gt;a fundamental human constraint&lt;/strong&gt;. It&amp;rsquo;s not imagined, it&amp;rsquo;s there and we can feel it.&lt;/p&gt;
+&lt;p&gt;Since we spend far more time reading and understanding code than writing it, we should constantly ask ourselves whether we are embedding excessive cognitive load into our code.&lt;/p&gt;
+&lt;h2 id=&#34;cognitive-load&#34;&gt;Cognitive load
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Cognitive load is how much a developer needs to think in order to complete a task.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;When reading code, you put things like values of variables, control flow logic and call sequences into your head. The average person can hold roughly &lt;a class=&#34;link&#34; href=&#34;https://github.com/zakirullin/cognitive-load/issues/16&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;four such chunks&lt;/a&gt; in working memory. Once the cognitive load reaches this threshold, it becomes much harder to understand things.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Let&amp;rsquo;s say we have been asked to make some fixes to a completely unfamiliar project. We were told that a really smart developer had contributed to it. Lots of cool architectures, fancy libraries and trendy technologies were used. In other words, &lt;strong&gt;the author had created a high cognitive load for us.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;/div&gt;
+&lt;p&gt;We should reduce the cognitive load in our projects as much as possible.&lt;/p&gt;
+&lt;details&gt;
+  &lt;summary&gt;&lt;b&gt;Cognitive load and interruptions&lt;/b&gt;&lt;/summary&gt;
+  &lt;img src=&#34;img/interruption.jpeg&#34;&gt;&lt;br&gt;
+&lt;/details&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We are going to use &amp;ldquo;cognitive load&amp;rdquo; in an informal sense; sometimes it lines up with the specific scientific concept of Cognitive Load, but we don&amp;rsquo;t know enough about where it does and doesn&amp;rsquo;t match.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;types-of-cognitive-load&#34;&gt;Types of cognitive load
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Intrinsic&lt;/strong&gt; - caused by the inherent difficulty of a task. It can&amp;rsquo;t be reduced, it&amp;rsquo;s at the very heart of software development.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Extraneous&lt;/strong&gt; - created by the way the information is presented. Caused by factors not directly relevant to the task, such as smart author&amp;rsquo;s quirks. Can be greatly reduced. We will focus on this type of cognitive load.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;/div&gt;
+&lt;p&gt;Let&amp;rsquo;s jump straight to the concrete practical examples of extraneous cognitive load.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;We will refer to the level of cognitive load as follows:&lt;br&gt;
+&lt;code&gt;🧠&lt;/code&gt;: fresh working memory, zero cognitive load&lt;br&gt;
+&lt;code&gt;🧠++&lt;/code&gt;: two facts in our working memory, cognitive load increased&lt;br&gt;
+&lt;code&gt;🤯&lt;/code&gt;: cognitive overload, more than 4 facts&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Our brain is much more complex and unexplored, but we can go with this simplistic model.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;complex-conditionals&#34;&gt;Complex conditionals
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;someConstant&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 🧠+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;condition2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;||&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;condition3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 🧠+++, prev cond should be true, one of c2 or c3 has be true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;condition4&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;condition5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 🤯, we are messed up by this point&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Introduce intermediate variables with meaningful names:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;isValid&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;someConstant&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;isAllowed&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;condition2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;||&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;condition3&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;isSecure&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;condition4&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;condition5&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 🧠, we don&amp;#39;t need to remember the conditions, there are descriptive variables&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;isValid&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;isAllowed&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;isSecure&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;nested-ifs&#34;&gt;Nested ifs
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;isValid&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 🧠+, okay nested code applies to valid input only&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;isSecure&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 🧠++, we do stuff for valid and secure input only&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;stuff&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 🧠+++&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Compare it with the early returns:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;isValid&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;isSecure&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 🧠, we don&amp;#39;t really care about earlier returns, if we are here then all good&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;stuff&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 🧠+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;We can focus on the happy path only, thus freeing our working memory from all sorts of preconditions.&lt;/p&gt;
+&lt;h2 id=&#34;inheritance-nightmare&#34;&gt;Inheritance nightmare
+&lt;/h2&gt;&lt;p&gt;We are asked to change a few things for our admin users: &lt;code&gt;🧠&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;AdminController extends UserController extends GuestController extends BaseController&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Ohh, part of the functionality is in &lt;code&gt;BaseController&lt;/code&gt;, let&amp;rsquo;s have a look: &lt;code&gt;🧠+&lt;/code&gt;&lt;br&gt;
+Basic role mechanics got introduced in &lt;code&gt;GuestController&lt;/code&gt;: &lt;code&gt;🧠++&lt;/code&gt;&lt;br&gt;
+Things got partially altered in &lt;code&gt;UserController&lt;/code&gt;: &lt;code&gt;🧠+++&lt;/code&gt;&lt;br&gt;
+Finally we are here, &lt;code&gt;AdminController&lt;/code&gt;, let&amp;rsquo;s code stuff! &lt;code&gt;🧠++++&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Oh, wait, there&amp;rsquo;s &lt;code&gt;SuperuserController&lt;/code&gt; which extends &lt;code&gt;AdminController&lt;/code&gt;. By modifying &lt;code&gt;AdminController&lt;/code&gt; we can break things in the inherited class, so let&amp;rsquo;s dive in &lt;code&gt;SuperuserController&lt;/code&gt; first: &lt;code&gt;🤯&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Prefer composition over inheritance. We won&amp;rsquo;t go into detail - there&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=hxGOiiR9ZKg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;plenty of material&lt;/a&gt; out there.&lt;/p&gt;
+&lt;h2 id=&#34;too-many-small-methods-classes-or-modules&#34;&gt;Too many small methods, classes or modules
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Method, class and module are interchangeable in this context&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Mantras like &amp;ldquo;methods should be shorter than 15 lines of code&amp;rdquo; or &amp;ldquo;classes should be small&amp;rdquo; turned out to be somewhat wrong.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Deep module&lt;/strong&gt; - simple interface, complex functionality&lt;br&gt;
+&lt;strong&gt;Shallow module&lt;/strong&gt; - interface is relatively complex to the small functionality it provides&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;/div&gt;
+&lt;p&gt;Having too many shallow modules can make it difficult to understand the project. &lt;strong&gt;Not only do we have to keep in mind each module responsibilities, but also all their interactions&lt;/strong&gt;. To understand the purpose of a shallow module, we first need to look at the functionality of all the related modules. Jumping between such shallow components is mentally exhausting, &lt;a target=&#34;_blank&#34; href=&#34;https://blog.separateconcerns.com/2023-09-11-linear-code.html&#34;&gt;linear thinking&lt;/a&gt; is more natural to us humans.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Information hiding is paramount, and we don&amp;rsquo;t hide as much complexity in shallow modules.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I have two pet projects, both of them are somewhat 5K lines of code. The first one has 80 shallow classes, whereas the second one has only 7 deep classes. I haven&amp;rsquo;t been maintaining any of these projects for one year and a half.&lt;/p&gt;
+&lt;p&gt;Once I came back, I realised that it was extremely difficult to untangle all the interactions between those 80 classes in the first project. I would have to rebuild an enormous amount of cognitive load before I could start coding. On the other hand, I was able to grasp the second project quickly, because it had only a few deep classes with a simple interface.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The best components are those that provide powerful functionality yet have a simple interface.&lt;br&gt;
+&lt;strong&gt;John K. Ousterhout&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The interface of the UNIX I/O is very simple. It has only five basic calls:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;flags&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;permissions&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;lseek&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;offset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;referencePosition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;A modern implementation of this interface has &lt;strong&gt;hundreds of thousands of lines of code&lt;/strong&gt;. Lots of complexity is hidden under the hood. Yet it is easy to use due to its simple interface.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This deep module example is taken from the book &lt;a class=&#34;link&#34; href=&#34;https://web.stanford.edu/~ouster/cgi-bin/book.php&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;A Philosophy of Software Design&lt;/a&gt; by John K. Ousterhout. Not only does this book cover the very essence of complexity in software development, but it also has the greatest interpretation of Parnas&amp;rsquo; influential paper &lt;a class=&#34;link&#34; href=&#34;https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;On the Criteria To Be Used in Decomposing Systems into Modules&lt;/a&gt;. Both are essential reads. Other related readings: &lt;a class=&#34;link&#34; href=&#34;https://github.com/johnousterhout/aposd-vs-clean-code&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;A Philosophy of Software Design vs Clean Code&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://qntm.org/clean&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;It&amp;rsquo;s probably time to stop recommending Clean Code&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://copyconstruct.medium.com/small-functions-considered-harmful-91035d316c29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Small Functions considered Harmful&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;P.S. If you think we are rooting for bloated God objects with too many responsibilities, you got it wrong.&lt;/p&gt;
+&lt;h2 id=&#34;responsible-for-one-thing&#34;&gt;Responsible for one thing
+&lt;/h2&gt;&lt;p&gt;All too often, we end up creating lots of shallow modules, following some vague &amp;ldquo;a module should be responsible for one, and only one, thing&amp;rdquo; principle. What is this blurry one thing? Instantiating an object is one thing, right? So &lt;a class=&#34;link&#34; href=&#34;https://minds.md/benji/frameworks&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MetricsProviderFactoryFactory&lt;/a&gt; seems to be just fine. &lt;strong&gt;The names and interfaces of such classes tend to be more mentally taxing than their entire implementations, what kind of abstraction is that?&lt;/strong&gt; Something went wrong.&lt;/p&gt;
+&lt;p&gt;We make changes to our systems to satisfy our users and stakeholders. We are responsible to them.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A module should be responsible to one, and only one, user or stakeholder.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is what this Single Responsibility Principle is all about. Simply put, if we introduce a bug in one place, and then two different business people come to complain, we&amp;rsquo;ve violated the principle. It has nothing to do with the number of things we do in our module.&lt;/p&gt;
+&lt;p&gt;But even now, this rule can do more harm than good. This principle can be understood in as many different ways as there are individuals. A better approach would be to look at how much cognitive load it all creates. It&amp;rsquo;s mentally demanding to remember that change in one place can trigger a chain of reactions across different business streams. And that&amp;rsquo;s about it, no fancy terms to learn.&lt;/p&gt;
+&lt;h2 id=&#34;too-many-shallow-microservices&#34;&gt;Too many shallow microservices
+&lt;/h2&gt;&lt;p&gt;This shallow-deep module principle is scale-agnostic, and we can apply it to microservices architecture. Too many shallow microservices won&amp;rsquo;t do any good - the industry is heading towards somewhat &amp;ldquo;macroservices&amp;rdquo;, i.e., services that are not so shallow (=deep). One of the worst and hardest to fix phenomena is so-called distributed monolith, which is often the result of this overly granular shallow separation.&lt;/p&gt;
+&lt;p&gt;I once consulted a startup where a team of five developers introduced 17(!) microservices. They were 10 months behind schedule and appeared nowhere close to the public release. Every new requirement led to changes in 4+ microservices. It took an enormous amount of time to reproduce and debug an issue in such a distributed system. Both time to market and cognitive load were unacceptably high. &lt;code&gt;🤯&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Is this the right way to approach the uncertainty of a new system? It&amp;rsquo;s enormously difficult to elicit the right logical boundaries in the beginning. The key is to make decisions as late as you can responsibly wait, because that is when you have the most information at hand. By introducing a network layer up front, we make our design decisions hard to revert right from the start. The team&amp;rsquo;s only justification was: &amp;ldquo;The FAANG companies proved microservices architecture to be effective&amp;rdquo;. &lt;em&gt;Hello, you got to stop dreaming big.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Tanenbaum%E2%80%93Torvalds_debate&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tanenbaum-Torvalds debate&lt;/a&gt; argued that Linux&amp;rsquo;s monolithic design was flawed and obsolete, and that a microkernel architecture should be used instead. Indeed, the microkernel design seemed to be superior &amp;ldquo;from a theoretical and aesthetical&amp;rdquo; point of view. On the practical side of things - three decades on, microkernel-based GNU Hurd is still in development, and monolithic Linux is everywhere. This page is powered by Linux, your smart teapot is powered by Linux. By monolithic Linux.&lt;/p&gt;
+&lt;p&gt;A well-crafted monolith with truly isolated modules is often much more flexible than a bunch of microservices. It also requires far less cognitive effort to maintain. It&amp;rsquo;s only when the need for separate deployments becomes crucial, such as scaling the development team, that you should consider adding a network layer between the modules, future microservices.&lt;/p&gt;
+&lt;h2 id=&#34;feature-rich-languages&#34;&gt;Feature-rich languages
+&lt;/h2&gt;&lt;p&gt;We feel excited when new features got released in our favourite language. We spend some time learning these features, we build code upon them.&lt;/p&gt;
+&lt;p&gt;If there are lots of features, we may spend half an hour playing with a few lines of code, to use one or another feature. And it&amp;rsquo;s kind of a waste of time. But what&amp;rsquo;s worse, &lt;strong&gt;when you come back later, you would have to recreate that thought process!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;You not only have to understand this complicated program, you have to understand why a programmer decided this was the way to approach a problem from the features that are available.&lt;/strong&gt; &lt;code&gt;🤯&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;These statements are made by none other than Rob Pike.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Reduce cognitive load by limiting the number of choices.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Language features are OK, as long as they are orthogonal to each other.&lt;/p&gt;
+&lt;details&gt;
+  &lt;summary&gt;&lt;b&gt;Thoughts from an engineer with 20 years of C++ experience ⭐️&lt;/b&gt;&lt;/summary&gt;
+  &lt;br&gt;
+  I was looking at my RSS reader the other day and noticed that I have somewhat three hundred unread articles under the &#34;C++&#34; tag. I haven&#39;t read a single article about the language since last summer, and I feel great!&lt;br&gt;&lt;br&gt;
+  I&#39;ve been using C++ for 20 years for now, that&#39;s almost two-thirds of my life. Most of my experience lies in dealing with the darkest corners of the language (such as undefined behaviours of all sorts). It&#39;s not a reusable experience, and it&#39;s kind of creepy to throw it all away now.&lt;br&gt;&lt;br&gt;
+  Like, can you imagine, the token &lt;code&gt;||&lt;/code&gt; has a different meaning in &lt;code&gt;requires ((!P&amp;lt;T&amp;gt; || !Q&amp;lt;T&amp;gt;))&lt;/code&gt; and in &lt;code&gt;requires (!(P&amp;lt;T&amp;gt; || Q&amp;lt;T&amp;gt;))&lt;/code&gt;. The first is the constraint disjunction, the second is the good-old logical OR operator, and they behave differently.&lt;br&gt;&lt;br&gt;
+  You can&#39;t allocate space for a trivial type and just &lt;code&gt;memcpy&lt;/code&gt; a set of bytes there without extra effort - that won&#39;t start the lifetime of an object. This was the case before C++20. It was fixed in C++20, but the cognitive load of the language has only increased.&lt;br&gt;&lt;br&gt;
+  Cognitive load is constantly growing, even though things got fixed. I should know what was fixed, when it was fixed, and what it was like before. I am a professional after all. Sure, C++ is good at legacy support, which also means that you &lt;b&gt;will face&lt;/b&gt; that legacy. For example, last month a colleague of mine asked me about some behaviour in C++03. &lt;code&gt;🤯&lt;/code&gt;&lt;br&gt;&lt;br&gt;
+  There were 20 ways of initialization. Uniform initialization syntax has been added. Now we have 21 ways of initialization. By the way, does anyone remember the rules for selecting constructors from the initializer list? Something about implicit conversion with the least loss of information, &lt;i&gt;but if&lt;/i&gt; the value is known statically, then... &lt;code&gt;🤯&lt;/code&gt;&lt;br&gt;&lt;br&gt;
+  &lt;b&gt;This increased cognitive load is not caused by a business task at hand. It is not an intrinsic complexity of the domain. It is just there due to historical reasons&lt;/b&gt; (&lt;i&gt;extraneous cognitive load&lt;/i&gt;).&lt;br&gt;&lt;br&gt;
+  I had to come up with some rules. Like, if that line of code is not as obvious and I have to remember the standard, I better not write it that way. The standard is somewhat 1500 pages long, by the way.&lt;br&gt;&lt;br&gt;
+  &lt;b&gt;By no means I am trying to blame C++.&lt;/b&gt; I love the language. It&#39;s just that I am tired now.&lt;br&gt;&lt;br&gt;
+  &lt;p&gt;Thanks to &lt;a href=&#34;https://0xd34df00d.me&#34; target=&#34;_blank&#34;&gt;0xd34df00d&lt;/a&gt; for writing.&lt;/p&gt;
+&lt;/details&gt;
+&lt;h2 id=&#34;business-logic-and-http-status-codes&#34;&gt;Business logic and HTTP status codes
+&lt;/h2&gt;&lt;p&gt;On the backend we return:&lt;br&gt;
+&lt;code&gt;401&lt;/code&gt; for expired jwt token&lt;br&gt;
+&lt;code&gt;403&lt;/code&gt; for not enough access&lt;br&gt;
+&lt;code&gt;418&lt;/code&gt; for banned users&lt;/p&gt;
+&lt;p&gt;The engineers on the frontend use backend API to implement login functionality. They would have to temporarily create the following cognitive load in their brains:&lt;br&gt;
+&lt;code&gt;401&lt;/code&gt; is for expired jwt token // &lt;code&gt;🧠+&lt;/code&gt;, ok just temporary remember it&lt;br&gt;
+&lt;code&gt;403&lt;/code&gt; is for not enough access // &lt;code&gt;🧠++&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;418&lt;/code&gt; is for banned users // &lt;code&gt;🧠+++&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Frontend developers would (hopefully) introduce some kind &lt;code&gt;numeric status -&amp;gt; meaning&lt;/code&gt; dictionary on their side, so that subsequent generations of contributors wouldn&amp;rsquo;t have to recreate this mapping in their brains.&lt;/p&gt;
+&lt;p&gt;Then QA engineers come into play:
+&amp;ldquo;Hey, I got &lt;code&gt;403&lt;/code&gt; status, is that expired token or not enough access?&amp;rdquo;
+&lt;strong&gt;QA engineers can&amp;rsquo;t jump straight to testing, because first they have to recreate the cognitive load that the engineers on the backend once created.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Why hold this custom mapping in our working memory? It&amp;rsquo;s better to abstract away your business details from the HTTP transfer protocol, and return self-descriptive codes directly in the response body:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;code&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;jwt_has_expired&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Cognitive load on the frontend side: &lt;code&gt;🧠&lt;/code&gt; (fresh, no facts are held in mind)&lt;br&gt;
+Cognitive load on the QA side: &lt;code&gt;🧠&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The same rule applies to all sorts of numeric statuses (in the database or wherever) - &lt;strong&gt;prefer self-describing strings&lt;/strong&gt;. We are not in the era of 640K computers to optimise for memory.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;People spend time arguing between &lt;code&gt;401&lt;/code&gt; and &lt;code&gt;403&lt;/code&gt;, making decisions based on their own mental models. New developers are coming in, and they need to recreate that thought process. You may have documented the &amp;ldquo;whys&amp;rdquo; (ADRs) for your code, helping newcomers to understand the decisions made. But in the end it just doesn&amp;rsquo;t make any sense. We can separate errors into either user-related or server-related, but apart from that, things are kind of blurry.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;P.S. It&amp;rsquo;s often mentally taxing to distinguish between &amp;ldquo;authentication&amp;rdquo; and &amp;ldquo;authorization&amp;rdquo;. We can use simpler terms like &lt;a class=&#34;link&#34; href=&#34;https://ntietz.com/blog/lets-say-instead-of-auth/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;login&amp;rdquo; and &amp;ldquo;permissions&amp;rdquo;&lt;/a&gt; to reduce the cognitive load.&lt;/p&gt;
+&lt;h2 id=&#34;abusing-dry-principle&#34;&gt;Abusing DRY principle
+&lt;/h2&gt;&lt;p&gt;Do not repeat yourself - that is one of the first principles you are taught as a software engineer. It is so deeply embedded in ourselves that we can not stand the fact of a few extra lines of code. Although in general a good and fundamental rule, when overused it leads to the cognitive load we can not handle.&lt;/p&gt;
+&lt;p&gt;Nowadays, everyone builds software based on logically separated components. Often those are distributed among multiple codebases representing separate services. When you strive to eliminate any repetition, you might end up creating tight coupling between unrelated components. As a result changes in one part may have unintended consequences in other seemingly unrelated areas. It can also hinder the ability to replace or modify individual components without impacting the entire system. &lt;code&gt;🤯&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;In fact, the same problem arises even within a single module. You might extract common functionality too early, based on perceived similarities that might not actually exist in the long run. This can result in unnecessary abstractions that are difficult to modify or extend.&lt;/p&gt;
+&lt;p&gt;Rob Pike once said:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A little copying is better than a little dependency.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We are tempted to not reinvent the wheel so strong that we are ready to import large, heavy libraries to use a small function that we could easily write by ourselves.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;All your dependencies are your code.&lt;/strong&gt; Going through 10+ levels of stack trace of some imported library and figuring out what went wrong (&lt;em&gt;because things go wrong&lt;/em&gt;) is painful.&lt;/p&gt;
+&lt;h2 id=&#34;tight-coupling-with-a-framework&#34;&gt;Tight coupling with a framework
+&lt;/h2&gt;&lt;p&gt;There&amp;rsquo;s a lot of &amp;ldquo;magic&amp;rdquo; in frameworks. By relying too heavily on a framework, &lt;strong&gt;we force all upcoming developers to learn that &amp;ldquo;magic&amp;rdquo; first&lt;/strong&gt;. It can take months. Even though frameworks enable us to launch MVPs in a matter of days, in the long run they tend to add unnecessary complexity and cognitive load.&lt;/p&gt;
+&lt;p&gt;Worse yet, at some point frameworks can become a significant constraint when faced with a new requirement that just doesn&amp;rsquo;t fit the architecture. From here onwards people end up forking a framework and maintaining their own custom version. Imagine the amount of cognitive load a newcomer would have to build (i.e. learn this custom framework) in order to deliver any value. &lt;code&gt;🤯&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;By no means do we advocate to invent everything from scratch!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We can write code in a somewhat framework-agnostic way. The business logic should not reside within a framework; rather, it should use the framework&amp;rsquo;s components. Put a framework outside of your core logic. Use the framework in a library-like fashion. This would allow new contributors to add value from day one, without the need of going through debris of framework-related complexity first.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://minds.md/benji/frameworks&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Why I Hate Frameworks&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;layered-architecture&#34;&gt;Layered architecture
+&lt;/h2&gt;&lt;p&gt;There is a certain engineering excitement about all this stuff.&lt;/p&gt;
+&lt;p&gt;I myself was a passionate advocate of Hexagonal/Onion Architecture for years. I used it here and there and encouraged other teams to do so. The complexity of our projects went up, the sheer number of files alone had doubled. It felt like we were writing a lot of glue code. On ever changing requirements we had to make changes across multiple layers of abstractions, it all became tedious. &lt;code&gt;🤯&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Abstraction is supposed to hide complexity, here it just adds &lt;a class=&#34;link&#34; href=&#34;https://fhur.me/posts/2024/thats-not-an-abstraction&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;indirection&lt;/a&gt;. Jumping from call to call to read along and figure out what goes wrong and what is missing is a vital requirement to quickly solve a problem. With this architecture’s layer uncoupling it requires an exponential factor of extra, often disjointed, traces to get to the point where the failure occurs. Every such trace takes space in our limited working memory. &lt;code&gt;🤯&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This architecture was something that made intuitive sense at first, but every time we tried applying it to projects it made a lot more harm than good. In the end, we gave it all up in favour of the good old dependency inversion principle. &lt;strong&gt;No port/adapter terms to learn, no unnecessary layers of horizontal abstractions, no extraneous cognitive load.&lt;/strong&gt;&lt;/p&gt;
+&lt;details&gt;
+  &lt;summary&gt;&lt;b&gt;Coding principles and experience&lt;/b&gt;&lt;/summary&gt;
+  &lt;img src=&#34;img/complexity.png&#34;&gt;&lt;br&gt;
+  &lt;a href=&#34;https://twitter.com/flaviocopes&#34;&gt;@flaviocopes&lt;/a&gt;
+&lt;/details&gt;
+&lt;p&gt;If you think that such layering will allow you to quickly replace a database or other dependencies, you&amp;rsquo;re mistaken. Changing the storage causes lots of problems, and believe us, having some abstractions for the data access layer is the least of your worries. At best, abstractions can save somewhat 10% of your migration time (if any), the real pain is in data model incompatibilities, communication protocols, distributed systems challenges, and &lt;a class=&#34;link&#34; href=&#34;https://www.hyrumslaw.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;implicit interfaces&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;With a sufficient number of users of an API,&lt;br&gt;
+it does not matter what you promise in the contract:&lt;br&gt;
+all observable behaviors of your system&lt;br&gt;
+will be depended on by somebody.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We did a storage migration, and that took us about 10 months. The old system was single-threaded, so the exposed events were sequential. All our systems depended on that observed behaviour. This behavior was not part of the API contract, it was not reflected in the code. A new distributed storage didn&amp;rsquo;t have that guarantee - the events came out-of-order. We spent only a few hours coding a new storage adapter, thanks to an abstraction. &lt;strong&gt;We spent the next 10 months on dealing with out-of-order events and other challenges.&lt;/strong&gt; It&amp;rsquo;s now funny to say that abstractions helps us replace components quickly.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;So, why pay the price of high cognitive load for such a layered architecture, if it doesn&amp;rsquo;t pay off in the future?&lt;/strong&gt; Plus, in most cases, that future of replacing some core component never happens.&lt;/p&gt;
+&lt;p&gt;These architectures are not fundamental, they are just subjective, biased consequences of more fundamental principles. Why rely on those subjective interpretations? Follow the fundamental rules instead: dependency inversion principle, single source of truth, cognitive load and information hiding. Your business logic should not depend on low-level modules like database, UI or framework. We should be able to write tests for our core logic without worrying about the infrastructure, and that&amp;rsquo;s it. &lt;a class=&#34;link&#34; href=&#34;https://github.com/zakirullin/cognitive-load/discussions/24&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Discuss&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Do not add layers of abstractions for the sake of an architecture. Add them whenever you need an extension point that is justified for practical reasons.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.jooq.org/why-you-should-not-implement-layered-architecture&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Layers of abstraction aren&amp;rsquo;t free of charge&lt;/a&gt;, they are to be held in our limited working memory&lt;/strong&gt;.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;domain-driven-design&#34;&gt;Domain-driven design
+&lt;/h2&gt;&lt;p&gt;Domain-driven design has some great points, although it is often misinterpreted. People say, &amp;ldquo;We write code in DDD&amp;rdquo;, which is a bit strange, because DDD is more about the problem space rather than the solution space.&lt;/p&gt;
+&lt;p&gt;Ubiquitous language, domain, bounded context, aggregate, event storming are all about problem space. They are meant to help us learn the insights about the domain and extract the boundaries. DDD enables developers, domain experts and business people to communicate effectively using a single, unified language. Rather than focusing on these problem space aspects of DDD, we tend to emphasise particular folder structures, services, repositories, and other solution space techniques.&lt;/p&gt;
+&lt;p&gt;Chances are that the way we interpret DDD is likely to be unique and subjective. And if we build code upon this understanding, i.e., if we create a lot of extraneous cognitive load - future developers are doomed. &lt;code&gt;🤯&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Team Topologies provides a much better, easier to understand framework that helps us split the cognitive load across teams. Engineers tend to develop somewhat similar mental models after learning about Team Topologies. DDD, on the other hand, seems to be creating 10 different mental models for 10 different readers. Instead of being common ground, it becomes a battleground for unnecessary debates.&lt;/p&gt;
+&lt;h2 id=&#34;cognitive-load-in-familiar-projects&#34;&gt;Cognitive load in familiar projects
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;The problem is that &lt;strong&gt;familiarity is not the same as simplicity&lt;/strong&gt;. They &lt;em&gt;feel&lt;/em&gt; the same — that same ease of moving through a space without much mental effort — but for very different reasons. Every “clever” (read: “self-indulgent”) and non-idiomatic trick you use incurs a learning penalty for everyone else. Once they have done that learning, then they will find working with the code less difficult. So it is hard to recognise how to simplify code that you are already familiar with. This is why I try to get “the new kid” to critique the code before they get too institutionalised!&lt;/p&gt;
+&lt;p&gt;It is likely that the previous author(s) created this huge mess one tiny increment at a time, not all at once. So you are the first person who has ever had to try to make sense of it all at once.&lt;/p&gt;
+&lt;p&gt;In my class I describe a sprawling SQL stored procedure we were looking at one day, with hundreds of lines of conditionals in a huge WHERE clause. Someone asked how anyone could have let it get this bad. I told them: “When there are only 2 or 3 conditionals, adding another one doesn’t make any difference. By the time there are 20 or 30 conditionals, adding another one doesn’t make any difference!”&lt;/p&gt;
+&lt;p&gt;There is no “simplifying force” acting on the code base other than deliberate choices that you make. Simplifying takes effort, and people are too often in a hurry.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Thanks to &lt;a class=&#34;link&#34; href=&#34;https://dannorth.net&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Dan North&lt;/a&gt; for his comment&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you&amp;rsquo;ve internalized the mental models of the project into your long-term memory, you won&amp;rsquo;t experience a high cognitive load.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;/div&gt;
+&lt;p&gt;The more mental models there are to learn, the longer it takes for a new developer to deliver value.&lt;/p&gt;
+&lt;p&gt;Once you onboard new people on your project, try to measure the amount of confusion they have (pair programming may help). If they&amp;rsquo;re confused for more than ~40 minutes in a row - you&amp;rsquo;ve got things to improve in your code.&lt;/p&gt;
+&lt;p&gt;If you keep the cognitive load low, people can contribute to your codebase within the first few hours of joining your company.&lt;/p&gt;
+&lt;h2 id=&#34;examples&#34;&gt;Examples
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Our architecture is a standard CRUD app architecture, &lt;a class=&#34;link&#34; href=&#34;https://danluu.com/simple-architectures/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;a Python monolith on top of Postgres&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;How Instagram scaled to 14 million users with &lt;a class=&#34;link&#34; href=&#34;https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;only 3 engineers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The companies where we were like ”woah, these folks are &lt;a class=&#34;link&#34; href=&#34;https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;smart as hell&lt;/a&gt;” for the most part failed&lt;/li&gt;
+&lt;li&gt;One function that wires up the entire system. If you want to know how the system works - &lt;a class=&#34;link&#34; href=&#34;https://www.infoq.com/presentations/8-lines-code-refactoring&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;go read it&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These architectures are quite boring and easy to understand. Anyone can grasp them without much mental effort.&lt;/p&gt;
+&lt;p&gt;Involve junior developers in architecture reviews. They will help you to identify the mentally demanding areas.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Maintaining software is hard&lt;/strong&gt;, things break and we would need every bit of mental effort we can save.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion
+&lt;/h2&gt;&lt;p&gt;Imagine for a moment that what we inferred in the second chapter isn’t actually true. If that’s the case, then the conclusion we just negated, along with the conclusions in the previous chapter that we had accepted as valid, might not be correct either. &lt;code&gt;🤯&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Do you feel it? Not only do you have to jump all over the article to get the meaning (shallow modules!), but the paragraph in general is difficult to understand. We have just created an unnecessary cognitive load in your head. &lt;strong&gt;Do not do this to your colleagues.&lt;/strong&gt;&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;/div&gt;
+&lt;p&gt;We should reduce any cognitive load above and beyond what is intrinsic to the work we do.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.linkedin.com/in/zakirullin/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LinkedIn&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://twitter.com/zakirullin&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;X&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/zakirullin&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub&lt;/a&gt;, artemzr(аt)g-yоu-knоw-com&lt;/p&gt;
+&lt;details&gt;
+    &lt;summary&gt;&lt;b&gt;Comments&lt;/b&gt;&lt;/summary&gt;
+    &lt;br&gt;
+    &lt;p&gt;&lt;strong&gt;Rob Pike&lt;/strong&gt;&lt;br&gt;Nice article.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://x.com/karpathy/status/1872038630405054853&#34; target=&#34;_blank&#34;&gt;Andrej Karpathy&lt;/a&gt;&lt;/strong&gt; &lt;i&gt;(ChatGPT, Tesla)&lt;/i&gt;&lt;br&gt;Nice post on software engineering. Probably the most true, least practiced viewpoint.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://x.com/elonmusk/status/1872346903792566655&#34; target=&#34;_blank&#34;&gt;Elon Musk&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;True.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://www.linkedin.com/feed/update/urn:li:activity:7277757844970520576/&#34; target=&#34;_blank&#34;&gt;Addy Osmani&lt;/a&gt;&lt;/strong&gt; &lt;i&gt;(Chrome, the most complex software system in the world)&lt;/i&gt;&lt;br&gt;I&#39;ve seen countless projects where smart developers created impressive architectures using the latest design patterns and microservices. But when new team members tried to make changes, they spent weeks just trying to understand how everything fits together. The cognitive load was so high that productivity plummeted and bugs multiplied.&lt;/p&gt;
+    &lt;p&gt;The irony? Many of these complexity-inducing patterns were implemented in the name of &#34;clean code.&#34;&lt;/p&gt;
+    &lt;p&gt;What really matters is reducing unnecessary cognitive burden. Sometimes this means fewer, deeper modules instead of many shallow ones. Sometimes it means keeping related logic together instead of splitting it into tiny functions.&lt;/p&gt;
+    &lt;p&gt;And sometimes it means choosing boring, straightforward solutions over clever ones. The best code isn&#39;t the most elegant or sophisticated - it&#39;s the code that future developers (including yourself) can understand quickly.&lt;/p&gt;
+    &lt;p&gt;Your article really resonates with the challenges we face in browser development. You&#39;re absolutely right about modern browsers being among the most complex software systems. Managing that complexity in Chromium is a constant challenge that aligns perfectly with many of the points you made about cognitive load.&lt;/p&gt;
+    &lt;p&gt;One way we try to handle this in Chromium is through careful component isolation and well-defined interfaces between subsystems (like rendering, networking, JavaScript execution, etc.). Similar to your deep modules example with Unix I/O - we aim for powerful functionality behind relatively simple interfaces. For instance, our rendering pipeline handles incredible complexity (layout, compositing, GPU acceleration) but developers can interact with it through clear abstraction layers.&lt;/p&gt;
+    &lt;p&gt;Your points about avoiding unnecessary abstractions really hit home too. In browser development, we constantly balance between making the codebase approachable for new contributors while handling the inherent complexity of web standards and compatibility. &lt;/p&gt;
+    &lt;p&gt;Sometimes the simplest solution is the best one, even in a complex system.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://x.com/antirez&#34; target=&#34;_blank&#34;&gt;antirez&lt;/a&gt;&lt;/strong&gt; &lt;i&gt;(Redis)&lt;/i&gt;&lt;br&gt;Totally agree about it :) Also, what I believe is missing from mentioned &#34;A Philosophy of Software Design&#34; is the concept of &#34;design sacrifice&#34;. That is, sometimes you sacrifice something and get back simplicity, or performances, or both. I apply this idea continuously, but often is not understood.&lt;/p&gt;
+    &lt;p&gt;A good example is the fact that I always refused to have hash items expires. This is a design sacrifice because if you have certain attributes only in the top-level items (the keys themselves), the design is simpler, values will just be objects. When Redis got hash expires, it was a nice feature but required (indeed) many changes to many parts, raising the complexity.&lt;/p&gt;
+    &lt;p&gt;Another example is what I&#39;m doing right now, Vector Sets, the new Redis data type. I decided that Redis would not be the source of truth about vectors, but that it can just take an approximate version of them, so I was able to do on-insert normalization, quantization without trying to retain the large floats vector on disk, and so forth. May vector DBs don&#39;t sacrifice the fact of remembering what the user put inside (the full precision vector).&lt;/p&gt;
+    &lt;p&gt;These are just two random examples, but I apply this idea everywhere. Now the thing is: of course one must sacrifice the right things. Often, there are 5% features that account for a very large amount of complexity: that is a good thing to kill :D&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://working-for-the-future.medium.com/about&#34; target=&#34;_blank&#34;&gt;A developer from the internet&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;You would not hire me... I sell myself on my track record of released enterprise projects.&lt;/p&gt;
+    &lt;p&gt;I worked with a guy that could speak design patterns. I could never speak that way, though I was one of the few that could well understand him. The managers loved him and he could dominate any development conversation. The people working around him said he left a trail of destruction behind him. I was told that I was the first person that could understand his projects. Maintainability matters. I care most about TCO. For some firms, that&#39;s what matters.&lt;/p&gt;
+    &lt;p&gt;I logged into Github after not being there for a while and for some reason it took me to an article in a repository by someone that seemed random. I was thinking &#34;what is this&#34; and had some trouble getting to my home page, so I read it. I didn&#39;t really register it at the time, but it was amazing. Every developer should read it. It largely said that almost everything we&#39;ve been told about programming best practices leads to excessive &#34;cognitive load&#34;, meaning our minds are getting kicked by the intellectual demands. I&#39;ve known this for a while, especially with the demands of cloud, security and DevOps.&lt;/p&gt;
+    &lt;p&gt;I also liked it because it described practices I have done for decades, but never much admit to because they are not popular... I write really complicated stuff and need all the help I can get.&lt;/p&gt;
+    &lt;p&gt;Consider, if I&#39;m right, it popped up because the Github folks, very smart people, though that developers should see it. I agree.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&#34;https://news.ycombinator.com/item?id=45074248&#34; target=&#34;_blank&#34;&gt;Comments on Hacker News&lt;/a&gt; (&lt;a href=&#34;https://news.ycombinator.com/item?id=42489645&#34; target=&#34;_blank&#34;&gt;2&lt;/a&gt;)&lt;/p&gt;
+&lt;/details&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,1954 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Autonomous Agent on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/autonomous-agent/</link>
+        <description>Recent content in Autonomous Agent on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Wed, 03 Jun 2026 20:08:34 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/autonomous-agent/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>hermes-webui</title>
+        <link>https://producthunt.programnotes.cn/en/p/hermes-webui/</link>
+        <pubDate>Wed, 03 Jun 2026 20:08:34 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/hermes-webui/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1449103552284-f455a4479fc4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODA0ODgzODN8&amp;ixlib=rb-4.1.0" alt="Featured image of post hermes-webui" /&gt;&lt;h1 id=&#34;nesquenahermes-webui&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/nesquena/hermes-webui&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;nesquena/hermes-webui&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;hermes-web-ui&#34;&gt;Hermes Web UI
+&lt;/h1&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://hermes-agent.nousresearch.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hermes Agent&lt;/a&gt; is a sophisticated autonomous agent that lives on your server, accessed via a terminal or messaging apps, that remembers what it learns and gets more capable the longer it runs.&lt;/p&gt;
+&lt;p&gt;Hermes WebUI is a lightweight, dark-themed web app interface in your browser for &lt;a class=&#34;link&#34; href=&#34;https://hermes-agent.nousresearch.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hermes Agent&lt;/a&gt;.
+Full parity with the CLI experience - everything you can do from a terminal,
+you can do from this UI. No build step, no framework, no bundler. Just Python
+and vanilla JS.&lt;/p&gt;
+&lt;p&gt;Layout: three-panel. Left sidebar for sessions and navigation, center for chat,
+right for workspace file browsing. Model, profile, and workspace controls live in
+the &lt;strong&gt;composer footer&lt;/strong&gt; — always visible while composing. A circular context ring
+shows token usage at a glance. All settings and session tools are in the
+&lt;strong&gt;Hermes Control Center&lt;/strong&gt; (launcher at the sidebar bottom).&lt;/p&gt;
+&lt;img width=&#34;2448&#34; height=&#34;1748&#34; alt=&#34;Hermes Web UI — three-panel layout&#34; src=&#34;https://github.com/user-attachments/assets/6bf8af4c-209d-441e-8b92-6515d7a0c369&#34; /&gt;
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td width=&#34;50%&#34; align=&#34;center&#34;&gt;
+      &lt;img width=&#34;2940&#34; height=&#34;1848&#34; alt=&#34;Light mode with full profile support&#34; src=&#34;https://github.com/user-attachments/assets/4ef3a59c-7a66-4705-b4e7-cb9148fe4c47&#34; /&gt;
+      &lt;br /&gt;&lt;sub&gt;Light mode with full profile support&lt;/sub&gt;
+    &lt;/td&gt;
+    &lt;td width=&#34;50%&#34; align=&#34;center&#34;&gt;
+      &lt;img alt=&#34;Customize your settings, configure a password&#34; src=&#34;https://github.com/user-attachments/assets/941f3156-21e3-41fd-bcc8-f975d5000cb8&#34; /&gt;
+      &lt;br /&gt;&lt;sub&gt;Customize your settings, configure a password&lt;/sub&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td width=&#34;50%&#34; align=&#34;center&#34;&gt;
+      &lt;img alt=&#34;Workspace file browser with inline preview&#34; src=&#34;docs/images/ui-workspace.png&#34; /&gt;
+      &lt;br /&gt;&lt;sub&gt;Workspace file browser with inline preview&lt;/sub&gt;
+    &lt;/td&gt;
+    &lt;td width=&#34;50%&#34; align=&#34;center&#34;&gt;
+      &lt;img alt=&#34;Session projects, tags, and tool call cards&#34; src=&#34;docs/images/ui-sessions.png&#34; /&gt;
+      &lt;br /&gt;&lt;sub&gt;Session projects, tags, and tool call cards&lt;/sub&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;This gives you nearly &lt;strong&gt;1:1 parity with Hermes CLI from a convenient web UI&lt;/strong&gt; which you can access securely through an SSH tunnel from your Hermes setup. Single command to start this up, and a single command to SSH tunnel for access on your computer. Every single part of the web UI uses your existing Hermes agent and existing models, without requiring any additional setup.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;contents&#34;&gt;Contents
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#why-hermes&#34; &gt;Why Hermes&lt;/a&gt; — what it is and how it compares&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#quick-start&#34; &gt;Quick start&lt;/a&gt; — clone + &lt;code&gt;bootstrap.py&lt;/code&gt; / &lt;code&gt;start.sh&lt;/code&gt; / &lt;code&gt;ctl.sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#features&#34; &gt;Features&lt;/a&gt; — chat, sessions, workspace, voice, profiles, security, themes, panels, mobile&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#configuration--access&#34; &gt;Configuration &amp;amp; access&lt;/a&gt; — auto-discovery, overrides, remote/Tailscale/phone, manual launch&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#docker&#34; &gt;Docker&lt;/a&gt; — single- and multi-container deploys&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#running-tests&#34; &gt;Running tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#architecture&#34; &gt;Architecture&lt;/a&gt; — backend/frontend layout, state dir&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#docs&#34; &gt;Docs&lt;/a&gt; — the full documentation index&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#contributors&#34; &gt;Contributors&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-hermes&#34;&gt;Why Hermes
+&lt;/h2&gt;&lt;p&gt;Most AI tools reset every session. They don&amp;rsquo;t know who you are, what you worked on, or what
+conventions your project follows. You re-explain yourself every time.&lt;/p&gt;
+&lt;p&gt;Hermes retains context across sessions, runs scheduled jobs while you&amp;rsquo;re offline, and gets
+smarter about your environment the longer it runs. It uses your existing Hermes agent setup,
+your existing models, and requires no additional configuration to start.&lt;/p&gt;
+&lt;p&gt;What makes it different from other agentic tools:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Persistent memory&lt;/strong&gt; — user profile, agent notes, and a skills system that saves reusable
+procedures; Hermes learns your environment and does not have to relearn it&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Self-hosted scheduling&lt;/strong&gt; — cron jobs that fire while you&amp;rsquo;re offline and deliver results to
+Telegram, Discord, Slack, Signal, email, and more&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;10+ messaging platforms&lt;/strong&gt; — the same agent available in the terminal is reachable from your phone&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Self-improving skills&lt;/strong&gt; — Hermes writes and saves its own skills automatically from experience;
+no marketplace to browse, no plugins to install&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Provider-agnostic&lt;/strong&gt; — OpenAI, Anthropic, Google, DeepSeek, OpenRouter, and more&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Orchestrates other agents&lt;/strong&gt; — can spawn Claude Code or Codex for heavy coding tasks and bring
+the results back into its own memory&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Self-hosted&lt;/strong&gt; — your conversations, your memory, your hardware&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;vs. the field&lt;/strong&gt; &lt;em&gt;(landscape is actively shifting — see &lt;a class=&#34;link&#34; href=&#34;docs/why-hermes.md&#34; &gt;docs/why-hermes.md&lt;/a&gt; for the full breakdown)&lt;/em&gt;:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;&lt;/th&gt;
+					&lt;th&gt;OpenClaw&lt;/th&gt;
+					&lt;th&gt;Claude Code&lt;/th&gt;
+					&lt;th&gt;Codex CLI&lt;/th&gt;
+					&lt;th&gt;OpenCode&lt;/th&gt;
+					&lt;th&gt;Hermes&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Persistent memory (auto)&lt;/td&gt;
+					&lt;td&gt;Yes&lt;/td&gt;
+					&lt;td&gt;Partial†&lt;/td&gt;
+					&lt;td&gt;Partial&lt;/td&gt;
+					&lt;td&gt;Partial&lt;/td&gt;
+					&lt;td&gt;Yes&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Scheduled jobs (self-hosted)&lt;/td&gt;
+					&lt;td&gt;Yes&lt;/td&gt;
+					&lt;td&gt;No‡&lt;/td&gt;
+					&lt;td&gt;No&lt;/td&gt;
+					&lt;td&gt;No&lt;/td&gt;
+					&lt;td&gt;Yes&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Messaging app access&lt;/td&gt;
+					&lt;td&gt;Yes (15+ platforms)&lt;/td&gt;
+					&lt;td&gt;Partial (Telegram/Discord preview)&lt;/td&gt;
+					&lt;td&gt;No&lt;/td&gt;
+					&lt;td&gt;No&lt;/td&gt;
+					&lt;td&gt;Yes (10+)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Web UI (self-hosted)&lt;/td&gt;
+					&lt;td&gt;Dashboard only&lt;/td&gt;
+					&lt;td&gt;No&lt;/td&gt;
+					&lt;td&gt;No&lt;/td&gt;
+					&lt;td&gt;Yes&lt;/td&gt;
+					&lt;td&gt;Yes&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Self-improving skills&lt;/td&gt;
+					&lt;td&gt;Partial&lt;/td&gt;
+					&lt;td&gt;No&lt;/td&gt;
+					&lt;td&gt;No&lt;/td&gt;
+					&lt;td&gt;No&lt;/td&gt;
+					&lt;td&gt;Yes&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Python / ML ecosystem&lt;/td&gt;
+					&lt;td&gt;No (Node.js)&lt;/td&gt;
+					&lt;td&gt;No&lt;/td&gt;
+					&lt;td&gt;No&lt;/td&gt;
+					&lt;td&gt;No&lt;/td&gt;
+					&lt;td&gt;Yes&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Provider-agnostic&lt;/td&gt;
+					&lt;td&gt;Yes&lt;/td&gt;
+					&lt;td&gt;No (Claude only)&lt;/td&gt;
+					&lt;td&gt;Yes&lt;/td&gt;
+					&lt;td&gt;Yes&lt;/td&gt;
+					&lt;td&gt;Yes&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Open source&lt;/td&gt;
+					&lt;td&gt;Yes (MIT)&lt;/td&gt;
+					&lt;td&gt;No&lt;/td&gt;
+					&lt;td&gt;Yes&lt;/td&gt;
+					&lt;td&gt;Yes&lt;/td&gt;
+					&lt;td&gt;Yes&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;† Claude Code has CLAUDE.md / MEMORY.md project context and rolling auto-memory, but not full automatic cross-session recall&lt;br&gt;
+‡ Claude Code has cloud-managed scheduling (Anthropic infrastructure) and session-scoped &lt;code&gt;/loop&lt;/code&gt;; no self-hosted cron&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The closest competitor is OpenClaw&lt;/strong&gt; — both are always-on, self-hosted, open-source agents
+with memory, cron, and messaging. The key differences: Hermes writes and saves its own skills
+automatically as a core behavior (OpenClaw&amp;rsquo;s skill system centers on a community marketplace);
+Hermes is more stable across updates (OpenClaw has documented release regressions and ClawHub
+has had security incidents involving malicious skills); and Hermes runs natively in the Python
+ecosystem. See &lt;a class=&#34;link&#34; href=&#34;docs/why-hermes.md&#34; &gt;docs/why-hermes.md&lt;/a&gt; for the full side-by-side.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick start
+&lt;/h2&gt;&lt;p&gt;Run the repo bootstrap:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/nesquena/hermes-webui.git hermes-webui
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; hermes-webui
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python3 bootstrap.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Or keep using the shell launcher:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./start.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For self-hosted VM or homelab installs, &lt;code&gt;ctl.sh&lt;/code&gt; wraps the common daemon lifecycle commands without requiring &lt;code&gt;fuser&lt;/code&gt; or &lt;code&gt;pkill&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./ctl.sh start              &lt;span class=&#34;c1&#34;&gt;# background daemon, PID at ~/.hermes/webui.pid&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./ctl.sh status             &lt;span class=&#34;c1&#34;&gt;# PID, uptime, bound host/port, log path, /health&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./ctl.sh logs --lines &lt;span class=&#34;m&#34;&gt;100&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;# tail ~/.hermes/webui.log&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./ctl.sh restart
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./ctl.sh stop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;ctl.sh start&lt;/code&gt; runs the bootstrap in foreground/no-browser mode behind the daemon wrapper, writes logs to &lt;code&gt;~/.hermes/webui.log&lt;/code&gt;, and respects &lt;code&gt;.env&lt;/code&gt; plus inline overrides such as &lt;code&gt;HERMES_WEBUI_HOST=0.0.0.0 ./ctl.sh start&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;advanced-dynamic-recall-prefill--gateway-backed-chat&#34;&gt;Advanced: dynamic recall prefill &amp;amp; Gateway-backed chat
+&lt;/h3&gt;&lt;p&gt;Two optional, self-hosted-deployment features — attaching dynamic &lt;strong&gt;session-recall prefill&lt;/strong&gt; to browser turns (Joplin/Obsidian/Notion/llm-wiki routers), and routing browser chat through a running &lt;strong&gt;Hermes Gateway&lt;/strong&gt; — are documented in &lt;a class=&#34;link&#34; href=&#34;docs/advanced-chat-setup.md&#34; &gt;&lt;code&gt;docs/advanced-chat-setup.md&lt;/code&gt;&lt;/a&gt;. Most users need neither.&lt;/p&gt;
+&lt;p&gt;The bootstrap will:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Detect Hermes Agent and, if missing, attempt the official installer (&lt;code&gt;curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Find or create a Python environment with the WebUI dependencies.&lt;/li&gt;
+&lt;li&gt;Start the web server and wait for &lt;code&gt;/health&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Open the browser unless you pass &lt;code&gt;--no-browser&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Drop you into a first-run onboarding wizard inside the WebUI.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Native Windows is not supported for this bootstrap yet. Use Linux, macOS, or WSL2.
+For Windows / WSL auto-start at login, see &lt;a class=&#34;link&#34; href=&#34;docs/wsl-autostart.md&#34; &gt;&lt;code&gt;docs/wsl-autostart.md&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A community-maintained native Windows setup is documented at &lt;a class=&#34;link&#34; href=&#34;https://github.com/markwang2658/hermes-windows-native-guide&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@markwang2658/hermes-windows-native-guide&lt;/a&gt; (companion setup repo: &lt;a class=&#34;link&#34; href=&#34;https://github.com/markwang2658/hermes-windows-native&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@markwang2658/hermes-windows-native&lt;/a&gt;). Notes from the community report in &lt;a class=&#34;link&#34; href=&#34;https://github.com/nesquena/hermes-webui/issues/1952&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#1952&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Memory:&lt;/strong&gt; community-measured ~330 MB native vs ~1080 MB with WSL2+Docker (varies by configuration).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;What works:&lt;/strong&gt; chat, workspace browser, session management, all themes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Known limitations:&lt;/strong&gt; some POSIX-style file paths surface in the workspace browser; bash-assuming agent tools may not work natively.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Native Windows setup:&lt;/strong&gt; install Python 3.11+, then from the hermes-agent root in PowerShell: &lt;code&gt;python -m venv venv&lt;/code&gt; → &lt;code&gt;pip install -r requirements.txt&lt;/code&gt; → &lt;code&gt;pwsh .\start.ps1&lt;/code&gt; (it auto-discovers &lt;code&gt;venv\Scripts\python.exe&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WSL2 relationship:&lt;/strong&gt; not a prerequisite — a WSL2-built venv (&lt;code&gt;venv/bin/python&lt;/code&gt;, ELF) isn&amp;rsquo;t invokable by native Windows Python, so use the native setup above. WSL2 stays useful as a parallel install if you want the full &lt;code&gt;bootstrap.py&lt;/code&gt; + Linux runtime.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If provider setup is still incomplete after install, the onboarding wizard will point you to finish it with &lt;code&gt;hermes model&lt;/code&gt; instead of trying to replicate the full CLI setup in-browser.
+For a step-by-step walkthrough of the wizard, provider choices, local model server Base URLs, and safe re-runs, see &lt;a class=&#34;link&#34; href=&#34;docs/onboarding.md&#34; &gt;&lt;code&gt;docs/onboarding.md&lt;/code&gt;&lt;/a&gt;.
+If an AI assistant is helping with install, reinstall, bootstrap, provider setup, or first-run support, have it read &lt;a class=&#34;link&#34; href=&#34;docs/onboarding-agent-checklist.md&#34; &gt;&lt;code&gt;docs/onboarding-agent-checklist.md&lt;/code&gt;&lt;/a&gt; before running commands or inspecting logs.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features
+&lt;/h2&gt;&lt;h3 id=&#34;chat-and-agent&#34;&gt;Chat and agent
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Streaming responses via SSE (tokens appear as they are generated)&lt;/li&gt;
+&lt;li&gt;Multi-provider model support &amp;ndash; any Hermes API provider (OpenAI, Anthropic, Google, DeepSeek, Nous Portal, OpenRouter, MiniMax, Xiaomi MiMo, Z.AI); dynamic model dropdown populated from configured keys&lt;/li&gt;
+&lt;li&gt;Send a message while one is processing &amp;ndash; it queues automatically&lt;/li&gt;
+&lt;li&gt;Edit any past user message inline and regenerate from that point&lt;/li&gt;
+&lt;li&gt;Retry the last assistant response with one click&lt;/li&gt;
+&lt;li&gt;Cancel a running task directly from the composer footer (Stop button next to Send)&lt;/li&gt;
+&lt;li&gt;Tool call cards inline &amp;ndash; each shows the tool name, args, and result snippet; expand/collapse all toggle for multi-tool turns&lt;/li&gt;
+&lt;li&gt;Subagent delegation cards &amp;ndash; child agent activity shown with distinct icon and indented border&lt;/li&gt;
+&lt;li&gt;Mermaid diagram rendering inline (flowcharts, sequence diagrams, gantt charts)&lt;/li&gt;
+&lt;li&gt;Thinking/reasoning display &amp;ndash; collapsible gold-themed cards for Claude extended thinking and o3 reasoning blocks&lt;/li&gt;
+&lt;li&gt;Approval card for dangerous shell commands (allow once / session / always / deny)&lt;/li&gt;
+&lt;li&gt;SSE auto-reconnect on network blips (SSH tunnel resilience)&lt;/li&gt;
+&lt;li&gt;File attachments persist across page reloads and are stored outside the active workspace by default (&lt;code&gt;~/.hermes/webui/attachments/&amp;lt;session_id&amp;gt;/&lt;/code&gt;, or &lt;code&gt;HERMES_WEBUI_ATTACHMENT_DIR/&amp;lt;session_id&amp;gt;/&lt;/code&gt; when configured)&lt;/li&gt;
+&lt;li&gt;Message timestamps (HH:MM next to each message, full date on hover)&lt;/li&gt;
+&lt;li&gt;Code block copy button with &amp;ldquo;Copied!&amp;rdquo; feedback&lt;/li&gt;
+&lt;li&gt;Syntax highlighting via Prism.js (Python, JS, bash, JSON, SQL, and more)&lt;/li&gt;
+&lt;li&gt;Safe HTML rendering in AI responses (bold, italic, code converted to markdown)&lt;/li&gt;
+&lt;li&gt;rAF-throttled token streaming for smoother rendering during long responses&lt;/li&gt;
+&lt;li&gt;Context usage indicator in composer footer &amp;ndash; token count, cost, and fill bar (model-aware)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;sessions&#34;&gt;Sessions
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Create, rename, duplicate, delete, search by title and message content&lt;/li&gt;
+&lt;li&gt;Session actions via &lt;code&gt;⋯&lt;/code&gt; dropdown per session — pin, move to project, archive, duplicate, delete&lt;/li&gt;
+&lt;li&gt;Pin/star sessions to the top of the sidebar (gold indicator)&lt;/li&gt;
+&lt;li&gt;Archive sessions (hide without deleting, toggle to show)&lt;/li&gt;
+&lt;li&gt;Session projects &amp;ndash; named groups with colors for organizing sessions&lt;/li&gt;
+&lt;li&gt;Session tags &amp;ndash; add #tag to titles for colored chips and click-to-filter&lt;/li&gt;
+&lt;li&gt;Grouped by Today / Yesterday / Earlier in the sidebar (collapsible date groups)&lt;/li&gt;
+&lt;li&gt;Download as Markdown transcript, full JSON export, or import from JSON&lt;/li&gt;
+&lt;li&gt;Sessions persist across page reloads and SSH tunnel reconnects&lt;/li&gt;
+&lt;li&gt;Browser tab title reflects the active session name&lt;/li&gt;
+&lt;li&gt;CLI session bridge &amp;ndash; CLI sessions from hermes-agent&amp;rsquo;s SQLite store appear in the sidebar with a gold &amp;ldquo;cli&amp;rdquo; badge; click to import with full history and reply normally&lt;/li&gt;
+&lt;li&gt;Token/cost display &amp;ndash; input tokens, output tokens, estimated cost shown per conversation (toggle in Settings or &lt;code&gt;/usage&lt;/code&gt; command)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;workspace-file-browser&#34;&gt;Workspace file browser
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Directory tree with expand/collapse (single-click toggles, double-click navigates)&lt;/li&gt;
+&lt;li&gt;Breadcrumb navigation with clickable path segments&lt;/li&gt;
+&lt;li&gt;Preview text, code, Markdown (rendered), and images inline&lt;/li&gt;
+&lt;li&gt;Chat links using &lt;code&gt;workspace://path/to/file&lt;/code&gt; open files in the right-side preview pane&lt;/li&gt;
+&lt;li&gt;Edit, create, delete, and rename files; create folders&lt;/li&gt;
+&lt;li&gt;Binary file download (auto-detected from server)&lt;/li&gt;
+&lt;li&gt;File preview auto-closes on directory navigation (with unsaved-edit guard)&lt;/li&gt;
+&lt;li&gt;Git detection &amp;ndash; branch name and dirty file count badge in workspace header&lt;/li&gt;
+&lt;li&gt;Right panel is drag-resizable&lt;/li&gt;
+&lt;li&gt;Syntax highlighted code preview (Prism.js)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;voice-input&#34;&gt;Voice input
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Microphone button in the composer (Web Speech API)&lt;/li&gt;
+&lt;li&gt;Tap to record, tap again or send to stop&lt;/li&gt;
+&lt;li&gt;Live interim transcription appears in the textarea&lt;/li&gt;
+&lt;li&gt;Auto-stops after ~2s of silence&lt;/li&gt;
+&lt;li&gt;Appends to existing textarea content (doesn&amp;rsquo;t replace)&lt;/li&gt;
+&lt;li&gt;Hidden when browser doesn&amp;rsquo;t support Web Speech API (Chrome, Edge, Safari)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;profiles&#34;&gt;Profiles
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Profile chip in the &lt;strong&gt;composer footer&lt;/strong&gt; &amp;ndash; dropdown showing all profiles with gateway status and model info&lt;/li&gt;
+&lt;li&gt;Gateway status dots (green = running), model info, skill count per profile&lt;/li&gt;
+&lt;li&gt;Profiles management panel &amp;ndash; create, switch, and delete profiles from the sidebar&lt;/li&gt;
+&lt;li&gt;Clone config from active profile on create&lt;/li&gt;
+&lt;li&gt;Optional custom endpoint fields on create &amp;ndash; Base URL and API key written into the profile&amp;rsquo;s &lt;code&gt;config.yaml&lt;/code&gt; at creation time, so Ollama, LMStudio, and other local endpoints can be configured without editing files manually&lt;/li&gt;
+&lt;li&gt;Seamless switching &amp;ndash; no server restart; reloads config, skills, memory, cron, models&lt;/li&gt;
+&lt;li&gt;Per-session profile tracking (records which profile was active at creation)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;authentication-and-security&#34;&gt;Authentication and security
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Optional password auth &amp;ndash; off by default, zero friction for localhost&lt;/li&gt;
+&lt;li&gt;Enable via &lt;code&gt;HERMES_WEBUI_PASSWORD&lt;/code&gt; env var or Settings panel&lt;/li&gt;
+&lt;li&gt;Optional passkeys/WebAuthn &amp;ndash; register from Settings -&amp;gt; System after signing in with a password; the login page only shows passkey sign-in after at least one passkey exists&lt;/li&gt;
+&lt;li&gt;After registering at least one passkey, Settings -&amp;gt; System can remove the password and keep passkey-only sign-in enabled. Password auth remains the bootstrap/recovery path until you choose to go passwordless; passkeys are same-origin and stored locally in the WebUI state directory&lt;/li&gt;
+&lt;li&gt;Signed HMAC HTTP-only cookie with 24h TTL&lt;/li&gt;
+&lt;li&gt;Minimal dark-themed login page at &lt;code&gt;/login&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Security headers on all responses (X-Content-Type-Options, X-Frame-Options, Referrer-Policy)&lt;/li&gt;
+&lt;li&gt;20MB POST body size limit&lt;/li&gt;
+&lt;li&gt;CDN resources pinned with SRI integrity hashes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;themes&#34;&gt;Themes
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Appearance is split into two axes: Theme (&lt;code&gt;system&lt;/code&gt;, &lt;code&gt;dark&lt;/code&gt;, &lt;code&gt;light&lt;/code&gt;) and Skin
+(&lt;code&gt;default&lt;/code&gt;, &lt;code&gt;ares&lt;/code&gt;, &lt;code&gt;mono&lt;/code&gt;, &lt;code&gt;slate&lt;/code&gt;, &lt;code&gt;poseidon&lt;/code&gt;, &lt;code&gt;sisyphus&lt;/code&gt;, &lt;code&gt;charizard&lt;/code&gt;,
+&lt;code&gt;sienna&lt;/code&gt;, &lt;code&gt;catppuccin&lt;/code&gt;, &lt;code&gt;nous&lt;/code&gt;, &lt;code&gt;geist-contrast&lt;/code&gt; / Geist Contrast)&lt;/li&gt;
+&lt;li&gt;Switch via Settings -&amp;gt; Appearance (instant live preview) or &lt;code&gt;/theme &amp;lt;theme-or-skin&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Persists across reloads (server-side in settings.json + localStorage for flicker-free loading)&lt;/li&gt;
+&lt;li&gt;Skins use &lt;code&gt;data-skin&lt;/code&gt; plus CSS variables; dark mode resolves through the
+&lt;code&gt;.dark&lt;/code&gt; class, not a &lt;code&gt;data-theme&lt;/code&gt; custom-theme axis — see &lt;a class=&#34;link&#34; href=&#34;THEMES.md&#34; &gt;THEMES.md&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;settings-and-configuration&#34;&gt;Settings and configuration
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Hermes Control Center&lt;/strong&gt; (sidebar launcher button) &amp;ndash; Conversation tab (export/import/clear), Preferences tab (model, send key, theme, language, all toggles), System tab (version, password)&lt;/li&gt;
+&lt;li&gt;Send key: Enter (default) or Ctrl/Cmd+Enter&lt;/li&gt;
+&lt;li&gt;Show/hide CLI sessions toggle (enabled by default)&lt;/li&gt;
+&lt;li&gt;Token usage display toggle (off by default, also via &lt;code&gt;/usage&lt;/code&gt; command)&lt;/li&gt;
+&lt;li&gt;Control Center always opens on the Conversation tab; resets on close&lt;/li&gt;
+&lt;li&gt;Unsaved changes guard &amp;ndash; discard/save prompt when closing with unpersisted changes&lt;/li&gt;
+&lt;li&gt;Cron completion alerts &amp;ndash; toast notifications and unread badge on Tasks tab&lt;/li&gt;
+&lt;li&gt;Background agent error alerts &amp;ndash; banner when a non-active session encounters an error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;slash-commands&#34;&gt;Slash commands
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Type &lt;code&gt;/&lt;/code&gt; in the composer for autocomplete dropdown&lt;/li&gt;
+&lt;li&gt;Built-in: &lt;code&gt;/help&lt;/code&gt;, &lt;code&gt;/clear&lt;/code&gt;, &lt;code&gt;/compress [focus topic]&lt;/code&gt;, &lt;code&gt;/compact&lt;/code&gt; (alias), &lt;code&gt;/model &amp;lt;name&amp;gt;&lt;/code&gt;, &lt;code&gt;/workspace &amp;lt;name&amp;gt;&lt;/code&gt;, &lt;code&gt;/new&lt;/code&gt;, &lt;code&gt;/usage&lt;/code&gt;, &lt;code&gt;/theme&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Arrow keys navigate, Tab/Enter select, Escape closes&lt;/li&gt;
+&lt;li&gt;Unrecognized commands pass through to the agent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;panels&#34;&gt;Panels
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Chat&lt;/strong&gt; &amp;ndash; session list, search, pin, archive, projects, new conversation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tasks&lt;/strong&gt; &amp;ndash; view, create, edit, run, pause/resume, delete cron jobs; run history; completion alerts&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Skills&lt;/strong&gt; &amp;ndash; list all skills by category, search, preview, create/edit/delete; linked files viewer&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Memory&lt;/strong&gt; &amp;ndash; view and edit MEMORY.md and USER.md inline&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Profiles&lt;/strong&gt; &amp;ndash; create, switch, delete agent profiles; clone config&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Todos&lt;/strong&gt; &amp;ndash; live task list from the current session&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Spaces&lt;/strong&gt; &amp;ndash; add, rename, remove workspaces; quick-switch from topbar&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;mobile-responsive&#34;&gt;Mobile responsive
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Hamburger sidebar &amp;ndash; slide-in overlay on mobile (&amp;lt;640px)&lt;/li&gt;
+&lt;li&gt;Sidebar top tabs stay available on mobile; no fixed bottom nav stealing chat height&lt;/li&gt;
+&lt;li&gt;Files slide-over panel from right edge&lt;/li&gt;
+&lt;li&gt;Touch targets minimum 44px on all interactive elements&lt;/li&gt;
+&lt;li&gt;Full-height chat/composer on phones without bottom-nav spacing&lt;/li&gt;
+&lt;li&gt;Desktop layout completely unchanged&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;configuration--access&#34;&gt;Configuration &amp;amp; access
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;start.sh&lt;/code&gt; auto-detects almost everything; the subsections below cover the knobs for when it can&amp;rsquo;t, and how to reach the UI remotely.&lt;/p&gt;
+&lt;h3 id=&#34;what-startsh-discovers-automatically&#34;&gt;What start.sh discovers automatically
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Thing&lt;/th&gt;
+					&lt;th&gt;How it finds it&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Hermes agent dir&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;HERMES_WEBUI_AGENT_DIR&lt;/code&gt; env, then &lt;code&gt;$HERMES_HOME/hermes-agent&lt;/code&gt; (Windows default &lt;code&gt;%LOCALAPPDATA%\hermes\hermes-agent&lt;/code&gt;, POSIX default &lt;code&gt;~/.hermes/hermes-agent&lt;/code&gt;), then sibling &lt;code&gt;../hermes-agent&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Python executable&lt;/td&gt;
+					&lt;td&gt;Agent venv first, then &lt;code&gt;.venv&lt;/code&gt; in this repo, then system &lt;code&gt;python3&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;State directory&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;HERMES_WEBUI_STATE_DIR&lt;/code&gt; env, then &lt;code&gt;$HERMES_HOME/webui&lt;/code&gt; (Windows default &lt;code&gt;%LOCALAPPDATA%\hermes\webui&lt;/code&gt;, POSIX default &lt;code&gt;~/.hermes/webui&lt;/code&gt;)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Default workspace&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;HERMES_WEBUI_DEFAULT_WORKSPACE&lt;/code&gt; env, then &lt;code&gt;~/workspace&lt;/code&gt;, then state dir&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Port&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;HERMES_WEBUI_PORT&lt;/code&gt; env or first argument, default &lt;code&gt;8787&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;If discovery finds everything, nothing else is required.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;overrides-only-needed-if-auto-detection-misses&#34;&gt;Overrides (only needed if auto-detection misses)
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HERMES_WEBUI_AGENT_DIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/path/to/hermes-agent
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HERMES_WEBUI_PYTHON&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/path/to/python
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HERMES_WEBUI_PORT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;9000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HERMES_WEBUI_AUTO_INSTALL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# enable auto-install of agent deps (disabled by default)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./start.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Or inline:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;HERMES_WEBUI_AGENT_DIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/custom/path ./start.sh &lt;span class=&#34;m&#34;&gt;9000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Full list of environment variables:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Variable&lt;/th&gt;
+					&lt;th&gt;Default&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;HERMES_WEBUI_AGENT_DIR&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;auto-discovered&lt;/td&gt;
+					&lt;td&gt;Path to the hermes-agent checkout&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;HERMES_WEBUI_PYTHON&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;auto-discovered&lt;/td&gt;
+					&lt;td&gt;Python executable&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;HERMES_WEBUI_HOST&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;127.0.0.1&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bind address (&lt;code&gt;0.0.0.0&lt;/code&gt; for all IPv4, &lt;code&gt;::&lt;/code&gt; for all IPv6, &lt;code&gt;::1&lt;/code&gt; for IPv6 loopback)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;HERMES_WEBUI_PORT&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;8787&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Port&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;HERMES_WEBUI_STATE_DIR&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;$HERMES_HOME/webui&lt;/code&gt; (Windows default &lt;code&gt;%LOCALAPPDATA%\hermes\webui&lt;/code&gt;, POSIX default &lt;code&gt;~/.hermes/webui&lt;/code&gt;)&lt;/td&gt;
+					&lt;td&gt;Where sessions and state are stored&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;HERMES_WEBUI_DEFAULT_WORKSPACE&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;~/workspace&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Default workspace&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;HERMES_WEBUI_DEFAULT_MODEL&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;em&gt;(provider default)&lt;/em&gt;&lt;/td&gt;
+					&lt;td&gt;Optional model override; leave unset to use the active Hermes provider default&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;HERMES_WEBUI_PASSWORD&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;em&gt;(unset)&lt;/em&gt;&lt;/td&gt;
+					&lt;td&gt;Set to enable password authentication&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;HERMES_WEBUI_CSP_CONNECT_EXTRA&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;em&gt;(unset)&lt;/em&gt;&lt;/td&gt;
+					&lt;td&gt;Optional space-separated &lt;code&gt;http(s)://&lt;/code&gt; or &lt;code&gt;ws(s)://&lt;/code&gt; origins to append to the report-only CSP &lt;code&gt;connect-src&lt;/code&gt; directive for reverse-proxy or tunnel deployments&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;HERMES_WEBUI_EXTENSION_DIR&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;em&gt;(unset)&lt;/em&gt;&lt;/td&gt;
+					&lt;td&gt;Optional local directory served at &lt;code&gt;/extensions/&lt;/code&gt;; must point to an existing directory before extension injection is enabled&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;HERMES_WEBUI_EXTENSION_SCRIPT_URLS&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;em&gt;(unset)&lt;/em&gt;&lt;/td&gt;
+					&lt;td&gt;Optional comma-separated same-origin script URLs to inject; see &lt;a class=&#34;link&#34; href=&#34;docs/EXTENSIONS.md&#34; &gt;WebUI Extensions&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;HERMES_WEBUI_EXTENSION_STYLESHEET_URLS&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;em&gt;(unset)&lt;/em&gt;&lt;/td&gt;
+					&lt;td&gt;Optional comma-separated same-origin stylesheet URLs to inject; see &lt;a class=&#34;link&#34; href=&#34;docs/EXTENSIONS.md&#34; &gt;WebUI Extensions&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;HERMES_HOME&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Windows: &lt;code&gt;%LOCALAPPDATA%\hermes&lt;/code&gt;; POSIX: &lt;code&gt;~/.hermes&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Base directory for Hermes state (affects all paths)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;HERMES_CONFIG_PATH&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;$HERMES_HOME/config.yaml&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Path to Hermes config file&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;remote-access-ssh-tunnel-tailscale-phone&#34;&gt;Remote access (SSH tunnel, Tailscale, phone)
+&lt;/h3&gt;&lt;p&gt;The server binds to &lt;code&gt;127.0.0.1&lt;/code&gt; by default. To reach it from another machine use an SSH tunnel (&lt;code&gt;ssh -N -L 8787:127.0.0.1:8787 user@host&lt;/code&gt;, which &lt;code&gt;start.sh&lt;/code&gt; prints for you over SSH), or join your server and phone to a &lt;a class=&#34;link&#34; href=&#34;https://tailscale.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tailscale&lt;/a&gt; network and browse to &lt;code&gt;http://&amp;lt;server-tailscale-ip&amp;gt;:8787&lt;/code&gt; with &lt;code&gt;HERMES_WEBUI_HOST=0.0.0.0&lt;/code&gt; + &lt;code&gt;HERMES_WEBUI_PASSWORD&lt;/code&gt; set. Full walkthrough (incl. a community ARM64-Android field report): &lt;a class=&#34;link&#34; href=&#34;docs/remote-access.md&#34; &gt;&lt;code&gt;docs/remote-access.md&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;manual-launch-without-startsh&#34;&gt;Manual launch (without start.sh)
+&lt;/h3&gt;&lt;p&gt;If you prefer to launch the server directly:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /path/to/hermes-agent          &lt;span class=&#34;c1&#34;&gt;# or wherever sys.path can find Hermes modules&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;HERMES_WEBUI_PORT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8787&lt;/span&gt; venv/bin/python /path/to/hermes-webui/server.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Note: use the agent venv Python (or any Python environment that has the Hermes agent dependencies installed). System Python will be missing &lt;code&gt;openai&lt;/code&gt;, &lt;code&gt;httpx&lt;/code&gt;, and other required packages.&lt;/p&gt;
+&lt;p&gt;Health check:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl http://127.0.0.1:8787/health
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;docker&#34;&gt;Docker
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Pre-built images&lt;/strong&gt; (amd64 + arm64) are published to GHCR on every release.&lt;/p&gt;
+&lt;p&gt;For a comprehensive setup guide covering all 3 compose files, common failure modes, and bind-mount migration, see &lt;a class=&#34;link&#34; href=&#34;docs/docker.md&#34; &gt;&lt;code&gt;docs/docker.md&lt;/code&gt;&lt;/a&gt;. The README covers the 5-minute happy path.&lt;/p&gt;
+&lt;h3 id=&#34;5-minute-quickstart-single-container&#34;&gt;5-minute quickstart (single container)
+&lt;/h3&gt;&lt;p&gt;The simplest setup: one WebUI container that runs the agent in-process.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/nesquena/hermes-webui
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; hermes-webui
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp .env.docker.example .env
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Edit .env if your host UID isn&amp;#39;t 1000 (e.g. macOS where UIDs start at 501)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker compose up -d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Open http://localhost:8787&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Run Compose as the user who owns your Hermes home. &lt;code&gt;sudo docker compose up -d&lt;/code&gt; can make &lt;code&gt;${HOME}&lt;/code&gt; expand to the root user&amp;rsquo;s home, so Docker mounts the wrong &lt;code&gt;.hermes&lt;/code&gt; directory instead of your real &lt;code&gt;~/.hermes&lt;/code&gt; and the WebUI starts with &lt;code&gt;config.yaml (not found, using defaults)&lt;/code&gt;. Prefer adding your user to the Docker group and running &lt;code&gt;docker compose up -d&lt;/code&gt;; if you must use sudo, set absolute paths first, for example &lt;code&gt;HERMES_HOME=/home/you/.hermes HERMES_WORKSPACE=/home/you/workspace sudo -E docker compose up -d&lt;/code&gt;, then verify with &lt;code&gt;docker compose config&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The container auto-detects your UID/GID from the mounted &lt;code&gt;~/.hermes&lt;/code&gt; volume so files written by the agent stay readable by you on the host.&lt;/p&gt;
+&lt;p&gt;To enable password protection (required if you expose the port outside &lt;code&gt;127.0.0.1&lt;/code&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;HERMES_WEBUI_PASSWORD=change-me-to-something-strong&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; .env
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker compose up -d --force-recreate
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;manual-docker-run-no-compose&#34;&gt;Manual &lt;code&gt;docker run&lt;/code&gt; (no compose)
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker pull ghcr.io/nesquena/hermes-webui:latest
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -e &lt;span class=&#34;nv&#34;&gt;WANTED_UID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;id -u&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt; -e &lt;span class=&#34;nv&#34;&gt;WANTED_GID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;id -g&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -v ~/.hermes:/home/hermeswebui/.hermes &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -e &lt;span class=&#34;nv&#34;&gt;HERMES_WEBUI_STATE_DIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/home/hermeswebui/.hermes/webui &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -v ~/workspace:/workspace &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -p 127.0.0.1:8787:8787 &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ghcr.io/nesquena/hermes-webui:latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;build-locally&#34;&gt;Build locally
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker build -t hermes-webui .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -e &lt;span class=&#34;nv&#34;&gt;WANTED_UID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;id -u&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt; -e &lt;span class=&#34;nv&#34;&gt;WANTED_GID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;id -g&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -v ~/.hermes:/home/hermeswebui/.hermes &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -e &lt;span class=&#34;nv&#34;&gt;HERMES_WEBUI_STATE_DIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/home/hermeswebui/.hermes/webui &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -v ~/workspace:/workspace &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -p 127.0.0.1:8787:8787 &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  hermes-webui
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;multi-container-setups&#34;&gt;Multi-container setups
+&lt;/h3&gt;&lt;p&gt;If you want the agent and WebUI in separate containers (for isolation, or because you&amp;rsquo;re already running an agent gateway elsewhere):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Agent + WebUI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker compose -f docker-compose.two-container.yml up -d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Agent + Dashboard + WebUI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker compose -f docker-compose.three-container.yml up -d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Both compose files use &lt;strong&gt;named Docker volumes&lt;/strong&gt; by default, which solves the UID/GID problem by construction. If you need bind mounts to share an existing host directory, see &lt;a class=&#34;link&#34; href=&#34;docs/docker.md&#34; &gt;&lt;code&gt;docs/docker.md&lt;/code&gt;&lt;/a&gt; for the full migration recipe.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Known limitation (#681)&lt;/strong&gt;: in the two-container setup, tools triggered from the WebUI run in the &lt;strong&gt;WebUI container&lt;/strong&gt;, not the agent container. If you need git/node/etc. on the WebUI&amp;rsquo;s filesystem, either use the single-container setup, extend the WebUI Dockerfile, or use the community &lt;a class=&#34;link&#34; href=&#34;https://github.com/sunnysktsang/hermes-suite&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;all-in-one image&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Source boundary note (#2453)&lt;/strong&gt;: the multi-container setup mounts &lt;code&gt;hermes-agent-src&lt;/code&gt; read-only into the WebUI by default. This prevents WebUI-side source rewrites but is still an implementation-coupling bridge, not a stable Agent API boundary. See &lt;a class=&#34;link&#34; href=&#34;docs/rfcs/agent-source-boundary.md&#34; &gt;&lt;code&gt;docs/rfcs/agent-source-boundary.md&lt;/code&gt;&lt;/a&gt; for the current source/API decoupling inventory.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;common-failure-modes&#34;&gt;Common failure modes
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Symptom&lt;/th&gt;
+					&lt;th&gt;Likely cause&lt;/th&gt;
+					&lt;th&gt;Fix&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;PermissionError&lt;/code&gt; at startup&lt;/td&gt;
+					&lt;td&gt;UID mismatch on bind mount&lt;/td&gt;
+					&lt;td&gt;Set &lt;code&gt;UID=$(id -u)&lt;/code&gt; in &lt;code&gt;.env&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;.env: permission denied&lt;/code&gt; (#1389)&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;fix_credential_permissions()&lt;/code&gt; enforced 0600&lt;/td&gt;
+					&lt;td&gt;Set &lt;code&gt;HERMES_SKIP_CHMOD=1&lt;/code&gt; in &lt;code&gt;.env&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Workspace appears empty&lt;/td&gt;
+					&lt;td&gt;UID mismatch on &lt;code&gt;/workspace&lt;/code&gt; mount&lt;/td&gt;
+					&lt;td&gt;Set &lt;code&gt;UID=$(id -u)&lt;/code&gt; in &lt;code&gt;.env&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;git: command not found&lt;/code&gt; in chat&lt;/td&gt;
+					&lt;td&gt;Two-container architectural limit (#681)&lt;/td&gt;
+					&lt;td&gt;Use single-container or extend Dockerfile&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;WebUI can&amp;rsquo;t find agent source&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;hermes-agent-src&lt;/code&gt; volume misconfigured&lt;/td&gt;
+					&lt;td&gt;Use the named volumes from compose files as-is&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Podman shared &lt;code&gt;.hermes&lt;/code&gt; fails&lt;/td&gt;
+					&lt;td&gt;Podman 3.4 &lt;code&gt;keep-id&lt;/code&gt; limitation&lt;/td&gt;
+					&lt;td&gt;Use Podman 4+ or single-container&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Host API at &lt;code&gt;localhost&lt;/code&gt; fails from WebUI&lt;/td&gt;
+					&lt;td&gt;Container &lt;code&gt;localhost&lt;/code&gt; means the container, not your host (#3012)&lt;/td&gt;
+					&lt;td&gt;Use &lt;code&gt;http://host.docker.internal:&amp;lt;port&amp;gt;&lt;/code&gt; on Docker Desktop, or &lt;code&gt;http://host.containers.internal:&amp;lt;port&amp;gt;&lt;/code&gt; on Podman&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;WebUI can&amp;rsquo;t see &lt;code&gt;~/.hermes&lt;/code&gt; after &lt;code&gt;sudo docker compose&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;${HOME}&lt;/code&gt; expanded to the root user&amp;rsquo;s home (#3006)&lt;/td&gt;
+					&lt;td&gt;Run Compose as your user, or pass absolute &lt;code&gt;HERMES_HOME&lt;/code&gt;/&lt;code&gt;HERMES_WORKSPACE&lt;/code&gt; with &lt;code&gt;sudo -E&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;For the deep dive on each of these, see &lt;a class=&#34;link&#34; href=&#34;docs/docker.md&#34; &gt;&lt;code&gt;docs/docker.md&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; By default, Docker Compose binds to &lt;code&gt;127.0.0.1&lt;/code&gt; (localhost only).
+To expose on a network, change the port to &lt;code&gt;&amp;quot;8787:8787&amp;quot;&lt;/code&gt; in &lt;code&gt;docker-compose.yml&lt;/code&gt;
+and set &lt;code&gt;HERMES_WEBUI_PASSWORD&lt;/code&gt; to enable authentication.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;running-tests&#34;&gt;Running tests
+&lt;/h2&gt;&lt;p&gt;Tests discover the repo and the Hermes agent dynamically &amp;ndash; no hardcoded paths.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; hermes-webui
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pytest tests/ -v --timeout&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;60&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Or using the agent venv explicitly:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/path/to/hermes-agent/venv/bin/python -m pytest tests/ -v
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Tests run against an isolated server with a separate state directory.
+Production data and real cron jobs are never touched. Current snapshot:
+&lt;strong&gt;~7,150 tests collected&lt;/strong&gt; across &lt;strong&gt;~700 test files&lt;/strong&gt;, run in CI on Python 3.11,
+3.12, and 3.13 (3 parallel shards each).&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;architecture&#34;&gt;Architecture
+&lt;/h2&gt;&lt;p&gt;No build step, no framework, no bundler — a Python standard-library HTTP server
+and vanilla JS. The backend lives in &lt;code&gt;api/&lt;/code&gt;, the frontend in &lt;code&gt;static/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Backend (&lt;code&gt;api/&lt;/code&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;         &lt;span class=&#34;n&#34;&gt;HTTP&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;routing&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;shell&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;auth&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;middleware&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;api&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;auth&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;         &lt;span class=&#34;n&#34;&gt;Optional&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;password&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;authentication&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;signed&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cookies&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;passkeys&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;config&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;       &lt;span class=&#34;n&#34;&gt;Discovery&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;globals&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;detection&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;reloadable&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;config&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;helpers&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;      &lt;span class=&#34;n&#34;&gt;HTTP&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;helpers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;security&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;headers&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;       &lt;span class=&#34;n&#34;&gt;Session&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CRUD&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CLI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;state&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;db&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bridge&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;onboarding&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;First&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;run&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;onboarding&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wizard&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;OAuth&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;provider&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;support&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;profiles&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;     &lt;span class=&#34;n&#34;&gt;Profile&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;state&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;management&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hermes_cli&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wrapper&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;routes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;       &lt;span class=&#34;n&#34;&gt;All&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GET&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;POST&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;route&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;handlers&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;elif&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dispatch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;no&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;decorators&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;state_sync&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;insights&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sync&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;—&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;message_count&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;state&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;db&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;streaming&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;SSE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;engine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;run_agent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cancellation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;compression&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;updates&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;      &lt;span class=&#34;n&#34;&gt;Self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;update&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;check&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;release&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;notes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;upload&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;       &lt;span class=&#34;n&#34;&gt;Multipart&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;parser&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;upload&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;handler&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;workspace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;    &lt;span class=&#34;ne&#34;&gt;File&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ops&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;workspace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;helpers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;detection&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Frontend (&lt;code&gt;static/&lt;/code&gt;)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;html&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;HTML&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;template&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;css&lt;/span&gt;         &lt;span class=&#34;n&#34;&gt;All&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CSS&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;incl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mobile&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;responsive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;themes&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;skins&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ui&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;js&lt;/span&gt;             &lt;span class=&#34;n&#34;&gt;DOM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;helpers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;renderMd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;tool&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cards&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;context&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;indicator&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;workspace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;js&lt;/span&gt;      &lt;span class=&#34;ne&#34;&gt;File&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;preview&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ops&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;badge&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;central&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;api&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fetch&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wrapper&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sessions&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;js&lt;/span&gt;       &lt;span class=&#34;n&#34;&gt;Session&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CRUD&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;collapsible&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;groups&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;search&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;reload&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;recovery&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;messages&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;js&lt;/span&gt;       &lt;span class=&#34;n&#34;&gt;send&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SSE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;handlers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;live&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;streaming&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;session&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;recovery&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;panels&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;js&lt;/span&gt;         &lt;span class=&#34;n&#34;&gt;Cron&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;skills&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;memory&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;profiles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;settings&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;ne&#34;&gt;Control&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Center&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;commands&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;js&lt;/span&gt;       &lt;span class=&#34;n&#34;&gt;Slash&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;command&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;autocomplete&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;boot&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;js&lt;/span&gt;           &lt;span class=&#34;n&#34;&gt;Mobile&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nav&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;voice&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;theme&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;skin&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;boot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;bfcache&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;handler&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Tests + packaging&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tests/            Pytest suite (~7,150 tests; isolated server/state fixtures)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyproject.toml    Tooling config (ruff lint gate) — not a packaged distribution
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Dockerfile        python:3.12-slim container image
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker-compose.yml  Compose with named volume and optional auth
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;.github/workflows/  CI: ruff + sharded pytest, browser smoke, Docker smoke,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    multi-arch Docker build + GitHub Release on tag
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;State lives outside the repo at &lt;code&gt;~/.hermes/webui/&lt;/code&gt; by default
+(sessions, workspaces, settings, projects, last_workspace). Override with &lt;code&gt;HERMES_WEBUI_STATE_DIR&lt;/code&gt;.
+Full design notes and the endpoint catalog are in &lt;a class=&#34;link&#34; href=&#34;ARCHITECTURE.md&#34; &gt;&lt;code&gt;ARCHITECTURE.md&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;docs&#34;&gt;Docs
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Start here&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/why-hermes.md&#34; &gt;&lt;code&gt;docs/why-hermes.md&lt;/code&gt;&lt;/a&gt; — why Hermes, the mental model, and a detailed comparison to Claude Code / Codex / OpenCode / Cursor&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/onboarding.md&#34; &gt;&lt;code&gt;docs/onboarding.md&lt;/code&gt;&lt;/a&gt; — first-run wizard, provider setup, local model server Base URLs, and safe re-runs&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/troubleshooting.md&#34; &gt;&lt;code&gt;docs/troubleshooting.md&lt;/code&gt;&lt;/a&gt; — diagnostic flows for common failures (e.g. &amp;ldquo;AIAgent not available&amp;rdquo;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Using &amp;amp; customizing&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;THEMES.md&#34; &gt;&lt;code&gt;THEMES.md&lt;/code&gt;&lt;/a&gt; — theme + skin system, custom theme guide&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/workspace-git.md&#34; &gt;&lt;code&gt;docs/workspace-git.md&lt;/code&gt;&lt;/a&gt; — the workspace Git controls&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/EXTENSIONS.md&#34; &gt;&lt;code&gt;docs/EXTENSIONS.md&lt;/code&gt;&lt;/a&gt; — administrator-controlled WebUI extension injection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Deploying &amp;amp; operating&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/remote-access.md&#34; &gt;&lt;code&gt;docs/remote-access.md&lt;/code&gt;&lt;/a&gt; — SSH tunnel, Tailscale, and phone access (incl. a community ARM64-Android field report)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/advanced-chat-setup.md&#34; &gt;&lt;code&gt;docs/advanced-chat-setup.md&lt;/code&gt;&lt;/a&gt; — optional dynamic recall-prefill and Gateway-backed browser chat for self-hosted deployments&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/docker.md&#34; &gt;&lt;code&gt;docs/docker.md&lt;/code&gt;&lt;/a&gt; — Docker compose setup, common failures, and bind-mount migration&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/supervisor.md&#34; &gt;&lt;code&gt;docs/supervisor.md&lt;/code&gt;&lt;/a&gt; — launchd, systemd, supervisord, runit, and s6 process-supervisor setup&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/wsl-autostart.md&#34; &gt;&lt;code&gt;docs/wsl-autostart.md&lt;/code&gt;&lt;/a&gt; — WSL2 auto-start at Windows login&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/onboarding-agent-checklist.md&#34; &gt;&lt;code&gt;docs/onboarding-agent-checklist.md&lt;/code&gt;&lt;/a&gt; — safety rules and pass/fail checks for assistant-led install/reinstall support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Contributing &amp;amp; design&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;&lt;code&gt;CONTRIBUTING.md&lt;/code&gt;&lt;/a&gt; — contribution style, PR expectations, and local verification&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;ARCHITECTURE.md&#34; &gt;&lt;code&gt;ARCHITECTURE.md&lt;/code&gt;&lt;/a&gt; — system design, all API endpoints, implementation notes&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;TESTING.md&#34; &gt;&lt;code&gt;TESTING.md&lt;/code&gt;&lt;/a&gt; — manual browser test plan and automated coverage reference&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;DESIGN.md&#34; &gt;&lt;code&gt;DESIGN.md&lt;/code&gt;&lt;/a&gt; — design tokens and the calm-console direction&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/UIUX-GUIDE.md&#34; &gt;&lt;code&gt;docs/UIUX-GUIDE.md&lt;/code&gt;&lt;/a&gt; — UI/UX principles sourced from the design docs and visual inventories&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/CONTRACTS.md&#34; &gt;&lt;code&gt;docs/CONTRACTS.md&lt;/code&gt;&lt;/a&gt; — project contract/RFC/design index for contributors and agents&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/rfcs/README.md&#34; &gt;&lt;code&gt;docs/rfcs/README.md&lt;/code&gt;&lt;/a&gt; — RFC index for larger architecture and durability proposals&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Release history &amp;amp; plan&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;CHANGELOG.md&#34; &gt;&lt;code&gt;CHANGELOG.md&lt;/code&gt;&lt;/a&gt; — release notes per version&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;ROADMAP.md&#34; &gt;&lt;code&gt;ROADMAP.md&lt;/code&gt;&lt;/a&gt; — feature roadmap and sprint history&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;SPRINTS.md&#34; &gt;&lt;code&gt;SPRINTS.md&lt;/code&gt;&lt;/a&gt; — forward sprint plan with CLI + Claude parity targets&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;CONTRIBUTORS.md&#34; &gt;&lt;code&gt;CONTRIBUTORS.md&lt;/code&gt;&lt;/a&gt; — the full community credit roll&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;contributors&#34;&gt;Contributors
+&lt;/h2&gt;&lt;p&gt;Hermes WebUI is built with help from the open-source community. Every PR — whether merged directly, absorbed into a batch release, or salvaged from a larger proposal — shapes the project, and we&amp;rsquo;re grateful to everyone who has taken the time to contribute.&lt;/p&gt;
+&lt;p&gt;Over &lt;strong&gt;190 contributors&lt;/strong&gt; have shipped code that landed in a release tag. The full,
+continuously-updated credit roll — including everyone with one or two PRs and the
+special-thanks roll for design and architectural work — lives in
+&lt;a class=&#34;link&#34; href=&#34;CONTRIBUTORS.md&#34; &gt;&lt;code&gt;CONTRIBUTORS.md&lt;/code&gt;&lt;/a&gt;. A snapshot of the most prolific contributors:&lt;/p&gt;
+&lt;h3 id=&#34;top-contributors-by-pr-count-including-absorbedbatch-released-work&#34;&gt;Top contributors (by PR count, including absorbed/batch-released work)
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;#&lt;/th&gt;
+					&lt;th&gt;Contributor&lt;/th&gt;
+					&lt;th style=&#34;text-align: right&#34;&gt;PRs&lt;/th&gt;
+					&lt;th&gt;First → latest release&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;1&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/franksong2702&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@franksong2702&lt;/a&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;148&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;v0.49.3&lt;/code&gt; → &lt;code&gt;v0.51.153&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;2&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Michaelyklam&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@Michaelyklam&lt;/a&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;117&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;v0.50.240&lt;/code&gt; → &lt;code&gt;v0.51.139&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;3&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/bergeouss&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@bergeouss&lt;/a&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;70&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;v0.48.0&lt;/code&gt; → &lt;code&gt;v0.51.46&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;4&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ai-ag2026&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@ai-ag2026&lt;/a&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;67&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;v0.50.279&lt;/code&gt; → &lt;code&gt;v0.51.190&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;5&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dso2ng&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@dso2ng&lt;/a&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;25&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;v0.50.227&lt;/code&gt; → &lt;code&gt;v0.51.153&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;6&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/AJV20&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@AJV20&lt;/a&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;24&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;v0.51.93&lt;/code&gt; → &lt;code&gt;v0.51.188&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;7&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/starship-s&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@starship-s&lt;/a&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;19&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;v0.50.123&lt;/code&gt; → &lt;code&gt;v0.51.153&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;8&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/jasonjcwu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@jasonjcwu&lt;/a&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;16&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;v0.50.227&lt;/code&gt; → &lt;code&gt;v0.51.132&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;9&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dobby-d-elf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@dobby-d-elf&lt;/a&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;15&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;v0.51.38&lt;/code&gt; → &lt;code&gt;v0.51.161&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;10&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Jordan-SkyLF&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@Jordan-SkyLF&lt;/a&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;12&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;v0.50.18&lt;/code&gt; → &lt;code&gt;v0.51.66&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;See &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTORS.md&#34; &gt;&lt;code&gt;CONTRIBUTORS.md&lt;/code&gt;&lt;/a&gt; for the full ranked list of all 194 contributors, including everyone with one or two PRs and the special-thanks roll for design and architectural contributions.&lt;/p&gt;
+&lt;h3 id=&#34;notable-contributions&#34;&gt;Notable contributions
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/franksong2702&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@franksong2702&lt;/a&gt;&lt;/strong&gt; — Most prolific external contributor (148 PRs, &lt;code&gt;v0.49.3&lt;/code&gt; → &lt;code&gt;v0.51.153&lt;/code&gt;)
+Across the longest tenure of any external contributor: the session title guard (#301), breadcrumb workspace navigation (#302), embedded workspace terminal (#1099), worktree-backed session creation (#2053), onboarding documentation (#2052), composer footer container queries, streaming-session sidebar exemption (#1327), session sidecar repair, cron output preservation (#1295), profile default workspace persistence, manual &lt;code&gt;/compress&lt;/code&gt; async start/status endpoints (#2128), worktree status surface (#2109) + guarded remove (#2156) for the lifecycle umbrella #2057, session post-render dedup (#2166), native-WebUI fast path (#2170), tail-window response trim (#2171), stale-stream guard extension (#2158), CSP report collector (#2160), and a long tail of polish across mobile/responsive, the session sidebar, and the workspace state machine.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Michaelyklam&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@Michaelyklam&lt;/a&gt;&lt;/strong&gt; — Most prolific contributor of recent releases (117 PRs, &lt;code&gt;v0.50.240&lt;/code&gt; → &lt;code&gt;v0.51.139&lt;/code&gt;)
+Production Docker hardening (#1921, drops sudo-capable staging user), profile-scoped skills endpoints (#1903), gateway PID resolution under profile-scoped HERMES_HOME (#1901), profile-aware AIAgent cache (#1898/#1904), backslash LaTeX delimiters (#1848), Codex quota error surfacing (#1770), shell-route HTML 503 (#1836), stale Kanban client recovery (#1828), context auto-compression toast lifetime (#1988), &lt;code&gt;/goal&lt;/code&gt; command (#1866), Kanban detail-view scrolling (#1916), CLI session tool metadata preservation (#1778), Traditional Chinese kanban locale backfill (#1979), v0.51.51 mobile Insights bucketing/layout (#2120/#2121), Hermes run adapter RFC (#2105 for #1925), fork-from-here absolute index (#2198 for #2184), opencode-go custom-provider overlap routing (#2204 for #1894).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/bergeouss&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@bergeouss&lt;/a&gt;&lt;/strong&gt; — Provider management UI + Docker hardening (70 PRs, &lt;code&gt;v0.48.0&lt;/code&gt; → &lt;code&gt;v0.51.46&lt;/code&gt;)
+Provider management UI for adding/editing custom providers from Settings, OAuth provider status detection (#1552), two-container Docker setup, profile isolation hardening (per-profile &lt;code&gt;.env&lt;/code&gt; secrets), the bulk of what users see when they touch Settings → Providers, Reveal-in-Finder context menu (#1551), gateway status card (#1552), auto-assign session to active project filter (#1550), &amp;ldquo;What&amp;rsquo;s new?&amp;rdquo; link in update banner (#1549), OpenRouter free-tier live fetch (#1548), credential pool 401 self-heal (#1553), inline provider chip + group model count in model picker (#1644).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ai-ag2026&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@ai-ag2026&lt;/a&gt;&lt;/strong&gt; — Session recovery + audit infrastructure (67 PRs, &lt;code&gt;v0.50.279&lt;/code&gt; → &lt;code&gt;v0.51.190&lt;/code&gt;)
+Autonomous-AI contributor (Hermes Agent-driven) focused on durability: &lt;code&gt;state.db&lt;/code&gt;-backed sidecar reconciliation (#2041), orphan &lt;code&gt;.json.bak&lt;/code&gt; recovery on startup (#2035), read-only session recovery audit endpoints (#2036, #2040), active run lifecycle in &lt;code&gt;/health&lt;/code&gt; (#2039), crash-safe turn-journal RFC at &lt;code&gt;docs/rfcs/turn-journal.md&lt;/code&gt; (#2042), append-only turn-journal helper (#2059), lifecycle events layer (#2062), &lt;code&gt;Content-Security-Policy-Report-Only&lt;/code&gt; header (#2084), per-cron toast toggle (#2100), fork-session compression lineage isolation (#2014).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dso2ng&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@dso2ng&lt;/a&gt;&lt;/strong&gt; — Session lineage + diagnostics (25 PRs, &lt;code&gt;v0.50.227&lt;/code&gt; → &lt;code&gt;v0.51.153&lt;/code&gt;)
+&lt;code&gt;/api/session/lineage-report/&amp;lt;sid&amp;gt;&lt;/code&gt; endpoint for bounded session graph diagnostics (#2012), stale Mermaid render error cleanup (#1337), &lt;code&gt;session_source=&amp;quot;fork&amp;quot;&lt;/code&gt; continuation-chain isolation (#2063), lazy lineage-report fetch on sidebar badge expand (#2130), and a long tail of frontend reliability fixes around session loading.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/jasonjcwu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@jasonjcwu&lt;/a&gt;&lt;/strong&gt; — Composer + transcript polish (16 PRs, &lt;code&gt;v0.50.227&lt;/code&gt; → &lt;code&gt;v0.51.132&lt;/code&gt;)
+Sidebar collapse via active-rail click (#2054, fuses #1884 + #1924), composer chip lightbox (#1758), title fixes for tool-heavy first turns, silent compress-status during session switch (#2185), concurrent-send loss fix (#2186), in-transcript steer message badges (#2187), and a string of frontend polish fixes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Jordan-SkyLF&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@Jordan-SkyLF&lt;/a&gt;&lt;/strong&gt; — Live streaming + UX polish (12 PRs, &lt;code&gt;v0.50.18&lt;/code&gt; → &lt;code&gt;v0.51.66&lt;/code&gt;)
+Original sprint of workspace fallback resolution, live reasoning cards (#366, #367, #394–#397), then a recent burst: manual &amp;ldquo;Refresh usage&amp;rdquo; button on the Provider quota card (#2150), cancelled-turn status classification (#2151), Firefox sidebar scroll stabilization (#2200), early provisional session titles (#2202), target-aware &amp;ldquo;What&amp;rsquo;s new?&amp;rdquo; update-banner links (#2207), and MCP tools overflow fix in Settings (#2210).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/aronprins&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@aronprins&lt;/a&gt;&lt;/strong&gt; — &lt;code&gt;v0.50.0&lt;/code&gt; UI overhaul (PR #242, plus 9 follow-ups)
+The biggest single contribution to the project: a complete UI redesign that moved model/profile/workspace controls into the composer footer, replaced the gear-icon settings panel with the Hermes Control Center (tabbed modal), removed the activity bar in favor of inline composer status, redesigned the session list with a &lt;code&gt;⋯&lt;/code&gt; action dropdown, and added the workspace panel state machine. Plus chat transcript redesign (#587), sidebar declutter (#584), three-column layout refactor (#899), light/dark theme + accent skins (#627), and shared &lt;code&gt;confirm()&lt;/code&gt;/&lt;code&gt;prompt()&lt;/code&gt; dialog replacement (PR #251 extracted from #242).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/iRonin&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@iRonin&lt;/a&gt;&lt;/strong&gt; — Security hardening sprint (PRs #196–#204)
+Six consecutive, focused security PRs: session memory leak fix (expired token pruning), CSP + Permissions-Policy headers, 30-second slow-client connection timeout, optional HTTPS/TLS support via environment variables, upstream branch tracking fix for self-update, and CLI session support in the file-browser API. The kind of focused, high-quality security work that makes a self-hosted tool trustworthy.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/lucasrc&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@lucasrc&lt;/a&gt;&lt;/strong&gt; — Auth-hardening trilogy (PRs #2191, #2192, #2193)
+Three coordinated security PRs that all landed in v0.51.57: thread-safe login rate limiter with PBKDF2 key separation, password-hash cache invalidation on Settings save, and the full 64-char HMAC-SHA256 session signature with a backwards-compatible migration bridge. The kind of cleanly-decomposed security work that&amp;rsquo;s reviewable as three independent pieces.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/LumenYoung&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@LumenYoung&lt;/a&gt;&lt;/strong&gt; — Streaming hot-path correctness (8 PRs, &lt;code&gt;v0.51.47&lt;/code&gt; → &lt;code&gt;v0.51.99&lt;/code&gt;)
+The original stale-stream writeback guard (#2136 — the bug class the next two releases extended), gateway-state alive-null classification (#2075), compression-banner anchor alignment (#2182), and context-progress ring auto-refresh on compression complete (#2188). Each PR opened a small surgical fix in one of the most fragile subsystems in the codebase.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dobby-d-elf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@dobby-d-elf&lt;/a&gt;&lt;/strong&gt; — Frontend reliability + motion polish (15 PRs, &lt;code&gt;v0.51.38&lt;/code&gt; → &lt;code&gt;v0.51.161&lt;/code&gt;)
+Workspace fallback on deleted directories (#2138), iPhone PWA bottom-scroll fix (#2143), the new &amp;ldquo;Activity: X tools&amp;rdquo; composer footer shimmer animation (#2203), and follow-up animation tuning (#2212).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/JKJameson&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@JKJameson&lt;/a&gt;&lt;/strong&gt; — Composer + session polish (10 PRs)
+Persistent composer draft per session (#1956), and a long tail of polish across the composer and session sidebar.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/gabogabucho&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@gabogabucho&lt;/a&gt;&lt;/strong&gt; — Spanish locale + onboarding wizard
+Full Spanish (&lt;code&gt;es&lt;/code&gt;) locale covering all UI strings, plus the one-shot bootstrap onboarding wizard that guides new users through provider setup on first launch.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/deboste&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@deboste&lt;/a&gt;&lt;/strong&gt; — Reverse-proxy auth + mobile responsive layout (PRs #3, #4, #5)
+Three of the very first community PRs: fixed EventSource/fetch to use URL origin for reverse-proxy setups, corrected model provider routing from config, and added mobile responsive layout with dvh viewport fix. Early foundation work.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/indigokarasu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@indigokarasu&lt;/a&gt;&lt;/strong&gt; — Visual redesign proposal (PR #213)
+A CSS-only redesign of the full UI — proper design tokens, an icon rail sidebar replacing the emoji tab strip, consistent form cards, breadcrumb nav, and 7 built-in themes as custom properties. The PR didn&amp;rsquo;t merge as-is but shaped the design language and theme architecture that shipped in v0.50.0.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/zenc-cp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@zenc-cp&lt;/a&gt;&lt;/strong&gt; — Anti-hallucination guard for the ReAct loop (PR #133)
+A three-layer approach (ephemeral anti-hallucination prompt, live token filtering, session-history cleanup) that the streaming pipeline still uses.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Hinotoi-agent&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@Hinotoi-agent&lt;/a&gt;&lt;/strong&gt; — Profile + session security (PRs #351, #2048)
+Profile &lt;code&gt;.env&lt;/code&gt; secret isolation fix (PR #351) preventing API key leakage between profiles, and session-import workspace validation (PR #2048) blocking a crafted-JSON file-read against &lt;code&gt;/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Sanjays2402&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@Sanjays2402&lt;/a&gt;&lt;/strong&gt; — Endless-scroll + Start-jump race fix (PR #1949)
+A generation-token + mutex pair fixing the v0.51.30 race between endless-scroll prefetch and Start-jump&amp;rsquo;s &lt;code&gt;_ensureAllMessagesLoaded&lt;/code&gt;. The naive same-flag-check approach (proposed in #1942 and #1962) was a no-op for the post-await race — Sanjays2402&amp;rsquo;s fix was the correct shape.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/fxd-jason&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@fxd-jason&lt;/a&gt;&lt;/strong&gt; — Real-time approval + clarify via SSE (PRs #1350, #1355)
+Replaced 1.5s HTTP polling with SSE long-connections for both approval and clarify, cutting latency from up to 1.5s to near-instant. Got all the correctness details right (atomic subscribe + snapshot, notify-inside-lock, head-of-queue payload, trailing event re-emission).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/happy5318&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@happy5318&lt;/a&gt;&lt;/strong&gt; — Custom provider model dedup (PR #1947)
+Fixed the same model from different named custom providers being silently deduplicated in the picker, with Opus catching a race in the original tests that needed augmentation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NocGeek&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@NocGeek&lt;/a&gt;&lt;/strong&gt; — Streaming scroll + manual cron output persistence (7 PRs)
+Streaming scroll viewport stability when tool/queue cards insert (#1360), manual cron-run output and metadata persistence (#1372, split from held #1352).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/DavidSchuchert&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@DavidSchuchert&lt;/a&gt;&lt;/strong&gt; — German translation (PR #190)
+Complete German locale (&lt;code&gt;de&lt;/code&gt;) covering all UI strings, settings labels, commands, and system messages — and stress-tested the i18n system, exposing several elements that weren&amp;rsquo;t yet translatable and getting them fixed as part of the same PR.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Bobby9228&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@Bobby9228&lt;/a&gt;&lt;/strong&gt; — Mobile Profiles button (PR #265)
+Added the Profiles entry to the mobile navigation flow, making profile switching reachable on phones.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/kevin-ho&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@kevin-ho&lt;/a&gt;&lt;/strong&gt; — OLED theme (PR #168)
+The 7th built-in theme: pure black backgrounds with warm accents tuned to reduce burn-in risk.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/andrewy-wizard&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@andrewy-wizard&lt;/a&gt;&lt;/strong&gt; — Chinese localization (PR #177)
+Initial Simplified Chinese (&lt;code&gt;zh&lt;/code&gt;) locale. One of the first non-English locales.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/DelightRun&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@DelightRun&lt;/a&gt;&lt;/strong&gt; — &lt;code&gt;session_search&lt;/code&gt; fix for WebUI sessions (PR #356)
+Tracked down the missing &lt;code&gt;SessionDB&lt;/code&gt; injection in the streaming path that was silently breaking the tool for every WebUI session.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/lawrencel1ng&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@lawrencel1ng&lt;/a&gt;&lt;/strong&gt; — Bandit security fixes (PR #354)
+Systematic bandit-scan fixes: URL scheme validation before &lt;code&gt;urlopen&lt;/code&gt;, MD5 &lt;code&gt;usedforsecurity=False&lt;/code&gt;, and 40+ bare &lt;code&gt;except: pass&lt;/code&gt; blocks replaced with proper logging.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/shaoxianbilly&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@shaoxianbilly&lt;/a&gt;&lt;/strong&gt; — Unicode filename downloads (PR #378)
+Proper &lt;code&gt;Content-Disposition&lt;/code&gt; with RFC 5987 &lt;code&gt;filename*=UTF-8&#39;&#39;...&lt;/code&gt; encoding so non-ASCII filenames download without crashing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/lx3133584&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@lx3133584&lt;/a&gt;&lt;/strong&gt; — CSRF fix for reverse proxy (PR #360)
+A real-world blocker for anyone hosting behind Nginx Proxy Manager or similar on a port other than 80/443.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/betamod&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@betamod&lt;/a&gt;&lt;/strong&gt; — Security audit (PR #171)
+A comprehensive CSRF / SSRF / XSS / env-race-condition audit that shipped in v0.39.0.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/TaraTheStar&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@TaraTheStar&lt;/a&gt;&lt;/strong&gt; — Bot name + thinking blocks + login refactor (PRs #132, #176, #181)
+Configurable assistant display name, thinking/reasoning block display, and a login page refactor.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;repo&#34;&gt;Repo
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git@github.com:nesquena/hermes-webui.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>GenericAgent</title>
+        <link>https://producthunt.programnotes.cn/en/p/genericagent/</link>
+        <pubDate>Sat, 18 Apr 2026 16:04:28 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/genericagent/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1572593685472-e0721d6c1bac?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY0OTk0NDV8&amp;ixlib=rb-4.1.0" alt="Featured image of post GenericAgent" /&gt;&lt;h1 id=&#34;lsdefinegenericagent&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/lsdefine/GenericAgent&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;lsdefine/GenericAgent&lt;/a&gt;
+&lt;/h1&gt;&lt;div align=&#34;center&#34;&gt;
+&lt;img src=&#34;assets/images/bar.jpg&#34; width=&#34;880&#34;/&gt;
+&lt;p&gt;&lt;a href=&#34;https://trendshift.io/repositories/25944&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://trendshift.io/api/badge/repositories/25944&#34; alt=&#34;lsdefine%2FGenericAgent | Trendshift&#34; style=&#34;width: 250px; height: 55px;&#34; width=&#34;250&#34; height=&#34;55&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;a href=&#34;#english&#34;&gt;English&lt;/a&gt; | &lt;a href=&#34;#chinese&#34;&gt;中文&lt;/a&gt; | 📄 &lt;a href=&#34;assets/GenericAgent_Technical_Report.pdf&#34;&gt;Technical Report&lt;/a&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a name=&#34;english&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-overview&#34;&gt;🌟 Overview
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;GenericAgent&lt;/strong&gt; is a minimal, self-evolving autonomous agent framework. Its core is just &lt;strong&gt;~3K lines of code&lt;/strong&gt;. Through &lt;strong&gt;9 atomic tools + a ~100-line Agent Loop&lt;/strong&gt;, it grants any LLM system-level control over a local computer — covering browser, terminal, filesystem, keyboard/mouse input, screen vision, and mobile devices (ADB).&lt;/p&gt;
+&lt;p&gt;Its design philosophy: &lt;strong&gt;don&amp;rsquo;t preload skills — evolve them.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Every time GenericAgent solves a new task, it automatically crystallizes the execution path into an skill for direct reuse later. The longer you use it, the more skills accumulate — forming a skill tree that belongs entirely to you, grown from 3K lines of seed code.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;🤖 Self-Bootstrap Proof&lt;/strong&gt; — Everything in this repository, from installing Git and running &lt;code&gt;git init&lt;/code&gt; to every commit message, was completed autonomously by GenericAgent. The author never opened a terminal once.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;-core-features&#34;&gt;📋 Core Features
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Self-Evolving&lt;/strong&gt;: Automatically crystallizes each task into an skill. Capabilities grow with every use, forming your personal skill tree.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Minimal Architecture&lt;/strong&gt;: ~3K lines of core code. Agent Loop is ~100 lines. No complex dependencies, zero deployment overhead.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Strong Execution&lt;/strong&gt;: Injects into a real browser (preserving login sessions). 9 atomic tools take direct control of the system.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;High Compatibility&lt;/strong&gt;: Supports Claude / Gemini / Kimi / MiniMax and other major models. Cross-platform.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Token Efficient&lt;/strong&gt;: &amp;lt;30K context window — a fraction of the 200K–1M other agents consume. Layered memory ensures the right knowledge is always in scope. Less noise, fewer hallucinations, higher success rate — at a fraction of the cost.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-self-evolution-mechanism&#34;&gt;🧬 Self-Evolution Mechanism
+&lt;/h2&gt;&lt;p&gt;This is what fundamentally distinguishes GenericAgent from every other agent framework.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[New Task] --&amp;gt; [Autonomous Exploration] (install deps, write scripts, debug &amp;amp; verify) --&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Crystallize Execution Path into skill] --&amp;gt; [Write to Memory Layer] --&amp;gt; [Direct Recall on Next Similar Task]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;What you say&lt;/th&gt;
+					&lt;th&gt;What the agent does the first time&lt;/th&gt;
+					&lt;th&gt;Every time after&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;em&gt;&amp;ldquo;Read my WeChat messages&amp;rdquo;&lt;/em&gt;&lt;/td&gt;
+					&lt;td&gt;Install deps → reverse DB → write read script → save skill&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;one-line invoke&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;em&gt;&amp;ldquo;Monitor stocks and alert me&amp;rdquo;&lt;/em&gt;&lt;/td&gt;
+					&lt;td&gt;Install mootdx → build selection flow → configure cron → save skill&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;one-line start&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;em&gt;&amp;ldquo;Send this file via Gmail&amp;rdquo;&lt;/em&gt;&lt;/td&gt;
+					&lt;td&gt;Configure OAuth → write send script → save skill&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;ready to use&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;After a few weeks, your agent instance will have a skill tree no one else in the world has — all grown from 3K lines of seed code.&lt;/p&gt;
+&lt;h5 id=&#34;-demo-showcase&#34;&gt;🎯 Demo Showcase
+&lt;/h5&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;🧋 Food Delivery Order&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;📈 Quantitative Stock Screening&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;assets/demo/order_tea.gif&#34; width=&#34;100%&#34; alt=&#34;Order Tea&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;assets/demo/selectstock.gif&#34; width=&#34;100%&#34; alt=&#34;Stock Selection&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;em&gt;&amp;ldquo;Order me a milk tea&amp;rdquo;&lt;/em&gt; — Navigates the delivery app, selects items, and completes checkout automatically.&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;em&gt;&amp;ldquo;Find GEM stocks with EXPMA golden cross, turnover &amp;gt; 5%&amp;rdquo;&lt;/em&gt; — Screens stocks with quantitative conditions.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;🌐 Autonomous Web Exploration&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;💰 Expense Tracking&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;assets/demo/autonomous_explore.png&#34; width=&#34;100%&#34; alt=&#34;Web Exploration&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;assets/demo/alipay_expense.png&#34; width=&#34;100%&#34; alt=&#34;Alipay Expense&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Autonomously browses and periodically summarizes web content.&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;em&gt;&amp;ldquo;Find expenses over ¥2K in the last 3 months&amp;rdquo;&lt;/em&gt; — Drives Alipay via ADB.&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-latest-news&#34;&gt;📅 Latest News
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;2026-04-11:&lt;/strong&gt; Introduced &lt;strong&gt;L4 session archive memory&lt;/strong&gt; and scheduler cron integration&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-03-23:&lt;/strong&gt; Support personal WeChat as a bot frontend&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-03-10:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/s/q2gQ7YvWoiAcwxzaiwpuiQ?scene=1&amp;amp;click_id=7&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Released million-scale Skill Library&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-03-08:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/s/eiEhwo-j6S-WpLxgBnNxBg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Released &amp;ldquo;Dintal Claw&amp;rdquo; — a GenericAgent-powered government affairs bot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-03-01:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/s/uVWpTTF5I1yzAENV_qm7yg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GenericAgent featured by Jiqizhixin (机器之心)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-01-16:&lt;/strong&gt; GenericAgent V1.0 public release&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-quick-start&#34;&gt;🚀 Quick Start
+&lt;/h2&gt;&lt;h4 id=&#34;method-1-standard-installation&#34;&gt;Method 1: Standard Installation
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1. Clone the repo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/lsdefine/GenericAgent.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; GenericAgent
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2. Install minimal dependencies&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install streamlit pywebview
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 3. Configure API Key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp mykey_template.py mykey.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Edit mykey.py and fill in your LLM API Key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 4. Launch&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python launch.pyw
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Full guide: &lt;a class=&#34;link&#34; href=&#34;GETTING_STARTED.md&#34; &gt;GETTING_STARTED.md&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-bot-interface-optional&#34;&gt;🤖 Bot Interface (Optional)
+&lt;/h2&gt;&lt;h3 id=&#34;telegram-bot&#34;&gt;Telegram Bot
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# mykey.py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;tg_bot_token&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;YOUR_BOT_TOKEN&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;tg_allowed_users&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;YOUR_USER_ID&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python frontends/tgapp.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;alternative-app-frontends&#34;&gt;Alternative App Frontends
+&lt;/h3&gt;&lt;p&gt;Besides the default Streamlit web UI, you can also try other frontend styles:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python frontends/qtapp.py                &lt;span class=&#34;c1&#34;&gt;# Qt-based desktop app&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;streamlit run frontends/stapp2.py        &lt;span class=&#34;c1&#34;&gt;# Alternative Streamlit UI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;-comparison-with-similar-tools&#34;&gt;📊 Comparison with Similar Tools
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Feature&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;GenericAgent&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;OpenClaw&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;Claude Code&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Codebase&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;~3K lines&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;~530,000 lines&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Open-sourced (large)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Deployment&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;pip install&lt;/code&gt; + API Key&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Multi-service orchestration&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;CLI + subscription&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Browser Control&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Real browser (session preserved)&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Sandbox / headless browser&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Via MCP plugin&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;OS Control&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Mouse/kbd, vision, ADB&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Multi-agent delegation&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;File + terminal&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Self-Evolution&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Autonomous skill growth&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Plugin ecosystem&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Stateless between sessions&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Out of the Box&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;A few core files + starter skills&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Hundreds of modules&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Rich CLI toolset&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-how-it-works&#34;&gt;🧠 How It Works
+&lt;/h2&gt;&lt;p&gt;GenericAgent accomplishes complex tasks through &lt;strong&gt;Layered Memory × Minimal Toolset × Autonomous Execution Loop&lt;/strong&gt;, continuously accumulating experience during execution.&lt;/p&gt;
+&lt;p&gt;1️⃣ &lt;strong&gt;Layered Memory System&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Memory crystallizes throughout task execution, letting the agent build stable, efficient working patterns over time.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;L0 — Meta Rules&lt;/strong&gt;: Core behavioral rules and system constraints of the agent&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;L1 — Insight Index&lt;/strong&gt;: Minimal memory index for fast routing and recall&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;L2 — Global Facts&lt;/strong&gt;: Stable knowledge accumulated over long-term operation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;L3 — Task Skills / SOPs&lt;/strong&gt;: Reusable workflows for completing specific task types&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;L4 — Session Archive&lt;/strong&gt;: Archived task records distilled from finished sessions for long-horizon recall&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2️⃣ &lt;strong&gt;Autonomous Execution Loop&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Perceive environment state → Task reasoning → Execute tools → Write experience to memory → Loop&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The entire core loop is just &lt;strong&gt;~100 lines of code&lt;/strong&gt; (&lt;code&gt;agent_loop.py&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;3️⃣ &lt;strong&gt;Minimal Toolset&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;GenericAgent provides only &lt;strong&gt;9 atomic tools&lt;/strong&gt;, forming the foundational capabilities for interacting with the outside world.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Tool&lt;/th&gt;
+					&lt;th&gt;Function&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;code_run&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Execute arbitrary code&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_read&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Read files&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_write&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Write files&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_patch&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Patch / modify files&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;web_scan&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Perceive web content&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;web_execute_js&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Control browser behavior&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;ask_user&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Human-in-the-loop confirmation&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Additionally, 2 &lt;strong&gt;memory management tools&lt;/strong&gt; (&lt;code&gt;update_working_checkpoint&lt;/code&gt;, &lt;code&gt;start_long_term_update&lt;/code&gt;) allow the agent to persist context and accumulate experience across sessions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;4️⃣ &lt;strong&gt;Capability Extension Mechanism&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Capable of dynamically creating new tools.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Via &lt;code&gt;code_run&lt;/code&gt;, GenericAgent can dynamically install Python packages, write new scripts, call external APIs, or control hardware at runtime — crystallizing temporary abilities into permanent tools.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+  &lt;img src=&#34;assets/images/workflow.jpg&#34; alt=&#34;GenericAgent Workflow&#34; width=&#34;400&#34;/&gt;
+  &lt;br&gt;&lt;em&gt;GenericAgent Workflow Diagram&lt;/em&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;-support&#34;&gt;⭐ Support
+&lt;/h2&gt;&lt;p&gt;If this project helped you, please consider leaving a &lt;strong&gt;Star!&lt;/strong&gt; 🙏&lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;re also welcome to join our &lt;strong&gt;GenericAgent Community Group&lt;/strong&gt; for discussion, feedback, and co-building 👏&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;WeChat Group 5&lt;/strong&gt;&lt;br&gt;&lt;img src=&#34;assets/images/wechat_group5.jpg&#34; alt=&#34;WeChat Group 5 QR Code&#34; width=&#34;250&#34;/&gt;&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;WeChat Group 6&lt;/strong&gt;&lt;br&gt;&lt;img src=&#34;assets/images/wechat_group6.jpg&#34; alt=&#34;WeChat Group 6 QR Code&#34; width=&#34;250&#34;/&gt;&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;WeChat Group 7&lt;/strong&gt;&lt;br&gt;&lt;img src=&#34;assets/images/wechat_group7.jpg&#34; alt=&#34;WeChat Group 7 QR Code&#34; width=&#34;250&#34;/&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;-friendly-links&#34;&gt;🚩 Friendly Links
+&lt;/h2&gt;&lt;p&gt;Thanks for the support from the LinuxDo community!&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linux.do/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/%e7%a4%be%e5%8c%ba-LinuxDo-blue?style=for-the-badge&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;LinuxDo&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-license&#34;&gt;📄 License
+&lt;/h2&gt;&lt;p&gt;MIT License — see &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a name=&#34;chinese&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-项目简介&#34;&gt;🌟 项目简介
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;GenericAgent&lt;/strong&gt; 是一个极简、可自我进化的自主 Agent 框架。核心仅 &lt;strong&gt;~3K 行代码&lt;/strong&gt;，通过 &lt;strong&gt;9 个原子工具 + ~100 行 Agent Loop&lt;/strong&gt;，赋予任意 LLM 对本地计算机的系统级控制能力，覆盖浏览器、终端、文件系统、键鼠输入、屏幕视觉及移动设备。&lt;/p&gt;
+&lt;p&gt;它的设计哲学是：&lt;strong&gt;不预设技能，靠进化获得能力。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;每解决一个新任务，GenericAgent 就将执行路径自动固化为 Skill，供后续直接调用。使用时间越长，沉淀的技能越多，形成一棵完全属于你、从 3K 行种子代码生长出来的专属技能树。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;🤖 自举实证&lt;/strong&gt; — 本仓库的一切，从安装 Git、&lt;code&gt;git init&lt;/code&gt; 到每一条 commit message，均由 GenericAgent 自主完成。作者全程未打开过一次终端。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;-核心特性&#34;&gt;📋 核心特性
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;自我进化&lt;/strong&gt;: 每次任务自动沉淀 Skill，能力随使用持续增长，形成专属技能树&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;极简架构&lt;/strong&gt;: ~3K 行核心代码，Agent Loop 约百行，无复杂依赖，部署零负担&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;强执行力&lt;/strong&gt;: 注入真实浏览器（保留登录态），9 个原子工具直接接管系统&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;高兼容性&lt;/strong&gt;: 支持 Claude / Gemini / Kimi / MiniMax 等主流模型，跨平台运行&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;极致省 Token&lt;/strong&gt;: 上下文窗口不到 30K，是其他 Agent（200K–1M）的零头。分层记忆让关键信息始终在场——噪声更少，幻觉更低，成功率反而更高，而成本低一个数量级。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-自我进化机制&#34;&gt;🧬 自我进化机制
+&lt;/h2&gt;&lt;p&gt;这是 GenericAgent 区别于其他 Agent 框架的根本所在。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[遇到新任务]--&amp;gt;[自主摸索](安装依赖、编写脚本、调试验证)--&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[将执行路径固化为 Skill]--&amp;gt;[写入记忆层]--&amp;gt;[下次同类任务直接调用]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;你说的一句话&lt;/th&gt;
+					&lt;th&gt;Agent 第一次做了什么&lt;/th&gt;
+					&lt;th&gt;之后每次&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;em&gt;&amp;ldquo;监控股票并提醒我&amp;rdquo;&lt;/em&gt;&lt;/td&gt;
+					&lt;td&gt;安装 mootdx → 构建选股流程 → 配置定时任务 → 保存 Skill&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;一句话启动&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;em&gt;&amp;ldquo;用 Gmail 发这个文件&amp;rdquo;&lt;/em&gt;&lt;/td&gt;
+					&lt;td&gt;配置 OAuth → 编写发送脚本 → 保存 Skill&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;直接可用&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;用几周后，你的 Agent 实例将拥有一套任何人都没有的专属技能树，全部从 3K 行种子代码中生长而来。&lt;/p&gt;
+&lt;!-- | *&#34;帮我读取微信消息&#34;* | 安装依赖 → 逆向数据库 → 写读取脚本 → 保存 Skill | **一句话调用** | --&gt;
+&lt;h4 id=&#34;-实例展示&#34;&gt;🎯 实例展示
+&lt;/h4&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;🧋 外卖下单&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;📈 量化选股&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;assets/demo/order_tea.gif&#34; width=&#34;100%&#34; alt=&#34;Order Tea&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;assets/demo/selectstock.gif&#34; width=&#34;100%&#34; alt=&#34;Stock Selection&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;em&gt;&amp;ldquo;Order me a milk tea&amp;rdquo;&lt;/em&gt; — 自动导航外卖 App，选品并完成结账&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;em&gt;&amp;ldquo;Find GEM stocks with EXPMA golden cross, turnover &amp;gt; 5%&amp;rdquo;&lt;/em&gt; — 量化条件筛股&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;🌐 自主网页探索&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;💰 支出追踪&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;assets/demo/autonomous_explore.png&#34; width=&#34;100%&#34; alt=&#34;Web Exploration&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;assets/demo/alipay_expense.png&#34; width=&#34;100%&#34; alt=&#34;Alipay Expense&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;自主浏览并定时汇总网页信息&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;em&gt;&amp;ldquo;查找近 3 个月超 ¥2K 的支出&amp;rdquo;&lt;/em&gt; — 通过 ADB 驱动支付宝&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-最新动态&#34;&gt;📅 最新动态
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;2026-04-11:&lt;/strong&gt; 引入 &lt;strong&gt;L4 会话归档记忆&lt;/strong&gt;，并接入 scheduler cron 调度&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-03-23:&lt;/strong&gt; 支持个人微信接入作为 Bot 前端&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-03-10:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/s/q2gQ7YvWoiAcwxzaiwpuiQ?scene=1&amp;amp;click_id=7&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;发布百万级 Skill 库&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-03-08:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/s/eiEhwo-j6S-WpLxgBnNxBg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;发布以 GenericAgent 为核心的&amp;quot;政务龙虾&amp;quot; Dintal Claw&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-03-01:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/s/uVWpTTF5I1yzAENV_qm7yg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GenericAgent 被机器之心报道&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-01-16:&lt;/strong&gt; GenericAgent V1.0 公开版本发布&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-快速开始&#34;&gt;🚀 快速开始
+&lt;/h2&gt;&lt;h4 id=&#34;方法一标准安装&#34;&gt;方法一：标准安装
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1. 克隆仓库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/lsdefine/GenericAgent.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; GenericAgent
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2. 安装最小依赖&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install streamlit pywebview
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 3. 配置 API Key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp mykey_template.py mykey.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 编辑 mykey.py，填入你的 LLM API Key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 4. 启动&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python launch.pyw
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;完整引导流程见 &lt;a class=&#34;link&#34; href=&#34;GETTING_STARTED.md&#34; &gt;GETTING_STARTED.md&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;📖 新手使用指南（图文版）：&lt;a class=&#34;link&#34; href=&#34;https://my.feishu.cn/wiki/CGrDw0T76iNFuskmwxdcWrpinPb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;飞书文档&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-bot-接口可选&#34;&gt;🤖 Bot 接口（可选）
+&lt;/h2&gt;&lt;h3 id=&#34;微信-bot个人微信&#34;&gt;微信 Bot（个人微信）
+&lt;/h3&gt;&lt;p&gt;无需额外配置，扫码登录即可：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install pycryptodome qrcode requests
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python frontends/wechatapp.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;首次启动会弹出二维码，用微信扫码完成绑定。之后通过微信消息与 Agent 交互。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;qq-bot&#34;&gt;QQ Bot
+&lt;/h3&gt;&lt;p&gt;使用 &lt;code&gt;qq-botpy&lt;/code&gt; WebSocket 长连接，&lt;strong&gt;无需公网 webhook&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install qq-botpy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在 &lt;code&gt;mykey.py&lt;/code&gt; 中补充：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;qq_app_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;YOUR_APP_ID&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;qq_app_secret&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;YOUR_APP_SECRET&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;qq_allowed_users&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;YOUR_USER_OPENID&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 或 [&amp;#39;*&amp;#39;] 公开访问&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python frontends/qqapp.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;在 &lt;a class=&#34;link&#34; href=&#34;https://q.qq.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;QQ 开放平台&lt;/a&gt; 创建机器人获取 AppID / AppSecret。首次消息后，用户 openid 记录于 &lt;code&gt;temp/qqapp.log&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;飞书lark&#34;&gt;飞书（Lark）
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install lark-oapi
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python frontends/fsapp.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fs_app_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;cli_xxx&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fs_app_secret&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;xxx&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fs_allowed_users&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;ou_xxx&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 或 [&amp;#39;*&amp;#39;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;入站支持&lt;/strong&gt;：文本、富文本 post、图片、文件、音频、media、交互卡片 / 分享卡片&lt;br&gt;
+&lt;strong&gt;出站支持&lt;/strong&gt;：流式进度卡片、图片回传、文件 / media 回传&lt;br&gt;
+&lt;strong&gt;视觉模型&lt;/strong&gt;：图片首轮以真正的多模态输入发送给兼容 OpenAI Vision 的后端&lt;/p&gt;
+&lt;p&gt;详细配置见 &lt;a class=&#34;link&#34; href=&#34;assets/SETUP_FEISHU.md&#34; &gt;assets/SETUP_FEISHU.md&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;企业微信wecom&#34;&gt;企业微信（WeCom）
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install wecom_aibot_sdk
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python frontends/wecomapp.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wecom_bot_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;your_bot_id&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wecom_secret&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;your_bot_secret&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wecom_allowed_users&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;your_user_id&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wecom_welcome_message&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;你好，我在线上。&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;钉钉dingtalk&#34;&gt;钉钉（DingTalk）
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install dingtalk-stream
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python frontends/dingtalkapp.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dingtalk_client_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;your_app_key&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dingtalk_client_secret&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;your_app_secret&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dingtalk_allowed_users&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;your_staff_id&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 或 [&amp;#39;*&amp;#39;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;其他-app-前端&#34;&gt;其他 App 前端
+&lt;/h3&gt;&lt;p&gt;除默认的 Streamlit Web UI 外，还可以尝试不同风格的前端：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python frontends/qtapp.py                &lt;span class=&#34;c1&#34;&gt;# 基于 Qt 的桌面应用&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;streamlit run frontends/stapp2.py        &lt;span class=&#34;c1&#34;&gt;# 另一种 Streamlit 风格 UI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;-与同类产品对比&#34;&gt;📊 与同类产品对比
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;特性&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;GenericAgent&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;OpenClaw&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;Claude Code&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;代码量&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;~3K 行&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;~530,000 行&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;已开源（体量大）&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;部署方式&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;&lt;code&gt;pip install&lt;/code&gt; + API Key&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;多服务编排&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;CLI + 订阅&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;浏览器控制&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;注入真实浏览器（保留登录态）&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;沙箱 / 无头浏览器&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;通过 MCP 插件&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;OS 控制&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;键鼠、视觉、ADB&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;多 Agent 委派&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;文件 + 终端&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;自我进化&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;自主生长 Skill 和工具&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;插件生态&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;会话间无状态&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;出厂配置&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;几个核心文件 + 少量初始 Skills&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;数百模块&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;丰富 CLI 工具集&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-工作机制&#34;&gt;🧠 工作机制
+&lt;/h2&gt;&lt;p&gt;GenericAgent 通过&lt;strong&gt;分层记忆 × 最小工具集 × 自主执行循环&lt;/strong&gt;完成复杂任务，并在执行过程中持续积累经验。&lt;/p&gt;
+&lt;p&gt;1️⃣ &lt;strong&gt;分层记忆系统&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;记忆在任务执行过程中持续沉淀，使 Agent 逐步形成稳定且高效的工作方式&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;L0 — 元规则（Meta Rules）&lt;/strong&gt;：Agent 的基础行为规则和系统约束&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;L1 — 记忆索引（Insight Index）&lt;/strong&gt;：极简索引层，用于快速路由与召回&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;L2 — 全局事实（Global Facts）&lt;/strong&gt;：在长期运行过程中积累的稳定知识&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;L3 — 任务 Skills / SOPs&lt;/strong&gt;：完成特定任务类型的可复用流程&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;L4 — 会话归档（Session Archive）&lt;/strong&gt;：从已完成任务中提炼出的归档记录，用于长程召回&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2️⃣ &lt;strong&gt;自主执行循环&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;感知环境状态  →  任务推理  →  调用工具执行  →  经验写入记忆  →  循环&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;整个核心循环仅 &lt;strong&gt;约百行代码&lt;/strong&gt;（&lt;code&gt;agent_loop.py&lt;/code&gt;）。&lt;/p&gt;
+&lt;p&gt;3️⃣ &lt;strong&gt;最小工具集&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GenericAgent 仅提供 &lt;strong&gt;9 个原子工具&lt;/strong&gt;，构成与外部世界交互的基础能力&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;工具&lt;/th&gt;
+					&lt;th&gt;功能&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;code_run&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;执行任意代码&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_read&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;读取文件&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_write&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;写入文件&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;file_patch&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;修改文件&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;web_scan&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;感知网页内容&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;web_execute_js&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;控制浏览器行为&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;ask_user&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;人机协作确认&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;此外，还有 2 个&lt;strong&gt;记忆管理工具&lt;/strong&gt;（&lt;code&gt;update_working_checkpoint&lt;/code&gt;、&lt;code&gt;start_long_term_update&lt;/code&gt;），使 Agent 能够跨会话积累经验、维持持久上下文。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;4️⃣ &lt;strong&gt;能力扩展机制&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;具备动态创建新的工具能力&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;通过 &lt;code&gt;code_run&lt;/code&gt;，GenericAgent 可在运行时动态安装 Python 包、编写新脚本、调用外部 API 或控制硬件，将临时能力固化为永久工具。&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+  &lt;img src=&#34;assets/images/workflow.jpg&#34; alt=&#34;GenericAgent 工作流程&#34; width=&#34;400&#34;/&gt;
+  &lt;br&gt;&lt;em&gt;GenericAgent 工作流程图&lt;/em&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;-支持&#34;&gt;⭐ 支持
+&lt;/h2&gt;&lt;p&gt;如果这个项目对您有帮助，欢迎点一个 &lt;strong&gt;Star!&lt;/strong&gt; 🙏&lt;/p&gt;
+&lt;p&gt;同时也欢迎加入我们的&lt;strong&gt;GenericAgent体验交流群&lt;/strong&gt;，一起交流、反馈和共建 👏&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;微信群 5&lt;/strong&gt;&lt;br&gt;&lt;img src=&#34;assets/images/wechat_group5.jpg&#34; alt=&#34;微信群 5 二维码&#34; width=&#34;250&#34;/&gt;&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;微信群 6&lt;/strong&gt;&lt;br&gt;&lt;img src=&#34;assets/images/wechat_group6.jpg&#34; alt=&#34;微信群 6 二维码&#34; width=&#34;250&#34;/&gt;&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;&lt;strong&gt;微信群 7&lt;/strong&gt;&lt;br&gt;&lt;img src=&#34;assets/images/wechat_group7.jpg&#34; alt=&#34;微信群 7 二维码&#34; width=&#34;250&#34;/&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;-友情链接&#34;&gt;🚩 友情链接
+&lt;/h2&gt;&lt;p&gt;感谢 &lt;strong&gt;LinuxDo&lt;/strong&gt; 社区的支持！&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://linux.do/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/%e7%a4%be%e5%8c%ba-LinuxDo-blue?style=for-the-badge&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;LinuxDo&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-许可&#34;&gt;📄 许可
+&lt;/h2&gt;&lt;p&gt;MIT License — 详见 &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-star-history&#34;&gt;📈 Star History
+&lt;/h2&gt;&lt;a href=&#34;https://star-history.com/#lsdefine/GenericAgent&amp;Date&#34;&gt;
+ &lt;picture&gt;
+   &lt;source media=&#34;(prefers-color-scheme: dark)&#34; srcset=&#34;https://api.star-history.com/svg?repos=lsdefine/GenericAgent&amp;type=Date&amp;theme=dark&#34; /&gt;
+   &lt;source media=&#34;(prefers-color-scheme: light)&#34; srcset=&#34;https://api.star-history.com/svg?repos=lsdefine/GenericAgent&amp;type=Date&#34; /&gt;
+   &lt;img alt=&#34;Star History Chart&#34; src=&#34;https://api.star-history.com/svg?repos=lsdefine/GenericAgent&amp;type=Date&#34; /&gt;
+ &lt;/picture&gt;
+&lt;/a&gt;
+</description>
+        </item>
+        <item>
+        <title>intentkit</title>
+        <link>https://producthunt.programnotes.cn/en/p/intentkit/</link>
+        <pubDate>Sun, 13 Apr 2025 15:25:48 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/intentkit/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1670782559267-d4c1ef138060?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ1MjkwODV8&amp;ixlib=rb-4.0.3" alt="Featured image of post intentkit" /&gt;&lt;h1 id=&#34;crestalnetworkintentkit&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/crestalnetwork/intentkit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;crestalnetwork/intentkit&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;intentkit&#34;&gt;IntentKit
+&lt;/h1&gt;&lt;div align=&#34;center&#34;&gt;
+  &lt;img src=&#34;docs/images/intentkit_banner.png&#34; alt=&#34;IntentKit by Crestal&#34; width=&#34;100%&#34; /&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;p&gt;IntentKit is an autonomous agent framework that enables the creation and management of AI agents with various capabilities including blockchain interaction, social media management, and custom skill integration.&lt;/p&gt;
+&lt;h2 id=&#34;alpha-warning&#34;&gt;Alpha Warning
+&lt;/h2&gt;&lt;p&gt;This project is currently in alpha stage and is not recommended for production use.&lt;/p&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;🤖 Multiple Agent Support&lt;/li&gt;
+&lt;li&gt;🔄 Autonomous Agent Management&lt;/li&gt;
+&lt;li&gt;🔗 Blockchain Integration (EVM chains first)&lt;/li&gt;
+&lt;li&gt;🐦 Social Media Integration (Twitter, Telegram, and more)&lt;/li&gt;
+&lt;li&gt;🛠️ Extensible Skill System&lt;/li&gt;
+&lt;li&gt;🔌 Extensible Plugin System (WIP)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;architecture&#34;&gt;Architecture
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                                                                    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                 Entrypoints                                        
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       │                             │                              
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       │   Twitter/Telegram &amp;amp; more   │                              
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       └──────────────┬──────────────┘                              
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                      │                                             
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Storage:  ────┐                     │                      ┌──── Skills:          
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                │                     │                      │                      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Agent Config  │     ┌───────────────▼────────────────┐     │  Chain Integration   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                │     │                                │     │                      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Credentials   │     │                                │     │  Wallet Management   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                │     │           The Agent            │     │                      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Personality   │     │                                │     │  On-Chain Actions    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                │     │                                │     │                      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Memory        │     │      Powered by LangGraph      │     │  Internet Search     
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                │     │                                │     │                      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Skill State   │     └────────────────────────────────┘     │  Image Processing    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            ────┘                                            └────                  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                                                                    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                                                More and More...    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                         ┌──────────────────────────┐                               
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                         │                          │                               
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                         │  Agent Config &amp;amp; Memory   │                               
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                         │                          │                               
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                         └──────────────────────────┘                               
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                                                                    
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The architecture is a simplified view, and more details can be found in the &lt;a class=&#34;link&#34; href=&#34;docs/architecture.md&#34; &gt;Architecture&lt;/a&gt; section.&lt;/p&gt;
+&lt;h2 id=&#34;development&#34;&gt;Development
+&lt;/h2&gt;&lt;p&gt;Read &lt;a class=&#34;link&#34; href=&#34;DEVELOPMENT.md&#34; &gt;Development Guide&lt;/a&gt; to get started with your setup.&lt;/p&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation
+&lt;/h2&gt;&lt;p&gt;Check out &lt;a class=&#34;link&#34; href=&#34;docs/&#34; &gt;Documentation&lt;/a&gt; before you start.&lt;/p&gt;
+&lt;h2 id=&#34;project-structure&#34;&gt;Project Structure
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;abstracts/&#34; &gt;abstracts/&lt;/a&gt;: Abstract classes and interfaces&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;app/&#34; &gt;app/&lt;/a&gt;: Core application code
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;app/core/&#34; &gt;core/&lt;/a&gt;: Core modules&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;app/services/&#34; &gt;services/&lt;/a&gt;: Services&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;app/entrypoints/&#34; &gt;entrypoints/&lt;/a&gt;: Entrypoints means the way to interact with the agent&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;app/admin/&#34; &gt;admin/&lt;/a&gt;: Admin logic&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;app/config/&#34; &gt;config/&lt;/a&gt;: Configurations&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;app/api.py&#34; &gt;api.py&lt;/a&gt;: REST API server&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;app/autonomous.py&#34; &gt;autonomous.py&lt;/a&gt;: Autonomous agent scheduler&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;app/singleton.py&#34; &gt;singleton.py&lt;/a&gt;: Singleton agent scheduler&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;app/scheduler.py&#34; &gt;scheduler.py&lt;/a&gt;: Scheduler for periodic tasks&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;app/readonly.py&#34; &gt;readonly.py&lt;/a&gt;: Readonly entrypoint&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;app/twitter.py&#34; &gt;twitter.py&lt;/a&gt;: Twitter listener&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;app/telegram.py&#34; &gt;telegram.py&lt;/a&gt;: Telegram listener&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;clients/&#34; &gt;clients/&lt;/a&gt;: Clients for external services&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/&#34; &gt;docs/&lt;/a&gt;: Documentation&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;models/&#34; &gt;models/&lt;/a&gt;: Database models&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;scripts/&#34; &gt;scripts/&lt;/a&gt;: Scripts for agent management&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;skills/&#34; &gt;skills/&lt;/a&gt;: Skill implementations&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;plugins/&#34; &gt;plugins/&lt;/a&gt;: Reserved for Plugin implementations&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;utils/&#34; &gt;utils/&lt;/a&gt;: Utility functions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;contributing&#34;&gt;Contributing
+&lt;/h2&gt;&lt;p&gt;Contributions are welcome! Please read our &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;Contributing Guidelines&lt;/a&gt; before submitting a pull request.&lt;/p&gt;
+&lt;h3 id=&#34;contribute-skills&#34;&gt;Contribute Skills
+&lt;/h3&gt;&lt;p&gt;First check &lt;a class=&#34;link&#34; href=&#34;docs/contributing/wishlist.md&#34; &gt;Wishlist&lt;/a&gt; for active requests.&lt;/p&gt;
+&lt;p&gt;Once you are ready to start, see &lt;a class=&#34;link&#34; href=&#34;docs/contributing/skills.md&#34; &gt;Skill Development Guide&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;This project is licensed under the MIT License - see the &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt; file for details.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

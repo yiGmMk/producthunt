@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Financial Services on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/financial-services/</link>
+        <description>Recent content in Financial Services on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sun, 10 May 2026 17:00:02 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/financial-services/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>financial-services</title>
+        <link>https://producthunt.programnotes.cn/en/p/financial-services/</link>
+        <pubDate>Sun, 10 May 2026 17:00:02 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/financial-services/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1539192262370-c2e258ff1cf5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MDM1OTN8&amp;ixlib=rb-4.1.0" alt="Featured image of post financial-services" /&gt;&lt;h1 id=&#34;anthropicsfinancial-services&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/anthropics/financial-services&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;anthropics/financial-services&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;claude-for-financial-services&#34;&gt;Claude for Financial Services
+&lt;/h1&gt;&lt;p&gt;Reference agents, skills, and data connectors for the financial-services workflows we see most — investment banking, equity research, private equity, and wealth management.&lt;/p&gt;
+&lt;p&gt;Everything here is available &lt;strong&gt;two ways from one source&lt;/strong&gt;: install it as a &lt;a class=&#34;link&#34; href=&#34;https://claude.com/product/cowork&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Claude Cowork&lt;/a&gt; plugin, or deploy it through the &lt;a class=&#34;link&#34; href=&#34;https://docs.claude.com/en/api/managed-agents&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Claude Managed Agents API&lt;/a&gt; behind your own workflow engine. Same system prompt, same skills — you choose where it runs.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!IMPORTANT]
+Nothing in this repository constitutes investment, legal, tax, or accounting advice. These agents draft analyst work product — models, memos, research notes, reconciliations — for review by a qualified professional. They do not make investment recommendations, execute transactions, bind risk, post to a ledger, or approve onboarding; every output is staged for human sign-off. You are responsible for verifying outputs and for compliance with the laws and regulations that apply to your firm.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What&amp;rsquo;s in the repo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;#agents&#34; &gt;Agents&lt;/a&gt;&lt;/strong&gt; — named, end-to-end workflow agents (Pitch Agent, Market Researcher, GL Reconciler, …). Each ships as a Cowork plugin &lt;strong&gt;and&lt;/strong&gt; as a &lt;a class=&#34;link&#34; href=&#34;./managed-agent-cookbooks&#34; &gt;Claude Managed Agent template&lt;/a&gt; you deploy via &lt;code&gt;/v1/agents&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;#vertical-plugins&#34; &gt;Vertical plugins&lt;/a&gt;&lt;/strong&gt; — the underlying skills, slash commands, and data connectors, bundled by FSI vertical. Install these on their own if you just want &lt;code&gt;/comps&lt;/code&gt;, &lt;code&gt;/dcf&lt;/code&gt;, &lt;code&gt;/earnings&lt;/code&gt; and the connectors without a full agent.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;agents&#34;&gt;Agents
+&lt;/h2&gt;&lt;p&gt;Each agent is named for the workflow it runs. They&amp;rsquo;re starting points: install the ones that match your work, then tune the prompts, skills, and connectors to how your firm does it.&lt;/p&gt;
+&lt;p&gt;Each agent plugin is &lt;strong&gt;self-contained&lt;/strong&gt; — it bundles the skills it uses, so installing the agent is all you need.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Function&lt;/th&gt;
+					&lt;th&gt;Agent&lt;/th&gt;
+					&lt;th&gt;What it does&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Coverage &amp;amp; advisory&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./plugins/agent-plugins/pitch-agent&#34; &gt;Pitch Agent&lt;/a&gt;&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Comps, precedents, LBO → branded pitch deck, end to end&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./plugins/agent-plugins/meeting-prep-agent&#34; &gt;Meeting Prep Agent&lt;/a&gt;&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Briefing pack before every client meeting&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Research &amp;amp; modeling&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./plugins/agent-plugins/market-researcher&#34; &gt;Market Researcher&lt;/a&gt;&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Sector or theme → industry overview, competitive landscape, peer comps, ideas shortlist&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./plugins/agent-plugins/earnings-reviewer&#34; &gt;Earnings Reviewer&lt;/a&gt;&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Earnings call + filings → model update → note draft&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./plugins/agent-plugins/model-builder&#34; &gt;Model Builder&lt;/a&gt;&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;DCF, LBO, 3-statement, comps — live in Excel&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Fund admin &amp;amp; finance ops&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./plugins/agent-plugins/valuation-reviewer&#34; &gt;Valuation Reviewer&lt;/a&gt;&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Ingests GP packages, runs valuation template, stages LP reporting&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./plugins/agent-plugins/gl-reconciler&#34; &gt;GL Reconciler&lt;/a&gt;&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Finds breaks, traces root cause, routes for sign-off&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./plugins/agent-plugins/month-end-closer&#34; &gt;Month-End Closer&lt;/a&gt;&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Accruals, roll-forwards, variance commentary&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./plugins/agent-plugins/statement-auditor&#34; &gt;Statement Auditor&lt;/a&gt;&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Audits LP statements before distribution&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Operations &amp;amp; onboarding&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./plugins/agent-plugins/kyc-screener&#34; &gt;KYC Screener&lt;/a&gt;&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Parses onboarding docs, runs the rules engine, flags gaps&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;For Managed Agent deployment — &lt;code&gt;agent.yaml&lt;/code&gt;, leaf-worker subagents, steering-event examples, and per-agent security notes — see &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./managed-agent-cookbooks&#34; &gt;managed-agent-cookbooks/&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;repository-layout&#34;&gt;Repository Layout
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plugins&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;agent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;plugins&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;               &lt;span class=&#34;c1&#34;&gt;# Named agents — one self-contained plugin each&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;vertical&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;plugins&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;            &lt;span class=&#34;c1&#34;&gt;# Skill + command bundles by FSI vertical, plus MCP connectors&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;partner&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;built&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;               &lt;span class=&#34;c1&#34;&gt;# Partner-authored plugins (LSEG, S&amp;amp;P Global)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;managed&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;agent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cookbooks&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;       &lt;span class=&#34;c1&#34;&gt;# Claude Managed Agent cookbooks — one dir per agent&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;claude&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;msft&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;365&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;install&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;# Admin tooling to provision the Claude Microsoft 365 add-in&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;scripts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;                       &lt;span class=&#34;c1&#34;&gt;# deploy-managed-agent.sh · check.py · validate.py · orchestrate.py · sync-agent-skills.py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started
+&lt;/h2&gt;&lt;h3 id=&#34;cowork&#34;&gt;Cowork
+&lt;/h3&gt;&lt;p&gt;In Cowork, open &lt;strong&gt;Settings → Plugins → Add plugin&lt;/strong&gt; and either:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Paste this repo URL&lt;/strong&gt; — &lt;code&gt;https://github.com/anthropics/claude-for-financial-services&lt;/code&gt; — then pick the agents and verticals you want from the marketplace list, or&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Upload a zip&lt;/strong&gt; — zip any directory under &lt;code&gt;plugins/&lt;/code&gt; (e.g. &lt;code&gt;plugins/agent-plugins/pitch-agent/&lt;/code&gt;) and drop it in.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;claude-code&#34;&gt;Claude Code
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Add the marketplace&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;claude plugin marketplace add anthropics/claude-for-financial-services
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Core skills + connectors (install first)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;claude plugin install financial-analysis@claude-for-financial-services
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Named agents — pick the ones you want&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;claude plugin install pitch-agent@claude-for-financial-services
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;claude plugin install gl-reconciler@claude-for-financial-services
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;claude plugin install market-researcher@claude-for-financial-services
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Vertical skill bundles&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;claude plugin install investment-banking@claude-for-financial-services
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;claude plugin install equity-research@claude-for-financial-services
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Once installed, agents appear in Cowork dispatch, skills fire automatically when relevant, and slash commands are available in your session (&lt;code&gt;/comps&lt;/code&gt;, &lt;code&gt;/dcf&lt;/code&gt;, &lt;code&gt;/earnings&lt;/code&gt;, &lt;code&gt;/ic-memo&lt;/code&gt;, …).&lt;/p&gt;
+&lt;h3 id=&#34;claude-managed-agents&#34;&gt;Claude Managed Agents
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ANTHROPIC_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;sk-ant-...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scripts/deploy-managed-agent.sh gl-reconciler
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Each template under &lt;a class=&#34;link&#34; href=&#34;./managed-agent-cookbooks&#34; &gt;&lt;code&gt;managed-agent-cookbooks/&lt;/code&gt;&lt;/a&gt; references the same system prompt and skills as its plugin counterpart. The deploy script resolves file references, uploads skills, creates leaf-worker subagents, and POSTs the orchestrator to &lt;code&gt;/v1/agents&lt;/code&gt;. See &lt;a class=&#34;link&#34; href=&#34;./scripts/orchestrate.py&#34; &gt;&lt;code&gt;scripts/orchestrate.py&lt;/code&gt;&lt;/a&gt; for a reference event loop that routes &lt;code&gt;handoff_request&lt;/code&gt; events between agents via your own orchestration layer.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Research Preview:&lt;/strong&gt; subagent delegation (&lt;code&gt;callable_agents&lt;/code&gt;) is a preview capability. See per-agent READMEs for security and handoff guidance.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;how-it-fits-together&#34;&gt;How It Fits Together
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;&lt;/th&gt;
+					&lt;th&gt;What it is&lt;/th&gt;
+					&lt;th&gt;Where it lives&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Agents&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Self-contained plugins that own a workflow end to end — system prompt plus the skills it uses. Cowork and the Managed Agent wrapper both reference the same directory.&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;plugins/agent-plugins/&amp;lt;slug&amp;gt;/&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Skills&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Domain expertise, conventions, and step-by-step methods Claude draws on automatically when relevant. Authored once in the verticals; each agent bundles a synced copy of the ones it needs.&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;plugins/vertical-plugins/&amp;lt;vertical&amp;gt;/skills/&lt;/code&gt; (source) · &lt;code&gt;plugins/agent-plugins/&amp;lt;slug&amp;gt;/skills/&lt;/code&gt; (bundled)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Commands&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Slash actions you trigger explicitly (&lt;code&gt;/comps&lt;/code&gt;, &lt;code&gt;/earnings&lt;/code&gt;, &lt;code&gt;/ic-memo&lt;/code&gt;).&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;plugins/vertical-plugins/&amp;lt;vertical&amp;gt;/commands/&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Connectors&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://modelcontextprotocol.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MCP servers&lt;/a&gt; that wire Claude to your data — terminals, research platforms, document stores.&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;plugins/vertical-plugins/financial-analysis/.mcp.json&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Managed-agent wrappers&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;agent.yaml&lt;/code&gt; + depth-1 subagents + steering examples for headless deployment.&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;managed-agent-cookbooks/&amp;lt;slug&amp;gt;/&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Everything is file-based — markdown and JSON, no build step.&lt;/p&gt;
+&lt;h2 id=&#34;vertical-plugins&#34;&gt;Vertical Plugins
+&lt;/h2&gt;&lt;p&gt;Start with &lt;strong&gt;financial-analysis&lt;/strong&gt; — it carries the shared modeling skills and all data connectors. Add verticals for the workflows you need.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Plugin&lt;/th&gt;
+					&lt;th&gt;What it adds&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./plugins/vertical-plugins/financial-analysis&#34; &gt;financial-analysis&lt;/a&gt;&lt;/strong&gt; &lt;em&gt;(core)&lt;/em&gt;&lt;/td&gt;
+					&lt;td&gt;Comps, DCF, LBO, 3-statement, deck QC, Excel audit. All 11 data connectors.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./plugins/vertical-plugins/investment-banking&#34; &gt;investment-banking&lt;/a&gt;&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;CIMs, teasers, process letters, buyer lists, merger models, deal tracking.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./plugins/vertical-plugins/equity-research&#34; &gt;equity-research&lt;/a&gt;&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Earnings notes, initiations, model updates, thesis and catalyst tracking.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./plugins/vertical-plugins/private-equity&#34; &gt;private-equity&lt;/a&gt;&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Sourcing, screening, diligence checklists, IC memos, portfolio monitoring.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./plugins/vertical-plugins/wealth-management&#34; &gt;wealth-management&lt;/a&gt;&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Client reviews, financial plans, rebalancing, reporting, TLH.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./plugins/vertical-plugins/fund-admin&#34; &gt;fund-admin&lt;/a&gt;&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;GL recon, break tracing, accruals, roll-forwards, variance commentary, NAV tie-out.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./plugins/vertical-plugins/operations&#34; &gt;operations&lt;/a&gt;&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;KYC document parsing and rules-grid evaluation.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./plugins/partner-built/lseg&#34; &gt;lseg&lt;/a&gt;&lt;/strong&gt; &lt;em&gt;(partner)&lt;/em&gt;&lt;/td&gt;
+					&lt;td&gt;Bond RV, swap curves, FX carry, options vol, macro-rates monitoring on LSEG data.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./plugins/partner-built/spglobal&#34; &gt;sp-global&lt;/a&gt;&lt;/strong&gt; &lt;em&gt;(partner)&lt;/em&gt;&lt;/td&gt;
+					&lt;td&gt;Tear sheets, earnings previews, funding digests on S&amp;amp;P Capital IQ.&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;mcp-integrations&#34;&gt;MCP Integrations
+&lt;/h2&gt;&lt;p&gt;All connectors are centralized in the &lt;strong&gt;financial-analysis&lt;/strong&gt; core plugin and shared across the rest.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Provider&lt;/th&gt;
+					&lt;th&gt;URL&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.daloopa.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Daloopa&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;https://mcp.daloopa.com/server/mcp&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.morningstar.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Morningstar&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;https://mcp.morningstar.com/mcp&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.spglobal.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;S&amp;amp;P Global&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;https://kfinance.kensho.com/integrations/mcp&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.factset.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FactSet&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;https://mcp.factset.com/mcp&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.moodys.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Moody&amp;rsquo;s&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;https://api.moodys.com/genai-ready-data/m1/mcp&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.mtnewswires.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MT Newswires&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;https://vast-mcp.blueskyapi.com/mtnewswires&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.aiera.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Aiera&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;https://mcp-pub.aiera.com&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.lseg.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LSEG&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;https://api.analytics.lseg.com/lfa/mcp&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://pitchbook.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PitchBook&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;https://premium.mcp.pitchbook.com/mcp&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.chronograph.pe/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chronograph&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;https://ai.chronograph.pe/mcp&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.egnyte.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Egnyte&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;https://mcp-server.egnyte.com/mcp&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MCP access may require a subscription or API key from the provider.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;claude-for-microsoft-365--install-tooling&#34;&gt;Claude for Microsoft 365 — Install Tooling
+&lt;/h2&gt;&lt;p&gt;If your firm runs Claude inside Excel, PowerPoint, Word, and Outlook via the Microsoft 365 add-in, &lt;a class=&#34;link&#34; href=&#34;./claude-for-msft-365-install&#34; &gt;&lt;code&gt;claude-for-msft-365-install/&lt;/code&gt;&lt;/a&gt; is the admin tooling to provision it against &lt;strong&gt;your own cloud&lt;/strong&gt; — Vertex AI, Bedrock, or an internal LLM gateway — instead of Anthropic&amp;rsquo;s API.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s a Claude Code plugin (not a Cowork plugin) that walks an IT admin through generating the customized add-in manifest, granting Azure admin consent, and writing per-user routing config via Microsoft Graph. Install with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;claude plugin install claude-for-msft-365-install@claude-for-financial-services
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/claude-for-msft-365-install:setup
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This is separate from the agents and vertical plugins above — it&amp;rsquo;s the on-ramp that gets the add-in deployed in a tenant, after which the agents and skills here are what runs inside it.&lt;/p&gt;
+&lt;h2 id=&#34;making-it-yours&#34;&gt;Making It Yours
+&lt;/h2&gt;&lt;p&gt;These are reference templates — they get better when you tune them to how your firm works.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Swap connectors&lt;/strong&gt; — point &lt;code&gt;.mcp.json&lt;/code&gt; at your data providers and internal systems.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Add firm context&lt;/strong&gt; — drop your terminology, processes, and formatting standards into skill files.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bring your templates&lt;/strong&gt; — &lt;code&gt;/ppt-template&lt;/code&gt; teaches Claude your branded PowerPoint layouts.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Adjust agent scope&lt;/strong&gt; — edit &lt;code&gt;agents/&amp;lt;slug&amp;gt;.md&lt;/code&gt; to match how your team actually runs the workflow.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Add your own&lt;/strong&gt; — copy the structure for workflows we haven&amp;rsquo;t covered.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;skill--command-reference&#34;&gt;Skill &amp;amp; Command Reference
+&lt;/h2&gt;&lt;details&gt;
+&lt;summary&gt;&lt;b&gt;financial-analysis&lt;/b&gt; — core modeling, Excel, deck QC&lt;/summary&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Skill&lt;/th&gt;
+					&lt;th&gt;Command&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;comps-analysis&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/comps&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Comparable company analysis with trading multiples&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;dcf-model&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/dcf&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;DCF valuation with WACC and sensitivity analysis&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;lbo-model&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/lbo&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Leveraged buyout model&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;3-statement-model&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/3-statement-model&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Populate 3-statement financial model templates&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;audit-xls&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/debug-model&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Excel model audit — formula tracing, hardcode detection, balance checks&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;clean-data-xls&lt;/td&gt;
+					&lt;td&gt;—&lt;/td&gt;
+					&lt;td&gt;Normalize and clean tabular data in Excel&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;deck-refresh&lt;/td&gt;
+					&lt;td&gt;—&lt;/td&gt;
+					&lt;td&gt;Re-link and refresh embedded charts/tables across a deck&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;competitive-analysis&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/competitive-analysis&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Competitive landscape and market positioning&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ib-check-deck&lt;/td&gt;
+					&lt;td&gt;—&lt;/td&gt;
+					&lt;td&gt;QC presentations for errors and consistency&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;pptx-author&lt;/td&gt;
+					&lt;td&gt;—&lt;/td&gt;
+					&lt;td&gt;Produce a &lt;code&gt;.pptx&lt;/code&gt; file headlessly (Managed Agent mode)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;xlsx-author&lt;/td&gt;
+					&lt;td&gt;—&lt;/td&gt;
+					&lt;td&gt;Produce a &lt;code&gt;.xlsx&lt;/code&gt; file headlessly (Managed Agent mode)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ppt-template-creator&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/ppt-template&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Create reusable PPT template skills&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;skill-creator&lt;/td&gt;
+					&lt;td&gt;—&lt;/td&gt;
+					&lt;td&gt;Guide for creating new skills&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;&lt;b&gt;investment-banking&lt;/b&gt; — deal materials and execution&lt;/summary&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Skill&lt;/th&gt;
+					&lt;th&gt;Command&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;strip-profile&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/one-pager&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;One-page company profiles for pitch books&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;pitch-deck&lt;/td&gt;
+					&lt;td&gt;—&lt;/td&gt;
+					&lt;td&gt;Populate pitch deck templates with data&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;datapack-builder&lt;/td&gt;
+					&lt;td&gt;—&lt;/td&gt;
+					&lt;td&gt;Build data packs from CIMs and filings&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;cim-builder&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/cim&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Draft Confidential Information Memorandums&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;teaser&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/teaser&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Anonymous one-page company teasers&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;buyer-list&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/buyer-list&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Strategic and financial buyer universe&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;merger-model&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/merger-model&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Accretion/dilution M&amp;amp;A analysis&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;process-letter&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/process-letter&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bid instructions and process correspondence&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;deal-tracker&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/deal-tracker&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Track live deals, milestones, and action items&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;&lt;b&gt;equity-research&lt;/b&gt; — coverage and publishing&lt;/summary&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Skill&lt;/th&gt;
+					&lt;th&gt;Command&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;earnings-analysis&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/earnings&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Post-earnings quarterly update reports&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;earnings-preview&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/earnings-preview&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Pre-earnings scenario analysis and key metrics&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;initiating-coverage&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/initiate&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Institutional-quality initiation reports&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;model-update&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/model-update&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Update financial models with new data&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;morning-note&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/morning-note&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Morning meeting notes and trade ideas&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;sector-overview&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/sector&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Industry landscape and thematic reports&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;thesis-tracker&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/thesis&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Maintain and update investment theses&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;catalyst-calendar&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/catalysts&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Track upcoming catalysts across coverage&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;idea-generation&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/screen&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Stock screening and idea sourcing&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;&lt;b&gt;private-equity&lt;/b&gt; — sourcing through portfolio ops&lt;/summary&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Skill&lt;/th&gt;
+					&lt;th&gt;Command&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;deal-sourcing&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/source&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Discover companies, check CRM, draft founder outreach&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;deal-screening&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/screen-deal&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Quick pass/fail on inbound CIMs and teasers&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;dd-checklist&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/dd-checklist&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Diligence checklists by workstream&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;dd-meeting-prep&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/dd-prep&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Prep for management presentations and expert calls&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;unit-economics&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/unit-economics&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;ARR cohorts, LTV/CAC, net retention, revenue quality&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;returns-analysis&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/returns&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;IRR/MOIC sensitivity tables&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ic-memo&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/ic-memo&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Investment committee memo drafting&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;portfolio-monitoring&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/portfolio&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Track portfolio company KPIs and variances&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;value-creation-plan&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/value-creation&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Post-close 100-day plans and EBITDA bridges&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ai-readiness&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/ai-readiness&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Assess a portfolio company&amp;rsquo;s AI readiness&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;&lt;b&gt;wealth-management&lt;/b&gt; — advisor workflows&lt;/summary&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Skill&lt;/th&gt;
+					&lt;th&gt;Command&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;client-review&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/client-review&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Prep for client meetings with performance and talking points&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;financial-plan&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/financial-plan&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Retirement, education, estate, and cash-flow projections&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;portfolio-rebalance&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/rebalance&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Allocation drift analysis and tax-aware rebalancing&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;client-report&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/client-report&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Client-facing performance reports&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;investment-proposal&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/proposal&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Proposals for prospective clients&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;tax-loss-harvesting&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;/tlh&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Identify TLH opportunities and manage wash sales&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/details&gt;
+&lt;h2 id=&#34;contributing&#34;&gt;Contributing
+&lt;/h2&gt;&lt;p&gt;Everything here is markdown and YAML. Fork, edit, PR. For new content:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;New skill → add it under &lt;code&gt;plugins/vertical-plugins/&amp;lt;vertical&amp;gt;/skills/&lt;/code&gt;, then run &lt;code&gt;python3 scripts/sync-agent-skills.py&lt;/code&gt; to propagate to any agent that bundles it.&lt;/li&gt;
+&lt;li&gt;New agent → &lt;code&gt;plugins/agent-plugins/&amp;lt;slug&amp;gt;/&lt;/code&gt; (with &lt;code&gt;agents/&amp;lt;slug&amp;gt;.md&lt;/code&gt; + &lt;code&gt;skills/&lt;/code&gt;) and a matching &lt;code&gt;managed-agent-cookbooks/&amp;lt;slug&amp;gt;/&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;python3 scripts/check.py&lt;/code&gt; before pushing — it lints every manifest, verifies all cross-file references resolve, and fails if any bundled skill has drifted from its vertical source.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;./LICENSE&#34; &gt;Apache License 2.0&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

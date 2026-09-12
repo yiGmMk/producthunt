@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Parallel Algorithms on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/parallel-algorithms/</link>
+        <description>Recent content in Parallel Algorithms on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Mon, 21 Apr 2025 15:29:19 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/parallel-algorithms/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>less_slow.cpp</title>
+        <link>https://producthunt.programnotes.cn/en/p/less_slow.cpp/</link>
+        <pubDate>Mon, 21 Apr 2025 15:29:19 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/less_slow.cpp/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDUyMjA0NjF8&amp;ixlib=rb-4.0.3" alt="Featured image of post less_slow.cpp" /&gt;&lt;h1 id=&#34;ashvardanianless_&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ashvardanian/less_slow.cpp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ashvardanian/less_slow.cpp&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;playing-around-less-slow-coding-practices-for-c-cuda-and-assembly-code&#34;&gt;Playing Around &lt;em&gt;Less Slow&lt;/em&gt; Coding Practices for C++, CUDA, and Assembly Code
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;The benchmarks in this repository don&amp;rsquo;t aim to cover every topic entirely, but they help form a mindset and intuition for performance-oriented software design.
+It also provides an example of using some non-&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Standard_Template_Library&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;STL&lt;/a&gt; but de facto standard libraries in C++, importing them via CMake and compiling from source.
+For higher-level abstractions and languages, check out &lt;a class=&#34;link&#34; href=&#34;https://github.com/ashvardanian/less_slow.rs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;less_slow.rs&lt;/code&gt;&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://github.com/ashvardanian/less_slow.py&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;less_slow.py&lt;/code&gt;&lt;/a&gt;.
+I needed many of these measurements to reconsider my own coding habits, but hopefully they&amp;rsquo;re helpful to others as well.
+Most of the code is organized in very long, ordered, and nested &lt;code&gt;#pragma&lt;/code&gt; sections — not necessarily the preferred form for everyone.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Much of modern code suffers from common pitfalls — bugs, security vulnerabilities, and &lt;strong&gt;performance bottlenecks&lt;/strong&gt;.
+University curricula and coding bootcamps tend to stick to traditional coding styles and standard features, rarely exposing the more fun, unusual, and potentially efficient design opportunities.
+This repository explores just that.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/ashvardanian/ashvardanian/blob/master/repositories/less_slow.cpp.jpg?raw=true&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Less Slow C&amp;#43;&amp;#43;&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The code leverages C++20 and CUDA features and is designed primarily for GCC, Clang, and NVCC compilers on Linux, though it may work on other platforms.
+The topics range from basic micro-kernels executing in a few nanoseconds to more complex constructs involving parallel algorithms, coroutines, and polymorphism.
+Some of the highlights include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;100x cheaper random inputs?!&lt;/strong&gt; Discover how input generation sometimes costs more than the algorithm.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;1% error in trigonometry at 1/40 cost:&lt;/strong&gt; Approximate STL functions like &lt;a class=&#34;link&#34; href=&#34;https://en.cppreference.com/w/cpp/numeric/math/sin&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;std::sin&lt;/code&gt;&lt;/a&gt; in just 3 lines of code.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;4x faster lazy-logic&lt;/strong&gt; with custom &lt;a class=&#34;link&#34; href=&#34;https://en.cppreference.com/w/cpp/ranges&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;std::ranges&lt;/code&gt;&lt;/a&gt; and iterators!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Compiler optimizations beyond &lt;code&gt;-O3&lt;/code&gt;:&lt;/strong&gt; Learn about less obvious flags and techniques for another 2x speedup.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multiplying matrices?&lt;/strong&gt; Check how a 3x3x3 GEMM can be 70% slower than 4x4x4, despite 60% fewer ops.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scaling AI?&lt;/strong&gt; Measure the gap between theoretical &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Arithmetic_logic_unit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ALU&lt;/a&gt; throughput and your &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BLAS&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How many if conditions are too many?&lt;/strong&gt; Test your CPU&amp;rsquo;s branch predictor with just 10 lines of code.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prefer recursion to iteration?&lt;/strong&gt; Measure the depth at which your algorithm will &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Segmentation_fault&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;SEGFAULT&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Why avoid exceptions?&lt;/strong&gt; Take &lt;code&gt;std::error_code&lt;/code&gt; or &lt;a class=&#34;link&#34; href=&#34;https://en.cppreference.com/w/cpp/utility/variant&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;std::variant&lt;/code&gt;&lt;/a&gt;-like wrappers?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scaling to many cores?&lt;/strong&gt; Learn how to use &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/OpenMP&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenMP&lt;/a&gt;, Intel&amp;rsquo;s oneTBB, or your custom thread pool.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How to handle &lt;a class=&#34;link&#34; href=&#34;https://www.json.org/json-en.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JSON&lt;/a&gt; avoiding memory allocations?&lt;/strong&gt; Is it easier with C++ 20 or old-school C 99 tools?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How to properly use STL&amp;rsquo;s associative containers&lt;/strong&gt; with custom keys and transparent comparators?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How to beat a hand-written parser&lt;/strong&gt; with &lt;a class=&#34;link&#34; href=&#34;https://en.cppreference.com/w/cpp/language/consteval&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;consteval&lt;/code&gt;&lt;/a&gt; RegEx engines?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Is the pointer size really 64 bits&lt;/strong&gt; and how to exploit &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Tagged_pointer&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pointer-tagging&lt;/a&gt;?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How many packets is &lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/learning/ddos/glossary/user-datagram-protocol-udp/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;UDP&lt;/a&gt; dropping&lt;/strong&gt; and how to serve web requests in &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Io_uring&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;io_uring&lt;/code&gt;&lt;/a&gt; from user-space?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scatter and Gather&lt;/strong&gt; for 50% faster vectorized disjoint memory operations.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Intel&amp;rsquo;s oneAPI vs Nvidia&amp;rsquo;s CCCL?&lt;/strong&gt; What&amp;rsquo;s so special about &lt;code&gt;&amp;lt;thrust&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;cub&amp;gt;&lt;/code&gt;?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CUDA C++, &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Parallel_Thread_Execution&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PTX&lt;/a&gt; Intermediate Representations, and SASS&lt;/strong&gt;, and how do they differ from CPU code?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How to choose between intrinsics, inline &lt;code&gt;asm&lt;/code&gt;, and separate &lt;code&gt;.S&lt;/code&gt; files&lt;/strong&gt; for your performance-critical code?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tensor Cores &amp;amp; Memory&lt;/strong&gt; differences on CPUs, and Volta, Ampere, Hopper, and Blackwell GPUs!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How coding FPGA differs from GPU&lt;/strong&gt; and what is High-Level Synthesis, Verilog, and VHDL? 🔜 #36&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;What are Encrypted Enclaves&lt;/strong&gt; and what&amp;rsquo;s the latency of Intel SGX, AMD SEV, and ARM Realm? 🔜 #31&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To read, jump to the &lt;a class=&#34;link&#34; href=&#34;https://github.com/ashvardanian/less_slow.cpp/blob/main/less_slow.cpp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;less_slow.cpp&lt;/code&gt; source file&lt;/a&gt; and read the code snippets and comments.
+Keep in mind, that most modern IDEs have a navigation bar to help you view and jump between &lt;code&gt;#pragma region&lt;/code&gt; sections.
+Follow the instructions below to run the code in your environment and compare it to the comments as you read through the source.&lt;/p&gt;
+&lt;h2 id=&#34;running-the-benchmarks&#34;&gt;Running the Benchmarks
+&lt;/h2&gt;&lt;p&gt;The project aims to be compatible with GCC, Clang, and MSVC compilers on Linux, MacOS, and Windows.
+That said, to cover the broadest functionality, using GCC on Linux is recommended:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you are on Windows, it&amp;rsquo;s recommended that you set up a Linux environment using &lt;a class=&#34;link&#34; href=&#34;https://docs.microsoft.com/en-us/windows/wsl/install&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WSL&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;If you are on MacOS, consider using the non-native distribution of Clang from &lt;a class=&#34;link&#34; href=&#34;https://brew.sh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Homebrew&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;https://www.macports.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MacPorts&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;If you are on Linux, make sure to install CMake and a recent version of GCC or Clang compilers to support C++20 features.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are familiar with C++ and want to review code and measurements as you read, you can clone the repository and execute the following commands.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/ashvardanian/less_slow.cpp.git &lt;span class=&#34;c1&#34;&gt;# Clone the repository&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; less_slow.cpp                                            &lt;span class=&#34;c1&#34;&gt;# Change the directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install cmake --upgrade                                 &lt;span class=&#34;c1&#34;&gt;# PyPI has a newer version of CMake&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install -y build-essential g++                 &lt;span class=&#34;c1&#34;&gt;# Install default build tools&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install -y pkg-config liburing-dev             &lt;span class=&#34;c1&#34;&gt;# Install liburing for kernel-bypass&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install -y libopenblas-base                    &lt;span class=&#34;c1&#34;&gt;# Install numerics libraries&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cmake -B build_release -D &lt;span class=&#34;nv&#34;&gt;CMAKE_BUILD_TYPE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;Release          &lt;span class=&#34;c1&#34;&gt;# Generate the build files&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cmake --build build_release --config Release                &lt;span class=&#34;c1&#34;&gt;# Build the project&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;build_release/less_slow                                     &lt;span class=&#34;c1&#34;&gt;# Run the benchmarks&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The build will pull and compile several third-party dependencies from the source:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Google&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://github.com/google/benchmark&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Benchmark&lt;/a&gt; is used for profiling.&lt;/li&gt;
+&lt;li&gt;Intel&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://github.com/uxlfoundation/oneTBB&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;oneTBB&lt;/a&gt; is used as the Parallel STL backend.&lt;/li&gt;
+&lt;li&gt;Meta&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://github.com/facebookexperimental/libunifex&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;libunifex&lt;/a&gt; is used for senders &amp;amp; executors.&lt;/li&gt;
+&lt;li&gt;Eric Niebler&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://github.com/ericniebler/range-v3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;range-v3&lt;/a&gt; replaces &lt;code&gt;std::ranges&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Victor Zverovich&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://github.com/fmtlib/fmt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;fmt&lt;/a&gt; replaces &lt;code&gt;std::format&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Ash Vardanian&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://github.com/ashvardanian/stringzilla&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;StringZilla&lt;/a&gt; replaces &lt;code&gt;std::string&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Hana Dusíková&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://github.com/hanickadot/compile-time-regular-expressions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CTRE&lt;/a&gt; replaces &lt;code&gt;std::regex&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Niels Lohmann&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://github.com/nlohmann/json&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;json&lt;/a&gt; is used for JSON deserialization.&lt;/li&gt;
+&lt;li&gt;Yaoyuan Guo&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://github.com/ibireme/yyjson&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;yyjson&lt;/a&gt; for faster JSON processing.&lt;/li&gt;
+&lt;li&gt;Google&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://github.com/abseil/abseil-cpp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Abseil&lt;/a&gt; replaces STL&amp;rsquo;s associative containers.&lt;/li&gt;
+&lt;li&gt;Lewis Baker&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://github.com/lewissbaker/cppcoro&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cppcoro&lt;/a&gt; implements C++20 coroutines.&lt;/li&gt;
+&lt;li&gt;Jens Axboe&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://github.com/axboe/liburing&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;liburing&lt;/a&gt; to simplify Linux kernel-bypass.&lt;/li&gt;
+&lt;li&gt;Chris Kohlhoff&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://github.com/chriskohlhoff/asio&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ASIO&lt;/a&gt; as a &lt;a class=&#34;link&#34; href=&#34;https://en.cppreference.com/w/cpp/experimental/networking&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;networking TS&lt;/a&gt; extension.&lt;/li&gt;
+&lt;li&gt;Nvidia&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://github.com/nvidia/cccl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CCCL&lt;/a&gt; for GPU-accelerated algorithms.&lt;/li&gt;
+&lt;li&gt;Nvidia&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://github.com/nvidia/cutlass&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CUTLASS&lt;/a&gt; for GPU-accelerated Linear Algebra.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To build without Parallel STL, Intel TBB, and CUDA:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cmake -B build_release -D &lt;span class=&#34;nv&#34;&gt;CMAKE_BUILD_TYPE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;Release -D &lt;span class=&#34;nv&#34;&gt;USE_INTEL_TBB&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;OFF -D &lt;span class=&#34;nv&#34;&gt;USE_NVIDIA_CCCL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;OFF
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cmake --build build_release --config Release
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To control the output or run specific benchmarks, use the following flags:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;build_release/less_slow --benchmark_format&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;json             &lt;span class=&#34;c1&#34;&gt;# Output in JSON format&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;build_release/less_slow --benchmark_out&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;results.json        &lt;span class=&#34;c1&#34;&gt;# Save the results to a file instead of `stdout`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;build_release/less_slow --benchmark_filter&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;std_sort         &lt;span class=&#34;c1&#34;&gt;# Run only benchmarks containing `std_sort` in their name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To enhance stability and reproducibility, disable Simultaneous Multi-Threading &lt;strong&gt;(SMT)&lt;/strong&gt; on your CPU and use the &lt;code&gt;--benchmark_enable_random_interleaving=true&lt;/code&gt; flag, which shuffles and interleaves benchmarks as described &lt;a class=&#34;link&#34; href=&#34;https://github.com/google/benchmark/blob/main/docs/random_interleaving.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;build_release/less_slow --benchmark_enable_random_interleaving&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Google Benchmark supports &lt;a class=&#34;link&#34; href=&#34;https://github.com/google/benchmark/blob/main/docs/perf_counters.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;User-Requested Performance Counters&lt;/a&gt; through &lt;code&gt;libpmf&lt;/code&gt;.
+Note that collecting these may require &lt;code&gt;sudo&lt;/code&gt; privileges.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo build_release/less_slow --benchmark_enable_random_interleaving&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; --benchmark_format&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;json --benchmark_perf_counters&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;CYCLES,INSTRUCTIONS&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Alternatively, use the Linux &lt;code&gt;perf&lt;/code&gt; tool for performance counter collection:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo perf stat taskset 0xEFFFEFFFEFFFEFFFEFFFEFFFEFFFEFFF build_release/less_slow --benchmark_enable_random_interleaving&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; --benchmark_filter&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;super_sort
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;project-structure&#34;&gt;Project Structure
+&lt;/h2&gt;&lt;p&gt;The primary file of this repository is clearly the &lt;code&gt;less_slow.cpp&lt;/code&gt; C++ file with CPU-side code.
+Several other files for different hardware-specific optimizations are created:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ tree .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── CMakeLists.txt          &lt;span class=&#34;c1&#34;&gt;# Build &amp;amp; assembly instructions for all files&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── less_slow.cpp           &lt;span class=&#34;c1&#34;&gt;# Primary CPU-side benchmarking code with the majority of examples&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── less_slow_amd64.S       &lt;span class=&#34;c1&#34;&gt;# Hand-written Assembly kernels for 64-bit x86 CPUs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── less_slow_aarch64.S     &lt;span class=&#34;c1&#34;&gt;# Hand-written Assembly kernels for 64-bit Arm CPUs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── less_slow.cu            &lt;span class=&#34;c1&#34;&gt;# CUDA C++ examples for parallel algorithms for Nvidia GPUs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── less_slow_sm70.ptx      &lt;span class=&#34;c1&#34;&gt;# Hand-written PTX IR kernels for Nvidia Volta GPUs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── less_slow_sm90a.ptx     &lt;span class=&#34;c1&#34;&gt;# Hand-written PTX IR kernels for Nvidia Hopper GPUs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;memes-and-references&#34;&gt;Memes and References
+&lt;/h2&gt;&lt;p&gt;Educational content without memes?!
+Come on!&lt;/p&gt;
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;img src=&#34;https://github.com/ashvardanian/ashvardanian/blob/master/memes/ieee764-vs-gnu-compiler.jpg?raw=true&#34; alt=&#34;IEEE 754 vs GNU Compiler&#34;&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;img src=&#34;https://github.com/ashvardanian/ashvardanian/blob/master/memes/no-easter-bunny-no-free-abstractions.jpg?raw=true&#34; alt=&#34;No Easter Bunny, No Free Abstractions&#34;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;google-benchmark-functionality&#34;&gt;Google Benchmark Functionality
+&lt;/h2&gt;&lt;p&gt;This benchmark suite uses most of the features provided by Google Benchmark.
+If you write a lot of benchmarks and avoid going to the full &lt;a class=&#34;link&#34; href=&#34;https://github.com/google/benchmark/blob/main/docs/user_guide.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;User Guide&lt;/a&gt;, here is a condensed list of the most useful features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-&amp;gt;Args({x, y})&lt;/code&gt; - Pass multiple arguments to parameterized benchmarks&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;BENCHMARK()&lt;/code&gt; - Register a basic benchmark function&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;BENCHMARK_CAPTURE()&lt;/code&gt; - Create variants of benchmarks with different captured values&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Counter::kAvgThreads&lt;/code&gt; - Specify thread-averaged counters&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DoNotOptimize()&lt;/code&gt; - Prevent compiler from optimizing away operations&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ClobberMemory()&lt;/code&gt; - Force memory synchronization&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&amp;gt;Complexity(oNLogN)&lt;/code&gt; - Specify and validate algorithmic complexity&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&amp;gt;SetComplexityN(n)&lt;/code&gt; - Set input size for complexity calculations&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&amp;gt;ComputeStatistics(&amp;quot;max&amp;quot;, ...)&lt;/code&gt; - Calculate custom statistics across runs&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&amp;gt;Iterations(n)&lt;/code&gt; - Control exact number of iterations&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&amp;gt;MinTime(n)&lt;/code&gt; - Set minimum benchmark duration&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&amp;gt;MinWarmUpTime(n)&lt;/code&gt; - To warm up the data caches&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&amp;gt;Name(&amp;quot;...&amp;quot;)&lt;/code&gt; - Assign custom benchmark names&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&amp;gt;Range(start, end)&lt;/code&gt; - Profile for a range of input sizes&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&amp;gt;RangeMultiplier(n)&lt;/code&gt; - Set multiplier between range values&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&amp;gt;ReportAggregatesOnly()&lt;/code&gt; - Show only aggregated statistics&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;state.counters[&amp;quot;name&amp;quot;]&lt;/code&gt; - Create custom performance counters&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;state.PauseTiming()&lt;/code&gt;, &lt;code&gt;ResumeTiming()&lt;/code&gt; - Control timing measurement&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;state.SetBytesProcessed(n)&lt;/code&gt; - Record number of bytes processed&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;state.SkipWithError()&lt;/code&gt; - Skip benchmark with error message&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&amp;gt;Threads(n)&lt;/code&gt; - Run benchmark with specified number of threads&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&amp;gt;Unit(kMicrosecond)&lt;/code&gt; - Set time unit for reporting&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&amp;gt;UseRealTime()&lt;/code&gt; - Measure real time instead of CPU time&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&amp;gt;UseManualTime()&lt;/code&gt; - To feed custom timings for GPU and IO benchmarks&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>cuda-python</title>
+        <link>https://producthunt.programnotes.cn/en/p/cuda-python/</link>
+        <pubDate>Fri, 11 Apr 2025 15:27:47 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/cuda-python/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1538558940285-e76825003c99?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQzNTY0MTZ8&amp;ixlib=rb-4.0.3" alt="Featured image of post cuda-python" /&gt;&lt;h1 id=&#34;nvidiacuda-python&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NVIDIA/cuda-python&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NVIDIA/cuda-python&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;cuda-python&#34;&gt;cuda-python
+&lt;/h1&gt;&lt;p&gt;CUDA Python is the home for accessing NVIDIA’s CUDA platform from Python. It consists of multiple components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nvidia.github.io/cuda-python/cuda-core/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cuda.core&lt;/a&gt;: Pythonic access to CUDA Runtime and other core functionalities&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nvidia.github.io/cuda-python/cuda-bindings/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cuda.bindings&lt;/a&gt;: Low-level Python bindings to CUDA C APIs&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nvidia.github.io/cccl/cuda_cooperative/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cuda.cooperative&lt;/a&gt;: A Python package providing CCCL&amp;rsquo;s reusable block-wide and warp-wide &lt;em&gt;device&lt;/em&gt; primitives for use within Numba CUDA kernels&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nvidia.github.io/cccl/cuda_parallel/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cuda.parallel&lt;/a&gt;: A Python package for easy access to CCCL&amp;rsquo;s highly efficient and customizable parallel algorithms, like &lt;code&gt;sort&lt;/code&gt;, &lt;code&gt;scan&lt;/code&gt;, &lt;code&gt;reduce&lt;/code&gt;, &lt;code&gt;transform&lt;/code&gt;, etc, that are callable on the &lt;em&gt;host&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nvidia.github.io/numba-cuda/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;numba.cuda&lt;/a&gt;: Numba&amp;rsquo;s target for CUDA GPU programming by directly compiling a restricted subset of Python code into CUDA kernels and device functions following the CUDA execution model.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For access to NVIDIA CPU &amp;amp; GPU Math Libraries, please refer to &lt;a class=&#34;link&#34; href=&#34;https://docs.nvidia.com/cuda/nvmath-python/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;nvmath-python&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;CUDA Python is currently undergoing an overhaul to improve existing and bring up new components. All of the previously available functionalities from the &lt;code&gt;cuda-python&lt;/code&gt; package will continue to be available, please refer to the &lt;a class=&#34;link&#34; href=&#34;https://nvidia.github.io/cuda-python/cuda-bindings/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cuda.bindings&lt;/a&gt; documentation for installation guide and further detail.&lt;/p&gt;
+&lt;h2 id=&#34;cuda-python-as-a-metapackage&#34;&gt;cuda-python as a metapackage
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;cuda-python&lt;/code&gt; is being re-structured to become a metapackage that contains a collection of subpackages. Each subpackage is versioned independently, allowing installation of each component as needed.&lt;/p&gt;
+&lt;h3 id=&#34;subpackage-cudacore&#34;&gt;Subpackage: &lt;code&gt;cuda.core&lt;/code&gt;
+&lt;/h3&gt;&lt;p&gt;The &lt;code&gt;cuda.core&lt;/code&gt; package offers idiomatic, pythonic access to CUDA Runtime and other functionalities.&lt;/p&gt;
+&lt;p&gt;The goals are to&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Provide &lt;strong&gt;idiomatic (&amp;ldquo;pythonic&amp;rdquo;)&lt;/strong&gt; access to CUDA Driver, Runtime, and JIT compiler toolchain&lt;/li&gt;
+&lt;li&gt;Focus on &lt;strong&gt;developer productivity&lt;/strong&gt; by ensuring end-to-end CUDA development can be performed quickly and entirely in Python&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Avoid homegrown&lt;/strong&gt; Python abstractions for CUDA for new Python GPU libraries starting from scratch&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ease&lt;/strong&gt; developer &lt;strong&gt;burden of maintaining&lt;/strong&gt; and catching up with latest CUDA features&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Flatten the learning curve&lt;/strong&gt; for current and future generations of CUDA developers&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;subpackage-cudabindings&#34;&gt;Subpackage: &lt;code&gt;cuda.bindings&lt;/code&gt;
+&lt;/h3&gt;&lt;p&gt;The &lt;code&gt;cuda.bindings&lt;/code&gt; package is a standard set of low-level interfaces, providing full coverage of and access to the CUDA host APIs from Python.&lt;/p&gt;
+&lt;p&gt;The list of available interfaces are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CUDA Driver&lt;/li&gt;
+&lt;li&gt;CUDA Runtime&lt;/li&gt;
+&lt;li&gt;NVRTC&lt;/li&gt;
+&lt;li&gt;nvJitLink&lt;/li&gt;
+&lt;li&gt;NVVM&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

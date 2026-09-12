@@ -1,0 +1,2765 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>SQL on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/sql/</link>
+        <description>Recent content in SQL on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Wed, 03 Sep 2025 15:26:58 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/sql/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>mangle</title>
+        <link>https://producthunt.programnotes.cn/en/p/mangle/</link>
+        <pubDate>Wed, 03 Sep 2025 15:26:58 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/mangle/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1542707088-7fa1c72006d8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY4ODQzNjh8&amp;ixlib=rb-4.1.0" alt="Featured image of post mangle" /&gt;&lt;h1 id=&#34;googlemangle&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/google/mangle&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;google/mangle&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;mangle&#34;&gt;Mangle
+&lt;/h1&gt;&lt;p&gt;Mangle is a programming language for deductive database programming. It
+is an extension of Datalog, with various extensions like aggregation, function
+calls and optional type-checking.&lt;/p&gt;
+&lt;p&gt;Deductive database programming is useful for bringing data from multiple
+data sources together since it enables us to represent and query that data in
+a uniform way. It can also be used to model domain knowledge, similar
+to machine-readable ontology but without being restricted to binary
+predicates.&lt;/p&gt;
+&lt;p&gt;Datalog is an expressive declarative language similar to relational calculus
+(think SQL and relational views). Unlike relational calculus, it also supports
+recursive rules and program structuring in a straightforward way.&lt;/p&gt;
+&lt;p&gt;Mangle contains Datalog as a fragment and adds extensions that make its use
+more practical. Some of the good properties like guaranteed termination are
+lost when such extensions are used.&lt;/p&gt;
+&lt;p&gt;The goal of Mangle as an open source project is to convey the concepts in
+a way that is accessible to developers and lends itself to easy experimentation.
+This repository contains an implementation of Mangle as a go library that can be
+easily embedded into applications.&lt;/p&gt;
+&lt;p&gt;Check out the &lt;a class=&#34;link&#34; href=&#34;docs/README.md&#34; &gt;docs&lt;/a&gt; and the
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/google/mangle/discussions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub discussions&lt;/a&gt; for more
+information. There is also a Q&amp;amp;A section.&lt;/p&gt;
+&lt;p&gt;For an example how to use Mangle library in a database-like grpc service,
+see the separate &lt;a class=&#34;link&#34; href=&#34;https://github.com/burakemir/mangle-service&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mangle demo service repo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is not an officially supported Google product.&lt;/p&gt;
+&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#examples&#34; &gt;Examples&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#building&#34; &gt;Building&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;examples&#34;&gt;Examples
+&lt;/h2&gt;&lt;h3 id=&#34;simple-queries&#34;&gt;Simple Queries
+&lt;/h3&gt;&lt;p&gt;Imagine you were asked to spot software affected by the
+&lt;a class=&#34;link&#34; href=&#34;https://www.cisa.gov/uscert/apache-log4j-vulnerability-guidance&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;log4j vulnerability discovered in late 2021&lt;/a&gt;.
+We want to look for projects that contain a Java archive (jar file) of
+log4j that is not updated to the patched version.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-prolog&#34; data-lang=&#34;prolog&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;projects_with_vulnerable_log4j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;P&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:-&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nf&#34;&gt;projects&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;P&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nf&#34;&gt;contains_jar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;P&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;log4j&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;Version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nv&#34;&gt;Version&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2.17.1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nv&#34;&gt;Version&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2.12.4&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nv&#34;&gt;Version&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2.3.2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This is a Mangle &lt;em&gt;rule&lt;/em&gt;: conceptually, the implementation retrieve all
+possible values for variables &lt;code&gt;P&lt;/code&gt; and &lt;code&gt;Version&lt;/code&gt; that make all the subgoals true.&lt;/p&gt;
+&lt;p&gt;Simple Mangle rules like this correspond to select-project-join relational
+queries. The same query in SQL would look like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;projects&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;as&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;P&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;projects&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;JOIN&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;contains_jar&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ON&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;projects&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;contains_jar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;project_id&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;contains_jar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;version&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;IN&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;2.17.1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;2.12.4&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;2.3.2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Unlike SQL, our Mangle rule &lt;code&gt;projects_with_vulnerable_log4j&lt;/code&gt; has a name
+and can be referenced in other queries.&lt;/p&gt;
+&lt;p&gt;(If translating non-recursive Datalog into SQL queries sounds interesting, you
+should check out the &lt;a class=&#34;link&#34; href=&#34;https://logica.dev/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Logica&lt;/a&gt; open source project.)&lt;/p&gt;
+&lt;h3 id=&#34;aggregation&#34;&gt;Aggregation
+&lt;/h3&gt;&lt;p&gt;In practice, querying is rarely enough and we also need grouping and
+aggregation.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;count_projects_with_vulnerable_log4j(Num) :-
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  projects_with_vulnerable_log4j(P) |&amp;gt; do fn:group_by(), let Num = fn:Count().
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;recursive-queries&#34;&gt;Recursive Queries
+&lt;/h3&gt;&lt;p&gt;The example does not specify what &lt;code&gt;contains_jar&lt;/code&gt; does. Here is a possible
+implementation for &lt;code&gt;contains_jar&lt;/code&gt; that walks a dependency graph.
+This shows that Mangle rules can be recursive.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;contains_jar(P, Name, Version) :-
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  contains_jar_directly(P, Name, Version).
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;contains_jar(P, Name, Version) :-
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  project_depends(P, Q),
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  contains_jar(Q, Name, Version).
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The two rules correspond to two cases in which a project may &amp;ldquo;contain&amp;rdquo; a jar:
+either directly, or through some dependency.&lt;/p&gt;
+&lt;h3 id=&#34;knowledge-graphs-property-graphs&#34;&gt;Knowledge Graphs, Property Graphs
+&lt;/h3&gt;&lt;p&gt;In requirements engineering, one needs to captures real world concepts in a
+domain model and controlled vocabulary. Description logics use
+roles to describe how concepts interact, but these relationships are always
+binary. Mangle can represent binary predicates, but also arbitrary n-ary
+relations. Moreover it also has support for structured data.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;one_or_two_leg_trip(Codes, Start, Destination, Price) :-
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  direct_conn(Code, Start, Destination, Price)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  |&amp;gt; let Codes = [Code].
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;one_or_two_leg_trip(Codes, Start, Destination, Price) :-
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  direct_conn(FirstCode, Start, Connecting, FirstLegPrice).
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  direct_conn(SecondCode, Connecting, Destination, SecondLegPrice)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  |&amp;gt; let Code = [FirstCode, SecondCode],
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     let Price = fn:plus(FirstLegPrice, SecondLegPrice).
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;pre class=&#34;mermaid&#34;&gt;
+  graph LR
+    /zurich --&amp;gt;|/code/ZL &amp;lt;br /&amp;gt; 60 CHF| /lausanne
+    /zurich --&amp;gt;|/code/ZB &amp;lt;br /&amp;gt; 30 CHF| /bern
+    /bern --&amp;gt;|/code/BL &amp;lt;br /&amp;gt; 30 CHF| /lausanne
+&lt;/pre&gt;
+
+&lt;h2 id=&#34;building--testing&#34;&gt;Building &amp;amp; Testing
+&lt;/h2&gt;&lt;p&gt;Get the dependencies (see &lt;a class=&#34;link&#34; href=&#34;go.mod&#34; &gt;go.mod&lt;/a&gt;), build the library, run tests:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go get -t ./...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go build ./...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go test ./...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;regenerating-the-parser-sources&#34;&gt;Regenerating the parser sources
+&lt;/h3&gt;&lt;p&gt;If you want to regenerate the parser sources, you need to set up ANTLR first.
+This requires a Java runtime environment.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wget&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;www&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;antlr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;org&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;download&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;antlr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;4.13&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;complete&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jar&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;antlr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;java -jar $PWD/antlr-4.13.2-complete.jar&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;antlr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Dlanguage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Go&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gen&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;./&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;parse&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gen&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Mangle&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;g4&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;visitor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;contributing&#34;&gt;Contributing
+&lt;/h2&gt;&lt;p&gt;The Mangle maintainers welcome external contributions to spec, documentation
+and this implementation (see &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;CONTRIBUTING.md&lt;/a&gt;) and also other
+implementations. Pull requests will be handled
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/tensorflow/tensorflow/blob/master/CONTRIBUTING.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;like for tensorflow&lt;/a&gt;,
+to ensure our internal usage and tests will pass.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>vanna</title>
+        <link>https://producthunt.programnotes.cn/en/p/vanna/</link>
+        <pubDate>Fri, 18 Jul 2025 15:34:55 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/vanna/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1712952809507-8a83e68a3f31?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI4MjQwNDR8&amp;ixlib=rb-4.1.0" alt="Featured image of post vanna" /&gt;&lt;h1 id=&#34;vanna-aivanna&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vanna-ai/vanna&lt;/a&gt;
+&lt;/h1&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;GitHub&lt;/th&gt;
+					&lt;th&gt;PyPI&lt;/th&gt;
+					&lt;th&gt;Documentation&lt;/th&gt;
+					&lt;th&gt;Gurubase&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/GitHub-vanna-blue?logo=github&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GitHub&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/vanna/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/pypi/v/vanna?logo=pypi&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PyPI&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://vanna.ai/docs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/Documentation-vanna-blue?logo=read-the-docs&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Documentation&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://gurubase.io/g/vanna&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/Gurubase-Ask%20Vanna%20Guru-006BFF&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Gurubase&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;vanna&#34;&gt;Vanna
+&lt;/h1&gt;&lt;p&gt;Vanna is an MIT-licensed open-source Python RAG (Retrieval-Augmented Generation) framework for SQL generation and related functionality.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/assets/7146154/1901f47a-515d-4982-af50-f12761a3b2ce&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/vanna-ai/vanna/assets/7146154/1901f47a-515d-4982-af50-f12761a3b2ce&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/vanna-ai/vanna/assets/7146154/1c7c88ba-c144-4ecf-a028-cf5ba7344ca2&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;vanna-quadrants&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;how-vanna-works&#34;&gt;How Vanna works
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://github.com/vanna-ai/vanna/assets/7146154/1d2718ad-12a8-4a76-afa2-c61754462f93&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screen Recording 2024-01-24 at 11 21 37 AM&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Vanna works in two easy steps - train a RAG &amp;ldquo;model&amp;rdquo; on your data, and then ask questions which will return SQL queries that can be set up to automatically run on your database.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Train a RAG &amp;ldquo;model&amp;rdquo; on your data&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ask questions&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/img/vanna-readme-diagram.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;If you don&amp;rsquo;t know what RAG is, don&amp;rsquo;t worry &amp;ndash; you don&amp;rsquo;t need to know how this works under the hood to use it. You just need to know that you &amp;ldquo;train&amp;rdquo; a model, which stores some metadata and then use it to &amp;ldquo;ask&amp;rdquo; questions.&lt;/p&gt;
+&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/blob/main/src/vanna/base/base.py&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;base class&lt;/a&gt; for more details on how this works under the hood.&lt;/p&gt;
+&lt;h2 id=&#34;user-interfaces&#34;&gt;User Interfaces
+&lt;/h2&gt;&lt;p&gt;These are some of the user interfaces that we&amp;rsquo;ve built using Vanna. You can use these as-is or as a starting point for your own custom interface.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://vanna.ai/docs/postgres-openai-vanna-vannadb/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Jupyter Notebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna-streamlit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vanna-ai/vanna-streamlit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna-flask&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vanna-ai/vanna-flask&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna-slack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vanna-ai/vanna-slack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;supported-llms&#34;&gt;Supported LLMs
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/tree/main/src/vanna/openai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenAI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/tree/main/src/vanna/anthropic&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anthropic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/blob/main/src/vanna/google/gemini_chat.py&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Gemini&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/blob/main/src/vanna/hf/hf.py&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;HuggingFace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/tree/main/src/vanna/bedrock&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AWS Bedrock&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/tree/main/src/vanna/ollama&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ollama&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/tree/main/src/vanna/qianwen&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qianwen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/tree/main/src/vanna/qianfan&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qianfan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/tree/main/src/vanna/ZhipuAI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Zhipu&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;supported-vectorstores&#34;&gt;Supported VectorStores
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/tree/main/src/vanna/azuresearch&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AzureSearch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/tree/main/src/vanna/opensearch&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Opensearch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/tree/main/src/vanna/pgvector&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PgVector&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/tree/main/src/vanna/pinecone&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PineCone&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/tree/main/src/vanna/chromadb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ChromaDB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/tree/main/src/vanna/faiss&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FAISS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/tree/main/src/vanna/marqo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Marqo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/tree/main/src/vanna/milvus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Milvus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/tree/main/src/vanna/qdrant&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qdrant&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/tree/main/src/vanna/weaviate&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Weaviate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/tree/main/src/vanna/oracle&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Oracle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;supported-databases&#34;&gt;Supported Databases
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.postgresql.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PostgreSQL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.mysql.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MySQL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://prestodb.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PrestoDB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://hive.apache.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Apache Hive&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://clickhouse.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ClickHouse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.snowflake.com/en/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Snowflake&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.oracle.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Oracle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.microsoft.com/en-us/sql-server/sql-server-downloads&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Microsoft SQL Server&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloud.google.com/bigquery&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BigQuery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.sqlite.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SQLite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://duckdb.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DuckDB&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting started
+&lt;/h2&gt;&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://vanna.ai/docs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;documentation&lt;/a&gt; for specifics on your desired database, LLM, etc.&lt;/p&gt;
+&lt;p&gt;If you want to get a feel for how it works after training, you can try this &lt;a class=&#34;link&#34; href=&#34;https://vanna.ai/docs/app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Colab notebook&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;install&#34;&gt;Install
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install vanna
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;There are a number of optional packages that can be installed so see the &lt;a class=&#34;link&#34; href=&#34;https://vanna.ai/docs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;documentation&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;h3 id=&#34;import&#34;&gt;Import
+&lt;/h3&gt;&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://vanna.ai/docs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;documentation&lt;/a&gt; if you&amp;rsquo;re customizing the LLM or vector database.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# The import statement will vary depending on your LLM and vector database. This is an example for OpenAI + ChromaDB&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;vanna.openai.openai_chat&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;OpenAI_Chat&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;vanna.chromadb.chromadb_vector&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ChromaDB_VectorStore&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;MyVanna&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ChromaDB_VectorStore&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;OpenAI_Chat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;fm&#34;&gt;__init__&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;config&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;ChromaDB_VectorStore&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;__init__&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;config&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;config&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;OpenAI_Chat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;fm&#34;&gt;__init__&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;config&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;config&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vn&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MyVanna&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;config&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;api_key&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;sk-...&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;model&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;gpt-4-...&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# See the documentation for other options&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;training&#34;&gt;Training
+&lt;/h2&gt;&lt;p&gt;You may or may not need to run these &lt;code&gt;vn.train&lt;/code&gt; commands depending on your use case. See the &lt;a class=&#34;link&#34; href=&#34;https://vanna.ai/docs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;documentation&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;p&gt;These statements are shown to give you a feel for how it works.&lt;/p&gt;
+&lt;h3 id=&#34;train-with-ddl-statements&#34;&gt;Train with DDL Statements
+&lt;/h3&gt;&lt;p&gt;DDL statements contain information about the table names, columns, data types, and relationships in your database.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;train&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ddl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    CREATE TABLE IF NOT EXISTS my-table (
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        id INT PRIMARY KEY,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        name VARCHAR(100),
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        age INT
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    )
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;train-with-documentation&#34;&gt;Train with Documentation
+&lt;/h3&gt;&lt;p&gt;Sometimes you may want to add documentation about your business terminology or definitions.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;train&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;documentation&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Our business defines XYZ as ...&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;train-with-sql&#34;&gt;Train with SQL
+&lt;/h3&gt;&lt;p&gt;You can also add SQL queries to your training data. This is useful if you have some queries already laying around. You can just copy and paste those from your editor to begin generating new SQL.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;train&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sql&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;SELECT name, age FROM my-table WHERE name = &amp;#39;John Doe&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;asking-questions&#34;&gt;Asking questions
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ask&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;What are the top 10 customers by sales?&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;You&amp;rsquo;ll get SQL&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c_name&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;as&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;customer_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;sum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l_extendedprice&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l_discount&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;as&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;total_sales&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;snowflake_sample_data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tpch_sf1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lineitem&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;join&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;snowflake_sample_data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tpch_sf1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;orders&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ON&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l_orderkey&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o_orderkey&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;join&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;snowflake_sample_data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tpch_sf1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;customer&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ON&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o_custkey&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c_custkey&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;GROUP&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;BY&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;customer_name&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;ORDER&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;BY&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;total_sales&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;desc&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;limit&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If you&amp;rsquo;ve connected to a database, you&amp;rsquo;ll get the table:&lt;/p&gt;
+&lt;div&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;CUSTOMER_NAME&lt;/th&gt;
+      &lt;th&gt;TOTAL_SALES&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;Customer#000143500&lt;/td&gt;
+      &lt;td&gt;6757566.0218&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;Customer#000095257&lt;/td&gt;
+      &lt;td&gt;6294115.3340&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;Customer#000087115&lt;/td&gt;
+      &lt;td&gt;6184649.5176&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;Customer#000131113&lt;/td&gt;
+      &lt;td&gt;6080943.8305&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;Customer#000134380&lt;/td&gt;
+      &lt;td&gt;6075141.9635&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;5&lt;/th&gt;
+      &lt;td&gt;Customer#000103834&lt;/td&gt;
+      &lt;td&gt;6059770.3232&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;6&lt;/th&gt;
+      &lt;td&gt;Customer#000069682&lt;/td&gt;
+      &lt;td&gt;6057779.0348&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;7&lt;/th&gt;
+      &lt;td&gt;Customer#000102022&lt;/td&gt;
+      &lt;td&gt;6039653.6335&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;8&lt;/th&gt;
+      &lt;td&gt;Customer#000098587&lt;/td&gt;
+      &lt;td&gt;6027021.5855&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;9&lt;/th&gt;
+      &lt;td&gt;Customer#000064660&lt;/td&gt;
+      &lt;td&gt;5905659.6159&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;You&amp;rsquo;ll also get an automated Plotly chart:
+&lt;img src=&#34;https://producthunt.programnotes.cn/img/top-10-customers.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;rag-vs-fine-tuning&#34;&gt;RAG vs. Fine-Tuning
+&lt;/h2&gt;&lt;p&gt;RAG&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Portable across LLMs&lt;/li&gt;
+&lt;li&gt;Easy to remove training data if any of it becomes obsolete&lt;/li&gt;
+&lt;li&gt;Much cheaper to run than fine-tuning&lt;/li&gt;
+&lt;li&gt;More future-proof &amp;ndash; if a better LLM comes out, you can just swap it out&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Fine-Tuning&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Good if you need to minimize tokens in the prompt&lt;/li&gt;
+&lt;li&gt;Slow to get started&lt;/li&gt;
+&lt;li&gt;Expensive to train and run (generally)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;why-vanna&#34;&gt;Why Vanna?
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;High accuracy on complex datasets.&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Vanna’s capabilities are tied to the training data you give it&lt;/li&gt;
+&lt;li&gt;More training data means better accuracy for large and complex datasets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Secure and private.&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Your database contents are never sent to the LLM or the vector database&lt;/li&gt;
+&lt;li&gt;SQL execution happens in your local environment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Self learning.&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;If using via Jupyter, you can choose to &amp;ldquo;auto-train&amp;rdquo; it on the queries that were successfully executed&lt;/li&gt;
+&lt;li&gt;If using via other interfaces, you can have the interface prompt the user to provide feedback on the results&lt;/li&gt;
+&lt;li&gt;Correct question to SQL pairs are stored for future reference and make the future results more accurate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Supports any SQL database.&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;The package allows you to connect to any SQL database that you can otherwise connect to with Python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Choose your front end.&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Most people start in a Jupyter Notebook.&lt;/li&gt;
+&lt;li&gt;Expose to your end users via Slackbot, web app, Streamlit app, or a custom front end.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;extending-vanna&#34;&gt;Extending Vanna
+&lt;/h2&gt;&lt;p&gt;Vanna is designed to connect to any database, LLM, and vector database. There&amp;rsquo;s a &lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/blob/main/src/vanna/base/base.py&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VannaBase&lt;/a&gt; abstract base class that defines some basic functionality. The package provides implementations for use with OpenAI and ChromaDB. You can easily extend Vanna to use your own LLM or vector database. See the &lt;a class=&#34;link&#34; href=&#34;https://vanna.ai/docs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;documentation&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;h2 id=&#34;vanna-in-100-seconds&#34;&gt;Vanna in 100 Seconds
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vanna-ai/vanna/assets/7146154/eb90ee1e-aa05-4740-891a-4fc10e611cab&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/vanna-ai/vanna/assets/7146154/eb90ee1e-aa05-4740-891a-4fc10e611cab&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;more-resources&#34;&gt;More resources
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://vanna.ai/docs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Full Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://vanna.ai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://discord.gg/qUZYKHremx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Discord group for support&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>perfetto</title>
+        <link>https://producthunt.programnotes.cn/en/p/perfetto/</link>
+        <pubDate>Sun, 06 Jul 2025 15:28:02 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/perfetto/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1615377730068-e8235046ff05?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3ODY3OTR8&amp;ixlib=rb-4.1.0" alt="Featured image of post perfetto" /&gt;&lt;h1 id=&#34;googleperfetto&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/google/perfetto&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;google/perfetto&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;perfetto---system-profiling-app-tracing-and-trace-analysis&#34;&gt;Perfetto - System profiling, app tracing and trace analysis
+&lt;/h1&gt;&lt;p&gt;Perfetto is a production-grade open-source stack for performance
+instrumentation and trace analysis. It offers services and libraries and for
+recording system-level and app-level traces, native + java heap profiling, a
+library for analyzing traces using SQL and a web-based UI to visualize and
+explore multi-GB traces.&lt;/p&gt;
+&lt;p&gt;See &lt;a class=&#34;link&#34; href=&#34;https://perfetto.dev/docs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://perfetto.dev/docs&lt;/a&gt; or the /docs/ directory for documentation.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>drawdb</title>
+        <link>https://producthunt.programnotes.cn/en/p/drawdb/</link>
+        <pubDate>Sat, 05 Jul 2025 15:28:25 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/drawdb/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1614522586497-1004752679ea?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE3MDA0MTZ8&amp;ixlib=rb-4.1.0" alt="Featured image of post drawdb" /&gt;&lt;h1 id=&#34;drawdb-iodrawdb&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/drawdb-io/drawdb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;drawdb-io/drawdb&lt;/a&gt;
+&lt;/h1&gt;&lt;div align=&#34;center&#34;&gt;
+  &lt;sup&gt;Special thanks to:&lt;/sup&gt;
+  &lt;br&gt;
+  &lt;a href=&#34;https://www.warp.dev/drawdb/&#34; target=&#34;_blank&#34;&gt;
+    &lt;img alt=&#34;Warp sponsorship&#34; width=&#34;280&#34; src=&#34;https://github.com/user-attachments/assets/c7f141e7-9751-407d-bb0e-d6f2c487b34f&#34;&gt;
+    &lt;br&gt;
+    &lt;b&gt;Next-gen AI-powered intelligent terminal for all platforms&lt;/b&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;div align=&#34;center&#34;&gt;
+    &lt;img width=&#34;64&#34; alt=&#34;drawdb logo&#34; src=&#34;./src/assets/icon-dark.png&#34;&gt;
+    &lt;h1&gt;drawDB&lt;/h1&gt;
+&lt;/div&gt;
+&lt;h3 align=&#34;center&#34;&gt;Free, simple, and intuitive database schema editor and SQL generator.&lt;/h3&gt;
+&lt;div align=&#34;center&#34; style=&#34;margin-bottom:12px;&#34;&gt;
+    &lt;a href=&#34;https://drawdb.app/&#34; style=&#34;display: flex; align-items: center;&#34;&gt;
+        &lt;img src=&#34;https://img.shields.io/badge/Start%20building-grey&#34; alt=&#34;drawDB&#34;/&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;https://discord.gg/BrjZgNrmR6&#34; style=&#34;display: flex; align-items: center;&#34;&gt;
+        &lt;img src=&#34;https://img.shields.io/discord/1196658537208758412.svg?label=Join%20the%20Discord&amp;logo=discord&#34; alt=&#34;Discord&#34;/&gt;
+    &lt;/a&gt;
+    &lt;a href=&#34;https://x.com/drawDB_&#34; style=&#34;display: flex; align-items: center;&#34;&gt;
+        &lt;img src=&#34;https://img.shields.io/badge/Follow%20us%20on%20X-blue?logo=X&#34; alt=&#34;Follow us on X&#34;/&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;h3 align=&#34;center&#34;&gt;&lt;img width=&#34;700&#34; style=&#34;border-radius:5px;&#34; alt=&#34;demo&#34; src=&#34;drawdb.png&#34;&gt;&lt;/h3&gt;
+&lt;p&gt;DrawDB is a robust and user-friendly database entity relationship (DBER) editor right in your browser. Build diagrams with a few clicks, export sql scripts, customize your editor, and more without creating an account. See the full set of features &lt;a class=&#34;link&#34; href=&#34;https://drawdb.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started
+&lt;/h2&gt;&lt;h3 id=&#34;local-development&#34;&gt;Local Development
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/drawdb-io/drawdb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; drawdb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm run dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;build&#34;&gt;Build
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/drawdb-io/drawdb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; drawdb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm run build
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;docker-build&#34;&gt;Docker Build
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker build -t drawdb .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -p 3000:80 drawdb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If you wish to work with sharing, set up &lt;a class=&#34;link&#34; href=&#34;https://github.com/drawdb-io/drawdb-server&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;server&lt;/a&gt; and environment variables according to &lt;code&gt;.env.sample&lt;/code&gt;. This is not required unless you want to share files.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>effect</title>
+        <link>https://producthunt.programnotes.cn/en/p/effect/</link>
+        <pubDate>Wed, 25 Jun 2025 15:30:56 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/effect/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1700372599816-010cbb047e94?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA4MzY1ODN8&amp;ixlib=rb-4.1.0" alt="Featured image of post effect" /&gt;&lt;h1 id=&#34;effect-tseffect&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Effect-TS/effect&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;effect-monorepo&#34;&gt;Effect Monorepo
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;An ecosystem of tools to build robust applications in TypeScript&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction
+&lt;/h2&gt;&lt;p&gt;Welcome to Effect, a powerful TypeScript framework that provides a fully-fledged functional effect system with a rich standard library.&lt;/p&gt;
+&lt;p&gt;Effect consists of several packages that work together to help build robust TypeScript applications. The core package, &lt;code&gt;effect&lt;/code&gt;, serves as the foundation of the framework, offering primitives for managing side effects, ensuring type safety, and supporting concurrency.&lt;/p&gt;
+&lt;h2 id=&#34;monorepo-structure&#34;&gt;Monorepo Structure
+&lt;/h2&gt;&lt;p&gt;The Effect monorepo is organized into multiple packages, each extending the core functionality. Below is an overview of the packages included:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Package&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+					&lt;th&gt;&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;effect&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Core package&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/effect/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/ai&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;AI utilities&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/ai/ai/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/ai-openai&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;OpenAI utilities&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/ai/openai/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/ai-anthropic&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Anthropic utilities&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/ai/anthropic/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/cli&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;CLI utilities&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/cli/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/cluster&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Distributed computing tools&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/cluster/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/cluster-browser&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Cluster utilities for the browser&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/cluster-browser/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/cluster-node&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Cluster utilities for &lt;a class=&#34;link&#34; href=&#34;https://nodejs.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Node.js&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/cluster-node/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/cluster-workflow&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Workflow management for clusters&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/cluster-worflow/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/experimental&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Experimental features and APIs&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/experimental/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/opentelemetry&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://opentelemetry.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenTelemetry&lt;/a&gt; integration&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/opentelemetry/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/platform&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Cross-platform runtime utilities&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/platform/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/platform-browser&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Platform utilities for the browser&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/platform-browser/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/platform-bun&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Platform utilities for &lt;a class=&#34;link&#34; href=&#34;https://bun.sh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Bun&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/platform-bun/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/platform-node&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Platform utilities for &lt;a class=&#34;link&#34; href=&#34;https://nodejs.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Node.js&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/platform-node/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/platform-node-shared&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Shared utilities for &lt;a class=&#34;link&#34; href=&#34;https://nodejs.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Node.js&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/platform-node-shared/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/printer&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;General-purpose printing utilities&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/printer/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/printer-ansi&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;ANSI-compatible printing utilities&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/printer-ansi/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/rpc&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Remote procedure call (RPC) utilities&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/rpc/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/rpc-http&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;HTTP-based RPC utilities&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/rpc-http/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/sql&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;SQL database utilities&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/sql/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/sql-clickhouse&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;An &lt;code&gt;@effect/sql&lt;/code&gt; implementation for &lt;a class=&#34;link&#34; href=&#34;https://clickhouse.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ClickHouse&lt;/a&gt;.&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/sql-clickhouse/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/sql-d1&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;An &lt;code&gt;@effect/sql&lt;/code&gt; implementation for &lt;a class=&#34;link&#34; href=&#34;https://developers.cloudflare.com/d1/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cloudflare D1&lt;/a&gt;.&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/sql-d1/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/sql-drizzle&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;An &lt;code&gt;@effect/sql&lt;/code&gt; implementation for &lt;a class=&#34;link&#34; href=&#34;https://orm.drizzle.team/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Drizzle&lt;/a&gt;.&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/sql-drizzle/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/sql-kysely&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;An &lt;code&gt;@effect/sql&lt;/code&gt; implementation for &lt;a class=&#34;link&#34; href=&#34;https://kysely.dev/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Kysely&lt;/a&gt;.&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/sql-kysely/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/sql-libsql&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;An &lt;code&gt;@effect/sql&lt;/code&gt; implementation using the &lt;code&gt;@libsql/client&lt;/code&gt; library.&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/sql-libsql/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/sql-mssql&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;An &lt;code&gt;@effect/sql&lt;/code&gt; implementation using the mssql &lt;code&gt;tedious&lt;/code&gt; library.&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/sql-mssql/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/sql-mysql2&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;An &lt;code&gt;@effect/sql&lt;/code&gt; implementation using the &lt;code&gt;mysql2&lt;/code&gt; library.&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/sql-mysql2/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/sql-pg&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;An &lt;code&gt;@effect/sql&lt;/code&gt; implementation using the &lt;code&gt;postgres.js&lt;/code&gt; library.&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/sql-pg/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/sql-sqlite-bun&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;An &lt;code&gt;@effect/sql&lt;/code&gt; implementation using the &lt;code&gt;bun:sqlite&lt;/code&gt; library.&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/sql-sqlite-bun/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/sql-sqlite-do&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;An &lt;code&gt;@effect/sql&lt;/code&gt; implementation for Cloudflare Durable Objects sqlite storage.&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/sql-sqlite-do/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/sql-sqlite-node&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;An &lt;code&gt;@effect/sql&lt;/code&gt; implementation using the &lt;code&gt;better-sqlite3&lt;/code&gt; library.&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/sql-sqlite-node/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/sql-sqlite-react-native&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;An &lt;code&gt;@effect/sql&lt;/code&gt; implementation using the &lt;code&gt;react-native-quick-sqlite&lt;/code&gt; library.&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/sql-sqlite-react-native/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/sql-sqlite-wasm&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;An &lt;code&gt;@effect/sql&lt;/code&gt; implementation using the &lt;code&gt;@sqlite.org/sqlite-wasm&lt;/code&gt; library.&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/sql-sqlite-wasm/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/typeclass&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Functional programming type classes&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/typeclass/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@effect/vitest&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Testing utilities for &lt;a class=&#34;link&#34; href=&#34;https://vitest.dev/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vitest&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Effect-TS/effect/blob/main/packages/vitest/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;README&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;documentation&#34;&gt;Documentation
+&lt;/h1&gt;&lt;h2 id=&#34;website&#34;&gt;Website
+&lt;/h2&gt;&lt;p&gt;For detailed information and usage examples, visit the &lt;a class=&#34;link&#34; href=&#34;https://www.effect.website/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Effect website&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;api-reference&#34;&gt;API Reference
+&lt;/h2&gt;&lt;p&gt;For a complete API reference of the core package &lt;code&gt;effect&lt;/code&gt;, see the &lt;a class=&#34;link&#34; href=&#34;https://effect-ts.github.io/effect/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Effect API documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;introduction-to-effect&#34;&gt;Introduction to Effect
+&lt;/h2&gt;&lt;p&gt;Get started with Effect by watching our introductory video on YouTube. This video provides an overview of Effect and its key features:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/ViSiXfBKElQ&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.youtube.com/vi/ViSiXfBKElQ/maxresdefault.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Introduction to Effect&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;connect-with-our-community&#34;&gt;Connect with Our Community
+&lt;/h1&gt;&lt;p&gt;Join the Effect community on Discord to connect with other developers, ask questions, and share insights: &lt;a class=&#34;link&#34; href=&#34;https://discord.gg/hdt7t7jpvn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Join Effect&amp;rsquo;s Discord Community&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;contributing-via-pull-requests&#34;&gt;Contributing via Pull Requests
+&lt;/h1&gt;&lt;p&gt;We welcome contributions via pull requests! Here are some guidelines to help you get started:&lt;/p&gt;
+&lt;h2 id=&#34;setting-up-your-environment&#34;&gt;Setting Up Your Environment
+&lt;/h2&gt;&lt;p&gt;Begin by forking the repository and clone it to your local machine.&lt;/p&gt;
+&lt;p&gt;Navigate into the cloned repository and create a new branch for your changes:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout -b my-branch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Ensure all required dependencies are installed by running:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pnpm install  &lt;span class=&#34;c1&#34;&gt;# Requires pnpm version 10.4.0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;making-changes&#34;&gt;Making Changes
+&lt;/h2&gt;&lt;h3 id=&#34;implement-your-changes&#34;&gt;Implement Your Changes
+&lt;/h3&gt;&lt;p&gt;Make the changes you propose to the codebase. If your changes impact functionality, please &lt;strong&gt;add corresponding tests&lt;/strong&gt; to validate your updates.&lt;/p&gt;
+&lt;h3 id=&#34;validate-your-changes&#34;&gt;Validate Your Changes
+&lt;/h3&gt;&lt;p&gt;Run the following commands to ensure your changes do not introduce any issues:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pnpm codegen&lt;/code&gt; (optional): Re-generate the package entrypoints in case you have changed the structure of a package or introduced a new module.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pnpm check&lt;/code&gt;: Confirm that the code compiles without errors.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pnpm test&lt;/code&gt;: Execute all unit tests to ensure your changes haven&amp;rsquo;t broken existing functionality.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pnpm circular&lt;/code&gt;: Check for any circular dependencies in imports.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pnpm lint&lt;/code&gt;: Ensure the code adheres to our coding standards.
+&lt;ul&gt;
+&lt;li&gt;If you encounter style issues, use &lt;code&gt;pnpm lint-fix&lt;/code&gt; to automatically correct some of these.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pnpm test-types&lt;/code&gt;: Run type-level tests. Tests are written using &lt;a class=&#34;link&#34; href=&#34;https://tstyche.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;tstyche&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pnpm docgen&lt;/code&gt;: Ensure the documentation generates correctly and reflects any changes made.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;document-your-changes&#34;&gt;Document Your Changes
+&lt;/h3&gt;&lt;h4 id=&#34;jsdoc-comments&#34;&gt;JSDoc Comments
+&lt;/h4&gt;&lt;p&gt;When adding a new feature, it&amp;rsquo;s important to document your code using JSDoc comments. This helps other developers understand the purpose and usage of your changes. Include at least the following in your JSDoc comments:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;A Short Description&lt;/strong&gt;: Summarize the purpose and functionality of the feature.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Example&lt;/strong&gt;: Provide a usage example under the &lt;code&gt;@example&lt;/code&gt; tag to demonstrate how to use the feature.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Since Version&lt;/strong&gt;: Use the &lt;code&gt;@since&lt;/code&gt; tag to indicate the version in which the feature was introduced. If you&amp;rsquo;re unsure about the version, please consult with a project maintainer.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Category (Optional)&lt;/strong&gt;: You can categorize the feature with the &lt;code&gt;@category&lt;/code&gt; tag to help organize the documentation. If you&amp;rsquo;re unsure about what category to assign, ask a project maintainer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: A HTML utility file, &lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/scripts/jsdocs/code2jsdoc-example.html&#34; &gt;&lt;code&gt;code2jsdoc-example.html&lt;/code&gt;&lt;/a&gt;, has been added to assist with creating JSDoc &lt;code&gt;@example&lt;/code&gt; comments. This web-based interface includes two text areas:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;An input textarea for pasting example code.&lt;/li&gt;
+&lt;li&gt;An output textarea that dynamically generates formatted JSDoc &lt;code&gt;@example&lt;/code&gt; comments.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This utility helps ensure consistent formatting and streamlines the process of documenting examples. See the following example of its usage:&lt;/p&gt;
+&lt;p&gt;Example Input:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ts&#34; data-lang=&#34;ts&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Effect&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;effect&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Effect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;runSyncExit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Effect&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;succeed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;/*
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;Output:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;  _id: &amp;#34;Exit&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;  _tag: &amp;#34;Success&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;  value: 1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;*/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Output:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;*
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* @example
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* ```ts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* import { Effect } from &amp;#34;effect&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;*
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* console.log(Effect.runSyncExit(Effect.succeed(1)))
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* // Output:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* // {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* //   _id: &amp;#34;Exit&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* //   _tag: &amp;#34;Success&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* //   value: 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* // }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* ```
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;*
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;By using this utility, you can save time and maintain consistency in your JSDoc comments, especially for complex examples.&lt;/p&gt;
+&lt;h4 id=&#34;changeset-documentation&#34;&gt;Changeset Documentation
+&lt;/h4&gt;&lt;p&gt;Before committing your changes, document them with a changeset. This process helps in tracking modifications and effectively communicating them to the project team and users:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pnpm changeset
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;During the changeset creation process, you will be prompted to select the appropriate level for your changes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;patch&lt;/strong&gt;: Opt for this if you are making small fixes or minor changes that do not affect the library&amp;rsquo;s overall functionality.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;minor&lt;/strong&gt;: Choose this for new features that enhance functionality but do not disrupt existing features.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;major&lt;/strong&gt;: Select this for any changes that result in backward-incompatible modifications to the library.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;finalizing-your-contribution&#34;&gt;Finalizing Your Contribution
+&lt;/h2&gt;&lt;h3 id=&#34;commit-your-changes&#34;&gt;Commit Your Changes
+&lt;/h3&gt;&lt;p&gt;Once you have documented your changes with a changeset, it’s time to commit them to the repository. Use a clear and descriptive commit message, which could be the same message you used in your changeset:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -am &lt;span class=&#34;s1&#34;&gt;&amp;#39;Add some feature&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;linking-to-issues&#34;&gt;Linking to Issues
+&lt;/h4&gt;&lt;p&gt;If your commit addresses an open issue, reference the issue number directly in your commit message. This helps to link your contribution clearly to specific tasks or bug reports. Additionally, if your commit resolves the issue, you can indicate this by adding a phrase like &lt;code&gt;&amp;quot;, closes #&amp;lt;issue-number&amp;gt;&amp;quot;&lt;/code&gt;. For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -am &lt;span class=&#34;s1&#34;&gt;&amp;#39;Add some feature, closes #123&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This practice not only helps in tracking the progress of issues but also automatically closes the issue when the commit is merged, streamlining project management.&lt;/p&gt;
+&lt;h3 id=&#34;push-to-your-fork&#34;&gt;Push to Your Fork
+&lt;/h3&gt;&lt;p&gt;Push the changes up to your GitHub fork:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin my-branch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;create-a-pull-request&#34;&gt;Create a Pull Request
+&lt;/h3&gt;&lt;p&gt;Open a pull request against the appropriate branch on the original repository:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;main&lt;/code&gt; branch: For minor patches or bug fixes.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;next-minor&lt;/code&gt; branch: For new features that are non-breaking.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;next-major&lt;/code&gt; branch: For changes that introduce breaking modifications.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please be patient! We will do our best to review your pull request as soon as possible.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Python-100-Days</title>
+        <link>https://producthunt.programnotes.cn/en/p/python-100-days/</link>
+        <pubDate>Sun, 04 May 2025 15:26:27 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/python-100-days/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1674763766874-a779ba110133?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYzNDM1MTd8&amp;ixlib=rb-4.0.3" alt="Featured image of post Python-100-Days" /&gt;&lt;h1 id=&#34;jackfruedpython-100-days&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/jackfrued/Python-100-Days&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;jackfrued/Python-100-Days&lt;/a&gt;
+&lt;/h1&gt;&lt;h2 id=&#34;python---100天从新手到大师&#34;&gt;Python - 100天从新手到大师
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;作者&lt;/strong&gt;：骆昊&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;：如果访问 GitHub 比较慢的话，可以关注我的知乎号（&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/people/jackfrued&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Python-Jack&lt;/strong&gt;&lt;/a&gt;），上面的&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/c_1216656665569013760&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;“&lt;strong&gt;从零开始学Python&lt;/strong&gt;”&lt;/a&gt;专栏（对应本项目前 20 天的内容）比较适合初学者，其他的专栏如“&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/column/c_1620074540456964096&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;数据思维和统计思维&lt;/strong&gt;&lt;/a&gt;”、“&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/column/c_1217746527315496960&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;基于Python的数据分析&lt;/strong&gt;&lt;/a&gt;”、“&lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/column/c_1628900668109946880&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;说走就走的AI之旅&lt;/strong&gt;&lt;/a&gt;”等也在持续创作和更新中，欢迎大家关注、点赞和评论。如果希望免费学习打卡或者参与问题讨论，可以加入下面的 QQ 交流群（三个群加一个即可），请不要重复加群，也不要在群里发布广告和其他色情、低俗或敏感内容。如果有付费学习或付费咨询的需求，可以添加我的私人微信（微信号：&lt;strong&gt;jackfrued&lt;/strong&gt;），备注好自己的称呼和需求，我会为大家提供力所能及的帮助。&lt;/p&gt;
+&lt;img src=&#34;res/python_study_qq_group.png&#34; style=&#34;zoom:30%;&#34;&gt;
+&lt;p&gt;本项目对应的部分视频已经同步到 &lt;a class=&#34;link&#34; href=&#34;https://space.bilibili.com/1177252794&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Bilibili&lt;/a&gt;，有兴趣的小伙伴可以点赞、投币、关注，一键三连支持一下！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;python应用领域和职业发展分析&#34;&gt;Python应用领域和职业发展分析
+&lt;/h3&gt;&lt;p&gt;简单的说，Python是一个“优雅”、“明确”、“简单”的编程语言。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;学习曲线低，非专业人士也能上手&lt;/li&gt;
+&lt;li&gt;开源系统，拥有强大的生态圈&lt;/li&gt;
+&lt;li&gt;解释型语言，完美的平台可移植性&lt;/li&gt;
+&lt;li&gt;动态类型语言，支持面向对象和函数式编程&lt;/li&gt;
+&lt;li&gt;代码规范程度高，可读性强&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Python在以下领域都有用武之地。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;后端开发 - Python / Java / Go / PHP&lt;/li&gt;
+&lt;li&gt;DevOps - Python / Shell / Ruby&lt;/li&gt;
+&lt;li&gt;数据采集 - Python / C++ / Java&lt;/li&gt;
+&lt;li&gt;量化交易 - Python / C++ / R&lt;/li&gt;
+&lt;li&gt;数据科学 - Python / R / Julia / Matlab&lt;/li&gt;
+&lt;li&gt;机器学习 - Python / R / C++ / Julia&lt;/li&gt;
+&lt;li&gt;自动化测试 - Python / Shell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;作为一名Python开发者，根据个人的喜好和职业规划，可以选择的就业领域也非常多。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python后端开发工程师（服务器、云平台、数据接口）&lt;/li&gt;
+&lt;li&gt;Python运维工程师（自动化运维、SRE、DevOps）&lt;/li&gt;
+&lt;li&gt;Python数据分析师（数据分析、商业智能、数字化运营）&lt;/li&gt;
+&lt;li&gt;Python数据科学家（机器学习、深度学习、算法专家）&lt;/li&gt;
+&lt;li&gt;Python爬虫工程师（不推荐此赛道！！！）&lt;/li&gt;
+&lt;li&gt;Python测试工程师（自动化测试、测试开发）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;：目前，&lt;strong&gt;数据科学赛道是非常热门的方向&lt;/strong&gt;，因为不管是互联网行业还是传统行业都已经积累了大量的数据，各行各业都需要数据科学家从已有的数据中发现更多的商业价值，从而为企业的决策提供数据的支撑，这就是所谓的数据驱动决策。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;给初学者的几个建议：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Make English as your working language.&lt;/strong&gt; （让英语成为你的工作语言）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Practice makes perfect.&lt;/strong&gt; （熟能生巧）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;All experience comes from the mistakes you&amp;rsquo;ve made.&lt;/strong&gt; （所有的经验都源于你犯过的错误）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Don&amp;rsquo;t be a freeloader.&lt;/strong&gt; （不要当伸手党）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Either outstanding or out.&lt;/strong&gt; （要么出众，要么出局）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;day0120---python语言基础&#34;&gt;Day01~20 - Python语言基础
+&lt;/h3&gt;&lt;h4 id=&#34;day01---初识python&#34;&gt;Day01 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/01.%e5%88%9d%e8%af%86Python.md&#34; &gt;初识Python&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Python简介
+&lt;ul&gt;
+&lt;li&gt;Python编年史&lt;/li&gt;
+&lt;li&gt;Python优缺点&lt;/li&gt;
+&lt;li&gt;Python应用领域&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;安装Python环境
+&lt;ul&gt;
+&lt;li&gt;Windows环境&lt;/li&gt;
+&lt;li&gt;macOS环境&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day02---第一个python程序&#34;&gt;Day02 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/02.%e7%ac%ac%e4%b8%80%e4%b8%aaPython%e7%a8%8b%e5%ba%8f.md&#34; &gt;第一个Python程序&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;编写代码的工具&lt;/li&gt;
+&lt;li&gt;你好世界&lt;/li&gt;
+&lt;li&gt;注释你的代码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day03---python语言中的变量&#34;&gt;Day03 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/03.Python%e8%af%ad%e8%a8%80%e4%b8%ad%e7%9a%84%e5%8f%98%e9%87%8f.md&#34; &gt;Python语言中的变量&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;一些常识&lt;/li&gt;
+&lt;li&gt;变量和类型&lt;/li&gt;
+&lt;li&gt;变量命名&lt;/li&gt;
+&lt;li&gt;变量的使用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day04---python语言中的运算符&#34;&gt;Day04 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/04.Python%e8%af%ad%e8%a8%80%e4%b8%ad%e7%9a%84%e8%bf%90%e7%ae%97%e7%ac%a6.md&#34; &gt;Python语言中的运算符&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;算术运算符&lt;/li&gt;
+&lt;li&gt;赋值运算符&lt;/li&gt;
+&lt;li&gt;比较运算符和逻辑运算符&lt;/li&gt;
+&lt;li&gt;运算符和表达式应用
+&lt;ul&gt;
+&lt;li&gt;华氏和摄氏温度转换&lt;/li&gt;
+&lt;li&gt;计算圆的周长和面积&lt;/li&gt;
+&lt;li&gt;判断闰年&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day05---分支结构&#34;&gt;Day05 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/05.%e5%88%86%e6%94%af%e7%bb%93%e6%9e%84.md&#34; &gt;分支结构&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;使用if和else构造分支结构&lt;/li&gt;
+&lt;li&gt;使用match和case构造分支结构&lt;/li&gt;
+&lt;li&gt;分支结构的应用
+&lt;ul&gt;
+&lt;li&gt;分段函数求值&lt;/li&gt;
+&lt;li&gt;百分制成绩转换成等级&lt;/li&gt;
+&lt;li&gt;计算三角形的周长和面积&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day06---循环结构&#34;&gt;Day06 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/06.%e5%be%aa%e7%8e%af%e7%bb%93%e6%9e%84.md&#34; &gt;循环结构&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;for-in循环&lt;/li&gt;
+&lt;li&gt;while循环&lt;/li&gt;
+&lt;li&gt;break和continue&lt;/li&gt;
+&lt;li&gt;嵌套的循环结构&lt;/li&gt;
+&lt;li&gt;循环结构的应用
+&lt;ul&gt;
+&lt;li&gt;判断素数&lt;/li&gt;
+&lt;li&gt;最大公约数&lt;/li&gt;
+&lt;li&gt;猜数字游戏&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day07---分支和循环结构实战&#34;&gt;Day07 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/07.%e5%88%86%e6%94%af%e5%92%8c%e5%be%aa%e7%8e%af%e7%bb%93%e6%9e%84%e5%ae%9e%e6%88%98.md&#34; &gt;分支和循环结构实战&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;例子1：100以内的素数&lt;/li&gt;
+&lt;li&gt;例子2：斐波那契数列&lt;/li&gt;
+&lt;li&gt;例子3：寻找水仙花数&lt;/li&gt;
+&lt;li&gt;例子4：百钱百鸡问题&lt;/li&gt;
+&lt;li&gt;例子5：CRAPS赌博游戏&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day08---常用数据结构之列表-1&#34;&gt;Day08 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/08.%e5%b8%b8%e7%94%a8%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e4%b9%8b%e5%88%97%e8%a1%a8-1.md&#34; &gt;常用数据结构之列表-1&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;创建列表&lt;/li&gt;
+&lt;li&gt;列表的运算&lt;/li&gt;
+&lt;li&gt;元素的遍历&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day09---常用数据结构之列表-2&#34;&gt;Day09 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/09.%e5%b8%b8%e7%94%a8%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e4%b9%8b%e5%88%97%e8%a1%a8-2.md&#34; &gt;常用数据结构之列表-2&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;列表的方法
+&lt;ul&gt;
+&lt;li&gt;添加和删除元素&lt;/li&gt;
+&lt;li&gt;元素位置和频次&lt;/li&gt;
+&lt;li&gt;元素排序和反转&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;列表生成式&lt;/li&gt;
+&lt;li&gt;嵌套列表&lt;/li&gt;
+&lt;li&gt;列表的应用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day10---常用数据结构之元组&#34;&gt;Day10 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/10.%e5%b8%b8%e7%94%a8%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e4%b9%8b%e5%85%83%e7%bb%84.md&#34; &gt;常用数据结构之元组&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;元组的定义和运算&lt;/li&gt;
+&lt;li&gt;打包和解包操作&lt;/li&gt;
+&lt;li&gt;交换变量的值&lt;/li&gt;
+&lt;li&gt;元组和列表的比较&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day11---常用数据结构之字符串&#34;&gt;Day11 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/11.%e5%b8%b8%e7%94%a8%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e4%b9%8b%e5%ad%97%e7%ac%a6%e4%b8%b2.md&#34; &gt;常用数据结构之字符串&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;字符串的定义
+&lt;ul&gt;
+&lt;li&gt;转义字符&lt;/li&gt;
+&lt;li&gt;原始字符串&lt;/li&gt;
+&lt;li&gt;字符的特殊表示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;字符串的运算
+&lt;ul&gt;
+&lt;li&gt;拼接和重复&lt;/li&gt;
+&lt;li&gt;比较运算&lt;/li&gt;
+&lt;li&gt;成员运算&lt;/li&gt;
+&lt;li&gt;获取字符串长度&lt;/li&gt;
+&lt;li&gt;索引和切片&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;字符的遍历&lt;/li&gt;
+&lt;li&gt;字符串的方法
+&lt;ul&gt;
+&lt;li&gt;大小写相关操作&lt;/li&gt;
+&lt;li&gt;查找操作&lt;/li&gt;
+&lt;li&gt;性质判断&lt;/li&gt;
+&lt;li&gt;格式化&lt;/li&gt;
+&lt;li&gt;修剪操作&lt;/li&gt;
+&lt;li&gt;替换操作&lt;/li&gt;
+&lt;li&gt;拆分与合并&lt;/li&gt;
+&lt;li&gt;编码与解码&lt;/li&gt;
+&lt;li&gt;其他方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day12---常用数据结构之集合&#34;&gt;Day12 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/12.%e5%b8%b8%e7%94%a8%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e4%b9%8b%e9%9b%86%e5%90%88.md&#34; &gt;常用数据结构之集合&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;创建集合&lt;/li&gt;
+&lt;li&gt;元素的变量&lt;/li&gt;
+&lt;li&gt;集合的运算
+&lt;ul&gt;
+&lt;li&gt;成员运算&lt;/li&gt;
+&lt;li&gt;二元运算&lt;/li&gt;
+&lt;li&gt;比较运算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;集合的方法&lt;/li&gt;
+&lt;li&gt;不可变集合&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day13---常用数据结构之字典&#34;&gt;Day13 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/13.%e5%b8%b8%e7%94%a8%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e4%b9%8b%e5%ad%97%e5%85%b8.md&#34; &gt;常用数据结构之字典&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;创建和使用字典&lt;/li&gt;
+&lt;li&gt;字典的运算&lt;/li&gt;
+&lt;li&gt;字典的方法&lt;/li&gt;
+&lt;li&gt;字典的应用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day14---函数和模块&#34;&gt;Day14 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/14.%e5%87%bd%e6%95%b0%e5%92%8c%e6%a8%a1%e5%9d%97.md&#34; &gt;函数和模块&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;定义函数&lt;/li&gt;
+&lt;li&gt;函数的参数
+&lt;ul&gt;
+&lt;li&gt;位置参数和关键字参数&lt;/li&gt;
+&lt;li&gt;参数的默认值&lt;/li&gt;
+&lt;li&gt;可变参数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;用模块管理函数&lt;/li&gt;
+&lt;li&gt;标准库中的模块和函数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day15---函数应用实战&#34;&gt;Day15 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/15.%e5%87%bd%e6%95%b0%e5%ba%94%e7%94%a8%e5%ae%9e%e6%88%98.md&#34; &gt;函数应用实战&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;例子1：随机验证码&lt;/li&gt;
+&lt;li&gt;例子2：判断素数&lt;/li&gt;
+&lt;li&gt;例子3：最大公约数和最小公倍数&lt;/li&gt;
+&lt;li&gt;例子4：数据统计&lt;/li&gt;
+&lt;li&gt;例子5：双色球随机选号&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day16---函数使用进阶&#34;&gt;Day16 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/16.%e5%87%bd%e6%95%b0%e4%bd%bf%e7%94%a8%e8%bf%9b%e9%98%b6.md&#34; &gt;函数使用进阶&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;高阶函数&lt;/li&gt;
+&lt;li&gt;Lambda函数&lt;/li&gt;
+&lt;li&gt;偏函数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day17---函数高级应用&#34;&gt;Day17 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/17.%e5%87%bd%e6%95%b0%e9%ab%98%e7%ba%a7%e5%ba%94%e7%94%a8.md&#34; &gt;函数高级应用&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;装饰器&lt;/li&gt;
+&lt;li&gt;递归调用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day18---面向对象编程入门&#34;&gt;Day18 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/18.%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1%e7%bc%96%e7%a8%8b%e5%85%a5%e9%97%a8.md&#34; &gt;面向对象编程入门&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;类和对象&lt;/li&gt;
+&lt;li&gt;定义类&lt;/li&gt;
+&lt;li&gt;创建和使用对象&lt;/li&gt;
+&lt;li&gt;初始化方法&lt;/li&gt;
+&lt;li&gt;面向对象的支柱&lt;/li&gt;
+&lt;li&gt;面向对象案例
+&lt;ul&gt;
+&lt;li&gt;例子1：数字时钟&lt;/li&gt;
+&lt;li&gt;例子2：平面上的点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day19---面向对象编程进阶&#34;&gt;Day19 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/19.%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1%e7%bc%96%e7%a8%8b%e8%bf%9b%e9%98%b6.md&#34; &gt;面向对象编程进阶&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;可见性和属性装饰器&lt;/li&gt;
+&lt;li&gt;动态属性&lt;/li&gt;
+&lt;li&gt;静态方法和类方法&lt;/li&gt;
+&lt;li&gt;继承和多态&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day20---面向对象编程应用&#34;&gt;Day20 - &lt;a class=&#34;link&#34; href=&#34;./Day01-20/20.%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1%e7%bc%96%e7%a8%8b%e5%ba%94%e7%94%a8.md&#34; &gt;面向对象编程应用&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;扑克游戏&lt;/li&gt;
+&lt;li&gt;工资结算系统&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;day2130---python语言应用&#34;&gt;Day21~30 - Python语言应用
+&lt;/h3&gt;&lt;h4 id=&#34;day21---文件读写和异常处理&#34;&gt;Day21 - &lt;a class=&#34;link&#34; href=&#34;./Day21-30/21.%e6%96%87%e4%bb%b6%e8%af%bb%e5%86%99%e5%92%8c%e5%bc%82%e5%b8%b8%e5%a4%84%e7%90%86.md&#34; &gt;文件读写和异常处理&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;打开和关闭文件&lt;/li&gt;
+&lt;li&gt;读写文本文件&lt;/li&gt;
+&lt;li&gt;异常处理机制&lt;/li&gt;
+&lt;li&gt;上下文管理器语法&lt;/li&gt;
+&lt;li&gt;读写二进制文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day22---对象的序列化和反序列化&#34;&gt;Day22 - &lt;a class=&#34;link&#34; href=&#34;./Day21-30/22.%e5%af%b9%e8%b1%a1%e7%9a%84%e5%ba%8f%e5%88%97%e5%8c%96%e5%92%8c%e5%8f%8d%e5%ba%8f%e5%88%97%e5%8c%96.md&#34; &gt;对象的序列化和反序列化&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;JSON概述&lt;/li&gt;
+&lt;li&gt;读写JSON格式的数据&lt;/li&gt;
+&lt;li&gt;包管理工具pip&lt;/li&gt;
+&lt;li&gt;使用网络API获取数据&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day23---python读写csv文件&#34;&gt;Day23 - &lt;a class=&#34;link&#34; href=&#34;23.Python%e8%af%bb%e5%86%99CSV%e6%96%87%e4%bb%b6.md&#34; &gt;Python读写CSV文件&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;CSV文件介绍&lt;/li&gt;
+&lt;li&gt;将数据写入CSV文件&lt;/li&gt;
+&lt;li&gt;从CSV文件读取数据&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day24---python读写excel文件-1&#34;&gt;Day24 - &lt;a class=&#34;link&#34; href=&#34;./Day21-30/24.%e7%94%a8Python%e8%af%bb%e5%86%99Excel%e6%96%87%e4%bb%b6-1.md&#34; &gt;Python读写Excel文件-1&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Excel简介&lt;/li&gt;
+&lt;li&gt;读Excel文件&lt;/li&gt;
+&lt;li&gt;写Excel文件&lt;/li&gt;
+&lt;li&gt;调整样式&lt;/li&gt;
+&lt;li&gt;公式计算&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day25---python读写excel文件-2&#34;&gt;Day25 - &lt;a class=&#34;link&#34; href=&#34;./Day21-30/25.Python%e8%af%bb%e5%86%99Excel%e6%96%87%e4%bb%b6-2.md&#34; &gt;Python读写Excel文件-2&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Excel简介&lt;/li&gt;
+&lt;li&gt;读Excel文件&lt;/li&gt;
+&lt;li&gt;写Excel文件&lt;/li&gt;
+&lt;li&gt;调整样式&lt;/li&gt;
+&lt;li&gt;生成统计图表&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day26---python操作word和powerpoint文件&#34;&gt;Day26 - &lt;a class=&#34;link&#34; href=&#34;./Day21-30/26.Python%e6%93%8d%e4%bd%9cWord%e5%92%8cPowerPoint%e6%96%87%e4%bb%b6.md&#34; &gt;Python操作Word和PowerPoint文件&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;操作Word文档&lt;/li&gt;
+&lt;li&gt;生成PowerPoint&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day27---python操作pdf文件&#34;&gt;Day27 - &lt;a class=&#34;link&#34; href=&#34;./Day21-30/27.Python%e6%93%8d%e4%bd%9cPDF%e6%96%87%e4%bb%b6.md&#34; &gt;Python操作PDF文件&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;从PDF中提取文本&lt;/li&gt;
+&lt;li&gt;旋转和叠加页面&lt;/li&gt;
+&lt;li&gt;加密PDF文件&lt;/li&gt;
+&lt;li&gt;批量添加水印&lt;/li&gt;
+&lt;li&gt;创建PDF文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day28---python处理图像&#34;&gt;Day28 - &lt;a class=&#34;link&#34; href=&#34;./Day21-30/28.Python%e5%a4%84%e7%90%86%e5%9b%be%e5%83%8f.md&#34; &gt;Python处理图像&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;入门知识&lt;/li&gt;
+&lt;li&gt;用Pillow处理图像&lt;/li&gt;
+&lt;li&gt;使用Pillow绘图&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day29---python发送邮件和短信&#34;&gt;Day29 - &lt;a class=&#34;link&#34; href=&#34;./Day21-30/29.Python%e5%8f%91%e9%80%81%e9%82%ae%e4%bb%b6%e5%92%8c%e7%9f%ad%e4%bf%a1.md&#34; &gt;Python发送邮件和短信&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;发送电子邮件&lt;/li&gt;
+&lt;li&gt;发送短信&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day30---正则表达式的应用&#34;&gt;Day30 - &lt;a class=&#34;link&#34; href=&#34;./Day21-30/30.%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f%e7%9a%84%e5%ba%94%e7%94%a8.md&#34; &gt;正则表达式的应用&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;正则表达式相关知识&lt;/li&gt;
+&lt;li&gt;Python对正则表达式的支持
+&lt;ul&gt;
+&lt;li&gt;例子1：输入验证&lt;/li&gt;
+&lt;li&gt;例子2：内容提取&lt;/li&gt;
+&lt;li&gt;例子3：内容替换&lt;/li&gt;
+&lt;li&gt;例子4：长句拆分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;day3135---其他相关内容&#34;&gt;Day31~35 - 其他相关内容
+&lt;/h3&gt;&lt;h4 id=&#34;python语言进阶&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;./Day31-35/31.Python%e8%af%ad%e8%a8%80%e8%bf%9b%e9%98%b6.md&#34; &gt;Python语言进阶&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;重要知识点&lt;/li&gt;
+&lt;li&gt;数据结构和算法&lt;/li&gt;
+&lt;li&gt;函数的使用方式&lt;/li&gt;
+&lt;li&gt;面向对象相关知识&lt;/li&gt;
+&lt;li&gt;迭代器和生成器&lt;/li&gt;
+&lt;li&gt;并发编程&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;web前端入门&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;./Day31-35/32-33.Web%e5%89%8d%e7%ab%af%e5%85%a5%e9%97%a8.md&#34; &gt;Web前端入门&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;用HTML标签承载页面内容&lt;/li&gt;
+&lt;li&gt;用CSS渲染页面&lt;/li&gt;
+&lt;li&gt;用JavaScript处理交互式行为&lt;/li&gt;
+&lt;li&gt;Vue.js入门&lt;/li&gt;
+&lt;li&gt;Element的使用&lt;/li&gt;
+&lt;li&gt;Bootstrap的使用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;玩转linux操作系统&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;./Day31-35/34-35.%e7%8e%a9%e8%bd%acLinux%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f.md&#34; &gt;玩转Linux操作系统&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;操作系统发展史和Linux概述&lt;/li&gt;
+&lt;li&gt;Linux基础命令&lt;/li&gt;
+&lt;li&gt;Linux中的实用程序&lt;/li&gt;
+&lt;li&gt;Linux的文件系统&lt;/li&gt;
+&lt;li&gt;Vim编辑器的应用&lt;/li&gt;
+&lt;li&gt;环境变量和Shell编程&lt;/li&gt;
+&lt;li&gt;软件的安装和服务的配置&lt;/li&gt;
+&lt;li&gt;网络访问和管理&lt;/li&gt;
+&lt;li&gt;其他相关内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;day3645---数据库基础和进阶&#34;&gt;Day36~45 - 数据库基础和进阶
+&lt;/h3&gt;&lt;h4 id=&#34;day36---关系型数据库和mysql概述&#34;&gt;Day36 - &lt;a class=&#34;link&#34; href=&#34;./Day36-45/36.%e5%85%b3%e7%b3%bb%e5%9e%8b%e6%95%b0%e6%8d%ae%e5%ba%93%e5%92%8cMySQL%e6%a6%82%e8%bf%b0.md&#34; &gt;关系型数据库和MySQL概述&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;关系型数据库概述&lt;/li&gt;
+&lt;li&gt;MySQL简介&lt;/li&gt;
+&lt;li&gt;安装MySQL&lt;/li&gt;
+&lt;li&gt;MySQL基本命令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day37---sql详解之ddl&#34;&gt;Day37 - &lt;a class=&#34;link&#34; href=&#34;./Day36-45/37.SQL%e8%af%a6%e8%a7%a3%e4%b9%8bDDL.md&#34; &gt;SQL详解之DDL&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;建库建表&lt;/li&gt;
+&lt;li&gt;删除表和修改表&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day38---sql详解之dml&#34;&gt;Day38 - &lt;a class=&#34;link&#34; href=&#34;./Day36-45/38.SQL%e8%af%a6%e8%a7%a3%e4%b9%8bDML.md&#34; &gt;SQL详解之DML&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;insert操作&lt;/li&gt;
+&lt;li&gt;delete操作&lt;/li&gt;
+&lt;li&gt;update操作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day39---sql详解之dql&#34;&gt;Day39 - &lt;a class=&#34;link&#34; href=&#34;./Day36-45/39.SQL%e8%af%a6%e8%a7%a3%e4%b9%8bDQL.md&#34; &gt;SQL详解之DQL&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;投影和别名&lt;/li&gt;
+&lt;li&gt;筛选数据&lt;/li&gt;
+&lt;li&gt;空值处理&lt;/li&gt;
+&lt;li&gt;去重&lt;/li&gt;
+&lt;li&gt;排序&lt;/li&gt;
+&lt;li&gt;聚合函数&lt;/li&gt;
+&lt;li&gt;嵌套查询&lt;/li&gt;
+&lt;li&gt;分组操作&lt;/li&gt;
+&lt;li&gt;表连接
+&lt;ul&gt;
+&lt;li&gt;笛卡尔积&lt;/li&gt;
+&lt;li&gt;内连接&lt;/li&gt;
+&lt;li&gt;自然连接&lt;/li&gt;
+&lt;li&gt;外连接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;窗口函数
+&lt;ul&gt;
+&lt;li&gt;定义窗口&lt;/li&gt;
+&lt;li&gt;排名函数&lt;/li&gt;
+&lt;li&gt;取数函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day40---sql详解之dcl&#34;&gt;Day40 - &lt;a class=&#34;link&#34; href=&#34;./Day36-45/40.SQL%e8%af%a6%e8%a7%a3%e4%b9%8bDCL.md&#34; &gt;SQL详解之DCL&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;创建用户&lt;/li&gt;
+&lt;li&gt;授予权限&lt;/li&gt;
+&lt;li&gt;召回权限&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day41---mysql新特性&#34;&gt;Day41 - &lt;a class=&#34;link&#34; href=&#34;./Day36-45/41.MySQL%e6%96%b0%e7%89%b9%e6%80%a7.md&#34; &gt;MySQL新特性&lt;/a&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;JSON类型&lt;/li&gt;
+&lt;li&gt;窗口函数&lt;/li&gt;
+&lt;li&gt;公共表表达式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;day42---视图函数和过程&#34;&gt;Day42 - &lt;a class=&#34;link&#34; href=&#34;./Day36-45/42.%e8%a7%86%e5%9b%be%e3%80%81%e5%87%bd%e6%95%b0%e5%92%8c%e8%bf%87%e7%a8%8b.md&#34; &gt;视图、函数和过程&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;视图
+&lt;ul&gt;
+&lt;li&gt;使用场景&lt;/li&gt;
+&lt;li&gt;创建视图&lt;/li&gt;
+&lt;li&gt;使用限制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;函数
+&lt;ul&gt;
+&lt;li&gt;内置函数&lt;/li&gt;
+&lt;li&gt;用户自定义函数（UDF）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;过程
+&lt;ul&gt;
+&lt;li&gt;创建过程&lt;/li&gt;
+&lt;li&gt;调用过程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day43---索引&#34;&gt;Day43 - &lt;a class=&#34;link&#34; href=&#34;./Day36-45/43.%e7%b4%a2%e5%bc%95.md&#34; &gt;索引&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;执行计划&lt;/li&gt;
+&lt;li&gt;索引的原理&lt;/li&gt;
+&lt;li&gt;创建索引
+&lt;ul&gt;
+&lt;li&gt;普通索引&lt;/li&gt;
+&lt;li&gt;唯一索引&lt;/li&gt;
+&lt;li&gt;前缀索引&lt;/li&gt;
+&lt;li&gt;复合索引&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;注意事项&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day44---python接入mysql数据库&#34;&gt;Day44 - &lt;a class=&#34;link&#34; href=&#34;./Day36-45/44.Python%e6%8e%a5%e5%85%a5MySQL%e6%95%b0%e6%8d%ae%e5%ba%93.md&#34; &gt;Python接入MySQL数据库&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;安装三方库&lt;/li&gt;
+&lt;li&gt;创建连接&lt;/li&gt;
+&lt;li&gt;获取游标&lt;/li&gt;
+&lt;li&gt;执行SQL语句&lt;/li&gt;
+&lt;li&gt;通过游标抓取数据&lt;/li&gt;
+&lt;li&gt;事务提交和回滚&lt;/li&gt;
+&lt;li&gt;释放连接&lt;/li&gt;
+&lt;li&gt;编写ETL脚本&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day45---大数据平台和hivesql&#34;&gt;Day45 - &lt;a class=&#34;link&#34; href=&#34;./Day36-45/45.%e5%a4%a7%e6%95%b0%e6%8d%ae%e5%b9%b3%e5%8f%b0%e5%92%8cHiveSQL.md&#34; &gt;大数据平台和HiveSQL&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Hadoop生态圈&lt;/li&gt;
+&lt;li&gt;Hive概述&lt;/li&gt;
+&lt;li&gt;准备工作&lt;/li&gt;
+&lt;li&gt;数据类型&lt;/li&gt;
+&lt;li&gt;DDL操作&lt;/li&gt;
+&lt;li&gt;DML操作&lt;/li&gt;
+&lt;li&gt;数据查询&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;day4660---实战django&#34;&gt;Day46~60 - 实战Django
+&lt;/h3&gt;&lt;h4 id=&#34;day46---django快速上手&#34;&gt;Day46 - &lt;a class=&#34;link&#34; href=&#34;./Day46-60/46.Django%e5%bf%ab%e9%80%9f%e4%b8%8a%e6%89%8b.md&#34; &gt;Django快速上手&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Web应用工作机制&lt;/li&gt;
+&lt;li&gt;HTTP请求和响应&lt;/li&gt;
+&lt;li&gt;Django框架概述&lt;/li&gt;
+&lt;li&gt;5分钟快速上手&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day47---深入模型&#34;&gt;Day47 - &lt;a class=&#34;link&#34; href=&#34;./Day46-60/47.%e6%b7%b1%e5%85%a5%e6%a8%a1%e5%9e%8b.md&#34; &gt;深入模型&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;关系型数据库配置&lt;/li&gt;
+&lt;li&gt;使用ORM完成对模型的CRUD操作&lt;/li&gt;
+&lt;li&gt;管理后台的使用&lt;/li&gt;
+&lt;li&gt;Django模型最佳实践&lt;/li&gt;
+&lt;li&gt;模型定义参考&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day48---静态资源和ajax请求&#34;&gt;Day48 - &lt;a class=&#34;link&#34; href=&#34;./Day46-60/48.%e9%9d%99%e6%80%81%e8%b5%84%e6%ba%90%e5%92%8cAjax%e8%af%b7%e6%b1%82.md&#34; &gt;静态资源和Ajax请求&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;加载静态资源&lt;/li&gt;
+&lt;li&gt;Ajax概述&lt;/li&gt;
+&lt;li&gt;用Ajax实现投票功能&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day49---cookie和session&#34;&gt;Day49 - &lt;a class=&#34;link&#34; href=&#34;./Day46-60/49.Cookie%e5%92%8cSession.md&#34; &gt;Cookie和Session&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;实现用户跟踪&lt;/li&gt;
+&lt;li&gt;cookie和session的关系&lt;/li&gt;
+&lt;li&gt;Django框架对session的支持&lt;/li&gt;
+&lt;li&gt;视图函数中的cookie读写操作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day50---报表和日志&#34;&gt;Day50 - &lt;a class=&#34;link&#34; href=&#34;./Day46-60/50.%e5%88%b6%e4%bd%9c%e6%8a%a5%e8%a1%a8.md&#34; &gt;报表和日志&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;通过&lt;code&gt;HttpResponse&lt;/code&gt;修改响应头&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;StreamingHttpResponse&lt;/code&gt;处理大文件&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;xlwt&lt;/code&gt;生成Excel报表&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;reportlab&lt;/code&gt;生成PDF报表&lt;/li&gt;
+&lt;li&gt;使用ECharts生成前端图表&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day51---日志和调试工具栏&#34;&gt;Day51 - &lt;a class=&#34;link&#34; href=&#34;./Day46-60/51.%e6%97%a5%e5%bf%97%e5%92%8c%e8%b0%83%e8%af%95%e5%b7%a5%e5%85%b7%e6%a0%8f.md&#34; &gt;日志和调试工具栏&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;配置日志&lt;/li&gt;
+&lt;li&gt;配置Django-Debug-Toolbar&lt;/li&gt;
+&lt;li&gt;优化ORM代码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day52---中间件的应用&#34;&gt;Day52 - &lt;a class=&#34;link&#34; href=&#34;./Day46-60/52.%e4%b8%ad%e9%97%b4%e4%bb%b6%e7%9a%84%e5%ba%94%e7%94%a8.md&#34; &gt;中间件的应用&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;什么是中间件&lt;/li&gt;
+&lt;li&gt;Django框架内置的中间件&lt;/li&gt;
+&lt;li&gt;自定义中间件及其应用场景&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day53---前后端分离开发入门&#34;&gt;Day53 - &lt;a class=&#34;link&#34; href=&#34;./Day46-60/53.%e5%89%8d%e5%90%8e%e7%ab%af%e5%88%86%e7%a6%bb%e5%bc%80%e5%8f%91%e5%85%a5%e9%97%a8.md&#34; &gt;前后端分离开发入门&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;返回JSON格式的数据&lt;/li&gt;
+&lt;li&gt;用Vue.js渲染页面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day54---restful架构和drf入门&#34;&gt;Day54 - &lt;a class=&#34;link&#34; href=&#34;./Day46-60/54.RESTful%e6%9e%b6%e6%9e%84%e5%92%8cDRF%e5%85%a5%e9%97%a8.md&#34; &gt;RESTful架构和DRF入门&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;REST概述&lt;/li&gt;
+&lt;li&gt;DRF库使用入门&lt;/li&gt;
+&lt;li&gt;前后端分离开发&lt;/li&gt;
+&lt;li&gt;JWT的应用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day55---restful架构和drf进阶&#34;&gt;Day55 - &lt;a class=&#34;link&#34; href=&#34;./Day46-60/55.RESTful%e6%9e%b6%e6%9e%84%e5%92%8cDRF%e8%bf%9b%e9%98%b6.md&#34; &gt;RESTful架构和DRF进阶&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;使用CBV&lt;/li&gt;
+&lt;li&gt;数据分页&lt;/li&gt;
+&lt;li&gt;数据筛选&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day56---使用缓存&#34;&gt;Day56 - &lt;a class=&#34;link&#34; href=&#34;./Day46-60/56.%e4%bd%bf%e7%94%a8%e7%bc%93%e5%ad%98.md&#34; &gt;使用缓存&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;网站优化第一定律&lt;/li&gt;
+&lt;li&gt;在Django项目中使用Redis提供缓存服务&lt;/li&gt;
+&lt;li&gt;在视图函数中读写缓存&lt;/li&gt;
+&lt;li&gt;使用装饰器实现页面缓存&lt;/li&gt;
+&lt;li&gt;为数据接口提供缓存服务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day57---接入三方平台&#34;&gt;Day57 - &lt;a class=&#34;link&#34; href=&#34;./Day46-60/57.%e6%8e%a5%e5%85%a5%e4%b8%89%e6%96%b9%e5%b9%b3%e5%8f%b0.md&#34; &gt;接入三方平台&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;文件上传表单控件和图片文件预览&lt;/li&gt;
+&lt;li&gt;服务器端如何处理上传的文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day58---异步任务和定时任务&#34;&gt;Day58 - &lt;a class=&#34;link&#34; href=&#34;./Day46-60/58.%e5%bc%82%e6%ad%a5%e4%bb%bb%e5%8a%a1%e5%92%8c%e5%ae%9a%e6%97%b6%e4%bb%bb%e5%8a%a1.md&#34; &gt;异步任务和定时任务&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;网站优化第二定律&lt;/li&gt;
+&lt;li&gt;配置消息队列服务&lt;/li&gt;
+&lt;li&gt;在项目中使用Celery实现任务异步化&lt;/li&gt;
+&lt;li&gt;在项目中使用Celery实现定时任务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day59---单元测试&#34;&gt;Day59 - &lt;a class=&#34;link&#34; href=&#34;./Day46-60/59.%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95.md&#34; &gt;单元测试&lt;/a&gt;
+&lt;/h4&gt;&lt;h4 id=&#34;day60---项目上线&#34;&gt;Day60 - &lt;a class=&#34;link&#34; href=&#34;./Day46-60/60.%e9%a1%b9%e7%9b%ae%e4%b8%8a%e7%ba%bf.md&#34; &gt;项目上线&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Python中的单元测试&lt;/li&gt;
+&lt;li&gt;Django框架对单元测试的支持&lt;/li&gt;
+&lt;li&gt;使用版本控制系统&lt;/li&gt;
+&lt;li&gt;配置和使用uWSGI&lt;/li&gt;
+&lt;li&gt;动静分离和Nginx配置&lt;/li&gt;
+&lt;li&gt;配置HTTPS&lt;/li&gt;
+&lt;li&gt;配置域名解析&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;day6165---网络数据采集&#34;&gt;Day61~65 - 网络数据采集
+&lt;/h3&gt;&lt;h4 id=&#34;day61---网络数据采集概述&#34;&gt;Day61 - &lt;a class=&#34;link&#34; href=&#34;./Day61-65/61.%e7%bd%91%e7%bb%9c%e6%95%b0%e6%8d%ae%e9%87%87%e9%9b%86%e6%a6%82%e8%bf%b0.md&#34; &gt;网络数据采集概述&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;网络爬虫的概念及其应用领域&lt;/li&gt;
+&lt;li&gt;网络爬虫的合法性探讨&lt;/li&gt;
+&lt;li&gt;开发网络爬虫的相关工具&lt;/li&gt;
+&lt;li&gt;一个爬虫程序的构成&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day62---数据抓取和解析&#34;&gt;Day62 - 数据抓取和解析
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;./Day61-65/62.%e7%94%a8Python%e8%8e%b7%e5%8f%96%e7%bd%91%e7%bb%9c%e8%b5%84%e6%ba%90-1.md&#34; &gt;使用&lt;code&gt;requests&lt;/code&gt;三方库实现数据抓取&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;./Day61-65/62.%e7%94%a8Python%e8%a7%a3%e6%9e%90HTML%e9%a1%b5%e9%9d%a2-2.md&#34; &gt;页面解析的三种方式&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;正则表达式解析&lt;/li&gt;
+&lt;li&gt;XPath解析&lt;/li&gt;
+&lt;li&gt;CSS选择器解析&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day63---python中的并发编程&#34;&gt;Day63 - Python中的并发编程
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;./Day61-65/63.Python%e4%b8%ad%e7%9a%84%e5%b9%b6%e5%8f%91%e7%bc%96%e7%a8%8b-1.md&#34; &gt;多线程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;./Day61-65/63.Python%e4%b8%ad%e7%9a%84%e5%b9%b6%e5%8f%91%e7%bc%96%e7%a8%8b-2.md&#34; &gt;多进程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;./Day61-65/63.Python%e4%b8%ad%e7%9a%84%e5%b9%b6%e5%8f%91%e7%bc%96%e7%a8%8b-3.md&#34; &gt;异步I/O&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day64---使用selenium抓取网页动态内容&#34;&gt;Day64 - &lt;a class=&#34;link&#34; href=&#34;./Day61-65/64.%e4%bd%bf%e7%94%a8Selenium%e6%8a%93%e5%8f%96%e7%bd%91%e9%a1%b5%e5%8a%a8%e6%80%81%e5%86%85%e5%ae%b9.md&#34; &gt;使用Selenium抓取网页动态内容&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;安装Selenium&lt;/li&gt;
+&lt;li&gt;加载页面&lt;/li&gt;
+&lt;li&gt;查找元素和模拟用户行为&lt;/li&gt;
+&lt;li&gt;隐式等待和显示等待&lt;/li&gt;
+&lt;li&gt;执行JavaScript代码&lt;/li&gt;
+&lt;li&gt;Selenium反爬破解&lt;/li&gt;
+&lt;li&gt;设置无头浏览器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day65---爬虫框架scrapy简介&#34;&gt;Day65 - &lt;a class=&#34;link&#34; href=&#34;./Day61-65/65.%e7%88%ac%e8%99%ab%e6%a1%86%e6%9e%b6Scrapy%e7%ae%80%e4%bb%8b.md&#34; &gt;爬虫框架Scrapy简介&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Scrapy核心组件&lt;/li&gt;
+&lt;li&gt;Scrapy工作流程&lt;/li&gt;
+&lt;li&gt;安装Scrapy和创建项目&lt;/li&gt;
+&lt;li&gt;编写蜘蛛程序&lt;/li&gt;
+&lt;li&gt;编写中间件和管道程序&lt;/li&gt;
+&lt;li&gt;Scrapy配置文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;day6680---python数据分析&#34;&gt;Day66~80 - Python数据分析
+&lt;/h3&gt;&lt;h4 id=&#34;day66---数据分析概述&#34;&gt;Day66 - &lt;a class=&#34;link&#34; href=&#34;./Day66-80/66.%e6%95%b0%e6%8d%ae%e5%88%86%e6%9e%90%e6%a6%82%e8%bf%b0.md&#34; &gt;数据分析概述&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;数据分析师的职责&lt;/li&gt;
+&lt;li&gt;数据分析师的技能栈&lt;/li&gt;
+&lt;li&gt;数据分析相关库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day67---环境准备&#34;&gt;Day67 - &lt;a class=&#34;link&#34; href=&#34;./Day66-80/67.%e7%8e%af%e5%a2%83%e5%87%86%e5%a4%87.md&#34; &gt;环境准备&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;安装和使用anaconda
+&lt;ul&gt;
+&lt;li&gt;conda相关命令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;安装和使用jupyter-lab
+&lt;ul&gt;
+&lt;li&gt;安装和启动&lt;/li&gt;
+&lt;li&gt;使用小技巧&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day68---numpy的应用-1&#34;&gt;Day68 - &lt;a class=&#34;link&#34; href=&#34;./Day66-80/68.NumPy%e7%9a%84%e5%ba%94%e7%94%a8-1.md&#34; &gt;NumPy的应用-1&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;创建数组对象&lt;/li&gt;
+&lt;li&gt;数组对象的属性&lt;/li&gt;
+&lt;li&gt;数组对象的索引运算
+&lt;ul&gt;
+&lt;li&gt;普通索引&lt;/li&gt;
+&lt;li&gt;花式索引&lt;/li&gt;
+&lt;li&gt;布尔索引&lt;/li&gt;
+&lt;li&gt;切片索引&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;案例：使用数组处理图像&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day69---numpy的应用-2&#34;&gt;Day69 - &lt;a class=&#34;link&#34; href=&#34;./Day66-80/69.NumPy%e7%9a%84%e5%ba%94%e7%94%a8-2.md&#34; &gt;NumPy的应用-2&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;数组对象的相关方法
+&lt;ul&gt;
+&lt;li&gt;获取描述性统计信息&lt;/li&gt;
+&lt;li&gt;其他相关方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day70---numpy的应用-3&#34;&gt;Day70 - &lt;a class=&#34;link&#34; href=&#34;./Day66-80/70.NumPy%e7%9a%84%e5%ba%94%e7%94%a8-3.md&#34; &gt;NumPy的应用-3&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;数组的运算
+&lt;ul&gt;
+&lt;li&gt;数组跟标量的运算&lt;/li&gt;
+&lt;li&gt;数组跟数组的运算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;通用一元函数&lt;/li&gt;
+&lt;li&gt;通用二元函数&lt;/li&gt;
+&lt;li&gt;广播机制&lt;/li&gt;
+&lt;li&gt;Numpy常用函数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day71---numpy的应用-4&#34;&gt;Day71 - &lt;a class=&#34;link&#34; href=&#34;./Day66-80/71.NumPy%e7%9a%84%e5%ba%94%e7%94%a8-4.md&#34; &gt;NumPy的应用-4&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;向量&lt;/li&gt;
+&lt;li&gt;行列式&lt;/li&gt;
+&lt;li&gt;矩阵&lt;/li&gt;
+&lt;li&gt;多项式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day72---深入浅出pandas-1&#34;&gt;Day72 - &lt;a class=&#34;link&#34; href=&#34;./Day66-80/72.%e6%b7%b1%e5%85%a5%e6%b5%85%e5%87%bapandas-1.md&#34; &gt;深入浅出pandas-1&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;创建Series对象&lt;/li&gt;
+&lt;li&gt;Series对象的运算&lt;/li&gt;
+&lt;li&gt;Series对象的属性和方法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day73---深入浅出pandas-2&#34;&gt;Day73 - &lt;a class=&#34;link&#34; href=&#34;./Day66-80/73.%e6%b7%b1%e5%85%a5%e6%b5%85%e5%87%bapandas-2.md&#34; &gt;深入浅出pandas-2&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;创建DataFrame对象&lt;/li&gt;
+&lt;li&gt;DataFrame对象的属性和方法&lt;/li&gt;
+&lt;li&gt;读写DataFrame中的数据&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day74---深入浅出pandas-3&#34;&gt;Day74 - &lt;a class=&#34;link&#34; href=&#34;./Day66-80/74.%e6%b7%b1%e5%85%a5%e6%b5%85%e5%87%bapandas-3.md&#34; &gt;深入浅出pandas-3&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;数据重塑
+&lt;ul&gt;
+&lt;li&gt;数据拼接&lt;/li&gt;
+&lt;li&gt;数据合并&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;数据清洗
+&lt;ul&gt;
+&lt;li&gt;缺失值&lt;/li&gt;
+&lt;li&gt;重复值&lt;/li&gt;
+&lt;li&gt;异常值&lt;/li&gt;
+&lt;li&gt;预处理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day75---深入浅出pandas-4&#34;&gt;Day75 - &lt;a class=&#34;link&#34; href=&#34;./Day66-80/75.%e6%b7%b1%e5%85%a5%e6%b5%85%e5%87%bapandas-4.md&#34; &gt;深入浅出pandas-4&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;数据透视
+&lt;ul&gt;
+&lt;li&gt;获取描述性统计信息&lt;/li&gt;
+&lt;li&gt;排序和头部值&lt;/li&gt;
+&lt;li&gt;分组聚合&lt;/li&gt;
+&lt;li&gt;透视表和交叉表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;数据呈现&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day76---深入浅出pandas-5&#34;&gt;Day76 - &lt;a class=&#34;link&#34; href=&#34;./Day66-80/76.%e6%b7%b1%e5%85%a5%e6%b5%85%e5%87%bapandas-5.md&#34; &gt;深入浅出pandas-5&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;计算同比环比&lt;/li&gt;
+&lt;li&gt;窗口计算&lt;/li&gt;
+&lt;li&gt;相关性判定&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day77---深入浅出pandas-6&#34;&gt;Day77 - &lt;a class=&#34;link&#34; href=&#34;./Day66-80/77.%e6%b7%b1%e5%85%a5%e6%b5%85%e5%87%bapandas-6.md&#34; &gt;深入浅出pandas-6&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;索引的使用
+&lt;ul&gt;
+&lt;li&gt;范围索引&lt;/li&gt;
+&lt;li&gt;分类索引&lt;/li&gt;
+&lt;li&gt;多级索引&lt;/li&gt;
+&lt;li&gt;间隔索引&lt;/li&gt;
+&lt;li&gt;日期时间索引&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day78---数据可视化-1&#34;&gt;Day78 - &lt;a class=&#34;link&#34; href=&#34;./Day66-80/78.%e6%95%b0%e6%8d%ae%e5%8f%af%e8%a7%86%e5%8c%96-1.md&#34; &gt;数据可视化-1&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;安装和导入matplotlib&lt;/li&gt;
+&lt;li&gt;创建画布&lt;/li&gt;
+&lt;li&gt;创建坐标系&lt;/li&gt;
+&lt;li&gt;绘制图表
+&lt;ul&gt;
+&lt;li&gt;折线图&lt;/li&gt;
+&lt;li&gt;散点图&lt;/li&gt;
+&lt;li&gt;柱状图&lt;/li&gt;
+&lt;li&gt;饼状图&lt;/li&gt;
+&lt;li&gt;直方图&lt;/li&gt;
+&lt;li&gt;箱线图&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;显示和保存图表&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day79---数据可视化-2&#34;&gt;Day79 - &lt;a class=&#34;link&#34; href=&#34;./Day66-80/79.%e6%95%b0%e6%8d%ae%e5%8f%af%e8%a7%86%e5%8c%96-2.md&#34; &gt;数据可视化-2&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;高阶图表
+&lt;ul&gt;
+&lt;li&gt;气泡图&lt;/li&gt;
+&lt;li&gt;面积图&lt;/li&gt;
+&lt;li&gt;雷达图&lt;/li&gt;
+&lt;li&gt;玫瑰图&lt;/li&gt;
+&lt;li&gt;3D图表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day80---数据可视化-3&#34;&gt;Day80 - &lt;a class=&#34;link&#34; href=&#34;./Day66-80/80.%e6%95%b0%e6%8d%ae%e5%8f%af%e8%a7%86%e5%8c%96-3.md&#34; &gt;数据可视化-3&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Seaborn&lt;/li&gt;
+&lt;li&gt;Pyecharts&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;day8190---机器学习&#34;&gt;Day81~90 - 机器学习
+&lt;/h3&gt;&lt;h4 id=&#34;day81---浅谈机器学习&#34;&gt;Day81 - &lt;a class=&#34;link&#34; href=&#34;./Day81-90/81.%e6%b5%85%e8%b0%88%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0.md&#34; &gt;浅谈机器学习&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;人工智能发展史&lt;/li&gt;
+&lt;li&gt;什么是机器学习&lt;/li&gt;
+&lt;li&gt;机器学习应用领域&lt;/li&gt;
+&lt;li&gt;机器学习的分类&lt;/li&gt;
+&lt;li&gt;机器学习的步骤&lt;/li&gt;
+&lt;li&gt;第一次机器学习&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day82---k最近邻算法&#34;&gt;Day82 - &lt;a class=&#34;link&#34; href=&#34;./Day81-90/82.k%e6%9c%80%e8%bf%91%e9%82%bb%e7%ae%97%e6%b3%95.md&#34; &gt;k最近邻算法&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;距离的度量&lt;/li&gt;
+&lt;li&gt;数据集介绍&lt;/li&gt;
+&lt;li&gt;kNN分类的实现&lt;/li&gt;
+&lt;li&gt;模型评估&lt;/li&gt;
+&lt;li&gt;参数调优&lt;/li&gt;
+&lt;li&gt;kNN回归的实现&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day83---决策树和随机森林&#34;&gt;Day83 - &lt;a class=&#34;link&#34; href=&#34;./Day81-90/83.%e5%86%b3%e7%ad%96%e6%a0%91%e5%92%8c%e9%9a%8f%e6%9c%ba%e6%a3%ae%e6%9e%97.md&#34; &gt;决策树和随机森林&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;决策树的构建
+&lt;ul&gt;
+&lt;li&gt;特征选择&lt;/li&gt;
+&lt;li&gt;数据分裂&lt;/li&gt;
+&lt;li&gt;树的剪枝&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;实现决策树模型&lt;/li&gt;
+&lt;li&gt;随机森林概述&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day84---朴素贝叶斯算法&#34;&gt;Day84 - &lt;a class=&#34;link&#34; href=&#34;./Day81-90/84.%e6%9c%b4%e7%b4%a0%e8%b4%9d%e5%8f%b6%e6%96%af%e7%ae%97%e6%b3%95.md&#34; &gt;朴素贝叶斯算法&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;贝叶斯定理&lt;/li&gt;
+&lt;li&gt;朴素贝叶斯&lt;/li&gt;
+&lt;li&gt;算法原理
+&lt;ul&gt;
+&lt;li&gt;训练阶段&lt;/li&gt;
+&lt;li&gt;预测阶段&lt;/li&gt;
+&lt;li&gt;代码实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;算法优缺点&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day85---回归模型&#34;&gt;Day85 - &lt;a class=&#34;link&#34; href=&#34;./Day81-90/85.%e5%9b%9e%e5%bd%92%e6%a8%a1%e5%9e%8b.md&#34; &gt;回归模型&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;回归模型的分类&lt;/li&gt;
+&lt;li&gt;回归系数的计算&lt;/li&gt;
+&lt;li&gt;新数据集介绍&lt;/li&gt;
+&lt;li&gt;线性回归代码实现&lt;/li&gt;
+&lt;li&gt;回归模型的评估&lt;/li&gt;
+&lt;li&gt;引入正则化项&lt;/li&gt;
+&lt;li&gt;线性回归另一种实现&lt;/li&gt;
+&lt;li&gt;多项式回归&lt;/li&gt;
+&lt;li&gt;逻辑回归&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day86---k-means聚类算法&#34;&gt;Day86 - &lt;a class=&#34;link&#34; href=&#34;./Day81-90/86.K-Means%e8%81%9a%e7%b1%bb%e7%ae%97%e6%b3%95.md&#34; &gt;K-Means聚类算法&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;算法原理&lt;/li&gt;
+&lt;li&gt;数学描述&lt;/li&gt;
+&lt;li&gt;代码实现&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day87---集成学习算法&#34;&gt;Day87 - &lt;a class=&#34;link&#34; href=&#34;./Day81-90/87.%e9%9b%86%e6%88%90%e5%ad%a6%e4%b9%a0%e7%ae%97%e6%b3%95.md&#34; &gt;集成学习算法&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;算法分类&lt;/li&gt;
+&lt;li&gt;AdaBoost&lt;/li&gt;
+&lt;li&gt;GBDT&lt;/li&gt;
+&lt;li&gt;XGBoost&lt;/li&gt;
+&lt;li&gt;LightGBM&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day88---神经网络模型&#34;&gt;Day88 - &lt;a class=&#34;link&#34; href=&#34;./Day81-90/88.%e7%a5%9e%e7%bb%8f%e7%bd%91%e7%bb%9c%e6%a8%a1%e5%9e%8b.md&#34; &gt;神经网络模型&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;基本构成&lt;/li&gt;
+&lt;li&gt;工作原理&lt;/li&gt;
+&lt;li&gt;代码实现&lt;/li&gt;
+&lt;li&gt;模型优缺点&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day89---自然语言处理入门&#34;&gt;Day89 - &lt;a class=&#34;link&#34; href=&#34;./Day81-90/89.%e8%87%aa%e7%84%b6%e8%af%ad%e8%a8%80%e5%a4%84%e7%90%86%e5%85%a5%e9%97%a8.md&#34; &gt;自然语言处理入门&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;词袋模型&lt;/li&gt;
+&lt;li&gt;词向量&lt;/li&gt;
+&lt;li&gt;NPLM和RNN&lt;/li&gt;
+&lt;li&gt;Seq2Seq&lt;/li&gt;
+&lt;li&gt;Transformer&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;day90---机器学习实战&#34;&gt;Day90 - &lt;a class=&#34;link&#34; href=&#34;./Day81-90/90.%e6%9c%ba%e5%99%a8%e5%ad%a6%e4%b9%a0%e5%ae%9e%e6%88%98.md&#34; &gt;机器学习实战&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;数据探索&lt;/li&gt;
+&lt;li&gt;特征工程&lt;/li&gt;
+&lt;li&gt;模型训练&lt;/li&gt;
+&lt;li&gt;模型评估&lt;/li&gt;
+&lt;li&gt;模型部署&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;day9199---团队项目开发&#34;&gt;Day91~99 - &lt;a class=&#34;link&#34; href=&#34;./Day91-100&#34; &gt;团队项目开发&lt;/a&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;第91天团队项目开发的问题和解决方案&#34;&gt;第91天：&lt;a class=&#34;link&#34; href=&#34;./Day91-100/91.%e5%9b%a2%e9%98%9f%e9%a1%b9%e7%9b%ae%e5%bc%80%e5%8f%91%e7%9a%84%e9%97%ae%e9%a2%98%e5%92%8c%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88.md&#34; &gt;团队项目开发的问题和解决方案&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;软件过程模型&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;经典过程模型（瀑布模型）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可行性分析（研究做还是不做），输出《可行性分析报告》。&lt;/li&gt;
+&lt;li&gt;需求分析（研究做什么），输出《需求规格说明书》和产品界面原型图。&lt;/li&gt;
+&lt;li&gt;概要设计和详细设计，输出概念模型图（ER图）、物理模型图、类图、时序图等。&lt;/li&gt;
+&lt;li&gt;编码 / 测试。&lt;/li&gt;
+&lt;li&gt;上线 / 维护。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;瀑布模型最大的缺点是无法拥抱需求变化，整套流程结束后才能看到产品，团队士气低落。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;敏捷开发（Scrum）- 产品所有者、Scrum Master、研发人员 - Sprint&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;产品的Backlog（用户故事、产品原型）。&lt;/li&gt;
+&lt;li&gt;计划会议（评估和预算）。&lt;/li&gt;
+&lt;li&gt;日常开发（站立会议、番茄工作法、结对编程、测试先行、代码重构……）。&lt;/li&gt;
+&lt;li&gt;修复bug（问题描述、重现步骤、测试人员、被指派人）。&lt;/li&gt;
+&lt;li&gt;发布版本。&lt;/li&gt;
+&lt;li&gt;评审会议（Showcase，用户需要参与）。&lt;/li&gt;
+&lt;li&gt;回顾会议（对当前迭代周期做一个总结）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;补充：敏捷软件开发宣言&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;个体和互动&lt;/strong&gt; 高于 流程和工具&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工作的软件&lt;/strong&gt; 高于 详尽的文档&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;客户合作&lt;/strong&gt; 高于 合同谈判&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;响应变化&lt;/strong&gt; 高于 遵循计划&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;角色：产品所有者（决定做什么，能对需求拍板的人）、团队负责人（解决各种问题，专注如何更好的工作，屏蔽外部对开发团队的影响）、开发团队（项目执行人员，具体指开发人员和测试人员）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;准备工作：商业案例和资金、合同、憧憬、初始产品需求、初始发布计划、入股、组建团队。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;敏捷团队通常人数为8-10人。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;工作量估算：将开发任务量化，包括原型、Logo设计、UI设计、前端开发等，尽量把每个工作分解到最小任务量，最小任务量标准为工作时间不能超过两天，然后估算总体项目时间。把每个任务都贴在看板上面，看板上分三部分：to do（待完成）、in progress（进行中）和done（已完成）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;项目团队组建&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;团队的构成和角色&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编程规范和代码审查（&lt;code&gt;flake8&lt;/code&gt;、&lt;code&gt;pylint&lt;/code&gt;）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Python中的一些“惯例”（请参考&lt;a class=&#34;link&#34; href=&#34;./%e7%95%aa%e5%a4%96%e7%af%87/Python%e7%bc%96%e7%a8%8b%e6%83%af%e4%be%8b.md&#34; &gt;《Python惯例-如何编写Pythonic的代码》&lt;/a&gt;）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;影响代码可读性的原因：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码注释太少或者没有注释&lt;/li&gt;
+&lt;li&gt;代码破坏了语言的最佳实践&lt;/li&gt;
+&lt;li&gt;反模式编程（意大利面代码、复制-黏贴编程、自负编程、……）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;团队开发工具介绍&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;版本控制：Git、Mercury&lt;/li&gt;
+&lt;li&gt;缺陷管理：&lt;a class=&#34;link&#34; href=&#34;https://about.gitlab.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Gitlab&lt;/a&gt;、&lt;a class=&#34;link&#34; href=&#34;http://www.redmine.org.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Redmine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;敏捷闭环工具：&lt;a class=&#34;link&#34; href=&#34;https://www.zentao.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;禅道&lt;/a&gt;、&lt;a class=&#34;link&#34; href=&#34;https://www.atlassian.com/software/jira/features&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JIRA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;持续集成：&lt;a class=&#34;link&#34; href=&#34;https://jenkins.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Jenkins&lt;/a&gt;、&lt;a class=&#34;link&#34; href=&#34;https://travis-ci.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Travis-CI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;请参考&lt;a class=&#34;link&#34; href=&#34;Day91-100/91.%e5%9b%a2%e9%98%9f%e9%a1%b9%e7%9b%ae%e5%bc%80%e5%8f%91%e7%9a%84%e9%97%ae%e9%a2%98%e5%92%8c%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88.md&#34; &gt;《团队项目开发的问题和解决方案》&lt;/a&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;项目选题和理解业务&#34;&gt;项目选题和理解业务
+&lt;/h5&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;选题范围设定&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;CMS（用户端）：新闻聚合网站、问答/分享社区、影评/书评网站等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MIS（用户端+管理端）：KMS、KPI考核系统、HRS、CRM系统、供应链系统、仓储管理系统等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;App后台（管理端+数据接口）：二手交易类、报刊杂志类、小众电商类、新闻资讯类、旅游类、社交类、阅读类等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其他类型：自身行业背景和工作经验、业务容易理解和把控。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;需求理解、模块划分和任务分配&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需求理解：头脑风暴和竞品分析。&lt;/li&gt;
+&lt;li&gt;模块划分：画思维导图（XMind），每个模块是一个枝节点，每个具体的功能是一个叶节点（用动词表述），需要确保每个叶节点无法再生出新节点，确定每个叶子节点的重要性、优先级和工作量。&lt;/li&gt;
+&lt;li&gt;任务分配：由项目负责人根据上面的指标为每个团队成员分配任务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;制定项目进度表（每日更新）&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;模块&lt;/th&gt;
+					&lt;th&gt;功能&lt;/th&gt;
+					&lt;th&gt;人员&lt;/th&gt;
+					&lt;th&gt;状态&lt;/th&gt;
+					&lt;th&gt;完成&lt;/th&gt;
+					&lt;th&gt;工时&lt;/th&gt;
+					&lt;th&gt;计划开始&lt;/th&gt;
+					&lt;th&gt;实际开始&lt;/th&gt;
+					&lt;th&gt;计划结束&lt;/th&gt;
+					&lt;th&gt;实际结束&lt;/th&gt;
+					&lt;th&gt;备注&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;评论&lt;/td&gt;
+					&lt;td&gt;添加评论&lt;/td&gt;
+					&lt;td&gt;王大锤&lt;/td&gt;
+					&lt;td&gt;正在进行&lt;/td&gt;
+					&lt;td&gt;50%&lt;/td&gt;
+					&lt;td&gt;4&lt;/td&gt;
+					&lt;td&gt;2018/8/7&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;2018/8/7&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;删除评论&lt;/td&gt;
+					&lt;td&gt;王大锤&lt;/td&gt;
+					&lt;td&gt;等待&lt;/td&gt;
+					&lt;td&gt;0%&lt;/td&gt;
+					&lt;td&gt;2&lt;/td&gt;
+					&lt;td&gt;2018/8/7&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;2018/8/7&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;查看评论&lt;/td&gt;
+					&lt;td&gt;白元芳&lt;/td&gt;
+					&lt;td&gt;正在进行&lt;/td&gt;
+					&lt;td&gt;20%&lt;/td&gt;
+					&lt;td&gt;4&lt;/td&gt;
+					&lt;td&gt;2018/8/7&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;2018/8/7&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;需要进行代码审查&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;评论投票&lt;/td&gt;
+					&lt;td&gt;白元芳&lt;/td&gt;
+					&lt;td&gt;等待&lt;/td&gt;
+					&lt;td&gt;0%&lt;/td&gt;
+					&lt;td&gt;4&lt;/td&gt;
+					&lt;td&gt;2018/8/8&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;2018/8/8&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;OOAD和数据库设计&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;UML（统一建模语言）的类图&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过模型创建表（正向工程），例如在Django项目中可以通过下面的命令创建二维表。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Shell&#34; data-lang=&#34;Shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python manage.py makemigrations app
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python manage.py migrate
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用PowerDesigner绘制物理模型图。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过数据表创建模型（反向工程），例如在Django项目中可以通过下面的命令生成模型。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Shell&#34; data-lang=&#34;Shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python manage.py inspectdb &amp;gt; app/models.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;第92天docker容器技术详解&#34;&gt;第92天：&lt;a class=&#34;link&#34; href=&#34;./Day91-100/92.Docker%e5%ae%b9%e5%99%a8%e6%8a%80%e6%9c%af%e8%af%a6%e8%a7%a3.md&#34; &gt;Docker容器技术详解&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Docker简介&lt;/li&gt;
+&lt;li&gt;安装Docker&lt;/li&gt;
+&lt;li&gt;使用Docker创建容器（Nginx、MySQL、Redis、Gitlab、Jenkins）&lt;/li&gt;
+&lt;li&gt;构建Docker镜像（Dockerfile的编写和相关指令）&lt;/li&gt;
+&lt;li&gt;容器编排（Docker-compose）&lt;/li&gt;
+&lt;li&gt;集群管理（Kubernetes）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;第93天mysql性能优化&#34;&gt;第93天：&lt;a class=&#34;link&#34; href=&#34;./Day91-100/93.MySQL%e6%80%a7%e8%83%bd%e4%bc%98%e5%8c%96.md&#34; &gt;MySQL性能优化&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;基本原则&lt;/li&gt;
+&lt;li&gt;InnoDB引擎&lt;/li&gt;
+&lt;li&gt;索引的使用和注意事项&lt;/li&gt;
+&lt;li&gt;数据分区&lt;/li&gt;
+&lt;li&gt;SQL优化&lt;/li&gt;
+&lt;li&gt;配置优化&lt;/li&gt;
+&lt;li&gt;架构优化&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;第94天网络api接口设计&#34;&gt;第94天：&lt;a class=&#34;link&#34; href=&#34;./Day91-100/94.%e7%bd%91%e7%bb%9cAPI%e6%8e%a5%e5%8f%a3%e8%ae%be%e8%ae%a1.md&#34; &gt;网络API接口设计&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;设计原则
+&lt;ul&gt;
+&lt;li&gt;关键问题&lt;/li&gt;
+&lt;li&gt;其他问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;文档撰写&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;第95天使用django开发商业项目day91-10095使用django开发商业项目md&#34;&gt;第95天：[使用Django开发商业项目](./Day91-100/95.使用Django开发商业项	目.md)
+&lt;/h4&gt;&lt;h5 id=&#34;项目开发中的公共问题&#34;&gt;项目开发中的公共问题
+&lt;/h5&gt;&lt;ol&gt;
+&lt;li&gt;数据库的配置（多数据库、主从复制、数据库路由）&lt;/li&gt;
+&lt;li&gt;缓存的配置（分区缓存、键设置、超时设置、主从复制、故障恢复（哨兵））&lt;/li&gt;
+&lt;li&gt;日志的配置&lt;/li&gt;
+&lt;li&gt;分析和调试（Django-Debug-ToolBar）&lt;/li&gt;
+&lt;li&gt;好用的Python模块（日期计算、图像处理、数据加密、三方API）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;rest-api设计&#34;&gt;REST API设计
+&lt;/h5&gt;&lt;ol&gt;
+&lt;li&gt;RESTful架构
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.ruanyifeng.com/blog/2011/09/restful.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;理解RESTful架构&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.ruanyifeng.com/blog/2014/05/restful_api.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RESTful API设计指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.ruanyifeng.com/blog/2018/10/restful-api-best-practices.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RESTful API最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;API接口文档的撰写
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://rap2.taobao.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RAP2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://yapi.demo.qunar.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YAPI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.django-rest-framework.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;django-REST-framework&lt;/a&gt;的应用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;项目中的重点难点剖析&#34;&gt;项目中的重点难点剖析
+&lt;/h5&gt;&lt;ol&gt;
+&lt;li&gt;使用缓存缓解数据库压力 - Redis&lt;/li&gt;
+&lt;li&gt;使用消息队列做解耦合和削峰 - Celery + RabbitMQ&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;第96天软件测试和自动化测试&#34;&gt;第96天：&lt;a class=&#34;link&#34; href=&#34;Day91-100/96.%e8%bd%af%e4%bb%b6%e6%b5%8b%e8%af%95%e5%92%8c%e8%87%aa%e5%8a%a8%e5%8c%96%e6%b5%8b%e8%af%95.md&#34; &gt;软件测试和自动化测试&lt;/a&gt;
+&lt;/h4&gt;&lt;h5 id=&#34;单元测试&#34;&gt;单元测试
+&lt;/h5&gt;&lt;ol&gt;
+&lt;li&gt;测试的种类&lt;/li&gt;
+&lt;li&gt;编写单元测试（&lt;code&gt;unittest&lt;/code&gt;、&lt;code&gt;pytest&lt;/code&gt;、&lt;code&gt;nose2&lt;/code&gt;、&lt;code&gt;tox&lt;/code&gt;、&lt;code&gt;ddt&lt;/code&gt;、……）&lt;/li&gt;
+&lt;li&gt;测试覆盖率（&lt;code&gt;coverage&lt;/code&gt;）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;django项目部署&#34;&gt;Django项目部署
+&lt;/h5&gt;&lt;ol&gt;
+&lt;li&gt;部署前的准备工作
+&lt;ul&gt;
+&lt;li&gt;关键设置（SECRET_KEY / DEBUG / ALLOWED_HOSTS / 缓存 / 数据库）&lt;/li&gt;
+&lt;li&gt;HTTPS / CSRF_COOKIE_SECUR  / SESSION_COOKIE_SECURE&lt;/li&gt;
+&lt;li&gt;日志相关配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Linux常用命令回顾&lt;/li&gt;
+&lt;li&gt;Linux常用服务的安装和配置&lt;/li&gt;
+&lt;li&gt;uWSGI/Gunicorn和Nginx的使用
+&lt;ul&gt;
+&lt;li&gt;Gunicorn和uWSGI的比较
+&lt;ul&gt;
+&lt;li&gt;对于不需要大量定制化的简单应用程序，Gunicorn是一个不错的选择，uWSGI的学习曲线比Gunicorn要陡峭得多，Gunicorn的默认参数就已经能够适应大多数应用程序。&lt;/li&gt;
+&lt;li&gt;uWSGI支持异构部署。&lt;/li&gt;
+&lt;li&gt;由于Nginx本身支持uWSGI，在线上一般都将Nginx和uWSGI捆绑在一起部署，而且uWSGI属于功能齐全且高度定制的WSGI中间件。&lt;/li&gt;
+&lt;li&gt;在性能上，Gunicorn和uWSGI其实表现相当。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;使用虚拟化技术（Docker）部署测试环境和生产环境&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;性能测试&#34;&gt;性能测试
+&lt;/h5&gt;&lt;ol&gt;
+&lt;li&gt;AB的使用&lt;/li&gt;
+&lt;li&gt;SQLslap的使用&lt;/li&gt;
+&lt;li&gt;sysbench的使用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;自动化测试&#34;&gt;自动化测试
+&lt;/h5&gt;&lt;ol&gt;
+&lt;li&gt;使用Shell和Python进行自动化测试&lt;/li&gt;
+&lt;li&gt;使用Selenium实现自动化测试
+&lt;ul&gt;
+&lt;li&gt;Selenium IDE&lt;/li&gt;
+&lt;li&gt;Selenium WebDriver&lt;/li&gt;
+&lt;li&gt;Selenium Remote Control&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;测试工具Robot Framework介绍&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;第97天电商网站技术要点剖析&#34;&gt;第97天：&lt;a class=&#34;link&#34; href=&#34;./Day91-100/97.%e7%94%b5%e5%95%86%e7%bd%91%e7%ab%99%e6%8a%80%e6%9c%af%e8%a6%81%e7%82%b9%e5%89%96%e6%9e%90.md&#34; &gt;电商网站技术要点剖析&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;商业模式和需求要点&lt;/li&gt;
+&lt;li&gt;物理模型设计&lt;/li&gt;
+&lt;li&gt;第三方登录&lt;/li&gt;
+&lt;li&gt;缓存预热和查询缓存&lt;/li&gt;
+&lt;li&gt;购物车的实现&lt;/li&gt;
+&lt;li&gt;支付功能集成&lt;/li&gt;
+&lt;li&gt;秒杀和超卖问题&lt;/li&gt;
+&lt;li&gt;静态资源管理&lt;/li&gt;
+&lt;li&gt;全文检索方案&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;第98天项目部署上线和性能调优&#34;&gt;第98天：&lt;a class=&#34;link&#34; href=&#34;./Day91-100/98.%e9%a1%b9%e7%9b%ae%e9%83%a8%e7%bd%b2%e4%b8%8a%e7%ba%bf%e5%92%8c%e6%80%a7%e8%83%bd%e8%b0%83%e4%bc%98.md&#34; &gt;项目部署上线和性能调优&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;MySQL数据库调优&lt;/li&gt;
+&lt;li&gt;Web服务器性能优化
+&lt;ul&gt;
+&lt;li&gt;Nginx负载均衡配置&lt;/li&gt;
+&lt;li&gt;Keepalived实现高可用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;代码性能调优
+&lt;ul&gt;
+&lt;li&gt;多线程&lt;/li&gt;
+&lt;li&gt;异步化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;静态资源访问优化
+&lt;ul&gt;
+&lt;li&gt;云存储&lt;/li&gt;
+&lt;li&gt;CDN&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;第99天面试中的公共问题&#34;&gt;第99天：&lt;a class=&#34;link&#34; href=&#34;./Day91-100/99.%e9%9d%a2%e8%af%95%e4%b8%ad%e7%9a%84%e5%85%ac%e5%85%b1%e9%97%ae%e9%a2%98.md&#34; &gt;面试中的公共问题&lt;/a&gt;
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;计算机基础&lt;/li&gt;
+&lt;li&gt;Python基础&lt;/li&gt;
+&lt;li&gt;Web框架相关&lt;/li&gt;
+&lt;li&gt;爬虫相关问题&lt;/li&gt;
+&lt;li&gt;数据分析&lt;/li&gt;
+&lt;li&gt;项目相关&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第100天---补充内容&#34;&gt;第100天 - &lt;a class=&#34;link&#34; href=&#34;./Day91-100/100.%e8%a1%a5%e5%85%85%e5%86%85%e5%ae%b9.md&#34; &gt;补充内容&lt;/a&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;面试宝典&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python 面试宝典&lt;/li&gt;
+&lt;li&gt;SQL 面试宝典（数据分析师）&lt;/li&gt;
+&lt;li&gt;商业分析面试宝典&lt;/li&gt;
+&lt;li&gt;机器学习面试宝典&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;机器学习数学基础&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;深度学习&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;计算机视觉&lt;/li&gt;
+&lt;li&gt;大语言模型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>supabase-mcp</title>
+        <link>https://producthunt.programnotes.cn/en/p/supabase-mcp/</link>
+        <pubDate>Thu, 10 Apr 2025 15:27:28 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/supabase-mcp/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1666032309795-9c48fd1a6d5a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQyNzAwMzJ8&amp;ixlib=rb-4.0.3" alt="Featured image of post supabase-mcp" /&gt;&lt;h1 id=&#34;supabase-communitysupabase-mcp&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/supabase-community/supabase-mcp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;supabase-community/supabase-mcp&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;supabase-mcp-server&#34;&gt;Supabase MCP Server
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;Connect your Supabase projects to Cursor, Claude, Windsurf, and other AI assistants.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/user-attachments/assets/3fce101a-b7d4-482f-9182-0be70ed1ad56&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;supabase-mcp-demo&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;https://modelcontextprotocol.io/introduction&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Model Context Protocol&lt;/a&gt; (MCP) standardizes how Large Language Models (LLMs) talk to external services like Supabase. It connects AI assistants directly with your Supabase project and allows them to perform tasks like managing tables, fetching config, and querying data. See the &lt;a class=&#34;link&#34; href=&#34;#tools&#34; &gt;full list of tools&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites
+&lt;/h2&gt;&lt;p&gt;You will need Node.js installed on your machine. You can check this by running:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;node -v
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If you don&amp;rsquo;t have Node.js installed, you can download it from &lt;a class=&#34;link&#34; href=&#34;https://nodejs.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;nodejs.org&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup
+&lt;/h2&gt;&lt;h3 id=&#34;1-personal-access-token-pat&#34;&gt;1. Personal access token (PAT)
+&lt;/h3&gt;&lt;p&gt;First, go to your &lt;a class=&#34;link&#34; href=&#34;https://supabase.com/dashboard/account/tokens&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Supabase settings&lt;/a&gt; and create a personal access token. Give it a name that describes its purpose, like &amp;ldquo;Cursor MCP Server&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;This will be used to authenticate the MCP server with your Supabase account. Make sure to copy the token, as you won&amp;rsquo;t be able to see it again.&lt;/p&gt;
+&lt;h3 id=&#34;2-configure-mcp-client&#34;&gt;2. Configure MCP client
+&lt;/h3&gt;&lt;p&gt;Next, configure your MCP client (such as Cursor) to use this server. Most MCP clients store the configuration as JSON in the following format:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;mcpServers&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;supabase&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;command&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;npx&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;args&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;-y&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;@supabase/mcp-server-supabase@latest&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;--access-token&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;personal-access-token&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Replace &lt;code&gt;&amp;lt;personal-access-token&amp;gt;&lt;/code&gt; with the token you created in step 1. Alternatively you can omit &lt;code&gt;--access-token&lt;/code&gt; and instead set the &lt;code&gt;SUPABASE_ACCESS_TOKEN&lt;/code&gt; environment variable to your personal access token (you will need to restart your MCP client after setting this). This allows you to keep your token out of version control if you plan on committing this configuration to a repository.&lt;/p&gt;
+&lt;p&gt;If you are on Windows, you will need to &lt;a class=&#34;link&#34; href=&#34;#windows&#34; &gt;prefix the command&lt;/a&gt;. If your MCP client doesn&amp;rsquo;t accept JSON, the direct CLI command is:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx -y @supabase/mcp-server-supabase@latest --access-token&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;personal-access-token&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Note: Do not run this command directly - this is meant to be executed by your MCP client in order to start the server. &lt;code&gt;npx&lt;/code&gt; automatically downloads the latest version of the MCP server from &lt;code&gt;npm&lt;/code&gt; and runs it in a single command.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;windows&#34;&gt;Windows
+&lt;/h4&gt;&lt;p&gt;On Windows, you will need to prefix the command with &lt;code&gt;cmd /c&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;mcpServers&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;supabase&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;command&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;cmd&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;args&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;/c&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;npx&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;-y&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;@supabase/mcp-server-supabase@latest&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;--access-token&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;personal-access-token&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;or with &lt;code&gt;wsl&lt;/code&gt; if you are running Node.js inside WSL:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;mcpServers&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;supabase&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;command&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;wsl&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;args&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;npx&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;-y&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;@supabase/mcp-server-supabase@latest&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;--access-token&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;personal-access-token&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Make sure Node.js is available in your system &lt;code&gt;PATH&lt;/code&gt; environment variable. If you are running Node.js natively on Windows, you can set this by running the following commands in your terminal.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Get the path to &lt;code&gt;npm&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm config get prefix
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add the directory to your PATH:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;setx PATH &lt;span class=&#34;s2&#34;&gt;&amp;#34;%PATH%;&amp;lt;path-to-dir&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Restart your MCP client.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;tools&#34;&gt;Tools
+&lt;/h2&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Note:&lt;/strong&gt; This server is pre-1.0, so expect some breaking changes between versions. Since LLMs will automatically adapt to the tools available, this shouldn&amp;rsquo;t affect most users.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The following Supabase tools are available to the LLM:&lt;/p&gt;
+&lt;h4 id=&#34;project-management&#34;&gt;Project Management
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;list_projects&lt;/code&gt;: Lists all Supabase projects for the user.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;get_project&lt;/code&gt;: Gets details for a project.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;create_project&lt;/code&gt;: Creates a new Supabase project.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pause_project&lt;/code&gt;: Pauses a project.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;restore_project&lt;/code&gt;: Restores a project.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;list_organizations&lt;/code&gt;: Lists all organizations that the user is a member of.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;get_organization&lt;/code&gt;: Gets details for an organization.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;database-operations&#34;&gt;Database Operations
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;list_tables&lt;/code&gt;: Lists all tables within the specified schemas.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;list_extensions&lt;/code&gt;: Lists all extensions in the database.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;list_migrations&lt;/code&gt;: Lists all migrations in the database.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;apply_migration&lt;/code&gt;: Applies a SQL migration to the database. SQL passed to this tool will be tracked within the database, so LLMs should use this for DDL operations (schema changes).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;execute_sql&lt;/code&gt;: Executes raw SQL in the database. LLMs should use this for regular queries that don&amp;rsquo;t change the schema.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;get_logs&lt;/code&gt;: Gets logs for a Supabase project by service type (api, postgres, edge functions, auth, storage, realtime). LLMs can use this to help with debugging and monitoring service performance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;project-configuration&#34;&gt;Project Configuration
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;get_project_url&lt;/code&gt;: Gets the API URL for a project.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;get_anon_key&lt;/code&gt;: Gets the anonymous API key for a project.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;branching-experimental-requires-a-paid-plan&#34;&gt;Branching (Experimental, requires a paid plan)
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;create_branch&lt;/code&gt;: Creates a development branch with migrations from production branch.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;list_branches&lt;/code&gt;: Lists all development branches.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;delete_branch&lt;/code&gt;: Deletes a development branch.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;merge_branch&lt;/code&gt;: Merges migrations and edge functions from a development branch to production.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;reset_branch&lt;/code&gt;: Resets migrations of a development branch to a prior version.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rebase_branch&lt;/code&gt;: Rebases development branch on production to handle migration drift.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;development-tools&#34;&gt;Development Tools
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;generate_typescript_types&lt;/code&gt;: Generates TypeScript types based on the database schema. LLMs can save this to a file and use it in their code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;cost-confirmation&#34;&gt;Cost Confirmation
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;get_cost&lt;/code&gt;: Gets the cost of a new project or branch for an organization.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;confirm_cost&lt;/code&gt;: Confirms the user&amp;rsquo;s understanding of new project or branch costs. This is required to create a new project or branch.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;other-mcp-servers&#34;&gt;Other MCP servers
+&lt;/h2&gt;&lt;h3 id=&#34;supabasemcp-server-postgrest&#34;&gt;&lt;code&gt;@supabase/mcp-server-postgrest&lt;/code&gt;
+&lt;/h3&gt;&lt;p&gt;The PostgREST MCP server allows you to connect your own users to your app via REST API. See more details on its &lt;a class=&#34;link&#34; href=&#34;./packages/mcp-server-postgrest&#34; &gt;project README&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://modelcontextprotocol.io/introduction&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Model Context Protocol&lt;/strong&gt;&lt;/a&gt;: Learn more about MCP and its capabilities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;This project is licensed under Apache 2.0. See the &lt;a class=&#34;link&#34; href=&#34;./LICENSE&#34; &gt;LICENSE&lt;/a&gt; file for details.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

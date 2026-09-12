@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Kamal on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/kamal/</link>
+        <description>Recent content in Kamal on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sat, 06 Dec 2025 15:27:23 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/kamal/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>fizzy</title>
+        <link>https://producthunt.programnotes.cn/en/p/fizzy/</link>
+        <pubDate>Sat, 06 Dec 2025 15:27:23 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/fizzy/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1544085311-11a028465b03?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjUwMDYwMzZ8&amp;ixlib=rb-4.1.0" alt="Featured image of post fizzy" /&gt;&lt;h1 id=&#34;basecampfizzy&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/basecamp/fizzy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;basecamp/fizzy&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;fizzy&#34;&gt;Fizzy
+&lt;/h1&gt;&lt;p&gt;This is the source code of &lt;a class=&#34;link&#34; href=&#34;https://fizzy.do/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Fizzy&lt;/a&gt;, the Kanban tracking tool for issues and ideas by &lt;a class=&#34;link&#34; href=&#34;https://37signals.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;37signals&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;deploying-fizzy&#34;&gt;Deploying Fizzy
+&lt;/h2&gt;&lt;p&gt;If you&amp;rsquo;d like to run Fizzy on your own server, we recommend deploying it with &lt;a class=&#34;link&#34; href=&#34;https://kamal-deploy.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Kamal&lt;/a&gt;.
+Kamal makes it easier to set up a bare server, copy the application to it, and manage the configuration settings that it uses.&lt;/p&gt;
+&lt;p&gt;(Kamal is also what we use to deploy Fizzy at 37signals. If you&amp;rsquo;re curious about what our deployment configuration looks like, you can find it inside &lt;a class=&#34;link&#34; href=&#34;https://github.com/basecamp/fizzy-saas&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;fizzy-saas&lt;/code&gt;&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;This repo contains a starter deployment file that you can modify for your own specific use. That file lives at &lt;a class=&#34;link&#34; href=&#34;config/deploy.yml&#34; &gt;config/deploy.yml&lt;/a&gt;, which is the default place where Kamal will look for it.&lt;/p&gt;
+&lt;p&gt;The steps to configure your very own Fizzy are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Fork the repo&lt;/li&gt;
+&lt;li&gt;Edit few things in config/deploy.yml, .kamal/secrets, and config/environments/production.rb&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;kamal setup&lt;/code&gt; to do your first deploy.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We&amp;rsquo;ll go through each of these in turn.&lt;/p&gt;
+&lt;h3 id=&#34;fork-the-repo&#34;&gt;Fork the repo
+&lt;/h3&gt;&lt;p&gt;To make it easy to customise Fizzy&amp;rsquo;s settings for your own instance, you should start by creating your own GitHub fork of the repo.
+That allows you to commit your changes, and track them over time.
+You can always re-sync your fork to pick up new changes from the main repo over time.&lt;/p&gt;
+&lt;p&gt;Once you&amp;rsquo;ve got your fork ready, run &lt;code&gt;bin/setup&lt;/code&gt; from within it, to make sure everything is installed.&lt;/p&gt;
+&lt;h3 id=&#34;editing-the-configuration&#34;&gt;Editing the configuration
+&lt;/h3&gt;&lt;p&gt;The config/deploy.yml has been mostly set up for you, but you&amp;rsquo;ll need to fill out some sections that are specific to your instance.
+To get started, the parts you need to change are all in the &amp;ldquo;About your deployment&amp;rdquo; section.
+We&amp;rsquo;ve added comments to that file to highlight what each setting needs to be, but the main ones are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;servers/web&lt;/code&gt;: Enter the hostname of the server you&amp;rsquo;re deploying to here. This should be an address that you can access via &lt;code&gt;ssh&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ssh/user&lt;/code&gt;: If you access your server a &lt;code&gt;root&lt;/code&gt; you can leave this alone; if you use a different user, set it here.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;proxy/ssl&lt;/code&gt; and &lt;code&gt;proxy/host&lt;/code&gt;: Kamal can set up SSL certificates for you automatically. To enable that, set the hostname again as &lt;code&gt;host&lt;/code&gt;. If you don&amp;rsquo;t want SSL for some reason, you can set &lt;code&gt;ssl: false&lt;/code&gt; to turn it off.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;env/clear/MAILER_FROM_ADDRESS&lt;/code&gt;: This is the email address that Fizzy will send emails from. It should usually be an address from the same domain where you&amp;rsquo;re running Fizzy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Fizzy also requires a few environment variables to be set up, some of which contain secrets.
+The simplest way to do this is to put them in a file called &lt;code&gt;.kamal/secrets&lt;/code&gt;.
+Because this file will contain secret credentials, it&amp;rsquo;s important that you DON&amp;rsquo;T CHECK THIS FILE INTO YOUR REPO! You can add the filename to &lt;code&gt;.gitignore&lt;/code&gt; to ensure you don&amp;rsquo;t commit this file accidentally.&lt;/p&gt;
+&lt;p&gt;If you use a password manager like 1Password, you can also opt to keep your secrets there instead.
+Refer to the &lt;a class=&#34;link&#34; href=&#34;https://kamal-deploy.org/docs/configuration/environment-variables/#secrets&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Kamal documentation&lt;/a&gt; for more information about how to do that.&lt;/p&gt;
+&lt;p&gt;To store your secrets, create the file &lt;code&gt;.kamal/secrets&lt;/code&gt; and enter something like the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SECRET_KEY_BASE=12345
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;VAPID_PUBLIC_KEY=something
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;VAPID_PRIVATE_KEY=somethingelse
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SMTP_USERNAME=email-provider-username
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SMTP_PASSWORD=email-provider-password
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The values you enter here will be specific to you, and you can get or create them as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;SECRET_KEY_BASE&lt;/code&gt; should be a long, random secret. You can run &lt;code&gt;bin/rails secret&lt;/code&gt; to create a suitable value for this.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;VAPID_PUBLIC_KEY&lt;/code&gt; &amp;amp; &lt;code&gt;VAPID_PRIVATE_KEY&lt;/code&gt; are a pair of credentials that are used for sending notifications. You can create your own keys by starting a development console with:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;bin/rails c
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And then run the following to create a new pair of keys:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vapid_key&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;WebPush&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generate_key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;puts&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;VAPID_PRIVATE_KEY=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;#{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vapid_key&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;private_key&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;puts&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;VAPID_PUBLIC_KEY=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;#{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vapid_key&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;public_key&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;SMTP_USERNAME&lt;/code&gt;/&lt;code&gt;SMTP_PASSWORD&lt;/code&gt; are credentials you should get from your email provider.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Lastly, you&amp;rsquo;ll need to set up the rest of your email configuration in &lt;code&gt;config/environments/production.rb&lt;/code&gt;. There is an example configuration in comments at the top of that file. The actual settings you use here will depend on your email provider, but in most cases will look similar to that section, so you can uncomment it and edit to suit. Note that it will use the &lt;code&gt;SMTP_USERNAME&lt;/code&gt; and &lt;code&gt;SMTP_PASSWORD&lt;/code&gt; values you entered in your secrets.&lt;/p&gt;
+&lt;p&gt;Once you&amp;rsquo;ve made all those changes, commit them to your fork so they&amp;rsquo;re saved.&lt;/p&gt;
+&lt;h3 id=&#34;deploy-fizzy&#34;&gt;Deploy Fizzy!
+&lt;/h3&gt;&lt;p&gt;You can now do your first deploy by running:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;bin/kamal setup
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will set up Docker (if needed), build your Fizzy app container, configure it, and start it running.&lt;/p&gt;
+&lt;p&gt;After the first deploy is done, any subsequent steps won&amp;rsquo;t need to do that initial setup. So for future deploys you can just run:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;bin/kamal deploy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;development&#34;&gt;Development
+&lt;/h2&gt;&lt;h3 id=&#34;setting-up&#34;&gt;Setting up
+&lt;/h3&gt;&lt;p&gt;First, get everything installed and configured with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/setup
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/setup --reset &lt;span class=&#34;c1&#34;&gt;# Reset the database and seed it&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;And then run the development server:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;You&amp;rsquo;ll be able to access the app in development at &lt;a class=&#34;link&#34; href=&#34;http://fizzy.localhost:3006&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://fizzy.localhost:3006&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To login, enter &lt;code&gt;david@example.com&lt;/code&gt; and grab the verification code from the browser console to sign in.&lt;/p&gt;
+&lt;h3 id=&#34;web-push-notifications&#34;&gt;Web Push Notifications
+&lt;/h3&gt;&lt;p&gt;Fizzy uses VAPID (Voluntary Application Server Identification) keys to send browser push notifications. For notifications to work in development you&amp;rsquo;ll need to generate a key pair and set these environment variables:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;VAPID_PRIVATE_KEY&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;VAPID_PUBLIC_KEY&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Generate them with the &lt;code&gt;web-push&lt;/code&gt; gem:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vapid_key&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;WebPush&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generate_key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;puts&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;VAPID_PRIVATE_KEY=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;#{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vapid_key&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;private_key&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;puts&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;VAPID_PUBLIC_KEY=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;#{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vapid_key&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;public_key&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;running-tests&#34;&gt;Running tests
+&lt;/h3&gt;&lt;p&gt;For fast feedback loops, unit tests can be run with:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;bin/rails test
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The full continuous integration tests can be run with:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;bin/ci
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;database-configuration&#34;&gt;Database configuration
+&lt;/h3&gt;&lt;p&gt;Fizzy works with SQLite by default and supports MySQL too. You can switch adapters with the &lt;code&gt;DATABASE_ADAPTER&lt;/code&gt; environment variable. For example, to develop locally against MySQL:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;DATABASE_ADAPTER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;mysql bin/setup --reset
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;DATABASE_ADAPTER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;mysql bin/ci
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The remote CI pipeline will run tests against both SQLite and MySQL.&lt;/p&gt;
+&lt;h3 id=&#34;outbound-emails&#34;&gt;Outbound Emails
+&lt;/h3&gt;&lt;p&gt;You can view email previews at &lt;a class=&#34;link&#34; href=&#34;http://fizzy.localhost:3006/rails/mailers&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://fizzy.localhost:3006/rails/mailers&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can enable or disable &lt;a class=&#34;link&#34; href=&#34;https://github.com/ryanb/letter_opener&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;letter_opener&lt;/code&gt;&lt;/a&gt; to open sent emails automatically with:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;bin/rails dev:email
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Under the hood, this will create or remove &lt;code&gt;tmp/email-dev.txt&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;saas-gem&#34;&gt;SaaS gem
+&lt;/h2&gt;&lt;p&gt;37signals bundles Fizzy with &lt;a class=&#34;link&#34; href=&#34;https://github.com/basecamp/fizzy-saas&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;fizzy-saas&lt;/code&gt;&lt;/a&gt;, a companion gem that links Fizzy with our billing system and contains our production setup.&lt;/p&gt;
+&lt;p&gt;This gem depends on some private git repositories and it is not meant to be used by third parties. But we hope it can serve as inspiration for anyone wanting to run fizzy on their own infrastructure.&lt;/p&gt;
+&lt;h2 id=&#34;contributing&#34;&gt;Contributing
+&lt;/h2&gt;&lt;p&gt;We welcome contributions! Please read our &lt;a class=&#34;link&#34; href=&#34;STYLE.md&#34; &gt;style guide&lt;/a&gt; before submitting code.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;Fizzy is released under the &lt;a class=&#34;link&#34; href=&#34;LICENSE.md&#34; &gt;O&amp;rsquo;Saasy License&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

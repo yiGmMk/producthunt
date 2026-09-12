@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Open WebUI on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/open-webui/</link>
+        <description>Recent content in Open WebUI on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Mon, 02 Jun 2025 15:31:52 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/open-webui/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>local-ai-packaged</title>
+        <link>https://producthunt.programnotes.cn/en/p/local-ai-packaged/</link>
+        <pubDate>Mon, 02 Jun 2025 15:31:52 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/local-ai-packaged/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1691520673295-9626f624869b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg4NDk0MTN8&amp;ixlib=rb-4.1.0" alt="Featured image of post local-ai-packaged" /&gt;&lt;h1 id=&#34;coleam00local-ai-packaged&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/coleam00/local-ai-packaged&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;coleam00/local-ai-packaged&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;self-hosted-ai-package&#34;&gt;Self-hosted AI Package
+&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Self-hosted AI Package&lt;/strong&gt; is an open, docker compose template that
+quickly bootstraps a fully featured Local AI and Low Code development
+environment including Ollama for your local LLMs, Open WebUI for an interface to chat with your N8N agents, and Supabase for your database, vector store, and authentication.&lt;/p&gt;
+&lt;p&gt;This is Cole&amp;rsquo;s version with a couple of improvements and the addition of Supabase, Open WebUI, Flowise, Neo4j, Langfuse, SearXNG, and Caddy!
+Also, the local RAG AI Agent workflows from the video will be automatically in your
+n8n instance if you use this setup instead of the base one provided by n8n!&lt;/p&gt;
+&lt;h2 id=&#34;important-links&#34;&gt;Important Links
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://thinktank.ottomator.ai/c/local-ai/18&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Local AI community&lt;/a&gt; forum over in the oTTomator Think Tank&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/users/coleam00/projects/2/views/1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Kanban board&lt;/a&gt; for feature implementation and bug squashing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/n8n-io/self-hosted-ai-starter-kit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Original Local AI Starter Kit&lt;/a&gt; by the n8n team&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Download my N8N + OpenWebUI integration &lt;a class=&#34;link&#34; href=&#34;https://openwebui.com/f/coleam/n8n_pipe/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;directly on the Open WebUI site.&lt;/a&gt; (more instructions below)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/n8n-io/self-hosted-ai-starter-kit/main/assets/n8n-demo.gif&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;n8n.io - Screenshot&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Curated by &lt;a class=&#34;link&#34; href=&#34;https://github.com/n8n-io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/n8n-io&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://github.com/coleam00&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/coleam00&lt;/a&gt;, it combines the self-hosted n8n
+platform with a curated list of compatible AI products and components to
+quickly get started with building self-hosted AI workflows.&lt;/p&gt;
+&lt;h3 id=&#34;whats-included&#34;&gt;What’s included
+&lt;/h3&gt;&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://n8n.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Self-hosted n8n&lt;/strong&gt;&lt;/a&gt; - Low-code platform with over 400
+integrations and advanced AI components&lt;/p&gt;
+&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://supabase.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Supabase&lt;/strong&gt;&lt;/a&gt; - Open source database as a service -
+most widely used database for AI agents&lt;/p&gt;
+&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://ollama.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Ollama&lt;/strong&gt;&lt;/a&gt; - Cross-platform LLM platform to install
+and run the latest local LLMs&lt;/p&gt;
+&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://openwebui.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Open WebUI&lt;/strong&gt;&lt;/a&gt; - ChatGPT-like interface to
+privately interact with your local models and N8N agents&lt;/p&gt;
+&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://flowiseai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Flowise&lt;/strong&gt;&lt;/a&gt; - No/low code AI agent
+builder that pairs very well with n8n&lt;/p&gt;
+&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://qdrant.tech/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Qdrant&lt;/strong&gt;&lt;/a&gt; - Open source, high performance vector
+store with an comprehensive API. Even though you can use Supabase for RAG, this was
+kept unlike Postgres since it&amp;rsquo;s faster than Supabase so sometimes is the better option.&lt;/p&gt;
+&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://neo4j.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Neo4j&lt;/strong&gt;&lt;/a&gt; - Knowledge graph engine that powers tools like GraphRAG, LightRAG, and Graphiti&lt;/p&gt;
+&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://searxng.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;SearXNG&lt;/strong&gt;&lt;/a&gt; - Open source, free internet metasearch engine which aggregates
+results from up to 229 search services. Users are neither tracked nor profiled, hence the fit with the local AI package.&lt;/p&gt;
+&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://caddyserver.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Caddy&lt;/strong&gt;&lt;/a&gt; - Managed HTTPS/TLS for custom domains&lt;/p&gt;
+&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://langfuse.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Langfuse&lt;/strong&gt;&lt;/a&gt; - Open source LLM engineering platform for agent observability&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites
+&lt;/h2&gt;&lt;p&gt;Before you begin, make sure you have the following software installed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Python&lt;/a&gt; - Required to run the setup script&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://desktop.github.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git/GitHub Desktop&lt;/a&gt; - For easy repository management&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.docker.com/products/docker-desktop/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker/Docker Desktop&lt;/a&gt; - Required to run all services&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation
+&lt;/h2&gt;&lt;p&gt;Clone the repository and navigate to the project directory:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone -b stable https://github.com/coleam00/local-ai-packaged.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; local-ai-packaged
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Before running the services, you need to set up your environment variables for Supabase following their &lt;a class=&#34;link&#34; href=&#34;https://supabase.com/docs/guides/self-hosting/docker#securing-your-services&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;self-hosting guide&lt;/a&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Make a copy of &lt;code&gt;.env.example&lt;/code&gt; and rename it to &lt;code&gt;.env&lt;/code&gt; in the root directory of the project&lt;/li&gt;
+&lt;li&gt;Set the following required environment variables:
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# N8N Configuration&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;N8N_ENCRYPTION_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;N8N_USER_MANAGEMENT_JWT_SECRET&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Supabase Secrets&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;POSTGRES_PASSWORD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;JWT_SECRET&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ANON_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;SERVICE_ROLE_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;DASHBOARD_USERNAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;DASHBOARD_PASSWORD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;POOLER_TENANT_ID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Neo4j Secrets&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############   &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;NEO4J_AUTH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Langfuse credentials&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;CLICKHOUSE_PASSWORD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;MINIO_ROOT_PASSWORD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;LANGFUSE_SALT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;NEXTAUTH_SECRET&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ENCRYPTION_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!IMPORTANT]
+Make sure to generate secure random values for all secrets. Never use the example values in production.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Set the following environment variables if deploying to production, otherwise leave commented:
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Caddy Config&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;N8N_HOSTNAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;n8n.yourdomain.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;WEBUI_HOSTNAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;:openwebui.yourdomain.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;FLOWISE_HOSTNAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;:flowise.yourdomain.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;SUPABASE_HOSTNAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;:supabase.yourdomain.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;OLLAMA_HOSTNAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;:ollama.yourdomain.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;SEARXNG_HOSTNAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;searxng.yourdomain.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;NEO4J_HOSTNAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;neo4j.yourdomain.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;LETSENCRYPT_EMAIL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;your-email-address
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;The project includes a &lt;code&gt;start_services.py&lt;/code&gt; script that handles starting both the Supabase and local AI services. The script accepts a &lt;code&gt;--profile&lt;/code&gt; flag to specify which GPU configuration to use.&lt;/p&gt;
+&lt;h3 id=&#34;for-nvidia-gpu-users&#34;&gt;For Nvidia GPU users
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python start_services.py --profile gpu-nvidia
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;[!NOTE]
+If you have not used your Nvidia GPU with Docker before, please follow the
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/ollama/ollama/blob/main/docs/docker.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ollama Docker instructions&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;for-amd-gpu-users-on-linux&#34;&gt;For AMD GPU users on Linux
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python start_services.py --profile gpu-amd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;for-mac--apple-silicon-users&#34;&gt;For Mac / Apple Silicon users
+&lt;/h3&gt;&lt;p&gt;If you&amp;rsquo;re using a Mac with an M1 or newer processor, you can&amp;rsquo;t expose your GPU to the Docker instance, unfortunately. There are two options in this case:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Run the starter kit fully on CPU:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python start_services.py --profile cpu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run Ollama on your Mac for faster inference, and connect to that from the n8n instance:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python start_services.py --profile none
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If you want to run Ollama on your mac, check the &lt;a class=&#34;link&#34; href=&#34;https://ollama.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ollama homepage&lt;/a&gt; for installation instructions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;for-mac-users-running-ollama-locally&#34;&gt;For Mac users running OLLAMA locally
+&lt;/h4&gt;&lt;p&gt;If you&amp;rsquo;re running OLLAMA locally on your Mac (not in Docker), you need to modify the OLLAMA_HOST environment variable in the n8n service configuration. Update the x-n8n section in your Docker Compose file as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;x-n8n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;amp;service-n8n&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# ... other configurations ...&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;environment&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# ... other environment variables ...&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;OLLAMA_HOST=host.docker.internal:11434&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Additionally, after you see &amp;ldquo;Editor is now accessible via: http://localhost:5678/&amp;rdquo;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Head to http://localhost:5678/home/credentials&lt;/li&gt;
+&lt;li&gt;Click on &amp;ldquo;Local Ollama service&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Change the base URL to &amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;http://host.docker.internal:11434/%22&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://host.docker.internal:11434/&#34;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;for-everyone-else&#34;&gt;For everyone else
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python start_services.py --profile cpu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;the-environment-argument&#34;&gt;The environment argument
+&lt;/h3&gt;&lt;p&gt;The &lt;strong&gt;start-services.py&lt;/strong&gt; script offers the possibility to pass one of two options for the environment argument, &lt;strong&gt;private&lt;/strong&gt; (default environment) and &lt;strong&gt;public&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;private:&lt;/strong&gt; you are deploying the stack in a safe environment, hence a lot of ports can be made accessible without having to worry about security&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;public:&lt;/strong&gt; the stack is deployed in a public environment, which means the attack surface should be made as small as possible. All ports except for 80 and 443 are closed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The stack initialized with&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   python start_services.py --profile gpu-nvidia --environment private
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;equals the one initialized with&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   python start_services.py --profile gpu-nvidia
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;deploying-to-the-cloud&#34;&gt;Deploying to the Cloud
+&lt;/h2&gt;&lt;h3 id=&#34;prerequisites-for-the-below-steps&#34;&gt;Prerequisites for the below steps
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Linux machine (preferably Unbuntu) with Nano, Git, and Docker installed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;extra-steps&#34;&gt;Extra steps
+&lt;/h3&gt;&lt;p&gt;Before running the above commands to pull the repo and install everything:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Run the commands as root to open up the necessary ports:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ufw enable&lt;/li&gt;
+&lt;li&gt;ufw allow 80 &amp;amp;&amp;amp; ufw allow 443&lt;/li&gt;
+&lt;li&gt;ufw reload&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;WARNING&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;ufw does not shield ports published by docker, because the iptables rules configured by docker are analyzed before those configured by ufw. There is a solution to change this behavior, but that is out of scope for this project. Just make sure that all traffic runs through the caddy service via port 443. Port 80 should only be used to redirect to port 443.&lt;/p&gt;
+&lt;hr&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run the &lt;strong&gt;start-services.py&lt;/strong&gt; script with the environment argument &lt;strong&gt;public&lt;/strong&gt; to indicate you are going to run the package in a public environment. The script will make sure that all ports, except for 80 and 443, are closed down, e.g.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   python start_services.py --profile gpu-nvidia --environment public
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Set up A records for your DNS provider to point your subdomains you&amp;rsquo;ll set up in the .env file for Caddy
+to the IP address of your cloud instance.&lt;/p&gt;
+&lt;p&gt;For example, A record to point n8n to [cloud instance IP] for n8n.yourdomain.com&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;-quick-start-and-usage&#34;&gt;⚡️ Quick start and usage
+&lt;/h2&gt;&lt;p&gt;The main component of the self-hosted AI starter kit is a docker compose file
+pre-configured with network and disk so there isn’t much else you need to
+install. After completing the installation steps above, follow the steps below
+to get started.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;a class=&#34;link&#34; href=&#34;http://localhost:5678/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:5678/&lt;/a&gt; in your browser to set up n8n. You’ll only
+have to do this once. You are NOT creating an account with n8n in the setup here,
+it is only a local account for your instance!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Open the included workflow:
+&lt;a class=&#34;link&#34; href=&#34;http://localhost:5678/workflow/vTN9y2dLXqTiDfPT&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:5678/workflow/vTN9y2dLXqTiDfPT&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create credentials for every service:&lt;/p&gt;
+&lt;p&gt;Ollama URL: http://ollama:11434&lt;/p&gt;
+&lt;p&gt;Postgres (through Supabase): use DB, username, and password from .env. IMPORTANT: Host is &amp;lsquo;db&amp;rsquo;
+Since that is the name of the service running Supabase&lt;/p&gt;
+&lt;p&gt;Qdrant URL: http://qdrant:6333 (API key can be whatever since this is running locally)&lt;/p&gt;
+&lt;p&gt;Google Drive: Follow &lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/integrations/builtin/credentials/google/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;this guide from n8n&lt;/a&gt;.
+Don&amp;rsquo;t use localhost for the redirect URI, just use another domain you have, it will still work!
+Alternatively, you can set up &lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;local file triggers&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select &lt;strong&gt;Test workflow&lt;/strong&gt; to start running the workflow.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If this is the first time you’re running the workflow, you may need to wait
+until Ollama finishes downloading Llama3.1. You can inspect the docker
+console logs to check on the progress.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Make sure to toggle the workflow as active and copy the &amp;ldquo;Production&amp;rdquo; webhook URL!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;a class=&#34;link&#34; href=&#34;http://localhost:3000/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:3000/&lt;/a&gt; in your browser to set up Open WebUI.
+You’ll only have to do this once. You are NOT creating an account with Open WebUI in the
+setup here, it is only a local account for your instance!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to Workspace -&amp;gt; Functions -&amp;gt; Add Function -&amp;gt; Give name + description then paste in
+the code from &lt;code&gt;n8n_pipe.py&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The function is also &lt;a class=&#34;link&#34; href=&#34;https://openwebui.com/f/coleam/n8n_pipe/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;published here on Open WebUI&amp;rsquo;s site&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click on the gear icon and set the n8n_url to the production URL for the webhook
+you copied in a previous step.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Toggle the function on and now it will be available in your model dropdown in the top left!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;To open n8n at any time, visit &lt;a class=&#34;link&#34; href=&#34;http://localhost:5678/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:5678/&lt;/a&gt; in your browser.
+To open Open WebUI at any time, visit &lt;a class=&#34;link&#34; href=&#34;http://localhost:3000/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:3000/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;With your n8n instance, you’ll have access to over 400 integrations and a
+suite of basic and advanced AI nodes such as
+&lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AI Agent&lt;/a&gt;,
+&lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Text classifier&lt;/a&gt;,
+and &lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.information-extractor/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Information Extractor&lt;/a&gt;
+nodes. To keep everything local, just remember to use the Ollama node for your
+language model and Qdrant as your vector store.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!NOTE]
+This starter kit is designed to help you get started with self-hosted AI
+workflows. While it’s not fully optimized for production environments, it
+combines robust components that work well together for proof-of-concept
+projects. You can customize it to meet your specific needs&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;upgrading&#34;&gt;Upgrading
+&lt;/h2&gt;&lt;p&gt;To update all containers to their latest versions (n8n, Open WebUI, etc.), run these commands:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Stop all services&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker compose -p localai -f docker-compose.yml --profile &amp;lt;your-profile&amp;gt; down
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Pull latest versions of all containers&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker compose -p localai -f docker-compose.yml --profile &amp;lt;your-profile&amp;gt; pull
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Start services again with your desired profile&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python start_services.py --profile &amp;lt;your-profile&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Replace &lt;code&gt;&amp;lt;your-profile&amp;gt;&lt;/code&gt; with one of: &lt;code&gt;cpu&lt;/code&gt;, &lt;code&gt;gpu-nvidia&lt;/code&gt;, &lt;code&gt;gpu-amd&lt;/code&gt;, or &lt;code&gt;none&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Note: The &lt;code&gt;start_services.py&lt;/code&gt; script itself does not update containers - it only restarts them or pulls them if you are downloading these containers for the first time. To get the latest versions, you must explicitly run the commands above.&lt;/p&gt;
+&lt;h2 id=&#34;troubleshooting&#34;&gt;Troubleshooting
+&lt;/h2&gt;&lt;p&gt;Here are solutions to common issues you might encounter:&lt;/p&gt;
+&lt;h3 id=&#34;supabase-issues&#34;&gt;Supabase Issues
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Supabase Pooler Restarting&lt;/strong&gt;: If the supabase-pooler container keeps restarting itself, follow the instructions in &lt;a class=&#34;link&#34; href=&#34;https://github.com/supabase/supabase/issues/30210#issuecomment-2456955578&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;this GitHub issue&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Supabase Analytics Startup Failure&lt;/strong&gt;: If the supabase-analytics container fails to start after changing your Postgres password, delete the folder &lt;code&gt;supabase/docker/volumes/db/data&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;If using Docker Desktop&lt;/strong&gt;: Go into the Docker settings and make sure &amp;ldquo;Expose daemon on tcp://localhost:2375 without TLS&amp;rdquo; is turned on&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Supabase Service Unavailable&lt;/strong&gt; - Make sure you don&amp;rsquo;t have an &amp;ldquo;@&amp;rdquo; character in your Postgres password! If the connection to the kong container is working (the container logs say it is receiving requests from n8n) but n8n says it cannot connect, this is generally the problem from what the community has shared. Other characters might not be allowed too, the @ symbol is just the one I know for sure!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;gpu-support-issues&#34;&gt;GPU Support Issues
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Windows GPU Support&lt;/strong&gt;: If you&amp;rsquo;re having trouble running Ollama with GPU support on Windows with Docker Desktop:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open Docker Desktop settings&lt;/li&gt;
+&lt;li&gt;Enable WSL 2 backend&lt;/li&gt;
+&lt;li&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/desktop/features/gpu/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker GPU documentation&lt;/a&gt; for more details&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Linux GPU Support&lt;/strong&gt;: If you&amp;rsquo;re having trouble running Ollama with GPU support on Linux, follow the &lt;a class=&#34;link&#34; href=&#34;https://github.com/ollama/ollama/blob/main/docs/docker.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ollama Docker instructions&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-recommended-reading&#34;&gt;👓 Recommended reading
+&lt;/h2&gt;&lt;p&gt;n8n is full of useful content for getting started quickly with its AI concepts
+and nodes. If you run into an issue, go to &lt;a class=&#34;link&#34; href=&#34;#support&#34; &gt;support&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.n8n.io/ai-agents/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AI agents for developers: from theory to practice with n8n&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/advanced-ai/intro-tutorial/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tutorial: Build an AI workflow in n8n&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/advanced-ai/langchain/langchain-n8n/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Langchain Concepts in n8n&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/advanced-ai/examples/agent-chain-comparison/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Demonstration of key differences between agents and chains&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/advanced-ai/examples/understand-vector-databases/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;What are vector databases?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-video-walkthrough&#34;&gt;🎥 Video walkthrough
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/pOsO40HSbOo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cole&amp;rsquo;s Guide to the Local AI Starter Kit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-more-ai-templates&#34;&gt;🛍️ More AI templates
+&lt;/h2&gt;&lt;p&gt;For more AI workflow ideas, visit the &lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/?categories=AI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;official n8n AI template
+gallery&lt;/strong&gt;&lt;/a&gt;. From each workflow,
+select the &lt;strong&gt;Use workflow&lt;/strong&gt; button to automatically import the workflow into
+your local n8n instance.&lt;/p&gt;
+&lt;h3 id=&#34;learn-ai-key-concepts&#34;&gt;Learn AI key concepts
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/1954-ai-agent-chat/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AI Agent Chat&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/2026-ai-chat-with-any-data-source-using-the-n8n-workflow-tool/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AI chat with any data source (using the n8n workflow too)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/2098-chat-with-openai-assistant-by-adding-a-memory/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chat with OpenAI Assistant (by adding a memory)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/1980-use-an-open-source-llm-via-huggingface/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Use an open-source LLM (via HuggingFace)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/2165-chat-with-pdf-docs-using-ai-quoting-sources/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chat with PDF docs using AI (quoting sources)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/2006-ai-agent-that-can-scrape-webpages/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AI agent that can scrape webpages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;local-ai-templates&#34;&gt;Local AI templates
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/2341-build-a-tax-code-assistant-with-qdrant-mistralai-and-openai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tax Code Assistant&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/2339-breakdown-documents-into-study-notes-using-templating-mistralai-and-qdrant/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Breakdown Documents into Study Notes with MistralAI and Qdrant&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/2335-build-a-financial-documents-assistant-using-qdrant-and-mistralai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Financial Documents Assistant using Qdrant and&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;http://mistral.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt; Mistral.ai&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/2333-recipe-recommendations-with-qdrant-and-mistral/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Recipe Recommendations with Qdrant and Mistral&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tips--tricks&#34;&gt;Tips &amp;amp; tricks
+&lt;/h2&gt;&lt;h3 id=&#34;accessing-local-files&#34;&gt;Accessing local files
+&lt;/h3&gt;&lt;p&gt;The self-hosted AI starter kit will create a shared folder (by default,
+located in the same directory) which is mounted to the n8n container and
+allows n8n to access files on disk. This folder within the n8n container is
+located at &lt;code&gt;/data/shared&lt;/code&gt; &amp;ndash; this is the path you’ll need to use in nodes that
+interact with the local filesystem.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nodes that interact with the local filesystem&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read/Write Files from Disk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Local File Trigger&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Execute Command&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;📜 License
+&lt;/h2&gt;&lt;p&gt;This project (originally created by the n8n team, link at the top of the README) is licensed under the Apache License 2.0 - see the
+&lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt; file for details.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>open-webui</title>
+        <link>https://producthunt.programnotes.cn/en/p/open-webui/</link>
+        <pubDate>Sat, 03 May 2025 15:27:20 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/open-webui/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1707417089733-500269069159?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYyNTcxMjF8&amp;ixlib=rb-4.0.3" alt="Featured image of post open-webui" /&gt;&lt;h1 id=&#34;open-webuiopen-webui&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/open-webui/open-webui&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open-webui/open-webui&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;open-webui-&#34;&gt;Open WebUI 👋
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://img.shields.io/github/stars/open-webui/open-webui?style=social&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GitHub stars&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://img.shields.io/github/forks/open-webui/open-webui?style=social&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GitHub forks&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://img.shields.io/github/watchers/open-webui/open-webui?style=social&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GitHub watchers&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://img.shields.io/github/repo-size/open-webui/open-webui&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GitHub repo size&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://img.shields.io/github/languages/count/open-webui/open-webui&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GitHub language count&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://img.shields.io/github/languages/top/open-webui/open-webui&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GitHub top language&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://img.shields.io/github/last-commit/open-webui/open-webui?color=red&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GitHub last commit&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Follama-webui%2Follama-wbui&amp;amp;count_bg=%2379C83D&amp;amp;title_bg=%23555555&amp;amp;icon=&amp;amp;icon_color=%23E7E7E7&amp;amp;title=hits&amp;amp;edge_flat=false&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Hits&#34;
+	
+	
+&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://discord.gg/5rJgQTnV4s&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/Discord-Open_WebUI-blue?logo=discord&amp;amp;logoColor=white&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Discord&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/sponsors/tjbck&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/static/v1?label=Sponsor&amp;amp;message=%E2%9D%A4&amp;amp;logo=GitHub&amp;amp;color=%23fe8e86&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Open WebUI is an &lt;a class=&#34;link&#34; href=&#34;https://docs.openwebui.com/features/plugin/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;extensible&lt;/a&gt;, feature-rich, and user-friendly self-hosted AI platform designed to operate entirely offline.&lt;/strong&gt; It supports various LLM runners like &lt;strong&gt;Ollama&lt;/strong&gt; and &lt;strong&gt;OpenAI-compatible APIs&lt;/strong&gt;, with &lt;strong&gt;built-in inference engine&lt;/strong&gt; for RAG, making it a &lt;strong&gt;powerful AI deployment solution&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!TIP]&lt;br&gt;
+&lt;strong&gt;Looking for an &lt;a class=&#34;link&#34; href=&#34;https://docs.openwebui.com/enterprise&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Enterprise Plan&lt;/a&gt;?&lt;/strong&gt; – &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;mailto:sales@openwebui.com&#34; &gt;Speak with Our Sales Team Today!&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Get &lt;strong&gt;enhanced capabilities&lt;/strong&gt;, including &lt;strong&gt;custom theming and branding&lt;/strong&gt;, &lt;strong&gt;Service Level Agreement (SLA) support&lt;/strong&gt;, &lt;strong&gt;Long-Term Support (LTS) versions&lt;/strong&gt;, and &lt;strong&gt;more!&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For more information, be sure to check out our &lt;a class=&#34;link&#34; href=&#34;https://docs.openwebui.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Open WebUI Documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;key-features-of-open-webui-&#34;&gt;Key Features of Open WebUI ⭐
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;🚀 &lt;strong&gt;Effortless Setup&lt;/strong&gt;: Install seamlessly using Docker or Kubernetes (kubectl, kustomize or helm) for a hassle-free experience with support for both &lt;code&gt;:ollama&lt;/code&gt; and &lt;code&gt;:cuda&lt;/code&gt; tagged images.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;🤝 &lt;strong&gt;Ollama/OpenAI API Integration&lt;/strong&gt;: Effortlessly integrate OpenAI-compatible APIs for versatile conversations alongside Ollama models. Customize the OpenAI API URL to link with &lt;strong&gt;LMStudio, GroqCloud, Mistral, OpenRouter, and more&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;🛡️ &lt;strong&gt;Granular Permissions and User Groups&lt;/strong&gt;: By allowing administrators to create detailed user roles and permissions, we ensure a secure user environment. This granularity not only enhances security but also allows for customized user experiences, fostering a sense of ownership and responsibility amongst users.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;📱 &lt;strong&gt;Responsive Design&lt;/strong&gt;: Enjoy a seamless experience across Desktop PC, Laptop, and Mobile devices.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;📱 &lt;strong&gt;Progressive Web App (PWA) for Mobile&lt;/strong&gt;: Enjoy a native app-like experience on your mobile device with our PWA, providing offline access on localhost and a seamless user interface.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;✒️🔢 &lt;strong&gt;Full Markdown and LaTeX Support&lt;/strong&gt;: Elevate your LLM experience with comprehensive Markdown and LaTeX capabilities for enriched interaction.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;🎤📹 &lt;strong&gt;Hands-Free Voice/Video Call&lt;/strong&gt;: Experience seamless communication with integrated hands-free voice and video call features, allowing for a more dynamic and interactive chat environment.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;🛠️ &lt;strong&gt;Model Builder&lt;/strong&gt;: Easily create Ollama models via the Web UI. Create and add custom characters/agents, customize chat elements, and import models effortlessly through &lt;a class=&#34;link&#34; href=&#34;https://openwebui.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Open WebUI Community&lt;/a&gt; integration.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;🐍 &lt;strong&gt;Native Python Function Calling Tool&lt;/strong&gt;: Enhance your LLMs with built-in code editor support in the tools workspace. Bring Your Own Function (BYOF) by simply adding your pure Python functions, enabling seamless integration with LLMs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;📚 &lt;strong&gt;Local RAG Integration&lt;/strong&gt;: Dive into the future of chat interactions with groundbreaking Retrieval Augmented Generation (RAG) support. This feature seamlessly integrates document interactions into your chat experience. You can load documents directly into the chat or add files to your document library, effortlessly accessing them using the &lt;code&gt;#&lt;/code&gt; command before a query.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;🔍 &lt;strong&gt;Web Search for RAG&lt;/strong&gt;: Perform web searches using providers like &lt;code&gt;SearXNG&lt;/code&gt;, &lt;code&gt;Google PSE&lt;/code&gt;, &lt;code&gt;Brave Search&lt;/code&gt;, &lt;code&gt;serpstack&lt;/code&gt;, &lt;code&gt;serper&lt;/code&gt;, &lt;code&gt;Serply&lt;/code&gt;, &lt;code&gt;DuckDuckGo&lt;/code&gt;, &lt;code&gt;TavilySearch&lt;/code&gt;, &lt;code&gt;SearchApi&lt;/code&gt; and &lt;code&gt;Bing&lt;/code&gt; and inject the results directly into your chat experience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;🌐 &lt;strong&gt;Web Browsing Capability&lt;/strong&gt;: Seamlessly integrate websites into your chat experience using the &lt;code&gt;#&lt;/code&gt; command followed by a URL. This feature allows you to incorporate web content directly into your conversations, enhancing the richness and depth of your interactions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;🎨 &lt;strong&gt;Image Generation Integration&lt;/strong&gt;: Seamlessly incorporate image generation capabilities using options such as AUTOMATIC1111 API or ComfyUI (local), and OpenAI&amp;rsquo;s DALL-E (external), enriching your chat experience with dynamic visual content.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;⚙️ &lt;strong&gt;Many Models Conversations&lt;/strong&gt;: Effortlessly engage with various models simultaneously, harnessing their unique strengths for optimal responses. Enhance your experience by leveraging a diverse set of models in parallel.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;🔐 &lt;strong&gt;Role-Based Access Control (RBAC)&lt;/strong&gt;: Ensure secure access with restricted permissions; only authorized individuals can access your Ollama, and exclusive model creation/pulling rights are reserved for administrators.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;🌐🌍 &lt;strong&gt;Multilingual Support&lt;/strong&gt;: Experience Open WebUI in your preferred language with our internationalization (i18n) support. Join us in expanding our supported languages! We&amp;rsquo;re actively seeking contributors!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;🧩 &lt;strong&gt;Pipelines, Open WebUI Plugin Support&lt;/strong&gt;: Seamlessly integrate custom logic and Python libraries into Open WebUI using &lt;a class=&#34;link&#34; href=&#34;https://github.com/open-webui/pipelines&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pipelines Plugin Framework&lt;/a&gt;. Launch your Pipelines instance, set the OpenAI URL to the Pipelines URL, and explore endless possibilities. &lt;a class=&#34;link&#34; href=&#34;https://github.com/open-webui/pipelines/tree/main/examples&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Examples&lt;/a&gt; include &lt;strong&gt;Function Calling&lt;/strong&gt;, User &lt;strong&gt;Rate Limiting&lt;/strong&gt; to control access, &lt;strong&gt;Usage Monitoring&lt;/strong&gt; with tools like Langfuse, &lt;strong&gt;Live Translation with LibreTranslate&lt;/strong&gt; for multilingual support, &lt;strong&gt;Toxic Message Filtering&lt;/strong&gt; and much more.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;🌟 &lt;strong&gt;Continuous Updates&lt;/strong&gt;: We are committed to improving Open WebUI with regular updates, fixes, and new features.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Want to learn more about Open WebUI&amp;rsquo;s features? Check out our &lt;a class=&#34;link&#34; href=&#34;https://docs.openwebui.com/features&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Open WebUI documentation&lt;/a&gt; for a comprehensive overview!&lt;/p&gt;
+&lt;h2 id=&#34;-also-check-out-open-webui-community&#34;&gt;🔗 Also Check Out Open WebUI Community!
+&lt;/h2&gt;&lt;p&gt;Don&amp;rsquo;t forget to explore our sibling project, &lt;a class=&#34;link&#34; href=&#34;https://openwebui.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Open WebUI Community&lt;/a&gt;, where you can discover, download, and explore customized Modelfiles. Open WebUI Community offers a wide range of exciting possibilities for enhancing your chat interactions with Open WebUI! 🚀&lt;/p&gt;
+&lt;h2 id=&#34;how-to-install-&#34;&gt;How to Install 🚀
+&lt;/h2&gt;&lt;h3 id=&#34;installation-via-python-pip-&#34;&gt;Installation via Python pip 🐍
+&lt;/h3&gt;&lt;p&gt;Open WebUI can be installed using pip, the Python package installer. Before proceeding, ensure you&amp;rsquo;re using &lt;strong&gt;Python 3.11&lt;/strong&gt; to avoid compatibility issues.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Install Open WebUI&lt;/strong&gt;:
+Open your terminal and run the following command to install Open WebUI:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install open-webui
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Running Open WebUI&lt;/strong&gt;:
+After installation, you can start Open WebUI by executing:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;open-webui serve
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This will start the Open WebUI server, which you can access at &lt;a class=&#34;link&#34; href=&#34;http://localhost:8080&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:8080&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;quick-start-with-docker-&#34;&gt;Quick Start with Docker 🐳
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;[!NOTE]&lt;br&gt;
+Please note that for certain Docker environments, additional configurations might be needed. If you encounter any connection issues, our detailed guide on &lt;a class=&#34;link&#34; href=&#34;https://docs.openwebui.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Open WebUI Documentation&lt;/a&gt; is ready to assist you.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!WARNING]
+When using Docker to install Open WebUI, make sure to include the &lt;code&gt;-v open-webui:/app/backend/data&lt;/code&gt; in your Docker command. This step is crucial as it ensures your database is properly mounted and prevents any loss of data.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!TIP]&lt;br&gt;
+If you wish to utilize Open WebUI with Ollama included or CUDA acceleration, we recommend utilizing our official images tagged with either &lt;code&gt;:cuda&lt;/code&gt; or &lt;code&gt;:ollama&lt;/code&gt;. To enable CUDA, you must install the &lt;a class=&#34;link&#34; href=&#34;https://docs.nvidia.com/dgx/nvidia-container-runtime-upgrade/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nvidia CUDA container toolkit&lt;/a&gt; on your Linux/WSL system.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;installation-with-default-configuration&#34;&gt;Installation with Default Configuration
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;If Ollama is on your computer&lt;/strong&gt;, use this command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d -p 3000:8080 --add-host&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;If Ollama is on a Different Server&lt;/strong&gt;, use this command:&lt;/p&gt;
+&lt;p&gt;To connect to Ollama on another server, change the &lt;code&gt;OLLAMA_BASE_URL&lt;/code&gt; to the server&amp;rsquo;s URL:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d -p 3000:8080 -e &lt;span class=&#34;nv&#34;&gt;OLLAMA_BASE_URL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;https://example.com -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;To run Open WebUI with Nvidia GPU support&lt;/strong&gt;, use this command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d -p 3000:8080 --gpus all --add-host&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:cuda
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;installation-for-openai-api-usage-only&#34;&gt;Installation for OpenAI API Usage Only
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;If you&amp;rsquo;re only using OpenAI API&lt;/strong&gt;, use this command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d -p 3000:8080 -e &lt;span class=&#34;nv&#34;&gt;OPENAI_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;your_secret_key -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;installing-open-webui-with-bundled-ollama-support&#34;&gt;Installing Open WebUI with Bundled Ollama Support
+&lt;/h3&gt;&lt;p&gt;This installation method uses a single container image that bundles Open WebUI with Ollama, allowing for a streamlined setup via a single command. Choose the appropriate command based on your hardware setup:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;With GPU Support&lt;/strong&gt;:
+Utilize GPU resources by running the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d -p 3000:8080 --gpus&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;all -v ollama:/root/.ollama -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:ollama
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;For CPU Only&lt;/strong&gt;:
+If you&amp;rsquo;re not using a GPU, use this command instead:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d -p 3000:8080 -v ollama:/root/.ollama -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:ollama
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both commands facilitate a built-in, hassle-free installation of both Open WebUI and Ollama, ensuring that you can get everything up and running swiftly.&lt;/p&gt;
+&lt;p&gt;After installation, you can access Open WebUI at &lt;a class=&#34;link&#34; href=&#34;http://localhost:3000&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:3000&lt;/a&gt;. Enjoy! 😄&lt;/p&gt;
+&lt;h3 id=&#34;other-installation-methods&#34;&gt;Other Installation Methods
+&lt;/h3&gt;&lt;p&gt;We offer various installation alternatives, including non-Docker native installation methods, Docker Compose, Kustomize, and Helm. Visit our &lt;a class=&#34;link&#34; href=&#34;https://docs.openwebui.com/getting-started/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Open WebUI Documentation&lt;/a&gt; or join our &lt;a class=&#34;link&#34; href=&#34;https://discord.gg/5rJgQTnV4s&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Discord community&lt;/a&gt; for comprehensive guidance.&lt;/p&gt;
+&lt;h3 id=&#34;troubleshooting&#34;&gt;Troubleshooting
+&lt;/h3&gt;&lt;p&gt;Encountering connection issues? Our &lt;a class=&#34;link&#34; href=&#34;https://docs.openwebui.com/troubleshooting/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Open WebUI Documentation&lt;/a&gt; has got you covered. For further assistance and to join our vibrant community, visit the &lt;a class=&#34;link&#34; href=&#34;https://discord.gg/5rJgQTnV4s&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Open WebUI Discord&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;open-webui-server-connection-error&#34;&gt;Open WebUI: Server Connection Error
+&lt;/h4&gt;&lt;p&gt;If you&amp;rsquo;re experiencing connection issues, it’s often due to the WebUI docker container not being able to reach the Ollama server at 127.0.0.1:11434 (host.docker.internal:11434) inside the container . Use the &lt;code&gt;--network=host&lt;/code&gt; flag in your docker command to resolve this. Note that the port changes from 3000 to 8080, resulting in the link: &lt;code&gt;http://localhost:8080&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example Docker Command&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d --network&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;host -v open-webui:/app/backend/data -e &lt;span class=&#34;nv&#34;&gt;OLLAMA_BASE_URL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;keeping-your-docker-installation-up-to-date&#34;&gt;Keeping Your Docker Installation Up-to-Date
+&lt;/h3&gt;&lt;p&gt;In case you want to update your local Docker installation to the latest version, you can do it with &lt;a class=&#34;link&#34; href=&#34;https://containrrr.dev/watchtower/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watchtower&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run --rm --volume /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once open-webui
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;In the last part of the command, replace &lt;code&gt;open-webui&lt;/code&gt; with your container name if it is different.&lt;/p&gt;
+&lt;p&gt;Check our Updating Guide available in our &lt;a class=&#34;link&#34; href=&#34;https://docs.openwebui.com/getting-started/updating&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Open WebUI Documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;using-the-dev-branch-&#34;&gt;Using the Dev Branch 🌙
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;[!WARNING]
+The &lt;code&gt;:dev&lt;/code&gt; branch contains the latest unstable features and changes. Use it at your own risk as it may have bugs or incomplete features.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you want to try out the latest bleeding-edge features and are okay with occasional instability, you can use the &lt;code&gt;:dev&lt;/code&gt; tag like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui --add-host&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;host.docker.internal:host-gateway --restart always ghcr.io/open-webui/open-webui:dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;offline-mode&#34;&gt;Offline Mode
+&lt;/h3&gt;&lt;p&gt;If you are running Open WebUI in an offline environment, you can set the &lt;code&gt;HF_HUB_OFFLINE&lt;/code&gt; environment variable to &lt;code&gt;1&lt;/code&gt; to prevent attempts to download models from the internet.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;HF_HUB_OFFLINE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;whats-next-&#34;&gt;What&amp;rsquo;s Next? 🌟
+&lt;/h2&gt;&lt;p&gt;Discover upcoming features on our roadmap in the &lt;a class=&#34;link&#34; href=&#34;https://docs.openwebui.com/roadmap/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Open WebUI Documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;license-&#34;&gt;License 📜
+&lt;/h2&gt;&lt;p&gt;This project is licensed under the &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;BSD-3-Clause License&lt;/a&gt; - see the &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt; file for details. 📄&lt;/p&gt;
+&lt;h2 id=&#34;support-&#34;&gt;Support 💬
+&lt;/h2&gt;&lt;p&gt;If you have any questions, suggestions, or need assistance, please open an issue or join our
+&lt;a class=&#34;link&#34; href=&#34;https://discord.gg/5rJgQTnV4s&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Open WebUI Discord community&lt;/a&gt; to connect with us! 🤝&lt;/p&gt;
+&lt;h2 id=&#34;star-history&#34;&gt;Star History
+&lt;/h2&gt;&lt;a href=&#34;https://star-history.com/#open-webui/open-webui&amp;Date&#34;&gt;
+  &lt;picture&gt;
+    &lt;source media=&#34;(prefers-color-scheme: dark)&#34; srcset=&#34;https://api.star-history.com/svg?repos=open-webui/open-webui&amp;type=Date&amp;theme=dark&#34; /&gt;
+    &lt;source media=&#34;(prefers-color-scheme: light)&#34; srcset=&#34;https://api.star-history.com/svg?repos=open-webui/open-webui&amp;type=Date&#34; /&gt;
+    &lt;img alt=&#34;Star History Chart&#34; src=&#34;https://api.star-history.com/svg?repos=open-webui/open-webui&amp;type=Date&#34; /&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+&lt;hr&gt;
+&lt;p&gt;Created by &lt;a class=&#34;link&#34; href=&#34;https://github.com/tjbck&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Timothy Jaeryang Baek&lt;/a&gt; - Let&amp;rsquo;s make Open WebUI even more amazing together! 💪&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

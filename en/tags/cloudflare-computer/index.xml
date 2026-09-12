@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Cloudflare Computer on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/cloudflare-computer/</link>
+        <description>Recent content in Cloudflare Computer on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sat, 08 Aug 2026 16:05:28 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/cloudflare-computer/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>computer</title>
+        <link>https://producthunt.programnotes.cn/en/p/computer/</link>
+        <pubDate>Sat, 08 Aug 2026 16:05:28 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/computer/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1584968124544-d10ce10dd21f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODYxNzYyMTF8&amp;ixlib=rb-4.1.0" alt="Featured image of post computer" /&gt;&lt;h1 id=&#34;cloudflarecomputer&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/cloudflare/computer&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cloudflare/computer&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;cloudflare-computer&#34;&gt;Cloudflare Computer
+&lt;/h1&gt;&lt;p&gt;Cloudflare Computer is a virtual filesystem that lives inside a
+Durable Object. The Durable Object holds the authoritative state in
+SQLite and exposes one pluggable execution surface through
+&lt;code&gt;workspace.runtime&lt;/code&gt;. Three backends ship today:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Container&lt;/strong&gt; projects the SQLite state into a sandbox container as
+a real FUSE mount. A sandbox-side daemon (&lt;code&gt;computerd&lt;/code&gt;) mounts the state
+as a filesystem and syncs changes back over a capnweb RPC channel.
+Full Linux userland, real binaries, real network.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Isolate shell&lt;/strong&gt; runs &lt;a class=&#34;link&#34; href=&#34;https://github.com/vercel-labs/just-bash&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;just-bash&lt;/a&gt;
+in a Dynamic Worker. It reaches the authoritative Workspace over
+Workers RPC, so there is no second store or sync round trip.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Isolate JavaScript&lt;/strong&gt; runs an ECMAScript module in a fresh Dynamic
+Worker with structured input/results, durable relative imports,
+configured libraries, Workspace-backed &lt;code&gt;node:fs/promises&lt;/code&gt;, and trusted &lt;code&gt;ws:git&lt;/code&gt; and
+&lt;code&gt;ws:artifacts&lt;/code&gt; modules.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A Workspace may register multiple backends under stable IDs.
+&lt;code&gt;workspace.runtime.exec(source, { backend })&lt;/code&gt; is the single execution
+entry point; the selected backend defines whether &lt;code&gt;source&lt;/code&gt; is a shell
+command or an ECMAScript module. Backends connect lazily on first use.&lt;/p&gt;
+&lt;p&gt;Workspace can also be constructed without a backend at all, giving
+callers the filesystem on its own.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!IMPORTANT]
+&lt;strong&gt;PREVIEW ONLY&lt;/strong&gt; This package is provided as a preview for feedback only.
+APIs are unstable and the design is subject to change.&lt;/p&gt;
+&lt;p&gt;Suitable for experiments, exploration and prototypes. It is NOT suitable
+for production use at this time.&lt;/p&gt;
+&lt;p&gt;The specification under &lt;a class=&#34;link&#34; href=&#34;docs/&#34; &gt;&lt;code&gt;docs/&lt;/code&gt;&lt;/a&gt; is forward-looking — read it for
+intent, not as description of the code today.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;using-it&#34;&gt;Using it
+&lt;/h2&gt;&lt;p&gt;If you want to build on Cloudflare Computer, install
+&lt;a class=&#34;link&#34; href=&#34;packages/computer/README.md&#34; &gt;&lt;code&gt;@cloudflare/computer&lt;/code&gt;&lt;/a&gt; and follow that
+package&amp;rsquo;s README — it has the installation steps, the entrypoint map,
+and worked examples of the &lt;code&gt;fs&lt;/code&gt; and &lt;code&gt;runtime&lt;/code&gt; surfaces.&lt;/p&gt;
+&lt;p&gt;To contribute feedback, see &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;&lt;code&gt;CONTRIBUTING.md&lt;/code&gt;&lt;/a&gt;.
+Approved collaborators should follow &lt;a class=&#34;link&#34; href=&#34;COLLABORATORS.md&#34; &gt;&lt;code&gt;COLLABORATORS.md&lt;/code&gt;&lt;/a&gt;
+for setup, build, and test instructions.&lt;/p&gt;
+&lt;h2 id=&#34;examples&#34;&gt;Examples
+&lt;/h2&gt;&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;examples&#34; &gt;&lt;code&gt;examples/&lt;/code&gt;&lt;/a&gt; directory holds runnable consumers of the
+public surface. Each is a Worker workspace with its own README.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;examples/container&#34; &gt;&lt;code&gt;examples/container&lt;/code&gt;&lt;/a&gt; — runs &lt;code&gt;computerd&lt;/code&gt; inside a
+container, mounts a workspace, and talks to a Durable Object over
+capnweb. A &lt;code&gt;write&lt;/code&gt; / &lt;code&gt;read&lt;/code&gt; / &lt;code&gt;exec&lt;/code&gt; HTTP surface.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;examples/worker-shell&#34; &gt;&lt;code&gt;examples/worker-shell&lt;/code&gt;&lt;/a&gt; — same HTTP surface as the
+container example, but the shell runs &lt;a class=&#34;link&#34; href=&#34;https://github.com/vercel-labs/just-bash&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;just-bash&lt;/a&gt;
+in a Dynamic Worker loaded through &lt;code&gt;env.LOADER&lt;/code&gt;. No container.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;examples/worker-javascript&#34; &gt;&lt;code&gt;examples/worker-javascript&lt;/code&gt;&lt;/a&gt; — mirrors
+&lt;code&gt;worker-shell&lt;/code&gt;, but &lt;code&gt;exec&lt;/code&gt; evaluates an ECMAScript module in a Dynamic
+Worker instead of running a shell command.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;examples/think&#34; &gt;&lt;code&gt;examples/think&lt;/code&gt;&lt;/a&gt; — a &lt;a class=&#34;link&#34; href=&#34;https://www.npmjs.com/package/@cloudflare/think&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;@cloudflare/think&lt;/code&gt;&lt;/a&gt;
+chat agent that uses the workspace as its working directory, reachable
+from a terminal.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;examples/think-compare-runtimes&#34; &gt;&lt;code&gt;examples/think-compare-runtimes&lt;/code&gt;&lt;/a&gt; —
+a web UI that runs the same agent task against the container and
+worker runtimes side by side.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;examples/tutorial&#34; &gt;&lt;code&gt;examples/tutorial&lt;/code&gt;&lt;/a&gt; — a step-by-step build: one
+endpoint, one agent that writes a markdown recipe card on the host and
+runs &lt;code&gt;pandoc&lt;/code&gt; on it in the container to produce a PDF.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;examples/artifacts&#34; &gt;&lt;code&gt;examples/artifacts&lt;/code&gt;&lt;/a&gt; — generates a Worker project
+in a workspace and publishes it to Cloudflare Artifacts as a
+clone-ready repo.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;examples/assets&#34; &gt;&lt;code&gt;examples/assets&lt;/code&gt;&lt;/a&gt; — turns a prompt into an image with
+Workers AI, writes it to the workspace, and returns a shareable link
+through &lt;code&gt;@cloudflare/computer/assets&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;repository-layout&#34;&gt;Repository layout
+&lt;/h2&gt;&lt;p&gt;The repo is a small monorepo. Each package has its own README with
+package-specific status and usage notes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;packages/dofs/README.md&#34; &gt;&lt;code&gt;packages/dofs&lt;/code&gt;&lt;/a&gt; (&lt;code&gt;@cloudflare/dofs&lt;/code&gt;) —
+Durable Object SQLite-backed virtual filesystem, sync protocol
+building blocks, and a &lt;code&gt;@platformatic/vfs&lt;/code&gt; provider for Node.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;packages/rpc/README.md&#34; &gt;&lt;code&gt;packages/rpc&lt;/code&gt;&lt;/a&gt;
+(&lt;code&gt;@cloudflare/computer-rpc&lt;/code&gt;) — capnweb wire types and
+server/client helpers shared between the Durable Object and &lt;code&gt;computerd&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;packages/computerd/README.md&#34; &gt;&lt;code&gt;packages/computerd&lt;/code&gt;&lt;/a&gt;
+(&lt;code&gt;@cloudflare/computerd&lt;/code&gt;) — the &lt;code&gt;computerd&lt;/code&gt; daemon: a FUSE mount plus
+HTTP/WebSocket RPC server that runs inside the sandbox container.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;packages/computer/README.md&#34; &gt;&lt;code&gt;packages/computer&lt;/code&gt;&lt;/a&gt;
+(&lt;code&gt;@cloudflare/computer&lt;/code&gt;) — the top-level Computer package
+consumed by Durable Objects. Work in progress.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;packages/computer-computerd-linux-x64/README.md&#34; &gt;&lt;code&gt;packages/computer-computerd-linux-x64&lt;/code&gt;&lt;/a&gt;
+— private Docker image context for the prebuilt &lt;code&gt;computerd&lt;/code&gt; linux-x64
+binary. The image, not an npm package, is the release artifact.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;performance&#34;&gt;Performance
+&lt;/h2&gt;&lt;p&gt;computerd&amp;rsquo;s FUSE mount beats real disk on metadata-heavy work and
+trails it on large sequential I/O. See
+&lt;a class=&#34;link&#34; href=&#34;docs/19_performance.md&#34; &gt;&lt;code&gt;docs/19_performance.md&lt;/code&gt;&lt;/a&gt; for the full &lt;code&gt;fs-bench&lt;/code&gt;
+numbers, a &lt;code&gt;cloudflare/sandbox-sdk&lt;/code&gt; &lt;code&gt;npm install&lt;/code&gt; comparison, and how
+to reproduce them.&lt;/p&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/README.md&#34; &gt;&lt;code&gt;docs/&lt;/code&gt;&lt;/a&gt; — design specification. Forward-looking;
+treat as intent.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/19_performance.md&#34; &gt;&lt;code&gt;docs/19_performance.md&lt;/code&gt;&lt;/a&gt; — filesystem benchmarks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;contributing&#34;&gt;Contributing
+&lt;/h2&gt;&lt;p&gt;We accept bug reports, fix proposals, feature requests, and design
+proposals through issues and discussions. We do not accept unsolicited
+pull requests. See &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;&lt;code&gt;CONTRIBUTING.md&lt;/code&gt;&lt;/a&gt; for the public
+contribution paths.&lt;/p&gt;
+&lt;p&gt;Approved collaborators should follow
+&lt;a class=&#34;link&#34; href=&#34;COLLABORATORS.md&#34; &gt;&lt;code&gt;COLLABORATORS.md&lt;/code&gt;&lt;/a&gt; for setup, formatting, testing,
+commit message, and pull request conventions.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re working in this repo as an agent, start with
+&lt;a class=&#34;link&#34; href=&#34;AGENTS.md&#34; &gt;&lt;code&gt;AGENTS.md&lt;/code&gt;&lt;/a&gt; and the skills under
+&lt;a class=&#34;link&#34; href=&#34;.agents/skills/&#34; &gt;&lt;code&gt;.agents/skills/&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;MIT. See &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;&lt;code&gt;LICENSE&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

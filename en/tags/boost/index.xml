@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Boost on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/boost/</link>
+        <description>Recent content in Boost on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sun, 14 Sep 2025 15:25:34 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/boost/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>folly</title>
+        <link>https://producthunt.programnotes.cn/en/p/folly/</link>
+        <pubDate>Sun, 14 Sep 2025 15:25:34 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/folly/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1726500087571-d3193fb2b6b3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc4MzQ2NTB8&amp;ixlib=rb-4.1.0" alt="Featured image of post folly" /&gt;&lt;h1 id=&#34;facebookfolly&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/facebook/folly&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;facebook/folly&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;folly-facebook-open-source-library&#34;&gt;Folly: Facebook Open-source Library
+&lt;/h1&gt;&lt;a href=&#34;https://opensource.facebook.com/support-ukraine&#34;&gt;
+  &lt;img src=&#34;https://img.shields.io/badge/Support-Ukraine-FFD500?style=flat&amp;labelColor=005BBB&#34; alt=&#34;Support Ukraine - Help Provide Humanitarian Aid to Ukraine.&#34; /&gt;
+&lt;/a&gt;
+&lt;h1 id=&#34;what-is-folly&#34;&gt;What is &lt;code&gt;folly&lt;/code&gt;?
+&lt;/h1&gt;&lt;img src=&#34;static/logo.svg&#34; alt=&#34;Logo Folly&#34; width=&#34;15%&#34; align=&#34;right&#34; /&gt;
+&lt;p&gt;Folly (acronymed loosely after Facebook Open Source Library) is a
+library of C++17 components designed with practicality and efficiency
+in mind. &lt;strong&gt;Folly contains a variety of core library components used extensively
+at Facebook&lt;/strong&gt;. In particular, it&amp;rsquo;s often a dependency of Facebook&amp;rsquo;s other
+open source C++ efforts and place where those projects can share code.&lt;/p&gt;
+&lt;p&gt;It complements (as opposed to competing against) offerings
+such as Boost and of course &lt;code&gt;std&lt;/code&gt;. In fact, we embark on defining our
+own component only when something we need is either not available, or
+does not meet the needed performance profile. We endeavor to remove
+things from folly if or when &lt;code&gt;std&lt;/code&gt; or Boost obsoletes them.&lt;/p&gt;
+&lt;p&gt;Performance concerns permeate much of Folly, sometimes leading to
+designs that are more idiosyncratic than they would otherwise be (see
+e.g. &lt;code&gt;PackedSyncPtr.h&lt;/code&gt;, &lt;code&gt;SmallLocks.h&lt;/code&gt;). Good performance at large
+scale is a unifying theme in all of Folly.&lt;/p&gt;
+&lt;h2 id=&#34;check-it-out-in-the-intro-video&#34;&gt;Check it out in the intro video
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=Wr_IfOICYSs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.youtube.com/vi/Wr_IfOICYSs/0.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Explain Like I’m 5: Folly&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;logical-design&#34;&gt;Logical Design
+&lt;/h1&gt;&lt;p&gt;Folly is a collection of relatively independent components, some as
+simple as a few symbols. There is no restriction on internal
+dependencies, meaning that a given folly module may use any other
+folly components.&lt;/p&gt;
+&lt;p&gt;All symbols are defined in the top-level namespace &lt;code&gt;folly&lt;/code&gt;, except of
+course macros. Macro names are ALL_UPPERCASE and should be prefixed
+with &lt;code&gt;FOLLY_&lt;/code&gt;. Namespace &lt;code&gt;folly&lt;/code&gt; defines other internal namespaces
+such as &lt;code&gt;internal&lt;/code&gt; or &lt;code&gt;detail&lt;/code&gt;. User code should not depend on symbols
+in those namespaces.&lt;/p&gt;
+&lt;h1 id=&#34;physical-design&#34;&gt;Physical Design
+&lt;/h1&gt;&lt;p&gt;At the top level Folly uses the classic &amp;ldquo;stuttering&amp;rdquo; scheme
+&lt;code&gt;folly/folly&lt;/code&gt; used by Boost and others. The first directory serves as
+an installation root of the library (with possible versioning a la
+&lt;code&gt;folly-1.0/&lt;/code&gt;), and the second is to distinguish the library when
+including files, e.g. &lt;code&gt;#include &amp;lt;folly/FBString.h&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The directory structure is flat (mimicking the namespace structure),
+i.e. we don&amp;rsquo;t have an elaborate directory hierarchy (it is possible
+this will change in future versions). The subdirectory &lt;code&gt;experimental&lt;/code&gt;
+contains files that are used inside folly and possibly at Facebook but
+not considered stable enough for client use. Your code should not use
+files in &lt;code&gt;folly/experimental&lt;/code&gt; lest it may break when you update Folly.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;folly/folly/test&lt;/code&gt; subdirectory includes the unittests for all
+components, usually named &lt;code&gt;ComponentXyzTest.cpp&lt;/code&gt; for each
+&lt;code&gt;ComponentXyz.*&lt;/code&gt;. The &lt;code&gt;folly/folly/docs&lt;/code&gt; directory contains
+documentation.&lt;/p&gt;
+&lt;h1 id=&#34;whats-in-it&#34;&gt;What&amp;rsquo;s in it?
+&lt;/h1&gt;&lt;p&gt;Because of folly&amp;rsquo;s fairly flat structure, the best way to see what&amp;rsquo;s in it
+is to look at the headers in &lt;a class=&#34;link&#34; href=&#34;https://github.com/facebook/folly/tree/main/folly&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;top level &lt;code&gt;folly/&lt;/code&gt; directory&lt;/a&gt;. You can also
+check the &lt;a class=&#34;link&#34; href=&#34;folly/docs&#34; &gt;&lt;code&gt;docs&lt;/code&gt; folder&lt;/a&gt; for documentation, starting with the
+&lt;a class=&#34;link&#34; href=&#34;folly/docs/Overview.md&#34; &gt;overview&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Folly is published on GitHub at &lt;a class=&#34;link&#34; href=&#34;https://github.com/facebook/folly&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/facebook/folly&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;build-notes&#34;&gt;Build Notes
+&lt;/h1&gt;&lt;p&gt;Because folly does not provide any ABI compatibility guarantees from commit to
+commit, we generally recommend building folly as a static library.&lt;/p&gt;
+&lt;p&gt;folly supports gcc (5.1+), clang, or MSVC. It should run on Linux (x86-32,
+x86-64, and ARM), iOS, macOS, and Windows (x86-64). The CMake build is only
+tested on some of these platforms; at a minimum, we aim to support macOS and
+Linux (on the latest Ubuntu LTS release or newer.)&lt;/p&gt;
+&lt;h2 id=&#34;getdepspy&#34;&gt;&lt;code&gt;getdeps.py&lt;/code&gt;
+&lt;/h2&gt;&lt;p&gt;This script is used by many of Meta&amp;rsquo;s OSS tools.  It will download and build all of the necessary dependencies first, and will then invoke cmake etc to build folly.  This will help ensure that you build with relevant versions of all of the dependent libraries, taking into account what versions are installed locally on your system.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s written in python so you&amp;rsquo;ll need python3.6 or later on your PATH.  It works on Linux, macOS and Windows.&lt;/p&gt;
+&lt;p&gt;The settings for folly&amp;rsquo;s cmake build are held in its getdeps manifest &lt;code&gt;build/fbcode_builder/manifests/folly&lt;/code&gt;, which you can edit locally if desired.&lt;/p&gt;
+&lt;h3 id=&#34;dependencies&#34;&gt;Dependencies
+&lt;/h3&gt;&lt;p&gt;If on Linux or MacOS (with homebrew installed) you can install system dependencies to save building them:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Clone the repo
+git clone https://github.com/facebook/folly
+# Install dependencies
+cd folly
+sudo ./build/fbcode_builder/getdeps.py install-system-deps --recursive
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you&amp;rsquo;d like to see the packages before installing them:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;./build/fbcode_builder/getdeps.py install-system-deps --dry-run --recursive
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;On other platforms or if on Linux and without system dependencies &lt;code&gt;getdeps.py&lt;/code&gt; will mostly download and build them for you during the build step.&lt;/p&gt;
+&lt;p&gt;Some of the dependencies &lt;code&gt;getdeps.py&lt;/code&gt; uses and installs are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a version of boost compiled with C++14 support.&lt;/li&gt;
+&lt;li&gt;googletest is required to build and run folly&amp;rsquo;s tests.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;build&#34;&gt;Build
+&lt;/h3&gt;&lt;p&gt;This script will download and build all of the necessary dependencies first,
+and will then invoke cmake etc to build folly.  This will help ensure that you build with relevant versions of all of the dependent libraries, taking into account what versions are installed locally on your system.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;getdeps.py&lt;/code&gt; currently requires python 3.6+ to be on your path.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;getdeps.py&lt;/code&gt; will invoke cmake etc.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# Clone the repo
+git clone https://github.com/facebook/folly
+cd folly
+# Build, using system dependencies if available
+python3 ./build/fbcode_builder/getdeps.py --allow-system-packages build
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It puts output in its scratch area:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;installed/folly/lib/libfolly.a&lt;/code&gt;: Library&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can also specify a &lt;code&gt;--scratch-path&lt;/code&gt; argument to control
+the location of the scratch directory used for the build. You can find the default scratch install location from logs or with &lt;code&gt;python3 ./build/fbcode_builder/getdeps.py show-inst-dir&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;There are also
+&lt;code&gt;--install-dir&lt;/code&gt; and &lt;code&gt;--install-prefix&lt;/code&gt; arguments to provide some more
+fine-grained control of the installation directories. However, given that
+folly provides no compatibility guarantees between commits we generally
+recommend building and installing the libraries to a temporary location, and
+then pointing your project&amp;rsquo;s build at this temporary location, rather than
+installing folly in the traditional system installation directories. e.g., if you are building with CMake you can use the &lt;code&gt;CMAKE_PREFIX_PATH&lt;/code&gt; variable to allow CMake to find folly in this temporary installation directory when
+building your project.&lt;/p&gt;
+&lt;p&gt;If you want to invoke &lt;code&gt;cmake&lt;/code&gt; again to iterate, there is a helpful &lt;code&gt;run_cmake.py&lt;/code&gt; script output in the scratch build directory.  You can find the scratch build directory from logs or with &lt;code&gt;python3 ./build/fbcode_builder/getdeps.py show-build-dir&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;run-tests&#34;&gt;Run tests
+&lt;/h3&gt;&lt;p&gt;By default &lt;code&gt;getdeps.py&lt;/code&gt; will build the tests for folly. To run them:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd folly
+python3 ./build/fbcode_builder/getdeps.py --allow-system-packages test
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;buildshbuildbat-wrapper&#34;&gt;&lt;code&gt;build.sh&lt;/code&gt;/&lt;code&gt;build.bat&lt;/code&gt; wrapper
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;build.sh&lt;/code&gt; can be used on Linux and MacOS, on Windows use
+the &lt;code&gt;build.bat&lt;/code&gt; script instead. Its a wrapper around &lt;code&gt;getdeps.py&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;build-with-cmake-directly&#34;&gt;Build with cmake directly
+&lt;/h2&gt;&lt;p&gt;If you don&amp;rsquo;t want to let getdeps invoke cmake for you then by default, building the tests is disabled as part of the CMake &lt;code&gt;all&lt;/code&gt; target.
+To build the tests, specify &lt;code&gt;-DBUILD_TESTS=ON&lt;/code&gt; to CMake at configure time.&lt;/p&gt;
+&lt;p&gt;NB if you want to invoke &lt;code&gt;cmake&lt;/code&gt; again to iterate on a &lt;code&gt;getdeps.py&lt;/code&gt; build, there is a helpful &lt;code&gt;run_cmake.py&lt;/code&gt; script output in the scratch-path build directory. You can find the scratch build directory from logs or with &lt;code&gt;python3 ./build/fbcode_builder/getdeps.py show-build-dir&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Running tests with ctests also works if you cd to the build dir, e.g.
+&lt;code&gt;(cd $(python3 ./build/fbcode_builder/getdeps.py show-build-dir) &amp;amp;&amp;amp; ctest)&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;finding-dependencies-in-non-default-locations&#34;&gt;Finding dependencies in non-default locations
+&lt;/h3&gt;&lt;p&gt;If you have boost, gtest, or other dependencies installed in a non-default
+location, you can use the &lt;code&gt;CMAKE_INCLUDE_PATH&lt;/code&gt; and &lt;code&gt;CMAKE_LIBRARY_PATH&lt;/code&gt;
+variables to make CMAKE look also look for header files and libraries in
+non-standard locations.  For example, to also search the directories
+&lt;code&gt;/alt/include/path1&lt;/code&gt; and &lt;code&gt;/alt/include/path2&lt;/code&gt; for header files and the
+directories &lt;code&gt;/alt/lib/path1&lt;/code&gt; and &lt;code&gt;/alt/lib/path2&lt;/code&gt; for libraries, you can invoke
+&lt;code&gt;cmake&lt;/code&gt; as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cmake \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -DCMAKE_INCLUDE_PATH=/alt/include/path1:/alt/include/path2 \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -DCMAKE_LIBRARY_PATH=/alt/lib/path1:/alt/lib/path2 ...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;ubuntu-lts-centos-stream-fedora&#34;&gt;Ubuntu LTS, CentOS Stream, Fedora
+&lt;/h2&gt;&lt;p&gt;Use the &lt;code&gt;getdeps.py&lt;/code&gt; approach above. We test in CI on Ubuntu LTS, and occasionally on other distros.&lt;/p&gt;
+&lt;p&gt;If you find the set of system packages is not quite right for your chosen distro, you can specify distro version specific overrides in the dependency manifests (e.g. &lt;a class=&#34;link&#34; href=&#34;https://github.com/facebook/folly/blob/main/build/fbcode_builder/manifests/boost&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/facebook/folly/blob/main/build/fbcode_builder/manifests/boost&lt;/a&gt; ). You could probably make it work on most recent Ubuntu/Debian or Fedora/Redhat derived distributions.&lt;/p&gt;
+&lt;p&gt;At time of writing (Dec 2021) there is a build break on GCC 11.x based systems in lang_badge_test.  If you don&amp;rsquo;t need badge functionality you can work around by commenting it out from CMakeLists.txt (unfortunately fbthrift does need it)&lt;/p&gt;
+&lt;h2 id=&#34;windows-vcpkg&#34;&gt;Windows (Vcpkg)
+&lt;/h2&gt;&lt;p&gt;Note that many tests are disabled for folly Windows builds, you can see them in the log from the cmake configure step, or by looking for WINDOWS_DISABLED in &lt;code&gt;CMakeLists.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;That said, &lt;code&gt;getdeps.py&lt;/code&gt; builds work on Windows and are tested in CI.&lt;/p&gt;
+&lt;p&gt;If you prefer, you can try Vcpkg. folly is available in &lt;a class=&#34;link&#34; href=&#34;https://github.com/Microsoft/vcpkg#vcpkg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vcpkg&lt;/a&gt; and releases may be built via &lt;code&gt;vcpkg install folly:x64-windows&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You may also use &lt;code&gt;vcpkg install folly:x64-windows --head&lt;/code&gt; to build against &lt;code&gt;main&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;macos&#34;&gt;macOS
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;getdeps.py&lt;/code&gt; builds work on macOS and are tested in CI, however if you prefer, you can try one of the macOS package managers&lt;/p&gt;
+&lt;h3 id=&#34;homebrew&#34;&gt;Homebrew
+&lt;/h3&gt;&lt;p&gt;folly is available as a Formula and releases may be built via &lt;code&gt;brew install folly&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You may also use &lt;code&gt;folly/build/bootstrap-osx-homebrew.sh&lt;/code&gt; to build against &lt;code&gt;main&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ./folly/build/bootstrap-osx-homebrew.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This will create a build directory &lt;code&gt;_build&lt;/code&gt; in the top-level.&lt;/p&gt;
+&lt;h3 id=&#34;macports&#34;&gt;MacPorts
+&lt;/h3&gt;&lt;p&gt;Install the required packages from MacPorts:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;port&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;boost&lt;/span&gt; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;cmake&lt;/span&gt; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;gflags&lt;/span&gt; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;google&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;glog&lt;/span&gt; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;libevent&lt;/span&gt; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;libtool&lt;/span&gt; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;lz4&lt;/span&gt; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;lzma&lt;/span&gt; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;openssl&lt;/span&gt; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;snappy&lt;/span&gt; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;xz&lt;/span&gt; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;zlib&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Download and install double-conversion:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  git clone https://github.com/google/double-conversion.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  cd double-conversion
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  cmake -DBUILD_SHARED_LIBS=ON .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  make
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  sudo make install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Download and install folly with the parameters listed below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  git clone https://github.com/facebook/folly.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  cd folly
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  mkdir _build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  cd _build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  cmake ..
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  make
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  sudo make install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

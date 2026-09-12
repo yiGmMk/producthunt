@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>IAM on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/iam/</link>
+        <description>Recent content in IAM on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sat, 12 Apr 2025 15:25:30 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/iam/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>amazon-nova-samples</title>
+        <link>https://producthunt.programnotes.cn/en/p/amazon-nova-samples/</link>
+        <pubDate>Sat, 12 Apr 2025 15:25:30 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/amazon-nova-samples/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1664840504239-991007ba2393?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ0NDI2NzR8&amp;ixlib=rb-4.0.3" alt="Featured image of post amazon-nova-samples" /&gt;&lt;h1 id=&#34;aws-samplesamazon-nova-samples&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/aws-samples/amazon-nova-samples&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;aws-samples/amazon-nova-samples&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;amazon-nova-model-cookbook&#34;&gt;Amazon Nova model cookbook
+&lt;/h1&gt;&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started
+&lt;/h2&gt;&lt;p&gt;To get started with the code examples, ensure you have access to &lt;a class=&#34;link&#34; href=&#34;https://aws.amazon.com/bedrock/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Amazon Bedrock&lt;/a&gt;. Then clone this repo and navigate to one of the folders above. Detailed instructions are provided in each folder&amp;rsquo;s README.&lt;/p&gt;
+&lt;h3 id=&#34;enable-aws-iam-permissions-for-bedrock&#34;&gt;Enable AWS IAM permissions for Bedrock
+&lt;/h3&gt;&lt;p&gt;The AWS identity you assume from your environment (which is the &lt;a class=&#34;link&#34; href=&#34;https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;em&gt;Studio/notebook Execution Role&lt;/em&gt;&lt;/a&gt; from SageMaker, or could be a role or IAM User for self-managed notebooks or other use-cases), must have sufficient &lt;a class=&#34;link&#34; href=&#34;https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AWS IAM permissions&lt;/a&gt; to call the Amazon Bedrock service.&lt;/p&gt;
+&lt;p&gt;To grant Bedrock access to your identity, you can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open the &lt;a class=&#34;link&#34; href=&#34;https://us-east-1.console.aws.amazon.com/iam/home?#&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AWS IAM Console&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Find your &lt;a class=&#34;link&#34; href=&#34;https://us-east-1.console.aws.amazon.com/iamv2/home?#/roles&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Role&lt;/a&gt; (if using SageMaker or otherwise assuming an IAM Role), or else &lt;a class=&#34;link&#34; href=&#34;https://us-east-1.console.aws.amazon.com/iamv2/home?#/users&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;User&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Select &lt;em&gt;Add Permissions &amp;gt; Create Inline Policy&lt;/em&gt; to attach new inline permissions, open the &lt;em&gt;JSON&lt;/em&gt; editor and paste in the below example policy:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;Version&amp;#34;: &amp;#34;2012-10-17&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#34;Statement&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;Sid&amp;#34;: &amp;#34;BedrockFullAccess&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;Effect&amp;#34;: &amp;#34;Allow&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;Action&amp;#34;: [&amp;#34;bedrock:*&amp;#34;],
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;#34;Resource&amp;#34;: &amp;#34;*&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;⚠️ &lt;strong&gt;Note 1:&lt;/strong&gt; With Amazon SageMaker, your notebook execution role will typically be &lt;em&gt;separate&lt;/em&gt; from the user or role that you log in to the AWS Console with. If you&amp;rsquo;d like to explore the AWS Console for Amazon Bedrock, you&amp;rsquo;ll need to grant permissions to your Console user/role too.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️ &lt;strong&gt;Note 2:&lt;/strong&gt; For top level folder changes, please reach out to the GitHub maintainers.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For more information on the fine-grained action and resource permissions in Bedrock, check out the &lt;a class=&#34;link&#34; href=&#34;https://docs.aws.amazon.com/bedrock/latest/userguide/getting-started-api.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Bedrock Developer Guide&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;contributing&#34;&gt;Contributing
+&lt;/h2&gt;&lt;p&gt;We welcome community contributions! Please see &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;CONTRIBUTING.md&lt;/a&gt; for guidelines.&lt;/p&gt;
+&lt;h2 id=&#34;security&#34;&gt;Security
+&lt;/h2&gt;&lt;p&gt;See &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md#security-issue-notifications&#34; &gt;CONTRIBUTING&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;This library is licensed under the MIT-0 License. See the &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt; file.&lt;/p&gt;
+&lt;h2 id=&#34;-contributors&#34;&gt;👏 Contributors
+&lt;/h2&gt;&lt;p&gt;Shout out to these awesome contributors:&lt;/p&gt;
+&lt;a href=&#34;https://github.com/aws-samples/amazon-nova-samples/graphs/contributors&#34;&gt;
+  &lt;img src=&#34;https://contrib.rocks/image?repo=aws-samples/amazon-nova-samples&#34; /&gt;
+&lt;/a&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
