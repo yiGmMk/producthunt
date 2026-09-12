@@ -1,9 +1,9 @@
 ---
 title: gods-eye-view
-date: 2026-09-11T20:19:28+08:00
+date: 2026-09-12T19:44:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1624382754341-9a8720a31180?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkxMjkwNTV8&ixlib=rb-4.1.0
-tags: ['github',Gods Eye View, 3D globe, live data]
+image: https://images.unsplash.com/photo-1545034282-d3951c675162?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkyMTMzNjN8&ixlib=rb-4.1.0
+tags: ['github',geospatial visualization, realtime data, voice AI]
 categories: ['github']
 ---
 
@@ -12,6 +12,8 @@ categories: ['github']
 <div align="center">
 
 # 🌐 God's Eye View
+
+[![CI](https://github.com/bilawalsidhu/gods-eye-view/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bilawalsidhu/gods-eye-view/actions/workflows/ci.yml)
 
 ### A spy-satellite simulator in your browser — then you realize the sources are public and the data is real.
 
