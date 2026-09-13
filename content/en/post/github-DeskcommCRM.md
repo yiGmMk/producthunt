@@ -1,8 +1,8 @@
 ---
 title: DeskcommCRM
-date: 2026-09-12T19:45:01+08:00
+date: 2026-09-13T20:55:35+08:00
 draft: False
-image: https://images.unsplash.com/photo-1752254873481-6b6095601f38?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkyMTMzNjN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1720924724655-392c822812a3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkzMDM4NDN8&ixlib=rb-4.1.0
 tags: ['github',CRM, AI, WhatsApp]
 categories: ['github']
 ---

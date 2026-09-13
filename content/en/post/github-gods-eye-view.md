@@ -1,9 +1,9 @@
 ---
 title: gods-eye-view
-date: 2026-09-12T19:44:17+08:00
+date: 2026-09-13T20:54:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1545034282-d3951c675162?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkyMTMzNjN8&ixlib=rb-4.1.0
-tags: ['github',geospatial visualization, realtime data, voice AI]
+image: https://images.unsplash.com/photo-1642287458180-449fad5abc2f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkzMDM4NDN8&ixlib=rb-4.1.0
+tags: ['github',geospatial intelligence, real-time visualization, open source]
 categories: ['github']
 ---
 
