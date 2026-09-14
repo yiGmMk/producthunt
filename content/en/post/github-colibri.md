@@ -1,9 +1,9 @@
 ---
 title: colibri
-date: 2026-09-13T20:51:24+08:00
+date: 2026-09-14T21:58:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1710766897444-fd6848f35e40?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkzMDM4NDN8&ixlib=rb-4.1.0
-tags: ['github',inference engine, MoE, memory multitiering]
+image: https://images.unsplash.com/photo-1596642392822-9843548f219e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkzOTQyNzF8&ixlib=rb-4.1.0
+tags: ['github',inference engine,MoE,multitiering]
 categories: ['github']
 ---
 
@@ -20,7 +20,7 @@ categories: ['github']
 
 <p align="center">
   <a href="https://justvugg.github.io/colibri"><b>Website</b></a> ·
-  <a href="https://discord.gg/FkyrEeJR"><b>Discord</b></a> ·
+  <a href="https://discord.gg/RXV83nSZdk"><b>Discord</b></a> ·
   English · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.it.md">Italiano</a>
 </p>
 
@@ -29,8 +29,8 @@ parameters** — on consumer and heterogeneous hardware, in pure C with zero
 engine dependencies, by treating storage, RAM, and VRAM as a single inference
 hierarchy (AI memory multitiering).
 
-Eight families run today: **GLM-5.2/5.3** (744B), **GLM-5.3-Flash** (321B, with
-vision), **Inkling** (975B), **Kimi K3** (2.8T), **DeepSeek V4 Flash** (284B),
+Nine families run today: **GLM-5.2/5.3** (744B), **GLM-5.3-Flash** (321B, with
+vision), **Inkling** (975B), **Kimi K3** (2.8T), **DeepSeek V4 Flash** (284B), **DeepSeek V4.1 Flash** (552B, with vision),
 **Qwen3.8-Flash-Next** (125B + 51B n-gram), **Qwen3.6** (35B-A3B) and
 **OLMoE** (7B) —
 one C file each, the same `coli chat` / `coli serve` / `coli web` front end.
@@ -51,7 +51,7 @@ may reduce speed; it must not quietly redefine the model.
 
 ```
 $ ./coli chat
-  🐦 colibri v1.10.2 — GLM-5.2 · 744B MoE · int4 · streaming CPU
+  🐦 colibri v1.11.0 — GLM-5.2 · 744B MoE · int4 · streaming CPU
   ✓ ready in 32s · resident 9.9 GB
   › ciao!
   ◆ Ciao! 😊 Come posso aiutarti oggi?
@@ -435,6 +435,7 @@ the model's `config.json`):
 | **GLM-5.3-Flash** (Z.ai) | 321B / 40B | [`zai-org/GLM-5.3-Flash`](https://huggingface.co/zai-org/GLM-5.3-Flash) — converted to **int4-gs64** routed experts, dense stays BF16 and the precision is a load-time choice; vision included | `make -C c glm53` | [glm53-flash.md](docs/glm53-flash.md) |
 | **Kimi K3** (Moonshot) | 2.8T / 104B | [`moonshotai/Kimi-K3`](https://huggingface.co/moonshotai/Kimi-K3) — original checkpoint, routed experts stay **native MXFP4** | `make -C c kimi_k3` | [kimi_k3.md](docs/kimi_k3.md) |
 | **DeepSeek V4 Flash** | 284B / 13B | official sharded checkpoint — routed experts stay **native fp4**, dense stays fp8-e4m3; the **REAP-pruned 150B** ([`puwaer/DeepSeek-V4-Flash-0731-reap-150b`](https://huggingface.co/puwaer/DeepSeek-V4-Flash-0731-reap-150b), 85 GB, 132 of 256 experts) loads with the same engine and no conversion | `make -C c deepseek-v4` | [deepseek-v4.md](docs/deepseek-v4.md) |
+| **DeepSeek V4.1 Flash** | 552B / 16B | official checkpoint, **no conversion**: experts are already fp4, dense is fp8-e4m3. 203 GB of it is an n-gram memory read from disk a few hundred bytes at a time, and the routed experts cost **4.5 GB per token** against GLM-5.2's 12.7. Vision, tool calling and the DSpark draft head are all on | `make -C c deepseek_v41` | [deepseek-v41.md](docs/deepseek-v41.md) |
 | **Qwen3.8-Flash-Next** (Alibaba) | 125B + 51B n-gram / 6B | [`Qwen/Qwen3.8-Flash-Next-FP8`](https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8) — original checkpoint; PLE stays pageable and experts stay **native block-FP8** | `make -C c qwen38` (CPU only) | [qwen38.md](docs/qwen38.md) |
 | **Qwen3.6** (Alibaba) | 35B / 3B | [`Kreuzzelg/qwen36-35b-a3b-colibri-i4-gs64`](https://huggingface.co/Kreuzzelg/qwen36-35b-a3b-colibri-i4-gs64) (~20 GB, **recommended**) — hybrid Gated Attention + Gated DeltaNet | `make -C c qwen36` (`CUDA=1` for the VRAM expert tier) | [qwen36.md](docs/qwen36.md) |
 | **OLMoE** (AI2) | 7B / 1B | converted with `c/tools/convert_olmoe_merged.py` — **int8** container, ~7 GB | `make -C c olmoe` | — |
@@ -594,8 +595,8 @@ checkpoint validation, and the generated tiny independent oracle.
   lower cost per useful token. Everything lands the way this project works:
   measured end to end, reviewed, and developed in the open.
 - **More open models.** The tiering algorithm is model-agnostic: any MoE with
-  routed experts can be staged the same way. Eight families run today (GLM-5.2,
-  GLM-5.3-Flash, Inkling, Kimi K3, DeepSeek V4 Flash, Qwen3.8-Flash-Next,
+  routed experts can be staged the same way. Nine families run today (GLM-5.2,
+  GLM-5.3-Flash, Inkling, Kimi K3, DeepSeek V4 Flash, DeepSeek V4.1 Flash, Qwen3.8-Flash-Next,
   Qwen3.6, OLMoE); further open-weight families — **MiniMax** among the
   candidates — earn an engine the way the first eight did: when someone
   measures one end to end.
@@ -608,7 +609,7 @@ today its numbers come from a community of real machines. If it's useful to you:
 - ⭐ star the repo and share it;
 - 🐛 open issues with benchmark numbers from your hardware — datapoints move
   this project more than anything else;
-- 💬 join the [Discord community](https://discord.gg/FkyrEeJR) to discuss
+- 💬 join the [Discord community](https://discord.gg/RXV83nSZdk) to discuss
   experiments, hardware results, and research directions;
 - 💬 reach out via GitHub issues to sponsor development or donate hardware.
 
