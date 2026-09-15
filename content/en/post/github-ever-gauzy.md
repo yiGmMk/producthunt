@@ -1,9 +1,9 @@
 ---
 title: ever-gauzy
-date: 2026-09-13T20:53:19+08:00
+date: 2026-09-15T20:46:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1720924724655-392c822812a3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkzMDM4NDN8&ixlib=rb-4.1.0
-tags: ['github',open business management platform, erp, crm]
+image: https://images.unsplash.com/photo-1663860194262-8ba762768500?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk0NzYyMzh8&ixlib=rb-4.1.0
+tags: ['github',business management platform, ERP, time tracking]
 categories: ['github']
 ---
 

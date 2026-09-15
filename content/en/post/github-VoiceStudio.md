@@ -1,9 +1,9 @@
 ---
 title: VoiceStudio
-date: 2026-09-14T21:59:41+08:00
+date: 2026-09-15T20:46:57+08:00
 draft: False
-image: https://images.unsplash.com/photo-1687786713095-76a44b189698?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkzOTQyNzF8&ixlib=rb-4.1.0
-tags: ['github',VoiceStudio,voice cloning,text-to-speech]
+image: https://images.unsplash.com/photo-1635073630004-97c3587ebcbf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk0NzYyMzh8&ixlib=rb-4.1.0
+tags: ['github',voice cloning, local processing, open source]
 categories: ['github']
 ---
 
