@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Code Agents on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/code-agents/</link>
+        <description>Recent content in Code Agents on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 28 Aug 2026 02:23:29 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/code-agents/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>go-modern-guidelines</title>
+        <link>https://producthunt.programnotes.cn/en/p/go-modern-guidelines/</link>
+        <pubDate>Fri, 28 Aug 2026 02:23:29 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/go-modern-guidelines/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1673738619521-9bbad6417434?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc4NTQ3ODJ8&amp;ixlib=rb-4.1.0" alt="Featured image of post go-modern-guidelines" /&gt;&lt;h1 id=&#34;jetbrainsgo-modern-guidelines&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/JetBrains/go-modern-guidelines&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JetBrains/go-modern-guidelines&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://confluence.jetbrains.com/display/ALL/JetBrains&amp;#43;on&amp;#43;GitHub&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;http://jb.gg/badges/official.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;official JetBrains project&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;modern-go-guidelines&#34;&gt;Modern Go Guidelines
+&lt;/h1&gt;&lt;p&gt;This repository contains &lt;a class=&#34;link&#34; href=&#34;https://github.com/JetBrains/go-modern-guidelines/blob/main/plugin/skills/use-modern-go/SKILL.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;guidelines&lt;/a&gt; for code agents that help them write modern Go code.&lt;/p&gt;
+&lt;p&gt;For example, an agent with these guidelines uses &lt;code&gt;max(a, b)&lt;/code&gt; instead of an if-else block, &lt;code&gt;slices.Contains&lt;/code&gt; instead of a manual loop, &lt;code&gt;cmp.Or(a, b, c)&lt;/code&gt; instead of a chain of nil checks. It also knows about recent additions like &lt;code&gt;new(42)&lt;/code&gt; to get a pointer to a value and &lt;code&gt;errors.AsType[T](err)&lt;/code&gt; for type-safe error matching—both from Go 1.26.&lt;/p&gt;
+&lt;p&gt;The guidelines cover the most useful features from Go 1.0 through Go 1.27, including everything targeted by the &lt;code&gt;modernize&lt;/code&gt; analyzer. An agent will:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Detect the project&amp;rsquo;s Go version from &lt;code&gt;go.mod&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Use language features and stdlib additions available up to and including that version&lt;/li&gt;
+&lt;li&gt;Prefer modern idioms over older patterns&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation
+&lt;/h2&gt;&lt;p&gt;All coding agents tend to generate outdated Go. Two reasons:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Training data lag.&lt;/strong&gt; Models don&amp;rsquo;t know about features added after their training cutoff. They can&amp;rsquo;t use &lt;code&gt;errors.AsType[T]&lt;/code&gt; (Go 1.26) if they&amp;rsquo;ve never seen it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Frequency bias.&lt;/strong&gt; Even for features the model knows, it often picks older patterns. There&amp;rsquo;s more &lt;code&gt;for i := 0; i &amp;lt; n; i++&lt;/code&gt; in the training data than &lt;code&gt;for i := range n&lt;/code&gt;, so that&amp;rsquo;s what comes out.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These guidelines fix both problems by giving the agent an explicit reference.&lt;/p&gt;
+&lt;p&gt;This aligns with the Go team&amp;rsquo;s direction. The &lt;code&gt;modernize&lt;/code&gt; analyzer exists to automatically update existing code to use newer idioms (see &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=_VePjjjV9JU&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;this talk&lt;/a&gt; from the Go team). These guidelines serve the same goal for new code: agents write modern Go from the start, so there&amp;rsquo;s less to fix later.&lt;/p&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements
+&lt;/h2&gt;&lt;p&gt;The marketplace integrations run a small CLI that is installed on first use with &lt;code&gt;go install&lt;/code&gt;. Because of that, the &lt;a class=&#34;link&#34; href=&#34;https://go.dev/dl/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Go toolchain&lt;/a&gt; must be installed and available on your &lt;code&gt;PATH&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The CLI is installed into a local cache (for example &lt;code&gt;~/.cache/go-modern-guidelines&lt;/code&gt;) and never modifies your project. It targets &lt;strong&gt;Go 1.25 or newer&lt;/strong&gt;; on an older Go it still works as long as automatic toolchain switching is enabled (&lt;code&gt;GOTOOLCHAIN=auto&lt;/code&gt;, the default), which lets Go fetch a compatible toolchain on first run.&lt;/p&gt;
+&lt;h2 id=&#34;instructions&#34;&gt;Instructions
+&lt;/h2&gt;&lt;p&gt;The guidelines are available for Junie, Claude Code, Codex, and Cursor, and for other agents via skills.sh.&lt;/p&gt;
+&lt;h3 id=&#34;junie&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://junie.jetbrains.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Junie&lt;/a&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;junie-cli&#34;&gt;Junie CLI
+&lt;/h4&gt;&lt;p&gt;Run the following commands inside a Junie CLI session.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Add this repository as a marketplace:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/extensions marketplace add JetBrains/go-modern-guidelines
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Install the extension:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/extensions install modern-go-guidelines
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Junie invokes the skill automatically when it is relevant to a Go task.&lt;/p&gt;
+&lt;h4 id=&#34;updating&#34;&gt;Updating
+&lt;/h4&gt;&lt;p&gt;Update the installed extension from inside a Junie CLI session:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/extensions update modern-go-guidelines
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;claude-code&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://claude.com/product/claude-code&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Claude Code&lt;/a&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;installation&#34;&gt;Installation
+&lt;/h4&gt;&lt;p&gt;Run the following commands inside a Claude Code session.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Add this repository as a marketplace:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/plugin marketplace add JetBrains/go-modern-guidelines
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Install the plugin:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/plugin install modern-go-guidelines@goland-claude-marketplace
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;usage&#34;&gt;Usage
+&lt;/h4&gt;&lt;p&gt;Claude Code invokes the skill automatically when it is relevant to a Go task.&lt;/p&gt;
+&lt;p&gt;To invoke it explicitly:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/modern-go-guidelines:use-modern-go
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;updating-1&#34;&gt;Updating
+&lt;/h4&gt;&lt;p&gt;Claude Code can update the marketplace and installed plugin automatically at startup. Automatic updates are disabled by default for third-party marketplaces, so enable them once:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Run &lt;code&gt;/plugin&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Open &lt;strong&gt;Marketplaces&lt;/strong&gt; and select &lt;code&gt;goland-claude-marketplace&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Select &lt;strong&gt;Enable auto-update&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;When Claude Code reports that the plugin was updated, apply the new version to the current session with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reload&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;plugins&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To update it manually instead, run these commands in a terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;claude plugin marketplace update goland-claude-marketplace
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;claude plugin update modern-go-guidelines@goland-claude-marketplace
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;codex&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://developers.openai.com/codex/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Codex&lt;/a&gt;
+&lt;/h3&gt;&lt;h4 id=&#34;installation-1&#34;&gt;Installation
+&lt;/h4&gt;&lt;p&gt;Run the following commands in a terminal.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Add this repository as a marketplace:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;codex plugin marketplace add JetBrains/go-modern-guidelines
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Install the plugin:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;codex plugin add modern-go-guidelines@goland-codex-marketplace
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;updating-2&#34;&gt;Updating
+&lt;/h4&gt;&lt;p&gt;Refresh the marketplace and reinstall the plugin so Codex replaces its cached copy:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;codex plugin marketplace upgrade goland-codex-marketplace
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;codex plugin remove modern-go-guidelines@goland-codex-marketplace
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;codex plugin add modern-go-guidelines@goland-codex-marketplace
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;cursor&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://cursor.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cursor&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;For convenience, the guidelines are distributed as a Cursor plugin.&lt;/p&gt;
+&lt;h4 id=&#34;installation-2&#34;&gt;Installation
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Add this repository as a marketplace by running the following command in a terminal:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cursor-agent plugin marketplace add https://github.com/JetBrains/go-modern-guidelines
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Install the plugin with the &lt;code&gt;/plugins&lt;/code&gt; command inside a Cursor session.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;updating-3&#34;&gt;Updating
+&lt;/h4&gt;&lt;p&gt;Refresh the marketplace from Git and reopen Cursor so it can pick up the new plugin version:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cursor-agent plugin marketplace update goland-cursor-marketplace
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If the installed plugin is still on the previous version, reinstall it with the &lt;code&gt;/plugins&lt;/code&gt; command. Cursor does not currently provide a non-interactive CLI command for updating an installed plugin.&lt;/p&gt;
+&lt;h3 id=&#34;other-agents-via-skillssh&#34;&gt;Other Agents (via &lt;a class=&#34;link&#34; href=&#34;https://skills.sh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;skills.sh&lt;/a&gt;)
+&lt;/h3&gt;&lt;p&gt;The same skill package works across other agents such as OpenCode. Install it with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx skills add JetBrains/go-modern-guidelines
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;(&lt;code&gt;--skill use-modern-go&lt;/code&gt; installs only this skill.)&lt;/p&gt;
+&lt;h4 id=&#34;updating-4&#34;&gt;Updating
+&lt;/h4&gt;&lt;p&gt;Update the project-installed skill with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx skills update use-modern-go -p -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For a globally installed skill, replace &lt;code&gt;-p&lt;/code&gt; with &lt;code&gt;-g&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;local-development&#34;&gt;Local development
+&lt;/h2&gt;&lt;p&gt;To try changes to the CLI in your agent, build this checkout into the tool&amp;rsquo;s cache:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make dev-install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Then set &lt;code&gt;GO_MODERN_GUIDELINES_DEV=1&lt;/code&gt; in the environment your agent runs in. With it set, any agent using the plugin runs your local build instead of the released version, the same way across Claude Code, Codex, and Cursor. Export it before launching the agent so the agent process inherits it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;GO_MODERN_GUIDELINES_DEV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;After editing the CLI, run &lt;code&gt;make dev-install&lt;/code&gt; again to rebuild; the next call picks it up. To go back to the released version, unset the variable (or run &lt;code&gt;make dev-uninstall&lt;/code&gt; to remove the build):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make dev-uninstall
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This requires the Go toolchain. The dev build is stored in the tool&amp;rsquo;s cache directory (&lt;code&gt;$XDG_CACHE_HOME/go-modern-guidelines&lt;/code&gt; or &lt;code&gt;~/.cache/go-modern-guidelines&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;The build is driven by &lt;code&gt;scripts/dev-install.sh&lt;/code&gt;, which is intentionally separate from the agent-facing wrapper so an agent can never trigger a build. Without &lt;code&gt;make&lt;/code&gt; (for example on Windows) you can run it directly:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sh scripts/dev-install.sh install       &lt;span class=&#34;c1&#34;&gt;# or: uninstall&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pwsh scripts/dev-install.ps1 install    &lt;span class=&#34;c1&#34;&gt;# PowerShell equivalent&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

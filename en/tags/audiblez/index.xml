@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Audiblez on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/audiblez/</link>
+        <description>Recent content in Audiblez on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 29 Aug 2025 15:27:48 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/audiblez/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>audiblez</title>
+        <link>https://producthunt.programnotes.cn/en/p/audiblez/</link>
+        <pubDate>Fri, 29 Aug 2025 15:27:48 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/audiblez/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1688870559348-bfbad318db1f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY0NTI0MTZ8&amp;ixlib=rb-4.1.0" alt="Featured image of post audiblez" /&gt;&lt;h1 id=&#34;santinicaudiblez&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/santinic/audiblez&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;santinic/audiblez&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;audiblez-generate--audiobooks-from-e-books&#34;&gt;Audiblez: Generate  audiobooks from e-books
+&lt;/h1&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/santinic/audiblez/actions/workflows/pip-install.yaml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/santinic/audiblez/actions/workflows/pip-install.yaml/badge.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Installing via pip and running&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/santinic/audiblez/actions/workflows/git-clone-and-run.yml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/santinic/audiblez/actions/workflows/git-clone-and-run.yml/badge.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Git clone and run&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;img src=&#34;https://img.shields.io/pypi/pyversions/audiblez&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PyPI - Python Version&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://img.shields.io/pypi/v/audiblez&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PyPI - Version&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;v4-now-with-graphical-interface-cuda-support-and-many-languages&#34;&gt;v4 Now with Graphical interface, CUDA support, and many languages!
+&lt;/h3&gt;&lt;p&gt;Audiblez generates &lt;code&gt;.m4b&lt;/code&gt; audiobooks from regular &lt;code&gt;.epub&lt;/code&gt; e-books,
+using Kokoro&amp;rsquo;s high-quality speech synthesis.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/hexgrad/Kokoro-82M&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Kokoro-82M&lt;/a&gt; is a recently published text-to-speech model with just 82M params and very natural sounding output.
+It&amp;rsquo;s released under Apache licence and it was trained on &amp;lt; 100 hours of audio.
+It currently supports these languages: 🇺🇸 🇬🇧 🇪🇸 🇫🇷 🇮🇳 🇮🇹 🇯🇵 🇧🇷 🇨🇳&lt;/p&gt;
+&lt;p&gt;On a Google Colab&amp;rsquo;s T4 GPU via Cuda, &lt;strong&gt;it takes about 5 minutes to convert &amp;ldquo;Animal&amp;rsquo;s Farm&amp;rdquo; by Orwell&lt;/strong&gt; (which is about 160,000 characters) to audiobook, at a rate of about 600 characters per second.&lt;/p&gt;
+&lt;p&gt;On my M2 MacBook Pro, on CPU, it takes about 1 hour, at a rate of about 60 characters per second.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-install-the-command-line-tool&#34;&gt;How to install the Command Line tool
+&lt;/h2&gt;&lt;p&gt;If you have Python 3 on your computer, you can install it with pip.
+You also need &lt;code&gt;espeak-ng&lt;/code&gt; and &lt;code&gt;ffmpeg&lt;/code&gt; installed on your machine:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install ffmpeg espeak-ng                   &lt;span class=&#34;c1&#34;&gt;# on Ubuntu/Debian 🐧&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install audiblez
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install ffmpeg espeak-ng                       &lt;span class=&#34;c1&#34;&gt;# on Mac 🍏&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install audiblez
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Then you can convert an .epub directly with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;audiblez book.epub -v af_sky
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;It will first create a bunch of &lt;code&gt;book_chapter_1.wav&lt;/code&gt;, &lt;code&gt;book_chapter_2.wav&lt;/code&gt;, etc. files in the same directory,
+and at the end it will produce a &lt;code&gt;book.m4b&lt;/code&gt; file with the whole book you can listen with VLC or any
+audiobook player.
+It will only produce the &lt;code&gt;.m4b&lt;/code&gt; file if you have &lt;code&gt;ffmpeg&lt;/code&gt; installed on your machine.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-run-the-gui&#34;&gt;How to run the GUI
+&lt;/h2&gt;&lt;p&gt;The GUI is a simple graphical interface to use audiblez.
+You need some extra dependencies to run the GUI:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install ffmpeg espeak-ng 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install libgtk-3-dev        # just for Ubuntu/Debian 🐧, Windows/Mac don&amp;#39;t need this
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install audiblez pillow wxpython
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Then you can run the GUI with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;audiblez-ui
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;how-to-run-on-windows&#34;&gt;How to run on Windows
+&lt;/h2&gt;&lt;p&gt;After many trials, on Windows we recommend to install audiblez in a Python venv:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open a Windows terminal&lt;/li&gt;
+&lt;li&gt;Create anew folder: &lt;code&gt;mkdir audiblez&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Enter the folder: &lt;code&gt;cd audiblez&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create a venv: &lt;code&gt;python -m venv venv&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Activate the venv: &lt;code&gt;.\venv\Scripts\Activate.ps1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Install the dependencies: &lt;code&gt;pip install audiblez pillow wxpython&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Now you can run &lt;code&gt;audiblez&lt;/code&gt; or &lt;code&gt;audiblez-ui&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;For Cuda support, you need to install Pytorch accordingly: &lt;a class=&#34;link&#34; href=&#34;https://pytorch.org/get-started/locally/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pytorch.org/get-started/locally/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;speed&#34;&gt;Speed
+&lt;/h2&gt;&lt;p&gt;By default the audio is generated using a normal speed, but you can make it up to twice slower or faster by specifying a speed argument between 0.5 to 2.0:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;audiblez book.epub -v af_sky -s 1.5
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;supported-voices&#34;&gt;Supported Voices
+&lt;/h2&gt;&lt;p&gt;Use &lt;code&gt;-v&lt;/code&gt; option to specify the voice to use. Available voices are listed here.
+The first letter is the language code and the second is the gender of the speaker e.g. &lt;code&gt;im_nicola&lt;/code&gt; is an italian male voice.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://claudio.uk/posts/audiblez-v4.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;For hearing samples of Kokoro-82M voices, go here&lt;/a&gt;&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Language&lt;/th&gt;
+					&lt;th&gt;Voices&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;🇺🇸 American English&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;af_alloy&lt;/code&gt;, &lt;code&gt;af_aoede&lt;/code&gt;, &lt;code&gt;af_bella&lt;/code&gt;, &lt;code&gt;af_heart&lt;/code&gt;, &lt;code&gt;af_jessica&lt;/code&gt;, &lt;code&gt;af_kore&lt;/code&gt;, &lt;code&gt;af_nicole&lt;/code&gt;, &lt;code&gt;af_nova&lt;/code&gt;, &lt;code&gt;af_river&lt;/code&gt;, &lt;code&gt;af_sarah&lt;/code&gt;, &lt;code&gt;af_sky&lt;/code&gt;, &lt;code&gt;am_adam&lt;/code&gt;, &lt;code&gt;am_echo&lt;/code&gt;, &lt;code&gt;am_eric&lt;/code&gt;, &lt;code&gt;am_fenrir&lt;/code&gt;, &lt;code&gt;am_liam&lt;/code&gt;, &lt;code&gt;am_michael&lt;/code&gt;, &lt;code&gt;am_onyx&lt;/code&gt;, &lt;code&gt;am_puck&lt;/code&gt;, &lt;code&gt;am_santa&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;🇬🇧 British English&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;bf_alice&lt;/code&gt;, &lt;code&gt;bf_emma&lt;/code&gt;, &lt;code&gt;bf_isabella&lt;/code&gt;, &lt;code&gt;bf_lily&lt;/code&gt;, &lt;code&gt;bm_daniel&lt;/code&gt;, &lt;code&gt;bm_fable&lt;/code&gt;, &lt;code&gt;bm_george&lt;/code&gt;, &lt;code&gt;bm_lewis&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;🇪🇸 Spanish&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;ef_dora&lt;/code&gt;, &lt;code&gt;em_alex&lt;/code&gt;, &lt;code&gt;em_santa&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;🇫🇷 French&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;ff_siwis&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;🇮🇳 Hindi&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;hf_alpha&lt;/code&gt;, &lt;code&gt;hf_beta&lt;/code&gt;, &lt;code&gt;hm_omega&lt;/code&gt;, &lt;code&gt;hm_psi&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;🇮🇹 Italian&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;if_sara&lt;/code&gt;, &lt;code&gt;im_nicola&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;🇯🇵 Japanese&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;jf_alpha&lt;/code&gt;, &lt;code&gt;jf_gongitsune&lt;/code&gt;, &lt;code&gt;jf_nezumi&lt;/code&gt;, &lt;code&gt;jf_tebukuro&lt;/code&gt;, &lt;code&gt;jm_kumo&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;🇧🇷 Brazilian Portuguese&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;pf_dora&lt;/code&gt;, &lt;code&gt;pm_alex&lt;/code&gt;, &lt;code&gt;pm_santa&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;🇨🇳 Mandarin Chinese&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;zf_xiaobei&lt;/code&gt;, &lt;code&gt;zf_xiaoni&lt;/code&gt;, &lt;code&gt;zf_xiaoxiao&lt;/code&gt;, &lt;code&gt;zf_xiaoyi&lt;/code&gt;, &lt;code&gt;zm_yunjian&lt;/code&gt;, &lt;code&gt;zm_yunxi&lt;/code&gt;, &lt;code&gt;zm_yunxia&lt;/code&gt;, &lt;code&gt;zm_yunyang&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;For more detaila about voice quality, check this document: &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Kokoro-82M voices&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;how-to-run-on-gpu&#34;&gt;How to run on GPU
+&lt;/h2&gt;&lt;p&gt;By default, audiblez runs on CPU. If you pass the option &lt;code&gt;--cuda&lt;/code&gt; it will try to use the Cuda device via Torch.&lt;/p&gt;
+&lt;p&gt;Check out this example: &lt;a class=&#34;link&#34; href=&#34;https://colab.research.google.com/drive/164PQLowogprWQpRjKk33e-8IORAvqXKI?usp=sharing]&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Audiblez running on a Google Colab Notebook with Cuda &lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We don&amp;rsquo;t currently support Apple Silicon, as there is not yet a Kokoro implementation in MLX. As soon as it will be available, we will support it.&lt;/p&gt;
+&lt;h2 id=&#34;manually-pick-chapters-to-convert&#34;&gt;Manually pick chapters to convert
+&lt;/h2&gt;&lt;p&gt;Sometimes you want to manually select which chapters/sections in the e-book to read out loud.
+To do so, you can use &lt;code&gt;--pick&lt;/code&gt; to interactively choose the chapters to convert (without running the GUI).&lt;/p&gt;
+&lt;h2 id=&#34;help-page&#34;&gt;Help page
+&lt;/h2&gt;&lt;p&gt;For all the options available, you can check the help page &lt;code&gt;audiblez --help&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;usage: audiblez [-h] [-v VOICE] [-p] [-s SPEED] [-c] [-o FOLDER] epub_file_path
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;positional arguments:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  epub_file_path        Path to the epub file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;options:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -h, --help            show this help message and exit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -v VOICE, --voice VOICE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        Choose narrating voice: a, b, e, f, h, i, j, p, z
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -p, --pick            Interactively select which chapters to read in the audiobook
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -s SPEED, --speed SPEED
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        Set speed from 0.5 to 2.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -c, --cuda            Use GPU via Cuda in Torch if available
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -o FOLDER, --output FOLDER
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        Output folder for the audiobook and temporary files
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;example:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  audiblez book.epub -l en-us -v af_sky
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;to use the GUI, run:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  audiblez-ui
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;author&#34;&gt;Author
+&lt;/h2&gt;&lt;p&gt;by &lt;a class=&#34;link&#34; href=&#34;https://claudio.uk&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Claudio Santini&lt;/a&gt; in 2025, distributed under MIT licence.&lt;/p&gt;
+&lt;p&gt;Related Article: &lt;a class=&#34;link&#34; href=&#34;https://claudio.uk/posts/audiblez-v4.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Audiblez v4: Generate Audiobooks from E-books&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

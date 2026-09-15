@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Raspberry-Pi on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/raspberry-pi/</link>
+        <description>Recent content in Raspberry-Pi on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Wed, 16 Jul 2025 15:32:29 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>WirelessAndroidAutoDongle</title>
+        <link>https://producthunt.programnotes.cn/en/p/wirelessandroidautodongle/</link>
+        <pubDate>Wed, 16 Jul 2025 15:32:29 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/wirelessandroidautodongle/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1725146657674-5ebce14f89b9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTI2NTExMDJ8&amp;ixlib=rb-4.1.0" alt="Featured image of post WirelessAndroidAutoDongle" /&gt;&lt;h1 id=&#34;nisargjhaveriwirelessandroidautodongle&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/nisargjhaveri/WirelessAndroidAutoDongle&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;nisargjhaveri/WirelessAndroidAutoDongle&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;wireless-android-auto-dongle&#34;&gt;Wireless Android Auto Dongle
+&lt;/h1&gt;&lt;p&gt;DIY Wireless Android Auto adapter to use with a car that supports only wired Android Auto using a Raspberry Pi.&lt;/p&gt;
+&lt;p&gt;This repository consists of the buildroot setup to generate an sd card image to create your own Wireless Android Auto adapter.&lt;/p&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Native Wireless Android Auto connection to the phone, no extra app needed on the phone.&lt;/li&gt;
+&lt;li&gt;Passes through all Android Auto traffic without any modifications to ensure seamless and safe experience.&lt;/li&gt;
+&lt;li&gt;Fast bootup, connection under 30 seconds.&lt;/li&gt;
+&lt;li&gt;Supports multiple boards (Currently multiple Raspberry Pi boards).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;supported-hardware&#34;&gt;Supported Hardware
+&lt;/h2&gt;&lt;p&gt;This is currently tested and built for the following Raspberry Pi boards supporting USB OTG.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Raspberry Pi Zero W&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Raspberry Pi Zero 2 W&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Raspberry Pi 3 A+&lt;/strong&gt; &lt;em&gt;(Raspberry Pi 3 B+ is not supported due to lack of USB OTG support.)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Raspberry Pi 4&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In theory, this can be extended to more hardware in future with these basic requirements.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The board should support USB OTG or Gadget mode.&lt;/li&gt;
+&lt;li&gt;Has Wifi and Bluetooth. External should also work if not in-built.&lt;/li&gt;
+&lt;li&gt;Should be able to operate on power provided by the car.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install-and-run&#34;&gt;Install and run
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/nisargjhaveri/WirelessAndroidAutoDongle/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Download a pre-built sd card image&lt;/a&gt; for your board. You can also &lt;a class=&#34;link&#34; href=&#34;BUILDING.md&#34; &gt;build one yourself&lt;/a&gt;. Install the image on the SD card using your favorite tool.&lt;/p&gt;
+&lt;p&gt;You may want to update the country code and other settings that works best for you. See &lt;a class=&#34;link&#34; href=&#34;#Configurations&#34; &gt;Configurations&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;first-time-connection&#34;&gt;First-time connection
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Connect the phone to headunit via USB cable, make sure Android Auto starts. Disconnect phone.&lt;/li&gt;
+&lt;li&gt;Connect the board to the car. Make sure to use a data cable, with the USB OTG enabled port on the board.
+&lt;ul&gt;
+&lt;li&gt;On &lt;strong&gt;Raspberry Pi Zero W&lt;/strong&gt; and &lt;strong&gt;Raspberry Pi Zero 2 W&lt;/strong&gt;: Use the second micro-usb port marked &amp;ldquo;USB&amp;rdquo; and not &amp;ldquo;PWR&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;On &lt;strong&gt;Raspberry Pi 3 A+&lt;/strong&gt;: Use the only USB-A port with an USB-A to USB-A cable.&lt;/li&gt;
+&lt;li&gt;On &lt;strong&gt;Raspberry Pi 4&lt;/strong&gt;, use the USB-C port used for normally powering the board.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Open Bluetooth settings and pair the new device called &lt;code&gt;AndroidAuto-Dongle-*&lt;/code&gt; or &lt;code&gt;WirelessAADongle-*&lt;/code&gt; on your phone.&lt;/li&gt;
+&lt;li&gt;After this phone should automatically connect via Wifi and the dongle will connect to the headunit via USB and start Android Auto on the car screen.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;subsequent-connections&#34;&gt;Subsequent connections
+&lt;/h3&gt;&lt;p&gt;From the next time, it should automatically connect to the phone and start Android Auto.&lt;/p&gt;
+&lt;p&gt;Make sure your Bluetooth and Wifi are enabled on the phone.&lt;/p&gt;
+&lt;h2 id=&#34;configurations&#34;&gt;Configurations
+&lt;/h2&gt;&lt;p&gt;Once the image is installed on the SD card, you can see the SD card as &lt;code&gt;WirelessAA&lt;/code&gt; drive.&lt;/p&gt;
+&lt;p&gt;Edit the &lt;code&gt;aawgd.conf&lt;/code&gt; file inside the &lt;code&gt;WirelessAA&lt;/code&gt; drive using a text editor to update the configurations. The file contains the possible configuration options with their explanations.&lt;/p&gt;
+&lt;h2 id=&#34;troubleshoot&#34;&gt;Troubleshoot
+&lt;/h2&gt;&lt;h3 id=&#34;common-issues&#34;&gt;Common issues
+&lt;/h3&gt;&lt;h4 id=&#34;bluetooth-and-wifi-seems-connected-but-the-phone-stuck-at-looking-for-android-auto&#34;&gt;Bluetooth and Wifi seems connected, but the phone stuck at &amp;ldquo;Looking for Android Auto&amp;rdquo;
+&lt;/h4&gt;&lt;p&gt;The most common issue behind this is either bad USB cable or use of wrong USB port on the device. Make sure:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The cable is good quality data cable and not power-only cable&lt;/li&gt;
+&lt;li&gt;You&amp;rsquo;re using the OTG enabled usb port on the board, and not the power-only port.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;getting-logs&#34;&gt;Getting logs
+&lt;/h3&gt;&lt;p&gt;Once you&amp;rsquo;ve already tried multiple times and it still does not work, you can ssh into the device and try to get some logs.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set a static password by setting the &lt;code&gt;AAWG_WIFI_PASSWORD&lt;/code&gt; config, and enable SSH by setting the &lt;code&gt;AAWG_ENABLE_SSH&lt;/code&gt; config. See &lt;a class=&#34;link&#34; href=&#34;#Configurations&#34; &gt;the instructions to update the configurations&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Connect the device to the headunit, let it boot and try to connect once. The logs are not persisted across reboots, so you need to get the logs in the same instance soon after you observe the issue.&lt;/li&gt;
+&lt;li&gt;Connect to the device using wifi (SSID: AAWirelessDongle, Password: &amp;lt;as set in the first step&amp;gt;).&lt;/li&gt;
+&lt;li&gt;SSH into the device (username: root, password: password, see relevant defconfigs e.g. &lt;a class=&#34;link&#34; href=&#34;aa_wireless_dongle/configs/raspberrypi0w_defconfig&#34; &gt;raspberrypi0w_defconfig&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Once you&amp;rsquo;re in, try to have a look at &lt;code&gt;/var/log/messages&lt;/code&gt; file, it should have most relevant logs to start with. You can also copy the file and attach to issues you create if any.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;contribute&#34;&gt;Contribute
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/nisargjhaveri/WirelessAndroidAutoDongle/issues&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Find or create a new issue&lt;/a&gt; for any bugs or improvements.&lt;/p&gt;
+&lt;p&gt;Feel free to &lt;a class=&#34;link&#34; href=&#34;https://github.com/nisargjhaveri/WirelessAndroidAutoDongle/pulls&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Create a PR&lt;/a&gt; to fix any issues. Refer &lt;a class=&#34;link&#34; href=&#34;BUILDING.md&#34; &gt;BUILDING.md&lt;/a&gt; for instructions on how to build locally.&lt;/p&gt;
+&lt;h2 id=&#34;support&#34;&gt;Support
+&lt;/h2&gt;&lt;p&gt;Please &lt;a class=&#34;link&#34; href=&#34;https://github.com/sponsors/nisargjhaveri&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;consider sponsoring&lt;/a&gt; if you find the project useful. Even a small donation helps. This will help continuing fixing issues and getting support for more devices and headunit in future.&lt;/p&gt;
+&lt;p&gt;In any case, don&amp;rsquo;t forget to star on github and spread the word if you think this project might be useful to someone else as well.&lt;/p&gt;
+&lt;h2 id=&#34;limitations&#34;&gt;Limitations
+&lt;/h2&gt;&lt;p&gt;This is currently tested with very limited set of headunits and cars. Let me know if it does not work with your headunit.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>thorium</title>
+        <link>https://producthunt.programnotes.cn/en/p/thorium/</link>
+        <pubDate>Mon, 07 Jul 2025 15:31:22 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/thorium/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1616506349772-77c088465018?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE4NzM0MjZ8&amp;ixlib=rb-4.1.0" alt="Featured image of post thorium" /&gt;&lt;h1 id=&#34;alex313031thorium&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Alex313031/thorium&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Alex313031/thorium&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://img.shields.io/github/v/tag/alex313031/thorium?label=Version%3A&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GitHub tag (latest SemVer)&#34;
+	
+	
+&gt;  &lt;img src=&#34;https://img.shields.io/github/license/alex313031/thorium?color=green&amp;amp;label=License%3A&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GitHub&#34;
+	
+	
+&gt;  &lt;img src=&#34;https://img.shields.io/github/commit-activity/w/alex313031/thorium?color=blueviolet&amp;amp;label=Commit%20Activity%3A&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GitHub commit activity&#34;
+	
+	
+&gt;  &lt;img src=&#34;https://img.shields.io/reddit/subreddit-subscribers/ChromiumBrowser?style=social&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Subreddit subscribers&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;thorium&#34;&gt;Thorium
+&lt;/h1&gt;&lt;img src=&#34;https://github.com/Alex313031/thorium/blob/main/logos/NEW/thorium_ver_2048_grey_old.png&#34;&gt;
+&lt;h2 id=&#34;chromium-fork-for-linux-named-after-radioactive-element-no-90-windowsmacosraspiandroidother-builds-see-below&#34;&gt;Chromium fork for linux named after &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Thorium&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;radioactive element No. 90&lt;/a&gt;. Windows/MacOS/RasPi/Android/Other builds see below.
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Always built with the latest stable version of &lt;a class=&#34;link&#34; href=&#34;https://www.chromium.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chromium&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Intended to behave like and have the featureset of Google Chrome, with differences/patches/enhancements listed below.&lt;/li&gt;
+&lt;li&gt;Includes &lt;a class=&#34;link&#34; href=&#34;https://www.widevine.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Widevine&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://tools.woolyss.com/html5-audio-video-tester/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;All Codecs&lt;/a&gt;, Chrome Plugins, as well as thinLTO, CFlag, LDFlag, LLVM Loop, and PGO compiler optimizations. It is built with &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/SSE4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SSE4&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Advanced_Vector_Extensions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AVX&lt;/a&gt;, and &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/AES_instruction_set&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AES&lt;/a&gt;, so it won&amp;rsquo;t launch on CPU&amp;rsquo;s below 2nd gen Core or AMD FX, but benefits from Advanced Vector EXtensions. If your CPU lacks AVX, you can use builds from the &lt;a class=&#34;link&#34; href=&#34;https://github.com/Alex313031/Thorium-SSE3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Thorium SSE3&lt;/a&gt; repo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;other-builds&#34;&gt;Other Builds  &lt;img src=&#34;https://github.com/Alex313031/thorium/blob/main/logos/STAGING/winflag_animated.gif&#34; width=&#34;34&#34;&gt;  &lt;img src=&#34;https://github.com/Alex313031/thorium/blob/main/logos/STAGING/AVX2.png&#34; width=&#34;48&#34;&gt;  &lt;img src=&#34;https://github.com/Alex313031/thorium/blob/main/logos/STAGING/apple.png&#34; width=&#34;30&#34;&gt;  &lt;img src=&#34;https://github.com/Alex313031/thorium/blob/main/logos/STAGING/Android_Robot.svg&#34; width=&#34;26&#34;&gt;  &lt;img src=&#34;https://github.com/Alex313031/thorium/blob/main/logos/STAGING/Raspberry_Pi_Logo.svg&#34; width=&#34;24&#34;&gt;  &lt;img src=&#34;https://raw.githubusercontent.com/Alex313031/thorium-win7/main/logos/STAGING/win7/compatible-with-windows-7.png&#34; width=&#34;28&#34;&gt;
+&lt;/h3&gt;&lt;p&gt; – Windows builds are here &amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/Alex313031/Thorium-Win&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Thorium Win&lt;/a&gt; &lt;br&gt;
+ – AVX2 Builds for Windows and Linux &amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/Alex313031/Thorium-AVX2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Thorium AVX2&lt;/a&gt; &lt;br&gt;
+ – MacOS (M1 and X64) builds are located at &amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/Alex313031/Thorium-Mac&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Thorium Mac&lt;/a&gt; &lt;br&gt;
+ – Android (arm32 &amp;amp; arm64) builds are located at &amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/Alex313031/Thorium-Android&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Thorium Android&lt;/a&gt; I might also occasionally post x86 builds. &lt;br&gt;
+ – Raspberry Pi builds are located at &amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/Alex313031/Thorium-Raspi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Thorium Raspi&lt;/a&gt; For the Pi 3B/3B+ and Pi 4/400. &lt;br&gt;
+ – Special builds are located at &amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/Alex313031/Thorium-SSE3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Thorium Special&lt;/a&gt; You can find SSE3 builds for CPUs without AVX here. &lt;br&gt;
+ – Thorium Website with deb repo for auto-updating on Linux &amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://thorium.rocks/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://thorium.rocks/&lt;/a&gt; &lt;br&gt;
+ – &lt;strong&gt;NEW&lt;/strong&gt;: Windows 7 / 8 / 8.1 / Server 2012 builds in &amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/Alex313031/thorium-win7&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Thorium Win7&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;features--differences-between-chromium-and-thorium&#34;&gt;FEATURES &amp;amp; DIFFERENCES BETWEEN CHROMIUM AND THORIUM &lt;img src=&#34;https://github.com/Alex313031/thorium/blob/main/logos/NEW/bulb_light.svg#gh-dark-mode-only&#34;&gt; &lt;img src=&#34;https://github.com/Alex313031/thorium/blob/main/logos/NEW/bulb_dark.svg#gh-light-mode-only&#34;&gt;
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Various compiler flags that improve performance and target &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Advanced_Vector_Extensions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AVX&lt;/a&gt; CPU&amp;rsquo;s (read &lt;a class=&#34;link&#34; href=&#34;https://github.com/Alex313031/thorium/blob/main/docs/PATCHES.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PATCHES.md&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Experimental &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MPEG-DASH&lt;/a&gt; support.&lt;/li&gt;
+&lt;li&gt;HEVC/H.265 support on Linux and Windows.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jpeg.org/jpegxl/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JPEG XL&lt;/a&gt; Image File Format support restored and turned on by default.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/File_Transfer_Protocol&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FTP&lt;/a&gt; URL support restored and enabled by default.&lt;/li&gt;
+&lt;li&gt;Enable &lt;a class=&#34;link&#34; href=&#34;https://support.google.com/chrome/answer/10538231?hl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Live Caption&lt;/a&gt; (SODA) on all builds.&lt;/li&gt;
+&lt;li&gt;Experimental PDF annotation support (called &amp;ldquo;Ink&amp;rdquo; on ChromiumOS). # DISABLED FOR NOW BECAUSE OF CRASHES.&lt;/li&gt;
+&lt;li&gt;Patches from Debian including font rendering patch, VAAPI Patch, Intel HD support patch, native notifications patch, title bar patch, and&amp;hellip; the VDPAU Patch!! (Rejoice Nvidia users)&lt;/li&gt;
+&lt;li&gt;Linux audio sandbox patch.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/DNS_over_HTTPS&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DoH&lt;/a&gt; (DNS over HTTPS) patches from Bromite.&lt;/li&gt;
+&lt;li&gt;Enable &lt;a class=&#34;link&#34; href=&#34;https://allaboutdnt.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Do Not Track&lt;/a&gt; by default patch from Vanadium.&lt;/li&gt;
+&lt;li&gt;Show full URLs including trailing slashes in address bar by default.&lt;/li&gt;
+&lt;li&gt;Disable &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Federated_Learning_of_Cohorts&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FLOC&lt;/a&gt; patch.&lt;/li&gt;
+&lt;li&gt;Disable annoying Google API Key Infobar warning (you can still use API Keys to enable sync) from Ungoogled Chromium.&lt;/li&gt;
+&lt;li&gt;Disable annoying Default Browser Infobar warning.&lt;/li&gt;
+&lt;li&gt;Disable annoying IPH (In Product Help) promos.&lt;/li&gt;
+&lt;li&gt;Adds &lt;a class=&#34;link&#34; href=&#34;https://duckduckgo.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DuckDuckGo&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://search.brave.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Brave Search&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://www.ecosia.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ecosia&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://www.ask.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ask.com&lt;/a&gt;, and &lt;a class=&#34;link&#34; href=&#34;https://yandex.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Yandex.com&lt;/a&gt; in US and other locales, along with the normal search engines.&lt;/li&gt;
+&lt;li&gt;Always use the local NTP (New Tab Page) regardless of search engine.&lt;/li&gt;
+&lt;li&gt;Fix icons when distilling page content in &lt;a class=&#34;link&#34; href=&#34;https://www.howtogeek.com/423643/how-to-use-google-chromes-hidden-reader-mode/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Reader Mode&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Enable new Menu UI when right clicking the Reload button. (Adds &amp;lsquo;Normal Reload&amp;rsquo;, &amp;lsquo;Hard Reload&amp;rsquo;, and &amp;lsquo;Clear Cache and Hard Reload&amp;rsquo;)&lt;/li&gt;
+&lt;li&gt;Home button, Chrome Labs button, and Bookmarks bar shown by default.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.chromium.org/developers/design-documents/dns-prefetching/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Prefetch&lt;/a&gt; settings updated to respect privacy.&lt;/li&gt;
+&lt;li&gt;Patches for &lt;a class=&#34;link&#34; href=&#34;https://chromium.googlesource.com/chromium/src/tools/gn/&amp;#43;/48062805e19b4697c5fbd926dc649c78b6aaa138/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GN&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://chromium.googlesource.com/chromium/src/&amp;#43;/HEAD/docs/design/sandbox.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;chrome_sandbox&lt;/a&gt; when building.&lt;/li&gt;
+&lt;li&gt;Remove the addition of the Chrome APT sources.list during installation.&lt;/li&gt;
+&lt;li&gt;Widevine CDM Patch for Linux.&lt;/li&gt;
+&lt;li&gt;GTK auto dark mode patch&lt;/li&gt;
+&lt;li&gt;Various new flags either developed from scratch, or added from Ungoogled Chromium. See &lt;a class=&#34;link&#34; href=&#34;https://github.com/Alex313031/thorium/blob/main/docs/PATCHES.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PATCHES.md&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Enable Parallel Downloading by Default.&lt;/li&gt;
+&lt;li&gt;Inclusion of &lt;img src=&#34;https://github.com/Alex313031/thorium/blob/main/logos/STAGING/pak.png&#34; width=&#34;16&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/Alex313031/thorium/tree/main/pak_src#readme&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pak&lt;/a&gt; a utility for packing and unpacking the &lt;a class=&#34;link&#34; href=&#34;https://textslashplain.com/2022/05/03/chromium-internals-pak-files/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;*.pak&lt;/a&gt; files in Thorium or any other Chromium based browser.&lt;/li&gt;
+&lt;li&gt;Logo and Branding/Naming changed to the Thorium logo, Thorium name, and &amp;ldquo;Alex313031&amp;rdquo; being appended to &amp;ldquo;The Chromium Authors&amp;rdquo; in credits, etc.&lt;/li&gt;
+&lt;li&gt;.desktop file includes useful cmdline flags that enable experimental or useful features. (See &lt;a class=&#34;link&#34; href=&#34;https://github.com/Alex313031/thorium/blob/main/docs/PATCHES.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PATCHES.md&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Includes installer patches and files to include &lt;a class=&#34;link&#34; href=&#34;https://chromedriver.chromium.org/home&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ChromeDriver&lt;/a&gt; and &lt;em&gt;thorium_shell&lt;/em&gt; &lt;a class=&#34;link&#34; href=&#34;https://chromium.googlesource.com/chromium/src/&amp;#43;/HEAD/docs/testing/web_tests_in_content_shell.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;(content_shell)&lt;/a&gt;, with a .desktop file being provided for thorium_shell (named thorium-shell.desktop and shows in desktop environments as Thorium Content Shell). These are also included in the Windows releases, but it doesn&amp;rsquo;t make a shorcut, although a .png and .ico is in the install directory for you to make your own shortcut with an icon. You can also run content_shell with the command thorium-shell (custom wrapper for it, located in /usr/bin/). You can run ChromeDriver at /usr/bin/chromedriver or chromedriver.exe on Windows. Also, patches for abseil library and mini_installer when building with AVX on Windows.&lt;/li&gt;
+&lt;li&gt;Right clicking the launcher after install gives three additional desktop actions, one to open thorium-shell, another to open in Safe Mode which disables any flags one has set in chrome://flags until the next launch, and lastly to open in Dark Mode which appends the &amp;ndash;force-dark-mode flag.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;For more info, read the &lt;a class=&#34;link&#34; href=&#34;https://github.com/Alex313031/thorium/blob/main/docs/PATCHES.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PATCHES.md&lt;/a&gt; file.&lt;/li&gt;
+&lt;li&gt;Known bugs are in the &lt;a class=&#34;link&#34; href=&#34;https://github.com/Alex313031/thorium/blob/main/infra/BUGS.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BUGS.md&lt;/a&gt; file.&lt;/li&gt;
+&lt;li&gt;A list of Chromium command line flags can be found at &amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://peter.sh/experiments/chromium-command-line-switches&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://peter.sh/experiments/chromium-command-line-switches&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;building&#34;&gt;Building &lt;img src=&#34;https://github.com/Alex313031/thorium/blob/main/logos/NEW/build_light.svg#gh-dark-mode-only&#34;&gt; &lt;img src=&#34;https://github.com/Alex313031/thorium/blob/main/logos/NEW/build_dark.svg#gh-light-mode-only&#34;&gt;
+&lt;/h2&gt;&lt;p&gt;See &amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/Alex313031/thorium/blob/main/docs/BUILDING.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Alex313031/thorium/blob/main/docs/BUILDING.md&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;debugging&#34;&gt;Debugging &lt;img src=&#34;https://github.com/Alex313031/thorium/blob/main/logos/STAGING/bug.svg&#34; width=&#34;28&#34;&gt;
+&lt;/h2&gt;&lt;p&gt;See &amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/Alex313031/thorium/tree/main/infra/DEBUG#readme&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Alex313031/thorium/tree/main/infra/DEBUG#readme&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt; − &lt;a class=&#34;link&#34; href=&#34;https://www.reddit.com/r/ChromiumBrowser/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.reddit.com/r/ChromiumBrowser/&lt;/a&gt; is a subreddit I made for Thorium and general Thorium/Chromium discussion, &lt;a class=&#34;link&#34; href=&#34;https://thorium.rocks/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://thorium.rocks/&lt;/a&gt; is the website I made for it, and &lt;a class=&#34;link&#34; href=&#34;https://alex313031.blogspot.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://alex313031.blogspot.com/&lt;/a&gt; is a blog I made relating to Thorium/ThoriumOS. &lt;br&gt;
+ − I also build ChromiumOS (now called ThoriumOS) with Thorium, Codecs, Widevine, linux-firmware/modules, and extra packages at &amp;gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/Alex313031/ChromiumOS/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Alex313031/ChromiumOS/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; − Thanks to &lt;a class=&#34;link&#34; href=&#34;https://github.com/robrich999/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/robrich999/&lt;/a&gt; for some info and fixes that went into this project.&lt;br&gt;
+ − Thanks to &lt;a class=&#34;link&#34; href=&#34;https://github.com/midzer/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/midzer/&lt;/a&gt; for support and helping with builds. &lt;br&gt;
+ − Also thanks to &lt;a class=&#34;link&#34; href=&#34;https://github.com/bromite/bromite&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/bromite/bromite&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/saiarcot895/chromium-ubuntu-build&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/saiarcot895/chromium-ubuntu-build&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/Eloston/ungoogled-chromium&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Eloston/ungoogled-chromium&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/GrapheneOS/Vanadium&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/GrapheneOS/Vanadium&lt;/a&gt;, and &lt;a class=&#34;link&#34; href=&#34;https://github.com/iridium-browser/iridium-browser&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/iridium-browser/iridium-browser&lt;/a&gt; for patch code. &lt;br&gt;
+ − The pak_src dir, and the binaries in &lt;em&gt;pack_src/bin&lt;/em&gt; are credited to @freeer &lt;a class=&#34;link&#34; href=&#34;https://github.com/myfreeer/chrome-pak-customizer/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/myfreeer/chrome-pak-customizer/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;   &lt;strong&gt;NOTE:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/Alex313031/thorium/blob/main/infra/libpepflashplayer.so&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;em&gt;libpepflashplayer.so&lt;/em&gt;&lt;/a&gt; is included for posterity and can be used to enable Adobe Flash on older Chromium releases. ʘ‿ʘ&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Thanks for using Thorium!&lt;/em&gt;&lt;/p&gt;
+&lt;img src=&#34;https://github.com/Alex313031/thorium/blob/main/logos/STAGING/Thorium90_504.jpg&#34; width=&#34;200&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/Alex313031/thorium/blob/main/logos/STAGING/GitHub/GitHub-Mark-Light-32px.png#gh-dark-mode-only&#34;&gt; &lt;img src=&#34;https://github.com/Alex313031/thorium/blob/main/logos/STAGING/GitHub/GitHub-Mark-32px.png#gh-light-mode-only&#34;&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>FieldStation42</title>
+        <link>https://producthunt.programnotes.cn/en/p/fieldstation42/</link>
+        <pubDate>Sun, 11 May 2025 15:26:50 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/fieldstation42/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1623325596331-456381aee37b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY5NDgzNjN8&amp;ixlib=rb-4.1.0" alt="Featured image of post FieldStation42" /&gt;&lt;h1 id=&#34;shane-masonfieldstation42&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/shane-mason/FieldStation42&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shane-mason/FieldStation42&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;fieldstation42&#34;&gt;FieldStation42
+&lt;/h1&gt;&lt;p&gt;Cable and broadcast TV simulator intended to provide an authentic experience of watching OTA television with the following goals:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When the TV is turned on, a believable show for the time slot and network should be playing&lt;/li&gt;
+&lt;li&gt;When switching between channels, the shows should continue playing serially as though they had been broadcasting the whole time&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/docs/retro-tv.png?raw=true&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;An older TV with an antenna rotator box in the background&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Supports multiple simultanous channels&lt;/li&gt;
+&lt;li&gt;Automatically interleaves commercial break and bumps into content&lt;/li&gt;
+&lt;li&gt;Generates weekly schedules based on per-station configurations&lt;/li&gt;
+&lt;li&gt;Feature length content - supports movie length show blocks&lt;/li&gt;
+&lt;li&gt;Randomly selects shows from the programming slot that have not been played recently to keep a fresh lineup&lt;/li&gt;
+&lt;li&gt;Set dates ranges for shows (like seasonal sports or holiday shows)&lt;/li&gt;
+&lt;li&gt;Per-station configuration of station sign-off video and off-air loops&lt;/li&gt;
+&lt;li&gt;UX to manage catalogs and schedules&lt;/li&gt;
+&lt;li&gt;Optional hardware connections to change the channel&lt;/li&gt;
+&lt;li&gt;Loooing channels - useful for community bulliten channels&lt;/li&gt;
+&lt;li&gt;Preview/guide channel with embedded video and configurable messages
+&lt;ul&gt;
+&lt;li&gt;This is a new feature - documentation in progress in the &lt;a class=&#34;link&#34; href=&#34;https://github.com/shane-mason/FieldStation42/wiki&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FieldStation42 Guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Flexible scheduling to support all kinds of channel types
+&lt;ul&gt;
+&lt;li&gt;Traditional networks channels with commercials and bumps&lt;/li&gt;
+&lt;li&gt;Commercial free channels with optional end bump padding at end (movie channels, public broadcasting networks)&lt;/li&gt;
+&lt;li&gt;Loop channels, useful for community bulletin style channels or information loops.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/docs/cable_cover_3.png?raw=true&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A cable box next to a TV&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;alpha-software---installation-is-not-simple&#34;&gt;Alpha software - installation is not simple
+&lt;/h2&gt;&lt;p&gt;This is a fairly new project and in active development - installation requires some background in the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Basic linux command line usage&lt;/li&gt;
+&lt;li&gt;Reading and editing JSON configuration files&lt;/li&gt;
+&lt;li&gt;Movie file conversion and organizing in folders&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;installation--setup&#34;&gt;Installation &amp;amp; Setup
+&lt;/h2&gt;&lt;p&gt;For a complete, step-by-step guide to setting up and administering FieldStation42 software, check out the &lt;a class=&#34;link&#34; href=&#34;https://github.com/shane-mason/FieldStation42/wiki&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FieldStation42 Guide&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;quickstart-setup&#34;&gt;Quickstart Setup
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Ensure Python 3 and MPV are installed on your system&lt;/li&gt;
+&lt;li&gt;Clone the repository - this will become you main working directory.&lt;/li&gt;
+&lt;li&gt;Run the install script&lt;/li&gt;
+&lt;li&gt;Add your own content (videos)&lt;/li&gt;
+&lt;li&gt;Configure your stations
+&lt;ul&gt;
+&lt;li&gt;Copy an example json file from &lt;code&gt;confs/examples&lt;/code&gt; into &lt;code&gt;confs/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Generate a weekly schedule
+&lt;ul&gt;
+&lt;li&gt;Run &lt;code&gt;python3 station_42.py&lt;/code&gt; on the command line
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;--rebuild_catalog&lt;/code&gt; option if content has changed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Watch TV
+&lt;ul&gt;
+&lt;li&gt;Run &lt;code&gt;field_player.py&lt;/code&gt; on the command line&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configure start-on-boot (optional and not recommended unless you are making a dedicated device.)
+&lt;ul&gt;
+&lt;li&gt;Run &lt;code&gt;fs42/hot_start.sh&lt;/code&gt; on the command line&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The quickstart above is only designed to provide an overview of the required steps - use the &lt;a class=&#34;link&#34; href=&#34;https://github.com/shane-mason/FieldStation42/wiki&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FieldStation42 Guide&lt;/a&gt; for more detailed description of the steps.&lt;/p&gt;
+&lt;h1 id=&#34;how-it-works&#34;&gt;How It Works
+&lt;/h1&gt;&lt;p&gt;FieldStation42 has multiple components that work together to recreate that old-school TV nostalgia.&lt;/p&gt;
+&lt;h3 id=&#34;station_42py&#34;&gt;station_42.py
+&lt;/h3&gt;&lt;p&gt;Use this to create catalogs and generate schedules. Catalogs are used to store metadata about the stations content, so they need to be rebuilt each time the content changes. Since it is inspecting files on disk, this can take some time depending on the number of videos in your content library. The liquid-scheduler uses the catalogs and the stations configuration to build schedules, so catalogs should be built first. Running &lt;code&gt;station_42.py&lt;/code&gt; with no arguments will start a UI that runs in the terminal. You can use this to manage catalogs and schedules, or you can perform all operations using command line arguments with no UI. To see the list of all options, run &lt;code&gt;station_42.py --help&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;field_playerpy&#34;&gt;field_player.py
+&lt;/h3&gt;&lt;p&gt;This is the main TV interface. On startup, it will read the schedule and open the correct video file and skip to the correct position based on the current time. It will re-perform this step each time the channel is changed. If you tune back to a previous channel, it will pick up the current time and start playing as though it had been playing the whole time.&lt;/p&gt;
+&lt;p&gt;The player monitors the plain text file &lt;code&gt;runtime/channel.socket&lt;/code&gt; for commands to change the channel and will change to the next station configured in &lt;code&gt;main_config&lt;/code&gt; in &lt;code&gt;confs/fieldStation42_conf.py&lt;/code&gt; if any content is found there - or you can use the following command to cause the player to change to channel 3:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;echo {\&amp;quot;command\&amp;quot;: \&amp;quot;direct\&amp;quot;, \&amp;quot;channel\&amp;quot;: 3} &amp;gt; runtime/channel.socket&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;You can also open &lt;code&gt;runtime/channel.socket&lt;/code&gt; in a text editor and enter the following json snippet (change 3 to whatever number you want to change to)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{&amp;quot;command&amp;quot;: &amp;quot;direct&amp;quot;, &amp;quot;channel&amp;quot;: 3}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The following command will cause the player to tune up or down respectively&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{&amp;quot;command&amp;quot;: &amp;quot;up&amp;quot;, &amp;quot;channel&amp;quot;: -1}&lt;/code&gt;
+&lt;code&gt;{&amp;quot;command&amp;quot;: &amp;quot;down&amp;quot;, &amp;quot;channel&amp;quot;: -1}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The player writes its status and current channel to &lt;code&gt;runtime/play_status.socket&lt;/code&gt; - this can be monitored by an external program if needed. See &lt;a class=&#34;link&#34; href=&#34;https://github.com/shane-mason/FieldStation42/wiki/Changing-Channel-From-Script&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;this page&lt;/a&gt; for more information on intgrating with &lt;code&gt;channel.socket&lt;/code&gt; and &lt;code&gt;play_status.socket&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;command_inputpy&#34;&gt;command_input.py
+&lt;/h3&gt;&lt;p&gt;This is provided as an example component to show how to connect an external device or program to invoke a channel changes and pass status information. This script listens for incoming commands on the pi&amp;rsquo;s UART connection and then writes channel change commands to &lt;code&gt;runtime/channel.socket&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;using-hotstartsh&#34;&gt;Using hotstart.sh
+&lt;/h2&gt;&lt;p&gt;This file is for use on a running system that has been configured and testing, because it swallows output so you&amp;rsquo;ll never know what&amp;rsquo;s going wrong. This file is intended to be used to start the player running on system boot up.&lt;/p&gt;
+&lt;h2 id=&#34;connecting-to-a-tv&#34;&gt;Connecting to a TV
+&lt;/h2&gt;&lt;p&gt;The Raspberry Pi has an HDMI output, but if you want to connect it to a vintage TV, you will need to convert that to an input signal your TV can understand. If your TV has composite or RF, you can use an HTMI-&amp;gt;Composit or HDMI-&amp;gt;RF adapter. These units are available online or at an electronics retailer.&lt;/p&gt;
+&lt;h2 id=&#34;connecting-a-remote-control-or-other-device&#34;&gt;Connecting a remote control or other device
+&lt;/h2&gt;&lt;p&gt;Since the player can recieve external commands and publishes its status as described above, its easy to connect external devices of all kinds. See &lt;a class=&#34;link&#34; href=&#34;https://github.com/shane-mason/FieldStation42/wiki/Changing-Channel-From-Script&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;this wiki page&lt;/a&gt; for more information on intgrating with &lt;code&gt;channel.socket&lt;/code&gt; and &lt;code&gt;play_status.socket&lt;/code&gt;. For a detailed guide on setting up a bluetooth remote control, &lt;a class=&#34;link&#34; href=&#34;https://github.com/shane-mason/FieldStation42/discussions/47&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;see this page in the discussion boards&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/docs/retro-tv-setup_bb.png?raw=true&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Fritzing diagram for the system&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;raspberry-pico-setup&#34;&gt;Raspberry Pico Setup
+&lt;/h2&gt;&lt;p&gt;This is only required if you are building the channel change detector component (not required).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install Circuit Python per their instructions and install dependencies for Neopixels.&lt;/li&gt;
+&lt;li&gt;Add the contents of &lt;code&gt;aerial_listener.py&lt;/code&gt; to &lt;code&gt;code.py&lt;/code&gt; on the device so that it starts at boot.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The fritzing diagram shows how to connect the components together to enable channel changes.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
