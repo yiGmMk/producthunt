@@ -1,9 +1,9 @@
 ---
 title: colibri
-date: 2026-09-15T20:45:45+08:00
+date: 2026-09-16T20:42:43+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591788114109-c391b0cfdd2f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk0NzYyMzh8&ixlib=rb-4.1.0
-tags: ['github',inference engine, mixture-of-experts, memory multitiering]
+image: https://images.unsplash.com/photo-1692607431253-8225c0e89f7d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk1NjI0NzF8&ixlib=rb-4.1.0
+tags: ['github',inference engine,MoE models,memory hierarchy]
 categories: ['github']
 ---
 
@@ -723,4 +723,4 @@ these is used or reimplemented in the tree today:
 
 ## License
 
-Apache 2.0. GLM-5.2 weights are released by Z.ai under MIT.
+Apache 2.0, Copyright 2026 Vincenzo Fornaro. See [LICENSE](LICENSE) and [NOTICE](NOTICE). GLM-5.2 weights are released by Z.ai under MIT.

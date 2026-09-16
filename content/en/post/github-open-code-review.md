@@ -1,9 +1,9 @@
 ---
 title: open-code-review
-date: 2026-09-15T20:44:59+08:00
+date: 2026-09-16T20:41:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1618163933939-42af0a5022d3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk0NzYyMzh8&ixlib=rb-4.1.0
-tags: ['github',code review, AI powered, CLI tool]
+image: https://images.unsplash.com/photo-1679478562104-d1115a0a7253?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk1NjI0NzF8&ixlib=rb-4.1.0
+tags: ['github',code review, AI, agent]
 categories: ['github']
 ---
 

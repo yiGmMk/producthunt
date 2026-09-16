@@ -1,9 +1,9 @@
 ---
 title: voicebox
-date: 2026-07-20T18:28:45+08:00
+date: 2026-09-16T20:44:10+08:00
 draft: False
-image: https://images.unsplash.com/photo-1515861461225-1488dfdaf0a8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ1NDMxMzl8&ixlib=rb-4.1.0
-tags: ['github',Voicebox, open-source, AI voice studio]
+image: https://images.unsplash.com/photo-1623780517031-ece79306cadc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk1NjI0NzF8&ixlib=rb-4.1.0
+tags: ['github',voice cloning, speech generation, AI voice studio]
 categories: ['github']
 ---
 
@@ -281,7 +281,8 @@ Use cases: agent dev loops (dictate a question, hear the answer in a cloned voic
 | Platform                 | Backend        | Notes                                          |
 | ------------------------ | -------------- | ---------------------------------------------- |
 | macOS (Apple Silicon)    | MLX (Metal)    | 4-5x faster via Neural Engine                  |
-| Windows / Linux (NVIDIA) | PyTorch (CUDA) | Auto-downloads CUDA binary from within the app |
+| Windows (NVIDIA)         | PyTorch (CUDA) | Auto-downloads CUDA binary from within the app |
+| Linux (NVIDIA)           | PyTorch (CUDA) | Use a local/remote Python backend with CUDA PyTorch |
 | Linux (AMD)              | PyTorch (ROCm) | Auto-configures HSA_OVERRIDE_GFX_VERSION       |
 | Windows (any GPU)        | DirectML       | Universal Windows GPU support                  |
 | Intel Arc                | IPEX/XPU       | Intel discrete GPU acceleration                |
