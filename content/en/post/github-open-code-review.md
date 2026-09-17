@@ -1,9 +1,9 @@
 ---
 title: open-code-review
-date: 2026-09-16T20:41:29+08:00
+date: 2026-09-17T20:40:55+08:00
 draft: False
-image: https://images.unsplash.com/photo-1679478562104-d1115a0a7253?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk1NjI0NzF8&ixlib=rb-4.1.0
-tags: ['github',code review, AI, agent]
+image: https://images.unsplash.com/photo-1595818418670-b920f931c2a4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk2NDg4MTh8&ixlib=rb-4.1.0
+tags: ['github',code review, AI-powered, CLI tool]
 categories: ['github']
 ---
 
@@ -43,6 +43,7 @@ categories: ['github']
   <a href="#supported-agents"><img alt="Claude Code" src="https://img.shields.io/badge/Claude_Code-supported-blueviolet.svg" /></a>
   <a href="#supported-agents"><img alt="Codex" src="https://img.shields.io/badge/Codex-supported-blueviolet.svg" /></a>
   <a href="#supported-agents"><img alt="Cursor" src="https://img.shields.io/badge/Cursor-supported-blueviolet.svg" /></a>
+  <a href="#supported-agents"><img alt="Kimi Code" src="https://img.shields.io/badge/Kimi_Code-supported-blueviolet.svg" /></a>
 </p>
 <p align="center">
   English | <a href="docs/i18n/README.zh-CN.md">简体中文</a> | <a href="docs/i18n/README.ja-JP.md">日本語</a> | <a href="docs/i18n/README.ko-KR.md">한국어</a> | <a href="docs/i18n/README.ru-RU.md">Русский</a>
@@ -191,6 +192,7 @@ Full documentation lives at **[open-codereview.ai/docs](https://open-codereview.
   - [Claude Code](plugins/open-code-review/README.md#claude-code) — install a plugin with review slash commands
   - [Codex](plugins/open-code-review/README.md#codex) — install a plugin with callable review skills
   - [Cursor](plugins/open-code-review/README.md#cursor) — install a plugin with portable review skills
+  - [Kimi Code](plugins/open-code-review/README.md#kimi-code) — install a plugin with review slash commands and skills
   - [OpenCode](plugins/open-code-review/opencode/README.md) — install native review tools and slash commands
   - [QCA Forward](plugins/open-code-review/qca/README.md) — run delegation mode with the QCA host model and a ready-to-publish template
   - [Skill-compatible agents](https://open-codereview.ai/docs/agent-skill) — install the portable agent skill
