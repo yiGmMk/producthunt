@@ -1,9 +1,9 @@
 ---
 title: BrowserSkill
-date: 2026-09-17T20:42:25+08:00
+date: 2026-09-18T20:21:11+08:00
 draft: False
-image: https://images.unsplash.com/photo-1501943716695-fddeb85465f7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk2NDg4MTh8&ixlib=rb-4.1.0
-tags: ['github',BrowserSkill, AI agents, browser automation]
+image: https://images.unsplash.com/photo-1574510297028-48360f052313?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk3MzM4NzR8&ixlib=rb-4.1.0
+tags: ['github',AI agents,browser automation,browser extension]
 categories: ['github']
 ---
 
