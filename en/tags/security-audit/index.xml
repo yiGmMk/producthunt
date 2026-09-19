@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Security Audit on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/security-audit/</link>
+        <description>Recent content in Security Audit on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 18 Sep 2026 20:18:25 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/security-audit/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>security-audit-skill</title>
+        <link>https://producthunt.programnotes.cn/en/p/security-audit-skill/</link>
+        <pubDate>Fri, 18 Sep 2026 20:18:25 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/security-audit-skill/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1481595357459-84468f6eeaac?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk3MzM4NzR8&amp;ixlib=rb-4.1.0" alt="Featured image of post security-audit-skill" /&gt;&lt;h1 id=&#34;cloudflaresecurity-audit-skill&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/cloudflare/security-audit-skill&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cloudflare/security-audit-skill&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;security-audit&#34;&gt;security-audit
+&lt;/h1&gt;&lt;p&gt;A coding-agent skill that turns your agent into a security auditor. It orchestrates isolated agents through reconnaissance, coverage-led hunting, candidate validation, structured output, independent record verification, and target-neutral reporting.&lt;/p&gt;
+&lt;p&gt;This is the skill that seeded Cloudflare&amp;rsquo;s vulnerability discovery harness, described in &lt;a class=&#34;link&#34; href=&#34;https://blog.cloudflare.com/build-your-own-vulnerability-harness&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Build your own vulnerability harness&lt;/a&gt;. The harness grew into a multi-stage, fleet-wide system; this skill is the single-repo starting point it evolved from.&lt;/p&gt;
+&lt;h2 id=&#34;what-it-does&#34;&gt;What it does
+&lt;/h2&gt;&lt;p&gt;The skill runs a structured audit in six phases:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Reconnaissance&lt;/strong&gt; &amp;ndash; map architecture, trust boundaries, input surfaces, prior evidence, and deterministic coverage in &lt;code&gt;architecture.md&lt;/code&gt; and &lt;code&gt;coverage-ledger.json&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Coverage-led hunting&lt;/strong&gt; &amp;ndash; assign isolated hunters from ledger units, record their checks, and use coverage critics to find gaps.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Candidate validation&lt;/strong&gt; &amp;ndash; give every unique candidate to a fresh verifier that tries to disprove it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Structured output&lt;/strong&gt; &amp;ndash; write &lt;code&gt;confirmed&lt;/code&gt;, &lt;code&gt;needs_validation&lt;/code&gt;, and &lt;code&gt;rejected&lt;/code&gt; records to &lt;code&gt;findings.json&lt;/code&gt; and validate them against &lt;code&gt;report-schema.json&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Independent record verification&lt;/strong&gt; &amp;ndash; fresh agents verify final source claims. Material replacements receive another independent verifier.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Target-neutral reporting&lt;/strong&gt; &amp;ndash; derive &lt;code&gt;REPORT.md&lt;/code&gt;, &lt;code&gt;FINDINGS-DETAIL.md&lt;/code&gt;, and &lt;code&gt;NEEDS-VALIDATION.md&lt;/code&gt; from the verified records and coverage ledger.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The parent runs &lt;code&gt;validate-coverage-ledger.cjs&lt;/code&gt; after creating the ledger and after each later ledger update. It runs &lt;code&gt;validate-findings.cjs&lt;/code&gt; in Phase 4 and again after every Phase 5 replacement.&lt;/p&gt;
+&lt;p&gt;The verdicts are distinct: &lt;code&gt;confirmed&lt;/code&gt; has a complete source trace and bounded observed result, &lt;code&gt;needs_validation&lt;/code&gt; has an exact unresolved fact and no severity, and &lt;code&gt;rejected&lt;/code&gt; records a disproved candidate.&lt;/p&gt;
+&lt;p&gt;Multiple runs against the same repo are additive. The skill uses prior ledgers and findings to target gaps, revalidate changed source, and carry forward current-source evidence without treating stale or unresolved work as covered.&lt;/p&gt;
+&lt;h2 id=&#34;files&#34;&gt;Files
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;File&lt;/th&gt;
+					&lt;th&gt;Purpose&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;SKILL.md&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Setup, core principles, platform terminology, workflow overview, and audit anti-patterns&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;RECONNAISSANCE.md&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Phase 1 reconnaissance prompts and synthesis instructions&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;HUNTING.md&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Phase 2 orchestration, hunting methodology, and validation rules&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;ATTACK-CLASSES.md&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Core, wildcard, and obvious-things attack prompts&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;MEMORY-SAFETY-AND-BINARY.md&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Memory-safety, binary, and kernel hunting classes for native targets&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;AI-AND-LLM.md&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Prompt-injection, agent/tool, and output-handling hunting classes for LLM-backed targets&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;WEB-PROTOCOL-AND-AUTH.md&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;HTTP request-framing, cache, and authentication-protocol hunting classes for HTTP-protocol and auth targets&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;CLIENT-SIDE.md&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;DOM-injection, messaging-trust, UI-redress, and prototype-pollution hunting classes for client-side/browser targets&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;SUPPLY-CHAIN-AND-RELEASE.md&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Dependency, CI, release, signing, update, plugin, and extension hunting classes&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;CLOUD-AND-DEPLOYMENT.md&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;IAM, infrastructure-as-code, container, serverless, ingress, and runtime-configuration hunting classes&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;PROTOCOLS-RPC-AND-MESSAGING.md&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;RPC, serialization, queue, broker, webhook, and streaming-protocol hunting classes&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;RESOURCE-EXHAUSTION-AND-AVAILABILITY.md&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Shared resource, quota, queue, worker, and operator-spend hunting classes&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;DATA-ISOLATION-AND-LIFECYCLE.md&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Tenant isolation, cache, search, export, backup, migration, deletion, and restore hunting classes&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;DESKTOP-MOBILE-AND-LOCAL-IPC.md&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Native app, deep-link, webview, exported-component, helper, daemon, and local-IPC hunting classes&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;VALIDATION-AND-REPORTING.md&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Phases 3–6 candidate validation, structured output, record verification, and reporting&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;report-schema.json&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;JSON schema for all three &lt;code&gt;findings.json&lt;/code&gt; verdicts&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;validate-findings.cjs&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Zero-dependency validator for &lt;code&gt;findings.json&lt;/code&gt; in Phases 4 and 5&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;validate-findings.test.cjs&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Findings-validator tests and producer-compatible fixture checks&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;validate-coverage-ledger.cjs&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Zero-dependency validator for &lt;code&gt;coverage-ledger.json&lt;/code&gt; in Phases 1–5&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;validate-coverage-ledger.test.cjs&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Coverage-ledger validator tests&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation
+&lt;/h2&gt;&lt;p&gt;Install the skill with the &lt;a class=&#34;link&#34; href=&#34;https://skills.sh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Skills CLI&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx skills add https://github.com/cloudflare/security-audit-skill &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --skill security-audit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Use &lt;code&gt;--global&lt;/code&gt; for a user-level installation:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx skills add https://github.com/cloudflare/security-audit-skill &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --skill security-audit &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --global
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Run &lt;code&gt;npx skills --help&lt;/code&gt; for agent-selection and non-interactive options.&lt;/p&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage
+&lt;/h2&gt;&lt;p&gt;Start your coding agent in (or pointed at) the codebase you want to audit, then ask it to do a security audit:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;security audit this codebase
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;find security vulnerabilities in ./src
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;do a security review, output to ~/audits/my-project
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The skill activates automatically when the request matches its trigger (security audit, find vulnerabilities, pen-test the code, etc.). A direct codebase audit or pen-test request uses full audit mode. Security questions and focused vulnerability work use guidance mode unless you request report artifacts. In full audit mode, an unspecified output directory defaults to &lt;code&gt;~/security-audit-skill/&amp;lt;repo-name&amp;gt;/run-&amp;lt;N&amp;gt;&lt;/code&gt;. The workflow writes inside the target repository only when you explicitly select a directory that version control ignores.&lt;/p&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;A coding agent with a model that supports tool use and parallel sub-agents&lt;/li&gt;
+&lt;li&gt;Node.js for the zero-dependency findings and coverage-ledger validators&lt;/li&gt;
+&lt;li&gt;An OS-enforced sandbox for target-controlled builds, tests, processes, browsers, emulators, fuzzers, and fixtures. It must disable external networking, use a sanitized allowlisted environment, enforce resource limits, and allow writes only to assigned scratch paths. Without these controls, the workflow keeps the lead as &lt;code&gt;needs_validation&lt;/code&gt; instead of executing target code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;design-principles&#34;&gt;Design principles
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Only confirm established boundary failures.&lt;/strong&gt; Keep a source-grounded blocked lead as &lt;code&gt;needs_validation&lt;/code&gt; with its exact unresolved fact.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Adversarial validation.&lt;/strong&gt; The agent that checks a finding is never the agent that found it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Severity requires impact.&lt;/strong&gt; Likelihood x impact, not deviation from a checklist.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Defense-in-depth gaps are not vulnerabilities.&lt;/strong&gt; If Layer A prevents the attack, the absence of Layer B is a hardening note.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multiple runs improve coverage.&lt;/strong&gt; In our test runs, a single run found roughly half of the vulnerabilities that repeated runs found in total.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;contact&#34;&gt;Contact
+&lt;/h2&gt;&lt;p&gt;Questions, feedback, or comparing notes on AI-driven security tooling: &lt;a class=&#34;link&#34; href=&#34;mailto:security-ai-research@cloudflare.com&#34; &gt;security-ai-research@cloudflare.com&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;MIT &amp;ndash; see &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

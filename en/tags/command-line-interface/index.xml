@@ -1,0 +1,1390 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Command-Line Interface on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/command-line-interface/</link>
+        <description>Recent content in Command-Line Interface on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sun, 21 Sep 2025 15:25:16 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/command-line-interface/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>aipyapp</title>
+        <link>https://producthunt.programnotes.cn/en/p/aipyapp/</link>
+        <pubDate>Sun, 21 Sep 2025 15:25:16 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/aipyapp/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1681394344964-04387f320e83?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTg0MzkzOTB8&amp;ixlib=rb-4.1.0" alt="Featured image of post aipyapp" /&gt;&lt;h1 id=&#34;knownsecaipyapp&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/knownsec/aipyapp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;knownsec/aipyapp&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://github.com/user-attachments/assets/3af4e228-79b2-4fa0-a45c-c38276c6db91&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;logo&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;python-use&#34;&gt;Python use
+&lt;/h1&gt;&lt;p&gt;AIPy is an implementation of the Python-use concept, demonstrating its practical value and potential.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Mission&lt;/strong&gt;: unleash the full potential of large language models.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vision&lt;/strong&gt;: a future where LLMs can think independently and proactively leverage AIPy to solve complex problems.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what&#34;&gt;What
+&lt;/h2&gt;&lt;p&gt;Python use provides the entire Python execution environment to LLM. Imagine LLM sitting in front of a computer, typing various commands into the Python command-line interpreter, pressing Enter to execute, observing the results, and then typing and executing more code.&lt;/p&gt;
+&lt;p&gt;Unlike Agents, Python use does not define any tools interface. LLM can freely use all the features provided by the Python runtime environment.&lt;/p&gt;
+&lt;h2 id=&#34;why&#34;&gt;Why
+&lt;/h2&gt;&lt;p&gt;If you are a data engineer, you are likely familiar with the following scenarios:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Handling various data file formats: csv/excel, json, html, sqlite, parquet, etc.&lt;/li&gt;
+&lt;li&gt;Performing operations like data cleaning, transformation, computation, aggregation, sorting, grouping, filtering, analysis, and visualization.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This process often requires:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Starting Python, importing pandas as pd, and typing a bunch of commands to process data.&lt;/li&gt;
+&lt;li&gt;Generating a bunch of intermediate temporary files.&lt;/li&gt;
+&lt;li&gt;Describing your needs to ChatGPT/Claude, copying the generated data processing code, and running it manually.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So, why not start the Python command-line interpreter, directly describe your data processing needs, and let it be done automatically? The benefits are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No need to manually input a bunch of Python commands temporarily.&lt;/li&gt;
+&lt;li&gt;No need to describe your needs to GPT, copy the program, and run it manually.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is the problem Python use aims to solve!&lt;/p&gt;
+&lt;h2 id=&#34;how&#34;&gt;How
+&lt;/h2&gt;&lt;p&gt;Python use (aipython) is a Python command-line interpreter integrated with LLM. You can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Enter and execute Python commands as usual.&lt;/li&gt;
+&lt;li&gt;Describe your needs in natural language, and aipython will automatically generate Python commands and execute them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Moreover, the two modes can access data interchangeably. For example, after aipython processes your natural language commands, you can use standard Python commands to view various data.&lt;/p&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage
+&lt;/h2&gt;&lt;p&gt;AIPython has two running modes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Task mode: Very simple and easy to use, just input your task, suitable for users unfamiliar with Python.&lt;/li&gt;
+&lt;li&gt;Python mode: Suitable for users familiar with Python, allowing both task input and Python commands, ideal for advanced users.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The default running mode is task mode, which can be switched to Python mode using the &lt;code&gt;--python&lt;/code&gt; parameter.&lt;/p&gt;
+&lt;h3 id=&#34;basic-config&#34;&gt;Basic Config
+&lt;/h3&gt;&lt;p&gt;~/.aipyapp/aipyapp.toml:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;llm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;deepseek&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;deepseek&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;api_key&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Your DeepSeek API Key&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;task-mode&#34;&gt;Task Mode
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;uv run aipy&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt;&amp;gt;&amp;gt; Get the latest posts from Reddit r/LocalLLaMA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;......
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;......
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt;&amp;gt;&amp;gt; /done
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;pip install aipyapp&lt;/code&gt; and run with &lt;code&gt;aipy&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-&amp;gt; % aipy
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;🚀 Python use - AIPython (0.1.22) [https://aipy.app]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt;&amp;gt; Get the latest posts from Reddit r/LocalLLaMA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;......
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;python-mode&#34;&gt;Python Mode
+&lt;/h3&gt;&lt;h4 id=&#34;basic-usage&#34;&gt;Basic Usage
+&lt;/h4&gt;&lt;p&gt;Automatic task processing:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt;&amp;gt;&amp;gt; ai(&amp;#34;Get the title of Google&amp;#39;s homepage&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;automatically-request-to-install-third-party-libraries&#34;&gt;Automatically Request to Install Third-Party Libraries
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Python use - AIPython (Quit with &amp;#39;exit()&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt;&amp;gt;&amp;gt; ai(&amp;#34;Use psutil to list all processes on MacOS&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;📦 LLM requests to install third-party packages: [&amp;#39;psutil&amp;#39;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;If you agree and have installed, please enter &amp;#39;y [y/n] (n): y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;thanks&#34;&gt;Thanks
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Hei Ge: Product manager/senior user/chief tester&lt;/li&gt;
+&lt;li&gt;Sonnet 3.7: Generated the first version of the code, which was almost ready to use without modification.&lt;/li&gt;
+&lt;li&gt;ChatGPT: Provided many suggestions and code snippets, especially for the command-line interface.&lt;/li&gt;
+&lt;li&gt;Codeium: Intelligent code completion&lt;/li&gt;
+&lt;li&gt;Copilot: Code improvement suggestions and README translation&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>cobra</title>
+        <link>https://producthunt.programnotes.cn/en/p/cobra/</link>
+        <pubDate>Sat, 30 Aug 2025 15:25:30 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/cobra/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1666115883766-efa38b52630c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY1Mzg2NDl8&amp;ixlib=rb-4.1.0" alt="Featured image of post cobra" /&gt;&lt;h1 id=&#34;spf13cobra&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/spf13/cobra&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;spf13/cobra&lt;/a&gt;
+&lt;/h1&gt;&lt;div align=&#34;center&#34;&gt;
+&lt;a href=&#34;https://cobra.dev&#34;&gt;
+&lt;img width=&#34;512&#34; height=&#34;535&#34; alt=&#34;cobra-logo&#34; src=&#34;https://github.com/user-attachments/assets/c8bf9aad-b5ae-41d3-8899-d83baec10af8&#34; /&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Cobra is a library for creating powerful modern CLI applications.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cobra.dev&#34;&gt;Visit Cobra.dev for extensive documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Cobra is used in many Go projects such as &lt;a class=&#34;link&#34; href=&#34;https://kubernetes.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Kubernetes&lt;/a&gt;,
+&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo&lt;/a&gt;, and &lt;a class=&#34;link&#34; href=&#34;https://github.com/cli/cli&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub CLI&lt;/a&gt; to
+name a few. &lt;a class=&#34;link&#34; href=&#34;site/content/projects_using_cobra.md&#34; &gt;This list&lt;/a&gt; contains a more extensive list of projects using Cobra.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/spf13/cobra/actions?query=workflow%3ATest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/github/actions/workflow/status/spf13/cobra/test.yml?branch=main&amp;amp;longCache=true&amp;amp;label=Test&amp;amp;logo=github%20actions&amp;amp;logoColor=fff&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://pkg.go.dev/github.com/spf13/cobra&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://pkg.go.dev/badge/github.com/spf13/cobra.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Go Reference&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://goreportcard.com/report/github.com/spf13/cobra&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://goreportcard.com/badge/github.com/spf13/cobra&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Go Report Card&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://gophers.slack.com/archives/CD3LP1199&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/Slack-cobra-brightgreen&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Slack&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div align=&#34;center&#34; markdown=&#34;1&#34;&gt;
+   &lt;sup&gt;Supported by:&lt;/sup&gt;
+   &lt;br&gt;
+   &lt;br&gt;
+   &lt;a href=&#34;https://www.warp.dev/cobra&#34;&gt;
+      &lt;img alt=&#34;Warp sponsorship&#34; width=&#34;400&#34; src=&#34;https://github.com/user-attachments/assets/ab8dd143-b0fd-4904-bdc5-dd7ecac94eae&#34;&gt;
+   &lt;/a&gt;
+&lt;h3 id=&#34;warp-the-ai-terminal-for-devs&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.warp.dev/cobra&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Warp, the AI terminal for devs&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.warp.dev/cobra&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Try Cobra in Warp today&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;overview&#34;&gt;Overview
+&lt;/h1&gt;&lt;p&gt;Cobra is a library providing a simple interface to create powerful modern CLI
+interfaces similar to git &amp;amp; go tools.&lt;/p&gt;
+&lt;p&gt;Cobra provides:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Easy subcommand-based CLIs: &lt;code&gt;app server&lt;/code&gt;, &lt;code&gt;app fetch&lt;/code&gt;, etc.&lt;/li&gt;
+&lt;li&gt;Fully POSIX-compliant flags (including short &amp;amp; long versions)&lt;/li&gt;
+&lt;li&gt;Nested subcommands&lt;/li&gt;
+&lt;li&gt;Global, local and cascading flags&lt;/li&gt;
+&lt;li&gt;Intelligent suggestions (&lt;code&gt;app srver&lt;/code&gt;&amp;hellip; did you mean &lt;code&gt;app server&lt;/code&gt;?)&lt;/li&gt;
+&lt;li&gt;Automatic help generation for commands and flags&lt;/li&gt;
+&lt;li&gt;Grouping help for subcommands&lt;/li&gt;
+&lt;li&gt;Automatic help flag recognition of &lt;code&gt;-h&lt;/code&gt;, &lt;code&gt;--help&lt;/code&gt;, etc.&lt;/li&gt;
+&lt;li&gt;Automatically generated shell autocomplete for your application (bash, zsh, fish, powershell)&lt;/li&gt;
+&lt;li&gt;Automatically generated man pages for your application&lt;/li&gt;
+&lt;li&gt;Command aliases so you can change things without breaking them&lt;/li&gt;
+&lt;li&gt;The flexibility to define your own help, usage, etc.&lt;/li&gt;
+&lt;li&gt;Optional seamless integration with &lt;a class=&#34;link&#34; href=&#34;https://github.com/spf13/viper&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;viper&lt;/a&gt; for 12-factor apps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;concepts&#34;&gt;Concepts
+&lt;/h1&gt;&lt;p&gt;Cobra is built on a structure of commands, arguments &amp;amp; flags.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Commands&lt;/strong&gt; represent actions, &lt;strong&gt;Args&lt;/strong&gt; are things and &lt;strong&gt;Flags&lt;/strong&gt; are modifiers for those actions.&lt;/p&gt;
+&lt;p&gt;The best applications read like sentences when used, and as a result, users
+intuitively know how to interact with them.&lt;/p&gt;
+&lt;p&gt;The pattern to follow is
+&lt;code&gt;APPNAME VERB NOUN --ADJECTIVE&lt;/code&gt;
+or
+&lt;code&gt;APPNAME COMMAND ARG --FLAG&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;A few good real world examples may better illustrate this point.&lt;/p&gt;
+&lt;p&gt;In the following example, &amp;lsquo;server&amp;rsquo; is a command, and &amp;lsquo;port&amp;rsquo; is a flag:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo server --port=1313
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In this command we are telling Git to clone the url bare.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone URL --bare
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;commands&#34;&gt;Commands
+&lt;/h2&gt;&lt;p&gt;Command is the central point of the application. Each interaction that
+the application supports will be contained in a Command. A command can
+have children commands and optionally run an action.&lt;/p&gt;
+&lt;p&gt;In the example above, &amp;lsquo;server&amp;rsquo; is the command.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://pkg.go.dev/github.com/spf13/cobra#Command&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;More about cobra.Command&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;flags&#34;&gt;Flags
+&lt;/h2&gt;&lt;p&gt;A flag is a way to modify the behavior of a command. Cobra supports
+fully POSIX-compliant flags as well as the Go &lt;a class=&#34;link&#34; href=&#34;https://golang.org/pkg/flag/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;flag package&lt;/a&gt;.
+A Cobra command can define flags that persist through to children commands
+and flags that are only available to that command.&lt;/p&gt;
+&lt;p&gt;In the example above, &amp;lsquo;port&amp;rsquo; is the flag.&lt;/p&gt;
+&lt;p&gt;Flag functionality is provided by the &lt;a class=&#34;link&#34; href=&#34;https://github.com/spf13/pflag&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pflag
+library&lt;/a&gt;, a fork of the flag standard library
+which maintains the same interface while adding POSIX compliance.&lt;/p&gt;
+&lt;h1 id=&#34;installing&#34;&gt;Installing
+&lt;/h1&gt;&lt;p&gt;Using Cobra is easy. First, use &lt;code&gt;go get&lt;/code&gt; to install the latest version
+of the library.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go get -u github.com/spf13/cobra@latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Next, include Cobra in your application:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;github.com/spf13/cobra&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id=&#34;usage&#34;&gt;Usage
+&lt;/h1&gt;&lt;p&gt;&lt;code&gt;cobra-cli&lt;/code&gt; is a command line program to generate cobra applications and command files.
+It will bootstrap your application scaffolding to rapidly
+develop a Cobra-based application. It is the easiest way to incorporate Cobra into your application.&lt;/p&gt;
+&lt;p&gt;It can be installed by running:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go install github.com/spf13/cobra-cli@latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For complete details on using the Cobra-CLI generator, please read &lt;a class=&#34;link&#34; href=&#34;https://github.com/spf13/cobra-cli/blob/main/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The Cobra Generator README&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For complete details on using the Cobra library, please read &lt;a class=&#34;link&#34; href=&#34;site/content/user_guide.md&#34; &gt;The Cobra User Guide&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;license&#34;&gt;License
+&lt;/h1&gt;&lt;p&gt;Cobra is released under the Apache 2.0 license. See &lt;a class=&#34;link&#34; href=&#34;LICENSE.txt&#34; &gt;LICENSE.txt&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>trippy</title>
+        <link>https://producthunt.programnotes.cn/en/p/trippy/</link>
+        <pubDate>Wed, 23 Jul 2025 15:35:45 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/trippy/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1643938915973-bfef644ec87f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMyNTYwMTZ8&amp;ixlib=rb-4.1.0" alt="Featured image of post trippy" /&gt;&lt;h1 id=&#34;fujiapple852trippy&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/fujiapple852/trippy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;fujiapple852/trippy&lt;/a&gt;
+&lt;/h1&gt;&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://raw.githubusercontent.com/fujiapple852/trippy/master/docs/src/assets/Trippy-Vertical-DarkMode.svg#gh-dark-mode-only&#34; width=&#34;300&#34;&gt;
+  &lt;img src=&#34;https://raw.githubusercontent.com/fujiapple852/trippy/master/docs/src/assets/Trippy-Vertical.svg#gh-light-mode-only&#34; width=&#34;300&#34;&gt;&lt;br&gt;
+  &lt;br&gt;
+  &lt;a href=&#34;https://github.com/fujiapple852/trippy/actions/workflows/ci.yml&#34;&gt;
+    &lt;img src=&#34;https://github.com/fujiapple852/trippy/actions/workflows/ci.yml/badge.svg?branch=master&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://crates.io/crates/trippy/0.13.0&#34;&gt;
+    &lt;img src=&#34;https://img.shields.io/crates/v/trippy.svg&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://repology.org/project/trippy/versions&#34;&gt;
+    &lt;img src=&#34;https://repology.org/badge/tiny-repos/trippy.svg&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://trippy.zulipchat.com&#34;&gt;
+    &lt;img src=&#34;https://img.shields.io/badge/zulip-join_chat-brightgreen.svg&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://matrix.to/#/#trippy-dev:matrix.org&#34;&gt;
+    &lt;img src=&#34;https://img.shields.io/badge/matrix/trippy-dev:matrix.org-blue&#34;&gt;&lt;/a&gt;
+  &lt;br&gt;
+  &lt;br&gt;
+  Trippy combines the functionality of traceroute and ping and is designed to assist with the analysis of networking
+issues.
+&lt;/p&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/fujiapple852/trippy/master/assets/0.12.0/demo.gif&#34; alt=&#34;trippy&#34;/&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick Start
+&lt;/h2&gt;&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs/start/getting-started&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;getting started&lt;/a&gt; guide.&lt;/p&gt;
+&lt;h3 id=&#34;install&#34;&gt;Install
+&lt;/h3&gt;&lt;p&gt;Trippy runs on Linux, BSD, macOS, and Windows. It can be installed from most package managers, precompiled binaries, or
+source.&lt;/p&gt;
+&lt;p&gt;For example, to install Trippy from &lt;code&gt;cargo&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cargo install trippy --locked
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;details&gt;
+&lt;summary&gt;All package managers&lt;/summary&gt;
+&lt;h3 id=&#34;cargo&#34;&gt;Cargo
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://crates.io/crates/trippy/0.13.0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/crates/v/trippy&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Crates.io&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cargo install trippy --locked
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;apt-debian&#34;&gt;APT (Debian)
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://tracker.debian.org/pkg/trippy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://repology.org/badge/version-for-repo/debian_13/trippy.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Debian 13 package&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt install trippy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;ⓘ Note:&lt;/p&gt;
+&lt;p&gt;Only available for Debian 13 (&lt;code&gt;trixie&lt;/code&gt;) and later.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;ppa-ubuntu&#34;&gt;PPA (Ubuntu)
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://launchpad.net/~fujiapple/&amp;#43;archive/ubuntu/trippy/&amp;#43;packages&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/Ubuntu%20PPA-0.13.0-brightgreen&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Ubuntu PPA&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;add-apt-repository ppa:fujiapple/trippy
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt update &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; apt install trippy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;ⓘ Note:&lt;/p&gt;
+&lt;p&gt;Only available for Ubuntu 24.04 (&lt;code&gt;Noble&lt;/code&gt;) and 22.04 (&lt;code&gt;Jammy&lt;/code&gt;).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;snap-linux&#34;&gt;Snap (Linux)
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://snapcraft.io/trippy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://snapcraft.io/trippy/badge.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;trippy&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;snap install trippy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;homebrew-macos&#34;&gt;Homebrew (macOS)
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://formulae.brew.sh/formula/trippy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://repology.org/badge/version-for-repo/homebrew/trippy.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Homebrew package&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install trippy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;winget-windows&#34;&gt;WinGet (Windows)
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/microsoft/winget-pkgs/tree/master/manifests/f/FujiApple/Trippy/0.13.0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/WinGet-0.13.0-brightgreen&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;winget package&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;winget install trippy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;scoop-windows&#34;&gt;Scoop (Windows)
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ScoopInstaller/Main/blob/master/bucket/trippy.json&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/scoop/v/trippy?style=flat&amp;amp;labelColor=5c5c5c&amp;amp;color=%234dc71f&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Scoop package&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scoop install trippy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;chocolatey-windows&#34;&gt;Chocolatey (Windows)
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://community.chocolatey.org/packages/trippy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://repology.org/badge/version-for-repo/chocolatey/trippy.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Chocolatey package&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;choco install trippy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;netbsd&#34;&gt;NetBSD
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://pkgsrc.se/net/trippy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://repology.org/badge/version-for-repo/pkgsrc_current/trippy.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;pkgsrc current package&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pkgin install trippy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;freebsd&#34;&gt;FreeBSD
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.freshports.org/net/trippy/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://repology.org/badge/version-for-repo/freebsd/trippy.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;FreeBSD port&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pkg install trippy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;openbsd&#34;&gt;OpenBSD
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://openports.pl/path/net/trippy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://repology.org/badge/version-for-repo/openbsd/trippy.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;OpenBSD port&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pkg_add trippy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;arch-linux&#34;&gt;Arch Linux
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://archlinux.org/packages/extra/x86_64/trippy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://repology.org/badge/version-for-repo/arch/trippy.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Arch package&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pacman -S trippy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;gentoo-linux&#34;&gt;Gentoo Linux
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://packages.gentoo.org/packages/net-analyzer/trippy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://repology.org/badge/version-for-repo/gentoo/trippy.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Gentoo package&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;emerge -av net-analyzer/trippy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;void-linux&#34;&gt;Void Linux
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/void-linux/void-packages/tree/master/srcpkgs/trippy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://repology.org/badge/version-for-repo/void_x86_64/trippy.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Void Linux x86_64 package&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xbps-install -S trippy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;alt-sisyphus&#34;&gt;ALT Sisyphus
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://packages.altlinux.org/en/sisyphus/srpms/trippy/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://repology.org/badge/version-for-repo/altsisyphus/trippy.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;ALT Sisyphus package&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt-get install trippy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;chimera-linux&#34;&gt;Chimera Linux
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/chimera-linux/cports/tree/master/user/trippy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://repology.org/badge/version-for-repo/chimera/trippy.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Chimera Linux package&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apk add trippy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;nix&#34;&gt;Nix
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/tr/trippy/package.nix&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://repology.org/badge/version-for-repo/nix_unstable/trippy.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;nixpkgs unstable package&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nix-env -iA trippy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;docker&#34;&gt;Docker
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://hub.docker.com/r/fujiapple/trippy/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/docker/v/fujiapple/trippy&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Docker Image Version (latest by date)&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -it fujiapple/trippy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;all-repositories&#34;&gt;All Repositories
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://repology.org/project/trippy/versions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://repology.org/badge/vertical-allrepos/trippy.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Packaging status&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs/start/installation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;installation&lt;/a&gt; guide for details of how to install Trippy on your system.&lt;/p&gt;
+&lt;h3 id=&#34;run&#34;&gt;Run
+&lt;/h3&gt;&lt;p&gt;To run a basic trace to &lt;code&gt;example.com&lt;/code&gt; with default settings, use the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo trip example.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs/guides/usage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;usage examples&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs/reference/cli&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CLI reference&lt;/a&gt; for
+details of how to use Trippy. To use Trippy without elevated privileges, see
+the &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs/guides/privileges&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;privileges&lt;/a&gt; guide.&lt;/p&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation
+&lt;/h2&gt;&lt;p&gt;Full documentation is available at &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;trippy.rs&lt;/a&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;documentation links&lt;/summary&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started
+&lt;/h2&gt;&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs/start/getting-started/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Getting Started&lt;/a&gt; guide.&lt;/p&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features
+&lt;/h2&gt;&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs/start/features/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Features&lt;/a&gt; list.&lt;/p&gt;
+&lt;h2 id=&#34;distributions&#34;&gt;Distributions
+&lt;/h2&gt;&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs/start/installation/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Distributions&lt;/a&gt; list.&lt;/p&gt;
+&lt;h2 id=&#34;privileges&#34;&gt;Privileges
+&lt;/h2&gt;&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs/guides/privileges/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Privileges&lt;/a&gt; guide.&lt;/p&gt;
+&lt;h2 id=&#34;usage-examples&#34;&gt;Usage Examples
+&lt;/h2&gt;&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs/guides/usage/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Usage Examples&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;command-reference&#34;&gt;Command Reference
+&lt;/h2&gt;&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs/reference/cli/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Command Reference&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;theme-reference&#34;&gt;Theme Reference
+&lt;/h2&gt;&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs/reference/theme/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Theme Reference&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;column-reference&#34;&gt;Column Reference
+&lt;/h2&gt;&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs/reference/column/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Column Reference&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;configuration-reference&#34;&gt;Configuration Reference
+&lt;/h2&gt;&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs/reference/configuration/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Configuration Reference&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;locale-reference&#34;&gt;Locale Reference
+&lt;/h2&gt;&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs/reference/locale/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Locale Reference&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;versions&#34;&gt;Versions
+&lt;/h2&gt;&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs/reference/version/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Version Reference&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;frequently-asked-questions&#34;&gt;Frequently Asked Questions
+&lt;/h2&gt;&lt;h3 id=&#34;why-does-trippy-show-awaiting-data&#34;&gt;Why does Trippy show &amp;ldquo;Awaiting data&amp;hellip;&amp;rdquo;?
+&lt;/h3&gt;&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs/guides/faq/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Awaiting Data&lt;/a&gt; guide.&lt;/p&gt;
+&lt;p&gt;&lt;a name=&#34;windows-defender&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;how-do-i-allow-incoming-icmp-traffic-in-the-windows-defender-firewall&#34;&gt;How do I allow incoming ICMP traffic in the Windows Defender firewall?
+&lt;/h3&gt;&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs/guides/windows_firewall/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Windows Defender Firewall&lt;/a&gt; guide.&lt;/p&gt;
+&lt;h3 id=&#34;what-are-the-recommended-settings-for-trippy&#34;&gt;What are the recommended settings for Trippy?
+&lt;/h3&gt;&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://trippy.rs/guides/recommendation/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Recommended Tracing Settings&lt;/a&gt; guide.&lt;/p&gt;
+&lt;/details&gt;
+&lt;h2 id=&#34;acknowledgements&#34;&gt;Acknowledgements
+&lt;/h2&gt;&lt;p&gt;Trippy is made possible by &lt;a class=&#34;link&#34; href=&#34;https://github.com/ratatui-org/ratatui&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ratatui&lt;/a&gt; (
+formerly &lt;a class=&#34;link&#34; href=&#34;https://github.com/fdehau/tui-rs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;tui-rs&lt;/a&gt;),
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/crossterm-rs/crossterm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;crossterm&lt;/a&gt; as well
+as &lt;a class=&#34;link&#34; href=&#34;https://github.com/fujiapple852/trippy/blob/master/Cargo.toml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;several&lt;/a&gt; foundational Rust libraries.&lt;/p&gt;
+&lt;p&gt;Trippy draws heavily from &lt;a class=&#34;link&#34; href=&#34;https://github.com/traviscross/mtr&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mtr&lt;/a&gt; and also incorporates ideas
+from both &lt;a class=&#34;link&#34; href=&#34;https://github.com/libparistraceroute/libparistraceroute&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;libparistraceroute&lt;/a&gt;
+&amp;amp; &lt;a class=&#34;link&#34; href=&#34;https://github.com/insomniacslk/dublin-traceroute&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Dublin Traceroute&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Trippy networking code is inspired by &lt;a class=&#34;link&#34; href=&#34;https://github.com/libpnet/libpnet&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pnet&lt;/a&gt; and some elements of that codebase
+are incorporated in Trippy.&lt;/p&gt;
+&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Autonomous_system_%28Internet%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AS&lt;/a&gt; data is retrieved from
+the &lt;a class=&#34;link&#34; href=&#34;https://team-cymru.com/community-services/ip-asn-mapping/#dns&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;IP to ASN Mapping Service&lt;/a&gt; provided
+by &lt;a class=&#34;link&#34; href=&#34;https://team-cymru.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Team Cymru&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;https://trippy.cli.rs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;trippy.cli.rs&lt;/a&gt; CNAME hosting is provided by &lt;a class=&#34;link&#34; href=&#34;https://cli.rs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cli.rs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Trippy chat room is sponsored by &lt;a class=&#34;link&#34; href=&#34;https://zulip.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Zulip&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Trippy logo designed by &lt;a class=&#34;link&#34; href=&#34;https://www.instagram.com/harunocaksiz&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Harun Ocaksiz Design&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;This project is distributed under the terms of the Apache License (Version 2.0).&lt;/p&gt;
+&lt;p&gt;Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in time by you, as defined
+in the Apache-2.0 license, shall be licensed as above, without any additional terms or conditions.&lt;/p&gt;
+&lt;p&gt;See &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt; for details.&lt;/p&gt;
+&lt;p&gt;Copyright 2022 &lt;a class=&#34;link&#34; href=&#34;https://github.com/fujiapple852/trippy/graphs/contributors&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Trippy Contributors&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>kilo</title>
+        <link>https://producthunt.programnotes.cn/en/p/kilo/</link>
+        <pubDate>Thu, 22 May 2025 15:29:05 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/kilo/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1598964356161-754cc07fcd36?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4OTg4OTN8&amp;ixlib=rb-4.1.0" alt="Featured image of post kilo" /&gt;&lt;h1 id=&#34;antirezkilo&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/antirez/kilo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;antirez/kilo&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;kilo&#34;&gt;Kilo
+&lt;/h1&gt;&lt;p&gt;Kilo is a small text editor in less than 1K lines of code (counted with cloc).&lt;/p&gt;
+&lt;p&gt;A screencast is available here: &lt;a class=&#34;link&#34; href=&#34;https://asciinema.org/a/90r2i9bq8po03nazhqtsifksb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://asciinema.org/a/90r2i9bq8po03nazhqtsifksb&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Usage: kilo &lt;code&gt;&amp;lt;filename&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Keys:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;CTRL-S: Save
+CTRL-Q: Quit
+CTRL-F: Find string in file (ESC to exit search, arrows to navigate)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Kilo does not depend on any library (not even curses). It uses fairly standard
+VT100 (and similar terminals) escape sequences. The project is in alpha
+stage and was written in just a few hours taking code from my other two
+projects, load81 and linenoise.&lt;/p&gt;
+&lt;p&gt;People are encouraged to use it as a starting point to write other editors
+or command line interfaces that are more advanced than the usual REPL
+style CLI.&lt;/p&gt;
+&lt;p&gt;Kilo was written by Salvatore Sanfilippo aka antirez and is released
+under the BSD 2 clause license.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>BabelDOC</title>
+        <link>https://producthunt.programnotes.cn/en/p/babeldoc/</link>
+        <pubDate>Tue, 15 Apr 2025 15:30:04 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/babeldoc/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1703333193841-011d163a18d9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ3MDIxNjZ8&amp;ixlib=rb-4.0.3" alt="Featured image of post BabelDOC" /&gt;&lt;h1 id=&#34;funstory-aibabeldoc&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/funstory-ai/BabelDOC&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;funstory-ai/BabelDOC&lt;/a&gt;
+&lt;/h1&gt;&lt;!-- # Yet Another Document Translator --&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;!-- &lt;img src=&#34;https://s.immersivetranslate.com/assets/r2-uploads/images/babeldoc-banner.png&#34; width=&#34;320px&#34;  alt=&#34;YADT&#34;/&gt; --&gt;
+&lt;br/&gt;
+&lt;picture&gt;
+  &lt;source media=&#34;(prefers-color-scheme: dark)&#34; srcset=&#34;https://s.immersivetranslate.com/assets/uploads/babeldoc-big-logo-darkmode-with-transparent-background-IKuNO1.svg&#34; width=&#34;320px&#34; alt=&#34;BabelDOC&#34;/&gt;
+  &lt;img src=&#34;https://s.immersivetranslate.com/assets/uploads/babeldoc-big-logo-with-transparent-background-2xweBr.svg&#34; width=&#34;320px&#34; alt=&#34;BabelDOC&#34;/&gt;
+&lt;/picture&gt;
+&lt;!-- &lt;h2 id=&#34;title&#34;&gt;BabelDOC&lt;/h2&gt; --&gt;
+&lt;p&gt;
+  &lt;!-- PyPI --&gt;
+  &lt;a href=&#34;https://pypi.org/project/BabelDOC/&#34;&gt;
+    &lt;img src=&#34;https://img.shields.io/pypi/v/BabelDOC&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://pepy.tech/projects/BabelDOC&#34;&gt;
+    &lt;img src=&#34;https://static.pepy.tech/badge/BabelDOC&#34;&gt;&lt;/a&gt;
+  &lt;!-- &lt;a href=&#34;https://github.com/funstory-ai/BabelDOC/pulls&#34;&gt;
+    &lt;img src=&#34;https://img.shields.io/badge/contributions-welcome-green&#34;&gt;&lt;/a&gt; --&gt;
+  &lt;!-- License --&gt;
+  &lt;a href=&#34;./LICENSE&#34;&gt;
+    &lt;img src=&#34;https://img.shields.io/github/license/funstory-ai/BabelDOC&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://t.me/+Z9_SgnxmsmA5NzBl&#34;&gt;
+    &lt;img src=&#34;https://img.shields.io/badge/Telegram-2CA5E0?style=flat-squeare&amp;logo=telegram&amp;logoColor=white&#34;&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://trendshift.io/repositories/13358&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://trendshift.io/api/badge/repositories/13358&#34; alt=&#34;funstory-ai%2FBabelDOC | Trendshift&#34; style=&#34;width: 250px; height: 55px;&#34; width=&#34;250&#34; height=&#34;55&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;PDF scientific paper translation and bilingual comparison library.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Online Service&lt;/strong&gt;: Beta version launched &lt;a class=&#34;link&#34; href=&#34;https://app.immersivetranslate.com/babel-doc/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Immersive Translate - BabelDOC&lt;/a&gt; 1000 free pages per month.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Self-deployment&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://github.com/Byaidu/PDFMathTranslate&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PDFMathTranslate&lt;/a&gt; 1.9.3+ Experimental support for BabelDOC, available for self-deployment + WebUI with more translation services.&lt;/li&gt;
+&lt;li&gt;Provides a simple &lt;a class=&#34;link&#34; href=&#34;#getting-started&#34; &gt;command line interface&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Provides a &lt;a class=&#34;link&#34; href=&#34;#python-api&#34; &gt;Python API&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Mainly designed to be embedded into other programs, but can also be used directly for simple translation tasks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;preview&#34;&gt;Preview
+&lt;/h2&gt;&lt;div align=&#34;center&#34;&gt;
+&lt;img src=&#34;https://s.immersivetranslate.com/assets/r2-uploads/images/babeldoc-preview.png&#34; width=&#34;80%&#34;/&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;we-are-hiring&#34;&gt;We are hiring
+&lt;/h2&gt;&lt;p&gt;See details: &lt;a class=&#34;link&#34; href=&#34;https://github.com/funstory-ai/jobs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;EN&lt;/a&gt; | &lt;a class=&#34;link&#34; href=&#34;https://github.com/funstory-ai/jobs/blob/main/README_ZH.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ZH&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started
+&lt;/h2&gt;&lt;h3 id=&#34;install-from-pypi&#34;&gt;Install from PyPI
+&lt;/h3&gt;&lt;p&gt;We recommend using the Tool feature of &lt;a class=&#34;link&#34; href=&#34;https://github.com/astral-sh/uv&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;uv&lt;/a&gt; to install yadt.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;First, you need to refer to &lt;a class=&#34;link&#34; href=&#34;https://github.com/astral-sh/uv#installation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;uv installation&lt;/a&gt; to install uv and set up the &lt;code&gt;PATH&lt;/code&gt; environment variable as prompted.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use the following command to install yadt:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uv tool install --python 3.12 BabelDOC
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;babeldoc --help
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Use the &lt;code&gt;babeldoc&lt;/code&gt; command. For example:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;babeldoc --bing  --files example.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# multiple files&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;babeldoc --bing  --files example1.pdf --files example2.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;install-from-source&#34;&gt;Install from Source
+&lt;/h3&gt;&lt;p&gt;We still recommend using &lt;a class=&#34;link&#34; href=&#34;https://github.com/astral-sh/uv&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;uv&lt;/a&gt; to manage virtual environments.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;First, you need to refer to &lt;a class=&#34;link&#34; href=&#34;https://github.com/astral-sh/uv#installation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;uv installation&lt;/a&gt; to install uv and set up the &lt;code&gt;PATH&lt;/code&gt; environment variable as prompted.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use the following command to install yadt:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# clone the project&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/funstory-ai/BabelDOC
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# enter the project directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; BabelDOC
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install dependencies and run babeldoc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uv run babeldoc --help
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Use the &lt;code&gt;uv run babeldoc&lt;/code&gt; command. For example:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uv run babeldoc --files example.pdf --openai --openai-model &lt;span class=&#34;s2&#34;&gt;&amp;#34;gpt-4o-mini&amp;#34;&lt;/span&gt; --openai-base-url &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://api.openai.com/v1&amp;#34;&lt;/span&gt; --openai-api-key &lt;span class=&#34;s2&#34;&gt;&amp;#34;your-api-key-here&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# multiple files&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uv run babeldoc --files example.pdf --files example2.pdf --openai --openai-model &lt;span class=&#34;s2&#34;&gt;&amp;#34;gpt-4o-mini&amp;#34;&lt;/span&gt; --openai-base-url &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://api.openai.com/v1&amp;#34;&lt;/span&gt; --openai-api-key &lt;span class=&#34;s2&#34;&gt;&amp;#34;your-api-key-here&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;[!TIP]
+The absolute path is recommended.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;advanced-options&#34;&gt;Advanced Options
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;[!NOTE]
+This CLI is mainly for debugging purposes. Although end users can use this CLI to translate files, we do not provide any technical support for this purpose.&lt;/p&gt;
+&lt;p&gt;End users should directly use &lt;strong&gt;Online Service&lt;/strong&gt;: Beta version launched &lt;a class=&#34;link&#34; href=&#34;https://app.immersivetranslate.com/babel-doc/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Immersive Translate - BabelDOC&lt;/a&gt; 1000 free pages per month.&lt;/p&gt;
+&lt;p&gt;End users who need self-deployment should use &lt;a class=&#34;link&#34; href=&#34;https://github.com/Byaidu/PDFMathTranslate&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PDFMathTranslate&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you find that an option is not listed below, it means that this option is a debugging option for maintainers. Please do not use these options.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;language-options&#34;&gt;Language Options
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--lang-in&lt;/code&gt;, &lt;code&gt;-li&lt;/code&gt;: Source language code (default: en)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--lang-out&lt;/code&gt;, &lt;code&gt;-lo&lt;/code&gt;: Target language code (default: zh)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!TIP]
+Currently, this project mainly focuses on English-to-Chinese translation, and other scenarios have not been tested yet.&lt;/p&gt;
+&lt;p&gt;(2025.3.1 update): Basic English target language support has been added, primarily to minimize line breaks within words([0-9A-Za-z]+).&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/funstory-ai/BabelDOC/issues/129&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;HELP WANTED: Collecting word regular expressions for more languages&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;pdf-processing-options&#34;&gt;PDF Processing Options
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--files&lt;/code&gt;: One or more file paths to input PDF documents.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--pages&lt;/code&gt;, &lt;code&gt;-p&lt;/code&gt;: Specify pages to translate (e.g., &amp;ldquo;1,2,1-,-3,3-5&amp;rdquo;). If not set, translate all pages&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--split-short-lines&lt;/code&gt;: Force split short lines into different paragraphs (may cause poor typesetting &amp;amp; bugs)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--short-line-split-factor&lt;/code&gt;: Split threshold factor (default: 0.8). The actual threshold is the median length of all lines on the current page * this factor&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--skip-clean&lt;/code&gt;: Skip PDF cleaning step&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--dual-translate-first&lt;/code&gt;: Put translated pages first in dual PDF mode (default: original pages first)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--disable-rich-text-translate&lt;/code&gt;: Disable rich text translation (may help improve compatibility with some PDFs)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--enhance-compatibility&lt;/code&gt;: Enable all compatibility enhancement options (equivalent to &amp;ndash;skip-clean &amp;ndash;dual-translate-first &amp;ndash;disable-rich-text-translate)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--use-alternating-pages-dual&lt;/code&gt;: Use alternating pages mode for dual PDF. When enabled, original and translated pages are arranged in alternate order. When disabled (default), original and translated pages are shown side by side on the same page.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--watermark-output-mode&lt;/code&gt;: Control watermark output mode: &amp;lsquo;watermarked&amp;rsquo; (default) adds watermark to translated PDF, &amp;rsquo;no_watermark&amp;rsquo; doesn&amp;rsquo;t add watermark, &amp;lsquo;both&amp;rsquo; outputs both versions.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--max-pages-per-part&lt;/code&gt;: Maximum number of pages per part for split translation. If not set, no splitting will be performed.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--no-watermark&lt;/code&gt;: [DEPRECATED] Use &amp;ndash;watermark-output-mode=no_watermark instead.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--translate-table-text&lt;/code&gt;: Translate table text (experimental, default: False)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--skip-scanned-detection&lt;/code&gt;: Skip scanned document detection (default: False). When using split translation, only the first part performs detection if not skipped.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!TIP]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Both &lt;code&gt;--skip-clean&lt;/code&gt; and &lt;code&gt;--dual-translate-first&lt;/code&gt; may help improve compatibility with some PDF readers&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--disable-rich-text-translate&lt;/code&gt; can also help with compatibility by simplifying translation input&lt;/li&gt;
+&lt;li&gt;However, using &lt;code&gt;--skip-clean&lt;/code&gt; will result in larger file sizes&lt;/li&gt;
+&lt;li&gt;If you encounter any compatibility issues, try using &lt;code&gt;--enhance-compatibility&lt;/code&gt; first&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;--max-pages-per-part&lt;/code&gt; for large documents to split them into smaller parts for translation and automatically merge them back.&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;--skip-scanned-detection&lt;/code&gt; to speed up processing when you know your document is not a scanned PDF.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;translation-service-options&#34;&gt;Translation Service Options
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--qps&lt;/code&gt;: QPS (Queries Per Second) limit for translation service (default: 4)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--ignore-cache&lt;/code&gt;: Ignore translation cache and force retranslation&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--no-dual&lt;/code&gt;: Do not output bilingual PDF files&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--no-mono&lt;/code&gt;: Do not output monolingual PDF files&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--min-text-length&lt;/code&gt;: Minimum text length to translate (default: 5)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--openai&lt;/code&gt;: Use OpenAI for translation (default: False)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!TIP]&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Currently, only OpenAI-compatible LLM is supported. For more translator support, please use &lt;a class=&#34;link&#34; href=&#34;https://github.com/Byaidu/PDFMathTranslate&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PDFMathTranslate&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;It is recommended to use models with strong compatibility with OpenAI, such as: &lt;code&gt;glm-4-flash&lt;/code&gt;, &lt;code&gt;deepseek-chat&lt;/code&gt;, etc.&lt;/li&gt;
+&lt;li&gt;Currently, it has not been optimized for traditional translation engines like Bing/Google, it is recommended to use LLMs.&lt;/li&gt;
+&lt;li&gt;You can use &lt;a class=&#34;link&#34; href=&#34;https://github.com/BerriAI/litellm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;litellm&lt;/a&gt; to access multiple models.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;openai-specific-options&#34;&gt;OpenAI Specific Options
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--openai-model&lt;/code&gt;: OpenAI model to use (default: gpt-4o-mini)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--openai-base-url&lt;/code&gt;: Base URL for OpenAI API&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--openai-api-key&lt;/code&gt;: API key for OpenAI service&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!TIP]&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;This tool supports any OpenAI-compatible API endpoints. Just set the correct base URL and API key. (e.g. &lt;code&gt;https://xxx.custom.xxx/v1&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;For local models like Ollama, you can use any value as the API key (e.g. &lt;code&gt;--openai-api-key a&lt;/code&gt;).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;output-control&#34;&gt;Output Control
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--output&lt;/code&gt;, &lt;code&gt;-o&lt;/code&gt;: Output directory for translated files. If not set, use current working directory.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--debug&lt;/code&gt;, &lt;code&gt;-d&lt;/code&gt;: Enable debug logging level and export detailed intermediate results in &lt;code&gt;~/.cache/yadt/working&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--report-interval&lt;/code&gt;: Progress report interval in seconds (default: 0.1).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;offline-assets-management&#34;&gt;Offline Assets Management
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--generate-offline-assets&lt;/code&gt;: Generate an offline assets package in the specified directory. This creates a zip file containing all required models and fonts.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--restore-offline-assets&lt;/code&gt;: Restore an offline assets package from the specified file. This extracts models and fonts from a previously generated package.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!TIP]&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Offline assets packages are useful for environments without internet access or to speed up installation on multiple machines.&lt;/li&gt;
+&lt;li&gt;Generate a package once with &lt;code&gt;babeldoc --generate-offline-assets /path/to/output/dir&lt;/code&gt; and then distribute it.&lt;/li&gt;
+&lt;li&gt;Restore the package on target machines with &lt;code&gt;babeldoc --restore-offline-assets /path/to/offline_assets_*.zip&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;The offline assets package name cannot be modified because the file list hash is encoded in the name.&lt;/li&gt;
+&lt;li&gt;If you provide a directory path to &lt;code&gt;--restore-offline-assets&lt;/code&gt;, the tool will automatically look for the correct offline assets package file in that directory.&lt;/li&gt;
+&lt;li&gt;The package contains all necessary fonts and models required for document processing, ensuring consistent results across different environments.&lt;/li&gt;
+&lt;li&gt;The integrity of all assets is verified using SHA3-256 hashes during both packaging and restoration.&lt;/li&gt;
+&lt;li&gt;If you&amp;rsquo;re deploying in an air-gapped environment, make sure to generate the package on a machine with internet access first.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;configuration-file&#34;&gt;Configuration File
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--config&lt;/code&gt;, &lt;code&gt;-c&lt;/code&gt;: Configuration file path. Use the TOML format.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example Configuration:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;babeldoc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Basic settings&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;debug&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;lang-in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;en-US&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;lang-out&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;zh-CN&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;qps&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;output&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/path/to/output/dir&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# PDF processing options&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;split-short-lines&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;short-line-split-factor&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.8&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;skip-clean&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;dual-translate-first&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;disable-rich-text-translate&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;use-alternating-pages-dual&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;watermark-output-mode&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;watermarked&amp;#34;&lt;/span&gt;  &lt;span class=&#34;c&#34;&gt;# Choices: &amp;#34;watermarked&amp;#34;, &amp;#34;no_watermark&amp;#34;, &amp;#34;both&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;max-pages-per-part&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;50&lt;/span&gt;  &lt;span class=&#34;c&#34;&gt;# Automatically split the document for translation and merge it back.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# no-watermark = false  # DEPRECATED: Use watermark-output-mode instead&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;skip-scanned-detection&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;  &lt;span class=&#34;c&#34;&gt;# Skip scanned document detection for faster processing&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Translation service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;openai&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;openai-model&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;gpt-4o-mini&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;openai-base-url&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://api.openai.com/v1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;openai-api-key&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;your-api-key-here&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Output control&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;no-dual&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;no-mono&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;min-text-length&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;report-interval&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Offline assets management&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Uncomment one of these options as needed:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# generate-offline-assets = &amp;#34;/path/to/output/dir&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# restore-offline-assets = &amp;#34;/path/to/offline_assets_package.zip&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;python-api&#34;&gt;Python API
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;[!TIP]&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Before pdf2zh 2.0 is released, you can temporarily use BabelDOC&amp;rsquo;s Python API. However, after pdf2zh 2.0 is released, please directly use pdf2zh&amp;rsquo;s Python API.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;This project&amp;rsquo;s Python API does not guarantee any compatibility. However, the Python API from pdf2zh will guarantee a certain level of compatibility.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;You can refer to the example in &lt;a class=&#34;link&#34; href=&#34;https://github.com/funstory-ai/yadt/blob/main/babeldoc/main.py&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;main.py&lt;/a&gt; to use BabelDOC&amp;rsquo;s Python API.&lt;/p&gt;
+&lt;p&gt;Please note:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Make sure call &lt;code&gt;babeldoc.high_level.init()&lt;/code&gt; before using the API&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The current &lt;code&gt;TranslationConfig&lt;/code&gt; does not fully validate input parameters, so you need to ensure the validity of input parameters&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For offline assets management, you can use the following functions:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Generate an offline assets package&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pathlib&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;babeldoc.assets.assets&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Generate package to a specific directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# path is optional, default is ~/.cache/babeldoc/assets/offline_assets_{hash}.zip&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;babeldoc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;assets&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;assets&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generate_offline_assets_package&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/path/to/output/dir&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Restore from a package file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# path is optional, default is ~/.cache/babeldoc/assets/offline_assets_{hash}.zip&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;babeldoc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;assets&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;assets&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;restore_offline_assets_package&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/path/to/offline_assets_package.zip&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# You can also restore from a directory containing the offline assets package&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# The tool will automatically find the correct package file based on the hash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;babeldoc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;assets&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;assets&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;restore_offline_assets_package&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/path/to/directory&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!TIP]&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The offline assets package name cannot be modified because the file list hash is encoded in the name.&lt;/li&gt;
+&lt;li&gt;When using in production environments, it&amp;rsquo;s recommended to pre-generate the assets package and include it with your application distribution.&lt;/li&gt;
+&lt;li&gt;The package verification ensures that all required assets are intact and match their expected checksums.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;background&#34;&gt;Background
+&lt;/h2&gt;&lt;p&gt;There are a lot projects and teams working on to make document editing and translating easier like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://mathpix.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mathpix&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://doc2x.noedgeai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Doc2X&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/opendatalab/MinerU&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;minerU&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/funstory-ai/yadt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PDFMathTranslate&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are also some solutions to solve specific parts of the problem like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/microsoft/unilm/tree/master/layoutreader&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;layoutreader&lt;/a&gt;: the read order of the text block in a pdf&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/surya-is/surya&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Surya&lt;/a&gt;: the structure of the pdf&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This project hopes to promote a standard pipeline and interface to solve the problem.&lt;/p&gt;
+&lt;p&gt;In fact, there are two main stages of a PDF parser or translator:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Parsing&lt;/strong&gt;: A stage of parsing means to get the structure of the pdf such as text blocks, images, tables, etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rendering&lt;/strong&gt;: A stage of rendering means to render the structure into a new pdf or other format.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For a service like mathpix, it will parse the pdf into a structure may be in a XML format, and then render them using a single column reader order as &lt;a class=&#34;link&#34; href=&#34;https://github.com/microsoft/unilm/tree/master/layoutreader&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;layoutreader&lt;/a&gt; does. The bad news is that the original structure lost.&lt;/p&gt;
+&lt;p&gt;Some people will use Adobe PDF Parser because it will generate a Word document and it keeps the original structure. But it is somewhat expensive.
+And you know, a pdf or word document is not a good format for reading in mobile devices.&lt;/p&gt;
+&lt;p&gt;We offer an intermediate representation of the results from parser and can be rendered into a new pdf or other format. The pipeline is also a plugin-based system which everybody can add their new model, ocr, renderer, etc.&lt;/p&gt;
+&lt;h2 id=&#34;roadmap&#34;&gt;Roadmap
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add line support&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add table support&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add cross-page/cross-column paragraph support&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; More advanced typesetting features&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Outline support&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Our first 1.0 version goal is to finish a translation from &lt;a class=&#34;link&#34; href=&#34;https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.7old.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PDF Reference, Version 1.7&lt;/a&gt; to the following language version:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Simplified Chinese&lt;/li&gt;
+&lt;li&gt;Traditional Chinese&lt;/li&gt;
+&lt;li&gt;Japanese&lt;/li&gt;
+&lt;li&gt;Spanish&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And meet the following requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;layout error less than 1%&lt;/li&gt;
+&lt;li&gt;content loss less than 1%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;known-issues&#34;&gt;Known Issues
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Parsing errors in the author and reference sections; they get merged into one paragraph after translation.&lt;/li&gt;
+&lt;li&gt;Lines are not supported.&lt;/li&gt;
+&lt;li&gt;Does not support drop caps.&lt;/li&gt;
+&lt;li&gt;Large pages will be skipped.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;how-to-contribute&#34;&gt;How to Contribute
+&lt;/h2&gt;&lt;p&gt;We encourage you to contribute to YADT! Please check out the &lt;a class=&#34;link&#34; href=&#34;https://github.com/funstory-ai/yadt/blob/main/docs/CONTRIBUTING.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CONTRIBUTING&lt;/a&gt; guide.&lt;/p&gt;
+&lt;p&gt;Everyone interacting in YADT and its sub-projects&amp;rsquo; codebases, issue trackers, chat rooms, and mailing lists is expected to follow the YADT &lt;a class=&#34;link&#34; href=&#34;https://github.com/funstory-ai/yadt/blob/main/docs/CODE_OF_CONDUCT.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Code of Conduct&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://immersivetranslate.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Immersive Translation&lt;/a&gt; sponsors monthly Pro membership redemption codes for active contributors to this project, see details at: &lt;a class=&#34;link&#34; href=&#34;https://github.com/funstory-ai/BabelDOC/blob/main/docs/CONTRIBUTOR_REWARD.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CONTRIBUTOR_REWARD.md&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgements&#34;&gt;Acknowledgements
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Byaidu/PDFMathTranslate&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PDFMathTranslate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/opendatalab/DocLayout-YOLO&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DocLayout-YOLO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/pdfminer/pdfminer.six&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pdfminer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/pymupdf/PyMuPDF&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyMuPDF&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/multimeric/Asynchronize/tree/master?tab=readme-ov-file&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Asynchronize&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/oleglpts/PriorityThreadPoolExecutor&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PriorityThreadPoolExecutor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;star_hist&#34;&gt;Star History&lt;/h2&gt;
+&lt;a href=&#34;https://star-history.com/#funstory-ai/babeldoc&amp;Date&#34;&gt;
+ &lt;picture&gt;
+   &lt;source media=&#34;(prefers-color-scheme: dark)&#34; srcset=&#34;https://api.star-history.com/svg?repos=funstory-ai/babeldoc&amp;type=Date&amp;theme=dark&#34; /&gt;
+   &lt;source media=&#34;(prefers-color-scheme: light)&#34; srcset=&#34;https://api.star-history.com/svg?repos=funstory-ai/babeldoc&amp;type=Date&#34; /&gt;
+   &lt;img alt=&#34;Star History Chart&#34; src=&#34;https://api.star-history.com/svg?repos=funstory-ai/babeldoc&amp;type=Date&#34;/&gt;
+ &lt;/picture&gt;
+&lt;/a&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

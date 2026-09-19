@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Animation Export on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/animation-export/</link>
+        <description>Recent content in Animation Export on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Mon, 25 Aug 2025 15:29:26 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/animation-export/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>mesh2motion-app</title>
+        <link>https://producthunt.programnotes.cn/en/p/mesh2motion-app/</link>
+        <pubDate>Mon, 25 Aug 2025 15:29:26 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/mesh2motion-app/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1591241900019-b4a4c6d1cb61?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYxMDY5Mjh8&amp;ixlib=rb-4.1.0" alt="Featured image of post mesh2motion-app" /&gt;&lt;h1 id=&#34;scottpetrovicmesh2motion-app&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/scottpetrovic/mesh2motion-app&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;scottpetrovic/mesh2motion-app&lt;/a&gt;
+&lt;/h1&gt;&lt;img src=&#34;./mesh2motion.svg&#34; alt=&#34;Mesh2Motion Logo&#34; width=&#34;400&#34;/&gt;
+&lt;p&gt;Import a 3D Model and automatically assign and export animations with Mesh2Motion. This is kind of similar to a web application like Mixamo, but I would like it to be more flexible so it can support other model and skeleton types. Hopefully the open source nature means it can be expanded on and evolve more than than the closed tools have.&lt;/p&gt;
+&lt;p&gt;The marketing site that explains features and release notes: &lt;a class=&#34;link&#34; href=&#34;https://mesh2motion.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://mesh2motion.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Try it live: &lt;a class=&#34;link&#34; href=&#34;https://app.mesh2motion.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://app.mesh2motion.org/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage
+&lt;/h2&gt;&lt;p&gt;There are instructions built into the web application, but this is the general flow of how to use it:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Import a 3d model of your choosing (currently only supports GLB/GLTF format)&lt;/li&gt;
+&lt;li&gt;Pick what type of skeleton that the 3d model will use&lt;/li&gt;
+&lt;li&gt;Modify the skeleton to fit inside of the model (optionally test the results)&lt;/li&gt;
+&lt;li&gt;Test out various animations to see the results.&lt;/li&gt;
+&lt;li&gt;Select which animations you want to use, then export (currently only GLB/GLTF supported format)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;building-and-running-locally&#34;&gt;Building and running locally
+&lt;/h2&gt;&lt;p&gt;The main dependency you need is Node.js. I am using 18.15, but other versions probably work fine too. Open you command line tool to the directory this readme is in. Run ths following commands to start the web server.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install
+npm run dev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;creating-a-production-build-for-the-web&#34;&gt;Creating a production build for the web
+&lt;/h2&gt;&lt;p&gt;We mostly just have typescript for this project, which web browsers cannot just read, so we need to do a build step to get everything ready for deploying. This project uses Vite for the web server and builder. See the vite.config.js for more info. This command will create a &amp;ldquo;dist&amp;rdquo; folder with all the files to serve to the web:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm run build
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;running-in-docker&#34;&gt;Running in Docker
+&lt;/h2&gt;&lt;p&gt;If you don&amp;rsquo;t want to modify your local file system, you can alternitvely build and run the project from Docker. Make sure you have Docker and Docker Compose installed. Navigate your command line tool to this directory where your Dockerfile is at. Make sure Docker is actually started and running before you run this command.&lt;/p&gt;
+&lt;p&gt;Execute the following command.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker-compose up -d
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To try it out, visit http://localhost:3000&lt;/p&gt;
+&lt;h2 id=&#34;running-and-creating-video-previews&#34;&gt;Running and creating video previews
+&lt;/h2&gt;&lt;p&gt;There is separate tool in the web app where you can generate video previews for each animation. It isn&amp;rsquo;t too hard to run, but it has a separate README file that explains how that works. It is more of an internal tool, so I didn&amp;rsquo;t want to muddy up this page too much.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;src/preview-generator/README.md&#34; &gt;Preview Generator Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;animator-guide&#34;&gt;Animator Guide
+&lt;/h2&gt;&lt;p&gt;Are you an animator who wants to help build out animations for this tool? This is by far my weakest skill, which is why I have been avoiding it. In the &lt;strong&gt;static &amp;gt; blender&lt;/strong&gt; folder, you can see all the source Blender files where I have been working. There are a couple of model files where I just have the model, and other files that actually contain the animations. These are the files we can build animations into.&lt;/p&gt;
+&lt;p&gt;🦊 fox.blend (animations for the quadruped character)&lt;/p&gt;
+&lt;p&gt;🫡 human.blend (animations for the humanoid character)&lt;/p&gt;
+&lt;p&gt;🐦‍⬛ bird.blend (animations for the bird character)&lt;/p&gt;
+&lt;p&gt;When new animations are added, I export everything to GLB and save the file in the &lt;strong&gt;static &amp;gt; animation&lt;/strong&gt; folder. Just overwrite the file that correlates. For the human animations, use the &amp;ldquo;addon&amp;rdquo; GLB file since these are being appended to the Quaternius ones. The Mixamo one is unused right now. Just a reference if I were to later add some type of support.&lt;/p&gt;
+&lt;p&gt;If you come up with anything, just get me the source .blend file and let me know what you changed. I can export it out to GLB and rebuild the animation previews.&lt;/p&gt;
+&lt;h2 id=&#34;contribute-to-the-animation-fund&#34;&gt;Contribute to the animation fund
+&lt;/h2&gt;&lt;p&gt;I don&amp;rsquo;t expect to be receiving money for working on this, but I am also not the best animator. If people want to see better, and more, animations made, add to the fund. I can pay for an animator to help build out the animation library better. Or, if you know an animator that wants to help with this, send them my way! I am just a dude working on this during nights and weekends.&lt;/p&gt;
+&lt;img src=&#34;./venmo.png&#34; alt=&#34;Venmo Animator Fund&#34; width=&#34;400&#34;/&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

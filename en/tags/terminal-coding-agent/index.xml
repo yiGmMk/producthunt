@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Terminal Coding Agent on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/terminal-coding-agent/</link>
+        <description>Recent content in Terminal Coding Agent on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sat, 09 May 2026 16:46:52 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/terminal-coding-agent/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>DeepSeek-TUI</title>
+        <link>https://producthunt.programnotes.cn/en/p/deepseek-tui/</link>
+        <pubDate>Sat, 09 May 2026 16:46:52 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/deepseek-tui/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1497345172581-5c2da4d00663?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzgzMTYzNzh8&amp;ixlib=rb-4.1.0" alt="Featured image of post DeepSeek-TUI" /&gt;&lt;h1 id=&#34;hmbowndeepseek-tui&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Hmbown/DeepSeek-TUI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hmbown/DeepSeek-TUI&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;deepseek-tui&#34;&gt;DeepSeek TUI
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;Terminal coding agent for DeepSeek V4. It runs from the &lt;code&gt;deepseek&lt;/code&gt; command, streams reasoning blocks, edits local workspaces with approval gates, and includes an auto mode that chooses both model and thinking level per turn.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;README.zh-CN.md&#34; &gt;简体中文 README&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;deepseek&lt;/code&gt; is distributed as Rust binaries: the dispatcher command
+(&lt;code&gt;deepseek&lt;/code&gt;) and the companion TUI runtime (&lt;code&gt;deepseek-tui&lt;/code&gt;). Pick whichever
+install path you already use; they all put the same commands on your &lt;code&gt;PATH&lt;/code&gt;.
+The npm package is an installer/wrapper for the release binaries, not the
+agent runtime itself.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1. npm — easiest if you already use Node. The package downloads the&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#    matching prebuilt Rust binaries from GitHub Releases.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install -g deepseek-tui
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2. Cargo — no Node needed.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cargo install deepseek-tui-cli --locked   &lt;span class=&#34;c1&#34;&gt;# `deepseek` (entry point)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cargo install deepseek-tui     --locked   &lt;span class=&#34;c1&#34;&gt;# `deepseek-tui` (TUI binary)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 3. Homebrew — macOS package manager.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew tap Hmbown/deepseek-tui
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install deepseek-tui
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 4. Direct download — no package manager or toolchain.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#    https://github.com/Hmbown/DeepSeek-TUI/releases&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#    Prebuilt for Linux x64/ARM64, macOS x64/ARM64, Windows x64.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 5. Docker — prebuilt release image.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run --rm -it &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -e DEEPSEEK_API_KEY &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -v &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PWD&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;:/workspace&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ghcr.io/hmbown/deepseek-tui:latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;In mainland China, speed up the npm path with
+&lt;code&gt;--registry=https://registry.npmmirror.com&lt;/code&gt;, or use the
+&lt;a class=&#34;link&#34; href=&#34;#china--mirror-friendly-installation&#34; &gt;Cargo mirror&lt;/a&gt; below.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Hmbown/DeepSeek-TUI/actions/workflows/ci.yml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/Hmbown/DeepSeek-TUI/actions/workflows/ci.yml/badge.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;CI&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.npmjs.com/package/deepseek-tui&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/npm/v/deepseek-tui&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;npm&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://crates.io/crates/deepseek-tui-cli&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/crates/v/deepseek-tui-cli?label=crates.io&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;crates.io&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://deepwiki.com/Hmbown/DeepSeek-TUI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DeepWiki project index&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/assets/screenshot.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;DeepSeek TUI screenshot&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-is-it&#34;&gt;What Is It?
+&lt;/h2&gt;&lt;p&gt;DeepSeek TUI is a coding agent that runs in your terminal. It can read and edit files, run shell commands, search the web, manage git, and coordinate sub-agents from a keyboard-driven TUI.&lt;/p&gt;
+&lt;p&gt;It is built around DeepSeek V4 (&lt;code&gt;deepseek-v4-pro&lt;/code&gt; / &lt;code&gt;deepseek-v4-flash&lt;/code&gt;), including 1M-token context windows, streaming reasoning blocks, and prefix-cache-aware cost reporting.&lt;/p&gt;
+&lt;h3 id=&#34;key-features&#34;&gt;Key Features
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Auto mode&lt;/strong&gt; — &lt;code&gt;--model auto&lt;/code&gt; / &lt;code&gt;/model auto&lt;/code&gt; chooses both the model and thinking level for each turn&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Thinking-mode streaming&lt;/strong&gt; — see DeepSeek reasoning blocks as the model works&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Full tool suite&lt;/strong&gt; — file ops, shell execution, git, web search/browse, apply-patch, sub-agents, MCP servers&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;1M-token context&lt;/strong&gt; — context tracking, manual or configured compaction, and prefix-cache telemetry&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Three modes&lt;/strong&gt; — Plan (read-only explore), Agent (interactive with approval), YOLO (auto-approved)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reasoning-effort tiers&lt;/strong&gt; — cycle through &lt;code&gt;off → high → max&lt;/code&gt; with &lt;code&gt;Shift + Tab&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Session save/resume&lt;/strong&gt; — checkpoint and resume long-running sessions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Workspace rollback&lt;/strong&gt; — side-git pre/post-turn snapshots with &lt;code&gt;/restore&lt;/code&gt; and &lt;code&gt;revert_turn&lt;/code&gt;, without touching your repo&amp;rsquo;s &lt;code&gt;.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Durable task queue&lt;/strong&gt; — background tasks can survive restarts&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HTTP/SSE runtime API&lt;/strong&gt; — &lt;code&gt;deepseek serve --http&lt;/code&gt; for headless agent workflows&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MCP protocol&lt;/strong&gt; — connect to Model Context Protocol servers for extended tooling; please see &lt;a class=&#34;link&#34; href=&#34;docs/MCP.md&#34; &gt;docs/MCP.md&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Native RLM&lt;/strong&gt; (&lt;code&gt;rlm_query&lt;/code&gt;) — run batched analysis through cheap &lt;code&gt;deepseek-v4-flash&lt;/code&gt; children using the same API client&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LSP diagnostics&lt;/strong&gt; — inline error/warning surfacing after every edit via rust-analyzer, pyright, typescript-language-server, gopls, clangd&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;User memory&lt;/strong&gt; — optional persistent note file injected into the system prompt for cross-session preferences&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Localized UI&lt;/strong&gt; — &lt;code&gt;en&lt;/code&gt;, &lt;code&gt;ja&lt;/code&gt;, &lt;code&gt;zh-Hans&lt;/code&gt;, &lt;code&gt;pt-BR&lt;/code&gt; with auto-detection&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Live cost tracking&lt;/strong&gt; — per-turn and session-level token usage and cost estimates; cache hit/miss breakdown&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Skills system&lt;/strong&gt; — composable, installable instruction packs from GitHub with no backend service required&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;how-its-wired&#34;&gt;How It&amp;rsquo;s Wired
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;deepseek&lt;/code&gt; (dispatcher CLI) → &lt;code&gt;deepseek-tui&lt;/code&gt; (companion binary) → ratatui interface ↔ async engine ↔ OpenAI-compatible streaming client. Tool calls route through a typed registry (shell, file ops, git, web, sub-agents, MCP, RLM) and results stream back into the transcript. The engine manages session state, turn tracking, the durable task queue, and an LSP subsystem that feeds post-edit diagnostics into the model&amp;rsquo;s context before the next reasoning step.&lt;/p&gt;
+&lt;p&gt;See &lt;a class=&#34;link&#34; href=&#34;docs/ARCHITECTURE.md&#34; &gt;docs/ARCHITECTURE.md&lt;/a&gt; for the full walkthrough.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;quickstart&#34;&gt;Quickstart
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install -g deepseek-tui
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek --version
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek --model auto
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Prebuilt binaries are published for &lt;strong&gt;Linux x64&lt;/strong&gt;, &lt;strong&gt;Linux ARM64&lt;/strong&gt; (v0.8.8+), &lt;strong&gt;macOS x64&lt;/strong&gt;, &lt;strong&gt;macOS ARM64&lt;/strong&gt;, and &lt;strong&gt;Windows x64&lt;/strong&gt;. For other targets (musl, riscv64, FreeBSD, etc.), see &lt;a class=&#34;link&#34; href=&#34;#install-from-source&#34; &gt;Install from source&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;docs/INSTALL.md&#34; &gt;docs/INSTALL.md&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;On first launch you&amp;rsquo;ll be prompted for your &lt;a class=&#34;link&#34; href=&#34;https://platform.deepseek.com/api_keys&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DeepSeek API key&lt;/a&gt;. The key is saved to &lt;code&gt;~/.deepseek/config.toml&lt;/code&gt; so it works from any directory without OS credential prompts.&lt;/p&gt;
+&lt;p&gt;You can also set it ahead of time:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek auth &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; --provider deepseek   &lt;span class=&#34;c1&#34;&gt;# saves to ~/.deepseek/config.toml&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek auth status                    &lt;span class=&#34;c1&#34;&gt;# shows the active credential source&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;DEEPSEEK_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;YOUR_KEY&amp;#34;&lt;/span&gt;      &lt;span class=&#34;c1&#34;&gt;# env var alternative; use ~/.zshenv for non-interactive shells&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek doctor                         &lt;span class=&#34;c1&#34;&gt;# verify setup&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If &lt;code&gt;deepseek doctor&lt;/code&gt; says the rejected key came from &lt;code&gt;DEEPSEEK_API_KEY&lt;/code&gt;, remove
+the stale export from your shell startup file, open a fresh shell, or run
+&lt;code&gt;deepseek auth set --provider deepseek&lt;/code&gt;. Use &lt;code&gt;deepseek auth status&lt;/code&gt; to see the
+config, keyring, and env-var source state without printing the key. Saved config
+keys take precedence over the keyring and environment and are easier to rotate.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;To rotate or remove a saved key: &lt;code&gt;deepseek auth clear --provider deepseek&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;auto-mode&#34;&gt;Auto Mode
+&lt;/h3&gt;&lt;p&gt;Use &lt;code&gt;deepseek --model auto&lt;/code&gt; or &lt;code&gt;/model auto&lt;/code&gt; when you want DeepSeek TUI to decide how much model and reasoning power a turn needs.&lt;/p&gt;
+&lt;p&gt;Auto mode controls two settings together:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Model: &lt;code&gt;deepseek-v4-flash&lt;/code&gt; or &lt;code&gt;deepseek-v4-pro&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Thinking: &lt;code&gt;off&lt;/code&gt;, &lt;code&gt;high&lt;/code&gt;, or &lt;code&gt;max&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Before the real turn is sent, the app makes a small &lt;code&gt;deepseek-v4-flash&lt;/code&gt; routing call with thinking off. That router looks at the latest request and recent context, then selects a concrete model and thinking level for the real request. Short/simple turns can stay on Flash with thinking off; coding, debugging, release work, architecture, security review, or ambiguous multi-step tasks can move up to Pro and/or higher thinking.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;auto&lt;/code&gt; is local to DeepSeek TUI. The upstream API never receives &lt;code&gt;model: &amp;quot;auto&amp;quot;&lt;/code&gt;; it receives the concrete model and thinking setting chosen for that turn. The TUI shows the selected route, and cost tracking is charged against the model that actually ran. If the router call fails or returns an invalid answer, the app falls back to a local heuristic. Sub-agents inherit auto mode unless you assign them an explicit model.&lt;/p&gt;
+&lt;p&gt;Use a fixed model or fixed thinking level when you want repeatable benchmarking, a strict cost ceiling, or a specific provider/model mapping.&lt;/p&gt;
+&lt;h3 id=&#34;linux-arm64-raspberry-pi-asahi-graviton-harmonyos-pc&#34;&gt;Linux ARM64 (Raspberry Pi, Asahi, Graviton, HarmonyOS PC)
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;npm i -g deepseek-tui&lt;/code&gt; works on glibc-based ARM64 Linux from v0.8.8 onward. You can also download prebuilt binaries from the &lt;a class=&#34;link&#34; href=&#34;https://github.com/Hmbown/DeepSeek-TUI/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Releases page&lt;/a&gt; and place them side by side on your &lt;code&gt;PATH&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;china--mirror-friendly-installation&#34;&gt;China / Mirror-friendly Installation
+&lt;/h3&gt;&lt;p&gt;If GitHub or npm downloads are slow from mainland China, use a Cargo registry mirror:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# ~/.cargo/config.toml&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;crates-io&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;replace-with&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;tuna&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;tuna&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;registry&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sparse+https://mirrors.tuna.tsinghua.edu.cn/crates.io-index/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Then install both binaries (the dispatcher delegates to the TUI at runtime):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cargo install deepseek-tui-cli --locked   &lt;span class=&#34;c1&#34;&gt;# provides `deepseek`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cargo install deepseek-tui     --locked   &lt;span class=&#34;c1&#34;&gt;# provides `deepseek-tui`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Prebuilt binaries can also be downloaded from &lt;a class=&#34;link&#34; href=&#34;https://github.com/Hmbown/DeepSeek-TUI/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Releases&lt;/a&gt;. Use &lt;code&gt;DEEPSEEK_TUI_RELEASE_BASE_URL&lt;/code&gt; for mirrored release assets.&lt;/p&gt;
+&lt;h3 id=&#34;windows-scoop&#34;&gt;Windows (Scoop)
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://scoop.sh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Scoop&lt;/a&gt; is a Windows package manager. DeepSeek TUI is listed
+in Scoop&amp;rsquo;s main bucket, but that manifest updates independently and can lag the
+GitHub/npm/Cargo release. Run &lt;code&gt;scoop update&lt;/code&gt; first, then verify the installed
+version with &lt;code&gt;deepseek --version&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scoop update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scoop install deepseek-tui
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Use npm or direct GitHub release downloads when you need the newest release
+before Scoop&amp;rsquo;s manifest catches up.&lt;/p&gt;
+&lt;details id=&#34;install-from-source&#34;&gt;
+&lt;summary&gt;Install from source&lt;/summary&gt;
+&lt;p&gt;Works on any Tier-1 Rust target — including musl, riscv64, FreeBSD, and older ARM64 distros.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Linux build deps (Debian/Ubuntu/RHEL):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#   sudo apt-get install -y build-essential pkg-config libdbus-1-dev&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#   sudo dnf install -y gcc make pkgconf-pkg-config dbus-devel&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/Hmbown/DeepSeek-TUI.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; DeepSeek-TUI
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cargo install --path crates/cli --locked   &lt;span class=&#34;c1&#34;&gt;# requires Rust 1.88+; provides `deepseek`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cargo install --path crates/tui --locked   &lt;span class=&#34;c1&#34;&gt;# provides `deepseek-tui`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Both binaries are required. Cross-compilation and platform-specific notes: &lt;a class=&#34;link&#34; href=&#34;docs/INSTALL.md&#34; &gt;docs/INSTALL.md&lt;/a&gt;.&lt;/p&gt;
+&lt;/details&gt;
+&lt;h3 id=&#34;other-api-providers&#34;&gt;Other API Providers
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# NVIDIA NIM&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek auth &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; --provider nvidia-nim --api-key &lt;span class=&#34;s2&#34;&gt;&amp;#34;YOUR_NVIDIA_API_KEY&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek --provider nvidia-nim
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Fireworks&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek auth &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; --provider fireworks --api-key &lt;span class=&#34;s2&#34;&gt;&amp;#34;YOUR_FIREWORKS_API_KEY&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek --provider fireworks --model deepseek-v4-pro
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Generic OpenAI-compatible endpoint&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek auth &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; --provider openai --api-key &lt;span class=&#34;s2&#34;&gt;&amp;#34;YOUR_OPENAI_COMPATIBLE_API_KEY&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;OPENAI_BASE_URL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://openai-compatible.example/v4&amp;#34;&lt;/span&gt; deepseek --provider openai --model glm-5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Self-hosted SGLang&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;SGLANG_BASE_URL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http://localhost:30000/v1&amp;#34;&lt;/span&gt; deepseek --provider sglang --model deepseek-v4-flash
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Self-hosted vLLM&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;VLLM_BASE_URL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http://localhost:8000/v1&amp;#34;&lt;/span&gt; deepseek --provider vllm --model deepseek-v4-flash
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Self-hosted Ollama&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ollama pull deepseek-coder:1.3b
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek --provider ollama --model deepseek-coder:1.3b
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;whats-new-in-v0824&#34;&gt;What&amp;rsquo;s New In v0.8.24
+&lt;/h2&gt;&lt;p&gt;A community-focused bugfix release picking up the backlog after the v0.8.23
+security release. &lt;a class=&#34;link&#34; href=&#34;CHANGELOG.md&#34; &gt;Full changelog&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cache-aware prompt diagnostics + payload optimization&lt;/strong&gt; (#1196, thanks
+&lt;strong&gt;wplll&lt;/strong&gt;) — new &lt;code&gt;/cache inspect&lt;/code&gt; and &lt;code&gt;/cache warmup&lt;/code&gt; commands, layered
+prompt classification (static / history / dynamic) with per-layer SHA-256
+hashes, wire-payload dedup for repeated tool outputs, and a footer cache-hit
+% chip from the DeepSeek API response. A new &lt;strong&gt;Project Context Pack&lt;/strong&gt; is
+injected into the stable prefix by default to improve cache hit rates;
+disable with &lt;code&gt;[context] project_pack = false&lt;/code&gt; if you&amp;rsquo;d rather keep prompts
+minimal.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Workspace-local slash commands&lt;/strong&gt; (#1259) — drop a &lt;code&gt;.deepseek/commands/foo.md&lt;/code&gt;
+in any project and &lt;code&gt;/foo&lt;/code&gt; works there. Also scans &lt;code&gt;.cursor/commands/&lt;/code&gt; and
+&lt;code&gt;.claude/commands/&lt;/code&gt;. Project-local shadows global by name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;@&lt;/code&gt;-mention completion finds AI-tool dot-directories&lt;/strong&gt; — files inside
+&lt;code&gt;.deepseek/&lt;/code&gt;, &lt;code&gt;.cursor/&lt;/code&gt;, &lt;code&gt;.claude/&lt;/code&gt;, and &lt;code&gt;.agents/&lt;/code&gt; are now discoverable
+via &lt;code&gt;@&lt;/code&gt; completion even when those dirs are in &lt;code&gt;.gitignore&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MCP paginated discovery&lt;/strong&gt; (#1250, thanks &lt;strong&gt;Liu-Vince&lt;/strong&gt;) — MCP servers that
+paginate &lt;code&gt;tools/list&lt;/code&gt; (e.g., gbrain at 5 per page) now have all their tools
+discovered via &lt;code&gt;nextCursor&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Snapshot disk cap&lt;/strong&gt; (#1112) — the snapshot side repo enforces a 500 MB
+hard limit, pruning oldest first when it&amp;rsquo;s hit. Guards against the reported
+1.2 TB blowup. Thanks &lt;strong&gt;@Giggitycountless&lt;/strong&gt; for the PR #1131 proposal.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;/clear&lt;/code&gt; resets the Todos sidebar&lt;/strong&gt; (#1258) — was only clearing the Plan
+panel before.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mouse-wheel survives focus toggles&lt;/strong&gt; — re-arms &lt;code&gt;EnableMouseCapture&lt;/code&gt; on
+&lt;code&gt;FocusGained&lt;/code&gt; so wheel scroll keeps working after Cmd+Tab or screenshot
+workflows.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;i18n: prompts in English get English replies&lt;/strong&gt; (#1118) — Chinese
+filenames in a project tree no longer bias the model toward Chinese
+responses.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plus&lt;/strong&gt;: language-directive strengthening, MCP error-message clarity
+improvements (PR #1196), and assorted polish.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;⚠️ &lt;strong&gt;Known issue:&lt;/strong&gt; v0.8.22+ have a Windows 10 conhost flicker regression
+(#1260) tracked for v0.8.25. v0.8.20 works correctly if you&amp;rsquo;re affected.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek                                         &lt;span class=&#34;c1&#34;&gt;# interactive TUI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek &lt;span class=&#34;s2&#34;&gt;&amp;#34;explain this function&amp;#34;&lt;/span&gt;                 &lt;span class=&#34;c1&#34;&gt;# one-shot prompt&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek --model deepseek-v4-flash &lt;span class=&#34;s2&#34;&gt;&amp;#34;summarize&amp;#34;&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;# model override&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek --model auto &lt;span class=&#34;s2&#34;&gt;&amp;#34;fix this bug&amp;#34;&lt;/span&gt;             &lt;span class=&#34;c1&#34;&gt;# auto-select model + thinking&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek --yolo                                  &lt;span class=&#34;c1&#34;&gt;# auto-approve tools&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek auth &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; --provider deepseek            &lt;span class=&#34;c1&#34;&gt;# save API key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek doctor                                  &lt;span class=&#34;c1&#34;&gt;# check setup &amp;amp; connectivity&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek doctor --json                           &lt;span class=&#34;c1&#34;&gt;# machine-readable diagnostics&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek setup --status                          &lt;span class=&#34;c1&#34;&gt;# read-only setup status&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek setup --tools --plugins                 &lt;span class=&#34;c1&#34;&gt;# scaffold tool/plugin dirs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek models                                  &lt;span class=&#34;c1&#34;&gt;# list live API models&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek sessions                                &lt;span class=&#34;c1&#34;&gt;# list saved sessions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek resume --last                           &lt;span class=&#34;c1&#34;&gt;# resume the most recent session in this workspace&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek resume &amp;lt;SESSION_ID&amp;gt;                     &lt;span class=&#34;c1&#34;&gt;# resume a specific session by UUID&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek fork &amp;lt;SESSION_ID&amp;gt;                       &lt;span class=&#34;c1&#34;&gt;# fork a session at a chosen turn&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek serve --http                            &lt;span class=&#34;c1&#34;&gt;# HTTP/SSE API server&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek serve --acp                             &lt;span class=&#34;c1&#34;&gt;# ACP stdio adapter for Zed/custom agents&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek run pr &amp;lt;N&amp;gt;                              &lt;span class=&#34;c1&#34;&gt;# fetch PR and pre-seed review prompt&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek mcp list                                &lt;span class=&#34;c1&#34;&gt;# list configured MCP servers&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek mcp validate                            &lt;span class=&#34;c1&#34;&gt;# validate MCP config/connectivity&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek mcp-server                              &lt;span class=&#34;c1&#34;&gt;# run dispatcher MCP stdio server&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deepseek update                                  &lt;span class=&#34;c1&#34;&gt;# check for and apply binary updates&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Docker images are published to GHCR for release builds:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker volume create deepseek-tui-home
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run --rm -it &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -e &lt;span class=&#34;nv&#34;&gt;DEEPSEEK_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$DEEPSEEK_API_KEY&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -v deepseek-tui-home:/home/deepseek/.deepseek &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ghcr.io/hmbown/deepseek-tui:latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;zed--acp&#34;&gt;Zed / ACP
+&lt;/h3&gt;&lt;p&gt;DeepSeek can run as a custom Agent Client Protocol server for editors that
+spawn local ACP agents over stdio. In Zed, add a custom agent server:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;agent_servers&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;DeepSeek&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;custom&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;command&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;deepseek&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;args&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;serve&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;--acp&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;env&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The first ACP slice supports new sessions and prompt responses through your
+existing DeepSeek config/API key. Tool-backed editing and checkpoint replay are
+not exposed through ACP yet.&lt;/p&gt;
+&lt;h3 id=&#34;keyboard-shortcuts&#34;&gt;Keyboard Shortcuts
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Key&lt;/th&gt;
+					&lt;th&gt;Action&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;Tab&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Complete &lt;code&gt;/&lt;/code&gt; or &lt;code&gt;@&lt;/code&gt; entries; while running, queue draft as follow-up; otherwise cycle mode&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;Shift+Tab&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Cycle reasoning-effort: off → high → max&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;F1&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Searchable help overlay&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;Esc&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Back / dismiss&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;Ctrl+K&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Command palette&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;Ctrl+R&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Resume an earlier session&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;Alt+R&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Search prompt history and recover cleared drafts&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;Ctrl+S&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Stash current draft (&lt;code&gt;/stash list&lt;/code&gt;, &lt;code&gt;/stash pop&lt;/code&gt; to recover)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;@path&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Attach file/directory context in composer&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;↑&lt;/code&gt; (at composer start)&lt;/td&gt;
+					&lt;td&gt;Select attachment row for removal&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Full shortcut catalog: &lt;a class=&#34;link&#34; href=&#34;docs/KEYBINDINGS.md&#34; &gt;docs/KEYBINDINGS.md&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;modes&#34;&gt;Modes
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Mode&lt;/th&gt;
+					&lt;th&gt;Behavior&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Plan&lt;/strong&gt; 🔍&lt;/td&gt;
+					&lt;td&gt;Read-only investigation — model explores and proposes a plan (&lt;code&gt;update_plan&lt;/code&gt; + &lt;code&gt;checklist_write&lt;/code&gt;) before making changes&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Agent&lt;/strong&gt; 🤖&lt;/td&gt;
+					&lt;td&gt;Default interactive mode — multi-step tool use with approval gates; model outlines work via &lt;code&gt;checklist_write&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;YOLO&lt;/strong&gt; ⚡&lt;/td&gt;
+					&lt;td&gt;Auto-approve all tools in a trusted workspace; still maintains plan and checklist for visibility&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;configuration&#34;&gt;Configuration
+&lt;/h2&gt;&lt;p&gt;User config: &lt;code&gt;~/.deepseek/config.toml&lt;/code&gt;. Project overlay: &lt;code&gt;&amp;lt;workspace&amp;gt;/.deepseek/config.toml&lt;/code&gt; (denied: &lt;code&gt;api_key&lt;/code&gt;, &lt;code&gt;base_url&lt;/code&gt;, &lt;code&gt;provider&lt;/code&gt;, &lt;code&gt;mcp_config_path&lt;/code&gt;). &lt;a class=&#34;link&#34; href=&#34;config.example.toml&#34; &gt;config.example.toml&lt;/a&gt; has every option.&lt;/p&gt;
+&lt;p&gt;Key environment variables:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Variable&lt;/th&gt;
+					&lt;th&gt;Purpose&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;DEEPSEEK_API_KEY&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;API key&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;DEEPSEEK_BASE_URL&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;API base URL&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;DEEPSEEK_HTTP_HEADERS&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Optional custom model request headers, e.g. &lt;code&gt;X-Model-Provider-Id=your-model-provider&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;DEEPSEEK_MODEL&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Default model&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;DEEPSEEK_STREAM_IDLE_TIMEOUT_SECS&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Stream idle timeout in seconds, default &lt;code&gt;300&lt;/code&gt;, clamped to &lt;code&gt;1..=3600&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;DEEPSEEK_PROVIDER&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;deepseek&lt;/code&gt; (default), &lt;code&gt;nvidia-nim&lt;/code&gt;, &lt;code&gt;openai&lt;/code&gt;, &lt;code&gt;openrouter&lt;/code&gt;, &lt;code&gt;novita&lt;/code&gt;, &lt;code&gt;fireworks&lt;/code&gt;, &lt;code&gt;sglang&lt;/code&gt;, &lt;code&gt;vllm&lt;/code&gt;, &lt;code&gt;ollama&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;DEEPSEEK_PROFILE&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Config profile name&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;DEEPSEEK_MEMORY&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Set to &lt;code&gt;on&lt;/code&gt; to enable user memory&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;NVIDIA_API_KEY&lt;/code&gt; / &lt;code&gt;OPENAI_API_KEY&lt;/code&gt; / &lt;code&gt;OPENROUTER_API_KEY&lt;/code&gt; / &lt;code&gt;NOVITA_API_KEY&lt;/code&gt; / &lt;code&gt;FIREWORKS_API_KEY&lt;/code&gt; / &lt;code&gt;SGLANG_API_KEY&lt;/code&gt; / &lt;code&gt;VLLM_API_KEY&lt;/code&gt; / &lt;code&gt;OLLAMA_API_KEY&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Provider auth&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;OPENAI_BASE_URL&lt;/code&gt; / &lt;code&gt;OPENAI_MODEL&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Generic OpenAI-compatible endpoint and model ID&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;SGLANG_BASE_URL&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Self-hosted SGLang endpoint&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;VLLM_BASE_URL&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Self-hosted vLLM endpoint&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;OLLAMA_BASE_URL&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Self-hosted Ollama endpoint&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;OLLAMA_MODEL&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Self-hosted Ollama model tag&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;NO_ANIMATIONS=1&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Force accessibility mode at startup&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;SSL_CERT_FILE&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Custom CA bundle for corporate proxies&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Set &lt;code&gt;locale&lt;/code&gt; in &lt;code&gt;settings.toml&lt;/code&gt;, use &lt;code&gt;/config locale zh-Hans&lt;/code&gt;, or rely on &lt;code&gt;LC_ALL&lt;/code&gt;/&lt;code&gt;LANG&lt;/code&gt; to choose UI chrome and the fallback language sent to V4 models. The latest user message still wins for natural-language reasoning and replies, so Chinese user turns stay Chinese even on an English system locale. See &lt;a class=&#34;link&#34; href=&#34;docs/CONFIGURATION.md&#34; &gt;docs/CONFIGURATION.md&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;docs/MCP.md&#34; &gt;docs/MCP.md&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;models--pricing&#34;&gt;Models &amp;amp; Pricing
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Model&lt;/th&gt;
+					&lt;th&gt;Context&lt;/th&gt;
+					&lt;th&gt;Input (cache hit)&lt;/th&gt;
+					&lt;th&gt;Input (cache miss)&lt;/th&gt;
+					&lt;th&gt;Output&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;deepseek-v4-pro&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;1M&lt;/td&gt;
+					&lt;td&gt;$0.003625 / 1M*&lt;/td&gt;
+					&lt;td&gt;$0.435 / 1M*&lt;/td&gt;
+					&lt;td&gt;$0.87 / 1M*&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;deepseek-v4-flash&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;1M&lt;/td&gt;
+					&lt;td&gt;$0.0028 / 1M&lt;/td&gt;
+					&lt;td&gt;$0.14 / 1M&lt;/td&gt;
+					&lt;td&gt;$0.28 / 1M&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;DeepSeek Platform defaults to &lt;code&gt;https://api.deepseek.com/beta&lt;/code&gt; in v0.8.16 so beta-gated API features can be tested without extra setup. Set &lt;code&gt;base_url = &amp;quot;https://api.deepseek.com&amp;quot;&lt;/code&gt; to opt out.&lt;/p&gt;
+&lt;p&gt;Legacy aliases &lt;code&gt;deepseek-chat&lt;/code&gt; / &lt;code&gt;deepseek-reasoner&lt;/code&gt; map to &lt;code&gt;deepseek-v4-flash&lt;/code&gt; and retire after July 24, 2026. NVIDIA NIM variants use your NVIDIA account terms.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;DeepSeek Pro rates currently reflect a limited-time 75% discount, which remains valid until 15:59 UTC on 31 May 2026. After that time, the TUI cost estimator will revert to the base Pro rates.&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!Note]
+For the latest DeepSeek-V4-Pro pricing, including the current 75% discount valid until 15:59 UTC on 31 May 2026, please consult the official &lt;a class=&#34;link&#34; href=&#34;https://api-docs.deepseek.com/zh-cn/quick_start/pricing&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DeepSeek pricing page&lt;/a&gt;. All rates listed in the README correspond to the officially published values.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;publishing-your-own-skill&#34;&gt;Publishing Your Own Skill
+&lt;/h2&gt;&lt;p&gt;DeepSeek TUI discovers skills from workspace directories (&lt;code&gt;.agents/skills&lt;/code&gt; → &lt;code&gt;skills&lt;/code&gt; → &lt;code&gt;.opencode/skills&lt;/code&gt; → &lt;code&gt;.claude/skills&lt;/code&gt; → &lt;code&gt;.cursor/skills&lt;/code&gt;) and global directories (&lt;code&gt;~/.agents/skills&lt;/code&gt; → &lt;code&gt;~/.claude/skills&lt;/code&gt; → &lt;code&gt;~/.deepseek/skills&lt;/code&gt;). Each skill is a directory with a &lt;code&gt;SKILL.md&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;~/.agents/skills/my-skill/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── SKILL.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Frontmatter required:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nn&#34;&gt;---&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;my-skill&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Use this when DeepSeek should follow my custom workflow.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nn&#34;&gt;---&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;# My Skill
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Instructions for the agent go here.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Commands: &lt;code&gt;/skills&lt;/code&gt; (list), &lt;code&gt;/skill &amp;lt;name&amp;gt;&lt;/code&gt; (activate), &lt;code&gt;/skill new&lt;/code&gt; (scaffold), &lt;code&gt;/skill install github:&amp;lt;owner&amp;gt;/&amp;lt;repo&amp;gt;&lt;/code&gt; (community), &lt;code&gt;/skill update&lt;/code&gt; / &lt;code&gt;uninstall&lt;/code&gt; / &lt;code&gt;trust&lt;/code&gt;. Community installs from GitHub require no backend service. Installed skills appear in the model-visible session context; the agent can auto-select relevant skills via the &lt;code&gt;load_skill&lt;/code&gt; tool when your task matches their descriptions.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Doc&lt;/th&gt;
+					&lt;th&gt;Topic&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/ARCHITECTURE.md&#34; &gt;ARCHITECTURE.md&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Codebase internals&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/CONFIGURATION.md&#34; &gt;CONFIGURATION.md&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Full config reference&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/MODES.md&#34; &gt;MODES.md&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Plan / Agent / YOLO modes&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/MCP.md&#34; &gt;MCP.md&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Model Context Protocol integration&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/RUNTIME_API.md&#34; &gt;RUNTIME_API.md&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;HTTP/SSE API server&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/INSTALL.md&#34; &gt;INSTALL.md&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Platform-specific install guide&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/MEMORY.md&#34; &gt;MEMORY.md&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;User memory feature guide&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/SUBAGENTS.md&#34; &gt;SUBAGENTS.md&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Sub-agent role taxonomy and lifecycle&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/KEYBINDINGS.md&#34; &gt;KEYBINDINGS.md&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Full shortcut catalog&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/RELEASE_RUNBOOK.md&#34; &gt;RELEASE_RUNBOOK.md&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Release process&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/LOCALIZATION.md&#34; &gt;LOCALIZATION.md&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;UI locale matrix &amp;amp; switching&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/OPERATIONS_RUNBOOK.md&#34; &gt;OPERATIONS_RUNBOOK.md&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Ops &amp;amp; recovery&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Full Changelog: &lt;a class=&#34;link&#34; href=&#34;CHANGELOG.md&#34; &gt;CHANGELOG.md&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;thanks&#34;&gt;Thanks
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/deepseek-ai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DeepSeek&lt;/a&gt;&lt;/strong&gt; — thank you for the models and support that power every turn. 感谢 DeepSeek 提供模型与支持，让每一次交互成为可能。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/datawhalechina&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DataWhale&lt;/a&gt;&lt;/strong&gt; 🐋 — thank you for your support and for welcoming us into the Whale Brother family. 感谢 DataWhale 的支持，并欢迎我们加入“鲸兄弟”大家庭。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This project ships with help from a growing community of contributors:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/merchloubna70-dot&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;merchloubna70-dot&lt;/a&gt;&lt;/strong&gt; — 28 PRs spanning features, fixes, and VS Code extension scaffolding (#645–#681)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/WyxBUPT-22&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WyxBUPT-22&lt;/a&gt;&lt;/strong&gt; — Markdown rendering for tables, bold/italic, and horizontal rules (#579)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/loongmiaow-pixel&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;loongmiaow-pixel&lt;/a&gt;&lt;/strong&gt; — Windows + China install documentation (#578)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/20bytes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;20bytes&lt;/a&gt;&lt;/strong&gt; — User memory docs and help polish (#569)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/staryxchen&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;staryxchen&lt;/a&gt;&lt;/strong&gt; — glibc compatibility preflight (#556)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Vishnu1837&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vishnu1837&lt;/a&gt;&lt;/strong&gt; — glibc compatibility improvements (#565)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/shentoumengxin&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;shentoumengxin&lt;/a&gt;&lt;/strong&gt; — Shell &lt;code&gt;cwd&lt;/code&gt; boundary validation (#524)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/toi500&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;toi500&lt;/a&gt;&lt;/strong&gt; — Windows paste fix report&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/xsstomy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;xsstomy&lt;/a&gt;&lt;/strong&gt; — Terminal startup repaint report&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/melody0709&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;melody0709&lt;/a&gt;&lt;/strong&gt; — Slash-prefix Enter activation report&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/lloydzhou&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;lloydzhou&lt;/a&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/jeoor&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;jeoor&lt;/a&gt;&lt;/strong&gt; — Compaction cost reports; lloydzhou also contributed deterministic environment context (#813, #922) and KV prefix-cache stabilisation (#1080)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Agent-Skill-007&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Agent-Skill-007&lt;/a&gt;&lt;/strong&gt; — README clarity pass (#685)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/woyxiang&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;woyxiang&lt;/a&gt;&lt;/strong&gt; — Windows install documentation (#696)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;mailto:wangfengcsu@qq.com&#34; &gt;wangfeng&lt;/a&gt;&lt;/strong&gt; — Pricing/discount info update (#692)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/zichen0116&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;zichen0116&lt;/a&gt;&lt;/strong&gt; — CODE_OF_CONDUCT.md (#686)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dfwqdyl-ui&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;dfwqdyl-ui&lt;/a&gt;&lt;/strong&gt; — model ID case-sensitivity compatibility report (#729)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Oliver-ZPLiu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Oliver-ZPLiu&lt;/a&gt;&lt;/strong&gt; — stale &lt;code&gt;working...&lt;/code&gt; state bug report and Windows clipboard fallback (#738, #850)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/reidliu41&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;reidliu41&lt;/a&gt;&lt;/strong&gt; — resume hint, workspace trust persistence, Ollama provider support, and thinking-block stream finalization (#863, #870, #921, #1078)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/xieshutao&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;xieshutao&lt;/a&gt;&lt;/strong&gt; — plain Markdown skill fallback (#869)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/GK012&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GK012&lt;/a&gt;&lt;/strong&gt; — npm wrapper &lt;code&gt;--version&lt;/code&gt; fallback (#885)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/y0sif&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;y0sif&lt;/a&gt;&lt;/strong&gt; — parent turn-loop wakeup after direct child sub-agent completion (#901)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/mac119&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mac119&lt;/a&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/leo119&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;leo119&lt;/a&gt;&lt;/strong&gt; — &lt;code&gt;deepseek update&lt;/code&gt; command documentation (#838, #917)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dumbjack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;dumbjack&lt;/a&gt;&lt;/strong&gt; / &lt;strong&gt;浩淼的mac&lt;/strong&gt; — command-safety null-byte hardening (#706, #918)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;macworkers&lt;/strong&gt; — fork confirmation with the new session id (#600, #919)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;zero&lt;/strong&gt; and &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/zerx-lab&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;zerx-lab&lt;/a&gt;&lt;/strong&gt; — notification condition config and richer OSC 9 notification body (#820, #920)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/chnjames&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;chnjames&lt;/a&gt;&lt;/strong&gt; — cached @mention completions, config recovery polish, and Windows UTF-8 shell output (#849, #927, #982, #1018)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/angziii&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;angziii&lt;/a&gt;&lt;/strong&gt; — config safety, async cleanup, Docker hardening, and command-safety fixes (#822, #824, #827, #831, #833, #835, #837)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/elowen53&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;elowen53&lt;/a&gt;&lt;/strong&gt; — UTF-8 decoding and deterministic test coverage (#825, #840)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/wdw8276&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wdw8276&lt;/a&gt;&lt;/strong&gt; — &lt;code&gt;/rename&lt;/code&gt; command for custom session titles (#836)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/banqii&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;banqii&lt;/a&gt;&lt;/strong&gt; — &lt;code&gt;.cursor/skills&lt;/code&gt; discovery path support (#817)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/junskyeed&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;junskyeed&lt;/a&gt;&lt;/strong&gt; — dynamic &lt;code&gt;max_tokens&lt;/code&gt; calculation for API requests (#826)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hafeez Pizofreude&lt;/strong&gt; — SSRF protection in &lt;code&gt;fetch_url&lt;/code&gt; and Star History chart&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unic (YuniqueUnic)&lt;/strong&gt; — Schema-driven config UI (TUI + web)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Jason&lt;/strong&gt; — SSRF security hardening&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/axobase001&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;axobase001&lt;/a&gt;&lt;/strong&gt; — snapshot orphan cleanup, npm install guards, session telemetry fixes, model-scope cache clear, symlinked skill support, and npm mirror-escape-hatch guidance (#975, #1032, #1047, #1049, #1052, #1019, #1051, #1056)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/MengZ-super&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MengZ-super&lt;/a&gt;&lt;/strong&gt; — &lt;code&gt;/theme&lt;/code&gt; command for dark/light toggle and SSE gzip/brotli decompression (#1057, #1061)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/DI-HUO-MING-YI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DI-HUO-MING-YI&lt;/a&gt;&lt;/strong&gt; — Plan-mode read-only sandbox safety fix (#1077)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/bevis-wong&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;bevis-wong&lt;/a&gt;&lt;/strong&gt; — precise paste-Enter auto-submit reproducer (#1073)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Duducoco&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Duducoco&lt;/a&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/AlphaGogoo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AlphaGogoo&lt;/a&gt;&lt;/strong&gt; — skills slash-menu and &lt;code&gt;/skills&lt;/code&gt; coverage fix (#1068, #1083)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ArronAI007&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ArronAI007&lt;/a&gt;&lt;/strong&gt; — window-resize artifact fix for macOS Terminal.app and ConHost (#993)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/THINKER-ONLY&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;THINKER-ONLY&lt;/a&gt;&lt;/strong&gt; — OpenRouter and custom-endpoint model-ID preservation (#1066)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Jefsky&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Jefsky&lt;/a&gt;&lt;/strong&gt; — DeepSeek endpoint correction report (#1079, #1084)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/wlon&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wlon&lt;/a&gt;&lt;/strong&gt; — NVIDIA NIM provider API-key preference diagnosis (#1081)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;contributing&#34;&gt;Contributing
+&lt;/h2&gt;&lt;p&gt;See &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;CONTRIBUTING.md&lt;/a&gt;. Pull requests welcome — check the &lt;a class=&#34;link&#34; href=&#34;https://github.com/Hmbown/DeepSeek-TUI/issues&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open issues&lt;/a&gt; for good first contributions.&lt;/p&gt;
+&lt;p&gt;Support: &lt;a class=&#34;link&#34; href=&#34;https://www.buymeacoffee.com/hmbown&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Buy me a coffee&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!Note]
+&lt;em&gt;Not affiliated with DeepSeek Inc.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;MIT&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;star-history&#34;&gt;Star History
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.star-history.com/?repos=Hmbown%2FDeepSeek-TUI&amp;amp;type=date&amp;amp;logscale=&amp;amp;legend=top-left&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://api.star-history.com/chart?repos=Hmbown/DeepSeek-TUI&amp;amp;type=date&amp;amp;legend=top-left&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Star History Chart&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

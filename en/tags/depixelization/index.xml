@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Depixelization on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/depixelization/</link>
+        <description>Recent content in Depixelization on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Wed, 29 Oct 2025 15:28:53 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/depixelization/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Depixelization_poc</title>
+        <link>https://producthunt.programnotes.cn/en/p/depixelization_poc/</link>
+        <pubDate>Wed, 29 Oct 2025 15:28:53 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/depixelization_poc/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1671686368026-a6eb65f14bb8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE3MjI4OTR8&amp;ixlib=rb-4.1.0" alt="Featured image of post Depixelization_poc" /&gt;&lt;h1 id=&#34;spipmdepixelization_&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/spipm/Depixelization_poc&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;spipm/Depixelization_poc&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;depix&#34;&gt;Depix
+&lt;/h1&gt;&lt;p&gt;Depix is a PoC for a technique to recover plaintext from pixelized screenshots.&lt;/p&gt;
+&lt;p&gt;This implementation works on pixelized images that were created with a linear box filter.
+In &lt;a class=&#34;link&#34; href=&#34;https://www.spipm.nl/2030.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;this article&lt;/a&gt; I cover background information on pixelization and similar research.&lt;/p&gt;
+&lt;h2 id=&#34;example&#34;&gt;Example
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/docs/img/Recovering_prototype_latest.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;updates&#34;&gt;Updates
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;24 dec &amp;lsquo;24: Made repo private, changed the name and made it public again. It just had a ridiculous amount of stars because of the media hype, which didn&amp;rsquo;t feel right. I made this as a quick PoC for a company back in the day, because someone pixelated part of a password for an account with Domain Admin rights. The hype got running by the catchy image and eventually this repo had 26152 stars. If I ever get this much stars again, I want it to be for a project that I&amp;rsquo;m that hyped about as well.
+&lt;img src=&#34;https://producthunt.programnotes.cn/images/stars.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;27 nov &amp;lsquo;23: Refactored and removed all this pip stuff. I like scripts I can just run. If a package can&amp;rsquo;t be found, just install it. Also added &lt;code&gt;tool_show_boxes.py&lt;/code&gt; to show how bad the box detector is (you have to really cut out the pixels exactly). Made a TODO to create a version that just cuts out boxes of static size.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Install the dependencies&lt;/li&gt;
+&lt;li&gt;Run Depix:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python3 depix.py &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -p /path/to/your/input/image.png &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -s images/searchimages/debruinseq_notepad_Windows10_closeAndSpaced.png &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -o /path/to/your/output.png
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;example-usage&#34;&gt;Example usage
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Depixelize example image created with Notepad and pixelized with Greenshot. Greenshot averages by averaging the gamma-encoded 0-255 values, which is Depix&amp;rsquo;s default mode.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python3 depix.py &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -p images/testimages/testimage3_pixels.png &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -s images/searchimages/debruinseq_notepad_Windows10_closeAndSpaced.png
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Result: &lt;img src=&#34;https://producthunt.programnotes.cn/docs/img/example_output_multiword.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Depixelize example image created with Sublime and pixelized with Gimp, where averaging is done in linear sRGB. The backgroundcolor option filters out the background color of the editor.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python3 depix.py &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -p images/testimages/sublime_screenshot_pixels_gimp.png &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -s images/searchimages/debruin_sublime_Linux_small.png &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --backgroundcolor 40,41,35 &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --averagetype linear
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Result: &lt;img src=&#34;https://producthunt.programnotes.cn/docs/img/output_depixelizedExample_linear.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(Optional) You can view if the box detector thingie finds your pixels with &lt;code&gt;tool_show_boxes.py&lt;/code&gt;. Consider a smaller batch of pixels if this looks all mangled. Example of good looking boxes:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python3 tool_show_boxes.py &lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -p images/testimages/testimage3_pixels.png &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -s images/searchimages/debruinseq_notepad_Windows10_closeAndSpaced.png
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;(Optional) You can create pixelized image by using &lt;code&gt;tool_gen_pixelated.py&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python3 tool_gen_pixelated.py -i /path/to/image.png -o pixed_output.png
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;For a detailed explanation, please try to run &lt;code&gt;$ python3 depix.py -h&lt;/code&gt; and &lt;code&gt;tool_gen_pixelated.py&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;about&#34;&gt;About
+&lt;/h2&gt;&lt;h3 id=&#34;making-a-search-image&#34;&gt;Making a Search Image
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Cut out the pixelated blocks from the screenshot as a single rectangle.&lt;/li&gt;
+&lt;li&gt;Paste a &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/De_Bruijn_sequence&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;De Bruijn sequence&lt;/a&gt; with expected characters in an editor with the same font settings as your input image (Same text size, similar font, same colors).&lt;/li&gt;
+&lt;li&gt;Make a screenshot of the sequence.&lt;/li&gt;
+&lt;li&gt;Move that screenshot into a folder like &lt;code&gt;images/searchimages/&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Run Depix with the &lt;code&gt;-s&lt;/code&gt; flag set to the location of this screenshot.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;making-a-pixelized-image&#34;&gt;Making a Pixelized Image
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Cut out the pixelized blocks exactly. See the &lt;code&gt;testimages&lt;/code&gt; for examples.&lt;/li&gt;
+&lt;li&gt;It tries to detect blocks but it doesn&amp;rsquo;t do an amazing job. Play with the &lt;code&gt;tool_show_boxes.py&lt;/code&gt; script and different cutouts if your blocks aren&amp;rsquo;t properly detected.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;algorithm&#34;&gt;Algorithm
+&lt;/h3&gt;&lt;p&gt;The algorithm uses the fact that the linear box filter processes every block separately. For every block it pixelizes all blocks in the search image to check for direct matches.&lt;/p&gt;
+&lt;p&gt;For some pixelized images Depix manages to find single-match results. It assumes these are correct. The matches of surrounding multi-match blocks are then compared to be geometrically at the same distance as in the pixelized image. Matches are also treated as correct. This process is repeated a couple of times.&lt;/p&gt;
+&lt;p&gt;After correct blocks have no more geometrical matches, it will output all correct blocks directly. For multi-match blocks, it outputs the average of all matches.&lt;/p&gt;
+&lt;h3 id=&#34;known-limitations&#34;&gt;Known limitations
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;The algorithm matches by integer block-boundaries. As a result, it has the underlying assumption that for all characters rendered (both in the de Brujin sequence and the pixelated image), the text positioning is done at pixel level. However, some modern text rasterizers position text &lt;a class=&#34;link&#34; href=&#34;http://agg.sourceforge.net/antigrain.com/research/font_rasterization/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;at sub-pixel accuracies&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;You need to know the font specifications and in some cases the screen settings with which the screenshot was taken. However, if there is enough plaintext in the original image you might be able to use the original as a search image.&lt;/li&gt;
+&lt;li&gt;This approach doesn&amp;rsquo;t work if additional image compression is performed, because it messes up the colors of a block.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;future-development&#34;&gt;Future development
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Implement more filter functions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Create more averaging filters that work like some popular editors do.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a new tool that utilizes HMMs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Still, anyone who is passionate about this type of depixelization is encouraged to implement their own HMM-based version and share it.&lt;/p&gt;
+&lt;h3 id=&#34;other-sources-and-tools&#34;&gt;Other sources and tools
+&lt;/h3&gt;&lt;p&gt;After creating this program, someone pointed me to a &lt;a class=&#34;link&#34; href=&#34;https://www.researchgate.net/publication/305423573_On_the_Ineffectiveness_of_Mosaicing_and_Blurring_as_Tools_for_Document_Redaction&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;research document&lt;/a&gt; from 2016 where a group of researchers managed to create a similar tool. Their tool has better precision and works across many different fonts. While their original source code is not public, an open-source implementation exists at &lt;a class=&#34;link&#34; href=&#34;https://github.com/JonasSchatz/DepixHMM&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DepixHMM&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Edit 16 Feb &amp;lsquo;22: &lt;a class=&#34;link&#34; href=&#34;https://bishopfox.com/authors/dan-petro&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Dan Petro&lt;/a&gt; created the tool UnRedacter (&lt;a class=&#34;link&#34; href=&#34;https://bishopfox.com/blog/unredacter-tool-never-pixelation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;write-up&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/BishopFox/unredacter&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;source&lt;/a&gt;) to crack a &lt;a class=&#34;link&#34; href=&#34;https://labs.jumpsec.com/can-depix-deobfuscate-your-data/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;challenge&lt;/a&gt; that was created as a response to Depix!&lt;/p&gt;
+&lt;p&gt;Edit 16 Apr &amp;lsquo;25: Jeff Geerling created a &lt;a class=&#34;link&#34; href=&#34;https://www.jeffgeerling.com/blog/2025/its-easier-ever-de-censor-videos&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;challenge&lt;/a&gt; for depixelating pixelated folder content in a moving image. Three people were able to do it. &lt;a class=&#34;link&#34; href=&#34;https://github.com/KoKuToru/de-pixelate_gaV-O6NPWrI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Here&lt;/a&gt; is a repo from KoKuToru showing how to do this with TensorFlow! Amazing!&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
