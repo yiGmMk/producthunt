@@ -1,9 +1,9 @@
 ---
 title: agent-skills
-date: 2026-09-17T20:41:52+08:00
+date: 2026-09-19T20:01:02+08:00
 draft: False
-image: https://images.unsplash.com/photo-1524415992653-5c28db77ce9e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk2NDg4MTh8&ixlib=rb-4.1.0
-tags: ['github',agent skills, AI coding agents, engineering workflows]
+image: https://images.unsplash.com/photo-1595455344954-2dd85d3a60b3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk4MTkxOTF8&ixlib=rb-4.1.0
+tags: ['github',AI agents, engineering skills, development workflows]
 categories: ['github']
 ---
 
@@ -230,7 +230,7 @@ Already installed? How you roll the pack out depends on your codebase. The **[Ad
 
 ---
 
-## All 24 Skills
+## All 25 Skills
 
 The commands above are entry points. The pack includes 25 skills total — 24 lifecycle skills plus the `using-agent-skills` meta-skill. Each skill is a structured workflow with steps, verification gates, and anti-rationalization tables. You can also reference any skill directly.
 

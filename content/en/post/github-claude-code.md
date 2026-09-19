@@ -1,9 +1,9 @@
 ---
 title: claude-code
-date: 2026-09-18T20:19:09+08:00
+date: 2026-09-19T20:02:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1734789251535-74def8e926a9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk3MzM4NzR8&ixlib=rb-4.1.0
-tags: ['github',Claude Code, coding tool, natural language processing]
+image: https://images.unsplash.com/photo-1687234187963-8906c938d3e8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk4MTkxOTF8&ixlib=rb-4.1.0
+tags: ['github',Claude Code, agentic coding tool, natural language commands]
 categories: ['github']
 ---
 
