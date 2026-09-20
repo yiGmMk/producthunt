@@ -1,9 +1,9 @@
 ---
 title: security-audit-skill
-date: 2026-09-19T20:00:18+08:00
+date: 2026-09-20T20:15:01+08:00
 draft: False
-image: https://images.unsplash.com/photo-1673675289232-4ee9463f44d4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk4MTkxOTF8&ixlib=rb-4.1.0
-tags: ['github',security audit, vulnerability discovery, AI agents]
+image: https://images.unsplash.com/photo-1587828862390-6e8d3504d6c6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk5MDY0NDJ8&ixlib=rb-4.1.0
+tags: ['github',security audit, audit, coverage-led hunting]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: financial-services
-date: 2026-05-10T17:00:02+08:00
+date: 2026-09-20T20:15:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1539192262370-c2e258ff1cf5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzg0MDM1OTN8&ixlib=rb-4.1.0
-tags: ['github',Claude, financial services, artificial intelligence]
+image: https://images.unsplash.com/photo-1679254205082-ba0b1d469ac4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk5MDY0NDJ8&ixlib=rb-4.1.0
+tags: ['github',financial services, AI agents, workflow automation]
 categories: ['github']
 ---
 
@@ -62,14 +62,14 @@ scripts/                       # deploy-managed-agent.sh · check.py · validate
 
 In Cowork, open **Settings → Plugins → Add plugin** and either:
 
-- **Paste this repo URL** — `https://github.com/anthropics/claude-for-financial-services` — then pick the agents and verticals you want from the marketplace list, or
+- **Paste this repo URL** — `https://github.com/anthropics/financial-services` — then pick the agents and verticals you want from the marketplace list, or
 - **Upload a zip** — zip any directory under `plugins/` (e.g. `plugins/agent-plugins/pitch-agent/`) and drop it in.
 
 ### Claude Code
 
 ```bash
 # Add the marketplace
-claude plugin marketplace add anthropics/claude-for-financial-services
+claude plugin marketplace add anthropics/financial-services
 
 # Core skills + connectors (install first)
 claude plugin install financial-analysis@claude-for-financial-services
@@ -119,9 +119,9 @@ Start with **financial-analysis** — it carries the shared modeling skills and 
 | **[investment-banking](./plugins/vertical-plugins/investment-banking)** | CIMs, teasers, process letters, buyer lists, merger models, deal tracking. |
 | **[equity-research](./plugins/vertical-plugins/equity-research)** | Earnings notes, initiations, model updates, thesis and catalyst tracking. |
 | **[private-equity](./plugins/vertical-plugins/private-equity)** | Sourcing, screening, diligence checklists, IC memos, portfolio monitoring. |
-| **[wealth-management](./plugins/vertical-plugins/wealth-management)** | Client reviews, financial plans, rebalancing, reporting, TLH. |
 | **[fund-admin](./plugins/vertical-plugins/fund-admin)** | GL recon, break tracing, accruals, roll-forwards, variance commentary, NAV tie-out. |
 | **[operations](./plugins/vertical-plugins/operations)** | KYC document parsing and rules-grid evaluation. |
+| **[claude-for-financial-advisors](./claude-for-financial-advisors)** | Advisor workflows: meeting prep and follow-up, compliance pre-check, prospect intake, rebalance review, alts and estate briefs, on live data from the advisor's CRM, portfolio, planning, and estate platforms. |
 | **[lseg](./plugins/partner-built/lseg)** *(partner)* | Bond RV, swap curves, FX carry, options vol, macro-rates monitoring on LSEG data. |
 | **[sp-global](./plugins/partner-built/spglobal)** *(partner)* | Tear sheets, earnings previews, funding digests on S&P Capital IQ. |
 
@@ -142,6 +142,7 @@ All connectors are centralized in the **financial-analysis** core plugin and sha
 | [PitchBook](https://pitchbook.com/) | `https://premium.mcp.pitchbook.com/mcp` |
 | [Chronograph](https://www.chronograph.pe/) | `https://ai.chronograph.pe/mcp` |
 | [Egnyte](https://www.egnyte.com/) | `https://mcp-server.egnyte.com/mcp` |
+| [Box](https://www.box.com/home) | `https://mcp.box.com` |
 
 > MCP access may require a subscription or API key from the provider.
 
@@ -240,20 +241,6 @@ These are reference templates — they get better when you tune them to how your
 | portfolio-monitoring | `/portfolio` | Track portfolio company KPIs and variances |
 | value-creation-plan | `/value-creation` | Post-close 100-day plans and EBITDA bridges |
 | ai-readiness | `/ai-readiness` | Assess a portfolio company's AI readiness |
-
-</details>
-
-<details>
-<summary><b>wealth-management</b> — advisor workflows</summary>
-
-| Skill | Command | Description |
-|---|---|---|
-| client-review | `/client-review` | Prep for client meetings with performance and talking points |
-| financial-plan | `/financial-plan` | Retirement, education, estate, and cash-flow projections |
-| portfolio-rebalance | `/rebalance` | Allocation drift analysis and tax-aware rebalancing |
-| client-report | `/client-report` | Client-facing performance reports |
-| investment-proposal | `/proposal` | Proposals for prospective clients |
-| tax-loss-harvesting | `/tlh` | Identify TLH opportunities and manage wash sales |
 
 </details>
 
