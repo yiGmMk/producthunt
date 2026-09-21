@@ -1,9 +1,9 @@
 ---
 title: cua
-date: 2026-09-20T20:15:32+08:00
+date: 2026-09-21T21:57:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1587828862390-6e8d3504d6c6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk5MDY0NDJ8&ixlib=rb-4.1.0
-tags: ['github',AI agents, desktop automation, computer use]
+image: https://images.unsplash.com/photo-1644780439297-7408445e0ef0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk5OTg5NDh8&ixlib=rb-4.1.0
+tags: ['github',AI agents, computer use, desktop automation]
 categories: ['github']
 ---
 

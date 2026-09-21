@@ -1,9 +1,9 @@
 ---
 title: coder
-date: 2026-09-19T20:01:44+08:00
+date: 2026-09-21T21:59:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1729180179367-ddadaeb50e18?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk4MTkxOTF8&ixlib=rb-4.1.0
-tags: ['github',self-hosted, cloud development environments, AI agents]
+image: https://images.unsplash.com/photo-1508344391098-d8e70224b163?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk5OTg5NDd8&ixlib=rb-4.1.0
+tags: ['github',cloud development environments, AI coding agents, self-hosted platform]
 categories: ['github']
 ---
 
