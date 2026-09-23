@@ -1,9 +1,9 @@
 ---
 title: financial-services
-date: 2026-09-22T20:39:07+08:00
+date: 2026-09-23T20:47:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1682547094964-dd621debede3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAwODA3MDV8&ixlib=rb-4.1.0
-tags: ['github',Claude, financial services, agents]
+image: https://images.unsplash.com/photo-1661899106133-fa7e4e952c97?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAxNjc2NDZ8&ixlib=rb-4.1.0
+tags: ['github',Fintech, financial services, AI agents]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: ax
-date: 2026-09-22T20:41:00+08:00
+date: 2026-09-23T20:48:18+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591121213541-c93b6e74c47a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAwODA3MDV8&ixlib=rb-4.1.0
-tags: ['github',autonomous agents, declarative orchestration, sandboxed execution]
+image: https://images.unsplash.com/photo-1683060971021-9d03f56ab4b0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAxNjc2NDZ8&ixlib=rb-4.1.0
+tags: ['github',AX, orchestrator, agent]
 categories: ['github']
 ---
 

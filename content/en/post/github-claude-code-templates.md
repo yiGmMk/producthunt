@@ -1,9 +1,9 @@
 ---
 title: claude-code-templates
-date: 2026-09-22T20:40:26+08:00
+date: 2026-09-23T20:48:56+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591121213541-c93b6e74c47a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAwODA3MDV8&ixlib=rb-4.1.0
-tags: ['github',Claude Code, Templates, AI Agents]
+image: https://images.unsplash.com/photo-1661899106133-fa7e4e952c97?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAxNjc2NDZ8&ixlib=rb-4.1.0
+tags: ['github',Claude Code, templates, MCPs]
 categories: ['github']
 ---
 

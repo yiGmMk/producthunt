@@ -1,9 +1,9 @@
 ---
 title: agent-native
-date: 2026-09-21T21:57:15+08:00
+date: 2026-09-23T20:49:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1671548242386-ca675c0fd414?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk5OTg5NDd8&ixlib=rb-4.1.0
-tags: ['github',agent native, typescript, framework]
+image: https://images.unsplash.com/photo-1520816468865-97e02931f666?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAxNjc2NDZ8&ixlib=rb-4.1.0
+tags: ['github',agent native, typescript framework, shared actions]
 categories: ['github']
 ---
 

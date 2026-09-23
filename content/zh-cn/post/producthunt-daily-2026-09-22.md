@@ -1,0 +1,137 @@
+---
+title: Product Hunt 今日热榜 | 2026-09-23
+date: 2026-09-23 12:45:18+0000
+image: https://ph-files.imgix.net/7d52afc1-9d27-45c5-b258-6b557bf0e7d4.jpeg?auto=format
+tags: ["团队协作", "AI视频创作", "聊天交互编辑"]
+---
+
+## 1. Clueso MCP  
+**标语**: 通过聊天创建和编辑视频  
+**介绍**: 用Clueso让Claude、ChatGPT或任何AI智能体帮你制作视频。只需提供创意、演示文稿、参考视频或录音，它就能包办完整的视频制作流程：分镜、场景、配音、配乐、剪辑，全程保持品牌风格。所有内容均可手动或通过聊天进行编辑调整。  
+**网站**: [立即访问](https://www.producthunt.com/r/CFUV35KT4ZLPZO?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/clueso?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Clueso MCP](https://ph-files.imgix.net/7d52afc1-9d27-45c5-b258-6b557bf0e7d4.jpeg?auto=format)  
+**关键词**: AI视频创作, 聊天交互编辑, 智能视频工具, 全流程视频生产, 品牌一致性, 可编辑内容  
+**票数**: 🔺504  
+**是否精选**: 是  
+**发布时间**: 2026年09月22日 PM03:01 (北京时间)  
+
+---  
+
+## 2. WZRD  
+**标语**: 能对话的AI原生文档、幻灯片、表格和表单  
+**介绍**: WZRD专为使用文档、幻灯片、表单和表格的团队与创作者设计。您既可上传现有作品，也能通过指令新建内容，并将其转化为用户可参与的AI交互体验。表单支持语音或文字收集答复，表格能对数据进行语音解读，幻灯片可引导听众理解内容脉络，文档则能让每位用户深度参与。所有输出始终保持对话式互动与即时响应。  
+**网站**: [立即访问](https://www.producthunt.com/r/6OKF7YXETYBRXV?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/wzrd?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![WZRD](https://ph-files.imgix.net/f092e01e-4adb-4c73-85b1-7e3518a807c9.jpeg?auto=format)  
+**关键词**: AI原生, 交互式文档, 团队协作, 语音输入, 对话式输出, 幻灯片演示, 表单收集, 表格分析  
+**票数**: 🔺317  
+**是否精选**: 是  
+**发布时间**: 2026年09月22日 PM03:01 (北京时间)  
+
+---  
+
+## 3. Anomalo  
+**标语**: 你的数据始终在诉说，别错过它的声音。  
+**介绍**: 您的数据时刻在变化。Anomalo Analyst 在您尚未察觉时，就主动揭示关键信息。它能持续监控 Snowflake、Databricks 或 BigQuery 中的数据，自动呈现重要趋势、异常与变动，并让您用自然语言直接追问探查。每个洞察都经过您数据的验证，Anomalo 帮助您辨别真实业务变化与数据异常。  
+**网站**: [立即访问](https://www.producthunt.com/r/JX5YLOBNA72SYU?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/anomalo?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Anomalo](https://ph-files.imgix.net/bf1246fd-ae8d-434e-b093-b510985328be.png?auto=format)  
+**关键词**: 异常检测,主动监控,趋势分析,数据问题检测,自然语言查询,多平台支持  
+**票数**: 🔺301  
+**是否精选**: 是  
+**发布时间**: 2026年09月22日 PM03:01 (北京时间)  
+
+---  
+
+## 4. SereneDB  
+**标语**: 极速搜索分析数据库，智能体AI就绪  
+**介绍**: SereneDB历经12年研发，是一款开源数据库，能在单一引擎中实现超高速全文检索与快速分析。它兼容Postgres和Elastic：保留您原有的SQL语句、驱动程序及Elastic客户端，无需维护双系统及中间ETL流程。公开基准测试显示，其性能超越Elasticsearch、ClickHouse及Postgres搜索扩展，能以约1/10的磁盘空间在8分钟内完成10亿条日志的索引。项目采用Apache 2.0协议，测试方法与原始数据均已公开。  
+**网站**: [立即访问](https://www.producthunt.com/r/JNUSRVQLG5UDSB?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/serenedb-krummelanke?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![SereneDB](https://ph-files.imgix.net/7af97d99-3fe7-4f37-8b1f-4867e6aa781f.png?auto=format)  
+**关键词**: SereneDB,开源数据库,超快搜索分析,AI就绪,Postgres兼容,Elastic兼容,高性能,低存储  
+**票数**: 🔺250  
+**是否精选**: 是  
+**发布时间**: 2026年09月22日 PM03:01 (北京时间)  
+
+---  
+
+## 5. thestory.run  
+**标语**: 企业影响力写作教练  
+**介绍**: 你的团队其实有很多想法，只是不知如何表达。我们的写作教练帮助你保持稳定输出，发掘值得分享的故事，并让你成为真正的执笔者。大多数AI工具会接管写作过程，而thestory.run恰恰相反：教练通过访谈了解你的想法，捕捉你反复琢磨的核心，为你梳理故事脉络，最终由你亲手完成创作。正是这位教练全程协助你：从一次真实的对话开始，将纷乱的思绪整理成一篇完整的文章。在每篇文章之间，它还会帮你保持每周的更新节奏，让你无需猜测下一步该写什么。  
+**网站**: [立即访问](https://www.producthunt.com/r/4NQTG6TFZMKOFG?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/thestory-run?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![thestory.run](https://ph-files.imgix.net/b8ddc878-d110-46f6-825f-62f3310ddf10.jpeg?auto=format)  
+**关键词**: 写作教练, 企业影响者, 故事创作, 内容一致性, 周计划管理  
+**票数**: 🔺185  
+**是否精选**: 是  
+**发布时间**: 2026年09月22日 PM03:01 (北京时间)  
+
+---  
+
+## 6. Freebuff Ads  
+**标语**: 向50万开发者推广我们的AI代码生成代理  
+**介绍**: 在Freebuff桌面应用、移动端、网页及命令行界面投放广告——这里已有50万开发者活跃工作。采用按点击付费模式，自主设置预算上限，并通过统一控制台追踪点击与转化数据。  
+**网站**: [立即访问](https://www.producthunt.com/r/M4PG5RMW35MG4V?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/freebuff-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Freebuff Ads](https://ph-files.imgix.net/dcdb547c-c3b6-4eb1-84f6-cb802358e3cc.png?auto=format)  
+**关键词**: Freebuff Ads, 开发者广告, 多平台投放, 按点击付费, 广告预算控制, 点击转化测量  
+**票数**: 🔺151  
+**是否精选**: 是  
+**发布时间**: 2026年09月22日 PM03:01 (北京时间)  
+
+---  
+
+## 7. PixelCrew  
+**标语**: 由AI代理团队打造的、可直接投入生产的设计方案  
+**介绍**: 一支专业AI团队根据您的需求简报，协同完成生产质量的设计交付。涵盖市场研究、创意指导、线框图设计，以及搭载设计系统的生产级HTML代码。您可实时观看智能体讨论决策过程。目前提供免费内测版：使用您的OpenRouter密钥，即可按偏好自由调配模型运行该团队。  
+**网站**: [立即访问](https://www.producthunt.com/r/4J7QOHDZNA32KU?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/pixelcrew?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![PixelCrew](https://ph-files.imgix.net/15175cd5-73b4-43f7-adaf-0301003db16d.jpeg?auto=format)  
+**关键词**: PixelCrew, AI设计团队, 生产就绪设计, AI代理协作, 创意指导, 线框图, 设计系统, 实时讨论, 免费内测, OpenRouter集成  
+**票数**: 🔺138  
+**是否精选**: 是  
+**发布时间**: 2026年09月22日 PM03:01 (北京时间)  
+
+---  
+
+## 8. Plane Agents  
+**标语**: 为AI智能体分配工作，如同对待任何团队成员一样。  
+**介绍**: Plane Agents作为成员加入您的工作区。您可以为他们分配工作项、标记他们、在工作变化时触发他们，或按计划运行他们。他们负责处理请求、起草规范、运行站会、标记交付风险等等。代理运行所需的AI点数包含在所有付费计划中。  
+**网站**: [立即访问](https://www.producthunt.com/r/K3DAYV2WJKMEFI?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/planehq?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Plane Agents](https://ph-files.imgix.net/db04b224-47eb-4228-b358-4dba3370da66.jpeg?auto=format)  
+**关键词**: AI代理, 工作分配, 自动化, 团队协作, 智能助手  
+**票数**: 🔺116  
+**是否精选**: 是  
+**发布时间**: 2026年09月22日 PM03:01 (北京时间)  
+
+---  
+
+## 9. MiMo-V2.6  
+**标语**: 开放的全模态智能，基于公开数据训练  
+**介绍**: MiMo-V2.6是小米面向长程代理任务的开源全模态模型家族。Pro与Flash版本可处理文本、图像、音频及视频数据，并支持100万tokens上下文长度。小米同时公开了技术报告、强化学习环境及训练代码，披露了公开后训练阶段的技术细节。  
+**网站**: [立即访问](https://www.producthunt.com/r/2DBGXRT2EMQKE7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/mimo-3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![MiMo-V2.6](https://ph-files.imgix.net/a98869b4-7a41-404e-a83f-287cd6fb6969.png?auto=format)  
+**关键词**: 小米, MiMo-V2.6, 开放式多模态智能, 公开训练, 长期智能体, 多模态处理, 1M上下文, 技术报告, RL环境, 训练代码  
+**票数**: 🔺114  
+**是否精选**: 是  
+**发布时间**: 2026年09月22日 PM03:01 (北京时间)  
+
+---  
+
+## 10. Pulsetic RUM  
+**标语**: 面向真实访客的运行时间监控，让您的网站始终在线。  
+**介绍**: Pulsetic是一款正常运行时间监测工具，同时还能测量真实访客数据。通过一个异步脚本，它能报告核心网页指标、加载时间百分位数以及遇到的JavaScript错误，并按页面、国家、浏览器和设备进行细分，从而帮助您发现那些被200响应码掩盖的缓慢结账问题。您可以用通俗语言直接询问Pulsetic AI昨晚出现了什么故障。此外，定时心跳监测、域名到期提醒和品牌状态页面等功能都可在同一账户中运行。  
+**网站**: [立即访问](https://www.producthunt.com/r/IL52O5VB4PYSYL?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/pulsetic?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Pulsetic RUM](https://ph-files.imgix.net/874f6f99-1497-4462-81f7-f34600849404.png?auto=format)  
+**关键词**: 正常运行时间监控, 真实访问者测量, 核心网页指标, 加载时间分析, JavaScript错误跟踪, 多维度性能切片, AI监控查询, 心跳检测, 域名过期提醒, 品牌状态页面  
+**票数**: 🔺113  
+**是否精选**: 是  
+**发布时间**: 2026年09月22日 PM03:01 (北京时间)  
+
+---  
+
