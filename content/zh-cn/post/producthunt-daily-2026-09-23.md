@@ -1,0 +1,138 @@
+---
+title: Product Hunt 今日热榜 | 2026-09-24
+date: 2026-09-24 12:44:02+0000
+image: https://ph-files.imgix.net/c40c6125-59a7-4669-807c-9f510a1b82eb.jpeg?auto=format
+tags: ["AI代理", "自主操作", "工作流程自动化"]
+---
+
+## 1. Solid  
+**标语**: 拥有各自计算机、账户和预算的代理人员。  
+**介绍**: Solid的AI代理不仅能构建应用、自动化工作流程，还能处理您无暇顾及或缺乏专业知识的任务。它们能自主挑选并配置实体设备，创建账户并为服务付费。这些代理可通过API使用您的应用程序，或像真人一样登录操作。它们能填补技术缺口，并在运行过程中随时修复问题。请超越Grok Bot和Muse等个人助手的想象：Solid专为您和团队设计，致力于处理复杂且需要长期运行的工作。合上笔记本电脑吧，Solid将为您全程接管任务，从开始到完成。  
+**网站**: [立即访问](https://www.producthunt.com/r/IGFJIPCFXEAE6A?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/solid-3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Solid](https://ph-files.imgix.net/c40c6125-59a7-4669-807c-9f510a1b82eb.jpeg?auto=format)  
+**关键词**: AI代理, 自主操作, 工作流程自动化, 应用程序构建, 复杂任务, 团队协作, 端到端负责  
+**票数**: 🔺449  
+**是否精选**: 是  
+**发布时间**: 2026年09月23日 PM03:01 (北京时间)  
+
+---  
+
+## 2. Naise AI  
+**标语**: 切实执行任务的自主营销代理  
+**介绍**: 别再费力调教只会输出空话的AI了。Naise AI为企业创始人和精干团队提供完整市场部门的产出能力，却无需高昂成本。用持久记忆功能锁定品牌准则，选择提示策略手册，让平台自动执行所有环节——从筛选真实影响者、对接媒体记者，到原生内容生成与社交排期。24小时内即可完成从冷启动到活动上线，每周节省40多小时，大幅削减营销成本。  
+**网站**: [立即访问](https://www.producthunt.com/r/I323VH3KBIWT3P?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/naise-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Naise AI](https://ph-files.imgix.net/210dea8f-67c2-488a-9749-64d1460aea83.jpeg?auto=format)  
+**关键词**: 自主营销代理, 自动执行, 节省时间, 降低成本, 持久记忆, 提示剧本, 影响者审查, 内容生成, 快速启动  
+**票数**: 🔺401  
+**是否精选**: 是  
+**发布时间**: 2026年09月23日 PM03:01 (北京时间)  
+
+---  
+
+## 3. Claude Opus 5.5  
+**标语**: Anthropic新Claude 5.5系列的首个模型  
+**介绍**: Claude Opus 5.5是Anthropic公司面向自主编程与知识工作的最新模型，在典型工作负载中较Opus 5实现了性能大幅提升、沟通更清晰、安全性更强，同时成本降低40%。  
+**网站**: [立即访问](https://www.producthunt.com/r/HM6M2YVM5UHR65?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/claude-fable-5-1?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Claude Opus 5.5](https://ph-files.imgix.net/7828634b-3a45-4f28-940b-5ec899dfc3dd.jpeg?auto=format)  
+**关键词**: Claude Opus 5.5, Claude 5.5系列, 首个模型, 代理编码, 知识工作, 性能提升, 沟通清晰, 安全性强, 成本降低40%  
+**票数**: 🔺329  
+**是否精选**: 是  
+**发布时间**: 2026年09月23日 PM03:01 (北京时间)  
+
+---  
+
+## 4. Pactto  
+**标语**: 创意在这里碰撞，AI在此处赋能。  
+**介绍**: Pactto是专为创意团队打造的全新AI平台，能够以工作室品质呈现作品，在理解创意意图的AI代理辅助下审阅素材，实时记录所有修改意见并即时调整。与Zoom或Google Meet这类会议结束后内容即消失的平台不同，Pactto空间会记住一切：每次对话、每个决策、每条反馈都永久留存。  
+**网站**: [立即访问](https://www.producthunt.com/r/RLRRZFYMNIPNLM?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/pactto-replay?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Pactto](https://ph-files.imgix.net/91d6c653-d939-4a7d-864d-375aaf5be6d7.jpeg?auto=format)  
+**关键词**: 根据您的要求，这是根据产品名称、标语和描述生成的关键词：
+creative collaboration platform, AI for creative teams, studio quality presentations, AI assistant for feedback, persistent meeting rooms, real-time editing, collaborative decision-making, creative workflow tool, AI note-taking  
+**票数**: 🔺187  
+**是否精选**: 是  
+**发布时间**: 2026年09月23日 PM03:01 (北京时间)  
+
+---  
+
+## 5. ToneBird  
+**标语**: AI人际记忆助手  
+**介绍**: ToneBird是一款适用于Mac和Windows的AI回复助手。它能记录您的人际关系、利用对话历史与关联文件，并在Gmail、Slack等支持的应用程序中以您的口吻起草回复。您可以审阅并发送。  
+**网站**: [立即访问](https://www.producthunt.com/r/HIQMABO4AMMX6M?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/tonebird?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![ToneBird](https://ph-files.imgix.net/0f1a1423-d48e-43f4-abbf-1caf863d10c8.jpeg?auto=format)  
+**关键词**: AI回复助手,关系记忆,对话历史,文件连接,语音起草,Gmail集成,Slack集成,跨平台支持,审核发送  
+**票数**: 🔺155  
+**是否精选**: 是  
+**发布时间**: 2026年09月23日 PM03:01 (北京时间)  
+
+---  
+
+## 6. AgentScore   
+**标语**: 每日评分，查看你的代理是否有所进步  
+**介绍**: 将您的生产代理连接到Latitude平台，即可获取涵盖成效、可靠性、成本、速度和安全性等维度的质量评分。该得分每日更新，让您随时掌握代理性能的改善或下降趋势。  
+**网站**: [立即访问](https://www.producthunt.com/r/E6BYZGQEHMHBPN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/latitude-4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![AgentScore ](https://ph-files.imgix.net/59653a74-38fc-49e5-aa35-9afd46498206.png?auto=format)  
+**关键词**: 代理评分,每日更新,质量评估,性能监控,代理改进  
+**票数**: 🔺155  
+**是否精选**: 是  
+**发布时间**: 2026年09月23日 PM03:01 (北京时间)  
+
+---  
+
+## 7. Alexandria by Firecrawl  
+**标语**: 超级智能知识库  
+**介绍**: 让AI智能体通过单一连接直接访问数据供应商、专用索引及完整数据集。相比内置网络工具，使用Alexandria的AI智能体在回答质量上高出21％。可通过Firecrawl的MCP、CLI及API使用该功能。  
+**网站**: [立即访问](https://www.producthunt.com/r/7SMGEWDYQVGNQL?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/extract-by-firecrawl?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Alexandria by Firecrawl](https://ph-files.imgix.net/5a9294b2-47e2-49e7-86d2-93430f823cb9.jpeg?auto=format)  
+**关键词**: 知识库, 超级智能, AI代理, 数据访问, 单一连接, 答案质量提升, Firecrawl  
+**票数**: 🔺127  
+**是否精选**: 是  
+**发布时间**: 2026年09月23日 PM03:01 (北京时间)  
+
+---  
+
+## 8. Lightmeter  
+**标语**: 为日常瞬间而生  
+**介绍**: 携带胶片时，它就是真正的测光表；不携带时，它便是胶片相机。呈现胶片级画质，基于真实的RAW捕捉——颗粒感、光晕效应和色彩表现皆如真实胶片，而非平面照片的滤镜效果。无人工智能介入，无需账户登录，所有数据仅留存于你的手机。  
+**网站**: [立即访问](https://www.producthunt.com/r/V2C7WTGQONQTIO?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/lightmeter-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Lightmeter](https://ph-files.imgix.net/a3671590-be6c-45fa-9782-f7bdec049e42.png?auto=format)  
+**关键词**: 光表, 胶片相机, 日常摄影, RAW捕捉, 胶片效果, 无AI, 数据隐私, 手机应用  
+**票数**: 🔺123  
+**是否精选**: 是  
+**发布时间**: 2026年09月23日 PM03:01 (北京时间)  
+
+---  
+
+## 9. Dub Program Marketplace  
+**标语**: 浏览并申请最佳的SaaS联盟计划  
+**介绍**: 浏览并申请顶尖的SaaS联盟计划，立即开始让您的受众变现。汇集了世界级企业，如Wispr Flow、Framer、Granola、Superhuman、CodeRabbit等。  
+**网站**: [立即访问](https://www.producthunt.com/r/UZ7S2QWM65JX2Z?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/dub?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Dub Program Marketplace](https://ph-files.imgix.net/bb655b9d-bb64-467d-9e94-43bd131feaae.jpeg?auto=format)  
+**关键词**: Dub SaaS联盟计划市场,最佳SaaS联盟计划,在线浏览与申请,变现受众,精选企业平台  
+**票数**: 🔺120  
+**是否精选**: 是  
+**发布时间**: 2026年09月23日 PM03:01 (北京时间)  
+
+---  
+
+## 10. RankControl  
+**标语**: 被ChatGPT引用并在Google排名靠前  
+**介绍**: 多数AI SEO工具仅告知提及情况便止步不前。RankControl则贯穿完整生命周期：依据AI与谷歌建议创作内容，以原生文章形式发布在您的独立域名上。追踪您在ChatGPT、Perplexity、Claude、Gemini、Grok等平台的AI能见度，洞察竞争对手短板，获取反向链接，将文章转为社媒草稿，并查看分析数据与AI抓取报告。统一价格套餐，提供7天免费试用！  
+**网站**: [立即访问](https://www.producthunt.com/r/F3CWRHCXYN5RTR?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/rankcontrol?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![RankControl](https://ph-files.imgix.net/20979f0b-a63e-4bfd-bf87-d1af0e6040c9.jpeg?auto=format)  
+**关键词**: RankControl, AI SEO工具, Google排名优化, AI可见性跟踪, 竞争对手分析, 反向链接获取, 内容创建, 社交草稿生成, 分析报告, 全生命周期管理, 一价计划, 免费试用  
+**票数**: 🔺119  
+**是否精选**: 是  
+**发布时间**: 2026年09月23日 PM03:01 (北京时间)  
+
+---  
+

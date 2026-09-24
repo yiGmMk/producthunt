@@ -1,9 +1,9 @@
 ---
 title: ax
-date: 2026-09-23T20:48:18+08:00
+date: 2026-09-24T20:48:31+08:00
 draft: False
-image: https://images.unsplash.com/photo-1683060971021-9d03f56ab4b0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAxNjc2NDZ8&ixlib=rb-4.1.0
-tags: ['github',AX, orchestrator, agent]
+image: https://images.unsplash.com/photo-1486122676632-ad1b5681fe33?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAyNTM5NDF8&ixlib=rb-4.1.0
+tags: ['github',autonomous agents, declarative orchestrator, sandbox]
 categories: ['github']
 ---
 
@@ -115,6 +115,7 @@ Want to see the whole lifecycle end to end? Run [`./demo.sh`](demo.sh). It appli
 | [Networking](docs/networking.md) | Reach a running task through the atenet router from the cluster, your laptop, or a gRPC client. |
 | [Architecture](DESIGN.md) | Understand how the control plane fits together, plus the [API reference](DESIGN.md#api-reference). |
 | [Development](docs/development.md) | Build, test, and ship changes to AX itself. |
+| [Roadmap](docs/roadmap.md) | See planned milestones across core specs, actor architecture, agentic environments, and governance. |
 
 ## CLI usage
 
