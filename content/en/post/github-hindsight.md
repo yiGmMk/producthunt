@@ -1,9 +1,9 @@
 ---
 title: hindsight
-date: 2026-09-24T20:47:23+08:00
+date: 2026-09-25T20:46:49+08:00
 draft: False
-image: https://images.unsplash.com/photo-1692548912452-261ede1babe0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAyNTM5NDF8&ixlib=rb-4.1.0
-tags: ['github',agent memory system, learning, AI agents]
+image: https://images.unsplash.com/photo-1604598879394-87da8999e7bd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAzNDAzNDl8&ixlib=rb-4.1.0
+tags: ['github',hindsight,agent,memory]
 categories: ['github']
 ---
 
