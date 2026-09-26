@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Speaker Identification on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/speaker-identification/</link>
+        <description>Recent content in Speaker Identification on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Tue, 02 Sep 2025 15:28:48 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/speaker-identification/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>WhisperLiveKit</title>
+        <link>https://producthunt.programnotes.cn/en/p/whisperlivekit/</link>
+        <pubDate>Tue, 02 Sep 2025 15:28:48 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/whisperlivekit/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1590615216008-8921f03835d4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY3OTgwOTd8&amp;ixlib=rb-4.1.0" alt="Featured image of post WhisperLiveKit" /&gt;&lt;h1 id=&#34;quentinfuxawhisperlivekit&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/QuentinFuxa/WhisperLiveKit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;QuentinFuxa/WhisperLiveKit&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 align=&#34;center&#34;&gt;WhisperLiveKit&lt;/h1&gt;
+&lt;p align=&#34;center&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/QuentinFuxa/WhisperLiveKit/refs/heads/main/demo.png&#34; alt=&#34;WhisperLiveKit Demo&#34; width=&#34;730&#34;&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;b&gt;Real-time, Fully Local Speech-to-Text with Speaker Identification&lt;/b&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+&lt;a href=&#34;https://pypi.org/project/whisperlivekit/&#34;&gt;&lt;img alt=&#34;PyPI Version&#34; src=&#34;https://img.shields.io/pypi/v/whisperlivekit?color=g&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://pepy.tech/project/whisperlivekit&#34;&gt;&lt;img alt=&#34;PyPI Downloads&#34; src=&#34;https://static.pepy.tech/personalized-badge/whisperlivekit?period=total&amp;units=international_system&amp;left_color=grey&amp;right_color=brightgreen&amp;left_text=installations&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://pypi.org/project/whisperlivekit/&#34;&gt;&lt;img alt=&#34;Python Versions&#34; src=&#34;https://img.shields.io/badge/python-3.9--3.13-dark_green&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://github.com/QuentinFuxa/WhisperLiveKit/blob/main/LICENSE&#34;&gt;&lt;img alt=&#34;License&#34; src=&#34;https://img.shields.io/badge/License-MIT/Dual Licensed-dark_green&#34;&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Real-time speech transcription directly to your browser, with a ready-to-use backend+server and a simple frontend. ✨&lt;/p&gt;
+&lt;h4 id=&#34;powered-by-leading-research&#34;&gt;Powered by Leading Research:
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ufal/SimulStreaming&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SimulStreaming&lt;/a&gt; (SOTA 2025) - Ultra-low latency transcription with AlignAtt policy&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ufal/whisper_streaming&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WhisperStreaming&lt;/a&gt; (SOTA 2023) - Low latency transcription with LocalAgreement policy&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2507.18446&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Streaming Sortformer&lt;/a&gt; (SOTA 2025) - Advanced real-time speaker diarization&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/juanmc2005/diart&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Diart&lt;/a&gt; (SOTA 2021) - Real-time speaker diarization&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/snakers4/silero-vad&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Silero VAD&lt;/a&gt; (2024) - Enterprise-grade Voice Activity Detection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Why not just run a simple Whisper model on every audio batch?&lt;/strong&gt; Whisper is designed for complete utterances, not real-time chunks. Processing small segments loses context, cuts off words mid-syllable, and produces poor transcription. WhisperLiveKit uses state-of-the-art simultaneous speech research for intelligent buffering and incremental processing.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;architecture&#34;&gt;Architecture
+&lt;/h3&gt;&lt;img alt=&#34;Architecture&#34; src=&#34;https://raw.githubusercontent.com/QuentinFuxa/WhisperLiveKit/refs/heads/main/architecture.png&#34; /&gt;
+&lt;p&gt;&lt;em&gt;The backend supports multiple concurrent users. Voice Activity Detection reduces overhead when no voice is detected.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;installation--quick-start&#34;&gt;Installation &amp;amp; Quick Start
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install whisperlivekit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;FFmpeg is required&lt;/strong&gt; and must be installed before using WhisperLiveKit&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;OS&lt;/th&gt;
+					&lt;th&gt;How to install&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Ubuntu/Debian&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;sudo apt install ffmpeg&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;MacOS&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;brew install ffmpeg&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Windows&lt;/td&gt;
+					&lt;td&gt;Download .exe from &lt;a class=&#34;link&#34; href=&#34;https://ffmpeg.org/download.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://ffmpeg.org/download.html&lt;/a&gt; and add to PATH&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;quick-start&#34;&gt;Quick Start
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Start the transcription server:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;whisperlivekit-server --model base --language en
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Open your browser&lt;/strong&gt; and navigate to &lt;code&gt;http://localhost:8000&lt;/code&gt;. Start speaking and watch your words appear in real-time!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;See &lt;a class=&#34;link&#34; href=&#34;https://github.com/QuentinFuxa/WhisperLiveKit/blob/main/whisperlivekit/simul_whisper/whisper/tokenizer.py&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;tokenizer.py&lt;/a&gt; for the list of all available languages.&lt;/li&gt;
+&lt;li&gt;For HTTPS requirements, see the &lt;strong&gt;Parameters&lt;/strong&gt; section for SSL configuration options.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;optional-dependencies&#34;&gt;Optional Dependencies
+&lt;/h4&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Optional&lt;/th&gt;
+					&lt;th&gt;&lt;code&gt;pip install&lt;/code&gt;&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Speaker diarization with Sortformer&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;git+https://github.com/NVIDIA/NeMo.git@main#egg=nemo_toolkit[asr]&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Speaker diarization with Diart&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;diart&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Original Whisper backend&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;whisper&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Improved timestamps backend&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;whisper-timestamped&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Apple Silicon optimization backend&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;mlx-whisper&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;OpenAI API backend&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;openai&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;See  &lt;strong&gt;Parameters &amp;amp; Configuration&lt;/strong&gt; below on how to use them.&lt;/p&gt;
+&lt;h3 id=&#34;usage-examples&#34;&gt;Usage Examples
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Command-line Interface&lt;/strong&gt;: Start the transcription server with various options:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Use better model than default (small)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;whisperlivekit-server --model large-v3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Advanced configuration with diarization and language&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;whisperlivekit-server --host 0.0.0.0 --port &lt;span class=&#34;m&#34;&gt;8000&lt;/span&gt; --model medium --diarization --language fr
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Python API Integration&lt;/strong&gt;: Check &lt;a class=&#34;link&#34; href=&#34;https://github.com/QuentinFuxa/WhisperLiveKit/blob/main/whisperlivekit/basic_server.py&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;basic_server&lt;/a&gt; for a more complete example of how to use the functions and classes.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;whisperlivekit&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TranscriptionEngine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AudioProcessor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;parse_args&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;fastapi&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FastAPI&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;WebSocket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;WebSocketDisconnect&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;fastapi.responses&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HTMLResponse&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;contextlib&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;asynccontextmanager&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;asyncio&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;transcription_engine&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@asynccontextmanager&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;async&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;lifespan&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FastAPI&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;global&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;transcription_engine&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;transcription_engine&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TranscriptionEngine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;medium&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;diarization&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lan&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;yield&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;app&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FastAPI&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lifespan&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lifespan&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;async&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;handle_websocket_results&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;websocket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;WebSocket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;results_generator&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;async&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;results_generator&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;websocket&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;send_json&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;websocket&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;send_json&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ready_to_stop&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@app.websocket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/asr&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;async&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;websocket_endpoint&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;websocket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;WebSocket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;global&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;transcription_engine&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# Create a new AudioProcessor for each connection, passing the shared engine&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;audio_processor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AudioProcessor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;transcription_engine&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;transcription_engine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;results_generator&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;audio_processor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create_tasks&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;results_task&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;asyncio&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create_task&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;handle_websocket_results&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;websocket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;results_generator&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;websocket&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;accept&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;message&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;websocket&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;receive_bytes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;audio_processor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;process_audio&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Frontend Implementation&lt;/strong&gt;: The package includes an HTML/JavaScript implementation &lt;a class=&#34;link&#34; href=&#34;https://github.com/QuentinFuxa/WhisperLiveKit/blob/main/whisperlivekit/web/live_transcription.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;. You can also import it using &lt;code&gt;from whisperlivekit import get_inline_ui_html&lt;/code&gt; &amp;amp; &lt;code&gt;page = get_inline_ui_html()&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;parameters--configuration&#34;&gt;Parameters &amp;amp; Configuration
+&lt;/h2&gt;&lt;p&gt;An important list of parameters can be changed. But what &lt;em&gt;should&lt;/em&gt; you change?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the &lt;code&gt;--model&lt;/code&gt; size. List and recommandations &lt;a class=&#34;link&#34; href=&#34;https://github.com/QuentinFuxa/WhisperLiveKit/blob/main/available_models.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;the &lt;code&gt;--language&lt;/code&gt;.  List &lt;a class=&#34;link&#34; href=&#34;https://github.com/QuentinFuxa/WhisperLiveKit/blob/main/whisperlivekit/simul_whisper/whisper/tokenizer.py&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;. If you use &lt;code&gt;auto&lt;/code&gt;, the model attempts to detect the language automatically, but it tends to bias towards English.&lt;/li&gt;
+&lt;li&gt;the &lt;code&gt;--backend&lt;/code&gt; ? you can switch to &lt;code&gt;--backend faster-whisper&lt;/code&gt; if  &lt;code&gt;simulstreaming&lt;/code&gt; does not work correctly or if you prefer to avoid the dual-license requirements.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--warmup-file&lt;/code&gt;, if you have one&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--host&lt;/code&gt;, &lt;code&gt;--port&lt;/code&gt;, &lt;code&gt;--ssl-certfile&lt;/code&gt;, &lt;code&gt;--ssl-keyfile&lt;/code&gt;, if you set up a server&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--diarization&lt;/code&gt;, if you want to use it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The rest I don&amp;rsquo;t recommend. But below are your options.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Parameter&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+					&lt;th&gt;Default&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--model&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Whisper model size.&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;small&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--language&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Source language code or &lt;code&gt;auto&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;auto&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--task&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;transcribe&lt;/code&gt; or &lt;code&gt;translate&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;transcribe&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--backend&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Processing backend&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;simulstreaming&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--min-chunk-size&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Minimum audio chunk size (seconds)&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;1.0&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--no-vac&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Disable Voice Activity Controller&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;False&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--no-vad&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Disable Voice Activity Detection&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;False&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--warmup-file&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Audio file path for model warmup&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;jfk.wav&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--host&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Server host address&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;localhost&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--port&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Server port&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;8000&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--ssl-certfile&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Path to the SSL certificate file (for HTTPS support)&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;None&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--ssl-keyfile&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Path to the SSL private key file (for HTTPS support)&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;None&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;WhisperStreaming backend options&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+					&lt;th&gt;Default&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--confidence-validation&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Use confidence scores for faster validation&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;False&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--buffer_trimming&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Buffer trimming strategy (&lt;code&gt;sentence&lt;/code&gt; or &lt;code&gt;segment&lt;/code&gt;)&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;segment&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;SimulStreaming backend options&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+					&lt;th&gt;Default&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--frame-threshold&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;AlignAtt frame threshold (lower = faster, higher = more accurate)&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;25&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--beams&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Number of beams for beam search (1 = greedy decoding)&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;1&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--decoder&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Force decoder type (&lt;code&gt;beam&lt;/code&gt; or &lt;code&gt;greedy&lt;/code&gt;)&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;auto&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--audio-max-len&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Maximum audio buffer length (seconds)&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;30.0&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--audio-min-len&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Minimum audio length to process (seconds)&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;0.0&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--cif-ckpt-path&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Path to CIF model for word boundary detection&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;None&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--never-fire&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Never truncate incomplete words&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;False&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--init-prompt&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Initial prompt for the model&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;None&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--static-init-prompt&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Static prompt that doesn&amp;rsquo;t scroll&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;None&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--max-context-tokens&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Maximum context tokens&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;None&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--model-path&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Direct path to .pt model file. Download it if not found&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;./base.pt&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--preloaded-model-count&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Optional. Number of models to preload in memory to speed up loading (set up to the expected number of concurrent users)&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;1&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Diarization options&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+					&lt;th&gt;Default&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--diarization&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Enable speaker identification&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;False&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--diarization-backend&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;diart&lt;/code&gt; or &lt;code&gt;sortformer&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;sortformer&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--segmentation-model&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Hugging Face model ID for Diart segmentation model. &lt;a class=&#34;link&#34; href=&#34;https://github.com/juanmc2005/diart/tree/main?tab=readme-ov-file#pre-trained-models&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Available models&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;pyannote/segmentation-3.0&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--embedding-model&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Hugging Face model ID for Diart embedding model. &lt;a class=&#34;link&#34; href=&#34;https://github.com/juanmc2005/diart/tree/main?tab=readme-ov-file#pre-trained-models&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Available models&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;speechbrain/spkrec-ecapa-voxceleb&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For diarization using Diart, you need access to pyannote.audio models:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/pyannote/segmentation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Accept user conditions&lt;/a&gt; for the &lt;code&gt;pyannote/segmentation&lt;/code&gt; model&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/pyannote/segmentation-3.0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Accept user conditions&lt;/a&gt; for the &lt;code&gt;pyannote/segmentation-3.0&lt;/code&gt; model&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/pyannote/embedding&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Accept user conditions&lt;/a&gt; for the &lt;code&gt;pyannote/embedding&lt;/code&gt; model&lt;/li&gt;
+&lt;li&gt;Login with HuggingFace: &lt;code&gt;huggingface-cli login&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;-deployment-guide&#34;&gt;🚀 Deployment Guide
+&lt;/h3&gt;&lt;p&gt;To deploy WhisperLiveKit in production:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Server Setup&lt;/strong&gt;: Install production ASGI server &amp;amp; launch with multiple workers&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install uvicorn gunicorn
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gunicorn -k uvicorn.workers.UvicornWorker -w &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; your_app:app
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Frontend&lt;/strong&gt;: Host your customized version of the &lt;code&gt;html&lt;/code&gt; example &amp;amp; ensure WebSocket connection points correctly&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Nginx Configuration&lt;/strong&gt; (recommended for production):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-nginx&#34; data-lang=&#34;nginx&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;kn&#34;&gt;listen&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;80&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;kn&#34;&gt;server_name&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;your-domain.com&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kn&#34;&gt;location&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;proxy_pass&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;http://localhost:8000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Upgrade&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$http_upgrade&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Connection&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;upgrade&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kn&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Host&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;HTTPS Support&lt;/strong&gt;: For secure deployments, use &amp;ldquo;wss://&amp;rdquo; instead of &amp;ldquo;ws://&amp;rdquo; in WebSocket URL&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;-docker&#34;&gt;🐋 Docker
+&lt;/h2&gt;&lt;p&gt;Deploy the application easily using Docker with GPU or CPU support.&lt;/p&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Docker installed on your system&lt;/li&gt;
+&lt;li&gt;For GPU support: NVIDIA Docker runtime installed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;quick-start-1&#34;&gt;Quick Start
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;With GPU acceleration (recommended):&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker build -t wlk .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run --gpus all -p 8000:8000 --name wlk wlk
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;CPU only:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker build -f Dockerfile.cpu -t wlk .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -p 8000:8000 --name wlk wlk
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;advanced-usage&#34;&gt;Advanced Usage
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Custom configuration:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Example with custom model and language&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run --gpus all -p 8000:8000 --name wlk wlk --model large-v3 --language fr
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;memory-requirements&#34;&gt;Memory Requirements
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Large models&lt;/strong&gt;: Ensure your Docker runtime has sufficient memory allocated&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;customization&#34;&gt;Customization
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--build-arg&lt;/code&gt; Options:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;EXTRAS=&amp;quot;whisper-timestamped&amp;quot;&lt;/code&gt; - Add extras to the image&amp;rsquo;s installation (no spaces). Remember to set necessary container options!&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HF_PRECACHE_DIR=&amp;quot;./.cache/&amp;quot;&lt;/code&gt; - Pre-load a model cache for faster first-time start&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HF_TKN_FILE=&amp;quot;./token&amp;quot;&lt;/code&gt; - Add your Hugging Face Hub access token to download gated models&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-use-cases&#34;&gt;🔮 Use Cases
+&lt;/h2&gt;&lt;p&gt;Capture discussions in real-time for meeting transcription, help hearing-impaired users follow conversations through accessibility tools, transcribe podcasts or videos automatically for content creation, transcribe support calls with speaker identification for customer service&amp;hellip;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>vosk-api</title>
+        <link>https://producthunt.programnotes.cn/en/p/vosk-api/</link>
+        <pubDate>Thu, 12 Jun 2025 15:29:28 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/vosk-api/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1638825183364-01e8b64b00e0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk3MTMzNDd8&amp;ixlib=rb-4.1.0" alt="Featured image of post vosk-api" /&gt;&lt;h1 id=&#34;alphacepvosk-api&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/alphacep/vosk-api&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;alphacep/vosk-api&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;vosk-speech-recognition-toolkit&#34;&gt;Vosk Speech Recognition Toolkit
+&lt;/h1&gt;&lt;p&gt;Vosk is an offline open source speech recognition toolkit. It enables
+speech recognition for 20+ languages and dialects - English, Indian
+English, German, French, Spanish, Portuguese, Chinese, Russian, Turkish,
+Vietnamese, Italian, Dutch, Catalan, Arabic, Greek, Farsi, Filipino,
+Ukrainian, Kazakh, Swedish, Japanese, Esperanto, Hindi, Czech, Polish.
+More to come.&lt;/p&gt;
+&lt;p&gt;Vosk models are small (50 Mb) but provide continuous large vocabulary
+transcription, zero-latency response with streaming API, reconfigurable
+vocabulary and speaker identification.&lt;/p&gt;
+&lt;p&gt;Speech recognition bindings implemented for various programming languages
+like Python, Java, Node.JS, C#, C++, Rust, Go and others.&lt;/p&gt;
+&lt;p&gt;Vosk supplies speech recognition for chatbots, smart home appliances,
+virtual assistants. It can also create subtitles for movies,
+transcription for lectures and interviews.&lt;/p&gt;
+&lt;p&gt;Vosk scales from small devices like Raspberry Pi or Android smartphone to
+big clusters.&lt;/p&gt;
+&lt;h1 id=&#34;documentation&#34;&gt;Documentation
+&lt;/h1&gt;&lt;p&gt;For installation instructions, examples and documentation visit &lt;a class=&#34;link&#34; href=&#34;https://alphacephei.com/vosk&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vosk
+Website&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
