@@ -1,9 +1,9 @@
 ---
 title: univer
-date: 2026-09-24T20:47:53+08:00
+date: 2026-09-26T20:18:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1692548912452-261ede1babe0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAyNTM5NDF8&ixlib=rb-4.1.0
-tags: ['github',Office SDK, AI Agents, Open-source]
+image: https://images.unsplash.com/photo-1732140904869-470e84f998d1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA0MjQ5ODJ8&ixlib=rb-4.1.0
+tags: ['github',Office SDK, AI Agents, Plugin Architecture]
 categories: ['github']
 ---
 

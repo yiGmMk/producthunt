@@ -1,9 +1,9 @@
 ---
 title: Model-Optimizer
-date: 2026-09-24T20:48:54+08:00
+date: 2026-09-26T20:17:33+08:00
 draft: False
-image: https://images.unsplash.com/photo-1486122676632-ad1b5681fe33?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAyNTM5NDF8&ixlib=rb-4.1.0
-tags: ['github',model optimization, quantization, inference acceleration]
+image: https://images.unsplash.com/photo-1627840935504-0672df8e8c14?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA0MjQ5ODJ8&ixlib=rb-4.1.0
+tags: ['github',model optimization,quantization,pruning]
 categories: ['github']
 ---
 
