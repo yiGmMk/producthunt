@@ -1,9 +1,9 @@
 ---
 title: paperclip
-date: 2026-09-26T20:16:45+08:00
+date: 2026-09-27T21:00:25+08:00
 draft: False
-image: https://images.unsplash.com/photo-1692607038324-6957c392410c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA0MjQ5ODJ8&ixlib=rb-4.1.0
-tags: ['github',AI agents, orchestration, task management]
+image: https://images.unsplash.com/photo-1544297787-43ce4f544585?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA1MTQwMDl8&ixlib=rb-4.1.0
+tags: ['github',AI agents, orchestration, team management]
 categories: ['github']
 ---
 
