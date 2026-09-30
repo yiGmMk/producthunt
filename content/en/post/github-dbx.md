@@ -1,9 +1,9 @@
 ---
 title: dbx
-date: 2026-09-29T22:02:25+08:00
+date: 2026-09-30T16:20:50+08:00
 draft: False
-image: https://images.unsplash.com/photo-1689576704883-36a4e08656c8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA2OTA0MTB8&ixlib=rb-4.1.0
-tags: ['github',database management, lightweight, AI assistant]
+image: https://images.unsplash.com/photo-1642841220705-b03194dd9de7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA3NTYyNTl8&ixlib=rb-4.1.0
+tags: ['github',Database Management, AI Assistant, MCP Server]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: VoiceStudio
-date: 2026-09-29T22:00:40+08:00
+date: 2026-09-30T16:18:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1528274725619-40604dc7dad7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA2OTA0MTB8&ixlib=rb-4.1.0
-tags: ['github',voice cloning, voice design, video dubbing]
+image: https://images.unsplash.com/photo-1567650076010-186173332565?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA3NTYyNTl8&ixlib=rb-4.1.0
+tags: ['github',voice cloning, video dubbing, text to speech]
 categories: ['github']
 ---
 

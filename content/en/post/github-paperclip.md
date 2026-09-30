@@ -1,9 +1,9 @@
 ---
 title: paperclip
-date: 2026-09-29T22:02:07+08:00
+date: 2026-09-30T16:20:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1697537326102-08bea5482dfb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA2OTA0MTB8&ixlib=rb-4.1.0
-tags: ['github',AI agents, orchestration, management]
+image: https://images.unsplash.com/photo-1614405512571-8018350fdf48?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA3NTYyNTl8&ixlib=rb-4.1.0
+tags: ['github',AI agent orchestration, autonomous AI management, multi-agent coordination]
 categories: ['github']
 ---
 
