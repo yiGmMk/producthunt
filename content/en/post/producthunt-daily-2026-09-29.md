@@ -1,9 +1,8 @@
 ---
 title: Product Hunt Daily | 2026-09-30
-date: 2026-09-30 08:17:36+0000
+date: 2026-09-30 13:39:33+0000
 image: https://ph-files.imgix.net/26de944b-fb8c-4ec9-a670-c9b709fa1b9e.png?auto=format
-tags: ["privacy focused", "AI workflow", "AI integration"]
-categories: ["AI"]
+tags: ["Anthropic", "AI auditing", "AI safety"]
 ---
 
 ## 1. iFixAi  
@@ -12,8 +11,8 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/GH7ZXAZXZF36UQ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/ifixai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![iFixAi](https://ph-files.imgix.net/26de944b-fb8c-4ec9-a670-c9b709fa1b9e.png?auto=format)  
-**Keyword**: AI auditing, agent safety, red teaming, AI alignment, trust verification, ethical oversight, risk assessment, AI governance, model evaluation, operational assurance, AI compliance, reliability testing, responsible AI  
-**VotesCount**: 🔺401  
+**Keyword**: AI auditing, AI safety, agent alignment, red teaming, AI risk, ethical AI, operational assurance, AI governance, trustworthy AI, misalignment, autonomous agents, AI compliance, AI verification, AI remediation  
+**VotesCount**: 🔺406  
 **Featured**: Yes  
 **CreatedAt**: 2026-09-29 07:01 AM (UTC)  
 
@@ -25,8 +24,8 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/IAYIS7TAFM7O7D?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/luci-desktop?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![LUCI Desktop](https://ph-files.imgix.net/ce5297a4-37f5-4633-a1d6-ca00e19364d8.png?auto=format)  
-**Keyword**: AI agent memory, screen history, meeting transcripts, local AI, cross-app context, on-device transcription, daily summaries, privacy focused, free desktop app, Mac Windows, context capture, AI workflow, local storage  
-**VotesCount**: 🔺352  
+**Keyword**: AI memory, screen history, meeting transcripts, local AI, context capture, cross-app search, on-device transcription, private AI, daily summaries, Claude Code, Cursor, Mac Windows, local storage, context awareness  
+**VotesCount**: 🔺355  
 **Featured**: Yes  
 **CreatedAt**: 2026-09-29 07:01 AM (UTC)  
 
@@ -38,8 +37,8 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/UAJNQGCRP7DJRD?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/zena-by-zenabm-linkedin-ads-ai-chatbot?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![ZenABM ](https://ph-files.imgix.net/00335e98-a408-4aab-8252-fd8cd05e99aa.jpeg?auto=format)  
-**Keyword**: LinkedIn Ads, AI marketing, campaign automation, ad optimization, automated reporting, revenue attribution, B2B marketing, AI agent, MCP server, marketing automation, ad management, LinkedIn campaigns, AI integration, performance analytics, smart advertising  
-**VotesCount**: 🔺286  
+**Keyword**: LinkedIn Ads, AI Agent, Campaign Optimization, Automated Reporting, Revenue Attribution, MCP Server, ABM, Zena, B2B Marketing, LinkedIn Marketing, AI Automation, Ad Management, Performance Reports, Account Engagement, LinkedIn Integrations  
+**VotesCount**: 🔺287  
 **Featured**: Yes  
 **CreatedAt**: 2026-09-29 07:01 AM (UTC)  
 
@@ -51,8 +50,8 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/DWZRO527OIEBF6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/claude?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Claude Sonnet 5.5](https://ph-files.imgix.net/db4306a9-efb7-47c4-a795-7a62a6bf6758.jpeg?auto=format)  
-**Keyword**: AI model, Anthropic, Claude Sonnet, fast AI, cost-efficient AI, coding assistance, bug fixes, document creation, slide design, knowledge work, productivity AI, developer tools, high-performance AI  
-**VotesCount**: 🔺255  
+**Keyword**: AI model, Anthropic, Claude Sonnet 5.5, fast AI, cost-efficient, coding assistant, bug fixes, document generation, slide creation, design tool, knowledge work, AI productivity, developer tools, workflow automation, low-cost AI  
+**VotesCount**: 🔺258  
 **Featured**: Yes  
 **CreatedAt**: 2026-09-29 07:01 AM (UTC)  
 
@@ -64,8 +63,8 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/BXLTD6AHRVUQBJ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/semos-ai-manager-agents?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Semos.ai Manager Agents](https://ph-files.imgix.net/6f910000-f53e-4608-b51c-14137a6b1c02.png?auto=format)  
-**Keyword**: AI manager, meeting insights, employee feedback, recognition tracking, conflict management, growth conversations, leadership coaching, people management, manager assistant, team leadership, performance tracking, AI coaching  
-**VotesCount**: 🔺223  
+**Keyword**: Semos.ai, AI agents, leadership development, meeting analysis, feedback management, employee recognition, conflict resolution, growth conversations, performance coaching, management AI, team leadership, actionable insights, manager productivity  
+**VotesCount**: 🔺224  
 **Featured**: Yes  
 **CreatedAt**: 2026-09-29 07:01 AM (UTC)  
 
@@ -77,7 +76,7 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/IMCXCD4JIOZYCN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/paste?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Paste 7](https://ph-files.imgix.net/aa84fb21-0ec2-40ab-bb47-40ba3410b53e.png?auto=format)  
-**Keyword**: clipboard manager, productivity app, smart clipboard, apple intelligence, mac utility, paste predictor, copy history, ai powered, workflow tool, privacy focused, intelligent paste, macOS app  
+**Keyword**: clipboard manager, macOS app, AI clipboard, paste predictor, copy history, productivity tool, Apple Intelligence, smart clipboard, workflow tool, Mac utility, intelligent paste, privacy-focused  
 **VotesCount**: 🔺177  
 **Featured**: Yes  
 **CreatedAt**: 2026-09-29 07:01 AM (UTC)  
@@ -90,7 +89,7 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/YGFDPVXISG4YPG?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/hopscotch-7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Hopscotch AI](https://ph-files.imgix.net/7d96be01-9c9c-466b-ab18-2f93a0dbcb2b.png?auto=format)  
-**Keyword**: AI API, Unified API, 500+ Models, LLM Gateway, Multi-provider, OpenAI, Anthropic, Google AI, Model Comparison, Fallbacks, Usage Tracking, No Markup, Developer Tools, Hopscotch AI  
+**Keyword**: AI API, Unified API, Multi-model API, LLM aggregator, OpenAI, Anthropic, Google AI, AI fallbacks, Model routing, No markup, Developer tools, AI costs, API gateway, Usage tracking, Cross-provider, Prompt testing, AI infrastructure, Hopscotch AI  
 **VotesCount**: 🔺134  
 **Featured**: Yes  
 **CreatedAt**: 2026-09-29 07:01 AM (UTC)  
@@ -103,8 +102,8 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/KP6AKRML6U6EGS?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/would-you-pay?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Would you pay?](https://ph-files.imgix.net/a97db861-25bf-462c-9a83-b87666e6da9b.png?auto=format)  
-**Keyword**: startup validation, market research, willingness to pay, idea testing, customer discovery, swipe validation, startup tool, indie hackers, side projects, revenue validation, user feedback, pre-build, validate ideas, pricing validation, product feedback, founder tools, product-market fit, demand validation, payment intent, concept testing  
-**VotesCount**: 🔺126  
+**Keyword**: startup validation, market validation, willingness to pay, side project, MVP testing, user feedback, validate idea, indie hacker, customer discovery, swipe validation, founder tools, product-market fit, pre-launch, target audience, revenue validation  
+**VotesCount**: 🔺128  
 **Featured**: Yes  
 **CreatedAt**: 2026-09-29 07:01 AM (UTC)  
 
@@ -116,7 +115,7 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/M7DFF5NRZNCIFP?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/timeos?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Timeless Code](https://ph-files.imgix.net/e3e79507-456d-46d7-9944-d419c912ab12.gif?auto=format)  
-**Keyword**: meeting notetaker, ai notetaker, claude code, terminal tool, meeting recorder, ai assistant, developer tools, cli integration, meeting transcription, automated notes, query meetings, meeting history, setup automation  
+**Keyword**: AI notetaker, meeting recorder, claude code integration, terminal assistant, dev productivity, AI transcription, meeting notes, CLI tool, AI query, developer workflow  
 **VotesCount**: 🔺122  
 **Featured**: Yes  
 **CreatedAt**: 2026-09-29 07:01 AM (UTC)  
@@ -129,8 +128,8 @@ categories: ["AI"]
 **Website**: [open](https://www.producthunt.com/r/AQ25I4L5Y4UMW6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/products/jotform?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
 ![Jotform Sign for ChatGPT and Claude](https://ph-files.imgix.net/04101558-05b3-40cb-abfe-6c9e46cd72c5.png?auto=format)  
-**Keyword**: Jotform Sign, ChatGPT, Claude, e-signature, digital signature, AI integration, document creation, prompt to document, workflow automation, contract management, online signatures, AI assistant, productivity, field editing, recipient management, signing order, progress tracking, seamless workflow, remote signing, AI workflow  
-**VotesCount**: 🔺118  
+**Keyword**: e-signature, digital signatures, AI document tools, ChatGPT integration, Claude integration, document generator, signing workflow, AI workspace, prompt to document, recipient management, document tracking, Jotform Sign, contract signing, AI automation, digital signing  
+**VotesCount**: 🔺122  
 **Featured**: Yes  
 **CreatedAt**: 2026-09-29 07:01 AM (UTC)  
 
