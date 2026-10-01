@@ -1,9 +1,9 @@
 ---
 title: openrig
-date: 2026-09-30T21:40:41+08:00
+date: 2026-10-01T22:33:43+08:00
 draft: False
-image: https://images.unsplash.com/photo-1655548201132-824b96322d69?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA3NzU1NzZ8&ixlib=rb-4.1.0
-tags: ['github',openrig, ai coding agents, multi-agent orchestration]
+image: https://images.unsplash.com/photo-1598330689031-03f7c3b0e8d4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4NjUwOTB8&ixlib=rb-4.1.0
+tags: ['github',multi-agent orchestration, AI coding agents, open source harness]
 categories: ['github']
 ---
 
@@ -15,7 +15,9 @@ categories: ['github']
 
 A harness wraps a model. A rig wraps your harnesses. Define your agent team in YAML, boot it with one command. Claude Code and Codex in the same rig, managed as one system.
 
-OpenRig turns AI coding agents from a pile of terminal sessions into a persistent, organized team. Talk to a lead agent about the outcome you want; it can coordinate specialists across teams and bring you results and decisions that need your attention. Start with a repository and one useful change, then keep the team's work and context at the same addresses.
+OpenRig is open-source software for building and running your own network of agents. It turns AI coding agents from a pile of terminal sessions into a persistent, organized team. Talk to a lead agent about the outcome you want; it can coordinate specialists across teams and bring you results and decisions that need your attention. Start with a repository and one useful change, then keep the team's work and context at the same addresses.
+
+It's the open-source system behind my AI civilization experiments.
 
 **Guide:** [Getting started](docs/reference/getting-started.md) · **Stuck?** [Help](docs/reference/help.md) · **Questions:** [Q&A](https://github.com/mvschwarz/openrig/discussions/92) · **Updates and demos:** [@_feralmachine on X](https://x.com/_feralmachine)
 

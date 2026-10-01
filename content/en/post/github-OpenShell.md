@@ -1,9 +1,9 @@
 ---
 title: OpenShell
-date: 2026-09-30T21:39:55+08:00
+date: 2026-10-01T22:32:53+08:00
 draft: False
-image: https://images.unsplash.com/photo-1627637820569-c95133be1c62?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA3NzU1NzZ8&ixlib=rb-4.1.0
-tags: ['github',OpenShell, Autonomous AI Agents, Policy Enforcement]
+image: https://images.unsplash.com/photo-1783990350684-71c38af04a8a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4NjUwOTB8&ixlib=rb-4.1.0
+tags: ['github',OpenShell, Autonomous AI Agents, Secure Sandboxes]
 categories: ['github']
 ---
 
