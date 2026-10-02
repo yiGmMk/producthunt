@@ -1,9 +1,9 @@
 ---
 title: ponytail
-date: 2026-10-01T22:31:59+08:00
+date: 2026-10-02T21:54:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1526319238109-524eecb9b913?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4NjUwOTB8&ixlib=rb-4.1.0
-tags: ['github',ai coding assistants, minimalist programming, code optimization]
+image: https://images.unsplash.com/photo-1724582980082-6753d3c54ede?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA5NDkxNjd8&ixlib=rb-4.1.0
+tags: ['github',AI coding assistant, minimal code generation, developer efficiency]
 categories: ['github']
 ---
 
