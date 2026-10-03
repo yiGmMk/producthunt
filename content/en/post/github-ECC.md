@@ -1,9 +1,9 @@
 ---
 title: ECC
-date: 2026-09-20T20:14:15+08:00
+date: 2026-10-03T20:33:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1733425999473-8a2ac086ec5b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk5MDY0NDJ8&ixlib=rb-4.1.0
-tags: ['github',ECC, agent harness operating system, skills]
+image: https://images.unsplash.com/photo-1541257052533-b9ea1b34a4bc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTEwMzA3NDZ8&ixlib=rb-4.1.0
+tags: ['github',AI Agent Orchestration, Automated Software Engineering, Context Management]
 categories: ['github']
 ---
 
@@ -42,7 +42,8 @@ categories: ['github']
   <a href="docs/th/README.md">ไทย</a> |
   <a href="docs/de-DE/README.md">Deutsch</a> |
   <a href="docs/es/README.md">Español</a> |
-  <a href="docs/uk-UA/README.md">Українська</a>
+  <a href="docs/uk-UA/README.md">Українська</a> |
+  <a href="docs/pl/README.md">Polski</a>
 </p>
 
 <p align="center">
@@ -125,9 +126,9 @@ Use the [guided setup](#install-ecc) or [native plugin commands](#claude-code-de
   <a href="https://serpapi.com/github-ecc" title="SerpApi: Web Search API"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/images/sponsors/serpapi-logo-dark-mode.svg" /><img src="assets/images/sponsors/serpapi-logo-light-mode.svg" width="200" alt="SerpApi: Web Search API" /></picture></a>
 </p>
 
-<sub><strong>Past sponsors:</strong> <a href="https://www.atlascloud.ai/?utm_source=github&amp;utm_medium=link&amp;utm_campaign=ECC">Atlas Cloud</a></sub>
+<sub><strong>Past sponsors:</strong> <a href="https://www.atlascloud.ai/?utm_source=github&amp;utm_medium=link&amp;utm_campaign=ECC">Atlas Cloud</a> · <a href="https://github.com/mikejmorgan-ai">Mike Morgan (inactive)</a></sub>
 
-<sub><strong>Community sponsors:</strong> <a href="https://github.com/mikejmorgan-ai">Mike Morgan</a> · <a href="https://github.com/jasonwu513">@jasonwu513</a> · <a href="https://github.com/1anter">@1anter</a> · <a href="https://github.com/massimotodaro">@massimotodaro</a> · <a href="https://github.com/meadmccabe">@meadmccabe</a></sub>
+<sub><strong>Community sponsors:</strong> <a href="https://github.com/jasonwu513">@jasonwu513</a> · <a href="https://github.com/1anter">@1anter</a> · <a href="https://github.com/massimotodaro">@massimotodaro</a> · <a href="https://github.com/meadmccabe">@meadmccabe</a></sub>
 
 <sub><a href="https://github.com/sponsors/affaan-m"><strong>Become a Sponsor</strong></a> · <a href="SPONSORS.md">Sponsor Tiers</a> · <a href="SPONSORING.md">Sponsorship Program</a></sub>
 
@@ -149,12 +150,12 @@ Instead of rebuilding that process in every prompt, you install it once and make
 
 ECC is MIT-licensed open source. It works best with Claude Code today, has a supported Codex sync path, and provides capability-limited adapters for Cursor, OpenCode, Gemini, Zed, GitHub Copilot, Antigravity, Qwen, and other harnesses. See the [support status matrix](#platform-support) before assuming feature parity.
 
-Access to 68 agents, 292 skills, and 94 legacy command shims, plus hooks, rules, memory, continuous learning, and AgentShield security scanning. The agents are specialized for planning, review, build repair, security, architecture, and domain work.
+Access to 68 agents, 293 skills, and 94 legacy command shims, plus hooks, rules, memory, continuous learning, and AgentShield security scanning. The agents are specialized for planning, review, build repair, security, architecture, and domain work.
 
 | Included         |       Count | What it gives you                                                                    |
 | ---------------- | ----------: | ------------------------------------------------------------------------------------ |
 | Agents           |   68 agents | Planning, review, build repair, security, architecture, and domain work              |
-| Skills           |  292 skills | TDD, research, security, docs, frontend, data, ML, operations, and more              |
+| Skills           |  293 skills | TDD, research, security, docs, frontend, data, ML, operations, and more              |
 | Commands         | 94 commands | Convenient entry points while ECC moves to a skills-first surface                    |
 | Hooks and memory |     Runtime | Enforcement, session summaries, continuous learning, instincts, and context controls |
 | Rules            |   Selective | Always-loaded standards you choose by language or project                            |
@@ -181,8 +182,33 @@ Access to 68 agents, 292 skills, and 94 legacy command shims, plus hooks, rules,
 For Claude Code plugin setup, updates, scope changes, and hook-profile changes:
 
 ```bash
-npx ecc-universal@2.2.2 setup
+npx ecc-universal@2.2.3 setup
 ```
+
+#### Windows first-time walkthrough
+
+If you are new to command-line tools, use this copy-and-paste path:
+
+1. Install Node.js 18 or newer, Git, and Claude Code.
+2. Open **PowerShell** from the Windows Start menu.
+3. Confirm that each prerequisite is available:
+
+   ```powershell
+   node --version
+   git --version
+   claude --version
+   ```
+
+4. Run the guided installer:
+
+   ```powershell
+   npx ecc-universal@2.2.3 setup
+   ```
+
+5. For a typical personal setup, choose **Global user**, choose **Standard** hooks, and confirm.
+6. Start a new Claude Code session and run `/plugin list` to verify that `ecc@ecc` is enabled.
+
+This path does not require cloning the repository. If any prerequisite command is not found, install or repair that prerequisite before rerunning ECC setup.
 
 If npm reports a version or cache error, confirm the registry version before retrying:
 
@@ -194,12 +220,12 @@ ECC 2.2 supports the same guided setup through modern package runners:
 
 | Package runner | Guided setup command |
 |---|---|
-| npm / npx | `npx ecc-universal@2.2.2 setup` |
-| pnpm | `pnpm dlx ecc-universal@2.2.2 setup` |
-| Yarn 2+ | `yarn dlx ecc-universal@2.2.2 setup` |
-| Bun | `bunx ecc-universal@2.2.2 setup` |
+| npm / npx | `npx ecc-universal@2.2.3 setup` |
+| pnpm | `pnpm dlx ecc-universal@2.2.3 setup` |
+| Yarn 2+ | `yarn dlx ecc-universal@2.2.3 setup` |
+| Bun | `bunx ecc-universal@2.2.3 setup` |
 
-The examples select [the published ECC 2.2.2 release](https://www.npmjs.com/package/ecc-universal/v/2.2.2), matching this repository's release version. A version pin is not a security audit or an integrity check. Review the release source and registry integrity before running package code; use a reviewed checkout for unreleased changes.
+The examples select [the published ECC 2.2.3 release](https://www.npmjs.com/package/ecc-universal/v/2.2.3), matching this repository's release version. A version pin is not a security audit or an integrity check. Review the release source and registry integrity before running package code; use a reviewed checkout for unreleased changes.
 
 Yarn Classic 1 does not provide `yarn dlx`; use `npx`, install the package globally, or upgrade Yarn for a temporary one-shot run.
 
@@ -208,7 +234,7 @@ The wizard inventories the official marketplace and every native Claude install 
 To configure more than one coding agent in one reviewed flow, use the multi-harness wizard:
 
 ```bash
-npx ecc-universal@2.2.2 install --guided
+npx ecc-universal@2.2.3 install --guided
 ```
 
 It lets you select any combination of Claude Code, Codex, and Kimi Code, shows each install channel and destination, preflights every selection before the first write, and asks for one final confirmation.
@@ -222,7 +248,7 @@ It lets you select any combination of Claude Code, Codex, and Kimi Code, shows e
 For automation, make every provider-specific choice explicit:
 
 ```bash
-npx ecc-universal@2.2.2 install --guided \
+npx ecc-universal@2.2.3 install --guided \
   --harness claude --harness codex --harness kimi \
   --claude-scope local --claude-hooks standard \
   --profile core --yes
@@ -231,16 +257,16 @@ npx ecc-universal@2.2.2 install --guided \
 Verify the native guided Codex path and managed Kimi path without writing first:
 
 ```bash
-npx ecc-universal@2.2.2 install --guided --harness codex --dry-run
-npx ecc-universal@2.2.2 install --profile core --target kimi --dry-run
+npx ecc-universal@2.2.3 install --guided --harness codex --dry-run
+npx ecc-universal@2.2.3 install --profile core --target kimi --dry-run
 ```
 
 Additional package-name commands are also available through the 2.2 alias:
 
 ```bash
-npx ecc-universal@2.2.2 consult "security reviews" --target claude
-npx ecc-universal@2.2.2 install --profile minimal --target claude --with capability:machine-learning
-npx ecc-universal@2.2.2 doctor --target kimi
+npx ecc-universal@2.2.3 consult "security reviews" --target claude
+npx ecc-universal@2.2.3 install --profile minimal --target claude --with capability:machine-learning
+npx ecc-universal@2.2.3 doctor --target kimi
 ```
 
 Do not use `npx ecc-install --profile minimal --target claude`: `ecc-install` is a binary name inside `ecc-universal`, not a separately published npm package.
@@ -389,7 +415,7 @@ cd ECC
 | Qwen CLI | `./install.sh --profile minimal --target qwen` | See the [Qwen guide](docs/QWEN-GUIDE.md) |
 | Hermes | `./install.sh --profile minimal --target hermes` | See the [Hermes setup guide](docs/HERMES-SETUP.md) |
 | OpenClaw | `./install.sh --profile minimal --target openclaw` | Managed home-directory install |
-| Kimi Code CLI | `./install.sh --profile minimal --target kimi` | Project-local `.kimi-code/` install · [Get Kimi Code](https://www.kimi.com/code?aff=ecc) |
+| Kimi Code CLI | `./install.sh --profile minimal --target kimi` | Project-local `.kimi-code/` install · [Get Kimi Code](https://www.kimi.ai/code?aff=ecc) |
 | CodeBuddy | `./install.sh --profile minimal --target codebuddy` | Project-local `.codebuddy/` install |
 | JoyCode | `./install.sh --profile minimal --target joycode` | Project-local `.joycode/` install |
 
@@ -412,7 +438,7 @@ Deep per-harness notes (feature parity, hook adapters, limitations) live in [Pla
 Use this when you want ECC's rules, agents, commands, platform config, and core workflows without runtime hooks:
 
 ```bash
-npx ecc-universal@2.2.2 install --profile minimal --target claude
+npx ecc-universal@2.2.3 install --profile minimal --target claude
 ```
 
 From a source checkout, the equivalent command is:
@@ -474,6 +500,7 @@ Manual component-by-component copying also works. Each component is fully indepe
 
 ```bash
 # Just agents
+mkdir -p ~/.claude/agents
 cp agents/*.md ~/.claude/agents/
 
 # Rules directories (common + language-specific)
@@ -518,7 +545,7 @@ Use this only when you are intentionally skipping the plugin path:
 ```bash
 git clone https://github.com/affaan-m/ECC.git
 cd ECC
-./install.sh --profile full
+./install.sh --profile full --enable-hooks
 ```
 
 Windows:
@@ -526,8 +553,10 @@ Windows:
 ```powershell
 git clone https://github.com/affaan-m/ECC.git
 cd ECC
-.\install.ps1 --profile full
+.\install.ps1 --profile full --enable-hooks
 ```
+
+These examples enable the automatic hook runtime. To install without hooks, replace `--enable-hooks` with `--no-hooks`.
 
 If you choose this path, stop there. Do not also run `/plugin install`.
 
@@ -597,11 +626,11 @@ If you installed from the universal package, run these commands from the same
 project directory used for installation:
 
 ```bash
-npx ecc-universal@2.2.2 list-installed
-npx ecc-universal@2.2.2 doctor
-npx ecc-universal@2.2.2 repair
-npx ecc-universal@2.2.2 uninstall --dry-run
-npx ecc-universal@2.2.2 uninstall
+npx ecc-universal@2.2.3 list-installed
+npx ecc-universal@2.2.3 doctor
+npx ecc-universal@2.2.3 repair
+npx ecc-universal@2.2.3 uninstall --dry-run
+npx ecc-universal@2.2.3 uninstall
 ```
 
 From a source checkout, inspect the managed state before reinstalling:
@@ -790,7 +819,7 @@ The `ito-compute-cli` package is currently unpublished. Build it locally from th
 
 ## What's New
 
-Current release: **2.2.2** (2026-08-31). Highlights of the 2.2 line:
+Current release: **2.2.3** (2026-10-01). Highlights of the 2.2 line:
 
 - Guided, manifest-driven setup across Claude Code, Codex, and Kimi Code, with install-state ownership, doctor, repair, and uninstall.
 - Native Antigravity install, a thin Pi adapter, and the packed-artifact release gate tested on Linux, macOS, and Windows.
@@ -807,7 +836,7 @@ Stable graduation of the 2.0 line: control-pane substrate, worktree lifecycle se
 ```text
 ECC/
 |-- agents/           # 68 specialized subagents for delegation
-|-- skills/           # 292 reusable workflows loaded on demand
+|-- skills/           # 293 reusable workflows loaded on demand
 |-- commands/         # 94 maintained slash-command shims
 |-- rules/            # opt-in common and language standards
 |-- hooks/            # runtime automation and enforcement
@@ -1207,7 +1236,7 @@ ECC's Memory Vault gives Claude, Codex, Hermes, OpenClaw, Kimi, and other harnes
 Skill-only, minimal, manual, and Claude plugin installs do not put the Memory Vault runtime on `PATH`. Install the npm runtime separately before using the CLI or optional MCP server:
 
 ```bash
-npm install -g ecc-universal@2.2.2
+npm install -g ecc-universal@2.2.3
 ecc memory init --scope project
 ecc memory search "authentication migration" --target-harness codex
 ecc memory doctor
@@ -1501,9 +1530,14 @@ npm install && bash scripts/sync-ecc-to-codex.sh
 cp .codex/config.toml ~/.codex/config.toml
 ```
 
-The sync script safely merges ECC MCP servers into your existing `~/.codex/config.toml` using an **add-only** strategy: it never removes or modifies your existing servers. Run with `--dry-run` to preview changes, or `--update-mcp` to force-refresh ECC servers to the latest recommended config.
+Normal MCP sync preserves existing server settings and warns when they differ from ECC's recommendation. An existing `chrome-devtools-mcp@latest` entry therefore stays unchanged; updating the repository alone does not adopt the recommended `chrome-devtools-mcp@1.10.1` pin. Existing legacy-sync users can preview and explicitly apply the refresh from the updated ECC checkout:
 
-For Context7, ECC uses the canonical Codex section name `[mcp_servers.context7]` while still launching the `@upstash/context7-mcp` package. If you already have a legacy `[mcp_servers.context7-mcp]` entry, `--update-mcp` migrates it to the canonical section name.
+```bash
+bash scripts/sync-ecc-to-codex.sh --dry-run --update-mcp
+bash scripts/sync-ecc-to-codex.sh --update-mcp
+```
+
+Review the preview before applying: `--update-mcp` replaces the entire recommended `chrome-devtools` server section, including custom command arguments and nested settings. Unrelated user-managed servers remain in place. Retired defaults such as Context7 are not refreshed or migrated by this flag.
 
 Codex macOS app:
 - Open this repository as your workspace.
@@ -1519,7 +1553,7 @@ Codex macOS app:
 | Config | 1 | `.codex/config.toml`: top-level approvals/sandbox/web_search, MCP servers, notifications, profiles |
 | AGENTS.md | 2 | Root (universal) + `.codex/AGENTS.md` (Codex-specific supplement) |
 | Skills | 32 | `.agents/skills/`: SKILL.md + agents/openai.yaml per skill |
-| MCP Servers | 6 | GitHub, Context7, Exa, Memory, Playwright, Sequential Thinking (7 with Supabase via `--update-mcp` sync) |
+| MCP Servers | 6 legacy reference entries | GitHub, Context7, Exa, Memory, Playwright, Sequential Thinking. Current managed sync recommends `chrome-devtools`; see the explicit refresh instructions above. |
 | Profiles | 2 | `strict` (read-only sandbox) and `yolo` (full auto-approve) |
 | Agent Roles | 3 | `.codex/agents/`: explorer, reviewer, docs-researcher |
 
@@ -1602,7 +1636,7 @@ opencode
 
 **Option 2: Install as npm package**
 ```bash
-npm install ecc-universal@2.2.2
+npm install ecc-universal@2.2.3
 ```
 
 Then add to your `opencode.json`:

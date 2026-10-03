@@ -1,9 +1,9 @@
 ---
 title: caveman
-date: 2026-10-02T21:53:33+08:00
+date: 2026-10-03T20:34:37+08:00
 draft: False
-image: https://images.unsplash.com/photo-1600884877875-065ed42abbd1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA5NDkxNjd8&ixlib=rb-4.1.0
-tags: ['github',AI coding agent, token compression, cost optimization]
+image: https://images.unsplash.com/photo-1529697216570-f48ef8f6b2dd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTEwMzA3NDZ8&ixlib=rb-4.1.0
+tags: ['github',AI token reduction, context compression, coding agent]
 categories: ['github']
 ---
 
@@ -59,8 +59,8 @@ categories: ['github']
 
 <table>
 <tr>
-<th width="50%">🗣️ Normal agent · 69 tokens</th>
-<th width="50%"><img src="docs/assets/dancing-rock.svg" width="18" height="18" alt=""> Caveman agent · 19 tokens</th>
+<th width="50%">🗣️ Normal agent · 63 tokens</th>
+<th width="50%"><img src="docs/assets/dancing-rock.svg" width="18" height="18" alt=""> Caveman agent · 20 tokens</th>
 </tr>
 <tr>
 <td valign="top">
@@ -70,7 +70,7 @@ categories: ['github']
 </td>
 <td valign="top">
 
-> New object ref each render. Inline object prop = new ref = re-render. Wrap in `useMemo`.
+> New object ref each render, so React re-renders. Wrap the prop in `useMemo`.
 
 </td>
 </tr>
@@ -144,13 +144,13 @@ They stack. Most people start with the small rock and graduate.
 The full installer wires up Claude Code hooks and the statusline badge, finds every supported agent on your machine, and skips agents you no have. Safe to re-run. Needs Node.js 22.13+.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/v3.0.0/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/v3.1.0/install.sh | bash
 ```
 
 Windows, PowerShell 5.1+:
 
 ```powershell
-irm https://raw.githubusercontent.com/JuliusBrussee/caveman/v3.0.0/install.ps1 | iex
+irm https://raw.githubusercontent.com/JuliusBrussee/caveman/v3.1.0/install.ps1 | iex
 ```
 
 Just one agent:
@@ -186,7 +186,7 @@ The full 30+ agent matrix, dry runs, flags, and verification live in [INSTALL.md
 **Small rock.** The skill, right after `npx skills add`:
 
 1. **Ask it something.** Any coding question. Watch the preamble vanish and the answer stay.
-2. **Turn the dial.** `/caveman lite` for tight-but-polite. `/caveman ultra` for grunts. `/caveman wenyan` for classical Chinese, because someone asked.
+2. **Pick your club.** `/caveman` for the voice. `/ultracave` for grunts. `/megacave` for classical Chinese, because someone asked.
 3. **Commit like a caveman.** `/caveman-commit` writes a Conventional Commit in one line.
 4. **Review like a caveman.** `/caveman-review` gives one finding per line: `L42: 🔴 null deref. Guard it.`
 5. **Shrink your memory files.** `/caveman-compress CLAUDE.md` cuts the prose, keeps every heading, path, and command, and backs up the original.
@@ -214,9 +214,9 @@ Every number below is either from a committed run in this repo or from a named t
 |---|---|---|
 | **[Adobe Research](https://arxiv.org/abs/2606.24083)** (CAVEWOMAN, arXiv 2606.24083) | Eight models, five datasets, five compression levels | Output-side caveman style cuts realized cost **1.4 to 2.4× per model, up to 3×** in the best case |
 | **[JetBrains](https://blog.jetbrains.com/ai/2026/07/speak-to-ai-agents-like-cavemen-tosave-tokens/)** | 86 real coding tasks, paired A/B, Claude Code 2.1.200. **Skill only, no proxy** (July 2026, before the proxy existed) | **8.5% fewer output tokens**, about 10% cost. **No detectable quality change** (sign test p = 0.82) |
-| **This repo** ([committed eval snapshot](./evals/README.md)) | Ten dev questions, skill vs a plain `Answer concisely.` control, claude-opus-4-6 | **50% fewer output tokens at the median** on top of the terse control. Length only, not correctness |
+| **This repo** ([committed eval snapshot](./evals/README.md)) | Ten dev questions, skill vs a plain `Answer concisely.` control, claude-opus-5-5 | **Default caveman: 3% fewer output tokens at the median** on top of the terse control, inside the noise (per question: 16% longer to 20% shorter). **ultracave: 35%.** megacave: 9%. Length only, not correctness |
 
-Read those three together and you get the honest picture. Chat-style Q&A: big cut. Agentic coding sessions, where most tokens are code and tool calls that the skill never touches: high single digits on output, quality flat.
+Read those three together and you get the honest picture. Chat-style Q&A on a current model that already obeys "be concise": default caveman adds little on top, ultracave still cuts 35%. Agentic coding sessions, where most tokens are code and tool calls that the skill never touches: high single digits on output, quality flat.
 
 **The JetBrains number is why the proxy exists.** They measured the skill alone, in July 2026, before the proxy shipped. Their finding was that an agent's bill is mostly *reading*, not writing, and no talking style fixes that. So we built the thing that shrinks the reading. The table below is what that changed.
 
@@ -338,14 +338,13 @@ Fair headline. We link it anyway. See [The Numbers](#-the-numbers).
 
 ## 💬 The skill, unpacked
 
-One rule file, one talking style, plus a small toolbox. `/caveman lite|full|ultra|wenyan-lite|wenyan-full|wenyan-ultra` sets intensity. `/caveman off` or `normal mode` turns it off.
+Three skills, one voice, plus a small toolbox. `/caveman` is the voice, `/ultracave` strips the grammar, `/megacave` speaks classical Chinese. `/caveman status` reports current mode. `/caveman off` or `normal mode` turns it off. Want opt-in startup? Claude Code supports [`defaultMode: "manual"`](skills/caveman/README.md#how-to-invoke).
 
-| Level | Same question: "Why does my React component re-render?" |
+| Skill | Same question: "Why does my React component re-render?" |
 |---|---|
-| **lite** | Your component re-renders because you create a new object reference each render. Wrap it in `useMemo`. |
-| **full** *(default)* | New object ref each render. Inline object prop = new ref = re-render. Wrap in `useMemo`. |
-| **ultra** | Inline obj prop, new ref, re-render. `useMemo`. |
-| **wenyan-full** | 每繪新生對象參照，故重繪；以 useMemo 包之則免。 |
+| **caveman** *(default)* | New object ref each render, so React re-renders. Wrap the prop in `useMemo`. |
+| **ultracave** | Inline object prop, new ref, re-render. `useMemo`. |
+| **megacave** | 每繪新生對象參照，故重繪；以 useMemo 包之則免。 |
 
 Three things the skill will never do: shorten your code, paraphrase an error message, or grunt through a security warning. It drops to full sentences for anything irreversible, then picks the club back up.
 
@@ -356,7 +355,7 @@ Three things the skill will never do: shorten your code, paraphrase an error mes
 
 | Tool / command                                                                                                                                  | What you get                                                                                                                |
 | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `/caveman [lite\|full\|ultra\|wenyan-lite\|wenyan-full\|wenyan-ultra\|off]`                                                                     | Shorter replies at the intensity you choose.                                                                                |
+| `/caveman`, `/ultracave`, `/megacave`                                                                                                             | Shorter replies: the caveman voice, the grammar stripped, or classical Chinese.                                             |
 | `cavecrew-investigator`, `cavecrew-builder`, `cavecrew-reviewer`                                                                                | Compressed subagent presets for locating, editing, and reviewing code.                                                      |
 | `/caveman-commit`                                                                                                                               | Terse Conventional Commit messages.                                                                                         |
 | `/caveman-review`                                                                                                                               | One-line, actionable review findings.                                                                                       |
@@ -509,7 +508,7 @@ In managed mode the Claude Code wrap also sends the repository (github.com owner
 
 <br>
 
-Tested against real sessions on **Hermes v0.18.0**, **OpenClaw 2026.6.11**, **Pi 0.84.2**, **Kilo Code 7.5.6** (the CLI, not the editor extension), and **Qwen Code 0.22.3**. Persistent shortcuts are journaled and reversible with `caveman disable <agent>`.
+Tested against real sessions on **Hermes v0.18.0**, **OpenClaw 2026.6.11**, **Pi 1.0.0**, **Kilo Code 7.5.6** (the CLI, not the editor extension), and **Qwen Code 0.22.3**. Persistent shortcuts are journaled and reversible with `caveman disable <agent>`.
 
 OpenClaw, for the record, is a lobster. Lobster claw still sharp. Lobster mouth now small.
 
