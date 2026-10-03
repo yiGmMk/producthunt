@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Document_conversion on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/document_conversion/</link>
+        <description>Recent content in Document_conversion on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sat, 16 Aug 2025 15:27:34 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/document_conversion/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>marker</title>
+        <link>https://producthunt.programnotes.cn/en/p/marker/</link>
+        <pubDate>Sat, 16 Aug 2025 15:27:34 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/marker/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1572295833898-c3f020417552?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTUzMjkyMDF8&amp;ixlib=rb-4.1.0" alt="Featured image of post marker" /&gt;&lt;h1 id=&#34;datalab-tomarker&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/datalab-to/marker&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;datalab-to/marker&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;marker&#34;&gt;Marker
+&lt;/h1&gt;&lt;p&gt;Marker converts documents to markdown, JSON, chunks, and HTML quickly and accurately.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Converts PDF, image, PPTX, DOCX, XLSX, HTML, EPUB files in all languages&lt;/li&gt;
+&lt;li&gt;Formats tables, forms, equations, inline math, links, references, and code blocks&lt;/li&gt;
+&lt;li&gt;Extracts and saves images&lt;/li&gt;
+&lt;li&gt;Removes headers/footers/other artifacts&lt;/li&gt;
+&lt;li&gt;Extensible with your own formatting and logic&lt;/li&gt;
+&lt;li&gt;Does structured extraction, given a JSON schema (beta)&lt;/li&gt;
+&lt;li&gt;Optionally boost accuracy with LLMs (and your own prompt)&lt;/li&gt;
+&lt;li&gt;Works on GPU, CPU, or MPS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;performance&#34;&gt;Performance
+&lt;/h2&gt;&lt;img src=&#34;data/images/overall.png&#34; width=&#34;800px&#34;/&gt;
+&lt;p&gt;Marker benchmarks favorably compared to cloud services like Llamaparse and Mathpix, as well as other open source tools.&lt;/p&gt;
+&lt;p&gt;The above results are running single PDF pages serially.  Marker is significantly faster when running in batch mode, with a projected throughput of 25 pages/second on an H100.&lt;/p&gt;
+&lt;p&gt;See &lt;a class=&#34;link&#34; href=&#34;#benchmarks&#34; &gt;below&lt;/a&gt; for detailed speed and accuracy benchmarks, and instructions on how to run your own benchmarks.&lt;/p&gt;
+&lt;h2 id=&#34;hybrid-mode&#34;&gt;Hybrid Mode
+&lt;/h2&gt;&lt;p&gt;For the highest accuracy, pass the &lt;code&gt;--use_llm&lt;/code&gt; flag to use an LLM alongside marker.  This will do things like merge tables across pages, handle inline math, format tables properly, and extract values from forms.  It can use any gemini or ollama model.  By default, it uses &lt;code&gt;gemini-2.0-flash&lt;/code&gt;.  See &lt;a class=&#34;link&#34; href=&#34;#llm-services&#34; &gt;below&lt;/a&gt; for details.&lt;/p&gt;
+&lt;p&gt;Here is a table benchmark comparing marker, gemini flash alone, and marker with use_llm:&lt;/p&gt;
+&lt;img src=&#34;data/images/table.png&#34; width=&#34;400px&#34;/&gt;
+&lt;p&gt;As you can see, the use_llm mode offers higher accuracy than marker or gemini alone.&lt;/p&gt;
+&lt;h2 id=&#34;examples&#34;&gt;Examples
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;PDF&lt;/th&gt;
+					&lt;th&gt;File type&lt;/th&gt;
+					&lt;th&gt;Markdown&lt;/th&gt;
+					&lt;th&gt;JSON&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://greenteapress.com/thinkpython/thinkpython.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Think Python&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Textbook&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/VikParuchuri/marker/blob/master/data/examples/markdown/thinkpython/thinkpython.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/VikParuchuri/marker/blob/master/data/examples/json/thinkpython.json&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/pdf/2101.03961.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Switch Transformers&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;arXiv paper&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/VikParuchuri/marker/blob/master/data/examples/markdown/switch_transformers/switch_trans.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/VikParuchuri/marker/blob/master/data/examples/json/switch_trans.json&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/pdf/1804.07821.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Multi-column CNN&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;arXiv paper&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/VikParuchuri/marker/blob/master/data/examples/markdown/multicolcnn/multicolcnn.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/VikParuchuri/marker/blob/master/data/examples/json/multicolcnn.json&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;commercial-usage&#34;&gt;Commercial usage
+&lt;/h1&gt;&lt;p&gt;I want marker to be as widely accessible as possible, while still funding my development/training costs.  Research and personal usage is always okay, but there are some restrictions on commercial usage.&lt;/p&gt;
+&lt;p&gt;The weights for the models are licensed &lt;code&gt;cc-by-nc-sa-4.0&lt;/code&gt;, but I will waive that for any organization under $2M USD in gross revenue in the most recent 12-month period AND under $2M in lifetime VC/angel funding raised. You also must not be competitive with the &lt;a class=&#34;link&#34; href=&#34;https://www.datalab.to/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Datalab API&lt;/a&gt;.  If you want to remove the GPL license requirements (dual-license) and/or use the weights commercially over the revenue limit, check out the options &lt;a class=&#34;link&#34; href=&#34;https://www.datalab.to&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;hosted-api&#34;&gt;Hosted API
+&lt;/h1&gt;&lt;p&gt;There&amp;rsquo;s a hosted API for marker available &lt;a class=&#34;link&#34; href=&#34;https://www.datalab.to/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Supports PDF, image, PPT, PPTX, DOC, DOCX, XLS, XLSX, HTML, EPUB files&lt;/li&gt;
+&lt;li&gt;1/4th the price of leading cloud-based competitors&lt;/li&gt;
+&lt;li&gt;Fast - ~15s for a 250 page PDF&lt;/li&gt;
+&lt;li&gt;Supports LLM mode&lt;/li&gt;
+&lt;li&gt;High uptime (99.99%)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;community&#34;&gt;Community
+&lt;/h1&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://discord.gg//KuZwXNGnfH&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Discord&lt;/a&gt; is where we discuss future development.&lt;/p&gt;
+&lt;h1 id=&#34;installation&#34;&gt;Installation
+&lt;/h1&gt;&lt;p&gt;You&amp;rsquo;ll need python 3.10+ and &lt;a class=&#34;link&#34; href=&#34;https://pytorch.org/get-started/locally/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyTorch&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Install with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install marker-pdf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If you want to use marker on documents other than PDFs, you will need to install additional dependencies with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install marker-pdf&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;full&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id=&#34;usage&#34;&gt;Usage
+&lt;/h1&gt;&lt;p&gt;First, some configuration:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Your torch device will be automatically detected, but you can override this.  For example, &lt;code&gt;TORCH_DEVICE=cuda&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Some PDFs, even digital ones, have bad text in them.  Set &lt;code&gt;--force_ocr&lt;/code&gt; to force OCR on all lines, or the &lt;code&gt;strip_existing_ocr&lt;/code&gt; to keep all digital text, and strip out any existing OCR text.&lt;/li&gt;
+&lt;li&gt;If you care about inline math, set &lt;code&gt;force_ocr&lt;/code&gt; to convert inline math to LaTeX.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;interactive-app&#34;&gt;Interactive App
+&lt;/h2&gt;&lt;p&gt;I&amp;rsquo;ve included a streamlit app that lets you interactively try marker with some basic options.  Run it with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install streamlit streamlit-ace
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;marker_gui
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;convert-a-single-file&#34;&gt;Convert a single file
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;marker_single /path/to/file.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;You can pass in PDFs or images.&lt;/p&gt;
+&lt;p&gt;Options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--page_range TEXT&lt;/code&gt;: Specify which pages to process. Accepts comma-separated page numbers and ranges. Example: &lt;code&gt;--page_range &amp;quot;0,5-10,20&amp;quot;&lt;/code&gt; will process pages 0, 5 through 10, and page 20.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--output_format [markdown|json|html|chunks]&lt;/code&gt;: Specify the format for the output results.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--output_dir PATH&lt;/code&gt;: Directory where output files will be saved. Defaults to the value specified in settings.OUTPUT_DIR.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--paginate_output&lt;/code&gt;: Paginates the output, using &lt;code&gt;\n\n{PAGE_NUMBER}&lt;/code&gt; followed by &lt;code&gt;-&lt;/code&gt; * 48, then &lt;code&gt;\n\n&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--use_llm&lt;/code&gt;: Uses an LLM to improve accuracy.  You will need to configure the LLM backend - see &lt;a class=&#34;link&#34; href=&#34;#llm-services&#34; &gt;below&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--force_ocr&lt;/code&gt;: Force OCR processing on the entire document, even for pages that might contain extractable text.  This will also format inline math properly.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--block_correction_prompt&lt;/code&gt;: if LLM mode is active, an optional prompt that will be used to correct the output of marker.  This is useful for custom formatting or logic that you want to apply to the output.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--strip_existing_ocr&lt;/code&gt;: Remove all existing OCR text in the document and re-OCR with surya.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--redo_inline_math&lt;/code&gt;: If you want the absolute highest quality inline math conversion, use this along with &lt;code&gt;--use_llm&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--disable_image_extraction&lt;/code&gt;: Don&amp;rsquo;t extract images from the PDF.  If you also specify &lt;code&gt;--use_llm&lt;/code&gt;, then images will be replaced with a description.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--debug&lt;/code&gt;: Enable debug mode for additional logging and diagnostic information.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--processors TEXT&lt;/code&gt;: Override the default processors by providing their full module paths, separated by commas. Example: &lt;code&gt;--processors &amp;quot;module1.processor1,module2.processor2&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--config_json PATH&lt;/code&gt;: Path to a JSON configuration file containing additional settings.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;config --help&lt;/code&gt;: List all available builders, processors, and converters, and their associated configuration.  These values can be used to build a JSON configuration file for additional tweaking of marker defaults.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--converter_cls&lt;/code&gt;: One of &lt;code&gt;marker.converters.pdf.PdfConverter&lt;/code&gt; (default) or &lt;code&gt;marker.converters.table.TableConverter&lt;/code&gt;.  The &lt;code&gt;PdfConverter&lt;/code&gt; will convert the whole PDF, the &lt;code&gt;TableConverter&lt;/code&gt; will only extract and convert tables.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--llm_service&lt;/code&gt;: Which llm service to use if &lt;code&gt;--use_llm&lt;/code&gt; is passed.  This defaults to &lt;code&gt;marker.services.gemini.GoogleGeminiService&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--help&lt;/code&gt;: see all of the flags that can be passed into marker.  (it supports many more options then are listed above)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The list of supported languages for surya OCR is &lt;a class=&#34;link&#34; href=&#34;https://github.com/VikParuchuri/surya/blob/master/surya/recognition/languages.py&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;.  If you don&amp;rsquo;t need OCR, marker can work with any language.&lt;/p&gt;
+&lt;h2 id=&#34;convert-multiple-files&#34;&gt;Convert multiple files
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;marker /path/to/input/folder
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;marker&lt;/code&gt; supports all the same options from &lt;code&gt;marker_single&lt;/code&gt; above.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--workers&lt;/code&gt; is the number of conversion workers to run simultaneously.  This is automatically set by default, but you can increase it to increase throughput, at the cost of more CPU/GPU usage.  Marker will use 5GB of VRAM per worker at the peak, and 3.5GB average.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;convert-multiple-files-on-multiple-gpus&#34;&gt;Convert multiple files on multiple GPUs
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;NUM_DEVICES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;NUM_WORKERS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; marker_chunk_convert ../pdf_in ../md_out
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;NUM_DEVICES&lt;/code&gt; is the number of GPUs to use.  Should be &lt;code&gt;2&lt;/code&gt; or greater.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;NUM_WORKERS&lt;/code&gt; is the number of parallel processes to run on each GPU.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;use-from-python&#34;&gt;Use from python
+&lt;/h2&gt;&lt;p&gt;See the &lt;code&gt;PdfConverter&lt;/code&gt; class at &lt;code&gt;marker/converters/pdf.py&lt;/code&gt; function for additional arguments that can be passed.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;marker.converters.pdf&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PdfConverter&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;marker.models&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;create_model_dict&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;marker.output&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text_from_rendered&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;converter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PdfConverter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;artifact_dict&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create_model_dict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;rendered&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;converter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;FILEPATH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;images&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text_from_rendered&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rendered&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;rendered&lt;/code&gt; will be a pydantic basemodel with different properties depending on the output type requested.  With markdown output (default), you&amp;rsquo;ll have the properties &lt;code&gt;markdown&lt;/code&gt;, &lt;code&gt;metadata&lt;/code&gt;, and &lt;code&gt;images&lt;/code&gt;.  For json output, you&amp;rsquo;ll have &lt;code&gt;children&lt;/code&gt;, &lt;code&gt;block_type&lt;/code&gt;, and &lt;code&gt;metadata&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;custom-configuration&#34;&gt;Custom configuration
+&lt;/h3&gt;&lt;p&gt;You can pass configuration using the &lt;code&gt;ConfigParser&lt;/code&gt;.  To see all available options, do &lt;code&gt;marker_single --help&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;marker.converters.pdf&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PdfConverter&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;marker.models&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;create_model_dict&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;marker.config.parser&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ConfigParser&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;config&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;output_format&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;json&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;ADDITIONAL_KEY&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;VALUE&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;config_parser&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ConfigParser&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;config&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;converter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PdfConverter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;config&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;config_parser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generate_config_dict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;artifact_dict&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create_model_dict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;processor_list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;config_parser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get_processors&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;renderer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;config_parser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get_renderer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;llm_service&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;config_parser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get_llm_service&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;rendered&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;converter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;FILEPATH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;extract-blocks&#34;&gt;Extract blocks
+&lt;/h3&gt;&lt;p&gt;Each document consists of one or more pages.  Pages contain blocks, which can themselves contain other blocks.  It&amp;rsquo;s possible to programmatically manipulate these blocks.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s an example of extracting all forms from a document:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;marker.converters.pdf&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PdfConverter&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;marker.models&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;create_model_dict&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;marker.schema&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BlockTypes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;converter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PdfConverter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;artifact_dict&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create_model_dict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;document&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;converter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;build_document&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;FILEPATH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;forms&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;contained_blocks&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;BlockTypes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Form&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Look at the processors for more examples of extracting and manipulating blocks.&lt;/p&gt;
+&lt;h2 id=&#34;other-converters&#34;&gt;Other converters
+&lt;/h2&gt;&lt;p&gt;You can also use other converters that define different conversion pipelines:&lt;/p&gt;
+&lt;h3 id=&#34;extract-tables&#34;&gt;Extract tables
+&lt;/h3&gt;&lt;p&gt;The &lt;code&gt;TableConverter&lt;/code&gt; will only convert and extract tables:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;marker.converters.table&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TableConverter&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;marker.models&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;create_model_dict&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;marker.output&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text_from_rendered&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;converter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TableConverter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;artifact_dict&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create_model_dict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;rendered&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;converter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;FILEPATH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;images&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text_from_rendered&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rendered&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This takes all the same configuration as the PdfConverter.  You can specify the configuration &lt;code&gt;force_layout_block=Table&lt;/code&gt; to avoid layout detection and instead assume every page is a table.  Set &lt;code&gt;output_format=json&lt;/code&gt; to also get cell bounding boxes.&lt;/p&gt;
+&lt;p&gt;You can also run this via the CLI with&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;marker_single FILENAME --use_llm --force_layout_block Table --converter_cls marker.converters.table.TableConverter --output_format json
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;ocr-only&#34;&gt;OCR Only
+&lt;/h3&gt;&lt;p&gt;If you only want to run OCR, you can also do that through the &lt;code&gt;OCRConverter&lt;/code&gt;.  Set &lt;code&gt;--keep_chars&lt;/code&gt; to keep individual characters and bounding boxes.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;marker.converters.ocr&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;OCRConverter&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;marker.models&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;create_model_dict&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;converter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;OCRConverter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;artifact_dict&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create_model_dict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;rendered&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;converter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;FILEPATH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This takes all the same configuration as the PdfConverter.&lt;/p&gt;
+&lt;p&gt;You can also run this via the CLI with&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;marker_single FILENAME --converter_cls marker.converters.ocr.OCRConverter
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;structured-extraction-beta&#34;&gt;Structured Extraction (beta)
+&lt;/h3&gt;&lt;p&gt;You can run structured extraction via the &lt;code&gt;ExtractionConverter&lt;/code&gt;.  This requires an llm service to be setup first (see &lt;a class=&#34;link&#34; href=&#34;#llm-services&#34; &gt;here&lt;/a&gt; for details).  You&amp;rsquo;ll get a JSON output with the extracted values.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;marker.converters.extraction&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ExtractionConverter&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;marker.models&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;create_model_dict&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;marker.config.parser&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ConfigParser&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pydantic&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BaseModel&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Links&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;BaseModel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;links&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;schema&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Links&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;model_json_schema&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;config_parser&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ConfigParser&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;page_schema&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;schema&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;converter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ExtractionConverter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;artifact_dict&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create_model_dict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;config&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;config_parser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generate_config_dict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;llm_service&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;config_parser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get_llm_service&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;rendered&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;converter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;FILEPATH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Rendered will have an &lt;code&gt;original_markdown&lt;/code&gt; field.  If you pass this back in next time you run the converter, as the &lt;code&gt;existing_markdown&lt;/code&gt; config key, you can skip re-parsing the document.&lt;/p&gt;
+&lt;h1 id=&#34;output-formats&#34;&gt;Output Formats
+&lt;/h1&gt;&lt;h2 id=&#34;markdown&#34;&gt;Markdown
+&lt;/h2&gt;&lt;p&gt;Markdown output will include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;image links (images will be saved in the same folder)&lt;/li&gt;
+&lt;li&gt;formatted tables&lt;/li&gt;
+&lt;li&gt;embedded LaTeX equations (fenced with &lt;code&gt;$$&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Code is fenced with triple backticks&lt;/li&gt;
+&lt;li&gt;Superscripts for footnotes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;html&#34;&gt;HTML
+&lt;/h2&gt;&lt;p&gt;HTML output is similar to markdown output:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Images are included via &lt;code&gt;img&lt;/code&gt; tags&lt;/li&gt;
+&lt;li&gt;equations are fenced with &lt;code&gt;&amp;lt;math&amp;gt;&lt;/code&gt; tags&lt;/li&gt;
+&lt;li&gt;code is in &lt;code&gt;pre&lt;/code&gt; tags&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;json&#34;&gt;JSON
+&lt;/h2&gt;&lt;p&gt;JSON output will be organized in a tree-like structure, with the leaf nodes being blocks.  Examples of leaf nodes are a single list item, a paragraph of text, or an image.&lt;/p&gt;
+&lt;p&gt;The output will be a list, with each list item representing a page.  Each page is considered a block in the internal marker schema.  There are different types of blocks to represent different elements.&lt;/p&gt;
+&lt;p&gt;Pages have the keys:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;id&lt;/code&gt; - unique id for the block.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;block_type&lt;/code&gt; - the type of block. The possible block types can be seen in &lt;code&gt;marker/schema/__init__.py&lt;/code&gt;.  As of this writing, they are [&amp;ldquo;Line&amp;rdquo;, &amp;ldquo;Span&amp;rdquo;, &amp;ldquo;FigureGroup&amp;rdquo;, &amp;ldquo;TableGroup&amp;rdquo;, &amp;ldquo;ListGroup&amp;rdquo;, &amp;ldquo;PictureGroup&amp;rdquo;, &amp;ldquo;Page&amp;rdquo;, &amp;ldquo;Caption&amp;rdquo;, &amp;ldquo;Code&amp;rdquo;, &amp;ldquo;Figure&amp;rdquo;, &amp;ldquo;Footnote&amp;rdquo;, &amp;ldquo;Form&amp;rdquo;, &amp;ldquo;Equation&amp;rdquo;, &amp;ldquo;Handwriting&amp;rdquo;, &amp;ldquo;TextInlineMath&amp;rdquo;, &amp;ldquo;ListItem&amp;rdquo;, &amp;ldquo;PageFooter&amp;rdquo;, &amp;ldquo;PageHeader&amp;rdquo;, &amp;ldquo;Picture&amp;rdquo;, &amp;ldquo;SectionHeader&amp;rdquo;, &amp;ldquo;Table&amp;rdquo;, &amp;ldquo;Text&amp;rdquo;, &amp;ldquo;TableOfContents&amp;rdquo;, &amp;ldquo;Document&amp;rdquo;]&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;html&lt;/code&gt; - the HTML for the page.  Note that this will have recursive references to children.  The &lt;code&gt;content-ref&lt;/code&gt; tags must be replaced with the child content if you want the full html.  You can see an example of this at &lt;code&gt;marker/output.py:json_to_html&lt;/code&gt;.  That function will take in a single block from the json output, and turn it into HTML.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;polygon&lt;/code&gt; - the 4-corner polygon of the page, in (x1,y1), (x2,y2), (x3, y3), (x4, y4) format.  (x1,y1) is the top left, and coordinates go clockwise.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;children&lt;/code&gt; - the child blocks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The child blocks have two additional keys:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;section_hierarchy&lt;/code&gt; - indicates the sections that the block is part of.  &lt;code&gt;1&lt;/code&gt; indicates an h1 tag, &lt;code&gt;2&lt;/code&gt; an h2, and so on.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;images&lt;/code&gt; - base64 encoded images.  The key will be the block id, and the data will be the encoded image.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note that child blocks of pages can have their own children as well (a tree structure).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/page/10/Page/366&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;block_type&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Page&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;html&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;content-ref src=&amp;#39;/page/10/SectionHeader/0&amp;#39;&amp;gt;&amp;lt;/content-ref&amp;gt;&amp;lt;content-ref src=&amp;#39;/page/10/SectionHeader/1&amp;#39;&amp;gt;&amp;lt;/content-ref&amp;gt;&amp;lt;content-ref src=&amp;#39;/page/10/Text/2&amp;#39;&amp;gt;&amp;lt;/content-ref&amp;gt;&amp;lt;content-ref src=&amp;#39;/page/10/Text/3&amp;#39;&amp;gt;&amp;lt;/content-ref&amp;gt;&amp;lt;content-ref src=&amp;#39;/page/10/Figure/4&amp;#39;&amp;gt;&amp;lt;/content-ref&amp;gt;&amp;lt;content-ref src=&amp;#39;/page/10/SectionHeader/5&amp;#39;&amp;gt;&amp;lt;/content-ref&amp;gt;&amp;lt;content-ref src=&amp;#39;/page/10/SectionHeader/6&amp;#39;&amp;gt;&amp;lt;/content-ref&amp;gt;&amp;lt;content-ref src=&amp;#39;/page/10/TextInlineMath/7&amp;#39;&amp;gt;&amp;lt;/content-ref&amp;gt;&amp;lt;content-ref src=&amp;#39;/page/10/TextInlineMath/8&amp;#39;&amp;gt;&amp;lt;/content-ref&amp;gt;&amp;lt;content-ref src=&amp;#39;/page/10/Table/9&amp;#39;&amp;gt;&amp;lt;/content-ref&amp;gt;&amp;lt;content-ref src=&amp;#39;/page/10/SectionHeader/10&amp;#39;&amp;gt;&amp;lt;/content-ref&amp;gt;&amp;lt;content-ref src=&amp;#39;/page/10/Text/11&amp;#39;&amp;gt;&amp;lt;/content-ref&amp;gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;polygon&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[[&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;612.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;612.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;792.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;792.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;children&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/page/10/SectionHeader/0&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;#34;block_type&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;SectionHeader&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;#34;html&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;h1&amp;gt;Supplementary Material for &amp;lt;i&amp;gt;Subspace Adversarial Training&amp;lt;/i&amp;gt; &amp;lt;/h1&amp;gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;#34;polygon&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;217.845703125&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;80.630859375&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;374.73046875&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;80.630859375&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;374.73046875&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;107.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;217.845703125&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;107.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;#34;children&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;#34;section_hierarchy&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nt&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/page/10/SectionHeader/1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;nt&#34;&gt;&amp;#34;images&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;err&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;chunks&#34;&gt;Chunks
+&lt;/h2&gt;&lt;p&gt;Chunks format is similar to JSON, but flattens everything into a single list instead of a tree.  Only the top level blocks from each page show up. It also has the full HTML of each block inside, so you don&amp;rsquo;t need to crawl the tree to reconstruct it.  This enable flexible and easy chunking for RAG.&lt;/p&gt;
+&lt;h2 id=&#34;metadata&#34;&gt;Metadata
+&lt;/h2&gt;&lt;p&gt;All output formats will return a metadata dictionary, with the following fields:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;table_of_contents&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Introduction&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;#34;heading_level&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;#34;page_id&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;#34;polygon&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// computed PDF table of contents
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;page_stats&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;#34;page_id&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;#34;text_extraction_method&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;pdftext&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;&amp;#34;block_counts&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Span&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;err&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id=&#34;llm-services&#34;&gt;LLM Services
+&lt;/h1&gt;&lt;p&gt;When running with the &lt;code&gt;--use_llm&lt;/code&gt; flag, you have a choice of services you can use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Gemini&lt;/code&gt; - this will use the Gemini developer API by default.  You&amp;rsquo;ll need to pass &lt;code&gt;--gemini_api_key&lt;/code&gt; to configuration.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Google Vertex&lt;/code&gt; - this will use vertex, which can be more reliable.  You&amp;rsquo;ll need to pass &lt;code&gt;--vertex_project_id&lt;/code&gt;.  To use it, set &lt;code&gt;--llm_service=marker.services.vertex.GoogleVertexService&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Ollama&lt;/code&gt; - this will use local models.  You can configure &lt;code&gt;--ollama_base_url&lt;/code&gt; and &lt;code&gt;--ollama_model&lt;/code&gt;. To use it, set &lt;code&gt;--llm_service=marker.services.ollama.OllamaService&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Claude&lt;/code&gt; - this will use the anthropic API.  You can configure &lt;code&gt;--claude_api_key&lt;/code&gt;, and &lt;code&gt;--claude_model_name&lt;/code&gt;.  To use it, set &lt;code&gt;--llm_service=marker.services.claude.ClaudeService&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;OpenAI&lt;/code&gt; - this supports any openai-like endpoint. You can configure &lt;code&gt;--openai_api_key&lt;/code&gt;, &lt;code&gt;--openai_model&lt;/code&gt;, and &lt;code&gt;--openai_base_url&lt;/code&gt;. To use it, set &lt;code&gt;--llm_service=marker.services.openai.OpenAIService&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Azure OpenAI&lt;/code&gt; - this uses the Azure OpenAI service. You can configure &lt;code&gt;--azure_endpoint&lt;/code&gt;, &lt;code&gt;--azure_api_key&lt;/code&gt;, and &lt;code&gt;--deployment_name&lt;/code&gt;. To use it, set &lt;code&gt;--llm_service=marker.services.azure_openai.AzureOpenAIService&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These services may have additional optional configuration as well - you can see it by viewing the classes.&lt;/p&gt;
+&lt;h1 id=&#34;internals&#34;&gt;Internals
+&lt;/h1&gt;&lt;p&gt;Marker is easy to extend.  The core units of marker are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Providers&lt;/code&gt;, at &lt;code&gt;marker/providers&lt;/code&gt;.  These provide information from a source file, like a PDF.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Builders&lt;/code&gt;, at &lt;code&gt;marker/builders&lt;/code&gt;.  These generate the initial document blocks and fill in text, using info from the providers.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Processors&lt;/code&gt;, at &lt;code&gt;marker/processors&lt;/code&gt;.  These process specific blocks, for example the table formatter is a processor.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Renderers&lt;/code&gt;, at &lt;code&gt;marker/renderers&lt;/code&gt;. These use the blocks to render output.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Schema&lt;/code&gt;, at &lt;code&gt;marker/schema&lt;/code&gt;.  The classes for all the block types.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Converters&lt;/code&gt;, at &lt;code&gt;marker/converters&lt;/code&gt;.  They run the whole end to end pipeline.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To customize processing behavior, override the &lt;code&gt;processors&lt;/code&gt;.  To add new output formats, write a new &lt;code&gt;renderer&lt;/code&gt;.  For additional input formats, write a new &lt;code&gt;provider.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Processors and renderers can be directly passed into the base &lt;code&gt;PDFConverter&lt;/code&gt;, so you can specify your own custom processing easily.&lt;/p&gt;
+&lt;h2 id=&#34;api-server&#34;&gt;API server
+&lt;/h2&gt;&lt;p&gt;There is a very simple API server you can run like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -U uvicorn fastapi python-multipart
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;marker_server --port &lt;span class=&#34;m&#34;&gt;8001&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This will start a fastapi server that you can access at &lt;code&gt;localhost:8001&lt;/code&gt;.  You can go to &lt;code&gt;localhost:8001/docs&lt;/code&gt; to see the endpoint options.&lt;/p&gt;
+&lt;p&gt;You can send requests like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import requests
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;post_data = {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;#39;filepath&amp;#39;: &amp;#39;FILEPATH&amp;#39;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    # Add other params here
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;requests.post(&amp;#34;http://localhost:8001/marker&amp;#34;, data=json.dumps(post_data)).json()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Note that this is not a very robust API, and is only intended for small-scale use.  If you want to use this server, but want a more robust conversion option, you can use the hosted &lt;a class=&#34;link&#34; href=&#34;https://www.datalab.to/plans&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Datalab API&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;troubleshooting&#34;&gt;Troubleshooting
+&lt;/h1&gt;&lt;p&gt;There are some settings that you may find useful if things aren&amp;rsquo;t working the way you expect:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you have issues with accuracy, try setting &lt;code&gt;--use_llm&lt;/code&gt; to use an LLM to improve quality.  You must set &lt;code&gt;GOOGLE_API_KEY&lt;/code&gt; to a Gemini API key for this to work.&lt;/li&gt;
+&lt;li&gt;Make sure to set &lt;code&gt;force_ocr&lt;/code&gt; if you see garbled text - this will re-OCR the document.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;TORCH_DEVICE&lt;/code&gt; - set this to force marker to use a given torch device for inference.&lt;/li&gt;
+&lt;li&gt;If you&amp;rsquo;re getting out of memory errors, decrease worker count.  You can also try splitting up long PDFs into multiple files.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;debugging&#34;&gt;Debugging
+&lt;/h2&gt;&lt;p&gt;Pass the &lt;code&gt;debug&lt;/code&gt; option to activate debug mode.  This will save images of each page with detected layout and text, as well as output a json file with additional bounding box information.&lt;/p&gt;
+&lt;h1 id=&#34;benchmarks&#34;&gt;Benchmarks
+&lt;/h1&gt;&lt;h2 id=&#34;overall-pdf-conversion&#34;&gt;Overall PDF Conversion
+&lt;/h2&gt;&lt;p&gt;We created a &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/datasets/datalab-to/marker_benchmark&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;benchmark set&lt;/a&gt; by extracting single PDF pages from common crawl.  We scored based on a heuristic that aligns text with ground truth text segments, and an LLM as a judge scoring method.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Method&lt;/th&gt;
+					&lt;th&gt;Avg Time&lt;/th&gt;
+					&lt;th&gt;Heuristic Score&lt;/th&gt;
+					&lt;th&gt;LLM Score&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;marker&lt;/td&gt;
+					&lt;td&gt;2.83837&lt;/td&gt;
+					&lt;td&gt;95.6709&lt;/td&gt;
+					&lt;td&gt;4.23916&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;llamaparse&lt;/td&gt;
+					&lt;td&gt;23.348&lt;/td&gt;
+					&lt;td&gt;84.2442&lt;/td&gt;
+					&lt;td&gt;3.97619&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;mathpix&lt;/td&gt;
+					&lt;td&gt;6.36223&lt;/td&gt;
+					&lt;td&gt;86.4281&lt;/td&gt;
+					&lt;td&gt;4.15626&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;docling&lt;/td&gt;
+					&lt;td&gt;3.69949&lt;/td&gt;
+					&lt;td&gt;86.7073&lt;/td&gt;
+					&lt;td&gt;3.70429&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Benchmarks were run on an H100 for markjer and docling - llamaparse and mathpix used their cloud services.  We can also look at it by document type:&lt;/p&gt;
+&lt;img src=&#34;data/images/per_doc.png&#34; width=&#34;1000px&#34;/&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Document Type&lt;/th&gt;
+					&lt;th&gt;Marker heuristic&lt;/th&gt;
+					&lt;th&gt;Marker LLM&lt;/th&gt;
+					&lt;th&gt;Llamaparse Heuristic&lt;/th&gt;
+					&lt;th&gt;Llamaparse LLM&lt;/th&gt;
+					&lt;th&gt;Mathpix Heuristic&lt;/th&gt;
+					&lt;th&gt;Mathpix LLM&lt;/th&gt;
+					&lt;th&gt;Docling Heuristic&lt;/th&gt;
+					&lt;th&gt;Docling LLM&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Scientific paper&lt;/td&gt;
+					&lt;td&gt;96.6737&lt;/td&gt;
+					&lt;td&gt;4.34899&lt;/td&gt;
+					&lt;td&gt;87.1651&lt;/td&gt;
+					&lt;td&gt;3.96421&lt;/td&gt;
+					&lt;td&gt;91.2267&lt;/td&gt;
+					&lt;td&gt;4.46861&lt;/td&gt;
+					&lt;td&gt;92.135&lt;/td&gt;
+					&lt;td&gt;3.72422&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Book page&lt;/td&gt;
+					&lt;td&gt;97.1846&lt;/td&gt;
+					&lt;td&gt;4.16168&lt;/td&gt;
+					&lt;td&gt;90.9532&lt;/td&gt;
+					&lt;td&gt;4.07186&lt;/td&gt;
+					&lt;td&gt;93.8886&lt;/td&gt;
+					&lt;td&gt;4.35329&lt;/td&gt;
+					&lt;td&gt;90.0556&lt;/td&gt;
+					&lt;td&gt;3.64671&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Other&lt;/td&gt;
+					&lt;td&gt;95.1632&lt;/td&gt;
+					&lt;td&gt;4.25076&lt;/td&gt;
+					&lt;td&gt;81.1385&lt;/td&gt;
+					&lt;td&gt;4.01835&lt;/td&gt;
+					&lt;td&gt;79.6231&lt;/td&gt;
+					&lt;td&gt;4.00306&lt;/td&gt;
+					&lt;td&gt;83.8223&lt;/td&gt;
+					&lt;td&gt;3.76147&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Form&lt;/td&gt;
+					&lt;td&gt;88.0147&lt;/td&gt;
+					&lt;td&gt;3.84663&lt;/td&gt;
+					&lt;td&gt;66.3081&lt;/td&gt;
+					&lt;td&gt;3.68712&lt;/td&gt;
+					&lt;td&gt;64.7512&lt;/td&gt;
+					&lt;td&gt;3.33129&lt;/td&gt;
+					&lt;td&gt;68.3857&lt;/td&gt;
+					&lt;td&gt;3.40491&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Presentation&lt;/td&gt;
+					&lt;td&gt;95.1562&lt;/td&gt;
+					&lt;td&gt;4.13669&lt;/td&gt;
+					&lt;td&gt;81.2261&lt;/td&gt;
+					&lt;td&gt;4&lt;/td&gt;
+					&lt;td&gt;83.6737&lt;/td&gt;
+					&lt;td&gt;3.95683&lt;/td&gt;
+					&lt;td&gt;84.8405&lt;/td&gt;
+					&lt;td&gt;3.86331&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Financial document&lt;/td&gt;
+					&lt;td&gt;95.3697&lt;/td&gt;
+					&lt;td&gt;4.39106&lt;/td&gt;
+					&lt;td&gt;82.5812&lt;/td&gt;
+					&lt;td&gt;4.16111&lt;/td&gt;
+					&lt;td&gt;81.3115&lt;/td&gt;
+					&lt;td&gt;4.05556&lt;/td&gt;
+					&lt;td&gt;86.3882&lt;/td&gt;
+					&lt;td&gt;3.8&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Letter&lt;/td&gt;
+					&lt;td&gt;98.4021&lt;/td&gt;
+					&lt;td&gt;4.5&lt;/td&gt;
+					&lt;td&gt;93.4477&lt;/td&gt;
+					&lt;td&gt;4.28125&lt;/td&gt;
+					&lt;td&gt;96.0383&lt;/td&gt;
+					&lt;td&gt;4.45312&lt;/td&gt;
+					&lt;td&gt;92.0952&lt;/td&gt;
+					&lt;td&gt;4.09375&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Engineering document&lt;/td&gt;
+					&lt;td&gt;93.9244&lt;/td&gt;
+					&lt;td&gt;4.04412&lt;/td&gt;
+					&lt;td&gt;77.4854&lt;/td&gt;
+					&lt;td&gt;3.72059&lt;/td&gt;
+					&lt;td&gt;80.3319&lt;/td&gt;
+					&lt;td&gt;3.88235&lt;/td&gt;
+					&lt;td&gt;79.6807&lt;/td&gt;
+					&lt;td&gt;3.42647&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Legal document&lt;/td&gt;
+					&lt;td&gt;96.689&lt;/td&gt;
+					&lt;td&gt;4.27759&lt;/td&gt;
+					&lt;td&gt;86.9769&lt;/td&gt;
+					&lt;td&gt;3.87584&lt;/td&gt;
+					&lt;td&gt;91.601&lt;/td&gt;
+					&lt;td&gt;4.20805&lt;/td&gt;
+					&lt;td&gt;87.8383&lt;/td&gt;
+					&lt;td&gt;3.65552&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Newspaper page&lt;/td&gt;
+					&lt;td&gt;98.8733&lt;/td&gt;
+					&lt;td&gt;4.25806&lt;/td&gt;
+					&lt;td&gt;84.7492&lt;/td&gt;
+					&lt;td&gt;3.90323&lt;/td&gt;
+					&lt;td&gt;96.9963&lt;/td&gt;
+					&lt;td&gt;4.45161&lt;/td&gt;
+					&lt;td&gt;92.6496&lt;/td&gt;
+					&lt;td&gt;3.51613&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Magazine page&lt;/td&gt;
+					&lt;td&gt;98.2145&lt;/td&gt;
+					&lt;td&gt;4.38776&lt;/td&gt;
+					&lt;td&gt;87.2902&lt;/td&gt;
+					&lt;td&gt;3.97959&lt;/td&gt;
+					&lt;td&gt;93.5934&lt;/td&gt;
+					&lt;td&gt;4.16327&lt;/td&gt;
+					&lt;td&gt;93.0892&lt;/td&gt;
+					&lt;td&gt;4.02041&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;throughput&#34;&gt;Throughput
+&lt;/h2&gt;&lt;p&gt;We benchmarked throughput using a &lt;a class=&#34;link&#34; href=&#34;https://www.greenteapress.com/thinkpython/thinkpython.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;single long PDF&lt;/a&gt;.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Method&lt;/th&gt;
+					&lt;th&gt;Time per page&lt;/th&gt;
+					&lt;th&gt;Time per document&lt;/th&gt;
+					&lt;th&gt;VRAM used&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;marker&lt;/td&gt;
+					&lt;td&gt;0.18&lt;/td&gt;
+					&lt;td&gt;43.42&lt;/td&gt;
+					&lt;td&gt;3.17GB&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The projected throughput is 122 pages per second on an H100 - we can run 22 individual processes given the VRAM used.&lt;/p&gt;
+&lt;h2 id=&#34;table-conversion&#34;&gt;Table Conversion
+&lt;/h2&gt;&lt;p&gt;Marker can extract tables from PDFs using &lt;code&gt;marker.converters.table.TableConverter&lt;/code&gt;. The table extraction performance is measured by comparing the extracted HTML representation of tables against the original HTML representations using the test split of &lt;a class=&#34;link&#34; href=&#34;https://developer.ibm.com/exchanges/data/all/fintabnet/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FinTabNet&lt;/a&gt;. The HTML representations are compared using a tree edit distance based metric to judge both structure and content. Marker detects and identifies the structure of all tables in a PDF page and achieves these scores:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Method&lt;/th&gt;
+					&lt;th&gt;Avg score&lt;/th&gt;
+					&lt;th&gt;Total tables&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;marker&lt;/td&gt;
+					&lt;td&gt;0.816&lt;/td&gt;
+					&lt;td&gt;99&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;marker w/use_llm&lt;/td&gt;
+					&lt;td&gt;0.907&lt;/td&gt;
+					&lt;td&gt;99&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;gemini&lt;/td&gt;
+					&lt;td&gt;0.829&lt;/td&gt;
+					&lt;td&gt;99&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The &lt;code&gt;--use_llm&lt;/code&gt; flag can significantly improve table recognition performance, as you can see.&lt;/p&gt;
+&lt;p&gt;We filter out tables that we cannot align with the ground truth, since fintabnet and our layout model have slightly different detection methods (this results in some tables being split/merged).&lt;/p&gt;
+&lt;h2 id=&#34;running-your-own-benchmarks&#34;&gt;Running your own benchmarks
+&lt;/h2&gt;&lt;p&gt;You can benchmark the performance of marker on your machine. Install marker manually with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/VikParuchuri/marker.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;poetry install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;overall-pdf-conversion-1&#34;&gt;Overall PDF Conversion
+&lt;/h3&gt;&lt;p&gt;Download the benchmark data &lt;a class=&#34;link&#34; href=&#34;https://drive.google.com/file/d/1ZSeWDo2g1y0BRLT7KnbmytV2bjWARWba/view?usp=sharing&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt; and unzip. Then run the overall benchmark like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python benchmarks/overall.py --methods marker --scores heuristic,llm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--use_llm&lt;/code&gt; use an llm to improve the marker results.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--max_rows&lt;/code&gt; how many rows to process for the benchmark.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--methods&lt;/code&gt; can be &lt;code&gt;llamaparse&lt;/code&gt;, &lt;code&gt;mathpix&lt;/code&gt;, &lt;code&gt;docling&lt;/code&gt;, &lt;code&gt;marker&lt;/code&gt;.  Comma separated.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--scores&lt;/code&gt; which scoring functions to use, can be &lt;code&gt;llm&lt;/code&gt;, &lt;code&gt;heuristic&lt;/code&gt;.  Comma separated.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;table-conversion-1&#34;&gt;Table Conversion
+&lt;/h3&gt;&lt;p&gt;The processed FinTabNet dataset is hosted &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/datasets/datalab-to/fintabnet-test&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt; and is automatically downloaded. Run the benchmark with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python benchmarks/table/table.py --max_rows &lt;span class=&#34;m&#34;&gt;100&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--use_llm&lt;/code&gt; uses an llm with marker to improve accuracy.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--use_gemini&lt;/code&gt; also benchmarks gemini 2.0 flash.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;how-it-works&#34;&gt;How it works
+&lt;/h1&gt;&lt;p&gt;Marker is a pipeline of deep learning models:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Extract text, OCR if necessary (heuristics, &lt;a class=&#34;link&#34; href=&#34;https://github.com/VikParuchuri/surya&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;surya&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Detect page layout and find reading order (&lt;a class=&#34;link&#34; href=&#34;https://github.com/VikParuchuri/surya&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;surya&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Clean and format each block (heuristics, &lt;a class=&#34;link&#34; href=&#34;https://github.com/VikParuchuri/texify&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;texify&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/VikParuchuri/surya&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;surya&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Optionally use an LLM to improve quality&lt;/li&gt;
+&lt;li&gt;Combine blocks and postprocess complete text&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It only uses models where necessary, which improves speed and accuracy.&lt;/p&gt;
+&lt;h1 id=&#34;limitations&#34;&gt;Limitations
+&lt;/h1&gt;&lt;p&gt;PDF is a tricky format, so marker will not always work perfectly.  Here are some known limitations that are on the roadmap to address:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Very complex layouts, with nested tables and forms, may not work&lt;/li&gt;
+&lt;li&gt;Forms may not be rendered well&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note: Passing the &lt;code&gt;--use_llm&lt;/code&gt; and &lt;code&gt;--force_ocr&lt;/code&gt; flags will mostly solve these issues.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

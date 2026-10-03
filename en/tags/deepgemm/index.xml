@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>DeepGEMM on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/deepgemm/</link>
+        <description>Recent content in DeepGEMM on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sun, 19 Apr 2026 16:11:03 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/deepgemm/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>DeepGEMM</title>
+        <link>https://producthunt.programnotes.cn/en/p/deepgemm/</link>
+        <pubDate>Sun, 19 Apr 2026 16:11:03 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/deepgemm/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1594671581654-cc7ed83167bb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzY1ODYyMDZ8&amp;ixlib=rb-4.1.0" alt="Featured image of post DeepGEMM" /&gt;&lt;h1 id=&#34;deepseek-aideepgemm&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/deepseek-ai/DeepGEMM&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;deepseek-ai/DeepGEMM&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;deepgemm&#34;&gt;DeepGEMM
+&lt;/h1&gt;&lt;p&gt;DeepGEMM is a unified, high-performance tensor core kernel library that brings together the key computation primitives of modern large language models — GEMMs (FP8, FP4, BF16), fused MoE with overlapped communication (Mega MoE), MQA scoring for the lightning indexer, HyperConnection (HC), and more — into a single, cohesive CUDA codebase. All kernels are compiled at runtime via a lightweight Just-In-Time (JIT) module, requiring no CUDA compilation during installation.&lt;/p&gt;
+&lt;p&gt;DeepGEMM leverages some concepts from &lt;a class=&#34;link&#34; href=&#34;https://github.com/nvidia/cutlass&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CUTLASS&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://github.com/NVIDIA/cutlass/tree/main/include/cute&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CuTe&lt;/a&gt;, but avoids heavy reliance on their templates or algebras. The library is designed for simplicity, with only a limited number of core kernel functions, making it a clean and accessible resource for learning NVIDIA GPU kernel optimization techniques.&lt;/p&gt;
+&lt;p&gt;Despite its lightweight design, DeepGEMM&amp;rsquo;s performance matches or exceeds expert-tuned libraries across various matrix shapes.&lt;/p&gt;
+&lt;h2 id=&#34;news&#34;&gt;News
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;2026.04.16: Mega MoE, FP8xFP4 GEMM, FP4 Indexer, PDL, faster JIT compilation and more.
+&lt;ul&gt;
+&lt;li&gt;Performance comparison will be posted later.&lt;/li&gt;
+&lt;li&gt;Please see &lt;a class=&#34;link&#34; href=&#34;https://github.com/deepseek-ai/DeepGEMM/pull/304&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#304&lt;/a&gt; for more details.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2025.09.28: DeepGEMM now supports scoring kernels (weighted ReLU MQA logits) for the lightning indexer for DeepSeek v3.2.
+&lt;ul&gt;
+&lt;li&gt;Please see &lt;a class=&#34;link&#34; href=&#34;https://github.com/deepseek-ai/DeepGEMM/pull/200&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#200&lt;/a&gt; for more details.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2025.07.20: DeepGEMM now supports both SM90/SM100, and has a full refactor with a low-CPU-overhead JIT CPP module.
+&lt;ul&gt;
+&lt;li&gt;NVRTC and post-compilation SASS optimization are all disabled.&lt;/li&gt;
+&lt;li&gt;NVRTC will be supported later.&lt;/li&gt;
+&lt;li&gt;As NVCC 12.9 will automatically do the FFMA interleaving, all post optimizations will be no longer supported.&lt;/li&gt;
+&lt;li&gt;Please see &lt;a class=&#34;link&#34; href=&#34;https://github.com/deepseek-ai/DeepGEMM/pull/112&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#112&lt;/a&gt; for more details.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2025.05.14: DeepGEMM now offers weight gradient kernels for dense and MoE backward! See &lt;a class=&#34;link&#34; href=&#34;https://github.com/deepseek-ai/DeepGEMM/pull/95&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#95&lt;/a&gt; for details.&lt;/li&gt;
+&lt;li&gt;2025.05.07: DeepGEMM now supports NVRTC with up to 10x compilation speedup! See &lt;a class=&#34;link&#34; href=&#34;https://github.com/deepseek-ai/DeepGEMM/pull/94&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#94&lt;/a&gt; for details. Please use &lt;code&gt;DG_JIT_USE_NVRTC=1&lt;/code&gt; to enable it (may have performance loss with some cases).&lt;/li&gt;
+&lt;li&gt;2025.04.18: DeepGEMM now achieves up to &lt;strong&gt;1550 TFLOPS&lt;/strong&gt; on H800! See &lt;a class=&#34;link&#34; href=&#34;https://github.com/deepseek-ai/DeepGEMM/pull/74&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#74&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/deepseek-ai/DeepGEMM/pull/78&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#78&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/deepseek-ai/DeepGEMM/pull/81&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#81&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/deepseek-ai/DeepGEMM/pull/86&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#86&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://github.com/deepseek-ai/DeepGEMM/commit/340d9880f4a418d943d34260d20a79f41f4c0526&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;340d988&lt;/a&gt; for details.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick start
+&lt;/h2&gt;&lt;h3 id=&#34;requirements&#34;&gt;Requirements
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;NVIDIA SM90 or SM100 architecture GPU&lt;/li&gt;
+&lt;li&gt;Python 3.8 or higher&lt;/li&gt;
+&lt;li&gt;Compilers with C++20 support&lt;/li&gt;
+&lt;li&gt;CUDA Toolkit:
+&lt;ul&gt;
+&lt;li&gt;CUDA 12.3 or higher for SM90
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;We highly recommend 12.9 or higher for the best performance&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CUDA 12.9 or higher for SM100&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;PyTorch 2.1 or higher&lt;/li&gt;
+&lt;li&gt;CUTLASS 4.0 or higher (could be cloned by Git submodule)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{fmt}&lt;/code&gt; library (could be cloned by Git submodule)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;development&#34;&gt;Development
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Submodule must be cloned&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone --recursive git@github.com:deepseek-ai/DeepGEMM.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; DeepGEMM
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Link some essential includes and build the CPP JIT module&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat develop.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./develop.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;installation&#34;&gt;Installation
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat install.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./install.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Then, import &lt;code&gt;deep_gemm&lt;/code&gt; in your Python project, and enjoy!&lt;/p&gt;
+&lt;h2 id=&#34;interfaces&#34;&gt;Interfaces
+&lt;/h2&gt;&lt;h4 id=&#34;notices&#34;&gt;Notices
+&lt;/h4&gt;&lt;p&gt;This library provides optimized GEMM kernels for NVIDIA GPUs with a naming convention: &lt;code&gt;D = C + A @ B&lt;/code&gt;. The input shape layout is NT (non-transposed A, transposed B). While the SM90 implementation supports only the NT memory layout (row-major, col-major), the SM100 implementation supports all memory layouts (NT, TN, NN, TT). For example, &lt;code&gt;fp8_gemm_nt&lt;/code&gt; will do a &lt;code&gt;D = C + A @ B.T&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;For both architectures, the LHS scaling factor is required to have a TMA-aligned and transposed layout. And the data format for the scaling factor of SM90 and SM100 is different:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SM90 requires scaling factors in FP32 format.&lt;/li&gt;
+&lt;li&gt;SM100 requires scaling factors in packed &lt;a class=&#34;link&#34; href=&#34;https://docs.nvidia.com/cuda/parallel-thread-execution/#alternate-floating-point-data-formats&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;UE8M0&lt;/a&gt; format, which packs 4 UE8M0 into a single &lt;code&gt;torch.int&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please note that operations like input transposition or FP8 casting must be handled separately by the user, please implement or fuse them into prior kernels independently. While the library provides some simple PyTorch utility functions, these may result in slower performance, but our primary focus is on optimizing the GEMM kernels themselves.&lt;/p&gt;
+&lt;h4 id=&#34;normal-dense-gemms-non-grouped&#34;&gt;Normal dense GEMMs (non-grouped)
+&lt;/h4&gt;&lt;p&gt;To perform a basic non-grouped FP8 GEMM, call the &lt;code&gt;fp8_gemm_{nt, nn, tn, tt}&lt;/code&gt; function. For more details, please refer to the function documentation.&lt;/p&gt;
+&lt;h4 id=&#34;grouped-gemms-contiguous-layout&#34;&gt;Grouped GEMMs (contiguous layout)
+&lt;/h4&gt;&lt;p&gt;Unlike traditional grouped GEMMs in CUTLASS, DeepGEMM groups only the M-axis, while N and K must remain fixed. This design is tailored for scenarios where experts in an MoE model share the same shape. For training forward passes or inference prefilling, where each expert may process a varying number of tokens, we concatenate these tokens into a single tensor, referred to as the &amp;ldquo;contiguous&amp;rdquo; layout. Note that each expert segment must be aligned to the GEMM M block size (&lt;code&gt;get_mk_alignment_for_contiguous_layout()&lt;/code&gt;).  For more information, please refer to the &lt;code&gt;m_grouped_fp8_gemm_{nt, nn}_contiguous&lt;/code&gt; function documentation.&lt;/p&gt;
+&lt;p&gt;We also provide a K-axis-grouped API for MoE weight backward (with M and N must remain fixed), please refer to &lt;code&gt;k_grouped_fp8_gemm_tn_contiguous&lt;/code&gt; for more information.&lt;/p&gt;
+&lt;h4 id=&#34;grouped-gemms-masked-layout&#34;&gt;Grouped GEMMs (masked layout)
+&lt;/h4&gt;&lt;p&gt;During the inference decoding phase, when CUDA graph is enabled and the CPU is unaware of the number of tokens each expert receives, we support masked grouped GEMMs. By providing a mask tensor, the kernel computes only the valid portions.&lt;/p&gt;
+&lt;p&gt;Use &lt;code&gt;m_grouped_fp8_gemm_nt_masked&lt;/code&gt; for this purpose and consult the relevant documentation. An example usage is to use the output of low-latency kernels from &lt;a class=&#34;link&#34; href=&#34;https://github.com/deepseek-ai/DeepEP&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DeepEP&lt;/a&gt; as input.&lt;/p&gt;
+&lt;h4 id=&#34;v32-mqa-kernels-for-the-indexer&#34;&gt;V3.2 MQA kernels for the indexer
+&lt;/h4&gt;&lt;p&gt;The kernel family has two versions, non-paged (for prefilling) and paged (for decoding).
+Take the non-paged version &lt;code&gt;fp8_mqa_logits&lt;/code&gt; as an example. It has 6 inputs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;q&lt;/code&gt;, E4M3 tensor with shape &lt;code&gt;[seq_len, num_heads, head_dim]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kv&lt;/code&gt;, E4M3 tensor (shaped as &lt;code&gt;[seq_len_kv, head_dim]&lt;/code&gt;) with float SF (shaped as &lt;code&gt;[seq_len_kv]&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;weights&lt;/code&gt;, float tensor with shape &lt;code&gt;[seq_len, num_heads]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cu_seq_len_k_start&lt;/code&gt; and &lt;code&gt;cu_seq_len_k_end&lt;/code&gt;, int tensor with shape &lt;code&gt;[seq_len]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;clean_logits&lt;/code&gt;, whether to clean the unfilled logits into &lt;code&gt;-inf&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The output tensor is shaped as &lt;code&gt;[seq_len, seq_len_kv]&lt;/code&gt;, indicating token-to-token logits.
+For each token &lt;code&gt;i&lt;/code&gt; in &lt;code&gt;q&lt;/code&gt;, it will iterate all tokens &lt;code&gt;j&lt;/code&gt; from &lt;code&gt;[cu_seq_len_k_start[i], cu_seq_len_k_end[i])&lt;/code&gt;,
+and calculate the logit &lt;code&gt;out[i, j]&lt;/code&gt; as:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;kv_j&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;unsqueeze&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# [head_dim]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;out_ij&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;@&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kv_j&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# [num_heads]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;out_ij&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;out_ij&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;relu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;weights&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:]&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# [num_heads]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;out_ij&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;out_ij&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# Scalar&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For more details and the paged version &lt;code&gt;fp8_paged_mqa_logits&lt;/code&gt;, please refer to &lt;code&gt;tests/test_attention.py&lt;/code&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;mega-moe&#34;&gt;Mega MoE
+&lt;/h4&gt;&lt;p&gt;Mega MoE fuses and overlaps EP dispatch, linear 1 (FP8xFP4), SwiGLU, linear 2 (FP8xFP4), and EP combine into a single mega-kernel, overlapping NVLink communication and tensor core computation. It requires multi-process launch with symmetric memory. Usage:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Allocate symmetric memory buffer&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# NOTES: requires PyTorch &amp;gt;= 2.9&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;deep_gemm&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get_symm_buffer_for_mega_moe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;group&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;num_experts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;num_max_tokens_per_rank&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;num_topk&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hidden&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;intermediate_hidden&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Transform weights (FP4 with UE8M0 SF) into the required layout&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;transformed_l1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;transformed_l2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;deep_gemm&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;transform_weights_for_mega_moe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l1_weights&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;l2_weights&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Copy inputs into the buffer before each call&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# You may fuse these into previous kernels&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;num_tokens&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;copy_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x_fp8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x_sf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;num_tokens&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;copy_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x_sf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;topk_idx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;num_tokens&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;copy_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;topk_idx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;topk_weights&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;num_tokens&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;copy_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;topk_weights&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Run the fused mega MoE kernel&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;num_tokens&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hidden&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dtype&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bfloat16&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;device&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;cuda&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;deep_gemm&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fp8_fp4_mega_moe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;transformed_l1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;transformed_l2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For the full example with multi-process setup and benchmarking, please refer to &lt;code&gt;tests/test_mega_moe.py&lt;/code&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;utilities&#34;&gt;Utilities
+&lt;/h4&gt;&lt;p&gt;The library provides some utility functions besides the above kernels:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;deep_gemm.set_num_sms&lt;/code&gt; / &lt;code&gt;get_num_sms&lt;/code&gt;: set/get the maximum SM count to use&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deep_gemm.set_tc_util&lt;/code&gt; / &lt;code&gt;get_tc_util&lt;/code&gt;: set/get an approximated tensor core utilization ratio&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deep_gemm.set_pdl&lt;/code&gt; / &lt;code&gt;get_pdl&lt;/code&gt;: enable/disable Programmatic Dependent Launch (PDL)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deep_gemm.set_mk_alignment_for_contiguous_layout&lt;/code&gt; / &lt;code&gt;get_mk_alignment_for_contiguous_layout&lt;/code&gt;: set/get the group-level M/K alignment for contiguous layout&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deep_gemm.get_theoretical_mk_alignment_for_contiguous_layout&lt;/code&gt;: get the theoretical minimum M/K alignment&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deep_gemm.set_ignore_compile_dims&lt;/code&gt;: configure dimensions to ignore during JIT compilation&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deep_gemm.set_block_size_multiple_of&lt;/code&gt;: constrain block sizes to be multiples of a given value&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deep_gemm.transform_sf_into_required_layout&lt;/code&gt;: transform scaling factors into the required layout&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deep_gemm.get_tma_aligned_size&lt;/code&gt;: get the required TMA alignment size&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deep_gemm.get_mn_major_tma_aligned_tensor&lt;/code&gt;: get a MN-major TMA-aligned tensor&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deep_gemm.get_mn_major_tma_aligned_packed_ue8m0_tensor&lt;/code&gt;: get a MN-major TMA-aligned tensor (with packing FP32 into UE8M0)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deep_gemm.get_k_grouped_mn_major_tma_aligned_packed_ue8m0_tensor&lt;/code&gt;: K-grouped GEMM packing kernel&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The library also provides some environment variables, which may be useful:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;General
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;DG_JIT_DEBUG&lt;/code&gt;: &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;, print JIT debugging information, &lt;code&gt;0&lt;/code&gt; by default&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DG_PRINT_CONFIGS&lt;/code&gt;: &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;, print selected configs for each shape, &lt;code&gt;0&lt;/code&gt; by default&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;JIT cache
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;DG_JIT_CACHE_DIR&lt;/code&gt;: string, cache directory for compiled kernels, &lt;code&gt;$HOME/.deep_gemm&lt;/code&gt; by default&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Compiler selection
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;DG_JIT_USE_NVRTC&lt;/code&gt;: &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;, use NVRTC instead of NVCC (faster compilation, may have lower performance for some cases), &lt;code&gt;0&lt;/code&gt; by default&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DG_JIT_NVCC_COMPILER&lt;/code&gt;: string, NVCC compiler path; defaults to &lt;code&gt;torch.utils.cpp_extension.CUDA_HOME&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DG_JIT_CPP_STANDARD&lt;/code&gt;: integer, C++ standard version, &lt;code&gt;20&lt;/code&gt; by default&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Compiler output
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;DG_JIT_PRINT_COMPILER_COMMAND&lt;/code&gt;: &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;, print compilation commands, &lt;code&gt;0&lt;/code&gt; by default&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DG_JIT_PTXAS_VERBOSE&lt;/code&gt;: &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;, show detailed PTXAS output, &lt;code&gt;0&lt;/code&gt; by default&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DG_JIT_PTXAS_CHECK&lt;/code&gt;: &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;, assert no local memory usage in compiled kernels, &lt;code&gt;0&lt;/code&gt; by default&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DG_JIT_PRINT_LOAD_TIME&lt;/code&gt;: &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;, print kernel load time, &lt;code&gt;0&lt;/code&gt; by default&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Debug and profiling
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;DG_JIT_WITH_LINEINFO&lt;/code&gt;: &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;, embed source line info for profiling tools, &lt;code&gt;0&lt;/code&gt; by default&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DG_JIT_DUMP_ASM&lt;/code&gt;: &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;, dump both PTX and SASS, &lt;code&gt;0&lt;/code&gt; by default&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DG_JIT_DUMP_PTX&lt;/code&gt;: &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;, dump PTX output, &lt;code&gt;0&lt;/code&gt; by default&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DG_JIT_DUMP_SASS&lt;/code&gt;: &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;, dump SASS output, &lt;code&gt;0&lt;/code&gt; by default&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DG_COMM_KERNEL_DEBUG&lt;/code&gt;: &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;, zero symmetric buffer before each Mega MoE call for debugging, &lt;code&gt;0&lt;/code&gt; by default&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DG_USE_NVIDIA_TOOLS&lt;/code&gt;: &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;, skip internal profiling when running under external NVIDIA tools, &lt;code&gt;0&lt;/code&gt; by default&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Build options
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;DG_SKIP_CUDA_BUILD&lt;/code&gt;: &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;, skip CUDA extension build during installation, &lt;code&gt;0&lt;/code&gt; by default&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DG_FORCE_BUILD&lt;/code&gt;: &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;, force local build instead of downloading pre-built wheels, &lt;code&gt;0&lt;/code&gt; by default&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DG_JIT_USE_RUNTIME_API&lt;/code&gt;: &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;, use CUDA Runtime API for kernel loading (requires CUDA runtime &amp;gt;= 12.8), &lt;code&gt;0&lt;/code&gt; by default&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For additional examples and details, please refer to &lt;a class=&#34;link&#34; href=&#34;tests/test_core.py&#34; &gt;the test code&lt;/a&gt; or review the corresponding Python documentation.&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgement&#34;&gt;Acknowledgement
+&lt;/h2&gt;&lt;p&gt;DeepGEMM is inspired by the &lt;a class=&#34;link&#34; href=&#34;https://github.com/nvidia/cutlass&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CUTLASS&lt;/a&gt; project. Thanks and respect to the developers!&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;This code repository is released under &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;the MIT License&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@misc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;deepgemm2025&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{DeepGEMM: clean and efficient BLAS kernel library on GPU}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{Chenggang Zhao and Zhean Xu and Liang Zhao and Jiashi Li and Chenhao Xu and Anyi Xu and Shengyu Liu and Kexing Zhou and Kuai Yu}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{2025}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;publisher&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{GitHub}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;howpublished&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{\url{https://github.com/deepseek-ai/DeepGEMM}}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

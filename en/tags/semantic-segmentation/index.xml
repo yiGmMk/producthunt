@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Semantic Segmentation on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/semantic-segmentation/</link>
+        <description>Recent content in Semantic Segmentation on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 25 Apr 2025 15:28:25 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/semantic-segmentation/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>dinov2</title>
+        <link>https://producthunt.programnotes.cn/en/p/dinov2/</link>
+        <pubDate>Fri, 25 Apr 2025 15:28:25 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/dinov2/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1590919097686-843b4ce68c01?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDU1NjYwMzd8&amp;ixlib=rb-4.0.3" alt="Featured image of post dinov2" /&gt;&lt;h1 id=&#34;facebookresearchdinov2&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/facebookresearch/dinov2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;facebookresearch/dinov2&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;:new: [2023-10-26] &lt;em&gt;Added DINOv2 backbones with registers, following &lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2309.16588&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vision Transformers Need Registers&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;dinov2-learning-robust-visual-features-without-supervision&#34;&gt;DINOv2: Learning Robust Visual Features without Supervision
+&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://ai.facebook.com/research/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Meta AI Research, FAIR&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Maxime Oquab,
+Timothée Darcet,
+Théo Moutakanni,
+Huy V. Vo,
+Marc Szafraniec,
+Vasil Khalidov,
+Patrick Labatut,
+Armand Joulin,
+Piotr Bojanowski&lt;/p&gt;
+&lt;p&gt;[&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2304.07193&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;Paper #1&lt;/code&gt;&lt;/a&gt;] &lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2309.16588&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;Paper #2&lt;/code&gt;&lt;/a&gt;] [&lt;a class=&#34;link&#34; href=&#34;https://ai.facebook.com/blog/dino-v2-computer-vision-self-supervised-learning/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;Blog&lt;/code&gt;&lt;/a&gt;] [&lt;a class=&#34;link&#34; href=&#34;https://dinov2.metademolab.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;Demo&lt;/code&gt;&lt;/a&gt;] [&lt;a class=&#34;link&#34; href=&#34;#citing-dinov2&#34; &gt;&lt;code&gt;BibTeX&lt;/code&gt;&lt;/a&gt;]&lt;/p&gt;
+&lt;p&gt;PyTorch implementation and pretrained models for DINOv2. For details, see the papers: &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2304.07193&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DINOv2: Learning Robust Visual Features without Supervision&lt;/a&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2309.16588&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vision Transformers Need Registers&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;DINOv2 models produce high-performance visual features that can be directly employed with classifiers as simple as linear layers on a variety of computer vision tasks; these visual features are robust and perform well across domains without any requirement for fine-tuning. The models were pretrained on a dataset of 142 M images without using any labels or annotations.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/facebookresearch/dinov2/assets/60359573/f168823e-7922-415a-b429-578badf5c356&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/facebookresearch/dinov2/assets/60359573/f168823e-7922-415a-b429-578badf5c356&lt;/a&gt;&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+  Visualization of the three first principal components of the patch features of all frames, mapped to RGB values.
+&lt;/div&gt;
+&lt;h2 id=&#34;pretrained-models&#34;&gt;Pretrained models
+&lt;/h2&gt;&lt;table style=&#34;margin: auto&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;model&lt;/th&gt;
+      &lt;th&gt;# of&lt;br /&gt;params&lt;/th&gt;
+      &lt;th&gt;with&lt;br /&gt;registers&lt;/th&gt;
+      &lt;th&gt;ImageNet&lt;br /&gt;k-NN&lt;/th&gt;
+      &lt;th&gt;ImageNet&lt;br /&gt;linear&lt;/th&gt;
+      &lt;th&gt;download&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-S/14 distilled&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;21 M&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;:x:&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;79.0%&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;81.1%&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth&#34;&gt;backbone only&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-S/14 distilled&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;21 M&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;:white_check_mark:&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;79.1%&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;80.9%&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_reg4_pretrain.pth&#34;&gt;backbone only&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-B/14 distilled&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;86 M&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;:x:&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;82.1%&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;84.5%&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_pretrain.pth&#34;&gt;backbone only&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-B/14 distilled&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;86 M&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;:white_check_mark:&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;82.0%&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;84.6%&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_reg4_pretrain.pth&#34;&gt;backbone only&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-L/14 distilled&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;300 M&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;:x:&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;83.5%&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;86.3%&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_pretrain.pth&#34;&gt;backbone only&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-L/14 distilled&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;300 M&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;:white_check_mark:&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;83.8%&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;86.7%&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_reg4_pretrain.pth&#34;&gt;backbone only&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-g/14&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;1,100 M&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;:x:&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;83.5%&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;86.5%&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_pretrain.pth&#34;&gt;backbone only&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-g/14&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;1,100 M&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;:white_check_mark:&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;83.7%&lt;/td&gt;
+      &lt;td align=&#34;right&#34;&gt;87.1%&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_reg4_pretrain.pth&#34;&gt;backbone only&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;pretrained-backbones-via-pytorch-hub&#34;&gt;Pretrained backbones (via PyTorch Hub)
+&lt;/h3&gt;&lt;p&gt;Please follow the instructions &lt;a class=&#34;link&#34; href=&#34;https://pytorch.org/get-started/locally/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt; to install PyTorch (the only required dependency for loading the model). Installing PyTorch with CUDA support is strongly recommended.&lt;/p&gt;
+&lt;p&gt;A corresponding &lt;a class=&#34;link&#34; href=&#34;MODEL_CARD.md&#34; &gt;model card&lt;/a&gt; is included in the repository.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;torch&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# DINOv2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dinov2_vits14&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;facebookresearch/dinov2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;dinov2_vits14&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dinov2_vitb14&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;facebookresearch/dinov2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;dinov2_vitb14&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dinov2_vitl14&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;facebookresearch/dinov2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;dinov2_vitl14&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dinov2_vitg14&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;facebookresearch/dinov2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;dinov2_vitg14&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# DINOv2 with registers&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dinov2_vits14_reg&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;facebookresearch/dinov2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;dinov2_vits14_reg&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dinov2_vitb14_reg&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;facebookresearch/dinov2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;dinov2_vitb14_reg&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dinov2_vitl14_reg&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;facebookresearch/dinov2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;dinov2_vitl14_reg&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dinov2_vitg14_reg&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;facebookresearch/dinov2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;dinov2_vitg14_reg&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;pretrained-heads---image-classification&#34;&gt;Pretrained heads - Image classification
+&lt;/h3&gt;&lt;table style=&#34;margin: auto&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th rowspan=&#34;2&#34;&gt;backbone&lt;/th&gt;
+      &lt;th rowspan=&#34;2&#34;&gt;with&lt;br /&gt;registers&lt;/th&gt;
+      &lt;th&gt;download&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;ImageNet&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-S/14 distilled&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;:x:&lt;/td&gt;
+      &lt;td&gt;
+        linear head (&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_linear_head.pth&#34;&gt;1 layer&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_linear4_head.pth&#34;&gt;4 layers&lt;/a&gt;)
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-S/14 distilled&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;:white_check_mark:&lt;/td&gt;
+      &lt;td&gt;
+        linear head (&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_reg4_linear_head.pth&#34;&gt;1 layer&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_reg4_linear4_head.pth&#34;&gt;4 layers&lt;/a&gt;)
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-B/14 distilled&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;:x:&lt;/td&gt;
+      &lt;td&gt;
+        linear head (&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_linear_head.pth&#34;&gt;1 layer&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_linear4_head.pth&#34;&gt;4 layers&lt;/a&gt;)
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-B/14 distilled&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;:white_check_mark:&lt;/td&gt;
+      &lt;td&gt;
+        linear head (&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_reg4_linear_head.pth&#34;&gt;1 layer&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_reg4_linear4_head.pth&#34;&gt;4 layers&lt;/a&gt;)
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-L/14 distilled&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;:x:&lt;/td&gt;
+      &lt;td&gt;
+        linear head (&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_linear_head.pth&#34;&gt;1 layer&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_linear4_head.pth&#34;&gt;4 layers&lt;/a&gt;)
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-L/14 distilled&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;:white_check_mark:&lt;/td&gt;
+      &lt;td&gt;
+        linear head (&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_reg4_linear_head.pth&#34;&gt;1 layer&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_reg4_linear4_head.pth&#34;&gt;4 layers&lt;/a&gt;)
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-g/14&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;:x:&lt;/td&gt;
+      &lt;td&gt;
+        linear head (&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_linear_head.pth&#34;&gt;1 layer&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_linear4_head.pth&#34;&gt;4 layers&lt;/a&gt;)
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-g/14&lt;/td&gt;
+      &lt;td align=&#34;center&#34;&gt;:white_check_mark:&lt;/td&gt;
+      &lt;td&gt;
+        linear head (&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_lreg4_inear_head.pth&#34;&gt;1 layer&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_reg4_linear4_head.pth&#34;&gt;4 layers&lt;/a&gt;)
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The (full) classifier models can be loaded via PyTorch Hub:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;torch&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# DINOv2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dinov2_vits14_lc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;facebookresearch/dinov2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;dinov2_vits14_lc&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dinov2_vitb14_lc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;facebookresearch/dinov2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;dinov2_vitb14_lc&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dinov2_vitl14_lc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;facebookresearch/dinov2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;dinov2_vitl14_lc&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dinov2_vitg14_lc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;facebookresearch/dinov2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;dinov2_vitg14_lc&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# DINOv2 with registers&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dinov2_vits14_reg_lc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;facebookresearch/dinov2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;dinov2_vits14_reg_lc&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dinov2_vitb14_reg_lc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;facebookresearch/dinov2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;dinov2_vitb14_reg_lc&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dinov2_vitl14_reg_lc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;facebookresearch/dinov2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;dinov2_vitl14_reg_lc&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dinov2_vitg14_reg_lc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;facebookresearch/dinov2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;dinov2_vitg14_reg_lc&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;pretrained-heads---depth-estimation&#34;&gt;Pretrained heads - Depth estimation
+&lt;/h3&gt;&lt;table style=&#34;margin: auto&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th rowspan=&#34;2&#34;&gt;backbone&lt;/th&gt;
+      &lt;th colspan=&#34;2&#34;&gt;download head&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;NYUd&lt;/th&gt;
+      &lt;th&gt;KITTI&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-S/14 distilled&lt;/td&gt;
+      &lt;td&gt;
+        linear (&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_nyu_linear_head.pth&#34;&gt;1 layer&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_nyu_linear4_head.pth&#34;&gt;4 layers&lt;/a&gt;),
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_nyu_dpt_head.pth&#34;&gt;DPT&lt;/a&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        linear (&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_kitti_linear_head.pth&#34;&gt;1 layer&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_kitti_linear4_head.pth&#34;&gt;4 layers&lt;/a&gt;),
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_kitti_dpt_head.pth&#34;&gt;DPT&lt;/a&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-B/14 distilled&lt;/td&gt;
+      &lt;td&gt;
+        linear (&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_linear_head.pth&#34;&gt;1 layer&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_nyu_linear4_head.pth&#34;&gt;4 layers&lt;/a&gt;),
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_nyu_dpt_head.pth&#34;&gt;DPT&lt;/a&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        linear (&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_kitti_linear_head.pth&#34;&gt;1 layer&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_kitti_linear4_head.pth&#34;&gt;4 layers&lt;/a&gt;),
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_kitti_dpt_head.pth&#34;&gt;DPT&lt;/a&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-L/14 distilled&lt;/td&gt;
+      &lt;td&gt;
+        linear (&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_linear_head.pth&#34;&gt;1 layer&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_nyu_linear4_head.pth&#34;&gt;4 layers&lt;/a&gt;),
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_nyu_dpt_head.pth&#34;&gt;DPT&lt;/a&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        linear (&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_kitti_linear_head.pth&#34;&gt;1 layer&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_kitti_linear4_head.pth&#34;&gt;4 layers&lt;/a&gt;),
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_kitti_dpt_head.pth&#34;&gt;DPT&lt;/a&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-g/14&lt;/td&gt;
+      &lt;td&gt;
+        linear (&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_linear_head.pth&#34;&gt;1 layer&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_nyu_linear4_head.pth&#34;&gt;4 layers&lt;/a&gt;),
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_nyu_dpt_head.pth&#34;&gt;DPT&lt;/a&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        linear (&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_kitti_linear_head.pth&#34;&gt;1 layer&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_kitti_linear4_head.pth&#34;&gt;4 layers&lt;/a&gt;),
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_kitti_dpt_head.pth&#34;&gt;DPT&lt;/a&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;pretrained-heads---semantic-segmentation&#34;&gt;Pretrained heads - Semantic segmentation
+&lt;/h3&gt;&lt;table style=&#34;margin: auto&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th rowspan=&#34;2&#34;&gt;backbone&lt;/th&gt;
+      &lt;th&gt;download model&lt;/th&gt;
+      &lt;th colspan=&#34;2&#34;&gt;download head&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;ADE20K&lt;/th&gt;
+      &lt;th&gt;ADE20K&lt;/th&gt;
+      &lt;th&gt;VOC2012&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-S/14 distilled&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_ade20k_linear_head.pth&#34;&gt;linear&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_ade20k_ms_head.pth&#34;&gt;multi-scale&lt;/a&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_voc2012_linear_head.pth&#34;&gt;linear&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_voc2012_ms_head.pth&#34;&gt;multi-scale&lt;/a&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-B/14 distilled&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_ade20k_linear_head.pth&#34;&gt;linear&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_ade20k_ms_head.pth&#34;&gt;multi-scale&lt;/a&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_voc2012_linear_head.pth&#34;&gt;linear&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_voc2012_ms_head.pth&#34;&gt;multi-scale&lt;/a&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-L/14 distilled&lt;/td&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_ade20k_linear_head.pth&#34;&gt;linear&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_ade20k_ms_head.pth&#34;&gt;multi-scale&lt;/a&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_voc2012_linear_head.pth&#34;&gt;linear&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_voc2012_ms_head.pth&#34;&gt;multi-scale&lt;/a&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ViT-g/14&lt;/td&gt;
+      &lt;td&gt;
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_ade20k_m2f.pth&#34;&gt;Mask2Former&lt;/a&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_ade20k_linear_head.pth&#34;&gt;linear&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_ade20k_ms_head.pth&#34;&gt;multi-scale&lt;/a&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_voc2012_linear_head.pth&#34;&gt;linear&lt;/a&gt;,
+        &lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_voc2012_ms_head.pth&#34;&gt;multi-scale&lt;/a&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation
+&lt;/h2&gt;&lt;p&gt;The training and evaluation code requires PyTorch 2.0 and &lt;a class=&#34;link&#34; href=&#34;https://github.com/facebookresearch/xformers&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;xFormers&lt;/a&gt; 0.0.18 as well as a number of other 3rd party packages. Note that the code has only been tested with the specified versions and also expects a Linux environment. To setup all the required dependencies for training and evaluation, please follow the instructions below:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;conda&lt;/a&gt;&lt;/em&gt; &lt;strong&gt;(Recommended)&lt;/strong&gt; - Clone the repository and then create and activate a &lt;code&gt;dinov2&lt;/code&gt; conda environment using the provided environment definition:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda env create -f conda.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda activate dinov2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;em&gt;&lt;a class=&#34;link&#34; href=&#34;https://pip.pypa.io/en/stable/getting-started/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pip&lt;/a&gt;&lt;/em&gt; - Clone the repository and then use the provided &lt;code&gt;requirements.txt&lt;/code&gt; to install the dependencies:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -r requirements.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For dense tasks (depth estimation and semantic segmentation), there are additional dependencies (specific versions of &lt;code&gt;mmcv&lt;/code&gt; and &lt;code&gt;mmsegmentation&lt;/code&gt;) which are captured in the &lt;code&gt;extras&lt;/code&gt; dependency specifications:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;conda&lt;/a&gt;&lt;/em&gt; &lt;strong&gt;(Recommended)&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda env create -f conda-extras.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda activate dinov2-extras
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;em&gt;&lt;a class=&#34;link&#34; href=&#34;https://pip.pypa.io/en/stable/getting-started/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pip&lt;/a&gt;&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -r requirements.txt -r requirements-extras.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;data-preparation&#34;&gt;Data preparation
+&lt;/h2&gt;&lt;h3 id=&#34;imagenet-1k&#34;&gt;ImageNet-1k
+&lt;/h3&gt;&lt;p&gt;The root directory of the dataset should hold the following contents:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;ROOT&amp;gt;/test/ILSVRC2012_test_00000001.JPEG&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;ROOT&amp;gt;/test/[..]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;ROOT&amp;gt;/test/ILSVRC2012_test_00100000.JPEG&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;ROOT&amp;gt;/train/n01440764/n01440764_10026.JPEG&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;ROOT&amp;gt;/train/[...]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;ROOT&amp;gt;/train/n15075141/n15075141_9993.JPEG&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;ROOT&amp;gt;/val/n01440764/ILSVRC2012_val_00000293.JPEG&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;ROOT&amp;gt;/val/[...]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;ROOT&amp;gt;/val/n15075141/ILSVRC2012_val_00049174.JPEG&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;ROOT&amp;gt;/labels.txt&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The provided dataset implementation expects a few additional metadata files to be present under the extra directory:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;EXTRA&amp;gt;/class-ids-TRAIN.npy&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;EXTRA&amp;gt;/class-ids-VAL.npy&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;EXTRA&amp;gt;/class-names-TRAIN.npy&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;EXTRA&amp;gt;/class-names-VAL.npy&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;EXTRA&amp;gt;/entries-TEST.npy&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;EXTRA&amp;gt;/entries-TRAIN.npy&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;EXTRA&amp;gt;/entries-VAL.npy&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These metadata files can be generated (once) with the following lines of Python code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;dinov2.data.datasets&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ImageNet&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;split&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ImageNet&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;dataset&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ImageNet&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;ROOT&amp;gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;extra&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;EXTRA&amp;gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;dataset&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dump_extra&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Note that the root and extra directories do not have to be distinct directories.&lt;/p&gt;
+&lt;h3 id=&#34;imagenet-22k&#34;&gt;ImageNet-22k
+&lt;/h3&gt;&lt;p&gt;Please adapt the &lt;a class=&#34;link&#34; href=&#34;dinov2/data/datasets/image_net_22k.py&#34; &gt;dataset class&lt;/a&gt; to match your local setup.&lt;/p&gt;
+&lt;br /&gt;
+&lt;p&gt;:warning: To execute the commands provided in the next sections for training and evaluation, the &lt;code&gt;dinov2&lt;/code&gt; package should be included in the Python module search path, i.e. simply prefix the command to run with &lt;code&gt;PYTHONPATH=.&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;training&#34;&gt;Training
+&lt;/h2&gt;&lt;h3 id=&#34;fast-setup-training-dinov2-vit-l16-on-imagenet-1k&#34;&gt;Fast setup: training DINOv2 ViT-L/16 on ImageNet-1k
+&lt;/h3&gt;&lt;p&gt;Run DINOv2 training on 4 A100-80GB nodes (32 GPUs) in a SLURM cluster environment with submitit:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python dinov2/run/train/train.py &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --nodes &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --config-file dinov2/configs/train/vitl16_short.yaml &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --output-dir &amp;lt;PATH/TO/OUTPUT/DIR&amp;gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    train.dataset_path&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;ImageNet:split&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;TRAIN:root&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt;:extra&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Training time is approximately 1 day and the resulting checkpoint should reach 81.6% on k-NN eval and 82.9% on linear eval.&lt;/p&gt;
+&lt;p&gt;The training code saves the weights of the teacher in the &lt;code&gt;eval&lt;/code&gt; folder every 12500 iterations for evaluation.&lt;/p&gt;
+&lt;h3 id=&#34;long-setup-training-dinov2-vit-l14-on-imagenet-22k&#34;&gt;Long setup: training DINOv2 ViT-L/14 on ImageNet-22k
+&lt;/h3&gt;&lt;p&gt;Run DINOv2 training on 12 A100-80GB nodes (96 GPUs) in a SLURM cluster environment with submitit:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python dinov2/run/train/train.py &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --nodes &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --config-file dinov2/configs/train/vitl14.yaml &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --output-dir &amp;lt;PATH/TO/OUTPUT/DIR&amp;gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    train.dataset_path&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;ImageNet22k:root&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt;:extra&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Training time is approximately 3.3 days and the resulting checkpoint should reach 82.0% on k-NN eval and 84.5% on linear eval.&lt;/p&gt;
+&lt;p&gt;The training code saves the weights of the teacher in the &lt;code&gt;eval&lt;/code&gt; folder every 12500 iterations for evaluation.&lt;/p&gt;
+&lt;h2 id=&#34;evaluation&#34;&gt;Evaluation
+&lt;/h2&gt;&lt;p&gt;The training code regularly saves the teacher weights. In order to evaluate the model, run the following evaluation on a single node:&lt;/p&gt;
+&lt;h3 id=&#34;k-nn-classification-on-imagenet-1k&#34;&gt;k-NN classification on ImageNet-1k
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python dinov2/run/eval/knn.py &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --config-file &amp;lt;PATH/TO/OUTPUT/DIR&amp;gt;/config.yaml &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --pretrained-weights &amp;lt;PATH/TO/OUTPUT/DIR&amp;gt;/eval/training_24999/teacher_checkpoint.pth &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --output-dir &amp;lt;PATH/TO/OUTPUT/DIR&amp;gt;/eval/training_24999/knn &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --train-dataset ImageNet:split&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;TRAIN:root&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt;:extra&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --val-dataset ImageNet:split&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;VAL:root&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt;:extra&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;logistic-regression-classification-on-imagenet-1k&#34;&gt;Logistic regression classification on ImageNet-1k
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python dinov2/run/eval/log_regression.py &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --config-file &amp;lt;PATH/TO/OUTPUT/DIR&amp;gt;/config.yaml &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --pretrained-weights &amp;lt;PATH/TO/OUTPUT/DIR&amp;gt;/eval/training_24999/teacher_checkpoint.pth &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --output-dir &amp;lt;PATH/TO/OUTPUT/DIR&amp;gt;/eval/training_24999/logreg &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --train-dataset ImageNet:split&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;TRAIN:root&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt;:extra&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --val-dataset ImageNet:split&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;VAL:root&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt;:extra&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;linear-classification-with-data-augmentation-on-imagenet-1k&#34;&gt;Linear classification with data augmentation on ImageNet-1k
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python dinov2/run/eval/linear.py &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --config-file &amp;lt;PATH/TO/OUTPUT/DIR&amp;gt;/config.yaml &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --pretrained-weights &amp;lt;PATH/TO/OUTPUT/DIR&amp;gt;/eval/training_24999/teacher_checkpoint.pth &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --output-dir &amp;lt;PATH/TO/OUTPUT/DIR&amp;gt;/eval/training_24999/linear &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --train-dataset ImageNet:split&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;TRAIN:root&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt;:extra&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --val-dataset ImageNet:split&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;VAL:root&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt;:extra&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;We release the weights from evaluating the different models:&lt;/p&gt;
+&lt;table style=&#34;margin: auto&#34;&gt;
+  &lt;tr&gt;
+    &lt;th&gt;model&lt;/th&gt;
+    &lt;th&gt;with&lt;br /&gt;registers&lt;/th&gt;
+    &lt;th&gt;ImageNet&lt;br /&gt;top-1&lt;/th&gt;
+    &lt;th&gt;linear evaluation&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;ViT-S/14 distilled&lt;/td&gt;
+    &lt;td align=&#34;center&#34;&gt;:x:&lt;/td&gt;
+    &lt;td align=&#34;right&#34;&gt;81.1%&lt;/td&gt;
+    &lt;td&gt;&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_linear_head.pth&#34;&gt;linear head weights&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;ViT-S/14 distilled&lt;/td&gt;
+    &lt;td align=&#34;center&#34;&gt;:white_check_mark:&lt;/td&gt;
+    &lt;td align=&#34;right&#34;&gt;80.8%&lt;/td&gt;
+    &lt;td&gt;&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_reg4_linear_head.pth&#34;&gt;linear head weights&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;ViT-B/14 distilled&lt;/td&gt;
+    &lt;td align=&#34;center&#34;&gt;:x:&lt;/td&gt;
+    &lt;td align=&#34;right&#34;&gt;84.5%&lt;/td&gt;
+    &lt;td&gt;&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_linear_head.pth&#34;&gt;linear head weights&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;ViT-B/14 distilled&lt;/td&gt;
+    &lt;td align=&#34;center&#34;&gt;:white_check_mark:&lt;/td&gt;
+    &lt;td align=&#34;right&#34;&gt;84.4%&lt;/td&gt;
+    &lt;td&gt;&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitb14/dinov2_vitb14_reg4_linear_head.pth&#34;&gt;linear head weights&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;ViT-L/14 distilled&lt;/td&gt;
+    &lt;td align=&#34;center&#34;&gt;:x:&lt;/td&gt;
+    &lt;td align=&#34;right&#34;&gt;86.3%&lt;/td&gt;
+    &lt;td&gt;&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_linear_head.pth&#34;&gt;linear head weights&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;ViT-L/14 distilled&lt;/td&gt;
+    &lt;td align=&#34;center&#34;&gt;:white_check_mark:&lt;/td&gt;
+    &lt;td align=&#34;right&#34;&gt;86.5%&lt;/td&gt;
+    &lt;td&gt;&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_reg4_linear_head.pth&#34;&gt;linear head weights&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;ViT-g/14&lt;/td&gt;
+    &lt;td align=&#34;center&#34;&gt;:x:&lt;/td&gt;
+    &lt;td align=&#34;right&#34;&gt;86.5%&lt;/td&gt;
+    &lt;td&gt;&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_linear_head.pth&#34;&gt;linear head weights&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;ViT-g/14&lt;/td&gt;
+    &lt;td align=&#34;center&#34;&gt;:white_check_mark:&lt;/td&gt;
+    &lt;td align=&#34;right&#34;&gt;87.0%&lt;/td&gt;
+    &lt;td&gt;&lt;a href=&#34;https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_reg4_linear_head.pth&#34;&gt;linear head weights&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;The performance of the provided pretrained model weights can be evaluated as follows on ImageNet-1k:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python dinov2/run/eval/linear.py &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --config-file dinov2/configs/eval/vitg14_pretrain.yaml &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --pretrained-weights https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_pretrain.pth &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --train-dataset ImageNet:split&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;TRAIN:root&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt;:extra&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --val-dataset ImageNet:split&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;VAL:root&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt;:extra&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;PATH/TO/DATASET&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;notebooks&#34;&gt;Notebooks
+&lt;/h2&gt;&lt;p&gt;A few notebooks are provided to help the community leverage the models and code:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&#34;https://github.com/facebookresearch/dinov2/blob/main/notebooks/depth_estimation.ipynb&#34;&gt;Depth estimation&lt;/a&gt; - How to load and use the depth heads in combination with a matching backbone via mmcv&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;https://github.com/facebookresearch/dinov2/blob/main/notebooks/semantic_segmentation.ipynb&#34;&gt;Semantic segmentation&lt;/a&gt; - How to load and use the segmentation heads in combination with a matching backbone via mmcv, and also how to load and use the Mask2Former-based segmentation model trained on ADE20K&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;DINOv2 code and model weights are released under the Apache License 2.0. See &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt; for additional details.&lt;/p&gt;
+&lt;h2 id=&#34;contributing&#34;&gt;Contributing
+&lt;/h2&gt;&lt;p&gt;See &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;contributing&lt;/a&gt; and the &lt;a class=&#34;link&#34; href=&#34;CODE_OF_CONDUCT.md&#34; &gt;code of conduct&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;citing-dinov2&#34;&gt;Citing DINOv2
+&lt;/h2&gt;&lt;p&gt;If you find this repository useful, please consider giving a star :star: and citation :t-rex::&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@misc{oquab2023dinov2,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  title={DINOv2: Learning Robust Visual Features without Supervision},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  author={Oquab, Maxime and Darcet, Timothée and Moutakanni, Theo and Vo, Huy V. and Szafraniec, Marc and Khalidov, Vasil and Fernandez, Pierre and Haziza, Daniel and Massa, Francisco and El-Nouby, Alaaeldin and Howes, Russell and Huang, Po-Yao and Xu, Hu and Sharma, Vasu and Li, Shang-Wen and Galuba, Wojciech and Rabbat, Mike and Assran, Mido and Ballas, Nicolas and Synnaeve, Gabriel and Misra, Ishan and Jegou, Herve and Mairal, Julien and Labatut, Patrick and Joulin, Armand and Bojanowski, Piotr},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  journal={arXiv:2304.07193},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  year={2023}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@misc{darcet2023vitneedreg,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  title={Vision Transformers Need Registers},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  author={Darcet, Timothée and Oquab, Maxime and Mairal, Julien and Bojanowski, Piotr},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  journal={arXiv:2309.16588},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  year={2023}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
