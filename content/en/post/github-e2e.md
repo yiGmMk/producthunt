@@ -1,9 +1,9 @@
 ---
 title: e2e
-date: 2026-10-04T21:16:41+08:00
+date: 2026-10-05T23:53:02+08:00
 draft: False
-image: https://images.unsplash.com/photo-1696550580343-4f339143b465?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTExMTk3NzR8&ixlib=rb-4.1.0
-tags: ['github',E2E testing,AI agent,natural language]
+image: https://images.unsplash.com/photo-1588584583307-59fa0370b191?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTEyMTU1NTJ8&ixlib=rb-4.1.0
+tags: ['github',end-to-end testing, AI testing framework, natural language automation]
 categories: ['github']
 ---
 
@@ -16,6 +16,10 @@ categories: ['github']
   <a href="https://www.npmjs.com/package/e2e"><img alt="npm version" src="https://img.shields.io/npm/v/e2e.svg?style=for-the-badge&labelColor=000000" /></a>
   <a href="./LICENSE"><img alt="License: Apache-2.0" src="https://img.shields.io/badge/license-Apache--2.0-green.svg?style=for-the-badge&labelColor=000000" /></a>
   <a href="https://tester.army/discord"><img alt="Join the community on Discord" src="https://img.shields.io/badge/Join%20the%20community-5865F2.svg?style=for-the-badge&logo=discord&logoColor=white&labelColor=000000" /></a>
+</p>
+
+<p align="center">
+  <a href="https://www.star-history.com/tester-army/e2e"><picture><source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?repo=tester-army/e2e&type=trending&theme=dark" /><img alt="GitHub Trending Repository of the Day" src="https://api.star-history.com/badge?repo=tester-army/e2e&type=trending" /></picture></a>
 </p>
 
 # e2e
@@ -50,6 +54,11 @@ npx e2e init
 `init` asks for an engine, web or mobile, and a model provider, then writes a
 config and an example test. The
 [quickstart](https://e2e.tester.army/docs/quickstart) covers the rest.
+
+To see a finished setup in your stack, open
+[`examples/`](https://github.com/tester-army/e2e/tree/main/examples):
+Vite, Next.js, Expo, and SwiftUI, each a standalone project with a passing
+suite.
 
 ## Packages
 
