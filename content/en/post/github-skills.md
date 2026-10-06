@@ -1,9 +1,9 @@
 ---
 title: skills
-date: 2026-10-01T22:32:30+08:00
+date: 2026-10-06T22:13:55+08:00
 draft: False
-image: https://images.unsplash.com/photo-1580176555250-1f842f0b4dd8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4NjUwOTB8&ixlib=rb-4.1.0
-tags: ['github',AI coding agents, software engineering, developer productivity]
+image: https://images.unsplash.com/photo-1596386963743-c0adfdc8b304?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTEyOTU5ODl8&ixlib=rb-4.1.0
+tags: ['github',AI coding agents,software engineering,test-driven development]
 categories: ['github']
 ---
 
@@ -35,7 +35,7 @@ If you want to keep up with changes to these skills, and any new ones I create, 
 
 ## Installation (30-second setup)
 
-Two ways in, two philosophies. **The [Claude Code plugin](https://code.claude.com/docs/en/plugins)** installs the whole set as a managed, read-only bundle that updates when I ship, so you subscribe rather than fork. **[skills.sh](https://skills.sh/mattpocock/skills)** copies editable skill files into your project, so you can hack on them and make them your own. Pick one: installing both leaves you with every skill twice.
+Two ways in, two philosophies. **The [Claude Code plugin](https://code.claude.com/docs/en/plugins)** installs the whole set as a managed, read-only bundle that updates when Anthropic's marketplace picks up my releases, so you subscribe rather than fork. **[skills.sh](https://skills.sh/mattpocock/skills)** copies editable skill files into your project, so you can hack on them and make them your own. Pick one: installing both leaves you with every skill twice.
 
 ### 1. Get the skills
 
@@ -52,7 +52,15 @@ Or, from inside a session:
 /plugin install mattpocock-skills
 ```
 
-It's in Claude Code's official marketplace, so there's nothing to add first, and updates arrive automatically.
+It's in Claude Code's official marketplace, so there's nothing to add first. Updates reach you when Anthropic's marketplace moves its pin to a new release, which can lag behind this repo by days or weeks.
+
+**Stuck on an old version?** `claude plugin list` shows what you have, and [CHANGELOG.md](./CHANGELOG.md) shows the latest release. To track this repo directly instead, switch to its own marketplace and turn on auto-update for it under `/plugin` → Marketplaces (it's off by default for marketplaces outside Anthropic's):
+
+```bash
+claude plugin uninstall mattpocock-skills@claude-plugins-official
+claude plugin marketplace add mattpocock/skills
+claude plugin install mattpocock-skills@mattpocock
+```
 
 </details>
 
@@ -86,7 +94,7 @@ It writes the skills into your repo as ordinary files you own and can edit. Noth
 
 In your agent, run it once per repo. It will:
 
-- Ask you which issue tracker you want to use (GitHub, Linear, or local files)
+- Ask you which issue tracker you want to use (GitHub, GitLab, local files, or anything else you describe)
 - Ask you what labels you apply to tickets when you triage them (`/triage` uses labels)
 - Ask you where you want to save any docs we create
 

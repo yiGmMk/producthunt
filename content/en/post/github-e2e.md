@@ -1,9 +1,9 @@
 ---
 title: e2e
-date: 2026-10-05T23:53:02+08:00
+date: 2026-10-06T22:13:32+08:00
 draft: False
-image: https://images.unsplash.com/photo-1588584583307-59fa0370b191?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTEyMTU1NTJ8&ixlib=rb-4.1.0
-tags: ['github',end-to-end testing, AI testing framework, natural language automation]
+image: https://images.unsplash.com/photo-1593429978083-45632b61d842?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTEyOTU5ODl8&ixlib=rb-4.1.0
+tags: ['github',end-to-end testing,AI agent framework,natural language testing]
 categories: ['github']
 ---
 
