@@ -1,9 +1,9 @@
 ---
 title: skills
-date: 2026-10-06T22:13:55+08:00
+date: 2026-10-07T22:31:20+08:00
 draft: False
-image: https://images.unsplash.com/photo-1596386963743-c0adfdc8b304?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTEyOTU5ODl8&ixlib=rb-4.1.0
-tags: ['github',AI coding agents,software engineering,test-driven development]
+image: https://images.unsplash.com/photo-1578022556726-81b21ac91f98?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTEzODM0MzV8&ixlib=rb-4.1.0
+tags: ['github',AI coding agents, software engineering skills, test-driven development]
 categories: ['github']
 ---
 
@@ -52,7 +52,7 @@ Or, from inside a session:
 /plugin install mattpocock-skills
 ```
 
-It's in Claude Code's official marketplace, so there's nothing to add first. Updates reach you when Anthropic's marketplace moves its pin to a new release, which can lag behind this repo by days or weeks.
+It's in Claude Code's official marketplace, so there's nothing to add first. If it says the plugin isn't found, run `claude plugins marketplace update` and retry. Updates reach you when Anthropic's marketplace moves its pin to a new release, which can lag behind this repo by days or weeks.
 
 **Stuck on an old version?** `claude plugin list` shows what you have, and [CHANGELOG.md](./CHANGELOG.md) shows the latest release. To track this repo directly instead, switch to its own marketplace and turn on auto-update for it under `/plugin` → Marketplaces (it's off by default for marketplaces outside Anthropic's):
 
