@@ -1,9 +1,9 @@
 ---
 title: AnyPS5
-date: 2026-10-07T22:31:41+08:00
+date: 2026-10-08T22:41:06+08:00
 draft: False
-image: https://images.unsplash.com/photo-1544747582-e90fd05971ca?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTEzODM0MzV8&ixlib=rb-4.1.0
-tags: ['github',PlayStation 5, Executable Porting, Shader Recompiler]
+image: https://images.unsplash.com/photo-1593600137672-e680bda1a5d5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE0NzA0NDZ8&ixlib=rb-4.1.0
+tags: ['github',executable porting, PS5 compatibility, shader recompiler]
 categories: ['github']
 ---
 
@@ -15,7 +15,7 @@ Tool for automatic executables porting to Linux and Windows.
 
 Includes a [relinker](core/relinker) that converts executable to the target system's native format and implementations of [system prx libraries](core/libs/prx) suitable for dynamic linking. No emulation or separate runtime process.
 
-[Usage](docs/user/USAGE.md), [Build instructions](docs/dev/BUILD.md), [Technical debt of the project](docs/dev/TechnicalDebt.md), [code style conventions](docs/dev/CONVENTIONS.md), [contributing](CONTRIBUTING.md)
+[Usage](docs/user/USAGE.md), [Build instructions](docs/dev/BUILD.md), [Architecture](docs/dev/ARCHITECTURE.md), [Technical debt of the project](docs/dev/TechnicalDebt.md), [code style conventions](docs/dev/CONVENTIONS.md), [contributing](CONTRIBUTING.md)
 
 ## Status
 

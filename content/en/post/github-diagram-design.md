@@ -1,9 +1,9 @@
 ---
 title: diagram-design
-date: 2026-10-07T22:32:31+08:00
+date: 2026-10-08T22:41:33+08:00
 draft: False
-image: https://images.unsplash.com/photo-1731493948299-dcaf11651ba8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTEzODM0MzV8&ixlib=rb-4.1.0
-tags: ['github',editorial diagrams, AI agent skills, brand customization]
+image: https://images.unsplash.com/photo-1768840932290-30b9e130faf8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE0NzA0NDZ8&ixlib=rb-4.1.0
+tags: ['github',diagram design, AI agent skill, semantic visualization]
 categories: ['github']
 ---
 

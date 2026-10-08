@@ -1,9 +1,9 @@
 ---
 title: claude-mem
-date: 2026-10-05T23:53:31+08:00
+date: 2026-10-08T22:42:47+08:00
 draft: False
-image: https://images.unsplash.com/photo-1523288405107-9bbaf851f49f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTEyMTU1NTJ8&ixlib=rb-4.1.0
-tags: ['github',Claude-Mem, Persistent Memory, Claude Code]
+image: https://images.unsplash.com/photo-1768840932290-30b9e130faf8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE0NzA0NDZ8&ixlib=rb-4.1.0
+tags: ['github',Persistent Memory, Claude Code, Context Preservation]
 categories: ['github']
 ---
 
@@ -70,7 +70,7 @@ categories: ['github']
     <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License">
   </a>
   <a href="package.json">
-    <img src="https://img.shields.io/badge/version-13.31.0-green.svg" alt="Version">
+    <img src="https://img.shields.io/badge/version-13.34.2-green.svg" alt="Version">
   </a>
   <a href="package.json">
     <img src="https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen.svg" alt="Node">
@@ -161,7 +161,7 @@ Install with a single command:
 npx claude-mem install
 ```
 
-The installer sets everything up first, then asks you to sign in to claude-mem in your browser (email magic link — no card required). Signing in provisions a memory key for your account and unlocks the **claude-mem observer**: memory that runs off-plan, free for up to 14 days, so you get up to 100% more usage from your plan. When the free trial ends, memory automatically falls back to your Anthropic plan unless you subscribe. After sign-in you pick your memory provider — the claude-mem observer, your own OpenRouter or Gemini key, or your Anthropic plan.
+The installer sets everything up first, then asks you to sign in to claude-mem in your browser (email magic link — no card required). Signing in provisions a memory key for your account and unlocks the **claude-mem observer** with a **30 Day Free Trial**: memory runs off-plan, so you get up to 100% more usage from your plan. When the free trial ends, memory automatically falls back to your Anthropic plan unless you subscribe. After sign-in you pick your memory provider — the claude-mem observer, your own OpenRouter or Gemini key, or your Anthropic plan.
 
 Prefer to skip the sign-in? Pass an explicit `--provider` flag, set `CLAUDE_MEM_ONLINE_OPTIN=false`, or run in CI/non-interactive shells — the installer completes without any account interaction.
 
@@ -170,6 +170,14 @@ Or install for OpenCode:
 ```bash
 npx claude-mem install --ide opencode
 ```
+
+Or install for **T3 Code** (Codex and Claude Code providers):
+
+```bash
+npx claude-mem install --ide t3code
+```
+
+The installer discovers T3 Code's enabled providers, registers native Claude-Mem plugins in their configured homes, and supports T3-managed Codex. Restart T3 Code, trust the provider's hooks when prompted, and start a new thread. See the [T3 Code integration guide](https://docs.claude-mem.ai/t3code-integration) for custom server settings, status, and removal.
 
 Or install for Antigravity CLI ([setup guide](https://docs.claude-mem.ai/antigravity-cli/setup)):
 
@@ -182,6 +190,15 @@ Or install for OMP (Oh My Pi):
 ```bash
 npx claude-mem install --ide omp
 ```
+
+Or install the native Pi extension or DeepSeek Harness plugin:
+
+```bash
+npx claude-mem install --ide pi
+npx claude-mem install --ide dsh --dsh-profile tui
+```
+
+Pi and DeepSeek Harness use the worker runtime. See [native harness setup](docs/native-harness-integrations.md) for capture, recall, and troubleshooting.
 
 Or install from the plugin marketplace inside Claude Code:
 
