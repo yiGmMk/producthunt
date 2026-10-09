@@ -1,9 +1,9 @@
 ---
 title: skills
-date: 2026-10-08T22:42:23+08:00
+date: 2026-10-09T22:28:10+08:00
 draft: False
-image: https://images.unsplash.com/photo-1593600137672-e680bda1a5d5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE0NzA0NDZ8&ixlib=rb-4.1.0
-tags: ['github',ai coding agents, software engineering, developer productivity]
+image: https://images.unsplash.com/photo-1657058061589-34baf3bb30da?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE1NTYwMTd8&ixlib=rb-4.1.0
+tags: ['github',AI Agent Skills, Software Engineering Workflows, Test Driven Development]
 categories: ['github']
 ---
 
