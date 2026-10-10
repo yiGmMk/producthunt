@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Long-Context on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/long-context/</link>
+        <description>Recent content in Long-Context on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 19 Jun 2026 19:37:39 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/long-context/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>GLM-5</title>
+        <link>https://producthunt.programnotes.cn/en/p/glm-5/</link>
+        <pubDate>Fri, 19 Jun 2026 19:37:39 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/glm-5/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1633624875787-ec89de82324f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODE4Njg4Nzl8&amp;ixlib=rb-4.1.0" alt="Featured image of post GLM-5" /&gt;&lt;h1 id=&#34;zai-orgglm-5&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/zai-org/GLM-5&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;zai-org/GLM-5&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;glm-52--glm-51--glm-5&#34;&gt;GLM-5.2 &amp;amp; GLM-5.1 &amp;amp; GLM-5
+&lt;/h1&gt;&lt;div align=&#34;center&#34;&gt;
+&lt;img src=resources/logo.svg width=&#34;15%&#34;/&gt;
+&lt;/div&gt;
+&lt;p align=&#34;center&#34;&gt;
+    👋 Join our &lt;a href=&#34;resources/WECHAT.md&#34; target=&#34;_blank&#34;&gt;Wechat&lt;/a&gt; or &lt;a href=&#34;https://discord.gg/Hc5z9bx5Xw&#34; target=&#34;_blank&#34;&gt;Discord&lt;/a&gt; community.
+    &lt;br&gt;
+    📖 Check out the GLM-5.2 &lt;a href=&#34;https://z.ai/blog/glm-5.2&#34; target=&#34;_blank&#34;&gt;blog&lt;/a&gt; and GLM-5 &lt;a href=&#34;https://arxiv.org/abs/2602.15763&#34; target=&#34;_blank&#34;&gt;Technical report&lt;/a&gt;.
+    &lt;br&gt;
+    📍 Use GLM-5.2 API services on &lt;a href=&#34;https://docs.z.ai/guides/llm/glm-5.2&#34;&gt;Z.ai API Platform. &lt;/a&gt;
+    &lt;br&gt;
+    🔜 Try GLM-5.2 at &lt;a href=&#34;https://z.ai&#34;&gt;z.ai&lt;/a&gt;.
+&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction
+&lt;/h2&gt;&lt;h3 id=&#34;glm-52&#34;&gt;GLM-5.2
+&lt;/h3&gt;&lt;p&gt;GLM-5.2, our latest flagship model for long-horizon tasks. It marks a substantial leap in long-horizon task capability over its predecessor GLM-5.1 and, for the first time, delivers that capability on a &lt;strong&gt;solid 1M-token context&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;GLM-5.2&amp;rsquo;s new capabilities include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Solid 1M Context:&lt;/strong&gt; A solid 1M-token context that stably sustains long-horizon work&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Advanced Coding with Flexible Effort&lt;/strong&gt;: Stronger coding capabilities with multiple thinking effort levels to balance performance and latency&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Improved Architecture&lt;/strong&gt;: We propose &lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2603.12201&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;IndexShare&lt;/a&gt;, which reuses the same indexer across every four sparse attention layers, reducing per-token FLOPs by 2.9× at a 1M context length. We also improve GLM-5.2’s MTP layer for speculative decoding, increasing the acceptance length by up to 20%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/resources/bench_52.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;bench_52&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;On standard coding benchmarks, GLM-5.2 is the strongest open-source model, improving on GLM-5.1 by a wide margin: 81.0 vs. 62.0 on Terminal-Bench 2.1 and 62.1 vs. 58.4 on SWE-bench Pro. It also closes much of the gap to the closed-source frontier — on Terminal-Bench 2.1 (81.0) it lands within a few points of Claude Opus 4.8 (85.0) — while staying ahead of Gemini 3.1 Pro.&lt;/p&gt;
+&lt;p&gt;For more detail, check our &lt;a class=&#34;link&#34; href=&#34;https://z.ai/blog/glm-5.2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;blog&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;glm-51&#34;&gt;GLM-5.1
+&lt;/h3&gt;&lt;p&gt;GLM-5.1 is our next-generation flagship model for agentic engineering, with significantly stronger coding capabilities than its predecessor. It achieves state-of-the-art performance on SWE-Bench Pro and leads GLM-5 by a wide margin on NL2Repo (repo generation) and Terminal-Bench 2.0 (real-world terminal tasks).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/resources/bench_51.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;bench_51&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;But the most meaningful leap goes beyond first-pass performance. Previous models—including GLM-5—tend to exhaust their repertoire early: they apply familiar techniques for quick initial gains, then plateau. Giving them more time doesn&amp;rsquo;t help.&lt;/p&gt;
+&lt;p&gt;GLM-5.1, by contrast, is built to stay effective on agentic tasks over much longer horizons. We&amp;rsquo;ve found that the model handles ambiguous problems with better judgment and stays productive over longer sessions. It breaks complex problems down, runs experiments, reads results, and identifies blockers with real precision. By revisiting its reasoning and revising its strategy through repeated iteration, GLM-5.1 sustains optimization over hundreds of rounds and thousands of tool calls. The longer it runs, the better the result.&lt;/p&gt;
+&lt;h3 id=&#34;glm-5&#34;&gt;GLM-5
+&lt;/h3&gt;&lt;p&gt;We are launching GLM-5, targeting complex systems engineering and long-horizon agentic tasks. Scaling is still one of the most important ways to improve the intelligence efficiency of Artificial General Intelligence (AGI). Compared to GLM-4.5, GLM-5 scales from 355B parameters (32B active) to 744B parameters (40B active), and increases pre-training data from 23T to 28.5T tokens. GLM-5 also integrates DeepSeek Sparse Attention (DSA), largely reducing deployment cost while preserving long-context capacity.&lt;/p&gt;
+&lt;p&gt;Reinforcement learning aims to bridge the gap between competence and excellence in pre-trained models. However, deploying it at scale for LLMs is a challenge due to the RL training inefficiency. To this end, we developed &lt;a class=&#34;link&#34; href=&#34;https://github.com/THUDM/slime&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;slime&lt;/a&gt;, a novel &lt;strong&gt;asynchronous RL infrastructure&lt;/strong&gt; that substantially improves training throughput and efficiency, enabling more fine-grained post-training iterations. With advances in both pre-training and post-training, GLM-5 delivers significant improvement compared to GLM-4.7 across a wide range of academic benchmarks and achieves best-in-class performance among all open-source models in the world on reasoning, coding, and agentic tasks,  closing the gap with frontier models.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/resources/bench.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;bench&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;GLM-5 is purpose-built for complex systems engineering and long-horizon agentic tasks. On our internal evaluation suite CC-Bench-V2, GLM-5 significantly outperforms GLM-4.7 across frontend, backend, and long-horizon tasks, narrowing the gap to Claude Opus 4.5.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/resources/realworld_bench.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;realworld_bench&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;On &lt;a class=&#34;link&#34; href=&#34;https://andonlabs.com/evals/vending-bench-2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vending Bench 2&lt;/a&gt;, a benchmark that measures long-term operational capability, GLM-5 ranks #1 among open-source models. Vending Bench 2 requires the model to run a simulated vending machine business over a one-year horizon; GLM-5 finishes with a final account balance of $4,432, approaching Claude Opus 4.5 and demonstrating strong long-term planning and resource management.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/resources/vending_bench.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;vending_bench&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;download-model&#34;&gt;Download Model
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Model&lt;/th&gt;
+					&lt;th&gt;Download Links&lt;/th&gt;
+					&lt;th&gt;Model Size&lt;/th&gt;
+					&lt;th&gt;Precision&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GLM-5.2&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/zai-org/GLM-5.2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🤗 Hugging Face&lt;/a&gt;&lt;br&gt; &lt;a class=&#34;link&#34; href=&#34;https://modelscope.cn/models/ZhipuAI/GLM-5.2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🤖 ModelScope&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;744B-A40B&lt;/td&gt;
+					&lt;td&gt;BF16&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GLM-5.2-FP8&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/zai-org/GLM-5.2-FP8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🤗 Hugging Face&lt;/a&gt;&lt;br&gt; &lt;a class=&#34;link&#34; href=&#34;https://modelscope.cn/models/ZhipuAI/GLM-5.2-FP8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🤖 ModelScope&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;744B-A40B&lt;/td&gt;
+					&lt;td&gt;FP8&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GLM-5.1&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/zai-org/GLM-5.1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🤗 Hugging Face&lt;/a&gt;&lt;br&gt; &lt;a class=&#34;link&#34; href=&#34;https://modelscope.cn/models/ZhipuAI/GLM-5.1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🤖 ModelScope&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;744B-A40B&lt;/td&gt;
+					&lt;td&gt;BF16&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GLM-5.1-FP8&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/zai-org/GLM-5.1-FP8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🤗 Hugging Face&lt;/a&gt;&lt;br&gt; &lt;a class=&#34;link&#34; href=&#34;https://modelscope.cn/models/ZhipuAI/GLM-5.1-FP8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🤖 ModelScope&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;744B-A40B&lt;/td&gt;
+					&lt;td&gt;FP8&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GLM-5&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/zai-org/GLM-5&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🤗 Hugging Face&lt;/a&gt;&lt;br&gt; &lt;a class=&#34;link&#34; href=&#34;https://modelscope.cn/models/ZhipuAI/GLM-5&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🤖 ModelScope&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;744B-A40B&lt;/td&gt;
+					&lt;td&gt;BF16&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GLM-5-FP8&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/zai-org/GLM-5-FP8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🤗 Hugging Face&lt;/a&gt;&lt;br&gt; &lt;a class=&#34;link&#34; href=&#34;https://modelscope.cn/models/ZhipuAI/GLM-5-FP8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🤖 ModelScope&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;744B-A40B&lt;/td&gt;
+					&lt;td&gt;FP8&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;serve-glm-5-series-locally&#34;&gt;Serve GLM-5 Series Locally
+&lt;/h2&gt;&lt;p&gt;GLM-5.2 supports deployment with the following frameworks. Feel free to try them out:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/sgl-project/sglang&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SGLang&lt;/a&gt; (v0.5.13.post1+) — see &lt;a class=&#34;link&#34; href=&#34;https://cookbook.sglang.io/autoregressive/GLM/GLM-5.2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cookbook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vllm-project/vllm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vLLM&lt;/a&gt; (v0.23.0+) — see &lt;a class=&#34;link&#34; href=&#34;https://recipes.vllm.ai/zai-org/GLM-5.2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;recipes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/huggingface/transformers&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Transformers&lt;/a&gt; (v0.5.12+) — see &lt;a class=&#34;link&#34; href=&#34;https://github.com/huggingface/transformers/blob/main/docs/source/en/model_doc/glm_moe_dsa.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;transformers docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/kvcache-ai/ktransformers&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;KTransformers&lt;/a&gt; (v0.5.12+) — see &lt;a class=&#34;link&#34; href=&#34;https://github.com/kvcache-ai/ktransformers/blob/main/doc/en/kt-kernel/GLM-5.2-Tutorial.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;For deployment on the &lt;code&gt;Ascend NPU&lt;/code&gt; platform, inference frameworks such as vLLM-Ascend, xLLM and SGLang are supported — see &lt;a class=&#34;link&#34; href=&#34;example/ascend.md&#34; &gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;GLM-5 supports controlling the thinking budget through the &lt;code&gt;reasoning_effort&lt;/code&gt; parameter, which accepts two levels: &lt;code&gt;max&lt;/code&gt; and &lt;code&gt;high&lt;/code&gt;. &lt;strong&gt;&lt;code&gt;max&lt;/code&gt; is the default&lt;/strong&gt; — if &lt;code&gt;reasoning_effort&lt;/code&gt; is left unset (or set to any value other than &lt;code&gt;high&lt;/code&gt;), the model runs at &lt;code&gt;Max&lt;/code&gt;. To use the &lt;code&gt;High&lt;/code&gt; level, you must explicitly pass &lt;code&gt;reasoning_effort=&amp;quot;high&amp;quot;&lt;/code&gt;. For default scenarios such as benchmark/leaderboard reproduction, keep &lt;code&gt;Max&lt;/code&gt; (no setting required); only set &lt;code&gt;reasoning_effort=&amp;quot;high&amp;quot;&lt;/code&gt; when you specifically want the &lt;code&gt;High&lt;/code&gt; level. Thinking can be turned off entirely by setting &lt;code&gt;enable_thinking=false&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation
+&lt;/h2&gt;&lt;p&gt;If you find GLM-5 series model useful in your research, please cite our technical report:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@misc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;glm5team2026glm5vibecodingagentic&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{GLM-5: from Vibe Coding to Agentic Engineering}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{GLM-5-Team and : and Aohan Zeng and Xin Lv and Zhenyu Hou and Zhengxiao Du and Qinkai Zheng and Bin Chen and Da Yin and Chendi Ge and Chenghua Huang and Chengxing Xie and Chenzheng Zhu and Congfeng Yin and Cunxiang Wang and Gengzheng Pan and Hao Zeng and Haoke Zhang and Haoran Wang and Huilong Chen and Jiajie Zhang and Jian Jiao and Jiaqi Guo and Jingsen Wang and Jingzhao Du and Jinzhu Wu and Kedong Wang and Lei Li and Lin Fan and Lucen Zhong and Mingdao Liu and Mingming Zhao and Pengfan Du and Qian Dong and Rui Lu and Shuang-Li and Shulin Cao and Song Liu and Ting Jiang and Xiaodong Chen and Xiaohan Zhang and Xuancheng Huang and Xuezhen Dong and Yabo Xu and Yao Wei and Yifan An and Yilin Niu and Yitong Zhu and Yuanhao Wen and Yukuo Cen and Yushi Bai and Zhongpei Qiao and Zihan Wang and Zikang Wang and Zilin Zhu and Ziqiang Liu and Zixuan Li and Bojie Wang and Bosi Wen and Can Huang and Changpeng Cai and Chao Yu and Chen Li and Chengwei Hu and Chenhui Zhang and Dan Zhang and Daoyan Lin and Dayong Yang and Di Wang and Ding Ai and Erle Zhu and Fangzhou Yi and Feiyu Chen and Guohong Wen and Hailong Sun and Haisha Zhao and Haiyi Hu and Hanchen Zhang and Hanrui Liu and Hanyu Zhang and Hao Peng and Hao Tai and Haobo Zhang and He Liu and Hongwei Wang and Hongxi Yan and Hongyu Ge and Huan Liu and Huanpeng Chu and Jia&amp;#39;ni Zhao and Jiachen Wang and Jiajing Zhao and Jiamin Ren and Jiapeng Wang and Jiaxin Zhang and Jiayi Gui and Jiayue Zhao and Jijie Li and Jing An and Jing Li and Jingwei Yuan and Jinhua Du and Jinxin Liu and Junkai Zhi and Junwen Duan and Kaiyue Zhou and Kangjian Wei and Ke Wang and Keyun Luo and Laiqiang Zhang and Leigang Sha and Liang Xu and Lindong Wu and Lintao Ding and Lu Chen and Minghao Li and Nianyi Lin and Pan Ta and Qiang Zou and Rongjun Song and Ruiqi Yang and Shangqing Tu and Shangtong Yang and Shaoxiang Wu and Shengyan Zhang and Shijie Li and Shuang Li and Shuyi Fan and Wei Qin and Wei Tian and Weining Zhang and Wenbo Yu and Wenjie Liang and Xiang Kuang and Xiangmeng Cheng and Xiangyang Li and Xiaoquan Yan and Xiaowei Hu and Xiaoying Ling and Xing Fan and Xingye Xia and Xinyuan Zhang and Xinze Zhang and Xirui Pan and Xu Zou and Xunkai Zhang and Yadi Liu and Yandong Wu and Yanfu Li and Yidong Wang and Yifan Zhu and Yijun Tan and Yilin Zhou and Yiming Pan and Ying Zhang and Yinpei Su and Yipeng Geng and Yong Yan and Yonglin Tan and Yuean Bi and Yuhan Shen and Yuhao Yang and Yujiang Li and Yunan Liu and Yunqing Wang and Yuntao Li and Yurong Wu and Yutao Zhang and Yuxi Duan and Yuxuan Zhang and Zezhen Liu and Zhengtao Jiang and Zhenhe Yan and Zheyu Zhang and Zhixiang Wei and Zhuo Chen and Zhuoer Feng and Zijun Yao and Ziwei Chai and Ziyuan Wang and Zuzhou Zhang and Bin Xu and Minlie Huang and Hongning Wang and Juanzi Li and Yuxiao Dong and Jie Tang}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{2026}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;eprint&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{2602.15763}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;archivePrefix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{arXiv}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;primaryClass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{cs.LG}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{https://arxiv.org/abs/2602.15763}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>LMCache</title>
+        <link>https://producthunt.programnotes.cn/en/p/lmcache/</link>
+        <pubDate>Wed, 20 Aug 2025 15:28:48 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/lmcache/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1478034460338-249ef2da6c0f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU2NzQ5MDF8&amp;ixlib=rb-4.1.0" alt="Featured image of post LMCache" /&gt;&lt;h1 id=&#34;lmcachelmcache&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/LMCache/LMCache&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LMCache/LMCache&lt;/a&gt;
+&lt;/h1&gt;&lt;div align=&#34;center&#34;&gt;
+  &lt;p align=&#34;center&#34;&gt;
+    &lt;img src=&#34;https://raw.githubusercontent.com/LMCache/LMCache/dev/asset/logo.png&#34; width=&#34;720&#34; alt=&#34;lmcache logo&#34;&gt;
+  &lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.lmcache.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/docs-live-brightgreen&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Docs&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/lmcache/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/pypi/v/lmcache&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PyPI&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/lmcache/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/pypi/pyversions/lmcache&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PyPI - Python Version&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://buildkite.com/lmcache/lmcache-unittests&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://badge.buildkite.com/ce25f1819a274b7966273bfa54f0e02f092c3de0d7563c5c9d.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Unit Tests&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/LMCache/LMCache/actions/workflows/code_quality_checks.yml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/lmcache/lmcache/actions/workflows/code_quality_checks.yml/badge.svg?branch=dev&amp;amp;label=tests&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Code Quality&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://buildkite.com/lmcache/lmcache-vllm-integration-tests&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://badge.buildkite.com/108ddd4ab482a2480999dec8c62a640a3315ed4e6c4e86798e.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Integration Tests&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+   &lt;br /&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bestpractices.dev/projects/10841&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://www.bestpractices.dev/projects/10841/badge&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;OpenSSF Best Practices&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://scorecard.dev/viewer/?uri=github.com/LMCache/LMCache&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://api.scorecard.dev/projects/github.com/LMCache/LMCache/badge&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;OpenSSF Scorecard&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://deepwiki.com/LMCache/LMCache/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://deepwiki.com/badge.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Ask DeepWiki&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/LMCache/LMCache/graphs/commit-activity&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/github/commit-activity/w/LMCache/LMCache&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GitHub commit activity&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/lmcache/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/pypi/dm/lmcache&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PyPI - Downloads&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/channel/UC58zMz55n70rtf1Ak2PULJA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/youtube/channel/views/UC58zMz55n70rtf1Ak2PULJA&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;YouTube Channel Views&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;| &lt;a class=&#34;link&#34; href=&#34;https://blog.lmcache.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Blog&lt;/strong&gt;&lt;/a&gt;
+| &lt;a class=&#34;link&#34; href=&#34;https://docs.lmcache.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Documentation&lt;/strong&gt;&lt;/a&gt;
+| &lt;a class=&#34;link&#34; href=&#34;https://join.slack.com/t/lmcacheworkspace/shared_invite/zt-36x1m765z-8FgDA_73vcXtlZ_4XvpE6Q&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Join Slack&lt;/strong&gt;&lt;/a&gt;
+| &lt;a class=&#34;link&#34; href=&#34;https://forms.gle/MHwLiYDU6kcW3dLj7&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Interest Form&lt;/strong&gt;&lt;/a&gt;
+| &lt;a class=&#34;link&#34; href=&#34;https://github.com/LMCache/LMCache/issues/1253&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Roadmap&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;🔥 &lt;strong&gt;NEW: For enterprise-scale deployment of LMCache and vLLM, please check out vLLM &lt;a class=&#34;link&#34; href=&#34;https://github.com/vllm-project/production-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Production Stack&lt;/a&gt;. LMCache is also officially supported in &lt;a class=&#34;link&#34; href=&#34;https://github.com/llm-d/llm-d/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;llm-d&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://github.com/kserve/kserve&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;KServe&lt;/a&gt;!&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary
+&lt;/h2&gt;&lt;p&gt;LMCache is an &lt;strong&gt;LLM&lt;/strong&gt; serving engine extension to &lt;strong&gt;reduce TTFT&lt;/strong&gt; and &lt;strong&gt;increase throughput&lt;/strong&gt;, especially under long-context scenarios. By storing the KV caches of reusable texts across various locations, including (GPU, CPU DRAM, Local Disk), LMCache reuses the KV caches of &lt;strong&gt;&lt;em&gt;any&lt;/em&gt;&lt;/strong&gt; reused text (not necessarily prefix) in &lt;strong&gt;&lt;em&gt;any&lt;/em&gt;&lt;/strong&gt; serving engine instance. Thus, LMCache saves precious GPU cycles and reduces user response delay.&lt;/p&gt;
+&lt;p&gt;By combining LMCache with vLLM, developers achieve 3-10x delay savings and GPU cycle reduction in many LLM use cases, including multi-round QA and RAG.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/user-attachments/assets/86137f17-f216-41a0-96a7-e537764f7a4c&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;performance&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 🔥 Integration with vLLM v1 with the following features:
+&lt;ul&gt;
+&lt;li&gt;High performance CPU KVCache offloading&lt;/li&gt;
+&lt;li&gt;Disaggregated prefill&lt;/li&gt;
+&lt;li&gt;P2P KVCache sharing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; LMCache is supported in the &lt;a class=&#34;link&#34; href=&#34;https://github.com/vllm-project/production-stack/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vLLM production stack&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/llm-d/llm-d/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;llm-d&lt;/a&gt;, and &lt;a class=&#34;link&#34; href=&#34;https://github.com/kserve/kserve&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;KServe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Stable support for non-prefix KV caches&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Storage support as follows:
+&lt;ul&gt;
+&lt;li&gt;CPU&lt;/li&gt;
+&lt;li&gt;Disk&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ai-dynamo/nixl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NIXL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Installation support through pip and latest vLLM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation
+&lt;/h2&gt;&lt;p&gt;To use LMCache, simply install &lt;code&gt;lmcache&lt;/code&gt; from your package manager, e.g. pip:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install lmcache
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Works on Linux NVIDIA GPU platform.&lt;/p&gt;
+&lt;p&gt;More &lt;a class=&#34;link&#34; href=&#34;https://docs.lmcache.ai/getting_started/installation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;detailed installation instructions&lt;/a&gt; are available in the docs, particularly if you are not using the latest stable version of vllm or using another serving engine with different dependencies. Any &amp;ldquo;undefined symbol&amp;rdquo; or torch mismatch versions can be resolved in the documentation.&lt;/p&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting started
+&lt;/h2&gt;&lt;p&gt;The best way to get started is to checkout the &lt;a class=&#34;link&#34; href=&#34;https://docs.lmcache.ai/getting_started/quickstart/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Quickstart Examples&lt;/a&gt; in the docs.&lt;/p&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation
+&lt;/h2&gt;&lt;p&gt;Check out the LMCache &lt;a class=&#34;link&#34; href=&#34;https://docs.lmcache.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;documentation&lt;/a&gt; which is available online.&lt;/p&gt;
+&lt;p&gt;We also post regularly in &lt;a class=&#34;link&#34; href=&#34;https://blog.lmcache.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LMCache blogs&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;examples&#34;&gt;Examples
+&lt;/h2&gt;&lt;p&gt;Go hands-on with our &lt;a class=&#34;link&#34; href=&#34;https://github.com/LMCache/LMCache/tree/dev/examples&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;examples&lt;/a&gt;,
+demonstrating how to address different use cases with LMCache.&lt;/p&gt;
+&lt;h2 id=&#34;interested-in-connecting&#34;&gt;Interested in Connecting?
+&lt;/h2&gt;&lt;p&gt;Fill out the &lt;a class=&#34;link&#34; href=&#34;https://forms.gle/mQfQDUXbKfp2St1z7&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;interest form&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://mailchi.mp/tensormesh/lmcache-sign-up-newsletter&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;sign up for our newsletter&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://join.slack.com/t/lmcacheworkspace/shared_invite/zt-2viziwhue-5Amprc9k5hcIdXT7XevTaQ&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;join LMCache slack&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://lmcache.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;check out LMCache website&lt;/a&gt;, or &lt;a class=&#34;link&#34; href=&#34;mailto:contact@lmcache.ai&#34; &gt;drop an email&lt;/a&gt;, and our team will reach out to you!&lt;/p&gt;
+&lt;h2 id=&#34;community-meeting&#34;&gt;Community meeting
+&lt;/h2&gt;&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;https://uchicago.zoom.us/j/6603596916?pwd=Z1E5MDRWUSt2am5XbEt4dTFkNGx6QT09&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;community meeting&lt;/a&gt; for LMCache is hosted bi-weekly. All are welcome to join!&lt;/p&gt;
+&lt;p&gt;Meetings are held bi-weekly on: Tuesdays at 9:00 AM PT – &lt;a class=&#34;link&#34; href=&#34;https://drive.usercontent.google.com/u/0/uc?id=1f5EXbooGcwNwzIpTgn5u4PHqXgfypMtu&amp;amp;export=download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Add to Calendar&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We keep notes from each meeting on this &lt;a class=&#34;link&#34; href=&#34;https://docs.google.com/document/d/1_Fl3vLtERFa3vTH00cezri78NihNBtSClK-_1tSrcow&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;document&lt;/a&gt; for summaries of standups, discussion, and action items.&lt;/p&gt;
+&lt;p&gt;Recordings of meetings are available on the &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/channel/UC58zMz55n70rtf1Ak2PULJA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube LMCache channel&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;contributing&#34;&gt;Contributing
+&lt;/h2&gt;&lt;p&gt;We welcome and value all contributions and collaborations.  Please check out &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;Contributing Guide&lt;/a&gt; on how to contribute.&lt;/p&gt;
+&lt;p&gt;We continually update &lt;a class=&#34;link&#34; href=&#34;https://github.com/LMCache/LMCache/issues/627&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;[Onboarding] Welcoming contributors with good first issues!&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation
+&lt;/h2&gt;&lt;p&gt;If you use LMCache for your research, please cite our papers:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@inproceedings{liu2024cachegen,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  title={Cachegen: Kv cache compression and streaming for fast large language model serving},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  author={Liu, Yuhan and Li, Hanchen and Cheng, Yihua and Ray, Siddhant and Huang, Yuyang and Zhang, Qizheng and Du, Kuntai and Yao, Jiayi and Lu, Shan and Ananthanarayanan, Ganesh and others},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  booktitle={Proceedings of the ACM SIGCOMM 2024 Conference},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  pages={38--56},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  year={2024}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@article{cheng2024large,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  title={Do Large Language Models Need a Content Delivery Network?},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  author={Cheng, Yihua and Du, Kuntai and Yao, Jiayi and Jiang, Junchen},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  journal={arXiv preprint arXiv:2409.13761},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  year={2024}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@inproceedings{10.1145/3689031.3696098,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  author = {Yao, Jiayi and Li, Hanchen and Liu, Yuhan and Ray, Siddhant and Cheng, Yihua and Zhang, Qizheng and Du, Kuntai and Lu, Shan and Jiang, Junchen},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  title = {CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  year = {2025},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  url = {https://doi.org/10.1145/3689031.3696098},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  doi = {10.1145/3689031.3696098},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  booktitle = {Proceedings of the Twentieth European Conference on Computer Systems},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  pages = {94–109},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;socials&#34;&gt;Socials
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.linkedin.com/company/lmcache-lab/?viewAsMember=true&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Linkedin&lt;/a&gt; | &lt;a class=&#34;link&#34; href=&#34;https://x.com/lmcache&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Twitter&lt;/a&gt; | &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/@LMCacheTeam&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Youtube&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;The LMCache codebase is licensed under Apache License 2.0. See the &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt; file for details.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Qwen3-Coder</title>
+        <link>https://producthunt.programnotes.cn/en/p/qwen3-coder/</link>
+        <pubDate>Sun, 27 Jul 2025 15:28:39 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/qwen3-coder/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1588477023308-7237e75cb979?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTM2MDEyOTh8&amp;ixlib=rb-4.1.0" alt="Featured image of post Qwen3-Coder" /&gt;&lt;h1 id=&#34;qwenlmqwen3-coder&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/QwenLM/Qwen3-Coder&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;QwenLM/Qwen3-Coder&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;&lt;a name=&#34;readme-top&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+    &lt;img src=&#34;https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-Coder/qwen3_coder.png&#34; width=&#34;400&#34;/&gt;
+&lt;p&gt;
+&lt;p align=&#34;center&#34;&gt;
+    &lt;img src=&#34;https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-Coder/qwen3-coder-main.jpg&#34; width=&#34;800&#34;/&gt;
+&lt;p&gt;
+&lt;p align=&#34;center&#34;&gt;
+        💜 &lt;a href=&#34;https://chat.qwenlm.ai/&#34;&gt;&lt;b&gt;Qwen Chat&lt;/b&gt;&lt;/a&gt;&amp;nbsp&amp;nbsp | &amp;nbsp&amp;nbsp🤗 &lt;a href=&#34;https://huggingface.co/collections/Qwen/qwen3-coder-687fc861e53c939e52d52d10&#34;&gt;Hugging Face&lt;/a&gt;&amp;nbsp&amp;nbsp | &amp;nbsp&amp;nbsp🤖 &lt;a href=&#34;https://modelscope.cn/organization/qwen&#34;&gt;ModelScope&lt;/a&gt;&amp;nbsp&amp;nbsp | &amp;nbsp&amp;nbsp 📑 &lt;a href=&#34;https://qwenlm.github.io/blog/qwen3-coder&#34;&gt;Blog&lt;/a&gt; &amp;nbsp&amp;nbsp ｜ &amp;nbsp&amp;nbsp📖 &lt;a href=&#34;https://qwen.readthedocs.io/&#34;&gt;Documentation&lt;/a&gt;
+&lt;br&gt; 
+&lt;/a&gt;&amp;nbsp&amp;nbsp | &amp;nbsp&amp;nbsp 🌍 &lt;a href=&#34;https://huggingface.co/spaces/Qwen/Qwen3-Coder-WebDev&#34;&gt;WebDev&lt;/a&gt;&amp;nbsp&amp;nbsp | &amp;nbsp&amp;nbsp💬 &lt;a href=&#34;https://github.com/QwenLM/Qwen/blob/main/assets/wechat.png&#34;&gt;WeChat (微信)&lt;/a&gt;&amp;nbsp&amp;nbsp | &amp;nbsp&amp;nbsp🫨 &lt;a href=&#34;https://discord.gg/CV4E9rpNSD&#34;&gt; Discord&lt;/a&gt;&amp;nbsp&amp;nbsp | &amp;nbsp&amp;nbsp 📄 &lt;a href=&#34;https://arxiv.org/abs/2505.09388&#34;&gt;Arxiv&lt;/a&gt;&amp;nbsp&amp;nbsp | &amp;nbsp&amp;nbsp 👽 &lt;a href=&#34;https://github.com/QwenLM/qwen-code&#34;&gt;Qwen Code&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Visit our Hugging Face or ModelScope organization (click links above), search checkpoints with names starting with &lt;code&gt;Qwen3-Coder-&lt;/code&gt;, and you will find all you need! Enjoy!&lt;/p&gt;
+&lt;h1 id=&#34;qwen3-coder-agentic-coding-in-the-world&#34;&gt;Qwen3-Coder: Agentic Coding in the World.
+&lt;/h1&gt;&lt;h2 id=&#34;introduction&#34;&gt;Introduction
+&lt;/h2&gt;&lt;p&gt;Today, we&amp;rsquo;re announcing Qwen3-Coder, our most agentic code model to date. &lt;strong&gt;Qwen3-Coder&lt;/strong&gt; is available in multiple sizes, but we&amp;rsquo;re excited to introduce its most powerful variant first: &lt;strong&gt;Qwen3-Coder-480B-A35B-Instruct&lt;/strong&gt; — a 480B-parameter Mixture-of-Experts model with 35B active parameters, offering exceptional performance in both coding and agentic tasks. &lt;strong&gt;Qwen3-Coder-480B-A35B-Instruct&lt;/strong&gt; sets new state-of-the-art results among open models on Agentic Coding, Agentic Browser-Use, and Agentic Tool-Use, comparable to Claude Sonnet.&lt;/p&gt;
+&lt;p&gt;💻 &lt;strong&gt;Significant Performance&lt;/strong&gt;: among open models on &lt;strong&gt;Agentic Coding&lt;/strong&gt;, &lt;strong&gt;Agentic Browser-Use&lt;/strong&gt;, and other foundational coding tasks, achieving results comparable to Claude Sonnet;&lt;/p&gt;
+&lt;p&gt;📚 &lt;strong&gt;Long-context Capabilities&lt;/strong&gt;: with native support for &lt;strong&gt;256K&lt;/strong&gt; tokens, extendable up to &lt;strong&gt;1M&lt;/strong&gt; tokens using Yarn, optimized for repository-scale understanding;&lt;/p&gt;
+&lt;p&gt;🛠 &lt;strong&gt;Agentic Coding&lt;/strong&gt;: supporting for most platform such as &lt;strong&gt;Qwen Code&lt;/strong&gt;, &lt;strong&gt;CLINE&lt;/strong&gt;, featuring a specially designed function call format;&lt;/p&gt;
+&lt;h2 id=&#34;basic-information&#34;&gt;Basic information
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;✨ Supporting long context understanding and generation with the context length of 256K tokens;&lt;/li&gt;
+&lt;li&gt;✨ Supporting 358 coding languages;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[&amp;#39;ABAP&amp;#39;, &amp;#39;ActionScript&amp;#39;, &amp;#39;Ada&amp;#39;, &amp;#39;Agda&amp;#39;, &amp;#39;Alloy&amp;#39;, &amp;#39;ApacheConf&amp;#39;, &amp;#39;AppleScript&amp;#39;, &amp;#39;Arc&amp;#39;, &amp;#39;Arduino&amp;#39;, &amp;#39;AsciiDoc&amp;#39;, &amp;#39;AspectJ&amp;#39;, &amp;#39;Assembly&amp;#39;, &amp;#39;Augeas&amp;#39;, &amp;#39;AutoHotkey&amp;#39;, &amp;#39;AutoIt&amp;#39;, &amp;#39;Awk&amp;#39;, &amp;#39;Batchfile&amp;#39;, &amp;#39;Befunge&amp;#39;, &amp;#39;Bison&amp;#39;, &amp;#39;BitBake&amp;#39;, &amp;#39;BlitzBasic&amp;#39;, &amp;#39;BlitzMax&amp;#39;, &amp;#39;Bluespec&amp;#39;, &amp;#39;Boo&amp;#39;, &amp;#39;Brainfuck&amp;#39;, &amp;#39;Brightscript&amp;#39;, &amp;#39;Bro&amp;#39;, &amp;#39;C&amp;#39;, &amp;#39;C#&amp;#39;, &amp;#39;C++&amp;#39;, &amp;#39;C2hs Haskell&amp;#39;, &amp;#39;CLIPS&amp;#39;, &amp;#39;CMake&amp;#39;, &amp;#39;COBOL&amp;#39;, &amp;#39;CSS&amp;#39;, &amp;#39;CSV&amp;#39;, &amp;#34;Cap&amp;#39;n Proto&amp;#34;, &amp;#39;CartoCSS&amp;#39;, &amp;#39;Ceylon&amp;#39;, &amp;#39;Chapel&amp;#39;, &amp;#39;ChucK&amp;#39;, &amp;#39;Cirru&amp;#39;, &amp;#39;Clarion&amp;#39;, &amp;#39;Clean&amp;#39;, &amp;#39;Click&amp;#39;, &amp;#39;Clojure&amp;#39;, &amp;#39;CoffeeScript&amp;#39;, &amp;#39;ColdFusion&amp;#39;, &amp;#39;ColdFusion CFC&amp;#39;, &amp;#39;Common Lisp&amp;#39;, &amp;#39;Component Pascal&amp;#39;, &amp;#39;Coq&amp;#39;, &amp;#39;Creole&amp;#39;, &amp;#39;Crystal&amp;#39;, &amp;#39;Csound&amp;#39;, &amp;#39;Cucumber&amp;#39;, &amp;#39;Cuda&amp;#39;, &amp;#39;Cycript&amp;#39;, &amp;#39;Cython&amp;#39;, &amp;#39;D&amp;#39;, &amp;#39;DIGITAL Command Language&amp;#39;, &amp;#39;DM&amp;#39;, &amp;#39;DNS Zone&amp;#39;, &amp;#39;Darcs Patch&amp;#39;, &amp;#39;Dart&amp;#39;, &amp;#39;Diff&amp;#39;, &amp;#39;Dockerfile&amp;#39;, &amp;#39;Dogescript&amp;#39;, &amp;#39;Dylan&amp;#39;, &amp;#39;E&amp;#39;, &amp;#39;ECL&amp;#39;, &amp;#39;Eagle&amp;#39;, &amp;#39;Ecere Projects&amp;#39;, &amp;#39;Eiffel&amp;#39;, &amp;#39;Elixir&amp;#39;, &amp;#39;Elm&amp;#39;, &amp;#39;Emacs Lisp&amp;#39;, &amp;#39;EmberScript&amp;#39;, &amp;#39;Erlang&amp;#39;, &amp;#39;F#&amp;#39;, &amp;#39;FLUX&amp;#39;, &amp;#39;FORTRAN&amp;#39;, &amp;#39;Factor&amp;#39;, &amp;#39;Fancy&amp;#39;, &amp;#39;Fantom&amp;#39;, &amp;#39;Forth&amp;#39;, &amp;#39;FreeMarker&amp;#39;, &amp;#39;G-code&amp;#39;, &amp;#39;GAMS&amp;#39;, &amp;#39;GAP&amp;#39;, &amp;#39;GAS&amp;#39;, &amp;#39;GDScript&amp;#39;, &amp;#39;GLSL&amp;#39;, &amp;#39;Genshi&amp;#39;, &amp;#39;Gentoo Ebuild&amp;#39;, &amp;#39;Gentoo Eclass&amp;#39;, &amp;#39;Gettext Catalog&amp;#39;, &amp;#39;Glyph&amp;#39;, &amp;#39;Gnuplot&amp;#39;, &amp;#39;Go&amp;#39;, &amp;#39;Golo&amp;#39;, &amp;#39;Gosu&amp;#39;, &amp;#39;Grace&amp;#39;, &amp;#39;Gradle&amp;#39;, &amp;#39;Grammatical Framework&amp;#39;, &amp;#39;GraphQL&amp;#39;, &amp;#39;Graphviz (DOT)&amp;#39;, &amp;#39;Groff&amp;#39;, &amp;#39;Groovy&amp;#39;, &amp;#39;Groovy Server Pages&amp;#39;, &amp;#39;HCL&amp;#39;, &amp;#39;HLSL&amp;#39;, &amp;#39;HTML&amp;#39;, &amp;#39;HTML+Django&amp;#39;, &amp;#39;HTML+EEX&amp;#39;, &amp;#39;HTML+ERB&amp;#39;, &amp;#39;HTML+PHP&amp;#39;, &amp;#39;HTTP&amp;#39;, &amp;#39;Haml&amp;#39;, &amp;#39;Handlebars&amp;#39;, &amp;#39;Harbour&amp;#39;, &amp;#39;Haskell&amp;#39;, &amp;#39;Haxe&amp;#39;, &amp;#39;Hy&amp;#39;, &amp;#39;IDL&amp;#39;, &amp;#39;IGOR Pro&amp;#39;, &amp;#39;INI&amp;#39;, &amp;#39;IRC log&amp;#39;, &amp;#39;Idris&amp;#39;, &amp;#39;Inform 7&amp;#39;, &amp;#39;Inno Setup&amp;#39;, &amp;#39;Io&amp;#39;, &amp;#39;Ioke&amp;#39;, &amp;#39;Isabelle&amp;#39;, &amp;#39;J&amp;#39;, &amp;#39;JFlex&amp;#39;, &amp;#39;JSON&amp;#39;, &amp;#39;JSON5&amp;#39;, &amp;#39;JSONLD&amp;#39;, &amp;#39;JSONiq&amp;#39;, &amp;#39;JSX&amp;#39;, &amp;#39;Jade&amp;#39;, &amp;#39;Jasmin&amp;#39;, &amp;#39;Java&amp;#39;, &amp;#39;Java Server Pages&amp;#39;, &amp;#39;JavaScript&amp;#39;, &amp;#39;Julia&amp;#39;, &amp;#39;Jupyter Notebook&amp;#39;, &amp;#39;KRL&amp;#39;, &amp;#39;KiCad&amp;#39;, &amp;#39;Kit&amp;#39;, &amp;#39;Kotlin&amp;#39;, &amp;#39;LFE&amp;#39;, &amp;#39;LLVM&amp;#39;, &amp;#39;LOLCODE&amp;#39;, &amp;#39;LSL&amp;#39;, &amp;#39;LabVIEW&amp;#39;, &amp;#39;Lasso&amp;#39;, &amp;#39;Latte&amp;#39;, &amp;#39;Lean&amp;#39;, &amp;#39;Less&amp;#39;, &amp;#39;Lex&amp;#39;, &amp;#39;LilyPond&amp;#39;, &amp;#39;Linker Script&amp;#39;, &amp;#39;Liquid&amp;#39;, &amp;#39;Literate Agda&amp;#39;, &amp;#39;Literate CoffeeScript&amp;#39;, &amp;#39;Literate Haskell&amp;#39;, &amp;#39;LiveScript&amp;#39;, &amp;#39;Logos&amp;#39;, &amp;#39;Logtalk&amp;#39;, &amp;#39;LookML&amp;#39;, &amp;#39;Lua&amp;#39;, &amp;#39;M&amp;#39;, &amp;#39;M4&amp;#39;, &amp;#39;MAXScript&amp;#39;, &amp;#39;MTML&amp;#39;, &amp;#39;MUF&amp;#39;, &amp;#39;Makefile&amp;#39;, &amp;#39;Mako&amp;#39;, &amp;#39;Maple&amp;#39;, &amp;#39;Markdown&amp;#39;, &amp;#39;Mask&amp;#39;, &amp;#39;Mathematica&amp;#39;, &amp;#39;Matlab&amp;#39;, &amp;#39;Max&amp;#39;, &amp;#39;MediaWiki&amp;#39;, &amp;#39;Metal&amp;#39;, &amp;#39;MiniD&amp;#39;, &amp;#39;Mirah&amp;#39;, &amp;#39;Modelica&amp;#39;, &amp;#39;Module Management System&amp;#39;, &amp;#39;Monkey&amp;#39;, &amp;#39;MoonScript&amp;#39;, &amp;#39;Myghty&amp;#39;, &amp;#39;NSIS&amp;#39;, &amp;#39;NetLinx&amp;#39;, &amp;#39;NetLogo&amp;#39;, &amp;#39;Nginx&amp;#39;, &amp;#39;Nimrod&amp;#39;, &amp;#39;Ninja&amp;#39;, &amp;#39;Nit&amp;#39;, &amp;#39;Nix&amp;#39;, &amp;#39;Nu&amp;#39;, &amp;#39;NumPy&amp;#39;, &amp;#39;OCaml&amp;#39;, &amp;#39;ObjDump&amp;#39;, &amp;#39;Objective-C++&amp;#39;, &amp;#39;Objective-J&amp;#39;, &amp;#39;Octave&amp;#39;, &amp;#39;Omgrofl&amp;#39;, &amp;#39;Opa&amp;#39;, &amp;#39;Opal&amp;#39;, &amp;#39;OpenCL&amp;#39;, &amp;#39;OpenEdge ABL&amp;#39;, &amp;#39;OpenSCAD&amp;#39;, &amp;#39;Org&amp;#39;, &amp;#39;Ox&amp;#39;, &amp;#39;Oxygene&amp;#39;, &amp;#39;Oz&amp;#39;, &amp;#39;PAWN&amp;#39;, &amp;#39;PHP&amp;#39;, &amp;#39;POV-Ray SDL&amp;#39;, &amp;#39;Pan&amp;#39;, &amp;#39;Papyrus&amp;#39;, &amp;#39;Parrot&amp;#39;, &amp;#39;Parrot Assembly&amp;#39;, &amp;#39;Parrot Internal Representation&amp;#39;, &amp;#39;Pascal&amp;#39;, &amp;#39;Perl&amp;#39;, &amp;#39;Perl6&amp;#39;, &amp;#39;Pickle&amp;#39;, &amp;#39;PigLatin&amp;#39;, &amp;#39;Pike&amp;#39;, &amp;#39;Pod&amp;#39;, &amp;#39;PogoScript&amp;#39;, &amp;#39;Pony&amp;#39;, &amp;#39;PostScript&amp;#39;, &amp;#39;PowerShell&amp;#39;, &amp;#39;Processing&amp;#39;, &amp;#39;Prolog&amp;#39;, &amp;#39;Propeller Spin&amp;#39;, &amp;#39;Protocol Buffer&amp;#39;, &amp;#39;Public Key&amp;#39;, &amp;#39;Pure Data&amp;#39;, &amp;#39;PureBasic&amp;#39;, &amp;#39;PureScript&amp;#39;, &amp;#39;Python&amp;#39;, &amp;#39;Python traceback&amp;#39;, &amp;#39;QML&amp;#39;, &amp;#39;QMake&amp;#39;, &amp;#39;R&amp;#39;, &amp;#39;RAML&amp;#39;, &amp;#39;RDoc&amp;#39;, &amp;#39;REALbasic&amp;#39;, &amp;#39;RHTML&amp;#39;, &amp;#39;RMarkdown&amp;#39;, &amp;#39;Racket&amp;#39;, &amp;#39;Ragel in Ruby Host&amp;#39;, &amp;#39;Raw token data&amp;#39;, &amp;#39;Rebol&amp;#39;, &amp;#39;Red&amp;#39;, &amp;#39;Redcode&amp;#39;, &amp;#34;Ren&amp;#39;Py&amp;#34;, &amp;#39;RenderScript&amp;#39;, &amp;#39;RobotFramework&amp;#39;, &amp;#39;Rouge&amp;#39;, &amp;#39;Ruby&amp;#39;, &amp;#39;Rust&amp;#39;, &amp;#39;SAS&amp;#39;, &amp;#39;SCSS&amp;#39;, &amp;#39;SMT&amp;#39;, &amp;#39;SPARQL&amp;#39;, &amp;#39;SQF&amp;#39;, &amp;#39;SQL&amp;#39;, &amp;#39;STON&amp;#39;, &amp;#39;SVG&amp;#39;, &amp;#39;Sage&amp;#39;, &amp;#39;SaltStack&amp;#39;, &amp;#39;Sass&amp;#39;, &amp;#39;Scala&amp;#39;, &amp;#39;Scaml&amp;#39;, &amp;#39;Scheme&amp;#39;, &amp;#39;Scilab&amp;#39;, &amp;#39;Self&amp;#39;, &amp;#39;Shell&amp;#39;, &amp;#39;ShellSession&amp;#39;, &amp;#39;Shen&amp;#39;, &amp;#39;Slash&amp;#39;, &amp;#39;Slim&amp;#39;, &amp;#39;Smali&amp;#39;, &amp;#39;Smalltalk&amp;#39;, &amp;#39;Smarty&amp;#39;, &amp;#39;Solidity&amp;#39;, &amp;#39;SourcePawn&amp;#39;, &amp;#39;Squirrel&amp;#39;, &amp;#39;Stan&amp;#39;, &amp;#39;Standard ML&amp;#39;, &amp;#39;Stata&amp;#39;, &amp;#39;Stylus&amp;#39;, &amp;#39;SuperCollider&amp;#39;, &amp;#39;Swift&amp;#39;, &amp;#39;SystemVerilog&amp;#39;, &amp;#39;TOML&amp;#39;, &amp;#39;TXL&amp;#39;, &amp;#39;Tcl&amp;#39;, &amp;#39;Tcsh&amp;#39;, &amp;#39;TeX&amp;#39;, &amp;#39;Tea&amp;#39;, &amp;#39;Text&amp;#39;, &amp;#39;Textile&amp;#39;, &amp;#39;Thrift&amp;#39;, &amp;#39;Turing&amp;#39;, &amp;#39;Turtle&amp;#39;, &amp;#39;Twig&amp;#39;, &amp;#39;TypeScript&amp;#39;, &amp;#39;Unified Parallel C&amp;#39;, &amp;#39;Unity3D Asset&amp;#39;, &amp;#39;Uno&amp;#39;, &amp;#39;UnrealScript&amp;#39;, &amp;#39;UrWeb&amp;#39;, &amp;#39;VCL&amp;#39;, &amp;#39;VHDL&amp;#39;, &amp;#39;Vala&amp;#39;, &amp;#39;Verilog&amp;#39;, &amp;#39;VimL&amp;#39;, &amp;#39;Visual Basic&amp;#39;, &amp;#39;Volt&amp;#39;, &amp;#39;Vue&amp;#39;, &amp;#39;Web Ontology Language&amp;#39;, &amp;#39;WebAssembly&amp;#39;, &amp;#39;WebIDL&amp;#39;, &amp;#39;X10&amp;#39;, &amp;#39;XC&amp;#39;, &amp;#39;XML&amp;#39;, &amp;#39;XPages&amp;#39;, &amp;#39;XProc&amp;#39;, &amp;#39;XQuery&amp;#39;, &amp;#39;XS&amp;#39;, &amp;#39;XSLT&amp;#39;, &amp;#39;Xojo&amp;#39;, &amp;#39;Xtend&amp;#39;, &amp;#39;YAML&amp;#39;, &amp;#39;YANG&amp;#39;, &amp;#39;Yacc&amp;#39;, &amp;#39;Zephir&amp;#39;, &amp;#39;Zig&amp;#39;, &amp;#39;Zimpl&amp;#39;, &amp;#39;desktop&amp;#39;, &amp;#39;eC&amp;#39;, &amp;#39;edn&amp;#39;, &amp;#39;fish&amp;#39;, &amp;#39;mupad&amp;#39;, &amp;#39;nesC&amp;#39;, &amp;#39;ooc&amp;#39;, &amp;#39;reStructuredText&amp;#39;, &amp;#39;wisp&amp;#39;, &amp;#39;xBase&amp;#39;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;✨ Retain strengths in math and general capabilities from base model.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!Important]&lt;/p&gt;
+&lt;p&gt;Qwen3-coder function calling relies on our new tool parser &lt;code&gt;qwen3coder_tool_parser.py&lt;/code&gt; &lt;a href=&#34;https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct/blob/main/qwen3coder_tool_parser.py&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We updated both the special tokens and their corresponding token ids, in order to maintain consistency with Qwen3. Please make sure to use the new tokenizer.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;model name&lt;/th&gt;
+					&lt;th&gt;type&lt;/th&gt;
+					&lt;th&gt;length&lt;/th&gt;
+					&lt;th&gt;Download&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Qwen3-Coder-480B-A35B-Instruct&lt;/td&gt;
+					&lt;td&gt;instruct&lt;/td&gt;
+					&lt;td&gt;256k&lt;/td&gt;
+					&lt;td&gt;🤗 &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugging Face&lt;/a&gt; • 🤖 &lt;a class=&#34;link&#34; href=&#34;https://modelscope.cn/models/Qwen/Qwen3-Coder-480B-A35B-Instruct&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ModelScope&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Qwen3-Coder-480B-A35B-Instruct-FP8&lt;/td&gt;
+					&lt;td&gt;instruct&lt;/td&gt;
+					&lt;td&gt;256k&lt;/td&gt;
+					&lt;td&gt;🤗 &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugging Face&lt;/a&gt; • 🤖 &lt;a class=&#34;link&#34; href=&#34;https://modelscope.cn/models/Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ModelScope&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Detailed performance and introduction are shown in this &lt;a href=&#34;https://qwenlm.github.io/blog/qwen3-coder&#34;&gt; 📑 blog&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick Start
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;[!Important]
+&lt;strong&gt;Qwen3-Coder-480B-A35B-Instruct&lt;/strong&gt; are instruction models for chatting;&lt;/p&gt;
+&lt;p&gt;This model supports only non-thinking mode and does not generate &lt;code&gt;&amp;lt;think&amp;gt;&amp;lt;/think&amp;gt;&lt;/code&gt; blocks in its output. Meanwhile, specifying &lt;code&gt;enable_thinking=False&lt;/code&gt; is no longer required.**&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;-chat-with-qwen3-coder-480b-a35b-instruct&#34;&gt;👉🏻 Chat with Qwen3-Coder-480B-A35B-Instruct
+&lt;/h3&gt;&lt;p&gt;You can just write several lines of code with &lt;code&gt;transformers&lt;/code&gt; to chat with Qwen3-Coder-480B-A35B-Instruct. Essentially, we build the tokenizer and the model with &lt;code&gt;from_pretrained&lt;/code&gt; method, and we use generate method to perform chatting with the help of chat template provided by the tokenizer. Below is an example of how to chat with &lt;strong&gt;Qwen3-Coder-480B-A35B-Instruct&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;transformers&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AutoModelForCausalLM&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AutoTokenizer&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;model_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Qwen/Qwen3-Coder-480B-A35B-Instruct&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;model&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AutoModelForCausalLM&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_pretrained&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;model_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;torch_dtype&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;auto&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;device_map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;auto&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AutoTokenizer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_pretrained&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;model_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;prompt&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;write a quick sort algorithm.&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;messages&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;role&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;user&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prompt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;apply_chat_template&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;messages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;tokenize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;add_generation_prompt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;model_inputs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;return_tensors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;pt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;device&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;generated_ids&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;model_inputs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;max_new_tokens&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;65536&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;generated_ids&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;output_ids&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input_ids&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;input_ids&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;output_ids&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;zip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;model_inputs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input_ids&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;generated_ids&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;batch_decode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generated_ids&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;skip_special_tokens&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The &lt;code&gt;apply_chat_template()&lt;/code&gt; function is used to convert the messages into a format that the model can understand.
+The &lt;code&gt;add_generation_prompt&lt;/code&gt; argument is used to add a generation prompt, which refers to &lt;code&gt;&amp;lt;|im_start|&amp;gt;assistant\n&lt;/code&gt; to the input. Notably, we apply ChatML template for chat models following our previous practice.
+The &lt;code&gt;max_new_tokens&lt;/code&gt; argument is used to set the maximum length of the response. The &lt;code&gt;tokenizer.batch_decode()&lt;/code&gt; function is used to decode the response. In terms of the input, the above messages is an example to show how to format your dialog history and system prompt.
+You can use the other size of instruct model in the same way.&lt;/p&gt;
+&lt;h4 id=&#34;fill-in-the-middle-with-qwen3-coder-480b-a35b-instruct&#34;&gt;Fill in the middle with Qwen3-Coder-480B-A35B-Instruct
+&lt;/h4&gt;&lt;p&gt;The code insertion task, also referred to as the &amp;ldquo;fill-in-the-middle&amp;rdquo; challenge, requires the insertion of code segments in a manner that bridges the gaps within a given code context. For an approach aligned with best practices, we recommend adhering to the formatting guidelines outlined in the paper &amp;ldquo;Efficient Training of Language Models to Fill in the Middle&amp;rdquo;[&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2207.14255&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;arxiv&lt;/a&gt;].&lt;/p&gt;
+&lt;p&gt;The prompt should be structured as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;prompt&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;|fim_prefix|&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prefix_code&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;|fim_suffix|&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;suffix_code&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;|fim_middle|&amp;gt;&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Following the approach mentioned, an example would be structured in this manner:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;transformers&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AutoTokenizer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AutoModelForCausalLM&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# load model&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;device&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;cuda&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# the device to load the model onto&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;TOKENIZER&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AutoTokenizer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_pretrained&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Qwen/Qwen3-Coder-480B-A35B-Instruct&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;MODEL&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AutoModelForCausalLM&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_pretrained&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Qwen/Qwen3-Coder-480B-A35B-Instruct&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;device_map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;auto&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;eval&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;input_text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&amp;lt;|fim_prefix|&amp;gt;def quicksort(arr):
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    if len(arr) &amp;lt;= 1:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;        return arr
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    pivot = arr[len(arr) // 2]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    &amp;lt;|fim_suffix|&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    middle = [x for x in arr if x == pivot]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    right = [x for x in arr if x &amp;gt; pivot]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;    return quicksort(left) + middle + quicksort(right)&amp;lt;|fim_middle|&amp;gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;messages&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;role&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;system&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;You are a code completion assistant.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;role&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;user&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;input_text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;apply_chat_template&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;messages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;tokenize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;add_generation_prompt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;model_inputs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TOKENIZER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;return_tensors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;pt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;device&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Use `max_new_tokens` to control the maximum output length.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;generated_ids&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MODEL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;model_inputs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input_ids&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;max_new_tokens&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;512&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;do_sample&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# The generated_ids include prompt_ids, we only need to decode the tokens after prompt_ids.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;output_text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TOKENIZER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;decode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generated_ids&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;model_inputs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input_ids&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]):],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;skip_special_tokens&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Prompt: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input_text&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;Generated text: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;output_text&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;use-cases&#34;&gt;Use Cases
+&lt;/h2&gt;&lt;h3 id=&#34;example-physics-based-chimney-demolition-simulation-with-controlled-explosion&#34;&gt;Example: Physics-Based Chimney Demolition Simulation with Controlled Explosion
+&lt;/h3&gt;&lt;details&gt;
+&lt;summary&gt;Prompt with Qwen Chat Web Dev &lt;/summary&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;使用 three.js, cannon-es.js 生成一个震撼的3D建筑拆除演示。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 场景设置：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 地面是一个深灰色混凝土平面，尺寸80*80，
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 所有物体严格遵循现实物理规则，包括重力、摩擦力、碰撞检测和动量守恒
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 建筑结构：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 一座圆形高层建筑，周长对应20个方块
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 建筑总高度60个方块
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 每层采用砖砌结构，方块与砖结构建筑一致, 错开50%排列，增强结构稳定性
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 建筑外墙使用米色方块
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- **重要：方块初始排列时必须确保紧密贴合，无间隙，可以通过轻微重叠或调整半径来实现**
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- **重要：建筑初始化完成后，所有方块应该处于物理&amp;#34;睡眠&amp;#34;状态，确保建筑在爆炸前保持完美的静止状态，不会因重力而下沉或松散**
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 建筑砖块之间使用粘性材料填充（不可见），通过高摩擦力（0.8+）和低弹性（0.05以下）来模拟粘合效果
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 砖块在建筑倒塌瞬间不会散掉，而是建筑作为一个整体倒在地面的时候才因受力过大而散掉
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 定向爆破系统：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 在建筑的第1层的最右侧方块附近安装爆炸装置（不可见）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 提供操作按钮点击爆炸
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- **爆炸时唤醒所有相关方块的物理状态**
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 爆炸点产生半径2的强力冲击波，冲击波影响到的方块, 受到2-5单位的冲击力
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 建筑稳定性要求：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- **确保建筑在未爆炸时完全静止，无任何晃动或下沉**
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- **物理世界初始化后给建筑几个物理步骤来自然稳定，或使用睡眠机制**
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- **方块间的接触材料应具有高摩擦力和极低弹性，模拟砖块间的砂浆粘合**
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 震撼的倒塌效果：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 方块在爆炸冲击下不仅飞散，还会在空中翻滚和碰撞
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 烟尘会随着建筑倒塌逐渐扩散，营造真实的拆除现场氛围
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 增强的视觉效果：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 添加环境光照变化：爆炸瞬间亮度激增，然后被烟尘遮挡变暗
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 粒子系统包括：烟雾、灰尘
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 技术要求：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 粒子系统用于烟雾和灰尘效果
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 所有代码集成在单个HTML文件中，包含必要的CSS样式
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- 添加简单的UI控制：重置按钮、相机角度切换, 爆炸按钮, 鼠标左键控制摄像机角度，右键控制摄像机位置，滚轮控制摄像机焦距
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;p align=&#34;center&#34;&gt;
+    &lt;a href=&#34;https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-Coder/demo1.mp4&#34;&gt;
+    &lt;img src=&#34;assets/usage_demo_example1.png&#34; width=&#34;400&#34; /&gt;
+    &lt;/a&gt;
+&lt;p &gt;
+&lt;h3 id=&#34;example-multicolor-and-interactive-animation&#34;&gt;Example: Multicolor and Interactive Animation
+&lt;/h3&gt;&lt;details&gt;
+&lt;summary&gt;Prompt with Cline [act mode] &lt;/summary&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Create an amazing animation multicolor and interactive using p5js
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;use this cdn:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.min.js
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;p align=&#34;center&#34;&gt;
+    &lt;a href=&#34;https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-Coder/demo2.mp4&#34;&gt;
+    &lt;img src=&#34;assets/usage_demo_example2.png&#34; width=&#34;400&#34; /&gt;
+    &lt;/a&gt;
+&lt;p &gt;
+&lt;h3 id=&#34;example-3d-google-earth&#34;&gt;Example: 3D Google Earth
+&lt;/h3&gt;&lt;details&gt;
+&lt;summary&gt;Prompt with Qwen Chat Web Dev &lt;/summary&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;To&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;create&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;D&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Google&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Earth&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;you&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;need&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;load&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;terrain&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;map&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;correctly&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;You&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;can&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;use&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;any&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;online&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;resource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;The&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;code&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;written&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;into&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;an&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HTML&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;p align=&#34;center&#34;&gt;
+    &lt;a href=&#34;https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-Coder/demo3.mp4&#34;&gt;
+    &lt;img src=&#34;assets/usage_demo_example3.png&#34; width=&#34;400&#34; /&gt;
+    &lt;/a&gt;
+&lt;p &gt;
+&lt;h3 id=&#34;example-testing-your-wpm-with-a-famous-quote&#34;&gt;Example: Testing Your WPM with a Famous Quote
+&lt;/h3&gt;&lt;details&gt;
+&lt;summary&gt; Prompt with Qwen-Code CLI &lt;/summary&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Create an interesting typing game with a keyboard in the lower middle of the screen and some famous articles in the upper middle. When the user types a word correctly, a cool reaction should be given to encourage him. Design a modern soft color scheme inspired by macarons. Come up with a very creative solution first, and then start writing code.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;The game should be able to support typing, and you need to neglect upcase and lowercase.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;p align=&#34;center&#34;&gt;
+    &lt;a href=&#34;https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-Coder/demo4.mp4&#34;&gt;
+    &lt;img src=&#34;assets/usage_demo_example4.png&#34; width=&#34;400&#34; /&gt;
+    &lt;/a&gt;
+&lt;p &gt;
+&lt;h3 id=&#34;example-bouncing-ball-in-rotation-hypercube&#34;&gt;Example: Bouncing Ball in Rotation Hypercube
+&lt;/h3&gt;&lt;details&gt;
+&lt;summary&gt; Prompt with Qwen Chat Web Dev &lt;/summary&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Make a page in HTML that shows an animation of a ball bouncing in a rotating hypercube
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;p align=&#34;center&#34;&gt;
+    &lt;a href=&#34;https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-Coder/demo5.mp4&#34;&gt;
+    &lt;img src=&#34;assets/usage_demo_example5.png&#34; width=&#34;400&#34; /&gt;
+    &lt;/a&gt;
+&lt;p &gt;
+&lt;h3 id=&#34;example-solar-system-simulation&#34;&gt;Example: Solar System Simulation
+&lt;/h3&gt;&lt;details&gt;
+&lt;summary&gt; Prompt with Cline [act mode] &lt;/summary&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;write a web page to show the solar system simulation
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;p align=&#34;center&#34;&gt;
+    &lt;a href=&#34;https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-Coder/demo6.mp4&#34;&gt;
+    &lt;img src=&#34;assets/usage_demo_example6.png&#34; width=&#34;400&#34; /&gt;
+    &lt;/a&gt;
+&lt;p &gt;
+&lt;h3 id=&#34;example-duet-game&#34;&gt;Example: DUET Game
+&lt;/h3&gt;&lt;details&gt;
+&lt;summary&gt; Prompt with Cline [act mode] &lt;/summary&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Create a complete, single-file HTML game with CSS and JavaScript. The game is inspired by &amp;#34;Duet&amp;#34;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Gameplay:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;There are two balls, one red and one blue, rotating around a central point.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;The player uses the &amp;#39;A&amp;#39; and &amp;#39;D&amp;#39; keys to rotate them counter-clockwise and clockwise.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;White rectangular obstacles move down from the top of the screen.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;The player must rotate the balls to avoid hitting the obstacles.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;If a ball hits an obstacle, the game is over.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Visuals:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Make the visual effects amazing.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Use a dark background with neon glowing effects for the balls and obstacles.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Animations should be very smooth.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;p align=&#34;center&#34;&gt;
+    &lt;a href=&#34;https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-Coder/demo7.mp4&#34;&gt;
+    &lt;img src=&#34;assets/usage_demo_example7.png&#34; width=&#34;400&#34; /&gt;
+    &lt;/a&gt;
+&lt;p &gt;
+&lt;h2 id=&#34;star-history&#34;&gt;Star History
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://star-history.com/#QwenLM/Qwen3-Coder&amp;amp;Date&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://api.star-history.com/svg?repos=QwenLM/Qwen3-Coder&amp;amp;type=Date&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Star History Chart&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation
+&lt;/h2&gt;&lt;p&gt;If you find our work helpful, feel free to give us a cite.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@misc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;qwen3technicalreport&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{Qwen3 Technical Report}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{Qwen Team}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{2025}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;eprint&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{2505.09388}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;archivePrefix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{arXiv}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;primaryClass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{cs.CL}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{https://arxiv.org/abs/2505.09388}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@article&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;hui2024qwen2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{Qwen2. 5-Coder Technical Report}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{Hui, Binyuan and Yang, Jian and Cui, Zeyu and Yang, Jiaxi and Liu, Dayiheng and Zhang, Lei and Liu, Tianyu and Zhang, Jiajun and Yu, Bowen and Dang, Kai and others}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;journal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{arXiv preprint arXiv:2409.12186}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{2024}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;contact-us&#34;&gt;Contact Us
+&lt;/h2&gt;&lt;p&gt;If you are interested to leave a message to either our research team or product team, join our &lt;a class=&#34;link&#34; href=&#34;https://discord.gg/z3GAxXZ9Ce&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Discord&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;https://github.com/QwenLM/Qwen/blob/main/assets/wechat.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WeChat groups&lt;/a&gt;!&lt;/p&gt;
+&lt;p align=&#34;right&#34; style=&#34;font-size: 14px; color: #555; margin-top: 20px;&#34;&gt;
+    &lt;a href=&#34;#readme-top&#34; style=&#34;text-decoration: none; color: #007bff; font-weight: bold;&#34;&gt;
+        ↑ Back to Top ↑
+    &lt;/a&gt;
+&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

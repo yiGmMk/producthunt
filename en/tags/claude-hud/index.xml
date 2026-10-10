@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Claude HUD on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/claude-hud/</link>
+        <description>Recent content in Claude HUD on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sat, 21 Mar 2026 15:38:03 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/claude-hud/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>claude-hud</title>
+        <link>https://producthunt.programnotes.cn/en/p/claude-hud/</link>
+        <pubDate>Sat, 21 Mar 2026 15:38:03 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/claude-hud/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1715390321213-c8d88b3e024a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQwNzg2NzN8&amp;ixlib=rb-4.1.0" alt="Featured image of post claude-hud" /&gt;&lt;h1 id=&#34;jarrodwattsclaude-hud&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/jarrodwatts/claude-hud&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;jarrodwatts/claude-hud&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;claude-hud&#34;&gt;Claude HUD
+&lt;/h1&gt;&lt;p&gt;A Claude Code plugin that shows what&amp;rsquo;s happening — context usage, active tools, running agents, and todo progress. Always visible below your input.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;&lt;img src=&#34;https://img.shields.io/github/license/jarrodwatts/claude-hud?v=2&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;License&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/jarrodwatts/claude-hud/stargazers&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/github/stars/jarrodwatts/claude-hud&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Stars&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/claude-hud-preview-5-2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Claude HUD in action&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install
+&lt;/h2&gt;&lt;p&gt;Inside a Claude Code instance, run the following commands:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 1: Add the marketplace&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/plugin marketplace add jarrodwatts/claude-hud
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Step 2: Install the plugin&lt;/strong&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;&lt;strong&gt;⚠️ Linux users: Click here first&lt;/strong&gt;&lt;/summary&gt;
+&lt;p&gt;On Linux, &lt;code&gt;/tmp&lt;/code&gt; is often a separate filesystem (tmpfs), which causes plugin installation to fail with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;EXDEV: cross-device link not permitted
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Fix&lt;/strong&gt;: Set TMPDIR before installing:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir -p ~/.cache/tmp &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TMPDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;~/.cache/tmp claude
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Then run the install command below in that session. This is a &lt;a class=&#34;link&#34; href=&#34;https://github.com/anthropics/claude-code/issues/14799&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Claude Code platform limitation&lt;/a&gt;.&lt;/p&gt;
+&lt;/details&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/plugin install claude-hud
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Step 3: Configure the statusline&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/claude-hud:setup
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Done! Restart Claude Code to load the new statusLine config, then the HUD will appear.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-is-claude-hud&#34;&gt;What is Claude HUD?
+&lt;/h2&gt;&lt;p&gt;Claude HUD gives you better insights into what&amp;rsquo;s happening in your Claude Code session.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;What You See&lt;/th&gt;
+					&lt;th&gt;Why It Matters&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Project path&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Know which project you&amp;rsquo;re in (configurable 1-3 directory levels)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Context health&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Know exactly how full your context window is before it&amp;rsquo;s too late&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Tool activity&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Watch Claude read, edit, and search files as it happens&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Agent tracking&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;See which subagents are running and what they&amp;rsquo;re doing&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Todo progress&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Track task completion in real-time&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;what-you-see&#34;&gt;What You See
+&lt;/h2&gt;&lt;h3 id=&#34;default-2-lines&#34;&gt;Default (2 lines)
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Opus | Max] │ my-project git:(main*)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Context █████░░░░░ 45% │ Usage ██░░░░░░░░ 25% (1h 30m / 5h)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Line 1&lt;/strong&gt; — Model, plan name (or &lt;code&gt;Bedrock&lt;/code&gt;), project path, git branch&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Line 2&lt;/strong&gt; — Context bar (green → yellow → red) and usage rate limits&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;optional-lines-enable-via-claude-hudconfigure&#34;&gt;Optional lines (enable via &lt;code&gt;/claude-hud:configure&lt;/code&gt;)
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;◐ Edit: auth.ts | ✓ Read ×3 | ✓ Grep ×2        ← Tools activity
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;◐ explore [haiku]: Finding auth code (2m 15s)    ← Agent status
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;▸ Fix authentication bug (2/5)                   ← Todo progress
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;how-it-works&#34;&gt;How It Works
+&lt;/h2&gt;&lt;p&gt;Claude HUD uses Claude Code&amp;rsquo;s native &lt;strong&gt;statusline API&lt;/strong&gt; — no separate window, no tmux required, works in any terminal.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Claude&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Code&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;→&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stdin&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;JSON&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;→&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;claude&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hud&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;→&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stdout&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;→&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;displayed&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;your&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;terminal&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           &lt;span class=&#34;err&#34;&gt;↘&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;transcript&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;JSONL&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tools&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;agents&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;todos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Key features:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Native token data from Claude Code (not estimated)&lt;/li&gt;
+&lt;li&gt;Scales with Claude Code&amp;rsquo;s reported context window size, including newer 1M-context sessions&lt;/li&gt;
+&lt;li&gt;Parses the transcript for tool/agent activity&lt;/li&gt;
+&lt;li&gt;Updates every ~300ms&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;configuration&#34;&gt;Configuration
+&lt;/h2&gt;&lt;p&gt;Customize your HUD anytime:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/claude-hud:configure
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The guided flow handles layout and display toggles. Advanced overrides such as
+custom colors and thresholds are preserved there, but you set them by editing the config file directly:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;First time setup&lt;/strong&gt;: Choose a preset (Full/Essential/Minimal), then fine-tune individual elements&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Customize anytime&lt;/strong&gt;: Toggle items on/off, adjust git display style, switch layouts&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Preview before saving&lt;/strong&gt;: See exactly how your HUD will look before committing changes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;presets&#34;&gt;Presets
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Preset&lt;/th&gt;
+					&lt;th&gt;What&amp;rsquo;s Shown&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Full&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Everything enabled — tools, agents, todos, git, usage, duration&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Essential&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Activity lines + git status, minimal info clutter&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Minimal&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Core only — just model name and context bar&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;After choosing a preset, you can turn individual elements on or off.&lt;/p&gt;
+&lt;h3 id=&#34;manual-configuration&#34;&gt;Manual Configuration
+&lt;/h3&gt;&lt;p&gt;Edit &lt;code&gt;~/.claude/plugins/claude-hud/config.json&lt;/code&gt; directly for advanced settings such as &lt;code&gt;colors.*&lt;/code&gt;,
+&lt;code&gt;pathLevels&lt;/code&gt;, and threshold overrides. Running &lt;code&gt;/claude-hud:configure&lt;/code&gt; preserves those manual settings.&lt;/p&gt;
+&lt;h3 id=&#34;options&#34;&gt;Options
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Option&lt;/th&gt;
+					&lt;th&gt;Type&lt;/th&gt;
+					&lt;th&gt;Default&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;lineLayout&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;string&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;expanded&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Layout: &lt;code&gt;expanded&lt;/code&gt; (multi-line) or &lt;code&gt;compact&lt;/code&gt; (single line)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;pathLevels&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;1-3&lt;/td&gt;
+					&lt;td&gt;1&lt;/td&gt;
+					&lt;td&gt;Directory levels to show in project path&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;elementOrder&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;string[]&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;[&amp;quot;project&amp;quot;,&amp;quot;context&amp;quot;,&amp;quot;usage&amp;quot;,&amp;quot;environment&amp;quot;,&amp;quot;tools&amp;quot;,&amp;quot;agents&amp;quot;,&amp;quot;todos&amp;quot;]&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Expanded-mode element order. Omit entries to hide them in expanded mode.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;gitStatus.enabled&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;boolean&lt;/td&gt;
+					&lt;td&gt;true&lt;/td&gt;
+					&lt;td&gt;Show git branch in HUD&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;gitStatus.showDirty&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;boolean&lt;/td&gt;
+					&lt;td&gt;true&lt;/td&gt;
+					&lt;td&gt;Show &lt;code&gt;*&lt;/code&gt; for uncommitted changes&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;gitStatus.showAheadBehind&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;boolean&lt;/td&gt;
+					&lt;td&gt;false&lt;/td&gt;
+					&lt;td&gt;Show &lt;code&gt;↑N ↓N&lt;/code&gt; for ahead/behind remote&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;gitStatus.showFileStats&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;boolean&lt;/td&gt;
+					&lt;td&gt;false&lt;/td&gt;
+					&lt;td&gt;Show file change counts &lt;code&gt;!M +A ✘D ?U&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;display.showModel&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;boolean&lt;/td&gt;
+					&lt;td&gt;true&lt;/td&gt;
+					&lt;td&gt;Show model name &lt;code&gt;[Opus]&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;display.showContextBar&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;boolean&lt;/td&gt;
+					&lt;td&gt;true&lt;/td&gt;
+					&lt;td&gt;Show visual context bar &lt;code&gt;████░░░░░░&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;display.contextValue&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;percent&lt;/code&gt; | &lt;code&gt;tokens&lt;/code&gt; | &lt;code&gt;remaining&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;percent&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Context display format (&lt;code&gt;45%&lt;/code&gt;, &lt;code&gt;45k/200k&lt;/code&gt;, or &lt;code&gt;55%&lt;/code&gt; remaining)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;display.showConfigCounts&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;boolean&lt;/td&gt;
+					&lt;td&gt;false&lt;/td&gt;
+					&lt;td&gt;Show CLAUDE.md, rules, MCPs, hooks counts&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;display.showDuration&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;boolean&lt;/td&gt;
+					&lt;td&gt;false&lt;/td&gt;
+					&lt;td&gt;Show session duration &lt;code&gt;⏱️ 5m&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;display.showSpeed&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;boolean&lt;/td&gt;
+					&lt;td&gt;false&lt;/td&gt;
+					&lt;td&gt;Show output token speed &lt;code&gt;out: 42.1 tok/s&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;display.showUsage&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;boolean&lt;/td&gt;
+					&lt;td&gt;true&lt;/td&gt;
+					&lt;td&gt;Show usage limits (Pro/Max/Team only)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;display.usageBarEnabled&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;boolean&lt;/td&gt;
+					&lt;td&gt;true&lt;/td&gt;
+					&lt;td&gt;Display usage as visual bar instead of text&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;display.sevenDayThreshold&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;0-100&lt;/td&gt;
+					&lt;td&gt;80&lt;/td&gt;
+					&lt;td&gt;Show 7-day usage when &amp;gt;= threshold (0 = always)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;display.showTokenBreakdown&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;boolean&lt;/td&gt;
+					&lt;td&gt;true&lt;/td&gt;
+					&lt;td&gt;Show token details at high context (85%+)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;display.showTools&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;boolean&lt;/td&gt;
+					&lt;td&gt;false&lt;/td&gt;
+					&lt;td&gt;Show tools activity line&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;display.showAgents&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;boolean&lt;/td&gt;
+					&lt;td&gt;false&lt;/td&gt;
+					&lt;td&gt;Show agents activity line&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;display.showTodos&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;boolean&lt;/td&gt;
+					&lt;td&gt;false&lt;/td&gt;
+					&lt;td&gt;Show todos progress line&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;display.showSessionName&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;boolean&lt;/td&gt;
+					&lt;td&gt;false&lt;/td&gt;
+					&lt;td&gt;Show session slug or custom title from &lt;code&gt;/rename&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;usage.cacheTtlSeconds&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;number&lt;/td&gt;
+					&lt;td&gt;60&lt;/td&gt;
+					&lt;td&gt;How long (seconds) to cache a successful usage API response&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;usage.failureCacheTtlSeconds&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;number&lt;/td&gt;
+					&lt;td&gt;15&lt;/td&gt;
+					&lt;td&gt;How long (seconds) to cache a failed usage API response before retrying&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;colors.context&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;color name&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;green&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Base color for the context bar and context percentage&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;colors.usage&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;color name&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;brightBlue&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Base color for usage bars and percentages below warning thresholds&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;colors.warning&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;color name&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;yellow&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Warning color for context thresholds and usage warning text&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;colors.usageWarning&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;color name&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;brightMagenta&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Warning color for usage bars and percentages near their threshold&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;colors.critical&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;color name&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;red&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Critical color for limit-reached states and critical thresholds&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Supported color names: &lt;code&gt;red&lt;/code&gt;, &lt;code&gt;green&lt;/code&gt;, &lt;code&gt;yellow&lt;/code&gt;, &lt;code&gt;magenta&lt;/code&gt;, &lt;code&gt;cyan&lt;/code&gt;, &lt;code&gt;brightBlue&lt;/code&gt;, &lt;code&gt;brightMagenta&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;usage-limits-promaxteam&#34;&gt;Usage Limits (Pro/Max/Team)
+&lt;/h3&gt;&lt;p&gt;Usage display is &lt;strong&gt;enabled by default&lt;/strong&gt; for Claude Pro, Max, and Team subscribers. It shows your rate limit consumption on line 2 alongside the context bar.&lt;/p&gt;
+&lt;p&gt;The 7-day percentage appears when above the &lt;code&gt;display.sevenDayThreshold&lt;/code&gt; (default 80%):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Context █████░░░░░ 45% │ Usage ██░░░░░░░░ 25% (1h 30m / 5h) | ██████████ 85% (2d / 7d)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To disable, set &lt;code&gt;display.showUsage&lt;/code&gt; to &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Requirements:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Claude Pro, Max, or Team subscription (not available for API users)&lt;/li&gt;
+&lt;li&gt;OAuth credentials from Claude Code (created automatically when you log in)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Troubleshooting:&lt;/strong&gt; If usage doesn&amp;rsquo;t appear:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensure you&amp;rsquo;re logged in with a Pro/Max/Team account (not API key)&lt;/li&gt;
+&lt;li&gt;Check &lt;code&gt;display.showUsage&lt;/code&gt; is not set to &lt;code&gt;false&lt;/code&gt; in config&lt;/li&gt;
+&lt;li&gt;API users see no usage display (they have pay-per-token, not rate limits)&lt;/li&gt;
+&lt;li&gt;AWS Bedrock models display &lt;code&gt;Bedrock&lt;/code&gt; and hide usage limits (usage is managed in AWS)&lt;/li&gt;
+&lt;li&gt;Non-default &lt;code&gt;ANTHROPIC_BASE_URL&lt;/code&gt; / &lt;code&gt;ANTHROPIC_API_BASE_URL&lt;/code&gt; settings skip usage display, because the Anthropic OAuth usage API may not apply&lt;/li&gt;
+&lt;li&gt;If you are behind a proxy, set &lt;code&gt;HTTPS_PROXY&lt;/code&gt; (or &lt;code&gt;HTTP_PROXY&lt;/code&gt;/&lt;code&gt;ALL_PROXY&lt;/code&gt;) and optional &lt;code&gt;NO_PROXY&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;For high-latency environments, increase usage API timeout with &lt;code&gt;CLAUDE_HUD_USAGE_TIMEOUT_MS&lt;/code&gt; (milliseconds)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;example-configuration&#34;&gt;Example Configuration
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;lineLayout&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;expanded&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;pathLevels&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;elementOrder&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;project&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;tools&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;usage&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;environment&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;agents&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;todos&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;gitStatus&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;enabled&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;showDirty&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;showAheadBehind&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;showFileStats&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;display&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;showTools&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;showAgents&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;showTodos&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;showConfigCounts&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;showDuration&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;colors&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;cyan&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;usage&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;cyan&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;warning&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;yellow&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;usageWarning&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;magenta&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;critical&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;red&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;usage&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;cacheTtlSeconds&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;120&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;failureCacheTtlSeconds&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;display-examples&#34;&gt;Display Examples
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;1 level (default):&lt;/strong&gt; &lt;code&gt;[Opus] │ my-project git:(main)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2 levels:&lt;/strong&gt; &lt;code&gt;[Opus] │ apps/my-project git:(main)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3 levels:&lt;/strong&gt; &lt;code&gt;[Opus] │ dev/apps/my-project git:(main)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;With dirty indicator:&lt;/strong&gt; &lt;code&gt;[Opus] │ my-project git:(main*)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;With ahead/behind:&lt;/strong&gt; &lt;code&gt;[Opus] │ my-project git:(main ↑2 ↓1)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;With file stats:&lt;/strong&gt; &lt;code&gt;[Opus] │ my-project git:(main* !3 +1 ?2)&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;!&lt;/code&gt; = modified files, &lt;code&gt;+&lt;/code&gt; = added/staged, &lt;code&gt;✘&lt;/code&gt; = deleted, &lt;code&gt;?&lt;/code&gt; = untracked&lt;/li&gt;
+&lt;li&gt;Counts of 0 are omitted for cleaner display&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;troubleshooting&#34;&gt;Troubleshooting
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Config not applying?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Check for JSON syntax errors: invalid JSON silently falls back to defaults&lt;/li&gt;
+&lt;li&gt;Ensure valid values: &lt;code&gt;pathLevels&lt;/code&gt; must be 1, 2, or 3; &lt;code&gt;lineLayout&lt;/code&gt; must be &lt;code&gt;expanded&lt;/code&gt; or &lt;code&gt;compact&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Delete config and run &lt;code&gt;/claude-hud:configure&lt;/code&gt; to regenerate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Git status missing?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Verify you&amp;rsquo;re in a git repository&lt;/li&gt;
+&lt;li&gt;Check &lt;code&gt;gitStatus.enabled&lt;/code&gt; is not &lt;code&gt;false&lt;/code&gt; in config&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Tool/agent/todo lines missing?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;These are hidden by default — enable with &lt;code&gt;showTools&lt;/code&gt;, &lt;code&gt;showAgents&lt;/code&gt;, &lt;code&gt;showTodos&lt;/code&gt; in config&lt;/li&gt;
+&lt;li&gt;They also only appear when there&amp;rsquo;s activity to show&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;HUD not appearing after setup?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Restart Claude Code so it picks up the new statusLine config&lt;/li&gt;
+&lt;li&gt;On macOS, fully quit Claude Code and run &lt;code&gt;claude&lt;/code&gt; again in your terminal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Claude Code v1.0.80+&lt;/li&gt;
+&lt;li&gt;Node.js 18+ or Bun&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;development&#34;&gt;Development
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/jarrodwatts/claude-hud
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; claude-hud
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm ci &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; npm run build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;See &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;CONTRIBUTING.md&lt;/a&gt; for guidelines.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;MIT — see &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;star-history&#34;&gt;Star History
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://star-history.com/#jarrodwatts/claude-hud&amp;amp;Date&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://api.star-history.com/svg?repos=jarrodwatts/claude-hud&amp;amp;type=Date&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Star History Chart&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

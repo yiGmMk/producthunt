@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>ADR on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/adr/</link>
+        <description>Recent content in ADR on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Wed, 05 Aug 2026 17:50:47 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/adr/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ADR</title>
+        <link>https://producthunt.programnotes.cn/en/p/adr/</link>
+        <pubDate>Wed, 05 Aug 2026 17:50:47 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/adr/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1679881631944-38888f7aac81?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU5MjMzMjB8&amp;ixlib=rb-4.1.0" alt="Featured image of post ADR" /&gt;&lt;h1 id=&#34;uberadr&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/uber/ADR&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;uber/ADR&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;adr-agentic-ai-detection-and-response&#34;&gt;ADR: Agentic AI Detection and Response
+&lt;/h1&gt;&lt;p&gt;ADR (Agentic AI Detection and Response) is an enterprise security system for AI agents. It helps organizations secure employee-facing agents such as Cursor, Claude Code, and Codex, as well as customer-facing agents such as AI support agents.&lt;/p&gt;
+&lt;p&gt;ADR is &lt;strong&gt;deployed in production at Uber&lt;/strong&gt;, and the accompanying paper was accepted to &lt;strong&gt;MLSys 2026&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;docs/adr-paper.pdf&#34; &gt;Paper PDF&lt;/a&gt; · &lt;a class=&#34;link&#34; href=&#34;docs/adr-mlsys-2026-slides.pdf&#34; &gt;Slides PDF&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;how-adr-secures-enterprise-ai-agents&#34;&gt;How ADR secures enterprise AI agents
+&lt;/h2&gt;&lt;p&gt;ADR secures enterprise AI agents through four complementary capabilities: observing agent activity, evaluating defenses, detecting threats, and preventing unsafe actions.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;ADR Observability: Understand what AI agents are doing and why.&lt;/strong&gt; In production, ADR captures agent intent, tool use, and execution traces across 7+ AI coding tools on macOS, Linux, and Windows, as well as internal automation and customer-facing support agents.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ADR Benchmark: Test agent security under realistic enterprise conditions.&lt;/strong&gt; ADR-Bench includes 300+ tasks, 133 MCP servers, and coverage of all 17 agent attack techniques.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ADR Detection: Detect risky agent behavior efficiently.&lt;/strong&gt; Its two-tier architecture combines high-recall triage with deeper agentic reasoning for suspicious sessions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ADR Prevention: Stop unsafe actions before they cause harm.&lt;/strong&gt; This component is not included in the current open-source release. &lt;strong&gt;Stay tuned.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;repository-layout&#34;&gt;Repository layout
+&lt;/h2&gt;&lt;p&gt;This repository contains the open-source &lt;strong&gt;ADR Sensor&lt;/strong&gt;, &lt;strong&gt;ADR-Bench&lt;/strong&gt;, and &lt;strong&gt;ADR Detector&lt;/strong&gt; described in the paper. The offline &lt;strong&gt;ADR Explorer&lt;/strong&gt; engine, which hardens ADR Detection through pre-deployment red teaming, is not included here.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Path&lt;/th&gt;
+					&lt;th&gt;ADR component&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;Sensor/&#34; &gt;Sensor/&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;ADR Observability&lt;/td&gt;
+					&lt;td&gt;Collect and normalize agent telemetry from Claude Code, Cursor, Codex, and others&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;Detection/&#34; &gt;Detection/&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;ADR Benchmark + Detection&lt;/td&gt;
+					&lt;td&gt;Dual-agent detector, 133 MCP servers, 303 benchmark tasks, baselines, figure scripts&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/REPRODUCIBILITY.md&#34; &gt;docs/REPRODUCIBILITY.md&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Evaluation&lt;/td&gt;
+					&lt;td&gt;Step-by-step workflow to reproduce benchmark detection and paper figures&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;quick-start-adr-detection&#34;&gt;Quick start: ADR Detection
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/uber/ADR
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ADR/Detection
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uv sync
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ANTHROPIC_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;...&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;OPENAI_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Default detector is &lt;code&gt;adr&lt;/code&gt; (ADR dual-agent). For keyless smoke tests, use &lt;code&gt;--detector llamafirewall&lt;/code&gt; (see &lt;a class=&#34;link&#34; href=&#34;Detection/README.md&#34; &gt;Detection/README.md&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;See &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;docs/REPRODUCIBILITY.md&#34; &gt;docs/REPRODUCIBILITY.md&lt;/a&gt;&lt;/strong&gt; for the full evaluation workflow (inflate packed benchmark → run detectors → plot figures).&lt;/p&gt;
+&lt;p&gt;Component documentation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;Sensor/README.md&#34; &gt;Sensor/README.md&lt;/a&gt;: telemetry collection and unified schema&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;Detection/README.md&#34; &gt;Detection/README.md&lt;/a&gt;: ADR-Bench, detector baselines, MCP infrastructure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@inproceedings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;li2026adr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{ADR: An Agentic Detection System for Enterprise Agentic AI Security}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{Li, Chenning and Hu, Pan and Xu, Justin and Ozbas, Baris and Liu, Olivia and Van, Caroline and Li, Manxue and Zhou, Wei and Alizadeh, Mohammad and Zhang, Pengyu and Sriramadhesikan, KK and Zhang, Ming}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;booktitle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{Proceedings of the Ninth Conference on Machine Learning and Systems}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{2026}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Or use &lt;a class=&#34;link&#34; href=&#34;CITATION.cff&#34; &gt;CITATION.cff&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;Apache License 2.0. See &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt;. &lt;code&gt;Detection/benchmark/agentdojo/&lt;/code&gt; is vendored third-party code under its own &lt;a class=&#34;link&#34; href=&#34;Detection/benchmark/agentdojo/LICENSE&#34; &gt;LICENSE&lt;/a&gt; (MIT).&lt;/p&gt;
+&lt;h2 id=&#34;data-notice&#34;&gt;Data notice
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;Detection/&lt;/code&gt; includes &lt;strong&gt;synthetic&lt;/strong&gt; benchmark fixtures (fake credentials, emulated environments, prompt-injection scenarios) for defensive security research only. Details: &lt;a class=&#34;link&#34; href=&#34;docs/OPEN_SOURCE_REVIEW.md&#34; &gt;docs/OPEN_SOURCE_REVIEW.md&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

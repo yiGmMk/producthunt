@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Ripgrep on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/ripgrep/</link>
+        <description>Recent content in Ripgrep on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Wed, 14 May 2025 15:30:02 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/ripgrep/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>kickstart.nvim</title>
+        <link>https://producthunt.programnotes.cn/en/p/kickstart.nvim/</link>
+        <pubDate>Wed, 14 May 2025 15:30:02 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/kickstart.nvim/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1696251502207-dad49fd10bbf?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcyMDc3MDd8&amp;ixlib=rb-4.1.0" alt="Featured image of post kickstart.nvim" /&gt;&lt;h1 id=&#34;nvim-luakickstartnvim&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/nvim-lua/kickstart.nvim&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;nvim-lua/kickstart.nvim&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;kickstartnvim&#34;&gt;kickstart.nvim
+&lt;/h1&gt;&lt;h2 id=&#34;introduction&#34;&gt;Introduction
+&lt;/h2&gt;&lt;p&gt;A starting point for Neovim that is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Small&lt;/li&gt;
+&lt;li&gt;Single-file&lt;/li&gt;
+&lt;li&gt;Completely Documented&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;NOT&lt;/strong&gt; a Neovim distribution, but instead a starting point for your configuration.&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation
+&lt;/h2&gt;&lt;h3 id=&#34;install-neovim&#34;&gt;Install Neovim
+&lt;/h3&gt;&lt;p&gt;Kickstart.nvim targets &lt;em&gt;only&lt;/em&gt; the latest
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/neovim/neovim/releases/tag/stable&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;lsquo;stable&amp;rsquo;&lt;/a&gt; and latest
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/neovim/neovim/releases/tag/nightly&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;rsquo;nightly&amp;rsquo;&lt;/a&gt; of Neovim.
+If you are experiencing issues, please make sure you have the latest versions.&lt;/p&gt;
+&lt;h3 id=&#34;install-external-dependencies&#34;&gt;Install External Dependencies
+&lt;/h3&gt;&lt;p&gt;External Requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Basic utils: &lt;code&gt;git&lt;/code&gt;, &lt;code&gt;make&lt;/code&gt;, &lt;code&gt;unzip&lt;/code&gt;, C Compiler (&lt;code&gt;gcc&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/BurntSushi/ripgrep#installation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ripgrep&lt;/a&gt;,
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/sharkdp/fd#installation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;fd-find&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Clipboard tool (xclip/xsel/win32yank or other depending on the platform)&lt;/li&gt;
+&lt;li&gt;A &lt;a class=&#34;link&#34; href=&#34;https://www.nerdfonts.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nerd Font&lt;/a&gt;: optional, provides various icons
+&lt;ul&gt;
+&lt;li&gt;if you have it set &lt;code&gt;vim.g.have_nerd_font&lt;/code&gt; in &lt;code&gt;init.lua&lt;/code&gt; to true&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Emoji fonts (Ubuntu only, and only if you want emoji!) &lt;code&gt;sudo apt install fonts-noto-color-emoji&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Language Setup:
+&lt;ul&gt;
+&lt;li&gt;If you want to write Typescript, you need &lt;code&gt;npm&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;If you want to write Golang, you will need &lt;code&gt;go&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!NOTE]
+See &lt;a class=&#34;link&#34; href=&#34;#Install-Recipes&#34; &gt;Install Recipes&lt;/a&gt; for additional Windows and Linux specific notes
+and quick install snippets&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;install-kickstart&#34;&gt;Install Kickstart
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;[!NOTE]
+&lt;a class=&#34;link&#34; href=&#34;#FAQ&#34; &gt;Backup&lt;/a&gt; your previous configuration (if any exists)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Neovim&amp;rsquo;s configurations are located under the following paths, depending on your OS:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;OS&lt;/th&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;PATH&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Linux, MacOS&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;$XDG_CONFIG_HOME/nvim&lt;/code&gt;, &lt;code&gt;~/.config/nvim&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Windows (cmd)&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;%localappdata%\nvim\&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Windows (powershell)&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;$env:LOCALAPPDATA\nvim\&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;recommended-step&#34;&gt;Recommended Step
+&lt;/h4&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/en/get-started/quickstart/fork-a-repo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Fork&lt;/a&gt; this repo
+so that you have your own copy that you can modify, then install by cloning the
+fork to your machine using one of the commands below, depending on your OS.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!NOTE]
+Your fork&amp;rsquo;s URL will be something like this:
+&lt;code&gt;https://github.com/&amp;lt;your_github_username&amp;gt;/kickstart.nvim.git&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;You likely want to remove &lt;code&gt;lazy-lock.json&lt;/code&gt; from your fork&amp;rsquo;s &lt;code&gt;.gitignore&lt;/code&gt; file
+too - it&amp;rsquo;s ignored in the kickstart repo to make maintenance easier, but it&amp;rsquo;s
+&lt;a class=&#34;link&#34; href=&#34;https://lazy.folke.io/usage/lockfile&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;recommended to track it in version control&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;clone-kickstartnvim&#34;&gt;Clone kickstart.nvim
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;[!NOTE]
+If following the recommended step above (i.e., forking the repo), replace
+&lt;code&gt;nvim-lua&lt;/code&gt; with &lt;code&gt;&amp;lt;your_github_username&amp;gt;&lt;/code&gt; in the commands below&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;details&gt;&lt;summary&gt; Linux and Mac &lt;/summary&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/nvim-lua/kickstart.nvim.git &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;XDG_CONFIG_HOME&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:-&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/.config&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;/nvim
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt; Windows &lt;/summary&gt;
+&lt;p&gt;If you&amp;rsquo;re using &lt;code&gt;cmd.exe&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/nvim-lua/kickstart.nvim.git &amp;#34;%localappdata%\nvim&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If you&amp;rsquo;re using &lt;code&gt;powershell.exe&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/nvim-lua/kickstart.nvim.git &amp;#34;${env:LOCALAPPDATA}\nvim&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;h3 id=&#34;post-installation&#34;&gt;Post Installation
+&lt;/h3&gt;&lt;p&gt;Start Neovim&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nvim
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;That&amp;rsquo;s it! Lazy will install all the plugins you have. Use &lt;code&gt;:Lazy&lt;/code&gt; to view
+the current plugin status. Hit &lt;code&gt;q&lt;/code&gt; to close the window.&lt;/p&gt;
+&lt;h4 id=&#34;read-the-friendly-documentation&#34;&gt;Read The Friendly Documentation
+&lt;/h4&gt;&lt;p&gt;Read through the &lt;code&gt;init.lua&lt;/code&gt; file in your configuration folder for more
+information about extending and exploring Neovim. That also includes
+examples of adding popularly requested plugins.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!NOTE]
+For more information about a particular plugin check its repository&amp;rsquo;s documentation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;getting-started&#34;&gt;Getting Started
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/m8C0Cq9Uv9o&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The Only Video You Need to Get Started with Neovim&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;faq&#34;&gt;FAQ
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;What should I do if I already have a pre-existing Neovim configuration?
+&lt;ul&gt;
+&lt;li&gt;You should back it up and then delete all associated files.&lt;/li&gt;
+&lt;li&gt;This includes your existing init.lua and the Neovim files in &lt;code&gt;~/.local&lt;/code&gt;
+which can be deleted with &lt;code&gt;rm -rf ~/.local/share/nvim/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Can I keep my existing configuration in parallel to kickstart?
+&lt;ul&gt;
+&lt;li&gt;Yes! You can use &lt;a class=&#34;link&#34; href=&#34;https://neovim.io/doc/user/starting.html#%24NVIM_APPNAME&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NVIM_APPNAME&lt;/a&gt;&lt;code&gt;=nvim-NAME&lt;/code&gt;
+to maintain multiple configurations. For example, you can install the kickstart
+configuration in &lt;code&gt;~/.config/nvim-kickstart&lt;/code&gt; and create an alias:
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;alias nvim-kickstart=&amp;#39;NVIM_APPNAME=&amp;#34;nvim-kickstart&amp;#34; nvim&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;When you run Neovim using &lt;code&gt;nvim-kickstart&lt;/code&gt; alias it will use the alternative
+config directory and the matching local directory
+&lt;code&gt;~/.local/share/nvim-kickstart&lt;/code&gt;. You can apply this approach to any Neovim
+distribution that you would like to try out.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;What if I want to &amp;ldquo;uninstall&amp;rdquo; this configuration:
+&lt;ul&gt;
+&lt;li&gt;See &lt;a class=&#34;link&#34; href=&#34;https://lazy.folke.io/usage#-uninstalling&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;lazy.nvim uninstall&lt;/a&gt; information&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Why is the kickstart &lt;code&gt;init.lua&lt;/code&gt; a single file? Wouldn&amp;rsquo;t it make sense to split it into multiple files?
+&lt;ul&gt;
+&lt;li&gt;The main purpose of kickstart is to serve as a teaching tool and a reference
+configuration that someone can easily use to &lt;code&gt;git clone&lt;/code&gt; as a basis for their own.
+As you progress in learning Neovim and Lua, you might consider splitting &lt;code&gt;init.lua&lt;/code&gt;
+into smaller parts. A fork of kickstart that does this while maintaining the
+same functionality is available here:
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dam9000/kickstart-modular.nvim&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;kickstart-modular.nvim&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Discussions on this topic can be found here:
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/nvim-lua/kickstart.nvim/issues/218&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Restructure the configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/nvim-lua/kickstart.nvim/pull/473&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Reorganize init.lua into a multi-file setup&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;install-recipes&#34;&gt;Install Recipes
+&lt;/h3&gt;&lt;p&gt;Below you can find OS specific install instructions for Neovim and dependencies.&lt;/p&gt;
+&lt;p&gt;After installing all the dependencies continue with the &lt;a class=&#34;link&#34; href=&#34;#Install-Kickstart&#34; &gt;Install Kickstart&lt;/a&gt; step.&lt;/p&gt;
+&lt;h4 id=&#34;windows-installation&#34;&gt;Windows Installation
+&lt;/h4&gt;&lt;details&gt;&lt;summary&gt;Windows with Microsoft C++ Build Tools and CMake&lt;/summary&gt;
+Installation may require installing build tools and updating the run command for `telescope-fzf-native`
+&lt;p&gt;See &lt;code&gt;telescope-fzf-native&lt;/code&gt; documentation for &lt;a class=&#34;link&#34; href=&#34;https://github.com/nvim-telescope/telescope-fzf-native.nvim#installation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;more details&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This requires:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install CMake and the Microsoft C++ Build Tools on Windows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;nvim-telescope/telescope-fzf-native.nvim&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;build&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release &amp;amp;&amp;amp; cmake --build build --config Release &amp;amp;&amp;amp; cmake --install build --prefix build&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Windows with gcc/make using chocolatey&lt;/summary&gt;
+Alternatively, one can install gcc and make which don&#39;t require changing the config,
+the easiest way is to use choco:
+&lt;ol&gt;
+&lt;li&gt;install &lt;a class=&#34;link&#34; href=&#34;https://chocolatey.org/install&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;chocolatey&lt;/a&gt;
+either follow the instructions on the page or use winget,
+run in cmd as &lt;strong&gt;admin&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;winget install --accept-source-agreements chocolatey.chocolatey
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;install all requirements using choco, exit the previous cmd and
+open a new one so that choco path is set, and run in cmd as &lt;strong&gt;admin&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;choco install -y neovim git ripgrep wget fd unzip gzip mingw make
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;WSL (Windows Subsystem for Linux)&lt;/summary&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wsl --install
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wsl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo add-apt-repository ppa:neovim-ppa/unstable -y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install make gcc ripgrep unzip git xclip neovim
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;h4 id=&#34;linux-install&#34;&gt;Linux Install
+&lt;/h4&gt;&lt;details&gt;&lt;summary&gt;Ubuntu Install Steps&lt;/summary&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo add-apt-repository ppa:neovim-ppa/unstable -y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install make gcc ripgrep unzip git xclip neovim
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Debian Install Steps&lt;/summary&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;apt&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;update&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;apt&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gcc&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ripgrep&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unzip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xclip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;curl&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Now we install nvim&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LO&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;github&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;neovim&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;neovim&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;releases&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;latest&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;download&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nvim&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;linux&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x86_64&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tar&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gz&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rf&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;opt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nvim&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;linux&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x86_64&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mkdir&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;opt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nvim&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;linux&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x86_64&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;chmod&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rX&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;opt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nvim&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;linux&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x86_64&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tar&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;C&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;opt&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xzf&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nvim&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;linux&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x86_64&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tar&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gz&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# make it available in /usr/local/bin, distro installs to /usr/bin&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ln&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sf&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;opt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nvim&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;linux&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x86_64&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nvim&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Fedora Install Steps&lt;/summary&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dnf install -y gcc make git ripgrep fd-find unzip neovim
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Arch Install Steps&lt;/summary&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
