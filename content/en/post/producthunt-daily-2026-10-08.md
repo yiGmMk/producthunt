@@ -18,6 +18,8 @@ tags: ["AI operating system", "AI agents", "swarm intelligence"]
 
 ---  
 
+{{< ad-inarticle >}}
+
 ## 2. OpenSEO  
 **Tagline**: The open source Semrush alternative  
 **Description**: Without good data, your agent gives generic advice. We provide the data, tools, and integrations your AI agent needs for SEO via MCP. Regular SEO is the foundation of good GEO, but we just released a new set of AI Visibility features as well.  
