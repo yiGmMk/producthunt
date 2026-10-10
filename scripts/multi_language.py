@@ -334,9 +334,12 @@ def generate_markdown(products, date_str: str, language: str):
                 f'"{category}"' for category in sorted(categories)
             )
             markdown_content += f"categories: [{formatted_categories}]\n"
-    markdown_content += "---\n\n" + "".join(
-        product.to_markdown(rank) for rank, product in enumerate(products, 1)
-    )
+    ## 第一个后面添加广告代码 {{< ad-inarticle >}}
+    markdown_content += "---\n\n"
+    for rank, product in enumerate(products, 1):
+        markdown_content += product.to_markdown(rank)
+        if rank == 1:
+            markdown_content += "{{< ad-inarticle >}}\n\n"
 
     file_name = f"{path}/producthunt-daily-{date_str}.md"
     with open(file_name, "w", encoding="utf-8") as file:
