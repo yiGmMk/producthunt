@@ -1,9 +1,9 @@
 ---
 title: AnyPS5
-date: 2026-10-09T22:27:49+08:00
+date: 2026-10-10T21:38:13+08:00
 draft: False
-image: https://images.unsplash.com/photo-1723058852872-0e7ecaf4055d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE1NTYwMTd8&ixlib=rb-4.1.0
-tags: ['github',PS5, Executable Porting, Shader Recompilation]
+image: https://images.unsplash.com/photo-1761363941909-9a8c22a896f4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE2Mzk0NDJ8&ixlib=rb-4.1.0
+tags: ['github',executable porting,relinker,shader recompiler]
 categories: ['github']
 ---
 
