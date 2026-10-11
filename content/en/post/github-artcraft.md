@@ -1,9 +1,9 @@
 ---
 title: artcraft
-date: 2026-10-10T21:38:33+08:00
+date: 2026-10-11T22:05:43+08:00
 draft: False
-image: https://images.unsplash.com/photo-1737587653765-94bc8fe7b541?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE2Mzk0NDJ8&ixlib=rb-4.1.0
-tags: ['github',Rust, Monorepo, API]
+image: https://images.unsplash.com/photo-1679262581246-6007052f1ae5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE3Mjc0NzB8&ixlib=rb-4.1.0
+tags: ['github',Rust, Monorepo, API Development]
 categories: ['github']
 ---
 

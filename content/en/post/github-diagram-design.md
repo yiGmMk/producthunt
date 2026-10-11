@@ -1,20 +1,50 @@
 ---
 title: diagram-design
-date: 2026-10-10T21:39:02+08:00
+date: 2026-10-11T22:06:09+08:00
 draft: False
-image: https://images.unsplash.com/photo-1643555603719-7bb03644419b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE2Mzk0NDJ8&ixlib=rb-4.1.0
-tags: ['github',AI diagram generator, Agent skill, Editorial design]
+image: https://images.unsplash.com/photo-1635810766767-23613660be8c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE3Mjc0NzB8&ixlib=rb-4.1.0
+tags: ['github',AI diagram generator, agent skill, SVG export]
 categories: ['github']
 ---
 
 # [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design)
 
-# Diagram Design
+<div align="center">
 
-An agent skill for Claude Code, Codex, Copilot, Cursor and more that draws editorial diagrams as one self-contained HTML+SVG file, in your brand, with design rules baked in.
-44 diagram types. No shadows. No Mermaid slop. Project site: [diagramdesign.dev](https://diagramdesign.dev)
+<h1>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/hero/hero-dark.webp">
+    <img alt="Diagram Design. Editorial diagrams your designer won't hate." src="docs/hero/hero-light.webp">
+  </picture>
+</h1>
 
-[![A prompt typed into an agent session becomes a finished architecture diagram, then a generic first-pass diagram is redrawn in an editorial style](docs/hero/demo.gif)](https://diagramdesign.dev)
+**An agent skill that draws diagrams as one self-contained HTML + SVG file, in your brand.<br>44 diagram types. No shadows. No Mermaid slop.**
+
+[![GitHub stars](https://img.shields.io/github/stars/cathrynlavery/diagram-design?style=flat-square&color=bf4520)](https://github.com/cathrynlavery/diagram-design/stargazers)
+[![skills.sh installs](https://skills.sh/b/cathrynlavery/diagram-design?style=flat-square)](https://skills.sh/cathrynlavery/diagram-design/diagram-design)
+[![CI](https://img.shields.io/github/actions/workflow/status/cathrynlavery/diagram-design/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/cathrynlavery/diagram-design/actions/workflows/ci.yml)
+[![Plugin version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fcathrynlavery%2Fdiagram-design%2Fmain%2F.claude-plugin%2Fplugin.json&query=%24.version&label=version&style=flat-square&color=555555)](CHANGELOG.md)
+[![MIT license](https://img.shields.io/badge/license-MIT-555555?style=flat-square)](LICENSE)
+
+<a href="https://trendshift.io/repositories/26141" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/26141" alt="cathrynlavery/diagram-design on Trendshift" width="250" height="55"/></a>
+
+**[Website](https://diagramdesign.dev) · [Gallery](https://cathrynlavery.github.io/diagram-design/) · [Changelog](CHANGELOG.md)**
+
+[Install](#install) · [What it makes](#what-it-makes) · [Quickstart](#quickstart) · [Match your brand](#onboarding-make-it-look-like-your-brand) · [Import](#import-from-drawio-mermaid-or-excalidraw) · [Export](#export-to-png--svg) · [Contributing](#contributing)
+
+<code>npx skills add cathrynlavery/diagram-design</code>
+
+<br><br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/hero/demo.gif">
+  <source media="(prefers-color-scheme: light)" srcset="docs/hero/demo-light.gif">
+  <img src="docs/hero/demo.gif" alt="A prompt typed into an agent session becomes a finished architecture diagram, then a plain first-pass diagram is redrawn with the skill, then the gallery of diagram types" width="900">
+</picture>
+
+</div>
+
+<br>
 
 Ask your agent in plain words:
 
@@ -592,7 +622,7 @@ diagram-design/
 ├── docs/cookbook.md                  # operator recipes for editable installs and common tasks
 ├── docs/adr/                         # short records of settled design decisions
 ├── docs/superpowers/                 # design specs and implementation plans (plans/, specs/)
-├── docs/hero/                        # README demo GIF and social preview image
+├── docs/hero/                        # README demo GIFs (dark, light) and social preview image
 ├── docs/screenshots/                 # full-resolution images + source-digest manifest.json
 ├── docs/screenshots/thumbs/          # generated WebP previews the README renders
 ├── CHANGELOG.md                      # release history
