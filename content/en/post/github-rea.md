@@ -1,9 +1,9 @@
 ---
 title: rea
-date: 2026-10-11T22:04:52+08:00
+date: 2026-10-13T00:48:25+08:00
 draft: False
-image: https://images.unsplash.com/photo-1580152582409-4928ecec1821?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE3Mjc0NzB8&ixlib=rb-4.1.0
-tags: ['github',Reverse Engineering, MCP Protocol, Binary Analysis]
+image: https://images.unsplash.com/photo-1654284392067-10486b12edc5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE4MjM2ODF8&ixlib=rb-4.1.0
+tags: ['github',Reverse Engineering, Binary Analysis, MCP Framework]
 categories: ['github']
 ---
 
@@ -20,7 +20,6 @@ categories: ['github']
 **See a feature you like. Understand how it works, down to the binary level.**
 
 [![npm version](https://img.shields.io/npm/v/rea-agents?style=flat-square&color=cb3837)](https://www.npmjs.com/package/rea-agents)
-[![CI](https://img.shields.io/github/actions/workflow/status/morluto/rea/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/morluto/rea/actions/workflows/ci.yml)
 [![MCP tool catalog](https://img.shields.io/badge/MCP-tool_catalog-5c4ee5?style=flat-square)](docs/mcp-contracts.md#generated-catalog)
 [![Node.js requirements](https://img.shields.io/badge/Node.js-requirements-339933?style=flat-square&logo=nodedotjs&logoColor=white)](#what-you-can-analyze)
 [![skills.sh](https://skills.sh/b/morluto/rea?style=flat-square)](https://skills.sh/morluto/rea/reverse-engineer-anything)
@@ -166,6 +165,7 @@ Additional tools and host support depend on the target:
 | ---------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Native binaries        | Pseudocode, assembly, strings, symbols, calls and references                         | Hopper, Ghidra or IDA; [native analysis](https://rea.tools/guides/native/)                                                            |
 | Offline ELF layout     | Sections, segments, original symbols/relocations and static mitigation candidates    | Caller-supplied pwntools on Linux x64; [binary diagnostics](docs/binary-diagnostics.md)                                               |
+| Go binaries            | Embedded compiler version, modules, replacements and build settings                  | Built-in static ELF/PE/thin Mach-O inspection; no Go installation required                                                            |
 | WASM artifact          | Validation, sections, exact import/export WAT forms and decoded WAT                  | Caller-supplied WABT 1.0.42; `inspect_wasm_artifact`                                                                                  |
 | EVM bytecode           | Dispatch selectors, byte offsets, inferred arguments and mutability                  | Local raw/hex carrier on Linux x64; [offline EVM guide](docs/evm-bytecode.md)                                                         |
 | Recorded Linux crashes | Raw notes, every recorded thread's registers/signals and optional mapping candidates | Caller-supplied pwntools on Linux x64; optional GDB/pwndbg; [recorded crashes](docs/recorded-crashes.md)                              |
@@ -177,6 +177,7 @@ Additional tools and host support depend on the target:
 | Android devices        | Devices, packages, processes, logs, dumps, screen captures, and APK/file transfers   | Caller-supplied adb (emulator or hardware); [ADB guide](docs/adb-device-analysis.md)                                                  |
 | JEB projects           | Engine-backed project units, artifact digests and type/method pseudo-code            | A caller-started JEB client serving MCP, selected with REA_JEB_MCP_URL; [JEB guide](docs/jeb-analysis.md)                             |
 | Android resources      | Decoded manifest, string tables, locales and version facts                           | Caller-supplied Apktool launcher; [resource guide](docs/apktool-resource-analysis.md)                                                 |
+| Flutter apps           | Dart snapshot hash, per-ABI library digests and engine build provenance              | None (static APK parsing); [Flutter guide](docs/flutter-analysis.md)                                                                  |
 | Firmware               | Regions, extraction results and native-analysis handoffs                             | Binwalk / Unblob on Linux; [firmware guide](docs/firmware-analysis.md)                                                                |
 | Packages and resources | File inventories, digests, plists, Apple bundle anatomy and extracted resources      | [Artifact and JavaScript guide](docs/javascript-artifact-reconstruction.md), [Apple applications](docs/apple-application-analysis.md) |
 | Process behavior       | Terminal output, interactions, exit and filesystem observations, and run comparisons | Linux/macOS with a native PTY; [process capture](docs/process-capture.md)                                                             |
@@ -192,8 +193,8 @@ Native formats and host support vary by provider. See
 [IDA guide](docs/ida-provider.md), and
 [experimental Windows Ghidra support](docs/windows-ghidra-p0.md).
 Ghidra also supports [16-bit DOS analysis](docs/ghidra-dos.md).
-For large binaries, raise its startup deadline with
-`REA_GHIDRA_STARTUP_TIMEOUT_MS`.
+For large binaries, raise the provider's startup deadline with
+`REA_GHIDRA_STARTUP_TIMEOUT_MS` or `REA_HOPPER_STARTUP_TIMEOUT_MS`.
 For provider selection, see the [CLI guide](docs/cli.md#choose-a-provider).
 Check [release availability](docs/installation.md#released-package-and-main)
 for features added since the latest npm release.
@@ -256,7 +257,9 @@ Ghidra and IDA use your existing installations. See [provider setup](docs/instal
 <summary><strong>Do I need to start Hopper first?</strong></summary>
 
 REA starts Hopper when an operation needs it. On macOS, a first-run dialog may
-ask you to choose demo mode or activate your license. See
+ask you to choose demo mode or activate your license. Complete that prompt in the
+same user session before your first CLI/MCP operation or unattended job. Open
+Hopper manually if needed. See
 [Hopper startup and troubleshooting](docs/installation.md#launcher-paths-and-troubleshooting).
 
 </details>
@@ -326,7 +329,7 @@ Report vulnerabilities through [SECURITY.md](SECURITY.md).
 
 ## Star history
 
-🎉 **80,000 GitHub stars — thank you!**
+🎉 **110,000 GitHub stars — thank you!**
 
 Thanks to everyone using REA, reporting bugs, requesting features, testing builds, and contributing fixes.
 
@@ -340,9 +343,13 @@ Thanks to everyone using REA, reporting bugs, requesting features, testing build
 
 ## Disclaimer
 
-REA provides tools for lawful reverse-engineering research, analysis, and reconstruction. You are responsible for obtaining any required authorization and complying with applicable laws. The project does not endorse illegal or unauthorized use.
+See [DISCLAIMER.md](DISCLAIMER.md) for responsible-use guidance.
 
-REA is an open-source software project. We have not issued or endorsed any cryptocurrency or token. Tokens using the REA name are not affiliated with the project.
+The project's position on illegal or unauthorized use covers all REA versions,
+distribution channels, and platforms; each copy retains its applicable licenses.
+
+REA is for lawful research, education, interoperability, software preservation,
+and analysis of software you own or are authorized to examine.
 
 ## Contributing
 
@@ -357,3 +364,16 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup and checks,
 ## License
 
 [MIT](LICENSE)
+
+REA-authored code is licensed under MIT. Third-party material retains its own
+licenses and copyright notices; see
+[Third-party notices](THIRD_PARTY_NOTICES.md) for the dependency inventory,
+preserved license texts, and external-tool terms.
+
+**You must legally obtain and be authorized to use commercial tools**, including
+IDA Pro / Hex-Rays decompilers, Hopper, and JEB, under their applicable
+licenses. REA grants no tool license, key, or activation entitlement. Trials and
+demos remain subject to vendor terms, including user, feature, automation, and
+output sharing restrictions. Cracked copies, stolen keys, unauthorized key
+sharing, and bypassing license restrictions are not authorized. This guidance
+does not amend MIT or third-party licenses.
