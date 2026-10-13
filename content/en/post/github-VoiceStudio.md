@@ -1,9 +1,9 @@
 ---
 title: VoiceStudio
-date: 2026-09-30T21:40:15+08:00
+date: 2026-10-13T23:07:10+08:00
 draft: False
-image: https://images.unsplash.com/photo-1620238748161-64af28ab2d3a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA3NzU1NzZ8&ixlib=rb-4.1.0
-tags: ['github',voice cloning, video dubbing, text-to-speech]
+image: https://images.unsplash.com/photo-1608501773255-d8cd9e5ba968?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE5MDM5NTF8&ixlib=rb-4.1.0
+tags: ['github',voice cloning, video dubbing, voice design]
 categories: ['github']
 ---
 
@@ -22,7 +22,8 @@ categories: ['github']
     <a href="#get-started">Get started</a> ·
     <a href="#documentation">Docs</a> ·
     <a href="https://discord.gg/bzQavDfVV9">Discord</a> ·
-    <a href="README_CN.md">简体中文</a>
+    <a href="README_CN.md">简体中文</a> ·
+    <a href="README_JA.md">日本語</a>
   </p>
   <p>
     <a href="https://github.com/debpalash/VoiceStudio/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/debpalash/VoiceStudio/ci.yml?branch=main" alt="CI" /></a>
@@ -38,7 +39,7 @@ categories: ['github']
 | Create | Produce | Connect |
 | :--- | :--- | :--- |
 | Clone a voice or design your own | Dub videos with timed speech | Local API & MCP for agents |
-| Dictate with a floating widget | Stories, audiobooks & batch jobs | Optional remote workers |
+| Dictate with a floating widget | Stories, audiobooks & batch jobs | Reusable recipes & watch folders |
 
 Start with **VoiceStudio** (default, powered by k2-fsa/OmniVoice), or choose another engine. [Features & engine catalog](docs/feature-catalog.md).
 
@@ -82,15 +83,24 @@ curl -fsSL https://voicestudio.sh/install | sh -s -- --main
 curl -fsSL https://voicestudio.sh/install | sh -s -- --uninstall
 ```
 
+On Windows, run `irm https://voicestudio.sh/install | iex` in PowerShell.
 Release downloads require curl and a SHA-256 tool. `--main` requires Git,
 Node.js 22+, Bun, Rust/Cargo, and platform build tools; see
 [installer prerequisites and behavior](docs/install/script.md).
 The installer preserves your settings, projects, and models. Older versions
 must contain Electron packages; it never falls back to archived Tauri builds.
 
-Download from [Releases](https://github.com/debpalash/VoiceStudio/releases/latest), then follow your platform guide:
+Or download from [Releases](https://github.com/debpalash/VoiceStudio/releases/latest) (macOS `.dmg`, Windows `.exe`, Linux `.AppImage` or `.deb`) and follow your platform guide:
 
 **[macOS](docs/install/macos.md) · [Windows](docs/install/windows.md) · [Linux](docs/install/linux.md) · [Docker](docs/install/docker.md)**
+
+| Hardware | Support |
+|---|---|
+| NVIDIA GPU (Windows / Linux) | CUDA acceleration |
+| Apple Silicon | Metal (MPS) acceleration |
+| No dedicated GPU (Intel/AMD integrated graphics, older PCs) | Fully usable on the CPU, slower; setup installs the small CPU build of PyTorch (about 5 GB free disk) |
+| Windows on ARM (Snapdragon X etc.) | **Experimental**, validation pending: native ARM64 app, x64 Python backend under emulation, CPU only |
+| Intel Mac | App UI only; connect to a remote backend ([why](docs/install/macos.md)) |
 
 Open **Voice cloning**, choose a voice or add a clean reference recording, enter your text, and generate. Install the required model when prompted. Hardware needs vary by engine; see [performance](docs/performance.md).
 
@@ -148,4 +158,5 @@ Support development: [Ko-fi](https://ko-fi.com/debpalash) · [PayPal](https://pa
 
 ## License & responsible use
 
-[AGPL-3.0](LICENSE). Models have their own licenses; review them before commercial use. Clone voices only with permission. See [license details](LICENSE-NOTICE.md).
+[AGPL-3.0](LICENSE) covers the application, including commercial use under its conditions. Model weights, tokenizers, voices and generated-output conditions are separate; a paid app licence does not grant those rights. Clone voices only with permission. Model Manager now shows versioned model-source notices, evidence links and unresolved review gaps from the [shared inventory](docs/licensing/model-inventory.md). Its optional [reviewed-file preview](docs/licensing/model-review-workflow.md) does not enforce ordinary downloads or certify commercial permission. See [license details](LICENSE-NOTICE.md).
+

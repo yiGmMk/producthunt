@@ -1,9 +1,9 @@
 ---
 title: rea
-date: 2026-10-13T00:48:25+08:00
+date: 2026-10-13T23:06:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1654284392067-10486b12edc5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE4MjM2ODF8&ixlib=rb-4.1.0
-tags: ['github',Reverse Engineering, Binary Analysis, MCP Framework]
+image: https://images.unsplash.com/photo-1691440501591-8aaec69b2b77?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE5MDM5NTF8&ixlib=rb-4.1.0
+tags: ['github',reverse engineering, binary analysis, ai agents]
 categories: ['github']
 ---
 
@@ -11,7 +11,7 @@ categories: ['github']
 
 <div align="center">
 
-**English** · [简体中文](README_zh.md) · [繁體中文](README_zh-TW.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Türkçe](README_tr.md) · [Русский](README_ru.md) · [Tiếng Việt](README_vi.md) · [ไทย](README_th.md) · [Deutsch](README_de.md) · [Español](README_es.md) · [Français](README_fr.md) · [Українська](README_uk.md) · [Polski](README_pl.md) · [Português (Brasil)](README_pt-BR.md) · [العربية](README_ar.md) · [فارسی](README_fa.md) · [Bahasa Indonesia](README_id.md) · [Italiano](README_it.md)
+**English** · [简体中文](docs/readme/README_zh.md) · [繁體中文](docs/readme/README_zh-TW.md) · [日本語](docs/readme/README_ja.md) · [한국어](docs/readme/README_ko.md) · [Türkçe](docs/readme/README_tr.md) · [Русский](docs/readme/README_ru.md) · [Tiếng Việt](docs/readme/README_vi.md) · [ไทย](docs/readme/README_th.md) · [Deutsch](docs/readme/README_de.md) · [Español](docs/readme/README_es.md) · [Français](docs/readme/README_fr.md) · [Українська](docs/readme/README_uk.md) · [Polski](docs/readme/README_pl.md) · [Português (Brasil)](docs/readme/README_pt-BR.md) · [العربية](docs/readme/README_ar.md) · [فارسی](docs/readme/README_fa.md) · [Bahasa Indonesia](docs/readme/README_id.md) · [Italiano](docs/readme/README_it.md)
 
 # REA: Reverse Engineer Anything
 
@@ -168,10 +168,11 @@ Additional tools and host support depend on the target:
 | Go binaries            | Embedded compiler version, modules, replacements and build settings                  | Built-in static ELF/PE/thin Mach-O inspection; no Go installation required                                                            |
 | WASM artifact          | Validation, sections, exact import/export WAT forms and decoded WAT                  | Caller-supplied WABT 1.0.42; `inspect_wasm_artifact`                                                                                  |
 | EVM bytecode           | Dispatch selectors, byte offsets, inferred arguments and mutability                  | Local raw/hex carrier on Linux x64; [offline EVM guide](docs/evm-bytecode.md)                                                         |
+| SQLite databases       | Tables, columns, indexes, views, triggers and selected ordinary-table rows           | Local database/WAL snapshot; Node.js 24.x >=24.15 or 26+ with native SQLite limits                                                    |
 | Recorded Linux crashes | Raw notes, every recorded thread's registers/signals and optional mapping candidates | Caller-supplied pwntools on Linux x64; optional GDB/pwndbg; [recorded crashes](docs/recorded-crashes.md)                              |
 | JavaScript / Electron  | Modules, imports, source maps, routes, IPC and native add-on relationships           | Node.js and npm; [application analysis](https://rea.tools/guides/javascript/)                                                         |
 | Websites               | Page structure, scripts, network observations and requested screenshots              | A Chrome-family browser; [browser analysis](https://rea.tools/guides/browser/)                                                        |
-| Saved network captures | Requests, responses, exposed payloads and source locations                           | HAR; mitmdump on Linux for native mitmproxy captures; [capture guide](docs/web-network-captures.md)                                   |
+| Saved network captures | Requests, responses, exposed payloads and source locations                           | HAR or Fiddler Everywhere SAZ; mitmdump on Linux for native mitmproxy; [capture guide](docs/web-network-captures.md)                  |
 | .NET assemblies        | Metadata, CIL instructions, declared native dependencies and build comparisons       | None (static only); [managed-code guide](docs/managed-code-analysis.md)                                                               |
 | Android APKs           | Manifest declarations, classes, decompiled methods and references                    | Headless JADX and a full JDK on Linux/macOS/Windows x64; [Android guide](docs/android-analysis.md)                                    |
 | Android devices        | Devices, packages, processes, logs, dumps, screen captures, and APK/file transfers   | Caller-supplied adb (emulator or hardware); [ADB guide](docs/adb-device-analysis.md)                                                  |
@@ -179,6 +180,9 @@ Additional tools and host support depend on the target:
 | Android resources      | Decoded manifest, string tables, locales and version facts                           | Caller-supplied Apktool launcher; [resource guide](docs/apktool-resource-analysis.md)                                                 |
 | Flutter apps           | Dart snapshot hash, per-ABI library digests and engine build provenance              | None (static APK parsing); [Flutter guide](docs/flutter-analysis.md)                                                                  |
 | Firmware               | Regions, extraction results and native-analysis handoffs                             | Binwalk / Unblob on Linux; [firmware guide](docs/firmware-analysis.md)                                                                |
+| Recorded packets       | Selected fields, repeated values, filters and decode-as rules                        | Linux: TShark 4.x + prlimit; [capture guide](docs/packet-captures.md)                                                                 |
+| Packet summaries       | Endpoints, DNS, TLS SNI, protocol distribution and HTTP requests                     | Caller-supplied tshark and capinfos (Linux-verified); [pcap guide](docs/pcap-analysis.md)                                             |
+| Recorded logic signals | Decoder annotations, sample ranges and diagnostics                                   | Linux: sigrok-cli 0.7.2 + prlimit; [signal recordings](docs/signal-recordings.md)                                                     |
 | Packages and resources | File inventories, digests, plists, Apple bundle anatomy and extracted resources      | [Artifact and JavaScript guide](docs/javascript-artifact-reconstruction.md), [Apple applications](docs/apple-application-analysis.md) |
 | Process behavior       | Terminal output, interactions, exit and filesystem observations, and run comparisons | Linux/macOS with a native PTY; [process capture](docs/process-capture.md)                                                             |
 
@@ -190,7 +194,7 @@ using your user permissions; each runtime guide describes its effects.
 
 Native formats and host support vary by provider. See
 [Hopper and Ghidra setup](docs/installation.md#hopper), the
-[IDA guide](docs/ida-provider.md), and
+[IDA guide](docs/ida-provider.md) (including an optional native MCP bridge), and
 [experimental Windows Ghidra support](docs/windows-ghidra-p0.md).
 Ghidra also supports [16-bit DOS analysis](docs/ghidra-dos.md).
 For large binaries, raise the provider's startup deadline with
@@ -329,7 +333,7 @@ Report vulnerabilities through [SECURITY.md](SECURITY.md).
 
 ## Star history
 
-🎉 **110,000 GitHub stars — thank you!**
+🎉 **180,000 GitHub stars — thank you!**
 
 Thanks to everyone using REA, reporting bugs, requesting features, testing builds, and contributing fixes.
 

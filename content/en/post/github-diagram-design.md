@@ -1,9 +1,9 @@
 ---
 title: diagram-design
-date: 2026-10-11T22:06:09+08:00
+date: 2026-10-13T23:08:05+08:00
 draft: False
-image: https://images.unsplash.com/photo-1635810766767-23613660be8c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE3Mjc0NzB8&ixlib=rb-4.1.0
-tags: ['github',AI diagram generator, agent skill, SVG export]
+image: https://images.unsplash.com/photo-1665658458087-25f517e3d74d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE5MDM5NTF8&ixlib=rb-4.1.0
+tags: ['github',diagram generation, ai agent skill, html svg export]
 categories: ['github']
 ---
 
@@ -18,7 +18,7 @@ categories: ['github']
   </picture>
 </h1>
 
-**An agent skill that draws diagrams as one self-contained HTML + SVG file, in your brand.<br>44 diagram types. No shadows. No Mermaid slop.**
+**An agent skill that draws diagrams as one self-contained HTML + SVG file, in your brand.<br>45 diagram types. No shadows. No Mermaid slop.**
 
 [![GitHub stars](https://img.shields.io/github/stars/cathrynlavery/diagram-design?style=flat-square&color=bf4520)](https://github.com/cathrynlavery/diagram-design/stargazers)
 [![skills.sh installs](https://skills.sh/b/cathrynlavery/diagram-design?style=flat-square)](https://skills.sh/cathrynlavery/diagram-design/diagram-design)
@@ -229,7 +229,7 @@ The model already understood the content. What it was missing was taste, so I wr
 
 ## What it makes
 
-44 diagram types, each in three static variants: minimal light, minimal dark, and full-editorial. Open any of them directly in a browser. There is no build step, JavaScript, or external image dependency.
+45 diagram types, each in three static variants: minimal light, minimal dark, and full-editorial. Open any of them directly in a browser. There is no build step, JavaScript, or external image dependency.
 
 <table>
 <tr>
@@ -305,7 +305,7 @@ The model already understood the content. What it was missing was taste, so I wr
 <tr>
   <td align="center" width="33%"><a href="docs/screenshots/axonometric-plan.png"><img src="docs/screenshots/thumbs/axonometric-plan.webp" alt="Axonometric plan"></a><br><b>Axonometric plan</b><br><sub>Rooms and buildings on one plate</sub></td>
   <td align="center" width="33%"><a href="docs/screenshots/heatmap.png"><img src="docs/screenshots/thumbs/heatmap.webp" alt="Heatmap"></a><br><b>Heatmap</b><br><sub>Value per row × column cell</sub></td>
-  <td align="center" width="33%"></td>
+  <td align="center" width="33%"><a href="docs/screenshots/service-blueprint.png"><img src="docs/screenshots/thumbs/service-blueprint.webp" alt="Service blueprint"></a><br><b>Service blueprint</b><br><sub>Frontstage and backstage on a shared stage grid</sub></td>
 </tr>
 </table>
 
@@ -437,7 +437,7 @@ Already have diagrams in draw.io / diagrams.net, Mermaid, or Excalidraw? Point t
 Or just ask: *"redraw this drawio file for my deck"*, *"make this Mermaid block editorial"*, *"make this whiteboard sketch presentable"*, or *"この Mermaid をスライド用にきれいにして"*.
 
 Reads the common containers draw.io writes (`.drawio`, `.drawio.xml`, `.drawio.png` with an embedded diagram, and `.drawio.svg`), including compressed payloads that look like base64 garbage in an editor.
-For Mermaid, it accepts `.mmd`, `.mermaid`, and one or more fenced `mermaid` blocks in Markdown.
+For Mermaid, it accepts `.mmd`, `.mermaid`, and one or more fenced `mermaid` blocks in Markdown. UTF-8 files may include a byte-order mark.
 For Excalidraw, it accepts `.excalidraw` and `.excalidraw.json` scene files (not `.excalidraw.png`/`.excalidraw.svg` exports). It parses text only: no rendering, JavaScript, browser, network, or followed click targets.
 
 ### The four dials
@@ -466,7 +466,7 @@ What never carries over: source or renderer coordinates, source palette, source 
 
 ## Export to PNG / SVG
 
-Diagrams ship as self-contained HTML, but you can export the diagram itself for Figma, slides, or social cards. Use the slash command for your agent:
+Diagrams ship as self-contained HTML, but you can export the diagram itself for Figma, slides, or social cards. SVG export also carries CDATA-wrapped diagram CSS, including selectors bound to the original SVG root. Use the slash command for your agent:
 
 **Pi:**
 
