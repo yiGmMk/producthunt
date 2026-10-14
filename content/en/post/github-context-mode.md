@@ -1,9 +1,9 @@
 ---
 title: context-mode
-date: 2026-10-13T23:07:42+08:00
+date: 2026-10-14T21:03:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1603731537358-95b0fc1cfaa6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE5MDM5NTF8&ixlib=rb-4.1.0
-tags: ['github',Context Optimization, MCP Server, Session Continuity]
+image: https://images.unsplash.com/flagged/photo-1573152455866-867556534827?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE5ODI4NzV8&ixlib=rb-4.1.0
+tags: ['github',context window,MCP server,session continuity]
 categories: ['github']
 ---
 
