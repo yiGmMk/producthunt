@@ -1,9 +1,9 @@
 ---
 title: rea
-date: 2026-10-14T21:01:57+08:00
+date: 2026-10-15T20:45:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1554490678-b105a02ce4ec?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE5ODI4NzV8&ixlib=rb-4.1.0
-tags: ['github',reverse engineering, mcp server, binary analysis]
+image: https://images.unsplash.com/photo-1709312411350-2d6c34032cba?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTIwNjgzMTF8&ixlib=rb-4.1.0
+tags: ['github',Reverse Engineering, MCP, Binary Analysis]
 categories: ['github']
 ---
 
@@ -216,7 +216,8 @@ or update either provider.
 
 Native formats and host support vary by provider. See
 [Hopper and Ghidra setup](docs/installation.md#hopper), the
-[IDA guide](docs/ida-provider.md) (including an optional native MCP bridge), and
+[IDA guide](docs/ida-provider.md) (including an optional native MCP bridge), the
+[Kuna decompiler guide](docs/kuna-provider.md), and
 [experimental Windows Ghidra support](docs/windows-ghidra-p0.md).
 Ghidra also supports [16-bit DOS analysis](docs/ghidra-dos.md).
 For large binaries, raise the provider's startup deadline with
@@ -355,7 +356,7 @@ Report vulnerabilities through [SECURITY.md](SECURITY.md).
 
 ## Star history
 
-🎉 **200,000 GitHub stars — thank you!**
+🎉 **250,000 GitHub stars — thank you!**
 
 Thanks to everyone using REA, reporting bugs, requesting features, testing builds, and contributing fixes.
 
