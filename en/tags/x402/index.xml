@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>X402 on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/x402/</link>
+        <description>Recent content in X402 on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sun, 26 Oct 2025 15:25:35 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/x402/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>x402</title>
+        <link>https://producthunt.programnotes.cn/en/p/x402/</link>
+        <pubDate>Sun, 26 Oct 2025 15:25:35 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/x402/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1595265795606-5c2a09e965bb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE0NjM1MTF8&amp;ixlib=rb-4.1.0" alt="Featured image of post x402" /&gt;&lt;h1 id=&#34;coinbasex402&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/coinbase/x402&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;coinbase/x402&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;x402-payments-protocol&#34;&gt;x402 payments protocol
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;1 line of code to accept digital dollars. No fee, 2 second settlement, $0.001 minimum payment.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-typescript&#34; data-lang=&#34;typescript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;use&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// How much you want to charge, and where you want the funds to land
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;paymentMiddleware&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;0xYourAddress&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/your-endpoint&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;$0.01&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// That&amp;#39;s it! See examples/typescript/servers/express.ts for a complete example. Instruction below for running on base-sepolia.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;philosophy&#34;&gt;Philosophy
+&lt;/h2&gt;&lt;p&gt;Payments on the internet are fundamentally flawed. Credit Cards are high friction, hard to accept, have minimum payments that are far too high, and don&amp;rsquo;t fit into the programmatic nature of the internet.
+It&amp;rsquo;s time for an open, internet-native form of payments. A payment rail that doesn&amp;rsquo;t have high minimums + % based fee. Payments that are amazing for humans and AI agents.&lt;/p&gt;
+&lt;h2 id=&#34;principles&#34;&gt;Principles
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Open standard:&lt;/strong&gt; the x402 protocol will never force reliance on a single party&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HTTP Native:&lt;/strong&gt; x402 is meant to seamlessly complement the existing HTTP request made by traditional web services, it should not mandate additional requests outside the scope of a typical client / server flow.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chain and token agnostic:&lt;/strong&gt; we welcome contributions that add support for new chains, signing standards, or schemes, so long as they meet our acceptance criteria laid out in &lt;a class=&#34;link&#34; href=&#34;https://github.com/coinbase/x402/blob/main/CONTRIBUTING.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CONTRIBUTING.md&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Trust minimizing:&lt;/strong&gt; all payment schemes must not allow for the facilitator or resource server to move funds, other than in accordance with client intentions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Easy to use:&lt;/strong&gt; x402 needs to be 10x better than existing ways to pay on the internet. This means abstracting as many details of crypto as possible away from the client and resource server, and into the facilitator. This means the client/server should not need to think about gas, rpc, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem
+&lt;/h2&gt;&lt;p&gt;The x402 ecosystem is growing! Check out our &lt;a class=&#34;link&#34; href=&#34;https://x402.org/ecosystem&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ecosystem page&lt;/a&gt; to see projects building with x402, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Client-side integrations&lt;/li&gt;
+&lt;li&gt;Services and endpoints&lt;/li&gt;
+&lt;li&gt;Ecosystem infrastructure and tooling&lt;/li&gt;
+&lt;li&gt;Learning and community resources&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Want to add your project to the ecosystem? See our &lt;a class=&#34;link&#34; href=&#34;https://github.com/coinbase/x402/tree/main/typescript/site#adding-your-project-to-the-ecosystem&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;demo site README&lt;/a&gt; for detailed instructions on how to submit your project.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Roadmap:&lt;/strong&gt; see &lt;a class=&#34;link&#34; href=&#34;https://github.com/coinbase/x402/blob/main/ROADMAP.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ROADMAP.md&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;terms&#34;&gt;Terms:
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;resource&lt;/code&gt;: Something on the internet. This could be a webpage, file server, RPC service, API, any resource on the internet that accepts HTTP / HTTPS requests.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;client&lt;/code&gt;: An entity wanting to pay for a resource.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;facilitator server&lt;/code&gt;: A server that facilitates verification and execution of on-chain payments.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;resource server&lt;/code&gt;: An HTTP server that provides an API or other resource for a client.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;technical-goals&#34;&gt;Technical Goals:
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Permissionless and secure for clients and servers&lt;/li&gt;
+&lt;li&gt;Gasless for client and resource servers&lt;/li&gt;
+&lt;li&gt;Minimal integration for the resource server and client (1 line for the server, 1 function for the client)&lt;/li&gt;
+&lt;li&gt;Ability to trade off speed of response for guarantee of payment&lt;/li&gt;
+&lt;li&gt;Extensible to different payment flows and chains&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;v1-protocol&#34;&gt;V1 Protocol
+&lt;/h2&gt;&lt;p&gt;The &lt;code&gt;x402&lt;/code&gt; protocol is a chain agnostic standard for payments on top of HTTP, leverage the existing &lt;code&gt;402 Payment Required&lt;/code&gt; HTTP status code to indicate that a payment is required for access to the resource.&lt;/p&gt;
+&lt;p&gt;It specifies:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A schema for how servers can respond to clients to facilitate payment for a resource (&lt;code&gt;PaymentRequirements&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;A standard header &lt;code&gt;X-PAYMENT&lt;/code&gt; that is set by clients paying for resources&lt;/li&gt;
+&lt;li&gt;A standard schema and encoding method for data in the &lt;code&gt;X-PAYMENT&lt;/code&gt; header&lt;/li&gt;
+&lt;li&gt;A recommended flow for how payments should be verified and settled by a resource server&lt;/li&gt;
+&lt;li&gt;A REST specification for how a resource server can perform verification and settlement against a remote 3rd party server (&lt;code&gt;facilitator&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;A specification for a &lt;code&gt;X-PAYMENT-RESPONSE&lt;/code&gt; header that can be used by resource servers to communicate blockchain transactions details to the client in their HTTP response&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;v1-protocol-sequencing&#34;&gt;V1 Protocol Sequencing
+&lt;/h3&gt;&lt;p&gt;The following outlines the flow of a payment using the &lt;code&gt;x402&lt;/code&gt; protocol. Note that steps (1) and (2) are optional if the client already knows the payment details accepted for a resource.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Client&lt;/code&gt; makes an HTTP request to a &lt;code&gt;resource server&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Resource server&lt;/code&gt; responds with a &lt;code&gt;402 Payment Required&lt;/code&gt; status and a &lt;code&gt;Payment Required Response&lt;/code&gt; JSON object in the response body.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Client&lt;/code&gt; selects one of the &lt;code&gt;paymentRequirements&lt;/code&gt; returned by the server response and creates a &lt;code&gt;Payment Payload&lt;/code&gt; based on the &lt;code&gt;scheme&lt;/code&gt; of the &lt;code&gt;paymentRequirements&lt;/code&gt; they have selected.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Client&lt;/code&gt; sends the HTTP request with the &lt;code&gt;X-PAYMENT&lt;/code&gt; header containing the &lt;code&gt;Payment Payload&lt;/code&gt; to the resource server.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Resource server&lt;/code&gt; verifies the &lt;code&gt;Payment Payload&lt;/code&gt; is valid either via local verification or by POSTing the &lt;code&gt;Payment Payload&lt;/code&gt; and &lt;code&gt;Payment Requirements&lt;/code&gt; to the &lt;code&gt;/verify&lt;/code&gt; endpoint of a &lt;code&gt;facilitator server&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Facilitator server&lt;/code&gt; performs verification of the object based on the &lt;code&gt;scheme&lt;/code&gt; and &lt;code&gt;network&lt;/code&gt; of the &lt;code&gt;Payment Payload&lt;/code&gt; and returns a &lt;code&gt;Verification Response&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If the &lt;code&gt;Verification Response&lt;/code&gt; is valid, the resource server performs the work to fulfill the request. If the &lt;code&gt;Verification Response&lt;/code&gt; is invalid, the resource server returns a &lt;code&gt;402 Payment Required&lt;/code&gt; status and a &lt;code&gt;Payment Required Response&lt;/code&gt; JSON object in the response body.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Resource server&lt;/code&gt; either settles the payment by interacting with a blockchain directly, or by POSTing the &lt;code&gt;Payment Payload&lt;/code&gt; and &lt;code&gt;Payment PaymentRequirements&lt;/code&gt; to the &lt;code&gt;/settle&lt;/code&gt; endpoint of a &lt;code&gt;facilitator server&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Facilitator server&lt;/code&gt; submits the payment to the blockchain based on the &lt;code&gt;scheme&lt;/code&gt; and &lt;code&gt;network&lt;/code&gt; of the &lt;code&gt;Payment Payload&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Facilitator server&lt;/code&gt; waits for the payment to be confirmed on the blockchain.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Facilitator server&lt;/code&gt; returns a &lt;code&gt;Payment Execution Response&lt;/code&gt; to the resource server.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Resource server&lt;/code&gt; returns a &lt;code&gt;200 OK&lt;/code&gt; response to the &lt;code&gt;Client&lt;/code&gt; with the resource they requested as the body of the HTTP response, and a &lt;code&gt;X-PAYMENT-RESPONSE&lt;/code&gt; header containing the &lt;code&gt;Settlement Response&lt;/code&gt; as Base64 encoded JSON if the payment was executed successfully.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;type-specifications&#34;&gt;Type Specifications
+&lt;/h3&gt;&lt;h4 id=&#34;data-types&#34;&gt;Data types
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Payment Required Response&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Version of the x402 payment protocol
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;x402Version:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;int,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// List of payment requirements that the resource server accepts. A resource server may accept on multiple chains, or in multiple currencies.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;accepts:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;[paymentRequirements]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Message from the resource server to the client to communicate errors in processing payment
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;error:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;paymentRequirements&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Scheme of the payment protocol to use
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;scheme:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Network of the blockchain to send payment on
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;network:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Maximum amount required to pay for the resource in atomic units of the asset
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;maxAmountRequired:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;uint256&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// URL of resource to pay for
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;resource:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Description of the resource
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;description:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// MIME type of the resource response
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;mimeType:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Output schema of the resource response
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;outputSchema?:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;null;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Address to pay value to
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;payTo:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Maximum time in seconds for the resource server to respond
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;maxTimeoutSeconds:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;number;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Address of the EIP-3009 compliant ERC20 contract
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;asset:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Extra information about the payment details specific to the scheme
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// For `exact` scheme on a EVM network, expects extra to contain the records `name` and `version` pertaining to asset
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;extra:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;null;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;Payment Payload&lt;/code&gt;&lt;/strong&gt; (included as the &lt;code&gt;X-PAYMENT&lt;/code&gt; header in base64 encoded json)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Version of the x402 payment protocol
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;x402Version:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;number;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// scheme is the scheme value of the accepted `paymentRequirements` the client is using to pay
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;scheme:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// network is the network id of the accepted `paymentRequirements` the client is using to pay
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;network:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// payload is scheme dependent
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;payload:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;scheme&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;dependent&amp;gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;facilitator-types--interface&#34;&gt;Facilitator Types &amp;amp; Interface
+&lt;/h4&gt;&lt;p&gt;A &lt;code&gt;facilitator server&lt;/code&gt; is a 3rd party service that can be used by a &lt;code&gt;resource server&lt;/code&gt; to verify and settle payments, without the &lt;code&gt;resource server&lt;/code&gt; needing to have access to a blockchain node or wallet.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;POST /verify&lt;/strong&gt;. Verify a payment with a supported scheme and network:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Request body JSON:
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;x402Version:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;number;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;paymentHeader:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;paymentRequirements:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;paymentRequirements;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Response:
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;isValid:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;boolean;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;invalidReason:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;null;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;POST /settle&lt;/strong&gt;. Settle a payment with a supported scheme and network:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Request body JSON:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;x402Version:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;number;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;paymentHeader:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;paymentRequirements:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;paymentRequirements;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Response:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Whether the payment was successful
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;success:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;boolean;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Error message from the facilitator server
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;error:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;null;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Transaction hash of the settled payment
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;txHash:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;null;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Network id of the blockchain the payment was settled on
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;networkId:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;null;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;GET /supported&lt;/strong&gt;. Get supported payment schemes and networks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Response:
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;kinds:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;err&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;scheme&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;network&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;schemes&#34;&gt;Schemes
+&lt;/h3&gt;&lt;p&gt;A scheme is a logical way of moving money.&lt;/p&gt;
+&lt;p&gt;Blockchains allow for a large number of flexible ways to move money. To help facilitate an expanding number of payment use cases, the &lt;code&gt;x402&lt;/code&gt; protocol is extensible to different ways of settling payments via its &lt;code&gt;scheme&lt;/code&gt; field.&lt;/p&gt;
+&lt;p&gt;Each payment scheme may have different operational functionality depending on what actions are necessary to fulfill the payment.
+For example &lt;code&gt;exact&lt;/code&gt;, the first scheme shipping as part of the protocol, would have different behavior than &lt;code&gt;upto&lt;/code&gt;. &lt;code&gt;exact&lt;/code&gt; transfers a specific amount (ex: pay $1 to read an article), while a theoretical &lt;code&gt;upto&lt;/code&gt; would transfer up to an amount, based on the resources consumed during a request (ex: generating tokens from an LLM).&lt;/p&gt;
+&lt;p&gt;See &lt;code&gt;specs/schemes&lt;/code&gt; for more details on schemes, and see &lt;code&gt;specs/schemes/exact/scheme_exact_evm.md&lt;/code&gt; to see the first proposed scheme for exact payment on EVM chains.&lt;/p&gt;
+&lt;h3 id=&#34;schemes-vs-networks&#34;&gt;Schemes vs Networks
+&lt;/h3&gt;&lt;p&gt;Because a scheme is a logical way of moving money, the way a scheme is implemented can be different for different blockchains. (ex: the way you need to implement &lt;code&gt;exact&lt;/code&gt; on Ethereum is very different from the way you need to implement &lt;code&gt;exact&lt;/code&gt; on Solana).&lt;/p&gt;
+&lt;p&gt;Clients and facilitators must explicitly support different &lt;code&gt;(scheme, network)&lt;/code&gt; pairs in order to be able to create proper payloads and verify / settle payments.&lt;/p&gt;
+&lt;h2 id=&#34;running-example&#34;&gt;Running example
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Requirements:&lt;/strong&gt; Node.js v24 or higher&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;From &lt;code&gt;examples/typescript&lt;/code&gt; run &lt;code&gt;pnpm install&lt;/code&gt; and &lt;code&gt;pnpm build&lt;/code&gt; to ensure all dependent packages and examples are setup.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select a server, i.e. express, and &lt;code&gt;cd&lt;/code&gt; into that example. Add your server&amp;rsquo;s ethereum address to get paid to into the &lt;code&gt;.env&lt;/code&gt; file, and then run &lt;code&gt;pnpm dev&lt;/code&gt; in that directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select a client, i.e. axios, and &lt;code&gt;cd&lt;/code&gt; into that example. Add your private key for the account making payments into the &lt;code&gt;.env&lt;/code&gt; file, and then run &lt;code&gt;pnpm dev&lt;/code&gt; in that directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You should see activities in the client terminal, which will display a weather report.&lt;/p&gt;
+&lt;h2 id=&#34;running-tests&#34;&gt;Running tests
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Navigate to the typescript directory: &lt;code&gt;cd typescript&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Install dependencies: &lt;code&gt;pnpm install&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run the unit tests: &lt;code&gt;pnpm test&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This will run the unit tests for the x402 packages.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

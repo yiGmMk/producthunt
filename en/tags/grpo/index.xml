@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>GRPO on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/grpo/</link>
+        <description>Recent content in GRPO on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Thu, 28 Aug 2025 15:29:47 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/grpo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>verifiers</title>
+        <link>https://producthunt.programnotes.cn/en/p/verifiers/</link>
+        <pubDate>Thu, 28 Aug 2025 15:29:47 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/verifiers/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1696345452312-dd623f76551c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYzNjYwODJ8&amp;ixlib=rb-4.1.0" alt="Featured image of post verifiers" /&gt;&lt;h1 id=&#34;willccbbverifiers&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/willccbb/verifiers&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;willccbb/verifiers&lt;/a&gt;
+&lt;/h1&gt;&lt;div align=&#34;center&#34;&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;h1&gt;Verifiers&lt;/h1&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Environments for LLM Reinforcement Learning
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview
+&lt;/h2&gt;&lt;p&gt;Verifiers is a library of modular components for creating RL environments and training LLM agents. Verifiers includes an async GRPO implementation built around the &lt;code&gt;transformers&lt;/code&gt; Trainer, is supported by &lt;code&gt;prime-rl&lt;/code&gt; for large-scale FSDP training, and can easily be integrated into any RL framework which exposes an OpenAI-compatible inference client. In addition to RL training, Verifiers can be used directly for building LLM evaluations, creating synthetic data pipelines, and implementing agent harnesses.&lt;/p&gt;
+&lt;p&gt;Full documentation is available &lt;a class=&#34;link&#34; href=&#34;https://verifiers.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup
+&lt;/h2&gt;&lt;p&gt;We recommend using &lt;code&gt;verifiers&lt;/code&gt; with along &lt;a class=&#34;link&#34; href=&#34;https://docs.astral.sh/uv/getting-started/installation/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;uv&lt;/a&gt; for dependency management in your own project:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -LsSf https://astral.sh/uv/install.sh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uv init &lt;span class=&#34;c1&#34;&gt;# create a fresh project&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; .venv/bin/activate
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For local (CPU) development and evaluation with API models, do:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uv add verifiers &lt;span class=&#34;c1&#34;&gt;# uv add &amp;#39;verifiers[dev]&amp;#39; for Jupyter + testing support&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For training on GPUs with &lt;code&gt;vf.GRPOTrainer&lt;/code&gt;, do:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uv add &lt;span class=&#34;s1&#34;&gt;&amp;#39;verifiers[all]&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; uv pip install flash-attn --no-build-isolation
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To use the latest &lt;code&gt;main&lt;/code&gt; branch, do:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uv add verifiers @ git+https://github.com/willccbb/verifiers.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To use with &lt;code&gt;prime-rl&lt;/code&gt;, see &lt;a class=&#34;link&#34; href=&#34;https://github.com/PrimeIntellect-ai/prime-rl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To install &lt;code&gt;verifiers&lt;/code&gt; from source for core library development, do:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/willccbb/verifiers.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; verifiers
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uv sync --all-extras &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; uv pip install flash-attn --no-build-isolation
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uv run pre-commit install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;In general, we recommend that you build and train Environments &lt;em&gt;with&lt;/em&gt; &lt;code&gt;verifiers&lt;/code&gt;, not &lt;em&gt;in&lt;/em&gt; &lt;code&gt;verifiers&lt;/code&gt;. If you find yourself needing to clone and modify the core library in order to implement key functionality for your project, we&amp;rsquo;d love for you to open an issue so that we can try and streamline the development experience. Our aim is for &lt;code&gt;verifiers&lt;/code&gt; to be a reliable toolkit to build on top of, and to minimize the &amp;ldquo;fork proliferation&amp;rdquo; which often pervades the RL infrastructure ecosystem.&lt;/p&gt;
+&lt;h2 id=&#34;environments&#34;&gt;Environments
+&lt;/h2&gt;&lt;p&gt;Environments in Verifiers are installable Python modules which can specify dependencies in a &lt;code&gt;pyproject.toml&lt;/code&gt;, and which expose a &lt;code&gt;load_environment&lt;/code&gt; function for instantiation by downstream applications (e.g. trainers). See &lt;code&gt;environments/&lt;/code&gt; for examples.&lt;/p&gt;
+&lt;p&gt;To initialize a blank Environment module template, do:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vf-init vf-environment-name &lt;span class=&#34;c1&#34;&gt;# -p /path/to/environments (defaults to &amp;#34;./environments&amp;#34;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To an install an Environment module into your project, do:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vf-install vf-environment-name &lt;span class=&#34;c1&#34;&gt;# -p /path/to/environments (defaults to &amp;#34;./environments&amp;#34;) &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To install an Environment module from this repo&amp;rsquo;s &lt;code&gt;environments&lt;/code&gt; folder, do:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vf-install vf-math-python --from-repo &lt;span class=&#34;c1&#34;&gt;# -b branch_or_commit (defaults to &amp;#34;main&amp;#34;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Once an Environment module is installed, you can create an instance of the Environment using &lt;code&gt;load_environment&lt;/code&gt;, passing any necessary args:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;verifiers&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;vf&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vf_env&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load_environment&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;vf-environment-name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;env_args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To run a quick evaluation of your Environment with an API-based model, do:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vf-eval vf-environment-name &lt;span class=&#34;c1&#34;&gt;# vf-eval -h for config options; defaults to gpt-4.1-mini, 5 prompts, 3 rollouts for each&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The core elements of Environments in are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Datasets: a Hugging Face &lt;code&gt;Dataset&lt;/code&gt; with a &lt;code&gt;prompt&lt;/code&gt; column for inputs, and either &lt;code&gt;answer (str)&lt;/code&gt; or &lt;code&gt;info (dict)&lt;/code&gt; columns for evaluation&lt;/li&gt;
+&lt;li&gt;Rollout logic: interactions between models and the environment (e.g. &lt;code&gt;env_response&lt;/code&gt; + &lt;code&gt;is_completed&lt;/code&gt; for any &lt;code&gt;MultiTurnEnv&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Rubrics: an encapsulation for one or more reward functions&lt;/li&gt;
+&lt;li&gt;Parsers: optional; an encapsulation for reusable parsing logic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We support both &lt;code&gt;/v1/chat/completions&lt;/code&gt;-style and &lt;code&gt;/v1/completions&lt;/code&gt;-style inference via OpenAI clients, though we generally recommend &lt;code&gt;/v1/chat/completions&lt;/code&gt;-style inference for the vast majority of applications. Both the included &lt;code&gt;GRPOTrainer&lt;/code&gt; as well as &lt;code&gt;prime-rl&lt;/code&gt; support the full set of &lt;a class=&#34;link&#34; href=&#34;https://docs.vllm.ai/en/v0.6.0/dev/sampling_params.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SamplingParams&lt;/a&gt; exposed by vLLM (via their OpenAI-compatible &lt;a class=&#34;link&#34; href=&#34;https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;server&lt;/a&gt; interface), and leveraging this will often be the appropriate way to implement rollout strategies requiring finer-grained control, such as interrupting and resuming generations for interleaved tool use, or enforcing reasoning budgets.&lt;/p&gt;
+&lt;p&gt;The primary constraint we impose on rollout logic is that token sequences must be &lt;em&gt;increasing&lt;/em&gt;, i.e. once a token has been added to a model&amp;rsquo;s context in a rollout, it must remain as the rollout progresses. Note that this causes issues with some popular reasoning models such as the Qwen3 and DeepSeek-R1-Distill series; see &lt;a class=&#34;link&#34; href=&#34;#footguns&#34; &gt;Footguns&lt;/a&gt; for guidance on adapting these models to support multi-turn rollouts.&lt;/p&gt;
+&lt;h3 id=&#34;singleturnenv&#34;&gt;SingleTurnEnv
+&lt;/h3&gt;&lt;p&gt;For tasks requiring only a single response from a model for each prompt, you can use &lt;code&gt;SingleTurnEnv&lt;/code&gt; directly by specifying a Dataset and a Rubric. Rubrics are sets of reward functions, which can be either sync or async.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;datasets&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;load_dataset&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;verifiers&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;vf&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dataset&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;load_dataset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;my-account/my-dataset&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;train&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;reward_A&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;prompt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;completion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;info&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;# reward fn, e.g. correctness&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;reward_B&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;parser&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;completion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;# auxiliary reward fn, e.g. format&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;async&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;metric&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;completion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;# non-reward metric, e.g. proper noun count&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;rubric&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Rubric&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;funcs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reward_A&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;reward_B&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;metric&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;weights&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;1.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vf_env&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SingleTurnEnv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;dataset&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dataset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;rubric&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rubric&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;results&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vf_env&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;evaluate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;OpenAI&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;gpt-4.1-mini&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;num_examples&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rollouts_per_example&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vf_env&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;make_dataset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;results&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# HF dataset format&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Datasets should be formatted with columns for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&#39;prompt&#39; (List[ChatMessage])&lt;/code&gt; OR &lt;code&gt;&#39;question&#39; (str)&lt;/code&gt; fields
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ChatMessage&lt;/code&gt; = e.g. &lt;code&gt;{&#39;role&#39;: &#39;user&#39;, &#39;content&#39;: &#39;...&#39;}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;if &lt;code&gt;question&lt;/code&gt; is set instead of &lt;code&gt;prompt&lt;/code&gt;, you can also pass &lt;code&gt;system_prompt (str)&lt;/code&gt; and/or &lt;code&gt;few_shot (List[ChatMessage])&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;answer (str)&lt;/code&gt; AND/OR &lt;code&gt;info (dict)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;task (str)&lt;/code&gt;: optional, used by &lt;code&gt;EnvGroup&lt;/code&gt; and &lt;code&gt;RubricGroup&lt;/code&gt; for orchestrating composition of Environments and Rubrics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following named attributes available for use by reward functions in your Rubric:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;prompt&lt;/code&gt;: sequence of input messages&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;completion&lt;/code&gt;: sequence of messages generated during rollout by model and Environment&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;answer&lt;/code&gt;: primary answer column, optional if &lt;code&gt;info&lt;/code&gt; is used&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;state&lt;/code&gt;: can be modified during rollout to accumulate any metadata (&lt;code&gt;state[&#39;responses&#39;]&lt;/code&gt; includes full OpenAI response objects by default)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;info&lt;/code&gt;: auxiliary info needed for reward computation (e.g. test cases), optional if &lt;code&gt;answer&lt;/code&gt; is used&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;task&lt;/code&gt;: tag for task type (used by &lt;code&gt;EnvGroup&lt;/code&gt; and &lt;code&gt;RubricGroup&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;parser&lt;/code&gt;: the parser object declared. Note: &lt;code&gt;vf.Parser().get_format_reward_func()&lt;/code&gt; is a no-op (always 1.0); use &lt;code&gt;vf.ThinkParser&lt;/code&gt; or a custom parser if you want a real format adherence reward.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For tasks involving LLM judges, you may wish to use &lt;code&gt;vf.JudgeRubric()&lt;/code&gt; for managing requests to auxiliary models.&lt;/p&gt;
+&lt;p&gt;Note on concurrency: environment APIs accept &lt;code&gt;max_concurrent&lt;/code&gt; to control parallel rollouts. The &lt;code&gt;vf-eval&lt;/code&gt; CLI currently exposes &lt;code&gt;--max-concurrent-requests&lt;/code&gt;; ensure this maps to your environment’s concurrency as expected.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;vf-eval&lt;/code&gt; also supports specifying &lt;code&gt;sampling_args&lt;/code&gt; as a JSON object, which is sent to the vLLM inference engine:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vf-eval vf-environment-name --sampling-args &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;reasoning_effort&amp;#34;: &amp;#34;low&amp;#34;}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Use &lt;code&gt;vf-eval -s&lt;/code&gt; to save outputs as dataset-formatted JSON, and view all locally-saved eval results with &lt;code&gt;vf-tui&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;toolenv&#34;&gt;ToolEnv
+&lt;/h3&gt;&lt;p&gt;For many applications involving tool use, you can use &lt;code&gt;ToolEnv&lt;/code&gt; to leverage models&amp;rsquo; native tool/function-calling capabilities in an agentic loop. Tools can be specified as generic Python functions (with type hints and docstrings), which will then be passed in JSON schema form to each inference request.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;verifiers&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;vf&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vf_env&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ToolEnv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;dataset&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# HF Dataset with &amp;#39;prompt&amp;#39;/&amp;#39;question&amp;#39; + &amp;#39;answer&amp;#39;/&amp;#39;info&amp;#39; columns&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;rubric&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Rubric object; vf.ToolRubric() can be optionally used for counting tool invocations in each rollout&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;tools&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;search_tool&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;read_article_tool&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;python_tool&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# python functions with type hints + docstrings&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;max_turns&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;In cases where your tools require heavy computational resources, we recommend hosting your tools as standalone servers (e.g. MCP servers) and creating lightweight wrapper functions to pass to &lt;code&gt;ToolEnv&lt;/code&gt;. Parallel tool call support is enabled by default.&lt;/p&gt;
+&lt;p&gt;For training, or self-hosted endpoints, you&amp;rsquo;ll want to enable auto tool choice in &lt;a class=&#34;link&#34; href=&#34;https://docs.vllm.ai/en/stable/features/tool_calling.html#automatic-function-calling&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vLLM&lt;/a&gt; with the appropriate parser. If your model does not support native tool calling, you may find the &lt;code&gt;XMLParser&lt;/code&gt; abstraction useful for rolling your own tool call parsing on top of &lt;code&gt;MultiTurnEnv&lt;/code&gt;; see &lt;code&gt;environments/xml_tool_env&lt;/code&gt; for an example.&lt;/p&gt;
+&lt;h3 id=&#34;multiturnenv&#34;&gt;MultiTurnEnv
+&lt;/h3&gt;&lt;p&gt;Both &lt;code&gt;SingleTurnEnv&lt;/code&gt; and &lt;code&gt;ToolEnv&lt;/code&gt; are instances of &lt;code&gt;MultiTurnEnv&lt;/code&gt;, which exposes an interface for writing custom Environment interaction protocols. The two methods you must override are&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;typing&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Tuple&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;verifiers&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;vf&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;verifiers.types&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Messages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;State&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;YourMultiTurnEnv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MultiTurnEnv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;fm&#34;&gt;__init__&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                 &lt;span class=&#34;n&#34;&gt;dataset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Dataset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                 &lt;span class=&#34;n&#34;&gt;rubric&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Rubric&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				 &lt;span class=&#34;n&#34;&gt;max_turns&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                 &lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;kwargs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;async&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;is_completed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;messages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Messages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;state&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;State&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;kwargs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;bool&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# return whether or not a rollout is completed&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;async&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;env_response&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;messages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Messages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;state&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;State&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;kwargs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Tuple&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Messages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;State&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# return new environment message(s) + updated state&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If your application requires more fine-grained control than is allowed by &lt;code&gt;MultiTurnEnv&lt;/code&gt;, you may want to inherit from the base &lt;code&gt;Environment&lt;/code&gt; functionality directly and override the &lt;code&gt;rollout&lt;/code&gt; method.&lt;/p&gt;
+&lt;h2 id=&#34;training&#34;&gt;Training
+&lt;/h2&gt;&lt;h3 id=&#34;grpotrainer&#34;&gt;GRPOTrainer
+&lt;/h3&gt;&lt;p&gt;The included trainer (&lt;code&gt;vf.GRPOTrainer&lt;/code&gt;) supports running GRPO-style RL training via Accelerate/DeepSpeed, and uses vLLM for inference. It supports both full-parameter finetuning, and is optimized for efficiently training dense transformer models on 2-16 GPUs.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install environment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vf-install vf-wordle &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-p /path/to/environments &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; --from-repo&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# quick eval&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vf-eval vf-wordle -m &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;model_name in configs/endpoints.py&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -n NUM_EXAMPLES -r ROLLOUTS_PER_EXAMPLE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# inference (shell 0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;CUDA_VISIBLE_DEVICES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0,1,2,3,4,5 vf-vllm --model willcb/Qwen3-1.7B-Wordle &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --data-parallel-size &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt; --enforce-eager --disable-log-requests
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# training (shell 1)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;CUDA_VISIBLE_DEVICES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;6,7 accelerate launch --num-processes &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --config-file configs/zero3.yaml examples/grpo/train_wordle.py --size 1.7B
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Alternatively, you can train environments with the external &lt;code&gt;prime-rl&lt;/code&gt; project (FSDP-first orchestration). See the &lt;code&gt;prime-rl&lt;/code&gt; README for installation and examples. For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# orchestrator config (prime-rl)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;environment&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;vf-math-python&amp;#34;&lt;/span&gt;  &lt;span class=&#34;c&#34;&gt;# or your environment ID&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# run (prime-rl)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uv run rl &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --trainer @ configs/your_exp/train.toml &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --orchestrator @ configs/your_exp/orch.toml &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --inference @ configs/your_exp/infer.toml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;troubleshooting&#34;&gt;Troubleshooting
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Ensure your &lt;code&gt;wandb&lt;/code&gt; and &lt;code&gt;huggingface-cli&lt;/code&gt; logins are set up (or set &lt;code&gt;report_to=None&lt;/code&gt; in &lt;code&gt;training_args&lt;/code&gt;). You should also have something set as your &lt;code&gt;OPENAI_API_KEY&lt;/code&gt; in your environment (can be a dummy key for vLLM).&lt;/li&gt;
+&lt;li&gt;If using high max concurrency, increase the number of allowed open sockets (e.g. &lt;code&gt;ulimit -n 4096&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;On some setups, inter-GPU communication can &lt;a class=&#34;link&#34; href=&#34;https://github.com/huggingface/trl/issues/2923&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hang&lt;/a&gt; or crash during vLLM weight syncing. This can usually be alleviated by setting (or unsetting) &lt;code&gt;NCCL_P2P_DISABLE=1&lt;/code&gt; in your environment (or potentially &lt;code&gt;NCCL_CUMEM_ENABLE=1&lt;/code&gt;). Try this as your first step if you experience NCCL-related issues.&lt;/li&gt;
+&lt;li&gt;If problems persist, please open an &lt;a class=&#34;link&#34; href=&#34;https://github.com/willccbb/verifiers/issues&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;issue&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;resource-requirements&#34;&gt;Resource Requirements
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;GRPOTrainer&lt;/code&gt; is optimized for setups with at least 2 GPUs, scaling up to multiple nodes. 2-GPU setups with sufficient memory to enable small-scale experimentation can be &lt;a class=&#34;link&#34; href=&#34;https://app.primeintellect.ai/dashboard/create-cluster?image=ubuntu_22_cuda_12&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;rented&lt;/a&gt; for &amp;lt;$1/hr.&lt;/p&gt;
+&lt;h3 id=&#34;prime-rl&#34;&gt;PRIME-RL
+&lt;/h3&gt;&lt;p&gt;If you do not require LoRA support, you may want to use the &lt;code&gt;prime-rl&lt;/code&gt; trainer, which natively supports Environments created using &lt;code&gt;verifiers&lt;/code&gt;, is more optimized for performance and scalability via FSDP, includes a broader set of configuration options and user experience features, and has more battle-tested defaults. Both trainers support asynchronous rollouts, and use a one-step off-policy delay by default for overlapping training and inference. See the &lt;code&gt;prime-rl&lt;/code&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/PrimeIntellect-ai/prime-rl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docs&lt;/a&gt; for usage instructions.&lt;/p&gt;
+&lt;h2 id=&#34;further-documentation&#34;&gt;Further Documentation
+&lt;/h2&gt;&lt;p&gt;See the full &lt;a class=&#34;link&#34; href=&#34;https://verifiers.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docs&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;h2 id=&#34;contributions&#34;&gt;Contributions
+&lt;/h2&gt;&lt;p&gt;Verifiers warmly welcomes community contributions! Please open an issue or PR if you encounter bugs or other pain points during your development, or start a discussion for more open-ended questions.&lt;/p&gt;
+&lt;p&gt;Please note that the core &lt;code&gt;verifiers/&lt;/code&gt; library is intended to be a relatively lightweight set of reusable components rather than an exhaustive catalog of RL environments. For &lt;em&gt;applications&lt;/em&gt; of &lt;code&gt;verifiers&lt;/code&gt; (e.g. &amp;ldquo;an Environment for XYZ task&amp;rdquo;), you are welcome to submit a PR for a self-contained module that lives within &lt;code&gt;environments/&lt;/code&gt; if it serves as a canonical example of a new pattern. Stay tuned for more info shortly about our plans for supporting community Environment contributions 🙂&lt;/p&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation
+&lt;/h2&gt;&lt;p&gt;If you use this code in your research, please cite:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@misc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;brown_verifiers_2025&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;       &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{William Brown}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;        &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{{Verifiers}: Reinforcement Learning with LLMs in Verifiable Environments}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;howpublished&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{\url{https://github.com/willccbb/verifiers}}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;note&lt;/span&gt;         &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{Commit abcdefg • accessed DD Mon YYYY}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;         &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{2025}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;roadmap&#34;&gt;Roadmap
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;A community Environments hub for crowdsourcing, sharing, and discovering new RL environments built with &lt;code&gt;verifiers&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Default patterns for hosted resources such as code sandboxes, auxiliary models, and MCP servers&lt;/li&gt;
+&lt;li&gt;Multimodal input support&lt;/li&gt;
+&lt;li&gt;Non-increasing token sequences via REINFORCE&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>ART</title>
+        <link>https://producthunt.programnotes.cn/en/p/art/</link>
+        <pubDate>Thu, 28 Aug 2025 15:29:23 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/art/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1696345452312-dd623f76551c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTYzNjYwODJ8&amp;ixlib=rb-4.1.0" alt="Featured image of post ART" /&gt;&lt;h1 id=&#34;openpipeart&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/OpenPipe/ART&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenPipe/ART&lt;/a&gt;
+&lt;/h1&gt;&lt;div align=&#34;center&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://art.openpipe.ai&#34;&gt;&lt;picture&gt;
+&lt;img alt=&#34;ART logo&#34; src=&#34;https://github.com/openpipe/art/raw/main/assets/ART_logo.png&#34; width=&#34;160px&#34;&gt;
+&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;h1&gt;Agent Reinforcement Trainer&lt;/h1&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Train multi-step agents for real-world tasks using GRPO.
+&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/openpipe/art/blob/main/CONTRIBUTING.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/PRs-welcome-blue.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PRs-Welcome&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/openpipe-art/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/pypi/v/openpipe-art?color=364fc7&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PyPI version&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://colab.research.google.com/github/openpipe/art-notebooks/blob/main/examples/2048/2048.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://colab.research.google.com/assets/colab-badge.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Train Agent&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://discord.gg/zbBHRUpwf4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/Join%20Discord-5865F2?style=plastic&amp;amp;logo=discord&amp;amp;logoColor=white&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Join Discord&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://art.openpipe.ai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/Documentation-orange?style=plastic&amp;amp;logo=gitbook&amp;amp;logoColor=white&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Documentation&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;-ruler-zero-shot-agent-rewards&#34;&gt;📏 RULER: Zero-Shot Agent Rewards
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;RULER&lt;/strong&gt; (Relative Universal LLM-Elicited Rewards) eliminates the need for hand-crafted reward functions by using an LLM-as-judge to automatically score agent trajectories. Simply define your task in the system prompt, and RULER handles the rest—&lt;strong&gt;no labeled data, expert feedback, or reward engineering required&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;✨ &lt;strong&gt;Key Benefits:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;2-3x faster development&lt;/strong&gt; - Skip reward function engineering entirely&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;General-purpose&lt;/strong&gt; - Works across any task without modification&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Strong performance&lt;/strong&gt; - Matches or exceeds hand-crafted rewards in 3/4 benchmarks&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Easy integration&lt;/strong&gt; - Drop-in replacement for manual reward functions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Before: Hours of reward engineering&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;complex_reward_function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;trajectory&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# 50+ lines of careful scoring logic...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;pass&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# After: One line with RULER&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;judged_group&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ruler_score_group&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;group&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;openai/o3&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://art.openpipe.ai/fundamentals/ruler&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;📖 Learn more about RULER →&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;art-overview&#34;&gt;ART Overview
+&lt;/h2&gt;&lt;p&gt;ART is an open-source RL framework that improves agent reliability by allowing LLMs to &lt;strong&gt;learn from experience&lt;/strong&gt;. ART provides an ergonomic harness for integrating GRPO into any python application. For a quick hands-on introduction, run one of the notebooks below. When you&amp;rsquo;re ready to learn more, check out the &lt;a class=&#34;link&#34; href=&#34;https://art.openpipe.ai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docs&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;-notebooks&#34;&gt;📒 Notebooks
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Agent Task&lt;/th&gt;
+					&lt;th&gt;Example Notebook&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+					&lt;th&gt;Comparative Performance&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;ART•E LangGraph&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://colab.research.google.com/github/openpipe/art-notebooks/blob/main/examples/langgraph/art-e-langgraph.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🏋️ Train agent&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Qwen 2.5 7B learns to search emails using LangGraph&lt;/td&gt;
+					&lt;td&gt;[Link coming soon]&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;MCP•RL&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://colab.research.google.com/github/openpipe/art-notebooks/blob/main/examples/mcp-rl/mcp-rl.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🏋️ Train agent&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Qwen 2.5 3B masters the NWS MCP server&lt;/td&gt;
+					&lt;td&gt;[Link coming soon]&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;ART•E [RULER]&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://colab.research.google.com/github/openpipe/art-notebooks/blob/main/examples/art-e.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🏋️ Train agent&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Qwen 2.5 7B learns to search emails using RULER&lt;/td&gt;
+					&lt;td&gt;&lt;img src=&#34;https://github.com/openpipe/art/raw/main/assets/benchmarks/email_agent/accuracy-training-progress.svg&#34; height=&#34;72&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/dev/art-e/art_e/evaluate/display_benchmarks.ipynb&#34; &gt;benchmarks&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;2048&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://colab.research.google.com/github/openpipe/art-notebooks/blob/main/examples/2048/2048.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🏋️ Train agent&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Qwen 2.5 3B learns to play 2048&lt;/td&gt;
+					&lt;td&gt;&lt;img src=&#34;https://github.com/openpipe/art/raw/main/assets/benchmarks/2048/accuracy-training-progress.svg&#34; height=&#34;72&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/examples/2048/display_benchmarks.ipynb&#34; &gt;benchmarks&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Temporal Clue&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://colab.research.google.com/github/openpipe/art-notebooks/blob/main/examples/temporal_clue/temporal-clue.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🏋️ Train agent&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Qwen 2.5 7B learns to solve Temporal Clue&lt;/td&gt;
+					&lt;td&gt;[Link coming soon]&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Tic Tac Toe&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://colab.research.google.com/github/openpipe/art-notebooks/blob/main/examples/tic_tac_toe/tic-tac-toe.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🏋️ Train agent&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Qwen 2.5 3B learns to play Tic Tac Toe&lt;/td&gt;
+					&lt;td&gt;&lt;img src=&#34;https://github.com/openpipe/art/raw/main/assets/benchmarks/tic-tac-toe-local/accuracy-training-progress.svg&#34; height=&#34;72&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/examples/tic_tac_toe/display-benchmarks.ipynb&#34; &gt;benchmarks&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Codenames&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://colab.research.google.com/github/openpipe/art-notebooks/blob/main/examples/codenames/Codenames_RL.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🏋️ Train agent&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Qwen 2.5 3B learns to play Codenames&lt;/td&gt;
+					&lt;td&gt;&lt;img src=&#34;https://github.com/openpipe/art/raw/main/assets/benchmarks/codenames/win_rate_over_time.png&#34; height=&#34;72&#34;&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/OpenPipe/art-notebooks/blob/main/examples/codenames/Codenames_RL.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;benchmarks&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;AutoRL [RULER]&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://colab.research.google.com/github/openpipe/art-notebooks/blob/main/examples/auto_rl.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;🏋️ Train agent&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Train Qwen 2.5 7B to master any task&lt;/td&gt;
+					&lt;td&gt;[Link coming soon]&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-art-news&#34;&gt;📰 ART News
+&lt;/h2&gt;&lt;p&gt;Explore our latest research and updates on building SOTA agents.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🗞️ &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://art.openpipe.ai/integrations/langgraph-integration&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ART now integrates seamlessly with LangGraph&lt;/a&gt;&lt;/strong&gt; - Train your LangGraph agents with reinforcement learning for smarter multi-step reasoning and improved tool usage.&lt;/li&gt;
+&lt;li&gt;🗞️ &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://x.com/corbtt/status/1953171838382817625&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MCP•RL: Teach Your Model to Master Any MCP Server&lt;/a&gt;&lt;/strong&gt; - Automatically train models to effectively use MCP server tools through reinforcement learning.&lt;/li&gt;
+&lt;li&gt;🗞️ &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://x.com/mattshumer_/status/1950572449025650733&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AutoRL: Zero-Data Training for Any Task&lt;/a&gt;&lt;/strong&gt; - Train custom AI models without labeled data using automatic input generation and RULER evaluation.&lt;/li&gt;
+&lt;li&gt;🗞️ &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://openpipe.ai/blog/ruler-easy-mode-for-rl-rewards&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RULER: Easy Mode for RL Rewards&lt;/a&gt;&lt;/strong&gt; is now available for automatic reward generation in reinforcement learning.&lt;/li&gt;
+&lt;li&gt;🗞️ &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://openpipe.ai/blog/art-e-mail-agent&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ART·E: How We Built an Email Research Agent That Beats o3&lt;/a&gt;&lt;/strong&gt; demonstrates a Qwen 2.5 14B email agent outperforming OpenAI&amp;rsquo;s o3.&lt;/li&gt;
+&lt;li&gt;🗞️ &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://openpipe.ai/blog/art-trainer&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ART Trainer: A New RL Trainer for Agents&lt;/a&gt;&lt;/strong&gt; enables easy training of LLM-based agents using GRPO.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://openpipe.ai/blog&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;📖 See all blog posts →&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;why-art&#34;&gt;Why ART?
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;ART provides convenient wrappers for introducing RL training into &lt;strong&gt;existing applications&lt;/strong&gt;. We abstract the training server into a modular service that your code doesn&amp;rsquo;t need to interface with.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Train from anywhere.&lt;/strong&gt; Run the ART client on your laptop and let the ART server kick off an ephemeral GPU-enabled environment, or run on a local GPU.&lt;/li&gt;
+&lt;li&gt;Integrations with hosted platforms like W&amp;amp;B, Langfuse, and OpenPipe provide flexible observability and &lt;strong&gt;simplify debugging&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;ART is customizable with &lt;strong&gt;intelligent defaults&lt;/strong&gt;. You can configure training parameters and inference engine configurations to meet specific needs, or take advantage of the defaults, which have been optimized for training efficiency and stability.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation
+&lt;/h2&gt;&lt;p&gt;ART agents can be trained from any client machine that runs python. To add to an existing project, run this command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install openpipe-art
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;-arte-agent&#34;&gt;🤖 ART•E Agent
+&lt;/h2&gt;&lt;p&gt;Curious about how to use ART for a real-world task? Check out the &lt;a class=&#34;link&#34; href=&#34;https://openpipe.ai/blog/art-e-mail-agent&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ART•E Agent&lt;/a&gt; blog post, where we detail how we trained Qwen 2.5 14B to beat o3 at email retrieval!&lt;/p&gt;
+&lt;img src=&#34;https://github.com/openpipe/art/raw/main/assets/ART_E_graphs.png&#34; width=&#34;700&#34;&gt;
+&lt;h2 id=&#34;-training-loop-overview&#34;&gt;🔁 Training Loop Overview
+&lt;/h2&gt;&lt;p&gt;ART&amp;rsquo;s functionality is divided into a &lt;strong&gt;client&lt;/strong&gt; and a &lt;strong&gt;server&lt;/strong&gt;. The OpenAI-compatible client is responsible for interfacing between ART and your codebase. Using the client, you can pass messages and get completions from your LLM as it improves. The server runs independently on any machine with a GPU. It abstracts away the complexity of the inference and training portions of the RL loop while allowing for some custom configuration. An outline of the training loop is shown below:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Inference&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Your code uses the ART client to perform an agentic workflow (usually executing several rollouts in parallel to gather data faster).&lt;/li&gt;
+&lt;li&gt;Completion requests are routed to the ART server, which runs the model&amp;rsquo;s latest LoRA in vLLM.&lt;/li&gt;
+&lt;li&gt;As the agent executes, each &lt;code&gt;system&lt;/code&gt;, &lt;code&gt;user&lt;/code&gt;, and &lt;code&gt;assistant&lt;/code&gt; message is stored in a Trajectory.&lt;/li&gt;
+&lt;li&gt;When a rollout finishes, your code assigns a &lt;code&gt;reward&lt;/code&gt; to its Trajectory, indicating the performance of the LLM.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Training&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;When each rollout has finished, Trajectories are grouped and sent to the server. Inference is blocked while training executes.&lt;/li&gt;
+&lt;li&gt;The server trains your model using GRPO, initializing from the latest checkpoint (or an empty LoRA on the first iteration).&lt;/li&gt;
+&lt;li&gt;The server saves the newly trained LoRA to a local directory and loads it into vLLM.&lt;/li&gt;
+&lt;li&gt;Inference is unblocked and the loop resumes at step 1.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This training loop runs until a specified number of inference and training iterations have completed.&lt;/p&gt;
+&lt;h2 id=&#34;-supported-models&#34;&gt;🧩 Supported Models
+&lt;/h2&gt;&lt;p&gt;ART should work with most vLLM/HuggingFace-transformers compatible causal language models, or at least the ones supported by &lt;a class=&#34;link&#34; href=&#34;https://docs.unsloth.ai/get-started/all-our-models&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Unsloth&lt;/a&gt;. Gemma 3 does not appear to be supported for the time being. If any other model isn&amp;rsquo;t working for you, please let us know on &lt;a class=&#34;link&#34; href=&#34;https://discord.gg/zbBHRUpwf4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Discord&lt;/a&gt; or open an issue on &lt;a class=&#34;link&#34; href=&#34;https://github.com/openpipe/art/issues&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub&lt;/a&gt;!&lt;/p&gt;
+&lt;h2 id=&#34;-contributing&#34;&gt;🤝 Contributing
+&lt;/h2&gt;&lt;p&gt;ART is in active development, and contributions are most welcome! Please see the &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;CONTRIBUTING.md&lt;/a&gt; file for more information.&lt;/p&gt;
+&lt;h2 id=&#34;-citation&#34;&gt;📖 Citation
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@misc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;hilton2025art&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{Brad Hilton and Kyle Corbitt and David Corbitt and Saumya Gandhi and Angky William and Bohdan Kovalenskyi and Andie Jones}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{ART: Agent Reinforcement Trainer}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{2025}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;publisher&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{GitHub}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;journal&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{GitHub repository}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;howpublished&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;{\url{https://github.com/openpipe/art}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;-license&#34;&gt;⚖️ License
+&lt;/h2&gt;&lt;p&gt;This repository&amp;rsquo;s source code is available under the &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;Apache-2.0 License&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;-credits&#34;&gt;🙏 Credits
+&lt;/h2&gt;&lt;p&gt;ART stands on the shoulders of giants. While we owe many of the ideas and early experiments that led to ART&amp;rsquo;s development to the open source RL community at large, we&amp;rsquo;re especially grateful to the authors of the following projects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/unslothai/unsloth&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Unsloth&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vllm-project/vllm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vLLM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/huggingface/trl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;trl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/pytorch/torchtune&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;torchtune&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/skypilot-org/skypilot&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SkyPilot&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Finally, thank you to our partners who&amp;rsquo;ve helped us test ART in the wild! We&amp;rsquo;re excited to see what you all build with it.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

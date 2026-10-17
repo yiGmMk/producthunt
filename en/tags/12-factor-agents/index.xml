@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>12-Factor Agents on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/12-factor-agents/</link>
+        <description>Recent content in 12-Factor Agents on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Wed, 09 Jul 2025 15:30:40 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/12-factor-agents/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>12-factor-agents</title>
+        <link>https://producthunt.programnotes.cn/en/p/12-factor-agents/</link>
+        <pubDate>Wed, 09 Jul 2025 15:30:40 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/12-factor-agents/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1664953524829-8bcd3f70e22c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIwNDYyMzF8&amp;ixlib=rb-4.1.0" alt="Featured image of post 12-factor-agents" /&gt;&lt;h1 id=&#34;humanlayer12-factor-agents&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;humanlayer/12-factor-agents&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;12-factor-agents---principles-for-building-reliable-llm-applications&#34;&gt;12-Factor Agents - Principles for building reliable LLM applications
+&lt;/h1&gt;&lt;div align=&#34;center&#34;&gt;
+&lt;a href=&#34;https://www.apache.org/licenses/LICENSE-2.0&#34;&gt;
+        &lt;img src=&#34;https://img.shields.io/badge/Code-Apache%202.0-blue.svg&#34; alt=&#34;Code License: Apache 2.0&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34;&gt;
+        &lt;img src=&#34;https://img.shields.io/badge/Content-CC%20BY--SA%204.0-lightgrey.svg&#34; alt=&#34;Content License: CC BY-SA 4.0&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://humanlayer.dev/discord&#34;&gt;
+    &lt;img src=&#34;https://img.shields.io/badge/chat-discord-5865F2&#34; alt=&#34;Discord Server&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=8kMaTybvDUw&#34;&gt;
+    &lt;img src=&#34;https://img.shields.io/badge/aidotengineer-conf_talk_(17m)-white&#34; alt=&#34;YouTube
+Deep Dive&#34;&gt;&lt;/a&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=yxJDyQ8v6P0&#34;&gt;
+    &lt;img src=&#34;https://img.shields.io/badge/youtube-deep_dive-crimson&#34; alt=&#34;YouTube
+Deep Dive&#34;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;In the spirit of &lt;a class=&#34;link&#34; href=&#34;https://12factor.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;12 Factor Apps&lt;/a&gt;&lt;/em&gt;.  &lt;em&gt;The source for this project is public at &lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/humanlayer/12-factor-agents&lt;/a&gt;, and I welcome your feedback and contributions. Let&amp;rsquo;s figure this out together!&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!TIP]
+Missed the AI Engineer World&amp;rsquo;s Fair? &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=8kMaTybvDUw&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Catch the talk here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Looking for Context Engineering? &lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-03-own-your-context-window.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Jump straight to factor 3&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;img referrerpolicy=&#34;no-referrer-when-downgrade&#34; src=&#34;https://static.scarf.sh/a.png?x-pxid=2acad99a-c2d9-48df-86f5-9ca8061b7bf9&#34; /&gt;
+&lt;p&gt;&lt;a href=&#34;#visual-nav&#34;&gt;&lt;img width=&#34;907&#34; alt=&#34;Screenshot 2025-04-03 at 2 49 07 PM&#34; src=&#34;https://github.com/user-attachments/assets/23286ad8-7bef-4902-b371-88ff6a22e998&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hi, I&amp;rsquo;m Dex. I&amp;rsquo;ve been &lt;a class=&#34;link&#34; href=&#34;https://youtu.be/8bIHcttkOTE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hacking&lt;/a&gt; on &lt;a class=&#34;link&#34; href=&#34;https://theouterloop.substack.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AI agents&lt;/a&gt; for &lt;a class=&#34;link&#34; href=&#34;https://humanlayer.dev&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;a while&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;I&amp;rsquo;ve tried every agent framework out there&lt;/strong&gt;, from the plug-and-play crew/langchains to the &amp;ldquo;minimalist&amp;rdquo; smolagents of the world to the &amp;ldquo;production grade&amp;rdquo; langraph, griptape, etc.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;I&amp;rsquo;ve talked to a lot of really strong founders&lt;/strong&gt;, in and out of YC, who are all building really impressive things with AI. Most of them are rolling the stack themselves. I don&amp;rsquo;t see a lot of frameworks in production customer-facing agents.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;I&amp;rsquo;ve been surprised to find&lt;/strong&gt; that most of the products out there billing themselves as &amp;ldquo;AI Agents&amp;rdquo; are not all that agentic. A lot of them are mostly deterministic code, with LLM steps sprinkled in at just the right points to make the experience truly magical.&lt;/p&gt;
+&lt;p&gt;Agents, at least the good ones, don&amp;rsquo;t follow the &lt;a class=&#34;link&#34; href=&#34;https://www.anthropic.com/engineering/building-effective-agents#agents&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;here&amp;rsquo;s your prompt, here&amp;rsquo;s a bag of tools, loop until you hit the goal&amp;rdquo;&lt;/a&gt; pattern. Rather, they are comprised of mostly just software.&lt;/p&gt;
+&lt;p&gt;So, I set out to answer:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;what-are-the-principles-we-can-use-to-build-llm-powered-software-that-is-actually-good-enough-to-put-in-the-hands-of-production-customers&#34;&gt;&lt;strong&gt;What are the principles we can use to build LLM-powered software that is actually good enough to put in the hands of production customers?&lt;/strong&gt;
+&lt;/h3&gt;&lt;/blockquote&gt;
+&lt;p&gt;Welcome to 12-factor agents. As every Chicago mayor since Daley has consistently plastered all over the city&amp;rsquo;s major airports, we&amp;rsquo;re glad you&amp;rsquo;re here.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Special thanks to &lt;a class=&#34;link&#34; href=&#34;https://github.com/iantbutler01&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@iantbutler01&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/tnm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@tnm&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://www.github.com/hellovai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@hellovai&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://www.github.com/stantonk&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@stantonk&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://www.github.com/balanceiskey&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@balanceiskey&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://www.github.com/AdjectiveAllison&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@AdjectiveAllison&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://www.github.com/pfbyjy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@pfbyjy&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://www.github.com/a-churchill&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@a-churchill&lt;/a&gt;, and the SF MLOps community for early feedback on this guide.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-short-version-the-12-factors&#34;&gt;The Short Version: The 12 Factors
+&lt;/h2&gt;&lt;p&gt;Even if LLMs &lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-10-small-focused-agents.md#what-if-llms-get-smarter&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;continue to get exponentially more powerful&lt;/a&gt;, there will be core engineering techniques that make LLM-powered software more reliable, more scalable, and easier to maintain.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/brief-history-of-software.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;How We Got Here: A Brief History of Software&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-01-natural-language-to-tool-calls.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 1: Natural Language to Tool Calls&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-02-own-your-prompts.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 2: Own your prompts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-03-own-your-context-window.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 3: Own your context window&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-04-tools-are-structured-outputs.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 4: Tools are just structured outputs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-05-unify-execution-state.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 5: Unify execution state and business state&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-06-launch-pause-resume.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 6: Launch/Pause/Resume with simple APIs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-07-contact-humans-with-tools.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 7: Contact humans with tool calls&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-08-own-your-control-flow.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 8: Own your control flow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-09-compact-errors.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 9: Compact Errors into Context Window&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-10-small-focused-agents.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 10: Small, Focused Agents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-11-trigger-from-anywhere.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 11: Trigger from anywhere, meet users where they are&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-12-stateless-reducer.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 12: Make your agent a stateless reducer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;visual-nav&#34;&gt;Visual Nav
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;&lt;/th&gt;
+					&lt;th&gt;&lt;/th&gt;
+					&lt;th&gt;&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-01-natural-language-to-tool-calls.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/img/110-natural-language-tool-calls.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;factor 1&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-02-own-your-prompts.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/img/120-own-your-prompts.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;factor 2&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-03-own-your-context-window.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/img/130-own-your-context-building.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;factor 3&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-04-tools-are-structured-outputs.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/img/140-tools-are-just-structured-outputs.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;factor 4&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-05-unify-execution-state.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/img/150-unify-state.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;factor 5&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-06-launch-pause-resume.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/img/160-pause-resume-with-simple-apis.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;factor 6&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-07-contact-humans-with-tools.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/img/170-contact-humans-with-tools.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;factor 7&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-08-own-your-control-flow.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/img/180-control-flow.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;factor 8&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-09-compact-errors.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/img/190-factor-9-errors-static.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;factor 9&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-10-small-focused-agents.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/img/1a0-small-focused-agents.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;factor 10&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-11-trigger-from-anywhere.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/img/1b0-trigger-from-anywhere.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;factor 11&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-12-stateless-reducer.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/img/1c0-stateless-reducer.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;factor 12&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;how-we-got-here&#34;&gt;How we got here
+&lt;/h2&gt;&lt;p&gt;For a deeper dive on my agent journey and what led us here, check out &lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/brief-history-of-software.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;A Brief History of Software&lt;/a&gt; - a quick summary here:&lt;/p&gt;
+&lt;h3 id=&#34;the-promise-of-agents&#34;&gt;The promise of agents
+&lt;/h3&gt;&lt;p&gt;We&amp;rsquo;re gonna talk a lot about Directed Graphs (DGs) and their Acyclic friends, DAGs. I&amp;rsquo;ll start by pointing out that&amp;hellip;well&amp;hellip;software is a directed graph. There&amp;rsquo;s a reason we used to represent programs as flow charts.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/img/010-software-dag.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;010-software-dag&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;from-code-to-dags&#34;&gt;From code to DAGs
+&lt;/h3&gt;&lt;p&gt;Around 20 years ago, we started to see DAG orchestrators become popular. We&amp;rsquo;re talking classics like &lt;a class=&#34;link&#34; href=&#34;https://airflow.apache.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Airflow&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://www.prefect.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Prefect&lt;/a&gt;, some predecessors, and some newer ones like (&lt;a class=&#34;link&#34; href=&#34;https://dagster.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;dagster&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://www.inngest.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;inggest&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://www.windmill.dev/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;windmill&lt;/a&gt;). These followed the same graph pattern, with the added benefit of observability, modularity, retries, administration, etc.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/img/015-dag-orchestrators.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;015-dag-orchestrators&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-promise-of-agents-1&#34;&gt;The promise of agents
+&lt;/h3&gt;&lt;p&gt;I&amp;rsquo;m not the first &lt;a class=&#34;link&#34; href=&#34;https://youtu.be/Dc99-zTMyMg?si=bcT0hIwWij2mR-40&amp;amp;t=73&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;person to say this&lt;/a&gt;, but my biggest takeaway when I started learning about agents, was that you get to throw the DAG away. Instead of software engineers coding each step and edge case, you can give the agent a goal and a set of transitions:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/img/025-agent-dag.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;025-agent-dag&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;And let the LLM make decisions in real time to figure out the path&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/img/026-agent-dag-lines.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;026-agent-dag-lines&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The promise here is that you write less software, you just give the LLM the &amp;ldquo;edges&amp;rdquo; of the graph and let it figure out the nodes. You can recover from errors, you can write less code, and you may find that LLMs find novel solutions to problems.&lt;/p&gt;
+&lt;h3 id=&#34;agents-as-loops&#34;&gt;Agents as loops
+&lt;/h3&gt;&lt;p&gt;As we&amp;rsquo;ll see later, it turns out this doesn&amp;rsquo;t quite work.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s dive one step deeper - with agents you&amp;rsquo;ve got this loop consisting of 3 steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;LLM determines the next step in the workflow, outputting structured json (&amp;ldquo;tool calling&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;Deterministic code executes the tool call&lt;/li&gt;
+&lt;li&gt;The result is appended to the context window&lt;/li&gt;
+&lt;li&gt;Repeat until the next step is determined to be &amp;ldquo;done&amp;rdquo;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;initial_event&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;...&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;context&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;initial_event&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;next_step&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;llm&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;determine_next_step&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;context&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;context&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;next_step&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;next_step&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;done&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;next_step&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;final_answer&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;execute_step&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;next_step&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;context&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Our initial context is just the starting event (maybe a user message, maybe a cron fired, maybe a webhook, etc), and we ask the llm to choose the next step (tool) or to determine that we&amp;rsquo;re done.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s a multi-step example:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/user-attachments/assets/3beb0966-fdb1-4c12-a47f-ed4e8240f8fd&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/img/027-agent-loop-animation.gif&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;027-agent-loop-animation&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;&lt;a href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/img/027-agent-loop-animation.gif&#34;&gt;GIF Version&lt;/a&gt;&lt;/summary&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/img/027-agent-loop-animation.gif&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;027-agent-loop-animation&#34;
+	
+	
+&gt;]&lt;/p&gt;
+&lt;/details&gt;
+&lt;h2 id=&#34;why-12-factor-agents&#34;&gt;Why 12-factor agents?
+&lt;/h2&gt;&lt;p&gt;At the end of the day, this approach just doesn&amp;rsquo;t work as well as we want it to.&lt;/p&gt;
+&lt;p&gt;In building HumanLayer, I&amp;rsquo;ve talked to at least 100 SaaS builders (mostly technical founders) looking to make their existing product more agentic. The journey usually goes something like:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Decide you want to build an agent&lt;/li&gt;
+&lt;li&gt;Product design, UX mapping, what problems to solve&lt;/li&gt;
+&lt;li&gt;Want to move fast, so grab $FRAMEWORK and &lt;em&gt;get to building&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Get to 70-80% quality bar&lt;/li&gt;
+&lt;li&gt;Realize that 80% isn&amp;rsquo;t good enough for most customer-facing features&lt;/li&gt;
+&lt;li&gt;Realize that getting past 80% requires reverse-engineering the framework, prompts, flow, etc.&lt;/li&gt;
+&lt;li&gt;Start over from scratch&lt;/li&gt;
+&lt;/ol&gt;
+&lt;details&gt;
+&lt;summary&gt;Random Disclaimers&lt;/summary&gt;
+&lt;p&gt;&lt;strong&gt;DISCLAIMER&lt;/strong&gt;: I&amp;rsquo;m not sure the exact right place to say this, but here seems as good as any: &lt;strong&gt;this in BY NO MEANS meant to be a dig on either the many frameworks out there, or the pretty dang smart people who work on them&lt;/strong&gt;. They enable incredible things and have accelerated the AI ecosystem.&lt;/p&gt;
+&lt;p&gt;I hope that one outcome of this post is that agent framework builders can learn from the journeys of myself and others, and make frameworks even better.&lt;/p&gt;
+&lt;p&gt;Especially for builders who want to move fast but need deep control.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DISCLAIMER 2&lt;/strong&gt;: I&amp;rsquo;m not going to talk about MCP. I&amp;rsquo;m sure you can see where it fits in.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DISCLAIMER 3&lt;/strong&gt;: I&amp;rsquo;m using mostly typescript, for &lt;a class=&#34;link&#34; href=&#34;https://www.linkedin.com/posts/dexterihorthy_llms-typescript-aiagents-activity-7290858296679313408-Lh9e?utm_source=share&amp;amp;utm_medium=member_desktop&amp;amp;rcm=ACoAAA4oHTkByAiD-wZjnGsMBUL_JT6nyyhOh30&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;reasons&lt;/a&gt; but all this stuff works in python or any other language you prefer.&lt;/p&gt;
+&lt;p&gt;Anyways back to the thing&amp;hellip;&lt;/p&gt;
+&lt;/details&gt;
+&lt;h3 id=&#34;design-patterns-for-great-llm-applications&#34;&gt;Design Patterns for great LLM applications
+&lt;/h3&gt;&lt;p&gt;After digging through hundreds of AI libriaries and working with dozens of founders, my instinct is this:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;There are some core things that make agents great&lt;/li&gt;
+&lt;li&gt;Going all in on a framework and building what is essentially a greenfield rewrite may be counter-productive&lt;/li&gt;
+&lt;li&gt;There are some core principles that make agents great, and you will get most/all of them if you pull in a framework&lt;/li&gt;
+&lt;li&gt;BUT, the fastest way I&amp;rsquo;ve seen for builders to get high-quality AI software in the hands of customers is to take small, modular concepts from agent building, and incorporate them into their existing product&lt;/li&gt;
+&lt;li&gt;These modular concepts from agents can be defined and applied by most skilled software engineers, even if they don&amp;rsquo;t have an AI background&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;h4 id=&#34;the-fastest-way-ive-seen-for-builders-to-get-good-ai-software-in-the-hands-of-customers-is-to-take-small-modular-concepts-from-agent-building-and-incorporate-them-into-their-existing-product&#34;&gt;The fastest way I&amp;rsquo;ve seen for builders to get good AI software in the hands of customers is to take small, modular concepts from agent building, and incorporate them into their existing product
+&lt;/h4&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;the-12-factors-again&#34;&gt;The 12 Factors (again)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/brief-history-of-software.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;How We Got Here: A Brief History of Software&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-01-natural-language-to-tool-calls.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 1: Natural Language to Tool Calls&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-02-own-your-prompts.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 2: Own your prompts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-03-own-your-context-window.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 3: Own your context window&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-04-tools-are-structured-outputs.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 4: Tools are just structured outputs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-05-unify-execution-state.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 5: Unify execution state and business state&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-06-launch-pause-resume.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 6: Launch/Pause/Resume with simple APIs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-07-contact-humans-with-tools.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 7: Contact humans with tool calls&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-08-own-your-control-flow.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 8: Own your control flow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-09-compact-errors.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 9: Compact Errors into Context Window&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-10-small-focused-agents.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 10: Small, Focused Agents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-11-trigger-from-anywhere.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 11: Trigger from anywhere, meet users where they are&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-12-stateless-reducer.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 12: Make your agent a stateless reducer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;honorable-mentions--other-advice&#34;&gt;Honorable Mentions / other advice
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/blob/main/content/appendix-13-pre-fetch.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Factor 13: Pre-fetch all the context you might need&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;related-resources&#34;&gt;Related Resources
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Contribute to this guide &lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/8bIHcttkOTE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;I talked about a lot of this on an episode of the Tool Use podcast&lt;/a&gt; in March 2025&lt;/li&gt;
+&lt;li&gt;I write about some of this stuff at &lt;a class=&#34;link&#34; href=&#34;https://theouterloop.substack.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The Outer Loop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;I do &lt;a class=&#34;link&#34; href=&#34;https://github.com/hellovai/ai-that-works/tree/main&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;webinars about Maximizing LLM Performance&lt;/a&gt; with &lt;a class=&#34;link&#34; href=&#34;https://github.com/hellovai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@hellovai&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;We build OSS agents with this methodology under &lt;a class=&#34;link&#34; href=&#34;https://github.com/got-agents/agents&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;got-agents/agents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;We ignored all our own advice and built a &lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/kubechain&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;framework for running distributed agents in kubernetes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Other links from this guide:
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://12factor.net&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;12 Factor Apps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.anthropic.com/engineering/building-effective-agents#agents&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Building Effective Agents (Anthropic)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://thedataexchange.media/baml-revolution-in-ai-engineering/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Prompts are Functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://tomasp.net/blog/2015/library-frameworks/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Library patterns: Why frameworks are evil&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The Wrong Abstraction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dexhorthy/mailcrew&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mailcrew Agent&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=f_cKnoPC_Oo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mailcrew Demo Video&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://x.com/chainlit_io/status/1858613325921480922&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chainlit Demo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.linkedin.com/posts/dexterihorthy_llms-typescript-aiagents-activity-7290858296679313408-Lh9e&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;TypeScript for LLMs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.boundaryml.com/blog/schema-aligned-parsing&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Schema Aligned Parsing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.vellum.ai/blog/when-should-i-use-function-calling-structured-outputs-or-json-mode&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Function Calling vs Structured Outputs vs JSON Mode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/boundaryml/baml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BAML on GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.llamaindex.ai/en/stable/examples/llm/openai_json_vs_function_calling/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenAI JSON vs Function Calling&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://theouterloop.substack.com/p/openais-realtime-api-is-a-step-towards&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Outer Loop Agents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://airflow.apache.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Airflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.prefect.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Prefect&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://dagster.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Dagster&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.inngest.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Inngest&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.windmill.dev/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Windmill&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://aiagentindex.mit.edu/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The AI Agent Index (MIT)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://open.substack.com/pub/swyx/p/notebooklm?selection=08e1187c-cfee-4c63-93c9-71216640a5f8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NotebookLM on Finding Model Capability Boundaries&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;contributors&#34;&gt;Contributors
+&lt;/h2&gt;&lt;p&gt;Thanks to everyone who has contributed to 12-factor agents!&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dexhorthy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://avatars.githubusercontent.com/u/3730605?v=4&amp;s=80&#34; width=&#34;80px&#34; alt=&#34;dexhorthy&#34; /&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/Sypherd&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://avatars.githubusercontent.com/u/50557586?v=4&amp;s=80&#34; width=&#34;80px&#34; alt=&#34;Sypherd&#34; /&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/tofaramususa&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://avatars.githubusercontent.com/u/66259401?v=4&amp;s=80&#34; width=&#34;80px&#34; alt=&#34;tofaramususa&#34; /&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/a-churchill&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://avatars.githubusercontent.com/u/18105223?v=4&amp;s=80&#34; width=&#34;80px&#34; alt=&#34;a-churchill&#34; /&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/Elijas&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://avatars.githubusercontent.com/u/4084885?v=4&amp;s=80&#34; width=&#34;80px&#34; alt=&#34;Elijas&#34; /&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/hugolmn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://avatars.githubusercontent.com/u/39267118?v=4&amp;s=80&#34; width=&#34;80px&#34; alt=&#34;hugolmn&#34; /&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/jeremypeters&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://avatars.githubusercontent.com/u/1882972?v=4&amp;s=80&#34; width=&#34;80px&#34; alt=&#34;jeremypeters&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/kndl&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://avatars.githubusercontent.com/u/380402?v=4&amp;s=80&#34; width=&#34;80px&#34; alt=&#34;kndl&#34; /&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/maciejkos&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://avatars.githubusercontent.com/u/16674643?v=4&amp;s=80&#34; width=&#34;80px&#34; alt=&#34;maciejkos&#34; /&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/pfbyjy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://avatars.githubusercontent.com/u/85041180?v=4&amp;s=80&#34; width=&#34;80px&#34; alt=&#34;pfbyjy&#34; /&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/0xRaduan&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://avatars.githubusercontent.com/u/36044389?v=4&amp;s=80&#34; width=&#34;80px&#34; alt=&#34;0xRaduan&#34; /&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/zyuanlim&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://avatars.githubusercontent.com/u/7169731?v=4&amp;s=80&#34; width=&#34;80px&#34; alt=&#34;zyuanlim&#34; /&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/lombardo-chcg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://avatars.githubusercontent.com/u/15862501?v=4&amp;s=80&#34; width=&#34;80px&#34; alt=&#34;lombardo-chcg&#34; /&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/sahanatvessel&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://avatars.githubusercontent.com/u/160066852?v=4&amp;s=80&#34; width=&#34;80px&#34; alt=&#34;sahanatvessel&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;versions&#34;&gt;Versions
+&lt;/h2&gt;&lt;p&gt;This is the current version of 12-factor agents, version 1.0. There is a draft of version 1.1  on the &lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/tree/v1.1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;v1.1 branch&lt;/a&gt;. There are a few &lt;a class=&#34;link&#34; href=&#34;https://github.com/humanlayer/12-factor-agents/issues?q=is%3Aissue%20state%3Aopen%20label%3Aversion%3A%3A1.1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Issues to track work on v1.1&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;All content and images are licensed under a &lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34;&gt;CC BY-SA 4.0 License&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Code is licensed under the &lt;a href=&#34;https://www.apache.org/licenses/LICENSE-2.0&#34;&gt;Apache 2.0 License&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

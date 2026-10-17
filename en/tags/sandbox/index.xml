@@ -1,0 +1,1252 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Sandbox on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/sandbox/</link>
+        <description>Recent content in Sandbox on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Thu, 24 Sep 2026 20:48:31 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/sandbox/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ax</title>
+        <link>https://producthunt.programnotes.cn/en/p/ax/</link>
+        <pubDate>Thu, 24 Sep 2026 20:48:31 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/ax/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1486122676632-ad1b5681fe33?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAyNTM5NDF8&amp;ixlib=rb-4.1.0" alt="Featured image of post ax" /&gt;&lt;h1 id=&#34;googleax&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/google/ax&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;google/ax&lt;/a&gt;
+&lt;/h1&gt;&lt;h1&gt;
+  &lt;img src=&#34;assets/axolotl.svg&#34; width=&#34;70&#34; align=&#34;absmiddle&#34; alt=&#34;AX axolotl&#34;&gt;
+  AX
+&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!WARNING]
+We are still actively refining our core concepts, protocols,
+and specifications. We will likely to introduce major breaking
+changes prior to a stable release.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Declare an agentic task with workspaces and gateway specifications. AX sandboxes it, wires up its workspace, fences its network, and helps running it at scale.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;AX is a high-throughput, declarative orchestrator to run billions of autonomous agent workloads in a cluster. It runs on top of &lt;a class=&#34;link&#34; href=&#34;https://github.com/agent-substrate/substrate&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Agent Substrate&lt;/a&gt; for sandboxed execution and is built to run billions of tasks per cluster. If you have used Kubernetes, &lt;code&gt;ax&lt;/code&gt; will feel similar.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# task.yaml&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;apiVersion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ax.io/v1alpha1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;kind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Workspace&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;metadata&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;golang&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;spec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;git&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;repo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.com/golang/go.git&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;branch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;my-fix&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nn&#34;&gt;---&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;apiVersion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ax.io/v1alpha1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;kind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Task&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;metadata&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;spec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;workspaces&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;golang&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;goal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Ensure that Go tool chain is available and is built from source&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;debug&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# lets you `ax ssh` into the sandbox&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Then apply it, watch it come up, and look over the agent&amp;rsquo;s shoulder:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax apply -f task.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax watch task &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax ssh &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; -- ls -al /workspace
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;why&#34;&gt;Why?
+&lt;/h2&gt;&lt;p&gt;Agents are a new kind of workload. They are neither stateless microservices nor run-to-completion batch jobs. They accumulate state, need strict isolation, call out to model APIs and tool servers, and can burn money in a loop if nobody is watching. AX gives you four small primitives that handle all of that declaratively:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;You want to&amp;hellip;&lt;/th&gt;
+					&lt;th&gt;AX gives you&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Run untrusted agent code in an isolated sandbox with CPU/memory limits&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;code&gt;Task&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Pre-wire Git repos, MCP servers, and skill packages so every agent starts warm&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;code&gt;Workspace&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Lock outbound traffic down to an explicit host allowlist&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;code&gt;Gateway&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Configure which LLM the platform itself uses, with credentials from a Kubernetes secret&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;&lt;code&gt;Model&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Pause an idle agent and pick up exactly where it left off&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;ax suspend&lt;/code&gt; / &lt;code&gt;ax resume&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Shell into a running agent to see what it is doing&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;ax ssh&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Everything is expressed as &lt;code&gt;ax.io/v1alpha1&lt;/code&gt; manifests and applied with a single command.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick start
+&lt;/h2&gt;&lt;h3 id=&#34;1-install-the-cli&#34;&gt;1. Install the CLI
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go install github.com/google/ax/cmd/ax@latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This puts the &lt;code&gt;ax&lt;/code&gt; binary in &lt;code&gt;$(go env GOPATH)/bin&lt;/code&gt;. Make sure that directory is on your &lt;code&gt;PATH&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;2-deploy-the-control-plane&#34;&gt;2. Deploy the control plane
+&lt;/h3&gt;&lt;p&gt;You need a Kubernetes cluster, &lt;a class=&#34;link&#34; href=&#34;https://ko.build/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;ko&lt;/code&gt;&lt;/a&gt; (&lt;code&gt;brew install ko&lt;/code&gt;), a container registry your cluster can pull from, and a reachable Agent Substrate Control API (in-cluster default: &lt;code&gt;api.ate-system.svc.cluster.local:443&lt;/code&gt;).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make deploy &lt;span class=&#34;nv&#34;&gt;AX_IMAGE_REPO&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;your-registry&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This deploys Redis, then builds and deploys the control plane images with &lt;code&gt;ko&lt;/code&gt;. Everything lands in the &lt;code&gt;ax-system&lt;/code&gt; namespace.&lt;/p&gt;
+&lt;h3 id=&#34;3-run-your-first-task&#34;&gt;3. Run your first task
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax apply -f examples/task.yaml       &lt;span class=&#34;c1&#34;&gt;# Task + Workspace + Gateway + Model in one file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax get tasks
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# NAME      ATESPACE   PHASE     ACTOR           WORKER-IP    AGE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# task123   default    Running   task123         10.20.3.67   1m&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax watch task task123                &lt;span class=&#34;c1&#34;&gt;# stream phase and condition changes live&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax ssh task123 -- ls -la /workspace  &lt;span class=&#34;c1&#34;&gt;# poke around inside the sandbox&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax &lt;span class=&#34;nb&#34;&gt;suspend&lt;/span&gt; task task123              &lt;span class=&#34;c1&#34;&gt;# checkpoint and pause&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax resume task task123               &lt;span class=&#34;c1&#34;&gt;# pick up where it left off&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Want to see the whole lifecycle end to end? Run &lt;a class=&#34;link&#34; href=&#34;demo.sh&#34; &gt;&lt;code&gt;./demo.sh&lt;/code&gt;&lt;/a&gt;. It applies a custom workspace, waits for readiness, runs commands over &lt;code&gt;ax ssh&lt;/code&gt;, and suspends the task.&lt;/p&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Guide&lt;/th&gt;
+					&lt;th&gt;Read it to&amp;hellip;&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/concepts.md&#34; &gt;Concepts&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Learn what a &lt;code&gt;Task&lt;/code&gt;, &lt;code&gt;Workspace&lt;/code&gt;, &lt;code&gt;Gateway&lt;/code&gt;, and &lt;code&gt;Model&lt;/code&gt; each do, and how a task moves through phases and conditions.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/manifests.md&#34; &gt;Manifests&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Write your own YAML, with an annotated example of every kind.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/sandbox.md&#34; &gt;Sandbox&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;See what the runner does on boot and what your command can rely on: metadata server, guest services, environment.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/runner.md&#34; &gt;Runners&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Understand the contract between the control plane and the task container, and build your own runner image to replace the default.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/networking.md&#34; &gt;Networking&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Reach a running task through the atenet router from the cluster, your laptop, or a gRPC client.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;DESIGN.md&#34; &gt;Architecture&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Understand how the control plane fits together, plus the &lt;a class=&#34;link&#34; href=&#34;DESIGN.md#api-reference&#34; &gt;API reference&lt;/a&gt;.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/development.md&#34; &gt;Development&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Build, test, and ship changes to AX itself.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/roadmap.md&#34; &gt;Roadmap&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;See planned milestones across core specs, actor architecture, agentic environments, and governance.&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;cli-usage&#34;&gt;CLI usage
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;ax&lt;/code&gt; talks to the control plane over gRPC. It is deliberately &lt;code&gt;kubectl&lt;/code&gt;-shaped: &lt;code&gt;apply&lt;/code&gt;, &lt;code&gt;get&lt;/code&gt;, &lt;code&gt;describe&lt;/code&gt;, &lt;code&gt;watch&lt;/code&gt;, &lt;code&gt;delete&lt;/code&gt;, plus a few agent-specific verbs.&lt;/p&gt;
+&lt;h3 id=&#34;everyday-commands&#34;&gt;Everyday commands
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Apply anything (multi-document YAML, file or stdin)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax apply -f examples/task.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Tasks&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax get tasks                          &lt;span class=&#34;c1&#34;&gt;# list&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax get tasks -a my-atespace           &lt;span class=&#34;c1&#34;&gt;# list in another atespace&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax get task task123                   &lt;span class=&#34;c1&#34;&gt;# full spec + live status as YAML&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax describe task task123              &lt;span class=&#34;c1&#34;&gt;# human-readable detail&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax watch task task123                 &lt;span class=&#34;c1&#34;&gt;# stream status and condition transitions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax &lt;span class=&#34;nb&#34;&gt;suspend&lt;/span&gt; task task123               &lt;span class=&#34;c1&#34;&gt;# checkpoint actor state and pause&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax resume task task123                &lt;span class=&#34;c1&#34;&gt;# resume a suspended task&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax delete task task123
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Shell into the running sandbox&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax ssh task123                        &lt;span class=&#34;c1&#34;&gt;# interactive shell (task needs spec.debug: true)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax ssh task123 -- ls -la /workspace   &lt;span class=&#34;c1&#34;&gt;# one-off command&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax ssh task123 -- python3 main.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Gateways, workspaces, models follow the same pattern&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax get gateways
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# NAME              ATESPACE   LISTENERS             EGRESS-HOSTS&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# default-gateway   default    8494/gRPC,8080/HTTP   *&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax describe gateway default-gateway
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax delete gateway default-gateway
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax get workspaces
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# NAME                ATESPACE   GIT-REPOS   MCP-SERVERS&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# default-workspace   default    1           1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax describe workspace default-workspace
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax delete workspace default-workspace
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax get models
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# NAME            ATESPACE   PROVIDER   MODEL&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# default-model   default    google     gemini-3.8-flash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax describe model default-model
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax delete model default-model
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Connection plumbing&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax ctx                                &lt;span class=&#34;c1&#34;&gt;# active kube context and how ax is reaching the control plane&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax tunnel list                        &lt;span class=&#34;c1&#34;&gt;# background tunnels (state lives in ~/.ax/tunnels)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax tunnel stop
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;works-with-kubectx&#34;&gt;Works with &lt;code&gt;kubectx&lt;/code&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;ax&lt;/code&gt; follows your active Kubernetes context. Switch clusters and &lt;code&gt;ax&lt;/code&gt; resolves and tunnels to that cluster&amp;rsquo;s control plane in the background.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectx staging-cluster
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax get tasks
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectx prod-cluster
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax get tasks
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Or target a context without switching&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ax --context&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;dev-cluster get tasks
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;global-flags&#34;&gt;Global flags
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Flag&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+					&lt;th&gt;Default&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;-a&lt;/code&gt;, &lt;code&gt;--atespace&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Atespace scope for the command&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;default&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;-n&lt;/code&gt;, &lt;code&gt;--namespace&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Kubernetes namespace where AX is installed&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;ax-system&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--context&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Kubernetes context to target&lt;/td&gt;
+					&lt;td&gt;active &lt;code&gt;kubectx&lt;/code&gt; / &lt;code&gt;current-context&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--server&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Control plane address, bypassing auto-detection&lt;/td&gt;
+					&lt;td&gt;derived from kube context, or &lt;code&gt;$AX_SERVER&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;Apache License 2.0. See &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt; for details.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>substrate</title>
+        <link>https://producthunt.programnotes.cn/en/p/substrate/</link>
+        <pubDate>Tue, 22 Sep 2026 20:39:36 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/substrate/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1727717768632-f4241a128f50?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAwODA3MDV8&amp;ixlib=rb-4.1.0" alt="Featured image of post substrate" /&gt;&lt;h1 id=&#34;agent-substratesubstrate&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/agent-substrate/substrate&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;agent-substrate/substrate&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;agent-substrate&#34;&gt;Agent Substrate
+&lt;/h1&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://opensource.org/licenses/Apache-2.0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/License-Apache_2.0-blue.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;License&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;NOTE: This is not an officially supported Google product. This project is not
+eligible for the &lt;a class=&#34;link&#34; href=&#34;https://bughunters.google.com/open-source-security&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google Open Source Software Vulnerability Rewards Program&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-agent-substrate&#34;&gt;What is Agent Substrate?
+&lt;/h2&gt;&lt;p&gt;Agent Substrate is a secure-by-default agent execution runtime engineered to run millions of sandboxes with 10x higher density than standard container runtimes. Purpose-built for the era of autonomous agents, Substrate delivers sub-500ms resume operations at over 500 suspend/resume activations per second with native zero-trust kernel and network isolation. It supports multiple sandbox technologies including microVMs and gVisor, enabling consistent lifecycle operations for all sandbox types.&lt;/p&gt;
+&lt;p&gt;At its core, Agent Substrate maps a larger set of “actors” (applications such as agents) onto a smaller set of ready “workers”, relying on the fact that agent-like applications tend to be idle most of the time to achieve heavy multiplexing.  It provides functionality to manage an actor’s lifecycle (e.g. create/destroy, suspend/resume), to assign actors to workers in real time, and to route incoming traffic to them.&lt;/p&gt;
+&lt;p&gt;Agent Substrate is intended to be a low-opinion system.  The workloads it manages don&amp;rsquo;t have to be literal AI agents, but those are the best example of the kind of applications it is designed for.  It is not an SDK for building agents, but rather a system for running them at scale.&lt;/p&gt;
+&lt;p&gt;Agent Substrate leverages Kubernetes for the infrastructure provisioning and worker lifecycle management (Kubernetes Pods). It builds on top of Kubernetes features like Pods and Pod autoscaling, while Agent Substrate provides agent-specific scheduling and control to achieve lower latency. Using Kubernetes as the underlying system enables consistent infrastructure management across all workloads types that are required for end to end agentic deployments and allows holistic infrastructure optimizations for RL scenarios that span agentic, inference and training cycles.&lt;/p&gt;
+&lt;h2 id=&#34;demo&#34;&gt;Demo
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=ZEzkCFJkzjY&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.youtube.com/vi/ZEzkCFJkzjY/hq1.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Agent Substrate Demo&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Watch the Agent Substrate cluster multiplex ~250 stateful actors across just 8 physical pods.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This demo highlights the core developer experience and &amp;ldquo;Agentic Infrastructure&amp;rdquo; capabilities of Substrate:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Actor Teleport:&lt;/strong&gt; High-performance suspend and resume of actors onto any available worker in the pool with sub-second activation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;State Persistence:&lt;/strong&gt; Persistent working memory (volatile RAM) and filesystem state preserved perfectly across hibernation cycles via full-state snapshots.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Agent Multiplexing:&lt;/strong&gt; Demonstrates 30x+ oversubscription by &amp;ldquo;juggling&amp;rdquo; a large registry of stateful actors onto a small pool of shared physical pods.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;To reproduce this demo in your own cluster, please refer to the detailed walkthrough in the &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;demos/counter/README.md&#34; &gt;Counter Demo&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;For more videos and walkthroughs, visit our YouTube channel: &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/channel/UCN9PPqlTtVxlcpbQ-NWpfZQ&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;agent-substrate&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;framework-agnostic--compatibility&#34;&gt;Framework Agnostic &amp;amp; Compatibility
+&lt;/h2&gt;&lt;p&gt;Agent Substrate is designed to be &lt;strong&gt;framework and agent harness agnostic&lt;/strong&gt;. Because it manages standard OCI containers at the kernel level (via gVisor), it can host agents built on any stack.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Agent Development Kit (ADK):&lt;/strong&gt; Support for ADK agents with session state preservation across invocations as actor state. Ideal for all types of agents and stateful tool or subagent calls.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LangChain:&lt;/strong&gt; Ideal execution environment for LangChain agents and tool calls.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Claude Code, CodeX, and Antigravity:&lt;/strong&gt; Support for high-density, stateful coding environments that preserve system state and filesystem state across sessions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Model Context Protocol (MCP):&lt;/strong&gt; Support for deploying secure, sandboxed MCP servers as Substrate Actors to provide durable tools for any model.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ecosystem--examples&#34;&gt;Ecosystem &amp;amp; Examples
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/google/ax&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Agent Executor&lt;/a&gt;:&lt;/strong&gt; A distributed agent runtime that demonstrates building a secure, hyper-scalable agent harness on Agent Substrate (see the &lt;a class=&#34;link&#34; href=&#34;https://cloud.google.com/blog/products/ai-machine-learning/agent-executor-googles-distributed-agent-runtime&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;announcement blog&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://github.com/google/ax/blob/main/manifests/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;integration guide&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/kagent-dev/kagent&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;kagent&lt;/a&gt;:&lt;/strong&gt; A CNCF Sandbox project and Kubernetes-native framework for building, deploying, and managing AI agents that uses Agent Substrate to run sandboxed, stateful agent workloads (see the &lt;a class=&#34;link&#34; href=&#34;https://kagent.dev/blog/the-future-of-kagent&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;announcement blog&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;status-and-compatibility&#34;&gt;Status and compatibility
+&lt;/h2&gt;&lt;p&gt;Agent Substrate is currently in early development.  It is not ready for
+production use, and the APIs are almost guaranteed to change.  We are not
+making any guarantees about backward compatibility at this stage, and
+everything in this project may be changed.&lt;/p&gt;
+&lt;h3 id=&#34;supported-kubernetes-releases&#34;&gt;Supported Kubernetes Releases
+&lt;/h3&gt;&lt;p&gt;Currently we aim to support the &lt;a class=&#34;link&#34; href=&#34;https://kubernetes.io/releases/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;latest stable release&lt;/a&gt; of Kubernetes, and the previous minor release.&lt;/p&gt;
+&lt;h2 id=&#34;community&#34;&gt;Community
+&lt;/h2&gt;&lt;p&gt;For announcements, technical discussions, and community support, please join
+the &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://groups.google.com/g/ate-dev&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ate-dev&lt;/a&gt;&lt;/strong&gt; Google Group.&lt;/p&gt;
+&lt;p&gt;We host a weekly community meeting every Thursday from 10:00am - 11:00am PST.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Video call link: &lt;a class=&#34;link&#34; href=&#34;https://meet.google.com/uhq-cxvn-dhy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://meet.google.com/uhq-cxvn-dhy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Or dial: (US) +1 253-289-6971 PIN: 787 664 574 59#&lt;/li&gt;
+&lt;li&gt;More phone numbers: &lt;a class=&#34;link&#34; href=&#34;https://tel.meet/uhq-cxvn-dhy?pin=9044088223662&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://tel.meet/uhq-cxvn-dhy?pin=9044088223662&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.google.com/document/d/1obSIvfcafLNniLYTQCcT2eCgxHqa2AQ3Ga7YTsju49s&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Meeting notes&lt;/a&gt; for the weekly sync meeting&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://drive.google.com/corp/drive/u/0/folders/1rX1S6vPxPrR8dA1lEBuBEXkGKjHtG-mL&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Recordings and transcripts&lt;/a&gt; of all community meetings&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We also have channels in the CNCF slack; &lt;a class=&#34;link&#34; href=&#34;https://slack.cncf.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;request an invite here&lt;/a&gt;
+if you don&amp;rsquo;t have access.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloud-native.slack.com/archives/C0B6RCAJULW&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#substrate-users&lt;/a&gt; to discuss using substrate.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloud-native.slack.com/archives/C0B6M3E2J3D&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#substrate-dev&lt;/a&gt; to discuss developing substrate.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;developing&#34;&gt;Developing
+&lt;/h2&gt;&lt;p&gt;Please see &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;CONTRIBUTING.md&lt;/a&gt; for guidelines on contributing to
+the project.  We welcome contributions of all kinds, but the project is VERY
+young.  Our immediate focus is on building out the core system and demos, so we
+may not be able to review or merge contributions that don&amp;rsquo;t align with those
+goals in the near term.&lt;/p&gt;
+&lt;h2 id=&#34;quickstart-development&#34;&gt;Quickstart (Development)
+&lt;/h2&gt;&lt;p&gt;To quickly set up the complete environment:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Make sure you have &lt;a class=&#34;link&#34; href=&#34;https://go.dev/doc/install&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Go&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://kubernetes.io/docs/tasks/tools/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;kubectl&lt;/code&gt;&lt;/a&gt;, and &lt;a class=&#34;link&#34; href=&#34;https://www.docker.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;docker&lt;/code&gt;&lt;/a&gt; installed and configured on your dev machine. We will automatically manage other dependencies via Go, including &lt;a class=&#34;link&#34; href=&#34;https://kind.sigs.k8s.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;kind&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run the following steps:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# create cluster and local registry (IPv4; IP_FAMILY=dual|ipv6 overrides)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hack/create-kind-cluster.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install ate, PostgreSQL, rustfs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hack/install-ate-kind.sh --deploy-ate-system
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install counter demo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hack/install-ate-kind.sh --deploy-demo-counter
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install kubectl-ate&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go install ./cmd/kubectl-ate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# create a counter actor in the demo&amp;#39;s atespace (--template names the&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# actor template, resolved in the actor&amp;#39;s atespace)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl ate create actor my-counter-1 -a ate-demo-counter --template counter
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# port-forward the network router to bind to local port `8000`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl port-forward -n ate-system svc/atenet-router 8000:80
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;In a &lt;strong&gt;separate terminal&lt;/strong&gt;, send an HTTP request to increment the counter:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -X POST &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;ate-target-actor: ate-demo-counter/my-counter-1&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   -i http://localhost:8000/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Worker capacity is versioned: the dataplane (the atelet DaemonSet and the
+worker pods) schedules only on nodes that carry the
+&lt;code&gt;ate.dev/substrate-version&lt;/code&gt; label, and the install stamps it on every node
+that exists when it runs. A node added later hosts no workers until you label
+it with the installed version
+(&lt;code&gt;kubectl label node &amp;lt;node&amp;gt; ate.dev/substrate-version=&amp;lt;build version&amp;gt;&lt;/code&gt;).
+&lt;code&gt;kubectl get ds -n ate-system -l app=atelet -L ate.dev/substrate-version&lt;/code&gt;
+prints the installed version, off the atelet DaemonSet the install created.&lt;/p&gt;
+&lt;h3 id=&#34;gke-quickstart-development&#34;&gt;GKE Quickstart (Development)
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Create and configure your environment file:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp hack/ate-dev-env.sh.example .ate-dev-env.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Edit .ate-dev-env.sh to match your project and preferences, then source it:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; .ate-dev-env.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enable application-default credentials for gcloud:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcloud auth application-default login --project&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PROJECT_ID&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Provision the required GCP resources (GKE cluster, GCS, and IAM bindings):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go run ./tools/setup-gcp bootstrap
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;On a fresh project this step also creates the atelet Workload Identity IAM
+grants that snapshots depend on — see
+&lt;a class=&#34;link&#34; href=&#34;tools/setup-gcp/README.md#what-create-iam-actually-grants&#34; &gt;what &lt;code&gt;create iam&lt;/code&gt; actually grants&lt;/a&gt;
+to audit them or apply them manually. If you bring your own cluster instead,
+note the required Kubernetes beta APIs can only be enabled &lt;strong&gt;at cluster
+creation&lt;/strong&gt; — see the &lt;a class=&#34;link&#34; href=&#34;tools/setup-gcp/README.md#2-create-cluster&#34; &gt;Create Cluster warning&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Deploy the Agent Substrate system to your cluster:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./hack/install-ate.sh --deploy-ate-system
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Nodes that GKE adds later (autoscaling, auto-repair, node upgrades) are
+born with the node pool&amp;rsquo;s labels, so the pool needs
+&lt;code&gt;ate.dev/substrate-version&lt;/code&gt; too; see
+&lt;a class=&#34;link&#34; href=&#34;tools/setup-gcp/README.md&#34; &gt;Node version labels&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You can then deploy the sample applications. See &lt;a class=&#34;link&#34; href=&#34;demos/counter/README.md&#34; &gt;demos/counter/README.md&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;demos/sandbox/README.md&#34; &gt;demos/sandbox/README.md&lt;/a&gt; for detailed walkthroughs.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./hack/install-ate.sh --deploy-demo-counter
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;custom-setup-and-deployment&#34;&gt;Custom Setup and Deployment
+&lt;/h4&gt;&lt;p&gt;You can run individual setup steps to create GCP resources as needed. See &lt;code&gt;go run ./tools/setup-gcp --help&lt;/code&gt; for available options. For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go run ./tools/setup-gcp create cluster
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go run ./tools/setup-gcp create bucket
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To run the PostgreSQL store backend on Cloud SQL — with IAM database
+authentication and no passwords — see &lt;a class=&#34;link&#34; href=&#34;tools/setup-gcp/cloud-sql.md&#34; &gt;tools/setup-gcp/cloud-sql.md&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Similarly, you can deploy or cleanup specific Agent Substrate components using the installation script. See &lt;code&gt;./hack/install-ate.sh --help&lt;/code&gt; for all options.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Re-deploy only ate-apiserver of the ATE system&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./hack/install-ate.sh --deploy-ate-apiserver
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Delete everything (core system and all demos)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./hack/install-ate.sh --delete-all
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;tearing-down-resources-gcp&#34;&gt;Tearing down resources (GCP)
+&lt;/h4&gt;&lt;p&gt;If you need to delete the resources created by the setup script, you can use the provided script &lt;code&gt;hack/teardown.sh&lt;/code&gt;. This script will delete resources in the reverse order of creation and handles partial failures gracefully.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./hack/teardown.sh --all
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Or run individual teardown steps as needed (see &lt;code&gt;./hack/teardown.sh&lt;/code&gt; for available options).&lt;/p&gt;
+&lt;h4 id=&#34;tearing-down-local-kind-resources&#34;&gt;Tearing down local &lt;code&gt;kind&lt;/code&gt; resources
+&lt;/h4&gt;&lt;p&gt;If you need to delete the local &lt;code&gt;kind&lt;/code&gt; cluster and its registry (if it was created by &lt;code&gt;hack/create-kind-cluster.sh&lt;/code&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./hack/delete-kind-cluster.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;demos&#34;&gt;Demos
+&lt;/h2&gt;&lt;p&gt;We provide several sample applications demonstrating Agent Substrate&amp;rsquo;s capabilities:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;demos/counter/README.md&#34; &gt;Counter Demo&lt;/a&gt;&lt;/strong&gt;: A stateful Go HTTP server demonstrating state preservation across suspends/resumes, and on-demand actor resumption and routing via the Substrate router.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;demos/sandbox/README.md&#34; &gt;Sandbox Demo (Antigravity)&lt;/a&gt;&lt;/strong&gt;: A secure, sandboxed execution environment (running Alpine Linux) that allows arbitrary shell execution while preserving filesystem state across sessions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;demos/claude-code-multiplex/README.md&#34; &gt;Claude Code Multiplex&lt;/a&gt;&lt;/strong&gt;: Demonstrates oversubscribing physical hardware by multiplexing multiple Claude Code agents onto a limited pool of workers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;demos/multi-template/README.md&#34; &gt;Multi-Template&lt;/a&gt;&lt;/strong&gt;: Two &lt;code&gt;ActorTemplate&lt;/code&gt;s running different binaries share one &lt;code&gt;WorkerPool&lt;/code&gt;, even though the templates live in different atespaces.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;demos/parking/README.md&#34; &gt;Request Parking&lt;/a&gt;&lt;/strong&gt;: An oversubscribed pool where the router holds inbound requests until a worker frees up, instead of returning &lt;code&gt;503&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;demos/autoscaled-workerpool/README.md&#34; &gt;Autoscaled WorkerPool&lt;/a&gt;&lt;/strong&gt;: Scales a &lt;code&gt;WorkerPool&lt;/code&gt; on its assigned-worker count with an HPA fed by prometheus-adapter.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;documentation--guides&#34;&gt;Documentation &amp;amp; Guides
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/architecture.md&#34; &gt;Architecture&lt;/a&gt;: How the control plane, node supervisor, and networking stack fit together.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/api-guide.md&#34; &gt;API Configuration Guide&lt;/a&gt;: Detailed reference for configuring WorkerPools, ActorTemplates, Secrets, and Volumes.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;cmd/kubectl-ate/README.md&#34; &gt;Full CLI Documentation&lt;/a&gt;: Installation and usage for &lt;code&gt;kubectl-ate&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/glossary.md&#34; &gt;Glossary&lt;/a&gt;: Core terms (Actor, Atespace, ActorTemplate, WorkerPool, Worker, ate-api-server, atenet, atelet, ateom) and how they relate.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/integration-repos.md&#34; &gt;Integration Repositories&lt;/a&gt;: Where integrations live, how their repositories are named, and how fixes flow back to core.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/observability.md&#34; &gt;Observability Guide&lt;/a&gt;: Guide to actor logging, metrics, and distributed tracing.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/authentication.md&#34; &gt;Authentication Guide&lt;/a&gt;: Configure trusted JWT providers and human credentials.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/egress-traffic.md&#34; &gt;Egress Traffic&lt;/a&gt;: Which protocols an Actor may reach the outside world with and which are blocked.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/egress-trust-bundle.md&#34; &gt;Enabling man-in-the-middle (MITM) interception for Actor Egress policy&lt;/a&gt;: Egress policies such as header injection depend on MITM interception of Actor traffic. This guide explains how an Actor should be configured to enable interception.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/request-parking.md&#34; &gt;Request Parking&lt;/a&gt;: How the router parks requests through transient worker-pool saturation.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/upgrade.md&#34; &gt;Rolling Upgrade Runbook&lt;/a&gt;: Upgrade a running substrate node by node without losing actor state.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/threat-model.md&#34; &gt;Threat Model&lt;/a&gt;: Trust boundaries, assumptions, and known risks.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/roadmap.md&#34; &gt;Roadmap&lt;/a&gt;: Current limitations and what is planned next.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;benchmarking/README.md&#34; &gt;Benchmarking Guide&lt;/a&gt;: Locust-based load tests, monitoring stack, and the orchestrated benchmark harness.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tour&#34;&gt;Tour
+&lt;/h2&gt;&lt;h3 id=&#34;commands&#34;&gt;Commands
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cmd/ateapi&lt;/code&gt;: The core control plane API server exposing gRPC endpoints to manage actor and worker lifecycles.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmd/atelet&lt;/code&gt;: A node-level DaemonSet that supervises physical worker pods, coordinates snapshotting, and manages state transfers.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmd/atecontroller&lt;/code&gt;: A Kubernetes controller that reconciles WorkerPool custom resources.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmd/atenet&lt;/code&gt;: A combined networking controller providing Envoy routing and proxy sidecars.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmd/ateom-gvisor&lt;/code&gt;: An interior-pod helper running inside sandboxed worker pods to execute &lt;code&gt;runsc&lt;/code&gt; checkpoint and restore commands.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmd/ateom-microvm&lt;/code&gt;: The micro-VM peer of &lt;code&gt;ateom-gvisor&lt;/code&gt;, running actors as cloud-hypervisor VMs.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmd/podcertcontroller&lt;/code&gt;: A &amp;ldquo;polyfill&amp;rdquo; that provides Pod Certificate signers that
+will eventually ship in upstream Kubernetes (with different names).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmd/kubectl-ate&lt;/code&gt;: A CLI tool for managing Agent Substrate resources. See its &lt;a class=&#34;link&#34; href=&#34;cmd/kubectl-ate/README.md&#34; &gt;README&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmd/benchmarking&lt;/code&gt;: Synthetic workloads used by the load tests, including &lt;code&gt;glutton&lt;/code&gt;, which consumes RAM, disk, and file descriptors on demand.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tools/setup-gcp&lt;/code&gt;: A provisioning utility to set up the necessary GCP infrastructure resources (GKE, GCS, IAM).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;demos/&lt;/code&gt;: Sample applications demonstrating Agent Substrate capabilities.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>maka</title>
+        <link>https://producthunt.programnotes.cn/en/p/maka/</link>
+        <pubDate>Wed, 26 Aug 2026 16:04:04 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/maka/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1671050578787-e271e550ba0b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc3MzEyOTF8&amp;ixlib=rb-4.1.0" alt="Featured image of post maka" /&gt;&lt;h1 id=&#34;apachemaka&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/apache/maka&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;apache/maka&lt;/a&gt;
+&lt;/h1&gt;&lt;!--
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  &#34;License&#34;); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  &#34;AS IS&#34; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+--&gt;
+&lt;h1 align=&#34;center&#34;&gt;
+  &lt;img src=&#34;apps/desktop/assets/app-icons/sky.png&#34; alt=&#34;Maka&#34; width=&#34;72&#34; valign=&#34;middle&#34; /&gt; Apache Maka (Incubating)
+&lt;/h1&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;sub&gt;Incubating at The Apache Software Foundation&lt;/sub&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;a href=&#34;https://github.com/apache/maka/stargazers&#34;&gt;&lt;img src=&#34;https://img.shields.io/github/stars/apache/maka?style=flat&amp;label=%E2%98%85&amp;color=4C8DFF&#34; alt=&#34;GitHub stars&#34; /&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://github.com/apache/maka/releases&#34;&gt;&lt;img src=&#34;https://img.shields.io/github/downloads/apache/maka/total?style=flat&amp;label=downloads&amp;color=4C8DFF&#34; alt=&#34;GitHub downloads&#34; /&gt;&lt;/a&gt;
+  &lt;a href=&#34;./LICENSE&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/license-Apache%202.0-4C8DFF?style=flat&#34; alt=&#34;License: Apache 2.0&#34; /&gt;&lt;/a&gt;
+  &lt;img src=&#34;https://img.shields.io/badge/macOS-arm64-4C8DFF?style=flat&amp;logo=apple&amp;logoColor=white&#34; alt=&#34;macOS Apple Silicon&#34; /&gt;
+  &lt;img src=&#34;https://img.shields.io/badge/Windows-preview-9BB8F0?style=flat&amp;logo=windows&amp;logoColor=white&#34; alt=&#34;Windows unsigned preview&#34; /&gt;
+  &lt;img src=&#34;https://img.shields.io/badge/Linux-soon-D0D4DA?style=flat&amp;logo=linux&amp;logoColor=6B7280&#34; alt=&#34;Linux not yet supported&#34; /&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;a href=&#34;./README.zh-CN.md&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3-4C8DFF?style=flat&#34; alt=&#34;中文文档&#34; /&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;strong&gt;A local-first Agent workspace built for real work.&lt;/strong&gt;&lt;br/&gt;
+  Maka inspects projects, runs tools under a sandbox boundary, and records
+  model messages and tool calls as recoverable execution facts — on your
+  machine, through one Runtime Host.
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!NOTE]
+Apache Maka (Incubating) is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator PMC. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision-making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF. &lt;a class=&#34;link&#34; href=&#34;./DISCLAIMER-WIP&#34; &gt;DISCLAIMER-WIP&lt;/a&gt; records the issues the project is currently aware of.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!IMPORTANT]
+Maka is under active development. The macOS Apple Silicon desktop build is an early public release; data formats, CLI commands, and experimental capabilities may still change.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;why-maka&#34;&gt;Why Maka
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Your machine, your data.&lt;/strong&gt; Sessions, settings, and run records stay local by default. You bring the model: a cloud API, a local model, or a compatible gateway.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The record is kept.&lt;/strong&gt; Model messages, tool calls, tool results, and how a turn ended are written down. The UI and the next model call are views of that record, not the only copy.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Shorter context is not deleted history.&lt;/strong&gt; Maka can omit old tool output from the next prompt without throwing away the saved evidence.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;One place runs the agent.&lt;/strong&gt; Desktop, the terminal, and Maka evaluation all go through Runtime Host. Eval only owns the experiment and its scores.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Read &lt;a class=&#34;link&#34; href=&#34;./ARCHITECTURE.md&#34; &gt;Maka Backend Architecture&lt;/a&gt; for the design.&lt;/p&gt;
+&lt;h2 id=&#34;surfaces&#34;&gt;Surfaces
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Entry point&lt;/th&gt;
+					&lt;th&gt;Best for&lt;/th&gt;
+					&lt;th&gt;Current capability&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Desktop&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Daily interaction, file and Artifact workflows, model and permission setup&lt;/td&gt;
+					&lt;td&gt;Electron + React with streaming sessions, tool timelines, branching, search, and recovery&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;TUI / CLI&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Using Maka in the current project directory or running one non-interactive Turn&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;maka&lt;/code&gt;, &lt;code&gt;maka run&lt;/code&gt;; shares workspace and model connections with Desktop&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Eval&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Reproducible benchmark experiments across Maka and external subjects&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;maka eval run &amp;lt;spec&amp;gt; --out &amp;lt;directory&amp;gt;&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;current-capabilities&#34;&gt;Current capabilities
+&lt;/h2&gt;&lt;h3 id=&#34;agent-runtime&#34;&gt;Agent Runtime
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Multiple model connections, streaming output, thinking, usage, and clearer provider errors;&lt;/li&gt;
+&lt;li&gt;Built-in tools: &lt;code&gt;Read&lt;/code&gt;, &lt;code&gt;Write&lt;/code&gt;, &lt;code&gt;Edit&lt;/code&gt;, &lt;code&gt;Bash&lt;/code&gt;, &lt;code&gt;Glob&lt;/code&gt;, &lt;code&gt;Grep&lt;/code&gt;. Computer Use and catalog skills are optional and not on by default;&lt;/li&gt;
+&lt;li&gt;Tools that leave the sandbox must be approved; runs can be aborted; failures are classified;&lt;/li&gt;
+&lt;li&gt;A durable execution record, crash recovery, and optional resume of an interrupted turn.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;desktop-workspace&#34;&gt;Desktop workspace
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Create, archive, search, rename, retry, regenerate, and branch sessions from a Turn;&lt;/li&gt;
+&lt;li&gt;Artifact lists and previews, workspace instructions, model settings, and sandbox settings;&lt;/li&gt;
+&lt;li&gt;Local memory and web search when configured;&lt;/li&gt;
+&lt;li&gt;Chat apps (IM bots) are experimental. See &lt;a class=&#34;link&#34; href=&#34;./docs/architecture/bot-onboarding-runtime.zh-CN.md&#34; &gt;IM onboarding&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;evaluation&#34;&gt;Evaluation
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Declarative multi-arm experiments expanded into task × repetition × subject cells;&lt;/li&gt;
+&lt;li&gt;Immutable per-cell attempts with targeted infrastructure replacement and earliest-valid selection;&lt;/li&gt;
+&lt;li&gt;A small result kernel for score, normalized usage, attributable cost, duration, status, failure reason, and artifacts;&lt;/li&gt;
+&lt;li&gt;Maka subjects execute only through Runtime Host; external subjects use generic external subject adapters.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick start
+&lt;/h2&gt;&lt;h3 id=&#34;releases-and-downloads&#34;&gt;Releases and downloads
+&lt;/h3&gt;&lt;p&gt;Apache Maka has not made an Apache release yet. Everything currently published from this repository or from a package registry was produced before or during incubation, is not an Apache Software Foundation release, and has not been reviewed or voted on by the Incubator PMC.&lt;/p&gt;
+&lt;p&gt;Once Apache releases exist, the official release is the source release published by the ASF and approved by the podling PPMC and the Incubator PMC. A package built from that source and distributed elsewhere, for example through a package registry or as a Desktop installer, is a convenience artifact rather than the release itself, and it is valid only when it is built from an approved source release. &lt;a class=&#34;link&#34; href=&#34;./.github/ASF_SOURCE_RELEASE.md&#34; &gt;&lt;code&gt;.github/ASF_SOURCE_RELEASE.md&lt;/code&gt;&lt;/a&gt; holds the candidate contract, signing path, and verification steps.&lt;/p&gt;
+&lt;p&gt;Until an approved source release exists, this README recommends no prebuilt download. Build and run Maka from source as described below. Desktop currently targets Apple Silicon Macs (&lt;code&gt;arm64&lt;/code&gt;). Intel Macs and Linux are not supported yet. &lt;a class=&#34;link&#34; href=&#34;docs/windows-support.md&#34; &gt;Windows&lt;/a&gt; is an unsigned preview, not a supported release tier.&lt;/p&gt;
+&lt;h3 id=&#34;requirements&#34;&gt;Requirements
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Node.js 22.19 or newer (CI uses Node.js 24);&lt;/li&gt;
+&lt;li&gt;npm (the lockfile and scripts use npm; the current &lt;code&gt;packageManager&lt;/code&gt; is npm 11);&lt;/li&gt;
+&lt;li&gt;Git;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ripgrep&lt;/code&gt;, used by Runtime&amp;rsquo;s &lt;code&gt;Grep&lt;/code&gt; tool.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;start-desktop&#34;&gt;Start Desktop
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/apache/maka.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; maka
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm ci
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm run dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;npm run dev&lt;/code&gt; starts the Desktop development environment with HMR. To build every workspace before starting Electron, use:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm run dev:full
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If dependencies were installed with &lt;code&gt;ELECTRON_SKIP_BINARY_DOWNLOAD=1&lt;/code&gt;, install the Electron platform binary before starting:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;node node_modules/electron/install.js
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;first-run&#34;&gt;First run
+&lt;/h3&gt;&lt;p&gt;Maka does not bundle a shared model account. On first launch:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open &lt;code&gt;Settings → Models&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;Add an API, local-model, or supported account connection;&lt;/li&gt;
+&lt;li&gt;Test it and choose a default model;&lt;/li&gt;
+&lt;li&gt;Return to the workspace and start a task.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The app distinguishes configured, send-ready, and experimental connection states. An account flow that is not wired into Runtime is not presented as a usable model.&lt;/p&gt;
+&lt;h2 id=&#34;terminal-entry-points&#34;&gt;Terminal entry points
+&lt;/h2&gt;&lt;p&gt;For the public npm package, see the &lt;a class=&#34;link&#34; href=&#34;./packages/cli/README.md&#34; &gt;CLI installation and usage guide&lt;/a&gt;.
+The commands below run the development CLI from a source checkout.&lt;/p&gt;
+&lt;p&gt;Build the workspaces first:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm run build
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Then start the TUI or run one Turn:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm run cli:dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm run cli:dev -- run &lt;span class=&#34;s2&#34;&gt;&amp;#34;Summarize this repository and identify its most important risk&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm run cli:dev -- run --graph &lt;span class=&#34;s2&#34;&gt;&amp;#34;Implement two independent slices, integrate them, then review the result&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm run cli:dev -- --help
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The TUI also accepts &lt;code&gt;/graph on&lt;/code&gt;, &lt;code&gt;/graph off&lt;/code&gt;, and &lt;code&gt;/graph &amp;lt;task&amp;gt;&lt;/code&gt;. Non-interactive
+&lt;code&gt;--graph&lt;/code&gt; runs wait for the durable Graph to finish before printing the final
+supervisor output. Graph implementation operators use isolated Git worktrees, so
+the source project must be a clean Git worktree.&lt;/p&gt;
+&lt;p&gt;The repository CLI uses the same &lt;code&gt;Maka Dev&lt;/code&gt; profile as a development Desktop build. The
+released &lt;code&gt;maka&lt;/code&gt; binary continues to use the &lt;code&gt;Maka&lt;/code&gt; profile; the two profiles are not copied or
+synchronized automatically. Evaluation specs and adapters live in &lt;a class=&#34;link&#34; href=&#34;./packages/eval&#34; &gt;&lt;code&gt;packages/eval&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;architecture&#34;&gt;Architecture
+&lt;/h2&gt;&lt;p&gt;The backend spine is:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Desktop / TUI / CLI → Runtime Host → SessionManager → AgentRun
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                             ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                         Model + Tool Runtime → Runtime Event Log
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                                             ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                              Context / Session / UI projections
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Experiment → Cells → Attempts → Results
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    ↓
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       Runtime Host executes Maka subjects
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Start with &lt;a class=&#34;link&#34; href=&#34;./ARCHITECTURE.md&#34; &gt;ARCHITECTURE.md&lt;/a&gt;. It provides the system map, code boundaries, problem-oriented reading paths, and six bilingual deep dives.&lt;/p&gt;
+&lt;h2 id=&#34;repository-layout&#34;&gt;Repository layout
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apps/desktop/       Electron main / preload / React renderer
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;packages/core/      Pure contracts for Sessions, Events, Permissions, and Connections
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;packages/storage/   SQLite operational state, configuration, and payload stores
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;packages/runtime/   AgentRun, model adapters, tools, context, and recovery
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;packages/eval/      Experiment cells, attempts, results, and executor/subject adapters
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;packages/cli/       TUI and non-interactive CLI
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;packages/ui/        Shared conversation, Markdown, Artifact, and UI primitives
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docs/               Architecture, product, security, privacy, and test contracts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scripts/            Build hygiene, visual checks, smoke tests, and release helpers
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;local-data-and-recovery&#34;&gt;Local data and recovery
+&lt;/h2&gt;&lt;p&gt;Workspace data lives under Electron &lt;code&gt;userData&lt;/code&gt; by default:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;Electron userData&amp;gt;/workspaces/default/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  runtime.sqlite
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  connection-catalog.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  credential-vault.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  settings.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  artifacts/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;API keys and similar secrets are a local plaintext file (&lt;code&gt;credential-vault.json&lt;/code&gt;), readable only by your OS account. The renderer never sees them.&lt;/li&gt;
+&lt;li&gt;Tools that write files or run a shell must pass the sandbox boundary first.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;runtime.sqlite&lt;/code&gt; is the live record. Older JSONL transcripts and Electron &lt;code&gt;safeStorage&lt;/code&gt; credential files are not imported; an upgraded workspace can show empty threads, and those credentials must be entered again.&lt;/li&gt;
+&lt;li&gt;Resuming an interrupted turn is off by default. Set &lt;code&gt;MAKA_RUNTIME_SAFE_BOUNDARY_RESUME=1&lt;/code&gt; only if you want Desktop &lt;strong&gt;Safe resume&lt;/strong&gt;, CLI &lt;code&gt;/resume&lt;/code&gt;, and startup auto-resume — those calls hit the model and use tokens.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Details: &lt;a class=&#34;link&#34; href=&#34;./SECURITY.md&#34; &gt;SECURITY.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;./docs/workspace-privacy-context.md&#34; &gt;privacy&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;./docs/architecture/runtime-resume-architecture.md&#34; &gt;resume&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;development-and-verification&#34;&gt;Development and verification
+&lt;/h2&gt;&lt;p&gt;Before sending a change, read &lt;a class=&#34;link&#34; href=&#34;./CONTRIBUTING.md&#34; &gt;CONTRIBUTING.md&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Common repository-level commands:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm run build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm run typecheck
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm run check:release
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Run one workspace in isolation:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm --workspace @maka/runtime &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm --workspace @maka/eval &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm --workspace @maka/desktop &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Use &lt;code&gt;refresh:model-metadata&lt;/code&gt; to fetch the current catalog from models.dev, update the committed snapshot, and regenerate the derived TypeScript files. A refresh fails closed when any committed model, capability, provider override, or pricing field disappears; after reviewing an intentional upstream removal, acknowledge it with &lt;code&gt;npm run refresh:model-metadata -- --accept-upstream-removals&lt;/code&gt;. &lt;code&gt;sync:model-metadata&lt;/code&gt; is intentionally offline: it only regenerates those files from the committed snapshot. Keep access-path-specific overrides in &lt;code&gt;model-metadata.ts&lt;/code&gt;; do not edit the generated files by hand.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm run refresh:model-metadata
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm --workspace @maka/core &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Desktop real-window and visual verification:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm --workspace @maka/desktop run e2e
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm --workspace @maka/desktop run smoke:real-window
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Before submitting code, run typecheck, build, and focused tests proportionate to the change, followed by &lt;code&gt;git diff --check&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;./docs/README.md&#34; &gt;Documentation index and authority map&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;./ARCHITECTURE.md&#34; &gt;Backend architecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;./DESIGN.md&#34; &gt;Product design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;./CONTRIBUTING.md&#34; &gt;Contributing guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;./SECURITY.md&#34; &gt;Security policy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;Maka is licensed under the &lt;a class=&#34;link&#34; href=&#34;./LICENSE&#34; &gt;Apache License 2.0&lt;/a&gt;. See
+&lt;a class=&#34;link&#34; href=&#34;./NOTICE&#34; &gt;NOTICE&lt;/a&gt; for attribution information. Third-party components remain
+subject to their respective licenses and notices.&lt;/p&gt;
+&lt;p&gt;Apache Maka, Maka, Apache, the Apache feather, and the Apache Maka project logo are either registered trademarks or trademarks of The Apache Software Foundation.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>terminal-bench</title>
+        <link>https://producthunt.programnotes.cn/en/p/terminal-bench/</link>
+        <pubDate>Thu, 21 Aug 2025 15:31:31 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/terminal-bench/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1648730665635-4f2b670cd921?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU3NjE0MDF8&amp;ixlib=rb-4.1.0" alt="Featured image of post terminal-bench" /&gt;&lt;h1 id=&#34;laude-instituteterminal-bench&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/laude-institute/terminal-bench&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;laude-institute/terminal-bench&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;terminal-bench&#34;&gt;terminal-bench
+&lt;/h1&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#####################################################################
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#  _____                   _             _     ______________       #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# |_   _|__ _ __ _ __ ___ (_)_ __   __ _| |   ||            ||      #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#   | |/ _ \ &amp;#39;__| &amp;#39;_ ` _ \| | &amp;#39;_ \ / _` | |   || &amp;gt;          ||      #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#   | |  __/ |  | | | | | | | | | | (_| | |   ||            ||      #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#   |_|\___|_|  |_| |_| |_|_|_| |_|\__,_|_|   ||____________||      #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#   ____                  _                   |______________|      #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#  | __ )  ___ _ __   ___| |__                 \\############\\     #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#  |  _ \ / _ \ &amp;#39;_ \ / __| &amp;#39;_ \                 \\############\\    # 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#  | |_) |  __/ | | | (__| | | |                 \      ____    \   #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#  |____/ \___|_| |_|\___|_| |_|                  \_____\___\____\  #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#                                                                   #
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#####################################################################
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://discord.gg/6xWPKhGDbA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/Join_our_discord-5865F2?style=for-the-badge&amp;amp;logo=discord&amp;amp;logoColor=white&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Discord&#34;
+	
+	
+&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/laude-institute/terminal-bench&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/T--Bench-000000?style=for-the-badge&amp;amp;logo=github&amp;amp;logoColor=000&amp;amp;logoColor=white&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Github&#34;
+	
+	
+&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://www.tbench.ai/docs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/Docs-000000?style=for-the-badge&amp;amp;logo=mdbook&amp;amp;color=105864&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Docs&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Terminal-Bench is the benchmark for testing AI agents in real terminal environments. From compiling code to training models and setting up servers, Terminal-Bench evaluates how well agents can handle real-world, end-to-end tasks - autonomously.&lt;/p&gt;
+&lt;p&gt;Whether you&amp;rsquo;re building LLM agents, benchmarking frameworks, or stress-testing system-level reasoning, Terminal-Bench gives you a reproducible task suite and execution harness designed for practical, real-world evaluation.&lt;/p&gt;
+&lt;p&gt;Terminal-Bench consists of two parts: a &lt;strong&gt;dataset of tasks&lt;/strong&gt;, and an &lt;strong&gt;execution harness&lt;/strong&gt; that connects a language model to our terminal sandbox.&lt;/p&gt;
+&lt;p&gt;Terminal-Bench is currently in &lt;strong&gt;beta&lt;/strong&gt; with ~100 tasks. Over the coming months, we are going to expand Terminal-Bench into comprehensive testbed for AI agents in text-based environments. Any contributions are welcome, especially new and challenging tasks!&lt;/p&gt;
+&lt;h2 id=&#34;quickstart&#34;&gt;Quickstart
+&lt;/h2&gt;&lt;p&gt;Our &lt;a class=&#34;link&#34; href=&#34;https://www.tbench.ai/docs/installation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Quickstart Guide&lt;/a&gt; will walk you through installing the repo and contributing.&lt;/p&gt;
+&lt;p&gt;Terminal-Bench is distributed as a pip package and can be run using the Terminal-Bench CLI: &lt;code&gt;tb&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uv tool install terminal-bench
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;or&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install terminal-bench
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;further-documentation&#34;&gt;Further Documentation
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.tbench.ai/tasks&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Task Gallery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.tbench.ai/docs/task-ideas&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Task Ideas&lt;/a&gt; - Browse community-sourced task ideas&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.tbench.ai/docs/dashboard&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Dashboard Documentation&lt;/a&gt; - Information about the Terminal-Bench dashboard&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;core-components&#34;&gt;Core Components
+&lt;/h2&gt;&lt;h3 id=&#34;dataset-of-tasks&#34;&gt;Dataset of Tasks
+&lt;/h3&gt;&lt;p&gt;Each task in Terminal-Bench includes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a instruction in English,&lt;/li&gt;
+&lt;li&gt;a test script to verify if the language model / agent completed the task successfully,&lt;/li&gt;
+&lt;li&gt;a reference (&amp;ldquo;oracle&amp;rdquo;) solution that solves the task.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tasks are located in the &lt;a class=&#34;link&#34; href=&#34;./tasks&#34; &gt;&lt;code&gt;tasks&lt;/code&gt;&lt;/a&gt; folder of the repository, and the aforementioned list of current tasks gives an overview that is easy to browse.&lt;/p&gt;
+&lt;h3 id=&#34;execution-harness&#34;&gt;Execution Harness
+&lt;/h3&gt;&lt;p&gt;The harness connects language models to a sandboxed terminal environment. After &lt;a class=&#34;link&#34; href=&#34;https://www.tbench.ai/docs/installation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;installing the terminal-bench package&lt;/a&gt; (along with the dependencies &lt;code&gt;uv&lt;/code&gt; and &lt;code&gt;Docker&lt;/code&gt;) you can view how to run the harness using:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tb run --help
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For detailed information about running the harness and its options, see the &lt;a class=&#34;link&#34; href=&#34;https://www.tbench.ai/docs/first-steps&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;submit-to-our-leaderboard&#34;&gt;Submit to Our Leaderboard
+&lt;/h3&gt;&lt;p&gt;Terminal-Bench-Core v0.1.1 is the set of tasks for Terminal-Bench&amp;rsquo;s beta release and corresponds to the current leaderboard. To evaluate on it pass &lt;code&gt;--dataset-name terminal-bench-core&lt;/code&gt; and &lt;code&gt;--dataset-version 0.1.1&lt;/code&gt; to the harness. For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tb run &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --agent terminus &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --model-name anthropic/claude-3-7-latest &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --dataset-name terminal-bench-core
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --dataset-version 0.1.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --n-concurrent &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For more detailed instructions on submitting to the leaderboard, view our &lt;a class=&#34;link&#34; href=&#34;https://www.tbench.ai/docs/submitting-to-leaderboard&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;leaderboard submission guide&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For more information on Terminal-Bench datasets and versioning view our &lt;a class=&#34;link&#34; href=&#34;https://www.tbench.ai/docs/registry&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;registry overview&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;creating-new-tasks&#34;&gt;Creating New Tasks
+&lt;/h2&gt;&lt;p&gt;View our &lt;a class=&#34;link&#34; href=&#34;https://www.tbench.ai/docs/task-quickstart&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;task contribution quickstart&lt;/a&gt; to create a new task.&lt;/p&gt;
+&lt;h2 id=&#34;citing-us&#34;&gt;Citing Us
+&lt;/h2&gt;&lt;p&gt;If you found Terminal-Bench useful, please cite us as:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@misc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;tbench_2025&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{Terminal-Bench: A Benchmark for AI Agents in Terminal Environments}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{https://github.com/laude-institute/terminal-bench}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{The Terminal-Bench Team}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{2025}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;month&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{Apr}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
