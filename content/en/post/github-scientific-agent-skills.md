@@ -1,9 +1,9 @@
 ---
 title: scientific-agent-skills
-date: 2026-10-16T20:26:04+08:00
+date: 2026-10-17T19:45:53+08:00
 draft: False
-image: https://images.unsplash.com/photo-1487266659293-c4762f375955?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTIxNTM1MTB8&ixlib=rb-4.1.0
-tags: ['github',Scientific Agent Skills, AI Research Agents, Open Source Repository]
+image: https://images.unsplash.com/photo-1760644520246-e84fadc18cd6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTIyMzczOTR8&ixlib=rb-4.1.0
+tags: ['github',Scientific Agent Skills,AI Research Workflows,Python Scientific Libraries]
 categories: ['github']
 ---
 

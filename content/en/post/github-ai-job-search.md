@@ -1,9 +1,9 @@
 ---
 title: ai-job-search
-date: 2026-08-26T16:03:26+08:00
+date: 2026-10-17T19:44:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1673970825861-3469f8fe01d3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODc3MzEyOTF8&ixlib=rb-4.1.0
-tags: ['github',AI job search, job application automation, interview preparation]
+image: https://images.unsplash.com/photo-1504838986326-0f4d3ce9cf63?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTIyMzczOTR8&ixlib=rb-4.1.0
+tags: ['github',AI Job Search, Automated Applications, Resume Generation]
 categories: ['github']
 ---
 
@@ -72,11 +72,11 @@ The framework encodes career guidance best practices, including structured evalu
 
 ## Prerequisites
 
-- [Claude Code](https://claude.com/claude-code) (CLI). Using a different agent tool (Codex, Antigravity, Gemini CLI)? Start at [`AGENTS.md`](AGENTS.md) - the portal search skills work there out of the box, and [community forks](https://github.com/MadsLorentzen/ai-job-search/discussions/78) adapt the full workflow.
+- [Claude Code](https://claude.com/claude-code) (CLI). Claude Code has no free tier: you need a Claude Pro/Max/Team subscription or Anthropic API credits (pay-per-token, usually cheaper for occasional use). Using a different agent tool (Codex, Antigravity, Gemini CLI)? Start at [`AGENTS.md`](AGENTS.md) - the portal search skills work there out of the box, and [community forks](https://github.com/MadsLorentzen/ai-job-search/discussions/78) adapt the full workflow.
 - Python 3.10+
 - [Bun](https://bun.sh) (for job search CLI tools)
 - LaTeX distribution with `lualatex` and `xelatex`: [TeX Live](https://tug.org/texlive/), [MacTeX](https://tug.org/mactex/), [TinyTeX](https://yihui.org/tinytex/), or [MiKTeX](https://miktex.org/). The CV compiles with `lualatex` (pdflatex often fails on modern MiKTeX installs with `fontawesome5` font-expansion errors); the cover letter compiles with `xelatex` because `cover.cls` requires `fontspec`. If using a minimal TeX install such as TinyTeX or BasicTeX, install the extra packages listed in [SETUP.md](SETUP.md#minimal-tex-install-tinytexbasictex).
-- Optional: `pdftotext` from [poppler](https://poppler.freedesktop.org/) (macOS: `brew install poppler`, Debian/Ubuntu: `apt install poppler-utils`, Windows: `choco install poppler`) — used by `/apply`'s ATS parseability check on the compiled CV. If missing, the check degrades gracefully to a visual keyword review.
+- Optional: `pip install pypdf` for `/apply`'s ATS parseability check (BSD; no Poppler required). Poppler `pdftotext` remains a fallback (macOS: `brew install poppler`, Debian/Ubuntu: `apt install poppler-utils`, Windows: `choco install poppler`). If both are missing, the check degrades to a visual keyword review.
 
 ## Quick start
 
@@ -100,24 +100,11 @@ cd ai-job-search
 
 ### 2. Install job search tools
 
-PowerShell:
-
-```powershell
-$tools = @("jobbank-search", "jobdanmark-search", "jobindex-search", "jobnet-search", "linkedin-search", "freehire-search")
-foreach ($tool in $tools) {
-  Push-Location ".agents/skills/$tool/cli"
-  bun install
-  Pop-Location
-}
-```
-
-Bash / zsh / Git Bash:
-
 ```bash
-for tool in jobbank-search jobdanmark-search jobindex-search jobnet-search linkedin-search freehire-search; do
-  (cd .agents/skills/$tool/cli && bun install)
-done
+python3 tools/install_portal_clis.py   # Windows: python tools\install_portal_clis.py
 ```
+
+It runs `bun install` in every portal CLI under `.agents/skills/*/cli/` - discovered, not listed, so a portal you add with `/add-portal` or copy from another fork is included on a fresh clone. A CLI whose `package.json` declares an install-time lifecycle script is skipped and reported rather than run. `--dry-run` shows what it would install.
 
 For `linkedin-search` and `freehire-search` the install is optional: both have zero runtime dependencies and run with plain `bun`; `bun install` only pulls TypeScript dev types.
 
@@ -232,10 +219,12 @@ ai-job-search/
 │   ├── check_framework_version.py     # CI check: framework_version bumped when skill files change
 │   ├── check_upstream_updates.py      # Preview which personalized files an upstream update touches
 │   ├── convert_salary_excel.py        # Convert salary Excel to JSON
+│   ├── install_portal_clis.py         # Install every discovered portal CLI (bun install)
 │   ├── lint_skills.py                 # CI lint for skills, commands, settings.json
 │   ├── robots_check.py                # Gate the browser-header retry against robots.txt
 │   ├── security_guards.py             # CI guards: permission allowlist, gitignore rules, manifests
 │   ├── upstream_triage.py             # Sort upstream commits into worth-reviewing vs probably-skip
+│   ├── verify_layout.py               # Measure a compiled PDF's page layout (holes, orphans, footer collisions)
 │   ├── verify_pdf.py                  # Verify a compiled PDF's page count and extractable text
 │   └── README_SALARY_TOOL.md          # Salary tool setup instructions
 ├── job_scraper/                       # Scraper state (seen jobs, results)
