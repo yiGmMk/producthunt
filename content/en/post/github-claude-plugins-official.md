@@ -1,9 +1,9 @@
 ---
 title: claude-plugins-official
-date: 2026-10-17T19:43:48+08:00
+date: 2026-10-18T20:15:03+08:00
 draft: False
-image: https://images.unsplash.com/photo-1504838986326-0f4d3ce9cf63?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTIyMzczOTR8&ixlib=rb-4.1.0
-tags: ['github',Claude Code, Plugins, Marketplace]
+image: https://images.unsplash.com/photo-1545401286-d0f8826ab98c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTIzMjU2NDR8&ixlib=rb-4.1.0
+tags: ['github',claude code, plugins, marketplace]
 categories: ['github']
 ---
 
