@@ -1,9 +1,9 @@
 ---
 title: ruflo
-date: 2026-10-18T20:16:29+08:00
+date: 2026-10-19T22:44:43+08:00
 draft: False
-image: https://images.unsplash.com/photo-1636992539350-b89430fe3286?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTIzMjU2NDR8&ixlib=rb-4.1.0
-tags: ['github',ruflo, ai agents, claude code]
+image: https://images.unsplash.com/photo-1674777114341-a158a1e41d01?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTI0MjA5Mzd8&ixlib=rb-4.1.0
+tags: ['github',agent orchestration,MCP server,self learning memory]
 categories: ['github']
 ---
 

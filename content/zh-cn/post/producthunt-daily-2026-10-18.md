@@ -1,0 +1,140 @@
+---
+title: Product Hunt 今日热榜 | 2026-10-19
+date: 2026-10-19 14:39:08+0000
+image: https://ph-files.imgix.net/2f067ad5-1e46-4ce9-9c74-5e4ff1d128bd.jpeg?auto=format
+tags: ["开源邮件客户端", "统一收件箱", "AI邮件助手"]
+categories: ["工具"]
+---
+
+## 1. Inbox Zero  
+**标语**: Superhuman 的开源替代方案  
+**介绍**: Inbox Zero Mail 是一款适用于 Gmail 和 Outlook 的开源电子邮件客户端。它运行迅速，主打键盘操作，完全免费，支持网页版、Mac、Windows 和 iPhone 平台，可将所有邮箱账户统一收纳于一个收件箱中。每月仅需 20 美元即可启用 AI 功能：每封邮件都会自动分类整理，并在您打开前以您的个人语气草拟好回复。支持与团队成员进行私密留言，接收 Slack 通知，并允许 AI 获取您常用工具中的上下文信息。  
+**网站**: [立即访问](https://www.producthunt.com/r/FK6F3KNVDZW35Y?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/inbox-zero-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Inbox Zero](https://ph-files.imgix.net/2f067ad5-1e46-4ce9-9c74-5e4ff1d128bd.jpeg?auto=format)  
+**关键词**: 开源邮件客户端, 统一收件箱, AI邮件助手, 快捷键优先, 跨平台支持, 免费高效, 团队协同, 智能分类, 自动草稿, 生产力工具  
+**票数**: 🔺342  
+**是否精选**: 是  
+**发布时间**: 2026年10月18日 PM03:01 (北京时间)  
+
+---  
+
+{{< ad-inarticle >}}
+
+## 2. MyLens  
+**标语**: 1-1 借助AI实现大规模直播演示  
+**介绍**: MyLens是一款面向大规模实时一对一演示的AI工具。上传原始资料，指明核心内容，随后邀请您的听众参与。MyLens AI 会为每位参与者提供专属的实时演示，基于您提供的资料实时解答疑问，并在演示过程中同步生成新的幻灯片与内容层级。AI 将为您反馈每场会话的具体情况，帮助您清晰掌握参与者的状态：谁已掌握要点，谁仍遇瓶颈，以及接下来该如何跟进。  
+**网站**: [立即访问](https://www.producthunt.com/r/RES6VMKW3LGAIK?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/mylens-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![MyLens](https://ph-files.imgix.net/552d436f-cf8f-443d-b96a-4f974503af58.jpeg?auto=format)  
+**关键词**: AI演示,实时互动,个性化定制,智能答疑,动态PPT,效果分析,企业培训,商务演示  
+**票数**: 🔺211  
+**是否精选**: 是  
+**发布时间**: 2026年10月18日 PM03:01 (北京时间)  
+
+---  
+
+## 3. shim-cli  
+**标语**: 查看编程代理发送的内容，并隐藏你能隐藏的信息。  
+**介绍**: 一款面向 Claude Code、Codex、Copilot CLI 和 VS Code 的开源钩子与本地代理。在 Claude Code 中，它会在模型读取前对工具结果中的密钥和个人数据进行遮蔽；shim watch 可展示会话发送的数据及产生的费用。无需账号，无遥测收集。  
+**网站**: [立即访问](https://www.producthunt.com/r/2E657WIGYUKWTP?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/shim-cli?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![shim-cli](https://ph-files.imgix.net/b466991a-54d6-4bf2-896d-e6f22eaf00fa.png?auto=format)  
+**关键词**: 开源CLI,本地代理,数据脱敏,隐私保护,密钥隐藏,流量监控,成本追踪,无遥测,代码安全,AI编程工具  
+**票数**: 🔺188  
+**是否精选**: 是  
+**发布时间**: 2026年10月18日 PM03:01 (北京时间)  
+
+---  
+
+## 4. Tower 18 for Mac  
+**标语**: 最强大的 Git 客户端，提供卓越的命令行体验  
+**介绍**: Tower 18 for Mac 现已发布！本次更新专注于提升终端中的 Tower 体验：Tower 命令行工具现已支持通过单条命令直接跳转至 Tower 中的任意视图（包括历史记录、Blame、工作副本、分支审查等）。  
+**网站**: [立即访问](https://www.producthunt.com/r/H54Y7ZW2KMIL66?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/tower?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Tower 18 for Mac](https://ph-files.imgix.net/8fab1bb9-fef1-4f66-bace-5420d0f0fda8.png?auto=format)  
+**关键词**: Tower 18,Git客户端,Mac版,命令行工具,终端集成,版本控制,开发者工具  
+**票数**: 🔺151  
+**是否精选**: 是  
+**发布时间**: 2026年10月18日 PM03:01 (北京时间)  
+
+---  
+
+## 5. MeetPaw  
+**标语**: 从 Mac 菜单栏发起即时会议  
+**介绍**: MeetPaw 是一款轻量级 macOS 菜单栏应用，让你一键即可开启会议。需要时，它能瞬间生成 Google Meet、Zoom 或 Microsoft Teams 的会议链接。链接生成后会立即复制至剪贴板，并在你切换窗口前就已准备就绪。无需多标签页，无需层层翻找，全程零摩擦。  
+**网站**: [立即访问](https://www.producthunt.com/r/CLGB7TMIM44O62?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/meetpaw?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![MeetPaw](https://ph-files.imgix.net/39b1d756-bd6f-42b2-85ea-2c1449de7dac.jpeg?auto=format)  
+**关键词**: 一键会议,macOS菜单栏,快速会议链接,多平台支持,轻量高效,即时共享,远程协作,工作效率  
+**票数**: 🔺136  
+**是否精选**: 是  
+**发布时间**: 2026年10月18日 PM03:01 (北京时间)  
+
+---  
+
+## 6. XBOX Nano Controller  
+**标语**: 口袋大小无线游戏手柄，配备全部18个按键  
+**介绍**: 使用 Xbox Nano 手柄，将游戏乐趣带到更多地方。以小巧机身，让你的日常随时融入游戏。蓝牙连接，轻松实现跨设备畅玩。  
+**网站**: [立即访问](https://www.producthunt.com/r/EAREDKT5V2YY67?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/microsoft-xbox-series-s?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![XBOX Nano Controller](https://ph-files.imgix.net/17820f30-5848-411a-9bac-c0ce513357f2.jpeg?auto=format)  
+**关键词**: 迷你游戏手柄,便携无线手柄,蓝牙控制器,口袋游戏手柄,多设备兼容,全按键手柄,Xbox迷你手柄  
+**票数**: 🔺119  
+**是否精选**: 是  
+**发布时间**: 2026年10月18日 PM03:01 (北京时间)  
+
+---  
+
+## 7. 3AM Super Intelligence  
+**标语**: 生产故障：已排查、已定位、已修复  
+**介绍**: 认识一下 3AM，这是一款专为无法重写的系统打造的 AI 值班工程师。它能定位根因、演练修复方案，只需在 Slack 中轻点一下即可解决故障，且所有操作均在您的内网环境中完成。  
+**网站**: [立即访问](https://www.producthunt.com/r/PUH26LXS2WLDLX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/3am-super-intelligence?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![3AM Super Intelligence](https://ph-files.imgix.net/4059fe3d-d7df-4b89-85bb-73f627b5368e.png?auto=format)  
+**关键词**: 智能运维, 故障排查, 根因分析, 一键修复, Slack集成, 内网部署, AI值班, 自动化运维  
+**票数**: 🔺103  
+**是否精选**: 是  
+**发布时间**: 2026年10月18日 PM03:01 (北京时间)  
+
+---  
+
+## 8. Tomo for ChatGPT  
+**标语**: 随时提问，然后用多邻国式的玩法来练习。  
+**介绍**: 向 ChatGPT 询问黑洞主题的 Tomo 课程，一款游戏便会直接弹入聊天界面。快问快答，心跳悬于一线。涵盖任意主题，甚至就是你当前的对话内容。自由选择导师，从教授到海盗任你挑。只需在 ChatGPT 插件中心添加 Tomo。无需注册，即刻开玩。  
+**网站**: [立即访问](https://www.producthunt.com/r/B7PYM6TZUHFML4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/tomo-for-chatgpt?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Tomo for ChatGPT](https://ph-files.imgix.net/488580f2-96a0-4c03-84ec-417d3432ae58.png?auto=format)  
+**关键词**: AI学习插件,游戏化教育,ChatGPT插件,互动答题,趣味闯关,角色扮演教学,免注册即用,任意主题  
+**票数**: 🔺95  
+**是否精选**: 是  
+**发布时间**: 2026年10月18日 PM03:01 (北京时间)  
+
+---  
+
+## 9. Bee Frontier and Bee Eclipse  
+**标语**: 亚马逊个人AI记忆，现已上线智能手表与手机端。  
+**介绍**: Bee Frontier 和 Bee Eclipse 是亚马逊全新推出的个人 AI 设备，可助您牢记重要事项。Frontier 为腕部或衣物佩戴式设备，Eclipse 则支持磁吸固定于手机。两者均能捕捉对话内容，并自动转化为实用的摘要、提醒与后续跟进事项，且全程不保存音频录音。通过接入 Alexa+，您的个人 AI 记忆将帮助您精准回忆关键细节，以便日后及时处理。  
+**网站**: [立即访问](https://www.producthunt.com/r/WNZ6NFZTTN7MBD?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/bee-frontier-and-bee-eclipse?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Bee Frontier and Bee Eclipse](https://ph-files.imgix.net/f164daef-b6da-48b0-8662-e4c811e51337.jpeg?auto=format)  
+**关键词**: 亚马逊, 个人AI记忆, Bee Frontier, Bee Eclipse, 对话摘要, 智能提醒, Alexa+, 可穿戴设备, 磁吸配件, AI硬件  
+**票数**: 🔺93  
+**是否精选**: 是  
+**发布时间**: 2026年10月18日 PM03:01 (北京时间)  
+
+---  
+
+## 10. Openbroca  
+**标语**: Mac轻量级AI语音输入，完美还原你的音色  
+**介绍**: Openbroca 是一款基于原生 Swift 开发的 Mac AI 语音输入应用，下载体积仅约 6.5 MB。按下快捷键自然口述，即可随时插入到您正在输入的任意位置，生成纯净文本。它能智能去除语气词和重复内容，同时完整保留您的原意与语气，全程无需调整提示词。支持通过纠错学习构建个人词典、导入 Typeless 词典，并提供 28 种语言的翻译功能。所有功能均可免费试用。  
+**网站**: [立即访问](https://www.producthunt.com/r/BLEYUJP5LFNQCX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/openbroca?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Openbroca](https://ph-files.imgix.net/46e1376a-116e-47f1-810f-8329e6dd8344.jpeg?auto=format)  
+**关键词**: AI语音输入,Mac原生应用,智能语音识别,文本自动清理,个人词库学习,多语言翻译,轻量级工具,免费试用  
+**票数**: 🔺92  
+**是否精选**: 是  
+**发布时间**: 2026年10月18日 PM03:01 (北京时间)  
+
+---  
+

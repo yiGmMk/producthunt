@@ -1,9 +1,9 @@
 ---
 title: ai-job-search
-date: 2026-10-18T20:14:30+08:00
+date: 2026-10-19T22:42:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1574026415093-14ca826b2a85?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTIzMjU2NDR8&ixlib=rb-4.1.0
-tags: ['github',AI Job Search, Automated Applications, Career Development]
+image: https://images.unsplash.com/photo-1674777114341-a158a1e41d01?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTI0MjA5Mzd8&ixlib=rb-4.1.0
+tags: ['github',AI job search, automated applications, resume tailoring]
 categories: ['github']
 ---
 
