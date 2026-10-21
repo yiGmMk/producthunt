@@ -1,9 +1,9 @@
 ---
 title: orca
-date: 2026-10-20T20:52:38+08:00
+date: 2026-10-21T21:03:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1588578909723-af2d43f196e2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTI1MDA2ODJ8&ixlib=rb-4.1.0
-tags: ['github',AI Orchestrator, Parallel Worktrees, CLI Agents]
+image: https://images.unsplash.com/photo-1683817580104-57bcb2eca608?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTI1ODc3MjJ8&ixlib=rb-4.1.0
+tags: ['github',AI orchestrator, AI coding agents, parallel worktrees]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: security-audit-skill
-date: 2026-10-20T20:52:14+08:00
+date: 2026-10-21T21:02:46+08:00
 draft: False
-image: https://images.unsplash.com/photo-1588578909723-af2d43f196e2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTI1MDA2ODJ8&ixlib=rb-4.1.0
-tags: ['github',Security Audit, Vulnerability Hunting, Coding Agent]
+image: https://images.unsplash.com/photo-1519874894605-54cfd04fa2fc?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTI1ODc3MjJ8&ixlib=rb-4.1.0
+tags: ['github',security audit, coding agent, vulnerability discovery]
 categories: ['github']
 ---
 
