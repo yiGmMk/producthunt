@@ -1,9 +1,9 @@
 ---
 title: php-src
-date: 2026-10-22T21:03:03+08:00
+date: 2026-10-23T20:42:29+08:00
 draft: False
-image: https://images.unsplash.com/photo-1545063914-a1a6ec821c88?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTI2NzQxNjB8&ixlib=rb-4.1.0
-tags: ['github',PHP, Source Code, Extensions]
+image: https://images.unsplash.com/photo-1728897711128-7c6a683c2747?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTI3NTkzMDB8&ixlib=rb-4.1.0
+tags: ['github',PHP, Source Code, Installation]
 categories: ['github']
 ---
 

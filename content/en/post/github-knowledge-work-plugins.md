@@ -1,9 +1,9 @@
 ---
 title: knowledge-work-plugins
-date: 2026-10-22T21:03:27+08:00
+date: 2026-10-23T20:42:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1590173872156-7caa1375e3ad?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTI2NzQxNjB8&ixlib=rb-4.1.0
-tags: ['github',Knowledge Work Plugins, Claude AI, Plugin Customization]
+image: https://images.unsplash.com/photo-1692981226516-f76bcc8945b3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTI3NTkzMDB8&ixlib=rb-4.1.0
+tags: ['github',Knowledge Work Plugins, Claude AI, Custom Workflows]
 categories: ['github']
 ---
 

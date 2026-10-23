@@ -1,9 +1,9 @@
 ---
 title: OpenShell
-date: 2026-10-01T22:32:53+08:00
+date: 2026-10-23T20:43:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1783990350684-71c38af04a8a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTA4NjUwOTB8&ixlib=rb-4.1.0
-tags: ['github',OpenShell, Autonomous AI Agents, Secure Sandboxes]
+image: https://images.unsplash.com/photo-1550664865-e35e69d95f48?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTI3NTkzMDB8&ixlib=rb-4.1.0
+tags: ['github',Autonomous AI Agents, Sandbox Isolation, Policy Enforcement]
 categories: ['github']
 ---
 
@@ -89,7 +89,7 @@ SDKs connect applications to an OpenShell gateway. They do not install the CLI. 
 - **Roadmap:** [OpenShell Roadmap](https://github.com/orgs/NVIDIA/projects/233) and the [RFC board](https://github.com/orgs/NVIDIA/projects/233/views/6)
 - **Try it in the cloud:** [Brev Launchable](https://brev.nvidia.com/launchable/deploy/now?launchableID=env-3Ap3tL55zq4a8kew1AuW0FpSLsg)
 
-OpenShell is built agent-first: it is developed with the same agent-driven workflows it enables. See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup and the contribution workflow, and [AGENTS.md](AGENTS.md) for the contributor agent skills and workflow chains.
+OpenShell is built agent-first: it is developed with the same agent-driven workflows it enables. See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup and the contribution workflow, and [AGENTS.md](AGENTS.md) for repository coding conventions.
 
 ## Telemetry
 
