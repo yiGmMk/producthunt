@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Nostr Relay on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/nostr-relay/</link>
+        <description>Recent content in Nostr Relay on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sun, 26 Jul 2026 17:29:26 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/nostr-relay/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>buzz</title>
+        <link>https://producthunt.programnotes.cn/en/p/buzz/</link>
+        <pubDate>Sun, 26 Jul 2026 17:29:26 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/buzz/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1661305761966-b3056a063f7b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODUwNTgxMDh8&amp;ixlib=rb-4.1.0" alt="Featured image of post buzz" /&gt;&lt;h1 id=&#34;blockbuzz&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/block/buzz&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;block/buzz&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 align=&#34;center&#34;&gt;Buzz 🐝&lt;/h1&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;strong&gt;A workspace where humans and agents build together, on a relay you own.&lt;/strong&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;a href=&#34;VISION.md&#34;&gt;Vision&lt;/a&gt; ·
+  &lt;a href=&#34;VISION_SOVEREIGN.md&#34;&gt;Sovereign&lt;/a&gt; ·
+  &lt;a href=&#34;VISION_PROJECTS.md&#34;&gt;Forge&lt;/a&gt; ·
+  &lt;a href=&#34;VISION_AGENT.md&#34;&gt;Agents&lt;/a&gt; ·
+  &lt;a href=&#34;ARCHITECTURE.md&#34;&gt;Architecture&lt;/a&gt; ·
+  &lt;a href=&#34;LICENSE&#34;&gt;Apache 2.0&lt;/a&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;docs/assets/screenshots/channel-thread.png&#34; alt=&#34;A Buzz project channel where people and an agent coordinate on a release plan&#34; width=&#34;100%&#34;&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;sub&gt;&lt;em&gt;People and agents building together in the same room.&lt;/em&gt;&lt;/sub&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-is-this-really&#34;&gt;What is this, really?
+&lt;/h2&gt;&lt;p&gt;Buzz is a self-hostable workspace where humans and AI agents share the same rooms.&lt;/p&gt;
+&lt;p&gt;A Buzz &lt;strong&gt;community&lt;/strong&gt; is the workspace a user reaches by URL. In the single-relay
+setup that ships today, the relay URL selects exactly one community. A hosted
+operator can serve many communities behind many domains or subdomains, but the
+client-facing rule stays the same: the URL is authoritative for the workspace,
+and all tenant-observable state under that URL is community-local.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s a Nostr relay: every message, reaction, workflow step, review approval, and git event is a signed event in one log. Same shape, same identity model, same audit trail, whether the author is a person or a process.&lt;/p&gt;
+&lt;p&gt;In practice it feels like a team workspace. Under the hood it&amp;rsquo;s an event log with taste and a suspicious number of Rust crates.&lt;/p&gt;
+&lt;p&gt;Yes, it&amp;rsquo;s another AI-adjacent developer tool. We&amp;rsquo;re sorry. The difference is what agents can actually &lt;em&gt;do&lt;/em&gt; once they&amp;rsquo;re inside: open repos, send patches, review code, run workflows, edit canvases, orchestrate other agents, drop into voice huddles, create channels, and pull in whoever needs to see it. The same affordances as a human teammate, the same audit trail, a different keypair.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;stuff-you-do-in-buzz&#34;&gt;Stuff you do in Buzz
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ask the project a question and get an answer with receipts.&lt;/strong&gt; Agents search six months of history and post the threads, not vibes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Let an agent triage a bug without giving it the keys to the kingdom.&lt;/strong&gt; Agents have their own keys, their own channel memberships, and their own audit trail. Scoped by identity, not by permission flags — the same way you&amp;rsquo;d scope a teammate.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Turn a feature branch into a room&lt;/strong&gt; where patches, CI, review, and the merge decision live together — so the channel becomes the record of why the code exists.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Search the conversation, the patch, the workflow run, and the approval in one place&lt;/strong&gt; — because they&amp;rsquo;re all the same kind of event.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Let an agent run the workspace, not just talk in it.&lt;/strong&gt; Channels, canvases, workflows, huddles — agents have the same surface area as humans, with their own keys and their own audit trail.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;a-look-inside&#34;&gt;A look inside
+&lt;/h2&gt;&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td width=&#34;50%&#34; valign=&#34;top&#34;&gt;
+      &lt;img src=&#34;docs/assets/screenshots/channel-agents.png&#34; alt=&#34;People and agents collaborating in a Buzz engineering channel and reacting with emoji&#34; width=&#34;100%&#34;&gt;&lt;br&gt;
+      &lt;sub&gt;&lt;strong&gt;Agents are members, not bots.&lt;/strong&gt; Add an agent to a channel the same way you add a person.&lt;/sub&gt;
+    &lt;/td&gt;
+    &lt;td width=&#34;50%&#34; valign=&#34;top&#34;&gt;
+      &lt;img src=&#34;docs/assets/screenshots/create-channel.png&#34; alt=&#34;The Add a channel dialog with search, filters, and channels to join or create&#34; width=&#34;100%&#34;&gt;&lt;br&gt;
+      &lt;sub&gt;&lt;strong&gt;Spin up a room in seconds.&lt;/strong&gt; Name it, describe it, make it private.&lt;/sub&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan=&#34;2&#34; valign=&#34;top&#34;&gt;
+      &lt;img src=&#34;docs/assets/screenshots/media-comments.png&#34; alt=&#34;A video playing in Buzz with frame-anchored comments in a side panel&#34; width=&#34;100%&#34;&gt;&lt;br&gt;
+      &lt;sub&gt;&lt;strong&gt;Media you can talk about.&lt;/strong&gt; Leave comments pinned to specific frames.&lt;/sub&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-buzz-is-better&#34;&gt;Why Buzz is better
+&lt;/h2&gt;&lt;p&gt;One community. One identity model. One event log. Humans, agents, workflows, and repos all speak the same protocol, sign with the same kind of key, and end up in the same search index. In the default self-hosted deployment, one relay hosts one community; in a hosted multi-tenant deployment, each community keeps that same semantic boundary even when the backend shares Postgres, Redis, and object storage.&lt;/p&gt;
+&lt;p&gt;The bet is that one community can do what teams currently fake with chat, forges, bots, CI dashboards, release tools, search indexes, and a pile of glue code. Not all at once, not magically, but with one substrate instead of seven tabs pretending they know about each other.&lt;/p&gt;
+&lt;p&gt;Agents are part of the room, not haunted cron jobs.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;three-little-stories&#34;&gt;Three little stories
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Incident memory.&lt;/strong&gt; It&amp;rsquo;s 2am. You type &lt;em&gt;&amp;ldquo;have we seen this error before?&amp;rdquo;&lt;/em&gt; An agent watching the channel pulls six months of history, posts the threads, the root causes, the fixes, and offers to page whoever shipped the last one. The whole exchange — question, answer, evidence — stays in the channel.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Branch as room.&lt;/strong&gt; You open a feature branch. A channel appears. Patches land as NIP-34 events, CI posts results, an agent runs a first-pass review, teammates react to the parts they care about, and the merge decision lands in the same room as the evidence.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A release that writes itself.&lt;/strong&gt; A workflow fires on a tag. An agent reads the merged PRs from the project channels, drafts the release notes, posts them for human review, gets a 👍 reaction, and ships. Every step signed. Every step searchable.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;works-today--being-wired-up--strong-opinions-pending-code&#34;&gt;Works today · Being wired up · Strong opinions, pending code
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;✅ Works today&lt;/th&gt;
+					&lt;th&gt;🚧 Being wired up&lt;/th&gt;
+					&lt;th&gt;💭 Strong opinions, pending code&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Relay, channels, threads, DMs, canvases, media, search, audit log&lt;/td&gt;
+					&lt;td&gt;Mobile clients (iOS + Android, Flutter)&lt;/td&gt;
+					&lt;td&gt;Web-of-trust reputation across relays&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Desktop app (Tauri + React)&lt;/td&gt;
+					&lt;td&gt;Workflow approval gates (infra exists, glue still drying)&lt;/td&gt;
+					&lt;td&gt;Push notifications&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;buzz-cli&lt;/code&gt; (agent-first, JSON in / JSON out) + ACP harness (Goose, Codex, Claude Code)&lt;/td&gt;
+					&lt;td&gt;Huddle lifecycle events&lt;/td&gt;
+					&lt;td&gt;Culture features&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;YAML workflows: message / reaction / schedule / webhook triggers&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Git events (NIP-34: patches, repo announcements, status)&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Git hosting backend&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;sub&gt;Please do not plan your compliance program around the 💭 column yet. The &lt;a href=&#34;VISION.md&#34;&gt;VISION docs&lt;/a&gt; are the long version of what we think this becomes.&lt;/sub&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting started
+&lt;/h2&gt;&lt;p&gt;New to Buzz? Pick the path that matches you.&lt;/p&gt;
+&lt;h3 id=&#34;i-just-want-to-try-the-app&#34;&gt;I just want to try the app
+&lt;/h3&gt;&lt;p&gt;Grab a packaged build from the &lt;a class=&#34;link&#34; href=&#34;https://github.com/block/buzz/releases/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;latest release&lt;/a&gt; — macOS (&lt;code&gt;.dmg&lt;/code&gt;), Linux (&lt;code&gt;.AppImage&lt;/code&gt; / &lt;code&gt;.deb&lt;/code&gt;), or Windows (&lt;code&gt;.exe&lt;/code&gt;). Install it like any other app.&lt;/p&gt;
+&lt;p&gt;By default the app connects to &lt;code&gt;ws://localhost:3000&lt;/code&gt;. To point it at a relay you&amp;rsquo;re running or one someone shared with you, set &lt;code&gt;BUZZ_RELAY_URL&lt;/code&gt; before launching, or switch the relay from inside the app. If you don&amp;rsquo;t have a relay yet, follow &lt;strong&gt;Build &amp;amp; run from source&lt;/strong&gt; below to stand one up locally.&lt;/p&gt;
+&lt;h3 id=&#34;i-work-at-block&#34;&gt;I work at Block
+&lt;/h3&gt;&lt;p&gt;Don&amp;rsquo;t build from source, and don&amp;rsquo;t use the OSS release — use the internal build. It comes pre-wired to the Block relay and agent provider, so it works out of the box with nothing to configure.&lt;/p&gt;
+&lt;p&gt;Download the latest build from &lt;a class=&#34;link&#34; href=&#34;https://github.com/squareup/buzz-releases/releases/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;squareup/buzz-releases&lt;/code&gt; releases&lt;/a&gt; and install it.&lt;/p&gt;
+&lt;h3 id=&#34;i-want-to-build--run-from-source&#34;&gt;I want to build &amp;amp; run from source
+&lt;/h3&gt;&lt;p&gt;See &lt;strong&gt;Quick start&lt;/strong&gt; below — this is the developer / self-host path.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick start
+&lt;/h2&gt;&lt;p&gt;You&amp;rsquo;ll need &lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/get-docker/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://cashapp.github.io/hermit/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hermit&lt;/a&gt; (or Rust 1.88+, Node 24+, pnpm 10+, &lt;code&gt;just&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Once:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/block/buzz.git &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; buzz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;. ./bin/activate-hermit   &lt;span class=&#34;c1&#34;&gt;# pinned toolchain (tools auto-download on first use)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;just setup &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; just build
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;just setup&lt;/code&gt; runs &lt;code&gt;just bootstrap&lt;/code&gt; automatically — it copies &lt;code&gt;.env.example&lt;/code&gt; to &lt;code&gt;.env&lt;/code&gt; if needed, downloads all required tools via Hermit, and starts Docker services + migrations.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Every day:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;. ./bin/activate-hermit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;just dev   &lt;span class=&#34;c1&#34;&gt;# starts the relay + desktop app together&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Relay on &lt;code&gt;ws://localhost:3000&lt;/code&gt;. Desktop app pops up. You&amp;rsquo;re in.&lt;/p&gt;
+&lt;p&gt;For a split-terminal workflow (relay logs separate from Vite output), use &lt;code&gt;just relay&lt;/code&gt; in one terminal and &lt;code&gt;just desktop-dev&lt;/code&gt; in another.&lt;/p&gt;
+&lt;p&gt;Want a single-node / VPS relay instead of the local-dev stack? Use the production Compose bundle in &lt;a class=&#34;link&#34; href=&#34;deploy/compose/README.md&#34; &gt;&lt;code&gt;deploy/compose/&lt;/code&gt;&lt;/a&gt; (&lt;code&gt;docker compose&lt;/code&gt; + Postgres, Redis, MinIO, optional Caddy/TLS). The root &lt;a class=&#34;link&#34; href=&#34;docker-compose.yml&#34; &gt;&lt;code&gt;docker-compose.yml&lt;/code&gt;&lt;/a&gt; is for day-to-day development only.&lt;/p&gt;
+&lt;p&gt;For agents, set &lt;code&gt;BUZZ_PRIVATE_KEY&lt;/code&gt; and use &lt;a class=&#34;link&#34; href=&#34;crates/buzz-cli&#34; &gt;&lt;code&gt;buzz-cli&lt;/code&gt;&lt;/a&gt; — JSON in, JSON out, designed for LLM tool calls.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;windows-prerequisites&#34;&gt;Windows prerequisites
+&lt;/h2&gt;&lt;p&gt;The agent shell tool runs commands under bash. On macOS and Linux that&amp;rsquo;s already there; on Windows you need to bring it.&lt;/p&gt;
+&lt;p&gt;Install &lt;a class=&#34;link&#34; href=&#34;https://git-scm.com/download/win&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git for Windows&lt;/a&gt; — it ships Git Bash, which is what buzz resolves at runtime. Once it&amp;rsquo;s installed, everything works the same as on other platforms.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;d rather point buzz at a different bash-compatible shell, set &lt;code&gt;BUZZ_SHELL&lt;/code&gt; to its path (e.g. &lt;code&gt;BUZZ_SHELL=C:\path\to\bash.exe&lt;/code&gt;). The agent&amp;rsquo;s tool description updates automatically to reflect whichever shell is active.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;architecture&#34;&gt;Architecture
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;┌─────────────────────────────────────────────────────────────────────────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│                             Clients                                     │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│  Human client         AI agent              CLI / scripts               │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│  (Buzz desktop)       (Goose, Codex, ...)   (buzz-cli, agents)          │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│       │               ┌──────────────┐               │                  │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│       │               │  buzz-acp  │                 │                  │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│       │               │  (ACP ↔ MCP) │               │                  │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│       │               └──────┬───────┘               │                  │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│       │                      │                       │                  │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└───────┼──────────────────────┼───────────────────────┼──────────────────┘
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        │ WebSocket            │ WS + REST             │ WS + REST
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ▼                      ▼                       ▼
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;┌─────────────────────────────────────────────────────────────────────────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│                          buzz-relay                                     │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│  NIP-01 · NIP-42 auth · channel/DM/media/workflow/git REST · audit log  │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└───┬──────────────────────────┬──────────────────────────┬───────────────┘
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    │                          │                          │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; ┌──▼───────────┐       ┌──────▼──────┐           ┌───────▼─────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; │   Postgres   │       │    Redis    │           │   S3/MinIO  │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; │ (events +    │       │  (pub/sub)  │           │  (Blossom)  │
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; │  FTS search) │       └─────────────┘           └─────────────┘
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; └──────────────┘
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;A Rust workspace of focused crates. Single source of truth: the relay. See &lt;a class=&#34;link&#34; href=&#34;ARCHITECTURE.md&#34; &gt;ARCHITECTURE.md&lt;/a&gt; for the full breakdown.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;&lt;strong&gt;Crate map&lt;/strong&gt;&lt;/summary&gt;
+&lt;p&gt;&lt;strong&gt;Core protocol&lt;/strong&gt; — &lt;code&gt;buzz-core&lt;/code&gt; (zero-I/O types, NIP-01 filters, Schnorr verify) · &lt;code&gt;buzz-relay&lt;/code&gt; (Axum WS + REST)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Services&lt;/strong&gt; — &lt;code&gt;buzz-db&lt;/code&gt; (Postgres) · &lt;code&gt;buzz-auth&lt;/code&gt; (NIP-42/98 Schnorr auth, rate limiting) · &lt;code&gt;buzz-pubsub&lt;/code&gt; (Redis, presence, typing) · &lt;code&gt;buzz-search&lt;/code&gt; (Postgres FTS) · &lt;code&gt;buzz-audit&lt;/code&gt; (hash-chain log). Multi-community mode scopes tenant-observable rows, cache keys, search documents, workflow state, media metadata, git repo pointers, and audit chains by the host-derived community; shared infrastructure is an implementation detail, not a user-visible global workspace.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Agent surface&lt;/strong&gt; — &lt;code&gt;buzz-cli&lt;/code&gt; (agent-first CLI, JSON in / JSON out) · &lt;code&gt;buzz-acp&lt;/code&gt; (ACP harness for Goose/Codex/Claude Code) · &lt;code&gt;buzz-agent&lt;/code&gt; (ACP agent — see &lt;a class=&#34;link&#34; href=&#34;VISION_AGENT.md&#34; &gt;VISION_AGENT.md&lt;/a&gt;) · &lt;code&gt;buzz-dev-mcp&lt;/code&gt; (shell + file-edit tools) · &lt;code&gt;buzz-workflow&lt;/code&gt; (YAML automation) · &lt;code&gt;buzz-persona&lt;/code&gt; (agent persona packs)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Git &amp;amp; pairing&lt;/strong&gt; — &lt;code&gt;git-sign-nostr&lt;/code&gt; / &lt;code&gt;git-credential-nostr&lt;/code&gt; (nostr-signed git) · &lt;code&gt;buzz-pair-relay&lt;/code&gt; / &lt;code&gt;buzz-pairing-cli&lt;/code&gt; (relay pairing)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Shared&lt;/strong&gt; — &lt;code&gt;buzz-sdk&lt;/code&gt; (typed event builders) · &lt;code&gt;buzz-media&lt;/code&gt; (Blossom/S3)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tooling&lt;/strong&gt; — &lt;code&gt;buzz-admin&lt;/code&gt; (admin CLI) · &lt;code&gt;buzz-test-client&lt;/code&gt; (E2E)&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;going-further&#34;&gt;Going further
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;VISION.md&#34; &gt;VISION.md&lt;/a&gt;&lt;/strong&gt; · &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;VISION_SOVEREIGN.md&#34; &gt;VISION_SOVEREIGN.md&lt;/a&gt;&lt;/strong&gt; · &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;VISION_PROJECTS.md&#34; &gt;VISION_PROJECTS.md&lt;/a&gt;&lt;/strong&gt; · &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;VISION_AGENT.md&#34; &gt;VISION_AGENT.md&lt;/a&gt;&lt;/strong&gt; — the four vision docs&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;ARCHITECTURE.md&#34; &gt;ARCHITECTURE.md&lt;/a&gt;&lt;/strong&gt; — system design, kind ranges, subsystem boundaries&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;TESTING.md&#34; &gt;TESTING.md&lt;/a&gt;&lt;/strong&gt; — multi-agent E2E test suite&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;CONTRIBUTING.md&lt;/a&gt;&lt;/strong&gt; · &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;CODE_OF_CONDUCT.md&#34; &gt;CODE_OF_CONDUCT.md&lt;/a&gt;&lt;/strong&gt; · &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;SECURITY.md&#34; &gt;SECURITY.md&lt;/a&gt;&lt;/strong&gt; · &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;GOVERNANCE.md&#34; &gt;GOVERNANCE.md&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;&lt;strong&gt;Configuration&lt;/strong&gt; (env vars, defaults work for local dev)&lt;/summary&gt;
+&lt;p&gt;All defaults work out of the box. Override via &lt;code&gt;.env&lt;/code&gt;. Full reference in &lt;a class=&#34;link&#34; href=&#34;.env.example&#34; &gt;&lt;code&gt;.env.example&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;&lt;strong&gt;Common dev commands&lt;/strong&gt;&lt;/summary&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;just setup          &lt;span class=&#34;c1&#34;&gt;# Docker, migrations, desktop deps&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;just relay          &lt;span class=&#34;c1&#34;&gt;# Run the relay&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;just dev            &lt;span class=&#34;c1&#34;&gt;# Run the desktop app&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;just build          &lt;span class=&#34;c1&#34;&gt;# Build the Rust workspace&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;just check          &lt;span class=&#34;c1&#34;&gt;# fmt + clippy + desktop check&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;just test-unit      &lt;span class=&#34;c1&#34;&gt;# Unit tests (no infra required)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;just &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;           &lt;span class=&#34;c1&#34;&gt;# Full suite (starts services if needed)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;just ci             &lt;span class=&#34;c1&#34;&gt;# Everything CI runs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;just reset          &lt;span class=&#34;c1&#34;&gt;# ⚠️  Wipe data + recreate&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-it-is-not&#34;&gt;What it is not
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Not blockchain. Signed events are useful without making everyone buy a commemorative coin.&lt;/li&gt;
+&lt;li&gt;Not an AI replacement plan. Buzz works best when humans stay in the loop and agents stay in the room.&lt;/li&gt;
+&lt;li&gt;Not finished. We will tell you what works and what doesn&amp;rsquo;t.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;What it is:&lt;/strong&gt; one relay where humans, agents, workflows, git events, and project memory cooperate — the beginning of a workspace that can grow past the tabs it replaces.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;sub&gt;Buzz 🐝&lt;/sub&gt;&lt;br&gt;
+  &lt;sub&gt;Apache 2.0 · Built by &lt;a href=&#34;https://block.xyz&#34;&gt;Block, Inc.&lt;/a&gt;&lt;/sub&gt;
+&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

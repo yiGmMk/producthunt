@@ -1,0 +1,1164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>3D-Reconstruction on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/3d-reconstruction/</link>
+        <description>Recent content in 3D-Reconstruction on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sun, 19 Jul 2026 17:14:21 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/3d-reconstruction/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>lingbot-map</title>
+        <link>https://producthunt.programnotes.cn/en/p/lingbot-map/</link>
+        <pubDate>Sun, 19 Jul 2026 17:14:21 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/lingbot-map/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1505985518385-c4e867fcaf82?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ0NTI0NDR8&amp;ixlib=rb-4.1.0" alt="Featured image of post lingbot-map" /&gt;&lt;h1 id=&#34;robbyantlingbot-map&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Robbyant/lingbot-map&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Robbyant/lingbot-map&lt;/a&gt;
+&lt;/h1&gt;&lt;div align=&#34;center&#34;&gt;
+  &lt;img src=&#34;assets/teaser.webp&#34; width=&#34;100%&#34;&gt;
+&lt;h1&gt;LingBot-Map: Geometric Context Transformer for Streaming 3D Reconstruction&lt;/h1&gt;
+&lt;p&gt;Robbyant Team&lt;/p&gt;
+&lt;/div&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2604.14141&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/static/v1?label=Paper&amp;amp;message=arXiv&amp;amp;color=red&amp;amp;logo=arxiv&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Paper&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;lingbot-map_paper.pdf&#34; &gt;&lt;img src=&#34;https://img.shields.io/static/v1?label=Paper&amp;amp;message=PDF&amp;amp;color=red&amp;amp;logo=adobeacrobatreader&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PDF&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://technology.robbyant.com/lingbot-map&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/Project-Website-blue&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Project&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/robbyant/lingbot-map&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Model&amp;amp;message=HuggingFace&amp;amp;color=orange&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;HuggingFace&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.modelscope.cn/models/Robbyant/lingbot-map&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/static/v1?label=%F0%9F%A4%96%20Model&amp;amp;message=ModelScope&amp;amp;color=purple&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;ModelScope&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;LICENSE.txt&#34; &gt;&lt;img src=&#34;https://img.shields.io/badge/License-Apache--2.0-green&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;License&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/user-attachments/assets/fe39e095-af2c-4ec9-b68d-a8ba97e505ab&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/user-attachments/assets/fe39e095-af2c-4ec9-b68d-a8ba97e505ab&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-meet-lingbot-map-weve-built-a-feed-forward-3d-foundation-model-for-streaming-3d-reconstruction-&#34;&gt;🗺️ Meet LingBot-Map! We&amp;rsquo;ve built a feed-forward 3D foundation model for streaming 3D reconstruction! 🏗️🌍
+&lt;/h3&gt;&lt;p&gt;LingBot-Map has focused on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Geometric Context Transformer&lt;/strong&gt;: Architecturally unifies coordinate grounding, dense geometric cues, and long-range drift correction within a single streaming framework through anchor context, pose-reference window, and trajectory memory.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;High-Efficiency Streaming Inference&lt;/strong&gt;: A feed-forward architecture with paged KV cache attention, enabling stable inference at ~20 FPS on 518×378 resolution over long sequences exceeding 10,000 frames.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;State-of-the-Art Reconstruction&lt;/strong&gt;: Superior performance on diverse benchmarks compared to both existing streaming and iterative optimization-based approaches.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-table-of-contents&#34;&gt;📑 Table of Contents
+&lt;/h2&gt;&lt;details&gt;
+&lt;summary&gt;Click to expand&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#-news&#34; &gt;📰 News&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#-todo&#34; &gt;📋 TODO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%ef%b8%8f-installation&#34; &gt;⚙️ Installation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#-model-download&#34; &gt;📦 Model Download&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#-quick-start&#34; &gt;🚀 Quick Start&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#-interactive-demo-demopy&#34; &gt;🎬 Interactive Demo (&lt;code&gt;demo.py&lt;/code&gt;)&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#try-the-example-scenes&#34; &gt;Try the Example Scenes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#streaming-with-keyframe-interval&#34; &gt;Streaming with Keyframe Interval&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#windowed-inference-for-long-sequences-3000-frames&#34; &gt;Windowed Inference (for long sequences, &amp;gt;3000 frames)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#sky-masking&#34; &gt;Sky Masking&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#visualization-options&#34; &gt;Visualization Options&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#performance--memory&#34; &gt;Performance &amp;amp; Memory&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#-offline-rendering-pipeline-demo_renderbatch_demopy&#34; &gt;🎥 Offline Rendering Pipeline (&lt;code&gt;demo_render/batch_demo.py&lt;/code&gt;)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#-license&#34; &gt;📜 License&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#-citation&#34; &gt;📖 Citation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#-acknowledgments&#34; &gt;✨ Acknowledgments&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-news&#34;&gt;📰 News
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;2026-06-28&lt;/strong&gt; — Fixed an SDPA KV cache bug. &lt;strong&gt;The SDPA backend now performs better on long sequences&lt;/strong&gt;. We still recommend the FlashInfer backend for the best performance.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-05-25&lt;/strong&gt; — 📊 &lt;strong&gt;Evaluation benchmark released&lt;/strong&gt;. We released the evaluation scripts for KITTI and Oxford Spires — see &lt;a class=&#34;link&#34; href=&#34;benchmark/&#34; &gt;benchmark/&lt;/a&gt; for the pipeline, and run &lt;a class=&#34;link&#34; href=&#34;preprocess/oxford.py&#34; &gt;&lt;code&gt;preprocess/oxford.py&lt;/code&gt;&lt;/a&gt; to prepare Oxford Spires data before evaluation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-04-29&lt;/strong&gt; — 📹 &lt;strong&gt;Long-video demo released&lt;/strong&gt;. We released a very-long-video example (~25 000 frames, 13-minute indoor walkthrough) rendered with the offline pipeline — see &lt;a class=&#34;link&#34; href=&#34;#worked-example--long-indoor-walkthrough-25-000-frames-13-minutes&#34; &gt;Worked Example&lt;/a&gt; for the command, flag rationale, and rendered output.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-04-27&lt;/strong&gt; — 🚀 &lt;strong&gt;LingBot-Map accelerated&lt;/strong&gt;. Pull the latest &lt;code&gt;main&lt;/code&gt; and run &lt;code&gt;python demo.py --compile ...&lt;/code&gt; or &lt;code&gt;python gct_profile.py --backend flashinfer --dtype bf16 --compile&lt;/code&gt; to verify on your hardware.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2026-04-24&lt;/strong&gt; — Fixed a FlashInfer KV cache bug where &lt;code&gt;--keyframe_interval &amp;gt; 1&lt;/code&gt; silently cached non-keyframes. &lt;strong&gt;You should now see better pose and reconstruction quality when running with more than 320 frames&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-todo&#34;&gt;📋 TODO
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;✅ Release evaluation benchmark
+&lt;ul&gt;
+&lt;li&gt;✅ Oxford Spires dataset&lt;/li&gt;
+&lt;li&gt;✅ KITTI dataset&lt;/li&gt;
+&lt;li&gt;✅ VBR dataset&lt;/li&gt;
+&lt;li&gt;✅ Droid-W dataset&lt;/li&gt;
+&lt;li&gt;✅ TUM-D dataset&lt;/li&gt;
+&lt;li&gt;✅ 7-scenes dataset&lt;/li&gt;
+&lt;li&gt;✅ ETH3D dataset&lt;/li&gt;
+&lt;li&gt;✅ Tanks and Temples dataset&lt;/li&gt;
+&lt;li&gt;✅ NRGBD dataset&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;✅ Release demo scripts
+&lt;ul&gt;
+&lt;li&gt;✅ Indoor long-video demo (&lt;a class=&#34;link&#34; href=&#34;#-featured-indoor-walkthrough-25-000-frames-13-minutes&#34; &gt;Featured indoor walkthrough&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;✅ Outdoor long-video demo&lt;/li&gt;
+&lt;li&gt;✅ LingBot-World demo (&lt;a class=&#34;link&#34; href=&#34;#worked-example--lingbot-world-scenes&#34; &gt;Worked example&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;✅ Aerial long-video demo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-installation&#34;&gt;⚙️ Installation
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1. Create conda environment&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda create -n lingbot-map &lt;span class=&#34;nv&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3.10 -y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda activate lingbot-map
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;2. Install PyTorch (CUDA 12.8)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install &lt;span class=&#34;nv&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;2.8.0 &lt;span class=&#34;nv&#34;&gt;torchvision&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;0.23.0 --index-url https://download.pytorch.org/whl/cu128
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;PyTorch 2.8.0 is the recommended version because NVIDIA Kaolin (required by the batch rendering pipeline) has prebuilt wheels for &lt;code&gt;torch-2.8.0_cu128&lt;/code&gt;. If you only need &lt;code&gt;demo.py&lt;/code&gt; you may use a newer PyTorch, but the batch renderer then requires building Kaolin from source.
+For other CUDA versions, see &lt;a class=&#34;link&#34; href=&#34;https://pytorch.org/get-started/locally/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyTorch Get Started&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;3. Install lingbot-map&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -e .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;4. Install FlashInfer (recommended)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;FlashInfer provides paged KV cache attention for efficient streaming inference. It is a pure-Python package that JIT-compiles CUDA kernels on first use, so a single wheel works across CUDA/PyTorch versions:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install --index-url https://pypi.org/simple flashinfer-python
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;--index-url https://pypi.org/simple&lt;/code&gt; is only needed if your default pip index is an internal mirror that doesn&amp;rsquo;t have &lt;code&gt;flashinfer-python&lt;/code&gt;.
+(Optional) For faster first-use, you can additionally install a CUDA-specific JIT cache: &lt;code&gt;pip install flashinfer-jit-cache -f https://flashinfer.ai/whl/cu128/flashinfer-jit-cache/&lt;/code&gt;.
+See &lt;a class=&#34;link&#34; href=&#34;https://docs.flashinfer.ai/installation.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FlashInfer installation&lt;/a&gt; for details. If FlashInfer is not installed, the model falls back to SDPA (PyTorch native attention) via &lt;code&gt;--use_sdpa&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;5. Visualization dependencies (optional)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -e &lt;span class=&#34;s2&#34;&gt;&amp;#34;.[vis]&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;-model-download&#34;&gt;📦 Model Download
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;Model Name&lt;/th&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;Huggingface Repository&lt;/th&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;ModelScope Repository&lt;/th&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;lingbot-map-long&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/robbyant/lingbot-map&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;robbyant/lingbot-map&lt;/a&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.modelscope.cn/models/Robbyant/lingbot-map&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Robbyant/lingbot-map&lt;/a&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Better suited for long sequences and large scale scenes.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;lingbot-map&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/robbyant/lingbot-map&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;robbyant/lingbot-map&lt;/a&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.modelscope.cn/models/Robbyant/lingbot-map&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Robbyant/lingbot-map&lt;/a&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Balanced checkpoint (used in paper, benchmark and offline demo) — trade off all-around performance across short and long sequences.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;lingbot-map-stage1&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/robbyant/lingbot-map&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;robbyant/lingbot-map&lt;/a&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.modelscope.cn/models/Robbyant/lingbot-map&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Robbyant/lingbot-map&lt;/a&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Stage-1 training checkpoint of lingbot-map — can be loaded into the VGGT model for bidirectional inference (c2w).&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;🚧 &lt;strong&gt;Coming soon:&lt;/strong&gt; we&amp;rsquo;re training an stronger model that supports longer sequences — stay tuned.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;-quick-start&#34;&gt;🚀 Quick Start
+&lt;/h2&gt;&lt;p&gt;After installation, run your first scene with one command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python demo.py --model_path /path/to/lingbot-map-long.pt &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --image_folder example/courthouse --mask_sky
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This launches an interactive &lt;a class=&#34;link&#34; href=&#34;https://github.com/nerfstudio-project/viser&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;viser&lt;/a&gt; viewer at &lt;code&gt;http://localhost:8080&lt;/code&gt;. See &lt;a class=&#34;link&#34; href=&#34;#-interactive-demo-demopy&#34; &gt;Interactive Demo&lt;/a&gt; below for the full set of scenes and flags, or jump to &lt;a class=&#34;link&#34; href=&#34;#-offline-rendering-pipeline-demo_renderbatch_demopy&#34; &gt;Offline Rendering Pipeline&lt;/a&gt; for long-sequence batch rendering.&lt;/p&gt;
+&lt;h2 id=&#34;-interactive-demo-demopy&#34;&gt;🎬 Interactive Demo (&lt;code&gt;demo.py&lt;/code&gt;)
+&lt;/h2&gt;&lt;p&gt;Run &lt;code&gt;demo.py&lt;/code&gt; for interactive 3D visualization via a browser-based &lt;a class=&#34;link&#34; href=&#34;https://github.com/nerfstudio-project/viser&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;viser&lt;/a&gt; viewer (default &lt;code&gt;http://localhost:8080&lt;/code&gt;).&lt;/p&gt;
+&lt;h3 id=&#34;try-the-example-scenes&#34;&gt;Try the Example Scenes
+&lt;/h3&gt;&lt;p&gt;We provide four example scenes in &lt;code&gt;example/&lt;/code&gt; that you can run out of the box:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# courthouse scene&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python demo.py --model_path /path/to/lingbot-map-long.pt &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --image_folder example/courthouse --mask_sky
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/user-attachments/assets/aa10f7ab-8024-43c7-92f8-d56159ec85c8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/user-attachments/assets/aa10f7ab-8024-43c7-92f8-d56159ec85c8&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# University scene&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python demo.py --model_path /path/to/lingbot-map-long.pt &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --image_folder example/university --mask_sky
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/user-attachments/assets/212a1744-6ff5-4ccf-9bd4-728608248b57&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/user-attachments/assets/212a1744-6ff5-4ccf-9bd4-728608248b57&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Loop scene (loop closure trajectory)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python demo.py --model_path /path/to/lingbot-map-long.pt &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --image_folder example/loop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/user-attachments/assets/5ae0a292-b081-40c6-838c-b7c1a0538d75&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/user-attachments/assets/5ae0a292-b081-40c6-838c-b7c1a0538d75&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Oxford scene with sky masking (outdoor, large scale scene)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python demo.py --model_path /path/to/lingbot-map-long.pt &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --image_folder example/oxford --mask_sky
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/user-attachments/assets/6b8daa95-9ed4-40b2-9902-7435779b886d&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/user-attachments/assets/6b8daa95-9ed4-40b2-9902-7435779b886d&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;-featured-indoor-walkthrough-25-000-frames-13-minutes&#34;&gt;🎯 Featured: indoor walkthrough (~25 000 frames, 13 minutes)
+&lt;/h4&gt;&lt;p&gt;&lt;em&gt;Sequence is too long for the interactive viser viewer — this clip was rendered with the &lt;a class=&#34;link&#34; href=&#34;#-offline-rendering-pipeline-demo_renderbatch_demopy&#34; &gt;Offline Rendering Pipeline&lt;/a&gt;. See that section for the full command.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;We will provide more examples in the follow-up.&lt;/p&gt;
+&lt;h3 id=&#34;streaming-with-keyframe-interval&#34;&gt;Streaming with Keyframe Interval
+&lt;/h3&gt;&lt;p&gt;Use &lt;code&gt;--keyframe_interval&lt;/code&gt; to reduce KV cache memory by only keeping every N-th frame as a keyframe. Non-keyframe frames still produce predictions but are not stored in the cache. This is useful for long sequences which exceed 320 frames (We train with video RoPE on 320 views, so performance degrades when the KV cache stores more than 320 views. Using a keyframe strategy allows inference over longer sequences.).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dataset:&lt;/strong&gt; Download the demo sequences from &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/datasets/robbyant/lingbot-map-demo/tree/main&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;robbyant/lingbot-map-demo&lt;/a&gt; on Hugging Face.&lt;/p&gt;
+&lt;p&gt;Example run on the &lt;code&gt;travel&lt;/code&gt; sequence from the dataset above (sky masking on, 4 camera optimization iterations, keyframe every 2 frames):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python demo.py &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --image_folder /path/to/lingbot-map-demo/travel/ &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --model_path /path/to/lingbot-map-long.pt &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --mask_sky &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --camera_num_iterations &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --keyframe_interval &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/user-attachments/assets/d350b590-d036-4363-af8c-7af3918338ef&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/user-attachments/assets/d350b590-d036-4363-af8c-7af3918338ef&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note on inference range.&lt;/strong&gt; Our method does not perform state resetting by default, so the maximum inference range is bounded by the longest distance seen during training on the dataset. Beyond that distance, state resetting becomes necessary. If you observe pose collapse, switch to windowed mode (&lt;code&gt;--mode windowed&lt;/code&gt;) — in most cases tuning &lt;code&gt;--keyframe_interval&lt;/code&gt; alone is enough and the rest of the windowed parameters can stay at their defaults.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;windowed-inference-for-long-sequences-3000-frames&#34;&gt;Windowed Inference (for long sequences, &amp;gt;3000 frames)
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python demo.py --model_path /path/to/lingbot-map-long.pt &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --video_path video.mp4 --fps &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --mode windowed --window_size &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt; --overlap_keyframes &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt; --keyframe_interval &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;sky-masking&#34;&gt;Sky Masking
+&lt;/h3&gt;&lt;p&gt;Sky masking uses an ONNX sky segmentation model to filter out sky points from the reconstructed point cloud, which improves visualization quality for outdoor scenes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Setup:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Install onnxruntime (required)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install onnxruntime        &lt;span class=&#34;c1&#34;&gt;# CPU&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# or&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install onnxruntime-gpu    &lt;span class=&#34;c1&#34;&gt;# GPU (faster for large image sets)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The sky segmentation model (&lt;code&gt;skyseg.onnx&lt;/code&gt;) will be automatically downloaded from &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/JianyuanWang/skyseg/resolve/main/skyseg.onnx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;HuggingFace&lt;/a&gt; on first use.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python demo.py --model_path /path/to/checkpoint.pt &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --image_folder /path/to/images/ --mask_sky
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Sky masks are cached in &lt;code&gt;&amp;lt;image_folder&amp;gt;_sky_masks/&lt;/code&gt; so subsequent runs skip regeneration. You can also specify a custom cache directory with &lt;code&gt;--sky_mask_dir&lt;/code&gt;, or save side-by-side mask visualizations with &lt;code&gt;--sky_mask_visualization_dir&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python demo.py --model_path /path/to/checkpoint.pt &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --image_folder /path/to/images/ --mask_sky &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --sky_mask_dir /path/to/cached_masks/ &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --sky_mask_visualization_dir /path/to/mask_viz/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;visualization-options&#34;&gt;Visualization Options
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;Argument&lt;/th&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;Default&lt;/th&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;--port&lt;/code&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;8080&lt;/code&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Viser viewer port&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;--conf_threshold&lt;/code&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;1.5&lt;/code&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Visibility threshold for filtering low-confidence points&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;--point_size&lt;/code&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;0.00001&lt;/code&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Point cloud point size&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;--downsample_factor&lt;/code&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;10&lt;/code&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;Spatial downsampling for point cloud display&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;performance--memory&#34;&gt;Performance &amp;amp; Memory
+&lt;/h3&gt;&lt;h4 id=&#34;without-flashinfer-sdpa-fallback&#34;&gt;Without FlashInfer (SDPA fallback)
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python demo.py --model_path /path/to/checkpoint.pt &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --image_folder /path/to/images/ --use_sdpa
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;running-on-limited-gpu-memory&#34;&gt;Running on Limited GPU Memory
+&lt;/h4&gt;&lt;p&gt;If you run into out-of-memory issues, try one (or both) of the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;--offload_to_cpu&lt;/code&gt;&lt;/strong&gt; — offload per-frame predictions to CPU during inference (on by default; use &lt;code&gt;--no-offload_to_cpu&lt;/code&gt; only if you have memory to spare).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;--num_scale_frames 2&lt;/code&gt;&lt;/strong&gt; — reduce the number of bidirectional scale frames from the default 8 down to 2, which shrinks the activation peak of the initial scale phase.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;faster-inference&#34;&gt;Faster Inference
+&lt;/h4&gt;&lt;p&gt;Lower the number of iterative refinement steps in the camera head to trade a small amount of pose accuracy for wall-clock speed:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python demo.py --model_path /path/to/checkpoint.pt &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --image_folder /path/to/images/ --camera_num_iterations &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;--camera_num_iterations&lt;/code&gt; defaults to &lt;code&gt;4&lt;/code&gt;; setting it to &lt;code&gt;1&lt;/code&gt; skips three refinement passes in the camera head (and shrinks its KV cache by 4×).&lt;/p&gt;
+&lt;h2 id=&#34;-offline-rendering-pipeline-demo_renderbatch_demopy&#34;&gt;🎥 Offline Rendering Pipeline (&lt;code&gt;demo_render/batch_demo.py&lt;/code&gt;)
+&lt;/h2&gt;&lt;p&gt;Use this pipeline when your sequence is too long for the interactive viser viewer — for example, the &lt;a class=&#34;link&#34; href=&#34;#-featured-indoor-walkthrough-25-000-frames-13-minutes&#34; &gt;indoor walkthrough featured above&lt;/a&gt;. &lt;code&gt;demo_render/batch_demo.py&lt;/code&gt; is the all-in-one offline entry point: feed it a video or a folder of images and it will run model inference and produce a headless point-cloud flythrough MP4 in a single command. It shares the same PyTorch / FlashInfer / checkpoint stack as &lt;code&gt;demo.py&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;For those constrained by limited VRAM or GPU usage, you may also refer to the implementation at: &lt;a class=&#34;link&#34; href=&#34;https://github.com/ureeey/lingbot-map-rtx4060-8g/commit/eeee84a89cc97c1e39b736b46df4ee315275700b&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/ureeey/lingbot-map-rtx4060-8g/commit/eeee84a89cc97c1e39b736b46df4ee315275700b&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;install-extends-the-main-install&#34;&gt;Install (extends the main install)
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;1. Rendering Python dependencies&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -e &lt;span class=&#34;s2&#34;&gt;&amp;#34;.[vis,render]&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;render&lt;/code&gt; pulls in &lt;code&gt;open3d&amp;gt;=0.19&lt;/code&gt; and &lt;code&gt;pyyaml&lt;/code&gt; (the core &lt;code&gt;numpy&amp;lt;2&lt;/code&gt; constraint comes from the base &lt;code&gt;lingbot-map&lt;/code&gt; install). Sky masking in this pipeline uses &lt;code&gt;onnxruntime-gpu&lt;/code&gt; for batched segmentation; install it if you don&amp;rsquo;t already have the CPU &lt;code&gt;onnxruntime&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install onnxruntime-gpu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;2. Kaolin&lt;/strong&gt; — matches the PyTorch 2.8.0 + CUDA 12.8 recommended above:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install --index-url https://pypi.org/simple &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    kaolin -f https://nvidia-kaolin.s3.us-east-2.amazonaws.com/torch-2.8.0_cu128.html
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;--index-url https://pypi.org/simple&lt;/code&gt; bypasses any internal mirror that might otherwise serve the PyPI placeholder wheel (which raises &lt;code&gt;ImportError&lt;/code&gt; on import).
+NVIDIA Kaolin does not publish prebuilt wheels for PyTorch 2.9.x — if you&amp;rsquo;re on 2.9 for other reasons, build Kaolin from source (&lt;code&gt;pip install --no-build-isolation git+https://github.com/NVIDIAGameWorks/kaolin.git&lt;/code&gt;, needs local CUDA toolkit). For other torch/CUDA combinations see &lt;a class=&#34;link&#34; href=&#34;https://kaolin.readthedocs.io/en/latest/notes/installation.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NVIDIA Kaolin installation&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;3. ffmpeg&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install ffmpeg    &lt;span class=&#34;c1&#34;&gt;# or: brew install ffmpeg&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;4. CUDA extensions&lt;/strong&gt; (required before first run)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; demo_render/render_cuda_ext &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; python setup.py build_ext --inplace &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ../..
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This builds &lt;code&gt;voxel_morton_ext&lt;/code&gt; and &lt;code&gt;frustum_cull_ext&lt;/code&gt; in place — both are imported by &lt;code&gt;rgbd_render&lt;/code&gt; for GPU voxelization and frustum culling.&lt;/p&gt;
+&lt;h3 id=&#34;worked-example--long-indoor-walkthrough-25-000-frames-13-minutes&#34;&gt;Worked Example — long indoor walkthrough (~25 000 frames, 13 minutes)
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Dataset:&lt;/strong&gt; Download the example video from &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/datasets/robbyant/lingbot-map-demo/tree/main&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;robbyant/lingbot-map-demo&lt;/a&gt; on Hugging Face.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    python demo_render/batch_demo.py &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --video_path /data/demo_videos/indoor_travel.MP4 &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --output_folder /data/outputs/indoor_travel/ &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --model_path /path/to/lingbot-map.pt &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --config demo_render/config/indoor.yaml &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --mode windowed --window_size &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --keyframe_interval &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; --overlap_keyframes &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --sky_mask_dir /data/outputs/sky_masks &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --sky_mask_visualization_dir /data/outputs/sky_mask_viz &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --camera_vis default --keyframes_only_points &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --frame_tag --frame_tag_position top_right &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --save_predictions
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;img width=&#34;1920&#34; height=&#34;1080&#34; alt=&#34;image&#34; src=&#34;https://github.com/user-attachments/assets/f4f5e555-22a8-4cc9-b380-dfde5fe1c809&#34; /&gt;
+&lt;p&gt;Flag-by-flag rationale:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Flag&lt;/th&gt;
+					&lt;th&gt;Why it&amp;rsquo;s there&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--mode windowed --window_size 128&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Sliding-window inference is required once the sequence exceeds the ~320-frame RoPE training range; each window resets the KV cache. &lt;strong&gt;&lt;code&gt;window_size&lt;/code&gt; counts KV-cache slots, not actual frames&lt;/strong&gt; — the first &lt;code&gt;num_scale_frames&lt;/code&gt; (=8) slots hold the scale frames and the remaining &lt;code&gt;128 − 8 = 120&lt;/code&gt; slots hold keyframes. With &lt;code&gt;keyframe_interval = 13&lt;/code&gt;, one window therefore covers &lt;code&gt;8 + 120 × 13 = 1568&lt;/code&gt; actual frames.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--keyframe_interval 10&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Cache only every 10th frame as a keyframe. Non-keyframes still emit per-frame predictions but don&amp;rsquo;t grow the KV cache&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--overlap_keyframes 8&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Adjacent windows share 8 keyframes of context, resolved internally to &lt;code&gt;max(num_scale_frames, 8 × keyframe_interval) = 8 × 13 = 104&lt;/code&gt; actual frames of overlap. Recommended whenever &lt;code&gt;keyframe_interval &amp;gt; 1&lt;/code&gt;, to keep cross-window pose alignment stable.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--config demo_render/config/indoor.yaml&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Seed render/scene/camera/overlay defaults from the indoor preset (short depth, tighter follow cam). Any CLI flag the user explicitly passes still overrides the YAML value.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--sky_mask_dir&lt;/code&gt; / &lt;code&gt;--sky_mask_visualization_dir&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Persist sky masks and their side-by-side visualizations to disk so subsequent reruns reuse them instead of re-running ONNX segmentation. (The render pipeline only consumes them when sky masking is enabled — by the YAML preset or by &lt;code&gt;--mask_sky&lt;/code&gt;.)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--camera_vis default&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Overlay the trajectory trail + recent-frame points on the rendered video.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--keyframes_only_points&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Only unproject keyframe depth into the point cloud; non-keyframes still contribute their pose to the trajectory/frustum overlay. Keeps the cloud sparse for very long sequences.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--frame_tag --frame_tag_position top_right&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Stamp a &lt;code&gt;&amp;lt;i&amp;gt; / &amp;lt;N&amp;gt; Frames&lt;/code&gt; counter in the top-right corner of the MP4.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--save_predictions&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Persist per-frame NPZs alongside the MP4. Useful for inspection or for re-rendering with different camera/overlay settings later.&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Replacing keyframe_interval = 10 with image_stride = 10 speeds up rendering. Then, comment out the camera follow section in demo_render/config/indoor.yaml and set the birdeye&amp;rsquo;s ranges to [2000, 2500] to reproduce the indoor fly-through effect shown in the demo:&lt;/p&gt;
+&lt;img width=&#34;3822&#34; height=&#34;1080&#34; alt=&#34;image&#34; src=&#34;https://github.com/user-attachments/assets/5581d2b2-cb86-4187-a13d-46ac9a22ce99&#34; /&gt;
+&lt;h3 id=&#34;worked-example--outdoor-drive-scene&#34;&gt;Worked Example — outdoor drive scene
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Dataset:&lt;/strong&gt; Download the example video from &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/datasets/robbyant/lingbot-map-demo/tree/main&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;robbyant/lingbot-map-demo&lt;/a&gt; on Hugging Face.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    python demo_render/batch_demo.py &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --video_path /data/demo_videos/drive_frames.mp4 &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --output_folder /data/outputs/drive/ &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --model_path /path/to/lingbot-map.pt &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --config demo_render/config/outdoor_drive.yaml &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --mode windowed --window_size &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --max_non_keyframe_gap &lt;span class=&#34;m&#34;&gt;100&lt;/span&gt; --overlap_keyframes &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --image_stride &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --sky_mask_dir /data/outputs/sky_masks &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --sky_mask_visualization_dir /data/outputs/sky_mask_viz &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --camera_vis default --keyframes_only_points &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --frame_tag --frame_tag_position top_right &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --save_predictions
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;img width=&#34;3822&#34; height=&#34;1080&#34; alt=&#34;image&#34; src=&#34;https://github.com/user-attachments/assets/3c26afdb-6bb8-4d20-a7e0-f5a220382662&#34; /&gt;
+&lt;p&gt;What differs from the indoor walkthrough above:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Flag&lt;/th&gt;
+					&lt;th&gt;Why it&amp;rsquo;s there&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--config demo_render/config/outdoor_drive.yaml&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Seed defaults from the outdoor preset: sky masking enabled, deeper render range (&lt;code&gt;max_depth: 250&lt;/code&gt;), and a follow cam tuned for vehicle trajectories with a final birdeye reveal.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--image_stride 1&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Use every video frame. Increase it to subsample long or high-FPS drive footage.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--max_non_keyframe_gap 100&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Upper bound on consecutive non-keyframes before a keyframe is forced. Only active with flow-based keyframe selection (&lt;code&gt;--flow_threshold &amp;gt; 0&lt;/code&gt;); in the default fixed-interval mode it has no effect.&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The remaining flags (&lt;code&gt;--mode windowed --window_size 128&lt;/code&gt;, &lt;code&gt;--overlap_keyframes 8&lt;/code&gt;, sky-mask caching, overlays, &lt;code&gt;--save_predictions&lt;/code&gt;) carry over unchanged from the indoor example — see the flag-by-flag table above.&lt;/p&gt;
+&lt;h3 id=&#34;worked-example--lingbot-world-scenes&#34;&gt;Worked Example — LingBot-World scenes
+&lt;/h3&gt;&lt;p&gt;Reconstruct videos generated by LingBot-World, our world model — the same pipeline works on generated footage out of the box.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dataset:&lt;/strong&gt; Download the example videos (&lt;code&gt;lingbo_world_frames.mp4&lt;/code&gt;, &lt;code&gt;lingbo_world2_frames.mp4&lt;/code&gt;) from &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/datasets/robbyant/lingbot-map-demo/tree/main&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;robbyant/lingbot-map-demo&lt;/a&gt; on Hugging Face.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    python demo_render/batch_demo.py &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --video_path /data/demo_videos/lingbo_world_frames.mp4 &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --output_folder /data/outputs/lingbo_world/ &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --model_path /path/to/lingbot-map.pt &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --config demo_render/config/outdoor_drive.yaml &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --mode windowed --window_size &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --max_non_keyframe_gap &lt;span class=&#34;m&#34;&gt;100&lt;/span&gt; --overlap_keyframes &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --image_stride &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --sky_mask_dir /data/outputs/sky_masks &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --sky_mask_visualization_dir /data/outputs/sky_mask_viz &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --camera_vis default --keyframes_only_points &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --frame_tag --frame_tag_position top_right &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --save_predictions
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For the second clip, run the same command with &lt;code&gt;--video_path /data/demo_videos/lingbo_world2_frames.mp4 --output_folder /data/outputs/lingbo_world2/&lt;/code&gt; (and separate &lt;code&gt;--sky_mask_dir&lt;/code&gt; / &lt;code&gt;--sky_mask_visualization_dir&lt;/code&gt; folders if you want to keep the cached masks apart).&lt;/p&gt;
+&lt;p&gt;All flags are identical to the &lt;a class=&#34;link&#34; href=&#34;#worked-example--outdoor-drive-scene&#34; &gt;outdoor drive scene&lt;/a&gt; above — only the input video and output folder change. See the drive scene and indoor walkthrough tables for the flag-by-flag rationale.&lt;/p&gt;
+&lt;img width=&#34;3736&#34; height=&#34;1080&#34; alt=&#34;image&#34; src=&#34;https://github.com/user-attachments/assets/1f60d505-1407-482c-9b5d-57c7145c0b7d&#34; /&gt;
+&lt;img width=&#34;1200&#34; height=&#34;339&#34; alt=&#34;image&#34; src=&#34;https://github.com/user-attachments/assets/e62bedaa-1e61-40b3-8fea-01c8a15355f0&#34; /&gt;
+&lt;h3 id=&#34;camera-path-yaml&#34;&gt;Camera Path (YAML)
+&lt;/h3&gt;&lt;p&gt;The virtual camera path is described by the &lt;code&gt;camera.segments&lt;/code&gt; list in the YAML preset passed via &lt;code&gt;--config&lt;/code&gt;. Edit the YAML to design your own shot — no need to touch CLI flags.&lt;/p&gt;
+&lt;p&gt;Built-in presets live in &lt;code&gt;demo_render/config/&lt;/code&gt;: &lt;code&gt;default.yaml&lt;/code&gt;, &lt;code&gt;indoor.yaml&lt;/code&gt;, &lt;code&gt;outdoor_drive.yaml&lt;/code&gt;. Copy one and edit the &lt;code&gt;camera:&lt;/code&gt; block.&lt;/p&gt;
+&lt;h4 id=&#34;yaml-structure&#34;&gt;YAML structure
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;camera&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;fov&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;60.0&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# camera field of view in degrees&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;transition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# frames blended between adjacent segments&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;segments&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;mode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;follow           &lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# chase cam following the input trajectory&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;frames&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1500&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;       &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# rendered-frame range this segment covers (-1 = end)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;back_offset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0.3&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# how far behind the input camera (fraction of scene scale)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;up_offset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0.08&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# vertical lift above the input camera&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;look_offset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0.4&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# how far ahead the lookat target points&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;smooth_window&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;       &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# trajectory smoothing window in frames&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;mode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;birdeye          &lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# rise up for a top-down reveal of the whole scene&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;frames&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1500&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1800&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;reveal_height_mult&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2.5&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# birdeye height = scene scale × this factor&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;mode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;follow           &lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# drop back into chase cam&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;frames&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1800&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;-&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;back_offset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0.3&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;up_offset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0.08&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;look_offset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0.4&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;transition&lt;/code&gt; controls how many frames are blended between adjacent segments; &lt;code&gt;frames: [0, -1]&lt;/code&gt; means &amp;ldquo;the whole sequence&amp;rdquo;.&lt;/p&gt;
+&lt;h4 id=&#34;available-modes&#34;&gt;Available modes
+&lt;/h4&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;&lt;code&gt;mode&lt;/code&gt;&lt;/th&gt;
+					&lt;th&gt;Behavior&lt;/th&gt;
+					&lt;th&gt;Tunable fields&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;follow&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Chase cam tracks the input trajectory with smooth offsets. The most cinematic option for walkthroughs.&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;back_offset&lt;/code&gt;, &lt;code&gt;up_offset&lt;/code&gt;, &lt;code&gt;look_offset&lt;/code&gt;, &lt;code&gt;smooth_window&lt;/code&gt;, &lt;code&gt;scale_frames&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;birdeye&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Top-down reveal of the whole scene. Useful for hero / overview shots.&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;reveal_height_mult&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;static&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Fixed eye + lookat, auto-derived from the segment&amp;rsquo;s start frame.&lt;/td&gt;
+					&lt;td&gt;—&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;pivot&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Fixed eye, lookat sweeps along the trajectory.&lt;/td&gt;
+					&lt;td&gt;—&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;single-shot-yaml-examples&#34;&gt;Single-shot YAML examples
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Pure follow&lt;/strong&gt; (most common):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;camera&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;fov&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;60.0&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;segments&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;mode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;follow&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;frames&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;-&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;back_offset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0.3&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;up_offset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0.08&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;look_offset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0.4&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;smooth_window&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Full birdeye&lt;/strong&gt; (good for overview / hero shots):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;camera&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;fov&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;60.0&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;segments&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;mode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;birdeye&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;frames&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;-&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;reveal_height_mult&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2.5&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Follow with birdeye inserts&lt;/strong&gt;: just list multiple segments in order under &lt;code&gt;segments:&lt;/code&gt; — adjacent segments are interpolated using &lt;code&gt;transition&lt;/code&gt; frames.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Caveat: when &lt;code&gt;--config&lt;/code&gt; loads a YAML preset, passing &lt;strong&gt;any&lt;/strong&gt; segment-shaping CLI flag (&lt;code&gt;--camera_mode&lt;/code&gt;, &lt;code&gt;--back_offset&lt;/code&gt;, &lt;code&gt;--up_offset&lt;/code&gt;, &lt;code&gt;--look_offset&lt;/code&gt;, &lt;code&gt;--smooth_window&lt;/code&gt;, &lt;code&gt;--follow_scale_frames&lt;/code&gt;, &lt;code&gt;--birdeye_start&lt;/code&gt;, &lt;code&gt;--birdeye_duration&lt;/code&gt;, &lt;code&gt;--reveal_height_mult&lt;/code&gt;) discards the YAML&amp;rsquo;s &lt;code&gt;segments&lt;/code&gt; and rebuilds the camera path from those flags instead. To stay fully YAML-driven, don&amp;rsquo;t pass any of them on the command line.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;output-files&#34;&gt;Output files
+&lt;/h3&gt;&lt;p&gt;For a given output name (e.g. &lt;code&gt;&amp;lt;scene&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;lt;video_name&amp;gt;&lt;/code&gt;):&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;File&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;&amp;lt;name&amp;gt;_pointcloud.mp4&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Rendered point-cloud flythrough&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;&amp;lt;name&amp;gt;_pointcloud_rgb.mp4&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Original RGB frames encoded as video&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;&amp;lt;name&amp;gt;_pointcloud_config.yaml&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Full config snapshot of this run&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;batch_results.json&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Per-scene success / duration summary&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-license&#34;&gt;📜 License
+&lt;/h2&gt;&lt;p&gt;This project is released under the Apache License 2.0. See &lt;a class=&#34;link&#34; href=&#34;LICENSE.txt&#34; &gt;LICENSE&lt;/a&gt; file for details.&lt;/p&gt;
+&lt;h2 id=&#34;-citation&#34;&gt;📖 Citation
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@article&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;chen2026geometric&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{Geometric Context Transformer for Streaming 3D Reconstruction}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{Chen, Lin-Zhuo and Gao, Jian and Chen, Yihang and Cheng, Ka Leong and Sun, Yipengjing and Hu, Liangxiao and Xue, Nan and Zhu, Xing and Shen, Yujun and Yao, Yao and Xu, Yinghao}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;journal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{arXiv preprint arXiv:2604.14141}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{2026}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;-acknowledgments&#34;&gt;✨ Acknowledgments
+&lt;/h2&gt;&lt;p&gt;We thank Shangzhan Zhang, Jianyuan Wang, Yudong Jin, Christian Rupprecht, and Xun Cao for their helpful discussions and support.&lt;/p&gt;
+&lt;p&gt;This work builds upon several excellent open-source projects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/facebookresearch/vggt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VGGT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/facebookresearch/dinov2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DINOv2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/flashinfer-ai/flashinfer&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Flashinfer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
+        <title>brush</title>
+        <link>https://producthunt.programnotes.cn/en/p/brush/</link>
+        <pubDate>Fri, 19 Sep 2025 15:28:23 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/brush/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1676139524257-6b71166d737e?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTgyNjY3ODh8&amp;ixlib=rb-4.1.0" alt="Featured image of post brush" /&gt;&lt;h1 id=&#34;arthurbrusseebrush&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ArthurBrussee/brush&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ArthurBrussee/brush&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;brush&#34;&gt;Brush
+&lt;/h1&gt;&lt;p&gt;&lt;video src=https://github.com/user-attachments/assets/5756967a-846c-44cf-bde9-3ca4c86f1a4d&gt;A video showing various Brush features and scenes&lt;/video&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;i&gt;
+    Massive thanks to &lt;a href=&#34;https://www.youtube.com/@gradeeterna&#34;&gt;@GradeEterna&lt;/a&gt; for the beautiful scenes
+  &lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;Brush is a 3D reconstruction engine using &lt;a class=&#34;link&#34; href=&#34;https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Gaussian splatting&lt;/a&gt;. It works on a wide range of systems: &lt;strong&gt;macOS/windows/linux&lt;/strong&gt;, &lt;strong&gt;AMD/Nvidia/Intel&lt;/strong&gt; cards, &lt;strong&gt;Android&lt;/strong&gt;, and in a &lt;strong&gt;browser&lt;/strong&gt;. To achieve this, it uses WebGPU compatible tech and the &lt;a class=&#34;link&#34; href=&#34;https://github.com/tracel-ai/burn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Burn&lt;/a&gt; machine learning framework.&lt;/p&gt;
+&lt;p&gt;Machine learning for real time rendering has tons of potential, but most ML tools don&amp;rsquo;t work well with it: Rendering requires realtime interactivity, usually involve dynamic shapes &amp;amp; computations, don&amp;rsquo;t run on most platforms, and it can be cumbersome to ship apps with large CUDA deps. Brush on the other hand produces simple dependency free binaries, runs on nearly all devices, without any setup.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://arthurbrussee.github.io/brush-demo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Try the web demo&lt;/strong&gt; &lt;img src=&#34;https://cdn-icons-png.flaticon.com/256/888/888846.png&#34; alt=&#34;chrome logo&#34; width=&#34;24&#34;/&gt;
+&lt;/a&gt;
+&lt;em&gt;NOTE: Only works on Chrome and Edge. Firefox and Safari are hopefully supported soon)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://discord.gg/TbxJST2BbC&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://dcbadge.limes.pink/api/server/https://discord.gg/TbxJST2BbC&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;features&#34;&gt;Features
+&lt;/h1&gt;&lt;h2 id=&#34;training&#34;&gt;Training
+&lt;/h2&gt;&lt;p&gt;Brush takes in COLMAP data or datasets in the Nerfstudio format. Training is fully supported natively, on mobile, and in a browser. While training you can interact with the scene and see the training dynamics live, and compare the current rendering to input views as the training progresses.&lt;/p&gt;
+&lt;p&gt;It also supports masking images:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Images with transparency. This will force the final splat to match the transparency of the input.&lt;/li&gt;
+&lt;li&gt;A folder of images called &amp;lsquo;masks&amp;rsquo;. This ignores parts of the image that are masked out.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;viewer&#34;&gt;Viewer
+&lt;/h2&gt;&lt;p&gt;Brush also works well as a splat viewer, including on the web. It can load .ply &amp;amp; .compressed.ply files. You can stream in data from a URL (for a web app, simply append &lt;code&gt;?url=&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Brush also can load .zip of splat files to display them as an animation, or a special ply that includes delta frames (see &lt;a class=&#34;link&#34; href=&#34;https://cat-4d.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cat-4D&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://felixtaubner.github.io/cap4d/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cap4D&lt;/a&gt;!).&lt;/p&gt;
+&lt;h2 id=&#34;cli&#34;&gt;CLI
+&lt;/h2&gt;&lt;p&gt;Brush can be used as a CLI. Run &lt;code&gt;brush --help&lt;/code&gt; to get an overview. Every CLI command can work with &lt;code&gt;--with-viewer&lt;/code&gt; which also opens the UI, for easy debugging.&lt;/p&gt;
+&lt;h2 id=&#34;rerun&#34;&gt;Rerun
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/user-attachments/assets/f679fec0-935d-4dd2-87e1-c301db9cdc2c&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/user-attachments/assets/f679fec0-935d-4dd2-87e1-c301db9cdc2c&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;While training, additional data can be visualized with the excellent &lt;a class=&#34;link&#34; href=&#34;https://rerun.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;rerun&lt;/a&gt;. To install rerun on your machine, please follow their &lt;a class=&#34;link&#34; href=&#34;https://rerun.io/docs/getting-started/installing-viewer&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;instructions&lt;/a&gt;. Open the ./brush_blueprint.rbl in the viewer for best results.&lt;/p&gt;
+&lt;h2 id=&#34;building-brush&#34;&gt;Building Brush
+&lt;/h2&gt;&lt;p&gt;First install rust 1.88+. You can run tests with &lt;code&gt;cargo test --all&lt;/code&gt;. Brush uses the wonderful &lt;a class=&#34;link&#34; href=&#34;https://rerun.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;rerun&lt;/a&gt; for additional visualizations while training, run &lt;code&gt;cargo install rerun-cli&lt;/code&gt; if you want to use it.&lt;/p&gt;
+&lt;h3 id=&#34;windowsmacoslinux&#34;&gt;Windows/macOS/Linux
+&lt;/h3&gt;&lt;p&gt;Simply &lt;code&gt;cargo run&lt;/code&gt; or &lt;code&gt;cargo run --release&lt;/code&gt; from the workspace root. Brush can also be used as a CLI, run &lt;code&gt;cargo run --release -- --help&lt;/code&gt; to use the CLI directly from source. See the notes about the CLI in the features section.&lt;/p&gt;
+&lt;h3 id=&#34;web&#34;&gt;Web
+&lt;/h3&gt;&lt;p&gt;Brush can be compiled to WASM. Run &lt;code&gt;npm run dev&lt;/code&gt; to start the demo website using Next.js, see the brush_nextjs directory.&lt;/p&gt;
+&lt;p&gt;Brush uses &lt;a class=&#34;link&#34; href=&#34;https://rustwasm.github.io/wasm-bindgen/introduction.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;wasm-pack&lt;/code&gt;&lt;/a&gt; to build the WASM bundle. You can also use it without a bundler, see &lt;a class=&#34;link&#34; href=&#34;hhttps://rustwasm.github.io/wasm-bindgen/examples/without-a-bundler.html&#34; &gt;wasm-pack&amp;rsquo;s documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;WebGPU is still an upcoming standard, and as such, only Chrome 134+ on Windows and macOS is currently supported.&lt;/p&gt;
+&lt;h3 id=&#34;android&#34;&gt;Android
+&lt;/h3&gt;&lt;p&gt;As a one time setup, make sure you have the Android SDK &amp;amp; NDK installed.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Check if ANDROID_NDK_HOME and ANDROID_HOME are set&lt;/li&gt;
+&lt;li&gt;Add the Android target to rust &lt;code&gt;rustup target add aarch64-linux-android&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Install cargo-ndk to manage building a lib &lt;code&gt;cargo install cargo-ndk&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Each time you change the rust code, run&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cargo ndk -t arm64-v8a -o crates/brush-app/app/src/main/jniLibs/ build&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Nb:  Nb, for best performance, build in release mode. This is separate
+from the Android Studio app build configuration.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cargo ndk -t arm64-v8a -o crates/brush-app/app/src/main/jniLibs/  build --release&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can now either run the project from Android Studio (Android Studio does NOT build the rust code), or run it from the command line:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./gradlew build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./gradlew installDebug
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell am start -n com.splats.app/.MainActivity
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;You can also open this folder as a project in Android Studio and run things from there. Nb: Running in Android Studio does &lt;em&gt;not&lt;/em&gt; rebuild the rust code automatically.&lt;/p&gt;
+&lt;h2 id=&#34;benchmarks&#34;&gt;Benchmarks
+&lt;/h2&gt;&lt;p&gt;Rendering and training are generally faster than gsplat. You can run benchmarks of some of the kernels using &lt;code&gt;cargo bench&lt;/code&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;acknowledgements&#34;&gt;Acknowledgements
+&lt;/h1&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/nerfstudio-project/gsplat&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;gSplat&lt;/strong&gt;&lt;/a&gt;, for their reference version of the kernels&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Peter Hedman, George Kopanas &amp;amp; Bernhard Kerbl&lt;/strong&gt;, for the many discussions &amp;amp; pointers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Burn team&lt;/strong&gt;, for help &amp;amp; improvements to Burn along the way&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Raph Levien&lt;/strong&gt;, for the &lt;a class=&#34;link&#34; href=&#34;https://github.com/googlefonts/compute-shader-101/pull/31&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;original version&lt;/a&gt; of the GPU radix sort.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GradeEterna&lt;/strong&gt;, for feedback and their scenes.&lt;/p&gt;
+&lt;h1 id=&#34;disclaimer&#34;&gt;Disclaimer
+&lt;/h1&gt;&lt;p&gt;This is &lt;em&gt;not&lt;/em&gt; an official Google product. This repository is a forked public version of &lt;a class=&#34;link&#34; href=&#34;https://github.com/google-research/google-research/tree/master/brush_splat&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;the google-research repository&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>colmap</title>
+        <link>https://producthunt.programnotes.cn/en/p/colmap/</link>
+        <pubDate>Mon, 18 Aug 2025 15:33:30 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/colmap/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1536045082245-23940deb3be1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTU1MDIzMzB8&amp;ixlib=rb-4.1.0" alt="Featured image of post colmap" /&gt;&lt;h1 id=&#34;colmapcolmap&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/colmap/colmap&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;colmap/colmap&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;colmap&#34;&gt;COLMAP
+&lt;/h1&gt;&lt;h2 id=&#34;about&#34;&gt;About
+&lt;/h2&gt;&lt;p&gt;COLMAP is a general-purpose Structure-from-Motion (SfM) and Multi-View Stereo
+(MVS) pipeline with a graphical and command-line interface. It offers a wide
+range of features for reconstruction of ordered and unordered image collections.
+The software is licensed under the new BSD license. If you use this project for
+your research, please cite:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@inproceedings{schoenberger2016sfm,
+    author={Sch\&amp;quot;{o}nberger, Johannes Lutz and Frahm, Jan-Michael},
+    title={Structure-from-Motion Revisited},
+    booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year={2016},
+}
+
+@inproceedings{schoenberger2016mvs,
+    author={Sch\&amp;quot;{o}nberger, Johannes Lutz and Zheng, Enliang and Pollefeys, Marc and Frahm, Jan-Michael},
+    title={Pixelwise View Selection for Unstructured Multi-View Stereo},
+    booktitle={European Conference on Computer Vision (ECCV)},
+    year={2016},
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you use the image retrieval / vocabulary tree engine, please also cite:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@inproceedings{schoenberger2016vote,
+    author={Sch\&amp;quot;{o}nberger, Johannes Lutz and Price, True and Sattler, Torsten and Frahm, Jan-Michael and Pollefeys, Marc},
+    title={A Vote-and-Verify Strategy for Fast Spatial Verification in Image Retrieval},
+    booktitle={Asian Conference on Computer Vision (ACCV)},
+    year={2016},
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The latest source code is available at &lt;a class=&#34;link&#34; href=&#34;https://github.com/colmap/colmap&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/colmap/colmap&lt;/a&gt;. COLMAP
+builds on top of existing works and when using specific algorithms within
+COLMAP, please also cite the original authors, as specified in the source code,
+and consider citing relevant third-party dependencies (most notably
+ceres-solver, poselib, sift-gpu, vlfeat).&lt;/p&gt;
+&lt;h2 id=&#34;download&#34;&gt;Download
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Binaries for &lt;strong&gt;Windows&lt;/strong&gt; and other resources can be downloaded
+from &lt;a class=&#34;link&#34; href=&#34;https://github.com/colmap/colmap/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/colmap/colmap/releases&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Binaries for &lt;strong&gt;Linux/Unix/BSD&lt;/strong&gt; are available at
+&lt;a class=&#34;link&#34; href=&#34;https://repology.org/metapackage/colmap/versions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://repology.org/metapackage/colmap/versions&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Pre-built &lt;strong&gt;Docker&lt;/strong&gt; images are available at
+&lt;a class=&#34;link&#34; href=&#34;https://hub.docker.com/r/colmap/colmap&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://hub.docker.com/r/colmap/colmap&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Python bindings&lt;/strong&gt; are available at &lt;a class=&#34;link&#34; href=&#34;https://pypi.org/project/pycolmap&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pypi.org/project/pycolmap&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;To &lt;strong&gt;build from source&lt;/strong&gt;, please see &lt;a class=&#34;link&#34; href=&#34;https://colmap.github.io/install.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://colmap.github.io/install.html&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Download pre-built binaries or build from source.&lt;/li&gt;
+&lt;li&gt;Download one of the provided datasets at &lt;a class=&#34;link&#34; href=&#34;https://demuc.de/colmap/datasets/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://demuc.de/colmap/datasets/&lt;/a&gt;
+or use your own images.&lt;/li&gt;
+&lt;li&gt;Use the &lt;strong&gt;automatic reconstruction&lt;/strong&gt; to easily build models
+with a single click or command.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation
+&lt;/h2&gt;&lt;p&gt;The documentation is available at &lt;a class=&#34;link&#34; href=&#34;https://colmap.github.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://colmap.github.io/&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;support&#34;&gt;Support
+&lt;/h2&gt;&lt;p&gt;Please, use GitHub Discussions at &lt;a class=&#34;link&#34; href=&#34;https://github.com/colmap/colmap/discussions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/colmap/colmap/discussions&lt;/a&gt;
+for questions and the GitHub issue tracker at &lt;a class=&#34;link&#34; href=&#34;https://github.com/colmap/colmap&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/colmap/colmap&lt;/a&gt;
+for bug reports, feature requests/additions, etc.&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgments&#34;&gt;Acknowledgments
+&lt;/h2&gt;&lt;p&gt;COLMAP was originally written by &lt;a class=&#34;link&#34; href=&#34;https://demuc.de/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Johannes Schönberger&lt;/a&gt; with
+funding provided by his PhD advisors Jan-Michael Frahm and Marc Pollefeys.
+The team of core project maintainers currently includes
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/ahojnnes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Johannes Schönberger&lt;/a&gt;,
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/sarlinpe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Paul-Edouard Sarlin&lt;/a&gt;, and
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/B1ueber2y&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Shaohui Liu&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Python bindings in PyCOLMAP were originally added by
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/mihaidusmanu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mihai Dusmanu&lt;/a&gt;,
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/Phil26AT&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Philipp Lindenberger&lt;/a&gt;, and
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/sarlinpe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Paul-Edouard Sarlin&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The project has also benefitted from countless community contributions, including
+bug fixes, improvements, new features, third-party tooling, and community
+support (special credits to &lt;a class=&#34;link&#34; href=&#34;https://tsattler.github.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Torsten Sattler&lt;/a&gt;).&lt;/p&gt;
+&lt;h2 id=&#34;contribution&#34;&gt;Contribution
+&lt;/h2&gt;&lt;p&gt;Contributions (bug reports, bug fixes, improvements, etc.) are very welcome and
+should be submitted in the form of new issues and/or pull requests on GitHub.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;The COLMAP library is licensed under the new BSD license. Note that this text
+refers only to the license for COLMAP itself, independent of its thirdparty
+dependencies, which are separately licensed. Building COLMAP with these
+dependencies may affect the resulting COLMAP license.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Copyright (c), ETH Zurich and UNC Chapel Hill.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+
+    * Neither the name of ETH Zurich and UNC Chapel Hill nor the names of
+      its contributors may be used to endorse or promote products derived
+      from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &amp;quot;AS IS&amp;quot;
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

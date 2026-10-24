@@ -1,0 +1,1855 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>NLP on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/nlp/</link>
+        <description>Recent content in NLP on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sun, 14 Sep 2025 15:25:45 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/nlp/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>transformers</title>
+        <link>https://producthunt.programnotes.cn/en/p/transformers/</link>
+        <pubDate>Sun, 14 Sep 2025 15:25:45 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/transformers/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1700245481730-d375ad70ff2b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTc4MzQ2NTB8&amp;ixlib=rb-4.1.0" alt="Featured image of post transformers" /&gt;&lt;h1 id=&#34;huggingfacetransformers&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/huggingface/transformers&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;huggingface/transformers&lt;/a&gt;
+&lt;/h1&gt;&lt;!---
+Copyright 2020 The HuggingFace Team. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the &#34;License&#34;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &#34;AS IS&#34; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+--&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;picture&gt;
+    &lt;source media=&#34;(prefers-color-scheme: dark)&#34; srcset=&#34;https://huggingface.co/datasets/huggingface/documentation-images/raw/main/transformers-logo-dark.svg&#34;&gt;
+    &lt;source media=&#34;(prefers-color-scheme: light)&#34; srcset=&#34;https://huggingface.co/datasets/huggingface/documentation-images/raw/main/transformers-logo-light.svg&#34;&gt;
+    &lt;img alt=&#34;Hugging Face Transformers Library&#34; src=&#34;https://huggingface.co/datasets/huggingface/documentation-images/raw/main/transformers-logo-light.svg&#34; width=&#34;352&#34; height=&#34;59&#34; style=&#34;max-width: 100%;&#34;&gt;
+  &lt;/picture&gt;
+  &lt;br/&gt;
+  &lt;br/&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+    &lt;a href=&#34;https://huggingface.com/models&#34;&gt;&lt;img alt=&#34;Checkpoints on Hub&#34; src=&#34;https://img.shields.io/endpoint?url=https://huggingface.co/api/shields/models&amp;color=brightgreen&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://circleci.com/gh/huggingface/transformers&#34;&gt;&lt;img alt=&#34;Build&#34; src=&#34;https://img.shields.io/circleci/build/github/huggingface/transformers/main&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://github.com/huggingface/transformers/blob/main/LICENSE&#34;&gt;&lt;img alt=&#34;GitHub&#34; src=&#34;https://img.shields.io/github/license/huggingface/transformers.svg?color=blue&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://huggingface.co/docs/transformers/index&#34;&gt;&lt;img alt=&#34;Documentation&#34; src=&#34;https://img.shields.io/website/http/huggingface.co/docs/transformers/index.svg?down_color=red&amp;down_message=offline&amp;up_message=online&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://github.com/huggingface/transformers/releases&#34;&gt;&lt;img alt=&#34;GitHub release&#34; src=&#34;https://img.shields.io/github/release/huggingface/transformers.svg&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://github.com/huggingface/transformers/blob/main/CODE_OF_CONDUCT.md&#34;&gt;&lt;img alt=&#34;Contributor Covenant&#34; src=&#34;https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://zenodo.org/badge/latestdoi/155220641&#34;&gt;&lt;img src=&#34;https://zenodo.org/badge/155220641.svg&#34; alt=&#34;DOI&#34;&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;h4 align=&#34;center&#34;&gt;
+    &lt;p&gt;
+        &lt;b&gt;English&lt;/b&gt; |
+        &lt;a href=&#34;https://github.com/huggingface/transformers/blob/main/i18n/README_zh-hans.md&#34;&gt;简体中文&lt;/a&gt; |
+        &lt;a href=&#34;https://github.com/huggingface/transformers/blob/main/i18n/README_zh-hant.md&#34;&gt;繁體中文&lt;/a&gt; |
+        &lt;a href=&#34;https://github.com/huggingface/transformers/blob/main/i18n/README_ko.md&#34;&gt;한국어&lt;/a&gt; |
+        &lt;a href=&#34;https://github.com/huggingface/transformers/blob/main/i18n/README_es.md&#34;&gt;Español&lt;/a&gt; |
+        &lt;a href=&#34;https://github.com/huggingface/transformers/blob/main/i18n/README_ja.md&#34;&gt;日本語&lt;/a&gt; |
+        &lt;a href=&#34;https://github.com/huggingface/transformers/blob/main/i18n/README_hd.md&#34;&gt;हिन्दी&lt;/a&gt; |
+        &lt;a href=&#34;https://github.com/huggingface/transformers/blob/main/i18n/README_ru.md&#34;&gt;Русский&lt;/a&gt; |
+        &lt;a href=&#34;https://github.com/huggingface/transformers/blob/main/i18n/README_pt-br.md&#34;&gt;Português&lt;/a&gt; |
+        &lt;a href=&#34;https://github.com/huggingface/transformers/blob/main/i18n/README_te.md&#34;&gt;తెలుగు&lt;/a&gt; |
+        &lt;a href=&#34;https://github.com/huggingface/transformers/blob/main/i18n/README_fr.md&#34;&gt;Français&lt;/a&gt; |
+        &lt;a href=&#34;https://github.com/huggingface/transformers/blob/main/i18n/README_de.md&#34;&gt;Deutsch&lt;/a&gt; |
+        &lt;a href=&#34;https://github.com/huggingface/transformers/blob/main/i18n/README_vi.md&#34;&gt;Tiếng Việt&lt;/a&gt; |
+        &lt;a href=&#34;https://github.com/huggingface/transformers/blob/main/i18n/README_ar.md&#34;&gt;العربية&lt;/a&gt; |
+        &lt;a href=&#34;https://github.com/huggingface/transformers/blob/main/i18n/README_ur.md&#34;&gt;اردو&lt;/a&gt; |
+    &lt;/p&gt;
+&lt;/h4&gt;
+&lt;h3 align=&#34;center&#34;&gt;
+    &lt;p&gt;State-of-the-art pretrained models for inference and training&lt;/p&gt;
+&lt;/h3&gt;
+&lt;h3 align=&#34;center&#34;&gt;
+    &lt;img src=&#34;https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/transformers_as_a_model_definition.png&#34;/&gt;
+&lt;/h3&gt;
+&lt;p&gt;Transformers acts as the model-definition framework for state-of-the-art machine learning models in text, computer
+vision, audio, video, and multimodal model, for both inference and training.&lt;/p&gt;
+&lt;p&gt;It centralizes the model definition so that this definition is agreed upon across the ecosystem. &lt;code&gt;transformers&lt;/code&gt; is the
+pivot across frameworks: if a model definition is supported, it will be compatible with the majority of training
+frameworks (Axolotl, Unsloth, DeepSpeed, FSDP, PyTorch-Lightning, &amp;hellip;), inference engines (vLLM, SGLang, TGI, &amp;hellip;),
+and adjacent modeling libraries (llama.cpp, mlx, &amp;hellip;) which leverage the model definition from &lt;code&gt;transformers&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;We pledge to help support new state-of-the-art models and democratize their usage by having their model definition be
+simple, customizable, and efficient.&lt;/p&gt;
+&lt;p&gt;There are over 1M+ Transformers &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/models?library=transformers&amp;amp;sort=trending&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;model checkpoints&lt;/a&gt; on the &lt;a class=&#34;link&#34; href=&#34;https://huggingface.com/models&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugging Face Hub&lt;/a&gt; you can use.&lt;/p&gt;
+&lt;p&gt;Explore the &lt;a class=&#34;link&#34; href=&#34;https://huggingface.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hub&lt;/a&gt; today to find a model and use Transformers to help you get started right away.&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation
+&lt;/h2&gt;&lt;p&gt;Transformers works with Python 3.9+ &lt;a class=&#34;link&#34; href=&#34;https://pytorch.org/get-started/locally/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PyTorch&lt;/a&gt; 2.1+, &lt;a class=&#34;link&#34; href=&#34;https://www.tensorflow.org/install/pip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;TensorFlow&lt;/a&gt; 2.6+, and &lt;a class=&#34;link&#34; href=&#34;https://flax.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Flax&lt;/a&gt; 0.4.1+.&lt;/p&gt;
+&lt;p&gt;Create and activate a virtual environment with &lt;a class=&#34;link&#34; href=&#34;https://docs.python.org/3/library/venv.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;venv&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;https://docs.astral.sh/uv/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;uv&lt;/a&gt;, a fast Rust-based Python package and project manager.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-py&#34; data-lang=&#34;py&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# venv&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;python&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;venv&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;my&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;env&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;my&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;env&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;activate&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# uv&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;uv&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;venv&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;my&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;env&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;my&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;env&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;activate&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Install Transformers in your virtual environment.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-py&#34; data-lang=&#34;py&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# pip&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;transformers[torch]&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# uv&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;uv&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;transformers[torch]&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Install Transformers from source if you want the latest changes in the library or are interested in contributing. However, the &lt;em&gt;latest&lt;/em&gt; version may not be stable. Feel free to open an &lt;a class=&#34;link&#34; href=&#34;https://github.com/huggingface/transformers/issues&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;issue&lt;/a&gt; if you encounter an error.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/huggingface/transformers.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; transformers
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# pip&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install .&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;torch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# uv&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uv pip install .&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;torch&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;quickstart&#34;&gt;Quickstart
+&lt;/h2&gt;&lt;p&gt;Get started with Transformers right away with the &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/docs/transformers/pipeline_tutorial&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pipeline&lt;/a&gt; API. The &lt;code&gt;Pipeline&lt;/code&gt; is a high-level inference class that supports text, audio, vision, and multimodal tasks. It handles preprocessing the input and returns the appropriate output.&lt;/p&gt;
+&lt;p&gt;Instantiate a pipeline and specify model to use for text generation. The model is downloaded and cached so you can easily reuse it again. Finally, pass some text to prompt the model.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-py&#34; data-lang=&#34;py&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;transformers&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;task&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;text-generation&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Qwen/Qwen2.5-1.5B&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;the secret to baking a really good cake is &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;generated_text&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;the secret to baking a really good cake is 1) to use the right ingredients and 2) to follow the recipe exactly. the recipe for the cake is as follows: 1 cup of sugar, 1 cup of flour, 1 cup of milk, 1 cup of butter, 1 cup of eggs, 1 cup of chocolate chips. if you want to make 2 cakes, how much sugar do you need? To make 2 cakes, you will need 2 cups of sugar.&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To chat with a model, the usage pattern is the same. The only difference is you need to construct a chat history (the input to &lt;code&gt;Pipeline&lt;/code&gt;) between you and the system.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!TIP]
+You can also chat with a model directly from the command line.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;transformers chat Qwen/Qwen2.5-0.5B-Instruct
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-py&#34; data-lang=&#34;py&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;torch&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;transformers&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;chat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;role&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;system&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;You are a sassy, wise-cracking robot as imagined by Hollywood circa 1986.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;role&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;user&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Hey, can you tell me any fun things to do in New York?&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;task&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;text-generation&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;meta-llama/Meta-Llama-3-8B-Instruct&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dtype&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;torch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bfloat16&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;device_map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;auto&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;chat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;max_new_tokens&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;512&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;generated_text&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Expand the examples below to see how &lt;code&gt;Pipeline&lt;/code&gt; works for different modalities and tasks.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;Automatic speech recognition&lt;/summary&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-py&#34; data-lang=&#34;py&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;transformers&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;task&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;automatic-speech-recognition&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;openai/whisper-large-v3&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;text&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39; I have a dream that one day this nation will rise up and live out the true meaning of its creed.&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;Image classification&lt;/summary&gt;
+&lt;h3 align=&#34;center&#34;&gt;
+    &lt;a&gt;&lt;img src=&#34;https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-py&#34; data-lang=&#34;py&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;transformers&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;task&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;image-classification&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;facebook/dinov2-small-imagenet1k-1-layer&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;label&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;macaw&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;score&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.997848391532898&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;label&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;sulphur-crested cockatoo, Kakatoe galerita, Cacatua galerita&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s1&#34;&gt;&amp;#39;score&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.0016551691805943847&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;label&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;lorikeet&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;score&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.00018523589824326336&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;label&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;African grey, African gray, Psittacus erithacus&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s1&#34;&gt;&amp;#39;score&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;7.85409429227002e-05&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;label&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;quail&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;score&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;5.502637941390276e-05&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;Visual question answering&lt;/summary&gt;
+&lt;h3 align=&#34;center&#34;&gt;
+    &lt;a&gt;&lt;img src=&#34;https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-few-shot.jpg&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-py&#34; data-lang=&#34;py&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;transformers&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;task&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;visual-question-answering&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Salesforce/blip-vqa-base&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-few-shot.jpg&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;question&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;What is in the image?&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;answer&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;statue of liberty&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;h2 id=&#34;why-should-i-use-transformers&#34;&gt;Why should I use Transformers?
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Easy-to-use state-of-the-art models:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;High performance on natural language understanding &amp;amp; generation, computer vision, audio, video, and multimodal tasks.&lt;/li&gt;
+&lt;li&gt;Low barrier to entry for researchers, engineers, and developers.&lt;/li&gt;
+&lt;li&gt;Few user-facing abstractions with just three classes to learn.&lt;/li&gt;
+&lt;li&gt;A unified API for using all our pretrained models.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lower compute costs, smaller carbon footprint:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Share trained models instead of training from scratch.&lt;/li&gt;
+&lt;li&gt;Reduce compute time and production costs.&lt;/li&gt;
+&lt;li&gt;Dozens of model architectures with 1M+ pretrained checkpoints across all modalities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Choose the right framework for every part of a models lifetime:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Train state-of-the-art models in 3 lines of code.&lt;/li&gt;
+&lt;li&gt;Move a single model between PyTorch/JAX/TF2.0 frameworks at will.&lt;/li&gt;
+&lt;li&gt;Pick the right framework for training, evaluation, and production.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Easily customize a model or an example to your needs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We provide examples for each architecture to reproduce the results published by its original authors.&lt;/li&gt;
+&lt;li&gt;Model internals are exposed as consistently as possible.&lt;/li&gt;
+&lt;li&gt;Model files can be used independently of the library for quick experiments.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;a target=&#34;_blank&#34; href=&#34;https://huggingface.co/enterprise&#34;&gt;
+    &lt;img alt=&#34;Hugging Face Enterprise Hub&#34; src=&#34;https://github.com/user-attachments/assets/247fb16d-d251-4583-96c4-d3d76dda4925&#34;&gt;
+&lt;/a&gt;&lt;br&gt;
+&lt;h2 id=&#34;why-shouldnt-i-use-transformers&#34;&gt;Why shouldn&amp;rsquo;t I use Transformers?
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;This library is not a modular toolbox of building blocks for neural nets. The code in the model files is not refactored with additional abstractions on purpose, so that researchers can quickly iterate on each of the models without diving into additional abstractions/files.&lt;/li&gt;
+&lt;li&gt;The training API is optimized to work with PyTorch models provided by Transformers. For generic machine learning loops, you should use another library like &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/docs/accelerate&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Accelerate&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;The &lt;a class=&#34;link&#34; href=&#34;https://github.com/huggingface/transformers/tree/main/examples&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;example scripts&lt;/a&gt; are only &lt;em&gt;examples&lt;/em&gt;. They may not necessarily work out-of-the-box on your specific use case and you&amp;rsquo;ll need to adapt the code for it to work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;100-projects-using-transformers&#34;&gt;100 projects using Transformers
+&lt;/h2&gt;&lt;p&gt;Transformers is more than a toolkit to use pretrained models, it&amp;rsquo;s a community of projects built around it and the
+Hugging Face Hub. We want Transformers to enable developers, researchers, students, professors, engineers, and anyone
+else to build their dream projects.&lt;/p&gt;
+&lt;p&gt;In order to celebrate Transformers 100,000 stars, we wanted to put the spotlight on the
+community with the &lt;a class=&#34;link&#34; href=&#34;./awesome-transformers.md&#34; &gt;awesome-transformers&lt;/a&gt; page which lists 100
+incredible projects built with Transformers.&lt;/p&gt;
+&lt;p&gt;If you own or use a project that you believe should be part of the list, please open a PR to add it!&lt;/p&gt;
+&lt;h2 id=&#34;example-models&#34;&gt;Example models
+&lt;/h2&gt;&lt;p&gt;You can test most of our models directly on their &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/models&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hub model pages&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Expand each modality below to see a few example models for various use cases.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;Audio&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Audio classification with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/openai/whisper-large-v3-turbo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Whisper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Automatic speech recognition with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/UsefulSensors/moonshine&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Moonshine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Keyword spotting with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/superb/wav2vec2-base-superb-ks&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Wav2Vec2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Speech to speech generation with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/kyutai/moshiko-pytorch-bf16&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Moshi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Text to audio with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/facebook/musicgen-large&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MusicGen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Text to speech with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/suno/bark&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Bark&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;Computer vision&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Automatic mask generation with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/facebook/sam-vit-base&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SAM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Depth estimation with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/apple/DepthPro-hf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DepthPro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Image classification with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/facebook/dinov2-base&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DINO v2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Keypoint detection with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/magic-leap-community/superpoint&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SuperPoint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Keypoint matching with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/magic-leap-community/superglue_outdoor&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SuperGlue&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Object detection with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/PekingU/rtdetr_v2_r50vd&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RT-DETRv2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pose Estimation with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/usyd-community/vitpose-base-simple&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VitPose&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Universal segmentation with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/shi-labs/oneformer_ade20k_swin_large&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OneFormer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Video classification with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/MCG-NJU/videomae-large&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VideoMAE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;Multimodal&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Audio or text to text with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/Qwen/Qwen2-Audio-7B&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qwen2-Audio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Document question answering with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/microsoft/layoutlmv3-base&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LayoutLMv3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Image or text to text with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qwen-VL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Image captioning &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/Salesforce/blip2-opt-2.7b&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BLIP-2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;OCR-based document understanding with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/stepfun-ai/GOT-OCR-2.0-hf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GOT-OCR2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Table question answering with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/google/tapas-base&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;TAPAS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Unified multimodal understanding and generation with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/BAAI/Emu3-Gen&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Emu3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Vision to text with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/llava-hf/llava-onevision-qwen2-0.5b-ov-hf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Llava-OneVision&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Visual question answering with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/llava-hf/llava-1.5-7b-hf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Llava&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Visual referring expression segmentation with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/microsoft/kosmos-2-patch14-224&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Kosmos-2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;NLP&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Masked word completion with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/answerdotai/ModernBERT-base&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ModernBERT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Named entity recognition with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/google/gemma-2-2b&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Gemma&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Question answering with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/mistralai/Mixtral-8x7B-v0.1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mixtral&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Summarization with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/facebook/bart-large-cnn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BART&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Translation with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/google-t5/t5-base&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;T5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Text generation with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/meta-llama/Llama-3.2-1B&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Llama&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Text classification with &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/Qwen/Qwen2.5-0.5B&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qwen&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation
+&lt;/h2&gt;&lt;p&gt;We now have a &lt;a class=&#34;link&#34; href=&#34;https://www.aclweb.org/anthology/2020.emnlp-demos.6/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;paper&lt;/a&gt; you can cite for the 🤗 Transformers library:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@inproceedings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;wolf-etal-2020-transformers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Transformers: State-of-the-Art Natural Language Processing&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Thomas Wolf and Lysandre Debut and Victor Sanh and Julien Chaumond and Clement Delangue and Anthony Moi and Pierric Cistac and Tim Rault and Rémi Louf and Morgan Funtowicz and Joe Davison and Sam Shleifer and Patrick von Platen and Clara Ma and Yacine Jernite and Julien Plu and Canwen Xu and Teven Le Scao and Sylvain Gugger and Mariama Drame and Quentin Lhoest and Alexander M. Rush&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;booktitle&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;month&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;oct&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;2020&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;address&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Online&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;publisher&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Association for Computational Linguistics&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;https://www.aclweb.org/anthology/2020.emnlp-demos.6&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;pages&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;38--45&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>nn-zero-to-hero</title>
+        <link>https://producthunt.programnotes.cn/en/p/nn-zero-to-hero/</link>
+        <pubDate>Fri, 29 Aug 2025 15:27:57 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/nn-zero-to-hero/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1637160691421-e66ac6194e2b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTY0NTI0MTZ8&amp;ixlib=rb-4.1.0" alt="Featured image of post nn-zero-to-hero" /&gt;&lt;h1 id=&#34;karpathynn-zero-to-hero&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/karpathy/nn-zero-to-hero&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;karpathy/nn-zero-to-hero&lt;/a&gt;
+&lt;/h1&gt;&lt;h2 id=&#34;neural-networks-zero-to-hero&#34;&gt;Neural Networks: Zero to Hero
+&lt;/h2&gt;&lt;p&gt;A course on neural networks that starts all the way at the basics. The course is a series of YouTube videos where we code and train neural networks together. The Jupyter notebooks we build in the videos are then captured here inside the &lt;a class=&#34;link&#34; href=&#34;lectures/&#34; &gt;lectures&lt;/a&gt; directory. Every lecture also has a set of exercises included in the video description. (This may grow into something more respectable).&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Lecture 1: The spelled-out intro to neural networks and backpropagation: building micrograd&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Backpropagation and training of neural networks. Assumes basic knowledge of Python and a vague recollection of calculus from high school.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=VMj-3S1tku0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube video lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;lectures/micrograd&#34; &gt;Jupyter notebook files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/karpathy/micrograd&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;micrograd Github repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Lecture 2: The spelled-out intro to language modeling: building makemore&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We implement a bigram character-level language model, which we will further complexify in followup videos into a modern Transformer language model, like GPT. In this video, the focus is on (1) introducing torch.Tensor and its subtleties and use in efficiently evaluating neural networks and (2) the overall framework of language modeling that includes model training, sampling, and the evaluation of a loss (e.g. the negative log likelihood for classification).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=PaCmpygFfXo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube video lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;lectures/makemore/makemore_part1_bigrams.ipynb&#34; &gt;Jupyter notebook files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/karpathy/makemore&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;makemore Github repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Lecture 3: Building makemore Part 2: MLP&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We implement a multilayer perceptron (MLP) character-level language model. In this video we also introduce many basics of machine learning (e.g. model training, learning rate tuning, hyperparameters, evaluation, train/dev/test splits, under/overfitting, etc.).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/TCH_1BHY58I&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube video lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;lectures/makemore/makemore_part2_mlp.ipynb&#34; &gt;Jupyter notebook files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/karpathy/makemore&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;makemore Github repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Lecture 4: Building makemore Part 3: Activations &amp;amp; Gradients, BatchNorm&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We dive into some of the internals of MLPs with multiple layers and scrutinize the statistics of the forward pass activations, backward pass gradients, and some of the pitfalls when they are improperly scaled. We also look at the typical diagnostic tools and visualizations you&amp;rsquo;d want to use to understand the health of your deep network. We learn why training deep neural nets can be fragile and introduce the first modern innovation that made doing so much easier: Batch Normalization. Residual connections and the Adam optimizer remain notable todos for later video.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/P6sfmUTpUmc&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube video lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;lectures/makemore/makemore_part3_bn.ipynb&#34; &gt;Jupyter notebook files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/karpathy/makemore&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;makemore Github repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Lecture 5: Building makemore Part 4: Becoming a Backprop Ninja&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We take the 2-layer MLP (with BatchNorm) from the previous video and backpropagate through it manually without using PyTorch autograd&amp;rsquo;s loss.backward(). That is, we backprop through the cross entropy loss, 2nd linear layer, tanh, batchnorm, 1st linear layer, and the embedding table. Along the way, we get an intuitive understanding about how gradients flow backwards through the compute graph and on the level of efficient Tensors, not just individual scalars like in micrograd. This helps build competence and intuition around how neural nets are optimized and sets you up to more confidently innovate on and debug modern neural networks.&lt;/p&gt;
+&lt;p&gt;I recommend you work through the exercise yourself but work with it in tandem and whenever you are stuck unpause the video and see me give away the answer. This video is not super intended to be simply watched. The exercise is &lt;a class=&#34;link&#34; href=&#34;https://colab.research.google.com/drive/1WV2oi2fh9XXyldh02wupFQX0wh5ZC-z-?usp=sharing&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here as a Google Colab&lt;/a&gt;. Good luck :)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/q8SA3rM6ckI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube video lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;lectures/makemore/makemore_part4_backprop.ipynb&#34; &gt;Jupyter notebook files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/karpathy/makemore&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;makemore Github repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Lecture 6: Building makemore Part 5: Building WaveNet&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We take the 2-layer MLP from previous video and make it deeper with a tree-like structure, arriving at a convolutional neural network architecture similar to the WaveNet (2016) from DeepMind. In the WaveNet paper, the same hierarchical architecture is implemented more efficiently using causal dilated convolutions (not yet covered). Along the way we get a better sense of torch.nn and what it is and how it works under the hood, and what a typical deep learning development process looks like (a lot of reading of documentation, keeping track of multidimensional tensor shapes, moving between jupyter notebooks and repository code, &amp;hellip;).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/t3YJ5hKiMQ0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube video lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;lectures/makemore/makemore_part5_cnn1.ipynb&#34; &gt;Jupyter notebook files&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Lecture 7: Let&amp;rsquo;s build GPT: from scratch, in code, spelled out.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We build a Generatively Pretrained Transformer (GPT), following the paper &amp;ldquo;Attention is All You Need&amp;rdquo; and OpenAI&amp;rsquo;s GPT-2 / GPT-3. We talk about connections to ChatGPT, which has taken the world by storm. We watch GitHub Copilot, itself a GPT, help us write a GPT (meta :D!) . I recommend people watch the earlier makemore videos to get comfortable with the autoregressive language modeling framework and basics of tensors and PyTorch nn, which we take for granted in this video.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=kCc8FmEb1nY&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube video lecture&lt;/a&gt;. For all other links see the video description.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Lecture 8: Let&amp;rsquo;s build the GPT Tokenizer&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The Tokenizer is a necessary and pervasive component of Large Language Models (LLMs), where it translates between strings and tokens (text chunks). Tokenizers are a completely separate stage of the LLM pipeline: they have their own training sets, training algorithms (Byte Pair Encoding), and after training implement two fundamental functions: encode() from strings to tokens, and decode() back from tokens to strings. In this lecture we build from scratch the Tokenizer used in the GPT series from OpenAI. In the process, we will see that a lot of weird behaviors and problems of LLMs actually trace back to tokenization. We&amp;rsquo;ll go through a number of these issues, discuss why tokenization is at fault, and why someone out there ideally finds a way to delete this stage entirely.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=zduSFxRajkE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube video lecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/karpathy/minbpe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;minBPE code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://colab.research.google.com/drive/1y0KnCFZvGVf_odSfcNAws6kcDD7HsI0L?usp=sharing&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google Colab&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Ongoing&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;License&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;MIT&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>VideoLingo</title>
+        <link>https://producthunt.programnotes.cn/en/p/videolingo/</link>
+        <pubDate>Sun, 03 Aug 2025 15:30:27 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/videolingo/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1450501719076-a6d5e3e780e5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQyMDYxMjV8&amp;ixlib=rb-4.1.0" alt="Featured image of post VideoLingo" /&gt;&lt;h1 id=&#34;huansherevideolingo&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Huanshere/VideoLingo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Huanshere/VideoLingo&lt;/a&gt;
+&lt;/h1&gt;&lt;div align=&#34;center&#34;&gt;
+&lt;h1 id=&#34;connect-the-world-frame-by-frame&#34;&gt;Connect the World, Frame by Frame
+&lt;/h1&gt;&lt;p&gt;&lt;a href=&#34;https://trendshift.io/repositories/12200&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://trendshift.io/api/badge/repositories/12200&#34; alt=&#34;Huanshere%2FVideoLingo | Trendshift&#34; style=&#34;width: 250px; height: 55px;&#34; width=&#34;250&#34; height=&#34;55&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/README.md&#34; &gt;&lt;strong&gt;English&lt;/strong&gt;&lt;/a&gt;｜&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/translations/README.zh.md&#34; &gt;&lt;strong&gt;简体中文&lt;/strong&gt;&lt;/a&gt;｜&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/translations/README.zh-TW.md&#34; &gt;&lt;strong&gt;繁體中文&lt;/strong&gt;&lt;/a&gt;｜&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/translations/README.ja.md&#34; &gt;&lt;strong&gt;日本語&lt;/strong&gt;&lt;/a&gt;｜&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/translations/README.es.md&#34; &gt;&lt;strong&gt;Español&lt;/strong&gt;&lt;/a&gt;｜&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/translations/README.ru.md&#34; &gt;&lt;strong&gt;Русский&lt;/strong&gt;&lt;/a&gt;｜&lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/translations/README.fr.md&#34; &gt;&lt;strong&gt;Français&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;-overview-try-vl-now&#34;&gt;🌟 Overview (&lt;a class=&#34;link&#34; href=&#34;https://videolingo.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Try VL Now!&lt;/a&gt;)
+&lt;/h2&gt;&lt;p&gt;VideoLingo is an all-in-one video translation, localization, and dubbing tool aimed at generating Netflix-quality subtitles. It eliminates stiff machine translations and multi-line subtitles while adding high-quality dubbing, enabling global knowledge sharing across language barriers.&lt;/p&gt;
+&lt;p&gt;Key features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;🎥 YouTube video download via yt-dlp&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;🎙️ Word-level and Low-illusion subtitle recognition with WhisperX&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;📝 NLP and AI-powered subtitle segmentation&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;📚 Custom + AI-generated terminology for coherent translation&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;🔄 3-step Translate-Reflect-Adaptation for cinematic quality&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;✅ Netflix-standard, Single-line subtitles Only&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;🗣️ Dubbing with GPT-SoVITS, Azure, OpenAI, and more&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;🚀 One-click startup and processing in Streamlit&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;🌍 Multi-language support in Streamlit UI&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;📝 Detailed logging with progress resumption&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Difference from similar projects: &lt;strong&gt;Single-line subtitles only, superior translation quality, seamless dubbing experience&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-demo&#34;&gt;🎥 Demo
+&lt;/h2&gt;&lt;table&gt;
+&lt;tr&gt;
+&lt;td width=&#34;33%&#34;&gt;
+&lt;h3 id=&#34;dual-subtitles&#34;&gt;Dual Subtitles
+&lt;/h3&gt;&lt;hr&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/user-attachments/assets/a5c3d8d1-2b29-4ba9-b0d0-25896829d951&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/user-attachments/assets/a5c3d8d1-2b29-4ba9-b0d0-25896829d951&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td width=&#34;33%&#34;&gt;
+&lt;h3 id=&#34;cosy2-voice-clone&#34;&gt;Cosy2 Voice Clone
+&lt;/h3&gt;&lt;hr&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/user-attachments/assets/e065fe4c-3694-477f-b4d6-316917df7c0a&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/user-attachments/assets/e065fe4c-3694-477f-b4d6-316917df7c0a&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td width=&#34;33%&#34;&gt;
+&lt;h3 id=&#34;gpt-sovits-with-my-voice&#34;&gt;GPT-SoVITS with my voice
+&lt;/h3&gt;&lt;hr&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/user-attachments/assets/47d965b2-b4ab-4a0b-9d08-b49a7bf3508c&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/user-attachments/assets/47d965b2-b4ab-4a0b-9d08-b49a7bf3508c&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;language-support&#34;&gt;Language Support
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Input Language Support(more to come):&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;🇺🇸 English 🤩 | 🇷🇺 Russian 😊 | 🇫🇷 French 🤩 | 🇩🇪 German 🤩 | 🇮🇹 Italian 🤩 | 🇪🇸 Spanish 🤩 | 🇯🇵 Japanese 😐 | 🇨🇳 Chinese* 😊&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;*Chinese uses a separate punctuation-enhanced whisper model, for now&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Translation supports all languages, while dubbing language depends on the chosen TTS method.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation
+&lt;/h2&gt;&lt;p&gt;Meet any problem? Chat with our free online AI agent &lt;a class=&#34;link&#34; href=&#34;https://share.fastgpt.in/chat/share?shareId=066w11n3r9aq6879r4z0v9rh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;here&lt;/strong&gt;&lt;/a&gt; to help you.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; For Windows users with NVIDIA GPU, follow these steps before installation:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install &lt;a class=&#34;link&#34; href=&#34;https://developer.download.nvidia.com/compute/cuda/12.6.0/local_installers/cuda_12.6.0_560.76_windows.exe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CUDA Toolkit 12.6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Install &lt;a class=&#34;link&#34; href=&#34;https://developer.download.nvidia.com/compute/cudnn/9.3.0/local_installers/cudnn_9.3.0_windows.exe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CUDNN 9.3.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;C:\Program Files\NVIDIA\CUDNN\v9.3\bin\12.6&lt;/code&gt; to your system PATH&lt;/li&gt;
+&lt;li&gt;Restart your computer&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; FFmpeg is required. Please install it via package managers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows: &lt;code&gt;choco install ffmpeg&lt;/code&gt; (via &lt;a class=&#34;link&#34; href=&#34;https://chocolatey.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chocolatey&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;macOS: &lt;code&gt;brew install ffmpeg&lt;/code&gt; (via &lt;a class=&#34;link&#34; href=&#34;https://brew.sh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Homebrew&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Linux: &lt;code&gt;sudo apt install ffmpeg&lt;/code&gt; (Debian/Ubuntu)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;Clone the repository&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/Huanshere/VideoLingo.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; VideoLingo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Install dependencies(requires &lt;code&gt;python=3.10&lt;/code&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda create -n videolingo &lt;span class=&#34;nv&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3.10.0 -y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda activate videolingo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python install.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Start the application&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;streamlit run st.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;docker&#34;&gt;Docker
+&lt;/h3&gt;&lt;p&gt;Alternatively, you can use Docker (requires CUDA 12.4 and NVIDIA Driver version &amp;gt;550), see &lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/docs/pages/docs/docker.en-US.md&#34; &gt;Docker docs&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker build -t videolingo .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d -p 8501:8501 --gpus all videolingo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;apis&#34;&gt;APIs
+&lt;/h2&gt;&lt;p&gt;VideoLingo supports OpenAI-Like API format and various TTS interfaces:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LLM: &lt;code&gt;claude-3-5-sonnet&lt;/code&gt;, &lt;code&gt;gpt-4.1&lt;/code&gt;, &lt;code&gt;deepseek-v3&lt;/code&gt;, &lt;code&gt;gemini-2.0-flash&lt;/code&gt;, &amp;hellip; (sorted by performance, be cautious with gemini-2.5-flash&amp;hellip;)&lt;/li&gt;
+&lt;li&gt;WhisperX: Run whisperX (large-v3) locally or use 302.ai API&lt;/li&gt;
+&lt;li&gt;TTS: &lt;code&gt;azure-tts&lt;/code&gt;, &lt;code&gt;openai-tts&lt;/code&gt;, &lt;code&gt;siliconflow-fishtts&lt;/code&gt;, &lt;strong&gt;&lt;code&gt;fish-tts&lt;/code&gt;&lt;/strong&gt;, &lt;code&gt;GPT-SoVITS&lt;/code&gt;, &lt;code&gt;edge-tts&lt;/code&gt;, &lt;code&gt;*custom-tts&lt;/code&gt;(You can modify your own TTS in custom_tts.py!)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; VideoLingo works with &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://gpt302.saaslink.net/C2oHR9&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;302.ai&lt;/a&gt;&lt;/strong&gt; - one API key for all services (LLM, WhisperX, TTS). Or run locally with Ollama and Edge-TTS for free, no API needed!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For detailed installation, API configuration, and batch mode instructions, please refer to the documentation: &lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/docs/pages/docs/start.en-US.md&#34; &gt;English&lt;/a&gt; | &lt;a class=&#34;link&#34; href=&#34;https://producthunt.programnotes.cn/docs/pages/docs/start.zh-CN.md&#34; &gt;中文&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;current-limitations&#34;&gt;Current Limitations
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;WhisperX transcription performance may be affected by video background noise, as it uses wav2vac model for alignment. For videos with loud background music, please enable Voice Separation Enhancement. Additionally, subtitles ending with numbers or special characters may be truncated early due to wav2vac&amp;rsquo;s inability to map numeric characters (e.g., &amp;ldquo;1&amp;rdquo;) to their spoken form (&amp;ldquo;one&amp;rdquo;).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Using weaker models can lead to errors during processes due to strict JSON format requirements for responses (tried my best to prompt llm😊). If this error occurs, please delete the &lt;code&gt;output&lt;/code&gt; folder and retry with a different LLM, otherwise repeated execution will read the previous erroneous response causing the same error.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The dubbing feature may not be 100% perfect due to differences in speech rates and intonation between languages, as well as the impact of the translation step. However, this project has implemented extensive engineering processing for speech rates to ensure the best possible dubbing results.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Multilingual video transcription recognition will only retain the main language&lt;/strong&gt;. This is because whisperX uses a specialized model for a single language when forcibly aligning word-level subtitles, and will delete unrecognized languages.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;For now, cannot dub multiple characters separately&lt;/strong&gt;, as whisperX&amp;rsquo;s speaker distinction capability is not sufficiently reliable.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;-license&#34;&gt;📄 License
+&lt;/h2&gt;&lt;p&gt;This project is licensed under the Apache 2.0 License. Special thanks to the following open source projects for their contributions:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/m-bain/whisperX&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;whisperX&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/yt-dlp/yt-dlp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;yt-dlp&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/mangiucugna/json_repair&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;json_repair&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/LianjiaTech/BELLE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BELLE&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-contact-me&#34;&gt;📬 Contact Me
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Submit &lt;a class=&#34;link&#34; href=&#34;https://github.com/Huanshere/VideoLingo/issues&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Issues&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;https://github.com/Huanshere/VideoLingo/pulls&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pull Requests&lt;/a&gt; on GitHub&lt;/li&gt;
+&lt;li&gt;DM me on Twitter: &lt;a class=&#34;link&#34; href=&#34;https://twitter.com/Huanshere&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@Huanshere&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Email me at: &lt;a class=&#34;link&#34; href=&#34;mailto:team@videolingo.io&#34; &gt;team@videolingo.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-star-history&#34;&gt;⭐ Star History
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://star-history.com/#Huanshere/VideoLingo&amp;amp;Timeline&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://api.star-history.com/svg?repos=Huanshere/VideoLingo&amp;amp;type=Timeline&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Star History Chart&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p align=&#34;center&#34;&gt;If you find VideoLingo helpful, please give me a ⭐️!&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>GenAI_Agents</title>
+        <link>https://producthunt.programnotes.cn/en/p/genai_agents/</link>
+        <pubDate>Wed, 09 Jul 2025 15:32:24 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/genai_agents/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1593026238203-90a4fc78cba5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIwNDYyMzF8&amp;ixlib=rb-4.1.0" alt="Featured image of post GenAI_Agents" /&gt;&lt;h1 id=&#34;nirdiamantgenai_&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NirDiamant/GenAI_Agents&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://makeapullrequest.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PRs Welcome&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.linkedin.com/in/nir-diamant-759323134/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/LinkedIn-Connect-blue&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;LinkedIn&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/NirDiamantAI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/twitter/follow/NirDiamantAI?label=Follow%20@NirDiamantAI&amp;amp;style=social&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Twitter&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://discord.gg/cA6Aa4uyDX&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/Discord-Join%20our%20community-7289da?style=flat-square&amp;amp;logo=discord&amp;amp;logoColor=white&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Discord&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;🌟 &lt;strong&gt;Support This Project:&lt;/strong&gt; Your sponsorship fuels innovation in GenAI agent development. &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/sponsors/NirDiamant&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Become a sponsor&lt;/a&gt;&lt;/strong&gt; to help maintain and expand this valuable resource!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;genai-agents-comprehensive-repository-for-development-and-implementation-&#34;&gt;GenAI Agents: Comprehensive Repository for Development and Implementation 🚀
+&lt;/h1&gt;&lt;p&gt;Welcome to one of the most extensive and dynamic collections of Generative AI (GenAI) agent tutorials and implementations available today. This repository serves as a comprehensive resource for learning, building, and sharing GenAI agents, ranging from simple conversational bots to complex, multi-agent systems.&lt;/p&gt;
+&lt;h2 id=&#34;-stay-updated&#34;&gt;📫 Stay Updated!
+&lt;/h2&gt;&lt;div align=&#34;center&#34;&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;🚀&lt;br&gt;&lt;b&gt;Cutting-edge&lt;br&gt;Updates&lt;/b&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;💡&lt;br&gt;&lt;b&gt;Expert&lt;br&gt;Insights&lt;/b&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;🎯&lt;br&gt;&lt;b&gt;Top 0.1%&lt;br&gt;Content&lt;/b&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://diamantai.substack.com/?r=336pe4&amp;amp;utm_campaign=pub-share-checklist&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://producthunt.programnotes.cn/images/subscribe-button.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Subscribe to DiamantAI Newsletter&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Join over 20,000 of AI enthusiasts getting unique cutting-edge insights and free tutorials!&lt;/em&gt; &lt;em&gt;&lt;strong&gt;Plus, subscribers get exclusive early access and special 33% discounts to my book and the upcoming RAG Techniques course!&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://diamantai.substack.com/?r=336pe4&amp;amp;utm_campaign=pub-share-checklist&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://producthunt.programnotes.cn/images/substack_image.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;DiamantAI’s newsletter&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction
+&lt;/h2&gt;&lt;p&gt;Generative AI agents are at the forefront of artificial intelligence, revolutionizing the way we interact with and leverage AI technologies. This repository is designed to guide you through the development journey, from basic agent implementations to advanced, cutting-edge systems.&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;h3&gt;📚 Learn to Build Your First AI Agent&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://diamantai.substack.com/p/your-first-ai-agent-simpler-than&#34;&gt;Your First AI Agent: Simpler Than You Think&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This detailed blog post complements the repository by providing a complete A-Z walkthrough with in-depth explanations of core concepts, step-by-step implementation, and the theory behind AI agents. It&#39;s designed to be incredibly simple to follow while covering everything you need to know to build your first working agent from scratch.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;💡 Plus: Subscribe to the newsletter for exclusive early access to tutorials and special discounts on upcoming courses and books!&lt;/em&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;Our goal is to provide a valuable resource for everyone - from beginners taking their first steps in AI to seasoned practitioners pushing the boundaries of what&amp;rsquo;s possible. By offering a range of examples from foundational to complex, we aim to facilitate learning, experimentation, and innovation in the rapidly evolving field of GenAI agents.&lt;/p&gt;
+&lt;p&gt;Furthermore, this repository serves as a platform for showcasing innovative agent creations. Whether you&amp;rsquo;ve developed a novel agent architecture or found an innovative application for existing techniques, we encourage you to share your work with the community.&lt;/p&gt;
+&lt;h2 id=&#34;related-projects&#34;&gt;Related Projects
+&lt;/h2&gt;&lt;p&gt;🚀 Level up with my &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/agents-towards-production&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Agents Towards Production&lt;/a&gt;&lt;/strong&gt; repository. It delivers horizontal, code-first tutorials that cover every tool and step in the lifecycle of building production-grade GenAI agents, guiding you from spark to scale with proven patterns and reusable blueprints for real-world launches, making it the smartest place to start if you&amp;rsquo;re serious about shipping agents to production.&lt;/p&gt;
+&lt;p&gt;📚 Dive into my &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/RAG_Techniques&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;comprehensive guide on RAG techniques&lt;/a&gt;&lt;/strong&gt; to learn about integrating external knowledge into AI systems, enhancing their capabilities with up-to-date and relevant information retrieval.&lt;/p&gt;
+&lt;p&gt;🖋️ Explore my &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/Prompt_Engineering&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Prompt Engineering Techniques guide&lt;/a&gt;&lt;/strong&gt; for an extensive collection of prompting strategies, from fundamental concepts to advanced methods, improving your ability to communicate effectively with AI language models.&lt;/p&gt;
+&lt;h2 id=&#34;a-community-driven-knowledge-hub&#34;&gt;A Community-Driven Knowledge Hub
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;This repository grows stronger with your contributions!&lt;/strong&gt; Join our vibrant Discord community — the central hub for shaping and advancing this project together 🤝&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://discord.gg/cA6Aa4uyDX&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GenAI Agents Discord Community&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Whether you&amp;rsquo;re a novice eager to learn or an expert ready to share your knowledge, your insights can shape the future of GenAI agents. Join us to propose ideas, get feedback, and collaborate on innovative implementations. For contribution guidelines, please refer to our &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/CONTRIBUTING.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CONTRIBUTING.md&lt;/a&gt;&lt;/strong&gt; file. Let&amp;rsquo;s advance GenAI agent technology together!&lt;/p&gt;
+&lt;p&gt;🔗 For discussions on GenAI, agents, or to explore knowledge-sharing opportunities, feel free to &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.linkedin.com/in/nir-diamant-759323134/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;connect on LinkedIn&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;key-features&#34;&gt;Key Features
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;🎓 Learn to build GenAI agents from beginner to advanced levels&lt;/li&gt;
+&lt;li&gt;🧠 Explore a wide range of agent architectures and applications&lt;/li&gt;
+&lt;li&gt;📚 Step-by-step tutorials and comprehensive documentation&lt;/li&gt;
+&lt;li&gt;🛠️ Practical, ready-to-use agent implementations&lt;/li&gt;
+&lt;li&gt;🌟 Regular updates with the latest advancements in GenAI&lt;/li&gt;
+&lt;li&gt;🤝 Share your own agent creations with the community&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;genai-agent-implementations&#34;&gt;GenAI Agent Implementations
+&lt;/h2&gt;&lt;p&gt;Below is a comprehensive overview of our GenAI agent implementations, organized by category and functionality. Each implementation is designed to showcase different aspects of AI agent development, from basic conversational agents to complex multi-agent systems.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;#&lt;/th&gt;
+					&lt;th&gt;Category&lt;/th&gt;
+					&lt;th&gt;Agent Name&lt;/th&gt;
+					&lt;th&gt;Framework&lt;/th&gt;
+					&lt;th&gt;Key Features&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;1&lt;/td&gt;
+					&lt;td&gt;🌱 &lt;strong&gt;Beginner&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/simple_conversational_agent.ipynb&#34; &gt;Simple Conversational Agent&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangChain/PydanticAI&lt;/td&gt;
+					&lt;td&gt;Context-aware conversations, history management&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;2&lt;/td&gt;
+					&lt;td&gt;🌱 &lt;strong&gt;Beginner&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/simple_question_answering_agent.ipynb&#34; &gt;Simple Question Answering&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangChain&lt;/td&gt;
+					&lt;td&gt;Query understanding, concise answers&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;3&lt;/td&gt;
+					&lt;td&gt;🌱 &lt;strong&gt;Beginner&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/simple_data_analysis_agent_notebook.ipynb&#34; &gt;Simple Data Analysis&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangChain/PydanticAI&lt;/td&gt;
+					&lt;td&gt;Dataset interpretation, natural language queries&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;4&lt;/td&gt;
+					&lt;td&gt;🔧 &lt;strong&gt;Framework&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/langgraph-tutorial.ipynb&#34; &gt;Introduction to LangGraph&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Modular AI workflows, state management&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;5&lt;/td&gt;
+					&lt;td&gt;🔧 &lt;strong&gt;Framework&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/mcp-tutorial.ipynb&#34; &gt;Model Context Protocol (MCP)&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;MCP&lt;/td&gt;
+					&lt;td&gt;AI-external resource integration&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;6&lt;/td&gt;
+					&lt;td&gt;🎓 &lt;strong&gt;Educational&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/Academic_Task_Learning_Agent_LangGraph.ipynb&#34; &gt;ATLAS: Academic Task System&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Multi-agent academic planning, note-taking&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;7&lt;/td&gt;
+					&lt;td&gt;🎓 &lt;strong&gt;Educational&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/scientific_paper_agent_langgraph.ipynb&#34; &gt;Scientific Paper Agent&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Literature review automation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;8&lt;/td&gt;
+					&lt;td&gt;🎓 &lt;strong&gt;Educational&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/chiron_learning_agent_langgraph.ipynb&#34; &gt;Chiron - Feynman Learning&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Adaptive learning, checkpoint system&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;9&lt;/td&gt;
+					&lt;td&gt;💼 &lt;strong&gt;Business&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/customer_support_agent_langgraph.ipynb&#34; &gt;Customer Support Agent&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Query categorization, sentiment analysis&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;10&lt;/td&gt;
+					&lt;td&gt;💼 &lt;strong&gt;Business&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/essay_grading_system_langgraph.ipynb&#34; &gt;Essay Grading Agent&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Automated grading, multiple criteria&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;11&lt;/td&gt;
+					&lt;td&gt;💼 &lt;strong&gt;Business&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/simple_travel_planner_langgraph.ipynb&#34; &gt;Travel Planning Agent&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Personalized itineraries&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;12&lt;/td&gt;
+					&lt;td&gt;💼 &lt;strong&gt;Business&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/agent_hackathon_genAI_career_assistant.ipynb&#34; &gt;GenAI Career Assistant&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Career guidance, learning paths&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;13&lt;/td&gt;
+					&lt;td&gt;💼 &lt;strong&gt;Business&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/project_manager_assistant_agent.ipynb&#34; &gt;Project Manager Assistant&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Task generation, risk assessment&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;14&lt;/td&gt;
+					&lt;td&gt;💼 &lt;strong&gt;Business&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/ClauseAI.ipynb&#34; &gt;Contract Analysis Assistant&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Clause analysis, compliance checking&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;15&lt;/td&gt;
+					&lt;td&gt;💼 &lt;strong&gt;Business&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/e2e_testing_agent.ipynb&#34; &gt;E2E Testing Agent&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Test automation, browser control&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;16&lt;/td&gt;
+					&lt;td&gt;🎨 &lt;strong&gt;Creative&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/gif_animation_generator_langgraph.ipynb&#34; &gt;GIF Animation Generator&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Text-to-animation pipeline&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;17&lt;/td&gt;
+					&lt;td&gt;🎨 &lt;strong&gt;Creative&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/tts_poem_generator_agent_langgraph.ipynb&#34; &gt;TTS Poem Generator&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Text classification, speech synthesis&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;18&lt;/td&gt;
+					&lt;td&gt;🎨 &lt;strong&gt;Creative&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/music_compositor_agent_langgraph.ipynb&#34; &gt;Music Compositor&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;AI music composition&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;19&lt;/td&gt;
+					&lt;td&gt;🎨 &lt;strong&gt;Creative&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/ContentIntelligence.ipynb&#34; &gt;Content Intelligence&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Multi-platform content generation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;20&lt;/td&gt;
+					&lt;td&gt;🎨 &lt;strong&gt;Creative&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/business_meme_generator.ipynb&#34; &gt;Business Meme Generator&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Brand-aligned meme creation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;21&lt;/td&gt;
+					&lt;td&gt;🎨 &lt;strong&gt;Creative&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/murder_mystery_agent_langgraph.ipynb&#34; &gt;Murder Mystery Game&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Procedural story generation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;22&lt;/td&gt;
+					&lt;td&gt;📊 &lt;strong&gt;Analysis&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/memory_enhanced_conversational_agent.ipynb&#34; &gt;Memory-Enhanced Conversational&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangChain&lt;/td&gt;
+					&lt;td&gt;Short/long-term memory integration&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;23&lt;/td&gt;
+					&lt;td&gt;📊 &lt;strong&gt;Analysis&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/multi_agent_collaboration_system.ipynb&#34; &gt;Multi-Agent Collaboration&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangChain&lt;/td&gt;
+					&lt;td&gt;Historical research, data analysis&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;24&lt;/td&gt;
+					&lt;td&gt;📊 &lt;strong&gt;Analysis&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/self_improving_agent.ipynb&#34; &gt;Self-Improving Agent&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangChain&lt;/td&gt;
+					&lt;td&gt;Learning from interactions&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;25&lt;/td&gt;
+					&lt;td&gt;📊 &lt;strong&gt;Analysis&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/task_oriented_agent.ipynb&#34; &gt;Task-Oriented Agent&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangChain&lt;/td&gt;
+					&lt;td&gt;Text summarization, translation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;26&lt;/td&gt;
+					&lt;td&gt;📊 &lt;strong&gt;Analysis&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/search_the_internet_and_summarize.ipynb&#34; &gt;Internet Search Agent&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangChain&lt;/td&gt;
+					&lt;td&gt;Web research, summarization&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;27&lt;/td&gt;
+					&lt;td&gt;📊 &lt;strong&gt;Analysis&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/research_team_autogen.ipynb&#34; &gt;Research Team - Autogen&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;AutoGen&lt;/td&gt;
+					&lt;td&gt;Multi-agent research collaboration&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;28&lt;/td&gt;
+					&lt;td&gt;📊 &lt;strong&gt;Analysis&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/sales_call_analyzer_agent.ipynb&#34; &gt;Sales Call Analyzer&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Audio transcription, NLP analysis&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;29&lt;/td&gt;
+					&lt;td&gt;📊 &lt;strong&gt;Analysis&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/Weather_Disaster_Management_AI_AGENT.ipynb&#34; &gt;Weather Emergency System&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Real-time data processing&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;30&lt;/td&gt;
+					&lt;td&gt;📊 &lt;strong&gt;Analysis&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/self_healing_code.ipynb&#34; &gt;Self-Healing Codebase&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Error detection, automated fixes&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;31&lt;/td&gt;
+					&lt;td&gt;📊 &lt;strong&gt;Analysis&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/database_discovery_fleet.ipynb&#34; &gt;DataScribe&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Database exploration, query planning&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;32&lt;/td&gt;
+					&lt;td&gt;📊 &lt;strong&gt;Analysis&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/memory-agent-tutorial.ipynb&#34; &gt;Memory-Enhanced Email&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Email triage, response generation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;33&lt;/td&gt;
+					&lt;td&gt;📰 &lt;strong&gt;News&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/news_tldr_langgraph.ipynb&#34; &gt;News TL;DR&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;News summarization, API integration&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;34&lt;/td&gt;
+					&lt;td&gt;📰 &lt;strong&gt;News&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/ainsight_langgraph.ipynb&#34; &gt;AInsight&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;AI/ML news aggregation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;35&lt;/td&gt;
+					&lt;td&gt;📰 &lt;strong&gt;News&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/journalism_focused_ai_assistant_langgraph.ipynb&#34; &gt;Journalism Assistant&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Fact-checking, bias detection&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;36&lt;/td&gt;
+					&lt;td&gt;📰 &lt;strong&gt;News&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/blog_writer_swarm.ipynb&#34; &gt;Blog Writer&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;OpenAI Swarm&lt;/td&gt;
+					&lt;td&gt;Collaborative content creation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;37&lt;/td&gt;
+					&lt;td&gt;📰 &lt;strong&gt;News&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/generate_podcast_agent_langgraph.ipynb&#34; &gt;Podcast Generator&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Content search, audio generation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;38&lt;/td&gt;
+					&lt;td&gt;🛍️ &lt;strong&gt;Shopping&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/ShopGenie.ipynb&#34; &gt;ShopGenie&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Product comparison, recommendations&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;39&lt;/td&gt;
+					&lt;td&gt;🛍️ &lt;strong&gt;Shopping&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/car_buyer_agent_langgraph.ipynb&#34; &gt;Car Buyer Agent&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Web scraping, decision support&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;40&lt;/td&gt;
+					&lt;td&gt;🎯 &lt;strong&gt;Task Management&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/taskifier.ipynb&#34; &gt;Taskifier&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Work style analysis, task breakdown&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;41&lt;/td&gt;
+					&lt;td&gt;🎯 &lt;strong&gt;Task Management&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/grocery_management_agents_system.ipynb&#34; &gt;Grocery Management&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;CrewAI&lt;/td&gt;
+					&lt;td&gt;Inventory tracking, recipe suggestions&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;42&lt;/td&gt;
+					&lt;td&gt;🔍 &lt;strong&gt;QA&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/graph_inspector_system_langgraph.ipynb&#34; &gt;LangGraph Inspector&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;System testing, vulnerability detection&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;43&lt;/td&gt;
+					&lt;td&gt;🔍 &lt;strong&gt;QA&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/EU_Green_Compliance_FAQ_Bot.ipynb&#34; &gt;EU Green Deal Bot&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Regulatory compliance, FAQ system&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;44&lt;/td&gt;
+					&lt;td&gt;🔍 &lt;strong&gt;QA&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;all_agents_tutorials/systematic_review_of_scientific_articles.ipynb&#34; &gt;Systematic Review&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;LangGraph&lt;/td&gt;
+					&lt;td&gt;Academic paper processing, draft generation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;45&lt;/td&gt;
+					&lt;td&gt;🌟 &lt;strong&gt;Advanced&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/Controllable-RAG-Agent&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Controllable RAG Agent&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Custom&lt;/td&gt;
+					&lt;td&gt;Complex question answering, deterministic graph&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Explore our extensive list of GenAI agent implementations, sorted by categories:&lt;/p&gt;
+&lt;h3 id=&#34;-beginner-friendly-agents&#34;&gt;🌱 Beginner-Friendly Agents
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Simple Conversational Agent&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/simple_conversational_agent.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LangChain&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/simple_conversational_agent-pydanticai.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PydanticAI&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;overview-&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;A context-aware conversational AI maintains information across interactions, enabling more natural dialogues.&lt;/p&gt;
+&lt;h4 id=&#34;implementation-&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Integrates a language model, prompt template, and history manager to generate contextual responses and track conversation sessions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/simple_question_answering_agent.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Simple Question Answering Agent&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--1&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;Answering (QA) agent using LangChain and OpenAI&amp;rsquo;s language model understands user queries and provides relevant, concise answers.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--1&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Combines OpenAI&amp;rsquo;s GPT model, a prompt template, and an LLMChain to process user questions and generate AI-driven responses in a streamlined manner.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Simple Data Analysis Agent&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/simple_data_analysis_agent_notebook.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LangChain&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/simple_data_analysis_agent_notebook-pydanticai.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PydanticAI&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;overview--2&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;An AI-powered data analysis agent interprets and answers questions about datasets using natural language, combining language models with data manipulation tools for intuitive data exploration.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--2&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Integrates a language model, data manipulation framework, and agent framework to process natural language queries and perform data analysis on a synthetic dataset, enabling accessible insights for non-technical users.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;-framework-tutorial&#34;&gt;🔧 Framework Tutorial
+&lt;/h3&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/langgraph-tutorial.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Introduction to LangGraph: Building Modular AI Workflows&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--3&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;This tutorial introduces LangGraph, a powerful framework for creating modular, graph-based AI workflows. Learn how to leverage LangGraph to build more complex and flexible AI agents that can handle multi-step processes efficiently.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--3&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Step-by-step guide on using LangGraph to create a StateGraph workflow. The tutorial covers key concepts such as state management, node creation, and graph compilation. It demonstrates these principles by constructing a simple text analysis pipeline, serving as a foundation for more advanced agent architectures.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources-&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://open.substack.com/pub/diamantai/p/your-first-ai-agent-simpler-than?r=336pe4&amp;amp;utm_campaign=post&amp;amp;utm_medium=web&amp;amp;showWelcomeOnShare=false&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Blog Post&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/mcp-tutorial.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Model Context Protocol (MCP):  Seamless Integration of AI and External Resources&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--4&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;This tutorial introduces the Model Context Protocol (MCP), an open standard for connecting AI models with external data sources and tools. Learn how MCP serves as a universal bridge between GenAI agents and the wider digital ecosystem, enabling more capable and context-aware AI applications.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--4&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Provides a hands-on guide to implementing MCP servers and clients, demonstrating how to connect language models with external tools and data sources. The tutorial covers server setup, tool definition, and integration with AI clients, with practical examples of building useful agent capabilities through the protocol.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--1&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://open.substack.com/pub/diamantai/p/model-context-protocol-mcp-explained?r=336pe4&amp;amp;utm_campaign=post&amp;amp;utm_medium=web&amp;amp;showWelcomeOnShare=false&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Blog Post&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://modelcontextprotocol.io/introduction&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Official MCP Documentation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/modelcontextprotocol&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MCP GitHub Repository&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;-educational-and-research-agents&#34;&gt;🎓 Educational and Research Agents
+&lt;/h3&gt;&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/Academic_Task_Learning_Agent_LangGraph.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ATLAS: Academic Task and Learning Agent System&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--5&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;ATLAS demonstrates how to build an intelligent multi-agent system that transforms academic support through AI-powered assistance. The system leverages LangGraph&amp;rsquo;s workflow framework to coordinate multiple specialized agents that provide personalized academic planning, note-taking, and advisory support.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--5&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Implements a state-managed multi-agent architecture using four specialized agents (Coordinator, Planner, Notewriter, and Advisor) working in concert through LangGraph&amp;rsquo;s workflow framework. The system features sophisticated workflows for profile analysis and academic support, with continuous adaptation based on student performance and feedback.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--2&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=yxowMLL2dDI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://open.substack.com/pub/diamantai/p/atlas-when-artificial-intelligence?r=336pe4&amp;amp;utm_campaign=post&amp;amp;utm_medium=web&amp;amp;showWelcomeOnShare=false&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Blog Post&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/scientific_paper_agent_langgraph.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Scientific Paper Agent - Literature Review&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--6&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;An intelligent research assistant that helps users navigate, understand, and analyze scientific literature through an orchestrated workflow. The system combines academic APIs with sophisticated paper processing techniques to automate literature review tasks, enabling researchers to efficiently extract insights from academic papers while maintaining research rigor and quality control.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--6&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Leverages LangGraph to create a five-node workflow system including decision making, planning, tool execution, and quality validation nodes. The system integrates the CORE API for paper access, PDFplumber for document processing, and advanced language models for analysis. Key features include a retry mechanism for robust paper downloads, structured data handling through Pydantic models, and quality-focused improvement cycles with human-in-the-loop validation options.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--3&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/Bc4YtpHY6Ws&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://open.substack.com/pub/diamantai/p/nexus-ai-the-revolutionary-research?r=336pe4&amp;amp;utm_campaign=post&amp;amp;utm_medium=web&amp;amp;showWelcomeOnShare=false&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Blog Post&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/chiron_learning_agent_langgraph.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chiron - A Feynman-Enhanced Learning Agent&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--7&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;An adaptive learning agent that guides users through educational content using a structured checkpoint system and Feynman-style teaching. The system processes learning materials (either user-provided or web-retrieved), verifies understanding through interactive checkpoints, and provides simplified explanations when needed, creating a personalized learning experience that mimics one-on-one tutoring.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--7&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Uses LangGraph to orchestrate a learning workflow that includes checkpoint definition, context building, understanding verification, and Feynman teaching nodes. The system integrates web search for dynamic content retrieval, employs semantic chunking for context processing, and manages embeddings for relevant information retrieval. Key features include a 70% understanding threshold for progression, interactive human-in-the-loop validation, and structured output through Pydantic models for consistent data handling.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--4&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=qsdiTGkB8mk&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;-business-and-professional-agents&#34;&gt;💼 Business and Professional Agents
+&lt;/h3&gt;&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/customer_support_agent_langgraph.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Customer Support Agent (LangGraph)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--8&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;An intelligent customer support agent using LangGraph categorizes queries, analyzes sentiment, and provides appropriate responses or escalates issues.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--8&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Utilizes LangGraph to create a workflow combining state management, query categorization, sentiment analysis, and response generation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/essay_grading_system_langgraph.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Essay Grading Agent (LangGraph)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--9&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;An automated essay grading system using LangGraph and an LLM model evaluates essays based on relevance, grammar, structure, and depth of analysis.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--9&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Utilizes a state graph to define the grading workflow, incorporating separate grading functions for each criterion.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/simple_travel_planner_langgraph.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Travel Planning Agent (LangGraph)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--10&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;A Travel Planner using LangGraph demonstrates how to build a stateful, multi-step conversational AI application that collects user input and generates personalized travel itineraries.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--10&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Utilizes StateGraph to define the application flow, incorporates custom PlannerState for process management.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/agent_hackathon_genAI_career_assistant.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GenAI Career Assistant Agent&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--11&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;The GenAI Career Assistant demonstrates how to create a multi-agent system that provides personalized guidance for careers in Generative AI. Using LangGraph and Gemini LLM, the system delivers customized learning paths, resume assistance, interview preparation, and job search support.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--11&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Leverages a multi-agent architecture using LangGraph to coordinate specialized agents (Learning, Resume, Interview, Job Search) through TypedDict-based state management. The system employs sophisticated query categorization and routing while integrating with external tools like DuckDuckGo for job searches and dynamic content generation.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--5&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=IcKh0ltXO_8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/project_manager_assistant_agent.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Project Manager Assistant Agent&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--12&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;An AI agent designed to assist in project management tasks by automating the process of creating actionable tasks from project descriptions, identifying dependencies, scheduling work, and assigning tasks to team members based on expertise. The system includes risk assessment and self-reflection capabilities to optimize project plans through multiple iterations, aiming to minimize overall project risk.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--12&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Leverages LangGraph to orchestrate a workflow of specialized nodes including task generation, dependency mapping, scheduling, allocation, and risk assessment. Each node uses GPT-4o-mini for structured outputs following Pydantic models. The system implements a feedback loop for self-improvement, where risk scores trigger reflection cycles that generate insights to optimize the project plan. Visualization tools display Gantt charts of the generated schedules across iterations.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--6&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=R7YWjzg3LpI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/ClauseAI.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Contract Analysis Assistant (ClauseAI)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--13&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;ClauseAI demonstrates how to build an AI-powered contract analysis system using a multi-agent approach. The system employs specialized AI agents for different aspects of contract review, from clause analysis to compliance checking, and leverages LangGraph for workflow orchestration and Pinecone for efficient clause retrieval and comparison.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--13&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Implements a sophisticated state-based workflow using LangGraph to coordinate multiple AI agents through contract analysis stages. The system features Pydantic models for data validation, vector storage with Pinecone for clause comparison, and LLM-based analysis for generating comprehensive contract reports. The implementation includes parallel processing capabilities and customizable report generation based on user requirements.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--7&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=rP8uv_tXuSI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/e2e_testing_agent.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;E2E Testing Agent&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--14&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;The E2E Testing Agent demonstrates how to build an AI-powered system that converts natural language test instructions into executable end-to-end web tests. Using LangGraph for workflow orchestration and Playwright for browser automation, the system enables users to specify test cases in plain English while handling the complexity of test generation and execution.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--14&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Implements a structured workflow using LangGraph to coordinate test generation, validation, and execution. The system features TypedDict state management, integration with Playwright for browser automation, and LLM-based code generation for converting natural language instructions into executable test scripts. The implementation includes DOM state analysis, error handling, and comprehensive test reporting.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--8&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=jPXtpzcCtyA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;-creative-and-content-generation-agents&#34;&gt;🎨 Creative and Content Generation Agents
+&lt;/h3&gt;&lt;ol start=&#34;16&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/gif_animation_generator_langgraph.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GIF Animation Generator Agent (LangGraph)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--15&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;A GIF animation generator that integrates LangGraph for workflow management, GPT-4 for text generation, and DALL-E for image creation, producing custom animations from user prompts.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--15&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Utilizes LangGraph to orchestrate a workflow that generates character descriptions, plots, and image prompts using GPT-4, creates images with DALL-E 3, and assembles them into GIFs using PIL. Employs asynchronous programming for efficient parallel processing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/tts_poem_generator_agent_langgraph.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;TTS Poem Generator Agent (LangGraph)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--16&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;An advanced text-to-speech (TTS) agent using LangGraph and OpenAI&amp;rsquo;s APIs classifies input text, processes it based on content type, and generates corresponding speech output.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--16&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Utilizes LangGraph to orchestrate a workflow that classifies input text using GPT models, applies content-specific processing, and converts the processed text to speech using OpenAI&amp;rsquo;s TTS API. The system adapts its output based on the identified content type (general, poem, news, or joke).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/music_compositor_agent_langgraph.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Music Compositor Agent (LangGraph)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--17&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;An AI Music Compositor using LangGraph and OpenAI&amp;rsquo;s language models generates custom musical compositions based on user input. The system processes the input through specialized components, each contributing to the final musical piece, which is then converted to a playable MIDI file.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--17&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;LangGraph orchestrates a workflow that transforms user input into a musical composition, using ChatOpenAI (GPT-4) to generate melody, harmony, and rhythm, which are then style-adapted. The final AI-generated composition is converted to a MIDI file using music21 and can be played back using pygame.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/ContentIntelligence.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Content Intelligence: Multi-Platform Content Generation Agent&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--18&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;Content Intelligence demonstrates how to build an advanced content generation system that transforms input text into platform-optimized content across multiple social media channels. The system employs LangGraph for workflow orchestration to analyze content, conduct research, and generate tailored content while maintaining brand consistency across different platforms.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--18&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Implements a sophisticated workflow using LangGraph to coordinate multiple specialized nodes (Summary, Research, Platform-Specific) through the content generation process. The system features TypedDict and Pydantic models for state management, integration with Tavily Search for research enhancement, and platform-specific content generation using GPT-4. The implementation includes parallel processing for multiple platforms and customizable content templates.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--9&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=DPMtPbKmWnU&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/business_meme_generator.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Business Meme Generator Using LangGraph and Memegen.link&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--19&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;The Business Meme Generator demonstrates how to create an AI-powered system that generates contextually relevant memes based on company website analysis. Using LangGraph for workflow orchestration, the system combines Groq&amp;rsquo;s Llama model for text analysis and the Memegen.link API to automatically produce brand-aligned memes for digital marketing.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--19&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Implements a state-managed workflow using LangGraph to coordinate website content analysis, meme concept generation, and image creation. The system features Pydantic models for data validation, asynchronous processing with aiohttp, and integration with external APIs (Groq, Memegen.link) to create a complete meme generation pipeline with customizable templates.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--10&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/lsdDaGmkSCw?si=oF3CGfhbRqz1_Vm8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/murder_mystery_agent_langgraph.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Murder Mystery Game with LLM Agents&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--20&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;A text-based detective game that utilizes autonomous LLM agents as interactive characters in a procedurally generated murder mystery. Drawing inspiration from the UNBOUNDED paper, the system creates unique scenarios each time, with players taking on the role of Sherlock Holmes to solve the case through character interviews and deductive reasoning.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--20&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Leverages two LangGraph workflows - a main game loop for story/character generation and game progression, and a conversation sub-graph for character interactions. The system uses a combination of LLM-powered narrative generation, character AI, and structured game mechanics to create an immersive investigative experience with replayable storylines.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--11&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=_3cJYlk2EmA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;-analysis-and-information-processing-agents&#34;&gt;📊 Analysis and Information Processing Agents
+&lt;/h3&gt;&lt;ol start=&#34;22&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/memory_enhanced_conversational_agent.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Memory-Enhanced Conversational Agent&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--21&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;A memory-enhanced conversational AI agent incorporates short-term and long-term memory systems to maintain context within conversations and across multiple sessions, improving interaction quality and personalization.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--21&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Integrates a language model with separate short-term and long-term memory stores, utilizes a prompt template incorporating both memory types, and employs a memory manager for storage and retrieval. The system includes an interaction loop that updates and utilizes memories for each response.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/multi_agent_collaboration_system.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Multi-Agent Collaboration System&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--22&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;A multi-agent collaboration system combining historical research with data analysis, leveraging large language models to simulate specialized agents working together to answer complex historical questions.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--22&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Utilizes a base Agent class to create specialized HistoryResearchAgent and DataAnalysisAgent, orchestrated by a HistoryDataCollaborationSystem. The system follows a five-step process: historical context provision, data needs identification, historical data provision, data analysis, and final synthesis.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/self_improving_agent.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Self-Improving Agent&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--23&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;A Self-Improving Agent using LangChain engages in conversations, learns from interactions, and continuously improves its performance over time through reflection and adaptation.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--23&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Integrates a language model with chat history management, response generation, and a reflection mechanism. The system employs a learning system that incorporates insights from reflection to enhance future performance, creating a continuous improvement loop.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/task_oriented_agent.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Task-Oriented Agent&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--24&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;A language model application using LangChain that summarizes text and translates the summary to Spanish, combining custom functions, structured tools, and an agent for efficient text processing.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--24&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Utilizes custom functions for summarization and translation, wrapped as structured tools. Employs a prompt template to guide the agent, which orchestrates the use of tools. An agent executor manages the process, taking input text and producing both an English summary and its Spanish translation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/search_the_internet_and_summarize.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Internet Search and Summarize Agent&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--25&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;An intelligent web research assistant that combines web search capabilities with AI-powered summarization, automating the process of gathering information from the internet and distilling it into concise, relevant summaries.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--25&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Integrates a web search module using DuckDuckGo&amp;rsquo;s API, a result parser, and a text summarization engine leveraging OpenAI&amp;rsquo;s language models. The system performs site-specific or general searches, extracts relevant content, generates concise summaries, and compiles attributed results for efficient information retrieval and synthesis.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/research_team_autogen.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Multi agent research team - Autogen&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--26&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;This technique explores a multi-agent system for collaborative research using the AutoGen library. It employs agents to solve tasks collaboratively, focusing on efficient execution and quality assurance. The system enhances research by distributing tasks among specialized agents.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--26&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Agents are configured with specific roles using the GPT-4 model, including admin, developer, planner, executor, and quality assurance. Interaction management ensures orderly communication with defined transitions. Task execution involves collaborative planning, coding, execution, and quality checking, demonstrating a scalable framework for various domains.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--12&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/yanivvak/dream-team&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;comprehensive solution with UI&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/build-your-dream-team-with-autogen/ba-p/4157961&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Blogpost&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/sales_call_analyzer_agent.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Sales Call Analyzer&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--27&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;An intelligent system that automates the analysis of sales call recordings by combining audio transcription with advanced natural language processing. The analyzer transcribes audio using OpenAI&amp;rsquo;s Whisper, processes the text using NLP techniques, and generates comprehensive reports including sentiment analysis, key phrases, pain points, and actionable recommendations to improve sales performance.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--27&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Utilizes multiple components in a structured workflow: OpenAI Whisper for audio transcription, CrewAI for task automation and agent management, and LangChain for orchestrating the analysis pipeline. The system processes audio through a series of steps from transcription to detailed analysis, leveraging custom agents and tasks to generate structured JSON reports containing insights about customer sentiment, sales opportunities, and recommended improvements.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--13&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=SKAt_PvznDw&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/Weather_Disaster_Management_AI_AGENT.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Weather Emergency &amp;amp; Response System&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--28&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;A comprehensive system demonstrating two agent graph implementations for weather emergency response: a real-time graph processing live weather data, and a hybrid graph combining real and simulated data for testing high-severity scenarios. The system handles complete workflow from data gathering through emergency plan generation, with automated notifications and human verification steps.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--28&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Utilizes LangGraph for orchestrating complex workflows with state management, integrating OpenWeatherMap API for real-time data, and Gemini for analysis and response generation. The system incorporates email notifications, social media monitoring simulation, and severity-based routing with configurable human verification for low/medium severity events.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--14&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=AgiOAJl_apw&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/self_healing_code.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Self-Healing Codebase System&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--29&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;An intelligent system that automatically detects, diagnoses, and fixes runtime code errors using LangGraph workflow orchestration and ChromaDB vector storage. The system maintains a memory of encountered bugs and their fixes through vector embeddings, enabling pattern recognition for similar errors across the codebase.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--29&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Utilizes a state-based graph workflow that processes function definitions and runtime arguments through specialized nodes for error detection, code analysis, and fix generation. Incorporates ChromaDB for vector-based storage of bug patterns and fixes, with automated search and retrieval capabilities for similar error patterns, while maintaining code execution safety through structured validation steps.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--15&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=ga7ShvIXOvE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/database_discovery_fleet.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DataScribe: AI-Powered Schema Explorer&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--30&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;An intelligent agent system that enables intuitive exploration and querying of relational databases through natural language interactions. The system utilizes a fleet of specialized agents, coordinated by a stateful Supervisor, to handle schema discovery, query planning, and data analysis tasks while maintaining contextual understanding through vector-based relationship graphs.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--30&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Leverages LangGraph for orchestrating a multi-agent workflow including discovery, inference, and planning agents, with NetworkX for relationship graph visualization and management. The system incorporates dynamic state management through TypedDict classes, maintains database context between sessions using a db_graph attribute, and includes safety measures to prevent unauthorized database modifications.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/memory-agent-tutorial.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Memory-Enhanced Email Agent (LangGraph &amp;amp; LangMem)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--31&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;An intelligent email assistant that combines three types of memory (semantic, episodic, and procedural) to create a system that improves over time. The agent can triage incoming emails, draft contextually appropriate responses using stored knowledge, and enhance its performance based on user feedback.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--31&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Leverages LangGraph for workflow orchestration and LangMem for sophisticated memory management across multiple memory types. The system implements a triage workflow with memory-enhanced decision making, specialized tools for email composition and calendar management, and a self-improvement mechanism that updates its own prompts based on feedback and past performance.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--16&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;**&lt;a class=&#34;link&#34; href=&#34;https://open.substack.com/pub/diamantai/p/building-an-ai-agent-with-memory?r=336pe4&amp;amp;utm_campaign=post&amp;amp;utm_medium=web&amp;amp;showWelcomeOnShare=false&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Blog Post&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;-news-and-information-agents&#34;&gt;📰 News and Information Agents
+&lt;/h3&gt;&lt;ol start=&#34;33&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/news_tldr_langgraph.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;News TL;DR using LangGraph&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--32&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;A news summarization system that generates concise TL;DR summaries of current events based on user queries. The system leverages large language models for decision making and summarization while integrating with news APIs to access up-to-date content, allowing users to quickly catch up on topics of interest through generated bullet-point summaries.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--32&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Utilizes LangGraph to orchestrate a workflow combining multiple components: GPT-4o-mini for generating search terms and article summaries, NewsAPI for retrieving article metadata, BeautifulSoup for web scraping article content, and Asyncio for concurrent processing. The system follows a structured pipeline from query processing through article selection and summarization, managing the flow between components to produce relevant TL;DRs of current news articles.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--17&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=0fRxW6miybI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://open.substack.com/pub/diamantai/p/stop-reading-start-understanding?r=336pe4&amp;amp;utm_campaign=post&amp;amp;utm_medium=web&amp;amp;showWelcomeOnShare=false&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Blog Post&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/ainsight_langgraph.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AInsight: AI/ML Weekly News Reporter&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--33&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;AInsight demonstrates how to build an intelligent news aggregation and summarization system using a multi-agent architecture. The system employs three specialized agents (NewsSearcher, Summarizer, Publisher) to automatically collect, process and summarize AI/ML news for general audiences through LangGraph-based workflow orchestration.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--33&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Implements a state-managed multi-agent system using LangGraph to coordinate the news collection (Tavily API), technical content summarization (GPT-4), and report generation processes. The system features modular architecture with TypedDict-based state management, external API integration, and markdown report generation with customizable templates.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--18&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=kH5S1is2D_0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/journalism_focused_ai_assistant_langgraph.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Journalism-Focused AI Assistant&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--34&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;A specialized AI assistant that helps journalists tackle modern journalistic challenges like misinformation, bias, and information overload. The system integrates fact-checking, tone analysis, summarization, and grammar review tools to enhance the accuracy and efficiency of journalistic work while maintaining ethical reporting standards.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--34&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Leverages LangGraph to orchestrate a workflow of specialized components including language models for analysis and generation, web search integration via DuckDuckGo&amp;rsquo;s API, document parsing tools like PyMuPDFLoader and WebBaseLoader, text splitting with RecursiveCharacterTextSplitter, and structured JSON outputs. Each component works together through a unified workflow to analyze content, verify facts, detect bias, extract quotes, and generate comprehensive reports.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/blog_writer_swarm.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Blog Writer (Open AI Swarm)&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--35&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;A multi-agent system for collaborative blog post creation using OpenAI&amp;rsquo;s Swarm package. It leverages specialized agents to perform research, planning, writing, and editing tasks efficiently.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--35&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Utilizes OpenAI&amp;rsquo;s Swarm Package to manage agent interactions. Includes an admin, researcher, planner, writer, and editor, each with specific roles. The system follows a structured workflow: topic setting, outlining, research, drafting, and editing. This approach enhances content creation through task distribution, specialization, and collaborative problem-solving.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--19&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/openai/swarm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Swarm Repo&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/generate_podcast_agent_langgraph.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Podcast Internet Search and Generate Agent 🎙️&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--36&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;A two step agent that first searches the internet for a given topic and then generates a podcast on the topic found. The search step uses a search agent and search function to find the most relevant information. The second step uses a podcast generation agent and generation function to create a podcast on the topic found.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--36&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Utilizes LangGraph to orchestrate a two-step workflow. The first step involves a search agent and function to gather information from the internet. The second step uses a podcast generation agent and function to create a podcast based on the gathered information.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;-shopping-and-product-analysis-agents&#34;&gt;🛍️ Shopping and Product Analysis Agents
+&lt;/h3&gt;&lt;ol start=&#34;38&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/ShopGenie.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ShopGenie - Redefining Online Shopping Customer Experience&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--37&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;An AI-powered shopping assistant that helps customers make informed purchasing decisions even without domain expertise. The system analyzes product information from multiple sources, compares specifications and reviews, identifies the best option based on user needs, and delivers recommendations through email with supporting video reviews, creating a comprehensive shopping experience.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--37&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Uses LangGraph to orchestrate a workflow combining Tavily for web search, Llama-3.1-70B for structured data analysis and product comparison, and YouTube API for review video retrieval. The system processes search results through multiple nodes including schema mapping, product comparison, review identification, and email generation. Key features include structured Pydantic models for consistent data handling, retry mechanisms for robust API interactions, and email delivery through SMTP for sharing recommendations.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--20&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=Js0sK0u53dQ&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/car_buyer_agent_langgraph.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Car Buyer AI Agent&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--38&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;The Smart Product Buyer AI Agent demonstrates how to build an intelligent system that assists users in making informed purchasing decisions. Using LangGraph and LLM-based intelligence, the system processes user requirements, scrapes product listings from websites like AutoTrader, and provides detailed analysis and recommendations for car purchases.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--38&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Implements a state-based workflow using LangGraph to coordinate user interaction, web scraping, and decision support. The system features TypedDict state management, async web scraping with Playwright, and integrates with external APIs for comprehensive product analysis. The implementation includes a Gradio interface for real-time chat interaction and modular scraper architecture for easy extension to additional product categories.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--21&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=I61I1fp0qys&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;-task-management-and-productivity-agents&#34;&gt;🎯 Task Management and Productivity Agents
+&lt;/h3&gt;&lt;ol start=&#34;40&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/taskifier.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Taskifier - Intelligent Task Allocation &amp;amp; Management&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--39&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;An intelligent task management system that analyzes user work styles and creates personalized task breakdown strategies, born from the observation that procrastination often stems from task ambiguity among students and early-career professionals. The system evaluates historical work patterns, gathers relevant task information through web search, and generates customized step-by-step approaches to optimize productivity and reduce workflow paralysis.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--39&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Leverages LangGraph for orchestrating a multi-step workflow including work style analysis, information gathering via Tavily API, and customized plan generation. The system maintains state through the process, integrating historical work pattern data with fresh task research to output detailed, personalized task execution plans aligned with the user&amp;rsquo;s natural working style.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--22&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=1W_p_RVi9KE&amp;amp;t=25s&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/grocery_management_agents_system.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Grocery Management Agents System&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--40&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;A multi-agent system built with CrewAI that automates grocery management tasks including receipt interpretation, expiration date tracking, inventory management, and recipe recommendations. The system uses specialized agents to extract data from receipts, estimate product shelf life, track consumption, and suggest recipes to minimize food waste.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--40&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Implements four specialized agents using CrewAI - a Receipt Interpreter that extracts item details from receipts, an Expiration Date Estimator that determines shelf life using online sources, a Grocery Tracker that maintains inventory based on consumption, and a Recipe Recommender that suggests meals using available ingredients. Each agent has specific tools and tasks orchestrated through a crew workflow.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--23&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=FlMu5pKSaHI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;-quality-assurance-and-testing-agents&#34;&gt;🔍 Quality Assurance and Testing Agents
+&lt;/h3&gt;&lt;ol start=&#34;42&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/graph_inspector_system_langgraph.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LangGraph-Based Systems Inspector&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--41&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;A comprehensive testing and validation tool for LangGraph-based applications that automatically analyzes system architecture, generates test cases, and identifies potential vulnerabilities through multi-agent inspection. The inspector employs specialized AI testers to evaluate different aspects of the system, from basic functionality to security concerns and edge cases.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--41&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Integrates LangGraph for workflow orchestration, multiple LLM-powered testing agents, and a structured evaluation pipeline that includes static analysis, test case generation, and results verification. The system uses Pydantic for data validation, NetworkX for graph representation, and implements a modular architecture that allows for parallel test execution and comprehensive result analysis.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--24&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=fQd6lXc-Y9A&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://open.substack.com/pub/diamantai/p/langgraph-systems-inspector-an-ai?r=336pe4&amp;amp;utm_campaign=post&amp;amp;utm_medium=web&amp;amp;showWelcomeOnShare=false&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Blog Post&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/EU_Green_Compliance_FAQ_Bot.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;EU Green Deal FAQ Bot&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--42&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;The EU Green Deal FAQ Bot demonstrates how to build a RAG-based AI agent that helps businesses understand EU green deal policies. The system processes complex regulatory documents into manageable chunks and provides instant, accurate answers to common questions about environmental compliance, emissions reporting, and waste management requirements.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--42&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Implements a sophisticated RAG pipeline using FAISS vectorstore for document storage, semantic chunking for preprocessing, and multiple specialized agents (Retriever, Summarizer, Evaluator) for query processing. The system features query rephrasing for improved accuracy, cross-reference with gold Q&amp;amp;A datasets for answer validation, and comprehensive evaluation metrics to ensure response quality and relevance.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--25&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=Av0kBQjwU-Y&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/systematic_review_of_scientific_articles.ipynb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Systematic Review Automation System + Paper Draft Creation&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--43&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;A comprehensive system for automating academic systematic reviews using a directed graph architecture and LangChain components. The system generates complete, publication-ready systematic review papers, automatically processing everything from literature search through final draft generation with multiple revision cycles.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--43&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;Utilizes a state-based graph workflow that handles paper search and selection (up to 3 papers), PDF processing, and generates a complete academic paper with all standard sections (abstract, introduction, methods, results, conclusions, references). The system incorporates multiple revision cycles with automated critique and improvement phases, all orchestrated through LangGraph state management.&lt;/p&gt;
+&lt;h4 id=&#34;additional-resources--26&#34;&gt;Additional Resources 📚
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=qi35mGGkCtg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Explanation&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;-special-advanced-technique-&#34;&gt;🌟 Special Advanced Technique 🌟
+&lt;/h3&gt;&lt;ol start=&#34;45&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/Controllable-RAG-Agent&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Sophisticated Controllable Agent for Complex RAG Tasks 🤖&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overview--44&#34;&gt;Overview 🔎
+&lt;/h4&gt;&lt;p&gt;An advanced RAG solution designed to tackle complex questions that simple semantic similarity-based retrieval cannot solve. This approach uses a sophisticated deterministic graph as the &amp;ldquo;brain&amp;rdquo; 🧠 of a highly controllable autonomous agent, capable of answering non-trivial questions from your own data.&lt;/p&gt;
+&lt;h4 id=&#34;implementation--44&#34;&gt;Implementation 🛠️
+&lt;/h4&gt;&lt;p&gt;• Implement a multi-step process involving question anonymization, high-level planning, task breakdown, adaptive information retrieval and question answering, continuous re-planning, and rigorous answer verification to ensure grounded and accurate responses.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started
+&lt;/h2&gt;&lt;p&gt;To begin exploring and building GenAI agents:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Clone this repository:
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/NirDiamant/GenAI_Agents.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Navigate to the technique you&amp;rsquo;re interested in:
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd all_agents_tutorials/technique-name
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Follow the detailed implementation guide in each technique&amp;rsquo;s notebook.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;contributing&#34;&gt;Contributing
+&lt;/h2&gt;&lt;p&gt;We welcome contributions from the community! If you have a new technique or improvement to suggest:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Fork the repository&lt;/li&gt;
+&lt;li&gt;Create your feature branch: &lt;code&gt;git checkout -b feature/AmazingFeature&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Commit your changes: &lt;code&gt;git commit -m &#39;Add some AmazingFeature&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Push to the branch: &lt;code&gt;git push origin feature/AmazingFeature&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Open a pull request&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;contributors&#34;&gt;Contributors
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NirDiamant/GenAI_Agents/graphs/contributors&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://contrib.rocks/image?repo=NirDiamant/GenAI_Agents&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Contributors&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;This project is licensed under a custom non-commercial license - see the &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt; file for details.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;⭐️ If you find this repository helpful, please consider giving it a star!&lt;/p&gt;
+&lt;p&gt;Keywords: GenAI, Generative AI, Agents, NLP, AI, Machine Learning, Natural Language Processing, LLM, Conversational AI, Task-Oriented AI&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Agentic Tree Search on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/agentic-tree-search/</link>
+        <description>Recent content in Agentic Tree Search on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sun, 29 Mar 2026 15:56:16 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/agentic-tree-search/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AI-Scientist-v2</title>
+        <link>https://producthunt.programnotes.cn/en/p/ai-scientist-v2/</link>
+        <pubDate>Sun, 29 Mar 2026 15:56:16 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/ai-scientist-v2/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1617605875475-3e903abae832?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQ3NzA5Mzd8&amp;ixlib=rb-4.1.0" alt="Featured image of post AI-Scientist-v2" /&gt;&lt;h1 id=&#34;sakanaaiai-scientist-v2&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/SakanaAI/AI-Scientist-v2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SakanaAI/AI-Scientist-v2&lt;/a&gt;
+&lt;/h1&gt;&lt;div align=&#34;center&#34;&gt;
+  &lt;a href=&#34;https://github.com/SakanaAI/AI-Scientist_v2/blob/main/docs/logo_v1.jpg&#34;&gt;
+    &lt;img src=&#34;docs/logo_v1.png&#34; width=&#34;215&#34; alt=&#34;AI Scientist v2 Logo&#34; /&gt;
+  &lt;/a&gt;
+  &lt;h1&gt;
+    &lt;b&gt;The AI Scientist-v2: Workshop-Level Automated&lt;/b&gt;&lt;br&gt;
+    &lt;b&gt;Scientific Discovery via Agentic Tree Search&lt;/b&gt;
+  &lt;/h1&gt;
+&lt;/div&gt;
+&lt;p align=&#34;center&#34;&gt;
+  📚 &lt;a href=&#34;https://pub.sakana.ai/ai-scientist-v2/paper&#34;&gt;[Paper]&lt;/a&gt; |
+  📝 &lt;a href=&#34;https://sakana.ai/ai-scientist-first-publication/&#34;&gt; [Blog Post]&lt;/a&gt; |
+  📂 &lt;a href=&#34;https://github.com/SakanaAI/AI-Scientist-ICLR2025-Workshop-Experiment&#34;&gt; [ICLR2025 Workshop Experiment]&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Fully autonomous scientific research systems are becoming increasingly capable, with AI playing a pivotal role in transforming how scientific discoveries are made.
+We are excited to introduce The AI Scientist-v2, a generalized end-to-end agentic system that has generated the first workshop paper written entirely by AI and accepted through peer review.&lt;/p&gt;
+&lt;p&gt;This system autonomously generates hypotheses, runs experiments, analyzes data, and writes scientific manuscripts. Unlike &lt;a class=&#34;link&#34; href=&#34;https://github.com/SakanaAI/AI-Scientist&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;its predecessor (AI Scientist-v1)&lt;/a&gt;, the AI Scientist-v2 removes reliance on human-authored templates, generalizes across Machine Learning (ML) domains, and employs a progressive agentic tree search, guided by an experiment manager agent.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;
+The AI Scientist-v2 doesn’t necessarily produce better papers than v1, especially when a strong starting template is available. v1 follows well-defined templates, leading to high success rates, while v2 takes a broader, more exploratory approach with lower success rates. v1 works best for tasks with clear objectives and a solid foundation, whereas v2 is designed for open-ended scientific exploration.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Caution!&lt;/strong&gt;
+This codebase will execute Large Language Model (LLM)-written code. There are various risks and challenges associated with this autonomy, including the potential use of dangerous packages, uncontrolled web access, and the possibility of spawning unintended processes. Ensure that you run this within a controlled sandbox environment (e.g., a Docker container). Use at your own discretion.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#requirements&#34; &gt;Requirements&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#installation&#34; &gt;Installation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#supported-models-and-api-keys&#34; &gt;Supported Models and API Keys&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#generate-research-ideas&#34; &gt;Generate Research Ideas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#run-ai-scientist-v2-paper-generation-experiments&#34; &gt;Run AI Scientist-v2 Paper Generation Experiments&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#citing-the-ai-scientist-v2&#34; &gt;Citing The AI Scientist-v2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#frequently-asked-questions&#34; &gt;Frequently Asked Questions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#acknowledgement&#34; &gt;Acknowledgement&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements
+&lt;/h2&gt;&lt;p&gt;This code is designed to run on Linux with NVIDIA GPUs using CUDA and PyTorch.&lt;/p&gt;
+&lt;h3 id=&#34;installation&#34;&gt;Installation
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Create a new conda environment&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda create -n ai_scientist &lt;span class=&#34;nv&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3.11
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda activate ai_scientist
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Install PyTorch with CUDA support (adjust pytorch-cuda version for your setup)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda install pytorch torchvision torchaudio pytorch-cuda&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;12.4 -c pytorch -c nvidia
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Install PDF and LaTeX tools&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda install anaconda::poppler
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda install conda-forge::chktex
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Install Python package requirements&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -r requirements.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Installation usually takes no more than one hour.&lt;/p&gt;
+&lt;h3 id=&#34;supported-models-and-api-keys&#34;&gt;Supported Models and API Keys
+&lt;/h3&gt;&lt;h4 id=&#34;openai-models&#34;&gt;OpenAI Models
+&lt;/h4&gt;&lt;p&gt;By default, the system uses the &lt;code&gt;OPENAI_API_KEY&lt;/code&gt; environment variable for OpenAI models.&lt;/p&gt;
+&lt;h4 id=&#34;gemini-models&#34;&gt;Gemini Models
+&lt;/h4&gt;&lt;p&gt;By default, the system uses the &lt;code&gt;GEMINI_API_KEY&lt;/code&gt; environment variable for Gemini models through OpenAI API.&lt;/p&gt;
+&lt;h4 id=&#34;claude-models-via-aws-bedrock&#34;&gt;Claude Models via AWS Bedrock
+&lt;/h4&gt;&lt;p&gt;To use Claude models provided by Amazon Bedrock, install the necessary additional packages:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install anthropic&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;bedrock&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Next, configure valid &lt;a class=&#34;link&#34; href=&#34;https://docs.aws.amazon.com/cli/v1/userguide/cli-configure-envvars.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AWS Credentials&lt;/a&gt; and the target &lt;a class=&#34;link&#34; href=&#34;https://docs.aws.amazon.com/bedrock/latest/userguide/bedrock-regions.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AWS Region&lt;/a&gt; by setting the following environment variables: &lt;code&gt;AWS_ACCESS_KEY_ID&lt;/code&gt;, &lt;code&gt;AWS_SECRET_ACCESS_KEY&lt;/code&gt;, &lt;code&gt;AWS_REGION_NAME&lt;/code&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;semantic-scholar-api-literature-search&#34;&gt;Semantic Scholar API (Literature Search)
+&lt;/h4&gt;&lt;p&gt;Our code can optionally use a Semantic Scholar API Key (&lt;code&gt;S2_API_KEY&lt;/code&gt;) for higher throughput during literature search &lt;a class=&#34;link&#34; href=&#34;https://www.semanticscholar.org/product/api&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;if you have one&lt;/a&gt;. This is used during both the ideation and paper writing stages. The system should work without it, though you might encounter rate limits or reduced novelty checking during ideation. If you experience issues with Semantic Scholar, you can skip the citation phase during paper generation.&lt;/p&gt;
+&lt;h4 id=&#34;setting-api-keys&#34;&gt;Setting API Keys
+&lt;/h4&gt;&lt;p&gt;Ensure you provide the necessary API keys as environment variables for the models you intend to use. For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;OPENAI_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;YOUR_OPENAI_KEY_HERE&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;S2_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;YOUR_S2_KEY_HERE&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Set AWS credentials if using Bedrock&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# export AWS_ACCESS_KEY_ID=&amp;#34;YOUR_AWS_ACCESS_KEY_ID&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# export AWS_SECRET_ACCESS_KEY=&amp;#34;YOUR_AWS_SECRET_KEY&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# export AWS_REGION_NAME=&amp;#34;your-aws-region&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;generate-research-ideas&#34;&gt;Generate Research Ideas
+&lt;/h2&gt;&lt;p&gt;Before running the full AI Scientist-v2 experiment pipeline, you first use the &lt;code&gt;ai_scientist/perform_ideation_temp_free.py&lt;/code&gt; script to generate potential research ideas. This script uses an LLM to brainstorm and refine ideas based on a high-level topic description you provide, interacting with tools like Semantic Scholar to check for novelty.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Prepare a Topic Description:&lt;/strong&gt; Create a Markdown file (e.g., &lt;code&gt;my_research_topic.md&lt;/code&gt;) describing the research area or theme you want the AI to explore. This file should contain sections like &lt;code&gt;Title&lt;/code&gt;, &lt;code&gt;Keywords&lt;/code&gt;, &lt;code&gt;TL;DR&lt;/code&gt;, and &lt;code&gt;Abstract&lt;/code&gt; to define the scope of the research. Refer to the example file &lt;code&gt;ai_scientist/ideas/i_cant_believe_its_not_better.md&lt;/code&gt; for the expected structure and content format. Place your file in a location accessible by the script (e.g., the &lt;code&gt;ai_scientist/ideas/&lt;/code&gt; directory).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Run the Ideation Script:&lt;/strong&gt; Execute the script from the main project directory, pointing it to your topic description file and specifying the desired LLM.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python ai_scientist/perform_ideation_temp_free.py &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; --workshop-file &lt;span class=&#34;s2&#34;&gt;&amp;#34;ai_scientist/ideas/my_research_topic.md&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; --model gpt-4o-2024-05-13 &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; --max-num-generations &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; --num-reflections &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--workshop-file&lt;/code&gt;: Path to your topic description Markdown file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--model&lt;/code&gt;: The LLM to use for generating ideas (ensure you have the corresponding API key set).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--max-num-generations&lt;/code&gt;: How many distinct research ideas to attempt generating.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--num-reflections&lt;/code&gt;: How many refinement steps the LLM should perform for each idea.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Output:&lt;/strong&gt; The script will generate a JSON file named after your input Markdown file (e.g., &lt;code&gt;ai_scientist/ideas/my_research_topic.json&lt;/code&gt;). This file will contain a list of structured research ideas, including hypotheses, proposed experiments, and related work analysis.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Proceed to Experiments:&lt;/strong&gt; Once you have the generated JSON file containing research ideas, you can proceed to the next section to run the experiments.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This ideation step guides the AI Scientist towards specific areas of interest and produces concrete research directions to be tested in the main experimental pipeline.&lt;/p&gt;
+&lt;h2 id=&#34;run-ai-scientist-v2-paper-generation-experiments&#34;&gt;Run AI Scientist-v2 Paper Generation Experiments
+&lt;/h2&gt;&lt;p&gt;Using the JSON file generated in the previous ideation step, you can now launch the main AI Scientist-v2 pipeline. This involves running experiments via agentic tree search, analyzing results, and generating a paper draft.&lt;/p&gt;
+&lt;p&gt;Specify the models used for the write-up and review phases via command-line arguments.
+The configuration for the best-first tree search (BFTS) is located in &lt;code&gt;bfts_config.yaml&lt;/code&gt;. Adjust parameters in this file as needed.&lt;/p&gt;
+&lt;p&gt;Key tree search configuration parameters in &lt;code&gt;bfts_config.yaml&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;agent&lt;/code&gt; config:
+&lt;ul&gt;
+&lt;li&gt;Set &lt;code&gt;num_workers&lt;/code&gt; (number of parallel exploration paths) and &lt;code&gt;steps&lt;/code&gt; (maximum number of nodes to explore). For example, if &lt;code&gt;num_workers=3&lt;/code&gt; and &lt;code&gt;steps=21&lt;/code&gt;, the tree search will explore up to 21 nodes, expanding 3 nodes concurrently at each step.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;num_seeds&lt;/code&gt;: Should generally be the same as &lt;code&gt;num_workers&lt;/code&gt; if &lt;code&gt;num_workers&lt;/code&gt; is less than 3. Otherwise, set &lt;code&gt;num_seeds&lt;/code&gt; to 3.&lt;/li&gt;
+&lt;li&gt;Note: Other agent parameters like &lt;code&gt;k_fold_validation&lt;/code&gt;, &lt;code&gt;expose_prediction&lt;/code&gt;, and &lt;code&gt;data_preview&lt;/code&gt; are not used in the current version.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;search&lt;/code&gt; config:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;max_debug_depth&lt;/code&gt;: The maximum number of times the agent will attempt to debug a failing node before abandoning that search path.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;debug_prob&lt;/code&gt;: The probability of attempting to debug a failing node.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;num_drafts&lt;/code&gt;: The number of initial root nodes (i.e., the number of independent trees to grow) during Stage 1.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example command to run AI-Scientist-v2 using a generated idea file (e.g., &lt;code&gt;my_research_topic.json&lt;/code&gt;). Please review &lt;code&gt;bfts_config.yaml&lt;/code&gt; for detailed tree search parameters (the default config includes &lt;code&gt;claude-3-5-sonnet&lt;/code&gt; for experiments). Do not set &lt;code&gt;load_code&lt;/code&gt; if you do not want to initialize experimentation with a code snippet.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python launch_scientist_bfts.py &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; --load_ideas &lt;span class=&#34;s2&#34;&gt;&amp;#34;ai_scientist/ideas/my_research_topic.json&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; --load_code &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; --add_dataset_ref &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; --model_writeup o1-preview-2024-09-12 &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; --model_citation gpt-4o-2024-11-20 &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; --model_review gpt-4o-2024-11-20 &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; --model_agg_plots o3-mini-2025-01-31 &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; --num_cite_rounds &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Once the initial experimental stage is complete, you will find a timestamped log folder inside the &lt;code&gt;experiments/&lt;/code&gt; directory. Navigate to &lt;code&gt;experiments/&amp;quot;timestamp_ideaname&amp;quot;/logs/0-run/&lt;/code&gt; within that folder to find the tree visualization file &lt;code&gt;unified_tree_viz.html&lt;/code&gt;.
+After all experiment stages are complete, the writeup stage begins. The writeup stage typically takes about 20 to 30 minutes in total. Once it finishes, you should see &lt;code&gt;timestamp_ideaname.pdf&lt;/code&gt; in the &lt;code&gt;timestamp_ideaname&lt;/code&gt; folder.
+For this example run, all stages typically finish within several hours.&lt;/p&gt;
+&lt;h2 id=&#34;citing-the-ai-scientist-v2&#34;&gt;Citing The AI Scientist-v2
+&lt;/h2&gt;&lt;p&gt;If you use &lt;strong&gt;The AI Scientist-v2&lt;/strong&gt; in your research, please cite our work as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bibtex&#34; data-lang=&#34;bibtex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;@article&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;aiscientist_v2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;author&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{Yamada, Yutaro and Lange, Robert Tjarko and Lu, Cong and Hu, Shengran and Lu, Chris and Foerster, Jakob and Clune, Jeff and Ha, David}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;journal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{arXiv preprint arXiv:2504.08066}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;na&#34;&gt;year&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{2025}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;frequently-asked-questions&#34;&gt;Frequently Asked Questions
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Why wasn&amp;rsquo;t a PDF or a review generated for my experiment?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The AI Scientist-v2 completes experiments with a success rate that depends on the chosen foundation model, and the complexity of the idea. Higher success rates are generally observed when using powerful models like Claude 3.5 Sonnet for the experimentation phase.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What is the estimated cost per experiment?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The ideation step cost depends on the LLM used and the number of generations/reflections, but is generally low (a few dollars). For the main experiment pipeline, using Claude 3.5 Sonnet for the experimentation phase typically costs around $15–$20 per run. The subsequent writing phase adds approximately $5 when using the default models specified in the example command. Using GPT-4o for &lt;code&gt;model_citation&lt;/code&gt; is recommended as it can help reduce writing costs.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How do I run The AI Scientist-v2 for different subject fields?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;First, perform the &lt;a class=&#34;link&#34; href=&#34;#generate-research-ideas&#34; &gt;Generate Research Ideas&lt;/a&gt; step. Create a new Markdown file describing your desired subject field or topic, following the structure of the example &lt;code&gt;ai_scientist/ideas/i_cant_believe_its_not_better.md&lt;/code&gt;. Run the &lt;code&gt;perform_ideation_temp_free.py&lt;/code&gt; script with this file to generate a corresponding JSON idea file. Then, proceed to the &lt;a class=&#34;link&#34; href=&#34;#run-ai-scientist-v2-paper-generation-experiments&#34; &gt;Run AI Scientist-v2 Paper Generation Experiments&lt;/a&gt; step, using this JSON file with the &lt;code&gt;launch_scientist_bfts.py&lt;/code&gt; script via the &lt;code&gt;--load_ideas&lt;/code&gt; argument.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What should I do if I have problems accessing the Semantic Scholar API?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The Semantic Scholar API is used to assess the novelty of generated ideas and to gather citations during the paper write-up phase. If you don&amp;rsquo;t have an API key, encounter rate limits, you may be able to skip these phases.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;I encountered a &amp;ldquo;CUDA Out of Memory&amp;rdquo; error. What can I do?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This error typically occurs when the AI Scientist-v2 attempts to load or run a model that requires more GPU memory than available on your system. To resolve this, you can try updating your ideation prompt file (&lt;code&gt;ai_scientist/ideas/my_research_topic.md&lt;/code&gt;) to suggest using smaller models for the experiments.&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgement&#34;&gt;Acknowledgement
+&lt;/h2&gt;&lt;p&gt;The tree search component implemented within the &lt;code&gt;ai_scientist&lt;/code&gt; directory is built on top of the &lt;a class=&#34;link&#34; href=&#34;https://github.com/WecoAI/aideml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AIDE&lt;/a&gt; project. We thank the AIDE developers for their valuable contributions and for making their work publicly available.&lt;/p&gt;
+&lt;h2 id=&#34;star-history&#34;&gt;Star History
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://star-history.com/#SakanaAI/AI-Scientist-v2&amp;amp;Date&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://api.star-history.com/svg?repos=SakanaAI/AI-Scientist-v2&amp;amp;type=Date&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Star History Chart&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-license--responsible-use&#34;&gt;⚖️ License &amp;amp; Responsible Use
+&lt;/h2&gt;&lt;p&gt;This project is licensed under &lt;strong&gt;The AI Scientist Source Code License&lt;/strong&gt; (a derivative of the Responsible AI License).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mandatory Disclosure:&lt;/strong&gt; By using this code, you are legally bound to clearly and prominently disclose the use of AI in any resulting scientific manuscripts or papers.&lt;/p&gt;
+&lt;p&gt;We recommend the following attribution in your paper&amp;rsquo;s Abstract or Methods section:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;This manuscript was autonomously generated using &lt;a class=&#34;link&#34; href=&#34;https://github.com/SakanaAI/AI-Scientist&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The AI Scientist&lt;/a&gt;.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
