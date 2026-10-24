@@ -1,9 +1,9 @@
 ---
 title: hallmark
-date: 2026-07-18T17:00:45+08:00
+date: 2026-10-24T20:07:25+08:00
 draft: False
-image: https://images.unsplash.com/photo-1715465115598-086887a43221?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQzNjUwOTZ8&ixlib=rb-4.1.0
-tags: ['github',design generation, AI code editors, skill]
+image: https://images.unsplash.com/photo-1597037682167-61eba513c1ff?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTI4NDM1NjF8&ixlib=rb-4.1.0
+tags: ['github',hallmark, ai design, web development]
 categories: ['github']
 ---
 
@@ -11,113 +11,111 @@ categories: ['github']
 
 # Hallmark
 
-**A design skill for Claude Code, Cursor, and Codex that refuses to look AI-generated.**
+**A design skill for Claude Code, Codex, Cursor and OpenCode that refuses to look AI-generated.**
 
-[Live demo →](https://www.usehallmark.com) &nbsp;·&nbsp; twenty themes &nbsp;·&nbsp; four verbs &nbsp;·&nbsp; press `T` to cycle.
+[usehallmark.com](https://www.usehallmark.com) &nbsp;·&nbsp; forty-eight themes &nbsp;·&nbsp; custom on request &nbsp;·&nbsp; redesign and audit by name
 
 Made by Together AI.
 
 <p align="center">
-  <img src="site/OG-hallmark.png" alt="Hallmark, a design skill that refuses to look AI-generated" />
+  <img src="site/OG-hallmark.png" alt="Hallmark, the design skill that ends AI slop" />
 </p>
 
-Hallmark picks a macrostructure for the brief, dresses it in one of twenty themes, runs fifty-seven slop-test gates plus a pre-emit self-critique, and refuses the on-distribution defaults every LLM was trained into. Two pages by Hallmark for two different briefs feel like different sites, not colour-swaps of the same template.
+Hallmark holds a hard floor and then gets out of the way. It deals three themes from a catalog of forty-eight materials, builds the page around what the visitor came to do, and lints the result in a real browser against the tells that read as machine-made: the eyebrow above every heading, tracked-capital labels, one coloured word in a headline, a page of empty frames or nothing but photographs, a hero that misses its screen, an email sign-up at the end of every page, a form that says thanks without sending anything. A fresh-context reviewer gets the last word.
 
----
+The gates come in tiers. The **Floor** never ships (contrast, focus, reduced motion, invented facts, a broken phone layout). **Reflex** gates are the defaults a model falls into; a build with a reason may overrule one on the record. **Finish** checks are craft detail that never blocks a ship.
 
-## Four verbs
+## New in v2
 
-| Verb | What it does |
-| --- | --- |
-| *(default)* | Build new UI. Picks a macrostructure, applies the rule-set, runs the slop test before handing back. |
-| `hallmark audit <target>` | Score existing code against the anti-patterns. Punch list, no edits. |
-| `hallmark redesign <target>` | Throw out the structure, keep copy + IA + brand, rebuild with a different fingerprint. |
-| `hallmark study <screenshot \| URL>` | Extract the **DNA** from a design you admire: macrostructure, type-pairing, colour anchor. Refuses pixel-clones and paid templates. Optionally emits a portable `design.md` for handoff to other AI tools. |
+- **Forty-eight themes.** Each is a material (paper, type, colour, surfaces, its own components and texture) with a picture of a finished page, and the build lays out its own page in it.
+- **Built from the job.** A booking page books, a shop sells, a newsletter subscribes: the action sits where the category puts it, and the page ends on it.
+- **Custom.** Ask for a custom page and Hallmark designs from your prompt alone, under the same rules and checks.
+- **Your real product.** Point it at a URL, a dev server or an app and it captures the screenshots itself.
+- **Real photographs.** 755 openly licensed photos, picked per subject and credited on the page.
+- **Redesign and audit.** `/hallmark redesign <path>` rebuilds a page and keeps its content and wiring; `/hallmark audit <path>` only reports.
 
----
-
-## Different briefs, different shapes
-
-Each generated from a different brief. The skill picks the theme, structure, and craft to fit each one, not from a template.
+## Themes
 
 <table>
   <tr>
-    <td width="25%"><a href="https://www.usehallmark.com/examples/hum-07/"><img src="docs/screenshots/hero-hum-07.jpg" alt="Bubble guided sourdough app hero" /></a></td>
-    <td width="25%"><a href="https://www.usehallmark.com/examples/cobalt-01/"><img src="docs/screenshots/hero-cobalt-01.jpg" alt="Distil content-extraction API hero" /></a></td>
-    <td width="25%"><a href="https://www.usehallmark.com/examples/carnival-01/"><img src="docs/screenshots/hero-carnival-01.jpg" alt="Cold Snap record-label EP hero" /></a></td>
-    <td width="25%"><a href="https://www.usehallmark.com/examples/lumen-01/"><img src="docs/screenshots/hero-lumen-01.jpg" alt="Cinder AI reasoning tool hero" /></a></td>
+    <td width="20%"><a href="https://www.usehallmark.com/themes/dusk/"><img src="docs/screenshots/dusk.jpg" alt="Dusk theme: Closewise, bank reconciliation" /></a></td>
+    <td width="20%"><a href="https://www.usehallmark.com/themes/cobalt/"><img src="docs/screenshots/cobalt.jpg" alt="Cobalt theme: Relay, a webhook API" /></a></td>
+    <td width="20%"><a href="https://www.usehallmark.com/themes/studio/"><img src="docs/screenshots/studio.jpg" alt="Studio theme: Field Office, an identity studio" /></a></td>
+    <td width="20%"><a href="https://www.usehallmark.com/themes/atelier/"><img src="docs/screenshots/atelier.jpg" alt="Atelier theme: Maison Orla, a fragrance atelier" /></a></td>
+    <td width="20%"><a href="https://www.usehallmark.com/themes/ribbon/"><img src="docs/screenshots/ribbon.jpg" alt="Ribbon theme: Lull, a sleep sounds app" /></a></td>
   </tr>
   <tr>
-    <td><b>Bubble</b><br/><sub>Sourdough app · Hum</sub></td>
-    <td><b>Distil</b><br/><sub>Extraction API · Cobalt</sub></td>
-    <td><b>Cold Snap</b><br/><sub>Record label · Carnival</sub></td>
-    <td><b>Cinder</b><br/><sub>AI tool · Lumen</sub></td>
+    <td><b>Dusk</b><br/><sub>Closewise, bank reconciliation</sub></td>
+    <td><b>Cobalt</b><br/><sub>Relay, a webhook API</sub></td>
+    <td><b>Studio</b><br/><sub>Field Office, an identity studio</sub></td>
+    <td><b>Atelier</b><br/><sub>Maison Orla, a fragrance atelier</sub></td>
+    <td><b>Ribbon</b><br/><sub>Lull, a sleep sounds app</sub></td>
   </tr>
   <tr>
-    <td><a href="https://www.usehallmark.com/examples/custom-03/"><img src="docs/screenshots/hero-custom-03.jpg" alt="Ferns and Fathom tea menu hero" /></a></td>
-    <td><a href="https://www.usehallmark.com/examples/garden-01/"><img src="docs/screenshots/hero-garden-01.jpg" alt="Hollowback Apiary honey farm hero" /></a></td>
-    <td><a href="https://www.usehallmark.com/examples/riso-01/"><img src="docs/screenshots/hero-riso-01.jpg" alt="Off-Register risograph print fair hero" /></a></td>
-    <td><a href="https://www.usehallmark.com/examples/press-01/"><img src="docs/screenshots/hero-press-01.jpg" alt="Press Quaternary type studio hero" /></a></td>
+    <td width="20%"><a href="https://www.usehallmark.com/themes/furrow/"><img src="docs/screenshots/furrow.jpg" alt="Furrow theme: Fieldbook, farm records" /></a></td>
+    <td width="20%"><a href="https://www.usehallmark.com/themes/dose/"><img src="docs/screenshots/dose.jpg" alt="Dose theme: Tandem, a family medication app" /></a></td>
+    <td width="20%"><a href="https://www.usehallmark.com/themes/hum/"><img src="docs/screenshots/hum.jpg" alt="Hum theme: Sprout, a reading game for kids" /></a></td>
+    <td width="20%"><a href="https://www.usehallmark.com/themes/terminal/"><img src="docs/screenshots/terminal.jpg" alt="Terminal theme: burrow, a dotfiles CLI" /></a></td>
+    <td width="20%"><a href="https://www.usehallmark.com/themes/hedgerow/"><img src="docs/screenshots/hedgerow.jpg" alt="Hedgerow theme: Five Mile Gin, a distillery" /></a></td>
   </tr>
   <tr>
-    <td><b>Ferns &amp; Fathom</b><br/><sub>Tea menu · Custom</sub></td>
-    <td><b>Hollowback Apiary</b><br/><sub>Honey farm · Garden</sub></td>
-    <td><b>Off-Register</b><br/><sub>Print fair · Riso</sub></td>
-    <td><b>Press Quaternary</b><br/><sub>Type studio · Custom</sub></td>
-  </tr>
-  <tr>
-    <td><a href="https://www.usehallmark.com/examples/tally/"><img src="docs/screenshots/hero-tally.jpg" alt="Tally SaaS product page hero" /></a></td>
-    <td><a href="https://www.usehallmark.com/examples/wayfare/"><img src="docs/screenshots/hero-wayfare.jpg" alt="Wayfare travel booking hero" /></a></td>
-    <td><a href="https://www.usehallmark.com/examples/najm/"><img src="docs/screenshots/hero-najm.jpg" alt="NAJM Moroccan fashion brand hero" /></a></td>
-    <td><a href="https://www.usehallmark.com/examples/hyperlane/"><img src="docs/screenshots/hero-hyperlane.jpg" alt="Hyperlane developer infrastructure hero" /></a></td>
-  </tr>
-  <tr>
-    <td><b>Tally</b><br/><sub>SaaS · modern-minimal</sub></td>
-    <td><b>Wayfare</b><br/><sub>Travel · atmospheric</sub></td>
-    <td><b>NAJM</b><br/><sub>Fashion brand</sub></td>
-    <td><b>Hyperlane</b><br/><sub>Dev infrastructure</sub></td>
+    <td><b>Furrow</b><br/><sub>Fieldbook, farm records</sub></td>
+    <td><b>Dose</b><br/><sub>Tandem, a family medication app</sub></td>
+    <td><b>Hum</b><br/><sub>Sprout, a reading game for kids</sub></td>
+    <td><b>Terminal</b><br/><sub>burrow, a dotfiles CLI</sub></td>
+    <td><b>Hedgerow</b><br/><sub>Five Mile Gin, a distillery</sub></td>
   </tr>
 </table>
 
-Each page is self-contained HTML + CSS, stamped with its macrostructure in the CSS comment. Browse the full set at [usehallmark.com](https://www.usehallmark.com) or under [`site/_tests/`](site/_tests/).
+Ten of the forty-eight. A theme is a material, not a plan: it never says what a page contains or in what order, so two prompts in one theme make two different pages. Each is one file of at most 8 KB in [`references/themes/`](skills/hallmark/references/themes/) with a picture beside it; a build reads exactly one. See them all at [usehallmark.com](https://www.usehallmark.com).
 
----
+## Custom
 
-## Custom <sup>NEW</sup>
+Say **custom** and Hallmark drops the themes: no plan, no components, no palette recipe, only the floor, the gates and a short direction in [`direction.md`](skills/hallmark/references/direction.md) to find one idea that only this client has and let it run the page.
 
-When a brief carries creative intent that no catalog theme fits, Hallmark switches to **Custom** and designs the page from scratch: a made-to-measure palette, type, and layout. Same 57 slop-test gates, no template underneath.
+## How a build runs
 
-<table>
-  <tr>
-    <td width="50%"><a href="https://www.usehallmark.com/examples/custom-02/"><img src="docs/screenshots/hero-custom-02.jpg" alt="The Cascadia Nightjar sleeper-train ticket hero" /></a></td>
-    <td width="50%"><a href="https://www.usehallmark.com/examples/custom-04/"><img src="docs/screenshots/hero-custom-04.jpg" alt="The Mend Assembly repair-café broadsheet hero" /></a></td>
-  </tr>
-  <tr>
-    <td><b>The Cascadia Nightjar</b><br/><sub>Sleeper-train ticket · Custom</sub></td>
-    <td><b>The Mend Assembly</b><br/><sub>Repair-café broadsheet · Custom</sub></td>
-  </tr>
-</table>
+1. Pre-flight reads the project (fonts, palette, framework, a locked `design.md`) and asks once for the material: photos, screenshots, real numbers. Nothing is invented.
+2. `scripts/theme.mjs deal` offers three themes that fit the prompt and clear the log; `draw` deals the page's anatomy from its job.
+3. The hero is built alone, rendered and reviewed cold before the rest of the page exists.
+4. `scripts/sloplint.mjs --render` checks the page at eight widths, then a subagent reviews it with fresh eyes.
 
-It stays a quiet branch; vanilla briefs never see it. The protocol lives in [`custom-theme.md`](skills/hallmark/references/custom-theme.md).
+Each page is self-contained HTML and CSS, stamped in its first CSS comment with the decisions it took.
 
----
+## Redesign
+
+Hallmark never starts on a design that already exists unless you name it:
+
+```
+/hallmark redesign ./src/app
+/hallmark audit ./index.html
+```
+
+A full redesign keeps the content and the wiring and changes the system and the layout; say *keep the layout* for a restyle or *polish* for only the tells. `sloplint --before` records every link, field, handler and heading first, `sloplint --kept` fails the redesign if one went missing, and the handoff is a side-by-side before and after.
 
 ## Install
 
 ```
-npx skills add nutlope/hallmark
+npx skills add nutlope/hallmark -g
 ```
 
-Re-run any time to update. Or copy [`SKILL.md`](skills/hallmark/SKILL.md) + [`references/`](skills/hallmark/references/) into:
+`-g` installs for every project; leave it off to install into the current one. Needs Node 18 or later. The browser checks (`sloplint --render`, screenshots) also need `npm i -g puppeteer-core` and Chrome; without them the static checks still run.
 
-- **Claude Code**: `~/.claude/skills/hallmark/`
-- **Cursor**: `.cursor/rules/hallmark.mdc` (body of `SKILL.md`, no frontmatter)
-- **Codex**: `~/.codex/skills/hallmark/` (personal) or `.codex/skills/hallmark/` (project-scoped)
+| Harness | Lands in | Invoke |
+| --- | --- | --- |
+| Claude Code | `~/.claude/skills/hallmark` | `/hallmark <prompt>` or describe a new build |
+| Codex CLI | `~/.agents/skills/hallmark` | `$hallmark <prompt>` or describe a new build |
+| Cursor | finds the copies above | `/hallmark <prompt>` or describe a new build |
+| OpenCode | finds the copies above | `/hallmark <prompt>` or describe a new build |
 
-The rule-set lives in [`SKILL.md`](skills/hallmark/SKILL.md) and [`references/`](skills/hallmark/references/). Worked examples in [`docs/recipes.md`](docs/recipes.md) and [`docs/study-examples.md`](docs/study-examples.md).
-
----
+- **One harness only:** `npx skills add nutlope/hallmark -g --agent claude-code` (or `codex`, `opencode`, `cursor`, `github-copilot`).
+- **As a Claude Code plugin:** `/plugin marketplace add nutlope/hallmark`, then `/plugin install hallmark@hallmark` (invoked as `/hallmark:hallmark`).
+- **From a clone:** `node skills/hallmark/scripts/install.mjs` validates every theme and reference before it copies; `install-hook.mjs` adds an edit-time Floor check to Claude Code.
+- **Lint any page:** `node skills/hallmark/scripts/sloplint.mjs <file-or-dir> --render`.
+- **If it does not fire on its own,** name it: *use hallmark to build ...*.
 
 ## Licence
 
 MIT. Use it, fork it, ship it.
+
+The photo library (`skills/hallmark/scripts/photos.json`) lists photographs hosted on Wikimedia Commons and holds no image files. Each keeps its own licence (CC0, public domain, CC BY or CC BY-SA), and Hallmark credits every one it uses on the page. It does not use stock sites (Unsplash, Pexels, Pixabay), whose terms bar AI tools from picking their images.

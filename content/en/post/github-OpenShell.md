@@ -1,9 +1,9 @@
 ---
 title: OpenShell
-date: 2026-10-23T20:43:12+08:00
+date: 2026-10-24T20:06:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1550664865-e35e69d95f48?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTI3NTkzMDB8&ixlib=rb-4.1.0
-tags: ['github',Autonomous AI Agents, Sandbox Isolation, Policy Enforcement]
+image: https://images.unsplash.com/photo-1527720255604-b27935ade401?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTI4NDM1NjF8&ixlib=rb-4.1.0
+tags: ['github',OpenShell, AI agents, Sandbox]
 categories: ['github']
 ---
 

@@ -1,0 +1,139 @@
+---
+title: Product Hunt 今日热榜 | 2026-10-24
+date: 2026-10-24 12:03:12+0000
+image: https://ph-files.imgix.net/63e7224f-3120-4869-b8c5-6aca2a63c623.jpeg?auto=format
+tags: ["实时预览", "Product Hunt发布", "可视化编辑器"]
+---
+
+## 1. Product Hunt Visual Launch Editor  
+**标语**: 在构建过程中预览你的发布效果  
+**介绍**: 边搭建边预览，让你的 Product Hunt 发布页面逐渐成形！全新的可视化编辑器大幅精简了操作步骤，并在编辑的同时自动保存草稿。你只需点击名称、标语、图片库或主创人员，即可直接在原位进行修改。清单功能会清晰列出必填内容与加分建议，助你的发布页面脱颖而出；点击任意清单项目，即可直接跳转至待完善的对应字段。现在，草稿、定时发布与已上线页面均已统一使用该编辑器。  
+**网站**: [立即访问](https://www.producthunt.com/r/Y7DEMV6KEGC3FT?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/producthunt?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Product Hunt Visual Launch Editor](https://ph-files.imgix.net/63e7224f-3120-4869-b8c5-6aca2a63c623.jpeg?auto=format)  
+**关键词**: Product Hunt发布,可视化编辑器,所见即所得,原位编辑,自动保存,发布清单,统一编辑器,实时预览,高效上架,草稿管理  
+**票数**: 🔺402  
+**是否精选**: 是  
+**发布时间**: 2026年10月23日 PM03:01 (北京时间)  
+
+---  
+
+{{< ad-inarticle >}}
+
+## 2. MOVO AI  
+**标语**: 全球首款移动端长视频智能体  
+**介绍**: MOVO AI 是全球首款专为长视频创作打造的 AI 视频代理，支持直接在手机上使用，同时也兼容网页端。你可以拍摄、上传素材，或仅凭一个灵感启动项目，随后直接告诉 MOVO AI 你的需求。MOVO 将全程负责规划、生成与打磨，自动保持角色与场景的一致性，并将所有内容无缝整合为完整影片。即使锁屏，MOVO 也会在后台持续运行。你只需随时回来，通过对话界面即可查看进度或下达修改指令。告别繁琐的提示词技巧，无需沉重的画布式工作流，更不必手动拼接片段。  
+**网站**: [立即访问](https://www.producthunt.com/r/JXYZH5BXNMIBOM?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/movo-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![MOVO AI](https://ph-files.imgix.net/c0db1ecf-ccf4-4006-accb-51767a6064fc.jpeg?auto=format)  
+**关键词**: 长视频生成,AI视频智能体,手机端创作,自动剪辑,角色一致性,对话交互,后台运行,一键成片,创意转视频,移动端AI  
+**票数**: 🔺291  
+**是否精选**: 是  
+**发布时间**: 2026年10月23日 PM03:01 (北京时间)  
+
+---  
+
+## 3. Agent Hunt  
+**标语**: AI智能体最常使用的工具实时排名  
+**介绍**: Agent Hunt 是一个展示 AI 代理实际使用工具的实时排行榜。每个名次均由代理通过 Monid 发起的真实通话赢得。  
+**网站**: [立即访问](https://www.producthunt.com/r/VX6RX4U6IBXRW6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/monid?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Agent Hunt](https://ph-files.imgix.net/7fb51944-90bc-4a7d-8f7e-aad102e79bfb.jpeg?auto=format)  
+**关键词**: AI智能体,AI工具排行,实时榜单,真实调用,工具选型,AI趋势,智能体生态,热度追踪  
+**票数**: 🔺258  
+**是否精选**: 是  
+**发布时间**: 2026年10月23日 PM03:01 (北京时间)  
+
+---  
+
+## 4. Ovren Live Preview  
+**标语**: 产品上线前实时预览变更  
+**介绍**: 用通俗的语言描述修改内容。Ovren 会在你项目的安全副本上编写代码，并为每次前端变更提供实时预览——即带有该修改的真实页面。点击浏览、确认批准，你的团队即可合并拉取请求（Pull Request）。  
+**网站**: [立即访问](https://www.producthunt.com/r/GZYWZ6Z6BGE5RV?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/ovren?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Ovren Live Preview](https://ph-files.imgix.net/4608a2ed-db7f-4c71-a72c-e630937fee3d.jpeg?auto=format)  
+**关键词**: 实时预览,前端开发,AI生成代码,安全沙箱,在线审批,团队协作,预发布验证,PR合并  
+**票数**: 🔺190  
+**是否精选**: 是  
+**发布时间**: 2026年10月23日 PM03:01 (北京时间)  
+
+---  
+
+## 5. ElevenLabs Realtime  
+**标语**: 实时语音智能体模型，首音延迟570毫秒  
+**介绍**: Eleven Realtime 是 ElevenLabs 推出的全新语音到语音模型家族，专为语音智能体设计。该系列对语音识别、话轮转换、大语言模型（LLM）及音色进行了端到端优化。v1 Mini 专为自然对话打造，v1 Max 则面向复杂任务，其首音延迟分别仅为 620 毫秒和 570 毫秒。它支持 90 多种语言，既可在 ElevenAgents 中使用，也支持通过兼容 OpenAI 协议的实时 API 调用，用户仅需修改端点地址和模型名称即可无缝接入。  
+**网站**: [立即访问](https://www.producthunt.com/r/J2VB5S23Y57R7F?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/realtime-max-mini?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![ElevenLabs Realtime](https://ph-files.imgix.net/4b26b4a9-9f7c-4a44-bcdf-2c6d0acff218.webp?auto=format)  
+**关键词**: 实时语音生成,语音代理模型,超低延迟,端到端优化,多语言支持,OpenAI兼容API,智能对话系统,语音识别与合成  
+**票数**: 🔺183  
+**是否精选**: 是  
+**发布时间**: 2026年10月23日 PM03:01 (北京时间)  
+
+---  
+
+## 6. ShogunAI  
+**标语**: 你的个人AGI，运行在你的电脑上  
+**介绍**: 一款能记住您工作内容的AI助手，可协助您进行会议准备、搜索、写作与后续跟进。Mac版ShogunAI现提供7天免费试用。  
+**网站**: [立即访问](https://www.producthunt.com/r/WGEUVK2HDK6FM6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/shogunai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![ShogunAI](https://ph-files.imgix.net/3e47fa9a-cad9-472e-9e54-0112262675b3.jpeg?auto=format)  
+**关键词**: AI助手,个人AGI,本地运行,智能记忆,会议准备,写作辅助,任务跟进,Mac应用,免费试用  
+**票数**: 🔺153  
+**是否精选**: 是  
+**发布时间**: 2026年10月23日 PM03:01 (北京时间)  
+
+---  
+
+## 7. FLUX 3 Max  
+**标语**: fal的FLUX 3 Max：10秒AI视频仅需约12秒  
+**介绍**: FLUX 3 Max 是 fal 与 Black Forest Labs 基于 FLUX 3 基础模型联合打造的、经过后训练的文生视频与图生视频模型。fal 表示，该模型可在约 12 秒内生成一段 10 秒长的 720p 视频，速度比 FLUX 3 快约 10 倍。在 Artificial Analysis 的初步图生视频排行榜上，它与其他模型并列第一。11 月 7 日前，其定价为每秒视频 0.0425 美元（标价为 0.17 美元），并提供 Playground 和 API 接口。  
+**网站**: [立即访问](https://www.producthunt.com/r/H7WZJVJO5LJCXF?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/fal-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![FLUX 3 Max](https://ph-files.imgix.net/6bbef86c-ed98-4f44-a379-15ec0574b38e.webp?auto=format)  
+**关键词**: FLUX 3 Max, AI视频生成, 文生视频, 图生视频, 极速生成, 12秒出片, 720p画质, fal平台, API接口, 性能榜首  
+**票数**: 🔺131  
+**是否精选**: 是  
+**发布时间**: 2026年10月23日 PM03:01 (北京时间)  
+
+---  
+
+## 8. Cloudflare Clairic  
+**标语**: Cloudflare的快速、低成本数据提取AI模型  
+**介绍**: Clairic 是 Cloudflare 推出的一款新型 AI 模型，用于提取结构化信息且无需生成令牌。向其输入杂乱文本或图像后，它能在单次处理中直接返回带类型的值（如姓名、日期、金额、计算结果和估算值），并附带置信度评分。该模型专为开发者打造，可提供比传统 LLM 调用更快、成本更低的数据处理方案。目前已在 Workers AI 平台开启预览，定价为每百万个输入令牌 0.10 美元，后续计划开源模型权重。  
+**网站**: [立即访问](https://www.producthunt.com/r/A6H4RT6E667XWS?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/cloudflare?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Cloudflare Clairic](https://ph-files.imgix.net/1b751f0a-6758-4390-aecb-b2656a8d2e8a.png?auto=format)  
+**关键词**: 数据提取, 结构化解析, 高效低成本, 图文解析, 零Token生成, 置信度评分, 单步处理, 开发者工具, 边缘AI, 智能信息抽取  
+**票数**: 🔺129  
+**是否精选**: 是  
+**发布时间**: 2026年10月23日 PM03:01 (北京时间)  
+
+---  
+
+## 9. Context Engine  
+**标语**: 供AI智能体与人工团队成员共享的一条记忆。  
+**介绍**: Context Engine 是您的 AI 智能体与团队的统一记忆库。Claude、ChatGPT、Cursor 和 Claude Code 在运行时会向其保存数据，团队成员则可查阅、提问并添加文件。免费注册起步。  
+**网站**: [立即访问](https://www.producthunt.com/r/MJ2TTPRLW354IS?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/context-engine-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Context Engine](https://ph-files.imgix.net/6d2a5bbb-42bb-4576-89f9-50d5c201386c.png?auto=format)  
+**关键词**: 统一记忆库,AI协同,团队知识库,多AI兼容,智能记忆管理,人机协作,跨工具同步,免费起步  
+**票数**: 🔺108  
+**是否精选**: 是  
+**发布时间**: 2026年10月23日 PM03:01 (北京时间)  
+
+---  
+
+## 10. Dub Startup Program  
+**标语**: 启动您的合作伙伴驱动增长计划  
+**介绍**: 启动您的合作伙伴计划，追踪每次推荐，并奖励助您成长的伙伴。Dub首年享五折优惠。  
+**网站**: [立即访问](https://www.producthunt.com/r/4BOWHNSPRGHOFP?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/dub?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Dub Startup Program](https://ph-files.imgix.net/97560ae7-d1d8-418d-a77e-7211b3712311.jpeg?auto=format)  
+**关键词**: 伙伴计划,推荐追踪,激励机制,增长工具,初创加速,渠道营销  
+**票数**: 🔺103  
+**是否精选**: 是  
+**发布时间**: 2026年10月23日 PM03:01 (北京时间)  
+
+---  
+
