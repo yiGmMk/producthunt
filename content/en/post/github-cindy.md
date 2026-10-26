@@ -1,9 +1,9 @@
 ---
 title: cindy
-date: 2026-10-25T20:38:30+08:00
+date: 2026-10-26T22:25:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1710186346257-69308f1d5753?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTI5MzE4ODd8&ixlib=rb-4.1.0
-tags: ['github',Open Source, AI Agent, Desktop Client]
+image: https://images.unsplash.com/photo-1727507264828-8fc7d52265f5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTMwMjQ2MTV8&ixlib=rb-4.1.0
+tags: ['github',AI agent, open source software, local automation]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: ECC
-date: 2026-10-17T19:44:55+08:00
+date: 2026-10-26T22:25:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1684722623365-1c21823d3b49?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTIyMzczOTR8&ixlib=rb-4.1.0
-tags: ['github',AI coding agent, agent harness, skill-based workflows]
+image: https://images.unsplash.com/photo-1591084723706-0436e6f5fbee?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTMwMjQ2MTV8&ixlib=rb-4.1.0
+tags: ['github',agent harness, automated workflows, claude code plugin]
 categories: ['github']
 ---
 
