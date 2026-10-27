@@ -1,9 +1,9 @@
 ---
 title: hallmark
-date: 2026-10-26T22:24:06+08:00
+date: 2026-10-27T21:15:57+08:00
 draft: False
-image: https://images.unsplash.com/photo-1708372602931-72213dc99eb6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTMwMjQ2MTV8&ixlib=rb-4.1.0
-tags: ['github',AI design, web development, design validation]
+image: https://images.unsplash.com/photo-1597525718249-dc68970b2f46?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTMxMDY5Mjl8&ixlib=rb-4.1.0
+tags: ['github',AI design tool, realistic UI, automated linting]
 categories: ['github']
 ---
 
