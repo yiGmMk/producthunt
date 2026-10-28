@@ -1,9 +1,9 @@
 ---
 title: macro
-date: 2026-08-15T15:48:31+08:00
+date: 2026-10-28T22:08:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1542040349543-dfde36e9f746?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODY3Nzk5MDl8&ixlib=rb-4.1.0
-tags: ['github',all-in-one workspace, agents, team collaboration]
+image: https://images.unsplash.com/photo-1674575496466-5119fd691bf4?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTMxOTY0MDh8&ixlib=rb-4.1.0
+tags: ['github',all-in-one workspace, ai agents, team collaboration]
 categories: ['github']
 ---
 
@@ -22,7 +22,7 @@ categories: ['github']
     ·
     <a href="https://docs.macro.com">Docs</a>
     ·
-    <a href="https://cal.com/team/macro/macro-demo-call?metadata%5Bfbp%5D=fb.1.1778954074516.817396687896036613">Book demo</a>
+    <a href="https://macro.com/app/book/6de4003c-15e4-549f-b5a9-0e930bbf56e4/demo">Book demo</a>
     ·
     <a href="https://macro.com">Website</a>
     ·
@@ -36,8 +36,8 @@ categories: ['github']
 
 <br />
 
-Macro is the all-in-one workspace for you and your team. It unifies email + messages + docs + tasks + agents + CRM into a single fast interface with shared team-level memory. Everything in your workspace is @linked and searchable so your team (and your agents) never have to switch tools.
-
+Macro is the all-in-one workspace for you and your team. It unifies email + messages + docs + tasks + agents + CRM into a single fast interface with shared team-level memory. Everything in your workspace is @linked and searchable so your team (and your agents) never have to switch tools. 
+ 
 <br />
 
 # Why Macro
@@ -212,7 +212,7 @@ Deeper reading: [key concepts](https://docs.macro.com/concepts/blocks) covers bl
 
 # Running it locally
 
-To run the full app on your machine, follow [Running locally](docs/RUNNING_LOCALLY.md).
+To run the frontend against hosted services, or to run the local stack, follow [Running locally](docs/development/running-locally.md).
 
 To contribute, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -234,7 +234,7 @@ macro/
 └── tooling/       repo scripts and code generators
 ```
 
-Services follow a hexagonal layout: inbound adapters, a domain core with ports, outbound adapters. [`docs/STYLE_GUIDE.md`](docs/STYLE_GUIDE.md) has the conventions and [`CONTRIBUTING.md`](CONTRIBUTING.md) covers the PR process.
+Services follow a hexagonal layout: inbound adapters, a domain core with ports, outbound adapters. [`docs/development/style-guide.md`](docs/development/style-guide.md) has the conventions and [`CONTRIBUTING.md`](CONTRIBUTING.md) covers the PR process.
 
 <br />
 
@@ -271,6 +271,6 @@ If Macro is interesting/useful to you, please scroll up and give the repo a star
 <a href="https://github.com/macro-inc/macro">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset=".github/readme/star-history-dark.svg" />
-    <img alt="Star history for macro-inc/macro, from launch to 1698 stars" src=".github/readme/star-history-light.svg" width="100%" />
+    <img alt="Star history for macro-inc/macro, from launch to 4320 stars" src=".github/readme/star-history-light.svg" width="100%" />
   </picture>
 </a>
