@@ -1,9 +1,9 @@
 ---
 title: thinkrail
-date: 2026-10-28T22:07:13+08:00
+date: 2026-10-29T22:13:58+08:00
 draft: False
-image: https://images.unsplash.com/photo-1543107097-ffe418c8d0f0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTMxOTY0MDh8&ixlib=rb-4.1.0
-tags: ['github',ThinkRail, Agentic IDE, Living Specs]
+image: https://images.unsplash.com/photo-1682613269321-ddaade6ea1f9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTMyODMxNDN8&ixlib=rb-4.1.0
+tags: ['github',Agentic IDE, Coding Agent, Isolated Workspaces]
 categories: ['github']
 ---
 
