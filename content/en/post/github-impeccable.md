@@ -1,9 +1,9 @@
 ---
 title: impeccable
-date: 2026-10-29T22:13:36+08:00
+date: 2026-10-30T22:12:10+08:00
 draft: False
-image: https://images.unsplash.com/photo-1758760335737-ac9befd57617?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTMyODMxNDN8&ixlib=rb-4.1.0
-tags: ['github',AI coding agent, UI design polish, automated UX audit]
+image: https://images.unsplash.com/photo-1786726358456-ab4647cb9767?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTMzNjk0NDh8&ixlib=rb-4.1.0
+tags: ['github',AI coding agents, design polish, automated UI review]
 categories: ['github']
 ---
 
