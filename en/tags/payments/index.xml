@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Payments on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/payments/</link>
+        <description>Recent content in Payments on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sun, 26 Oct 2025 15:25:35 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/payments/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>x402</title>
+        <link>https://producthunt.programnotes.cn/en/p/x402/</link>
+        <pubDate>Sun, 26 Oct 2025 15:25:35 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/x402/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1595265795606-5c2a09e965bb?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjE0NjM1MTF8&amp;ixlib=rb-4.1.0" alt="Featured image of post x402" /&gt;&lt;h1 id=&#34;coinbasex402&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/coinbase/x402&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;coinbase/x402&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;x402-payments-protocol&#34;&gt;x402 payments protocol
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;1 line of code to accept digital dollars. No fee, 2 second settlement, $0.001 minimum payment.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-typescript&#34; data-lang=&#34;typescript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;use&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// How much you want to charge, and where you want the funds to land
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;paymentMiddleware&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;0xYourAddress&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/your-endpoint&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;$0.01&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// That&amp;#39;s it! See examples/typescript/servers/express.ts for a complete example. Instruction below for running on base-sepolia.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;philosophy&#34;&gt;Philosophy
+&lt;/h2&gt;&lt;p&gt;Payments on the internet are fundamentally flawed. Credit Cards are high friction, hard to accept, have minimum payments that are far too high, and don&amp;rsquo;t fit into the programmatic nature of the internet.
+It&amp;rsquo;s time for an open, internet-native form of payments. A payment rail that doesn&amp;rsquo;t have high minimums + % based fee. Payments that are amazing for humans and AI agents.&lt;/p&gt;
+&lt;h2 id=&#34;principles&#34;&gt;Principles
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Open standard:&lt;/strong&gt; the x402 protocol will never force reliance on a single party&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HTTP Native:&lt;/strong&gt; x402 is meant to seamlessly complement the existing HTTP request made by traditional web services, it should not mandate additional requests outside the scope of a typical client / server flow.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chain and token agnostic:&lt;/strong&gt; we welcome contributions that add support for new chains, signing standards, or schemes, so long as they meet our acceptance criteria laid out in &lt;a class=&#34;link&#34; href=&#34;https://github.com/coinbase/x402/blob/main/CONTRIBUTING.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CONTRIBUTING.md&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Trust minimizing:&lt;/strong&gt; all payment schemes must not allow for the facilitator or resource server to move funds, other than in accordance with client intentions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Easy to use:&lt;/strong&gt; x402 needs to be 10x better than existing ways to pay on the internet. This means abstracting as many details of crypto as possible away from the client and resource server, and into the facilitator. This means the client/server should not need to think about gas, rpc, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem
+&lt;/h2&gt;&lt;p&gt;The x402 ecosystem is growing! Check out our &lt;a class=&#34;link&#34; href=&#34;https://x402.org/ecosystem&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ecosystem page&lt;/a&gt; to see projects building with x402, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Client-side integrations&lt;/li&gt;
+&lt;li&gt;Services and endpoints&lt;/li&gt;
+&lt;li&gt;Ecosystem infrastructure and tooling&lt;/li&gt;
+&lt;li&gt;Learning and community resources&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Want to add your project to the ecosystem? See our &lt;a class=&#34;link&#34; href=&#34;https://github.com/coinbase/x402/tree/main/typescript/site#adding-your-project-to-the-ecosystem&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;demo site README&lt;/a&gt; for detailed instructions on how to submit your project.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Roadmap:&lt;/strong&gt; see &lt;a class=&#34;link&#34; href=&#34;https://github.com/coinbase/x402/blob/main/ROADMAP.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ROADMAP.md&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;terms&#34;&gt;Terms:
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;resource&lt;/code&gt;: Something on the internet. This could be a webpage, file server, RPC service, API, any resource on the internet that accepts HTTP / HTTPS requests.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;client&lt;/code&gt;: An entity wanting to pay for a resource.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;facilitator server&lt;/code&gt;: A server that facilitates verification and execution of on-chain payments.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;resource server&lt;/code&gt;: An HTTP server that provides an API or other resource for a client.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;technical-goals&#34;&gt;Technical Goals:
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Permissionless and secure for clients and servers&lt;/li&gt;
+&lt;li&gt;Gasless for client and resource servers&lt;/li&gt;
+&lt;li&gt;Minimal integration for the resource server and client (1 line for the server, 1 function for the client)&lt;/li&gt;
+&lt;li&gt;Ability to trade off speed of response for guarantee of payment&lt;/li&gt;
+&lt;li&gt;Extensible to different payment flows and chains&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;v1-protocol&#34;&gt;V1 Protocol
+&lt;/h2&gt;&lt;p&gt;The &lt;code&gt;x402&lt;/code&gt; protocol is a chain agnostic standard for payments on top of HTTP, leverage the existing &lt;code&gt;402 Payment Required&lt;/code&gt; HTTP status code to indicate that a payment is required for access to the resource.&lt;/p&gt;
+&lt;p&gt;It specifies:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A schema for how servers can respond to clients to facilitate payment for a resource (&lt;code&gt;PaymentRequirements&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;A standard header &lt;code&gt;X-PAYMENT&lt;/code&gt; that is set by clients paying for resources&lt;/li&gt;
+&lt;li&gt;A standard schema and encoding method for data in the &lt;code&gt;X-PAYMENT&lt;/code&gt; header&lt;/li&gt;
+&lt;li&gt;A recommended flow for how payments should be verified and settled by a resource server&lt;/li&gt;
+&lt;li&gt;A REST specification for how a resource server can perform verification and settlement against a remote 3rd party server (&lt;code&gt;facilitator&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;A specification for a &lt;code&gt;X-PAYMENT-RESPONSE&lt;/code&gt; header that can be used by resource servers to communicate blockchain transactions details to the client in their HTTP response&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;v1-protocol-sequencing&#34;&gt;V1 Protocol Sequencing
+&lt;/h3&gt;&lt;p&gt;The following outlines the flow of a payment using the &lt;code&gt;x402&lt;/code&gt; protocol. Note that steps (1) and (2) are optional if the client already knows the payment details accepted for a resource.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Client&lt;/code&gt; makes an HTTP request to a &lt;code&gt;resource server&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Resource server&lt;/code&gt; responds with a &lt;code&gt;402 Payment Required&lt;/code&gt; status and a &lt;code&gt;Payment Required Response&lt;/code&gt; JSON object in the response body.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Client&lt;/code&gt; selects one of the &lt;code&gt;paymentRequirements&lt;/code&gt; returned by the server response and creates a &lt;code&gt;Payment Payload&lt;/code&gt; based on the &lt;code&gt;scheme&lt;/code&gt; of the &lt;code&gt;paymentRequirements&lt;/code&gt; they have selected.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Client&lt;/code&gt; sends the HTTP request with the &lt;code&gt;X-PAYMENT&lt;/code&gt; header containing the &lt;code&gt;Payment Payload&lt;/code&gt; to the resource server.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Resource server&lt;/code&gt; verifies the &lt;code&gt;Payment Payload&lt;/code&gt; is valid either via local verification or by POSTing the &lt;code&gt;Payment Payload&lt;/code&gt; and &lt;code&gt;Payment Requirements&lt;/code&gt; to the &lt;code&gt;/verify&lt;/code&gt; endpoint of a &lt;code&gt;facilitator server&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Facilitator server&lt;/code&gt; performs verification of the object based on the &lt;code&gt;scheme&lt;/code&gt; and &lt;code&gt;network&lt;/code&gt; of the &lt;code&gt;Payment Payload&lt;/code&gt; and returns a &lt;code&gt;Verification Response&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If the &lt;code&gt;Verification Response&lt;/code&gt; is valid, the resource server performs the work to fulfill the request. If the &lt;code&gt;Verification Response&lt;/code&gt; is invalid, the resource server returns a &lt;code&gt;402 Payment Required&lt;/code&gt; status and a &lt;code&gt;Payment Required Response&lt;/code&gt; JSON object in the response body.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Resource server&lt;/code&gt; either settles the payment by interacting with a blockchain directly, or by POSTing the &lt;code&gt;Payment Payload&lt;/code&gt; and &lt;code&gt;Payment PaymentRequirements&lt;/code&gt; to the &lt;code&gt;/settle&lt;/code&gt; endpoint of a &lt;code&gt;facilitator server&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Facilitator server&lt;/code&gt; submits the payment to the blockchain based on the &lt;code&gt;scheme&lt;/code&gt; and &lt;code&gt;network&lt;/code&gt; of the &lt;code&gt;Payment Payload&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Facilitator server&lt;/code&gt; waits for the payment to be confirmed on the blockchain.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Facilitator server&lt;/code&gt; returns a &lt;code&gt;Payment Execution Response&lt;/code&gt; to the resource server.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Resource server&lt;/code&gt; returns a &lt;code&gt;200 OK&lt;/code&gt; response to the &lt;code&gt;Client&lt;/code&gt; with the resource they requested as the body of the HTTP response, and a &lt;code&gt;X-PAYMENT-RESPONSE&lt;/code&gt; header containing the &lt;code&gt;Settlement Response&lt;/code&gt; as Base64 encoded JSON if the payment was executed successfully.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;type-specifications&#34;&gt;Type Specifications
+&lt;/h3&gt;&lt;h4 id=&#34;data-types&#34;&gt;Data types
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Payment Required Response&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Version of the x402 payment protocol
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;x402Version:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;int,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// List of payment requirements that the resource server accepts. A resource server may accept on multiple chains, or in multiple currencies.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;accepts:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;[paymentRequirements]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Message from the resource server to the client to communicate errors in processing payment
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;error:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;paymentRequirements&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Scheme of the payment protocol to use
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;scheme:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Network of the blockchain to send payment on
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;network:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Maximum amount required to pay for the resource in atomic units of the asset
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;maxAmountRequired:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;uint256&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// URL of resource to pay for
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;resource:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Description of the resource
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;description:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// MIME type of the resource response
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;mimeType:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Output schema of the resource response
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;outputSchema?:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;null;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Address to pay value to
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;payTo:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Maximum time in seconds for the resource server to respond
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;maxTimeoutSeconds:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;number;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Address of the EIP-3009 compliant ERC20 contract
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;asset:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Extra information about the payment details specific to the scheme
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// For `exact` scheme on a EVM network, expects extra to contain the records `name` and `version` pertaining to asset
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;extra:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;null;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;&lt;code&gt;Payment Payload&lt;/code&gt;&lt;/strong&gt; (included as the &lt;code&gt;X-PAYMENT&lt;/code&gt; header in base64 encoded json)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Version of the x402 payment protocol
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;x402Version:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;number;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// scheme is the scheme value of the accepted `paymentRequirements` the client is using to pay
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;scheme:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// network is the network id of the accepted `paymentRequirements` the client is using to pay
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;network:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// payload is scheme dependent
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;payload:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;scheme&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;dependent&amp;gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;facilitator-types--interface&#34;&gt;Facilitator Types &amp;amp; Interface
+&lt;/h4&gt;&lt;p&gt;A &lt;code&gt;facilitator server&lt;/code&gt; is a 3rd party service that can be used by a &lt;code&gt;resource server&lt;/code&gt; to verify and settle payments, without the &lt;code&gt;resource server&lt;/code&gt; needing to have access to a blockchain node or wallet.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;POST /verify&lt;/strong&gt;. Verify a payment with a supported scheme and network:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Request body JSON:
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;x402Version:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;number;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;paymentHeader:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;paymentRequirements:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;paymentRequirements;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Response:
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;isValid:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;boolean;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;invalidReason:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;null;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;POST /settle&lt;/strong&gt;. Settle a payment with a supported scheme and network:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Request body JSON:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;x402Version:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;number;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;paymentHeader:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;paymentRequirements:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;paymentRequirements;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Response:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Whether the payment was successful
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;success:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;boolean;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Error message from the facilitator server
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;error:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;null;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Transaction hash of the settled payment
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;txHash:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;null;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// Network id of the blockchain the payment was settled on
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;networkId:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;null;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;GET /supported&lt;/strong&gt;. Get supported payment schemes and networks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Response:
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;kinds:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;err&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;scheme&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;network&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;err&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;schemes&#34;&gt;Schemes
+&lt;/h3&gt;&lt;p&gt;A scheme is a logical way of moving money.&lt;/p&gt;
+&lt;p&gt;Blockchains allow for a large number of flexible ways to move money. To help facilitate an expanding number of payment use cases, the &lt;code&gt;x402&lt;/code&gt; protocol is extensible to different ways of settling payments via its &lt;code&gt;scheme&lt;/code&gt; field.&lt;/p&gt;
+&lt;p&gt;Each payment scheme may have different operational functionality depending on what actions are necessary to fulfill the payment.
+For example &lt;code&gt;exact&lt;/code&gt;, the first scheme shipping as part of the protocol, would have different behavior than &lt;code&gt;upto&lt;/code&gt;. &lt;code&gt;exact&lt;/code&gt; transfers a specific amount (ex: pay $1 to read an article), while a theoretical &lt;code&gt;upto&lt;/code&gt; would transfer up to an amount, based on the resources consumed during a request (ex: generating tokens from an LLM).&lt;/p&gt;
+&lt;p&gt;See &lt;code&gt;specs/schemes&lt;/code&gt; for more details on schemes, and see &lt;code&gt;specs/schemes/exact/scheme_exact_evm.md&lt;/code&gt; to see the first proposed scheme for exact payment on EVM chains.&lt;/p&gt;
+&lt;h3 id=&#34;schemes-vs-networks&#34;&gt;Schemes vs Networks
+&lt;/h3&gt;&lt;p&gt;Because a scheme is a logical way of moving money, the way a scheme is implemented can be different for different blockchains. (ex: the way you need to implement &lt;code&gt;exact&lt;/code&gt; on Ethereum is very different from the way you need to implement &lt;code&gt;exact&lt;/code&gt; on Solana).&lt;/p&gt;
+&lt;p&gt;Clients and facilitators must explicitly support different &lt;code&gt;(scheme, network)&lt;/code&gt; pairs in order to be able to create proper payloads and verify / settle payments.&lt;/p&gt;
+&lt;h2 id=&#34;running-example&#34;&gt;Running example
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Requirements:&lt;/strong&gt; Node.js v24 or higher&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;From &lt;code&gt;examples/typescript&lt;/code&gt; run &lt;code&gt;pnpm install&lt;/code&gt; and &lt;code&gt;pnpm build&lt;/code&gt; to ensure all dependent packages and examples are setup.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select a server, i.e. express, and &lt;code&gt;cd&lt;/code&gt; into that example. Add your server&amp;rsquo;s ethereum address to get paid to into the &lt;code&gt;.env&lt;/code&gt; file, and then run &lt;code&gt;pnpm dev&lt;/code&gt; in that directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select a client, i.e. axios, and &lt;code&gt;cd&lt;/code&gt; into that example. Add your private key for the account making payments into the &lt;code&gt;.env&lt;/code&gt; file, and then run &lt;code&gt;pnpm dev&lt;/code&gt; in that directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You should see activities in the client terminal, which will display a weather report.&lt;/p&gt;
+&lt;h2 id=&#34;running-tests&#34;&gt;Running tests
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Navigate to the typescript directory: &lt;code&gt;cd typescript&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Install dependencies: &lt;code&gt;pnpm install&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run the unit tests: &lt;code&gt;pnpm test&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This will run the unit tests for the x402 packages.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>polar</title>
+        <link>https://producthunt.programnotes.cn/en/p/polar/</link>
+        <pubDate>Mon, 11 Aug 2025 15:34:51 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/polar/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1487226658827-f4ee83412c4b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTQ4OTc2MzZ8&amp;ixlib=rb-4.1.0" alt="Featured image of post polar" /&gt;&lt;h1 id=&#34;polarsourcepolar&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/polarsource/polar&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;polarsource/polar&lt;/a&gt;
+&lt;/h1&gt;&lt;p align=&#34;center&#34;&gt;
+  &lt;a href=&#34;https://polar.sh&#34;&gt;
+      &lt;img src=&#34;https://github.com/user-attachments/assets/89a588e5-0c58-429a-8bbe-20f70af41372&#34; /&gt;
+  &lt;/a&gt;
+&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.producthunt.com/posts/polar-5?embed=true&amp;utm_source=badge-top-post-badge&amp;utm_medium=badge&amp;utm_souce=badge-polar&amp;#0045;5&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=484271&amp;theme=dark&amp;period=daily&#34; alt=&#34;Polar - An&amp;#0032;open&amp;#0032;source&amp;#0032;monetization&amp;#0032;platform&amp;#0032;for&amp;#0032;developers | Product Hunt&#34; style=&#34;width: 250px; height: 54px;&#34; width=&#34;250&#34; height=&#34;54&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://www.producthunt.com/posts/polar-5?embed=true&amp;utm_source=badge-top-post-topic-badge&amp;utm_medium=badge&amp;utm_souce=badge-polar&amp;#0045;5&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://api.producthunt.com/widgets/embed-image/v1/top-post-topic-badge.svg?post_id=484271&amp;theme=dark&amp;period=monthly&amp;topic_id=267&#34; alt=&#34;Polar - An&amp;#0032;open&amp;#0032;source&amp;#0032;monetization&amp;#0032;platform&amp;#0032;for&amp;#0032;developers | Product Hunt&#34; style=&#34;width: 250px; height: 54px;&#34; width=&#34;250&#34; height=&#34;54&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+&lt;div align=&#34;center&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://polar.sh&#34;&gt;Website&lt;/a&gt;
+&lt;span&gt;  •  &lt;/span&gt;
+&lt;a href=&#34;https://polar.sh/blog&#34;&gt;Blog&lt;/a&gt;
+&lt;span&gt;  •  &lt;/span&gt;
+&lt;a href=&#34;https://polar.sh/docs&#34;&gt;Docs&lt;/a&gt;
+&lt;span&gt;  •  &lt;/span&gt;
+&lt;a href=&#34;https://docs.polar.sh/api-reference&#34;&gt;API Reference&lt;/a&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;a href=&#34;https://discord.gg/Pnhfz3UThd&#34;&gt;
+    &lt;img src=&#34;https://img.shields.io/badge/chat-on%20discord-7289DA.svg&#34; alt=&#34;Discord Chat&#34; /&gt;
+  &lt;/a&gt;
+  &lt;a href=&#34;https://twitter.com/intent/follow?screen_name=polar_sh&#34;&gt;
+    &lt;img src=&#34;https://img.shields.io/twitter/follow/polar_sh.svg?label=Follow%20@polar_sh&#34; alt=&#34;Follow @polar_sh&#34; /&gt;
+  &lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&#34;polar-open-source-payments-infrastructure-for-the-21st-century&#34;&gt;Polar: Open Source payments infrastructure for the 21st century
+&lt;/h2&gt;&lt;p&gt;Focus on building your passion, while we focus on the infrastructure to get you paid.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sell SaaS and digital products in minutes&lt;/li&gt;
+&lt;li&gt;All-in-one funding &amp;amp; monetization platform for developers.&lt;/li&gt;
+&lt;li&gt;Sell access to GitHub repositories, Discord Support channels, File Downloads, License Keys &amp;amp; much more with Digital Products &amp;amp; Subscriptions.&lt;/li&gt;
+&lt;li&gt;We&amp;rsquo;re the merchant of record handling the&amp;hellip;
+&lt;ul&gt;
+&lt;li&gt;&amp;hellip;boilerplate (billing, receipts, customer accounts etc)&lt;/li&gt;
+&lt;li&gt;&amp;hellip;headaches (sales tax, VAT)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;pricing&#34;&gt;Pricing
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;4% + 40¢&lt;/li&gt;
+&lt;li&gt;No fixed monthly costs&lt;/li&gt;
+&lt;li&gt;Additional fees may apply. &lt;a class=&#34;link&#34; href=&#34;https://docs.polar.sh/documentation/polar-as-merchant-of-record/fees&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read more&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;roadmap-issues--feature-requests&#34;&gt;Roadmap, Issues &amp;amp; Feature Requests
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;🎯 Upcoming milestones.&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/polarsource/polar/issues/3242&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Check out what we&amp;rsquo;re building towards&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;💬 Shape the future of Polar with us.&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://discord.gg/Pnhfz3UThd&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Join our Discord&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🐛 Found a bug?&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/polarsource/polar/issues&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Submit it here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🔓 Found a security vulnerability?&lt;/strong&gt; We greatly appreciate responsible and private disclosures. See &lt;a class=&#34;link&#34; href=&#34;./SECURITY.md&#34; &gt;Security&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;polar-api--sdk&#34;&gt;Polar API &amp;amp; SDK
+&lt;/h3&gt;&lt;p&gt;You can integrate Polar on your docs, sites or services using our &lt;a class=&#34;link&#34; href=&#34;https://docs.polar.sh/api-reference&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Public API&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://docs.polar.sh/developers/webhooks&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Webhook API&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We also maintain SDKs for the following languages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JavaScript (Node.js and browsers): &lt;a class=&#34;link&#34; href=&#34;https://github.com/polarsource/polar-js&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;polarsource/polar-js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python: &lt;a class=&#34;link&#34; href=&#34;https://github.com/polarsource/polar-python&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;polarsource/polar-python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;contributions&#34;&gt;Contributions
+&lt;/h2&gt;&lt;p&gt;Our &lt;a class=&#34;link&#34; href=&#34;./DEVELOPMENT.md&#34; &gt;&lt;code&gt;DEVELOPMENT.md&lt;/code&gt;&lt;/a&gt; file contains everything you need to know to configure your development environment.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!TIP]
+Want to get started quickly? Use GitHub Codespaces.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://codespaces.new/polarsource/polar?machine=standardLinux32gb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/codespaces/badge.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Open in GitHub Codespaces&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;contributors&#34;&gt;Contributors
+&lt;/h3&gt;&lt;a href=&#34;https://github.com/polarsource/polar/graphs/contributors&#34;&gt;
+  &lt;img src=&#34;https://contrib.rocks/image?repo=polarsource/polar&#34; /&gt;
+&lt;/a&gt;
+&lt;h2 id=&#34;monorepo&#34;&gt;Monorepo
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./server/README.md&#34; &gt;server&lt;/a&gt;&lt;/strong&gt; – Python / FastAPI / Dramatiq / SQLAlchemy (PostgreSQL) / Redis&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;./clients/README.md&#34; &gt;clients&lt;/a&gt;&lt;/strong&gt; – Turborepo
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;./clients/apps/web&#34; &gt;web&lt;/a&gt; (Dashboard) – NextJS (TypeScript)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;./clients/packages/polarkit&#34; &gt;polarkit&lt;/a&gt; - Shared React components&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;sub&gt;♥️🙏 To our &lt;code&gt;pyproject.toml&lt;/code&gt; friends: &lt;a class=&#34;link&#34; href=&#34;https://github.com/tiangolo/fastapi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FastAPI&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/pydantic/pydantic&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Pydantic&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/Bogdanp/dramatiq&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Dramatiq&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/sqlalchemy/sqlalchemy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SQLAlchemy&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/yanyongyu/githubkit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Githubkit&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/sysid/sse-starlette&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;sse-starlette&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/encode/uvicorn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Uvicorn&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/frankie567/httpx-oauth&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;httpx-oauth&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/pallets/jinja&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;jinja&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/pallets-eco/blinker&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;blinker&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/jpadilla/pyjwt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pyjwt&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/getsentry/sentry&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Sentry&lt;/a&gt; + more&lt;/sub&gt;&lt;br /&gt;
+&lt;sub&gt;♥️🙏 To our &lt;code&gt;package.json&lt;/code&gt; friends: &lt;a class=&#34;link&#34; href=&#34;https://github.com/vercel/next.js/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Next.js&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/TanStack/query&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;TanStack Query&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/tailwindlabs/tailwindcss&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;tailwindcss&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/pmndrs/zustand&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;zustand&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/ferdikoomen/openapi-typescript-codegen&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;openapi-typescript-codegen&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/axios/axios&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;axios&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/radix-ui/primitives&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;radix-ui&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/pacocoursey/cmdk&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cmdk&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/framer/motion&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;framer-motion&lt;/a&gt; + more&lt;/sub&gt;&lt;br /&gt;
+&lt;sub&gt;♥️🙏 To &lt;a class=&#34;link&#34; href=&#34;https://ipinfo.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;IPinfo&lt;/a&gt; that provides IP address data to help us geolocate customers during checkout.&lt;/sub&gt;&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;Licensed under &lt;a class=&#34;link&#34; href=&#34;https://www.apache.org/licenses/LICENSE-2.0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Apache License, Version 2.0&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Product Hunt Daily | 2025-06-09</title>
+        <link>https://producthunt.programnotes.cn/en/p/product-hunt-daily-2025-06-09/</link>
+        <pubDate>Mon, 09 Jun 2025 07:29:56 +0000</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/product-hunt-daily-2025-06-09/</guid>
+        <description>&lt;img src="https://ph-files.imgix.net/1de4bfcc-cf5c-4cfe-8dc8-43546c3d97bb.png?auto=format&amp;fit=crop&amp;frame=1&amp;h=512&amp;w=1024" alt="Featured image of post Product Hunt Daily | 2025-06-09" /&gt;&lt;h2 id=&#34;1-socleads-20&#34;&gt;1. SocLeads 2.0
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Lead Generation from Social Media and Maps&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: SocLeads 2.0 is here! 🚀 The ultimate email scraper just got better. ⭐️ Extract emails from Google Maps, Instagram, Facebook, LinkedIn, Twitter &amp;amp; YouTube using keywords or followers. ✔️ Find top SMM leads fast — now faster, smarter, and more powerful.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/FRZMAW2KF4MHNY?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/socleads-2-0?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/1de4bfcc-cf5c-4cfe-8dc8-43546c3d97bb.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;SocLeads 2.0&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Lead Generation, Email Scraper, Social Media Leads, Google Maps Leads, Instagram Leads, Facebook Leads, LinkedIn Leads, Twitter Leads, YouTube Leads, SMM Leads, SocLeads 2.0&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺607&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-06-08 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-vidau&#34;&gt;2. VidAU
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Create high-converting video ads in seconds with AI&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Create high-ROI video ads in minutes with VidAU. Use our AI-powered toolkit of proven ad templates, avatars, and data-backed formats to launch scroll-stopping creatives—fast. No editing needed. Built for marketers and eCom sellers who want results now.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/K24SYFMHN7XBYV?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/vidau-2?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/62fadf20-1dc7-45e1-9423-cc0d8b2eecd1.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;VidAU &#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: video ad maker, AI video ads, video ad creator, ad creator, video ads, AI marketing, eCom video ads, high-converting video ads, video ad templates, AI video generator&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺538&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-06-08 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-not-boring-camera&#34;&gt;3. (Not Boring) Camera
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: For the love of photography&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: The serious camera that doesn’t take itself too seriously. Camera technology has gotten better, but our photos haven’t gotten any more interesting. (Not Boring…&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/JQGRQ4LY2UXIYZ?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/not-boring-camera?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/9ef06710-c099-4961-8c12-6483ebf56c4b.jpeg?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;(Not Boring) Camera&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Camera, Photography, Fun Camera,  Creative Camera,  Unique Camera,  (Not Boring) Camera&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺333&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-06-08 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-zeno&#34;&gt;4. Zeno
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: The Most Complete AI YouTube Curator, Summarizer &amp;amp; Coach&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: More than just AI YouTube summaries. Turn YouTube into bite-sized learning, actionable wisdom, and career fuel. Each video is distilled into 8 bite-sized cards with insights, action steps, entrepreneurial ideas, TBR list, video clips, X post ideas, and more.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/TF6PEE7YNP4Q4Z?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/zeno-3?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/5a52888f-d6f9-4763-9c59-85bb5b815f42.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Zeno&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AI YouTube, YouTube Summarizer, AI learning, YouTube Coach, Video Summarizer, Content Curator, Actionable Insights,  Bite-sized Learning,  Entrepreneurial Ideas,  TBR List, X Post Ideas&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺269&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-06-08 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-bountyhub&#34;&gt;5. BountyHub
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Crowdfunding GitHub issues made easy&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: BountyHub is a platform where developers can put bounties on their Github issues or earn money by solving them. Secure payments and dispute resolution make BountyHub a reliable way to incentivize open-source contributions.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/EDA3V2YE7EEFLC?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/bountyhub-2?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/0ccd820d-2004-4b09-ab42-880f50c4938e.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;BountyHub &#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Crowdfunding, GitHub, Issues, Bounties, Open Source, Developer, Payments, Incentive, Dispute Resolution&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺220&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-06-08 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-rownd-app-services-platform-1m-mau-free&#34;&gt;6. Rownd App Services Platform; 1M MAU Free
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: 1M MAU; user-management, auth, payments, all in one SDK. &lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Rownd is an AI-ready App Services Platform: one SDK for auth 🔐, payments 💳 &amp;amp; user management ⚙️. Spin up production-ready apps in minutes, free up to 1 M MAUs 🚀. Build faster, scale smarter, ditch siloed vendors! 🔥&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/BKTZ74Z6CK63VD?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/rownd-app-services-platform-1m-mau-free?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/284c66db-2e99-470e-a190-5923070336dc.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Rownd App Services Platform; 1M MAU Free&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Rownd, App Services Platform, SDK, User Management, Authentication, Payments, 1M MAU, Free, AI-ready, Scalable,  Mobile App Development&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺140&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-06-08 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;7-generatifyyai&#34;&gt;7. Generatifyy.AI
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: 30+ AI Apps to build, market &amp;amp; grow your brand&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Generatifyy.AI is Your all-in-one AI Growth Engine — Built to power marketing, content creation &amp;amp; business scaling - fast. Access 30+ AI Apps for content, visuals, videos, funnels, chatbot, CRM, email marketing, task management, campaign copy &amp;amp; more.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/OLMMALTUGEAVKM?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/generatifyy-ai?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/6c98f86d-4014-4e11-9061-91890ba2a8df.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Generatifyy.AI&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AI Marketing, AI Growth Engine, AI Business Tools, AI Content Creation, AI Apps, AI Marketing Tools, Brand Building,  Content Marketing,  Business Scaling,  AI Video Creation, AI Copywriting,  AI Chatbot, AI CRM, Email Marketing AI, Task Management AI, AI Funnels&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺46&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: No&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-06-08 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;8-nukkadmiles&#34;&gt;8. NukkadMiles
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Premium travel experiences worldwide&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Nukkad Miles is your personal AI travel planner for India. Get hyper-personalized itineraries, hidden gems, food trails, language tips, safety hacks &amp;amp; more — all tailored to your vibe. One click. No confusion. Just your kind of journey. 🌍✨&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/ZZHJN2J2NTCV2Y?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/nukkadmiles?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/1c43a831-ca93-4f2e-9d26-aff645f535e3.jpeg?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;NukkadMiles&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AI travel planner, India travel, personalized itinerary, travel tips, hidden gems, food tours, travel hacks, India trip planning, bespoke travel, AI travel planning&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺22&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: No&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-06-08 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;9-founders-match&#34;&gt;9. Founders Match
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: The first AI-powered Co-Founder Matching Platform&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Founders Match is the first AI-powered Co-Founder matching platform. Backed by behavioral science, it helps you avoid mismatches, analize compatibility, and save 80% of your co-founder search time — even before the first call.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/NGYWVDBU6HM2DZ?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/founders-match?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/2d43bb0f-e31c-4059-9843-853574142357.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Founders Match&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Co-founder matching, AI co-founder, Founder matchmaking, Co-founder search, Startup co-founder, AI startup,  Behavioral science, Co-founder compatibility&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺20&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: No&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-06-08 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;10-avatone-fitness-game&#34;&gt;10. Avatone: Fitness Game
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Track workouts and level up your fitness&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Avatone is a fitness game where real-life workouts level up your virtual avatar. Turn sweat into XP, build streaks, unlock gear, and make fitness addictive.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/UQSD77I5NE2FP4?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/posts/avatone-fitness-game?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/df747ab3-7ad7-4fc4-8430-b6eeb2cc5a71.png?auto=format&amp;amp;fit=crop&amp;amp;frame=1&amp;amp;h=512&amp;amp;w=1024&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Avatone: Fitness Game&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: fitness game, workout game, avatar fitness, fitness tracker, gamified fitness, level up fitness, XP fitness, fitness app, workout app&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺17&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: No&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-06-08 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
