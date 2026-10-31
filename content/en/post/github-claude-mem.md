@@ -1,9 +1,9 @@
 ---
 title: claude-mem
-date: 2026-10-30T22:11:13+08:00
+date: 2026-10-31T21:45:30+08:00
 draft: False
-image: https://images.unsplash.com/photo-1627738325894-231b1e1fbd06?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTMzNjk0NDh8&ixlib=rb-4.1.0
-tags: ['github',Claude Code, Persistent Memory, Memory Compression]
+image: https://images.unsplash.com/photo-1778222413836-8c3d280b6460?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM0NTQzMDV8&ixlib=rb-4.1.0
+tags: ['github',Claude-Mem, Persistent Memory, Claude Code]
 categories: ['github']
 ---
 
