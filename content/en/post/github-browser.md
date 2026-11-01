@@ -1,9 +1,9 @@
 ---
 title: browser
-date: 2026-03-16T16:12:09+08:00
+date: 2026-11-01T22:20:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1594220862488-117b78382514?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzM2NDg3MjB8&ixlib=rb-4.1.0
-tags: ['github',lightpanda browser,headless automation,Javascript support]
+image: https://images.unsplash.com/photo-1619491202102-088c4afb271c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM1NDI3OTF8&ixlib=rb-4.1.0
+tags: ['github',headless browser, AI agents, Zig programming]
 categories: ['github']
 ---
 
@@ -15,7 +15,8 @@ categories: ['github']
 <h1 align="center">Lightpanda Browser</h1>
 <p align="center">
 <strong>The headless browser built from scratch for AI agents and automation.</strong><br>
-Not a Chromium fork. Not a WebKit patch. A new browser, written in Zig.
+Not a Chromium fork. Not a WebKit patch. A new browser, written in Zig.</strong><br>
+16x lighter and 9x faster than Chromium.
 </p>
 
 </div>
@@ -29,39 +30,44 @@ Not a Chromium fork. Not a WebKit patch. A new browser, written in Zig.
 </div>
 <div align="center">
 
-[<img width="350px" src="https://cdn.lightpanda.io/assets/images/github/execution-time.svg">
+[<img width="350px" src="https://cdn.lightpanda.io/assets/images/github/execution-time-v2.svg">
 ](https://github.com/lightpanda-io/demo)
 &emsp;
-[<img width="350px" src="https://cdn.lightpanda.io/assets/images/github/memory-frame.svg">
+[<img width="350px" src="https://cdn.lightpanda.io/assets/images/github/memory-frame-v2.svg">
 ](https://github.com/lightpanda-io/demo)
 </div>
 
-_Puppeteer requesting 100 pages from a local website on a AWS EC2 m5.large instance.
-See [benchmark details](https://github.com/lightpanda-io/demo)._
+## Benchmarks
 
-Lightpanda is the open-source browser made for headless usage:
+Requesting 933 real web pages over the network on a AWS EC2 m5.large instance.
+See [benchmark details](https://github.com/lightpanda-io/demo/blob/main/BENCHMARKS.md#crawler-benchmark).
 
-- Javascript execution
-- Support of Web APIs (partial, WIP)
-- Compatible with Playwright[^1], Puppeteer, chromedp through [CDP](https://chromedevtools.github.io/devtools-protocol/)
-
-Fast web automation for AI agents, LLM training, scraping and testing:
-
-- Ultra-low memory footprint (9x less than Chrome)
-- Exceptionally fast execution (11x faster than Chrome)
-- Instant startup
-
-[^1]: **Playwright support disclaimer:**
-Due to the nature of Playwright, a script that works with the current version of the browser may not function correctly with a future version. Playwright uses an intermediate JavaScript layer that selects an execution strategy based on the browser's available features. If Lightpanda adds a new [Web API](https://developer.mozilla.org/en-US/docs/Web/API), Playwright may choose to execute different code for the same script. This new code path could attempt to use features that are not yet implemented. Lightpanda makes an effort to add compatibility tests, but we can't cover all scenarios. If you encounter an issue, please create a [GitHub issue](https://github.com/lightpanda-io/browser/issues) and include the last known working version of the script.
+| Metric | Lightpanda | Headless Chrome | Difference |
+| :---- | :---- | :---- | :---- |
+| Memory (peak, 100 pages) | 123MB | 2GB | ~16x less |
+| Execution time (100 pages) | 5s | 46s | ~9x faster |
 
 ## Quick start
 
 ### Install
-**Install from the nightly builds**
+
+**Package Managers**
+
+Latest nightly from Homebrew:
+```console
+brew install lightpanda-io/browser/lightpanda
+```
+
+Latest nightly from Arch Linux User Repository:
+```console
+yay -S lightpanda-nightly-bin
+```
+
+**Download from the nightly builds**
 
 You can download the last binary from the [nightly
 builds](https://github.com/lightpanda-io/browser/releases/tag/nightly) for
-Linux x86_64 and MacOS aarch64.
+Linux and MacOS for both x86_64 and aarch64.
 
 *For Linux*
 ```console
@@ -69,16 +75,45 @@ curl -L -o lightpanda https://github.com/lightpanda-io/browser/releases/download
 chmod a+x ./lightpanda
 ```
 
+Verify the binary before running anything:
+```console
+./lightpanda version
+```
+
+[Linux aarch64 is also available](https://github.com/lightpanda-io/browser/releases/tag/nightly)
+
+If you use [**Nix**](https://nixos.org/download/), you can run Lightpanda directly from the flake without downloading a binary:
+```console
+nix run github:lightpanda-io/browser -- --help
+```
+
+Or pin it as an input in your own flake:
+```nix
+{
+  inputs.lightpanda.url = "github:lightpanda-io/browser";
+}
+```
+
+> **Note:** The Linux release binaries are linked against glibc. On musl-based Linux distributions (Alpine, etc.) the binary fails with `cannot execute: required file not found` because the glibc dynamic linker is missing. Use a glibc-based base image: the current release binaries need glibc **2.35** (`x86_64`) or **2.38** (`arm64`), so `debian:bookworm-slim` (2.36) is fine on `x86_64` but too old for `arm64` — use `FROM ubuntu:24.04`, `FROM debian:trixie-slim`, or `FROM debian:forky-slim` there — or [build from sources](#build-from-sources).
+>
+> **Android / Termux:** there is no native Android build. The Linux aarch64 binary needs the glibc loader (`/lib/ld-linux-aarch64.so.1`), which Android's Bionic libc does not provide, so it fails with the same `cannot execute: required file not found` error.
+
 *For MacOS*
 ```console
 curl -L -o lightpanda https://github.com/lightpanda-io/browser/releases/download/nightly/lightpanda-aarch64-macos && \
 chmod a+x ./lightpanda
 ```
 
+[MacOS x86_64 is also available](https://github.com/lightpanda-io/browser/releases/tag/nightly)
+
 *For Windows + WSL2*
 
-The Lightpanda browser is compatible to run on windows inside WSL. Follow the Linux instruction for installation from a WSL terminal.
-It is recommended to install clients like Puppeteer on the Windows host.
+Lightpanda has no native Windows binary. Install it inside WSL following the Linux steps above.
+
+WSL not installed? Run `wsl --install` from an administrator shell, restart, then open `wsl`.
+See [Microsoft's WSL install guide](https://learn.microsoft.com/en-us/windows/wsl/install) for details.
+
+Your automation client (Puppeteer, Playwright, etc.) can run either inside WSL or on the Windows host. WSL forwards `localhost:9222` automatically.
 
 **Install from Docker**
 
@@ -87,63 +122,41 @@ images](https://hub.docker.com/r/lightpanda/browser) for both Linux amd64 and
 arm64 architectures.
 The following command fetches the Docker image and starts a new container exposing Lightpanda's CDP server on port `9222`.
 ```console
-docker run -d --name lightpanda -p 9222:9222 lightpanda/browser:nightly
+docker run -d --name lightpanda -p 127.0.0.1:9222:9222 lightpanda/browser:latest
 ```
 
 ### Dump a URL
 
 ```console
-./lightpanda fetch --obey_robots --log_format pretty  --log_level info https://demo-browser.lightpanda.io/campfire-commerce/
+./lightpanda fetch --obey-robots --dump html --log-format pretty  --log-level info https://demo-browser.lightpanda.io/campfire-commerce/
 ```
-```console
-INFO  telemetry : telemetry status . . . . . . . . . . . . .  [+0ms]
-      disabled = false
 
-INFO  page : navigate . . . . . . . . . . . . . . . . . . . . [+6ms]
-      url = https://demo-browser.lightpanda.io/campfire-commerce/
-      method = GET
-      reason = address_bar
-      body = false
-      req_id = 1
-
-INFO  browser : executing script . . . . . . . . . . . . . .  [+118ms]
-      src = https://demo-browser.lightpanda.io/campfire-commerce/script.js
-      kind = javascript
-      cacheable = true
-
-INFO  http : request complete . . . . . . . . . . . . . . . . [+140ms]
-      source = xhr
-      url = https://demo-browser.lightpanda.io/campfire-commerce/json/product.json
-      status = 200
-      len = 4770
-
-INFO  http : request complete . . . . . . . . . . . . . . . . [+141ms]
-      source = fetch
-      url = https://demo-browser.lightpanda.io/campfire-commerce/json/reviews.json
-      status = 200
-      len = 1615
-<!DOCTYPE html>
-```
+You can use `--dump markdown` to convert directly into markdown, or
+`--dump png > page.png` or `--dump pdf > page.pdf` for a text-only rendering
+of the page. `--dump structured_data` prints the page's JSON-LD, OpenGraph,
+Twitter card, meta and link tags as JSON, like the MCP `structuredData` tool.
+`--wait-until`, `--wait-ms`, `--wait-selector` and `--wait-script` are
+available to adjust waiting time before dump.
 
 ### Start a CDP server
 
 ```console
-./lightpanda serve --obey_robots --log_format pretty  --log_level info --host 127.0.0.1 --port 9222
+./lightpanda serve --obey-robots --log-format pretty  --log-level info --host 127.0.0.1 --port 9222
 ```
-```console
-INFO  telemetry : telemetry status . . . . . . . . . . . . .  [+0ms]
-      disabled = false
 
-INFO  app : server running . . . . . . . . . . . . . . . . .  [+0ms]
-      address = 127.0.0.1:9222
+To listen on a Unix-domain socket (owner-only, mode 0600) instead of TCP:
+
+```console
+./lightpanda serve --unix-socket /run/user/1000/lightpanda.sock
 ```
 
 Once the CDP server started, you can run a Puppeteer script by configuring the
 `browserWSEndpoint`.
 
-```js
-'use strict'
+<details>
+<summary>Example Puppeteer script</summary>
 
+```js
 import puppeteer from 'puppeteer-core';
 
 // use browserWSEndpoint to pass the Lightpanda's CDP server address.
@@ -153,12 +166,12 @@ const browser = await puppeteer.connect({
 
 // The rest of your script remains the same.
 const context = await browser.createBrowserContext();
-const page = await context.newPage();
+const frame = await context.newPage();
 
-// Dump all the links from the page.
-await page.goto('https://demo-browser.lightpanda.io/amiibo/', {waitUntil: "networkidle0"});
+// Dump all the links from the frame.
+await frame.goto('https://demo-browser.lightpanda.io/amiibo/', {waitUntil: "networkidle0"});
 
-const links = await page.evaluate(() => {
+const links = await frame.evaluate(() => {
   return Array.from(document.querySelectorAll('a')).map(row => {
     return row.getAttribute('href');
   });
@@ -166,21 +179,145 @@ const links = await page.evaluate(() => {
 
 console.log(links);
 
-await page.close();
+await frame.close();
 await context.close();
 await browser.disconnect();
 ```
+</details>
+
+#### Start a webdriver Bidi server
+
+Use `--protocol webdriver` to enable Bidi support.
+You can start both, CDP and Bidi, with `--protocol webdriver --protocol cdp`
+
+```console
+./lightpanda serve --obey-robots --log-format pretty  --log-level info --host 127.0.0.1 --port 9222 --protocol webdriver
+```
+
+### Agent mode
+
+`lightpanda agent` lets you drive the browser with a native agent. Describe what
+you want in plain English or with slash commands, and it controls the browser:
+navigating pages, clicking through flows, filling forms, extracting structured
+data. Think of it as a robot you're directing to use the web, more than a
+chatbot you're having a conversation with.
+
+Because the agent runs inside the same process as the browser, every tool call
+is a direct operation and you retain Lightpanda's speed and memory advantage.
+
+The output of an agent session is a
+[PandaScript](https://lightpanda.io/docs/usage/pandascript): vanilla JavaScript
+with a small set of native browser primitives built directly into Lightpanda.
+Run `/save` to export one from your current session, then replay it with
+`lightpanda run <script>.js`. Scripts are deterministic and token-free, so
+you can prototype with the LLM and ship the output to production without a
+model at runtime.
+
+It supports Anthropic, OpenAI, Gemini, Google Vertex AI, Mistral, Hugging
+Face, the multi-lab gateways [Vercel AI Gateway](https://vercel.com/ai-gateway)
+and [OpenRouter](https://openrouter.ai) (one key for hundreds of models), any OpenAI-compatible endpoint via
+`OPENAI_BASE_URL`, and local models via Ollama, llama.cpp or [LLMD](https://zml.ai/llmd). You can also run
+without an LLM using `--no-llm`, which drops you into the REPL. See the
+[agent documentation](https://lightpanda.io/docs/usage/agent) for the full
+reference.
+
+```console
+./lightpanda agent                                    # auto-detects API key from env
+./lightpanda agent --task "top story on news.ycombinator.com?"
+./lightpanda agent --no-llm                           # basic REPL, no LLM
+./lightpanda run session.js                           # run a recorded script
+cat session.js | ./lightpanda run -                   # ...or pipe one in via stdin
+./lightpanda agent --provider gemini --task "..."     # force a specific provider
+./lightpanda agent --list-models                      # models available for the detected provider
+VERTEX_API_KEY=... ./lightpanda agent --provider vertex             # Vertex AI, express mode
+GOOGLE_CLOUD_PROJECT=my-proj ./lightpanda agent --provider vertex   # Vertex AI, token via gcloud auth
+AI_GATEWAY_API_KEY=... ./lightpanda agent --provider vercel --model moonshotai/kimi-k2   # any model behind Vercel AI Gateway
+OPENROUTER_API_KEY=... ./lightpanda agent --provider openrouter --model anthropic/claude-sonnet-5   # any model behind OpenRouter
+OPENAI_BASE_URL=https://my-gateway/v1 OPENAI_API_KEY=... ./lightpanda agent            # any OpenAI-compatible server
+```
+
+### Native MCP and skill
+
+The MCP server communicates via MCP JSON-RPC 2.0 over stdio.
+
+Add to your MCP configuration:
+```json
+{
+  "mcpServers": {
+    "lightpanda": {
+      "command": "/path/to/lightpanda",
+      "args": ["mcp"]
+    }
+  }
+}
+```
+
+#### HTTP transport and independent sessions
+
+For serving several agents from one process, start the MCP server over HTTP
+instead of stdio by giving it a port (add `--host x.x.x.x` to specify the
+interface to listen on):
+
+```bash
+lightpanda mcp --port 9223
+```
+
+Clients POST JSON-RPC to `http://host:9223/mcp`. Each connection is routed to
+its own **browsing session** — its own page, cookies and memory — so agents no
+longer clobber each other's page:
+
+- A client that `initialize`s without an `Mcp-Session-Id` header is assigned a
+  fresh session; the id comes back in the response's `Mcp-Session-Id` header.
+  Send it on subsequent requests to stay on that session (**isolation**).
+- Two agents that send the **same** `Mcp-Session-Id` share one browsing context
+  (**sharing** — e.g. a workflow where several agents work the same page).
+- The `session_new`, `session_list` and `session_close` tools manage sessions
+  explicitly. Sending `DELETE /mcp` with an `Mcp-Session-Id` closes that session.
+
+The `run` tool runs a [PandaScript](https://lightpanda.io/docs/usage/pandascript)
+in the caller's session, as `lightpanda run` does, and returns its console
+output and the value it returns. It takes the source as `script`, or the `path`
+of a file that `save` wrote. Pages the script opens are closed when it ends;
+cookies and storage stay, so a login carries over to the next `run`. An optional
+`timeout` in milliseconds (default 60000) stops a stuck script. A backend can
+drive Lightpanda with one POST:
+
+```bash
+curl -s http://127.0.0.1:9223/mcp -H 'Content-Type: application/json' -d '{
+  "jsonrpc": "2.0", "id": 1, "method": "tools/call",
+  "params": { "name": "run", "arguments": { "script":
+    "const page = new Page();\nawait page.goto(\"https://example.com\");\nreturn page.extract({ title: \"title\", links: [\"a\"] });" } }
+}'
+```
+
+[Read full documentation](https://lightpanda.io/docs/open-source/guides/mcp-server)
+
+A skill is available in [lightpanda-io/agent-skill](https://github.com/lightpanda-io/agent-skill).
+
+### Shell completion
+
+`lightpanda completion <bash | fish | zsh>` prints a completion script for commands, flags and their values:
+
+```console
+lightpanda completion fish > ~/.config/fish/completions/lightpanda.fish
+lightpanda completion bash > ~/.local/share/bash-completion/completions/lightpanda
+lightpanda completion zsh > ~/.zfunc/_lightpanda  # with fpath=(~/.zfunc $fpath) before compinit
+```
 
 ### Telemetry
+
 By default, Lightpanda collects and sends usage telemetry. This can be disabled by setting an environment variable `LIGHTPANDA_DISABLE_TELEMETRY=true`. You can read Lightpanda's privacy policy at: [https://lightpanda.io/privacy-policy](https://lightpanda.io/privacy-policy).
+
+### Core dumps
+
+Set `LIGHTPANDA_DISABLE_CORE_DUMP` (to any value) to suppress crash core dumps by zeroing the soft `RLIMIT_CORE` at startup.
 
 ## Status
 
-Lightpanda is in Beta and currently a work in progress. Stability and coverage are improving and many websites now work.
-You may still encounter errors or crashes. Please open an issue with specifics if so.
+Here are the key features we have implemented.
+For full details, see our [Web Platform Tests results](https://perf.lightpanda.io/wpt).
 
-Here are the key features we have implemented:
-
+- [x] CORS
 - [x] HTTP loader ([Libcurl](https://curl.se/libcurl/))
 - [x] HTML parser ([html5ever](https://github.com/servo/html5ever))
 - [x] DOM tree
@@ -189,7 +326,7 @@ Here are the key features we have implemented:
 - [x] Ajax
   - [x] XHR API
   - [x] Fetch API
-- [x] DOM dump
+- [x] DOM and Markdown dump
 - [x] CDP/websockets server
 - [x] Click
 - [x] Input form
@@ -197,24 +334,22 @@ Here are the key features we have implemented:
 - [x] Custom HTTP headers
 - [x] Proxy support
 - [x] Network interception
-- [x] Respect `robots.txt` with option `--obey_robots`
-
-NOTE: There are hundreds of Web APIs. Developing a browser (even just for headless mode) is a huge task. Coverage will increase over time.
-
-You can also follow the progress of our Javascript support in our dedicated [zig-js-runtime](https://github.com/lightpanda-io/zig-js-runtime#development) project.
+- [x] Respect `robots.txt` with option `--obey-robots`
+- [x] CDP and Webdriver Bidi
+- [x] Adblocker
 
 ## Build from sources
 
 ### Prerequisites
 
-Lightpanda is written with [Zig](https://ziglang.org/) `0.15.2`. You have to
+Lightpanda is written with [Zig](https://ziglang.org/) `0.17.0`. You have to
 install it with the right version in order to build the project.
 
 Lightpanda also depends on
-[zig-js-runtime](https://github.com/lightpanda-io/zig-js-runtime/) (with v8),
+[v8](https://chromium.googlesource.com/v8/v8.git),
 [Libcurl](https://curl.se/libcurl/) and [html5ever](https://github.com/servo/html5ever).
 
-To be able to build the v8 engine for zig-js-runtime, you have to install some libs:
+To be able to build the v8 engine, you have to install some libs:
 
 For **Debian/Ubuntu based Linux**:
 
@@ -225,7 +360,7 @@ sudo apt install xz-utils ca-certificates \
 ```
 You also need to [install Rust](https://rust-lang.org/tools/install/).
 
-For systems with [**Nix**](https://nixos.org/download/), you can use the devShell:
+For systems with [**Nix**](https://nixos.org/download/), you can use the devShell.
 ```
 nix develop
 ```
@@ -237,7 +372,7 @@ brew install cmake
 
 ### Build and run
 
-You an build the entire browser with `make build` or `make build-dev` for debug
+You can build the entire browser with `make build` or `make build-dev` for debug
 env.
 
 But you can directly use the zig command: `zig build run`.
@@ -265,6 +400,16 @@ See [#1279](https://github.com/lightpanda-io/browser/pull/1279) for more details
 
 You can test Lightpanda by running `make test`.
 
+```bash
+make test                                       # Run all tests
+make test F="server"                            # Filter by substring
+TEST_FILTER="WebApi: #selector_all" make test   # Filter main + subtest (separator: #)
+TEST_VERBOSE=true make test
+TEST_FAIL_FIRST=true make test
+METRICS=true make test                          # Capture allocation/duration metrics as JSON
+TEST_JOBS=1 make test                           # Run in one process (default: up to 4, or 1 when filtered)
+```
+
 ### End to end tests
 
 To run end to end tests, you need to clone the [demo
@@ -285,9 +430,9 @@ Lightpanda is tested against the standardized [Web Platform
 Tests](https://web-platform-tests.org/).
 
 We use [a fork](https://github.com/lightpanda-io/wpt/tree/fork) including a custom
-[`testharnessreport.js`](https://github.com/lightpanda-io/wpt/commit/01a3115c076a3ad0c84849dbbf77a6e3d199c56f).
+[`testharnessreport.js`](https://github.com/lightpanda-io/wpt/blob/fork/resources/testharnessreport.js). Results are [published](https://perf.lightpanda.io/wpt) daily.
 
-For reference, you can easily execute a WPT test case with your browser via
+For reference, you can execute a WPT test case with your browser via
 [wpt.live](https://wpt.live).
 
 #### Configure WPT HTTP server
@@ -330,10 +475,16 @@ First start the WPT's HTTP server from your `wpt/` clone dir.
 Run a Lightpanda browser
 
 ```
-zig build run -- --insecure_disable_tls_host_verification
+zig build -Dwpt_extensions run -- serve \
+    --ws-max-concurrent 64 \
+    --insecure-disable-tls-host-verification \
+    --load-resources iframe \
+    --load-resources image \
+    --load-resources worker \
+    --load-resources stylesheet
 ```
 
-Then you can start the wptrunner from the Demo's clone dir:
+Then you can start the wptrunner from the demo's clone dir:
 ```
 cd wptrunner && go run .
 ```
@@ -347,41 +498,54 @@ cd wptrunner && go run . Node-childNodes.html
 `wptrunner` command accepts `--summary` and `--json` options modifying output.
 Also `--concurrency` define the concurrency limit.
 
+To check a single test case without the runner, `fetch --dump wpt` prints its
+results as JSON: the harness status, a pass/fail summary and the cases that
+did not pass. It relies on the fork's `testharnessreport.js`.
+
+```
+zig build -Dwpt_extensions run -- fetch \
+    --insecure-disable-tls-host-verification \
+    --load-resources worker \
+    --load-resources iframe \
+    --dump wpt \
+    --wait-script "window.report && report.complete" \
+    "http://web-platform.test:8000/dom/nodes/Node-childNodes.html"
+```
+
 :warning: Running the whole test suite will take a long time. In this case,
 it's useful to build in `releaseFast` mode to make tests faster.
 
 ```
-zig build -Doptimize=ReleaseFast run
+zig build -Dwpt_extensions -Doptimize=fast run -- serve ...
 ```
 
 ## Contributing
 
-Lightpanda accepts pull requests through GitHub.
+See [CONTRIBUTING.md](https://github.com/lightpanda-io/browser/blob/main/CONTRIBUTING.md) for guidelines.
+You must sign our [CLA](CLA.md) during the pull request process.
+- [Discord](https://discord.gg/K63XeymfB5)
 
-You have to sign our [CLA](CLA.md) during the pull request process otherwise
-we're not able to accept your contributions.
-
-## Why?
+## Why Lightpanda?
 
 ### Javascript execution is mandatory for the modern web
 
-In the good old days, scraping a webpage was as easy as making an HTTP request, cURL-like. It’s not possible anymore, because Javascript is everywhere, like it or not:
+Simple HTTP requests used to be enough for web automation. That's no longer the case. Javascript now drives most of the web:
 
-- Ajax, Single Page App, infinite loading, “click to display”, instant search, etc.
-- JS web frameworks: React, Vue, Angular & others
+- Ajax, Single Page Apps, infinite loading, instant search
+- JS frameworks: React, Vue, Angular, and others
 
 ### Chrome is not the right tool
 
-If we need Javascript, why not use a real web browser? Take a huge desktop application, hack it, and run it on the server. Hundreds or thousands of instances of Chrome if you use it at scale. Are you sure it’s such a good idea?
+Running a full desktop browser on a server works, but it does not scale well. Chrome at hundreds or thousands of instances is expensive:
 
-- Heavy on RAM and CPU, expensive to run
-- Hard to package, deploy and maintain at scale
-- Bloated, lots of features are not useful in headless usage
+- Heavy on RAM and CPU
+- Hard to package, deploy, and maintain at scale
+- Many features are not necessary in headless made
 
 ### Lightpanda is built for performance
 
-If we want both Javascript and performance in a true headless browser, we need to start from scratch. Not another iteration of Chromium, really from a blank page. Crazy right? But that’s what we did:
+Supporting Javascript with real performance meant building from scratch rather than forking Chromium:
 
-- Not based on Chromium, Blink or WebKit
-- Low-level system programming language (Zig) with optimisations in mind
-- Opinionated: without graphical rendering
+- Not based on Chromium, Blink, or WebKit
+- Written in Zig, a low-level language with explicit memory control
+- No graphical rendering engine

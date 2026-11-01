@@ -1,9 +1,9 @@
 ---
 title: Kronos
-date: 2026-07-25T17:16:25+08:00
+date: 2026-11-01T22:20:52+08:00
 draft: False
-image: https://images.unsplash.com/photo-1725132901046-4290700f69b7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODQ5NzA3OTZ8&ixlib=rb-4.1.0
-tags: ['github',financial markets, K-lines, foundation model]
+image: https://images.unsplash.com/photo-1477573829233-74cd1c17fa65?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM1NDI3OTF8&ixlib=rb-4.1.0
+tags: ['github',Kronos, Financial Foundation Model, Time Series Forecasting]
 categories: ['github']
 ---
 

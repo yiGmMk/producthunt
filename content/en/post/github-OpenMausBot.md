@@ -1,9 +1,9 @@
 ---
 title: OpenMausBot
-date: 2026-10-30T22:11:40+08:00
+date: 2026-11-01T22:21:38+08:00
 draft: False
-image: https://images.unsplash.com/photo-1663208848595-36ce355cb715?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTMzNjk0NDh8&ixlib=rb-4.1.0
-tags: ['github',Open Source AI Agents, Local First Architecture, Multi-Agent Platform]
+image: https://images.unsplash.com/photo-1727434032765-9c4df88b6e02?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM1NDI3OTF8&ixlib=rb-4.1.0
+tags: ['github',Open Source, Local First, AI Agents]
 categories: ['github']
 ---
 

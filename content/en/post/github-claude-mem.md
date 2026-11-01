@@ -1,8 +1,8 @@
 ---
 title: claude-mem
-date: 2026-10-31T21:45:30+08:00
+date: 2026-11-01T22:20:06+08:00
 draft: False
-image: https://images.unsplash.com/photo-1778222413836-8c3d280b6460?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM0NTQzMDV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1477573829233-74cd1c17fa65?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM1NDI3OTF8&ixlib=rb-4.1.0
 tags: ['github',Claude-Mem, Persistent Memory, Claude Code]
 categories: ['github']
 ---
@@ -70,7 +70,7 @@ categories: ['github']
     <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License">
   </a>
   <a href="package.json">
-    <img src="https://img.shields.io/badge/version-15.7.0-green.svg" alt="Version">
+    <img src="https://img.shields.io/badge/version-15.8.0-green.svg" alt="Version">
   </a>
   <a href="package.json">
     <img src="https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen.svg" alt="Node">
