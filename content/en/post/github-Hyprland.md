@@ -1,9 +1,9 @@
 ---
 title: Hyprland
-date: 2025-07-23T15:36:57+08:00
+date: 2026-11-03T01:08:12+08:00
 draft: False
-image: https://images.unsplash.com/photo-1638864615951-360884c3a277?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTMyNTYwMTZ8&ixlib=rb-4.1.0
-tags: ['github',]
+image: https://images.unsplash.com/photo-1625111970819-5f32ac1885c3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM2MzkyMDN8&ixlib=rb-4.1.0
+tags: ['github',Hyprland, Wayland compositor, dynamic tiling]
 categories: ['github']
 ---
 
@@ -46,10 +46,10 @@ easy IPC, much more QoL stuff than other compositors and more...
 
 # Features
 
-- All of the eyecandy: gradient borders, blur, animations, shadows and much more
+- All of the eyecandy: gradient borders, many types of blur, animations, glow, shadows and much more
 - A lot of customization
 - 100% independent, no wlroots, no libweston, no kwin, no mutter.
-- Custom bezier curves for the best animations
+- Custom bezier and spring curves for the best animations
 - Powerful plugin support
 - Built-in plugin manager
 - Tearing support for better gaming performance
@@ -57,8 +57,6 @@ easy IPC, much more QoL stuff than other compositors and more...
 - Fast and active development
 - Not afraid to provide bleeding-edge features
 - Config reloaded instantly upon saving
-- Fully dynamic workspaces
-- Two built-in layouts and more available as plugins
 - Global keybinds passed to your apps of choice
 - Tiling/pseudotiling/floating/fullscreen windows
 - Special workspaces (scratchpads)
@@ -66,6 +64,15 @@ easy IPC, much more QoL stuff than other compositors and more...
 - Powerful window/monitor/layer rules
 - Socket-based IPC
 - Native IME and Input Panels Support
+- Fully dynamic workspaces
+- Extensive layout support
+    - Dwindle
+    - Scrolling
+    - Master
+    - Monocle
+    - Custom layout with Lua
+    - Custom layouts with plugins
+- Per Workspace Layouts
 - and much more...
 
 <br>
@@ -111,7 +118,7 @@ easy IPC, much more QoL stuff than other compositors and more...
 
 <!----------------------------------------------------------------------------->
 
-[Configure]: https://wiki.hypr.land/Configuring/
+[Configure]: https://wiki.hypr.land/configuring/
 [Stars]: https://starchart.cc/hyprwm/Hyprland
 [Hypr]: https://github.com/hyprwm/Hypr
 
@@ -119,9 +126,9 @@ easy IPC, much more QoL stuff than other compositors and more...
 [Issues]: https://github.com/hyprwm/Hyprland/issues
 [Todo]: https://github.com/hyprwm/Hyprland/projects?type=beta
 
-[Contribute]: https://wiki.hypr.land/Contributing-and-Debugging/
-[Install]: https://wiki.hypr.land/Getting-Started/Installation/
-[Quick Start]: https://wiki.hypr.land/Getting-Started/Master-Tutorial/
+[Contribute]: https://wiki.hypr.land/contributing-and-debugging/
+[Install]: https://wiki.hypr.land/getting-started/installation/
+[Quick Start]: https://wiki.hypr.land/getting-started/master-tutorial/
 [Workflow]: https://github.com/hyprwm/Hyprland/actions/workflows/ci.yaml
 [License]: LICENSE
 
@@ -137,9 +144,9 @@ easy IPC, much more QoL stuff than other compositors and more...
 
 <!----------------------------------{ Images }--------------------------------->
 
-[Preview A]: https://i.ibb.co/XxFY75Mk/greerggergerhtrytghjnyhjn.png
-[Preview B]: https://i.ibb.co/C1yTb0r/falf.png
-[Preview C]: https://i.ibb.co/2Yc4q835/hyprland-preview-b.png
+[Preview A]: ./assets/prev1.png
+[Preview B]: ./assets/prev2.png
+[Preview C]: ./assets/prev3.png
 
 
 <!----------------------------------{ Badges }--------------------------------->

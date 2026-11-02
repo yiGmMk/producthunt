@@ -1,0 +1,146 @@
+---
+title: Product Hunt 今日热榜 | 2026-11-02
+date: 2026-11-02 17:04:28+0000
+image: https://ph-files.imgix.net/e34f9fdf-0919-4b01-9bad-76687f286a44.jpeg?auto=format
+tags: ["AI智能体", "屏幕录制", "Mac录屏"]
+---
+
+## 1. Screen Studio 4.0  
+**标语**: 玻璃放大镜、摄像头抠图、按文稿编辑，以及更多  
+**介绍**: 专为 Mac 设计的屏幕录制软件，轻松应对复杂操作：缩放、运镜、音频与构图。让每一次演示与教程都精致专业。
+4.0 版本新增功能：
+- Glass Loupe（玻璃放大镜）：可聚焦放大单一细节
+- 分屏模式，全面支持竖屏视频
+- 像编辑文本一样编辑视频
+- 摄像头抠图：仅保留人物，自动去除背景
+- 自动隐藏敏感数据与人脸
+- 缩放更清晰、支持 ProRes 编码、导出速度最高提升 4 倍，以及更多优化  
+**网站**: [立即访问](https://www.producthunt.com/r/MXBY2KB22GHVHB?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/screen-studio?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Screen Studio 4.0](https://ph-files.imgix.net/e34f9fdf-0919-4b01-9bad-76687f286a44.jpeg?auto=format)  
+**关键词**: 屏幕录制,Mac录屏,视频教程,智能缩放,字幕剪辑,虚拟抠像,隐私打码,竖屏录制,高速导出,Screen Studio  
+**票数**: 🔺417  
+**是否精选**: 是  
+**发布时间**: 2026年11月01日 PM03:01 (北京时间)  
+
+---  
+
+{{< ad-inarticle >}}
+
+## 2. ClawsGO Science  
+**标语**: 拥有专属云实验室的AI研究智能体  
+**介绍**: 全自动科学研究。ClawsGO Science 能将问题直接转化为发现成果，并撰写成可被引用的学术论文。其云实验室配备 500 多种工具与 90 多个数据集。其长周期运行平台可让 Claude 与 GPT 智能体集群连续作业数日。这标志着科学研究的下一代范式。  
+**网站**: [立即访问](https://www.producthunt.com/r/BECJZCED6CRLLK?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/clawsgo-science?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![ClawsGO Science](https://ph-files.imgix.net/b4ee4a4b-0656-47f4-98bc-7ab5fdaea2d9.jpeg?auto=format)  
+**关键词**: AI科研代理, 自动化科研, 云实验室, 多智能体协同, 自动生成论文, 科研自动化, AI驱动科学, 长周期研究  
+**票数**: 🔺276  
+**是否精选**: 是  
+**发布时间**: 2026年11月01日 PM03:01 (北京时间)  
+
+---  
+
+## 3. Riverside Agents  
+**标语**: 一个用于视频的AI智能体团队：制作、剪辑、切片、发布  
+**介绍**: Riverside Agents 是一支专为视频打造的 AI 智能体团队。制作助理负责准备录制会话，剪辑师将原始素材转化为完整成片，切片助手把精彩瞬间剪辑成适合社交平台的短视频，营销助手则负责撰写文案并安排发布时间。你可自由设定自动化程度，所有内容均须经你审核确认后方可发布。该功能已包含于 Riverside 所有套餐中，并提供 14 天免费试用。  
+**网站**: [立即访问](https://www.producthunt.com/r/DIOFM7OZMKNLDK?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/riverside-fm?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Riverside Agents](https://ph-files.imgix.net/89691ee7-9b95-490e-bf36-49b800e7649e.png?auto=format)  
+**关键词**: AI视频代理,视频制作,智能剪辑,社交媒体发布,AI自动化,人工审核,一站式视频工作流,免费试用  
+**票数**: 🔺217  
+**是否精选**: 是  
+**发布时间**: 2026年11月01日 PM03:01 (北京时间)  
+
+---  
+
+## 4. Embage  
+**标语**: 为您的客户构建智能体，运行工作流，进行分析。  
+**介绍**: 为您的网站、Telegram及其他平台构建多渠道AI聊天与语音智能体。创建专属子智能体，实时编排跨越知识库、数据存储及数百款第三方工具的工作流。自动评估每次交互，为线索质量打分，并直接从对话转写文本中提取结构化数据。  
+**网站**: [立即访问](https://www.producthunt.com/r/OYXQ3VEP75YG64?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/embage?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Embage](https://ph-files.imgix.net/47f45415-e870-41f9-9f37-f99b79f19f99.jpeg?auto=format)  
+**关键词**: AI智能客服, 对话机器人, 工作流编排, 多渠道集成, 语音助手, 知识库集成, 线索评分, 实时数据分析, AI智能体, 自动化运营  
+**票数**: 🔺171  
+**是否精选**: 是  
+**发布时间**: 2026年11月01日 PM03:01 (北京时间)  
+
+---  
+
+## 5. Precise Edit by Ideogram  
+**标语**: 基于上下文窗口的精准编辑  
+**介绍**: 升级版的“精确编辑”功能支持上下文窗口，因此能够以原始像素精度处理分辨率最高达8K的任意图像，使小文字、徽标和精细细节的渲染更加清晰锐利。  
+**网站**: [立即访问](https://www.producthunt.com/r/RV5WCJYJUF4JTW?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/ideogram?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Precise Edit by Ideogram](https://ph-files.imgix.net/fa33c385-4b51-48c5-82da-65b0a96efc94.jpeg?auto=format)  
+**关键词**: 精准编辑,上下文窗口,8K分辨率,原像素编辑,细节增强,AI图像编辑,文字渲染,Logo优化  
+**票数**: 🔺143  
+**是否精选**: 是  
+**发布时间**: 2026年11月01日 PM03:01 (北京时间)  
+
+---  
+
+## 6. agentmash  
+**标语**: 面向团队编程智能体的开源多人协作AI  
+**介绍**: Agentmash 是一款面向团队代码智能体的开源多人协作 AI。它提供了一个共享上下文层，能够告知每个智能体队友的智能体正在修改哪些文件，从而使智能体之间可以相互沟通并独立工作，且不会覆盖彼此的代码。你可以在运行于不同模型的任务间自由切换，像使用 Slack 一样 @提及队友、你自己的智能体或队友的智能体，并保持技能、聊天记录与自动化流程的同步。此外，还支持连接 Claude Code、Codex、Antigravity 或你自有的开源模型。  
+**网站**: [立即访问](https://www.producthunt.com/r/4SM6ILOBQKUALZ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/agentmash?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![agentmash](https://ph-files.imgix.net/fc601bc5-5957-434b-9b5c-d91fa54ec903.jpeg?auto=format)  
+**关键词**: 开源AI,多智能体协作,AI编程代理,代码防冲突,多模型支持,团队协编,智能体通讯,自动化同步  
+**票数**: 🔺139  
+**是否精选**: 是  
+**发布时间**: 2026年11月01日 PM03:01 (北京时间)  
+
+---  
+
+## 7. Click  
+**标语**: 兼容任意模型的托管智能体API  
+**介绍**: 您可以将托管代理 API 与任意模型搭配使用。通过 API 调用发送任务，Click 即可运行代理并流式返回结果。Click 通过 API 提供完整的代理技术栈，无需管理任何基础设施。会话创建时即自动包含代理所需的一切——沙盒、浏览器和网页搜索。代理在搭载最新创新技术的运行框架上执行，例如支持数千种工具的延迟工具发现机制，以及可通过脚本调用工具的代码模式。  
+**网站**: [立即访问](https://www.producthunt.com/r/YVXJGLHPKNUSCC?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/click-6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Click](https://ph-files.imgix.net/0f9548e9-8ef4-40d9-b324-ce69b603b536.png?auto=format)  
+**关键词**: 托管智能体API,多模型兼容,免运维架构,自动化任务执行,内置沙箱,网页搜索,海量工具支持,代码模式,AI智能体平台,流式输出  
+**票数**: 🔺128  
+**是否精选**: 是  
+**发布时间**: 2026年11月01日 PM03:01 (北京时间)  
+
+---  
+
+## 8. Modelpeers  
+**标语**: 像关注人一样关注 AI 模型与智能体  
+**介绍**: Modelpeers 就像 AI 模型和智能体的“领英”。关注 Claude Code、GPT-6、Gemini 等 200 多个项目，即可在信息流中随时查看它们的新版本发布、价格与限额调整、服务中断及退役下线等情况。  
+**网站**: [立即访问](https://www.producthunt.com/r/FE6ZXGALFPL6HM?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/modelpeers?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Modelpeers](https://ph-files.imgix.net/807567e4-1cb2-440e-918b-6e2414355f11.png?auto=format)  
+**关键词**: AI模型追踪, 智能体社区, 版本监控, 价格额度查询, 服务状态预警, AI资讯平台, 开发者工具, 模型动态  
+**票数**: 🔺127  
+**是否精选**: 是  
+**发布时间**: 2026年11月01日 PM03:01 (北京时间)  
+
+---  
+
+## 9. magpie  
+**标语**: 你保存的所有内容，尽在同一个视觉库中  
+**介绍**: 一个视觉资料库，收录你在 Instagram、X、TikTok、Pinterest、YouTube、Reddit、Dribbble、Behance、Are.na 及全网保存的所有内容。AI 智能打标，支持按语义与色彩检索，即使原帖已下架，内容依然保留。  
+**网站**: [立即访问](https://www.producthunt.com/r/CAPVPJYNGIAYEW?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/magpie-14?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![magpie](https://ph-files.imgix.net/14d71b52-199b-4010-b439-13cde680a6c5.jpeg?auto=format)  
+**关键词**: 视觉收藏库,跨平台保存,AI智能分类,语义检索,灵感管理,内容归档  
+**票数**: 🔺119  
+**是否精选**: 是  
+**发布时间**: 2026年11月01日 PM03:01 (北京时间)  
+
+---  
+
+## 10. Raah.dev  
+**标语**: 追踪您的营收、数据分析与网站表现  
+**介绍**: 在统一仪表盘中，将支付与转化数据同页面加载速度、API延迟、错误及ISP性能关联。为人类与AI智能体提供营收分析与真实用户可观测性。  
+**网站**: [立即访问](https://www.producthunt.com/r/JWF4HOBIH2FG6T?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/raah-dev?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Raah.dev](https://ph-files.imgix.net/add5ffb1-4fb4-4147-98b3-952ce93d7559.jpeg?auto=format)  
+**关键词**: 营收分析,网站性能,支付转化,页面速度,API延迟,错误监控,真实用户监控,统一看板,AI智能体  
+**票数**: 🔺95  
+**是否精选**: 是  
+**发布时间**: 2026年11月01日 PM03:01 (北京时间)  
+
+---  
+

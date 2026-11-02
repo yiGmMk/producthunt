@@ -1,9 +1,9 @@
 ---
 title: Claude-Code-Game-Studios
-date: 2026-10-31T21:47:09+08:00
+date: 2026-11-03T01:08:33+08:00
 draft: False
-image: https://images.unsplash.com/photo-1778222413836-8c3d280b6460?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM0NTQzMDV8&ixlib=rb-4.1.0
-tags: ['github',Claude Code, Game Development, Multi-Agent System]
+image: https://images.unsplash.com/photo-1625111970819-5f32ac1885c3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM2MzkyMDN8&ixlib=rb-4.1.0
+tags: ['github',Claude Code,AI game development,multi agent orchestration]
 categories: ['github']
 ---
 
