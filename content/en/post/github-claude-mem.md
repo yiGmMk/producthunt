@@ -1,9 +1,9 @@
 ---
 title: claude-mem
-date: 2026-11-03T01:07:26+08:00
+date: 2026-11-03T23:06:24+08:00
 draft: False
-image: https://images.unsplash.com/photo-1590091321858-a3f46aec17e5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM2MzkyMDN8&ixlib=rb-4.1.0
-tags: ['github',claude-mem, persistent memory, claude code]
+image: https://images.unsplash.com/photo-1788183364376-37e2aa6a56fe?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM3MTgzNjN8&ixlib=rb-4.1.0
+tags: ['github',persistent memory, context preservation, smart search]
 categories: ['github']
 ---
 
@@ -70,7 +70,7 @@ categories: ['github']
     <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License">
   </a>
   <a href="package.json">
-    <img src="https://img.shields.io/badge/version-15.8.3-green.svg" alt="Version">
+    <img src="https://img.shields.io/badge/version-15.9.0-green.svg" alt="Version">
   </a>
   <a href="package.json">
     <img src="https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen.svg" alt="Node">
