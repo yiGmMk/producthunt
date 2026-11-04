@@ -1,9 +1,9 @@
 ---
 title: worktrunk
-date: 2026-11-03T23:07:14+08:00
+date: 2026-11-04T23:50:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1658604872041-172a440e6d78?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM3MTgzNjN8&ixlib=rb-4.1.0
-tags: ['github',git worktree management, cli tool, ai agents]
+image: https://images.unsplash.com/photo-1675090407173-33ce0f4180f0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM4MDczNzV8&ixlib=rb-4.1.0
+tags: ['github',git worktrees, cli tool, ai agents]
 categories: ['github']
 ---
 
