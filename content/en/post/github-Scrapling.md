@@ -1,8 +1,8 @@
 ---
 title: Scrapling
-date: 2026-11-03T01:07:48+08:00
+date: 2026-11-05T23:29:28+08:00
 draft: False
-image: https://images.unsplash.com/photo-1625111970819-5f32ac1885c3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM2MzkyMDN8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1714823034882-e3a63a33588d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM4OTI0NDF8&ixlib=rb-4.1.0
 tags: ['github',Web Scraping, Python Framework, Data Extraction]
 categories: ['github']
 ---
@@ -158,6 +158,16 @@ This prints `10` and saves the quotes and authors to `quotes.json`.
         <b>Evomi</b>
       </a>: residential proxies from $0.49/GB. Scraping browser with fully spoofed Chromium, residential IPs, auto CAPTCHA solving, and anti-bot bypass. </br>
       <b>Scraper API for hassle-free results. MCP and N8N integrations are available.</b>
+    </td>
+  </tr>
+  <tr>
+    <td width="200">
+      <a href="https://tikhub.io/?utm_source=github.com/D4Vinci/Scrapling&utm_medium=marketing_social&utm_campaign=retargeting&utm_content=carousel_ad" target="_blank" title="Unlock the Power of Social Media Data & AI">
+        <img src="https://raw.githubusercontent.com/D4Vinci/Scrapling/main/images/TikHub.jpg">
+      </a>
+    </td>
+    <td>
+      <a href="https://tikhub.io/?utm_source=github.com/D4Vinci/Scrapling&utm_medium=marketing_social&utm_campaign=retargeting&utm_content=carousel_ad" target="_blank">TikHub.io</a> provides 900+ stable APIs across 16+ platforms including TikTok, X, YouTube & Instagram, with 40M+ datasets. <br /> Also offers <a href="https://ai.tikhub.io/?ref=KarimShoair" target="_blank">DISCOUNTED AI models</a> - Claude, GPT, GEMINI & more up to 71% off.
     </td>
   </tr>
   <tr>
