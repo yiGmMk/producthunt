@@ -1,9 +1,9 @@
 ---
 title: auto-ontology
-date: 2026-11-05T23:27:46+08:00
+date: 2026-11-06T23:03:42+08:00
 draft: False
-image: https://images.unsplash.com/photo-1591777985871-19aadbb3c153?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM4OTI0NDF8&ixlib=rb-4.1.0
-tags: ['github',Auto Ontology, Natural Language to SQL, Semantic Catalog]
+image: https://images.unsplash.com/photo-1769112112580-cee0f8a30413?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM5NzczODB8&ixlib=rb-4.1.0
+tags: ['github',Auto Ontology, Text-to-SQL, Semantic Catalog]
 categories: ['github']
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: rails
-date: 2025-09-07T15:24:20+08:00
+date: 2026-11-06T23:04:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1708917880580-a6bea5c232a1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTcyMjk4MjZ8&ixlib=rb-4.1.0
-tags: ['github',Rails,MVC,Model,View,Controller,Active Record,Action View,Action Pack,Active Model,web application framework]
+image: https://images.unsplash.com/photo-1579598811772-d470c24d4660?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM5NzczODB8&ixlib=rb-4.1.0
+tags: ['github',Ruby on Rails, MVC, Web Application Framework]
 categories: ['github']
 ---
 
@@ -13,7 +13,7 @@ categories: ['github']
 
 ## What's Rails?
 
-Rails is a web-application framework that includes everything needed to
+Rails is a web application framework that includes everything needed to
 create database-backed web applications according to the
 [Model-View-Controller (MVC)](https://en.wikipedia.org/wiki/Model-view-controller)
 pattern.
@@ -39,7 +39,7 @@ The _**View layer**_ is composed of "templates" that are responsible for providi
 appropriate representations of your application's resources. Templates can
 come in a variety of formats, but most view templates are HTML with embedded
 Ruby code (ERB files). Views are typically rendered to generate a controller response
-or to generate the body of an email. In Rails, View generation is handled by [Action View](actionview/README.rdoc).
+or to generate the body of an email. In Rails, View generation is handled by [Action View](actionview/README.md).
 
 ## Controller layer
 
@@ -49,21 +49,21 @@ can also generate XML, JSON, PDFs, mobile-specific views, and more. Controllers 
 manipulate models, and render view templates in order to generate the appropriate HTTP response.
 In Rails, incoming requests are routed by Action Dispatch to an appropriate controller, and
 controller classes are derived from `ActionController::Base`. Action Dispatch and Action Controller
-are bundled together in [Action Pack](actionpack/README.rdoc).
+are bundled together in [Action Pack](actionpack/README.md).
 
 ## Frameworks and libraries
 
-[Active Record](activerecord/README.rdoc), [Active Model](activemodel/README.rdoc), [Action Pack](actionpack/README.rdoc), and [Action View](actionview/README.rdoc) can each be used independently outside Rails.
+[Active Record](activerecord/README.rdoc), [Active Model](activemodel/README.rdoc), [Action Pack](actionpack/README.md), and [Action View](actionview/README.md) can each be used independently outside Rails.
 
 In addition to that, Rails also comes with:
 
-- [Action Mailer](actionmailer/README.rdoc), a library to generate and send emails
+- [Action Mailer](actionmailer/README.md), a library to generate and send emails
 - [Action Mailbox](actionmailbox/README.md), a library to receive emails within a Rails application
 - [Active Job](activejob/README.md), a framework for declaring jobs and making them run on a variety of queuing backends
 - [Action Cable](actioncable/README.md), a framework to integrate WebSockets with a Rails application
 - [Active Storage](activestorage/README.md), a library to attach cloud and local files to Rails applications
 - [Action Text](actiontext/README.md), a library to handle rich text content
-- [Active Support](activesupport/README.rdoc), a collection of utility classes and standard library extensions that are useful for Rails, and may also be used independently outside Rails
+- [Active Support](activesupport/README.md), a collection of utility classes and standard library extensions that are useful for Rails, and may also be used independently outside Rails
 
 ## Getting Started
 

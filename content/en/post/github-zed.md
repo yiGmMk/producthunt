@@ -1,9 +1,9 @@
 ---
 title: zed
-date: 2025-05-12T15:29:07+08:00
+date: 2026-11-06T23:03:21+08:00
 draft: False
-image: https://images.unsplash.com/photo-1672173234737-684207ad12a0?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDcwMzQ4OTF8&ixlib=rb-4.1.0
-tags: ['github',Zed,code editor,multiplayer,Atom,Tree-sitter,macOS,Linux,Windows,Web]
+image: https://images.unsplash.com/photo-1534152404058-33b90d4d5f42?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM5NzczODB8&ixlib=rb-4.1.0
+tags: ['github',Zed, Code Editor, Open Source]
 categories: ['github']
 ---
 
@@ -11,7 +11,8 @@ categories: ['github']
 
 # Zed
 
-[![CI](https://github.com/zed-industries/zed/actions/workflows/ci.yml/badge.svg)](https://github.com/zed-industries/zed/actions/workflows/ci.yml)
+[![Zed](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zed-industries/zed/main/assets/badge/v0.json)](https://zed.dev)
+[![CI](https://github.com/zed-industries/zed/actions/workflows/run_tests.yml/badge.svg)](https://github.com/zed-industries/zed/actions/workflows/run_tests.yml)
 
 Welcome to Zed, a high-performance, multiplayer code editor from the creators of [Atom](https://github.com/atom/atom) and [Tree-sitter](https://github.com/tree-sitter/tree-sitter).
 
@@ -19,23 +20,17 @@ Welcome to Zed, a high-performance, multiplayer code editor from the creators of
 
 ### Installation
 
-<a href="https://repology.org/project/zed-editor/versions">
-    <img src="https://repology.org/badge/vertical-allrepos/zed-editor.svg?minversion=0.143.5" alt="Packaging status" align="right">
-</a>
-
-On macOS and Linux you can [download Zed directly](https://zed.dev/download) or [install Zed via your local package manager](https://zed.dev/docs/linux#installing-via-a-package-manager).
+On macOS, Linux, and Windows you can [download Zed directly](https://zed.dev/download) or install Zed via your local package manager ([macOS](https://zed.dev/docs/installation#macos)/[Linux](https://zed.dev/docs/linux#installing-via-a-package-manager)/[Windows](https://zed.dev/docs/windows#package-managers)).
 
 Other platforms are not yet available:
 
-- Windows ([tracking issue](https://github.com/zed-industries/zed/issues/5394))
-- Web ([tracking issue](https://github.com/zed-industries/zed/issues/5396))
+- Web ([tracking discussion](https://github.com/zed-industries/zed/discussions/26195))
 
 ### Developing Zed
 
 - [Building Zed for macOS](./docs/src/development/macos.md)
 - [Building Zed for Linux](./docs/src/development/linux.md)
 - [Building Zed for Windows](./docs/src/development/windows.md)
-- [Running Collaboration Locally](./docs/src/development/local-collaboration.md)
 
 ### Contributing
 
@@ -45,6 +40,8 @@ Also... we're hiring! Check out our [jobs](https://zed.dev/jobs) page for open r
 
 ### Licensing
 
+Zed source code is licensed primarily under GPL-3.0-or-later, with Apache-2.0 components where marked.
+
 License information for third party dependencies must be correctly provided for CI to pass.
 
 We use [`cargo-about`](https://github.com/EmbarkStudios/cargo-about) to automatically comply with open source licenses. If CI is failing, check the following:
@@ -52,3 +49,11 @@ We use [`cargo-about`](https://github.com/EmbarkStudios/cargo-about) to automati
 - Is it showing a `no license specified` error for a crate you've created? If so, add `publish = false` under `[package]` in your crate's Cargo.toml.
 - Is the error `failed to satisfy license requirements` for a dependency? If so, first determine what license the project has and whether this system is sufficient to comply with this license's requirements. If you're unsure, ask a lawyer. Once you've verified that this system is acceptable add the license's SPDX identifier to the `accepted` array in `script/licenses/zed-licenses.toml`.
 - Is `cargo-about` unable to find the license for a dependency? If so, add a clarification field at the end of `script/licenses/zed-licenses.toml`, as specified in the [cargo-about book](https://embarkstudios.github.io/cargo-about/cli/generate/config.html#crate-configuration).
+
+## Sponsorship
+
+Zed is developed by **Zed Industries, Inc.**, a for-profit company.
+
+If you’d like to financially support the project, you can do so via GitHub Sponsors.
+Sponsorships go directly to Zed Industries and are used as general company revenue.
+There are no perks or entitlements associated with sponsorship.
