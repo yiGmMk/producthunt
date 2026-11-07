@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>AI Writing on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/ai-writing/</link>
+        <description>Recent content in AI Writing on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Thu, 28 May 2026 19:09:39 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/ai-writing/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>stop-slop</title>
+        <link>https://producthunt.programnotes.cn/en/p/stop-slop/</link>
+        <pubDate>Thu, 28 May 2026 19:09:39 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/stop-slop/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1725921874109-79d1057c7e72?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Nzk5NjY0NTJ8&amp;ixlib=rb-4.1.0" alt="Featured image of post stop-slop" /&gt;&lt;h1 id=&#34;hardikpandyastop-slop&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/hardikpandya/stop-slop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hardikpandya/stop-slop&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;stop-slop&#34;&gt;Stop Slop
+&lt;/h1&gt;&lt;p&gt;A skill for removing AI tells from prose.&lt;/p&gt;
+&lt;img width=&#34;3840&#34; height=&#34;2160&#34; alt=&#34;G-Yg4RVbIAAhVxW&#34; src=&#34;https://github.com/user-attachments/assets/902afc15-1f40-4a9d-af24-8cd67afb8ebf&#34; /&gt;
+&lt;h2 id=&#34;what-this-is&#34;&gt;What this is
+&lt;/h2&gt;&lt;p&gt;AI writing has patterns. Predictable phrases, structures, rhythms. This skill teaches Claude (or any LLM) to catch and remove them.&lt;/p&gt;
+&lt;h2 id=&#34;skill-structure&#34;&gt;Skill Structure
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;stop-slop/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── SKILL.md              # Core instructions
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── references/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   ├── phrases.md        # Phrases to remove
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   ├── structures.md     # Structural patterns to avoid
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   └── examples.md       # Before/after transformations
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── LICENSE
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;quick-start&#34;&gt;Quick start
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Claude Code:&lt;/strong&gt; Add this folder as a skill.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Claude Projects:&lt;/strong&gt; Upload &lt;code&gt;SKILL.md&lt;/code&gt; and reference files to project knowledge.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Custom instructions:&lt;/strong&gt; Copy core rules from &lt;code&gt;SKILL.md&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;API calls:&lt;/strong&gt; Include &lt;code&gt;SKILL.md&lt;/code&gt; in your system prompt. Reference files load on demand.&lt;/p&gt;
+&lt;h2 id=&#34;what-it-catches&#34;&gt;What it catches
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Banned phrases&lt;/strong&gt; - Throat-clearing openers, emphasis crutches, business jargon, all adverbs, vague declaratives, meta-commentary. See &lt;code&gt;references/phrases.md&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Structural clichés&lt;/strong&gt; - Binary contrasts, negative listings, dramatic fragmentation, rhetorical setups, false agency, narrator-from-a-distance voice, passive voice. See &lt;code&gt;references/structures.md&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sentence-level rules&lt;/strong&gt; - No Wh- sentence starters, no em dashes, no staccato fragmentation, no lazy extremes, active voice required.&lt;/p&gt;
+&lt;h2 id=&#34;scoring&#34;&gt;Scoring
+&lt;/h2&gt;&lt;p&gt;Rate 1-10 on each dimension:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Dimension&lt;/th&gt;
+					&lt;th&gt;Question&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Directness&lt;/td&gt;
+					&lt;td&gt;Statements or announcements?&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Rhythm&lt;/td&gt;
+					&lt;td&gt;Varied or metronomic?&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Trust&lt;/td&gt;
+					&lt;td&gt;Respects reader intelligence?&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Authenticity&lt;/td&gt;
+					&lt;td&gt;Sounds human?&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Density&lt;/td&gt;
+					&lt;td&gt;Anything cuttable?&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Below 35/50: revise.&lt;/p&gt;
+&lt;h2 id=&#34;author&#34;&gt;Author
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://hvpandya.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hardik Pandya&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;MIT. Use freely, share widely.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Product Hunt Daily | 2025-11-15</title>
+        <link>https://producthunt.programnotes.cn/en/p/product-hunt-daily-2025-11-15/</link>
+        <pubDate>Sat, 15 Nov 2025 07:25:15 +0000</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/product-hunt-daily-2025-11-15/</guid>
+        <description>&lt;img src="https://ph-files.imgix.net/6ad3da14-79ad-4648-8f67-01f8dedf1fdd.png?auto=format" alt="Featured image of post Product Hunt Daily | 2025-11-15" /&gt;&lt;h2 id=&#34;1-group-chats-in-chatgpt&#34;&gt;1. Group Chats in ChatGPT
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Collaborate with others &amp;amp; ChatGPT in the same conversation&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Group chats are now in ChatGPT. You can add friends, family, or coworkers to a shared conversation to collaborate, plan, and create together with AI. It&amp;rsquo;s separate from your private chats.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/KB4NUGKLQR3XDW?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/openai?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/6ad3da14-79ad-4648-8f67-01f8dedf1fdd.png?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Group Chats in ChatGPT&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: ChatGPT group chats, collaboration, shared conversation, AI, planning, teamwork, group chat, chat with others&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺384&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-11-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-mylens-for-youtube&#34;&gt;2. MyLens for Youtube
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Turn Youtube videos into AI timelines&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: MyLens AI instantly turns any YouTube video into an interactive AI timeline of key moments. You can see all the key parts of long videos at a glance, click to only watch what matters most, and skip the noise. You can even expand sections or dive deeper into any parts with AI. It is a smarter way to watch and understand any YouTube content 10X faster.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/4LR7WUBEEQPJGC?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/mylens-for-youtube?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/7eea6074-29bd-430b-8d9c-ec2ae630c93c.gif?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;MyLens for Youtube &#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: YouTube, AI, timeline, video summary, key moments, skip noise, video analysis, faster watching, content understanding&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺346&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-11-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-scraibapp&#34;&gt;3. Scraib.app
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: AI writing partner in every app on your Mac&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Press ⌃R to instantly rewrite and improve any text. AI-powered writing assistant that lives in your menu bar.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/WUFYIVDU6GIWRH?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/scraib-app?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/9f382781-434e-4525-b1f1-028148238ad7.png?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Scraib.app&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AI writing, text rewrite, Mac app, writing assistant, menu bar, productivity, text improvement, AI-powered&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺273&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-11-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-email-buttons&#34;&gt;4. Email Buttons
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Turn email links into buttons that get clicked&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Add buttons to Gmail emails easily. Create custom CTA buttons, save templates, add QR codes for Gmail. Perfect for marketing and sales.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/4C4MGJEIH6QA53?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/email-buttons?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/bb186887-9c23-42ed-b51c-d0fc7e7e355e.jpeg?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Email Buttons&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: email buttons, Gmail, CTA, QR codes, email marketing, sales, email links, templates, call to action&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺216&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-11-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-sima-2&#34;&gt;5. SIMA 2
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Google&amp;rsquo;s most capable AI agent for virtual 3D worlds&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: An Agent that Plays, Reasons, and Learns With You in Virtual 3D Worlds. Powered by Gemini, it goes beyond following basic instructions to think, understand, and take actions in interactive environments – meaning you can talk to it through text, voice, or even images.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/XHJ3XIQF64QRGD?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/gemini-1-5-pro?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/4ca2a48f-290a-4c34-b6f8-288b76f3e627.jpeg?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;SIMA 2&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: SIMA 2, AI agent, virtual 3D worlds, Gemini, interactive environments, game AI, play, reason, learn, text, voice, images&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺197&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-11-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-sourcepilot&#34;&gt;6. SourcePIlot
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Cursor for learning to write with confidence &amp;amp; precision&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Own Your Writing Tool Forever. Enhance your writing experience with a personal editor that empowers you to write better, faster, and smarter. Begin your journey for free and upgrade wisely to unlock advanced features.&amp;quot;&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/AOVYQSO5AY26GM?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/sourcepilot-your-first-ai-writer?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/ab2ea794-b1bc-44f8-b036-49c752a4dc9d.png?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;SourcePIlot&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Writing assistant, AI writing, editing tool, writing confidence, writing precision, personal editor, learn to write, free writing tool, writing enhancement, smarter writing&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺159&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-11-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;7-airshare&#34;&gt;7. AirShare
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: AirDrop-style file local sharing and across the globe&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Beautiful, private, lightning-fast file sharing across local networks and global peers. QUIC + Iroh. No accounts. No cloud.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/6ORPO7GSHGSREJ?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/airshare-instant-local-file-sharing?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/b94970e9-0463-4603-b50e-7816aac5e2d8.png?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;AirShare&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AirShare, file sharing, AirDrop, local sharing, global sharing, QUIC, Iroh, private, fast, no accounts, no cloud&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺151&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-11-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;8-whereuat&#34;&gt;8. WhereUAt
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Know who’s actually on their way to your event.&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Most event apps focus on tickets and big conferences. WhereUAt is for everyday meetups—sports, home parties, coffee catch-ups—where the real question is “Are they coming or should I keep waiting?” It shares live location only from 15 minutes before to 15 minutes after the event, then turns off automatically.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/INX3ITNH4F5ZIV?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/whereuat?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/7aabe86d-5334-407e-90ea-42b6ce46aefe.jpeg?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;WhereUAt&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Event app, meetups, location sharing, attendance, real-time, parties, sports, coffee, automatic location, event planning&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺54&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: No&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-11-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;9-paywallpro&#34;&gt;9. PaywallPro
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Pinterest for App Paywall Designs&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Trusted by 2,000+ apps, PaywallPro turns 46,000+ iOS paywalls into actionable insights. Track pricing, design shifts, revenue trends, and competitor strategies — everything you need to grow smarter and monetize better.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/LZWMG3I3VZTUYS?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/paywallpro?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/b527a070-967a-48c1-b37c-dff7fa824f25.jpeg?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PaywallPro&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: paywall, app paywalls, iOS paywalls, paywall design, competitor analysis, pricing, revenue, app monetization, Pinterest, insights, app strategy&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺48&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: No&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-11-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;10-surfgeo&#34;&gt;10. Surfgeo
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Where AI Search Discovers You&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Drive traffic to your website from AI Search Surfgeo shows when and where you’re mentioned and recommended in AI answers, which sources models actually trust, and how your share of voice compares to competitors. It turns that visibility into a concrete GEO plan: prompt-level gaps, which domains to win on (blogs, reviews, communities), and content ideas tuned for how LLMs actually answer.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/EFQ66IGJ5D4PBO?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/surfgeo?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/34bc4bb9-00a1-493d-99cf-00be580438ee.png?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Surfgeo&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AI Search, SEO, Website Traffic, AI Monitoring, Share of Voice, Competitor Analysis, Content Ideas, GEO Plan, LLM, AI Answers, Brand Visibility, AI Mentions, AI Recommendations, Surfgeo&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺39&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: No&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-11-14 08:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
+        <title>Product Hunt Daily | 2025-09-10</title>
+        <link>https://producthunt.programnotes.cn/en/p/product-hunt-daily-2025-09-10/</link>
+        <pubDate>Wed, 10 Sep 2025 07:27:07 +0000</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/product-hunt-daily-2025-09-10/</guid>
+        <description>&lt;h2 id=&#34;1-youmind&#34;&gt;1. YouMind
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: The first AI creation studio where learning meets writing&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: YouMind helps anyone start creating, from capturing ideas to drafting and polishing articles, podcasts, videos, and more. With YouMind, everyone can turn curiosity into creation.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/7E5DIGQSMJROEQ?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/youmind?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;YouMind&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AI writing, AI creation, content creation, AI studio, writing tool, article writer, podcast creator, video creator, idea generation, content creation tool, AI assistant&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺851&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-09 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-creao&#34;&gt;2. CREAO
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Infinitely personalized software for every team member&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Teams get stuck with one-size-fits-all SaaS that doesn’t fit anyone perfectly. CREAO lets anyone build custom AI apps with natural language, each one with a built-in copilot. Build the right tools for any job.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/E4IEGOFDEOS2HY?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/creao-ai?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;CREAO&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: CREAO, AI Apps, Custom Software, Personalized Software, No-Code, AI Copilot, Natural Language, SaaS, Team Software, Workflow Automation&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺846&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-09 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-empromptu&#34;&gt;3. Empromptu
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Describe your idea to build AI apps that actually work&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Empromptu empowers businesses to build full-stack, AI-native applications in minutes—no code required—by combining a conversational builder with powerful agents that handle data ingestion, logic, and deployment.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/IAUBDRLJ3PVR5S?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/empromptu?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Empromptu&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AI, no-code, AI app builder, Empromptu, conversational AI, AI development, full-stack AI, rapid AI development, AI agents, business AI&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺404&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-09 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-ona-formerly-gitpod&#34;&gt;4. Ona (formerly Gitpod)
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Sandboxed parallel coding agent platform&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Your personal team of software engineering agents, sandboxed in ephemeral environments with editing via embedded VS Code and support for desktop IDEs. Collaborate on any device from phone to tablet or laptop.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/JM6GSNOFDLWXNM?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/ona-hq?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Ona (formerly Gitpod)&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: coding agent, sandboxed development, parallel coding, ephemeral environments, VS Code, IDE, collaboration, remote development, software agents, Gitpod, Ona&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺238&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-09 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-gram-by-speakeasy&#34;&gt;5. Gram by Speakeasy
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Instantly create MCP servers and SDKs that LLMs understand&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Gram is an open source platform that enables your team to build MCP servers that perform. Start with your API, add context, refine prompts, and compose custom workflow-based tools until LLMs are executing reliably in production. Start building for free!&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/JUUU47IRWRNZQM?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/speakeasy-3?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Gram by Speakeasy&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Gram, Speakeasy, LLM, MCP server, SDK, open source, API, prompt engineering, workflow tools, production LLMs&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺213&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-09 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-gosearch-free&#34;&gt;6. GoSearch Free
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: FREE enterprise search and AI agents for personal resources&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: GoSearch Free is the first agentic enterprise search tool for personal use, expand to a paid plan when ready. Connect your apps to search across files, chats, and emails in one place. Use AI to summarize, analyze, and take action. From the makers of GoLinks.🔗&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/GGWZYDLHF5E5J3?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/gosearch?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GoSearch Free&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: GoSearch Free, free enterprise search, AI agents, personal search, agentic search, file search, chat search, email search, AI summarization, AI analysis, GoLinks&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺170&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-09 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;7-sammy-guides&#34;&gt;7. SAMMY Guides
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Learn any software in real time&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: SAMMY is an invisible AI agent that watches your screen and talks to you in real time. It&amp;rsquo;s like having an expert standing behind you, guiding you step by step as you work or browse.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/PSCCRPYSTT4W5O?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/sammy-guides?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;SAMMY Guides&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AI tutor, software training, real-time learning, on-screen guidance, AI guide, software tutorial, tech support, SAMMY, invisible AI agent&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺161&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-09 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;8-behold-cam-1&#34;&gt;8. Behold Cam-1
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: the clever little wildlife camera&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Behold Cam-1 is a clever little camera for seeing and sharing your backyard wildlife.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/KHBEMAJKUNX2C5?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/behold-2?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Behold Cam-1&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: wildlife camera, backyard camera, trail camera, mini camera, wildlife photography, outdoor camera, cam-1, behold cam&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺144&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-09 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;9-agilepitch&#34;&gt;9. Agilepitch
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Superhuman for sales teams on HubSpot&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Your CRM tells you what happened. Agilepitch tells you what to do next. AI-powered deal execution for HubSpot that keeps every deal healthy and on track.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/C3BWLBJM7ZNRW2?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/agilepitch?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Agilepitch&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Agilepitch, HubSpot, AI, Sales, CRM, Deal Execution, Sales AI, Sales Automation, Deal Management, Pipeline Management&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺137&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-09 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;10-piñata-birthday-reminder&#34;&gt;10. Piñata Birthday Reminder
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Your simple source of truth for birthdays&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Piñata is your simple source of truth for birthdays. Build birthday contacts, get reminders when it matters, and launch your messaging app with a prewritten text message so you can send or call in seconds. Create meaningful moments effortlessly.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/MQKDO3PRCSZVOJ?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/pinata-birthday-reminder?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://producthunt.programnotes.cn/&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Piñata Birthday Reminder&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Birthday reminders, birthday contacts, birthday app, reminder app, contact manager, messaging app, text message, birthday calendar, event reminders, scheduling app&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺126&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2025-09-09 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

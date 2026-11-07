@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Agent Runtime on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/agent-runtime/</link>
+        <description>Recent content in Agent Runtime on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Tue, 22 Sep 2026 20:39:36 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/agent-runtime/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>substrate</title>
+        <link>https://producthunt.programnotes.cn/en/p/substrate/</link>
+        <pubDate>Tue, 22 Sep 2026 20:39:36 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/substrate/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1727717768632-f4241a128f50?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTAwODA3MDV8&amp;ixlib=rb-4.1.0" alt="Featured image of post substrate" /&gt;&lt;h1 id=&#34;agent-substratesubstrate&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/agent-substrate/substrate&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;agent-substrate/substrate&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;agent-substrate&#34;&gt;Agent Substrate
+&lt;/h1&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://opensource.org/licenses/Apache-2.0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/License-Apache_2.0-blue.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;License&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;NOTE: This is not an officially supported Google product. This project is not
+eligible for the &lt;a class=&#34;link&#34; href=&#34;https://bughunters.google.com/open-source-security&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google Open Source Software Vulnerability Rewards Program&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-agent-substrate&#34;&gt;What is Agent Substrate?
+&lt;/h2&gt;&lt;p&gt;Agent Substrate is a secure-by-default agent execution runtime engineered to run millions of sandboxes with 10x higher density than standard container runtimes. Purpose-built for the era of autonomous agents, Substrate delivers sub-500ms resume operations at over 500 suspend/resume activations per second with native zero-trust kernel and network isolation. It supports multiple sandbox technologies including microVMs and gVisor, enabling consistent lifecycle operations for all sandbox types.&lt;/p&gt;
+&lt;p&gt;At its core, Agent Substrate maps a larger set of “actors” (applications such as agents) onto a smaller set of ready “workers”, relying on the fact that agent-like applications tend to be idle most of the time to achieve heavy multiplexing.  It provides functionality to manage an actor’s lifecycle (e.g. create/destroy, suspend/resume), to assign actors to workers in real time, and to route incoming traffic to them.&lt;/p&gt;
+&lt;p&gt;Agent Substrate is intended to be a low-opinion system.  The workloads it manages don&amp;rsquo;t have to be literal AI agents, but those are the best example of the kind of applications it is designed for.  It is not an SDK for building agents, but rather a system for running them at scale.&lt;/p&gt;
+&lt;p&gt;Agent Substrate leverages Kubernetes for the infrastructure provisioning and worker lifecycle management (Kubernetes Pods). It builds on top of Kubernetes features like Pods and Pod autoscaling, while Agent Substrate provides agent-specific scheduling and control to achieve lower latency. Using Kubernetes as the underlying system enables consistent infrastructure management across all workloads types that are required for end to end agentic deployments and allows holistic infrastructure optimizations for RL scenarios that span agentic, inference and training cycles.&lt;/p&gt;
+&lt;h2 id=&#34;demo&#34;&gt;Demo
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=ZEzkCFJkzjY&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.youtube.com/vi/ZEzkCFJkzjY/hq1.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Agent Substrate Demo&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Watch the Agent Substrate cluster multiplex ~250 stateful actors across just 8 physical pods.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This demo highlights the core developer experience and &amp;ldquo;Agentic Infrastructure&amp;rdquo; capabilities of Substrate:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Actor Teleport:&lt;/strong&gt; High-performance suspend and resume of actors onto any available worker in the pool with sub-second activation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;State Persistence:&lt;/strong&gt; Persistent working memory (volatile RAM) and filesystem state preserved perfectly across hibernation cycles via full-state snapshots.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Agent Multiplexing:&lt;/strong&gt; Demonstrates 30x+ oversubscription by &amp;ldquo;juggling&amp;rdquo; a large registry of stateful actors onto a small pool of shared physical pods.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;To reproduce this demo in your own cluster, please refer to the detailed walkthrough in the &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;demos/counter/README.md&#34; &gt;Counter Demo&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;For more videos and walkthroughs, visit our YouTube channel: &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/channel/UCN9PPqlTtVxlcpbQ-NWpfZQ&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;agent-substrate&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;framework-agnostic--compatibility&#34;&gt;Framework Agnostic &amp;amp; Compatibility
+&lt;/h2&gt;&lt;p&gt;Agent Substrate is designed to be &lt;strong&gt;framework and agent harness agnostic&lt;/strong&gt;. Because it manages standard OCI containers at the kernel level (via gVisor), it can host agents built on any stack.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Agent Development Kit (ADK):&lt;/strong&gt; Support for ADK agents with session state preservation across invocations as actor state. Ideal for all types of agents and stateful tool or subagent calls.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LangChain:&lt;/strong&gt; Ideal execution environment for LangChain agents and tool calls.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Claude Code, CodeX, and Antigravity:&lt;/strong&gt; Support for high-density, stateful coding environments that preserve system state and filesystem state across sessions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Model Context Protocol (MCP):&lt;/strong&gt; Support for deploying secure, sandboxed MCP servers as Substrate Actors to provide durable tools for any model.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ecosystem--examples&#34;&gt;Ecosystem &amp;amp; Examples
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/google/ax&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Agent Executor&lt;/a&gt;:&lt;/strong&gt; A distributed agent runtime that demonstrates building a secure, hyper-scalable agent harness on Agent Substrate (see the &lt;a class=&#34;link&#34; href=&#34;https://cloud.google.com/blog/products/ai-machine-learning/agent-executor-googles-distributed-agent-runtime&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;announcement blog&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://github.com/google/ax/blob/main/manifests/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;integration guide&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/kagent-dev/kagent&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;kagent&lt;/a&gt;:&lt;/strong&gt; A CNCF Sandbox project and Kubernetes-native framework for building, deploying, and managing AI agents that uses Agent Substrate to run sandboxed, stateful agent workloads (see the &lt;a class=&#34;link&#34; href=&#34;https://kagent.dev/blog/the-future-of-kagent&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;announcement blog&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;status-and-compatibility&#34;&gt;Status and compatibility
+&lt;/h2&gt;&lt;p&gt;Agent Substrate is currently in early development.  It is not ready for
+production use, and the APIs are almost guaranteed to change.  We are not
+making any guarantees about backward compatibility at this stage, and
+everything in this project may be changed.&lt;/p&gt;
+&lt;h3 id=&#34;supported-kubernetes-releases&#34;&gt;Supported Kubernetes Releases
+&lt;/h3&gt;&lt;p&gt;Currently we aim to support the &lt;a class=&#34;link&#34; href=&#34;https://kubernetes.io/releases/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;latest stable release&lt;/a&gt; of Kubernetes, and the previous minor release.&lt;/p&gt;
+&lt;h2 id=&#34;community&#34;&gt;Community
+&lt;/h2&gt;&lt;p&gt;For announcements, technical discussions, and community support, please join
+the &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://groups.google.com/g/ate-dev&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ate-dev&lt;/a&gt;&lt;/strong&gt; Google Group.&lt;/p&gt;
+&lt;p&gt;We host a weekly community meeting every Thursday from 10:00am - 11:00am PST.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Video call link: &lt;a class=&#34;link&#34; href=&#34;https://meet.google.com/uhq-cxvn-dhy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://meet.google.com/uhq-cxvn-dhy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Or dial: (US) +1 253-289-6971 PIN: 787 664 574 59#&lt;/li&gt;
+&lt;li&gt;More phone numbers: &lt;a class=&#34;link&#34; href=&#34;https://tel.meet/uhq-cxvn-dhy?pin=9044088223662&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://tel.meet/uhq-cxvn-dhy?pin=9044088223662&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.google.com/document/d/1obSIvfcafLNniLYTQCcT2eCgxHqa2AQ3Ga7YTsju49s&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Meeting notes&lt;/a&gt; for the weekly sync meeting&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://drive.google.com/corp/drive/u/0/folders/1rX1S6vPxPrR8dA1lEBuBEXkGKjHtG-mL&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Recordings and transcripts&lt;/a&gt; of all community meetings&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We also have channels in the CNCF slack; &lt;a class=&#34;link&#34; href=&#34;https://slack.cncf.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;request an invite here&lt;/a&gt;
+if you don&amp;rsquo;t have access.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloud-native.slack.com/archives/C0B6RCAJULW&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#substrate-users&lt;/a&gt; to discuss using substrate.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloud-native.slack.com/archives/C0B6M3E2J3D&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#substrate-dev&lt;/a&gt; to discuss developing substrate.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;developing&#34;&gt;Developing
+&lt;/h2&gt;&lt;p&gt;Please see &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;CONTRIBUTING.md&lt;/a&gt; for guidelines on contributing to
+the project.  We welcome contributions of all kinds, but the project is VERY
+young.  Our immediate focus is on building out the core system and demos, so we
+may not be able to review or merge contributions that don&amp;rsquo;t align with those
+goals in the near term.&lt;/p&gt;
+&lt;h2 id=&#34;quickstart-development&#34;&gt;Quickstart (Development)
+&lt;/h2&gt;&lt;p&gt;To quickly set up the complete environment:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Make sure you have &lt;a class=&#34;link&#34; href=&#34;https://go.dev/doc/install&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Go&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://kubernetes.io/docs/tasks/tools/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;kubectl&lt;/code&gt;&lt;/a&gt;, and &lt;a class=&#34;link&#34; href=&#34;https://www.docker.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;docker&lt;/code&gt;&lt;/a&gt; installed and configured on your dev machine. We will automatically manage other dependencies via Go, including &lt;a class=&#34;link&#34; href=&#34;https://kind.sigs.k8s.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;kind&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run the following steps:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# create cluster and local registry (IPv4; IP_FAMILY=dual|ipv6 overrides)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hack/create-kind-cluster.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install ate, PostgreSQL, rustfs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hack/install-ate-kind.sh --deploy-ate-system
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install counter demo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hack/install-ate-kind.sh --deploy-demo-counter
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install kubectl-ate&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go install ./cmd/kubectl-ate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# create a counter actor in the demo&amp;#39;s atespace (--template names the&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# actor template, resolved in the actor&amp;#39;s atespace)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl ate create actor my-counter-1 -a ate-demo-counter --template counter
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# port-forward the network router to bind to local port `8000`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl port-forward -n ate-system svc/atenet-router 8000:80
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;In a &lt;strong&gt;separate terminal&lt;/strong&gt;, send an HTTP request to increment the counter:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -X POST &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;ate-target-actor: ate-demo-counter/my-counter-1&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   -i http://localhost:8000/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Worker capacity is versioned: the dataplane (the atelet DaemonSet and the
+worker pods) schedules only on nodes that carry the
+&lt;code&gt;ate.dev/substrate-version&lt;/code&gt; label, and the install stamps it on every node
+that exists when it runs. A node added later hosts no workers until you label
+it with the installed version
+(&lt;code&gt;kubectl label node &amp;lt;node&amp;gt; ate.dev/substrate-version=&amp;lt;build version&amp;gt;&lt;/code&gt;).
+&lt;code&gt;kubectl get ds -n ate-system -l app=atelet -L ate.dev/substrate-version&lt;/code&gt;
+prints the installed version, off the atelet DaemonSet the install created.&lt;/p&gt;
+&lt;h3 id=&#34;gke-quickstart-development&#34;&gt;GKE Quickstart (Development)
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Create and configure your environment file:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp hack/ate-dev-env.sh.example .ate-dev-env.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Edit .ate-dev-env.sh to match your project and preferences, then source it:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; .ate-dev-env.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enable application-default credentials for gcloud:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcloud auth application-default login --project&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PROJECT_ID&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Provision the required GCP resources (GKE cluster, GCS, and IAM bindings):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go run ./tools/setup-gcp bootstrap
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;On a fresh project this step also creates the atelet Workload Identity IAM
+grants that snapshots depend on — see
+&lt;a class=&#34;link&#34; href=&#34;tools/setup-gcp/README.md#what-create-iam-actually-grants&#34; &gt;what &lt;code&gt;create iam&lt;/code&gt; actually grants&lt;/a&gt;
+to audit them or apply them manually. If you bring your own cluster instead,
+note the required Kubernetes beta APIs can only be enabled &lt;strong&gt;at cluster
+creation&lt;/strong&gt; — see the &lt;a class=&#34;link&#34; href=&#34;tools/setup-gcp/README.md#2-create-cluster&#34; &gt;Create Cluster warning&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Deploy the Agent Substrate system to your cluster:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./hack/install-ate.sh --deploy-ate-system
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Nodes that GKE adds later (autoscaling, auto-repair, node upgrades) are
+born with the node pool&amp;rsquo;s labels, so the pool needs
+&lt;code&gt;ate.dev/substrate-version&lt;/code&gt; too; see
+&lt;a class=&#34;link&#34; href=&#34;tools/setup-gcp/README.md&#34; &gt;Node version labels&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You can then deploy the sample applications. See &lt;a class=&#34;link&#34; href=&#34;demos/counter/README.md&#34; &gt;demos/counter/README.md&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;demos/sandbox/README.md&#34; &gt;demos/sandbox/README.md&lt;/a&gt; for detailed walkthroughs.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./hack/install-ate.sh --deploy-demo-counter
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;custom-setup-and-deployment&#34;&gt;Custom Setup and Deployment
+&lt;/h4&gt;&lt;p&gt;You can run individual setup steps to create GCP resources as needed. See &lt;code&gt;go run ./tools/setup-gcp --help&lt;/code&gt; for available options. For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go run ./tools/setup-gcp create cluster
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go run ./tools/setup-gcp create bucket
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To run the PostgreSQL store backend on Cloud SQL — with IAM database
+authentication and no passwords — see &lt;a class=&#34;link&#34; href=&#34;tools/setup-gcp/cloud-sql.md&#34; &gt;tools/setup-gcp/cloud-sql.md&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Similarly, you can deploy or cleanup specific Agent Substrate components using the installation script. See &lt;code&gt;./hack/install-ate.sh --help&lt;/code&gt; for all options.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Re-deploy only ate-apiserver of the ATE system&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./hack/install-ate.sh --deploy-ate-apiserver
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Delete everything (core system and all demos)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./hack/install-ate.sh --delete-all
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;tearing-down-resources-gcp&#34;&gt;Tearing down resources (GCP)
+&lt;/h4&gt;&lt;p&gt;If you need to delete the resources created by the setup script, you can use the provided script &lt;code&gt;hack/teardown.sh&lt;/code&gt;. This script will delete resources in the reverse order of creation and handles partial failures gracefully.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./hack/teardown.sh --all
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Or run individual teardown steps as needed (see &lt;code&gt;./hack/teardown.sh&lt;/code&gt; for available options).&lt;/p&gt;
+&lt;h4 id=&#34;tearing-down-local-kind-resources&#34;&gt;Tearing down local &lt;code&gt;kind&lt;/code&gt; resources
+&lt;/h4&gt;&lt;p&gt;If you need to delete the local &lt;code&gt;kind&lt;/code&gt; cluster and its registry (if it was created by &lt;code&gt;hack/create-kind-cluster.sh&lt;/code&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./hack/delete-kind-cluster.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;demos&#34;&gt;Demos
+&lt;/h2&gt;&lt;p&gt;We provide several sample applications demonstrating Agent Substrate&amp;rsquo;s capabilities:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;demos/counter/README.md&#34; &gt;Counter Demo&lt;/a&gt;&lt;/strong&gt;: A stateful Go HTTP server demonstrating state preservation across suspends/resumes, and on-demand actor resumption and routing via the Substrate router.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;demos/sandbox/README.md&#34; &gt;Sandbox Demo (Antigravity)&lt;/a&gt;&lt;/strong&gt;: A secure, sandboxed execution environment (running Alpine Linux) that allows arbitrary shell execution while preserving filesystem state across sessions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;demos/claude-code-multiplex/README.md&#34; &gt;Claude Code Multiplex&lt;/a&gt;&lt;/strong&gt;: Demonstrates oversubscribing physical hardware by multiplexing multiple Claude Code agents onto a limited pool of workers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;demos/multi-template/README.md&#34; &gt;Multi-Template&lt;/a&gt;&lt;/strong&gt;: Two &lt;code&gt;ActorTemplate&lt;/code&gt;s running different binaries share one &lt;code&gt;WorkerPool&lt;/code&gt;, even though the templates live in different atespaces.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;demos/parking/README.md&#34; &gt;Request Parking&lt;/a&gt;&lt;/strong&gt;: An oversubscribed pool where the router holds inbound requests until a worker frees up, instead of returning &lt;code&gt;503&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;demos/autoscaled-workerpool/README.md&#34; &gt;Autoscaled WorkerPool&lt;/a&gt;&lt;/strong&gt;: Scales a &lt;code&gt;WorkerPool&lt;/code&gt; on its assigned-worker count with an HPA fed by prometheus-adapter.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;documentation--guides&#34;&gt;Documentation &amp;amp; Guides
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/architecture.md&#34; &gt;Architecture&lt;/a&gt;: How the control plane, node supervisor, and networking stack fit together.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/api-guide.md&#34; &gt;API Configuration Guide&lt;/a&gt;: Detailed reference for configuring WorkerPools, ActorTemplates, Secrets, and Volumes.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;cmd/kubectl-ate/README.md&#34; &gt;Full CLI Documentation&lt;/a&gt;: Installation and usage for &lt;code&gt;kubectl-ate&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/glossary.md&#34; &gt;Glossary&lt;/a&gt;: Core terms (Actor, Atespace, ActorTemplate, WorkerPool, Worker, ate-api-server, atenet, atelet, ateom) and how they relate.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/integration-repos.md&#34; &gt;Integration Repositories&lt;/a&gt;: Where integrations live, how their repositories are named, and how fixes flow back to core.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/observability.md&#34; &gt;Observability Guide&lt;/a&gt;: Guide to actor logging, metrics, and distributed tracing.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/authentication.md&#34; &gt;Authentication Guide&lt;/a&gt;: Configure trusted JWT providers and human credentials.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/egress-traffic.md&#34; &gt;Egress Traffic&lt;/a&gt;: Which protocols an Actor may reach the outside world with and which are blocked.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/egress-trust-bundle.md&#34; &gt;Enabling man-in-the-middle (MITM) interception for Actor Egress policy&lt;/a&gt;: Egress policies such as header injection depend on MITM interception of Actor traffic. This guide explains how an Actor should be configured to enable interception.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/request-parking.md&#34; &gt;Request Parking&lt;/a&gt;: How the router parks requests through transient worker-pool saturation.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/upgrade.md&#34; &gt;Rolling Upgrade Runbook&lt;/a&gt;: Upgrade a running substrate node by node without losing actor state.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/threat-model.md&#34; &gt;Threat Model&lt;/a&gt;: Trust boundaries, assumptions, and known risks.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/roadmap.md&#34; &gt;Roadmap&lt;/a&gt;: Current limitations and what is planned next.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;benchmarking/README.md&#34; &gt;Benchmarking Guide&lt;/a&gt;: Locust-based load tests, monitoring stack, and the orchestrated benchmark harness.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tour&#34;&gt;Tour
+&lt;/h2&gt;&lt;h3 id=&#34;commands&#34;&gt;Commands
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cmd/ateapi&lt;/code&gt;: The core control plane API server exposing gRPC endpoints to manage actor and worker lifecycles.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmd/atelet&lt;/code&gt;: A node-level DaemonSet that supervises physical worker pods, coordinates snapshotting, and manages state transfers.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmd/atecontroller&lt;/code&gt;: A Kubernetes controller that reconciles WorkerPool custom resources.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmd/atenet&lt;/code&gt;: A combined networking controller providing Envoy routing and proxy sidecars.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmd/ateom-gvisor&lt;/code&gt;: An interior-pod helper running inside sandboxed worker pods to execute &lt;code&gt;runsc&lt;/code&gt; checkpoint and restore commands.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmd/ateom-microvm&lt;/code&gt;: The micro-VM peer of &lt;code&gt;ateom-gvisor&lt;/code&gt;, running actors as cloud-hypervisor VMs.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmd/podcertcontroller&lt;/code&gt;: A &amp;ldquo;polyfill&amp;rdquo; that provides Pod Certificate signers that
+will eventually ship in upstream Kubernetes (with different names).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmd/kubectl-ate&lt;/code&gt;: A CLI tool for managing Agent Substrate resources. See its &lt;a class=&#34;link&#34; href=&#34;cmd/kubectl-ate/README.md&#34; &gt;README&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmd/benchmarking&lt;/code&gt;: Synthetic workloads used by the load tests, including &lt;code&gt;glutton&lt;/code&gt;, which consumes RAM, disk, and file descriptors on demand.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tools/setup-gcp&lt;/code&gt;: A provisioning utility to set up the necessary GCP infrastructure resources (GKE, GCS, IAM).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;demos/&lt;/code&gt;: Sample applications demonstrating Agent Substrate capabilities.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

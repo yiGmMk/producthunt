@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Semantic Catalog on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/semantic-catalog/</link>
+        <description>Recent content in Semantic Catalog on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 06 Nov 2026 23:03:42 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/semantic-catalog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>auto-ontology</title>
+        <link>https://producthunt.programnotes.cn/en/p/auto-ontology/</link>
+        <pubDate>Fri, 06 Nov 2026 23:03:42 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/auto-ontology/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1769112112580-cee0f8a30413?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM5NzczODB8&amp;ixlib=rb-4.1.0" alt="Featured image of post auto-ontology" /&gt;&lt;h1 id=&#34;nvidiaauto-ontology&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/NVIDIA/auto-ontology&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NVIDIA/auto-ontology&lt;/a&gt;
+&lt;/h1&gt;&lt;!--
+SPDX-FileCopyrightText: Copyright (c) 2026, NVIDIA CORPORATION &amp; AFFILIATES.
+All rights reserved.
+SPDX-License-Identifier: Apache-2.0
+--&gt;
+&lt;h1 id=&#34;auto-ontology&#34;&gt;Auto Ontology
+&lt;/h1&gt;&lt;p&gt;Agents can retrieve documents and query databases, but reliability gates agentic analytics: a revenue metric answered faster is worth nothing if the number is wrong. Agents need a context layer that tells them where data lives, what it means, whether to use it, how to use it, where it came from, and what is similar. NVIDIA Auto Ontology is an open library that builds that layer from enterprise metadata, reconciles definitions across systems, and exposes it to any agent harness through MCP, CLI, and API. It complements the semantic models customers already own.&lt;/p&gt;
+&lt;p&gt;It enables developers to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Discover: generate enterprise ontologies from metadata; connect existing ontologies and semantic models; build AI-ready knowledge graphs.&lt;/li&gt;
+&lt;li&gt;Ground: give agents trusted business meaning for metrics, entities, and relationships; reconcile inconsistent definitions across systems.&lt;/li&gt;
+&lt;li&gt;Validate: check generated queries against certified definitions and lineage; return provenance with every answer.&lt;/li&gt;
+&lt;li&gt;Expose: serve context to any agent harness through MCP, CLI, and API.
+Learn: fold certified corrections and usage back into the ontology, so shared context improves with every question.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;benchmarks&#34;&gt;Benchmarks
+&lt;/h2&gt;&lt;p&gt;To run a text-to-SQL benchmark such as BIRD, refer to the
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/NVIDIA/ontology-sql-eval/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ontology SQL evaluation repository&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Licensing &amp;amp; contributions.&lt;/strong&gt; Auto Ontology is distributed under the
+&lt;a class=&#34;link&#34; href=&#34;./LICENSE&#34; &gt;Apache License 2.0&lt;/a&gt;. Third-party open-source components
+bundled, linked, or otherwise used by this project are listed in
+&lt;a class=&#34;link&#34; href=&#34;./THIRD_PARTY_NOTICES.md&#34; &gt;&lt;code&gt;THIRD_PARTY_NOTICES.md&lt;/code&gt;&lt;/a&gt;. &lt;strong&gt;This project
+is currently not accepting external contributions.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;img src=&#34;./docs/assets/arch.png&#34; alt=&#34;Auto Ontology Architecture&#34; width=&#34;800&#34;&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;key-features&#34;&gt;Key Features
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Natural-language querying&lt;/strong&gt; of structured data — questions are translated to
+SQL and executed against connected databases, powered by NVIDIA NIM.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Semantic catalog / ontology layer&lt;/strong&gt; over relational sources, stored in
+Postgres alongside the catalog it describes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Authentication &amp;amp; RBAC&lt;/strong&gt; —using &lt;a class=&#34;link&#34; href=&#34;https://github.com/better-auth/better-auth&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Better Auth&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Web UI&lt;/strong&gt; for chat, analysis, data catalog, analytics, and settings.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Flexible deployment&lt;/strong&gt; — Helm chart for Kubernetes or Docker Compose for a
+local stack.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;software-components&#34;&gt;Software Components
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Component&lt;/th&gt;
+					&lt;th&gt;Technology&lt;/th&gt;
+					&lt;th&gt;Role&lt;/th&gt;
+					&lt;th&gt;Default port&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Frontend&lt;/td&gt;
+					&lt;td&gt;Next.js 16 (React 19, TypeScript, Tailwind CSS 4), Better Auth, Prisma&lt;/td&gt;
+					&lt;td&gt;Web UI, authentication, API gateway&lt;/td&gt;
+					&lt;td&gt;3000&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Backend&lt;/td&gt;
+					&lt;td&gt;FastAPI (Python 3.12+), LangChain&lt;/td&gt;
+					&lt;td&gt;Chat / NL-to-SQL, catalog, datasource APIs&lt;/td&gt;
+					&lt;td&gt;3001&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Ingestion worker&lt;/td&gt;
+					&lt;td&gt;FastAPI (Python 3.12+)&lt;/td&gt;
+					&lt;td&gt;Ingests tabular data and writes embeddings&lt;/td&gt;
+					&lt;td&gt;3002&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Postgres + pgvector&lt;/td&gt;
+					&lt;td&gt;Relational Database&lt;/td&gt;
+					&lt;td&gt;App metadata, the catalog and ontology, vector store&lt;/td&gt;
+					&lt;td&gt;5432&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;HashiCorp Vault&lt;/td&gt;
+					&lt;td&gt;Optional&lt;/td&gt;
+					&lt;td&gt;Secure storage of connection credentials&lt;/td&gt;
+					&lt;td&gt;—&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;nvidia-nim&#34;&gt;NVIDIA NIM
+&lt;/h3&gt;&lt;p&gt;Auto Ontology uses NVIDIA NIM endpoints for inference — either the hosted
+&lt;a class=&#34;link&#34; href=&#34;https://build.nvidia.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NVIDIA API catalog&lt;/a&gt; (&lt;code&gt;integrate.api.nvidia.com&lt;/code&gt;) or
+self-hosted NIMs. The defaults in &lt;code&gt;.env.example&lt;/code&gt; are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;LLM:&lt;/strong&gt; &lt;code&gt;nvidia/nemotron-3.5-lightning-30b-a3b&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Embeddings:&lt;/strong&gt; &lt;code&gt;nvidia/nemotron-3-embed-1b&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reranking:&lt;/strong&gt; &lt;code&gt;nvidia/llama-nemotron-rerank-vl-1b-v2&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The endpoints and models are configured via the &lt;code&gt;DEFAULT_MODELS_ENDPOINT&lt;/code&gt;, &lt;code&gt;DEFAULT_MODELS_MODEL&lt;/code&gt;,
+&lt;code&gt;EMBED_ENDPOINT&lt;/code&gt;, and &lt;code&gt;EMBED_MODEL&lt;/code&gt; environment variables and require a
+&lt;code&gt;DEFAULT_MODELS_API_KEY&lt;/code&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;model-triplets&#34;&gt;Model triplets
+&lt;/h4&gt;&lt;p&gt;Each model role is configured by a &lt;strong&gt;triplet&lt;/strong&gt; of environment variables —
+&lt;code&gt;&amp;lt;PREFIX&amp;gt;_ENDPOINT&lt;/code&gt; (URL), &lt;code&gt;&amp;lt;PREFIX&amp;gt;_API_KEY&lt;/code&gt;, and &lt;code&gt;&amp;lt;PREFIX&amp;gt;_MODEL&lt;/code&gt;:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Prefix&lt;/th&gt;
+					&lt;th&gt;Role&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;DEFAULT_MODELS&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Shared default; every field below falls back to it.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;REASONING&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Main chat / NL-to-SQL model.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;NON_REASONING&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Lighter model used for entity extraction.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;EMBED&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Text-embedding model (must match between ingest and query).&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;RERANK&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Reranker used by the retrieval flow.&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;You can set a full triplet, only some of its fields, or none at all — any field
+left unset falls back to the matching &lt;code&gt;DEFAULT_MODELS_&amp;lt;FIELD&amp;gt;&lt;/code&gt;. So the simplest
+setup is to fill in &lt;code&gt;DEFAULT_MODELS_*&lt;/code&gt; and override per-triplet fields only where
+they differ (e.g. &lt;code&gt;EMBED_MODEL&lt;/code&gt;, &lt;code&gt;NON_REASONING_MODEL&lt;/code&gt;). &lt;code&gt;*_API_KEY&lt;/code&gt; also falls
+back to the legacy &lt;code&gt;NVIDIA_API_KEY&lt;/code&gt; for backward compatibility.&lt;/p&gt;
+&lt;h2 id=&#34;quickstart&#34;&gt;Quickstart
+&lt;/h2&gt;&lt;p&gt;This runs Auto-Ontology with Docker Compose against Wide World Importers,
+Microsoft&amp;rsquo;s sample sales database. You need Docker with Compose v2,
+&lt;a class=&#34;link&#34; href=&#34;https://docs.astral.sh/uv/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;uv&lt;/a&gt;, and an NVIDIA API key (&lt;code&gt;nvapi-...&lt;/code&gt;) from
+&lt;a class=&#34;link&#34; href=&#34;https://build.nvidia.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;build.nvidia.com&lt;/a&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Clone the repository and create &lt;code&gt;.env&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/NVIDIA/auto-ontology.git &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; auto-ontology
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp .env.example .env
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Then set these values in &lt;code&gt;.env&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DEFAULT_MODELS_API_KEY=nvapi-...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AUTH_SECRET=&amp;lt;a long random string, e.g. from openssl rand -base64 32&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;APP_URL=http://localhost:3000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;POSTGRES_PASSWORD=&amp;lt;a new password&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CONNECTION_STRINGS=postgresql://postgres:&amp;lt;the same password&amp;gt;@postgres:5432/wideworldimporters
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AUTO_ONTOLOGY_ADMIN_PASSWORD=&amp;lt;a new password&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PGADMIN_PASSWORD=&amp;lt;a new password&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Compose publishes Postgres, pgAdmin, and the web app on the host, so replace
+each default password before you start it. &lt;code&gt;.env.example&lt;/code&gt; also sets an API
+key per model role: replace each &lt;code&gt;nvapi-your-api-key-here&lt;/code&gt; with your key, or
+delete those lines so they fall back to &lt;code&gt;DEFAULT_MODELS_API_KEY&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Start Postgres and load the sample database. The seed script lives in
+auto-ontology-eval; pass it the Postgres password you set:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker compose up -d --wait postgres
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/NVIDIA/auto-ontology-eval.git ../auto-ontology-eval
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ../auto-ontology-eval &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; uv sync &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cp .env.example .env &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nv&#34;&gt;POSTGRES_PASSWORD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;the same password&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  uv run python scripts/seed/seed_wwi.py --database-name wideworldimporters --drop&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build and start the rest of the stack:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker compose up -d --build
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;a class=&#34;link&#34; href=&#34;http://localhost:3000&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:3000&lt;/a&gt; and sign in with &lt;code&gt;AUTO_ONTOLOGY_ADMIN_EMAIL&lt;/code&gt; and
+&lt;code&gt;AUTO_ONTOLOGY_ADMIN_PASSWORD&lt;/code&gt; from &lt;code&gt;.env&lt;/code&gt;. Go to &lt;strong&gt;Settings → Semantic
+Compilation&lt;/strong&gt; and turn it on. Ingestion runs at startup; compilation starts
+immediately and reports &lt;strong&gt;Semantic compilation is ready&lt;/strong&gt; when it finishes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ask a question in &lt;strong&gt;Chat&lt;/strong&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What was revenue for the USB food flash drive - sushi roll in Pennsylvania
+in June 2015?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The agent resolves &lt;em&gt;revenue&lt;/em&gt;, &lt;em&gt;product&lt;/em&gt;, and &lt;em&gt;state&lt;/em&gt; to terms in the
+ontology, follows their relationships to the joins it needs, and runs the
+query. The answer comes back with its SQL and the steps that produced it,
+so you can check the result against the source:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Answer:  Revenue for USB food flash drive - sushi roll in Pennsylvania in
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         June 2015 was $588.80, from 3 invoice lines.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SQL:     SELECT SUM(il.extendedprice) AS revenue, COUNT(*) AS invoice_lines
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         FROM sales.invoicelines il
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         JOIN sales.invoices i             ON il.invoiceid = i.invoiceid
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         JOIN warehouse.stockitems si      ON il.stockitemid = si.stockitemid
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         JOIN sales.customers c            ON i.customerid = c.customerid
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         JOIN application.cities ct        ON c.deliverycityid = ct.cityid
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         JOIN application.stateprovinces sp ON ct.stateprovinceid = sp.stateprovinceid
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         WHERE si.stockitemname = &amp;#39;USB food flash drive - sushi roll&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           AND sp.stateprovincename = &amp;#39;Pennsylvania&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           AND i.invoicedate &amp;gt;= &amp;#39;2015-06-01&amp;#39; AND i.invoicedate &amp;lt; &amp;#39;2015-07-01&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Steps:   Resolved terms: Invoice Line (revenue), Stock Item, State Province, Invoice
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         Joined: invoice line -&amp;gt; invoice -&amp;gt; customer -&amp;gt; city -&amp;gt; state province
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         Validated the filter values against the data, then executed
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ask something the data can&amp;rsquo;t answer. Wide World Importers has no
+advertising data, so a question about ad spend has nothing to resolve
+against. An agent connected through &lt;a class=&#34;link&#34; href=&#34;#mcp-server&#34; &gt;MCP&lt;/a&gt; checks answerability
+first and asks you to clarify:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;You:    What was return on ad spend for the sushi roll flash drive in June 2015?
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Agent:  check_answerable -&amp;gt; coverage 0.5; no term covers &amp;#34;ad spend&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Agent:  I can find revenue for that product, but this data has no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        advertising spend, so I can&amp;#39;t compute return on ad spend. Do you
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        want June 2015 revenue instead, or is ad spend tracked in another
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        source I should connect?
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If the UI loads without its left navigation after a restart, the browser is
+holding a stale session cookie. Clear site data for &lt;code&gt;localhost:3000&lt;/code&gt; and sign in
+again. For other setup failures, see the
+&lt;a class=&#34;link&#34; href=&#34;./skills/nvidia-ontology-setup/references/troubleshooting.md&#34; &gt;setup skill&amp;rsquo;s troubleshooting guide&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;how-it-works&#34;&gt;How it works
+&lt;/h2&gt;&lt;p&gt;
+&lt;img src=&#34;./docs/assets/arch.png&#34; alt=&#34;Auto-Ontology architecture&#34; width=&#34;800&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Auto-Ontology works in three stages: it generates an ontology, people certify
+it, and the agent answers questions from it.&lt;/p&gt;
+&lt;p&gt;The ontology holds three kinds of definition:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Terms.&lt;/strong&gt; Business concepts such as &lt;em&gt;Customer&lt;/em&gt; or &lt;em&gt;Invoice Line&lt;/em&gt;, each with a
+description and synonyms, mapped to the columns that hold them.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SQL attributes.&lt;/strong&gt; Reviewed SQL expressions under a term, such as a margin or
+a rolling total. The agent reuses them, so answers compute each measure the
+same way.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Relationships.&lt;/strong&gt; How tables join, including bridge tables, inferred from
+keys and from the data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Generate.&lt;/strong&gt; The ingestion service builds a first draft from the source
+databases:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Read sources: extract schemas, profile columns, and sample values into the
+catalog.&lt;/li&gt;
+&lt;li&gt;Name entities: extract terms table by table and map each to columns.&lt;/li&gt;
+&lt;li&gt;Resolve relationships: infer joins between tables and bridge tables, and
+suggest SQL attributes from query history.&lt;/li&gt;
+&lt;li&gt;Write the ontology: store terms, relationships, and SQL attributes in
+Postgres, with embeddings in pgvector for retrieval.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The result is a semantic graph you can explore in the UI. In this example, one
+compilation of Wide World Importers produced 31 terms; selecting &lt;strong&gt;Order&lt;/strong&gt; shows
+its description, related terms, mapped columns, and SQL attributes:&lt;/p&gt;
+&lt;p&gt;
+&lt;img src=&#34;./docs/assets/ontology-graph.png&#34; alt=&#34;Semantic graph of the Wide World Importers ontology, with the Order term selected&#34; width=&#34;800&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Certify.&lt;/strong&gt; People make the draft trustworthy:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Test with real questions in Chat, or with &lt;code&gt;check_answerable&lt;/code&gt; and
+&lt;code&gt;ask_question&lt;/code&gt; over MCP.&lt;/li&gt;
+&lt;li&gt;Refine terms, descriptions, and SQL attributes in the UI or through the API.&lt;/li&gt;
+&lt;li&gt;Certify names, descriptions, and SQL attributes once they&amp;rsquo;re correct.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Answer.&lt;/strong&gt; For each question, the agent:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Classifies the intent and extracts the entities the question names.&lt;/li&gt;
+&lt;li&gt;Retrieves candidate terms, columns, and SQL attributes by embedding search.&lt;/li&gt;
+&lt;li&gt;Writes SQL from those candidates.&lt;/li&gt;
+&lt;li&gt;Checks the filter values and the query against the database, repairing the
+SQL when a check fails.&lt;/li&gt;
+&lt;li&gt;Runs the query and returns the answer with its SQL and the steps it took.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;When the candidates can&amp;rsquo;t support a query, the agent reports that the question
+can&amp;rsquo;t be answered from this data. Predictive questions go to KumoRFM when it&amp;rsquo;s
+configured (see &lt;a class=&#34;link&#34; href=&#34;#predictions&#34; &gt;Predictions&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;In Chat, each answer shows its SQL, and you can view the rows, download them as
+CSV, or read them as a chart:&lt;/p&gt;
+&lt;p&gt;
+&lt;img src=&#34;./docs/assets/qa-example.png&#34; alt=&#34;Chat answering which products drive the most revenue and highest customer count, with the generated SQL and a revenue chart&#34; width=&#34;550&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Auto-Ontology is compatible with &lt;a class=&#34;link&#34; href=&#34;https://ossie.apache.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Apache Ossie&lt;/a&gt;, the
+open standard for exchanging semantic models. Ossie includes a
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/apache/ossie-converters/tree/main/nvidia&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;converter for Auto-Ontology&lt;/a&gt;,
+which Auto-Ontology uses to import and export model definitions as Ossie YAML.
+Use &lt;strong&gt;Settings → Import / Export&lt;/strong&gt;, or &lt;code&gt;POST /api/model/import&lt;/code&gt; and
+&lt;code&gt;POST /api/model/export&lt;/code&gt;.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Component&lt;/th&gt;
+					&lt;th&gt;Technology&lt;/th&gt;
+					&lt;th&gt;Role&lt;/th&gt;
+					&lt;th&gt;Port&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Frontend&lt;/td&gt;
+					&lt;td&gt;Next.js, Better Auth, Prisma&lt;/td&gt;
+					&lt;td&gt;Web UI, authentication, public API gateway&lt;/td&gt;
+					&lt;td&gt;3000&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Backend&lt;/td&gt;
+					&lt;td&gt;FastAPI (Python 3.12+), LangChain&lt;/td&gt;
+					&lt;td&gt;Text-to-SQL agent, catalog, ontology APIs&lt;/td&gt;
+					&lt;td&gt;3001&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Ingestion service&lt;/td&gt;
+					&lt;td&gt;FastAPI (Python 3.12+)&lt;/td&gt;
+					&lt;td&gt;Ingestion and semantic compilation&lt;/td&gt;
+					&lt;td&gt;3002&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;MCP server&lt;/td&gt;
+					&lt;td&gt;FastMCP&lt;/td&gt;
+					&lt;td&gt;Read-only agent tools over the public API&lt;/td&gt;
+					&lt;td&gt;3003&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Postgres + pgvector&lt;/td&gt;
+					&lt;td&gt;PostgreSQL 17&lt;/td&gt;
+					&lt;td&gt;Catalog, ontology, app data, vector store&lt;/td&gt;
+					&lt;td&gt;5432&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;HashiCorp Vault&lt;/td&gt;
+					&lt;td&gt;Optional&lt;/td&gt;
+					&lt;td&gt;Connection credential storage&lt;/td&gt;
+					&lt;td&gt;n/a&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Keep ports 3001 and 3002 on a private network. FastAPI trusts the user identity
+the frontend forwards in the &lt;code&gt;x-auto-ontology-user-id&lt;/code&gt; header, and the ingestion
+service&amp;rsquo;s endpoints (ingest, delete, reset, compile) have no authentication of
+their own. Clients go through the web app on port 3000.&lt;/p&gt;
+&lt;h2 id=&#34;use-it-from-your-agent&#34;&gt;Use it from your agent
+&lt;/h2&gt;&lt;h3 id=&#34;mcp-server&#34;&gt;MCP server
+&lt;/h3&gt;&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;https://modelcontextprotocol.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MCP&lt;/a&gt; server gives any MCP client read-only
+tools over the ontology. Each user signs in through Auto-Ontology, and every
+call runs with that user&amp;rsquo;s permissions.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Job&lt;/th&gt;
+					&lt;th&gt;Tools&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Readiness&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;check_readiness&lt;/code&gt;: can this deployment answer anything at all&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Terms&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;search_terms&lt;/code&gt;, &lt;code&gt;get_term&lt;/code&gt;, &lt;code&gt;get_term_columns&lt;/code&gt;, &lt;code&gt;get_term_sql_attributes&lt;/code&gt;, &lt;code&gt;get_sql_attribute&lt;/code&gt;, &lt;code&gt;describe_table&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Answerability&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;check_answerable&lt;/code&gt;: does the ontology cover this question&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Questions&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;ask_question&lt;/code&gt;: the answer, the SQL, and the rows&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Run the server against your deployment:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;AUTO_ONTOLOGY_API_URL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;http://localhost:3000 &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  uvx --from &lt;span class=&#34;s2&#34;&gt;&amp;#34;git+https://github.com/NVIDIA/auto-ontology.git#subdirectory=mcp&amp;#34;&lt;/span&gt; auto-ontology-mcp
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Cursor (&lt;code&gt;~/.cursor/mcp.json&lt;/code&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;mcpServers&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;auto-ontology&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;url&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://localhost:3003/mcp&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Claude Desktop (&lt;code&gt;claude_desktop_config.json&lt;/code&gt;), bridged with
+&lt;a class=&#34;link&#34; href=&#34;https://www.npmjs.com/package/mcp-remote&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;mcp-remote&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;mcpServers&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;auto-ontology&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;command&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;npx&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;args&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;mcp-remote&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://localhost:3003/mcp&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Restart the client after editing its config, then sign in when it prompts.
+Sign-in, configuration, and troubleshooting are in &lt;a class=&#34;link&#34; href=&#34;./docs/mcp.md&#34; &gt;docs/mcp.md&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;agent-skills&#34;&gt;Agent skills
+&lt;/h3&gt;&lt;p&gt;Three skills teach a coding agent to work with Auto-Ontology. Start at
+&lt;a class=&#34;link&#34; href=&#34;./AGENTS.md&#34; &gt;AGENTS.md&lt;/a&gt;.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Skill&lt;/th&gt;
+					&lt;th&gt;Covers&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;./skills/nvidia-ontology-setup/&#34; &gt;&lt;code&gt;nvidia-ontology-setup&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Install, connect sources, compile, prove readiness&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;./skills/nvidia-ontology-management/&#34; &gt;&lt;code&gt;nvidia-ontology-management&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Inspect, model, certify, import/export, and publish&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;./skills/nvidia-ontology-query/&#34; &gt;&lt;code&gt;nvidia-ontology-query&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Ask questions and validate the SQL, rows, and answer&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;rest-api&#34;&gt;REST API
+&lt;/h3&gt;&lt;p&gt;Ask a question with &lt;code&gt;POST /api/chat/completions&lt;/code&gt; on the web app&amp;rsquo;s origin. Mint
+an API token under the user menu → &lt;strong&gt;API Tokens&lt;/strong&gt;. The response is a
+server-sent event stream: a &lt;code&gt;result&lt;/code&gt; event carries the answer, and
+&lt;code&gt;data: [DONE]&lt;/code&gt; ends the stream.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -N http://localhost:3000/api/chat/completions &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;x-api-key: &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$AUTO_ONTOLOGY_API_TOKEN&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;question&amp;#34;: &amp;#34;How many orders shipped last week?&amp;#34;}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;json&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;os&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;requests&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://localhost:3000/api/chat/completions&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;headers&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;x-api-key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;os&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;environ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;AUTO_ONTOLOGY_API_TOKEN&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;json&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;question&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;How many orders shipped last week?&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;stream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;timeout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;900&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;raise_for_status&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;line&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;iter_lines&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;decode_unicode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;line&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;startswith&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;data:&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;continue&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;payload&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;line&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;removeprefix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;data:&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;payload&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;[DONE]&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;event&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;json&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;loads&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;payload&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;event&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;result&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;event&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;answer&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;response&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;event&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;answer&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;sql_code&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;elif&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;event&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;raise&lt;/span&gt; &lt;span class=&#34;ne&#34;&gt;RuntimeError&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;event&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Event types, multi-turn conversations, and the gateway trust boundary are in
+&lt;a class=&#34;link&#34; href=&#34;./docs/conversation-api.md&#34; &gt;docs/conversation-api.md&lt;/a&gt;. Every other operation is
+in the &lt;a class=&#34;link&#34; href=&#34;./docs/openapi/auto-ontology-api.json&#34; &gt;OpenAPI spec&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;connectors-models-and-predictions&#34;&gt;Connectors, models, and predictions
+&lt;/h2&gt;&lt;h3 id=&#34;sources&#34;&gt;Sources
+&lt;/h3&gt;&lt;p&gt;Auto-Ontology connects to ten engines:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PostgreSQL&lt;/li&gt;
+&lt;li&gt;MySQL&lt;/li&gt;
+&lt;li&gt;Databricks&lt;/li&gt;
+&lt;li&gt;Snowflake&lt;/li&gt;
+&lt;li&gt;ClickHouse&lt;/li&gt;
+&lt;li&gt;Trino&lt;/li&gt;
+&lt;li&gt;Apache Kyuubi&lt;/li&gt;
+&lt;li&gt;HeavyDB&lt;/li&gt;
+&lt;li&gt;DuckDB&lt;/li&gt;
+&lt;li&gt;SQLite&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Add connections under &lt;strong&gt;Settings → Connections&lt;/strong&gt;, or list them in
+&lt;code&gt;CONNECTION_STRINGS&lt;/code&gt;. DuckDB and SQLite are connection-string only. See
+&lt;a class=&#34;link&#34; href=&#34;./docs/connections.md&#34; &gt;docs/connections.md&lt;/a&gt; for URL schemes, scoping, and
+credential storage.&lt;/p&gt;
+&lt;h3 id=&#34;models&#34;&gt;Models
+&lt;/h3&gt;&lt;p&gt;Auto-Ontology uses four model roles. With an &lt;code&gt;nvapi-&lt;/code&gt; key, each defaults to an
+NVIDIA NIM on &lt;a class=&#34;link&#34; href=&#34;https://build.nvidia.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;build.nvidia.com&lt;/a&gt;:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Role&lt;/th&gt;
+					&lt;th&gt;Default model&lt;/th&gt;
+					&lt;th&gt;What it does&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;REASONING&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;nvidia/nemotron-3.5-lightning-30b-a3b&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Builds the ontology (terms, relationships, SQL attributes), writes each answer&amp;rsquo;s SQL and explanation, and grades answerability&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;NON_REASONING&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;nvidia/nemotron-3.5-lightning-30b-a3b&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Runs the agent&amp;rsquo;s faster steps: question intent, entity extraction, candidate selection, and SQL checks and repair&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;EMBED&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;nvidia/nemotron-3.5-embed-1b&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Indexes tables, columns, terms, and SQL attributes in pgvector, and matches each question to them&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;RERANK&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;nvidia/nemotron-3.5-rerank-8b&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Ranks candidate tables when compilation builds bridge-table SQL attributes&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;To use self-hosted NIM or any OpenAI-compatible endpoint, set
+&lt;code&gt;&amp;lt;ROLE&amp;gt;_ENDPOINT&lt;/code&gt;, &lt;code&gt;&amp;lt;ROLE&amp;gt;_API_KEY&lt;/code&gt;, and &lt;code&gt;&amp;lt;ROLE&amp;gt;_MODEL&lt;/code&gt;. Any field you leave
+unset falls back to &lt;code&gt;DEFAULT_MODELS_&amp;lt;FIELD&amp;gt;&lt;/code&gt;, so the simplest setup fills in
+&lt;code&gt;DEFAULT_MODELS_*&lt;/code&gt; and overrides only what differs. Use models
+that support structured output, and keep the embedding model the same for
+ingestion and queries. &lt;a class=&#34;link&#34; href=&#34;./.env.example&#34; &gt;&lt;code&gt;.env.example&lt;/code&gt;&lt;/a&gt; documents every
+variable.&lt;/p&gt;
+&lt;h3 id=&#34;predictions&#34;&gt;Predictions
+&lt;/h3&gt;&lt;p&gt;Set &lt;code&gt;KUMO_RFM_API_KEY&lt;/code&gt; and the agent routes predictive questions to KumoRFM.
+KumoRFM is a hosted service: to answer, the agent uploads the connected tables
+to it, capped by &lt;code&gt;KUMO_MAX_TABLES&lt;/code&gt; (20 by default) and
+&lt;code&gt;KUMO_MAX_ROWS_PER_TABLE&lt;/code&gt; (unlimited unless set). Review what that sends, and
+complete your organization&amp;rsquo;s data review, before you enable it.&lt;/p&gt;
+&lt;h2 id=&#34;integrate-with-us&#34;&gt;Integrate with us
+&lt;/h2&gt;&lt;p&gt;To integrate an agent platform, application, or storage provider with
+Auto-Ontology,
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/NVIDIA/auto-ontology/issues/new?template=integration.yml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open an integration request&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Auto-Ontology team maintains the code and doesn&amp;rsquo;t accept external pull
+requests. Integration requests and bug reports are welcome as issues. Report
+security vulnerabilities through &lt;a class=&#34;link&#34; href=&#34;./SECURITY.md&#34; &gt;SECURITY.md&lt;/a&gt;. Maintainer
+workflow is in &lt;a class=&#34;link&#34; href=&#34;./CONTRIBUTING.md&#34; &gt;CONTRIBUTING.md&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Topic&lt;/th&gt;
+					&lt;th&gt;Doc&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Kubernetes deployment with Helm&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;./DEPLOYMENT.md&#34; &gt;DEPLOYMENT.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Connections, scoping, and Vault&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;./docs/connections.md&#34; &gt;docs/connections.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Authentication, SSO, and API tokens&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;./docs/authentication.md&#34; &gt;docs/authentication.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Conversation API&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;./docs/conversation-api.md&#34; &gt;docs/conversation-api.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;MCP server&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;./docs/mcp.md&#34; &gt;docs/mcp.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;REST API&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;./docs/openapi/auto-ontology-api.json&#34; &gt;docs/openapi/auto-ontology-api.json&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;Auto-Ontology is licensed under the &lt;a class=&#34;link&#34; href=&#34;./LICENSE&#34; &gt;Apache License, Version 2.0&lt;/a&gt;.
+SPDX identifier: &lt;code&gt;Apache-2.0&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Each NVIDIA-authored source file in this repository carries an SPDX header
+of the form:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SPDX-FileCopyrightText: Copyright (c) 2024-2026, NVIDIA CORPORATION &amp;amp; AFFILIATES.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;All rights reserved.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SPDX-License-Identifier: Apache-2.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Third-party open-source components used by Auto-Ontology are enumerated, with their
+upstream licenses and project URLs, in
+&lt;a class=&#34;link&#34; href=&#34;./THIRD_PARTY_NOTICES.md&#34; &gt;&lt;code&gt;THIRD_PARTY_NOTICES.md&lt;/code&gt;&lt;/a&gt;. Components added by the
+container images are listed separately in
+&lt;a class=&#34;link&#34; href=&#34;./CONTAINER_THIRD_PARTY_NOTICES.md&#34; &gt;&lt;code&gt;CONTAINER_THIRD_PARTY_NOTICES.md&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;notice-and-disclaimer&#34;&gt;Notice and Disclaimer
+&lt;/h2&gt;&lt;p&gt;NOTICE AND DISCLAIMER: This software automatically retrieves, accesses or
+interacts with external materials. Those retrieved materials are not
+distributed with this software and are governed solely by separate terms,
+conditions and licenses. You are solely responsible for finding, reviewing and
+complying with all applicable terms, conditions, and licenses, and for
+verifying the security, integrity and suitability of any retrieved materials
+for your specific use case. This software is provided &amp;ldquo;AS IS&amp;rdquo;, without warranty
+of any kind. The author makes no representations or warranties regarding any
+retrieved materials, and assumes no liability for any losses, damages,
+liabilities or legal consequences from your use or inability to use this
+software or any retrieved materials. Use this software and the retrieved
+materials at your own risk.&lt;/p&gt;
+&lt;p&gt;External materials Auto-Ontology interacts with at run time:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Model endpoints you configure, by default the NVIDIA API catalog
+(&lt;code&gt;integrate.api.nvidia.com&lt;/code&gt;, &lt;code&gt;ai.api.nvidia.com&lt;/code&gt;), under each provider&amp;rsquo;s and
+model&amp;rsquo;s terms.&lt;/li&gt;
+&lt;li&gt;The KumoRFM service, only when &lt;code&gt;KUMO_RFM_API_KEY&lt;/code&gt; is set, under Kumo&amp;rsquo;s terms.&lt;/li&gt;
+&lt;li&gt;Your source databases, under your agreements for those systems.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;security&#34;&gt;Security
+&lt;/h2&gt;&lt;p&gt;Report security vulnerabilities as described in &lt;a class=&#34;link&#34; href=&#34;./SECURITY.md&#34; &gt;SECURITY.md&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

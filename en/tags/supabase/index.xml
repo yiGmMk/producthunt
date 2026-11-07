@@ -1,0 +1,1083 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Supabase on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/supabase/</link>
+        <description>Recent content in Supabase on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Tue, 24 Jun 2025 15:30:37 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/supabase/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>suna</title>
+        <link>https://producthunt.programnotes.cn/en/p/suna/</link>
+        <pubDate>Tue, 24 Jun 2025 15:30:37 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/suna/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA3NTAyMDV8&amp;ixlib=rb-4.1.0" alt="Featured image of post suna" /&gt;&lt;h1 id=&#34;kortix-aisuna&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/kortix-ai/suna&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;kortix-ai/suna&lt;/a&gt;
+&lt;/h1&gt;&lt;div align=&#34;center&#34;&gt;
+&lt;h1 id=&#34;suna---open-source-generalist-ai-agent&#34;&gt;Suna - Open Source Generalist AI Agent
+&lt;/h1&gt;&lt;p&gt;(that acts on your behalf)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/frontend/public/banner.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Suna Screenshot&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Suna is a fully open source AI assistant that helps you accomplish real-world tasks with ease. Through natural conversation, Suna becomes your digital companion for research, data analysis, and everyday challenges—combining powerful capabilities with an intuitive interface that understands what you need and delivers results.&lt;/p&gt;
+&lt;p&gt;Suna&amp;rsquo;s powerful toolkit includes seamless browser automation to navigate the web and extract data, file management for document creation and editing, web crawling and extended search capabilities, command-line execution for system tasks, website deployment, and integration with various APIs and services. These capabilities work together harmoniously, allowing Suna to solve your complex problems and automate workflows through simple conversations!&lt;/p&gt;
+&lt;p&gt;[
+&lt;a class=&#34;link&#34; href=&#34;https://discord.gg/Py6pCBUUPw&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://dcbadge.limes.pink/api/server/Py6pCBUUPw?style=flat&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Discord Follow&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://x.com/kortixai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/twitter/follow/kortixai&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Twitter Follow&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/kortix-ai/suna&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/github/stars/kortix-ai/suna&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GitHub Repo stars&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/kortix-ai/suna/labels/bug&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/github/issues/kortix-ai/suna&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Issues&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#project-architecture&#34; &gt;Suna Architecture&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#backend-api&#34; &gt;Backend API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#frontend&#34; &gt;Frontend&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#agent-docker&#34; &gt;Agent Docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#supabase-database&#34; &gt;Supabase Database&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#use-cases&#34; &gt;Use Cases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#self-hosting&#34; &gt;Self-Hosting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#acknowledgements&#34; &gt;Acknowledgements&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#license&#34; &gt;License&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;project-architecture&#34;&gt;Project Architecture
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/docs/images/diagram.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Architecture Diagram&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Suna consists of four main components:&lt;/p&gt;
+&lt;h3 id=&#34;backend-api&#34;&gt;Backend API
+&lt;/h3&gt;&lt;p&gt;Python/FastAPI service that handles REST endpoints, thread management, and LLM integration with Anthropic, and others via LiteLLM.&lt;/p&gt;
+&lt;h3 id=&#34;frontend&#34;&gt;Frontend
+&lt;/h3&gt;&lt;p&gt;Next.js/React application providing a responsive UI with chat interface, dashboard, etc.&lt;/p&gt;
+&lt;h3 id=&#34;agent-docker&#34;&gt;Agent Docker
+&lt;/h3&gt;&lt;p&gt;Isolated execution environment for every agent - with browser automation, code interpreter, file system access, tool integration, and security features.&lt;/p&gt;
+&lt;h3 id=&#34;supabase-database&#34;&gt;Supabase Database
+&lt;/h3&gt;&lt;p&gt;Handles data persistence with authentication, user management, conversation history, file storage, agent state, analytics, and real-time subscriptions.&lt;/p&gt;
+&lt;h2 id=&#34;use-cases&#34;&gt;Use Cases
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Competitor Analysis&lt;/strong&gt; (&lt;a class=&#34;link&#34; href=&#34;https://www.suna.so/share/5ee791ac-e19c-4986-a61c-6d0659d0e5bc&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch&lt;/a&gt;) - &lt;em&gt;&amp;ldquo;Analyze the market for my next company in the healthcare industry, located in the UK. Give me the major players, their market size, strengths, and weaknesses, and add their website URLs. Once done, generate a PDF report.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;VC List&lt;/strong&gt; (&lt;a class=&#34;link&#34; href=&#34;https://www.suna.so/share/804d20a3-cf1c-4adb-83bb-0e77cc6adeac&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch&lt;/a&gt;) - &lt;em&gt;&amp;ldquo;Give me the list of the most important VC Funds in the United States based on Assets Under Management. Give me website URLs, and if possible an email to reach them out.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Looking for Candidates&lt;/strong&gt; (&lt;a class=&#34;link&#34; href=&#34;https://www.suna.so/share/3ae581b0-2db8-4c63-b324-3b8d29762e74&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch&lt;/a&gt;) - &lt;em&gt;&amp;ldquo;Go on LinkedIn, and find me 10 profiles available - they are not working right now - for a junior software engineer position, who are located in Munich, Germany. They should have at least one bachelor&amp;rsquo;s degree in Computer Science or anything related to it, and 1-year of experience in any field/role.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Planning Company Trip&lt;/strong&gt; (&lt;a class=&#34;link&#34; href=&#34;https://www.suna.so/share/725e64a0-f1e2-4bb6-8a1f-703c2833fd72&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch&lt;/a&gt;) - &lt;em&gt;&amp;ldquo;Generate me a route plan for my company. We should go to California. We&amp;rsquo;ll be in 8 people. Compose the trip from the departure (Paris, France) to the activities we can do considering that the trip will be 7 days long - departure on the 21st of Apr 2025. Check the weather forecast and temperature for the upcoming days, and based on that, you can plan our activities (outdoor vs indoor).&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Working on Excel&lt;/strong&gt; (&lt;a class=&#34;link&#34; href=&#34;https://www.suna.so/share/128f23a4-51cd-42a6-97a0-0b458b32010e&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch&lt;/a&gt;) - &lt;em&gt;&amp;ldquo;My company asked me to set up an Excel spreadsheet with all the information about Italian lottery games (Lotto, 10eLotto, and Million Day). Based on that, generate and send me a spreadsheet with all the basic information (public ones).&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Automate Event Speaker Prospecting&lt;/strong&gt; (&lt;a class=&#34;link&#34; href=&#34;https://www.suna.so/share/7a7592ea-ed44-4c69-bcb5-5f9bb88c188c&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch&lt;/a&gt;) - &lt;em&gt;&amp;ldquo;Find 20 AI ethics speakers from Europe who&amp;rsquo;ve spoken at conferences in the past year. Scrapes conference sites, cross-references LinkedIn and YouTube, and outputs contact info + talk summaries.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Summarize and Cross-Reference Scientific Papers&lt;/strong&gt; (&lt;a class=&#34;link&#34; href=&#34;https://www.suna.so/share/c2081b3c-786e-4e7c-9bf4-46e9b23bb662&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch&lt;/a&gt;) - &lt;em&gt;&amp;ldquo;Research and compare scientific papers talking about Alcohol effects on our bodies during the last 5 years. Generate a report about the most important scientific papers talking about the topic I wrote before.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Research + First Contact Draft&lt;/strong&gt; (&lt;a class=&#34;link&#34; href=&#34;https://www.suna.so/share/6b6296a6-8683-49e5-9ad0-a32952d12c44&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch&lt;/a&gt;) - &lt;em&gt;&amp;ldquo;Research my potential customers (B2B) on LinkedIn. They should be in the clean tech industry. Find their websites and their email addresses. After that, based on the company profile, generate a personalized first contact email where I present my company which is offering consulting services to cleantech companies to maximize their profits and reduce their costs.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;SEO Analysis&lt;/strong&gt; (&lt;a class=&#34;link&#34; href=&#34;https://www.suna.so/share/43491cb0-cd6c-45f0-880c-66ddc8c4b842&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch&lt;/a&gt;) - &lt;em&gt;&amp;ldquo;Based on my website suna.so, generate an SEO report analysis, find top-ranking pages by keyword clusters, and identify topics I&amp;rsquo;m missing.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Generate a Personal Trip&lt;/strong&gt; (&lt;a class=&#34;link&#34; href=&#34;https://www.suna.so/share/37b31907-8349-4f63-b0e5-27ca597ed02a&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch&lt;/a&gt;) - &lt;em&gt;&amp;ldquo;Generate a personal trip to London, with departure from Bangkok on the 1st of May. The trip will last 10 days. Find an accommodation in the center of London, with a rating on Google reviews of at least 4.5. Find me interesting outdoor activities to do during the journey. Generate a detailed itinerary plan.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Recently Funded Startups&lt;/strong&gt; (&lt;a class=&#34;link&#34; href=&#34;https://www.suna.so/share/8b2a897e-985a-4d5e-867b-15239274f764&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch&lt;/a&gt;) - &lt;em&gt;&amp;ldquo;Go on Crunchbase, Dealroom, and TechCrunch, filter by Series A funding rounds in the SaaS Finance Space, and build a report with company data, founders, and contact info for outbound sales.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Scrape Forum Discussions&lt;/strong&gt; (&lt;a class=&#34;link&#34; href=&#34;https://www.suna.so/share/7d7a5d93-a20d-48b0-82cc-e9a876e9fd04&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Watch&lt;/a&gt;) - &lt;em&gt;&amp;ldquo;I need to find the best beauty centers in Rome, but I want to find them by using open forums that speak about this topic. Go on Google, and scrape the forums by looking for beauty center discussions located in Rome. Then generate a list of 5 beauty centers with the best comments about them.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;self-hosting&#34;&gt;Self-Hosting
+&lt;/h2&gt;&lt;p&gt;Suna can be self-hosted on your own infrastructure using our comprehensive setup wizard. For a complete guide to self-hosting Suna, please refer to our &lt;a class=&#34;link&#34; href=&#34;./docs/SELF-HOSTING.md&#34; &gt;Self-Hosting Guide&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The setup process includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Setting up a Supabase project for database and authentication&lt;/li&gt;
+&lt;li&gt;Configuring Redis for caching and session management&lt;/li&gt;
+&lt;li&gt;Setting up Daytona for secure agent execution&lt;/li&gt;
+&lt;li&gt;Integrating with LLM providers (Anthropic, OpenAI, OpenRouter, etc.)&lt;/li&gt;
+&lt;li&gt;Configuring web search and scraping capabilities (Tavily, Firecrawl)&lt;/li&gt;
+&lt;li&gt;Setting up QStash for background job processing and workflows&lt;/li&gt;
+&lt;li&gt;Configuring webhook handling for automated tasks&lt;/li&gt;
+&lt;li&gt;Optional integrations (RapidAPI, Smithery for custom agents)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;quick-start&#34;&gt;Quick Start
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Clone the repository&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/kortix-ai/suna.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; suna
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Run the setup wizard&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python setup.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The wizard will guide you through 14 steps with progress saving, so you can resume if interrupted.&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Start or stop the containers&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python start.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;manual-setup&#34;&gt;Manual Setup
+&lt;/h3&gt;&lt;p&gt;See the &lt;a class=&#34;link&#34; href=&#34;./docs/SELF-HOSTING.md&#34; &gt;Self-Hosting Guide&lt;/a&gt; for detailed manual setup instructions.&lt;/p&gt;
+&lt;p&gt;The wizard will guide you through all necessary steps to get your Suna instance up and running. For detailed instructions, troubleshooting tips, and advanced configuration options, see the &lt;a class=&#34;link&#34; href=&#34;./docs/SELF-HOSTING.md&#34; &gt;Self-Hosting Guide&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;contributing&#34;&gt;Contributing
+&lt;/h2&gt;&lt;p&gt;We welcome contributions from the community! Please see our &lt;a class=&#34;link&#34; href=&#34;./CONTRIBUTING.md&#34; &gt;Contributing Guide&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgements&#34;&gt;Acknowledgements
+&lt;/h2&gt;&lt;h3 id=&#34;main-contributors&#34;&gt;Main Contributors
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://x.com/adamcohenhillel&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Adam Cohen Hillel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://x.com/datlqqq&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Dat-lequoc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/markokraemer&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Marko Kraemer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;technologies&#34;&gt;Technologies
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://daytona.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Daytona&lt;/a&gt; - Secure agent execution environment&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://supabase.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Supabase&lt;/a&gt; - Database and authentication&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://playwright.dev/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Playwright&lt;/a&gt; - Browser automation&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://openai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenAI&lt;/a&gt; - LLM provider&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.anthropic.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Anthropic&lt;/a&gt; - LLM provider&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://tavily.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tavily&lt;/a&gt; - Search capabilities&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://firecrawl.dev/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Firecrawl&lt;/a&gt; - Web scraping capabilities&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://upstash.com/qstash&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;QStash&lt;/a&gt; - Background job processing and workflows&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://rapidapi.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RapidAPI&lt;/a&gt; - API services&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://smithery.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Smithery&lt;/a&gt; - Custom agent development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;Kortix Suna is licensed under the Apache License, Version 2.0. See &lt;a class=&#34;link&#34; href=&#34;./LICENSE&#34; &gt;LICENSE&lt;/a&gt; for the full license text.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>local-ai-packaged</title>
+        <link>https://producthunt.programnotes.cn/en/p/local-ai-packaged/</link>
+        <pubDate>Mon, 02 Jun 2025 15:31:52 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/local-ai-packaged/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1691520673295-9626f624869b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDg4NDk0MTN8&amp;ixlib=rb-4.1.0" alt="Featured image of post local-ai-packaged" /&gt;&lt;h1 id=&#34;coleam00local-ai-packaged&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/coleam00/local-ai-packaged&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;coleam00/local-ai-packaged&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;self-hosted-ai-package&#34;&gt;Self-hosted AI Package
+&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Self-hosted AI Package&lt;/strong&gt; is an open, docker compose template that
+quickly bootstraps a fully featured Local AI and Low Code development
+environment including Ollama for your local LLMs, Open WebUI for an interface to chat with your N8N agents, and Supabase for your database, vector store, and authentication.&lt;/p&gt;
+&lt;p&gt;This is Cole&amp;rsquo;s version with a couple of improvements and the addition of Supabase, Open WebUI, Flowise, Neo4j, Langfuse, SearXNG, and Caddy!
+Also, the local RAG AI Agent workflows from the video will be automatically in your
+n8n instance if you use this setup instead of the base one provided by n8n!&lt;/p&gt;
+&lt;h2 id=&#34;important-links&#34;&gt;Important Links
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://thinktank.ottomator.ai/c/local-ai/18&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Local AI community&lt;/a&gt; forum over in the oTTomator Think Tank&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/users/coleam00/projects/2/views/1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Kanban board&lt;/a&gt; for feature implementation and bug squashing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/n8n-io/self-hosted-ai-starter-kit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Original Local AI Starter Kit&lt;/a&gt; by the n8n team&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Download my N8N + OpenWebUI integration &lt;a class=&#34;link&#34; href=&#34;https://openwebui.com/f/coleam/n8n_pipe/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;directly on the Open WebUI site.&lt;/a&gt; (more instructions below)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/n8n-io/self-hosted-ai-starter-kit/main/assets/n8n-demo.gif&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;n8n.io - Screenshot&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Curated by &lt;a class=&#34;link&#34; href=&#34;https://github.com/n8n-io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/n8n-io&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://github.com/coleam00&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/coleam00&lt;/a&gt;, it combines the self-hosted n8n
+platform with a curated list of compatible AI products and components to
+quickly get started with building self-hosted AI workflows.&lt;/p&gt;
+&lt;h3 id=&#34;whats-included&#34;&gt;What’s included
+&lt;/h3&gt;&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://n8n.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Self-hosted n8n&lt;/strong&gt;&lt;/a&gt; - Low-code platform with over 400
+integrations and advanced AI components&lt;/p&gt;
+&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://supabase.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Supabase&lt;/strong&gt;&lt;/a&gt; - Open source database as a service -
+most widely used database for AI agents&lt;/p&gt;
+&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://ollama.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Ollama&lt;/strong&gt;&lt;/a&gt; - Cross-platform LLM platform to install
+and run the latest local LLMs&lt;/p&gt;
+&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://openwebui.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Open WebUI&lt;/strong&gt;&lt;/a&gt; - ChatGPT-like interface to
+privately interact with your local models and N8N agents&lt;/p&gt;
+&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://flowiseai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Flowise&lt;/strong&gt;&lt;/a&gt; - No/low code AI agent
+builder that pairs very well with n8n&lt;/p&gt;
+&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://qdrant.tech/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Qdrant&lt;/strong&gt;&lt;/a&gt; - Open source, high performance vector
+store with an comprehensive API. Even though you can use Supabase for RAG, this was
+kept unlike Postgres since it&amp;rsquo;s faster than Supabase so sometimes is the better option.&lt;/p&gt;
+&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://neo4j.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Neo4j&lt;/strong&gt;&lt;/a&gt; - Knowledge graph engine that powers tools like GraphRAG, LightRAG, and Graphiti&lt;/p&gt;
+&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://searxng.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;SearXNG&lt;/strong&gt;&lt;/a&gt; - Open source, free internet metasearch engine which aggregates
+results from up to 229 search services. Users are neither tracked nor profiled, hence the fit with the local AI package.&lt;/p&gt;
+&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://caddyserver.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Caddy&lt;/strong&gt;&lt;/a&gt; - Managed HTTPS/TLS for custom domains&lt;/p&gt;
+&lt;p&gt;✅ &lt;a class=&#34;link&#34; href=&#34;https://langfuse.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Langfuse&lt;/strong&gt;&lt;/a&gt; - Open source LLM engineering platform for agent observability&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites
+&lt;/h2&gt;&lt;p&gt;Before you begin, make sure you have the following software installed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Python&lt;/a&gt; - Required to run the setup script&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://desktop.github.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git/GitHub Desktop&lt;/a&gt; - For easy repository management&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.docker.com/products/docker-desktop/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker/Docker Desktop&lt;/a&gt; - Required to run all services&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation
+&lt;/h2&gt;&lt;p&gt;Clone the repository and navigate to the project directory:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone -b stable https://github.com/coleam00/local-ai-packaged.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; local-ai-packaged
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Before running the services, you need to set up your environment variables for Supabase following their &lt;a class=&#34;link&#34; href=&#34;https://supabase.com/docs/guides/self-hosting/docker#securing-your-services&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;self-hosting guide&lt;/a&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Make a copy of &lt;code&gt;.env.example&lt;/code&gt; and rename it to &lt;code&gt;.env&lt;/code&gt; in the root directory of the project&lt;/li&gt;
+&lt;li&gt;Set the following required environment variables:
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# N8N Configuration&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;N8N_ENCRYPTION_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;N8N_USER_MANAGEMENT_JWT_SECRET&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Supabase Secrets&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;POSTGRES_PASSWORD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;JWT_SECRET&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ANON_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;SERVICE_ROLE_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;DASHBOARD_USERNAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;DASHBOARD_PASSWORD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;POOLER_TENANT_ID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Neo4j Secrets&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############   &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;NEO4J_AUTH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Langfuse credentials&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;CLICKHOUSE_PASSWORD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;MINIO_ROOT_PASSWORD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;LANGFUSE_SALT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;NEXTAUTH_SECRET&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ENCRYPTION_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!IMPORTANT]
+Make sure to generate secure random values for all secrets. Never use the example values in production.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Set the following environment variables if deploying to production, otherwise leave commented:
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Caddy Config&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;############&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;N8N_HOSTNAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;n8n.yourdomain.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;WEBUI_HOSTNAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;:openwebui.yourdomain.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;FLOWISE_HOSTNAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;:flowise.yourdomain.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;SUPABASE_HOSTNAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;:supabase.yourdomain.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;OLLAMA_HOSTNAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;:ollama.yourdomain.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;SEARXNG_HOSTNAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;searxng.yourdomain.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;NEO4J_HOSTNAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;neo4j.yourdomain.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;LETSENCRYPT_EMAIL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;your-email-address
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;The project includes a &lt;code&gt;start_services.py&lt;/code&gt; script that handles starting both the Supabase and local AI services. The script accepts a &lt;code&gt;--profile&lt;/code&gt; flag to specify which GPU configuration to use.&lt;/p&gt;
+&lt;h3 id=&#34;for-nvidia-gpu-users&#34;&gt;For Nvidia GPU users
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python start_services.py --profile gpu-nvidia
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;[!NOTE]
+If you have not used your Nvidia GPU with Docker before, please follow the
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/ollama/ollama/blob/main/docs/docker.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ollama Docker instructions&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;for-amd-gpu-users-on-linux&#34;&gt;For AMD GPU users on Linux
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python start_services.py --profile gpu-amd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;for-mac--apple-silicon-users&#34;&gt;For Mac / Apple Silicon users
+&lt;/h3&gt;&lt;p&gt;If you&amp;rsquo;re using a Mac with an M1 or newer processor, you can&amp;rsquo;t expose your GPU to the Docker instance, unfortunately. There are two options in this case:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Run the starter kit fully on CPU:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python start_services.py --profile cpu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run Ollama on your Mac for faster inference, and connect to that from the n8n instance:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python start_services.py --profile none
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If you want to run Ollama on your mac, check the &lt;a class=&#34;link&#34; href=&#34;https://ollama.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ollama homepage&lt;/a&gt; for installation instructions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;for-mac-users-running-ollama-locally&#34;&gt;For Mac users running OLLAMA locally
+&lt;/h4&gt;&lt;p&gt;If you&amp;rsquo;re running OLLAMA locally on your Mac (not in Docker), you need to modify the OLLAMA_HOST environment variable in the n8n service configuration. Update the x-n8n section in your Docker Compose file as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;x-n8n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;amp;service-n8n&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# ... other configurations ...&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;environment&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# ... other environment variables ...&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;OLLAMA_HOST=host.docker.internal:11434&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Additionally, after you see &amp;ldquo;Editor is now accessible via: http://localhost:5678/&amp;rdquo;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Head to http://localhost:5678/home/credentials&lt;/li&gt;
+&lt;li&gt;Click on &amp;ldquo;Local Ollama service&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Change the base URL to &amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;http://host.docker.internal:11434/%22&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://host.docker.internal:11434/&#34;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;for-everyone-else&#34;&gt;For everyone else
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python start_services.py --profile cpu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;the-environment-argument&#34;&gt;The environment argument
+&lt;/h3&gt;&lt;p&gt;The &lt;strong&gt;start-services.py&lt;/strong&gt; script offers the possibility to pass one of two options for the environment argument, &lt;strong&gt;private&lt;/strong&gt; (default environment) and &lt;strong&gt;public&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;private:&lt;/strong&gt; you are deploying the stack in a safe environment, hence a lot of ports can be made accessible without having to worry about security&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;public:&lt;/strong&gt; the stack is deployed in a public environment, which means the attack surface should be made as small as possible. All ports except for 80 and 443 are closed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The stack initialized with&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   python start_services.py --profile gpu-nvidia --environment private
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;equals the one initialized with&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   python start_services.py --profile gpu-nvidia
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;deploying-to-the-cloud&#34;&gt;Deploying to the Cloud
+&lt;/h2&gt;&lt;h3 id=&#34;prerequisites-for-the-below-steps&#34;&gt;Prerequisites for the below steps
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Linux machine (preferably Unbuntu) with Nano, Git, and Docker installed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;extra-steps&#34;&gt;Extra steps
+&lt;/h3&gt;&lt;p&gt;Before running the above commands to pull the repo and install everything:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Run the commands as root to open up the necessary ports:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ufw enable&lt;/li&gt;
+&lt;li&gt;ufw allow 80 &amp;amp;&amp;amp; ufw allow 443&lt;/li&gt;
+&lt;li&gt;ufw reload&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;WARNING&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;ufw does not shield ports published by docker, because the iptables rules configured by docker are analyzed before those configured by ufw. There is a solution to change this behavior, but that is out of scope for this project. Just make sure that all traffic runs through the caddy service via port 443. Port 80 should only be used to redirect to port 443.&lt;/p&gt;
+&lt;hr&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run the &lt;strong&gt;start-services.py&lt;/strong&gt; script with the environment argument &lt;strong&gt;public&lt;/strong&gt; to indicate you are going to run the package in a public environment. The script will make sure that all ports, except for 80 and 443, are closed down, e.g.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   python start_services.py --profile gpu-nvidia --environment public
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Set up A records for your DNS provider to point your subdomains you&amp;rsquo;ll set up in the .env file for Caddy
+to the IP address of your cloud instance.&lt;/p&gt;
+&lt;p&gt;For example, A record to point n8n to [cloud instance IP] for n8n.yourdomain.com&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;-quick-start-and-usage&#34;&gt;⚡️ Quick start and usage
+&lt;/h2&gt;&lt;p&gt;The main component of the self-hosted AI starter kit is a docker compose file
+pre-configured with network and disk so there isn’t much else you need to
+install. After completing the installation steps above, follow the steps below
+to get started.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;a class=&#34;link&#34; href=&#34;http://localhost:5678/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:5678/&lt;/a&gt; in your browser to set up n8n. You’ll only
+have to do this once. You are NOT creating an account with n8n in the setup here,
+it is only a local account for your instance!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Open the included workflow:
+&lt;a class=&#34;link&#34; href=&#34;http://localhost:5678/workflow/vTN9y2dLXqTiDfPT&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:5678/workflow/vTN9y2dLXqTiDfPT&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create credentials for every service:&lt;/p&gt;
+&lt;p&gt;Ollama URL: http://ollama:11434&lt;/p&gt;
+&lt;p&gt;Postgres (through Supabase): use DB, username, and password from .env. IMPORTANT: Host is &amp;lsquo;db&amp;rsquo;
+Since that is the name of the service running Supabase&lt;/p&gt;
+&lt;p&gt;Qdrant URL: http://qdrant:6333 (API key can be whatever since this is running locally)&lt;/p&gt;
+&lt;p&gt;Google Drive: Follow &lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/integrations/builtin/credentials/google/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;this guide from n8n&lt;/a&gt;.
+Don&amp;rsquo;t use localhost for the redirect URI, just use another domain you have, it will still work!
+Alternatively, you can set up &lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;local file triggers&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select &lt;strong&gt;Test workflow&lt;/strong&gt; to start running the workflow.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If this is the first time you’re running the workflow, you may need to wait
+until Ollama finishes downloading Llama3.1. You can inspect the docker
+console logs to check on the progress.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Make sure to toggle the workflow as active and copy the &amp;ldquo;Production&amp;rdquo; webhook URL!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;a class=&#34;link&#34; href=&#34;http://localhost:3000/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:3000/&lt;/a&gt; in your browser to set up Open WebUI.
+You’ll only have to do this once. You are NOT creating an account with Open WebUI in the
+setup here, it is only a local account for your instance!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to Workspace -&amp;gt; Functions -&amp;gt; Add Function -&amp;gt; Give name + description then paste in
+the code from &lt;code&gt;n8n_pipe.py&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The function is also &lt;a class=&#34;link&#34; href=&#34;https://openwebui.com/f/coleam/n8n_pipe/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;published here on Open WebUI&amp;rsquo;s site&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click on the gear icon and set the n8n_url to the production URL for the webhook
+you copied in a previous step.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Toggle the function on and now it will be available in your model dropdown in the top left!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;To open n8n at any time, visit &lt;a class=&#34;link&#34; href=&#34;http://localhost:5678/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:5678/&lt;/a&gt; in your browser.
+To open Open WebUI at any time, visit &lt;a class=&#34;link&#34; href=&#34;http://localhost:3000/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:3000/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;With your n8n instance, you’ll have access to over 400 integrations and a
+suite of basic and advanced AI nodes such as
+&lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AI Agent&lt;/a&gt;,
+&lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Text classifier&lt;/a&gt;,
+and &lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.information-extractor/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Information Extractor&lt;/a&gt;
+nodes. To keep everything local, just remember to use the Ollama node for your
+language model and Qdrant as your vector store.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!NOTE]
+This starter kit is designed to help you get started with self-hosted AI
+workflows. While it’s not fully optimized for production environments, it
+combines robust components that work well together for proof-of-concept
+projects. You can customize it to meet your specific needs&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;upgrading&#34;&gt;Upgrading
+&lt;/h2&gt;&lt;p&gt;To update all containers to their latest versions (n8n, Open WebUI, etc.), run these commands:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Stop all services&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker compose -p localai -f docker-compose.yml --profile &amp;lt;your-profile&amp;gt; down
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Pull latest versions of all containers&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker compose -p localai -f docker-compose.yml --profile &amp;lt;your-profile&amp;gt; pull
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Start services again with your desired profile&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python start_services.py --profile &amp;lt;your-profile&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Replace &lt;code&gt;&amp;lt;your-profile&amp;gt;&lt;/code&gt; with one of: &lt;code&gt;cpu&lt;/code&gt;, &lt;code&gt;gpu-nvidia&lt;/code&gt;, &lt;code&gt;gpu-amd&lt;/code&gt;, or &lt;code&gt;none&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Note: The &lt;code&gt;start_services.py&lt;/code&gt; script itself does not update containers - it only restarts them or pulls them if you are downloading these containers for the first time. To get the latest versions, you must explicitly run the commands above.&lt;/p&gt;
+&lt;h2 id=&#34;troubleshooting&#34;&gt;Troubleshooting
+&lt;/h2&gt;&lt;p&gt;Here are solutions to common issues you might encounter:&lt;/p&gt;
+&lt;h3 id=&#34;supabase-issues&#34;&gt;Supabase Issues
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Supabase Pooler Restarting&lt;/strong&gt;: If the supabase-pooler container keeps restarting itself, follow the instructions in &lt;a class=&#34;link&#34; href=&#34;https://github.com/supabase/supabase/issues/30210#issuecomment-2456955578&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;this GitHub issue&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Supabase Analytics Startup Failure&lt;/strong&gt;: If the supabase-analytics container fails to start after changing your Postgres password, delete the folder &lt;code&gt;supabase/docker/volumes/db/data&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;If using Docker Desktop&lt;/strong&gt;: Go into the Docker settings and make sure &amp;ldquo;Expose daemon on tcp://localhost:2375 without TLS&amp;rdquo; is turned on&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Supabase Service Unavailable&lt;/strong&gt; - Make sure you don&amp;rsquo;t have an &amp;ldquo;@&amp;rdquo; character in your Postgres password! If the connection to the kong container is working (the container logs say it is receiving requests from n8n) but n8n says it cannot connect, this is generally the problem from what the community has shared. Other characters might not be allowed too, the @ symbol is just the one I know for sure!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;gpu-support-issues&#34;&gt;GPU Support Issues
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Windows GPU Support&lt;/strong&gt;: If you&amp;rsquo;re having trouble running Ollama with GPU support on Windows with Docker Desktop:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open Docker Desktop settings&lt;/li&gt;
+&lt;li&gt;Enable WSL 2 backend&lt;/li&gt;
+&lt;li&gt;See the &lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/desktop/features/gpu/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker GPU documentation&lt;/a&gt; for more details&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Linux GPU Support&lt;/strong&gt;: If you&amp;rsquo;re having trouble running Ollama with GPU support on Linux, follow the &lt;a class=&#34;link&#34; href=&#34;https://github.com/ollama/ollama/blob/main/docs/docker.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ollama Docker instructions&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-recommended-reading&#34;&gt;👓 Recommended reading
+&lt;/h2&gt;&lt;p&gt;n8n is full of useful content for getting started quickly with its AI concepts
+and nodes. If you run into an issue, go to &lt;a class=&#34;link&#34; href=&#34;#support&#34; &gt;support&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.n8n.io/ai-agents/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AI agents for developers: from theory to practice with n8n&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/advanced-ai/intro-tutorial/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tutorial: Build an AI workflow in n8n&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/advanced-ai/langchain/langchain-n8n/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Langchain Concepts in n8n&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/advanced-ai/examples/agent-chain-comparison/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Demonstration of key differences between agents and chains&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/advanced-ai/examples/understand-vector-databases/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;What are vector databases?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-video-walkthrough&#34;&gt;🎥 Video walkthrough
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/pOsO40HSbOo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cole&amp;rsquo;s Guide to the Local AI Starter Kit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-more-ai-templates&#34;&gt;🛍️ More AI templates
+&lt;/h2&gt;&lt;p&gt;For more AI workflow ideas, visit the &lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/?categories=AI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;official n8n AI template
+gallery&lt;/strong&gt;&lt;/a&gt;. From each workflow,
+select the &lt;strong&gt;Use workflow&lt;/strong&gt; button to automatically import the workflow into
+your local n8n instance.&lt;/p&gt;
+&lt;h3 id=&#34;learn-ai-key-concepts&#34;&gt;Learn AI key concepts
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/1954-ai-agent-chat/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AI Agent Chat&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/2026-ai-chat-with-any-data-source-using-the-n8n-workflow-tool/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AI chat with any data source (using the n8n workflow too)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/2098-chat-with-openai-assistant-by-adding-a-memory/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chat with OpenAI Assistant (by adding a memory)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/1980-use-an-open-source-llm-via-huggingface/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Use an open-source LLM (via HuggingFace)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/2165-chat-with-pdf-docs-using-ai-quoting-sources/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chat with PDF docs using AI (quoting sources)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/2006-ai-agent-that-can-scrape-webpages/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AI agent that can scrape webpages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;local-ai-templates&#34;&gt;Local AI templates
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/2341-build-a-tax-code-assistant-with-qdrant-mistralai-and-openai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tax Code Assistant&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/2339-breakdown-documents-into-study-notes-using-templating-mistralai-and-qdrant/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Breakdown Documents into Study Notes with MistralAI and Qdrant&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/2335-build-a-financial-documents-assistant-using-qdrant-and-mistralai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Financial Documents Assistant using Qdrant and&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;http://mistral.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt; Mistral.ai&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://n8n.io/workflows/2333-recipe-recommendations-with-qdrant-and-mistral/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Recipe Recommendations with Qdrant and Mistral&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tips--tricks&#34;&gt;Tips &amp;amp; tricks
+&lt;/h2&gt;&lt;h3 id=&#34;accessing-local-files&#34;&gt;Accessing local files
+&lt;/h3&gt;&lt;p&gt;The self-hosted AI starter kit will create a shared folder (by default,
+located in the same directory) which is mounted to the n8n container and
+allows n8n to access files on disk. This folder within the n8n container is
+located at &lt;code&gt;/data/shared&lt;/code&gt; &amp;ndash; this is the path you’ll need to use in nodes that
+interact with the local filesystem.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nodes that interact with the local filesystem&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read/Write Files from Disk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Local File Trigger&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Execute Command&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;📜 License
+&lt;/h2&gt;&lt;p&gt;This project (originally created by the n8n team, link at the top of the README) is licensed under the Apache License 2.0 - see the
+&lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt; file for details.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>supabase-mcp</title>
+        <link>https://producthunt.programnotes.cn/en/p/supabase-mcp/</link>
+        <pubDate>Thu, 10 Apr 2025 15:27:28 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/supabase-mcp/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1666032309795-9c48fd1a6d5a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQyNzAwMzJ8&amp;ixlib=rb-4.0.3" alt="Featured image of post supabase-mcp" /&gt;&lt;h1 id=&#34;supabase-communitysupabase-mcp&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/supabase-community/supabase-mcp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;supabase-community/supabase-mcp&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;supabase-mcp-server&#34;&gt;Supabase MCP Server
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;Connect your Supabase projects to Cursor, Claude, Windsurf, and other AI assistants.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/user-attachments/assets/3fce101a-b7d4-482f-9182-0be70ed1ad56&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;supabase-mcp-demo&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;https://modelcontextprotocol.io/introduction&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Model Context Protocol&lt;/a&gt; (MCP) standardizes how Large Language Models (LLMs) talk to external services like Supabase. It connects AI assistants directly with your Supabase project and allows them to perform tasks like managing tables, fetching config, and querying data. See the &lt;a class=&#34;link&#34; href=&#34;#tools&#34; &gt;full list of tools&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites
+&lt;/h2&gt;&lt;p&gt;You will need Node.js installed on your machine. You can check this by running:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;node -v
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If you don&amp;rsquo;t have Node.js installed, you can download it from &lt;a class=&#34;link&#34; href=&#34;https://nodejs.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;nodejs.org&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup
+&lt;/h2&gt;&lt;h3 id=&#34;1-personal-access-token-pat&#34;&gt;1. Personal access token (PAT)
+&lt;/h3&gt;&lt;p&gt;First, go to your &lt;a class=&#34;link&#34; href=&#34;https://supabase.com/dashboard/account/tokens&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Supabase settings&lt;/a&gt; and create a personal access token. Give it a name that describes its purpose, like &amp;ldquo;Cursor MCP Server&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;This will be used to authenticate the MCP server with your Supabase account. Make sure to copy the token, as you won&amp;rsquo;t be able to see it again.&lt;/p&gt;
+&lt;h3 id=&#34;2-configure-mcp-client&#34;&gt;2. Configure MCP client
+&lt;/h3&gt;&lt;p&gt;Next, configure your MCP client (such as Cursor) to use this server. Most MCP clients store the configuration as JSON in the following format:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;mcpServers&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;supabase&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;command&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;npx&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;args&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;-y&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;@supabase/mcp-server-supabase@latest&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;--access-token&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;personal-access-token&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Replace &lt;code&gt;&amp;lt;personal-access-token&amp;gt;&lt;/code&gt; with the token you created in step 1. Alternatively you can omit &lt;code&gt;--access-token&lt;/code&gt; and instead set the &lt;code&gt;SUPABASE_ACCESS_TOKEN&lt;/code&gt; environment variable to your personal access token (you will need to restart your MCP client after setting this). This allows you to keep your token out of version control if you plan on committing this configuration to a repository.&lt;/p&gt;
+&lt;p&gt;If you are on Windows, you will need to &lt;a class=&#34;link&#34; href=&#34;#windows&#34; &gt;prefix the command&lt;/a&gt;. If your MCP client doesn&amp;rsquo;t accept JSON, the direct CLI command is:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx -y @supabase/mcp-server-supabase@latest --access-token&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;personal-access-token&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Note: Do not run this command directly - this is meant to be executed by your MCP client in order to start the server. &lt;code&gt;npx&lt;/code&gt; automatically downloads the latest version of the MCP server from &lt;code&gt;npm&lt;/code&gt; and runs it in a single command.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;windows&#34;&gt;Windows
+&lt;/h4&gt;&lt;p&gt;On Windows, you will need to prefix the command with &lt;code&gt;cmd /c&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;mcpServers&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;supabase&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;command&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;cmd&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;args&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;/c&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;npx&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;-y&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;@supabase/mcp-server-supabase@latest&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;--access-token&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;personal-access-token&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;or with &lt;code&gt;wsl&lt;/code&gt; if you are running Node.js inside WSL:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;mcpServers&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;supabase&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;command&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;wsl&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;args&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;npx&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;-y&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;@supabase/mcp-server-supabase@latest&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;--access-token&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;personal-access-token&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Make sure Node.js is available in your system &lt;code&gt;PATH&lt;/code&gt; environment variable. If you are running Node.js natively on Windows, you can set this by running the following commands in your terminal.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Get the path to &lt;code&gt;npm&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm config get prefix
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add the directory to your PATH:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;setx PATH &lt;span class=&#34;s2&#34;&gt;&amp;#34;%PATH%;&amp;lt;path-to-dir&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Restart your MCP client.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;tools&#34;&gt;Tools
+&lt;/h2&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Note:&lt;/strong&gt; This server is pre-1.0, so expect some breaking changes between versions. Since LLMs will automatically adapt to the tools available, this shouldn&amp;rsquo;t affect most users.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The following Supabase tools are available to the LLM:&lt;/p&gt;
+&lt;h4 id=&#34;project-management&#34;&gt;Project Management
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;list_projects&lt;/code&gt;: Lists all Supabase projects for the user.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;get_project&lt;/code&gt;: Gets details for a project.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;create_project&lt;/code&gt;: Creates a new Supabase project.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pause_project&lt;/code&gt;: Pauses a project.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;restore_project&lt;/code&gt;: Restores a project.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;list_organizations&lt;/code&gt;: Lists all organizations that the user is a member of.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;get_organization&lt;/code&gt;: Gets details for an organization.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;database-operations&#34;&gt;Database Operations
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;list_tables&lt;/code&gt;: Lists all tables within the specified schemas.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;list_extensions&lt;/code&gt;: Lists all extensions in the database.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;list_migrations&lt;/code&gt;: Lists all migrations in the database.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;apply_migration&lt;/code&gt;: Applies a SQL migration to the database. SQL passed to this tool will be tracked within the database, so LLMs should use this for DDL operations (schema changes).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;execute_sql&lt;/code&gt;: Executes raw SQL in the database. LLMs should use this for regular queries that don&amp;rsquo;t change the schema.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;get_logs&lt;/code&gt;: Gets logs for a Supabase project by service type (api, postgres, edge functions, auth, storage, realtime). LLMs can use this to help with debugging and monitoring service performance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;project-configuration&#34;&gt;Project Configuration
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;get_project_url&lt;/code&gt;: Gets the API URL for a project.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;get_anon_key&lt;/code&gt;: Gets the anonymous API key for a project.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;branching-experimental-requires-a-paid-plan&#34;&gt;Branching (Experimental, requires a paid plan)
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;create_branch&lt;/code&gt;: Creates a development branch with migrations from production branch.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;list_branches&lt;/code&gt;: Lists all development branches.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;delete_branch&lt;/code&gt;: Deletes a development branch.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;merge_branch&lt;/code&gt;: Merges migrations and edge functions from a development branch to production.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;reset_branch&lt;/code&gt;: Resets migrations of a development branch to a prior version.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rebase_branch&lt;/code&gt;: Rebases development branch on production to handle migration drift.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;development-tools&#34;&gt;Development Tools
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;generate_typescript_types&lt;/code&gt;: Generates TypeScript types based on the database schema. LLMs can save this to a file and use it in their code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;cost-confirmation&#34;&gt;Cost Confirmation
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;get_cost&lt;/code&gt;: Gets the cost of a new project or branch for an organization.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;confirm_cost&lt;/code&gt;: Confirms the user&amp;rsquo;s understanding of new project or branch costs. This is required to create a new project or branch.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;other-mcp-servers&#34;&gt;Other MCP servers
+&lt;/h2&gt;&lt;h3 id=&#34;supabasemcp-server-postgrest&#34;&gt;&lt;code&gt;@supabase/mcp-server-postgrest&lt;/code&gt;
+&lt;/h3&gt;&lt;p&gt;The PostgREST MCP server allows you to connect your own users to your app via REST API. See more details on its &lt;a class=&#34;link&#34; href=&#34;./packages/mcp-server-postgrest&#34; &gt;project README&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://modelcontextprotocol.io/introduction&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Model Context Protocol&lt;/strong&gt;&lt;/a&gt;: Learn more about MCP and its capabilities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;This project is licensed under Apache 2.0. See the &lt;a class=&#34;link&#34; href=&#34;./LICENSE&#34; &gt;LICENSE&lt;/a&gt; file for details.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

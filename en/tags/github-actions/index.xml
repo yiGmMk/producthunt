@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>GitHub Actions on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/github-actions/</link>
+        <description>Recent content in GitHub Actions on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sat, 04 Jul 2026 17:31:32 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/github-actions/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>checkout</title>
+        <link>https://producthunt.programnotes.cn/en/p/checkout/</link>
+        <pubDate>Sat, 04 Jul 2026 17:31:32 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/checkout/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1540760647190-be47b2b4d2ae?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODMxNTczOTZ8&amp;ixlib=rb-4.1.0" alt="Featured image of post checkout" /&gt;&lt;h1 id=&#34;actionscheckout&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/actions/checkout&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;actions/checkout&lt;/a&gt;
+&lt;/h1&gt;&lt;p align=&#34;center&#34;&gt;
+  &lt;a href=&#34;https://github.com/actions/checkout&#34;&gt;&lt;img alt=&#34;GitHub Actions status&#34; src=&#34;https://github.com/actions/checkout/workflows/test-local/badge.svg&#34;&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;checkout-v2&#34;&gt;Checkout V2
+&lt;/h1&gt;&lt;p&gt;This action checks-out your repository under &lt;code&gt;$GITHUB_WORKSPACE&lt;/code&gt;, so your workflow can access it.&lt;/p&gt;
+&lt;p&gt;Only a single commit is fetched by default, for the ref/SHA that triggered the workflow. Set &lt;code&gt;fetch-depth: 0&lt;/code&gt; to fetch all history for all branches and tags. Refer &lt;a class=&#34;link&#34; href=&#34;https://help.github.com/en/articles/events-that-trigger-workflows&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt; to learn which commit &lt;code&gt;$GITHUB_SHA&lt;/code&gt; points to for different events.&lt;/p&gt;
+&lt;p&gt;The auth token is persisted in the local git config. This enables your scripts to run authenticated git commands. The token is removed during post-job cleanup. Set &lt;code&gt;persist-credentials: false&lt;/code&gt; to opt-out.&lt;/p&gt;
+&lt;p&gt;When Git 2.18 or higher is not in your PATH, falls back to the REST API to download the files.&lt;/p&gt;
+&lt;h1 id=&#34;whats-new&#34;&gt;What&amp;rsquo;s new
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Improved performance
+&lt;ul&gt;
+&lt;li&gt;Fetches only a single commit by default&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Script authenticated git commands
+&lt;ul&gt;
+&lt;li&gt;Auth token persisted in the local git config&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Supports SSH&lt;/li&gt;
+&lt;li&gt;Creates a local branch
+&lt;ul&gt;
+&lt;li&gt;No longer detached HEAD when checking out a branch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Improved layout
+&lt;ul&gt;
+&lt;li&gt;The input &lt;code&gt;path&lt;/code&gt; is always relative to $GITHUB_WORKSPACE&lt;/li&gt;
+&lt;li&gt;Aligns better with container actions, where $GITHUB_WORKSPACE gets mapped in&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Fallback to REST API download
+&lt;ul&gt;
+&lt;li&gt;When Git 2.18 or higher is not in the PATH, the REST API will be used to download the files&lt;/li&gt;
+&lt;li&gt;When using a job container, the container&amp;rsquo;s PATH is used&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Refer &lt;a class=&#34;link&#34; href=&#34;https://github.com/actions/checkout/blob/v1/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt; for previous versions.&lt;/p&gt;
+&lt;h1 id=&#34;usage&#34;&gt;Usage
+&lt;/h1&gt;&lt;!-- start usage --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;62
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;63
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;64
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;65
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;66
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;67
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;68
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;69
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;70
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;71
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- &lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Repository name with owner. For example, actions/checkout&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Default: ${{ github.repository }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;repository&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# The branch, tag or SHA to checkout. When checking out the repository that&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# triggered a workflow, this defaults to the reference or SHA for that event.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Otherwise, uses the default branch.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ref&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Personal access token (PAT) used to fetch the repository. The PAT is configured&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# with the local git config, which enables your scripts to run authenticated git&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# commands. The post-job step removes the PAT.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# We recommend using a service account with the least permissions necessary. Also&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# when generating a new PAT, select the least scopes necessary.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# [Learn more about creating and using encrypted secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Default: ${{ github.token }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;token&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# SSH key used to fetch the repository. The SSH key is configured with the local&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# git config, which enables your scripts to run authenticated git commands. The&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# post-job step removes the SSH key.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# We recommend using a service account with the least permissions necessary.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# [Learn more about creating and using encrypted secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ssh-key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Known hosts in addition to the user and global host key database. The public SSH&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# keys for a host may be obtained using the utility `ssh-keyscan`. For example,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# `ssh-keyscan github.com`. The public key for github.com is always implicitly&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# added.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ssh-known-hosts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Whether to perform strict host key checking. When true, adds the options&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# `StrictHostKeyChecking=yes` and `CheckHostIP=no` to the SSH command line. Use&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# the input `ssh-known-hosts` to configure additional hosts.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Default: true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ssh-strict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Whether to configure the token or SSH key with the local git config&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Default: true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;persist-credentials&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Relative path under $GITHUB_WORKSPACE to place the repository&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Whether to execute `git clean -ffdx &amp;amp;&amp;amp; git reset --hard HEAD` before fetching&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Default: true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;clean&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Number of commits to fetch. 0 indicates all history for all branches and tags.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Default: 1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;fetch-depth&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Whether to download Git-LFS files&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Default: false&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;lfs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Whether to checkout submodules: `true` to checkout submodules or `recursive` to&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# recursively checkout submodules.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# When the `ssh-key` input is not provided, SSH URLs beginning with&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# `git@github.com:` are converted to HTTPS.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Default: false&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;submodules&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;!-- end usage --&gt;
+&lt;h1 id=&#34;scenarios&#34;&gt;Scenarios
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#Fetch-all-history-for-all-tags-and-branches&#34; &gt;Fetch all history for all tags and branches&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#Checkout-a-different-branch&#34; &gt;Checkout a different branch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#Checkout-HEAD&#34; &gt;Checkout HEAD^&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#Checkout-multiple-repos-side-by-side&#34; &gt;Checkout multiple repos (side by side)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#Checkout-multiple-repos-nested&#34; &gt;Checkout multiple repos (nested)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#Checkout-multiple-repos-private&#34; &gt;Checkout multiple repos (private)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#Checkout-pull-request-HEAD-commit-instead-of-merge-commit&#34; &gt;Checkout pull request HEAD commit instead of merge commit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#Checkout-pull-request-on-closed-event&#34; &gt;Checkout pull request on closed event&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;fetch-all-history-for-all-tags-and-branches&#34;&gt;Fetch all history for all tags and branches
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- &lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;fetch-depth&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;checkout-a-different-branch&#34;&gt;Checkout a different branch
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- &lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ref&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;my-branch&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;checkout-head&#34;&gt;Checkout HEAD^
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- &lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;fetch-depth&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- &lt;span class=&#34;nt&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;git checkout HEAD^&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;checkout-multiple-repos-side-by-side&#34;&gt;Checkout multiple repos (side by side)
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Checkout&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Checkout tools repo&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;repository&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;my-org/my-tools&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;my-tools&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;checkout-multiple-repos-nested&#34;&gt;Checkout multiple repos (nested)
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Checkout&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Checkout tools repo&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;repository&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;my-org/my-tools&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;my-tools&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;checkout-multiple-repos-private&#34;&gt;Checkout multiple repos (private)
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Checkout&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Checkout private tools&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;repository&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;my-org/my-private-tools&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;token&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;${{ secrets.GitHub_PAT }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# `GitHub_PAT` is a secret that contains your PAT&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;my-tools&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;${{ github.token }}&lt;/code&gt; is scoped to the current repository, so if you want to checkout a different repository that is private you will need to provide your own &lt;a class=&#34;link&#34; href=&#34;https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PAT&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;checkout-pull-request-head-commit-instead-of-merge-commit&#34;&gt;Checkout pull request HEAD commit instead of merge commit
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- &lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ref&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;${{ github.event.pull_request.head.sha }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;checkout-pull-request-on-closed-event&#34;&gt;Checkout pull request on closed event
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;pull_request&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;branches&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;l&#34;&gt;master]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;types&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;l&#34;&gt;opened, synchronize, closed]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;jobs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;build&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;runs-on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ubuntu-latest&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;steps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id=&#34;license&#34;&gt;License
+&lt;/h1&gt;&lt;p&gt;The scripts and documentation in this project are released under the &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;MIT License&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>ai</title>
+        <link>https://producthunt.programnotes.cn/en/p/ai/</link>
+        <pubDate>Fri, 20 Jun 2025 15:29:37 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/ai/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1667582704408-aca85f4aea5a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTA0MDQ1MTR8&amp;ixlib=rb-4.1.0" alt="Featured image of post ai" /&gt;&lt;h1 id=&#34;cloudflareai&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/cloudflare/ai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cloudflare/ai&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;cloudflare-ai&#34;&gt;Cloudflare AI
+&lt;/h1&gt;&lt;p&gt;This repository contains various packages and demo apps related consuming Cloudflare&amp;rsquo;s AI offerings on the client-side. It is a monorepo powered by &lt;a class=&#34;link&#34; href=&#34;https://nx.dev/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nx&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://github.com/changesets/changesets&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Changesets&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;packages&#34;&gt;Packages
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;./packages/workers-ai-provider/README.md&#34; &gt;&lt;code&gt;workers-ai-provider&lt;/code&gt;&lt;/a&gt;: A custom provider that enables &lt;a class=&#34;link&#34; href=&#34;https://ai.cloudflare.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Workers AI&lt;/a&gt;&amp;rsquo;s models for the &lt;a class=&#34;link&#34; href=&#34;https://sdk.vercel.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vercel AI SDK&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;./packages/ai-gateway-provider/README.md&#34; &gt;&lt;code&gt;ai-gateway-provider&lt;/code&gt;&lt;/a&gt;: &lt;a class=&#34;link&#34; href=&#34;https://developers.cloudflare.com/ai-gateway/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AI Gateway&lt;/a&gt; Provider for &lt;a class=&#34;link&#34; href=&#34;https://sdk.vercel.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vercel AI SDK&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;local-development&#34;&gt;Local Development
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Clone the repository.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone git@github.com:cloudflare/ai.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install Dependencies.&lt;/p&gt;
+&lt;p&gt;From the root directory, run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ai
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pnpm install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Develop.&lt;/p&gt;
+&lt;p&gt;To start a development server for a specific app (for instance, &lt;code&gt;tool-calling&lt;/code&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pnpm nx dev tool-calling
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;em&gt;Ideally all commands should be executed from the repository root with the &lt;code&gt;pnpm nx&lt;/code&gt; prefix. This will ensure that the dependency graph is managed correctly, e.g. if one package relies on the output of an other.&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Testing and Linting.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;To execute your continuous integration tests for a specific project (e.g., &lt;code&gt;workers-ai-provider&lt;/code&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pnpm nx test:ci workers-ai-provider
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To lint a specific project:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pnpm nx lint my-project
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To run a more comprehensive sweep of tasks (lint, tests, type checks, build) against one or more projects:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pnpm nx run-many -t lint test:ci type-check build -p &lt;span class=&#34;s2&#34;&gt;&amp;#34;my-project other-project&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Other Nx Tasks.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;build&lt;/code&gt;: Compiles a project or a set of projects.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;test&lt;/code&gt;: Runs project tests in watch mode.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;test:ci&lt;/code&gt;: Runs tests in CI mode (no watch).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;test:smoke&lt;/code&gt;: Runs smoke tests.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;type-check&lt;/code&gt;: Performs TypeScript type checks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;creating-a-new-demo-app&#34;&gt;Creating a New Demo App
+&lt;/h2&gt;&lt;p&gt;In order to scaffold a new demo app, you can use the &lt;code&gt;create-demo&lt;/code&gt; script. This script will create a new demo app in the &lt;code&gt;demos&lt;/code&gt; directory.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pnpm create-demo &amp;lt;demo-name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;After creating the app, &lt;code&gt;pnpm install&lt;/code&gt; will be run to install the dependencies, and &lt;code&gt;pnpm nx cf-typegen &amp;lt;demo-name&amp;gt;&lt;/code&gt; will be run to generate the types for the demo app. Then it&amp;rsquo;s simply a case of starting the app with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pnpm nx dev &amp;lt;demo-name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;contributing&#34;&gt;Contributing
+&lt;/h2&gt;&lt;p&gt;We appreciate contributions and encourage pull requests. Please follow these guidelines:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Project Setup: After forking or cloning, install dependencies with &lt;code&gt;pnpm install&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Branching: Create a new branch for your feature or fix.&lt;/li&gt;
+&lt;li&gt;Making Changes:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Add or update relevant tests.&lt;/li&gt;
+&lt;li&gt;On pushing your changes, automated tasks will be run (courtesy of a Husky pre-push hook).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Changesets: If your changes affect a published package, run &lt;code&gt;pnpm changeset&lt;/code&gt; to create a changeset. Provide a concise summary of your changes in the changeset prompt.&lt;/li&gt;
+&lt;li&gt;Pull Request: Submit a pull request to the &lt;code&gt;main&lt;/code&gt; branch. The team will review it and merge if everything is in order.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;release-process&#34;&gt;Release Process
+&lt;/h2&gt;&lt;p&gt;This repository uses &lt;a class=&#34;link&#34; href=&#34;https://github.com/changesets/changesets&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Changesets&lt;/a&gt; to manage versioning and publication:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Changeset Creation&lt;/strong&gt;: Whenever a change is made that warrants a new release (e.g., bug fixes, new features), run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pnpm changeset
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Provide a clear description of the changes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Merging&lt;/strong&gt;: Once the changeset is merged into &lt;code&gt;main&lt;/code&gt;, our GitHub Actions workflows will:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Detect the changed packages, and create a Version Packages PR.&lt;/li&gt;
+&lt;li&gt;Increment versions automatically (via Changesets).&lt;/li&gt;
+&lt;li&gt;Publish any package that has a version number to npm. (Demos and other internal items do not require versioning.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Publication&lt;/strong&gt;: The release workflow (&lt;code&gt;.github/workflows/release.yml&lt;/code&gt;) will run on every push to &lt;code&gt;main&lt;/code&gt;. It ensures each published package is tagged and released on npm. Any package with a version field in its &lt;code&gt;package.json&lt;/code&gt; will be included in this process.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;For any queries or guidance, kindly open an issue or submit a pull request. We hope this structure and process help you to contribute effectively.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>act</title>
+        <link>https://producthunt.programnotes.cn/en/p/act/</link>
+        <pubDate>Thu, 22 May 2025 15:30:06 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/act/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1598455067671-f31973e95db2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDc4OTg4OTN8&amp;ixlib=rb-4.1.0" alt="Featured image of post act" /&gt;&lt;h1 id=&#34;nektosact&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/nektos/act&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;nektos/act&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/wiki/nektos/act/img/logo-150.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;act-logo&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;overview-push-join-the-chat-at-httpsgitterimnektosact-go-report-card-awesome-runners&#34;&gt;Overview &lt;a class=&#34;link&#34; href=&#34;https://github.com/nektos/act/actions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/nektos/act/workflows/push/badge.svg?branch=master&amp;amp;event=push&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;push&#34;
+	
+	
+&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://gitter.im/nektos/act?utm_source=badge&amp;amp;utm_medium=badge&amp;amp;utm_campaign=pr-badge&amp;amp;utm_content=badge&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://badges.gitter.im/nektos/act.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Join the chat at https://gitter.im/nektos/act&#34;
+	
+	
+&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://goreportcard.com/report/github.com/nektos/act&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://goreportcard.com/badge/github.com/nektos/act&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Go Report Card&#34;
+	
+	
+&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/jonico/awesome-runners&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/listed%20on-awesome--runners-blue.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;awesome-runners&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Think globally, &lt;code&gt;act&lt;/code&gt; locally&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Run your &lt;a class=&#34;link&#34; href=&#34;https://developer.github.com/actions/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Actions&lt;/a&gt; locally! Why would you want to do this? Two reasons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fast Feedback&lt;/strong&gt; - Rather than having to commit/push every time you want to test out the changes you are making to your &lt;code&gt;.github/workflows/&lt;/code&gt; files (or for any changes to embedded GitHub actions), you can use &lt;code&gt;act&lt;/code&gt; to run the actions locally. The &lt;a class=&#34;link&#34; href=&#34;https://help.github.com/en/actions/configuring-and-managing-workflows/using-environment-variables#default-environment-variables&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;environment variables&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://help.github.com/en/actions/reference/virtual-environments-for-github-hosted-runners#filesystems-on-github-hosted-runners&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;filesystem&lt;/a&gt; are all configured to match what GitHub provides.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Local Task Runner&lt;/strong&gt; - I love &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Make_%28software%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;make&lt;/a&gt;. However, I also hate repeating myself. With &lt;code&gt;act&lt;/code&gt;, you can use the GitHub Actions defined in your &lt;code&gt;.github/workflows/&lt;/code&gt; to replace your &lt;code&gt;Makefile&lt;/code&gt;!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!TIP]
+&lt;strong&gt;Now Manage and Run Act Directly From VS Code!&lt;/strong&gt;&lt;br/&gt;
+Check out the &lt;a class=&#34;link&#34; href=&#34;https://sanjulaganepola.github.io/github-local-actions-docs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Local Actions&lt;/a&gt; Visual Studio Code extension which allows you to leverage the power of &lt;code&gt;act&lt;/code&gt; to run and test workflows locally without leaving your editor.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;how-does-it-work&#34;&gt;How Does It Work?
+&lt;/h1&gt;&lt;p&gt;When you run &lt;code&gt;act&lt;/code&gt; it reads in your GitHub Actions from &lt;code&gt;.github/workflows/&lt;/code&gt; and determines the set of actions that need to be run. It uses the Docker API to either pull or build the necessary images, as defined in your workflow files and finally determines the execution path based on the dependencies that were defined. Once it has the execution path, it then uses the Docker API to run containers for each action based on the images prepared earlier. The &lt;a class=&#34;link&#34; href=&#34;https://help.github.com/en/actions/configuring-and-managing-workflows/using-environment-variables#default-environment-variables&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;environment variables&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#file-systems&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;filesystem&lt;/a&gt; are all configured to match what GitHub provides.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s see it in action with a &lt;a class=&#34;link&#34; href=&#34;https://github.com/cplee/github-actions-demo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;sample repo&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/wiki/nektos/act/quickstart/act-quickstart-2.gif&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Demo&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;act-user-guide&#34;&gt;Act User Guide
+&lt;/h1&gt;&lt;p&gt;Please look at the &lt;a class=&#34;link&#34; href=&#34;https://nektosact.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;act user guide&lt;/a&gt; for more documentation.&lt;/p&gt;
+&lt;h1 id=&#34;support&#34;&gt;Support
+&lt;/h1&gt;&lt;p&gt;Need help? Ask on &lt;a class=&#34;link&#34; href=&#34;https://gitter.im/nektos/act&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Gitter&lt;/a&gt;!&lt;/p&gt;
+&lt;h1 id=&#34;contributing&#34;&gt;Contributing
+&lt;/h1&gt;&lt;p&gt;Want to contribute to act? Awesome! Check out the &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;contributing guidelines&lt;/a&gt; to get involved.&lt;/p&gt;
+&lt;h2 id=&#34;manually-building-from-source&#34;&gt;Manually building from source
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Install Go tools 1.20+ - (&lt;a class=&#34;link&#34; href=&#34;https://golang.org/doc/install&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://golang.org/doc/install&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Clone this repo &lt;code&gt;git clone git@github.com:nektos/act.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run unit tests with &lt;code&gt;make test&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Build and install: &lt;code&gt;make install&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>element-plus</title>
+        <link>https://producthunt.programnotes.cn/en/p/element-plus/</link>
+        <pubDate>Sat, 10 May 2025 15:26:15 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/element-plus/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1676579300183-c53b23384218?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDY4NjE4OTR8&amp;ixlib=rb-4.1.0" alt="Featured image of post element-plus" /&gt;&lt;h1 id=&#34;element-pluselement-plus&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/element-plus/element-plus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;element-plus/element-plus&lt;/a&gt;
+&lt;/h1&gt;&lt;p align=&#34;center&#34;&gt;
+  &lt;img width=&#34;300px&#34; src=&#34;https://user-images.githubusercontent.com/10731096/95823103-9ce15780-0d5f-11eb-8010-1bd1b5910d4f.png&#34;&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;a href=&#34;https://www.npmjs.org/package/element-plus&#34;&gt;
+    &lt;img src=&#34;https://img.shields.io/npm/v/element-plus.svg&#34; /&gt;
+  &lt;/a&gt;
+  &lt;a href=&#34;https://github.com/element-plus/element-plus&#34;&gt;
+    &lt;img src=&#34;https://img.shields.io/badge/node-%20%3E%3D%2018-47c219&#34; /&gt;
+  &lt;/a&gt;
+  &lt;a href=&#34;https://npmcharts.com/compare/element-plus?minimal=true&#34;&gt;
+    &lt;img src=&#34;https://img.shields.io/npm/dm/element-plus.svg&#34; /&gt;
+  &lt;/a&gt;
+  &lt;a href=&#34;https://codecov.io/gh/element-plus/element-plus&#34;&gt;
+    &lt;img src=&#34;https://codecov.io/gh/element-plus/element-plus/branch/dev/graph/badge.svg?token=BKSBO2GLZI&#34;/&gt;
+  &lt;/a&gt;
+  &lt;br&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;Element Plus - A Vue.js 3 UI library&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;💪 Vue 3 Composition API&lt;/li&gt;
+&lt;li&gt;🔥 Written in TypeScript&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started
+&lt;/h2&gt;&lt;p&gt;Alright, for you to get started if you are looking for making Element Plus better you should keep reading.
+For developers that uses Element Plus to develop your website you should go ahead visit &lt;a class=&#34;link&#34; href=&#34;https://element-plus.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Getting Started&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;中国大陆&lt;a class=&#34;link&#34; href=&#34;https://cn.element-plus.org/zh-CN/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;加速镜像站点&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;breaking-change-list&#34;&gt;Breaking change list
+&lt;/h2&gt;&lt;p&gt;The first stable release of Element Plus suitable for use in production was released on February 07, 2022. The APIs is stable right now, and here&amp;rsquo;s also a full list about how to get upgraded from &lt;a class=&#34;link&#34; href=&#34;https://element.eleme.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Element UI&lt;/a&gt; to Element Plus.&lt;/p&gt;
+&lt;p&gt;You can find the breaking change list here: &lt;a class=&#34;link&#34; href=&#34;https://github.com/element-plus/element-plus/discussions/5658&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Breaking Change List&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;migration-tool-hammer_and_wrench&#34;&gt;Migration Tool :hammer_and_wrench:
+&lt;/h3&gt;&lt;p&gt;We have made a migration tool for you to migrate your project from &lt;a class=&#34;link&#34; href=&#34;https://element.eleme.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Element UI&lt;/a&gt; to Element Plus.&lt;/p&gt;
+&lt;p&gt;You can find the &lt;a class=&#34;link&#34; href=&#34;https://github.com/thx/gogocode/tree/main/packages/gogocode-plugin-element&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;gogo code migration tool&lt;/a&gt; here.&lt;/p&gt;
+&lt;p&gt;We have tested this on &lt;a class=&#34;link&#34; href=&#34;https://github.com/PanJiaChen/vue-element-admin&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vue Element Admin&lt;/a&gt;. You can find the transpiled code &lt;a class=&#34;link&#34; href=&#34;https://github.com/gogocodeio/vue-element-admin&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;playground&#34;&gt;Playground
+&lt;/h3&gt;&lt;p&gt;You can also try Element Plus out with the components built-in playground.&lt;/p&gt;
+&lt;h4 id=&#34;try-it-with-our-built-in-playground&#34;&gt;Try it with our built-in playground
+&lt;/h4&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://element-plus.run/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Playground&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;try-it-with-code-sandbox&#34;&gt;Try it with code sandbox
+&lt;/h4&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://codesandbox.io/s/element-plus-demo-dxtcr&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://codesandbox.io/static/img/play-codesandbox.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Edit element-plus&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;b&gt;Special thanks to the generous sponsorship by:&lt;/b&gt;
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;b&gt;Platinum Sponsors&lt;/b&gt;
+&lt;/p&gt;
+&lt;table align=&#34;center&#34; cellspacing=&#34;0&#34; cellpadding=&#34;0&#34;&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td align=&#34;center&#34; valign=&#34;middle&#34;&gt;
+        &lt;a href=&#34;https://melecode.com/&#34; target=&#34;_blank&#34;&gt;
+          &lt;img width=&#34;150px&#34; src=&#34;https://github.com/element-plus/element-plus/assets/82012629/9ca4269c-7545-4463-9bdc-8e5a1fbd0b08&#34;&gt;
+        &lt;/a&gt;
+      &lt;/td&gt;
+      &lt;td align=&#34;center&#34; valign=&#34;middle&#34;&gt;
+        &lt;a href=&#34;https://www.jnpfsoft.com/index.html?from=elementUI&#34; target=&#34;_blank&#34;&gt;
+          &lt;img width=&#34;150px&#34; src=&#34;https://github.com/element-plus/element-plus/assets/17680888/6a044d82-c393-48ab-90b8-de0d3aad1624&#34;&gt;
+        &lt;/a&gt;
+      &lt;/td&gt;
+      &lt;td align=&#34;center&#34; valign=&#34;middle&#34;&gt;
+        &lt;a href=&#34;https://vue.misboot.com/#/login?from=element-plus&#34; target=&#34;_blank&#34;&gt;
+          &lt;img width=&#34;150px&#34; src=&#34;https://github.com/user-attachments/assets/ade8e7e6-f9a4-45d5-9006-44b548599a8d&#34;&gt;
+        &lt;/a&gt;
+      &lt;/td&gt;
+      &lt;td align=&#34;center&#34; valign=&#34;middle&#34;&gt;
+        &lt;a href=&#34;http://github.crmeb.net/u/Element?from=element-plus&#34; target=&#34;_blank&#34;&gt;
+          &lt;img width=&#34;150px&#34; src=&#34;https://github.com/user-attachments/assets/18079452-986c-4c6e-84ec-fb6175c26567&#34;&gt;
+        &lt;/a&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;b&gt;Gold Sponsors&lt;/b&gt;
+&lt;/p&gt;
+&lt;table align=&#34;center&#34; cellspacing=&#34;0&#34; cellpadding=&#34;0&#34;&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td align=&#34;center&#34; valign=&#34;middle&#34;&gt;
+        &lt;a href=&#34;https://doc.buildadmin.com/?from=element-plus&#34; target=&#34;_blank&#34;&gt;
+          &lt;img width=&#34;130px&#34; src=&#34;https://user-images.githubusercontent.com/17680888/173179536-30e35fd1-cd5a-482a-bc41-9d5f0aa66fd4.png&#34;&gt;
+        &lt;/a&gt;
+      &lt;/td&gt;
+      &lt;td align=&#34;center&#34; valign=&#34;middle&#34;&gt;
+        &lt;a href=&#34;https://fantastic-admin.github.io/?from=element-plus&#34; target=&#34;_blank&#34;&gt;
+          &lt;img width=&#34;130px&#34; src=&#34;https://github.com/user-attachments/assets/0dbd9c02-d132-4c9e-a162-2b5a8728fc7e&#34;&gt;
+        &lt;/a&gt;
+      &lt;/td&gt;
+      &lt;td align=&#34;center&#34; valign=&#34;middle&#34;&gt;
+        &lt;a href=&#34;https://bit.dev/?from=element-ui&#34; target=&#34;_blank&#34;&gt;
+          &lt;img width=&#34;130px&#34; src=&#34;https://user-images.githubusercontent.com/10095631/41342907-e44e7196-6f2f-11e8-92f2-47702dc8f059.png&#34;&gt;
+        &lt;/a&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;translations&#34;&gt;Translations
+&lt;/h2&gt;&lt;p&gt;Element Plus is translated to multiple languages, you can click the badge to help up update the translation or apply to become
+a proofreader &lt;a class=&#34;link&#34; href=&#34;https://crowdin.com/project/element-plus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://badges.crowdin.net/element-plus/localized.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Crowdin&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For now we are only showing English and Chinese for resource reasons, but we are looking forward to translate it into more languages, please go to the link
+above and leave a message if you want to help translating Element Plus into your desired language.&lt;/p&gt;
+&lt;h3 id=&#34;how-to-help-translating&#34;&gt;How to help translating
+&lt;/h3&gt;&lt;p&gt;See how to help translating in &lt;a class=&#34;link&#34; href=&#34;https://element-plus.org/en-US/guide/translation.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Translating Element Plus&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;stay-tuned-eyes&#34;&gt;Stay tuned :eyes:
+&lt;/h2&gt;&lt;p&gt;Join our &lt;a class=&#34;link&#34; href=&#34;https://discord.com/invite/gXK9XNzW3X&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Discord&lt;/a&gt; to start communicating with everybody.&lt;/p&gt;
+&lt;h2 id=&#34;this-thing-is-broken-i-should-help-improve-it&#34;&gt;This thing is broken, I should help improve it!
+&lt;/h2&gt;&lt;p&gt;Awesommmmmmee. Everything you need is down below. You can also refer to
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/element-plus/element-plus/blob/dev/CONTRIBUTING.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CONTRIBUTING&lt;/a&gt; and
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/element-plus/element-plus/blob/dev/CODE_OF_CONDUCT.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Code of Conduct&lt;/a&gt;
+where you&amp;rsquo;ll find the same information listed below.&lt;/p&gt;
+&lt;h2 id=&#34;i-would-like-to-become-a-part-of-the-development-team&#34;&gt;I would like to become a part of the development team!
+&lt;/h2&gt;&lt;p&gt;Welcome :star_struck:! We are looking for talented developers to join us and making Element Plus better! If you care to join the development team, please
+reach out to us, you are more than welcomed to join us! :heart:&lt;/p&gt;
+&lt;p&gt;We are now lacking of experts of &lt;code&gt;Testing&lt;/code&gt;, &lt;code&gt;GitHub Actions&lt;/code&gt;, &lt;code&gt;PM&lt;/code&gt;, if you do feel like you can and willing to help us, please do reach out to us. :pray:&lt;/p&gt;
+&lt;h2 id=&#34;contributors&#34;&gt;Contributors
+&lt;/h2&gt;&lt;p&gt;This project exists thanks to all the people who contribute.&lt;/p&gt;
+&lt;p&gt;And thank you to all our backers! 🙏&lt;/p&gt;
+&lt;a href=&#34;https://github.com/element-plus/element-plus/graphs/contributors&#34;&gt;
+  &lt;img src=&#34;https://contrib.rocks/image?repo=element-plus/element-plus&#34; /&gt;
+&lt;/a&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;Element Plus is open source software licensed as
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/element-plus/element-plus/blob/master/LICENSE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MIT&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>english-note</title>
+        <link>https://producthunt.programnotes.cn/en/p/english-note/</link>
+        <pubDate>Fri, 02 May 2025 15:29:49 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/english-note/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1524474881054-1e155f1138d5?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDYxNzA4Njl8&amp;ixlib=rb-4.0.3" alt="Featured image of post english-note" /&gt;&lt;h1 id=&#34;hzpt-inet-clubenglish-note&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/hzpt-inet-club/english-note&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hzpt-inet-club/english-note&lt;/a&gt;
+&lt;/h1&gt;&lt;div align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://hzpt-inet-club.github.io/english-note/logo/logo.svg&#34;&gt;
+&lt;/div&gt;
+&lt;h1 align=&#34;center&#34;&gt;英语语法笔记&lt;/h1&gt;
+&lt;h2 id=&#34;背景&#34;&gt;背景
+&lt;/h2&gt;&lt;p&gt;这个项目由 &lt;a class=&#34;link&#34; href=&#34;https://github.com/xiaoxunyao&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;xiaoxunyao&lt;/a&gt; 提出，并且大量文本编辑的工作由他负责查阅资料和整理资料完成。在这个社会学会英语对于每位程序员的帮助都是有重大意义的，所以 &lt;a class=&#34;link&#34; href=&#34;https://github.com/hzpt-inet-club&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;INet&lt;/a&gt; 社区开始着手编写语法笔记，争取将复杂困难的语法知识点掰碎了告诉大家。&lt;/p&gt;
+&lt;p&gt;很多人对于英语都是不屑的，因为对于大部分的同学而言短期内不会考虑出国的问题，所以在社区内的不少同学英语都是较为薄弱的地方，这边可以参考&lt;a class=&#34;link&#34; href=&#34;https://zhihu.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎&lt;/a&gt;上的一则提问 &lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/55998388/answer/167024826&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;英语是否会成为开发工程师的发展瓶颈？&lt;/a&gt; 中 &lt;a class=&#34;link&#34; href=&#34;https://github.com/yyx990803&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Evan You&lt;/a&gt; 的回答。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不仅英语差会成为瓶颈，英语好还能成为优势，因为学习效率会比别人高。像我这样半路出家自学的人，只能靠英语了&amp;hellip;        &amp;ndash;尤雨溪&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;学习的方法很多大神都贡献了很多方法和方式，我们参考了 &lt;a class=&#34;link&#34; href=&#34;https://github.com/yyx990803&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Evan You&lt;/a&gt; 的方法，具体参考&lt;a class=&#34;link&#34; href=&#34;https://zhihu.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;知乎&lt;/a&gt;上的一则提问 &lt;a class=&#34;link&#34; href=&#34;https://www.zhihu.com/question/22027426/answer/21944576&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;上了大学还是完全不懂语法只想靠美剧或者英语书籍来的语感强行记忆，这种做法靠谱吗？&lt;/a&gt; ，方法如下&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;语法也不是完全不需要。或者说，你需要做到的是借助语法去理解你看不懂的句子，而不是去记忆语法本身。理解的过程就是培养语感的过程。从这个角度来说，一些基础的语法知识，比如时态、从句啥的，是培养语感的前提条件。但是，我的看法是语法过了初学者的坎之后就不再是需要刻意去研究的东西，非英语专业尤其如此。&lt;/p&gt;
+&lt;p&gt;我自己就是语感党，以前考试从来都靠语感，从来不会去记忆具体的语法规则。至于效果&amp;hellip; 我高二托福考了673（当时满分677），上海高考 146/150，还拿了个英语比赛的一等奖，高考可以加20分的那种。高中毕业后直接来美国读本科（参加高考是为了防止签证签不出），读硕士，工作，除了本科时候 Liberal Arts 的恐怖阅读量有点累，其他时候英语上从来没有什么障碍。&lt;/p&gt;
+&lt;p&gt;但是联系到题主的问题，语感的培养绝对不能只靠被动的接收，必须要靠主动的使用。只看书看剧带来的提高是非常有限的，语感只有在使用中才能提高。所以，除了看和听，还要写和说。写嘛，现在网络这么发达，多逛逛外国网站跟人交流或者辩论都可以，但务必保证发言要言之有物。之所以辩论会很有效是因为你需要很努力地思考组织语言去论证自己的正确性。说的方面，在缺少口语交流环境的情况下，背是一个机械但有效的方法。以我自己来说，实质性提高英语的主要手段是靠背新概念 + 背词汇&amp;hellip;&lt;/p&gt;
+&lt;p&gt;所以说到底还是没有什么捷径可走的，想提高英语总得有所付出。 &amp;ndash;尤雨溪&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这边完成了第一步，语法的练习，后续的方法可以采用&lt;a class=&#34;link&#34; href=&#34;https://www.baicizhan.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;百词斩&lt;/a&gt;和&lt;a class=&#34;link&#34; href=&#34;https://zh.wikipedia.org/zh-cn/%E6%96%B0%E6%A6%82%E5%BF%B5%E8%8B%B1%E8%AF%AD&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;新概念英语&lt;/a&gt;作为教材进行学习。&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装
+&lt;/h2&gt;&lt;h3 id=&#34;直接使用-推荐&#34;&gt;直接使用 「推荐」
+&lt;/h3&gt;&lt;p&gt;点击&lt;a class=&#34;link&#34; href=&#34;https://hzpt-inet-club.github.io/english-note/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;链接&lt;/a&gt;打开网页直接可以阅读和学习。&lt;/p&gt;
+&lt;h3 id=&#34;本地使用&#34;&gt;本地使用
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;下载到本地&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/hzpt-inet-club/english-note.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;进入更目录后&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yarn init
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;运行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yarn docs:dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;使用说明&#34;&gt;使用说明
+&lt;/h2&gt;&lt;p&gt;本项目使用 &lt;a class=&#34;link&#34; href=&#34;https://github.com/vuepress/vuepress-next&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VuePress&lt;/a&gt; 进行文档编写，并且使用 &lt;a class=&#34;link&#34; href=&#34;https://github.com/features/actions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Actions&lt;/a&gt; 全自动的部署在 &lt;a class=&#34;link&#34; href=&#34;https://pages.github.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Page&lt;/a&gt; 上。&lt;/p&gt;
+&lt;p&gt;所有的内容在 &lt;a class=&#34;link&#34; href=&#34;https://github.com/hzpt-inet-club/english-note/tree/master/docs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docs&lt;/a&gt; 文件夹内，全部内容都采用了 &lt;a class=&#34;link&#34; href=&#34;https://daringfireball.net/projects/markdown/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MarkDown&lt;/a&gt; 的形式进行编写。&lt;/p&gt;
+&lt;h2 id=&#34;维护者&#34;&gt;维护者
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/hzpt-inet&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@hzpt-inet&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/xiaoxunyao&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@xiaoxunyao&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;如何贡献&#34;&gt;如何贡献
+&lt;/h2&gt;&lt;p&gt;在 &lt;a class=&#34;link&#34; href=&#34;https://github.com/hzpt-inet-club&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;INet&lt;/a&gt; 社区中拥有一个 &lt;a class=&#34;link&#34; href=&#34;https://github.com/hzpt-inet-club/home&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;home&lt;/a&gt; 项目，详细的说明了如何进行贡献项目，简单来说&lt;code&gt;提出一个issue&lt;/code&gt;和&lt;code&gt;提出一个pull Request&lt;/code&gt; 都是可以的。&lt;/p&gt;
+&lt;h2 id=&#34;贡献&#34;&gt;贡献
+&lt;/h2&gt;&lt;h3 id=&#34;内容贡献&#34;&gt;内容贡献
+&lt;/h3&gt;&lt;p&gt;感谢!&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.baicizhan.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;百词斩&lt;/a&gt; 提供内容贡献&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vuepress/vuepress-next&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VuePress&lt;/a&gt; 提供项目贡献&lt;/p&gt;
+&lt;h3 id=&#34;人员贡献&#34;&gt;人员贡献
+&lt;/h3&gt;&lt;p&gt;感谢以下参与项目的人：&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/hzpt-inet-club/english-note/graphs/contributors&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://producthunt.programnotes.cn/contributors/contributors.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;contributors&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;使用许可&#34;&gt;使用许可
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/hzpt-inet-club/english-note/blob/master/LICENSE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MIT&lt;/a&gt; © hzpt-inet-club&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

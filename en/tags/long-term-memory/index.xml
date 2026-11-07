@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Long Term Memory on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/long-term-memory/</link>
+        <description>Recent content in Long Term Memory on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Mon, 19 Oct 2026 22:43:43 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/long-term-memory/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ai-memory</title>
+        <link>https://producthunt.programnotes.cn/en/p/ai-memory/</link>
+        <pubDate>Mon, 19 Oct 2026 22:43:43 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/ai-memory/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1674777114341-a158a1e41d01?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTI0MjA5Mzd8&amp;ixlib=rb-4.1.0" alt="Featured image of post ai-memory" /&gt;&lt;h1 id=&#34;akitaonrailsai-memory&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/akitaonrails/ai-memory&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;akitaonrails/ai-memory&lt;/a&gt;
+&lt;/h1&gt;&lt;p align=&#34;center&#34;&gt;
+  &lt;picture&gt;
+    &lt;source media=&#34;(prefers-color-scheme: dark)&#34; srcset=&#34;docs/logo-dark.png&#34;&gt;
+    &lt;img alt=&#34;ai-memory&#34; src=&#34;docs/logo-light.png&#34; width=&#34;480&#34;&gt;
+  &lt;/picture&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Long-term memory for AI coding agents. Quit Claude Code mid-task,
+start OpenAI Codex in the same directory, continue without
+re-explaining the architecture, the failed approaches, or the open
+questions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Website: &lt;a class=&#34;link&#34; href=&#34;https://aimemory.sh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;aimemory.sh&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://aimemory.sh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/website-aimemory.sh-blue&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Website&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/akitaonrails/ai-memory/releases/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/github/v/release/akitaonrails/ai-memory&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Release&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;rust-toolchain.toml&#34; &gt;&lt;img src=&#34;https://img.shields.io/badge/rust-1.95&amp;#43;-blue&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Rust&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;&lt;img src=&#34;https://img.shields.io/badge/license-MIT-blue&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;License&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;why-ai-memory&#34;&gt;Why ai-memory
+&lt;/h2&gt;&lt;p&gt;Your coding agent probably has a memory feature already. Claude Code takes its
+own notes, Cursor remembers some things, and every platform is adding more. They
+all have the same limits: the notes live on one machine, belong to one agent,
+and drop out of view when you switch tools or hand the work to a teammate.&lt;/p&gt;
+&lt;p&gt;ai-memory removes those limits.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;It follows you across agents.&lt;/strong&gt; More than twenty harnesses (Claude Code,
+Codex, Cursor, Gemini CLI, OpenCode, Grok, Devin, Kimi, Kiro, and others)
+feed one shared memory. Quit Claude Code mid-task, open Codex in the same
+directory, and the next agent picks up a handoff that says where you left
+off, what failed, and what is still open. Handoffs are a typed protocol:
+each one has an owner and is claimed exactly once.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;It can carry the session, not just a summary.&lt;/strong&gt; Start agents with
+&lt;code&gt;ai-memory run&lt;/code&gt;: quit Claude Code, run &lt;code&gt;ai-memory run codex&lt;/code&gt;, and Codex gets
+the shared workstream plus a private, temporary local projection of Claude&amp;rsquo;s
+visible native history for exact details the bounded startup packet omitted.
+The remote server receives only the harness and session identity, never the
+local transcript path or body. Direct harness launches behave exactly as
+before.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;It follows you across projects.&lt;/strong&gt; A small profile of how you usually
+work (your package manager, test layout, architecture habits) reaches
+every new repository at session start, so you stop re-explaining yourself.
+It sits below each repository&amp;rsquo;s rules file as a default. It is on by
+default for a single user, and on a shared server it is opt-in and private
+per person. See &lt;a class=&#34;link&#34; href=&#34;docs/cross-project-profile.md&#34; &gt;&lt;code&gt;docs/cross-project-profile.md&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;It follows you across machines.&lt;/strong&gt; Memory lives in a server you run, on
+the same laptop, a homelab box, or anywhere else, so the project you left
+on the desktop is the project you resume on the laptop, with the same
+knowledge and the same open questions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;It works for a team.&lt;/strong&gt; Point everyone at one server, and what one
+person&amp;rsquo;s sessions learn, everyone&amp;rsquo;s agents can retrieve. Knowledge is
+shared per project; personal handoffs stay personal. Multi-user auth,
+per-person attribution, and an audit log are built in and are not a paid tier.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Your memory is plain markdown.&lt;/strong&gt; The source of truth is a git-backed
+wiki of ordinary &lt;code&gt;.md&lt;/code&gt; files: &lt;code&gt;grep&lt;/code&gt; it, open it in Obsidian, edit it by
+hand, &lt;code&gt;rsync&lt;/code&gt; it. The database is a derived index that can always be
+rebuilt from the files. There is no vector store to maintain and no
+content locked in a binary blob.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;It captures the work itself, silently.&lt;/strong&gt; Lifecycle hooks record what
+happened (prompts, tool calls, session boundaries), sanitize it at a typed
+privacy boundary before anything is stored, and the server consolidates it
+into readable pages. You do not have to ask it to remember anything. The
+default path uses &lt;strong&gt;zero LLM calls&lt;/strong&gt;: capture, search, and handoffs all
+work with no API key.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;It ages memory without an LLM.&lt;/strong&gt; Memory decays on a schedule you can
+tune per tier, and memory you use decays &lt;em&gt;slower&lt;/em&gt;: opening a page,
+searching it, or reaching it through a link counts as use. When episodic
+notes go cold they can be compacted down to their durable facts (file
+paths, error codes, decisions) instead of dropped. Near-duplicates
+collapse into one, and likely contradictions get flagged, all with &lt;strong&gt;zero
+API calls&lt;/strong&gt;. Nothing is hard-deleted: the original stays in git and the
+version chain (&lt;code&gt;restore-page&lt;/code&gt; brings it back). Access-weighted retention is
+always on because it can only keep memory &lt;em&gt;longer&lt;/em&gt;. The parts that rewrite
+or drop content (compaction, dedup, per-tier curves) stay off by default
+until you turn them on.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;It can also &amp;ldquo;dream&amp;rdquo;, if you let it.&lt;/strong&gt; With an LLM configured, an opt-in
+background pass rewrites whole clusters of cold notes into single coherent
+pages while you are idle, and cancels as soon as you come back to work. It
+never deletes a source (the pre-merge versions stay reachable), it is off
+by default, and it has to pass a recall eval before it could become
+default behavior. Unless you ask for more, the zero-LLM path above is what
+runs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;It is honest about itself.&lt;/strong&gt; It ships as one self-contained binary.
+Purge commands say exactly what &amp;ldquo;deleted&amp;rdquo; means. The write ceiling
+(~700/s) is measured, not guessed. An audit log records every mutation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;how-it-works&#34;&gt;How it works
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;capture ──▶ consolidate ──▶ recall ──▶ handoff
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; hooks        session-end      search     next agent,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; observe      summaries as     + brief    any harness
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; silently     wiki pages       injection
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Agents emit sanitized observations through lifecycle hooks as you work.
+At session end, observations become coherent markdown pages in the
+project&amp;rsquo;s wiki (optionally LLM-written; useful even without). The next
+session, in any agent on any machine, gets a bounded brief and can search
+everything: full-text, entities, links, and (optionally) vectors, fused
+into one ranking. Cross-agent handoffs pass the baton explicitly.&lt;/p&gt;
+&lt;p&gt;The full design, including the invariants that keep multi-user and
+multi-session use safe, is in &lt;a class=&#34;link&#34; href=&#34;docs/ARCHITECTURE.md&#34; &gt;&lt;code&gt;docs/ARCHITECTURE.md&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;An optional &lt;a class=&#34;link&#34; href=&#34;docs/management-ui.md&#34; &gt;server-rendered management console&lt;/a&gt; provides
+user administration, session inspection and deletion, and personal MCP API keys.
+Build with &lt;code&gt;--features management-ui&lt;/code&gt; and start &lt;code&gt;serve --transport http --enable-management-ui&lt;/code&gt;; both compile-time and runtime opt-ins are required.&lt;/p&gt;
+&lt;h2 id=&#34;support-matrix&#34;&gt;Support matrix
+&lt;/h2&gt;&lt;p&gt;Every row below is a first-party integration (MCP registration, lifecycle
+hooks, or both) checked by CI. The full matrix with per-agent notes and
+caveats is in &lt;a class=&#34;link&#34; href=&#34;docs/support-matrix.md&#34; &gt;&lt;code&gt;docs/support-matrix.md&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Area&lt;/th&gt;
+					&lt;th&gt;Status&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Linux&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;NixOS module&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;macOS&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Windows via WSL2&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Native Windows&lt;/td&gt;
+					&lt;td&gt;Experimental&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Claude Code&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Codex&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Command Code&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Devin CLI&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;OpenCode (V1/V2 auto-detected)&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;OpenCode V2 compatibility aliases (&lt;code&gt;opencode2&lt;/code&gt;, &lt;code&gt;opencode-v2&lt;/code&gt;, &lt;code&gt;open-code2&lt;/code&gt;)&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Cursor&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Gemini CLI&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Oh My Pi / OMP&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Pi&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Crush&lt;/td&gt;
+					&lt;td&gt;Managed-only&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Managed workstreams&lt;/td&gt;
+					&lt;td&gt;Opt-in&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Claude Desktop&lt;/td&gt;
+					&lt;td&gt;MCP-only&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;OpenClaw&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Antigravity CLI&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Grok Build CLI&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Swival CLI&lt;/td&gt;
+					&lt;td&gt;MCP-only&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Zero&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;ZCode&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Kimi Code&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Kiro CLI&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Pool&lt;/td&gt;
+					&lt;td&gt;Hooks-only&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GitHub Copilot CLI&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Factory Droid&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Meta Muse Code&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;CodeBuddy Code&lt;/td&gt;
+					&lt;td&gt;Hooks-only&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;IBM Bob&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;VS Code Copilot&lt;/td&gt;
+					&lt;td&gt;MCP-only&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Zed&lt;/td&gt;
+					&lt;td&gt;MCP-only&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;DeepSeek Harness (DSH)&lt;/td&gt;
+					&lt;td&gt;MCP-only&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Prime Agent&lt;/td&gt;
+					&lt;td&gt;MCP-only&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Hermes Agent&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GrizzyBot&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;LLM/auth providers&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Embedding providers&lt;/td&gt;
+					&lt;td&gt;Supported&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;coming-from-another-tool&#34;&gt;Coming from another tool?
+&lt;/h2&gt;&lt;p&gt;Most agent-memory tools optimize for one thing: extracting atomic facts per
+turn, a temporal knowledge graph, an agent-editable memory OS, or a hosted
+context API. ai-memory is built around a &lt;strong&gt;git-backed markdown wiki as the
+source of truth&lt;/strong&gt;, with a derived index for retrieval. It captures
+automatically from lifecycle hooks, is shared across agents, machines, and
+people, and works with &lt;strong&gt;zero LLM calls by default&lt;/strong&gt;. This table shows what
+carries over from each tool and what you gain:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Coming from…&lt;/th&gt;
+					&lt;th&gt;What&amp;rsquo;s similar&lt;/th&gt;
+					&lt;th&gt;What you gain&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Mem0 / fact extractors&lt;/strong&gt; (LangMem)&lt;/td&gt;
+					&lt;td&gt;Automatic per-turn capture&lt;/td&gt;
+					&lt;td&gt;Memory compiles into readable &lt;strong&gt;pages&lt;/strong&gt; you own and edit, not opaque fact rows; retrieval fuses FTS + entity + graph (+ local vectors) with no cloud API key&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Zep / Graphiti&lt;/strong&gt; (temporal KG)&lt;/td&gt;
+					&lt;td&gt;Temporal reasoning, typed relations&lt;/td&gt;
+					&lt;td&gt;Bi-temporal-lite (&lt;code&gt;as_of&lt;/code&gt;, version-filtered search) and typed edges without standing up a graph database, in one binary&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;mcp-memory-service&lt;/strong&gt; (fact rows, SQLite)&lt;/td&gt;
+					&lt;td&gt;SQLite + local embeddings, hook capture, typed edges, honest numbers, and, on 2.4, per-tier decay curves, extractive compression, DBSCAN cold-cluster dedup, access reinforcement, and contradiction flagging&lt;/td&gt;
+					&lt;td&gt;Human-editable markdown &lt;strong&gt;pages&lt;/strong&gt; instead of fact-rows, cross-agent claim-once handoffs, and the same aging machinery done &lt;strong&gt;zero-LLM by default, reversibly&lt;/strong&gt; (supersede-not-delete + &lt;code&gt;restore-page&lt;/code&gt;), and &lt;strong&gt;off by default&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;basic-memory&lt;/strong&gt; (file-first markdown)&lt;/td&gt;
+					&lt;td&gt;Markdown-on-disk as the source of truth&lt;/td&gt;
+					&lt;td&gt;Automatic lifecycle capture and a derived FTS/entity/graph index on top, cross-agent handoffs, and multi-user sharing built in&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Claude Code built-in memory&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&amp;ldquo;Remember my project&amp;rdquo; convenience, zero setup&lt;/td&gt;
+					&lt;td&gt;Synced across machines and agents, searchable, team-capable, and captures tool lifecycle, unlike a per-laptop &lt;code&gt;MEMORY.md&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Hindsight / OpenViking&lt;/strong&gt; (LLM or VLM in the loop)&lt;/td&gt;
+					&lt;td&gt;Living pages / document memory with a background consolidation loop, plus, on 2.4, belief-strength confidence plus an opt-in LLM &amp;ldquo;dream&amp;rdquo; rewrite of cold clusters&lt;/td&gt;
+					&lt;td&gt;A self-contained binary that runs zero-LLM by default and keeps memory in markdown files that are the source of truth, not a mirror; claim-once handoffs; the dream/belief features are &lt;strong&gt;opt-in, off by default, and never delete a source&lt;/strong&gt; (vs a mandatory LLM loop)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Supermemory / LiquidLM&lt;/strong&gt; (hosted memory API)&lt;/td&gt;
+					&lt;td&gt;A managed second brain with automatic ingestion&lt;/td&gt;
+					&lt;td&gt;Git-versioned markdown you own, no required API spend, offline operation, and per-project team sharing; ai-memory remembers &lt;em&gt;this repo&lt;/em&gt;, not a general vault&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Across all of these, ai-memory gives you files you own (git-backed markdown),
+a zero-LLM default, one self-contained binary, sharing across agents, machines,
+and teams, automatic lifecycle capture, and typed, claim-once handoffs.
+Opt-in features (LLM consolidation, vector search, the &amp;ldquo;dream&amp;rdquo; consolidation
+pass, belief-strength in ranking) stay opt-in, and the zero-LLM aging path
+(per-tier decay, extractive compaction, dedup, contradiction flagging,
+access-weighted retention) works with no API key at all.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Built on the shoulders of:&lt;/strong&gt; the
+&lt;a class=&#34;link&#34; href=&#34;https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Karpathy LLM Wiki&lt;/a&gt;
+(compile-not-retrieve),
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/rohitg00/agentmemory&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;agentmemory&lt;/a&gt; (hook capture for coding
+agents), &lt;a class=&#34;link&#34; href=&#34;https://github.com/basicmachines-co/basic-memory&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;basic-memory&lt;/a&gt;
+(markdown-on-disk truth),
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/topoteretes/cognee&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cognee&lt;/a&gt; (pipeline composition and
+triplet embeddings),
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/NousResearch/hermes-agent&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hermes Agent&lt;/a&gt; (the
+self-improvement loop), and &lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2502.12110&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;A-MEM&lt;/a&gt;
+(Zettelkasten-style atomic notes).&lt;/p&gt;
+&lt;p&gt;The full comparison, covering where each approach wins, where ai-memory
+differs, and the published benchmark, is in &lt;a class=&#34;link&#34; href=&#34;docs/comparison.md&#34; &gt;How ai-memory compares&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick start
+&lt;/h2&gt;&lt;h3 id=&#34;linux-and-macos-two-commands-no-root&#34;&gt;Linux and macOS (two commands, no root)
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -fsSL https://github.com/akitaonrails/ai-memory/releases/latest/download/install.sh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ai-memory setup
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;install.sh&lt;/code&gt; downloads the release for your OS and CPU, checks it against the
+release&amp;rsquo;s published SHA-256 checksum (it refuses to install without a match),
+and links &lt;code&gt;~/.local/bin/ai-memory&lt;/code&gt;. &lt;code&gt;ai-memory setup&lt;/code&gt; then creates the data
+directory with a bearer token in an owner-only file, starts a per-user service
+(systemd &lt;code&gt;--user&lt;/code&gt; or a launchd LaunchAgent), and wires MCP, hooks and Agent
+Skills for every agent it finds, or the ones you name with &lt;code&gt;--agent&lt;/code&gt;. It shows
+the plan, with where it found each agent, and asks first: answer &lt;code&gt;y&lt;/code&gt;, or type
+the numbers of the agents to wire. &lt;code&gt;--plan&lt;/code&gt; prints the plan and changes
+nothing, &lt;code&gt;--web&lt;/code&gt; shows the plan as a page in your browser and applies the agents
+you tick there, &lt;code&gt;--yes&lt;/code&gt; skips the question, and running it again changes nothing.
+Afterwards, restart your agents and ask one of them &amp;ldquo;What do you remember
+about this project?&amp;rdquo; to see it answer through ai-memory. Details, the environment
+variables and how to verify the script before running it are in
+&lt;a class=&#34;link&#34; href=&#34;docs/install.md#one-step-native-install-installsh--ai-memory-setup&#34; &gt;&lt;code&gt;docs/install.md&lt;/code&gt;&lt;/a&gt;.
+An AI agent installing ai-memory for you can follow
+&lt;a class=&#34;link&#34; href=&#34;INSTALL_FOR_AGENTS.md&#34; &gt;&lt;code&gt;INSTALL_FOR_AGENTS.md&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Claude Code and Codex users can wire their agent as a marketplace plugin
+instead (the binary is still installed as above):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;claude plugin marketplace add akitaonrails/ai-memory &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; claude plugin install ai-memory@ai-memory
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;codex plugin marketplace add akitaonrails/ai-memory &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; codex plugin add ai-memory@ai-memory
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Codex then asks you to trust the hooks in &lt;code&gt;/hooks&lt;/code&gt;. See
+&lt;a class=&#34;link&#34; href=&#34;docs/install.md#marketplace-plugins&#34; &gt;Marketplace plugins&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;windows-two-commands-no-admin&#34;&gt;Windows (two commands, no admin)
+&lt;/h3&gt;&lt;p&gt;In PowerShell:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;irm &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;github&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;akitaonrails&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;ai-memory&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;releases&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;latest&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;download&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;install&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;ps1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;iex
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;ai-memory&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;setup&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;install.ps1&lt;/code&gt; checks the release zip against its published SHA-256 checksum,
+unpacks it under &lt;code&gt;%LOCALAPPDATA%\Programs\ai-memory&lt;/code&gt; and adds that directory
+to your user &lt;code&gt;PATH&lt;/code&gt;. &lt;code&gt;ai-memory setup&lt;/code&gt; then does what it does on Linux and
+macOS, with a logon entry in place of the service: the server starts when you
+sign in, with no console window, and restarts if it fails. Details and the
+other Windows setups (WSL2, Docker Desktop, a real Windows service) are in
+&lt;a class=&#34;link&#34; href=&#34;docs/windows.md&#34; &gt;&lt;code&gt;docs/windows.md&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;arch-linux-aur&#34;&gt;Arch Linux (AUR)
+&lt;/h3&gt;&lt;p&gt;For native Arch installs, use the AUR packages. They install
+&lt;code&gt;/usr/bin/ai-memory&lt;/code&gt;, packaged hook sources, and both system-level and
+user-level systemd units.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yay -S ai-memory-bin    &lt;span class=&#34;c1&#34;&gt;# prebuilt Linux x86_64/aarch64 binary&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yay -S ai-memory        &lt;span class=&#34;c1&#34;&gt;# builds from source&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ai-memory setup         &lt;span class=&#34;c1&#34;&gt;# data dir, user service, agents, self-check&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;fedora-rpm&#34;&gt;Fedora (RPM)
+&lt;/h3&gt;&lt;p&gt;Download the &lt;code&gt;x86_64&lt;/code&gt; or &lt;code&gt;aarch64&lt;/code&gt; RPM from the
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/akitaonrails/ai-memory/releases/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;latest release&lt;/a&gt;,
+then install it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dnf install ./ai-memory-*.rpm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;On a single-user workstation, &lt;code&gt;ai-memory setup&lt;/code&gt; then does the rest, as on the
+two-command path above: data dir and token, a user service, the agents it
+finds, and a self-check.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ai-memory setup
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;System service installs use &lt;code&gt;/var/lib/ai-memory&lt;/code&gt; and &lt;code&gt;/etc/ai-memory/&lt;/code&gt; via the
+packaged unit. Full user-service, system-service, auth, and provider setup is in
+&lt;a class=&#34;link&#34; href=&#34;docs/install.md#arch-linux-native-packages-aur&#34; &gt;&lt;code&gt;docs/install.md#arch-linux-native-packages-aur&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;macos-menu-bar-app&#34;&gt;macOS (menu bar app)
+&lt;/h3&gt;&lt;p&gt;A self-contained &lt;code&gt;.app&lt;/code&gt; that bundles the native &lt;code&gt;ai-memory&lt;/code&gt; binary and
+&lt;code&gt;hooks/&lt;/code&gt; tree, starts the existing LaunchAgent, and opens &lt;code&gt;/web&lt;/code&gt;,
+&lt;code&gt;ai-memory status&lt;/code&gt;, and &lt;code&gt;config.toml&lt;/code&gt; from the menu bar. Wiki, SQLite,
+config, and models stay in &lt;code&gt;~/Library/Application Support/ai-memory&lt;/code&gt;, so
+replacing the app is an update and does not rewrite that tree.&lt;/p&gt;
+&lt;p&gt;Needs a Rust toolchain and Xcode / Swift 6 (same as a source build):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/akitaonrails/ai-memory
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ai-memory
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./companions/ai-memory-macos/build.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;open &lt;span class=&#34;s2&#34;&gt;&amp;#34;companions/ai-memory-macos/dist/AI Memory.app&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Drag &lt;strong&gt;AI Memory.app&lt;/strong&gt; to &lt;code&gt;/Applications&lt;/code&gt;, then &lt;strong&gt;Install &amp;amp; Start Server&lt;/strong&gt;
+from the menu extra (no Dock icon). The app reads the bearer token &lt;code&gt;init&lt;/code&gt;
+wrote into its data dir, so the status item turns green on its own. Then wire
+your agents with the bundled binary; &lt;code&gt;--no-service&lt;/code&gt; leaves the app&amp;rsquo;s
+LaunchAgent in charge:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;BIN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/Applications/AI Memory.app/Contents/Resources/runtime/ai-memory&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$BIN&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; setup --no-service
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Prebuilt tarball and launchd-without-the-app paths:
+&lt;a class=&#34;link&#34; href=&#34;docs/macos.md&#34; &gt;&lt;code&gt;docs/macos.md&lt;/code&gt;&lt;/a&gt;. Companion details:
+&lt;a class=&#34;link&#34; href=&#34;companions/ai-memory-macos&#34; &gt;&lt;code&gt;companions/ai-memory-macos&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;docker&#34;&gt;Docker
+&lt;/h3&gt;&lt;p&gt;You need: Docker or Podman + an agent CLI from the &lt;a class=&#34;link&#34; href=&#34;#support-matrix&#34; &gt;Support Matrix&lt;/a&gt;,
+or anything else that speaks MCP.&lt;/p&gt;
+&lt;p&gt;The published Docker image includes &lt;code&gt;linux/amd64&lt;/code&gt; and &lt;code&gt;linux/arm64&lt;/code&gt; variants,
+so Apple Silicon Macs and ARM64 Linux hosts can pull &lt;code&gt;akitaonrails/ai-memory&lt;/code&gt;
+without &lt;code&gt;--platform linux/amd64&lt;/code&gt; emulation.&lt;/p&gt;
+&lt;p&gt;The Docker quick-start below has &lt;strong&gt;no authentication&lt;/strong&gt;: the container never
+runs &lt;code&gt;init&lt;/code&gt;, so it starts without a token. The server binds to loopback only,
+so nothing outside the machine can reach it, but local processes and browser
+pages can. Native installs that run &lt;code&gt;ai-memory init&lt;/code&gt; get a bearer token by
+default; see &lt;a class=&#34;link&#34; href=&#34;#security&#34; &gt;Security&lt;/a&gt; below for that and for adding a token here.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1. Install the ai-memory CLI wrapper (a small shell script that&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#    runs the binary inside a container with your $HOME mounted). This is&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#    the only thing that needs to live on the host filesystem.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir -p ~/.local/bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;wrapper_tmp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;mktemp -d&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;trap&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;rm -rf &amp;#34;$wrapper_tmp&amp;#34;&amp;#39;&lt;/span&gt; EXIT
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;wrapper_base&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;https://github.com/akitaonrails/ai-memory/releases/latest/download/ai-memory-wrapper
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -fsSL &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$wrapper_base&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; -o &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$wrapper_tmp&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/ai-memory-wrapper&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -fsSL &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$wrapper_base&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.sha256&amp;#34;&lt;/span&gt; -o &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$wrapper_tmp&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/ai-memory-wrapper.sha256&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;expected&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;NR == 1 { print $1 }&amp;#39;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$wrapper_tmp&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/ai-memory-wrapper.sha256&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;command&lt;/span&gt; -v sha256sum &amp;gt;/dev/null 2&amp;gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;actual&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;sha256sum &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$wrapper_tmp&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/ai-memory-wrapper&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{ print $1 }&amp;#39;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;actual&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;shasum -a &lt;span class=&#34;m&#34;&gt;256&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$wrapper_tmp&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/ai-memory-wrapper&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{ print $1 }&amp;#39;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -n &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$expected&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$actual&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$expected&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;wrapper checksum mismatch&amp;#34;&lt;/span&gt; &amp;gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;2&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt; 1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;install -m &lt;span class=&#34;m&#34;&gt;0755&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$wrapper_tmp&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/ai-memory-wrapper&amp;#34;&lt;/span&gt; ~/.local/bin/ai-memory
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -rf &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$wrapper_tmp&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;trap&lt;/span&gt; - EXIT
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Most distros put ~/.local/bin on PATH automatically. If `which&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ai-memory` comes up empty, add this to ~/.bashrc / ~/.zshrc:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#     export PATH=&amp;#34;$HOME/.local/bin:$PATH&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2. Start the server. `--restart unless-stopped` makes it come back&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#    on docker daemon restart and on machine boot (provided your&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#    docker service is enabled at boot — `sudo systemctl enable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#    docker` on most distros). Loopback-only bind (`127.0.0.1:49374`)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#    so nothing outside this machine can reach it. Omit the LLM /&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#    EMBEDDING lines for zero-LLM mode — FTS5 search still works&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#    without any keys.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d --name ai-memory &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --restart unless-stopped &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -p 127.0.0.1:49374:49374 &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -v ai-memory-data:/data &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -e &lt;span class=&#34;nv&#34;&gt;AI_MEMORY_LLM_PROVIDER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;anthropic &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -e &lt;span class=&#34;nv&#34;&gt;ANTHROPIC_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;sk-ant-... &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -e &lt;span class=&#34;nv&#34;&gt;AI_MEMORY_EMBEDDING_PROVIDER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;openai &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -e &lt;span class=&#34;nv&#34;&gt;OPENAI_API_KEY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;sk-... &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    docker.io/akitaonrails/ai-memory:latest
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 3. Wire your agent CLI in two commands. The wrapper takes care of&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#    mounts and each client&amp;#39;s config-path detection. Re-run with&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#    `--agent codex`, `--agent command-code`, `--agent devin`, `--agent opencode`, `--agent opencode2`, `--agent gemini-cli`,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#    `--agent grok`, `--agent kimi-code`, `--agent kiro-cli`, `--agent copilot-cli`, `--agent droid`, `--agent muse`, `--agent omp`,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#    `--agent oh-my-pi`, `--client cursor`,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#    `--client gemini-cli`, `--client grok`, `--client kiro-cli`, etc.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#    for additional agents; full list in docs/install.md.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ai-memory install-mcp   --client claude-code --apply
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ai-memory install-hooks --agent  claude-code --apply
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;On Linux and macOS, the Docker wrapper runs &lt;code&gt;install-hooks&lt;/code&gt; through its
+checksum-verified native host client. The installed hooks therefore enforce
+client-side capture controls such as &lt;code&gt;[capture] ignore_paths&lt;/code&gt; and allowlist
+mode before an event reaches the spool or network. Set
+&lt;code&gt;AI_MEMORY_HOOK_PLATFORM=posix&lt;/code&gt; explicitly only when you need the legacy shell
+compatibility path; the installer warns that path cannot enforce capture
+policy v1.&lt;/p&gt;
+&lt;p&gt;The examples use &lt;code&gt;docker&lt;/code&gt;; replace it with &lt;code&gt;podman&lt;/code&gt; on a Podman host. The
+wrapper automatically uses Podman when Docker is not installed. Set
+&lt;code&gt;AI_MEMORY_DOCKER=podman&lt;/code&gt; to force Podman when both engines are available.&lt;/p&gt;
+&lt;p&gt;That completes the setup on Linux/macOS. Start a Claude Code session as
+usual: every prompt and tool call now lands in ai-memory, and the next session
+you open in this project will see a handoff with where you left off.
+On macOS the native binary is the recommended path when you do not need
+Docker, either through the &lt;a class=&#34;link&#34; href=&#34;#macos-menu-bar-app&#34; &gt;menu bar app&lt;/a&gt; above or a
+&lt;a class=&#34;link&#34; href=&#34;docs/macos.md&#34; &gt;release tarball / launchd agent&lt;/a&gt;. Later updates for that
+path use &lt;code&gt;ai-memory upgrade&lt;/code&gt; (checksum-verified GitHub release replace + hook
+refresh); see
+&lt;a class=&#34;link&#34; href=&#34;docs/install.md#keeping-ai-memory-up-to-date&#34; &gt;&lt;code&gt;docs/install.md#keeping-ai-memory-up-to-date&lt;/code&gt;&lt;/a&gt;.
+The same native upgrade path covers Windows x86_64 zip installs under a
+writable prefix (see &lt;a class=&#34;link&#34; href=&#34;docs/windows.md&#34; &gt;&lt;code&gt;docs/windows.md&lt;/code&gt;&lt;/a&gt; Scenario C).
+Upgrading a 2.x install of any kind to 3.0? Read
+&lt;a class=&#34;link&#34; href=&#34;docs/upgrading-to-3.0.md&#34; &gt;&lt;code&gt;docs/upgrading-to-3.0.md&lt;/code&gt;&lt;/a&gt; first.&lt;/p&gt;
+&lt;p&gt;Wiring another agent is the same two commands with a different name:
+&lt;code&gt;--client codex&lt;/code&gt;, &lt;code&gt;--agent codex&lt;/code&gt;, and so on for every row of the support
+matrix. OpenCode is version-detected by host-side commands; when generating its
+artifacts inside a container, use &lt;code&gt;setup-agent --agent opencode --opencode-dialect v1|v2 --to /tmp/unused&lt;/code&gt; because the container cannot inspect
+the host executable. The &lt;code&gt;opencode2&lt;/code&gt; aliases remain force-V2 compatibility
+spellings. The full per-agent guide, including Windows and remote servers, is
+&lt;a class=&#34;link&#34; href=&#34;docs/install.md&#34; &gt;&lt;code&gt;docs/install.md&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Two agents in the same project at once, or teammates on one server, work
+out of the box: the &amp;ldquo;current project&amp;rdquo; pointer is isolated per caller
+by default (v1.39+). See &lt;a class=&#34;link&#34; href=&#34;docs/auto-scope.md&#34; &gt;&lt;code&gt;docs/auto-scope.md&lt;/code&gt;&lt;/a&gt; for the
+optional session-aware Claude Code bridge and the details.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;If in doubt, start your harness with &lt;code&gt;ai-memory run&lt;/code&gt;.&lt;/strong&gt; It is the preferred
+way to launch: the first time it runs a harness it auto-installs that harness&amp;rsquo;s
+ai-memory hooks + MCP if they are missing (so capture and recall work without
+a separate &lt;code&gt;install-hooks&lt;/code&gt;/&lt;code&gt;install-mcp&lt;/code&gt; step to forget), it wires the right
+project scope by construction, and it adds cross-harness &lt;em&gt;session&lt;/em&gt; continuity on
+top of shared memory. Everything is idempotent and one-time per harness and
+config home. If the server is unreachable, &lt;code&gt;run&lt;/code&gt; warns and launches anyway
+with local capture spooling; run &lt;code&gt;ai-memory recover&lt;/code&gt; after the server returns
+(see &lt;a class=&#34;link&#34; href=&#34;docs/managed-workstreams.md#degraded-offline-launches&#34; &gt;Degraded offline launches&lt;/a&gt;).
+Pass &lt;code&gt;--require-server&lt;/code&gt; to fail closed instead.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ai-memory run claude
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ai-memory run codex --yolo   &lt;span class=&#34;c1&#34;&gt;# same workstream + local Claude history dossier&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ai-memory run --profile work claude  &lt;span class=&#34;c1&#34;&gt;# reusable config.toml env/account preset&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ai-memory &lt;span class=&#34;k&#34;&gt;continue&lt;/span&gt;           &lt;span class=&#34;c1&#34;&gt;# resume the newest managed checkout&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# after a dead launcher left its lease behind (same operator only)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ai-memory run --force-unlock codex
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ai-memory resume             &lt;span class=&#34;c1&#34;&gt;# pick from ALL workstreams in this checkout only&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ai-memory resume --search auth &lt;span class=&#34;c1&#34;&gt;# find a workstream by name (case-insensitive)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ai-memory resume --all       &lt;span class=&#34;c1&#34;&gt;# pick across every linked checkout&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;--force-unlock&lt;/code&gt; immediately expires the selected workstream&amp;rsquo;s active lease;
+use it only when you know the previous launcher is gone. It does not kill a
+native process, and it cannot evict another authenticated operator&amp;rsquo;s run. See
+the &lt;a class=&#34;link&#34; href=&#34;docs/managed-workstreams.md#lease-recovery&#34; &gt;managed-workstream recovery notes&lt;/a&gt;
+for the full safety contract.&lt;/p&gt;
+&lt;p&gt;On a real harness switch, the receiving managed agent is told to consult
+&lt;code&gt;AI_MEMORY_PREVIOUS_SESSION_HISTORY&lt;/code&gt; when you ask to continue and the bounded
+portable packet lacks a detail. The variable names a private temporary
+Markdown projection created from the previous harness&amp;rsquo;s checkout-validated,
+read-only adapter; the file disappears when the managed child exits. It is
+local to the launcher machine. This covers quota exhaustion and other abrupt
+exits where the old harness cannot write a handoff: refreshed ai-memory routing
+also tells the new agent that &amp;ldquo;continue&amp;rdquo;, &amp;ldquo;resume&amp;rdquo;, and &amp;ldquo;pick up where we left
+off&amp;rdquo; mean to read that file first when the three managed-run variables are
+present. A switch on another machine still gets the server&amp;rsquo;s portable ledger
+and handoff, but cannot read a native transcript that exists only on the first
+machine.&lt;/p&gt;
+&lt;p&gt;If that variable is absent on a real same-machine switch, run
+&lt;code&gt;type -a ai-memory&lt;/code&gt; and &lt;code&gt;ai-memory --version&lt;/code&gt; in the launching shell. This path
+requires the 3.1.0 or newer host client; a stale Cargo or package-manager binary
+earlier in &lt;code&gt;PATH&lt;/code&gt; can shadow an updated wrapper.&lt;/p&gt;
+&lt;p&gt;In &lt;code&gt;resume&lt;/code&gt;, type to search, use Up/Down to select a workstream, and Left/Right
+to choose its harness. Enter launches the selection; Escape clears a search,
+then cancels when the search is empty (Ctrl-C always cancels).
+The list scrolls and loads every checkout-local page;
+there is no default workstream cutoff. Use &lt;code&gt;--limit N&lt;/code&gt; only when you want to
+cap the matching results. Workstreams from other repositories or worktrees
+are left out unless you pass &lt;code&gt;--all&lt;/code&gt;, which lists every linked checkout (the
+current one first); &lt;code&gt;continue&lt;/code&gt; still resumes the newest linked checkout from
+anywhere. Listing reads Git identity only; it does not scan the working tree
+with &lt;code&gt;git status&lt;/code&gt; before showing the picker. Full checkpoints are still captured
+when launching the selected workstream.&lt;/p&gt;
+&lt;p&gt;Auto-wiring is on by default; opt out with &lt;code&gt;ai-memory run --no-autowire&lt;/code&gt; or
+&lt;code&gt;AI_MEMORY_RUN_AUTOWIRE=false&lt;/code&gt;. You can still wire agents by hand with
+&lt;code&gt;install-hooks&lt;/code&gt; / &lt;code&gt;install-mcp&lt;/code&gt; (e.g. for a harness you never launch through
+&lt;code&gt;ai-memory run&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ai-memory uninstall --apply&lt;/code&gt; removes everything ai-memory installed,
+and only what it installed. It also clears &lt;code&gt;ai-memory run&lt;/code&gt;&amp;rsquo;s auto-wire
+record, so the next managed launch wires that harness again; to keep it
+unwired, launch with &lt;code&gt;--no-autowire&lt;/code&gt; or set &lt;code&gt;AI_MEMORY_RUN_AUTOWIRE=false&lt;/code&gt;. Install commands are idempotent and write
+timestamped backups next to any file they touch.&lt;/p&gt;
+&lt;h3 id=&#34;nixos&#34;&gt;NixOS
+&lt;/h3&gt;&lt;p&gt;This flake ships a NixOS module (&lt;code&gt;nixosModules.default&lt;/code&gt;) with a
+&lt;code&gt;systemd.services.ai-memory&lt;/code&gt; unit: a dedicated &lt;code&gt;ai-memory&lt;/code&gt; system user
+(&lt;code&gt;nologin&lt;/code&gt;, no linger) plus a hardened systemd sandbox
+(&lt;code&gt;ProtectSystem = &amp;quot;strict&amp;quot;&lt;/code&gt;, empty capability sets,
+&lt;code&gt;MemoryDenyWriteExecute&lt;/code&gt;, &lt;code&gt;RestrictAddressFamilies&lt;/code&gt;, and the rest; see
+&lt;a class=&#34;link&#34; href=&#34;nix/systemd-sandbox.nix&#34; &gt;&lt;code&gt;nix/systemd-sandbox.nix&lt;/code&gt;&lt;/a&gt;). Packaged FHS units
+under &lt;code&gt;packaging/systemd/&lt;/code&gt; keep their existing lighter hardening.
+The flake exports packages for &lt;code&gt;x86_64-linux&lt;/code&gt;, &lt;code&gt;aarch64-linux&lt;/code&gt;, and
+&lt;code&gt;aarch64-darwin&lt;/code&gt;. Intel macOS remains supported by the release tarball and
+Homebrew, but not by the pinned Nixpkgs revision.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-nix&#34; data-lang=&#34;nix&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;inputs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ai-memory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;github:akitaonrails/ai-memory&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;outputs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nixpkgs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ai-memory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;nixosConfigurations&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;myhost&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nixpkgs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lib&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nixosSystem&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;n&#34;&gt;system&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;x86_64-linux&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;n&#34;&gt;modules&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;ai-memory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nixosModules&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;default&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;n&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ai-memory&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;enable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;c1&#34;&gt;# enableWeb = true;  # off by default — the web UI is opt-in&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;c1&#34;&gt;# enableApi = true;  # API-only companions; no browser UI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;n&#34;&gt;settings&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              &lt;span class=&#34;n&#34;&gt;allowed_hosts&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;localhost&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;127.0.0.1&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;::1&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;homelab.example&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              &lt;span class=&#34;n&#34;&gt;log_level&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;info&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;c1&#34;&gt;# Loopback (default): secrets optional; missing env file is tolerated.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;c1&#34;&gt;# Non-loopback: set one of ageSecret, sopsSecret, or environmentFile.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;c1&#34;&gt;# ageSecret = &amp;#34;ai-memory-env&amp;#34;;  # config.age.secrets.&amp;lt;name&amp;gt; (agenix)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;c1&#34;&gt;# sopsSecret = &amp;#34;ai-memory/env&amp;#34;; # config.sops.secrets.&amp;lt;name&amp;gt; (sops-nix)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Declarative non-secret config lives in &lt;code&gt;services.ai-memory.settings&lt;/code&gt; (a
+small typed set for common keys, plus &lt;code&gt;freeformType&lt;/code&gt; for the rest of
+&lt;code&gt;config.toml&lt;/code&gt;). The module renders a generated TOML file and passes
+&lt;code&gt;--config&lt;/code&gt;. Top-level &lt;code&gt;bind&lt;/code&gt;, &lt;code&gt;port&lt;/code&gt;, and &lt;code&gt;enableWeb&lt;/code&gt; win over duplicate
+settings keys. Anything in &lt;code&gt;settings&lt;/code&gt; (including &lt;code&gt;llm_headers&lt;/code&gt;) lands in a
+world-readable Nix store path, so do not put API keys there.&lt;/p&gt;
+&lt;p&gt;Secrets such as &lt;code&gt;AI_MEMORY_AUTH_TOKEN&lt;/code&gt; never go in &lt;code&gt;settings&lt;/code&gt; or the
+world-readable Nix store. This includes &lt;code&gt;llm_headers&lt;/code&gt;, which can carry API
+credentials; set &lt;code&gt;AI_MEMORY_LLM_HEADERS&lt;/code&gt; in &lt;code&gt;ageSecret&lt;/code&gt;, &lt;code&gt;sopsSecret&lt;/code&gt;, or
+&lt;code&gt;environmentFile&lt;/code&gt; instead. These three secret sources are mutually exclusive.
+Non-loopback binds require one; loopback may omit them and tolerates a missing
+environment file (systemd &lt;code&gt;EnvironmentFile=-…&lt;/code&gt;). Put TLS in front of a LAN/WAN
+bind; see &lt;a class=&#34;link&#34; href=&#34;docs/https-via-proxy.md&#34; &gt;&lt;code&gt;docs/https-via-proxy.md&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;All options and defaults are in &lt;a class=&#34;link&#34; href=&#34;nix/nixos-module.nix&#34; &gt;&lt;code&gt;nix/nixos-module.nix&lt;/code&gt;&lt;/a&gt;.
+The module is entirely opt-in: &lt;code&gt;nix build&lt;/code&gt;, &lt;code&gt;nix run&lt;/code&gt;, &lt;code&gt;nix develop&lt;/code&gt;, and the CLI are
+unchanged if you don&amp;rsquo;t import it.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git&lt;/code&gt; is a runtime dependency. Hook capture and &lt;code&gt;ai-memory doctor&lt;/code&gt; run it to
+read the repository a session works in. The module puts &lt;code&gt;pkgs.git&lt;/code&gt; on the
+service&amp;rsquo;s &lt;code&gt;PATH&lt;/code&gt;. The package itself leaves the binary unwrapped, because a
+wrapper renames the running process and the live-process guard in &lt;code&gt;reset&lt;/code&gt;,
+&lt;code&gt;restore&lt;/code&gt;, &lt;code&gt;reindex&lt;/code&gt; and &lt;code&gt;uninstall --purge-data&lt;/code&gt; looks for a process named
+&lt;code&gt;ai-memory&lt;/code&gt;. If you install the package without the module (&lt;code&gt;nix profile install&lt;/code&gt;, &lt;code&gt;home.packages&lt;/code&gt;), install &lt;code&gt;git&lt;/code&gt; next to it.&lt;/p&gt;
+&lt;h2 id=&#34;everyday-use&#34;&gt;Everyday use
+&lt;/h2&gt;&lt;p&gt;Day to day, you mostly do not think about ai-memory. Hooks capture
+prompts, tool calls, and session boundaries; session end turns them into
+readable wiki pages; the next session starts with a handoff.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ask &amp;ldquo;where did we leave off?&amp;rdquo; to continue from the pending handoff.&lt;/li&gt;
+&lt;li&gt;Ask &amp;ldquo;have we discussed X?&amp;rdquo; or &amp;ldquo;search memory for Y&amp;rdquo; to query the wiki.&lt;/li&gt;
+&lt;li&gt;Ask &amp;ldquo;catch me up&amp;rdquo; for a prose digest of recent project activity.&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;ai-memory bootstrap&lt;/code&gt; once when adopting an existing project with
+months of history.&lt;/li&gt;
+&lt;li&gt;Start the server with &lt;code&gt;--enable-web&lt;/code&gt; for a read-only browser view of
+the wiki and a JSON API under &lt;code&gt;/api/v1&lt;/code&gt;. On a server with a bearer token
+and no user accounts (every fresh install), the browser asks for a username
+and password: any username, and the contents of
+&lt;code&gt;&amp;lt;data_dir&amp;gt;/auth-tokens/default&lt;/code&gt; as the password.&lt;/li&gt;
+&lt;li&gt;Back up host-side harness configuration with
+&lt;code&gt;ai-memory backup-agents -o agent-assets.tar.gz&lt;/code&gt;; inspect a restore with
+&lt;code&gt;ai-memory restore-agents -i agent-assets.tar.gz&lt;/code&gt;, then add &lt;code&gt;--apply&lt;/code&gt; only
+after reviewing the active skills, plugins, instructions, and destinations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Search modes, entities, feedback, briefings, and the web API are covered in &lt;a class=&#34;link&#34; href=&#34;docs/usage.md&#34; &gt;&lt;code&gt;docs/usage.md&lt;/code&gt;&lt;/a&gt; and
+&lt;a class=&#34;link&#34; href=&#34;docs/use-cases.md&#34; &gt;&lt;code&gt;docs/use-cases.md&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;teams-and-multiple-machines&#34;&gt;Teams and multiple machines
+&lt;/h2&gt;&lt;p&gt;Run the server somewhere reachable, such as a homelab box or a LAN host, and
+point every machine and every teammate at it. Knowledge is shared per
+project; personal handoffs stay personal; every write is attributed and
+audited. Multi-user auth (passwords, API credentials) is built in.&lt;/p&gt;
+&lt;p&gt;Start with &lt;a class=&#34;link&#34; href=&#34;docs/users.md&#34; &gt;&lt;code&gt;docs/users.md&lt;/code&gt;&lt;/a&gt; for accounts and ownership,
+and &lt;a class=&#34;link&#34; href=&#34;docs/deploy.md&#34; &gt;&lt;code&gt;docs/deploy.md&lt;/code&gt;&lt;/a&gt; for the server itself. It includes
+measured capacity numbers and the one rule you must follow: one server per
+data directory, never two.&lt;/p&gt;
+&lt;p&gt;Two opt-in HTTP surfaces build on the same browser sign-in, and both are off
+by default. &lt;code&gt;serve --enable-session-management&lt;/code&gt; lets signed-in users inspect
+sessions and purge the ones they own
+(&lt;a class=&#34;link&#34; href=&#34;docs/session-management.md&#34; &gt;&lt;code&gt;docs/session-management.md&lt;/code&gt;&lt;/a&gt;).
+&lt;code&gt;serve --enable-self-service-keys&lt;/code&gt; lets them issue and revoke their own &lt;code&gt;aim_&lt;/code&gt;
+API keys (&lt;a class=&#34;link&#34; href=&#34;docs/self-service-keys.md&#34; &gt;&lt;code&gt;docs/self-service-keys.md&lt;/code&gt;&lt;/a&gt;).&lt;/p&gt;
+&lt;h2 id=&#34;security&#34;&gt;Security
+&lt;/h2&gt;&lt;p&gt;The server binds to loopback only by default. A fresh &lt;code&gt;ai-memory init&lt;/code&gt; also
+mints a root bearer token into the data dir, which the hooks, the CLI and the
+&lt;code&gt;ai-memory mcp-bridge&lt;/code&gt; stdio bridge read from there; it is never written into
+a harness config. An install created before that default (and the Docker
+quick-start) runs without auth until &lt;code&gt;ai-memory auth enable&lt;/code&gt;, and
+&lt;code&gt;ai-memory status&lt;/code&gt; says so. From there, hardening is incremental: a bearer
+token for the LAN, per-user accounts, OIDC device auth for hooks, TLS via
+a reverse proxy. Capture is sanitized at a typed privacy boundary before
+anything is stored, and per-repository &lt;code&gt;[capture]&lt;/code&gt; rules can exclude
+paths or invert to allowlist mode. A repository can also route its capture
+to a different server than the one the hooks were installed against.&lt;/p&gt;
+&lt;p&gt;The full model is in &lt;a class=&#34;link&#34; href=&#34;docs/security.md&#34; &gt;&lt;code&gt;docs/security.md&lt;/code&gt;&lt;/a&gt;,
+&lt;a class=&#34;link&#34; href=&#34;docs/users.md&#34; &gt;&lt;code&gt;docs/users.md&lt;/code&gt;&lt;/a&gt;, and
+&lt;a class=&#34;link&#34; href=&#34;docs/https-via-proxy.md&#34; &gt;&lt;code&gt;docs/https-via-proxy.md&lt;/code&gt;&lt;/a&gt;. For data-flow,
+identity/SSO, and offline-install questions specifically, see
+&lt;a class=&#34;link&#34; href=&#34;DATA_HANDLING.md&#34; &gt;&lt;code&gt;DATA_HANDLING.md&lt;/code&gt;&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/sso.md&#34; &gt;&lt;code&gt;docs/sso.md&lt;/code&gt;&lt;/a&gt;, and
+&lt;a class=&#34;link&#34; href=&#34;docs/airgapped-install.md&#34; &gt;&lt;code&gt;docs/airgapped-install.md&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;llm-providers&#34;&gt;LLM providers
+&lt;/h2&gt;&lt;p&gt;Optional. Everything works with zero LLM calls; adding a provider
+upgrades session summaries and enables semantic search. Anthropic,
+OpenAI (including OAuth), Codex CLI credential reuse, GitHub Copilot, Gemini,
+OpenCode (Go and Zen), the Cursor Agent CLI (&lt;code&gt;cursor&lt;/code&gt;), and
+any OpenAI-compatible endpoint (Ollama, LM Studio, vLLM) are supported
+for consolidation; OpenAI, Voyage, Gemini, and keyless OpenAI-compatible
+endpoints for embeddings. Configuration lives in
+&lt;a class=&#34;link&#34; href=&#34;docs/llm-providers.md&#34; &gt;&lt;code&gt;docs/llm-providers.md&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;architecture&#34;&gt;Architecture
+&lt;/h2&gt;&lt;p&gt;One Rust binary runs an MCP/HTTP server and owns one data directory:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;data_dir&amp;gt;/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── wiki/    # markdown source of truth, git-versioned
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── raw/     # immutable sanitized managed-workstream transcript segments
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── db/      # SQLite indexes, including FTS5, entities, and embeddings
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── models/  # reserved for local embedding models
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── logs/    # rolling tracing output
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Hooks POST observations to the server. The server serializes writes
+through one SQLite writer, compiles session observations into markdown
+pages, and serves retrieval through FTS5, entity-match and graph-neighbor RRF,
+optional vector RRF, an observation-evidence stream that lifts a session&amp;rsquo;s
+page when its captured turns match (on by default), bounded source-authority
+adjustment, and bounded raw-observation fallback for non-global searches.&lt;/p&gt;
+&lt;p&gt;See &lt;a class=&#34;link&#34; href=&#34;docs/ARCHITECTURE.md&#34; &gt;&lt;code&gt;docs/ARCHITECTURE.md&lt;/code&gt;&lt;/a&gt; for the data-flow
+diagram, crate breakdown, schema notes, and invariants.&lt;/p&gt;
+&lt;h2 id=&#34;docs&#34;&gt;Docs
+&lt;/h2&gt;&lt;h3 id=&#34;for-users&#34;&gt;For users
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;File&lt;/th&gt;
+					&lt;th&gt;What it is&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/cookbook.md&#34; &gt;&lt;code&gt;docs/cookbook.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;Task-oriented cheat sheet.&lt;/strong&gt; &amp;ldquo;I want to do X&amp;rdquo; → how: recall prior work, keep a project rule, import an existing knowledge base, get two agents/repos working together. Start here.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/install.md&#34; &gt;&lt;code&gt;docs/install.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;Installation cookbook.&lt;/strong&gt; Every agent CLI, every alternative (curl, source build, no-docker, no-auth), and the server-on-a-different-machine walkthrough.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/usage.md&#34; &gt;&lt;code&gt;docs/usage.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Handoffs, proactive memory queries, slim routing snippet + managed Agent Skills, web UI, raw-wiki inspection, and the rules, memory and profile precedence.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/cross-project-profile.md&#34; &gt;&lt;code&gt;docs/cross-project-profile.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;The cross-project profile.&lt;/strong&gt; Your usual choices delivered to every project as defaults: defaults per deployment, every setting, per-project opt-outs, multi-user opt-in and privacy, CLI.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/managed-workstreams.md&#34; &gt;&lt;code&gt;docs/managed-workstreams.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Optional &lt;code&gt;ai-memory run&lt;/code&gt; continuity across harnesses: auto harness selection, native resume, argument forwarding, ledger search, privacy, and recovery.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/agent-messaging.md&#34; &gt;&lt;code&gt;docs/agent-messaging.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Cross-project agent-to-agent messaging: a directed, claim-once inbox/queue plus the on-start &amp;ldquo;you have mail&amp;rdquo; notice.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/marker-file.md&#34; &gt;&lt;code&gt;docs/marker-file.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Default repository-path project naming plus &lt;code&gt;.ai-memory.toml&lt;/code&gt; workspace/project routing for multi-client trees, mono-repos, worktrees, and work/personal separation, plus per-repository server profiles.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/auto-scope.md&#34; &gt;&lt;code&gt;docs/auto-scope.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;[auto_scope]&lt;/code&gt; modes for shared servers: the default &lt;code&gt;per_actor&lt;/code&gt; isolation, session-aware &lt;code&gt;per_session&lt;/code&gt; isolation, and the pre-v1.39 &lt;code&gt;single&lt;/code&gt; slot.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/macos.md&#34; &gt;&lt;code&gt;docs/macos.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;macOS install paths: menu bar app, native release tarball, source build, Docker wrapper, launchd, and current limitations.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/windows.md&#34; &gt;&lt;code&gt;docs/windows.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Windows install modes: full WSL2, native Windows with Docker Desktop, prebuilt native release zip, native source builds, and caveats.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/mcp-install.md&#34; &gt;&lt;code&gt;docs/mcp-install.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Per-client MCP and lifecycle notes, handoff-injection limits, and community bridge guidance.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/programmatic-memory.md&#34; &gt;&lt;code&gt;docs/programmatic-memory.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Use ai-memory from any tool: MCP write/query/handoff calls, scope rules and incremental reads.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/deploy.md&#34; &gt;&lt;code&gt;docs/deploy.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Homelab deploy: bin/deploy, bearer-token auth, pointers to the TLS guide.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/users.md&#34; &gt;&lt;code&gt;docs/users.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;Multi-user attribution and human login.&lt;/strong&gt; Four-rung bearer ladder, password sessions, &lt;code&gt;ai-memory user&lt;/code&gt; / &lt;code&gt;api-key&lt;/code&gt; walkthrough, brownfield migration.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/management-ui.md&#34; &gt;&lt;code&gt;docs/management-ui.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Optional server-rendered console: feature gates, user and session management, MCP keys, public deployment, and frontend checks.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/https-via-proxy.md&#34; &gt;&lt;code&gt;docs/https-via-proxy.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;HTTPS via a reverse proxy.&lt;/strong&gt; When you need TLS and when you don&amp;rsquo;t, with copy-paste Caddy / nginx / Cloudflare Tunnel templates and the &amp;ldquo;secure when you&amp;rsquo;re not&amp;rdquo; failure modes.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/lifecycle-ops.md&#34; &gt;&lt;code&gt;docs/lifecycle-ops.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;Read before purge / rename / backup / restore / reset / reindex / restore-page.&lt;/strong&gt; Safety matrix, per-project disk layout, checkpoint page recovery, and operator workflows.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/backup.md&#34; &gt;&lt;code&gt;docs/backup.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Backing up the wiki + data dir to a remote git repository: what to include, what to exclude, scheduled push pattern, restore, and security posture. Companion to &lt;code&gt;docs/lifecycle-ops.md&lt;/code&gt; (which covers the on-box &lt;code&gt;ai-memory backup&lt;/code&gt; snapshot).&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/design-backup-agent-assets.md&#34; &gt;&lt;code&gt;docs/design-backup-agent-assets.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Host agent-asset backup/restore: supported paths, filtering, redaction limits, archive bounds, active-content warning, and rollback behavior.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/llm-providers.md&#34; &gt;&lt;code&gt;docs/llm-providers.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Provider configuration for consolidation and embeddings.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/security.md&#34; &gt;&lt;code&gt;docs/security.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;The full security model.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/support-matrix.md&#34; &gt;&lt;code&gt;docs/support-matrix.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;The full agent/platform matrix with notes.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/use-cases.md&#34; &gt;&lt;code&gt;docs/use-cases.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Scenario walkthroughs.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;DATA_HANDLING.md&#34; &gt;&lt;code&gt;DATA_HANDLING.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;Data-flow reference for security/legal review.&lt;/strong&gt; What&amp;rsquo;s stored, what&amp;rsquo;s local-only, the two opt-in external paths, and how deletion/retention work.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/sso.md&#34; &gt;&lt;code&gt;docs/sso.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Enterprise identity: the OIDC device-auth flow, its scope, and how to front the server with an OIDC-aware gateway.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/airgapped-install.md&#34; &gt;&lt;code&gt;docs/airgapped-install.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Offline/air-gapped install: self-contained build, checksum-verified release binaries, and offline local embedding models.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/upgrading-to-3.0.md&#34; &gt;&lt;code&gt;docs/upgrading-to-3.0.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Upgrading a 2.x install to 3.0: what changed, the removed token commands and their replacements, upgrade steps, and rollback.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/MIGRATION-2.0.md&#34; &gt;&lt;code&gt;docs/MIGRATION-2.0.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Upgrading an existing store to 2.0: the backup-gated automatic migration and how to restore.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/benchmarks/README.md&#34; &gt;&lt;code&gt;docs/benchmarks/&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Published retrieval-quality numbers with provenance, reproducible from the in-repo harness.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/okf.md&#34; &gt;&lt;code&gt;docs/okf.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;The wiki is natively an Open Knowledge Format (OKF v0.2) bundle; design and field mapping.&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;for-contributors&#34;&gt;For contributors
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;File&lt;/th&gt;
+					&lt;th&gt;What it is&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/ARCHITECTURE.md&#34; &gt;&lt;code&gt;docs/ARCHITECTURE.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Operational summary: data flow, crate layout, cross-cutting invariants, schema.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/design-decisions.md&#34; &gt;&lt;code&gt;docs/design-decisions.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;The full v1 spec.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/managed-harness-contributions.md&#34; &gt;&lt;code&gt;docs/managed-harness-contributions.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Protocol and acceptance bar for adding managed resume, transcript import, and startup context delivery to another harness.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/companion-crates.md&#34; &gt;&lt;code&gt;docs/companion-crates.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Optional companion projects: the &lt;a class=&#34;link&#34; href=&#34;companions/ai-memory-importer&#34; &gt;importer&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;companions/ai-memory-relay&#34; &gt;external lifecycle relay&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;companions/ai-memory-wikisync&#34; &gt;team-wiki sync&lt;/a&gt;, the &lt;a class=&#34;link&#34; href=&#34;companions/ai-memory-ts&#34; &gt;TypeScript client SDK&lt;/a&gt; and the &lt;a class=&#34;link&#34; href=&#34;companions/ai-memory-desktop&#34; &gt;desktop installer&lt;/a&gt; (unsigned preview).&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/external-lifecycle.md&#34; &gt;&lt;code&gt;docs/external-lifecycle.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;External lifecycle producers: per-execution native capture suppression, preserved handoffs, batch ingestion and stable retry identity.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/auto-improvement-loop.md&#34; &gt;&lt;code&gt;docs/auto-improvement-loop.md&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;Auto-improvement design notes: scheduled review, auto-approval default, manual review opt-in, pending proposal storage, and curator work.&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;community-articles&#34;&gt;Community articles
+&lt;/h3&gt;&lt;p&gt;Written by users; not maintained here, so check them against the version you run.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.linuxpro.com.br/2026/09/ai-memory-instalar-configurar-agentes-linux/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Installing and configuring ai-memory on Linux&lt;/a&gt; (pt-BR, LinuxPro, covers v2.6.3)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.linuxpro.com.br/2026/10/ai-memory-a-evolucao-da-2-4-a-2-6-3/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ai-memory from v2.4 to v2.6.3&lt;/a&gt; (pt-BR, LinuxPro)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;MIT. See &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgements&#34;&gt;Acknowledgements
+&lt;/h2&gt;&lt;p&gt;This codebase is being built collaboratively with Claude Code
+(Anthropic Claude Opus 4.7) following the plan documented in
+&lt;code&gt;docs/design-decisions.md&lt;/code&gt;.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
