@@ -1,8 +1,8 @@
 ---
 title: agent-browser
-date: 2026-11-07T21:59:16+08:00
+date: 2026-11-08T22:21:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1756745679447-73e51d7afe4d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQwNTk5MzR8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1651794327243-d976672943c2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQxNDc1Nzd8&ixlib=rb-4.1.0
 tags: ['github',browser automation, ai agents, rust cli]
 categories: ['github']
 ---

@@ -1,0 +1,139 @@
+---
+title: Product Hunt 今日热榜 | 2026-11-08
+date: 2026-11-08 14:17:03+0000
+image: https://ph-files.imgix.net/c47c6fd8-2a7c-4605-a78e-92fb686de1a0.jpeg?auto=format
+tags: ["角色一致性", "AI图像生成", "精准编辑"]
+---
+
+## 1. ChatGPT Images 2.6  
+**标语**: 使用AI创建、编辑和制作图片动画  
+**介绍**: Images 2.6 为 ChatGPT、Codex 和 API 带来了更快速的图像生成、更精准的编辑以及原生的 GIF 创作功能。支持创建循环动画，在多次编辑中保持角色与产品的一致性，导出 SVG 文件，并可灵活控制生成复杂度。  
+**网站**: [立即访问](https://www.producthunt.com/r/ZYSSWGXHU4P32K?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/openai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![ChatGPT Images 2.6](https://ph-files.imgix.net/c47c6fd8-2a7c-4605-a78e-92fb686de1a0.jpeg?auto=format)  
+**关键词**: AI图像生成, 精准编辑, GIF动态图, 角色一致性, SVG导出, 生成控制, AI绘图  
+**票数**: 🔺281  
+**是否精选**: 是  
+**发布时间**: 2026年11月07日 PM04:01 (北京时间)  
+
+---  
+
+{{< ad-inarticle >}}
+
+## 2. LiveReview  
+**标语**: 免费风险感知代码审查：自动通过低风险变更  
+**介绍**: 多数AI审查工具仅能标记问题。LiveReview承诺交付切实的生产环境成效：减少线上事故、降低回滚率、减轻资深审查员负担。每个PR均会进行风险评分。风险最低的30%~50%将被安全地自动审批通过；高风险的则直接交由应审核的工程师处理。该方案灵感源自Meta极为成功的内部AI审查系统，其中生产事故减少50倍，回滚减少3倍。基于大语言模型、事故专项训练的机器学习与代码图分析。免费且支持自托管。  
+**网站**: [立即访问](https://www.producthunt.com/r/UKG4GEUB6PLHOQ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/livereview?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![LiveReview](https://ph-files.imgix.net/414f9ad7-5744-45ec-bad7-17247b3ca1fd.jpeg?auto=format)  
+**关键词**: 代码审查,AI代码评审,风险感知,自动审批,自托管,免费工具,智能分析,降低故障率  
+**票数**: 🔺243  
+**是否精选**: 是  
+**发布时间**: 2026年11月07日 PM04:01 (北京时间)  
+
+---  
+
+## 3. Quest  
+**标语**: 您的专属AI顾问，助您过上更有目标感的生活  
+**介绍**: 大多数AI助手只是帮你把事情做完。而Quest则会花时间深入了解你的性格、价值观、人生抱负与内在动机。它不止于记忆对话，更是一位专属的AI顾问，助你深度自省、从容应对艰难抉择，并做出真正契合你真实自我的决定。它不是另一种只会告诉你该怎么做的助手，而是一位充满思辨的智慧顾问，伴你探寻属于自己的前行之路。  
+**网站**: [立即访问](https://www.producthunt.com/r/FFHQV6QCOEHH7N?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/quest-d8e9c4e8-cc0d-4b07-baee-e3dbf712c279?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Quest](https://ph-files.imgix.net/ed3c6493-ecef-43d6-a154-acc8e09f7fbe.jpeg?auto=format)  
+**关键词**: AI顾问, 个性化AI, 自我反思, 决策辅助, 价值观引导, 人生导航, 深度陪伴, 心智成长  
+**票数**: 🔺229  
+**是否精选**: 是  
+**发布时间**: 2026年11月07日 PM04:01 (北京时间)  
+
+---  
+
+## 4. Exa Monitors v2  
+**标语**: 定时网页搜索并调用您的智能体，每千次运行收费2美元  
+**介绍**: Exa Monitors v2 是专为 AI 智能体提供的定时网络搜索服务。您只需描述需要监控的内容并设定时间间隔，Exa 就会在发现新相关内容时调用您的 Webhook，并附带摘要或 JSON 格式的输出及引用来源。据 Exa 介绍，v2 会记录已推送过的结果，比 v1 更“安静”（减少冗余通知），且成本降至每千次运行 2 美元，较 v1 的 15 美元大幅降低。可用于监控价格、新闻、竞争对手、人物动态等多种信息。现已提供 Python SDK 与 API 接口。  
+**网站**: [立即访问](https://www.producthunt.com/r/TAD4DNQRSJ5L2K?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/exa-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Exa Monitors v2](https://ph-files.imgix.net/4ec2d393-59d1-46f7-add1-85ee89e98afa.png?auto=format)  
+**关键词**: 定时网页搜索,AI智能体调度,Webhook自动通知,智能内容去重,超低成本API,竞品价格追踪,新闻实时监测,Python SDK支持,自动化信息抓取,结构化JSON输出  
+**票数**: 🔺202  
+**是否精选**: 是  
+**发布时间**: 2026年11月07日 PM04:01 (北京时间)  
+
+---  
+
+## 5. GPT‑6 Cyber  
+**标语**: OpenAI网络安全模型，仅限经审核的防御人员访问  
+**介绍**: GPT-6 Cyber是OpenAI的网络安全模型，据OpenAI表示，该模型将更深入的安全研究与更优的模型对齐能力相结合。它曾助力OpenAI开展Linux内核研究。在网络安全评级中获评“Critical”级，该产品初期仅面向一小批经过审核的Daybreak Red客户开放，需完成身份验证、启用多因素认证（MFA）并提交申请方可使用。OpenAI表示，预计在未来几周将逐步扩大访问权限。目前暂无公开定价。  
+**网站**: [立即访问](https://www.producthunt.com/r/EQ2CDO3EYPSTVU?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/openai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![GPT‑6 Cyber](https://ph-files.imgix.net/3f2cc34d-7d0a-49f9-940f-a44eb473f053.png?auto=format)  
+**关键词**: GPT-6 Cyber, OpenAI, 网络安全AI, 安全大模型, 定向访问, 防御者专用, 安全对齐, Linux内核研究, 严格准入, 关键级安全  
+**票数**: 🔺148  
+**是否精选**: 是  
+**发布时间**: 2026年11月07日 PM04:01 (北京时间)  
+
+---  
+
+## 6. Google Omni 1.2 Flash  
+**标语**: Gemini Omni 1.2 Flash：15秒AI视频，每秒0.07美元  
+**介绍**: Gemini Omni 1.2 Flash 是 Google DeepMind 推出的视频生成与编辑模型，现已全面开放。据谷歌介绍，视频片段最长可达 15 秒（此前为 10 秒），720p 版本的生成费用为每秒 0.07 美元，较 Omni 1.1 降低 30%。新功能包括：无需重新生成即可进行多轮编辑，人物形象与画面风格更稳定，口型同步更精准，镜头运镜更流畅。用户可先以 360p 或 720p 生成初稿，随后将分辨率超分至 1080p 或 4K。目前已通过 Gemini API、Google Cloud、Flow 和 Vids 提供使用。  
+**网站**: [立即访问](https://www.producthunt.com/r/EAQRQBPBLUGUTY?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/google-omni-1-2-flash?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Google Omni 1.2 Flash](https://ph-files.imgix.net/10ee44f8-9c81-430a-a535-2e2efcc4a5b1.png?auto=format)  
+**关键词**: AI视频生成,视频编辑,15秒视频,多轮编辑,口型同步,画质升级,低成本,API接入  
+**票数**: 🔺121  
+**是否精选**: 是  
+**发布时间**: 2026年11月07日 PM04:01 (北京时间)  
+
+---  
+
+## 7. Muse Realtime Avatar  
+**标语**: 将和Muse的语音聊天转为实时视频通话  
+**介绍**: Muse 实时化身让 Meta 的 Muse 智能体拥有了一个可用于视频通话的形象。音视频均源自同一段语音流，因此唇形、表情、手势与姿态会随话语同步变化，回复启动延迟仅约 870 毫秒。与仅能驱动面部的传统“说话头”数字人不同，它还能同步呈现双手及全身动作，且角色在多轮对话中始终保持一致。在 Meta 的实时通话测试中，评测员有 78% 的比例认为它优于 Runway Characters，有 88% 的比例认为它优于 HeyGen LiveAvatar。  
+**网站**: [立即访问](https://www.producthunt.com/r/CEQNYNERKKN54Y?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/meta-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Muse Realtime Avatar](https://ph-files.imgix.net/0a953086-8cdf-4ed3-a43b-222c3ea7bad4.gif?auto=format)  
+**关键词**: AI数字人,实时视频通话,语音同步动画,全身体态交互,低延迟响应,角色一致性,Meta智能体,虚拟视频聊天  
+**票数**: 🔺109  
+**是否精选**: 是  
+**发布时间**: 2026年11月07日 PM04:01 (北京时间)  
+
+---  
+
+## 8. seam  
+**标语**: 将Mac的刘海变为灵动岛  
+**介绍**: Seam 将屏幕顶部的凹槽变为灵动岛。支持在任何应用中语音输入、控制音乐、查看 Claude Code 的完成情况，并运行专注计时器。语音功能在您的 Mac 本地运行。一次性付费 19.90 美元即可在两台 Mac 上使用，现提供 48 小时免费试用，无需绑定银行卡。  
+**网站**: [立即访问](https://www.producthunt.com/r/HR47JBOCYFZV7K?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/seam-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![seam](https://ph-files.imgix.net/2920b434-a041-451f-a000-97228e3a6627.png?auto=format)  
+**关键词**: Mac灵动岛, 刘海屏增强, 语音听写, 音乐控制, 专注计时器, 本地语音处理, Mac效率工具, macOS应用  
+**票数**: 🔺97  
+**是否精选**: 是  
+**发布时间**: 2026年11月07日 PM04:01 (北京时间)  
+
+---  
+
+## 9. Instagram Edits for Desktop  
+**标语**: 搭载AI智能体的Instagram免费桌面视频编辑器  
+**介绍**: Instagram Edits 现已上线 Mac 平台，将专业视频剪辑与 AI 智能体深度融合。可通过 MCP 连接兼容的 AI 助手拼接粗剪素材并完成初步编辑，随后在专业工作区中利用多轨道时间轴、关键帧、调色及精准音频控制等功能继续精修。支持导出无水印的 4K 视频，内置 Instagram 音乐库，并可一键直接发布至 Instagram。该应用完全免费，核心剪辑功能无需订阅。  
+**网站**: [立即访问](https://www.producthunt.com/r/TPRFPBACJLO5RW?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/instagram?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Instagram Edits for Desktop](https://ph-files.imgix.net/383798a8-90e4-4756-98d4-c233554db1a9.jpeg?auto=format)  
+**关键词**: Instagram视频编辑, 桌面端剪辑软件, AI智能剪辑, Mac视频编辑器, 多轨道时间线, 4K无水印, 直连Instagram发布, 免费视频工具  
+**票数**: 🔺95  
+**是否精选**: 是  
+**发布时间**: 2026年11月07日 PM04:01 (北京时间)  
+
+---  
+
+## 10. Rex (Beta)  
+**标语**: 构建用于所有工作的多路复用器  
+**介绍**: 你好，世界。我们正在开发一款终端多路复用器，相信您一定会爱上它。支持原生应用（如 macOS/iOS）、网页端访问及多人协作。由 Ghostty 和 Echo 的创作者打造。  
+**网站**: [立即访问](https://www.producthunt.com/r/EYQQV7LWZ6MOGL?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/superlogical?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Rex (Beta)](https://ph-files.imgix.net/400a76c4-c01f-41d3-a08e-d2e2fcd8e542.png?auto=format)  
+**关键词**: 终端复用器, 跨平台终端, 多人协作, 原生应用, 网页端, 开发者工具, 命令行, 测试版  
+**票数**: 🔺92  
+**是否精选**: 是  
+**发布时间**: 2026年11月07日 PM04:01 (北京时间)  
+
+---  
+
