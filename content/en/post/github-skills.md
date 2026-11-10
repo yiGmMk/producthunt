@@ -1,9 +1,9 @@
 ---
 title: skills
-date: 2026-11-10T01:29:04+08:00
+date: 2026-11-10T23:38:59+08:00
 draft: False
-image: https://images.unsplash.com/photo-1648738781247-f9a2b10736ad?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQyNDUzMjN8&ixlib=rb-4.1.0
-tags: ['github',Skills, Claude, Agent Skills]
+image: https://images.unsplash.com/photo-1538683741053-bb482d96f67b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQzMjUwOTV8&ixlib=rb-4.1.0
+tags: ['github',Claude, Skills, Anthropic]
 categories: ['github']
 ---
 

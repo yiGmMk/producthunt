@@ -1,9 +1,9 @@
 ---
 title: mujoco
-date: 2026-11-10T01:29:55+08:00
+date: 2026-11-10T23:40:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1610813882416-23fa71138023?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQyNDUzMjN8&ixlib=rb-4.1.0
-tags: ['github',MuJoCo, Physics Engine, Robotics]
+image: https://images.unsplash.com/photo-1538683741053-bb482d96f67b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQzMjUwOTV8&ixlib=rb-4.1.0
+tags: ['github',MuJoCo, Physics Engine, Robotics Simulation]
 categories: ['github']
 ---
 

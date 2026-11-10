@@ -1,9 +1,9 @@
 ---
 title: astryx
-date: 2026-11-10T01:29:30+08:00
+date: 2026-11-10T23:38:40+08:00
 draft: False
-image: https://images.unsplash.com/photo-1538593764070-93d0759a23c2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQyNDUzMjN8&ixlib=rb-4.1.0
-tags: ['github',design system, open source, React]
+image: https://images.unsplash.com/photo-1769066339205-6641775c3480?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQzMjUwOTV8&ixlib=rb-4.1.0
+tags: ['github',Astryx, Design System, React]
 categories: ['github']
 ---
 

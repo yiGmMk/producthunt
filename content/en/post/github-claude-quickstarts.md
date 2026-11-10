@@ -1,9 +1,9 @@
 ---
 title: claude-quickstarts
-date: 2026-11-10T01:30:15+08:00
+date: 2026-11-10T23:39:51+08:00
 draft: False
-image: https://images.unsplash.com/photo-1590117655736-376a036a1608?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQyNDUzMjN8&ixlib=rb-4.1.0
-tags: ['github',Claude API, AI Agents, Quickstarts]
+image: https://images.unsplash.com/photo-1660839178653-7f9d01642105?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQzMjUwOTV8&ixlib=rb-4.1.0
+tags: ['github',Claude API, Quickstarts, AI Agents]
 categories: ['github']
 ---
 
