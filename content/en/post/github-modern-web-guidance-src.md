@@ -1,9 +1,9 @@
 ---
 title: modern-web-guidance-src
-date: 2026-11-11T23:11:00+08:00
+date: 2026-11-13T00:03:11+08:00
 draft: False
-image: https://images.unsplash.com/photo-1665134866263-ea79306c5b27?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ0MDk3OTF8&ixlib=rb-4.1.0
-tags: ['github',Modern Web Guidance, Coding Agents, Web Platform APIs]
+image: https://images.unsplash.com/photo-1617396900799-f4ec2b43c7ae?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ0OTkzNjN8&ixlib=rb-4.1.0
+tags: ['github',modern web guidance, coding agents, browser apis]
 categories: ['github']
 ---
 
