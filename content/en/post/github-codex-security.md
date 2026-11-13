@@ -1,9 +1,9 @@
 ---
 title: codex-security
-date: 2026-11-13T00:03:36+08:00
+date: 2026-11-13T23:23:56+08:00
 draft: False
-image: https://images.unsplash.com/photo-1550133838-1c4b5ffede41?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ0OTkzNjN8&ixlib=rb-4.1.0
-tags: ['github',vulnerability scanning, security automation, threat modeling]
+image: https://images.unsplash.com/photo-1697012511728-68f3e6e290ab?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ1ODMzNjh8&ixlib=rb-4.1.0
+tags: ['github',Code Vulnerability Scanning, AI Security, Automated Remediation]
 categories: ['github']
 ---
 

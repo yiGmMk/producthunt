@@ -1,9 +1,9 @@
 ---
 title: open-code-review
-date: 2026-10-09T22:29:02+08:00
+date: 2026-11-13T23:23:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1542545594-eb58c6a902d7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTE1NTYwMTd8&ixlib=rb-4.1.0
-tags: ['github',AI code review, CLI tool, open source]
+image: https://images.unsplash.com/photo-1746166678412-124ca966c8b2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ1ODMzNjh8&ixlib=rb-4.1.0
+tags: ['github',ai code review, cli tool, llm integration]
 categories: ['github']
 ---
 
@@ -134,6 +134,9 @@ For other installation methods (install script, GitHub Release binary, from sour
 **1. Configure LLM**
 
 You must configure an LLM before reviewing code, unless you use [Delegation Mode](https://open-codereview.ai/docs/delegate).
+
+- **OCR calls the model:** `ocr review`, the `/open-code-review:review` command, and the `open-code-review` skill use OCR's own provider configuration, not your Claude Code Team/Pro subscription login. Authentication requirements depend on the provider; see [Configuration](https://open-codereview.ai/docs/configuration).
+- **The host agent calls the model:** the `/open-code-review:delegate-review` command and the `open-code-review-delegate` skill use the host agent's configured model and authentication. No separate LLM configuration or credentials are needed in OCR. See the [Claude Code install steps](plugins/open-code-review/README.md#claude-code).
 
 ```bash
 ocr config provider          # Select a built-in provider or add a custom one

@@ -1,9 +1,9 @@
 ---
 title: sure
-date: 2026-11-13T00:04:44+08:00
+date: 2026-11-13T23:24:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1627308072378-f119244a66c1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ0OTkzNjN8&ixlib=rb-4.1.0
-tags: ['github',personal finance, self hosted, open source]
+image: https://images.unsplash.com/photo-1596211283426-36875d7cf53a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ1ODMzNjh8&ixlib=rb-4.1.0
+tags: ['github',Personal finance, open source, self hosted]
 categories: ['github']
 ---
 
