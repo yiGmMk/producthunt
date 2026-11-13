@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PDF Parsing on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/pdf-parsing/</link>
+        <description>Recent content in PDF Parsing on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Thu, 25 Jun 2026 18:26:53 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/pdf-parsing/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>hiring-agent</title>
+        <link>https://producthunt.programnotes.cn/en/p/hiring-agent/</link>
+        <pubDate>Thu, 25 Jun 2026 18:26:53 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/hiring-agent/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1572260606466-c6c87046f892?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIzODMwNTN8&amp;ixlib=rb-4.1.0" alt="Featured image of post hiring-agent" /&gt;&lt;h1 id=&#34;interviewstreethiring-agent&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/interviewstreet/hiring-agent&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;interviewstreet/hiring-agent&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;hiring-agent&#34;&gt;Hiring Agent
+&lt;/h1&gt;&lt;p align=&#34;center&#34;&gt;&lt;strong&gt;Resume-to-Score pipeline&lt;/strong&gt; that extracts structured data from PDFs, enriches with GitHub signals, and outputs a fair, explainable evaluation.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;a href=&#34;https://www.python.org/downloads/release/python-3110/&#34;&gt;
+    &lt;img alt=&#34;Python&#34; src=&#34;https://img.shields.io/badge/python-3.11%2B-blue.svg&#34;&gt;
+  &lt;/a&gt;
+  &lt;a href=&#34;https://github.com/interviewstreet/hiring-agent/blob/master/LICENSE&#34;&gt;
+    &lt;img alt=&#34;License: MIT&#34; src=&#34;https://img.shields.io/badge/license-MIT-yellow.svg&#34;&gt;
+  &lt;/a&gt;
+  &lt;a href=&#34;https://github.com/psf/black&#34;&gt;
+    &lt;img alt=&#34;Code style: Black&#34; src=&#34;https://img.shields.io/badge/code%20style-Black-000000.svg&#34;&gt;
+  &lt;/a&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;contents&#34;&gt;Contents
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#overview&#34; &gt;Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#architecture&#34; &gt;Architecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#installation-and-setup&#34; &gt;Installation and Setup&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#prerequisites&#34; &gt;Prerequisites&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#quick-setup-with-pip&#34; &gt;Quick setup with pip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#ollama-models&#34; &gt;Ollama models&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#configuration&#34; &gt;Configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#how-it-works&#34; &gt;How it works&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#cli-usage&#34; &gt;CLI usage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#directory-layout&#34; &gt;Directory layout&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#provider-details&#34; &gt;Provider details&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#contributing&#34; &gt;Contributing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#license&#34; &gt;License&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview
+&lt;/h2&gt;&lt;p&gt;Hiring Agent parses a resume PDF to Markdown, extracts sectioned JSON using a local or hosted LLM, augments the data with GitHub profile and repository signals, then produces an objective evaluation with category scores, evidence, bonus points, and deductions. You can run fully local with Ollama or use Google Gemini.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;architecture&#34;&gt;Architecture
+&lt;/h2&gt;&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;p&gt;&lt;strong&gt;Flow&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;pymupdf_rag.py&lt;/code&gt; converts PDF pages to Markdown-like text.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pdf.py&lt;/code&gt; calls the LLM per section using Jinja templates under &lt;code&gt;prompts/templates&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;github.py&lt;/code&gt; fetches profile and repos, classifies projects, and asks the LLM to select the top 7.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;evaluator.py&lt;/code&gt; runs a strict-scored evaluation with fairness constraints.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;score.py&lt;/code&gt; orchestrates everything end to end and writes CSV when development mode is on.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;&lt;strong&gt;Key modules&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;models.py&lt;/code&gt;
+Pydantic schemas and LLM provider interfaces.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;llm_utils.py&lt;/code&gt;
+Provider initialization and response cleanup.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;transform.py&lt;/code&gt;
+Normalization from loose LLM JSON to JSON Resume style.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;prompts/&lt;/code&gt;
+All Jinja templates for extraction and scoring.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;installation-and-setup&#34;&gt;Installation and Setup
+&lt;/h2&gt;&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Python 3.11+&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The repository pins &lt;code&gt;.python-version&lt;/code&gt; to 3.11.13.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;One LLM backend&lt;/strong&gt; (either of them)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ollama&lt;/strong&gt; for local models
+Install from the &lt;a class=&#34;link&#34; href=&#34;https://ollama.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;official site&lt;/a&gt;, then run &lt;code&gt;ollama serve&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Google Gemini&lt;/strong&gt; if you have an API key, get it from &lt;a class=&#34;link&#34; href=&#34;https://aistudio.google.com/api-keys&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;quick-setup-with-pip&#34;&gt;Quick setup with pip
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git clone https://github.com/interviewstreet/hiring-agent
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; hiring-agent
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ python -m venv .venv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Linux or macOS&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; .venv/bin/activate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Windows&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# .venv\Scripts\activate&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ pip install -r requirements.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;ollama-models&#34;&gt;Ollama Models
+&lt;/h3&gt;&lt;p&gt;Pull the model you want to use. For example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ollama pull gemma3:4b
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If you want different results, you can pull other models such as:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# For higher system configuration&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ollama pull gemma3:12b
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# For lower system configuration&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ollama pull gemma3:1b
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;configuration&#34;&gt;Configuration
+&lt;/h2&gt;&lt;p&gt;Copy the template and set your environment variables.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ cp .env.example .env
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Environment variables&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Variable&lt;/th&gt;
+					&lt;th&gt;Values&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;LLM_PROVIDER&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;ollama&lt;/code&gt; or &lt;code&gt;gemini&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Chooses provider. Defaults to Ollama.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;DEFAULT_MODEL&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;for example &lt;code&gt;gemma3:4b&lt;/code&gt; or &lt;code&gt;gemini-2.5-pro&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Model name passed to the provider.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;GEMINI_API_KEY&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;string&lt;/td&gt;
+					&lt;td&gt;Required when &lt;code&gt;LLM_PROVIDER=gemini&lt;/code&gt;.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;GITHUB_TOKEN&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;optional&lt;/td&gt;
+					&lt;td&gt;Inherits from your shell environment, improves GitHub API rate limits.&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Provider mapping lives in &lt;code&gt;prompt.py&lt;/code&gt; and &lt;code&gt;models.py&lt;/code&gt;. The &lt;code&gt;config.py&lt;/code&gt; file has a single flag:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# config.py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;DEVELOPMENT_MODE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# enables caching and CSV export&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;You can leave it on during iteration. See the next section for details.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;how-it-works&#34;&gt;How it works
+&lt;/h2&gt;&lt;details&gt;
+&lt;summary&gt;&lt;b&gt;1) PDF extraction&lt;/b&gt;&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pymupdf_rag.py&lt;/code&gt; and &lt;code&gt;pdf.py&lt;/code&gt; read the PDF using PyMuPDF and convert pages to Markdown-like text.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;to_markdown&lt;/code&gt; routine handles headings, links, tables, and basic formatting.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;&lt;b&gt;2) Section parsing with templates&lt;/b&gt;&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;prompts/templates/*.jinja&lt;/code&gt; define strict instructions for each section
+Basics, Work, Education, Skills, Projects, Awards.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pdf.PDFHandler&lt;/code&gt; calls the LLM per section and assembles a &lt;code&gt;JSONResume&lt;/code&gt; object (see &lt;code&gt;models.py&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;&lt;b&gt;3) GitHub enrichment&lt;/b&gt;&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;github.py&lt;/code&gt; extracts a username from the resume profiles, fetches profile and repos, and classifies each project.&lt;/li&gt;
+&lt;li&gt;It asks the LLM to select exactly 7 unique projects with a minimum author commit threshold, favoring meaningful contributions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;&lt;b&gt;4) Evaluation&lt;/b&gt;&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;evaluator.py&lt;/code&gt; uses templates that encode fairness and scoring rules.&lt;/li&gt;
+&lt;li&gt;Scores include &lt;code&gt;open_source&lt;/code&gt;, &lt;code&gt;self_projects&lt;/code&gt;, &lt;code&gt;production&lt;/code&gt;, and &lt;code&gt;technical_skills&lt;/code&gt;, plus bonus and deductions, then an explanation for evidence.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;&lt;b&gt;5) Output and CSV export&lt;/b&gt;&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;score.py&lt;/code&gt; prints a readable summary to stdout.&lt;/li&gt;
+&lt;li&gt;When &lt;code&gt;DEVELOPMENT_MODE=True&lt;/code&gt; it creates or appends a &lt;code&gt;resume_evaluations.csv&lt;/code&gt; with key fields, and caches intermediate JSON under &lt;code&gt;cache/&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;cli-usage&#34;&gt;CLI usage
+&lt;/h2&gt;&lt;h3 id=&#34;end-to-end-scoring&#34;&gt;End to end scoring
+&lt;/h3&gt;&lt;p&gt;Provide a path to a resume PDF.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ python score.py /path/to/resume.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;What happens:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;If development mode is on, the PDF extraction result is cached to &lt;code&gt;cache/resumecache_&amp;lt;basename&amp;gt;.json&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;If a GitHub profile is found in the resume, repositories are fetched and cached to &lt;code&gt;cache/githubcache_&amp;lt;basename&amp;gt;.json&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;The evaluator prints a report and, in development mode, appends a CSV row to &lt;code&gt;resume_evaluations.csv&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;directory-layout&#34;&gt;Directory layout
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── .env.example
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── .python-version
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── config.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── evaluator.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── github.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── llm_utils.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── models.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── pdf.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── prompt.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── prompts/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   ├── template_manager.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│   └── templates/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│       ├── awards.jinja
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│       ├── basics.jinja
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│       ├── education.jinja
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│       ├── github_project_selection.jinja
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│       ├── projects.jinja
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│       ├── resume_evaluation_criteria.jinja
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│       ├── resume_evaluation_system_message.jinja
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│       ├── skills.jinja
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│       ├── system_message.jinja
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│       └── work.jinja
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── pymupdf_rag.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── requirements.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── score.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── transform.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;provider-details&#34;&gt;Provider details
+&lt;/h2&gt;&lt;h3 id=&#34;ollama&#34;&gt;Ollama
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Set &lt;code&gt;LLM_PROVIDER=ollama&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Set &lt;code&gt;DEFAULT_MODEL&lt;/code&gt; to any pulled model, for example &lt;code&gt;gemma3:4b&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The provider wrapper in &lt;code&gt;models.OllamaProvider&lt;/code&gt; calls &lt;code&gt;ollama.chat&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;gemini&#34;&gt;Gemini
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Set &lt;code&gt;LLM_PROVIDER=gemini&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Set &lt;code&gt;DEFAULT_MODEL&lt;/code&gt; to a supported Gemini model, for example &lt;code&gt;gemini-2.0-flash&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Provide &lt;code&gt;GEMINI_API_KEY&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The wrapper in &lt;code&gt;models.GeminiProvider&lt;/code&gt; adapts responses to a unified format&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;contributing&#34;&gt;Contributing
+&lt;/h2&gt;&lt;p&gt;Please read the &lt;a class=&#34;link&#34; href=&#34;./CONTRIBUTING.md&#34; &gt;CONTRIBUTING.md&lt;/a&gt; for detailed guidelines on filing issues, proposing changes, and submitting pull requests. Key principles include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Keep prompts declarative and provider-agnostic.&lt;/li&gt;
+&lt;li&gt;Validate changes with a couple of real resumes under different providers.&lt;/li&gt;
+&lt;li&gt;Add or adjust unit-free smoke tests that call each stage with minimal inputs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/interviewstreet/hiring-agent/blob/master/LICENSE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MIT&lt;/a&gt; © HackerRank&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

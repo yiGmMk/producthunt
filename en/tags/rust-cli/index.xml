@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Rust Cli on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/rust-cli/</link>
+        <description>Recent content in Rust Cli on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sun, 08 Nov 2026 22:21:16 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/rust-cli/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>agent-browser</title>
+        <link>https://producthunt.programnotes.cn/en/p/agent-browser/</link>
+        <pubDate>Sun, 08 Nov 2026 22:21:16 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/agent-browser/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1651794327243-d976672943c2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQxNDc1Nzd8&amp;ixlib=rb-4.1.0" alt="Featured image of post agent-browser" /&gt;&lt;h1 id=&#34;vercel-labsagent-browser&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vercel-labs/agent-browser&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vercel-labs/agent-browser&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;agent-browser&#34;&gt;agent-browser
+&lt;/h1&gt;&lt;p&gt;Browser automation for AI agents: open pages, read them as an accessibility tree, and act on elements from the shell.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a href=&#34;https://vercel.com/labs#labs-products&#34;&gt;&lt;img alt=&#34;Vercel Labs Product&#34; src=&#34;https://img.shields.io/badge/LABS-PRODUCT-0a0a0a.svg?style=for-the-badge&amp;amp;logo=Vercel&amp;amp;labelColor=000000&#34; height=&#34;28&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://www.npmjs.com/package/agent-browser&#34;&gt;&lt;img alt=&#34;npm version: agent-browser&#34; src=&#34;https://img.shields.io/npm/v/agent-browser.svg?style=for-the-badge&amp;amp;labelColor=000000&#34; height=&#34;28&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://github.com/vercel-labs/agent-browser/blob/main/LICENSE&#34;&gt;&lt;img alt=&#34;License: Apache-2.0&#34; src=&#34;https://img.shields.io/github/license/vercel-labs/agent-browser.svg?style=for-the-badge&amp;amp;labelColor=000000&#34; height=&#34;28&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://www.npmjs.com/package/agent-browser&#34;&gt;&lt;img alt=&#34;npm downloads per month: agent-browser&#34; src=&#34;https://img.shields.io/npm/dm/agent-browser.svg?style=for-the-badge&amp;amp;labelColor=000000&amp;amp;label=npm%20downloads&#34; height=&#34;28&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://skills.sh/vercel-labs/agent-browser&#34;&gt;&lt;img alt=&#34;skills.sh&#34; src=&#34;https://skills.sh/b/vercel-labs/agent-browser?style=for-the-badge&#34; height=&#34;28&#34;&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;agent-browser is a native Rust CLI that gives an AI agent a browser it can drive one command at a time. &lt;code&gt;snapshot&lt;/code&gt; returns the page as compact text with a ref such as &lt;code&gt;@e1&lt;/code&gt; for each element. The agent acts on a ref, reads the page again to check the result, and repeats. The browser stays open between commands, so each step is one short shell call.&lt;/p&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install -g agent-browser
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;agent-browser install           &lt;span class=&#34;c1&#34;&gt;# download Chrome for Testing (first time only)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Homebrew:&lt;/strong&gt; &lt;code&gt;brew install agent-browser&lt;/code&gt;, then &lt;code&gt;agent-browser install&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Linux:&lt;/strong&gt; &lt;code&gt;agent-browser install --with-deps&lt;/code&gt; also installs the browser&amp;rsquo;s system libraries.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No install:&lt;/strong&gt; &lt;code&gt;npx agent-browser open example.com&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Project installs, building from source, &lt;code&gt;upgrade&lt;/code&gt;, and &lt;code&gt;doctor&lt;/code&gt; are covered in &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/installation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Installation&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick start
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;agent-browser open example.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;agent-browser snapshot -i       &lt;span class=&#34;c1&#34;&gt;# interactive elements, each with a ref&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;agent-browser click @e1         &lt;span class=&#34;c1&#34;&gt;# act on a ref from that snapshot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;agent-browser get url           &lt;span class=&#34;c1&#34;&gt;# check the result&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;agent-browser close
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The snapshot for &lt;code&gt;example.com&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- link &amp;#34;Learn more&amp;#34; [ref=e1]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Refs describe the page at the time of the snapshot. After navigation or a DOM change, take a new snapshot before using refs again.&lt;/li&gt;
+&lt;li&gt;CSS selectors, text, XPath, and semantic locators also work, for example &lt;code&gt;agent-browser find role button click --name &amp;quot;Submit&amp;quot;&lt;/code&gt;. See &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/selectors&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Selectors&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;A click fails, instead of reporting success, when the target is hidden, disabled, outside the viewport, or covered by another element such as a consent banner. Dismiss the covering element, take a new snapshot, and retry.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The full walkthrough is in the &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/quick-start&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;quick start&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;how-it-works&#34;&gt;How it works
+&lt;/h2&gt;&lt;p&gt;The CLI sends each command to a background daemon that starts on the first command and controls the browser over the Chrome DevTools Protocol. Each &lt;code&gt;--session&lt;/code&gt; gets its own daemon and browser. By default, the daemon closes a headless browser and exits after one hour without commands, saving state first when &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/sessions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;session persistence&lt;/a&gt; is configured.&lt;/p&gt;
+&lt;p&gt;Chrome for Testing is the default browser. You can also attach to a running Chrome with &lt;code&gt;--cdp&lt;/code&gt; or &lt;code&gt;--auto-connect&lt;/code&gt; (&lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/cdp-mode&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CDP mode&lt;/a&gt;), select the &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/engines/lightpanda&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Lightpanda&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/engines/obscura&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Obscura&lt;/a&gt; engine with &lt;code&gt;--engine&lt;/code&gt;, drive Mobile Safari in the &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/ios&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;iOS Simulator&lt;/a&gt;, or use a cloud browser provider such as &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/providers/browserbase&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Browserbase&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/providers/browserless&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Browserless&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/providers/browser-use&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Browser Use&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/providers/kernel&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Kernel&lt;/a&gt;, or &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/providers/agentcore&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AgentCore&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;for-ai-agents&#34;&gt;For AI agents
+&lt;/h2&gt;&lt;p&gt;The CLI ships skills that match its version:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;agent-browser skills get core                 &lt;span class=&#34;c1&#34;&gt;# the core loop, refs, waiting, and common workflows&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;agent-browser skills get core --ref commands  &lt;span class=&#34;c1&#34;&gt;# one reference, such as the full command list&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;agent-browser skills get core --full          &lt;span class=&#34;c1&#34;&gt;# adds the full command reference and templates&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;agent-browser skills list                     &lt;span class=&#34;c1&#34;&gt;# specialized skills: electron, slack, dogfood, and more&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Install the discovery skill into an agent harness from &lt;a class=&#34;link&#34; href=&#34;https://skills.sh/vercel-labs/agent-browser&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;skills.sh&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx skills add vercel-labs/agent-browser
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The installed skill is a thin stub that tells the agent to load &lt;code&gt;agent-browser skills get core&lt;/code&gt;, so its instructions always match the installed CLI. Or add this to your &lt;code&gt;AGENTS.md&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Use &lt;span class=&#34;sb&#34;&gt;`agent-browser`&lt;/span&gt; for browser automation. Before the first use, run
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;`agent-browser skills get core`&lt;/span&gt; and follow it.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For MCP clients, &lt;code&gt;agent-browser mcp&lt;/code&gt; starts an MCP server over stdio. See &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/commands#mcp-server&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MCP server&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;commands&#34;&gt;Commands
+&lt;/h2&gt;&lt;p&gt;Run &lt;code&gt;agent-browser --help&lt;/code&gt; for the full list, or &lt;code&gt;agent-browser &amp;lt;command&amp;gt; --help&lt;/code&gt; for one command.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Group&lt;/th&gt;
+					&lt;th&gt;Commands&lt;/th&gt;
+					&lt;th&gt;Docs&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Navigate and read&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;open&lt;/code&gt;, &lt;code&gt;back&lt;/code&gt;, &lt;code&gt;forward&lt;/code&gt;, &lt;code&gt;reload&lt;/code&gt;, &lt;code&gt;read&lt;/code&gt;, &lt;code&gt;snapshot&lt;/code&gt;, &lt;code&gt;get&lt;/code&gt;, &lt;code&gt;is&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/commands#core&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Core&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/snapshots&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Snapshots&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Interact&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;click&lt;/code&gt;, &lt;code&gt;dblclick&lt;/code&gt;, &lt;code&gt;fill&lt;/code&gt;, &lt;code&gt;type&lt;/code&gt;, &lt;code&gt;press&lt;/code&gt;, &lt;code&gt;keyboard&lt;/code&gt;, &lt;code&gt;hover&lt;/code&gt;, &lt;code&gt;focus&lt;/code&gt;, &lt;code&gt;select&lt;/code&gt;, &lt;code&gt;check&lt;/code&gt;, &lt;code&gt;uncheck&lt;/code&gt;, &lt;code&gt;scroll&lt;/code&gt;, &lt;code&gt;drag&lt;/code&gt;, &lt;code&gt;upload&lt;/code&gt;, &lt;code&gt;mouse&lt;/code&gt;, &lt;code&gt;find&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/commands#core&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Core&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/commands#find-elements&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Find elements&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Wait&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;wait&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/commands#wait&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Wait&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Capture&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;screenshot&lt;/code&gt;, &lt;code&gt;pdf&lt;/code&gt;, &lt;code&gt;record&lt;/code&gt;, &lt;code&gt;download&lt;/code&gt;, &lt;code&gt;diff&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/recording&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Recording&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/diffing&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Diffing&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/files&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Files&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Page and network state&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;cookies&lt;/code&gt;, &lt;code&gt;storage&lt;/code&gt;, &lt;code&gt;network&lt;/code&gt;, &lt;code&gt;set&lt;/code&gt;, &lt;code&gt;clipboard&lt;/code&gt;, &lt;code&gt;eval&lt;/code&gt;, &lt;code&gt;pushstate&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/network&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Network&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/commands#settings&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Settings&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Tabs, frames, and dialogs&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;tab&lt;/code&gt;, &lt;code&gt;frame&lt;/code&gt;, &lt;code&gt;dialog&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/commands#tabs-frames&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tabs and frames&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Debug and performance&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;console&lt;/code&gt;, &lt;code&gt;errors&lt;/code&gt;, &lt;code&gt;highlight&lt;/code&gt;, &lt;code&gt;inspect&lt;/code&gt;, &lt;code&gt;trace&lt;/code&gt;, &lt;code&gt;profiler&lt;/code&gt;, &lt;code&gt;vitals&lt;/code&gt;, &lt;code&gt;react&lt;/code&gt;, &lt;code&gt;a11y&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/debugging&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Debugging&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/profiler&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Profiler&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/react&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;React&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Sessions and auth&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;session&lt;/code&gt;, &lt;code&gt;state&lt;/code&gt;, &lt;code&gt;auth&lt;/code&gt;, &lt;code&gt;profiles&lt;/code&gt;, &lt;code&gt;confirm&lt;/code&gt;, &lt;code&gt;deny&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/sessions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Sessions&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/security&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Security&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Agents and integrations&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;skills&lt;/code&gt;, &lt;code&gt;mcp&lt;/code&gt;, &lt;code&gt;webmcp&lt;/code&gt;, &lt;code&gt;flow&lt;/code&gt;, &lt;code&gt;chat&lt;/code&gt;, &lt;code&gt;batch&lt;/code&gt;, &lt;code&gt;plugin&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/skills&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Skills&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/webmcp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WebMCP&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/plugins&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Plugins&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Observe&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;stream&lt;/code&gt;, &lt;code&gt;dashboard&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/streaming&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Streaming&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/dashboard&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Dashboard&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Setup&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;install&lt;/code&gt;, &lt;code&gt;upgrade&lt;/code&gt;, &lt;code&gt;doctor&lt;/code&gt;, &lt;code&gt;connect&lt;/code&gt;, &lt;code&gt;close&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/installation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Installation&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Flags, environment variables, and &lt;code&gt;agent-browser.json&lt;/code&gt; are documented in &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/configuration&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Configuration&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;platforms&#34;&gt;Platforms
+&lt;/h2&gt;&lt;p&gt;Native binaries ship for macOS (ARM64, x64), Linux (ARM64, x64, glibc and musl), and Windows (x64). The npm package picks the right binary for the host.&lt;/p&gt;
+&lt;h2 id=&#34;development&#34;&gt;Development
+&lt;/h2&gt;&lt;p&gt;Building from source requires Node.js 24 or later, pnpm 11 or later, and Rust:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pnpm install
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pnpm build:source               &lt;span class=&#34;c1&#34;&gt;# builds the dashboard and the native CLI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pnpm link --global
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;agent-browser install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Run the Rust checks from &lt;code&gt;cli/&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cargo fmt -- --check
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cargo clippy
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cargo &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cargo &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; e2e -- --ignored --test-threads&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;# launches real headless Chrome&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;AGENTS.md&#34; &gt;AGENTS.md&lt;/a&gt; lists the files to update with each change, the docs checks, and the release process.&lt;/p&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;agent-browser.dev&lt;/a&gt;: introduction, guides, and reference&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/commands&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Commands&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/configuration&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/security&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Security&lt;/a&gt;: the auth vault, domain allowlists, action policies, and content boundaries&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/next&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Next.js and Vercel&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://agent-browser.dev/eve&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;eve&lt;/a&gt;: running agent-browser in Vercel Sandbox and eve agents&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;CHANGELOG.md&#34; &gt;Changelog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;Apache-2.0&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

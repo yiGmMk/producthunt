@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Accessibility Tree on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/accessibility-tree/</link>
+        <description>Recent content in Accessibility Tree on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Tue, 03 Nov 2026 23:06:47 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/accessibility-tree/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>agent-desktop</title>
+        <link>https://producthunt.programnotes.cn/en/p/agent-desktop/</link>
+        <pubDate>Tue, 03 Nov 2026 23:06:47 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/agent-desktop/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1547133166-95fde0ea4c49?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM3MTgzNjN8&amp;ixlib=rb-4.1.0" alt="Featured image of post agent-desktop" /&gt;&lt;h1 id=&#34;vercel-labsagent-desktop&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vercel-labs/agent-desktop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vercel-labs/agent-desktop&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;agent-desktop&#34;&gt;agent-desktop
+&lt;/h1&gt;&lt;p&gt;Computer use for AI agents: read and operate desktop apps through the OS accessibility tree.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a href=&#34;https://vercel.com/labs#labs-products&#34;&gt;&lt;img alt=&#34;Vercel Labs Product&#34; src=&#34;https://img.shields.io/badge/LABS-PRODUCT-0a0a0a.svg?style=for-the-badge&amp;amp;logo=Vercel&amp;amp;labelColor=000000&#34; height=&#34;28&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://www.npmjs.com/package/agent-desktop&#34;&gt;&lt;img alt=&#34;npm version: agent-desktop&#34; src=&#34;https://img.shields.io/npm/v/agent-desktop.svg?style=for-the-badge&amp;amp;labelColor=000000&#34; height=&#34;28&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://github.com/vercel-labs/agent-desktop/blob/main/LICENSE&#34;&gt;&lt;img alt=&#34;License: Apache-2.0&#34; src=&#34;https://img.shields.io/github/license/vercel-labs/agent-desktop.svg?style=for-the-badge&amp;amp;labelColor=000000&#34; height=&#34;28&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://www.npmjs.com/package/agent-desktop&#34;&gt;&lt;img alt=&#34;npm downloads per month: agent-desktop&#34; src=&#34;https://img.shields.io/npm/dm/agent-desktop.svg?style=for-the-badge&amp;amp;labelColor=000000&amp;amp;label=npm%20downloads&#34; height=&#34;28&#34;&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;A CLI and C library for macOS, Windows and Linux. A snapshot returns JSON with a ref for every element an agent can act on. The agent acts on a ref and snapshots again to check, with no pixel matching; the loop stays in your agent.&lt;/p&gt;
+&lt;p&gt;Every CLI call runs in its own process. Headless calls still prohibit foreground activation and synthesized input.&lt;/p&gt;
+&lt;p&gt;Snapshots, clipboard reads, screenshots, command output and debug artifacts can contain private desktop content. Keep them out of public logs and uploads. The optional &lt;a class=&#34;link&#34; href=&#34;skills/jev-desktop/SKILL.md&#34; &gt;JEV helper&lt;/a&gt; sends screen descriptions to a configured model provider; it is separate from the native CLI. See &lt;a class=&#34;link&#34; href=&#34;docs/faq.md#what-data-can-contain-private-information&#34; &gt;privacy and data handling&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation
+&lt;/h2&gt;&lt;p&gt;Install on macOS, Windows or Linux with npm:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install -g agent-desktop
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;agent-desktop version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Bun, Yarn and pnpm can install the same package. It includes native binaries and platform helpers for x64 and ARM64.
+For direct execution without a JavaScript launcher, download the matching native archive from
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/vercel-labs/agent-desktop/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Releases&lt;/a&gt; and keep its helper beside the executable.&lt;/p&gt;
+&lt;p&gt;Official Homebrew and Scoop packages are being submitted; they are not yet available in the default catalogs.
+The repository no longer maintains a custom Homebrew tap or Scoop bucket.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;macOS&lt;/strong&gt; needs Accessibility permission: &lt;code&gt;agent-desktop permissions --guide&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Windows&lt;/strong&gt; needs no grant for apps at your terminal&amp;rsquo;s integrity level.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Linux&lt;/strong&gt; needs the user&amp;rsquo;s graphical session with &lt;code&gt;at-spi2-core&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See &lt;a class=&#34;link&#34; href=&#34;docs/install.md&#34; &gt;installation and permissions&lt;/a&gt; for package-manager behavior, release archives, and building from source.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick start
+&lt;/h2&gt;&lt;p&gt;Observe, act on a ref, observe again. Any app name from &lt;code&gt;agent-desktop list-apps&lt;/code&gt; works; Finder is the macOS example.
+Each command prints one JSON envelope; a trimmed snapshot follows the commands.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;agent-desktop snapshot --app Finder -i      &lt;span class=&#34;c1&#34;&gt;# interactive elements, each with a ref&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;agent-desktop click @s8f3k2p9:e8            &lt;span class=&#34;c1&#34;&gt;# act on a ref from that snapshot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;agent-desktop snapshot --app Finder -i      &lt;span class=&#34;c1&#34;&gt;# observe again to verify&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;version&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2.6&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;ok&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;command&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;snapshot&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;data&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;app&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Finder&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;window&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;w-204749&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Downloads&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;snapshot_id&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;s8f3k2p9&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;ref_count&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;59&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;complete&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;tree&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;role&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;window&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Downloads&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;#34;children&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;role&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;treeitem&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Documents&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;ref_id&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;@s8f3k2p9:e8&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;available_actions&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Click&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Refs belong to their snapshot.&lt;/strong&gt; A bare &lt;code&gt;@e8&lt;/code&gt; is rejected with &lt;code&gt;INVALID_ARGS&lt;/code&gt;. When the UI changes, an action
+returns &lt;code&gt;STALE_REF&lt;/code&gt; or &lt;code&gt;AMBIGUOUS_TARGET&lt;/code&gt;: take a new snapshot and use its refs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Several windows&lt;/strong&gt; give &lt;code&gt;AMBIGUOUS_TARGET&lt;/code&gt;; &lt;code&gt;snapshot&lt;/code&gt; lists the candidate window ids in &lt;code&gt;error.details&lt;/code&gt;. Pass one
+with &lt;code&gt;--window-id&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dense apps:&lt;/strong&gt; map first with &lt;code&gt;snapshot --skeleton --app Slack -i --compact&lt;/code&gt;, then drill into one region with
+&lt;code&gt;snapshot --root @s8f3k2p9:e3 -i --compact&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Headless by default.&lt;/strong&gt; Ref actions go through the accessibility API without moving the pointer or taking focus.
+The global &lt;code&gt;--headed&lt;/code&gt; flag allows physical input.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PowerShell.&lt;/strong&gt; Quote every ref (&lt;code&gt;&#39;@s8f3k2p9:e8&#39;&lt;/code&gt;), because a bare &lt;code&gt;@token&lt;/code&gt; is the splatting operator.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;for-ai-agents&#34;&gt;For AI agents
+&lt;/h2&gt;&lt;p&gt;The binary carries its own docs, matched to its version:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;agent-desktop skills get desktop      &lt;span class=&#34;c1&#34;&gt;# the loop, refs, verification and retry rules&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;agent-desktop skills get platform     &lt;span class=&#34;c1&#34;&gt;# what differs on the OS you run on&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;agent-desktop &amp;lt;command&amp;gt; --help        &lt;span class=&#34;c1&#34;&gt;# flags for one command&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Install the skill into an agent harness from &lt;a class=&#34;link&#34; href=&#34;https://skills.sh/vercel-labs/agent-desktop/agent-desktop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;skills.sh&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx skills add https://github.com/vercel-labs/agent-desktop --skill agent-desktop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Or add this to your &lt;code&gt;AGENTS.md&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Use &lt;span class=&#34;sb&#34;&gt;`agent-desktop`&lt;/span&gt; to see and operate desktop apps. Before the first use, run
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;`agent-desktop skills get desktop`&lt;/span&gt; and &lt;span class=&#34;sb&#34;&gt;`agent-desktop skills get platform`&lt;/span&gt;, and follow them.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Every command prints one envelope with &lt;code&gt;ok&lt;/code&gt; and either &lt;code&gt;data&lt;/code&gt; or &lt;code&gt;error&lt;/code&gt;. An error carries a &lt;code&gt;code&lt;/code&gt;, a &lt;code&gt;disposition&lt;/code&gt; and usually a &lt;code&gt;suggestion&lt;/code&gt;; retry only when &lt;code&gt;error.disposition.retry&lt;/code&gt; is &lt;code&gt;safe&lt;/code&gt;. The contract, error codes and exit codes are in &lt;a class=&#34;link&#34; href=&#34;docs/json-output.md&#34; &gt;docs/json-output.md&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;commands&#34;&gt;Commands
+&lt;/h2&gt;&lt;p&gt;It ships 60 command names, 56 operational commands. The other four (&lt;code&gt;key-down&lt;/code&gt;, &lt;code&gt;key-up&lt;/code&gt;, &lt;code&gt;mouse-down&lt;/code&gt;, &lt;code&gt;mouse-up&lt;/code&gt;) refuse to run until a daemon can release a held key or button.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Group&lt;/th&gt;
+					&lt;th&gt;Commands&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Observe&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;snapshot&lt;/code&gt;, &lt;code&gt;find&lt;/code&gt;, &lt;code&gt;get&lt;/code&gt;, &lt;code&gt;is&lt;/code&gt;, &lt;code&gt;screenshot&lt;/code&gt;, &lt;code&gt;list-surfaces&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Act on a ref&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;click&lt;/code&gt;, &lt;code&gt;double-click&lt;/code&gt;, &lt;code&gt;triple-click&lt;/code&gt;, &lt;code&gt;right-click&lt;/code&gt;, &lt;code&gt;type&lt;/code&gt;, &lt;code&gt;set-value&lt;/code&gt;, &lt;code&gt;clear&lt;/code&gt;, &lt;code&gt;focus&lt;/code&gt;, &lt;code&gt;select&lt;/code&gt;, &lt;code&gt;toggle&lt;/code&gt;, &lt;code&gt;check&lt;/code&gt;, &lt;code&gt;uncheck&lt;/code&gt;, &lt;code&gt;expand&lt;/code&gt;, &lt;code&gt;collapse&lt;/code&gt;, &lt;code&gt;scroll&lt;/code&gt;, &lt;code&gt;scroll-to&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Keyboard and mouse&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;press&lt;/code&gt;, &lt;code&gt;hover&lt;/code&gt;, &lt;code&gt;drag&lt;/code&gt;, &lt;code&gt;mouse-move&lt;/code&gt;, &lt;code&gt;mouse-click&lt;/code&gt;, &lt;code&gt;mouse-wheel&lt;/code&gt;, &lt;code&gt;key-down&lt;/code&gt;, &lt;code&gt;key-up&lt;/code&gt;, &lt;code&gt;mouse-down&lt;/code&gt;, &lt;code&gt;mouse-up&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Apps and windows&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;launch&lt;/code&gt;, &lt;code&gt;close-app&lt;/code&gt;, &lt;code&gt;list-apps&lt;/code&gt;, &lt;code&gt;list-windows&lt;/code&gt;, &lt;code&gt;list-displays&lt;/code&gt;, &lt;code&gt;focus-window&lt;/code&gt;, &lt;code&gt;resize-window&lt;/code&gt;, &lt;code&gt;move-window&lt;/code&gt;, &lt;code&gt;minimize&lt;/code&gt;, &lt;code&gt;maximize&lt;/code&gt;, &lt;code&gt;restore&lt;/code&gt;, &lt;code&gt;open-system-surface&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Notifications&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;list-notifications&lt;/code&gt;, &lt;code&gt;dismiss-notification&lt;/code&gt;, &lt;code&gt;dismiss-all-notifications&lt;/code&gt;, &lt;code&gt;notification-action&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Clipboard&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;clipboard-get&lt;/code&gt;, &lt;code&gt;clipboard-set&lt;/code&gt;, &lt;code&gt;clipboard-clear&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Wait&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;wait&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Sessions&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;session&lt;/code&gt;, &lt;code&gt;trace&lt;/code&gt;, &lt;code&gt;cursor-overlay&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;System&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;status&lt;/code&gt;, &lt;code&gt;permissions&lt;/code&gt;, &lt;code&gt;version&lt;/code&gt;, &lt;code&gt;batch&lt;/code&gt;, &lt;code&gt;skills&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;platform-support&#34;&gt;Platform support
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;macOS&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;Windows&lt;/th&gt;
+					&lt;th style=&#34;text-align: center&#34;&gt;Linux&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Accessibility tree&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Yes&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Yes&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Yes (AT-SPI)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Click / type / keyboard&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Yes&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Yes&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;AT-SPI; X11 / GNOME keys&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Mouse input&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Yes&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Yes&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;X11, &lt;code&gt;--headed&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Screenshot&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Yes&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Yes&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;X11 windows; Wayland portal&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Clipboard&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Yes&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Yes&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Yes; Wayland needs &lt;code&gt;wl-clipboard&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;App &amp;amp; window management&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Yes&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Yes&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Launch/list; X11 window control&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Notifications&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Yes&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Yes&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;GNOME Shell&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Shell surfaces (&lt;code&gt;open-system-surface&lt;/code&gt;)&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Dock, menu bar extras&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;Yes&lt;/td&gt;
+					&lt;td style=&#34;text-align: center&#34;&gt;GNOME tray, Action Center&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The Windows surface and &lt;code&gt;launch&lt;/code&gt; notes and the Linux X11 and Wayland notes are in &lt;a class=&#34;link&#34; href=&#34;docs/install.md#platform-notes&#34; &gt;docs/install.md&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;agent-desktop skills get platform&lt;/code&gt; prints the full capability table for the OS you run on.&lt;/p&gt;
+&lt;h2 id=&#34;language-bindings&#34;&gt;Language bindings
+&lt;/h2&gt;&lt;p&gt;Each release also ships &lt;code&gt;libagent_desktop_ffi&lt;/code&gt; for macOS, Linux and Windows, so a program can call the tool in process instead of starting the CLI for each command. &lt;code&gt;agent-desktop skills get ffi&lt;/code&gt; covers the entry points, memory ownership and threading rules.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;ctypes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;lib&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ctypes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CDLL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;./lib/libagent_desktop_ffi.dylib&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;lib&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ad_adapter_create&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;restype&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ctypes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c_void_p&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;lib&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ad_adapter_destroy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argtypes&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ctypes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c_void_p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;assert&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lib&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ad_init&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# AD_RESULT_OK when the header&amp;#39;s AD_ABI_VERSION_MAJOR matches the library&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;adapter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lib&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ad_adapter_create&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;lib&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ad_adapter_destroy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;adapter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;development&#34;&gt;Development
+&lt;/h2&gt;&lt;p&gt;Each platform adapter builds only on its own OS, so scope cargo to the host&amp;rsquo;s packages. On macOS:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;HOST_PKGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=(&lt;/span&gt;-p agent-desktop-core -p agent-desktop-macos -p agent-desktop -p agent-desktop-ffi&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cargo &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;HOST_PKGS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[@]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cargo clippy &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;HOST_PKGS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[@]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; --all-targets -- -D warnings
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;On Windows, replace &lt;code&gt;agent-desktop-macos&lt;/code&gt; in that list with &lt;code&gt;agent-desktop-windows&lt;/code&gt;; on Linux, with &lt;code&gt;agent-desktop-linux&lt;/code&gt;.
+&lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;CONTRIBUTING.md&lt;/a&gt; lists every gate. Build from source: &lt;a class=&#34;link&#34; href=&#34;docs/install.md#from-source&#34; &gt;docs/install.md&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;I want to&amp;hellip;&lt;/th&gt;
+					&lt;th&gt;Read&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Fix an install problem, grant permissions, verify a download or build from source&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/install.md&#34; &gt;docs/install.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Parse the JSON envelope, error codes and exit codes&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/json-output.md&#34; &gt;docs/json-output.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Drive the tool as an AI agent&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;agent-desktop skills get desktop&lt;/code&gt; (&lt;a class=&#34;link&#34; href=&#34;skills/agent-desktop/&#34; &gt;skills/agent-desktop/&lt;/a&gt;)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Learn what differs on one OS&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;skills/agent-desktop-macos/&#34; &gt;macOS&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;skills/agent-desktop-windows/&#34; &gt;Windows&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;skills/agent-desktop-linux/&#34; &gt;Linux&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Call the C library&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;skills/agent-desktop-ffi/&#34; &gt;skills/agent-desktop-ffi/&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Look up the vocabulary: refs, snapshots, sessions&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;CONCEPTS.md&#34; &gt;CONCEPTS.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Contribute and pass the gates&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;CONTRIBUTING.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Read the engineering rules&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;AGENTS.md&#34; &gt;AGENTS.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Learn from past bugs and lessons&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/solutions/&#34; &gt;docs/solutions/&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Find answers to common questions&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/faq.md&#34; &gt;docs/faq.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Report a vulnerability&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;SECURITY.md&#34; &gt;SECURITY.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Get help&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;SUPPORT.md&#34; &gt;SUPPORT.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;Apache-2.0&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

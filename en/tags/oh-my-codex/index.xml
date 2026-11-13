@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Oh-My-Codex on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/oh-my-codex/</link>
+        <description>Recent content in Oh-My-Codex on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sun, 05 Apr 2026 15:59:27 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/oh-my-codex/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>oh-my-codex</title>
+        <link>https://producthunt.programnotes.cn/en/p/oh-my-codex/</link>
+        <pubDate>Sun, 05 Apr 2026 15:59:27 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/oh-my-codex/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1540200882611-31297ad57e00?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzUzNzU5Mzh8&amp;ixlib=rb-4.1.0" alt="Featured image of post oh-my-codex" /&gt;&lt;h1 id=&#34;yeachan-heooh-my-codex&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Yeachan-Heo/oh-my-codex&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Yeachan-Heo/oh-my-codex&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;oh-my-codex-omx&#34;&gt;oh-my-codex (OMX)
+&lt;/h1&gt;&lt;p&gt;Multi-agent orchestration layer for &lt;a class=&#34;link&#34; href=&#34;https://github.com/openai/codex&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenAI Codex CLI&lt;/a&gt;. Inspired by &lt;a class=&#34;link&#34; href=&#34;https://github.com/anthropics/oh-my-claudecode&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;oh-my-claudecode&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-this&#34;&gt;What is this?
+&lt;/h2&gt;&lt;p&gt;OMX brings 30 specialized agent roles, 39 workflow skills, mode lifecycle management, team orchestration, verification protocols, and notification systems to Codex CLI &amp;ndash; without forking the upstream project.&lt;/p&gt;
+&lt;h2 id=&#34;architecture&#34;&gt;Architecture
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;User -&amp;gt; Codex CLI -&amp;gt; AGENTS.md (orchestration brain)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                  -&amp;gt; ~/.codex/prompts/*.md (30 agent slash commands)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                  -&amp;gt; ~/.agents/skills/*/SKILL.md (39 skills)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                  -&amp;gt; config.toml (MCP servers, notify hook, features)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                  -&amp;gt; .omx/ (state, memory, notepad, plans)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Key design decision&lt;/strong&gt;: OMX is an add-on, not a fork. It uses Codex CLI&amp;rsquo;s native extension points:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Extension Point&lt;/th&gt;
+					&lt;th&gt;What OMX Uses It For&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;AGENTS.md&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Orchestration brain (equivalent to CLAUDE.md)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;~/.codex/prompts/*.md&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;30 agent definitions as slash commands&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;~/.agents/skills/*/SKILL.md&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;39 workflow skills&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;config.toml&lt;/code&gt; MCP servers&lt;/td&gt;
+					&lt;td&gt;State management + project memory&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;config.toml&lt;/code&gt; notify&lt;/td&gt;
+					&lt;td&gt;Post-turn logging and metrics&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;config.toml&lt;/code&gt; features&lt;/td&gt;
+					&lt;td&gt;collab (sub-agents), child_agents_md&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick Start
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Install&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install -g oh-my-codex
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Setup (installs prompts, skills, configures Codex CLI)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;omx setup
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Verify installation&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;omx doctor
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Start using in Codex CLI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;codex
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; /architect &lt;span class=&#34;s2&#34;&gt;&amp;#34;analyze the auth module&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; /autopilot &lt;span class=&#34;s2&#34;&gt;&amp;#34;build a REST API for user management&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; /team 3:executor &lt;span class=&#34;s2&#34;&gt;&amp;#34;fix all TypeScript errors&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;setup-details&#34;&gt;Setup Details
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;omx setup&lt;/code&gt; performs these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Creates directories (&lt;code&gt;~/.codex/prompts/&lt;/code&gt;, &lt;code&gt;~/.agents/skills/&lt;/code&gt;, &lt;code&gt;.omx/state/&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Installs 30 agent prompt files to &lt;code&gt;~/.codex/prompts/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Installs 39 skill SKILL.md files to &lt;code&gt;~/.agents/skills/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Updates &lt;code&gt;~/.codex/config.toml&lt;/code&gt; with MCP servers and features&lt;/li&gt;
+&lt;li&gt;Generates &lt;code&gt;AGENTS.md&lt;/code&gt; in the current project root&lt;/li&gt;
+&lt;li&gt;Configures the notify hook for post-turn logging&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;agent-catalog-30-agents&#34;&gt;Agent Catalog (30 agents)
+&lt;/h2&gt;&lt;h3 id=&#34;build--analysis&#34;&gt;Build &amp;amp; Analysis
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Agent&lt;/th&gt;
+					&lt;th&gt;Model&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/explore&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;haiku&lt;/td&gt;
+					&lt;td&gt;Codebase discovery, symbol/file mapping&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/analyst&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;opus&lt;/td&gt;
+					&lt;td&gt;Requirements clarity, acceptance criteria&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/planner&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;opus&lt;/td&gt;
+					&lt;td&gt;Task sequencing, execution plans&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/architect&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;opus&lt;/td&gt;
+					&lt;td&gt;System design, boundaries, interfaces&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/debugger&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;Root-cause analysis, failure diagnosis&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/executor&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;Code implementation, refactoring&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/deep-executor&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;opus&lt;/td&gt;
+					&lt;td&gt;Complex autonomous goal-oriented tasks&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/verifier&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;Completion evidence, claim validation&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;review&#34;&gt;Review
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Agent&lt;/th&gt;
+					&lt;th&gt;Model&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/style-reviewer&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;haiku&lt;/td&gt;
+					&lt;td&gt;Formatting, naming, lint conventions&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/quality-reviewer&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;Logic defects, anti-patterns&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/api-reviewer&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;API contracts, versioning&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/security-reviewer&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;Vulnerabilities, OWASP Top 10&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/performance-reviewer&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;Hotspots, complexity optimization&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/code-reviewer&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;opus&lt;/td&gt;
+					&lt;td&gt;Comprehensive review across concerns&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;domain-specialists&#34;&gt;Domain Specialists
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Agent&lt;/th&gt;
+					&lt;th&gt;Model&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/dependency-expert&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;External SDK/API evaluation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/test-engineer&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;Test strategy, coverage&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/quality-strategist&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;Release readiness, risk assessment&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/build-fixer&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;Build/toolchain failures&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/designer&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;UX/UI architecture&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/writer&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;haiku&lt;/td&gt;
+					&lt;td&gt;Docs, migration notes&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/qa-tester&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;Interactive CLI validation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/scientist&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;Data/statistical analysis&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/git-master&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;Commit strategy, history hygiene&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;product&#34;&gt;Product
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Agent&lt;/th&gt;
+					&lt;th&gt;Model&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/product-manager&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;Problem framing, PRDs&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/ux-researcher&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;Heuristic audits, usability&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/information-architect&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;Taxonomy, navigation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/product-analyst&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;Product metrics, experiments&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;coordination&#34;&gt;Coordination
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Agent&lt;/th&gt;
+					&lt;th&gt;Model&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/critic&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;opus&lt;/td&gt;
+					&lt;td&gt;Plan/design critical challenge&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;/vision&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;sonnet&lt;/td&gt;
+					&lt;td&gt;Image/screenshot analysis&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;skills-39-skills&#34;&gt;Skills (39 skills)
+&lt;/h2&gt;&lt;h3 id=&#34;execution-modes&#34;&gt;Execution Modes
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;autopilot&lt;/strong&gt; - Full autonomous execution from idea to working code&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ralph&lt;/strong&gt; - Persistence loop with architect verification&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ultrawork&lt;/strong&gt; - Maximum parallelism with parallel agent orchestration&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;team&lt;/strong&gt; - N coordinated agents on shared task list&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;pipeline&lt;/strong&gt; - Sequential agent chaining with data passing&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ecomode&lt;/strong&gt; - Token-efficient execution using haiku and sonnet&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ultrapilot&lt;/strong&gt; - Parallel autopilot with file ownership partitioning&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ultraqa&lt;/strong&gt; - QA cycling: test, verify, fix, repeat&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;swarm&lt;/strong&gt; - Compatibility facade over team&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;planning&#34;&gt;Planning
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;plan&lt;/strong&gt; - Strategic planning with optional consensus/review modes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ralplan&lt;/strong&gt; - Consensus planning (planner + architect + critic)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;agent-shortcuts&#34;&gt;Agent Shortcuts
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;analyze&lt;/strong&gt; - Deep analysis and investigation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;deepsearch&lt;/strong&gt; - Thorough codebase search&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;tdd&lt;/strong&gt; - Test-driven development workflow&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;build-fix&lt;/strong&gt; - Fix build and TypeScript errors&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;code-review&lt;/strong&gt; - Comprehensive code review&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;security-review&lt;/strong&gt; - Security vulnerability review&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;frontend-ui-ux&lt;/strong&gt; - UI/UX design work&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;git-master&lt;/strong&gt; - Git operations&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;review&lt;/strong&gt; - Plan review/critique&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;utilities&#34;&gt;Utilities
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;cancel&lt;/strong&gt; - Cancel any active mode&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;doctor&lt;/strong&gt; - Diagnose installation issues&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;help&lt;/strong&gt; - Usage guide&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;note&lt;/strong&gt; - Save notes to notepad&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;trace&lt;/strong&gt; - Agent flow trace timeline&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;skill&lt;/strong&gt; - Manage local skills&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;learner&lt;/strong&gt; - Extract learned skills&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;research&lt;/strong&gt; - Parallel research agents&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;deepinit&lt;/strong&gt; - Deep codebase init with AGENTS.md&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;release&lt;/strong&gt; - Automated release workflow&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;hud&lt;/strong&gt; - Status display configuration&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;omx-setup&lt;/strong&gt; - Setup and configure OMX&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;configure-telegram&lt;/strong&gt; - Telegram notifications&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;configure-discord&lt;/strong&gt; - Discord notifications&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;writer-memory&lt;/strong&gt; - Writer memory system&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;project-session-manager&lt;/strong&gt; / &lt;strong&gt;psm&lt;/strong&gt; - Isolated dev environments&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ralph-init&lt;/strong&gt; - Initialize PRD for ralph-loop&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;learn-about-omx&lt;/strong&gt; - OMX usage patterns&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;mcp-servers&#34;&gt;MCP Servers
+&lt;/h2&gt;&lt;p&gt;OMX provides two MCP servers that Codex CLI connects to via config.toml:&lt;/p&gt;
+&lt;h3 id=&#34;state-server-omx_state&#34;&gt;State Server (&lt;code&gt;omx_state&lt;/code&gt;)
+&lt;/h3&gt;&lt;p&gt;Manages mode lifecycle state for all execution modes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;state_read&lt;/code&gt; / &lt;code&gt;state_write&lt;/code&gt; / &lt;code&gt;state_clear&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;state_list_active&lt;/code&gt; / &lt;code&gt;state_get_status&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Supports: autopilot, ralph, ultrawork, ecomode, ultrapilot, team, pipeline, ultraqa, ralplan&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;memory-server-omx_memory&#34;&gt;Memory Server (&lt;code&gt;omx_memory&lt;/code&gt;)
+&lt;/h3&gt;&lt;p&gt;Project memory and session notepad.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;project_memory_read&lt;/code&gt; / &lt;code&gt;project_memory_write&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;project_memory_add_note&lt;/code&gt; / &lt;code&gt;project_memory_add_directive&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;notepad_read&lt;/code&gt; / &lt;code&gt;notepad_write_priority&lt;/code&gt; / &lt;code&gt;notepad_write_working&lt;/code&gt; / &lt;code&gt;notepad_write_manual&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;team-orchestration&#34;&gt;Team Orchestration
+&lt;/h2&gt;&lt;p&gt;The team skill provides a staged pipeline:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;team-plan -&amp;gt; team-prd -&amp;gt; team-exec -&amp;gt; team-verify -&amp;gt; team-fix (loop)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Each stage uses specialized agents. The verify/fix loop is bounded by max attempts to prevent infinite loops. Terminal states: &lt;code&gt;complete&lt;/code&gt;, &lt;code&gt;failed&lt;/code&gt;, &lt;code&gt;cancelled&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;notification-system&#34;&gt;Notification System
+&lt;/h2&gt;&lt;p&gt;Supports three channels (configured in &lt;code&gt;.omx/notifications.json&lt;/code&gt;):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Desktop&lt;/strong&gt; - Native notifications (macOS, Linux, Windows)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Discord&lt;/strong&gt; - Webhook integration with embedded messages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Telegram&lt;/strong&gt; - Bot API with Markdown formatting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;verification-protocol&#34;&gt;Verification Protocol
+&lt;/h2&gt;&lt;p&gt;Evidence-backed verification with task sizing:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Small&lt;/strong&gt; (&amp;lt;5 files, &amp;lt;100 lines): Type check + related tests&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Standard&lt;/strong&gt;: Full type check + test suite + linter&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Large&lt;/strong&gt; (&amp;gt;20 files): Full check + security review + performance assessment + regression testing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;hook-emulation&#34;&gt;Hook Emulation
+&lt;/h2&gt;&lt;p&gt;Codex CLI has limited hook support (AfterAgent, AfterToolUse only). OMX emulates the full hook pipeline:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;OMC Hook&lt;/th&gt;
+					&lt;th&gt;OMX Equivalent&lt;/th&gt;
+					&lt;th&gt;Capability&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;SessionStart&lt;/td&gt;
+					&lt;td&gt;AGENTS.md native loading&lt;/td&gt;
+					&lt;td&gt;Full&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;PreToolUse&lt;/td&gt;
+					&lt;td&gt;AGENTS.md inline guidance&lt;/td&gt;
+					&lt;td&gt;Partial&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;PostToolUse&lt;/td&gt;
+					&lt;td&gt;notify config hook&lt;/td&gt;
+					&lt;td&gt;Partial&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;UserPromptSubmit&lt;/td&gt;
+					&lt;td&gt;AGENTS.md self-detection&lt;/td&gt;
+					&lt;td&gt;Partial&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;SubagentStart/Stop&lt;/td&gt;
+					&lt;td&gt;Codex CLI collab native&lt;/td&gt;
+					&lt;td&gt;Full&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Stop&lt;/td&gt;
+					&lt;td&gt;notify config&lt;/td&gt;
+					&lt;td&gt;Full&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;coverage&#34;&gt;Coverage
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;~92% feature parity with oh-my-claudecode&lt;/strong&gt; (excluding MCP tools).&lt;/p&gt;
+&lt;p&gt;See &lt;a class=&#34;link&#34; href=&#34;COVERAGE.md&#34; &gt;COVERAGE.md&lt;/a&gt; for the detailed feature matrix.&lt;/p&gt;
+&lt;h2 id=&#34;project-structure&#34;&gt;Project Structure
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;oh&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;my&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;codex&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;bin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;omx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;js&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;CLI&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;entry&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;point&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cli&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                   &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;CLI&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;commands&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;setup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;doctor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cancel&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;help&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;config&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;config&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;toml&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;generator&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;agents&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Agent&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;definitions&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;registry&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;mcp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                   &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;MCP&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;servers&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;state&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;memory&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;hooks&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                 &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Hook&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;emulation&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;layer&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;keyword&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;detector&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;modes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                 &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Mode&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;lifecycle&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;management&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;team&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                  &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Team&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;orchestration&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;staged&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;pipeline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;verification&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Verification&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;protocol&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;notifications&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Desktop&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Discord&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Telegram&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;notifications&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;utils&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                 &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Path&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;resolution&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;utilities&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;prompts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                 &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;agent&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;prompt&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;md&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;skills&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                  &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;39&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;skill&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;directories&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;SKILL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;md&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;templates&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;               &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;AGENTS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;md&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;template&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;scripts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                 &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;notify&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;hook&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;js&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;dist&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;                    &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Compiled&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;development&#34;&gt;Development
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Install dependencies&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Build&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm run build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Type check&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx tsc --noEmit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Link for local development&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm link
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;MIT&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

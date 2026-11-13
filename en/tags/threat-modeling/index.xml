@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Threat Modeling on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/threat-modeling/</link>
+        <description>Recent content in Threat Modeling on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 13 Nov 2026 00:03:36 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/threat-modeling/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>codex-security</title>
+        <link>https://producthunt.programnotes.cn/en/p/codex-security/</link>
+        <pubDate>Fri, 13 Nov 2026 00:03:36 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/codex-security/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1550133838-1c4b5ffede41?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ0OTkzNjN8&amp;ixlib=rb-4.1.0" alt="Featured image of post codex-security" /&gt;&lt;h1 id=&#34;openaicodex-security&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/openai/codex-security&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;openai/codex-security&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;codex-security&#34;&gt;Codex Security
+&lt;/h1&gt;&lt;p&gt;Codex Security helps you find, investigate, and fix vulnerabilities in your code.
+Use its security workflows in Codex, or automate them with the
+&lt;code&gt;@openai/codex-security&lt;/code&gt; CLI and TypeScript SDK.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;In Codex:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;docs/agent-workflows.md&#34; &gt;choose a security workflow&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;In a terminal:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;#quick-start&#34; &gt;install the CLI and scan your repository&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;In automation:&lt;/strong&gt; use the &lt;a class=&#34;link&#34; href=&#34;#typescript-sdk&#34; &gt;TypeScript SDK&lt;/a&gt; or
+&lt;a class=&#34;link&#34; href=&#34;#github-actions&#34; &gt;GitHub Action&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Scan repositories, selected paths, or Git changes. Deep scans repeat Standard scans and return their deduplicated findings.&lt;/li&gt;
+&lt;li&gt;Validate candidate findings, generate patches, and verify existing fixes.&lt;/li&gt;
+&lt;li&gt;Draft &lt;code&gt;SECURITY.md&lt;/code&gt; policies and save threat models for later review.&lt;/li&gt;
+&lt;li&gt;Browse saved scans and findings, identify duplicates, assess severity against
+your own rubric, and suggest owners from source and Git history.&lt;/li&gt;
+&lt;li&gt;Preview third-party scanner findings, save them locally, or publish supported reports to Codex Security Cloud. &lt;a class=&#34;link&#34; href=&#34;docs/scanner-imports/README.md&#34; &gt;Scanner import guides&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Track findings in Linear, Jira, or GitHub, publish completed scans, or export SARIF, JSON, and CSV. &lt;a class=&#34;link&#34; href=&#34;docs/plugin-connectors.md&#34; &gt;Integration workflows&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Automate scans across repositories or project components, including in CI and
+containers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;use-in-codex&#34;&gt;Use in Codex
+&lt;/h2&gt;&lt;p&gt;Open your repository in a Codex session with the Codex Security plugin enabled,
+then ask:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Run a Codex Security scan on this repository, focusing on authentication and
+authorization. Return the saved report, source evidence, and coverage limits.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A completed scan saves a report and findings. Read the report for source
+evidence and exclusions, then request a patch or ask Codex to verify an
+existing fix. See the &lt;a class=&#34;link&#34; href=&#34;docs/agent-workflows.md&#34; &gt;agent workflow guide&lt;/a&gt; for setup,
+task selection, and recovery.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick start
+&lt;/h2&gt;&lt;p&gt;Requires Node.js 22.13.0+ within 22.x, or Node.js 24.x or 26.x, and Python 3.10+.
+Python 3.10 also requires &lt;code&gt;tomli&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Install the CLI globally and sign in:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install --global @openai/codex-security
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cs login
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Run your first scan from the repository directory:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cs scan .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;When the scan completes, open the Markdown file at the &lt;strong&gt;REPORT&lt;/strong&gt; path in the
+terminal. Run &lt;code&gt;cs scans show&lt;/code&gt; from the same repository to find its latest
+completed scan again. See &lt;a class=&#34;link&#34; href=&#34;sdk/typescript/docs/cli.md#understand-scan-scope-and-follow-up-work&#34; &gt;scan scope and follow-up work&lt;/a&gt;
+for how to interpret exclusions in the report.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cs&lt;/code&gt; and &lt;code&gt;codex-security&lt;/code&gt; run the same CLI. If the short name conflicts with
+another command, use &lt;code&gt;codex-security&lt;/code&gt;. To skip the global install, or if npm
+reports an &lt;code&gt;EEXIST&lt;/code&gt; conflict, use &lt;code&gt;npx @openai/codex-security&lt;/code&gt; in place of
+&lt;code&gt;cs&lt;/code&gt; for both login and scanning.&lt;/p&gt;
+&lt;p&gt;For CI, set &lt;code&gt;OPENAI_API_KEY&lt;/code&gt; or &lt;code&gt;CODEX_API_KEY&lt;/code&gt; in the scan process&amp;rsquo;s environment.
+For a headless machine, see &lt;a class=&#34;link&#34; href=&#34;sdk/typescript/docs/cli.md#authentication&#34; &gt;device or SSH login&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;scan-options&#34;&gt;Scan options
+&lt;/h3&gt;&lt;p&gt;Choose a scope and scan mode:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Scan selected paths.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cs scan . --path src --path tests
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Scan committed changes from a base revision to HEAD.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cs scan . --diff origin/main
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Run a deep scan of the repository.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cs scan . --mode deep
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Use &lt;code&gt;cs scan . --max-time 15&lt;/code&gt; for an advisory 15-minute Standard investigation
+allowance. See &lt;a class=&#34;link&#34; href=&#34;sdk/typescript/docs/cli.md#set-investigation-time&#34; &gt;investigation time&lt;/a&gt;
+for timing semantics and Deep Scan limits.&lt;/p&gt;
+&lt;p&gt;Use &lt;code&gt;cs --help&lt;/code&gt; to browse commands, or &lt;code&gt;cs scan --help&lt;/code&gt;
+for scan options, cost limits, and patching after a scan.&lt;/p&gt;
+&lt;p&gt;For an application spread across repositories, see
+&lt;a class=&#34;link&#34; href=&#34;sdk/typescript/docs/cli.md#review-one-system-across-repositories&#34; &gt;review one system across repositories&lt;/a&gt;.
+Use &lt;a class=&#34;link&#34; href=&#34;sdk/typescript/docs/cli.md#bulk-scans&#34; &gt;bulk scans&lt;/a&gt; for independent repository
+reviews in one resumable campaign.&lt;/p&gt;
+&lt;p&gt;Scans use existing root and component &lt;code&gt;SECURITY.md&lt;/code&gt; guidance. To write or
+revise it, see &lt;a class=&#34;link&#34; href=&#34;#generate-securitymd&#34; &gt;Generate SECURITY.md&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Some cybersecurity requests and protected findings require
+&lt;a class=&#34;link&#34; href=&#34;https://chatgpt.com/cyber&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Trusted Access for Cyber&lt;/a&gt;. For accounts with Daybreak
+access, see &lt;a class=&#34;link&#34; href=&#34;sdk/typescript/docs/cli.md#daybreak-opt-in&#34; &gt;Daybreak opt-in&lt;/a&gt; for the
+Codex toggle and &lt;a class=&#34;link&#34; href=&#34;sdk/typescript/docs/cli.md#select-a-cyber-access-program&#34; &gt;Cyber access programs&lt;/a&gt;
+to select a program explicitly.&lt;/p&gt;
+&lt;h2 id=&#34;typescript-sdk&#34;&gt;TypeScript SDK
+&lt;/h2&gt;&lt;p&gt;Install the package locally in your TypeScript project:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install @openai/codex-security
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Then import it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ts&#34; data-lang=&#34;ts&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;CodexSecurity&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;@openai/codex-security&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;security&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;CodexSecurity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;security&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/path/to/repository&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;reportPath&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;security&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;sdk/typescript/docs/sdk.md&#34; &gt;SDK guide&lt;/a&gt; includes deep-scan configuration,
+validation, severity classification, owner suggestions, and result handling.&lt;/p&gt;
+&lt;p&gt;Linked Git worktrees share scan history and saved findings when they use the same
+Codex Security state directory. Keep &lt;code&gt;CODEX_SECURITY_STATE_DIR&lt;/code&gt; stable to retain
+that shared history and sign-in scope. See the &lt;a class=&#34;link&#34; href=&#34;sdk/typescript/docs/cli.md#scan-history-and-reruns&#34; &gt;scan history guide&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;read-existing-cloud-findings&#34;&gt;Read existing Cloud findings
+&lt;/h2&gt;&lt;p&gt;When Codex Security Cloud is available to your account, the Security plugin&amp;rsquo;s
+&lt;code&gt;$cloud-findings&lt;/code&gt; skill can read findings, reports, recorded assignment and
+verification, and scan status in Codex desktop or the Codex CLI. Cloud is an
+optional connection; local scans work without it.&lt;/p&gt;
+&lt;p&gt;See &lt;a class=&#34;link&#34; href=&#34;sdk/typescript/docs/sdk.md#read-existing-cloud-findings&#34; &gt;Cloud connection setup and CLI reads&lt;/a&gt;
+for authentication requirements and a read-only example.&lt;/p&gt;
+&lt;h2 id=&#34;generate-securitymd&#34;&gt;Generate SECURITY.md
+&lt;/h2&gt;&lt;p&gt;Use &lt;code&gt;policy&lt;/code&gt; to draft a new &lt;code&gt;SECURITY.md&lt;/code&gt; or update an existing one. Use &lt;code&gt;--path&lt;/code&gt;
+to select a component:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cs policy .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cs policy . --path services/api --knowledge-base architecture.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The command saves its draft outside the repository and leaves existing files
+unchanged. Review the diff and notes, edit the draft, then copy only &lt;code&gt;SECURITY.md&lt;/code&gt;
+to the displayed &lt;strong&gt;Policy target&lt;/strong&gt;. Keep the saved architecture and threat-model
+documents outside the repository.&lt;/p&gt;
+&lt;p&gt;Scans already use root and component &lt;code&gt;SECURITY.md&lt;/code&gt; files. Keep your current policy
+if it needs no changes. When updating it, preserve its vulnerability-reporting
+instructions. If the command says the policy is already up to date, no copy is
+needed.&lt;/p&gt;
+&lt;p&gt;Files at &lt;code&gt;.github/SECURITY.md&lt;/code&gt; or &lt;code&gt;docs/SECURITY.md&lt;/code&gt; often contain reporting
+instructions. Preserve them when drafting a policy; those locations do not
+automatically provide repository-wide scan guidance. See the
+&lt;a class=&#34;link&#34; href=&#34;sdk/typescript/docs/cli.md#generate-a-security-policy&#34; &gt;policy guide&lt;/a&gt; for policy
+locations, unanswered questions, saved artifacts, and SDK usage.&lt;/p&gt;
+&lt;h2 id=&#34;save-and-export-threat-models&#34;&gt;Save and export threat models
+&lt;/h2&gt;&lt;p&gt;Scans and policy generation save threat models with their results. Export a saved
+model without starting another analysis:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cs &lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; --scan SCAN_ID --artifact threat-model --output threatmodel.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Omit &lt;code&gt;--scan&lt;/code&gt; to use the current repository&amp;rsquo;s latest completed scan. The
+&lt;a class=&#34;link&#34; href=&#34;sdk/typescript/docs/cli.md#exports-and-ci&#34; &gt;export guide&lt;/a&gt; also covers findings,
+SARIF output for CI, and the offline TypeScript API. For ServiceNow Application
+Vulnerability Response, see &lt;a class=&#34;link&#34; href=&#34;sdk/typescript/docs/cli.md#export-findings-for-servicenow&#34; &gt;Export findings for ServiceNow&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;github-actions&#34;&gt;GitHub Actions
+&lt;/h2&gt;&lt;p&gt;To run a weekly repository scan on GitHub-hosted Ubuntu:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Add an OpenAI API key as the repository secret &lt;code&gt;CODEX_SECURITY_API_KEY&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Copy the &lt;a class=&#34;link&#34; href=&#34;github-action/examples/repository.yml&#34; &gt;weekly workflow&lt;/a&gt; to
+&lt;code&gt;.github/workflows/codex-security.yml&lt;/code&gt;. Replace &lt;code&gt;REPLACE_WITH_REVIEWED_COMMIT&lt;/code&gt;
+with the reviewed distribution commit SHA from an Action release.&lt;/li&gt;
+&lt;li&gt;To try the workflow before the next scheduled run, open &lt;strong&gt;Actions → Codex
+Security repository → Run workflow&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The example uses an estimated $5 limit per scan and reports findings without
+failing the job. Requests in progress can exceed the limit. For a severity
+threshold, pull request checks, or runner requirements, see the
+&lt;a class=&#34;link&#34; href=&#34;github-action/README.md&#34; &gt;Action guide&lt;/a&gt;. For eligible accounts, see
+&lt;a class=&#34;link&#34; href=&#34;github-action/README.md#daybreak-access-and-refusals&#34; &gt;Daybreak access&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;containerized-bulk-scans&#34;&gt;Containerized bulk scans
+&lt;/h2&gt;&lt;p&gt;Scan a list of repositories with the included Docker Compose configuration,
+which keeps results and authentication between runs. See the
+&lt;a class=&#34;link&#34; href=&#34;sdk/typescript/docs/cli.md#containerized-bulk-scans&#34; &gt;container quick start&lt;/a&gt;.
+The &lt;a class=&#34;link&#34; href=&#34;docker/README.md#workflow-runner&#34; &gt;workflow runner&lt;/a&gt; runs individual CLI stages
+in containers and can connect to a separately deployed findings service.&lt;/p&gt;
+&lt;h2 id=&#34;findings-storage-and-deduplication&#34;&gt;Findings storage and deduplication
+&lt;/h2&gt;&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;sdk/typescript/docs/findings-service.md&#34; &gt;findings guide&lt;/a&gt; covers local
+storage, deduplication, and compatibility with independently operated endpoints
+through &lt;code&gt;publish scan --to custom&lt;/code&gt; and explicit &lt;code&gt;--findings-url&lt;/code&gt;. The local
+&lt;code&gt;serve&lt;/code&gt; command and browser dashboard have been removed; existing databases and
+scan artifacts remain available.&lt;/p&gt;
+&lt;h2 id=&#34;other-providers&#34;&gt;Other providers
+&lt;/h2&gt;&lt;p&gt;Scans support OpenAI, Amazon Bedrock, OpenRouter, Fireworks AI, and Cheaper Inference. Bedrock uses
+AWS credentials and does not require a separate OpenAI login. See
+&lt;a class=&#34;link&#34; href=&#34;docs/bedrock.md&#34; &gt;Bedrock setup&lt;/a&gt; for AWS profiles, regions, and model access.&lt;/p&gt;
+&lt;p&gt;For OpenRouter, Fireworks AI, and Cheaper Inference, set the provider&amp;rsquo;s API key and choose a supported
+model. See &lt;a class=&#34;link&#34; href=&#34;sdk/typescript/docs/cli.md#native-command-authentication-and-other-providers&#34; &gt;provider configuration&lt;/a&gt;
+for examples.&lt;/p&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://learn.chatgpt.com/docs/security/cli&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Online documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/agent-workflows.md&#34; &gt;Agent workflows and recovery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;sdk/typescript/docs/cli.md&#34; &gt;CLI reference&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/scanner-imports/schema-guide.md&#34; &gt;Imported finding identity and evidence&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/project-configuration.md&#34; &gt;Project configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;examples/README.md&#34; &gt;Examples&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To report a vulnerability privately, follow the &lt;a class=&#34;link&#34; href=&#34;SECURITY.md&#34; &gt;security policy&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

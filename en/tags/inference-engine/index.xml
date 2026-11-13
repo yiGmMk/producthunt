@@ -1,0 +1,1439 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Inference Engine on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/inference-engine/</link>
+        <description>Recent content in Inference Engine on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Tue, 03 Nov 2026 23:07:35 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/inference-engine/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>colibri</title>
+        <link>https://producthunt.programnotes.cn/en/p/colibri/</link>
+        <pubDate>Tue, 03 Nov 2026 23:07:35 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/colibri/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1706720097535-b92d47fef3b9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTM3MTgzNjN8&amp;ixlib=rb-4.1.0" alt="Featured image of post colibri" /&gt;&lt;h1 id=&#34;justvuggcolibri&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/JustVugg/colibri&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JustVugg/colibri&lt;/a&gt;
+&lt;/h1&gt;&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;assets/colibri-logo.svg&#34; width=&#34;560&#34; alt=&#34;colibrì: tiny engine, immense model&#34;&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;a href=&#34;https://justvugg.github.io/colibri&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/website-justvugg.github.io%2Fcolibri-1f6feb&#34; alt=&#34;Website&#34;&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://github.com/JustVugg/colibri/releases&#34;&gt;&lt;img src=&#34;https://img.shields.io/github/v/release/JustVugg/colibri?color=2ea043&#34; alt=&#34;Latest release&#34;&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;a href=&#34;https://justvugg.github.io/colibri&#34;&gt;&lt;b&gt;Website&lt;/b&gt;&lt;/a&gt; ·
+  &lt;a href=&#34;https://discord.gg/RXV83nSZdk&#34;&gt;&lt;b&gt;Discord&lt;/b&gt;&lt;/a&gt; ·
+  English · &lt;a href=&#34;README.zh-CN.md&#34;&gt;简体中文&lt;/a&gt; · &lt;a href=&#34;README.zh-TW.md&#34;&gt;繁體中文&lt;/a&gt; · &lt;a href=&#34;README.it.md&#34;&gt;Italiano&lt;/a&gt; · &lt;a href=&#34;README.ja.md&#34;&gt;日本語&lt;/a&gt; · &lt;a href=&#34;README.id.md&#34;&gt;Bahasa Indonesia&lt;/a&gt; · &lt;a href=&#34;README.pt-BR.md&#34;&gt;Português (Brasil)&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tiny engine, immense model.&lt;/strong&gt; colibri runs very large open models on the
+machine you already have. A mixture-of-experts model of hundreds of billions of
+parameters uses only a small part of itself for each token, so colibri keeps
+that part in RAM and reads the rest, the experts, from the disk when the model
+asks for them. Pure C, one file per model family, no GPU required.&lt;/p&gt;
+&lt;p&gt;Thirteen engines run today. Ten are for language models: &lt;strong&gt;GLM-5.2/5.3&lt;/strong&gt; (which
+also runs &lt;strong&gt;Mistral-Large-4&lt;/strong&gt;), &lt;strong&gt;GLM-5.3-Flash&lt;/strong&gt;, &lt;strong&gt;Inkling&lt;/strong&gt;, &lt;strong&gt;Kimi K3&lt;/strong&gt;,
+&lt;strong&gt;DeepSeek V4 Flash&lt;/strong&gt;, &lt;strong&gt;DeepSeek V4.1 Flash&lt;/strong&gt;, &lt;strong&gt;MiMo-V2.6 Flash&lt;/strong&gt; (and Pro),
+&lt;strong&gt;Qwen3.8-Flash-Next&lt;/strong&gt;, &lt;strong&gt;Qwen3.6&lt;/strong&gt; (which also runs Qwen3-Coder, the dense
+Qwen3.8-27B, &lt;strong&gt;Flint&lt;/strong&gt;, &lt;strong&gt;Muse Spark Open&lt;/strong&gt; and &lt;strong&gt;LFM3-VL&lt;/strong&gt;) and &lt;strong&gt;OLMoE&lt;/strong&gt;. One
+draws pictures: &lt;strong&gt;Qwen-Image-2.1&lt;/strong&gt;. Two answer decisions: &lt;strong&gt;Laya&lt;/strong&gt; and
+&lt;strong&gt;GLiNER2.5-Decide&lt;/strong&gt;, with a third decision model, &lt;strong&gt;Clef&lt;/strong&gt;, on the Qwen3.6
+engine. The language models also run from the GGUF files already published,
+read as they are (&lt;a class=&#34;link&#34; href=&#34;docs/gguf.md&#34; &gt;GGUF&lt;/a&gt;), on the CPU, on any GPU through Vulkan
+and on NVIDIA cards through CUDA. &lt;a class=&#34;link&#34; href=&#34;#which-model-for-my-machine&#34; &gt;Which one for my machine&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ./coli chat
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  colibri v2.1.0 · GLM-5.2 · 744B MoE · int4 · streaming CPU
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ✓ ready in 32s · resident 9.9 GB
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  › ciao!
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ◆ Ciao! Come posso aiutarti oggi?
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p align=&#34;center&#34;&gt;
+  &lt;a href=&#34;https://www.buymeacoffee.com/justvugg&#34;&gt;&lt;img src=&#34;https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&amp;emoji=&amp;slug=justvugg&amp;button_colour=FFDD00&amp;font_colour=000000&amp;font_family=Poppins&amp;outline_colour=000000&amp;coffee_colour=ffffff&#34; alt=&#34;Buy me a coffee&#34; height=&#34;40&#34;&gt;&lt;/a&gt;
+  &lt;br&gt;
+  &lt;sub&gt;colibri is free and open source. If it has earned a place on your machine, a coffee helps pay for the next engine and the next speedup.&lt;/sub&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#34;get-started&#34;&gt;&lt;/a&gt;
+&lt;a id=&#34;the-one-step-way&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;get-started-in-one-step&#34;&gt;Get started in one step
+&lt;/h2&gt;&lt;p&gt;You need a computer with &lt;strong&gt;8 GB of RAM&lt;/strong&gt; at the very least (16 GB or more is
+better), &lt;strong&gt;22 GB free on the disk&lt;/strong&gt; for the smallest model, and an internet
+connection. A graphics card is optional.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Windows&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;On this page click &lt;strong&gt;Code&lt;/strong&gt;, then &lt;strong&gt;Download ZIP&lt;/strong&gt;, and unzip it.&lt;/li&gt;
+&lt;li&gt;Double-click &lt;strong&gt;&lt;code&gt;START-HERE.bat&lt;/code&gt;&lt;/strong&gt; in the unzipped folder. If Python is
+missing, it offers to install it for you.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Linux&lt;/strong&gt; (Ubuntu and Debian; other distributions have the same packages under
+their own names)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install git python3 build-essential
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/JustVugg/colibri
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; colibri
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./start-here.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;macOS&lt;/strong&gt; (with &lt;a class=&#34;link&#34; href=&#34;https://brew.sh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Homebrew&lt;/a&gt;)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xcode-select --install
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install libomp git python
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/JustVugg/colibri
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; colibri
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./start-here.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;You answer one question, which model, and Enter takes the recommendation. Then
+the setup:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;looks at your machine&lt;/strong&gt;: RAM, free disk, CPU and GPUs;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;recommends a model that fits&lt;/strong&gt;: the part of the model that always stays in
+RAM, plus a minimum cache of experts, must fit in your RAM, and the download
+on your disk;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;gets the engine&lt;/strong&gt;: it builds it for your machine when a compiler is there,
+otherwise it downloads the prebuilt one, which runs on the CPU and, on Linux
+and Windows, on a Vulkan GPU too. It builds
+for your GPU when that pays: CUDA for an NVIDIA card on Linux when the CUDA toolkit is installed,
+otherwise Vulkan. On a discrete GPU it always does; on an integrated GPU,
+which shares the CPU&amp;rsquo;s RAM, only for the models measured faster there
+(Qwen3.6, Qwen3-Coder and Qwen3.8-Flash-Next). If a package is missing it
+prints the exact command to install it and carries on with the CPU; run the
+setup again afterwards and it rebuilds for the GPU;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;downloads the model&lt;/strong&gt; with progress and resume: stop it whenever you like,
+run it again and it continues where it stopped;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;starts colibri and opens the dashboard&lt;/strong&gt; in your browser, and prints the
+addresses other apps can use:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Starting colibri
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Browser:             http://127.0.0.1:8000/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  OpenAI base URL:     http://127.0.0.1:8000/v1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  Anthropic base URL:  http://127.0.0.1:8000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  stop: press Ctrl+C here (or close this window)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Next time&lt;/strong&gt;, run &lt;code&gt;START-HERE.bat&lt;/code&gt; or &lt;code&gt;./start-here.sh&lt;/code&gt; again: colibri starts
+straight away, with no download and no build. &lt;code&gt;c/coli status&lt;/code&gt; shows what is
+installed and whether it runs, &lt;code&gt;c/coli stop&lt;/code&gt; stops it (&lt;code&gt;c\coli.cmd status&lt;/code&gt; and
+&lt;code&gt;c\coli.cmd stop&lt;/code&gt; on Windows).&lt;/p&gt;
+&lt;p&gt;Options go after &lt;code&gt;./start-here.sh&lt;/code&gt; or &lt;code&gt;START-HERE.bat&lt;/code&gt;:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Option&lt;/th&gt;
+					&lt;th&gt;What it does&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--list&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;every model against this machine, and why one does not fit&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--model ID&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;install that model (the ids are in &lt;a class=&#34;link&#34; href=&#34;#which-model-for-my-machine&#34; &gt;the tables below&lt;/a&gt;)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--yes&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;no questions: take the recommendation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--dir DIR&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;put the models on another disk (default &lt;code&gt;~/colibri-models&lt;/code&gt;)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--backend vulkan&lt;/code&gt;, &lt;code&gt;cuda&lt;/code&gt; or &lt;code&gt;cpu&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;choose the engine build yourself; &lt;code&gt;--no-gpu&lt;/code&gt; is &lt;code&gt;--backend cpu&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--model-dir DIR&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;use a model you already downloaded&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;--reconfigure&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;choose another model&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;What each step does, in detail: &lt;a class=&#34;link&#34; href=&#34;docs/quickstart.md#the-one-step-way&#34; &gt;docs/quickstart.md&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;if-something-goes-wrong&#34;&gt;If something goes wrong
+&lt;/h3&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;What you see&lt;/th&gt;
+					&lt;th&gt;What to do&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;it stopped during the download&lt;/td&gt;
+					&lt;td&gt;run the same command again: it resumes from the bytes already on disk&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;to use the GPU through ..., first run: &amp;lt;command&amp;gt;&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;run that command, then the setup again: it rebuilds for the GPU and does not download again&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;the ... build failed&lt;/code&gt;, for example &lt;code&gt;Unsupported gpu architecture&lt;/code&gt; when the installed CUDA toolkit no longer supports the card&lt;/td&gt;
+					&lt;td&gt;the setup checks the toolkit against the card first and picks Vulkan by itself, saying why; if a build still fails it offers the next one (Vulkan, then the CPU). &lt;code&gt;./start-here.sh --backend vulkan&lt;/code&gt; forces Vulkan; &lt;code&gt;--no-gpu&lt;/code&gt; stays on the CPU&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;code&gt;needs N GB free for the download&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;--dir&lt;/code&gt; with a folder on a bigger disk&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;on WSL, the model folder is under &lt;code&gt;/mnt/c&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;keep it on the Linux disk (the default, &lt;code&gt;~/colibri-models&lt;/code&gt;): &lt;code&gt;/mnt/c&lt;/code&gt; is many times slower&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;you updated the checkout (&lt;code&gt;git pull&lt;/code&gt;)&lt;/td&gt;
+					&lt;td&gt;run &lt;code&gt;./start-here.sh&lt;/code&gt; again: it rebuilds the engine when the sources changed, then starts it&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;anything else&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;c/coli logs -n 50&lt;/code&gt; shows the log of a server started in the background (one started in the foreground prints to its own terminal) and &lt;code&gt;c/coli logs --install&lt;/code&gt; the setup&amp;rsquo;s; open an &lt;a class=&#34;link&#34; href=&#34;https://github.com/JustVugg/colibri/issues&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;issue&lt;/a&gt; with the last lines the setup printed&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;let-your-ai-assistant-set-it-up&#34;&gt;Let your AI assistant set it up
+&lt;/h3&gt;&lt;p&gt;If you use an AI coding assistant, it can do all of this for you. Ask it:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Set up colibri on this machine following docs/AI_SETUP.md from &lt;a class=&#34;link&#34; href=&#34;https://github.com/JustVugg/colibri&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/JustVugg/colibri&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;docs/AI_SETUP.md&#34; &gt;docs/AI_SETUP.md&lt;/a&gt; gives the assistant every step as a
+command with a machine-readable result, and tells it to ask you before it
+downloads a model or installs a system package. Assistants that speak the Model
+Context Protocol can use colibri&amp;rsquo;s MCP server instead: &lt;code&gt;coli mcp&lt;/code&gt; offers tools
+to detect the hardware, recommend a model, install, start, stop and check it
+(&lt;a class=&#34;link&#34; href=&#34;docs/MCP_SERVER.md&#34; &gt;docs/MCP_SERVER.md&lt;/a&gt;).&lt;/p&gt;
+&lt;h3 id=&#34;or-by-hand&#34;&gt;Or by hand
+&lt;/h3&gt;&lt;p&gt;To choose each step yourself (a prebuilt release or a source build, any model
+from the tables below, then &lt;code&gt;coli chat&lt;/code&gt;, &lt;code&gt;coli web&lt;/code&gt; or &lt;code&gt;coli serve&lt;/code&gt;), see
+&lt;a class=&#34;link&#34; href=&#34;#install-by-hand&#34; &gt;Install by hand&lt;/a&gt;, or the
+&lt;a class=&#34;link&#34; href=&#34;docs/quickstart.md&#34; &gt;Quick Start guide&lt;/a&gt; for every platform step by step.&lt;/p&gt;
+&lt;h2 id=&#34;what-colibri-is-and-why&#34;&gt;What colibri is, and why
+&lt;/h2&gt;&lt;p&gt;A mixture-of-experts model is huge on disk and small per token. GLM-5.2 has
+744B parameters, uses about 40B for each token, and only about 11 GB of those
+change from one token to the next: the routed experts.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;docs/media/sparse.png&#34; width=&#34;880&#34; alt=&#34;only about 5.4% of parameters are active per token&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;So the model does not have to fit in fast memory; it has to be &lt;strong&gt;placed&lt;/strong&gt;. The
+dense part (attention, shared experts, embeddings) stays in RAM. The routed
+experts stay on the disk and are read when the router asks for them, through a
+cache that learns which experts your work uses. A GPU, when there is one, holds
+the hottest experts and the dense layers. Where a weight sits changes how fast
+the answer comes, not which weights or which router decisions produce it.&lt;/p&gt;
+&lt;p&gt;Why: to run models of this size on hardware people already own, to watch them
+work (the dashboard shows every expert as it fires), and to keep the engine
+small enough that anyone can measure it and make it faster. colibri is also an
+open research platform: an optimisation earns its place with a reproducible
+end-to-end measurement, and the default policy never silently changes model
+precision or router semantics. Less fast memory may cost speed; it must not
+quietly redefine the model. &lt;a class=&#34;link&#34; href=&#34;#how-it-works&#34; &gt;How it works&lt;/a&gt; has the details.&lt;/p&gt;
+&lt;h2 id=&#34;which-model-for-my-machine&#34;&gt;Which model for my machine
+&lt;/h2&gt;&lt;p&gt;The setup recommends the most capable model that runs from RAM on your
+machine, and lists the larger ones that stream from the disk right below it.
+&lt;code&gt;./start-here.sh --list&lt;/code&gt; shows them all against your machine. The tables follow
+the setup&amp;rsquo;s own catalog (&lt;a class=&#34;link&#34; href=&#34;c/setup_catalog.py&#34; &gt;&lt;code&gt;c/setup_catalog.py&lt;/code&gt;&lt;/a&gt;); the
+downloads are the sizes Hugging Face lists for each repository.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;RAM&lt;/strong&gt; is two numbers: below the first the model does not start, from the
+second it runs as measured.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GPU&lt;/strong&gt; is what the setup can build for that engine (&lt;a class=&#34;link&#34; href=&#34;#gpus&#34; &gt;GPUs&lt;/a&gt;).
+&lt;em&gt;Integrated too&lt;/em&gt; means it also uses an integrated GPU, where these engines
+were measured faster; the others use a discrete GPU only.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Measured&lt;/strong&gt; is what was timed on the machine named, decode speed for the
+chat models. The letters are machines listed under the tables. A blank means
+nobody has measured it yet.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Small models, which run from RAM&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Model&lt;/th&gt;
+					&lt;th&gt;&lt;code&gt;--model&lt;/code&gt;&lt;/th&gt;
+					&lt;th&gt;Download&lt;/th&gt;
+					&lt;th&gt;RAM&lt;/th&gt;
+					&lt;th&gt;GPU&lt;/th&gt;
+					&lt;th&gt;Measured&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Qwen3.6-35B-A3B&lt;/strong&gt;: chat with thinking and tools&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;qwen36-35b&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;23 GB&lt;/td&gt;
+					&lt;td&gt;10 / 20 GB&lt;/td&gt;
+					&lt;td&gt;CUDA, Vulkan (integrated too)&lt;/td&gt;
+					&lt;td&gt;6.0 tok/s on the CPU, 9.9 with Vulkan on the integrated GPU (A); 30.0 with CUDA (C)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Qwen3-Coder-30B-A3B: code and tool calls, no thinking&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;qwen3-coder-30b&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;19 GB&lt;/td&gt;
+					&lt;td&gt;8 / 18 GB&lt;/td&gt;
+					&lt;td&gt;CUDA, Vulkan (integrated too)&lt;/td&gt;
+					&lt;td&gt;8.5-9.6 tok/s with every expert in RAM, 5.1 with 32 per layer (A, CPU)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Qwen-Image-2.1&lt;/strong&gt;: text to picture, non-commercial licence&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;qwen-image-2.1&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;33 GB&lt;/td&gt;
+					&lt;td&gt;12 / 18 GB&lt;/td&gt;
+					&lt;td&gt;Vulkan&lt;/td&gt;
+					&lt;td&gt;one 768x512 picture in 2 min 40 s (8 Zen 4 cores, CPU)&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Large models, whose experts stream from the disk&lt;/strong&gt; (the disk sets the speed:
+a fast NVMe drive helps most)&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Model&lt;/th&gt;
+					&lt;th&gt;&lt;code&gt;--model&lt;/code&gt;&lt;/th&gt;
+					&lt;th&gt;Download&lt;/th&gt;
+					&lt;th&gt;RAM&lt;/th&gt;
+					&lt;th&gt;GPU&lt;/th&gt;
+					&lt;th&gt;Measured&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;DeepSeek V4 Flash REAP 150B: 132 of the 256 experts&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;deepseek-v4-flash-reap&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;85 GB&lt;/td&gt;
+					&lt;td&gt;16 / 32 GB&lt;/td&gt;
+					&lt;td&gt;CUDA, Vulkan&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;DeepSeek V4 Flash&lt;/strong&gt; (284B): tools&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;deepseek-v4-flash&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;167 GB&lt;/td&gt;
+					&lt;td&gt;16 / 32 GB&lt;/td&gt;
+					&lt;td&gt;CUDA, Vulkan&lt;/td&gt;
+					&lt;td&gt;0.93 tok/s with 32 GB (Ryzen 7 5800X), 1.24 with 63 GB (Ryzen 9 5950X), CPU only; 1.5-1.6 with CUDA (RTX 5080, 32 GB, two NVMe)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;MiMo-V2.6 Flash&lt;/strong&gt; (309B): vision and tools&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;mimo-v2.6-flash&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;172 GB&lt;/td&gt;
+					&lt;td&gt;32 / 52 GB&lt;/td&gt;
+					&lt;td&gt;Vulkan&lt;/td&gt;
+					&lt;td&gt;2.34-3.37 tok/s (A, CPU)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Qwen3.8-Flash-Next&lt;/strong&gt; (125B + 51B n-gram): vision and tools&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;qwen38-flash-next&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;186 GB&lt;/td&gt;
+					&lt;td&gt;24 / 32 GB&lt;/td&gt;
+					&lt;td&gt;CUDA, Vulkan (integrated too)&lt;/td&gt;
+					&lt;td&gt;1.91-2.56 tok/s with 32-96 experts per layer; 3.99 with the optional int4 experts (A, CPU)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;GLM-5.2&lt;/strong&gt; (744B): the reference model, with the MTP head&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;glm-5.2&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;429 GB&lt;/td&gt;
+					&lt;td&gt;16 / 24 GB&lt;/td&gt;
+					&lt;td&gt;CUDA, Vulkan&lt;/td&gt;
+					&lt;td&gt;0.05-0.1 tok/s cold on a 25 GB laptop; 1.83 on a 128 GB Ryzen AI Max+ 395; 9.0-9.2 on 6x RTX 5090&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GLM-5.3 (744B): the same engine, no MTP head&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;glm-5.3&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;419 GB&lt;/td&gt;
+					&lt;td&gt;16 / 24 GB&lt;/td&gt;
+					&lt;td&gt;CUDA, Vulkan&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Inkling&lt;/strong&gt; (975B): int4 experts, bf16 dense weights&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;inkling&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;514 GB&lt;/td&gt;
+					&lt;td&gt;120 / 128 GB as downloaded; 25 GB after a &lt;a class=&#34;link&#34; href=&#34;docs/inkling.md&#34; &gt;dense conversion&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;CUDA, Vulkan&lt;/td&gt;
+					&lt;td&gt;0.25 tok/s (Ryzen 9 7900, 187 GB, RTX A6000)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;MiMo-V2.6 Pro (1.02T): vision and tools&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;mimo-v2.6-pro&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;564 GB&lt;/td&gt;
+					&lt;td&gt;54 / 64 GB&lt;/td&gt;
+					&lt;td&gt;Vulkan&lt;/td&gt;
+					&lt;td&gt;0.66-0.79 tok/s (A, CPU)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Kimi K3&lt;/strong&gt; (2.8T): the largest&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;kimi-k3&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;1.56 TB&lt;/td&gt;
+					&lt;td&gt;32 / 64 GB&lt;/td&gt;
+					&lt;td&gt;CUDA, Vulkan&lt;/td&gt;
+					&lt;td&gt;about 9.4 s per token, experts read at 6.3 GB/s&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;a id=&#34;other-supported-models&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;By hand: a conversion or preparation step after the download&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Model&lt;/th&gt;
+					&lt;th&gt;Download, then on disk&lt;/th&gt;
+					&lt;th&gt;RAM&lt;/th&gt;
+					&lt;th&gt;GPU&lt;/th&gt;
+					&lt;th&gt;Measured&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;OLMoE&lt;/strong&gt; (7B): small, to learn the tools on&lt;/td&gt;
+					&lt;td&gt;14 GB, 7 GB after conversion to int8&lt;/td&gt;
+					&lt;td&gt;8 GB&lt;/td&gt;
+					&lt;td&gt;Vulkan&lt;/td&gt;
+					&lt;td&gt;22-23 tok/s (A, CPU)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Qwen3.8-27B (dense): text and images&lt;/td&gt;
+					&lt;td&gt;56 GB, 51 GB after conversion&lt;/td&gt;
+					&lt;td&gt;20 GB in int4, 30 GB in int8&lt;/td&gt;
+					&lt;td&gt;Vulkan&lt;/td&gt;
+					&lt;td&gt;3.45 tok/s in int4, 2.1 in int8 (16-thread CPU server)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;GLM-5.3-Flash&lt;/strong&gt; (321B): vision and tools&lt;/td&gt;
+					&lt;td&gt;328 GB, converted shard by shard to 195 GB&lt;/td&gt;
+					&lt;td&gt;25 GB&lt;/td&gt;
+					&lt;td&gt;CUDA, Vulkan&lt;/td&gt;
+					&lt;td&gt;about 20 s per token warm, 44 s cold (6 cores, 25 GB, ordinary disk)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;DeepSeek V4.1 Flash&lt;/strong&gt; (552B): vision and tools, no conversion but a one-off preparation&lt;/td&gt;
+					&lt;td&gt;510 GB&lt;/td&gt;
+					&lt;td&gt;about 18 GB plus the expert cache (24.8 GB peak with 8 per layer)&lt;/td&gt;
+					&lt;td&gt;Vulkan&lt;/td&gt;
+					&lt;td&gt;0.21-0.24 tok/s (16-thread CPU server holding 68% of the experts)&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;a id=&#34;from-a-gguf&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;From a GGUF: the published files, read as they are&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;./coli import&lt;/code&gt; takes the first file of a GGUF (its other parts next to it) and writes a model
+directory beside it; &lt;code&gt;--model&lt;/code&gt; that directory, as any other (&lt;a class=&#34;link&#34; href=&#34;docs/gguf.md&#34; &gt;gguf.md&lt;/a&gt;). Nothing is
+converted or quantized again: the blocks run as the file holds them, from IQ1_S to Q8_0, F16, BF16
+and MXFP4. The engines of every chat model above read GGUFs too
+(&lt;a class=&#34;link&#34; href=&#34;docs/gguf.md#supported-architectures&#34; &gt;the architectures&lt;/a&gt;); these four models come as GGUFs:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Model&lt;/th&gt;
+					&lt;th&gt;GGUF&lt;/th&gt;
+					&lt;th&gt;GPU&lt;/th&gt;
+					&lt;th&gt;Measured&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Mistral-Large-4&lt;/strong&gt; (1T, 52B active): text, pictures, reasoning and tools&lt;/td&gt;
+					&lt;td&gt;unsloth, UD-IQ1_S 233 GB&lt;/td&gt;
+					&lt;td&gt;CUDA, Vulkan&lt;/td&gt;
+					&lt;td&gt;1.34-1.36 tok/s with CUDA, 1.16-1.17 with Vulkan (D)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Muse Spark Open&lt;/strong&gt; (816B, 42B active): text and tools, under Meta&amp;rsquo;s licence agreement&lt;/td&gt;
+					&lt;td&gt;unsloth, UD-IQ1_S 176 GB to UD-Q4_K_XL 505 GB&lt;/td&gt;
+					&lt;td&gt;CUDA, Vulkan&lt;/td&gt;
+					&lt;td&gt;1.55-1.58 tok/s with Vulkan, 1.34-1.40 with CUDA, 0.83-0.89 on the CPU (D)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Flint&lt;/strong&gt; (40B, 2.5B active): text and tools, Apache 2.0&lt;/td&gt;
+					&lt;td&gt;unsloth, UD-IQ1_M 11.4 GB to BF16 79.6 GB&lt;/td&gt;
+					&lt;td&gt;CUDA, Vulkan&lt;/td&gt;
+					&lt;td&gt;UD-Q4_K_XL: 77.4 tok/s with CUDA, 77.7 with Vulkan, 15.8 on the CPU (D)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;LFM3-VL-2B&lt;/strong&gt;: text, pictures and tools, LFM Open License&lt;/td&gt;
+					&lt;td&gt;LiquidAI, QAD-Q4_0 to BF16 (or the checkpoint, converted)&lt;/td&gt;
+					&lt;td&gt;CUDA, Vulkan&lt;/td&gt;
+					&lt;td&gt;Q4_K_M: 235.1 tok/s with CUDA, 214.1 with Vulkan, 34.5 on the CPU (D)&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The larger models of the tables above from their GGUFs, on the same machine: &lt;a class=&#34;link&#34; href=&#34;#large-models-on-the-same-machine&#34; &gt;Benchmarks&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Decision models&lt;/strong&gt; (they answer &lt;a class=&#34;link&#34; href=&#34;#system-one-a-decision-with-a-probability&#34; &gt;System One&lt;/a&gt; questions, they do not chat)&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Model&lt;/th&gt;
+					&lt;th&gt;Download, then on disk&lt;/th&gt;
+					&lt;th&gt;RAM&lt;/th&gt;
+					&lt;th&gt;GPU&lt;/th&gt;
+					&lt;th&gt;Measured&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Laya&lt;/strong&gt; (Convai Innovations), English&lt;/td&gt;
+					&lt;td&gt;0.85 GB&lt;/td&gt;
+					&lt;td&gt;1.7 GB&lt;/td&gt;
+					&lt;td&gt;CPU, CUDA&lt;/td&gt;
+					&lt;td&gt;219 ms for one question, 882 ms for three (B); twelve in 0.69 s with CUDA, 11.4-13.0 s on the CPU (D)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;GLiNER2.5-Decide&lt;/strong&gt; (fastino), English&lt;/td&gt;
+					&lt;td&gt;1.95 GB&lt;/td&gt;
+					&lt;td&gt;1.9 GB&lt;/td&gt;
+					&lt;td&gt;CPU, CUDA&lt;/td&gt;
+					&lt;td&gt;294 ms for one question, 897 ms for three (B, under load); twelve in 0.16-0.21 s with CUDA, 2.0-2.6 s on the CPU (D)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Clef&lt;/strong&gt; (Cloudflare): Qwen3.8-27B with a decision head, it also chats&lt;/td&gt;
+					&lt;td&gt;55 GB, 52 GB after conversion&lt;/td&gt;
+					&lt;td&gt;19 GB in int4 to 55 GB in f16&lt;/td&gt;
+					&lt;td&gt;CPU&lt;/td&gt;
+					&lt;td&gt;20.4 s per request in int8 (A)&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The machines:
+&lt;strong&gt;A&lt;/strong&gt; a Ryzen 7 PRO 8700GE desktop (8 cores, 61-64 GB DDR5, NVMe, integrated
+Radeon 780M);
+&lt;strong&gt;B&lt;/strong&gt; an i7-1355U laptop;
+&lt;strong&gt;C&lt;/strong&gt; an RTX 3070 8 GB in a Threadripper 3945WX box, with the dense layers and
+the DeltaNet layers on the card (per-row int4 container);
+&lt;strong&gt;D&lt;/strong&gt; an i5-13500 with 62 GB of RAM, an RTX PRO 4000 Blackwell SFF (24 GB) and two
+NVMe drives in an md array: the machine of &lt;a class=&#34;link&#34; href=&#34;#benchmarks&#34; &gt;the benchmark tables&lt;/a&gt;.
+Each number comes from its model&amp;rsquo;s page in &lt;a class=&#34;link&#34; href=&#34;docs/&#34; &gt;docs/&lt;/a&gt; or from
+&lt;a class=&#34;link&#34; href=&#34;docs/benchmarks.md&#34; &gt;the benchmark tables&lt;/a&gt;, with the exact settings.&lt;/p&gt;
+&lt;p&gt;Each family has its page: &lt;a class=&#34;link&#34; href=&#34;docs/qwen36.md&#34; &gt;qwen36.md&lt;/a&gt; (Qwen3.6, Qwen3-Coder,
+Qwen3.8-27B, Flint, Muse Spark Open, LFM3-VL), &lt;a class=&#34;link&#34; href=&#34;docs/mistral-large4.md&#34; &gt;mistral-large4.md&lt;/a&gt;,
+&lt;a class=&#34;link&#34; href=&#34;docs/gguf.md&#34; &gt;gguf.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/qwen38.md&#34; &gt;qwen38.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/deepseek-v4.md&#34; &gt;deepseek-v4.md&lt;/a&gt;,
+&lt;a class=&#34;link&#34; href=&#34;docs/deepseek-v41.md&#34; &gt;deepseek-v41.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/mimo.md&#34; &gt;mimo.md&lt;/a&gt;,
+&lt;a class=&#34;link&#34; href=&#34;docs/glm53-flash.md&#34; &gt;glm53-flash.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/inkling.md&#34; &gt;inkling.md&lt;/a&gt;,
+&lt;a class=&#34;link&#34; href=&#34;docs/kimi_k3.md&#34; &gt;kimi_k3.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/qwen-image.md&#34; &gt;qwen-image.md&lt;/a&gt;,
+&lt;a class=&#34;link&#34; href=&#34;docs/laya.md&#34; &gt;laya.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/gliner_decide.md&#34; &gt;gliner_decide.md&lt;/a&gt;,
+&lt;a class=&#34;link&#34; href=&#34;docs/clef.md&#34; &gt;clef.md&lt;/a&gt;, and GLM-5.2 in the &lt;a class=&#34;link&#34; href=&#34;docs/quickstart.md#3-get-the-model&#34; &gt;Quick Start&lt;/a&gt;.
+Checkpoints with the same architecture as a supported one, such as
+KAT-Coder v2.5 on the Qwen3.6 engine, run unchanged.&lt;/p&gt;
+&lt;h2 id=&#34;gpus&#34;&gt;GPUs
+&lt;/h2&gt;&lt;h3 id=&#34;no-gpu-needed&#34;&gt;No GPU needed
+&lt;/h3&gt;&lt;p&gt;Every engine runs on the CPU with nothing else installed. A GPU is a faster
+place to keep weights, not a requirement: for the large models the disk sets
+the speed, for the small ones the RAM.&lt;/p&gt;
+&lt;h3 id=&#34;vulkan-any-gpu&#34;&gt;Vulkan: any GPU
+&lt;/h3&gt;&lt;p&gt;Every MoE engine can use any GPU with a Vulkan 1.2 driver (AMD, Intel, NVIDIA,
+integrated or discrete) in two ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;the expert tier&lt;/strong&gt;: a cache of routed experts in GPU memory, filled at
+startup from the experts your past conversations used and adapting while you
+chat. The GPU computes the experts it holds while the CPU computes the rest;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the dense chain&lt;/strong&gt;: a whole layer recorded as one GPU submission, with the
+model&amp;rsquo;s running state kept on the GPU from one layer to the next.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Measured on the integrated Radeon 780M of machine A, the model files dropped
+from the page cache before each run, 100 tokens decoded
+(&lt;a class=&#34;link&#34; href=&#34;docs/vulkan.md#the-chain-on-a-radeon-780m&#34; &gt;vulkan.md&lt;/a&gt;):&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;&lt;/th&gt;
+					&lt;th&gt;CPU&lt;/th&gt;
+					&lt;th&gt;Vulkan, expert tier&lt;/th&gt;
+					&lt;th&gt;Vulkan, tier and dense chain&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Qwen3.6-35B-A3B, decode&lt;/td&gt;
+					&lt;td&gt;6.0 tok/s&lt;/td&gt;
+					&lt;td&gt;8.0 tok/s&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;9.9 tok/s&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Qwen3.6-35B-A3B, a 512-token prompt&lt;/td&gt;
+					&lt;td&gt;35.7 s&lt;/td&gt;
+					&lt;td&gt;12.2 s&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;9.5 s&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Qwen3.8-Flash-Next (int4 experts), decode&lt;/td&gt;
+					&lt;td&gt;3.5 tok/s&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;3.8 tok/s&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;3.2 tok/s&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Qwen3.8-Flash-Next, a 512-token prompt&lt;/td&gt;
+					&lt;td&gt;43.6 s&lt;/td&gt;
+					&lt;td&gt;38.7 s&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;30.1 s&lt;/strong&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;OLMoE, decode (warm)&lt;/td&gt;
+					&lt;td&gt;&lt;strong&gt;23.1 tok/s&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;12.8 tok/s&lt;/td&gt;
+					&lt;td&gt;17.3 tok/s&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;An integrated GPU shares the CPU&amp;rsquo;s RAM. What it saves is the work and the disk
+reads of the experts it holds, so it pays on a model like Qwen3.6, and a small
+model whose experts already sit in RAM, like OLMoE, can lose. That is why the
+setup turns Vulkan on for an integrated GPU only for Qwen3.6, Qwen3-Coder and
+Qwen3.8-Flash-Next, and why each engine decides for itself whether to run the
+dense chain there (Qwen3.6 yes, Qwen3.8 no). &lt;code&gt;--backend vulkan&lt;/code&gt; asks for Vulkan
+anyway.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Turning the GPU on or off.&lt;/strong&gt; &lt;code&gt;coli setup --backend vulkan&lt;/code&gt; uses the GPU for any
+model, and &lt;code&gt;coli setup --backend cpu&lt;/code&gt; (or &lt;code&gt;--no-gpu&lt;/code&gt;) keeps everything on the
+CPU. An engine built with Vulkan uses the GPU only with &lt;code&gt;COLI_VULKAN=1&lt;/code&gt; in the
+environment of &lt;code&gt;coli chat&lt;/code&gt;, &lt;code&gt;serve&lt;/code&gt; or &lt;code&gt;web&lt;/code&gt; (the setup sets it when it chose
+Vulkan); without it, the engine runs on the CPU. With the GPU on, &lt;code&gt;COLI_VK_CHAIN=0&lt;/code&gt;
+keeps the expert tier and runs the dense layers on the CPU. On an integrated GPU,
+try both: on a laptop with an Intel Iris Xe (Core i7-1355U), Qwen3.6 decoded
+2.1 tok/s on the CPU, 1.7 to 1.9 with Vulkan, and 2.1 with the dense chain off.&lt;/p&gt;
+&lt;p&gt;On a discrete GPU the setup builds Vulkan for every engine (CUDA first, where
+the engine has it and the toolkit is installed), with the dense layers on the
+card. That is the case the design is for. On an RTX PRO 4000 (24 GB, machine D)
+Qwen3.6-35B-A3B decodes at 92.9 tok/s and reads a prompt at 2,076, OLMoE at
+299.4 and 6,867 (&lt;a class=&#34;link&#34; href=&#34;#three-backends-on-one-machine&#34; &gt;the table&lt;/a&gt;). A model larger
+than the card keeps the experts the card cannot hold in a host pool in RAM, and
+in every step the CPU computes those while the card computes its own, in the
+same frame: Qwen3.8-Flash-Next IQ2_XS (68 GB) decodes at 50.6 tok/s there
+(&lt;a class=&#34;link&#34; href=&#34;docs/vulkan.md#the-routed-experts-in-the-frame-vk_dmoeh&#34; &gt;vulkan.md&lt;/a&gt;). A user measured Qwen3.6 at 17 to 19 tok/s on a
+Tesla V100 16 GB (&lt;a class=&#34;link&#34; href=&#34;https://github.com/JustVugg/colibri/issues/1852&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#1852&lt;/a&gt;).
+Numbers from your card are welcome.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cards without Resizable BAR&lt;/strong&gt; now work. Such a card (every Turing card,
+Ampere cards on their launch firmware, older AMD cards with the option off)
+lets the CPU write only about 256 MB of its memory directly; colibri now copies
+the weights in through a staging buffer, on its own. The path is tested by
+forcing it and by emulating the small window on three devices, and it costs
+nothing measurable on the 780M; it has not been measured on a card without
+Resizable BAR (&lt;a class=&#34;link&#34; href=&#34;docs/vulkan.md#memory-placement-without-resizable-bar&#34; &gt;vulkan.md&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;CI checks every engine&amp;rsquo;s Vulkan path against the CPU&amp;rsquo;s tokens on a software
+driver. The GPU adds numbers in a different order, and keeps some activations
+in f32 where the CPU rounds them, so a long answer can drift from the CPU&amp;rsquo;s by
+a word (&lt;a class=&#34;link&#34; href=&#34;docs/vulkan.md#the-other-engines&#34; &gt;vulkan.md&lt;/a&gt;).&lt;/p&gt;
+&lt;h3 id=&#34;cuda-nvidia-cards&#34;&gt;CUDA: NVIDIA cards
+&lt;/h3&gt;&lt;p&gt;The setup builds CUDA on Linux when the CUDA toolkit is installed, for the
+engines that have a CUDA path: GLM-5.2/5.3 and Mistral-Large-4, GLM-5.3-Flash,
+Inkling, Kimi K3, DeepSeek V4 Flash, DeepSeek V4.1 Flash, MiMo-V2.6,
+Qwen3.8-Flash-Next, and Qwen3.6 with the models it runs; OLMoE and the decision
+engines build with &lt;code&gt;make &amp;lt;engine&amp;gt; CUDA=1&lt;/code&gt;. On
+Windows the CUDA engine is a separate DLL (&lt;a class=&#34;link&#34; href=&#34;docs/windows.md&#34; &gt;windows.md&lt;/a&gt;), and
+every release ships it built: &lt;code&gt;colibri-&amp;lt;version&amp;gt;-windows-x86_64-cuda.zip&lt;/code&gt; has
+&lt;code&gt;coli_cuda.dll&lt;/code&gt; (cards of compute capability 8.0 and newer) and the colibri,
+qwen36 and kimi_k3 engines that load it, with DeepSeek V4&amp;rsquo;s own CUDA DLLs. Unpack it
+over the main archive and the setup picks CUDA.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Every layer on the card&lt;/strong&gt; for Qwen3.6, Qwen3.8 and OLMoE: the dense layers,
+the attention and the routed experts the card holds run as one chain, and the
+experts it does not hold run on the CPU. On an RTX PRO 4000,
+Qwen3.6-35B-A3B UD-Q4_K_M decodes at 104.8 tok/s and reads a prompt at 3,491,
+OLMoE at 354.6 and 10,418 (&lt;a class=&#34;link&#34; href=&#34;#three-backends-on-one-machine&#34; &gt;the table&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A routed-expert tier on the card for every engine&lt;/strong&gt; (&lt;code&gt;cu_tier.h&lt;/code&gt;), and the
+dense matrices on it for DeepSeek V4, V4.1, Kimi K3, GLM-5.3 and MiMo
+(&lt;code&gt;cu_dense.h&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A GGUF&amp;rsquo;s blocks on the card&lt;/strong&gt; (&lt;code&gt;cuda_bd.cuh&lt;/code&gt;): every ggml block type of 32
+weights or more, each row as the file has it; a prompt goes through the
+tensor cores (&lt;a class=&#34;link&#34; href=&#34;docs/gguf.md&#34; &gt;gguf.md&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The VRAM expert tier&lt;/strong&gt; keeps the hottest experts on the card, chosen from
+measured routing; misses compute on the CPU at the same time. Qwen3.6 on two
+8 GB cards (RTX 3070 and Quadro RTX 4000) decoded 11.3 tok/s with a warm
+history (&lt;a class=&#34;link&#34; href=&#34;docs/qwen36-cuda-tier.md&#34; &gt;qwen36-cuda-tier.md&lt;/a&gt;); GLM-5.2 on six
+RTX 5090 with every expert resident, 9.0-9.2 tok/s
+(&lt;a class=&#34;link&#34; href=&#34;docs/benchmarks.md&#34; &gt;benchmarks.md&lt;/a&gt;); DeepSeek V4 Flash on an RTX 5080,
+1.5-1.6 tok/s and a 3,324-token prompt in 90 s
+(&lt;a class=&#34;link&#34; href=&#34;docs/deepseek-v4.md&#34; &gt;deepseek-v4.md&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Qwen3.6&amp;rsquo;s DeltaNet layers on the card&lt;/strong&gt; (&lt;code&gt;Q36_DN_GPU=1&lt;/code&gt;,
+opt-in). Each of Qwen3.6&amp;rsquo;s 30 DeltaNet layers used to copy its data between
+the card and the CPU four times per token; now a decode token runs the whole layer
+on the card, with its recurrent state kept in VRAM. On an RTX 3070 with the
+dense layers in VRAM: 25.4 to 30.0 tok/s
+(&lt;a class=&#34;link&#34; href=&#34;docs/qwen36-cuda-tier.md#the-deltanet-layer-on-the-card-q36_dn_gpu1&#34; &gt;qwen36-cuda-tier.md&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Older cards.&lt;/strong&gt; If the CUDA toolkit no longer compiles for your card (CUDA
+13 and a V100, in &lt;a class=&#34;link&#34; href=&#34;https://github.com/JustVugg/colibri/issues/1852&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#1852&lt;/a&gt;),
+the setup sees it before building and uses the card through Vulkan, saying
+why; a CUDA 12.x toolkit brings the CUDA path back.
+DeepSeek V4&amp;rsquo;s CUDA tier also builds for Pascal and Turing
+(&lt;code&gt;CUDA_ARCH=portable-pre-ampere NO_TC=1&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All of it: &lt;a class=&#34;link&#34; href=&#34;docs/cuda.md&#34; &gt;docs/cuda.md&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;apple-silicon&#34;&gt;Apple Silicon
+&lt;/h3&gt;&lt;p&gt;A Metal backend does the expert math on the unified-memory GPU for several
+engines (&lt;a class=&#34;link&#34; href=&#34;docs/metal.md&#34; &gt;docs/metal.md&lt;/a&gt;). The release&amp;rsquo;s macOS archive has
+&lt;code&gt;colibri&lt;/code&gt;, &lt;code&gt;inkling&lt;/code&gt; and &lt;code&gt;kimi_k3&lt;/code&gt; built with it: &lt;code&gt;COLI_METAL=1&lt;/code&gt; (&lt;code&gt;K3_METAL=1&lt;/code&gt;
+for Kimi K3) turns it on, and without it they run on the CPU. From source,
+build with &lt;code&gt;METAL=1&lt;/code&gt;; the one-step setup builds for the CPU.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#34;system-one-mode-ask-a-closed-question&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;system-one-a-decision-with-a-probability&#34;&gt;System One: a decision with a probability
+&lt;/h2&gt;&lt;p&gt;Most of what people ask a model for is a choice, not a paragraph: which queue,
+which verdict, yes or no. &lt;code&gt;POST /v1/systemone&lt;/code&gt; takes a state (text or JSON) and
+typed questions, and answers each one with the probability of every allowed
+option and a confidence. Nothing is generated, so no answer can fall outside
+your list, and &amp;ldquo;the model is not sure&amp;rdquo; is a number you can put a threshold on.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -s http://127.0.0.1:8000/v1/systemone -H &lt;span class=&#34;s1&#34;&gt;&amp;#39;Content-Type: application/json&amp;#39;&lt;/span&gt; -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;{
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  &amp;#34;state&amp;#34;: &amp;#34;340 lines, 8 files, no tests. CI is green but nothing covers that path.&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;  &amp;#34;questions&amp;#34;: {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    &amp;#34;review&amp;#34;: {&amp;#34;type&amp;#34;: &amp;#34;choice&amp;#34;, &amp;#34;instructions&amp;#34;: &amp;#34;What should the reviewer do?&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;               &amp;#34;criteria&amp;#34;: {&amp;#34;merge&amp;#34;: null, &amp;#34;request changes&amp;#34;: null, &amp;#34;close&amp;#34;: null}},
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;    &amp;#34;risky&amp;#34;:  {&amp;#34;type&amp;#34;: &amp;#34;noul&amp;#34;, &amp;#34;instructions&amp;#34;: &amp;#34;Is this change risky?&amp;#34;}}}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;A &lt;code&gt;choice&lt;/code&gt; comes back with the chosen label, a probability for every label and a
+&lt;code&gt;confidence&lt;/code&gt; from 0 (flat) to 1 (certain); a &lt;code&gt;noul&lt;/code&gt; with the probability of yes;
+a &lt;code&gt;score&lt;/code&gt; with the expected level.&lt;/p&gt;
+&lt;p&gt;Who answers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Any chat model colibri runs&lt;/strong&gt;, by scoring: it reads the probability of each
+option instead of writing an answer. Many questions about one document read
+the document once: on Qwen3.6, four questions about one document came back
+5.7x faster than generating the same answers on the same CPU box.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Three decision models&lt;/strong&gt;, natively, in one forward pass with the calibration
+their authors fitted: &lt;a class=&#34;link&#34; href=&#34;docs/laya.md&#34; &gt;Laya&lt;/a&gt; (Convai Innovations),
+&lt;a class=&#34;link&#34; href=&#34;docs/gliner_decide.md&#34; &gt;GLiNER2.5-Decide&lt;/a&gt; (fastino) and &lt;a class=&#34;link&#34; href=&#34;docs/clef.md&#34; &gt;Clef&lt;/a&gt;
+(Cloudflare; it also chats). Their sizes and speeds are in
+&lt;a class=&#34;link&#34; href=&#34;#which-model-for-my-machine&#34; &gt;the decision models table&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Switching from Jev.&lt;/strong&gt; The request and the reply are those of TypeSafe&amp;rsquo;s Jev
+API, so a Jev client switches to colibri by changing its base URL and nothing
+else: &lt;code&gt;TYPESAFE_BASE_URL=http://127.0.0.1:8000&lt;/code&gt; (the key it already sends is
+accepted by a server started without &lt;code&gt;COLI_API_KEY&lt;/code&gt;). The two official SDKs,
+unmodified, are tested against &lt;code&gt;coli serve&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The same mode is in the terminal (&lt;code&gt;/decide merge | request changes | close&lt;/code&gt; in
+&lt;code&gt;coli chat&lt;/code&gt;) and on the dashboard&amp;rsquo;s System One page. The request and reply in
+full, the scoring rules and where it does not help:
+&lt;a class=&#34;link&#34; href=&#34;docs/systemone.md&#34; &gt;docs/systemone.md&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;the-dashboard&#34;&gt;The dashboard
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;coli web&lt;/code&gt; opens it, and so does the one-step setup: the chat, the System One
+page, the Brain and the Profiling page, in a light or a dark theme.&lt;/p&gt;
+&lt;h3 id=&#34;the-chat-ui&#34;&gt;The chat UI
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;coli ui&lt;/code&gt; opens the new chat next to a running &lt;code&gt;coli serve&lt;/code&gt;: reasoning in its own block,
+pictures for models with a vision tower, web search, the expert map, a live monitor, and
+coding agents opened already pointed at colibri. Seven languages. See &lt;a class=&#34;link&#34; href=&#34;ui/README.md&#34; &gt;ui/README.md&lt;/a&gt;.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;docs/media/ui/ui-chat.png&#34; width=&#34;900&#34; alt=&#34;the chat UI: a question, the reasoning folded, the answer, and its speed&#34;&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;em&gt;LFM3-VL-2B on an i5-13500&#39;s CPU, 32 tok/s.&lt;/em&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;docs/media/ui/ui-monitor.png&#34; width=&#34;900&#34; alt=&#34;the monitor: the model&#39;s state, its speed, the tokens written, the prompt, the engine&#39;s CPU and RAM&#34;&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;em&gt;The &lt;strong&gt;monitor&lt;/strong&gt; while LFM3-VL-2B writes: 31.6 tok/s, the prompt read in 0.1 s, 2.1 GB of RAM.&lt;/em&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;docs/media/ui/ui-experts.png&#34; width=&#34;900&#34; alt=&#34;the chat with the expert map open: a cell per expert in each of OLMoE&#39;s 16 blocks&#34;&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;em&gt;OLMoE with the &lt;strong&gt;expert map&lt;/strong&gt; open beside the chat: a cell per expert in each block, white when chosen in this step,
+amber when used in this answer.&lt;/em&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;docs/media/ui/ui-systemone.png&#34; width=&#34;900&#34; alt=&#34;the System One page: a pull request read once, a probability for every allowed answer, and how sure the model is&#34;&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;&lt;em&gt;&lt;strong&gt;System One&lt;/strong&gt;: give the model a document and the only answers it may pick. Here Qwen3.6-35B on an RTX PRO 4000
+reads a pull request that breaks a cache&#39;s size limit: &lt;strong&gt;request changes at 81%&lt;/strong&gt;, entropy 0.56 (unsure), 98 tokens read, 0 generated.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Profiling&lt;/strong&gt; page shows where each turn spends its time, phase by phase,
+with the last 30 turns as a trend.&lt;/p&gt;
+&lt;h2 id=&#34;use-it-from-other-apps&#34;&gt;Use it from other apps
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;coli serve&lt;/code&gt; (which the setup starts for you) is one server with several APIs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;OpenAI-compatible&lt;/strong&gt;: &lt;code&gt;/v1/chat/completions&lt;/code&gt;, &lt;code&gt;/v1/completions&lt;/code&gt; and
+&lt;code&gt;/v1/models&lt;/code&gt;, with streaming, JSON replies, stop sequences and logprobs;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Anthropic-compatible&lt;/strong&gt;: &lt;code&gt;/v1/messages&lt;/code&gt;, so Claude Code and the Anthropic
+SDKs work against it;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;tool calling&lt;/strong&gt; on every chat engine except Inkling and OLMoE, each in its
+model&amp;rsquo;s native format (&lt;a class=&#34;link&#34; href=&#34;docs/api.md#tool-calling-support&#34; &gt;the per-engine table&lt;/a&gt;);&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;images in&lt;/strong&gt; on GLM-5.3-Flash, DeepSeek V4.1 Flash, MiMo-V2.6,
+Qwen3.8-Flash-Next, Qwen3.8-27B, LFM3-VL and Mistral-Large-4 (from a GGUF, with
+the &lt;code&gt;mmproj&lt;/code&gt; file next to it): a path in a &lt;code&gt;coli chat&lt;/code&gt; message, an
+attachment in &lt;code&gt;coli web&lt;/code&gt; or &lt;code&gt;coli ui&lt;/code&gt;, or an &lt;code&gt;image_url&lt;/code&gt; part;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;documents in&lt;/strong&gt; on every chat engine: &lt;code&gt;/file PATH&lt;/code&gt; in &lt;code&gt;coli chat&lt;/code&gt; (or
+&lt;code&gt;coli chat --file PATH&lt;/code&gt;) sends a text file&amp;rsquo;s or a PDF&amp;rsquo;s text with the next
+message. Only a file named that way is read, never a path inside a message;
+it must be a regular file with a text suffix or &lt;code&gt;.pdf&lt;/code&gt;, within 64 MiB and
+2 million characters. A PDF is parsed in a separate process with a time and
+memory limit, by &lt;code&gt;pdftotext&lt;/code&gt; (poppler) or &lt;code&gt;pypdf&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;pictures out&lt;/strong&gt; with Qwen-Image-2.1 on &lt;code&gt;POST /v1/images/generations&lt;/code&gt;,
+and drawn inside the terminal by &lt;code&gt;coli chat&lt;/code&gt;
+(&lt;a class=&#34;link&#34; href=&#34;docs/qwen-image.md&#34; &gt;qwen-image.md&lt;/a&gt;);&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;decisions&lt;/strong&gt; on &lt;code&gt;POST /v1/systemone&lt;/code&gt; (&lt;a class=&#34;link&#34; href=&#34;#system-one-a-decision-with-a-probability&#34; &gt;above&lt;/a&gt;);&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;several conversations at once&lt;/strong&gt; on every text engine: &lt;code&gt;coli serve --kv-slots N&lt;/code&gt; keeps up to 16, each with its own cache, and decodes their next
+tokens together (&lt;a class=&#34;link&#34; href=&#34;docs/api.md#isolated-kv-contexts&#34; &gt;api.md&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Coding CLIs and editors connect as to any OpenAI-compatible provider: base URL
+&lt;code&gt;http://127.0.0.1:8000/v1&lt;/code&gt;, the model id &lt;code&gt;coli status&lt;/code&gt; prints, any non-empty key
+(&lt;a class=&#34;link&#34; href=&#34;docs/api.md#connect-a-coding-cli-or-editor&#34; &gt;docs/api.md&lt;/a&gt;).&lt;/p&gt;
+&lt;h2 id=&#34;how-it-works&#34;&gt;How it works
+&lt;/h2&gt;&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;docs/media/token-path.png&#34; width=&#34;880&#34; alt=&#34;route, union, place, overlap, learn&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Every layer of every token walks the same five steps: route, union, place,
+overlap, learn. The design goal is that &lt;strong&gt;placement only ever decides speed&lt;/strong&gt;:
+the router&amp;rsquo;s decisions and the weights&amp;rsquo; precision are the same whether an
+expert answered from VRAM, from RAM or from disk.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;docs/media/tiers.png&#34; width=&#34;880&#34; alt=&#34;VRAM, RAM and NVMe as three tiers of expert residency&#34;&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;A JIT for weights.&lt;/strong&gt; A compiler JIT never compiles the whole program: it
+watches what runs and compiles the hot paths. colibri makes the same bet
+about weights. Measured routing heat decides which experts earn VRAM, RAM or
+disk: a per-layer LRU cache, plus a pinned hot set learned from your own
+conversations (&lt;code&gt;.coli_usage&lt;/code&gt;, updated every turn). colibri gets faster the
+more you use it. It works because routing has measurable structure (the
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/JustVugg/colibri/issues/175&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;expert atlas&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Never wait for the disk twice.&lt;/strong&gt; An expert&amp;rsquo;s three matrices are read in one
+&lt;code&gt;pread&lt;/code&gt;; a pool of loaders reads the missing experts while the resident ones
+compute; a batch of positions reads each expert once; a router-lookahead
+thread can prefetch the next layer (GLM-5.2&amp;rsquo;s routing is 71.6% predictable
+one layer ahead). &lt;code&gt;DIRECT=1&lt;/code&gt; (O_DIRECT) is often a large win on fast NVMe drives and
+neutral or worse on others: measure it on yours (&lt;a class=&#34;link&#34; href=&#34;docs/tuning.md&#34; &gt;tuning.md&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;More than one SSD.&lt;/strong&gt; &lt;code&gt;COLI_MODEL_MIRROR=/second/glm52_i4 ./coli chat --model /fast/glm52_i4&lt;/code&gt;
+reads from a copy on a second drive. Two NVMe drives on independent
+controllers measured +37.5% decode; a partial mirror on a smaller drive works
+too (&lt;a class=&#34;link&#34; href=&#34;docs/multidisk.md&#34; &gt;multidisk.md&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;From a laptop to a rack.&lt;/strong&gt; On a 25 GB laptop every expert streams from
+disk, slowly and correctly; on a large host every expert is resident
+(&lt;code&gt;CUDA_EXPERT_GB=auto PIN_GB=all&lt;/code&gt;) and the disk drops out of decoding.
+&lt;code&gt;COLI_NUMA=1&lt;/code&gt; spreads the resident weights over the memory controllers of a
+multi-socket host, and a local cluster mode runs routed experts on other
+machines (&lt;a class=&#34;link&#34; href=&#34;docs/cluster.md&#34; &gt;cluster.md&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A faithful model.&lt;/strong&gt; Every engine is checked in CI against its model&amp;rsquo;s
+reference implementation on a tiny fixture. GLM-5.2&amp;rsquo;s MLA attention keeps a
+compressed KV state (576 floats per token instead of 32,768, 57x smaller)
+that survives restarts, so a conversation reopens with no prompt to read
+again.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Speculation that earns its keep.&lt;/strong&gt; GLM-5.2&amp;rsquo;s int8 MTP head drafts 2.2-2.8
+tokens per forward when it pays; Qwen3.8-Flash-Next&amp;rsquo;s MTP head, on by default, adds
+16-20% with the same output, and prompt lookup 6-7% on code edits. Qwen3.6&amp;rsquo;s
+head (&lt;code&gt;Q36_MTP=1&lt;/code&gt;) takes its decode from 99.7-104.5 to 115.8-120.1 tok/s on
+CUDA and from 83.2-83.8 to 99.9-109.3 on Vulkan (an RTX PRO 4000). DeepSeek
+V4.1&amp;rsquo;s DSpark head drafts as deep as its confidence says, and a gate skips the
+drafts that cannot pay. Where drafting costs more than it saves (DeepSeek V4)
+it stays off (&lt;a class=&#34;link&#34; href=&#34;docs/speculative.md&#34; &gt;speculative.md&lt;/a&gt;,
+&lt;a class=&#34;link&#34; href=&#34;docs/tuning.md#speculation-and-reproducibility&#34; &gt;tuning.md&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The engine is one C file per model family (&lt;code&gt;c/colibri.c&lt;/code&gt; for GLM-5.2) over
+shared headers, with no BLAS and no Python at runtime: Python runs only the
+setup, the launcher, the converters and the API gateway.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#34;what-it-achieves&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;benchmarks&#34;&gt;Benchmarks
+&lt;/h2&gt;&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;docs/media/ladder.png&#34; width=&#34;880&#34; alt=&#34;measured GLM-5.2 decode speed by hardware class&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;The same engine and the same int4 container: the hardware only changes where
+the experts live. GLM-5.2 decode, from &lt;a class=&#34;link&#34; href=&#34;docs/benchmarks.md&#34; &gt;the full tables&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;6x RTX 5090, every expert resident:&lt;/strong&gt; 5.8-6.8 tok/s, 9.0-9.2 with selective
+NUMA interleave (&lt;a class=&#34;link&#34; href=&#34;docs/experiments/glm52-6x5090-2026-07-12.md&#34; &gt;experiment log&lt;/a&gt;);&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;128 GB, CPU only&lt;/strong&gt; (Ryzen AI Max+ 395): 1.83 tok/s warm
+(&lt;a class=&#34;link&#34; href=&#34;https://github.com/JustVugg/colibri/issues/200&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#200&lt;/a&gt;);&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;a single RTX 5070 Ti laptop-class box:&lt;/strong&gt; 1.07 tok/s
+(&lt;a class=&#34;link&#34; href=&#34;https://github.com/JustVugg/colibri/issues/273&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#273&lt;/a&gt;);&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;the 25 GB laptop where this started:&lt;/strong&gt; 0.05-0.1 tok/s cold, the honest
+floor.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;three-backends-on-one-machine&#34;&gt;Three backends on one machine
+&lt;/h3&gt;&lt;p&gt;An i5-13500 with 62 GB of RAM and an RTX PRO 4000 Blackwell SFF (24 GB, 70 W),
+each model served by &lt;code&gt;coli serve&lt;/code&gt;: a fresh 450-token prompt, then a 128-token
+streamed answer, the request&amp;rsquo;s HTTP included; the better of two runs, tok/s.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;GGUF&lt;/th&gt;
+					&lt;th style=&#34;text-align: right&#34;&gt;CUDA prompt&lt;/th&gt;
+					&lt;th style=&#34;text-align: right&#34;&gt;CUDA decode&lt;/th&gt;
+					&lt;th style=&#34;text-align: right&#34;&gt;Vulkan prompt&lt;/th&gt;
+					&lt;th style=&#34;text-align: right&#34;&gt;Vulkan decode&lt;/th&gt;
+					&lt;th style=&#34;text-align: right&#34;&gt;CPU prompt&lt;/th&gt;
+					&lt;th style=&#34;text-align: right&#34;&gt;CPU decode&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Qwen3.6-35B-A3B UD-Q4_K_M&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;3,491&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;104.8&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;2,076&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;92.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;122.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;13.9&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;LFM3-VL-2B Q4_K_M&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;12,317&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;235.1&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;8,174&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;214.1&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;286.5&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;34.5&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;OLMoE-1B-7B-0125-Instruct Q4_K_M&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;10,418&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;354.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;6,867&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;299.4&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;279.9&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;47.4&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;LFM3-VL-2B F16&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;11,524&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;103.4&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;7,767&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;99.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;49.7&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;6.4&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Qwen3.8-Flash-Next IQ2_XS (68 GB: the experts the card cannot hold stay in RAM)&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;217.1&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;51.4&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;214.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;50.6&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;38.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;9.3&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;large-models-on-the-same-machine&#34;&gt;Large models on the same machine
+&lt;/h3&gt;&lt;p&gt;Machine D again, each model from its published GGUF through &lt;code&gt;coli serve&lt;/code&gt;: what
+neither the card nor the RAM holds comes from the two NVMe drives. Tokens per
+second, from each model&amp;rsquo;s page:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;GGUF&lt;/th&gt;
+					&lt;th style=&#34;text-align: right&#34;&gt;size&lt;/th&gt;
+					&lt;th&gt;backend&lt;/th&gt;
+					&lt;th style=&#34;text-align: right&#34;&gt;prompt&lt;/th&gt;
+					&lt;th style=&#34;text-align: right&#34;&gt;decode&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Inkling-Small UD-IQ2_XXS&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;77 GB&lt;/td&gt;
+					&lt;td&gt;Vulkan&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;15.1-33.1&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;10.92-11.53 (&lt;a class=&#34;link&#34; href=&#34;docs/vulkan.md&#34; &gt;vulkan.md&lt;/a&gt;)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;MiMo-V2.6-Flash Q2_K_S&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;106 GB&lt;/td&gt;
+					&lt;td&gt;Vulkan&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;8.2&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;7.8 (&lt;a class=&#34;link&#34; href=&#34;docs/gguf.md&#34; &gt;gguf.md&lt;/a&gt;)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;DeepSeek V4 Flash 0731 UD-IQ2_XXS&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;85 GB&lt;/td&gt;
+					&lt;td&gt;Vulkan&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;19.7-20.4&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;6.18-6.25 (&lt;a class=&#34;link&#34; href=&#34;docs/vulkan.md&#34; &gt;vulkan.md&lt;/a&gt;)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;DeepSeek V4.1 Flash UD-IQ1_S&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;&lt;/td&gt;
+					&lt;td&gt;Vulkan&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;31.8 over 3,403 tokens&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;5.01-5.29 (&lt;a class=&#34;link&#34; href=&#34;docs/deepseek-v41.md&#34; &gt;deepseek-v41.md&lt;/a&gt;)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GLM-5.3-Flash UD-IQ2_XXS&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;95 GB&lt;/td&gt;
+					&lt;td&gt;Vulkan&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;9.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;2.92-3.40 (&lt;a class=&#34;link&#34; href=&#34;docs/vulkan.md&#34; &gt;vulkan.md&lt;/a&gt;)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Muse Spark Open UD-IQ1_S&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;176 GB&lt;/td&gt;
+					&lt;td&gt;Vulkan&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;5.0-5.3&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.55-1.58 (&lt;a class=&#34;link&#34; href=&#34;docs/qwen36.md#muse-spark-open&#34; &gt;qwen36.md&lt;/a&gt;)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Mistral-Large-4 UD-IQ1_S&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;233 GB&lt;/td&gt;
+					&lt;td&gt;CUDA&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;240 tokens in 66-82 s&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;1.34-1.36 (&lt;a class=&#34;link&#34; href=&#34;docs/mistral-large4.md&#34; &gt;mistral-large4.md&lt;/a&gt;)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GLM-5.2 UD-IQ1_S&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;202 GB&lt;/td&gt;
+					&lt;td&gt;Vulkan&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;0.633-0.658 (&lt;a class=&#34;link&#34; href=&#34;docs/gguf.md&#34; &gt;gguf.md&lt;/a&gt;)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Kimi K3 UD-IQ1_S&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;594 GB&lt;/td&gt;
+					&lt;td&gt;Vulkan&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;31 tokens in 46.5 s&lt;/td&gt;
+					&lt;td style=&#34;text-align: right&#34;&gt;0.349 (&lt;a class=&#34;link&#34; href=&#34;docs/gguf.md&#34; &gt;gguf.md&lt;/a&gt;)&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;long-contexts-and-agents&#34;&gt;Long contexts and agents
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;A 256k context at the speed of 64k.&lt;/strong&gt; Qwen3.8-Flash-Next IQ2_XS on the CUDA
+chain of machine D, at a context of 262,144 tokens: prompt 15.6 -&amp;gt; 149 tok/s,
+decode 9.6 -&amp;gt; 45.7 (the RAM plan at one prompt segment, K/V in float16 on the
+card; at 65,536 it reads 188 and decodes 48.4) (&lt;a class=&#34;link&#34; href=&#34;docs/qwen38.md&#34; &gt;qwen38.md&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;An agent&amp;rsquo;s turns read only what is new.&lt;/strong&gt; A short request between two turns
+(an agent asking for the conversation&amp;rsquo;s title) parks the conversation instead
+of taking its state, on every engine (&lt;code&gt;COLI_PARK&lt;/code&gt;). Hermes Agent&amp;rsquo;s second turn
+on Qwen3.8-Flash-Next, 14,810 tokens: 86 s -&amp;gt; 4.9 s
+(&lt;a class=&#34;link&#34; href=&#34;docs/qwen38.md#an-agents-turns&#34; &gt;qwen38.md&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;KV caches in float16&lt;/strong&gt;: GLM-5.3 at 131,072 tokens holds 11.9 GB instead of
+23.9 (&lt;a class=&#34;link&#34; href=&#34;CHANGELOG.md&#34; &gt;CHANGELOG&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Quality is measured, not assumed: the int4 container&amp;rsquo;s cost and the
+quantization ablations are in
+&lt;a class=&#34;link&#34; href=&#34;docs/benchmarks.md#quality-benchmark&#34; &gt;benchmarks.md&lt;/a&gt;. To add your machine,
+follow &lt;a class=&#34;link&#34; href=&#34;docs/benchmarking.md&#34; &gt;the benchmark protocol&lt;/a&gt; and open an issue with
+the numbers.&lt;/p&gt;
+&lt;h2 id=&#34;install-by-hand&#34;&gt;Install by hand
+&lt;/h2&gt;&lt;p&gt;&lt;a id=&#34;1-get-colibri&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. The program.&lt;/strong&gt; Take the archive for your platform from
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/JustVugg/colibri/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Releases&lt;/a&gt; (Linux x86_64, macOS,
+Windows; no compiler needed, only &lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Python 3&lt;/a&gt;
+for the launcher and the API) and unpack it, then &lt;code&gt;python3 coli info&lt;/code&gt;. The Linux
+and Windows engines have Vulkan built in, with their &lt;code&gt;shaders/&lt;/code&gt; beside them, and
+the macOS ones Metal; for an NVIDIA card on Windows add the CUDA archive. Or build
+from source with &lt;code&gt;gcc&lt;/code&gt; (or clang) and OpenMP:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/JustVugg/colibri &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; colibri/c
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./setup.sh                                &lt;span class=&#34;c1&#34;&gt;# checks gcc/OpenMP, builds, self-tests&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make qwen36 &lt;span class=&#34;nv&#34;&gt;VK&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;                          &lt;span class=&#34;c1&#34;&gt;# one engine, here with Vulkan (CUDA=1 for CUDA)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;a id=&#34;2-get-the-model&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. A model.&lt;/strong&gt; Any download in &lt;a class=&#34;link&#34; href=&#34;#which-model-for-my-machine&#34; &gt;the tables above&lt;/a&gt;:
+the setup&amp;rsquo;s ids map to Hugging Face repositories, and each model&amp;rsquo;s page has the
+download and conversion command. For GLM-5.2 use the group-scaled (gs64)
+container with the int8 MTP head,
+&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/mastouri/GLM-5.2-colibri-int4-g64-with-int8-mtp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;mastouri/GLM-5.2-colibri-int4-g64-with-int8-mtp&lt;/code&gt;&lt;/a&gt;
+(429 GB), or &lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/Justvugg/GLM-5.3-colibri-int4-g64&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;Justvugg/GLM-5.3-colibri-int4-g64&lt;/code&gt;&lt;/a&gt;
+for GLM-5.3 (419 GB, no MTP head). Not the older per-row int4 mirrors: they
+measure about 9 points worse on quality and caused the looping answers of
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/JustVugg/colibri/issues/455&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;#455&lt;/a&gt;. &lt;code&gt;./coli convert --model /nvme/glm52_i4&lt;/code&gt; builds the same container from the FP8 release, shard by shard,
+without ever needing its 756 GB on disk at once. How to check the MTP head and
+the rest: &lt;a class=&#34;link&#34; href=&#34;docs/quickstart.md#3-get-the-model&#34; &gt;quickstart.md&lt;/a&gt;. A GGUF you
+already have needs no conversion: &lt;code&gt;./coli import&lt;/code&gt; its first file
+(&lt;a class=&#34;link&#34; href=&#34;#from-a-gguf&#34; &gt;above&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#34;3-run-it&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. Run it.&lt;/strong&gt; From &lt;code&gt;c/&lt;/code&gt; in a source checkout, or from the unpacked release.
+The launcher reads the model&amp;rsquo;s &lt;code&gt;config.json&lt;/code&gt; and picks the engine and its chat
+template, so the commands are the same for every model:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./coli chat  --model /nvme/qwen36          &lt;span class=&#34;c1&#34;&gt;# chat in the terminal&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./coli web   --model /nvme/qwen36          &lt;span class=&#34;c1&#34;&gt;# API + dashboard, opens a browser&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./coli serve --model /nvme/qwen36          &lt;span class=&#34;c1&#34;&gt;# API + dashboard, no browser&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./coli plan  --model /nvme/qwen36          &lt;span class=&#34;c1&#34;&gt;# where the model will live: VRAM, RAM, disk&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./coli doctor --model /nvme/qwen36         &lt;span class=&#34;c1&#34;&gt;# read-only check: is everything ready?&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./coli tune  --model /nvme/qwen36          &lt;span class=&#34;c1&#34;&gt;# measure and save this machine&amp;#39;s fastest safe settings&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./coli import /nvme/Flint-UD-Q4_K_XL.gguf  &lt;span class=&#34;c1&#34;&gt;# a GGUF: writes Flint-UD-Q4_K_XL.colibri next to it&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./coli ui                                  &lt;span class=&#34;c1&#34;&gt;# the chat UI, next to a running coli serve&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;On Windows a release archive ships &lt;code&gt;coli.cmd&lt;/code&gt; (&lt;code&gt;coli.cmd chat --model D:\qwen36&lt;/code&gt;); from a source checkout use &lt;code&gt;py -3 c\coli&lt;/code&gt;. The &lt;code&gt;.exe&lt;/code&gt; files are
+the engines, not the launcher. Every option and variable:
+&lt;a class=&#34;link&#34; href=&#34;docs/SETTINGS.md&#34; &gt;SETTINGS.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/ENVIRONMENT.md&#34; &gt;ENVIRONMENT.md&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;research-and-how-to-help&#34;&gt;Research, and how to help
+&lt;/h2&gt;&lt;p&gt;colibri wants frontier models to depend less on scarce hardware and to cost
+less to run. That means changing how weights are stored and moved, deciding
+what lives in VRAM, RAM or storage, overlapping CPU and GPU work, and testing
+new ways to decode. Nothing is kept because it is conventional, and nothing is
+adopted because a microbenchmark looks fast: the deciding result is end-to-end
+inference on real machines, with quality measured alongside speed. The open
+questions:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;hypothesis&lt;/th&gt;
+					&lt;th&gt;evidence so far&lt;/th&gt;
+					&lt;th&gt;experiment still needed&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Routing history can place experts better than plain LRU&lt;/td&gt;
+					&lt;td&gt;learned pins improve repeated workloads, but can overfit a prompt&lt;/td&gt;
+					&lt;td&gt;held-out, cross-session A/Bs across coding, chat, multilingual, and long-context workloads&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Multiple SSDs can turn independent bandwidth into decode speed&lt;/td&gt;
+					&lt;td&gt;two independent NVMe drives measured +37.5% decode; a slower third drive was neutral after weighted striping (&lt;a class=&#34;link&#34; href=&#34;docs/multidisk.md#what-has-been-measured&#34; &gt;measurements&lt;/a&gt;)&lt;/td&gt;
+					&lt;td&gt;reproduce across drive speeds, controller layouts, and cache states&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;A hardware-aware planner can approach each machine&amp;rsquo;s best configuration automatically&lt;/td&gt;
+					&lt;td&gt;RAM/VRAM budgets and several backends are detected today, and the setup picks the build&lt;/td&gt;
+					&lt;td&gt;compare the generated plan with a controlled parameter sweep across laptops, workstations, NUMA hosts, and multi-GPU systems&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Lossless or quality-bounded representations can reduce weight movement enough to matter&lt;/td&gt;
+					&lt;td&gt;format and quantization ablations exist, with correctness/quality gates&lt;/td&gt;
+					&lt;td&gt;reproduce quality, bytes moved, latency, and cost per useful token together, not compression ratio alone&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Routing-aware speculation can pay before near-full residency&lt;/td&gt;
+					&lt;td&gt;MTP and grammar drafts work, but MTP has also measured a 32% loss around 85% expert hit&lt;/td&gt;
+					&lt;td&gt;map the break-even surface across acceptance, expert hit rate, batch union, and draft depth&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;CPU/GPU overlap can hide transfer and synchronization rather than merely move the bottleneck&lt;/td&gt;
+					&lt;td&gt;CUDA, Metal and Vulkan wins exist, but fast CPUs, integrated GPUs and low residency can erase them&lt;/td&gt;
+					&lt;td&gt;per-stage profiles and one-variable A/Bs across PCIe, unified-memory, and full-resident machines, and more discrete cards for the Vulkan tier and chain than the one measured (an RTX PRO 4000)&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Want to help? Pick a row and publish the negative results too. Record the
+hardware, commit, model, exact command, prompt, cache state, throughput, time
+to first token, expert hit rate, bytes read and a quality check; change one
+variable, repeat, and attach the raw logs. Start with
+&lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;CONTRIBUTING.md&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;docs/benchmarking.md&#34; &gt;the benchmark protocol&lt;/a&gt;,
+then &lt;a class=&#34;link&#34; href=&#34;https://github.com/JustVugg/colibri/issues/new&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open an issue&lt;/a&gt;. A
+well-controlled failure is worth more here than an unexplained fast number.&lt;/p&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;topic&lt;/th&gt;
+					&lt;th&gt;doc&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;The one-step setup and the manual install, every platform&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/quickstart.md&#34; &gt;quickstart.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Setting up through an AI assistant, and the MCP server&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/AI_SETUP.md&#34; &gt;AI_SETUP.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/MCP_SERVER.md&#34; &gt;MCP_SERVER.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;The API: OpenAI, Anthropic, tools, KV slots, dashboard&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/api.md&#34; &gt;api.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;System One and the decision models&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/systemone.md&#34; &gt;systemone.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/laya.md&#34; &gt;laya.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/gliner_decide.md&#34; &gt;gliner_decide.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/clef.md&#34; &gt;clef.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GGUF files: the architectures, the two modes, what each engine does with the blocks&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/gguf.md&#34; &gt;gguf.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;The models on the Qwen3.6 engine (Flint, Muse Spark Open, LFM3-VL) and Mistral-Large-4&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/qwen36.md&#34; &gt;qwen36.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/mistral-large4.md&#34; &gt;mistral-large4.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;The chat UI (&lt;code&gt;coli ui&lt;/code&gt;)&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;ui/README.md&#34; &gt;ui/README.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Vulkan: the expert tier, the dense chain, cards without Resizable BAR&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/vulkan.md&#34; &gt;vulkan.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;CUDA, and Qwen3.6&amp;rsquo;s CUDA tier&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/cuda.md&#34; &gt;cuda.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/qwen36-cuda-tier.md&#34; &gt;qwen36-cuda-tier.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Apple Silicon, Windows&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/metal.md&#34; &gt;metal.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/windows.md&#34; &gt;windows.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Tuning, the learning cache, prefetch&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/tuning.md&#34; &gt;tuning.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Speculative decoding: the MTP heads, prompt lookup, the gate&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/speculative.md&#34; &gt;speculative.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Several SSDs, several machines&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/multidisk.md&#34; &gt;multidisk.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/cluster.md&#34; &gt;cluster.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Benchmarks and how to measure&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/benchmarks.md&#34; &gt;benchmarks.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/benchmarking.md&#34; &gt;benchmarking.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Every option and environment variable&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/SETTINGS.md&#34; &gt;SETTINGS.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/ENVIRONMENT.md&#34; &gt;ENVIRONMENT.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Grammar-forced drafts, and the experimental embedding ABIs&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/grammar-draft.md&#34; &gt;grammar-draft.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/segment-runtime.md&#34; &gt;segment-runtime.md&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/edge-runtime.md&#34; &gt;edge-runtime.md&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;repo-layout&#34;&gt;Repo layout
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;here&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sh&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;START&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HERE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bat&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;one&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;step&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;setup&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Linux&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;macOS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Windows&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Makefile&lt;/span&gt;                        &lt;span class=&#34;n&#34;&gt;root&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;build&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;check&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;entry&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;point&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;colibri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;             &lt;span class=&#34;n&#34;&gt;GLM&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;5.2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;5.3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Mistral&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Large&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;glm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;glm53&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;               &lt;span class=&#34;n&#34;&gt;GLM&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;5.3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Flash&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;glm53&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inkling&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;             &lt;span class=&#34;n&#34;&gt;Inkling&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inkling&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kimi_k3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;             &lt;span class=&#34;n&#34;&gt;Kimi&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;K3&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kimi_k3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;deepseek_v4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;         &lt;span class=&#34;n&#34;&gt;DeepSeek&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;V4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Flash&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;deepseek&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;deepseek_v41&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;DeepSeek&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;V4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Flash&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;deepseek_v41&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mimo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;                &lt;span class=&#34;n&#34;&gt;MiMo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;V2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Flash&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Pro&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mimo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;qwen38&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;              &lt;span class=&#34;n&#34;&gt;Qwen3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Flash&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Next&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;qwen38&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;qwen36&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;              &lt;span class=&#34;n&#34;&gt;Qwen3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Qwen3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Coder&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Qwen3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;27&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Flint&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Muse&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Spark&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;                         &lt;span class=&#34;n&#34;&gt;LFM3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;VL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Clef&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;qwen36&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;olmoe&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;               &lt;span class=&#34;n&#34;&gt;OLMoE&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;olmoe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;qwenimage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;           &lt;span class=&#34;n&#34;&gt;Qwen&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;ne&#34;&gt;Image&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;2.1&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;qwenimage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;laya&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;                &lt;span class=&#34;n&#34;&gt;Laya&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;laya&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gliner_decide&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;       &lt;span class=&#34;n&#34;&gt;GLiNER2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Decide&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gliner_decide&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;st&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;quant&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;idot&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;safetensors&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;reads&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;container&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;decoders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;integer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kernels&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;expert_ffn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;expert_store&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;routed&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;expert&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kernel&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;streaming&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;expert&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cache&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tok&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;json&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;compat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;      &lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;JSON&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Windows&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;macOS&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;shims&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;route_trace&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kv_prefix&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;routing&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;telemetry&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;coli_usage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;KV&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prefix&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;reuse&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gguf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;park&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;               &lt;span class=&#34;n&#34;&gt;GGUF&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;reader&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;conversation&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;parked&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;between&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;an&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;agent&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;s turns&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;decide_serve&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;               &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;decision&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;engines&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; side of System One&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;backend_cuda&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cu_tier&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cuda_chain&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cu&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;optional&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CUDA&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tier&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;chains&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CUDA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;backend_metal&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.*&lt;/span&gt;       &lt;span class=&#34;n&#34;&gt;optional&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Metal&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tier&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;METAL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;backend_vulkan&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vk_tier&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vk_chain&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;optional&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Vulkan&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tier&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dense&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;chain&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;VK&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;│&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;coli&lt;/span&gt;                  &lt;span class=&#34;n&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;facing&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CLI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;setup_&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;            &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;one&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;step&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;setup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hardware&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;catalog&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;downloads&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;flow&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mcp_server&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;         &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MCP&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;coli&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mcp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;openai_server&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;      &lt;span class=&#34;n&#34;&gt;OpenAI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Anthropic&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;compatible&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HTTP&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gateway&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;resource_plan&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;      &lt;span class=&#34;n&#34;&gt;RAM&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;VRAM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;planner&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;behind&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;coli&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;plan&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;coli&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;doctor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tools&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;                &lt;span class=&#34;n&#34;&gt;conversion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fixtures&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;benchmarks&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;└──&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;                &lt;span class=&#34;n&#34;&gt;dependency&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;free&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Python&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tests&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ui&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;                       &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;chat&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UI&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;coli&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ui&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;web&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;                      &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dashboard&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pure&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;API&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;client&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;desktop&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;                  &lt;span class=&#34;n&#34;&gt;Tauri&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;desktop&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;shell&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;around&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dashboard&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;docker&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;                   &lt;span class=&#34;n&#34;&gt;container&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;images&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;docs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;                     &lt;span class=&#34;n&#34;&gt;reference&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;docs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;experiments&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;media&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;site&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;                     &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;website&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;One &lt;code&gt;.c&lt;/code&gt; per model family, over shared single headers.&lt;/strong&gt; An engine owns its
+architecture and nothing else; anything two engines both need lives in a header
+they both include, so a fix reaches all of them at once. From the repository
+root, &lt;code&gt;make&lt;/code&gt;, &lt;code&gt;make check&lt;/code&gt; and &lt;code&gt;make clean&lt;/code&gt; delegate to the engine Makefile.&lt;/p&gt;
+&lt;h2 id=&#34;supporting-the-project&#34;&gt;Supporting the project
+&lt;/h2&gt;&lt;p&gt;colibri started as a one-person project on a 12-core laptop with 25 GB of RAM;
+today its numbers come from a community of real machines. If it is useful to
+you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;star the repository and share it;&lt;/li&gt;
+&lt;li&gt;open issues with benchmark numbers from your hardware: datapoints move this
+project more than anything else;&lt;/li&gt;
+&lt;li&gt;join the &lt;a class=&#34;link&#34; href=&#34;https://discord.gg/RXV83nSZdk&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Discord community&lt;/a&gt; to discuss
+experiments, hardware results and research directions;&lt;/li&gt;
+&lt;li&gt;reach out through GitHub issues to sponsor development or donate hardware.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;why-colibrì&#34;&gt;Why &amp;ldquo;colibrì&amp;rdquo;
+&lt;/h2&gt;&lt;p&gt;The hummingbird weighs a few grams, hovers in place, and visits a thousand
+flowers a day. This engine keeps a 744-billion-parameter giant alive on
+hummingbird rations: 25 GB of RAM, twelve CPU cores, and a lot of disk patience.&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgements&#34;&gt;Acknowledgements
+&lt;/h2&gt;&lt;p&gt;colibri is an engine; the minds it runs are a gift. Thank you to the teams who
+release their weights in the open: &lt;strong&gt;Z.ai&lt;/strong&gt; (GLM), &lt;strong&gt;Moonshot AI&lt;/strong&gt; (Kimi),
+&lt;strong&gt;Alibaba Qwen&lt;/strong&gt;, &lt;strong&gt;DeepSeek&lt;/strong&gt;, &lt;strong&gt;Xiaomi&lt;/strong&gt; (MiMo), &lt;strong&gt;Thinking Machines&lt;/strong&gt;
+(Inkling), &lt;strong&gt;Allen AI&lt;/strong&gt; (OLMoE), &lt;strong&gt;Convai Innovations&lt;/strong&gt; (Laya), &lt;strong&gt;fastino&lt;/strong&gt;
+(GLiNER2.5-Decide) and &lt;strong&gt;Cloudflare&lt;/strong&gt; (Clef); to the people who publish
+converted containers; and to every contributor who benchmarked, bisected,
+replicated an atlas run or sent a patch. Third-party code in this repository
+and its licences: &lt;a class=&#34;link&#34; href=&#34;THIRD_PARTY_NOTICES.md&#34; &gt;THIRD_PARTY_NOTICES.md&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The project&amp;rsquo;s expert placement, compression, and routing experiments also build
+on ideas and evidence from the following open research and systems work:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/CerebrasResearch/reap&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;REAP&lt;/a&gt; and
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/RUCAIBox/EASYEP&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;EASY-EP&lt;/a&gt; for output-aware and
+domain-specific expert importance.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/JL-Cheng/SERE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SERE&lt;/a&gt; for similarity-based expert
+re-routing, and &lt;a class=&#34;link&#34; href=&#34;https://github.com/BUAA-OSCAR/ReMoE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ReMoE&lt;/a&gt; for
+cache-locality-aware router fine-tuning.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/UNITES-Lab/MC-SMoE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MC-SMoE&lt;/a&gt; for routing-guided expert
+merging and compression.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/inclusionAI/MoBE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MoBE&lt;/a&gt; and
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/lliai/D2MoE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;D²-MoE&lt;/a&gt; for shared expert bases and
+low-rank expert deltas.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/PKU-SEC-Lab/HybriMoE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;HybriMoE&lt;/a&gt; for hybrid CPU/GPU expert
+scheduling, &lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2404.05019&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ScMoE&lt;/a&gt; for overlapping expert
+communication with computation, and
+&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2512.03927&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OD-MoE&lt;/a&gt; for distributed on-demand expert
+loading.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vllm-project/vllm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vLLM&lt;/a&gt;,
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/ggml-org/llama.cpp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;llama.cpp&lt;/a&gt;, and
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/kvcache-ai/ktransformers&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;kTransformers&lt;/a&gt; for the open
+inference systems and expert-offload work that make comparisons reproducible.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The engine also stands on concrete engineering work, not only ideas. Each of
+these is used or reimplemented in the tree today:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/huggingface/safetensors&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;safetensors&lt;/a&gt;: the container
+every engine reads (&lt;code&gt;c/st.h&lt;/code&gt;), including its fp8 and I64 dtypes.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/openai/tiktoken&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;tiktoken&lt;/a&gt;: &lt;code&gt;c/tok.h&lt;/code&gt; reimplements its
+&lt;code&gt;byte_pair_encode&lt;/code&gt; exactly, merging the adjacent pair whose concatenation has
+the lowest vocab id, so a tiktoken-derived vocabulary needs no merges list.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ggml-org/llama.cpp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;llama.cpp&lt;/a&gt;: the GBNF grammar subset
+in &lt;code&gt;c/grammar.h&lt;/code&gt; follows its syntax and its set-of-stacks PDA, and the Metal
+path borrows its &lt;code&gt;newBufferWithBytesNoCopy&lt;/code&gt; residency trick.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/vllm-project/vllm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vLLM&lt;/a&gt;: the reference for output
+semantics the engine matches position by position (e.g. where the final norm
+lands relative to the LM head).&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/huggingface/transformers&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;transformers&lt;/a&gt;: the oracle:
+CI reproduces a random-init model token for token against it.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/facebookresearch/dietgpu&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DietGPU&lt;/a&gt;: the GPU ANS codec
+behind the experimental compressed expert tier (&lt;code&gt;COLI_ANS&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ROCm/rocWMMA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;rocWMMA&lt;/a&gt;: the HIP backend maps CUDA&amp;rsquo;s
+&lt;code&gt;nvcuda::wmma&lt;/code&gt; fragment/mma_sync API onto it (&lt;code&gt;c/backend_gpu_compat.h&lt;/code&gt;), which
+is what lets one .cu source compile for both vendors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;Apache 2.0, Copyright 2026 Vincenzo Fornaro. See &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;NOTICE&#34; &gt;NOTICE&lt;/a&gt;. Each model keeps the licence its authors gave it (GLM-5.2 weights are released by Z.ai under MIT; Qwen-Image-2.1 is for non-commercial use only).&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

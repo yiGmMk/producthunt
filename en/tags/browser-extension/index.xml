@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Browser Extension on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/browser-extension/</link>
+        <description>Recent content in Browser Extension on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 18 Sep 2026 20:21:11 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/browser-extension/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>BrowserSkill</title>
+        <link>https://producthunt.programnotes.cn/en/p/browserskill/</link>
+        <pubDate>Fri, 18 Sep 2026 20:21:11 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/browserskill/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1574510297028-48360f052313?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk3MzM4NzR8&amp;ixlib=rb-4.1.0" alt="Featured image of post BrowserSkill" /&gt;&lt;h1 id=&#34;tencentbrowserskill&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Tencent/BrowserSkill&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tencent/BrowserSkill&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;browserskill&#34;&gt;BrowserSkill
+&lt;/h1&gt;&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;docs/assets/browserskill-readme-banner.png&#34; alt=&#34;BrowserSkill banner&#34; /&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;strong&gt;Let AI agents use your browser without interrupting your work.&lt;/strong&gt;
+&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  English · &lt;a href=&#34;README.zh-CN.md&#34;&gt;中文&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;BrowserSkill&lt;/strong&gt; connects Cursor, Claude Code, Codex, OpenClaw, CodeBuddy,
+WorkBuddy, Pi, Hermes Agent, DeepSeek Harness, and other AI agents to your already logged-in
+browser.&lt;/p&gt;
+&lt;p&gt;Need the agent to touch a tab you already have open? It must borrow that tab
+explicitly, return it when the task is done, and leave the rest of your browser
+alone.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/user-attachments/assets/db782c92-b1d4-4aae-a255-039675937a90&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/user-attachments/assets/db782c92-b1d4-4aae-a255-039675937a90&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;browserskill-advantages&#34;&gt;BrowserSkill Advantages
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Reuse real login state&lt;/strong&gt;: Agents can work with sites you are already signed
+into, without separate test accounts.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Keep working uninterrupted&lt;/strong&gt;: browser tasks run in a separate, visible
+Agent Window, so you can keep using your own browser.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Support any Agent&lt;/strong&gt;: any Agent that can call a shell can use BrowserSkill
+through the &lt;code&gt;bsk&lt;/code&gt; CLI, with no lock-in to a specific model, Agent framework, or
+harness.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Built-in human-in-loop&lt;/strong&gt;: when a task hits captcha, login, confirmation
+dialogs, or other human-only steps, the Agent can ask you to take over and
+then continue afterwards.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Capture a long image in &lt;strong&gt;Quick actions → Full-page screenshot&lt;/strong&gt;, or let an Agent use
+&lt;code&gt;bsk screenshot --session &amp;lt;id&amp;gt; --full-page --out page.png&lt;/code&gt;. See the
+&lt;a class=&#34;link&#34; href=&#34;docs/long-screenshot.md&#34; &gt;full-page screenshot guide&lt;/a&gt; for page support, cancellation and export.&lt;/p&gt;
+&lt;h2 id=&#34;runtime-environment&#34;&gt;Runtime Environment
+&lt;/h2&gt;&lt;p&gt;BrowserSkill has two local runtime pieces: the &lt;code&gt;bsk&lt;/code&gt; CLI/daemon and the browser
+extension.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Runtime&lt;/th&gt;
+					&lt;th&gt;Support&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Operating systems&lt;/td&gt;
+					&lt;td&gt;macOS (Apple Silicon and Intel), Linux (x64 and ARM64), Windows x64&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Browsers&lt;/td&gt;
+					&lt;td&gt;Chrome and Microsoft Edge are supported; other Chromium-based browsers are expected to work when they support unpacked Chromium extensions; Firefox is planned&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick Start
+&lt;/h2&gt;&lt;p&gt;Using an agent sandbox that reaps background processes after each command?
+Follow the &lt;a class=&#34;link&#34; href=&#34;docs/sandboxed-agents.md&#34; &gt;sandboxed agent setup&lt;/a&gt; to keep the daemon
+in a persistent host environment and connect with a shared &lt;code&gt;BSK_HOME&lt;/code&gt; plus
+&lt;code&gt;BSK_AUTO_START=0&lt;/code&gt;. Ordinary local use keeps automatic startup by default.&lt;/p&gt;
+&lt;details open&gt;
+&lt;summary&gt;&lt;b&gt;Install with your Agent (recommended)&lt;/b&gt;&lt;/summary&gt;
+&lt;br&gt;
+&lt;p&gt;Already using Cursor, Claude Code, Codex, or another shell-capable agent? Just
+copy this one line and send it to your agent — it will install the CLI and skill
+for you, then walk you through loading the extension:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Set up browser-skill on this machine by following https://raw.githubusercontent.com/Tencent/BrowserSkill/main/AGENT_INSTALL.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;&lt;b&gt;Manual install&lt;/b&gt;&lt;/summary&gt;
+&lt;br&gt;
+&lt;p&gt;Install the CLI, then install the extension from the &lt;a class=&#34;link&#34; href=&#34;https://chromewebstore.google.com/detail/hhcmgoofomhgciiibhipgmgkgnoenaoi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chrome Web Store&lt;/a&gt;
+or &lt;a class=&#34;link&#34; href=&#34;https://microsoftedge.microsoft.com/addons/detail/browserskill/emacgiaaaiojkkpkddmmdfhmokgmnikg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Edge Add-ons&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;1-install-the-bsk-cli&#34;&gt;1. Install the &lt;code&gt;bsk&lt;/code&gt; CLI
+&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;macOS / Linux&lt;/strong&gt; (recommended — installs to &lt;code&gt;~/.local/bin&lt;/code&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -fsSL https://raw.githubusercontent.com/Tencent/BrowserSkill/main/install.sh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;BSK_INSTALL_DIR&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:-&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/.local/bin&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Windows&lt;/strong&gt; (PowerShell — installs to &lt;code&gt;~/.local/bin&lt;/code&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;irm &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;raw&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;githubusercontent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Tencent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;BrowserSkill&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;install&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;ps1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;iex
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The export makes the CLI available in the current Unix shell. A running agent may
+need the same PATH setting in each shell call, or the installed binary&amp;rsquo;s absolute
+path. Restart the agent if it retains an old PATH after installation.&lt;/p&gt;
+&lt;p&gt;Verify the binary in the terminal or agent environment that will use it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bsk --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;2-install-the-browser-extension&#34;&gt;2. Install the browser extension
+&lt;/h4&gt;&lt;p&gt;Install BrowserSkill from your browser&amp;rsquo;s store:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Browser&lt;/th&gt;
+					&lt;th&gt;Store listing&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Chrome&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://chromewebstore.google.com/detail/hhcmgoofomhgciiibhipgmgkgnoenaoi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Chrome Web Store&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Microsoft Edge&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://microsoftedge.microsoft.com/addons/detail/browserskill/emacgiaaaiojkkpkddmmdfhmokgmnikg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Edge Add-ons&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;On other Chromium-based browsers, install the Chrome Web Store build.&lt;/p&gt;
+&lt;h4 id=&#34;3-install-the-skill&#34;&gt;3. Install the skill
+&lt;/h4&gt;&lt;p&gt;BrowserSkill ships a skill that teaches your agent harness how to use &lt;code&gt;bsk&lt;/code&gt;. For
+these harnesses, install it in one step:&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td align=&#34;center&#34; width=&#34;108&#34;&gt;&lt;a href=&#34;https://cursor.com&#34; title=&#34;Cursor&#34;&gt;&lt;img src=&#34;docs/assets/harnesses/cursor.svg&#34; height=&#34;36&#34; alt=&#34;Cursor&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;sub&gt;&lt;b&gt;Cursor&lt;/b&gt;&lt;/sub&gt;&lt;/td&gt;
+    &lt;td align=&#34;center&#34; width=&#34;108&#34;&gt;&lt;a href=&#34;https://docs.anthropic.com/en/docs/claude-code&#34; title=&#34;Claude Code&#34;&gt;&lt;img src=&#34;docs/assets/harnesses/claude.svg&#34; height=&#34;36&#34; alt=&#34;Claude Code&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;sub&gt;&lt;b&gt;Claude Code&lt;/b&gt;&lt;/sub&gt;&lt;/td&gt;
+    &lt;td align=&#34;center&#34; width=&#34;108&#34;&gt;&lt;a href=&#34;https://developers.openai.com/codex&#34; title=&#34;Codex&#34;&gt;&lt;img src=&#34;docs/assets/harnesses/codex.svg&#34; height=&#34;36&#34; alt=&#34;Codex&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;sub&gt;&lt;b&gt;Codex&lt;/b&gt;&lt;/sub&gt;&lt;/td&gt;
+    &lt;td align=&#34;center&#34; width=&#34;108&#34;&gt;&lt;a href=&#34;https://openclaw.ai&#34; title=&#34;OpenClaw&#34;&gt;&lt;img src=&#34;docs/assets/harnesses/openclaw.svg&#34; height=&#34;36&#34; alt=&#34;OpenClaw&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;sub&gt;&lt;b&gt;OpenClaw&lt;/b&gt;&lt;/sub&gt;&lt;/td&gt;
+    &lt;td align=&#34;center&#34; width=&#34;108&#34;&gt;&lt;a href=&#34;https://www.codebuddy.ai&#34; title=&#34;CodeBuddy&#34;&gt;&lt;img src=&#34;docs/assets/harnesses/codebuddy.svg&#34; height=&#34;36&#34; alt=&#34;CodeBuddy&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;sub&gt;&lt;b&gt;CodeBuddy&lt;/b&gt;&lt;/sub&gt;&lt;/td&gt;
+    &lt;td align=&#34;center&#34; width=&#34;108&#34;&gt;&lt;a href=&#34;https://www.workbuddy.ai&#34; title=&#34;WorkBuddy&#34;&gt;&lt;img src=&#34;docs/assets/harnesses/workbuddy.svg&#34; height=&#34;36&#34; alt=&#34;WorkBuddy&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;sub&gt;&lt;b&gt;WorkBuddy&lt;/b&gt;&lt;/sub&gt;&lt;/td&gt;
+    &lt;td align=&#34;center&#34; width=&#34;108&#34;&gt;&lt;a href=&#34;https://github.com/badlogic/pi-mono&#34; title=&#34;Pi&#34;&gt;&lt;img src=&#34;docs/assets/harnesses/pi.svg&#34; height=&#34;36&#34; alt=&#34;Pi&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;sub&gt;&lt;b&gt;Pi&lt;/b&gt;&lt;/sub&gt;&lt;/td&gt;
+    &lt;td align=&#34;center&#34; width=&#34;108&#34;&gt;&lt;a href=&#34;https://github.com/NousResearch/hermes-agent&#34; title=&#34;Hermes Agent&#34;&gt;&lt;img src=&#34;docs/assets/harnesses/hermes.png&#34; height=&#34;36&#34; alt=&#34;Hermes Agent&#34; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;sub&gt;&lt;b&gt;Hermes Agent&lt;/b&gt;&lt;/sub&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bsk install-skill
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Use &lt;kbd&gt;Space&lt;/kbd&gt; to select the Agent harness you want to install into, then
+press &lt;kbd&gt;Enter&lt;/kbd&gt; to install the skill. Run &lt;code&gt;bsk install-skill --list&lt;/code&gt; to see
+internal variants and install paths.&lt;/p&gt;
+&lt;p&gt;For non-interactive installation, specify the intended harness, for example
+&lt;code&gt;bsk install-skill --harness cursor --json&lt;/code&gt;. Explicit selection also works when
+the harness is not detected. &lt;code&gt;--yes&lt;/code&gt; alone installs into every detected harness
+and fails when none are detected.&lt;/p&gt;
+&lt;p&gt;To install your own instructions, use &lt;code&gt;bsk install-skill --harness cursor --source ./SKILL.md&lt;/code&gt;.
+An explicit &lt;code&gt;--source&lt;/code&gt; stays custom even if its contents match the bundled skill.
+Existing installations are skipped unless you add &lt;code&gt;--force&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Daemon startup, &lt;code&gt;session start&lt;/code&gt;, and &lt;code&gt;doctor&lt;/code&gt; automatically update managed skills
+only when their contents still match the last installed version. Local edits are
+preserved and automatic updates pause. An older installation without a content
+baseline is enrolled automatically only if it exactly matches the current bundled
+skill; this writes the source marker without rewriting &lt;code&gt;SKILL.md&lt;/code&gt;. Explicit custom
+installations stay custom even when their contents match.&lt;/p&gt;
+&lt;p&gt;For differing historical files, local edits, or an unrecognized source marker,
+&lt;code&gt;doctor&lt;/code&gt; shows &lt;code&gt;WARN&lt;/code&gt; with the reason and recovery options. These warnings do not
+make the health check fail (&lt;code&gt;--json&lt;/code&gt; reports &lt;code&gt;status: &amp;quot;warn&amp;quot;&lt;/code&gt; and &lt;code&gt;ok: true&lt;/code&gt;).
+A concurrent install or sync is reported as deferred and retried on a later pass.&lt;/p&gt;
+&lt;p&gt;To keep your current instructions as an explicit customization, run
+&lt;code&gt;bsk install-skill --harness cursor --source &amp;lt;existing-SKILL.md&amp;gt; --force&lt;/code&gt;, replacing
+&lt;code&gt;&amp;lt;existing-SKILL.md&amp;gt;&lt;/code&gt; with the path to your existing file. To restore the bundled
+skill and resume automatic updates, run &lt;code&gt;bsk install-skill --harness cursor --force&lt;/code&gt;
+without &lt;code&gt;--source&lt;/code&gt;. This second command overwrites the existing instructions.&lt;/p&gt;
+&lt;p&gt;Other shell-capable agent harnesses are supported too. Copy
+&lt;a class=&#34;link&#34; href=&#34;skill/SKILL.md&#34; &gt;&lt;code&gt;skill/SKILL.md&lt;/code&gt;&lt;/a&gt; into your harness&amp;rsquo;s skills directory as
+&lt;code&gt;browser-skill/SKILL.md&lt;/code&gt; to install the skill manually. DeepSeek Harness uses a
+dedicated plugin instead — see &lt;a class=&#34;link&#34; href=&#34;#deepseek-harness-plugin&#34; &gt;DeepSeek Harness plugin&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;4-verify-the-connection&#34;&gt;4. Verify the connection
+&lt;/h4&gt;&lt;p&gt;Run &lt;code&gt;bsk doctor&lt;/code&gt; and follow its hints. Open the extension popup and confirm it is
+connected. Explain any warnings and resolve failures before testing browser use.
+Doctor can pass with no skill installed (&lt;code&gt;N/A&lt;/code&gt;); verify skill discovery separately.&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;Start a new Agent session, confirm &lt;code&gt;browser-skill&lt;/code&gt; is available in the harness,
+and ask it to open &lt;code&gt;https://example.com&lt;/code&gt; and summarize the page. For harnesses
+with slash-command skill invocation, for example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/browser-skill open example.com and summarize what is on the page.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;A successful first-use check reads the page and stops its BrowserSkill session.
+If the skill is missing, check the target harness and install path before retrying.&lt;/p&gt;
+&lt;h3 id=&#34;updating&#34;&gt;Updating
+&lt;/h3&gt;&lt;p&gt;For the default local setup, finish active browser tasks before updating:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bsk update --yes
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If Windows reports a staged update, wait for the replacement to finish before
+checking &lt;code&gt;bsk --version&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;When it installs an update, this command restarts a running daemon with default
+startup settings. If you replaced the binary using the installer instead, restart
+the existing daemon with &lt;code&gt;bsk daemon restart&lt;/code&gt; after tasks finish.&lt;/p&gt;
+&lt;p&gt;For a custom port, host-managed sandbox daemon, or remote server, stop the daemon
+in its owning host or supervisor, run &lt;code&gt;bsk update --yes --no-restart-daemon&lt;/code&gt;, and
+start it there with its original flags and &lt;code&gt;BSK_HOME&lt;/code&gt;. Set &lt;code&gt;BSK_AUTO_START=0&lt;/code&gt;
+in agent commands while managing it; see the &lt;a class=&#34;link&#34; href=&#34;docs/sandboxed-agents.md&#34; &gt;sandbox&lt;/a&gt;
+and &lt;a class=&#34;link&#34; href=&#34;docs/remote-extension-connection.md&#34; &gt;remote&lt;/a&gt; setup guides.&lt;/p&gt;
+&lt;p&gt;Update the extension through its browser store; for an unpacked development build,
+rebuild and reload it. Store availability may lag the CLI release. Check the CLI,
+daemon and extension versions with &lt;code&gt;bsk --version&lt;/code&gt; and &lt;code&gt;bsk status&lt;/code&gt;, then run
+&lt;code&gt;bsk doctor&lt;/code&gt;. New features such as full-page screenshots need matching builds.
+Update the &lt;a class=&#34;link&#34; href=&#34;#deepseek-harness-plugin&#34; &gt;DSH plugin separately&lt;/a&gt; and restart its profile.
+Managed CLI skills synchronize on daemon startup, &lt;code&gt;session start&lt;/code&gt;, or &lt;code&gt;doctor&lt;/code&gt;;
+local edits and custom skills are preserved. Start a new agent session to load
+updated instructions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Upgrading to 0.3.0:&lt;/strong&gt; &lt;code&gt;--unattended&lt;/code&gt;, &lt;code&gt;tab borrow --no-confirm&lt;/code&gt;, and
+&lt;code&gt;BSK_REQUEST_HELP=off&lt;/code&gt; no longer bypass confirmation or disable help. Choose the
+corresponding extension settings described below. See &lt;a class=&#34;link&#34; href=&#34;CHANGELOG.md&#34; &gt;what changed&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;automation-settings&#34;&gt;Automation settings
+&lt;/h3&gt;&lt;p&gt;The extension popup has two independent &lt;strong&gt;Automation settings&lt;/strong&gt;, both enabled by default.
+The user&amp;rsquo;s saved browser settings are authoritative for every session:&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Confirm before borrowing tabs&lt;/th&gt;
+					&lt;th&gt;Allow requests for human help&lt;/th&gt;
+					&lt;th&gt;Behavior&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;On&lt;/td&gt;
+					&lt;td&gt;On&lt;/td&gt;
+					&lt;td&gt;Borrowing requires approval; help requests show the existing UI.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;On&lt;/td&gt;
+					&lt;td&gt;Off&lt;/td&gt;
+					&lt;td&gt;Borrowing requires approval; help requests return &lt;code&gt;disabled&lt;/code&gt;.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Off&lt;/td&gt;
+					&lt;td&gt;On&lt;/td&gt;
+					&lt;td&gt;Borrowing skips confirmation; help requests show the existing UI.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Off&lt;/td&gt;
+					&lt;td&gt;Off&lt;/td&gt;
+					&lt;td&gt;Borrowing skips confirmation; help requests return &lt;code&gt;disabled&lt;/code&gt;.&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Settings save automatically for the browser profile and apply to existing and new sessions.
+Turning confirmation off releases pending borrow confirmations; turning help off finishes pending
+help requests as &lt;code&gt;disabled&lt;/code&gt;. Turning either back on restores its behavior for subsequent operations,
+including sessions created with the legacy &lt;code&gt;--unattended&lt;/code&gt; flag. Completed borrows are not undone,
+and finished help requests are not reopened. Allowing help makes &lt;code&gt;request-help&lt;/code&gt; available; it does
+not require every browser action to ask for permission. Task authorization and host approvals still apply.&lt;/p&gt;
+&lt;p&gt;Start tasks with &lt;code&gt;bsk session start&lt;/code&gt;; add &lt;code&gt;--no-focus&lt;/code&gt; to avoid focusing the Agent Window.
+For unattended operation, turn off the corresponding settings in the extension. &lt;code&gt;--unattended&lt;/code&gt;,
+&lt;code&gt;tab borrow --no-confirm&lt;/code&gt;, and &lt;code&gt;BSK_REQUEST_HELP=off&lt;/code&gt; remain accepted for compatibility but are
+deprecated and cannot override the switches. The CLI logs a notice when these inputs are used;
+the daemon also logs a notice for its inherited environment setting. Scripts that relied on these
+inputs alone to avoid waiting must now use the browser settings. &lt;code&gt;session start --json&lt;/code&gt; and
+&lt;code&gt;session list --json&lt;/code&gt; report the browser&amp;rsquo;s effective &lt;code&gt;interaction&lt;/code&gt; policy.&lt;/p&gt;
+&lt;p&gt;When help is disabled, &lt;code&gt;request-help&lt;/code&gt; returns &lt;code&gt;disabled&lt;/code&gt; without confirming any human action.
+The skill directs the agent to re-observe and make reasonable efforts to complete authorized steps
+using existing login state, authorized inputs, and available tools. Where task authorization and
+host rules allow, models with image understanding may attempt graphical verification. Phone-only
+QR scans, face verification, unavailable SMS codes, and image-only CAPTCHAs for text-only models
+may remain blocked. A disabled result neither completes the task nor grants additional permission.&lt;/p&gt;
+&lt;p&gt;If preference loading fails, the runtime retains known values or defaults to both enabled when no
+valid value is available. It does not write fallback defaults or block session creation. Later reads
+and storage events can recover the settings. The popup reports read failures and prevents saving;
+failed writes are not treated as successful. A disconnected browser produces an error, not a local
+&lt;code&gt;disabled&lt;/code&gt; result based on command-line flags or environment variables.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;tab borrow --timeout 60s&lt;/code&gt; controls the confirmation wait, not whether confirmation is required.
+Protocol 1.3 retains connection compatibility with protocols 1.0–1.2. Ordinary sessions and
+default tab borrowing remain available during staggered upgrades. The popup identifies older
+daemons, while &lt;code&gt;bsk status&lt;/code&gt; reports protocol differences. Custom borrowing waits require both
+daemon and extension protocol 1.2 or later; only that operation returns an upgrade error when
+unsupported. Older daemons may still have shorter default borrowing waits.&lt;/p&gt;
+&lt;p&gt;The current CLI requires daemon protocol 1.3 for &lt;code&gt;request-help&lt;/code&gt;, because older daemons can answer
+locally without consulting the browser. This restriction does not disconnect the browser or stop
+other operations. Update the CLI, running daemon, and extension for full enforcement of the
+settings above. New extensions always enforce their saved settings on requests they receive.
+An older CLI may exit locally for &lt;code&gt;BSK_REQUEST_HELP=off&lt;/code&gt; before contacting the daemon; mixed-version
+installations retain such legacy behavior, which updating only the extension cannot change.&lt;/p&gt;
+&lt;p&gt;Run an Agent on a server and pair it with your local browser using the built-in authentication service, or a compatible gateway. See &lt;a class=&#34;link&#34; href=&#34;docs/remote-extension-connection.md&#34; &gt;remote browser connections&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;deepseek-harness-plugin&#34;&gt;DeepSeek Harness plugin
+&lt;/h2&gt;&lt;p&gt;Using &lt;a class=&#34;link&#34; href=&#34;https://github.com/deepseek-ai/deepseek-harness&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DeepSeek Harness&lt;/a&gt; (&lt;code&gt;dsh&lt;/code&gt;)?
+BrowserSkill ships a first-class dsh plugin on npm as
+&lt;a class=&#34;link&#34; href=&#34;https://www.npmjs.com/package/@wxg-prc-cpg/browser-skill-dsh-plugin&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;@wxg-prc-cpg/browser-skill-dsh-plugin&lt;/code&gt;&lt;/a&gt;.
+It gives the agent native &lt;code&gt;browser_*&lt;/code&gt; tools and a live view of its browser sessions
+in the Web UI. The plugin runs &lt;code&gt;bsk&lt;/code&gt; on the agent&amp;rsquo;s behalf.&lt;/p&gt;
+&lt;p&gt;Install the &lt;code&gt;bsk&lt;/code&gt; CLI and connect the browser extension first. Then add the plugin
+to a dsh profile and start it (replace &lt;code&gt;web&lt;/code&gt; with your profile name):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dsh plugin --profile web add @wxg-prc-cpg/browser-skill-dsh-plugin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dsh --profile web
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The plugin includes the &lt;code&gt;browser-skill&lt;/code&gt; skill, so &lt;code&gt;bsk install-skill&lt;/code&gt; is not needed
+for dsh. Installed plugins do not update automatically. To upgrade this plugin:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dsh plugin --profile web update @wxg-prc-cpg/browser-skill-dsh-plugin --latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Restart the profile after upgrading. See the
+&lt;a class=&#34;link&#34; href=&#34;packages/dsh-plugin-browserskill/README.md&#34; &gt;plugin README&lt;/a&gt; for usage and configuration.&lt;/p&gt;
+&lt;h2 id=&#34;how-it-works&#34;&gt;How It Works
+&lt;/h2&gt;&lt;p&gt;BrowserSkill is a local bridge between your agent harness and your browser.&lt;/p&gt;
+&lt;pre class=&#34;mermaid&#34;&gt;
+  flowchart TB
+  subgraph Harness[&amp;#34;Agent Harness&amp;#34;]
+    Agent[&amp;#34;Cursor / Claude Code / Codex / OpenClaw&amp;#34;]
+  end
+
+  subgraph Local[&amp;#34;Your Machine&amp;#34;]
+    CLI[&amp;#34;bsk CLI&amp;#34;]
+    Daemon[&amp;#34;bsk daemon&amp;#34;]
+    Extension[&amp;#34;BrowserSkill extension&amp;#34;]
+  end
+
+  subgraph Browser[&amp;#34;Browser Profile&amp;#34;]
+    AgentWindow[&amp;#34;Agent Window&amp;#34;]
+    UserWindows[&amp;#34;Your normal browser windows&amp;#34;]
+  end
+
+  Agent --&amp;gt;|&amp;#34;shell: bsk ...&amp;#34;| CLI
+  CLI --&amp;gt;|&amp;#34;local IPC&amp;#34;| Daemon
+  Daemon --&amp;gt;|&amp;#34;WebSocket on 127.0.0.1&amp;#34;| Extension
+  Extension --&amp;gt;|&amp;#34;automates&amp;#34;| AgentWindow
+  Extension -.-&amp;gt;|&amp;#34;borrow tab only when asked&amp;#34;| UserWindows
+
+  style AgentWindow fill:#fff4e6,stroke:#f59e0b,stroke-width:2px,color:#111827
+  style UserWindows fill:#f8fafc,stroke:#cbd5e1,color:#334155
+&lt;/pre&gt;
+
+&lt;p&gt;The agent never talks to the browser directly. It asks the &lt;code&gt;bsk&lt;/code&gt; CLI to perform a
+browser task; the local daemon routes that request to the extension; the
+extension runs it in an Agent Window. DeepSeek Harness takes the same path
+through the &lt;a class=&#34;link&#34; href=&#34;#deepseek-harness-plugin&#34; &gt;plugin&lt;/a&gt;: the agent calls injected
+&lt;code&gt;browser_*&lt;/code&gt; tools, and the plugin invokes &lt;code&gt;bsk&lt;/code&gt; on its behalf.&lt;/p&gt;
+&lt;h2 id=&#34;for-developers&#34;&gt;For Developers
+&lt;/h2&gt;&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;docs/scroll-to.md&#34; &gt;scroll-to primitive reference&lt;/a&gt; covers its CLI, protocol
+and plugin entry points, visible bounds and interruption behavior.&lt;/p&gt;
+&lt;p&gt;The repository is a Cargo + pnpm workspace:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;crates/bsk-cli&lt;/code&gt; — &lt;code&gt;bsk&lt;/code&gt; CLI and local daemon&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;crates/bsk-protocol&lt;/code&gt; — shared wire types and JSON schemas&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;apps/extension&lt;/code&gt; — browser extension&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;packages/ui&lt;/code&gt; and &lt;a class=&#34;link&#34; href=&#34;packages/i18n/README.md&#34; &gt;&lt;code&gt;packages/i18n&lt;/code&gt;&lt;/a&gt; — shared extension UI support, including English, Simplified Chinese and Korean localization&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;packages/dsh-plugin-browserskill&lt;/code&gt; — DeepSeek Harness plugin (&lt;code&gt;@wxg-prc-cpg/browser-skill-dsh-plugin&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;evals/browser/README.md&#34; &gt;&lt;code&gt;evals/browser&lt;/code&gt;&lt;/a&gt; — deterministic local pages and agent-neutral browser capability evaluation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;MIT&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Product Hunt Daily | 2026-05-18</title>
+        <link>https://producthunt.programnotes.cn/en/p/product-hunt-daily-2026-05-18/</link>
+        <pubDate>Mon, 18 May 2026 11:16:28 +0000</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/product-hunt-daily-2026-05-18/</guid>
+        <description>&lt;img src="https://ph-files.imgix.net/4dcfd370-3aa9-4b64-ac9f-9eb88ea18639.jpeg?auto=format" alt="Featured image of post Product Hunt Daily | 2026-05-18" /&gt;&lt;h2 id=&#34;1-vivago-video-agent&#34;&gt;1. Vivago Video Agent
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Skip the prompting. Produce consistently compelling videos.&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Vivago Video Agent lets you generate consistently compelling narrative videos with natural language. No more annoying prompting! Our video agent ensures every scene stays on-brand and internally coherent by guiding you through a structured creative process. Just share your assets and describe your story — a swarm of AI directors will invent characters and write a compelling story for you. See the keyframes before rendering. Your 1-min 1080P story video will be ready in 40 mins.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/4UYKCH63ZLBZY7?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/viva?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/4dcfd370-3aa9-4b64-ac9f-9eb88ea18639.jpeg?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Vivago Video Agent&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: video generation, AI video agent, narrative videos, no prompting, natural language input, structured creative process, on-brand videos, AI directors, character creation, story generation, keyframe preview, fast rendering, 1080P video&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺469&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-05-17 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-fere-ai&#34;&gt;2. Fere AI
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: AI agents that turn signals into crypto + Polymarket trades&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Unlike generic crypto research assistants, Fere turns market signals into autonomous trading workflows. Agents research opportunities, build trade setups, optimize routes and fees, execute with a wallet, and monitor strategies 24/7 across crypto and Polymarket. Standout features include autonomous Polymarket trading, entry/exit rules, stop-loss controls, execution routing, and lower-cost agent runs.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/5IJWOH2H3DJIER?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/fere-ai?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/6f50454e-0f2f-4bb9-91eb-7e63c7d03637.png?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Fere AI&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AI agents, autonomous trading, crypto trading, Polymarket, trade automation, signal execution, execution routing, stop-loss, trading workflows&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺463&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-05-17 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-sun-to-spotify&#34;&gt;3. SUN-to-Spotify
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Generate audio with SUN and send it to your Spotify library&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Download 👉 &lt;a class=&#34;link&#34; href=&#34;https://github.com/sunapp-ai/sun-to-spotify&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/sunapp-ai/sun-to-spotify&lt;/a&gt; SUN-to-Spotify is a skill that lets you generate AI podcasts, audiobooks, and then publish them directly to your Spotify library for streaming or offline listening. Just describe what you want to hear: startup advice, history deep dives, philosophy, news, or custom learning content, and SUN creates a personalized audio experience in minutes. Built for creators, developers, and curious minds exploring the future of AI native audio.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/ANMWQJRL3VEODH?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/sun-ai?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/1f4acbb1-f7a2-44cc-b3c4-71242144e815.png?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;SUN-to-Spotify &#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: AI audio generator, Spotify integration, podcast creation, audiobook creation, personalized audio, SUN AI, audio automation, AI creator tool, Spotify publishing, AI native audio&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺332&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-05-17 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-files-sdk&#34;&gt;4. Files SDK
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: A unified storage SDK for object and blob backends&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: A unified storage SDK for object and blob backends. One small, honest API. Web-standards I/O. An escape hatch when you need the native client.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/WCFEM6ZQGND5C5?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/files-sdk?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/c412f113-421d-46a8-9847-7fae69a5c1ed.png?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Files SDK&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: Files SDK, storage SDK, unified storage, object storage, blob storage, web standards I/O, developer tools, storage abstraction, cross-platform storage, simple API, minimal API, backend integration, native client escape hatch&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺219&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-05-17 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-kirki&#34;&gt;5. Kirki
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: WordPress finally has a freeform canvas website builder.&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Kirki gives WordPress designers a freeform infinite canvas — design freely without structure imposed. Built-in CMS, real-time collaboration, visual interaction timeline, and 100+ template kits. Free for everyone.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/OLRRY6YJ3LNAUB?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/kirki?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/787584b2-bb4a-40cf-93ee-8c0319e6dbe9.jpeg?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Kirki&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: WordPress website builder, freeform design, infinite canvas, drag-and-drop, visual builder, CMS, real-time collaboration, interaction timeline, template kits, free website builder&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺192&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: Yes&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-05-17 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-offshelf-learn--focus&#34;&gt;6. OffShelf: Learn &amp;amp; Focus
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Stop procrastenating on things you should learn!&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: OffShelf is a personal learning system that keeps you accountable, helps you stay consistent, and uses AI to decide what you should focus on next. Track deep work sessions, measure real progress, and grow your skills over time — not just your task list.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/JFVSQLVR6RVO4S?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/offshelf-learn-focus?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/6f83e123-6baf-49d3-a317-d5f9af2f61f0.png?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;OffShelf: Learn &amp; Focus&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: learn, focus, productivity, AI learning, skill tracking, deep work, accountability, progress, personal growth, consistency, anti-procrastination&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺19&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: No&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-05-17 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;7-chessbout&#34;&gt;7. ChessBout
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Multiple-choice chess duels &amp;amp; daily challenges ♟️&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Most chess puzzle apps feel like study tools. ChessBout makes them feel like a game. Solve multiple-choice chess puzzles, play live 1v1 duels, compete in daily challenges, and climb global leaderboards in a fast mobile-first experience with no drag-to-move friction.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/QGU2VJLXHENBN6?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/chessbout?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/b104353e-9c02-4d1c-9213-6c976d4f300b.jpeg?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;ChessBout&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: chess puzzles, chess game, chess duels, multiple-choice chess, daily chess challenges, live chess, 1v1 chess, chess leaderboards, mobile chess, fast-paced chess, puzzle game, competitive chess&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺13&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: No&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-05-17 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;8-buy-blocker&#34;&gt;8. Buy Blocker
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Stop impulse buying with a pause before checkout&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Free Chrome extension that intercepts &amp;ldquo;Add to Cart&amp;rdquo; buttons. When you click, a popup asks: &amp;ldquo;Do you really want this?&amp;rdquo; Choose to continue, save for later, or leave. Enable extra friction with Box Breathing or Math Mode to slow yourself down even more. Works on all shopping sites. No account. 100% private.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/VSKLHK4A3XTQSD?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/buy-blocker?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/4a4b83a2-9ba8-4fe7-8a2a-2914453fc1dc.png?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Buy Blocker&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: impulse control, online shopping, browser extension, Chrome extension, shopping blocker, mindful spending, checkout pause, spending control, digital wellness, shopping addiction, free tool, privacy focused, add to cart interceptor, box breathing, math mode, friction tool, universal blocker&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺11&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: No&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-05-17 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;9-ugo--autonomous-marketing&#34;&gt;9. UGO — Autonomous Marketing
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Marketing That Runs Itself&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: UGO writes your posts, publishes your blogs, builds your local SEO pages, and runs your ads — every month, automatically. Real content built from your brand. From $99/month. Setup in 30 minutes.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/OCN4YZLKFNYHOL?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/ugo-autonomous-marketing?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/dbcf8169-da86-4b51-8655-863c5dbfdc7d.jpeg?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;UGO — Autonomous Marketing&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: autonomous marketing, automated ads, content creation, local SEO, blog publishing, affordable marketing, quick setup, hands-free marketing&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺11&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: No&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-05-17 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;10-dashbuster&#34;&gt;10. DashBuster
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Tagline&lt;/strong&gt;: Replace em dashes on any website&lt;br&gt;
+&lt;strong&gt;Description&lt;/strong&gt;: Replace em dashes on any website. Pick your replacement character and see which sites overuse them the most. Tired of writers who think a 2-em-dash sentence like this makes them sound smarter? DashBuster silently replaces every em dash on any website with the character of your choice. One toggle. Zero tolerance.&lt;br&gt;
+&lt;strong&gt;Website&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/r/VAGNER2O5PQFWT?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;open&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;Product Hunt&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.producthunt.com/products/dashbuster?utm_campaign=producthunt-api&amp;amp;utm_medium=api-v2&amp;amp;utm_source=Application%3A&amp;#43;weekly&amp;#43;%28ID%3A&amp;#43;148189%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;View on Product Hunt&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://ph-files.imgix.net/3a2883be-929f-4ee3-a8a9-cf39f21e4813.jpeg?auto=format&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;DashBuster&#34;
+	
+	
+&gt;&lt;br&gt;
+&lt;strong&gt;Keyword&lt;/strong&gt;: em dash removal, browser extension, character substitution, writing critique, web customization, annoying dashes, overuse fix, simple toggle&lt;br&gt;
+&lt;strong&gt;VotesCount&lt;/strong&gt;: 🔺11&lt;br&gt;
+&lt;strong&gt;Featured&lt;/strong&gt;: No&lt;br&gt;
+&lt;strong&gt;CreatedAt&lt;/strong&gt;: 2026-05-17 07:01 AM (UTC)&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

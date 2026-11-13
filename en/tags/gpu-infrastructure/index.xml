@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>GPU Infrastructure on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/gpu-infrastructure/</link>
+        <description>Recent content in GPU Infrastructure on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Sun, 08 Nov 2026 22:20:06 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/gpu-infrastructure/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>nvke</title>
+        <link>https://producthunt.programnotes.cn/en/p/nvke/</link>
+        <pubDate>Sun, 08 Nov 2026 22:20:06 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/nvke/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1751517298281-505ca1a39f4b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQxNDc1Nzd8&amp;ixlib=rb-4.1.0" alt="Featured image of post nvke" /&gt;&lt;h1 id=&#34;dsx-ai-factorynvke&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/dsx-ai-factory/nvke&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;dsx-ai-factory/nvke&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;nvidia-kubernetes-engine-nvke&#34;&gt;NVIDIA Kubernetes Engine (NVKE)
+&lt;/h1&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;&lt;img src=&#34;https://img.shields.io/badge/license-Apache--2.0-blue.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;License&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;go.work&#34; &gt;&lt;img src=&#34;https://img.shields.io/badge/Go-1.27.3-00ADD8.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Go&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Run a managed Kubernetes service on your own NVIDIA GPU infrastructure.&lt;/strong&gt;
+NVIDIA Kubernetes® Engine (NVKE) provides the management plane that platform teams install to create and
+operate Kubernetes clusters for their customers. Each workload cluster has its
+own Kubernetes control plane, etcd and node pools. You operate the NVKE management
+plane; your customers use their clusters through the Kubernetes API and &lt;code&gt;kubectl&lt;/code&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Preview:&lt;/strong&gt; NVKE is available as a preview. APIs, configuration and behavior
+can change between releases, and we do not recommend NVKE for production
+workloads. See &lt;a class=&#34;link&#34; href=&#34;docs/overview/preview-status.md&#34; &gt;Preview status and known limitations&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;#getting-started&#34; &gt;Get started&lt;/a&gt; · &lt;a class=&#34;link&#34; href=&#34;docs/README.md&#34; &gt;Documentation&lt;/a&gt; ·
+&lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;Contribute&lt;/a&gt; · &lt;a class=&#34;link&#34; href=&#34;SUPPORT.md&#34; &gt;Get help&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting started
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Your goal&lt;/th&gt;
+					&lt;th&gt;Start here&lt;/th&gt;
+					&lt;th&gt;What you get&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Evaluate without GPU hardware&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/get-started/quickstart-local.md&#34; &gt;Local quickstart&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;A development management plane and a workload cluster on simulated machines. No NVIDIA account is required.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Install on your infrastructure&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/operate/plan-installation.md&#34; &gt;Plan your installation&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;The prerequisites and sequence for preparing nodes, bootstrapping a management cluster and installing its services.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Build or contribute&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;#build-from-source&#34; &gt;Build from source&lt;/a&gt;&lt;/td&gt;
+					&lt;td&gt;The NVKE binaries and the contributor development loop.&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The local quickstart runs on a &lt;strong&gt;Linux host or VM, amd64 or arm64&lt;/strong&gt;, with at least
+&lt;strong&gt;6 CPUs, 12 GiB of free memory and 100 GiB of free disk&lt;/strong&gt;. It requires Docker,
+virtual TPM support and the tools listed in the guide. Follow its setup through
+workload-cluster creation and confirm the cluster&amp;rsquo;s nodes report &lt;code&gt;Ready&lt;/code&gt;.
+On macOS, use the &lt;a class=&#34;link&#34; href=&#34;docs/get-started/local-site.md&#34; &gt;local site guide&lt;/a&gt;, which runs
+the evaluation inside a Colima virtual machine.&lt;/p&gt;
+&lt;p&gt;For a real installation, you supply the machines, networking, node images and
+registries, and configure access to &lt;strong&gt;NVIDIA Infra Controller (NICo)&lt;/strong&gt;. NICo is
+the sole compatible infrastructure provider at preview. The
+&lt;a class=&#34;link&#34; href=&#34;docs/overview/supported-platforms.md&#34; &gt;platform and version reference&lt;/a&gt; lists
+validated combinations and pinned dependencies.&lt;/p&gt;
+&lt;h2 id=&#34;what-nvke-does&#34;&gt;What NVKE does
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Creates independent workload clusters.&lt;/strong&gt; Request clusters through the NVKE
+API or &lt;code&gt;nvkectl&lt;/code&gt;; NVKE provisions machines through NICo and forms Kubernetes
+clusters with their own control planes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Manages workload cluster lifecycle.&lt;/strong&gt; Create, scale and delete node pools,
+upgrade Kubernetes and replace nodes. See the &lt;a class=&#34;link&#34; href=&#34;docs/workload-clusters/node-pools.md&#34; &gt;node pool guide&lt;/a&gt;
+for the manual steps and preview limits on replacement and upgrades.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Establishes node identity.&lt;/strong&gt; Nodes attest through SPIFFE/SPIRE using their
+TPM before receiving join credentials. Encryption of etcd data is available
+per cluster.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Connects builds to deployment.&lt;/strong&gt; Its companion project,
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/dsx-ai-factory/nvkr&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NVIDIA Kubernetes Recipes (NVKR)&lt;/a&gt;,
+builds node images and NVKE components from pinned inputs. NVKE deploys those
+artifacts; NVKR owns their build and release evidence.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The preview needs explicit operator configuration: API authentication is off
+and the API uses plain HTTP after installation. Configure
+&lt;a class=&#34;link&#34; href=&#34;docs/operate/api-authentication.md&#34; &gt;API authentication and protected access&lt;/a&gt;
+before admitting callers. The management cluster does not upgrade, scale or
+replace itself, and there is no management-plane upgrade or backup/restore
+procedure. FDE node images are for evaluation and provide no data-at-rest
+confidentiality. Read the &lt;a class=&#34;link&#34; href=&#34;docs/overview/preview-status.md&#34; &gt;known limitations&lt;/a&gt;
+before choosing an evaluation or installation path.&lt;/p&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview
+&lt;/h2&gt;&lt;p&gt;The diagram shows the NVKE product family, how it sits on NICo and your GPU machines, and which components talk to each other.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://producthunt.programnotes.cn/docs/assets/diagrams/product-family.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;NVKE product family. NVKR builds and signs artifacts and publishes them to a registry. The operator installs the management cluster’s components, the NVKE management plane, CAPNICo and NVKE observability, from the charts and images in the registry. The management plane requests machines through CAPNICo, which calls NICo, and drives each workload cluster. NICo provisions NVIDIA GPU machines from the node OS image, and those machines become the workload cluster’s Kubernetes nodes, each running nvke-agent, under the cluster’s Kubernetes control plane. The accelerated runtime produced by AICR and NVKE observability are optional in the workload cluster. The customer uses kubectl against the control plane.&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;NVKE is not a Kubernetes distribution and not a Cluster API flavour. It is a
+&lt;strong&gt;self-hosting factory for Kubernetes clusters&lt;/strong&gt;: a throwaway seed cluster
+stands up a management cluster, and the management plane on
+it then provisions and lifecycle-manages many isolated workload clusters
+on demand.&lt;/p&gt;
+&lt;p&gt;An installation has two kinds of Kubernetes cluster:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;strong&gt;management cluster&lt;/strong&gt; runs the NVKE management plane and infrastructure
+controllers. &lt;code&gt;nvkectl&lt;/code&gt; forms it using a temporary seed cluster; installing the
+management-plane services is a separate step.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Workload clusters&lt;/strong&gt; run customer applications. The management plane creates
+and operates them through NICo, Cluster API and the node agent.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Read &lt;a class=&#34;link&#34; href=&#34;docs/overview/what-is-nvke.md&#34; &gt;What is NVKE&lt;/a&gt; for the operator workflow and
+&lt;a class=&#34;link&#34; href=&#34;docs/architecture.md&#34; &gt;Architecture&lt;/a&gt; for the implementation and data flows.&lt;/p&gt;
+&lt;h2 id=&#34;build-from-source&#34;&gt;Build from source
+&lt;/h2&gt;&lt;p&gt;Use &lt;strong&gt;Go 1.27.3&lt;/strong&gt;, the version pinned in &lt;a class=&#34;link&#34; href=&#34;go.work&#34; &gt;go.work&lt;/a&gt;, and &lt;strong&gt;GNU Make 4 or later&lt;/strong&gt;. Public Go modules must be
+reachable on the first build. &lt;a class=&#34;link&#34; href=&#34;https://flox.dev/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Flox&lt;/a&gt; is optional and supplies
+the repository&amp;rsquo;s development tools; on macOS, it also supplies GNU Make 4.
+See &lt;a class=&#34;link&#34; href=&#34;docs/development.md&#34; &gt;Development&lt;/a&gt; for toolchain setup.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/dsx-ai-factory/nvke.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; nvke
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make build
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This builds the workspace and writes nine binaries to &lt;code&gt;bin/&lt;/code&gt;: &lt;code&gt;agent&lt;/code&gt;,
+&lt;code&gt;updater&lt;/code&gt;, &lt;code&gt;controller&lt;/code&gt;, &lt;code&gt;nvkectl&lt;/code&gt;, &lt;code&gt;capd-reboot-controller&lt;/code&gt;,
+&lt;code&gt;nvke-os-image-check&lt;/code&gt;, &lt;code&gt;management-engine&lt;/code&gt;, &lt;code&gt;tenant-api&lt;/code&gt; and &lt;code&gt;operator-api&lt;/code&gt;. Building does not start a
+management plane or create a cluster. The node agent runs on Linux.&lt;/p&gt;
+&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;docs/go-workspace.md&#34; &gt;workspace guide&lt;/a&gt; explains the modules and outputs.
+For local services and test environments, see &lt;a class=&#34;link&#34; href=&#34;docs/getting-started.md&#34; &gt;Local development setup&lt;/a&gt;.
+Before submitting a change, follow &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;CONTRIBUTING.md&lt;/a&gt; and run
+&lt;code&gt;make preflight&lt;/code&gt;; it selects checks for the modules you changed.&lt;/p&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation
+&lt;/h2&gt;&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Task&lt;/th&gt;
+					&lt;th&gt;Guide&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Prepare nodes and bootstrap the management cluster&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/operate/bootstrap-management-cluster.md&#34; &gt;Bootstrap the management cluster&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Install NVKE services&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;deploy/README.md&#34; &gt;Install the management plane from the deploy path&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Build node images and supply release artifacts&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/operate/build-node-images.md&#34; &gt;Get NVKE artifacts from NVKR&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Create and manage customer clusters&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/workload-clusters/create.md&#34; &gt;Create a workload cluster&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;docs/workload-clusters/node-pools.md&#34; &gt;Manage node pools&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Give a customer access&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/workload-clusters/access.md&#34; &gt;Access a workload cluster&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Inspect cluster health and telemetry&lt;/td&gt;
+					&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;docs/operate/observe.md&#34; &gt;Observe NVKE and its clusters&lt;/a&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;docs/README.md&#34; &gt;documentation index&lt;/a&gt; links the remaining guides and references.&lt;/p&gt;
+&lt;h2 id=&#34;contributing-and-support&#34;&gt;Contributing and support
+&lt;/h2&gt;&lt;p&gt;Contributions, bug reports and documentation improvements are welcome.
+Start with &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;CONTRIBUTING.md&lt;/a&gt;; open an issue before substantial
+work so maintainers can agree on the approach.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Questions:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/dsx-ai-factory/nvke/discussions/categories/q-a&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Discussions&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chat:&lt;/strong&gt; the &lt;code&gt;#nvke&lt;/code&gt; channel in the DSX AI Factory Slack.
+&lt;a class=&#34;link&#34; href=&#34;https://inviter.co/dsx-ai-factory&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Get an invite&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bugs and feature requests:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/dsx-ai-factory/nvke/issues&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Issues&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Security vulnerabilities:&lt;/strong&gt; follow &lt;a class=&#34;link&#34; href=&#34;SECURITY.md&#34; &gt;SECURITY.md&lt;/a&gt; and report privately.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Community:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;CODE_OF_CONDUCT.md&#34; &gt;Code of Conduct&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;GOVERNANCE.md&#34; &gt;Governance&lt;/a&gt;,
+&lt;a class=&#34;link&#34; href=&#34;MAINTAINERS.md&#34; &gt;Maintainers&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;SUPPORT.md&#34; &gt;Support&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Releases:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;RELEASE.md&#34; &gt;release process&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CI health:&lt;/strong&gt; the &lt;a class=&#34;link&#34; href=&#34;https://dsx-ai-factory.github.io/nvke/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CI dashboard&lt;/a&gt;
+shows the last thirty runs of every workflow and refreshes hourly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;trademarks&#34;&gt;Trademarks
+&lt;/h2&gt;&lt;p&gt;Kubernetes® is a registered trademark of The Linux Foundation in the United
+States and other countries. NVIDIA and the NVIDIA logo are trademarks and/or
+registered trademarks of NVIDIA Corporation in the U.S. and other countries.
+Other company and product names may be trademarks of the respective companies
+with which they are associated.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;Apache License 2.0. See &lt;a class=&#34;link&#34; href=&#34;LICENSE&#34; &gt;LICENSE&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;NOTICE&#34; &gt;NOTICE&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Copyright (c) 2026 NVIDIA CORPORATION &amp;amp; AFFILIATES. All rights reserved.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
