@@ -1,9 +1,9 @@
 ---
 title: modern-web-guidance-src
-date: 2026-11-13T23:23:31+08:00
+date: 2026-11-14T22:11:34+08:00
 draft: False
-image: https://images.unsplash.com/photo-1507182445787-52a471bd589d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ1ODMzNjh8&ixlib=rb-4.1.0
-tags: ['github',modern web guidance, coding agents, web platform]
+image: https://images.unsplash.com/photo-1710995164395-1037d3656b3a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ2NjU0NDF8&ixlib=rb-4.1.0
+tags: ['github',modern web guidance, coding agents, browser compatibility]
 categories: ['github']
 ---
 
@@ -562,6 +562,20 @@ codex plugin add modern-web-guidance@googlechrome
 
 If you installed the skill using `npx modern-web-guidance@latest install`, you can update with: `npx modern-web-guidance@latest update`.
 
+<details>
+<summary><b>Claude Code (if installed via <code>claude-plugins-official</code>)</b></summary>
+
+Anthropic stopped updating third-party plugins in their built-in `claude-plugins-official` marketplace on Oct 12, stranding installs at `v0.0.194` ([details](https://github.com/GoogleChrome/modern-web-guidance-src/issues/3533)). Switch to the `googlechrome` marketplace to get updates:
+
+```shell
+/plugin uninstall modern-web-guidance@claude-plugins-official
+/plugin marketplace add GoogleChrome/modern-web-guidance
+/plugin install modern-web-guidance@googlechrome
+/plugin  # Select GoogleChrome marketplace, press enter, enable AutoUpdate
+/reload-plugins
+```
+</details>
+
 Otherwise, consult your agent's documentation for updating plugins and skills.
 
 ## <img src="https://github.com/GoogleChrome/modern-web-guidance/raw/main/.github/img/shield-check.svg" width="24" height="24" style="vertical-align: middle; margin-right: 4px;"> Evals to prove this works well
@@ -583,7 +597,7 @@ We developed a robust eval harness to ensure that the content is **empirically p
 ```
 
 1. **Simulated Developer Tasks**: We define realistic developer prompts against full base applications (`daily-grind`, `devtools-times`) that mimic real-world requests (e.g., "make my images load faster"). Prompts avoid naming APIs or features, testing whether the agent can naturally discover and apply the right guides.
-2. **Static & Browser-Based Assertions**: Playwright graders verify that each implementation requirement was followed—checking source patterns, computed styles, runtime DOM behaviors, and accessibility states.
+2. **Static & Browser-Based Checks**: Playwright graders verify that each implementation requirement was followed—checking source patterns, computed styles, runtime DOM behaviors, and accessibility states.
 3. **Self-Healing Calibration**: Graders are calibrated against multi-agent (Claude/Codex/AGY) golden solutions (100% pass target) and an unmodified baseline application (0% pass target).
 4. **E2E Testing**: We measure coding agent performance on real tasks with and without guidance. The _opportunity_ (100% - unguided pass rate) and _uplift_ (guided - unguided pass rate) are key: if models already succeed without guidance, we prune redundant advice; where agents struggle, we refine guides to maximize uplift.
 
@@ -592,7 +606,7 @@ We developed a robust eval harness to ensure that the content is **empirically p
 Explore full per-agent and per-guide breakdowns on the **[Eval Dashboard](https://googlechrome.github.io/modern-web-guidance-src/)**.
 
 <!-- INJECT_EVAL_RESULTS_START -->
-| Date | Agent + Model | Tasks / Assertions | Unguided → Guided (Uplift) |
+| Date | Agent + Model | Tasks / Checks | Unguided → Guided (Uplift) |
 | :--- | :--- | :---: | :---: |
 | Nov 8 | antigravity_cli (gemini-4-argon) | 214 / 1673 | 58% → 94% (**+36pp**) |
 | Nov 8 | codex_cli (gpt-6.1-sol) | 215 / 1795 | 54% → 82% (**+28pp**) |

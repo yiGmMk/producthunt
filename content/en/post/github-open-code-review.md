@@ -1,9 +1,9 @@
 ---
 title: open-code-review
-date: 2026-11-13T23:23:07+08:00
+date: 2026-11-14T22:12:45+08:00
 draft: False
-image: https://images.unsplash.com/photo-1746166678412-124ca966c8b2?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ1ODMzNjh8&ixlib=rb-4.1.0
-tags: ['github',ai code review, cli tool, llm integration]
+image: https://images.unsplash.com/photo-1769096493523-b242f1277ace?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ2NjU0NDF8&ixlib=rb-4.1.0
+tags: ['github',AI code review, CLI tool, developer tools]
 categories: ['github']
 ---
 
