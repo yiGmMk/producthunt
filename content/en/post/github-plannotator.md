@@ -1,9 +1,9 @@
 ---
 title: plannotator
-date: 2026-11-14T22:11:04+08:00
+date: 2026-11-15T22:48:54+08:00
 draft: False
-image: https://images.unsplash.com/photo-1692198669686-0a3959951e11?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ2NjU0NDF8&ixlib=rb-4.1.0
-tags: ['github',code review, plan annotation, agent feedback interface]
+image: https://images.unsplash.com/photo-1614185953505-534e27db5a15?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ3NTQwMzl8&ixlib=rb-4.1.0
+tags: ['github',Plannotator, AI coding agents, Code review]
 categories: ['github']
 ---
 

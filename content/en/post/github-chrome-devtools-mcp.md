@@ -1,9 +1,9 @@
 ---
 title: chrome-devtools-mcp
-date: 2026-11-14T22:12:22+08:00
+date: 2026-11-15T22:49:16+08:00
 draft: False
-image: https://images.unsplash.com/photo-1692198669686-0a3959951e11?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ2NjU0NDF8&ixlib=rb-4.1.0
-tags: ['github',Chrome DevTools, MCP, Browser Automation]
+image: https://images.unsplash.com/photo-1655821190114-8921ef1ff7c3?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ3NTQwMzl8&ixlib=rb-4.1.0
+tags: ['github',Chrome DevTools, Model Context Protocol, Browser Automation]
 categories: ['github']
 ---
 
