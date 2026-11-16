@@ -1,0 +1,61 @@
+---
+title: arcane
+date: 2026-11-17T01:04:01+08:00
+draft: False
+image: https://images.unsplash.com/photo-1588605840431-a6d0f9af60b1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ4NDg1MjZ8&ixlib=rb-4.1.0
+tags: ['github',Docker, Container Management, Arcane]
+categories: ['github']
+---
+
+# [getarcaneapp/arcane](https://github.com/getarcaneapp/arcane)
+
+> [!NOTE]
+> The `main` branch is the v3 version of Arcane See the [`release/2.x.x`](https://github.com/getarcaneapp/arcane/tree/release/2.x.x) branch for the last 2.x release.
+
+> [!IMPORTANT]
+> Feature requests have moved to [Discussions](https://github.com/getarcaneapp/arcane/discussions/categories/feature-requests). Open new requests and upvote existing ones there; issues are only used for Bug reports now to help maintain priority on those issues.
+
+<div align="center">
+
+  <img src=".github/assets/img/arcane-full-trace-fill.svg" alt="Arcane Logo" width="500" />
+  <p>Modern Docker Management, Designed for Everyone.</p>
+
+<a title="Crowdin" target="_blank" href="https://crowdin.com/project/arcane-docker-management"><img src="https://badges.crowdin.net/arcane-docker-management/localized.svg"></a>
+<a href="https://pkg.go.dev/getarcane.dev/arcane/v3"><img src="https://pkg.go.dev/badge/getarcane.dev/arcane/v3.svg" alt="Go Reference"></a>
+<a href="https://github.com/getarcaneapp/arcane/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-BSD--3--Clause-blue.svg" alt="License"></a>
+<a href="https://snyk.io/test/github/getarcaneapp/arcane"><img src="https://snyk.io/test/github/getarcaneapp/arcane/badge.svg" alt="Known Vulnerabilities"></a>
+[![Greptile: The War on Bugs](https://www.greptile.com/badge.svg)](https://www.greptile.com/?utm_source=oss_badge&utm_medium=readme&utm_campaign=greptile_for_open_source)
+
+<br />
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/arcane-dash-v3-dark.jpg" />
+  <source media="(prefers-color-scheme: light)" srcset=".github/assets/arcane-dash-v3-light.jpg" />
+  <img width="1685" alt="Arcane v3 dashboard" src=".github/assets/arcane-dash-v3-dark.jpg" />
+</picture>
+
+## Documentation
+
+For setup instructions, configuration details, and development guides, visit the **[official documentation site](https://getarcane.app)**.
+
+## Sponsors
+
+This project is supported by the following amazing people:
+
+<p align="center">
+  <a href="https://github.com/sponsors/kmendell">
+    <img src='https://github.com/kmendell/static/blob/main/sponsors.svg?raw=true' alt="Logos" />
+  </a>
+</p>
+
+## Security & Transparency
+
+View the Software Bill of Materials (SBOM) for Arcane at **[getarcane.app/sbom](https://getarcane.app/sbom)**.
+
+## Translating
+
+Help translate Arcane on Crowdin: https://crowdin.com/project/arcane-docker-management
+
+Thank you for checking out Arcane! Your feedback and contributions are always welcome.
+
+</div>

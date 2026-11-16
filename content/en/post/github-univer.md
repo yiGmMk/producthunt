@@ -1,8 +1,8 @@
 ---
 title: univer
-date: 2026-11-15T22:47:38+08:00
+date: 2026-11-17T01:03:14+08:00
 draft: False
-image: https://images.unsplash.com/photo-1579933817550-089ba1e76f12?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ3NTQwMzl8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1542040349543-dfde36e9f746?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ4NDg1MjZ8&ixlib=rb-4.1.0
 tags: ['github',Office SDK, Spreadsheet Editor, Plugin Architecture]
 categories: ['github']
 ---
@@ -17,7 +17,7 @@ categories: ['github']
 
 <p align="center">Start with open-source Sheets and Docs, then connect your own application or agent.</p>
 
-<p align="center"><a href="#quick-start">🚀 Quick start</a> · <a href="https://docs.univer.ai/">📚 Documentation</a> · <a href="https://univer.ai/compare/">⚖️ Feature comparison</a> · <a href="https://univer.ai/">🌐 Website</a> · <a href="https://docs.univer.ai/showcase">🎮 Showcase</a> · <a href="https://docs.univer.ai/reference/classes/univer">🔧 API Reference</a> · <a href="https://docs.univer.ai/blog">📝 Blog</a></p>
+<p align="center"><a href="#quick-start">🚀 Quick start</a> · <a href="https://github.com/dream-num/univer-workspace">💼 Workspace</a> · <a href="https://docs.univer.ai/">📚 Documentation</a> · <a href="https://univer.ai/compare/">⚖️ Feature comparison</a> · <a href="https://univer.ai/">🌐 Website</a> · <a href="https://docs.univer.ai/showcase">🎮 Showcase</a> · <a href="https://docs.univer.ai/reference/classes/univer">🔧 API Reference</a> · <a href="https://docs.univer.ai/blog">📝 Blog</a></p>
 
 <p align="center"><strong>English</strong> · <a href="./docs/readme/fr-FR.md">Français</a> · <a href="./docs/readme/de-DE.md">Deutsch</a> · <a href="./docs/readme/es-ES.md">Español</a> · <a href="./docs/readme/zh-CN.md">简体中文</a> · <a href="./docs/readme/zh-TW.md">繁體中文</a> · <a href="./docs/readme/ja-JP.md">日本語</a> · <a href="./docs/readme/ko-KR.md">한국어</a></p>
 
@@ -79,6 +79,8 @@ categories: ['github']
 <p align="center"><img src="./docs/img/readme/intro-banner.png" alt="Univer Office SDK: Web, Server, and AI SDKs" width="960" /></p>
 
 **Univer** is an Office SDK for building Office applications inside your own product. It provides Office editing, calculation, collaboration, and file processing for people and existing agents, using your data and permissions. The product family covers spreadsheets, documents, presentations, relational tables, canvases, and PDFs.
+
+<p align="center"><a href="https://github.com/dream-num/univer-workspace"><img src="./docs/img/readme/workspace-promo.png" alt="Univer Workspace: open source, ready to use and extend, built with Univer Office SDK. Star on GitHub." width="720" /></a></p>
 
 Univer Office SDK has three parts:
 
