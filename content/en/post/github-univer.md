@@ -1,9 +1,9 @@
 ---
 title: univer
-date: 2026-11-17T01:03:14+08:00
+date: 2026-11-18T00:58:41+08:00
 draft: False
-image: https://images.unsplash.com/photo-1542040349543-dfde36e9f746?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ4NDg1MjZ8&ixlib=rb-4.1.0
-tags: ['github',Office SDK, Spreadsheet Editor, Plugin Architecture]
+image: https://images.unsplash.com/photo-1780711229729-e9f371e8b602?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ5MzQ2MDF8&ixlib=rb-4.1.0
+tags: ['github',Univer Office SDK, spreadsheet editor, ai integration]
 categories: ['github']
 ---
 

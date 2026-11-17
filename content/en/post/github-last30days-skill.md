@@ -1,9 +1,9 @@
 ---
 title: last30days-skill
-date: 2026-08-01T17:22:29+08:00
+date: 2026-11-18T00:57:24+08:00
 draft: False
-image: https://images.unsplash.com/photo-1698889253094-f12d17315b17?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU1NzYwMDh8&ixlib=rb-4.1.0
-tags: ['github',AI agent, search engine, social media analysis]
+image: https://images.unsplash.com/photo-1780711229729-e9f371e8b602?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ5MzQ2MDF8&ixlib=rb-4.1.0
+tags: ['github',AI search engine, social media aggregation, community engagement scoring]
 categories: ['github']
 ---
 
@@ -11,7 +11,7 @@ categories: ['github']
 
 # /last30days
 
-English | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md) | [Português (Brasil)](README.pt-BR.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md)
+English | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md) | [Português (Brasil)](README.pt-BR.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [العربية](README.ar.md) | [فارسی](README.fa.md)
 
 <p align="center">
   <img src="media/pr-assets/last30days-ad.gif" width="720" alt="last30days - an AI agent-led search engine that searches people, not editors" />
@@ -25,11 +25,15 @@ English | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](READM
   <a href="https://trendshift.io/repositories/21997" target="_blank">
     <img src="https://trendshift.io/api/badge/repositories/21997" alt="mvanhorn/last30days-skill | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
   </a>
+  <br/>
+  <a href="https://github.com/mvanhorn/last30days-skill/actions/workflows/validate.yml">
+    <img src="https://github.com/mvanhorn/last30days-skill/actions/workflows/validate.yml/badge.svg" alt="Validate status" />
+  </a>
 </p>
 
 **An AI agent-led search engine scored by upvotes, likes, and real money - not editors.**
 
-This README tracks the current v3 pipeline. The runtime skill spec lives in [skills/last30days/SKILL.md](skills/last30days/SKILL.md), which is the source of truth for the latest command and setup behavior.
+This README tracks the current v4 pipeline. The runtime skill spec lives in [skills/last30days/SKILL.md](skills/last30days/SKILL.md), which is the source of truth for the latest command and setup behavior.
 
 **Claude Code (recommended — auto-updates via marketplace):**
 ```
@@ -45,7 +49,7 @@ npx skills add mvanhorn/last30days-skill -g
 
 More install options (claude.ai web, OpenClaw, manual) in the [Install](#install) section below.
 
-Zero config. Reddit, HN, Polymarket, and GitHub work immediately. Run it once and the setup wizard unlocks X, YouTube, TikTok, arXiv, Techmeme, and more in 30 seconds.
+Zero config. Reddit, HN, Polymarket, and GitHub work immediately, and so do patent filings and careers pages when your topic is a company. Run it once and the setup wizard unlocks X, YouTube, TikTok, arXiv, Techmeme, and more in 30 seconds.
 
 ---
 
@@ -75,27 +79,38 @@ If you're meeting with a CEO, have you read all their tweets and YouTube transcr
 
 | Source | What the people tell you |
 |--------|--------------------------|
-| **Reddit** | The unfiltered take. Top comments with real upvote counts, free, no API key. The real opinions that Google buries. |
+| **Reddit** | The unfiltered take. Top comments with real upvote counts, free, no API key. The real opinions that Google buries. With your OK, it can also search as your own logged-in Reddit account for more threads and live scores. |
 | **X / Twitter** | The hot take, the expert thread, the breaking reaction. First to know, first to argue. |
 | **YouTube** | The 45-minute deep dive. Full transcripts searched for the 5 quotable sentences that matter. |
 | **TikTok** | The creator reaching 3.6M people with a take you'll never find on Google. |
 | **Instagram Reels** | The influencer perspective with spoken-word transcripts. The visual culture signal. |
 | **Hacker News** | The developer consensus. 825 points, 899 comments. Where technical people actually argue. |
-| **Polymarket** | Not opinions. Odds. Backed by real money. 96% confidence on album sales. 4% on an acquisition. |
+| **Polymarket** | Not opinions. Odds. Backed by real money. 96% confidence on album sales. 4% on an acquisition. The report puts a market's odds on one line under the story it bears on, with how much they moved. |
 | **GitHub** | For people: PR velocity, top repos by stars, release notes. For topics: issues and discussions. |
-| **Digg** | Curated story clusters from Digg's AI 1000 leaderboard (~1000 high-signal AI accounts on X), with attributable inline quotes (no X auth required). Auto-enabled when `digg-pp-cli` is on PATH. |
+| **Digg** | Story clusters from every Digg topic (AI, tech, world and business, sports, science, gaming, entertainment), ranked by Digg Score, with attributable inline quotes from X (no X auth required). Auto-enabled when `digg-pp-cli` is on PATH. An older `digg-pp-cli` still works, on AI and tech only and without scores. |
 | **arXiv** | The papers behind the hype. New research in the window, free, no API key. Auto-enabled when `arxiv-pp-cli` is on PATH (first-run setup installs it). |
 | **Techmeme** | The tech-news editorial layer, date-windowed to your 30 days. Free, no API key. Auto-enabled when `techmeme-pp-cli` is on PATH (first-run setup installs it). |
+| **Yahoo Finance** | The market's read on a company. The share-price move over your 30 days, next to the S&P 500 for US listings. Free, no API key. Shows when your topic is a listed company or the person who leads one and `yahoo-finance-pp-cli` is on PATH (first-run setup installs it). |
 | **LinkedIn** | The professional signal. Posts and articles, with articles weighted as high signal. |
+| **Meta Ads** | What a brand is paying to say. Live Meta ad creatives launched this month, with copy, promo codes, and spoken transcripts. |
 | **StockTwits** | Trader sentiment. Auto-activates when your topic is a ticker or crypto. |
 | **Threads** | The post-Twitter text layer. Conversations from creators and brands. |
 | **Pinterest** | Visual discovery. Pins, saves, and comments on products and ideas. |
 | **Xiaohongshu (RED)** | Chinese lifestyle, product, and creator signals. Requested explicitly with `--search xhs` when a logged-in x-mcp browser plugin or `xiaohongshu-mcp` service is running locally. |
 | **Bluesky** | The decentralized social layer. AT Protocol posts from the post-Twitter migration. |
-| **Perplexity** | Grounded Sonar synthesis, raw Search API rows, and Deep Research. |
+| **Perplexity** | Controlled Agent API synthesis, OpenRouter Sonar fallback, raw Search API rows, and explicit Deep Research. |
+| **DEV Community (dev.to)** | Developer articles and top comments through the public, keyless API. Opt in with `--devto-tags`, `--search devto`, or `INCLUDE_SOURCES=devto`. |
+| **Truth Social** | Posts searched with `TRUTHSOCIAL_TOKEN`; available when authenticated. |
+| **Telegram** | Public posts from named channels. Opt-in; requires `SCRAPECREATORS_API_KEY` and a channel list. No keyword discovery. |
+| **Trustpilot** | Company TrustScore, review count, and an AI summary of customer feedback. Opt-in; requires `trustpilot-pp-cli` on PATH and a usable session. |
+| **Amazon** | Product ratings, prices, and customer reviews. Opt-in; requires an authenticated `brightdata` CLI and uses your Bright Data credits. |
+| **DripStack** | Financial newsletters and analyst writeups through a public, keyless API. Opt in with `--search dripstack` or `INCLUDE_SOURCES=dripstack`. |
+| **Jobs / careers pages** | What a company is hiring for, read from its own careers page (Workday, Apple, Amazon, Google, Microsoft, Netflix, Oracle, and more). A company run reads it automatically, and roles that hint at something unannounced become Jobs Page Secret Signals. Also selected with `--hiring-signals`, `--search jobs`, or the research plan. |
+| **Patents** | A company's new US patent filings, as evidence of what it is building before it ships. Free, no API key. Shows when your topic is a company. A filing becomes a Patent Secret Signal only when it is out of character for the company or describes something it has not shipped or announced. |
+| **Local corpus** | Your local Markdown and text files, plus PDFs when `pdftotext` is on PATH. Opt in with `--corpus` or `LAST30DAYS_CORPUS_DIRS`. |
 | **Web** | The editorial coverage, the blog comparisons. One signal of many, not the only one. |
 
-Community contributors keep adding more. Truth Social and other niche sources are in the engine with more on the way.
+Ask `/last30days` to include the sources you need. Availability depends on credentials, installed tools, the topic, and explicit opt-ins. See [source requirements](CONFIGURATION.md#source-requirements) for configuration.
 
 A Reddit thread with 1,500 upvotes is a stronger signal than a blog post nobody read. A TikTok with 3.6M views tells you more about what's culturally relevant than a press release. Polymarket odds backed by $66K in volume are harder to argue with than a pundit's guess.
 
@@ -105,9 +120,9 @@ The synthesis ranks by what real people actually engaged with. Social relevancy,
 
 **Before a meeting.** `/last30days Peter Steinberger` - joined OpenAI's Codex team, fighting Anthropic's ban on third-party agents, 23 PRs merged at 85% merge rate on GitHub, building LobsterOS for cross-device agent control. r/ClaudeCode: "Ever since OpenClaw released, it was widely known that if you run it through anything other than the API, you were gonna get banned eventually" (227 upvotes). That's not on LinkedIn.
 
-**To read hiring signals.** `/last30days Listen Labs --hiring-signals` - current jobs and careers pages become cited evidence for focus shifts: hiring into enterprise security, customer success, infrastructure, or product expansion. The report says what the hiring appears to signal, not what the roadmap will ship.
+**To see what a company is building before it ships.** `/last30days Apple` - the Jobs Page Secret Signal flagged a new director role testing whether requests trigger transactions that run through partner APIs and financial systems, which reads like quality control for an assistant that completes purchases. The Patent Secret Signal flagged an application for changing a device's state by tapping it in a saved photo of your room. Polymarket put Apple at 91% to be the world's largest company at year end. `/last30days Alphabet` found a product manager role for "YouTube Ads Agentic Buyflows", and its stock line read down 17.6% over 30 days while the S&P 500 fell 3.6%, with the worst day on Oct 29 (-12.6%). For a hiring-only report, add `--hiring-signals`.
 
-**To find the topic before it peaks.** Ask `/last30days what's exploding in AI agents?` and the skill switches to discovery mode: the engine sweeps Reddit category listings, Hacker News front/best stories, Digg's AI 1000 feed, and X when authenticated; your agent judges the nominations (names, junk filtering, content-worthiness) and writes podcast / X-article angles; then you get 5-10 velocity-ranked topics. Every result includes cross-source numbers, a momentum label, and a ready-to-run `/last30days "<topic>"` follow-up.
+**To find the topic before it peaks.** Ask `/last30days what's exploding in AI agents?` and the skill switches to discovery mode: the engine sweeps Reddit category listings, Hacker News front/best stories, Digg stories, and X when authenticated; your agent judges the nominations (names, junk filtering, content-worthiness) and writes podcast / X-article angles; then you get 5-10 velocity-ranked topics. Every result includes cross-source numbers, a momentum label, and a ready-to-run `/last30days "<topic>"` follow-up.
 
 **When something drops.** `/last30days Kanye West` - UK blocked his visa, Wireless Festival canceled, sponsors fled. But BULLY debuted #2 on Billboard. Fantano came back from his "Yay sabbatical" to review it (653K views). SoFi Homecoming brought out Lauryn Hill and Travis Scott for 44 songs. Polymarket: "Will Kanye tweet again?" 86% Yes. 23 Reddit threads, 17 YouTube videos, 86K upvotes.
 
@@ -121,47 +136,20 @@ The synthesis ranks by what real people actually engaged with. Social relevancy,
 
 ## What's new
 
-Since the v3.3 announcement in May, as of v3.11.1 (July 2026): 175 merged PRs - 122 of them from 52 community contributors - across 15 releases. This is what landed.
+v4 reads what a company is doing before it announces it, and makes every report easier to quote:
 
-### First-class on OpenAI Codex
+- Patent Secret Signals: a company run reads that month's US patent filings, with no key, and flags only the ones that are out of character or describe something unannounced.
+- Jobs Page Secret Signals: it reads the company's own careers page and flags the roles that give away what's coming, including new teams nobody has covered yet.
+- Quote lines: the best Reddit, X, YouTube, TikTok, and Instagram comments sit on their own line under the story they back up, translated when needed, and a line said in a video can be quoted too.
+- Polymarket odds line: one line under the story it bears on, with how much the odds moved.
+- Yahoo Finance line: a listed company's share price over the last 30 days next to the S&P 500, plus its biggest single-day move.
+- Knows who you mean: "Apple" resolves to the company, its site, and its ticker on its own.
+- Reddit as you: with your OK, Reddit searches as your own logged-in account.
+- Digg covers every topic now, not just AI and tech.
 
-/last30days is now a native Codex plugin with guided setup - not a port, a first-class citizen. Renderer-aware citations mean Codex output reads like a brief instead of URL soup (#694), and the same engine runs on Claude Code, Cursor, Copilot, Gemini CLI, Claude Desktop, OpenClaw, and 50+ Agent Skills hosts. Codex plugin manifest by [@rfoust](https://github.com/rfoust) (#686), Codex auth fix by [@tmchow](https://github.com/tmchow) (#698).
+See the [latest release](https://github.com/mvanhorn/last30days-skill/releases/latest) for the current published version and [CHANGELOG.md](CHANGELOG.md) for version-by-version changes. Unreleased changes on the default branch are recorded in [changelog.d/](changelog.d/).
 
-### arXiv, Techmeme, and Digg - free, no API keys
-
-arXiv brings the papers behind the hype and Techmeme brings the editorial tech-news layer - free, zero keys, and first-run setup installs their CLIs so they activate automatically (#709). Digg's AI 1000 story clusters arrive without X auth the same way - setup installs the free Digg CLI for you (#590). Trustpilot ships opt-in for consumer-brand research.
-
-### Free Reddit grew real scores and top comments
-
-Reddit's public .json API died; the free path came back stronger. Keyless RSS + shreddit scraping (#457), dedicated-subreddit discovery with real upvote counts via arctic-shift (#696), and a relevance floor so a viral off-topic post can't hijack your brief (#488, thanks [@rzachsmith](https://github.com/rzachsmith)). No API key. Real scores. Top comments included.
-
-### The best comments in every brief
-
-Comments are now a default-on layer across sources: Instagram comments with rank-based diversity so five hot takes don't all come from one post (#751), YouTube comments plus a ScrapeCreators transcript backup for when yt-dlp strikes out (#637), and crowd-voted comments weighted into Best Takes so the community's funniest lines survive scoring (#592, #608).
-
-### One doctor command
-
-Ask for a health check and the doctor runs every source, then prescribes exact fixes - which key is missing, which CLI is off PATH, which cookie expired (#753). No more guessing why X came back thin.
-
-### X search, rebuilt
-
-The X pipeline got a ground-up overhaul: FROM and ABOUT lanes so a person's own posts and the conversation about them both rank (#610), person-aware subquery disambiguation (#611), first-party authorship grounding with interaction-signal ranking (#613), and a single X source with automatic backend failover (#622). Plus an honest `--diagnose` that actually probes auth (#609).
-
-### More sources joined
-
-LinkedIn via ScrapeCreators, with articles as high signal ([@ravstr](https://github.com/ravstr), #702). StockTwits auto-activates for ticker and crypto topics ([@wtiwana](https://github.com/wtiwana), #658). Perplexity grew direct API modes and async Deep Research ([@sk-holmes](https://github.com/sk-holmes), #629).
-
-### Hardened by the community
-
-The security wave was almost entirely community work: stored-XSS fixes in the HTML renderer ([@iliaal](https://github.com/iliaal), [@aaronjmars](https://github.com/aaronjmars)), locked-down cookie temp files, supply-chain-hardened CI with OpenSSF Scorecard and build provenance attestation ([@shaanmajid](https://github.com/shaanmajid), [@hammadxcm](https://github.com/hammadxcm), [@aniruddh909](https://github.com/aniruddh909)), Semgrep and OSV-Scanner scans plus a PR dependency-review gate ([@23241a6749](https://github.com/23241a6749)), a test-coverage floor introduced at 60% and since raised to 84% ([@gourab5139014](https://github.com/gourab5139014)), and a Hermes security scan cleared of every CRITICAL finding (#768).
-
-### Reaches further
-
-Hebrew and non-Latin languages ([@dudyme](https://github.com/dudyme)). CJK-aware tokenization for Chinese sources ([@An-idd](https://github.com/An-idd)). A Windows compatibility wave. Cookie extraction across the full Chromium family - Brave, Edge, Vivaldi, Opera, Arc ([@andrey-esipov](https://github.com/andrey-esipov)) - plus macOS Keychain and Linux pass(1) credential sources. `--as-of` historical lookback ([@chiyi-creator](https://github.com/chiyi-creator)). Auto-provisioned Python 3.12 via uv ([@buntysomroy](https://github.com/buntysomroy)). `--hiring-signals` for reading a company's job pages. Watchlist deltas between runs.
-
-### Still in the box from v3
-
-The v3 foundations are all still here: the pre-research brain that resolves the right handles, subreddits, and hashtags before a single API call fires (built by [@j-sperling](https://github.com/j-sperling)); Best Takes scoring for humor and virality alongside relevance; cross-source cluster merging; single-pass comparisons ("CLI vs MCP" in 3 minutes, not 12); auto-discovered `--competitors` comparisons; GitHub person-mode (`--github-user=steipete`); ELI5 mode ("eli5 on" after any run); and shareable, self-contained HTML briefs (`--emit=html`). Configuration knobs live in [CONFIGURATION.md](CONFIGURATION.md).
+This README describes the current source tree; your installed version may differ.
 
 ## Install
 
@@ -169,6 +157,7 @@ The v3 foundations are all still here: the pre-research brain that resolves the 
 |---------|---------|---------|
 | **Claude Code** (recommended) | `/plugin marketplace add mvanhorn/last30days-skill` | Auto via marketplace, or `claude plugin update last30days@last30days-skill` |
 | **Grok** (xAI Build CLI) | `grok plugin marketplace add mvanhorn/last30days-skill` then `grok plugin install last30days` | `grok plugin update last30days` |
+| **Grok Bot** | [Add it from the Grok Bot marketplace](https://x.ai/bot/marketplace/bots/last30days) | Managed by the marketplace |
 | **Codex, Cursor, Copilot, Gemini CLI, or any of 50+ [Agent Skills](https://agentskills.io) hosts** | `npx skills add mvanhorn/last30days-skill -g` | `npx skills update last30days -g` |
 | **claude.ai** (web) | [Download `last30days.skill`](https://github.com/mvanhorn/last30days-skill/releases/latest/download/last30days.skill) and upload via claude.ai > Customize > Skills > + > Create skill > Upload a skill | Re-download and re-upload |
 | **Claude Desktop** | [Download the `.mcpb` for your platform](https://github.com/mvanhorn/last30days-skill/releases/latest) and drag into Settings > Extensions | Re-download and drag the new bundle in |
@@ -188,6 +177,10 @@ If you'd rather use the agent-skills install path on Claude Code, that's also su
 npx skills add mvanhorn/last30days-skill -g -a claude-code
 ```
 
+### Quick Try-Link
+
+[Try Last30Days Research Skill in Telegram or WhatsApp](https://app.clawmama.run/skills/2ne05f/hermes?utm_source=github&utm_medium=issue&utm_campaign=skill_outreach_mvanhorn_last30days_skill)
+
 The native plugin and the `npx skills` install can coexist. Note that Claude Code does not dedupe across install methods: if you have both the marketplace plugin and the `npx skills` copy active, `/last30days` will show two entries. Use one install method per machine.
 
 ### Grok (xAI Build CLI)
@@ -205,7 +198,7 @@ grok plugin marketplace add mvanhorn/last30days-skill
 grok plugin install last30days
 ```
 
-Add `--trust` to skip the install confirmation. Update with `grok plugin update last30days`. Grok also reads the Claude Code manifests for compatibility; the native `.grok-plugin/` pair is the first-class lane (and what an official [xAI marketplace](https://github.com/xai-org/plugin-marketplace) listing points at). `npx skills add` remains a valid cross-host fallback.
+Add `--trust` to skip the install confirmation. Update with `grok plugin update last30days`. Grok also reads the Claude Code manifests for compatibility; the native `.grok-plugin/` pair is the first-class lane (and what an official [xAI marketplace](https://github.com/xai-org/plugin-marketplace) listing points at). `npx skills add` remains a valid cross-host fallback. On [Grok Bot](https://x.ai/bot/marketplace/bots/last30days), where last30days installs from the marketplace, X works out of the box through the bot's built-in X tools, then the bot's X connector, with the official X API (`X_BEARER_TOKEN`) as backup.
 
 ### Codex, Cursor, Copilot, Gemini CLI, and other Agent Skills hosts
 
@@ -217,7 +210,7 @@ npx skills add mvanhorn/last30days-skill -g
 
 The `-g` (global) flag installs to your user directory so the skill is available across all projects. Without `-g`, `npx skills` installs project-locally into `./.skills/` (committed with the repo). For a research-the-world tool, global is what you want.
 
-Codex desktop and other folder-mode hosts can work in ordinary folders as well as Git repos. Before first research, ask the host agent to run the bundled `scripts/last30days.py --preflight` from the loaded skill directory; in a source checkout, the equivalent command is `python3 skills/last30days/scripts/last30days.py --preflight`. It shows the config source, browser-cookie plan, planned writes, optional commands, and ignored project config without reading cookies, writing files, or running research.
+Codex desktop and other folder-mode hosts can work in ordinary folders as well as Git repos. To inspect what a run would read and write without starting research, run the bundled `scripts/last30days.py --preflight` from the loaded skill directory; in a source checkout, the equivalent command is `python3 skills/last30days/scripts/last30days.py --preflight`. It shows the config source, browser-cookie plan, planned writes, optional commands, and ignored project config without reading cookies, writing files, or running research. First-run setup does not require it.
 
 By default this installs for whichever harness `npx skills` detects. To target a specific one (or multiple):
 
@@ -289,7 +282,7 @@ ln -s "$(pwd)/last30days-skill/skills/last30days" ~/.claude/skills/last30days
 
 The symlink keeps the install in sync with your working tree as you edit — no re-copy needed. For `claude.ai`, build the `.skill` file from source: `bash skills/last30days/scripts/build-skill.sh` produces `dist/last30days.skill`.
 
-Reddit (with comments), Hacker News, Polymarket, and GitHub work immediately. Zero configuration. Run `/last30days` once and the setup wizard unlocks more sources in 30 seconds, including the free arXiv and Techmeme CLIs.
+Reddit (with comments), Hacker News, Polymarket, and GitHub work immediately, plus patent filings and careers pages for a company topic. Zero configuration. Run `/last30days` once and the setup wizard unlocks more sources in 30 seconds, including the free arXiv and Techmeme CLIs.
 
 ## Bring your own keys
 
@@ -297,15 +290,15 @@ These platforms don't have relationships with each other. X doesn't know what Re
 
 | Sources | What you need | Cost |
 |---------|---------------|------|
-| Reddit (with comments) + HN + Polymarket + GitHub + StockTwits | Nothing | Free |
-| arXiv + Techmeme | Free CLIs, auto-installed by first-run setup | Free |
-| X / Twitter | Log into x.com in any browser, or set `XQUIK_API_KEY` / `XAI_API_KEY` | Browser cookies are free; keys are provider-specific |
+| Reddit (with comments) + HN + Polymarket + GitHub + StockTwits + company patent filings and careers pages | Nothing | Free |
+| arXiv + Techmeme + Yahoo Finance | Free CLIs, auto-installed by first-run setup | Free |
+| X / Twitter | Set `X_BEARER_TOKEN` for the official X API (recent posts, about the last week, unless your X developer project has full-archive access; a backup on Grok Bot after the bot's built-in X tools, opt-in elsewhere with `LAST30DAYS_X_BACKEND=xapi`), or log into x.com in any browser, or set `XQUIK_API_KEY` / `XAI_API_KEY` | X API credits come from your X developer project; browser cookies are free; other keys are provider-specific |
 | YouTube | `brew install yt-dlp` | Free |
 | Bluesky | App password from bsky.app | Free |
 | TikTok + Instagram + Threads + Pinterest + LinkedIn + YouTube comments | ScrapeCreators key | 10,000 free calls, then PAYG |
 | Xiaohongshu (RED) | Run a logged-in x-mcp browser plugin or `xiaohongshu-mcp` service and opt in with `--search xhs` per run or `INCLUDE_SOURCES=xiaohongshu` in `.env`; last30days auto-probes `http://localhost:18060` then `http://host.docker.internal:18060`, or use `XIAOHONGSHU_API_BASE` for a custom URL | No last30days API key; depends on your local browser-session service |
 | DripStack (premium financial newsletters) | Opt-in: `--search dripstack` per run, or `INCLUDE_SOURCES=dripstack` in `.env` | No key; free public search API |
-| Perplexity Sonar / Search API / Deep Research | Perplexity key, or OpenRouter key as Sonar fallback | Pay as you go |
+| Perplexity Agent API / Search API / Deep Research | Perplexity key, or OpenRouter key as Sonar fallback | Pay as you go; a direct key enables Agent API and background Deep Research |
 | Web search | Brave Search key | 2,000 free queries/month |
 
 ### macOS Keychain (optional)
@@ -334,7 +327,7 @@ See [CONFIGURATION.md](CONFIGURATION.md) for the full per-source key matrix, rea
 
 Two things you'll likely want to know on day one:
 
-**Where research files are saved.** `LAST30DAYS_MEMORY_DIR` defaults to `~/Documents/Last30Days/` (Windows: `C:\Users\<you>\Documents\Last30Days\`). Override by setting that env var to any path in your shell, or `--save-dir <path>` per run. Use `--output <file>` when you need the rendered result at an exact path, using the format selected by `--emit`. Use `--save-suffix=<name>` to keep multiple variations of the same topic separate (e.g. per client). Each `--save-dir` run produces `<slug>-raw[-suffix].md`. Run `python3 skills/last30days/scripts/last30days.py --preflight` to review planned writes before a research run.
+**Where research files are saved.** `LAST30DAYS_MEMORY_DIR` defaults to `~/Documents/Last30Days/` (Windows: `C:\Users\<you>\Documents\Last30Days\`). Override by setting that env var to any path in your shell, or `--save-dir <path>` per run. Use `--output <file>` when you need the rendered result at an exact path, using the format selected by `--emit`. Use `--save-suffix=<name>` to keep multiple variations of the same topic separate (e.g. per client). Each `--save-dir` run produces `<slug>-raw[-suffix].md`. Optionally run `python3 skills/last30days/scripts/last30days.py --preflight` to review planned writes without starting research.
 
 **Structured output for agents and workflows.** Ask `/last30days` for machine-readable JSON to receive the stable, versioned agent profile. For direct engine use in scripts or development, run `python3 skills/last30days/scripts/last30days.py "AI coding agents" --emit=json`; add `--json-profile=raw` only when you need the unversioned internal `Report` dump. See the [JSON export field reference and versioning policy](docs/reference/json-export.md).
 
@@ -372,19 +365,29 @@ Published a recurring AI update, market watch, or wonderfully narrow obsession w
 
 ## Open source
 
-MIT license. No tracking. No analytics. Your research stays on your machine. 2,700+ tests.
+MIT license. No tracking. No analytics. Your research stays on your machine (see Data handling below).
+
+For test commands, see [CONTRIBUTING.md](CONTRIBUTING.md#tests).
 
 Built with Python 3.12+, yt-dlp, Node.js (vendored Bird client for X search), and ScrapeCreators API. v3 engine architecture by [@j-sperling](https://github.com/j-sperling).
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) to open a PR, [CONTRIBUTORS.md](CONTRIBUTORS.md) for the full list of community contributors, and [CHANGELOG.md](CHANGELOG.md) for version history.
 
+## Data handling
+
+By default the skill runs entirely on your machine — no data leaves except to the search APIs you call (Reddit, ScrapeCreators, etc.).
+
+**Reranking.** When you configure a reasoning provider (`OPENAI_API_KEY`, `XAI_API_KEY`, `OPENROUTER_API_KEY`, `GOOGLE_API_KEY`, `GEMINI_API_KEY`, or `GOOGLE_GENAI_API_KEY`), the engine sends your research topic and retrieved content snippets to that provider for relevance scoring. This is opt-in: if you set no reasoning key, the engine falls back to a local scoring model and no external reranking call is made. See [CONFIGURATION.md](CONFIGURATION.md) for provider priority.
+
+**Local store.** When `LAST30DAYS_STORE=1` is set, findings are persisted to a local SQLite database named `research.db` inside the effective save directory (`--save-dir` takes precedence over `LAST30DAYS_MEMORY_DIR`). If no save directory is in effect, the database is `~/.local/share/last30days/research.db`. Enabling the store does not upload its database to a remote service. See [CONFIGURATION.md](CONFIGURATION.md#--store-flag) for retention details and purge instructions, including stopping database users before deletion.
+
 ## Star History
 
-<a href="https://star-history.com/#mvanhorn/last30days-skill&Date">
+<a href="https://star-history.dera.page/#mvanhorn/last30days-skill&Date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=mvanhorn/last30days-skill&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=mvanhorn/last30days-skill&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=mvanhorn/last30days-skill&type=Date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://star-history.dera.page/svg?repos=mvanhorn/last30days-skill&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://star-history.dera.page/svg?repos=mvanhorn/last30days-skill&type=Date" />
+    <img alt="Star History Chart" src="https://star-history.dera.page/svg?repos=mvanhorn/last30days-skill&type=Date" />
   </picture>
 </a>
 
