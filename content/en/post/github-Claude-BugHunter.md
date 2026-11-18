@@ -1,9 +1,9 @@
 ---
 title: Claude-BugHunter
-date: 2026-11-18T00:57:04+08:00
+date: 2026-11-19T00:29:17+08:00
 draft: False
-image: https://images.unsplash.com/photo-1508177009104-67e929dd7570?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ5MzQ2MDF8&ixlib=rb-4.1.0
-tags: ['github',Bug Hunting, Red Teaming, Web Application Security]
+image: https://images.unsplash.com/photo-1593559720888-d519a3b67747?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUwMTkzMzV8&ixlib=rb-4.1.0
+tags: ['github',Bug Hunting, Red Teaming, AI Security Skills]
 categories: ['github']
 ---
 
@@ -285,7 +285,7 @@ The per-class `hunt-*` skills address gap-zero (*"what should I look for in weba
 
 ## Roadmap
 
-- [ ] HackerOne MCP integration (currently only Burp MCP wired in)
+- [x] HackerOne MCP integration — [`mcp/hackerone/`](mcp/hackerone/README.md): disclosed-report duplicate search, program stats and scope; optional logged-in mode for private programs and your own reports
 - [ ] Per-engagement memory layer — pattern recall across targets
 - [x] Industry-specific hunt skills — `hunt-fintech-graphql` shipped; `hunt-healthcare-fhir`, `hunt-gov-compliance` still open
 - [ ] Program-rules-parser skill — auto-generate structured `scope.md` from program text

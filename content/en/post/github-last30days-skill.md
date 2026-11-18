@@ -1,9 +1,9 @@
 ---
 title: last30days-skill
-date: 2026-11-18T00:57:24+08:00
+date: 2026-11-19T00:30:24+08:00
 draft: False
-image: https://images.unsplash.com/photo-1780711229729-e9f371e8b602?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ5MzQ2MDF8&ixlib=rb-4.1.0
-tags: ['github',AI search engine, social media aggregation, community engagement scoring]
+image: https://images.unsplash.com/photo-1505410807948-88c1d8ac0e4a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUwMTkzMzV8&ixlib=rb-4.1.0
+tags: ['github',AI Search Engine, Multi-Platform Research, Trend Discovery]
 categories: ['github']
 ---
 
@@ -11,7 +11,7 @@ categories: ['github']
 
 # /last30days
 
-English | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md) | [Português (Brasil)](README.pt-BR.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [العربية](README.ar.md) | [فارسی](README.fa.md)
+English | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md) | [Português (Brasil)](README.pt-BR.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [العربية](README.ar.md) | [فارسی](README.fa.md) | [Türkçe](README.tr.md)
 
 <p align="center">
   <img src="media/pr-assets/last30days-ad.gif" width="720" alt="last30days - an AI agent-led search engine that searches people, not editors" />

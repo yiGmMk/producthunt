@@ -1,0 +1,139 @@
+---
+title: Product Hunt 今日热榜 | 2026-11-18
+date: 2026-11-18 16:26:38+0000
+image: https://ph-files.imgix.net/df9a58a9-cff3-41a9-9e7d-7a982df725e2.jpeg?auto=format
+tags: ["开发者工具", "AI智能体", "SEO优化"]
+---
+
+## 1. RankSpot  
+**标语**: 面向智能体的按量付费SEO与AI搜索执行层  
+**介绍**: RankSpot 是面向智能体的 SEO 与 AI 搜索执行层。只需 2 分钟即可将 MCP 接入 Claude 或 ChatGPT，你的智能体即可自动完成工作：它能基于已在 Google 排名靠前的内容，以 100 多种语言撰写并发布文章，还能通过你的邮箱向外链目标的高排名网站发起推介合作。仅需一个聊天窗口，即可统筹运营所有客户或业务。免订阅制：按量计费，每篇文章 3 美元，每次提示词检查仅 0.004 美元，读取您的数据完全免费。充值 1 美元即可起步，并免费获赠一篇文章。  
+**网站**: [立即访问](https://www.producthunt.com/r/ZXC3TLTUHNL3JP?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/rankspot?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![RankSpot](https://ph-files.imgix.net/df9a58a9-cff3-41a9-9e7d-7a982df725e2.jpeg?auto=format)  
+**关键词**: SEO优化,AI智能体,按量付费,内容生成,自动发布,外链推广,多语言SEO,对话式运营,MCP集成  
+**票数**: 🔺432  
+**是否精选**: 是  
+**发布时间**: 2026年11月17日 PM04:01 (北京时间)  
+
+---  
+
+{{< ad-inarticle >}}
+
+## 2. Creatify Max  
+**标语**: 您的广告搭档，从策略到创意到投放  
+**介绍**: Max是你的付费广告搭档。只需提供产品链接或投放简报，Max便会制作视频广告，在Meta和TikTok平台搭建投放活动，并全天候监控数据表现，提示下一步的优化重点。最终决策权在你手中：未经你的批准，任何广告都不会上线。  
+**网站**: [立即访问](https://www.producthunt.com/r/NWW6YNL6LTJ6TX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/creatify?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Creatify Max](https://ph-files.imgix.net/73ee2cdb-87d6-4b3a-adcc-4976061cbccb.jpeg?auto=format)  
+**关键词**: AI视频广告,智能投放,广告自动化,效果监控,广告创意,人工审核,广告助手,跨平台投放  
+**票数**: 🔺422  
+**是否精选**: 是  
+**发布时间**: 2026年11月17日 PM04:01 (北京时间)  
+
+---  
+
+## 3. TheBold  
+**标语**: 把执行变成与投资者的会议  
+**介绍**: TheBold将创业项目的执行进展转化为直通投资人的机会。🎉 快速通道（11月17日–27日）现已开启：通过一场AI投资人准备度面试，即可进入与你的创业项目相匹配的投资人项目库，并解锁直接面谈权限。TheBold帮助创始人明晰投资标准，追踪并验证业务执行与市场表现，开展针对特定投资人的AI模拟演练，并在达标后预约会面。  
+**网站**: [立即访问](https://www.producthunt.com/r/C7KPFSSB5AHOYX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/thebold?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![TheBold](https://ph-files.imgix.net/980611e0-917c-453e-9a6e-71b23a769ff7.jpeg?auto=format)  
+**关键词**: 创业融资, 投资人对接, AI路演模拟, 业绩追踪, 融资加速, 创始人工具, 智能匹配  
+**票数**: 🔺415  
+**是否精选**: 是  
+**发布时间**: 2026年11月17日 PM04:01 (北京时间)  
+
+---  
+
+## 4. Appxiom  
+**标语**: AI编程智能体检测并修复Bug的上下文层  
+**介绍**: Appxiom 为你的代码智能体提供其缺失的生产环境上下文：涵盖移动与 Web 应用中的崩溃、卡顿、内存泄漏、网络请求失败及用户旅程中断等问题。Goal Friction Impact 功能使智能体能够根据缺陷对业务目标造成的损耗程度来设定优先级。支持 Android（Kotlin、Jetpack Compose、Java）、iOS（Swift、SwiftUI、Objective-C）、Flutter、Kotlin Multiplatform 以及 Web 端（兼容所有 JavaScript/TypeScript 框架，并针对 React 提供专项支持）。  
+**网站**: [立即访问](https://www.producthunt.com/r/4U3S4XIEYDOCDN?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/appxiom?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Appxiom](https://ph-files.imgix.net/afdb99af-f558-490b-be02-ff46f7bb4545.png?auto=format)  
+**关键词**: AI编程助手,智能缺陷检测,自动代码修复,生产环境监控,崩溃与性能分析,缺陷优先级排序,跨平台支持,开发者工具  
+**票数**: 🔺286  
+**是否精选**: 是  
+**发布时间**: 2026年11月17日 PM04:00 (北京时间)  
+
+---  
+
+## 5. EkLine  
+**标语**: 面向开发者工具与API优先型企业的AI SEO服务！  
+**介绍**: 你的客户会先问 ChatGPT 该用哪个工具，再让 Cursor 用它来开发。EkLine 帮助你的 API 或开发者工具在这两个方面都取得成功。其 AI 智能体会审查你的官网、文档、GitHub 仓库及社区内容，精准定位其他 AI 容易误解或无法准确调用的地方。接着，它们会按优先级处理这些不足，直接编写基于实际代码的修复方案（以 Pull Request 形式提交供你团队审核批准），并重新测试 AI 的响应结果，量化评估改进效果。  
+**网站**: [立即访问](https://www.producthunt.com/r/RX3ZWI6MXJWW7K?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/ekline?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![EkLine](https://ph-files.imgix.net/c4ee4673-9f37-4caa-92de-756c0be36f88.jpeg?auto=format)  
+**关键词**: AI搜索优化, 开发者工具, API产品, AI智能体, 技术文档, GitHub管理, 代码级修复, 开发者生态, AI流量, 自动PR  
+**票数**: 🔺266  
+**是否精选**: 是  
+**发布时间**: 2026年11月17日 PM04:01 (北京时间)  
+
+---  
+
+## 6. Versine  
+**标语**: 让你的AI收发资金。我们是智能体版的Venmo。  
+**介绍**: 借助 AI 收发资金。通过我们的 MCP，将其与 ChatGPT、Claude、Instinct、Muse 或您自定义的智能体对接。收款人无需持有 Versine 账户：资金可直接提现至其银行账户。每笔转账均需通过您的通行密钥授权，或自动发送至您预设的可信联系人。  
+**网站**: [立即访问](https://www.producthunt.com/r/SLJZPHAQH5CWEI?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/versine?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Versine](https://ph-files.imgix.net/765cba81-f2b9-4f8d-99bd-62fa1fa57b3a.jpeg?auto=format)  
+**关键词**: AI支付, 智能体转账, MCP协议, 免开户提现, 自主支付, AI金融, 信任转账, 智能体经济  
+**票数**: 🔺206  
+**是否精选**: 是  
+**发布时间**: 2026年11月17日 PM04:01 (北京时间)  
+
+---  
+
+## 7. superlog  
+**标语**: 发现你的监控系统从未捕捉到的生产环境缺陷  
+**介绍**: 您的监控系统仅会对您预设的监控项发出告警，因此客户仍会反馈 Bug。Superlog 可自动捕获未配置告警的错误，全天候持续排查并直接为您提供修复方案。已有 100 多家初创企业采用；我们提供的修复方案合并率达 87%。  
+**网站**: [立即访问](https://www.producthunt.com/r/QPAYF22JVBNIOY?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/superlog?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![superlog](https://ph-files.imgix.net/46cbb98f-32cb-480f-8a03-754289e0abad.png?auto=format)  
+**关键词**: 线上Bug检测,智能故障排查,自动化修复,监控盲区,开发者工具,SRE辅助,代码质量保障  
+**票数**: 🔺188  
+**是否精选**: 是  
+**发布时间**: 2026年11月17日 PM04:01 (北京时间)  
+
+---  
+
+## 8. VINC  
+**标语**: 让你的电影创意化为现实。  
+**介绍**: 你对场景、氛围、运镜方式以及影片应有的质感早已了然于胸，VINC 将替你完成其余工作。你可以创作剧本、勾勒分镜、规划并生成镜头，且在每个阶段都能自由审阅与打磨。最后，将所有生成的镜头汇入内置编辑器，音效与背景音乐均可在此妥善配置，一键交付最终成片。  
+**网站**: [立即访问](https://www.producthunt.com/r/5TFM5AL6BZDXRS?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/vinc?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![VINC](https://ph-files.imgix.net/20e1c8e4-d307-4d56-b4d2-37ca0ceb925c.jpeg?auto=format)  
+**关键词**: 影视创作,剧本开发,分镜绘制,镜头规划,视频剪辑,音效配乐,后期制作,全流程工作流  
+**票数**: 🔺173  
+**是否精选**: 是  
+**发布时间**: 2026年11月17日 PM04:01 (北京时间)  
+
+---  
+
+## 9. seshka  
+**标语**: 清除 Claude Code 留下的残余  
+**介绍**: Claude Code 会话结束后，其启动的开发服务器、文件监听器和脚本并不会随之停止。seshka 会在菜单栏中按会话分组显示这些进程，并标注内存占用与端口信息。一键即可将其终止。同时支持手动或自动结束空闲会话。免费且开源。  
+**网站**: [立即访问](https://www.producthunt.com/r/IPCIDIB7EGGJHC?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/seshka?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![seshka](https://ph-files.imgix.net/mcp-draft-media/870852e8-270a-43c0-88d5-40e73b586cdc.jpeg?auto=format)  
+**关键词**: 进程管理,会话清理,开发者工具,一键终止,自动化清理,资源监控,开源免费,AI编程辅助  
+**票数**: 🔺138  
+**是否精选**: 是  
+**发布时间**: 2026年11月17日 PM04:00 (北京时间)  
+
+---  
+
+## 10. Superhands  
+**标语**: 设计系统，而非逐个优化输出。  
+**介绍**: 设计的交付物已是系统，而非输出。请将你的设计转化为指引，让智能体在团队使用的每一个AI工具中都能遵循。只需观察其产出，一次性修复系统，而非疲于逐个修正每次的输出。  
+**网站**: [立即访问](https://www.producthunt.com/r/UXLAJKIOFASLOH?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/stencil-by-superhands?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Superhands](https://ph-files.imgix.net/mcp-draft-media/310b5dbc-0023-4fd2-9c5c-790fb1ee0623.jpeg?auto=format)  
+**关键词**: 设计系统,AI智能体,设计指引,自动化工作流,提效工具,全局复用,AI辅助设计  
+**票数**: 🔺108  
+**是否精选**: 是  
+**发布时间**: 2026年11月17日 PM04:01 (北京时间)  
+
+---  
+

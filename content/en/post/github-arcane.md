@@ -1,9 +1,9 @@
 ---
 title: arcane
-date: 2026-11-17T01:04:01+08:00
+date: 2026-11-19T00:30:48+08:00
 draft: False
-image: https://images.unsplash.com/photo-1588605840431-a6d0f9af60b1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTQ4NDg1MjZ8&ixlib=rb-4.1.0
-tags: ['github',Docker, Container Management, Arcane]
+image: https://images.unsplash.com/photo-1702991198821-d3a834ed43ef?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUwMTkzMzV8&ixlib=rb-4.1.0
+tags: ['github',Docker Management, Go, Open Source]
 categories: ['github']
 ---
 
