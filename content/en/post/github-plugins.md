@@ -1,9 +1,9 @@
 ---
 title: plugins
-date: 2026-11-19T00:29:41+08:00
+date: 2026-11-20T00:40:10+08:00
 draft: False
-image: https://images.unsplash.com/photo-1702991198821-d3a834ed43ef?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUwMTkzMzV8&ixlib=rb-4.1.0
-tags: ['github',Cursor plugins, AI developer tools, software integrations]
+image: https://images.unsplash.com/photo-1586294180396-0d1d93e0b71a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUxMDYyODh8&ixlib=rb-4.1.0
+tags: ['github',cursor plugins, developer tools, saas integrations]
 categories: ['github']
 ---
 

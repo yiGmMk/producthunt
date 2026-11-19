@@ -1,9 +1,9 @@
 ---
 title: Claude-BugHunter
-date: 2026-11-19T00:29:17+08:00
+date: 2026-11-20T00:38:36+08:00
 draft: False
-image: https://images.unsplash.com/photo-1593559720888-d519a3b67747?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUwMTkzMzV8&ixlib=rb-4.1.0
-tags: ['github',Bug Hunting, Red Teaming, AI Security Skills]
+image: https://images.unsplash.com/photo-1598908536831-d7255ead46d7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUxMDYyODh8&ixlib=rb-4.1.0
+tags: ['github',bug hunting, red teaming, pentesting]
 categories: ['github']
 ---
 
@@ -62,6 +62,8 @@ All triggered automatically by topic — describe what you're testing in plain E
 ```
 
 All 83 skills + 15 commands load namespaced under `claude-bughunter:` and update when you bump the plugin version — no files copied into `~/.claude/`.
+
+**A HackerOne account is optional.** The install asks for a HackerOne API username and token. They only let the HackerOne MCP read your private programs and your own reports; leave both blank if you don't need that. Every skill, command and the MCP's public tools (duplicate search, program scope) work without them.
 
 **Option B — copy install (no plugin system / pin to a clone):**
 

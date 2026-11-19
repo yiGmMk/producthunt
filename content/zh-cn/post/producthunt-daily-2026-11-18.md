@@ -1,0 +1,139 @@
+---
+title: Product Hunt 今日热榜 | 2026-11-19
+date: 2026-11-19 16:35:32+0000
+image: https://ph-files.imgix.net/launch-image-uploads/cce1b5a7-16b7-4782-82b8-b8e7da6970b8/f144d846b5ab511a8e073598343a6ea3efa28621e445131e8b0b4b42ea8136a1.jpeg?auto=format
+tags: ["AI智能体", "多智能体协作", "AI工作区"]
+---
+
+## 1. S.Space  
+**标语**: 团队与全员AI智能体，共享同一工作区  
+**介绍**: 你团队中的每位成员都配备了 AI 代理，但彼此互不协作，导致你整天忙于复制粘贴与反复说明。S.Space 为你的团队及所有代理提供了统一的工作区。可无缝接入任意厂商的现有代理（如 Claude Code 和 Codex）。代理之间能主动对接、交接任务并交付最终成果；依托共享记忆机制，让你只需解释一次即可。代理自动执行，你仅审批关键事项。起步免费。由 AutoGen 核心团队打造。  
+**网站**: [立即访问](https://www.producthunt.com/r/3NGQFAYB2FLK2V?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/s-space?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![S.Space](https://ph-files.imgix.net/launch-image-uploads/cce1b5a7-16b7-4782-82b8-b8e7da6970b8/f144d846b5ab511a8e073598343a6ea3efa28621e445131e8b0b4b42ea8136a1.jpeg?auto=format)  
+**关键词**: 多智能体协作,AI工作区,跨平台智能体,共享记忆,人机协同,智能体编排,团队AI协作  
+**票数**: 🔺374  
+**是否精选**: 是  
+**发布时间**: 2026年11月18日 PM04:01 (北京时间)  
+
+---  
+
+{{< ad-inarticle >}}
+
+## 2. Bluedot Phone Calls  
+**标语**: AI通话笔记助手  
+**介绍**: Bluedot 现已支持电话通话，不再仅限于会议。您可通过网页端或移动应用拨打电话，保留个人主叫号码，并自动生成通话实录、内容摘要与待办事项。  
+**网站**: [立即访问](https://www.producthunt.com/r/ULWYTTAYG5XTLI?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/bluedot-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Bluedot Phone Calls](https://ph-files.imgix.net/d39176a1-73a8-497d-a359-b50da55aa1db.jpeg?auto=format)  
+**关键词**: AI通话助手, 语音转文字, 自动通话纪要, 智能摘要, 行动项提取, Bluedot, 商务通话  
+**票数**: 🔺311  
+**是否精选**: 是  
+**发布时间**: 2026年11月18日 PM04:01 (北京时间)  
+
+---  
+
+## 3. Toone  
+**标语**: Grokbot与n8n/Zapier集成  
+**介绍**: Toone：Grokbot 与 n8n/Zapier 的融合。通过自然语言构建精准的智能体工作流与常规任务。每个节点均为基于你所选模型（ChatGPT 或 Claude）运行的智能体对话线程，或是无需 AI 介入、每次均以相同方式执行的自动步骤。运行可重复的任务流程，交由智能体辅助看护，在运行过程中实时打磨优化，并支持随时暂停与继续。此外还内置实时共享、会议笔记、Spotlight 风格布局、禅模式、日历、快速捕获、Git 集成，以及适用于研究、SEO 等场景的 MCP（模型上下文协议）。  
+**网站**: [立即访问](https://www.producthunt.com/r/46Q2MJEJGU72E3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/toone?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Toone](https://ph-files.imgix.net/0c9a27e6-0d52-4741-9fce-74a87b245d16.png?auto=format)  
+**关键词**: AI工作流,智能体自动化,自然语言构建,任务调度,多模型集成,实时协作,会议笔记,专注模式,日历同步,快速记录,MCP扩展,SEO优化,AI自动化平台  
+**票数**: 🔺272  
+**是否精选**: 是  
+**发布时间**: 2026年11月18日 PM04:01 (北京时间)  
+
+---  
+
+## 4. Waldo by Wherobots  
+**标语**: 基于空间数据加速工程的AI智能体  
+**介绍**: Waldo是一款地理空间数据智能体，能将关于物理世界的问题转化为答案、地图和可直接投入生产的数据流水线。它能够分析卫星影像、几何数据、地理信息及贵组织的第一方数据，自动编写并调试分析代码，在数小时内交付结果。当任务需要持续运行时，Waldo会将其转化为基于您现有数据平台的定时调度流水线。本产品由Apache Sedona的创建者打造，专为大规模空间分析而构建。  
+**网站**: [立即访问](https://www.producthunt.com/r/7GHVBKIFOJ7ABR?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/waldo-by-wherobots?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Waldo by Wherobots](https://ph-files.imgix.net/30ff8980-9f61-46d8-8e27-511ee85edbbf.jpeg?auto=format)  
+**关键词**: AI智能体,空间数据,地理空间分析,卫星影像,数据流水线,自动化分析,空间计算,工程加速  
+**票数**: 🔺233  
+**是否精选**: 是  
+**发布时间**: 2026年11月18日 PM04:01 (北京时间)  
+
+---  
+
+## 5. Dippr  
+**标语**: 专为您的智能体提供的数据平台，仅需一条提示词。  
+**介绍**: 这里是您的智能体构建与运行企业软件、工具与应用的地方——它们可跨数据源访问公司数据，获取理解这些数据所需的上下文，并遵循安全规则进行使用。  
+**网站**: [立即访问](https://www.producthunt.com/r/FOOJ7X4LAUBRQ3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/dippr?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Dippr](https://ph-files.imgix.net/launch-image-uploads/91db19a3-9963-4952-9667-6a3f81fbd78b/f2a7f53554134baa5cc0cf3c89c0011a18162c40fbf4862ec2f39ff61e59a344.png?auto=format)  
+**关键词**: 智能体数据平台,提示词驱动,智能应用开发,跨源数据整合,业务上下文理解,企业级安全管控  
+**票数**: 🔺210  
+**是否精选**: 是  
+**发布时间**: 2026年11月18日 PM04:01 (北京时间)  
+
+---  
+
+## 6. Pitch Avatar HR Suite  
+**标语**: 通过对话式AI虚拟人实现入职引导、培训与沟通  
+**介绍**: 人力资源团队本应把重心放在与员工的互动上。现实却是，每天高达70%的时间都耗在入职流程、强制培训和反复回答相同问题上，且完全无法衡量实际效果。HR Suite 借助对话式AI虚拟形象实现了自动化管理。虚拟形象可调用企业自有资料授课，既能在课程中答疑，也能随时充当HR助理响应员工提问。智能提醒确保进度不脱轨；HR后台可清晰查看完成情况并精准定位学员的卡点。现提供14天免费试用，输入优惠码 PRODUCTHUNT2026 可享全方案5折（活动截止至11月30日）。  
+**网站**: [立即访问](https://www.producthunt.com/r/LAAO4P46MHJORU?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/pitchavatar?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Pitch Avatar HR Suite](https://ph-files.imgix.net/096671a5-6ce9-4134-b323-f9c21b5daac1.jpeg?auto=format)  
+**关键词**: 人力资源, 入职培训, 员工培训, AI数字人, 智能问答, 内部沟通, 自动化, 进度追踪, 企业HR, AI助手  
+**票数**: 🔺176  
+**是否精选**: 是  
+**发布时间**: 2026年11月18日 PM04:01 (北京时间)  
+
+---  
+
+## 7. Mermaid Flow  
+**标语**: 智能体工作流可视化构建器  
+**介绍**: Mermaid Flow 支持将智能体工作流以图表形式搭建并直接运行。无论是 Issue 分类、每周总结还是 PR 审查，这些原本需要依赖冗长提示词或技能文件来处理的任务，现在都能轻松搞定。只需描述需求、选用模板或直接导入文件，即可生成每一步清晰可视的工作流。一键连接 GitHub、Slack、Notion 等平台，点击运行或设置定时任务即可自动执行。每次运行都会逐步骤存档，便于你追溯执行细节，团队成员也能同步跟进。免费开始体验。  
+**网站**: [立即访问](https://www.producthunt.com/r/6TWGPBZTSE7PQW?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/mermaid-chart?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Mermaid Flow](https://ph-files.imgix.net/587a0516-3067-4446-867a-e28d22f780ac.png?auto=format)  
+**关键词**: 可视化工作流,AI智能体,流程编排,自动化任务,多平台集成,步骤追踪,模板搭建,定时执行,低代码工具,团队协作  
+**票数**: 🔺151  
+**是否精选**: 是  
+**发布时间**: 2026年11月18日 PM04:01 (北京时间)  
+
+---  
+
+## 8. dusk bot  
+**标语**: 免费开源的Grok机器人替代方案  
+**介绍**: 最佳免费 Grok 机器人替代方案。直接使用你已订阅的 ChatGPT、Claude 或 Grok 套餐，即可组建一支机器人团队。每个机器人都有明确的任务、可编辑的记忆模块，以及独立的运行环境。支持定时调度执行，关键步骤前会主动确认风险，整体体验集成于界面清爽、交互流畅的聊天应用中。全面兼容 ChatGPT、Claude、Grok、Gemini、Cursor、Copilot、OpenRouter 及本地模型，支持使用你自己的账号直接登录接入。100% 免费开源。  
+**网站**: [立即访问](https://www.producthunt.com/r/U6XX5FHY4UCNF3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/dusk-bot?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![dusk bot](https://ph-files.imgix.net/a192383c-76d5-412c-845f-d8540f061384.png?auto=format)  
+**关键词**: Dusk Bot, 免费开源, AI机器人, 多模型兼容, 自动化工作流, 定时调度, 可编辑记忆, 安全确认, Grok替代, 自有账号登录  
+**票数**: 🔺141  
+**是否精选**: 是  
+**发布时间**: 2026年11月18日 PM04:01 (北京时间)  
+
+---  
+
+## 9. Review Box  
+**标语**: 一款用于审查 GitHub 拉取请求的快速桌面应用  
+**介绍**: 一款用于审查 GitHub Pull Request 的快速桌面应用。可记录已审文件、跳转至符号定义与引用、搜索整个 PR，并支持向 AI 咨询代码变更。  
+**网站**: [立即访问](https://www.producthunt.com/r/TEHSB3S2PP4OU7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/review-box?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Review Box](https://ph-files.imgix.net/902d13ef-19af-4d10-b7a0-032025775e1c.jpeg?auto=format)  
+**关键词**: GitHub代码审查,桌面应用,文件追踪,符号导航,PR搜索,AI辅助,开发者工具  
+**票数**: 🔺137  
+**是否精选**: 是  
+**发布时间**: 2026年11月18日 PM04:01 (北京时间)  
+
+---  
+
+## 10. GPT-6.2 Astra and Sol  
+**标语**: 两款新的OpenAI模型：前沿Astra与高效Sol  
+**介绍**: GPT-6.2 Astra 和 Sol 是 OpenAI 面向专业工作推出的全新模型。Astra 是针对最复杂项目的尖端模型，适用于幻灯片、网站、3D 设计和科学研究等领域。Sol 则是面向代码编写和多步骤智能体工作的高效日常模型。据 OpenAI 介绍，Astra 单次任务的成本不到 GPT-6 Astra 的三分之一。API 定价（按百万 token 计）：Astra 输入 8 美元，输出 40 美元；Sol 输入 2 美元，输出 10 美元。现已在 ChatGPT Work 和 Codex 中上线，面向 Plus、Pro、Enterprise 和 Edu 用户开放，并支持 API 调用。  
+**网站**: [立即访问](https://www.producthunt.com/r/ZQTBM36RYPXJZM?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/openai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![GPT-6.2 Astra and Sol](https://ph-files.imgix.net/ab705901-834a-41c3-ba02-6d56e741a60c.png?auto=format)  
+**关键词**: GPT-6.2,Astra,Sol,OpenAI,前沿模型,高效编程,多步智能体,API定价,ChatGPT Work,Codex  
+**票数**: 🔺131  
+**是否精选**: 是  
+**发布时间**: 2026年11月18日 PM04:01 (北京时间)  
+
+---  
+
