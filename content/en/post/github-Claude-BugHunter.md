@@ -1,9 +1,9 @@
 ---
 title: Claude-BugHunter
-date: 2026-11-20T00:38:36+08:00
+date: 2026-11-21T00:10:08+08:00
 draft: False
-image: https://images.unsplash.com/photo-1598908536831-d7255ead46d7?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUxMDYyODh8&ixlib=rb-4.1.0
-tags: ['github',bug hunting, red teaming, pentesting]
+image: https://images.unsplash.com/photo-1755456068148-afdcc11c928b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUxOTA5ODZ8&ixlib=rb-4.1.0
+tags: ['github',bug hunting, red teaming, vulnerability assessment]
 categories: ['github']
 ---
 
