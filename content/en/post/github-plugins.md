@@ -1,9 +1,9 @@
 ---
 title: plugins
-date: 2026-11-21T00:12:10+08:00
+date: 2026-11-21T23:24:07+08:00
 draft: False
-image: https://images.unsplash.com/photo-1545410146-7ee44f4e7519?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUxOTA5ODZ8&ixlib=rb-4.1.0
-tags: ['github',cursor, plugins, developer tools]
+image: https://images.unsplash.com/photo-1674674614404-604aad76d8a8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUyNzQ1MzF8&ixlib=rb-4.1.0
+tags: ['github',Cursor, Plugins, AI Integrations]
 categories: ['github']
 ---
 
@@ -161,6 +161,7 @@ Official Cursor plugins for popular developer tools, frameworks, and SaaS produc
 | `createos` | [CreateOS](third_party/createos/) | Cursor | Integrations | Deploy and manage projects, environments, deployments, domains, logs, cron jobs, security scans, templates, and sandboxes on NodeOps CreateOS. |
 | `fiscal-ai` | [Fiscal.ai](third_party/fiscal-ai/) | Cursor | Integrations | Pull source-linked financials, filings, ratios, prices, segments, KPIs, ownership, fund letters, and news from Fiscal.ai. |
 | `lmty` | [LMTY](third_party/lmty/) | Cursor | Integrations | Read tracked competitors, competitive intelligence reports, change logs, evidence, social mentions, and market feeds for your products, and browse LMTY's public Markets, event timelines, and company, product, and person profiles. |
+| `sabre-developer-hub` | [Sabre Developer Hub](third_party/sabre-developer-hub/) | Cursor | Integrations | Search and read Sabre Developer Hub documentation, OpenAPI specs, and Sabre-published agent skills for travel APIs, SDKs, and product collections. |
 Author values match each plugin’s `plugin.json` `author.name` (Cursor lists `plugins@cursor.com` in the manifest).
 
 ## Repository structure

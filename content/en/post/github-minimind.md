@@ -1,9 +1,9 @@
 ---
 title: minimind
-date: 2026-11-21T00:11:45+08:00
+date: 2026-11-21T23:23:44+08:00
 draft: False
-image: https://images.unsplash.com/photo-1755456068148-afdcc11c928b?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUxOTA5ODZ8&ixlib=rb-4.1.0
-tags: ['github',minimind, large language model, training]
+image: https://images.unsplash.com/photo-1757044123133-6613b20ff24c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUyNzQ1MzF8&ixlib=rb-4.1.0
+tags: ['github',Large Language Model, Training From Scratch, Lightweight AI]
 categories: ['github']
 ---
 
