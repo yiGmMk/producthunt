@@ -1,9 +1,9 @@
 ---
 title: Claude-BugHunter
-date: 2026-11-21T23:22:30+08:00
+date: 2026-11-22T23:20:11+08:00
 draft: False
-image: https://images.unsplash.com/photo-1539619863780-73300b12261c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUyNzQ1MzF8&ixlib=rb-4.1.0
-tags: ['github',Bug hunting, Red teaming, Web application security]
+image: https://images.unsplash.com/photo-1544808193-bcc82fd181e6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUzNjA3ODZ8&ixlib=rb-4.1.0
+tags: ['github',Bug Hunting, Red Team, AI Security Agent]
 categories: ['github']
 ---
 

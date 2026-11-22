@@ -1,9 +1,9 @@
 ---
 title: minimind
-date: 2026-11-21T23:23:44+08:00
+date: 2026-11-22T23:21:22+08:00
 draft: False
-image: https://images.unsplash.com/photo-1757044123133-6613b20ff24c?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUyNzQ1MzF8&ixlib=rb-4.1.0
-tags: ['github',Large Language Model, Training From Scratch, Lightweight AI]
+image: https://images.unsplash.com/photo-1658661811619-eb21e60d2682?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUzNjA3ODZ8&ixlib=rb-4.1.0
+tags: ['github',MiniMind, Large Language Model, From Scratch Training]
 categories: ['github']
 ---
 
@@ -80,6 +80,39 @@ categories: ['github']
 
 
 </div>
+
+---
+
+## ❤️ 赞助
+
+<div align="center">
+
+<table>
+  <tr>
+    <td align="center" width="76">
+      <a href="https://www.infistar.cc/register?aff=VCHAAHCH&ref_source=link">
+        <img src="https://infistar.cc/logo.png" width="48" alt="无限星河AI" />
+      </a>
+    </td>
+    <td>
+      <b>感谢 <a href="https://www.infistar.cc/register?aff=VCHAAHCH&ref_source=link">Infistar</a> 赞助</b>：多模型API网关，一个Key调用主流AI模型，低至官方0.1折。欢迎通过<a href="https://www.infistar.cc/register?aff=VCHAAHCH&ref_source=link"><b>项目专属链接</b></a>注册使用。
+    </td>
+  </tr>
+</table>
+
+</div>
+
+<details>
+<summary>关于赞助与合作</summary>
+<br>
+
+MiniMind 以 Apache 2.0 协议完全开源、永久免费。赞助完全自愿，不换取任何特权，也不影响项目使用。感谢每一位支持者，让这个业余时间维护的项目得以持续。
+
+赞助方式包括按月占位，或直接赞助 GPU 服务器（算力可能用于项目相关或不相关的研究性探索）。
+
+如有意向，欢迎通过 [邮件](mailto:gongjy.cs@foxmail.com) 联系。
+
+</details>
 
 ---
 
