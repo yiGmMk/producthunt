@@ -1,9 +1,9 @@
 ---
 title: minimind
-date: 2026-11-22T23:21:22+08:00
+date: 2026-11-24T03:15:34+08:00
 draft: False
-image: https://images.unsplash.com/photo-1658661811619-eb21e60d2682?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUzNjA3ODZ8&ixlib=rb-4.1.0
-tags: ['github',MiniMind, Large Language Model, From Scratch Training]
+image: https://images.unsplash.com/photo-1646245511861-24c997b18661?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTU0NjEyNTR8&ixlib=rb-4.1.0
+tags: ['github',Large Language Model, Model Training, Reinforcement Learning]
 categories: ['github']
 ---
 
@@ -95,7 +95,7 @@ categories: ['github']
       </a>
     </td>
     <td>
-      <b>感谢 <a href="https://www.infistar.cc/register?aff=VCHAAHCH&ref_source=link">Infistar</a> 赞助</b>：多模型API网关，一个Key调用主流AI模型，低至官方0.1折。欢迎通过<a href="https://www.infistar.cc/register?aff=VCHAAHCH&ref_source=link"><b>项目专属链接</b></a>注册使用。
+      <b>MiniMind × <a href="https://www.infistar.cc/register?aff=VCHAAHCH&ref_source=link">Infistar.cc</a></b>：Claude、GPT、Gemini、DeepSeek等200+模型一个Key搞定，低至官方0.1折（省99%），100%官方纯血可验真，千条线路自动切换。通过<a href="https://www.infistar.cc/register?aff=VCHAAHCH&ref_source=link"><b>专属链接</b></a>注册即送¥5。
     </td>
   </tr>
 </table>

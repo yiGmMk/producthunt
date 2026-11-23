@@ -1,0 +1,141 @@
+---
+title: Product Hunt 今日热榜 | 2026-11-23
+date: 2026-11-23 19:12:14+0000
+image: https://ph-files.imgix.net/e3de00d0-b549-4e7e-b8f9-34222a09983e.jpeg?auto=format
+tags: ["CLI工具", "互动叙事", "无代码开发"]
+---
+
+## 1. Yoroll  
+**标语**: 无需游戏引擎即可构建可玩故事  
+**介绍**: Yoroll 让任何人都能无需编程或游戏引擎，将故事转化为可游玩的电影级游戏。你可以从剧本、图片或视频片段起步，随后编排场景、添加玩家选项，并构建拥有不同结局的分支剧情。AI 将协助你把所有元素整合成可分享的互动体验。这更像是在执导一部属于你的互动电影，而非开发游戏。  
+**网站**: [立即访问](https://www.producthunt.com/r/XKLWN5SDJ5RSLW?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/yoroll?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Yoroll](https://ph-files.imgix.net/e3de00d0-b549-4e7e-b8f9-34222a09983e.jpeg?auto=format)  
+**关键词**: 互动叙事,无代码开发,AI辅助创作,分支剧情,互动电影,零门槛制作,故事游戏化  
+**票数**: 🔺358  
+**是否精选**: 是  
+**发布时间**: 2026年11月22日 PM04:01 (北京时间)  
+
+---  
+
+{{< ad-inarticle >}}
+
+## 2. Rankhog  
+**标语**: 自动从Reddit获取客户  
+**介绍**: Rankhog会在Reddit上寻找正在咨询你所售产品的用户。它会仔细阅读各子版块的版规，撰写有用的回复，并以真人发帖的节奏通过你自己的账号发布。你可逐条确认回复，或直接开启全自动模式。没有Reddit账号？Rankhog会为你注册并完成养号，账号完全归你所有。既可通过独立App运行，也可接入Claude、ChatGPT、Cursor及任意MCP客户端。免费试用7天。  
+**网站**: [立即访问](https://www.producthunt.com/r/HVFQNHONLRBAJZ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/rankhog?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Rankhog](https://ph-files.imgix.net/mcp-draft-media/e9e750f2-a006-4464-82f9-b7b4c44693c4.jpeg?auto=format)  
+**关键词**: Reddit营销, 自动化获客, AI回复生成, 社群引流, 账号养号, 营销自动化, AI工具集成, 潜在客户挖掘  
+**票数**: 🔺344  
+**是否精选**: 是  
+**发布时间**: 2026年11月22日 PM04:00 (北京时间)  
+
+---  
+
+## 3. Resurf  
+**标语**: Mac版个人知识库与书签管理器  
+**介绍**: 一款适用于 Mac、iPhone 和 iPad 的纯本地个人上下文库。支持保存笔记、链接、图片与文档。在 Mac 上可通过 MCP 或命令行接口（CLI）向 AI 传递上下文。  
+**网站**: [立即访问](https://www.producthunt.com/r/VXIIBY4W6WDWZU?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/resurf-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Resurf](https://ph-files.imgix.net/e0ba3b43-0a39-4990-aa39-5348ff70d85a.png?auto=format)  
+**关键词**: 个人知识库,书签管理,本地存储,AI上下文,MCP协议,苹果生态,数字归档,CLI工具  
+**票数**: 🔺184  
+**是否精选**: 是  
+**发布时间**: 2026年11月22日 PM04:01 (北京时间)  
+
+---  
+
+## 4. Daymaker  
+**标语**: 礼品如此贴心，让您的潜在客户欣然赴约。  
+**介绍**: Daymaker曾以“冷蛋糕”闻名，但这已成为过去。Daymaker现已成为一款专属工具：它能调研您的潜在客户、挖掘其兴趣偏好、推荐个性化礼品，支持使用您的品牌进行定制包装与寄送，只为确保您顺利拿到会面邀约。希望由我们全权操办？我们负责执行全套营销活动，并承诺保证会面成果。  
+**网站**: [立即访问](https://www.producthunt.com/r/22SNOV53PPMTPX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/daymaker?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Daymaker](https://ph-files.imgix.net/ab500b8b-b48b-41bc-8d64-9b6dd37ae07f.jpeg?auto=format)  
+**关键词**: 个性化礼品,商务送礼,客户洞察,品牌定制,销售赋能,邀约参会,会议保证  
+**票数**: 🔺161  
+**是否精选**: 是  
+**发布时间**: 2026年11月22日 PM04:01 (北京时间)  
+
+---  
+
+## 5. oovi  
+**标语**: 专属于你的桌面AI团队  
+**介绍**: 将任务交给 Oovi，AI 机器人团队将自动完成：负责人负责规划，研究员负责深挖，写手负责起草，审核员负责把关。随时查看每个机器人的工作状态，所有内容发布前均可审批。自带 AI 密钥即可免费使用，或每月 10 美元起订阅，积分永不失效。  
+**网站**: [立即访问](https://www.producthunt.com/r/YLKKXHEBGSFA4O?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/oovi?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![oovi](https://ph-files.imgix.net/dc5005ee-50e9-48c0-a744-a26f8fbaadb8.jpeg?auto=format)  
+**关键词**: AI助手,多智能体,AI团队,桌面应用,任务自动化,人机协作,AI工作流  
+**票数**: 🔺132  
+**是否精选**: 是  
+**发布时间**: 2026年11月22日 PM04:01 (北京时间)  
+
+---  
+
+## 6. Creavit Studio 4.0  
+**标语**: 适用于 Mac 的屏幕录制、iPhone 相机和电影模式演示  
+**介绍**: 规划、录制并将您的屏幕转化为产品故事。Creavit Studio 4.0 带来全新功能：支持通过二维码与iPhone配对进行人像拍摄；录制后仍可补充相机画面；内置内容规划器；提供标准与液态多焦点模式；搭载电影级3D MacBook与iPhone场景；具备流畅滚动与流畅打字效果；支持将您的语音转换为其他语言；以及全程需您审批的自动特效（Auto FX）。专为Mac打造。同时提供iPhone版本，让您随时随地轻松录制与编辑。  
+**网站**: [立即访问](https://www.producthunt.com/r/DO2TIU7I4GF4GO?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/creavit-studio?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Creavit Studio 4.0](https://ph-files.imgix.net/a253204b-9014-4b40-b6d9-8b5e683bc6ce.jpeg?auto=format)  
+**关键词**: 屏幕录制,iPhone拍摄,电影级演示,Mac应用,产品视频,智能对焦,3D场景,自动特效,语音翻译,内容策划,跨端剪辑  
+**票数**: 🔺121  
+**是否精选**: 是  
+**发布时间**: 2026年11月22日 PM04:01 (北京时间)  
+
+---  
+
+## 7. Webless Agents  
+**标语**: 您希望面向客户的代理  
+**介绍**: 你通常不会让普通的网站聊天机器人直接面对客户。Webless 智能体则与众不同：你只需使用通俗易懂的英语描述期望的目标，Webless 便会基于你的公开内容进行构建，确保它仅依据你提供的内容作答。在正式上线前，你可以逐一审查所有指令，并修改任何细节。随后它便开始投入工作：解答疑问、筛选买家、发送报价、预约会议，并将任务转交给你的团队。
+
+为 Product Hunt 用户特别福利：免费体验我们最高档计划 3 个月。  
+**网站**: [立即访问](https://www.producthunt.com/r/VH6EKEDCE4QLCA?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/webless?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Webless Agents](https://ph-files.imgix.net/f6df644e-3a27-4666-b13e-1b8cc03fe36f.png?auto=format)  
+**关键词**: AI智能体,智能客服,内容驱动,自然语言配置,销售自动化,人工审核,团队协同  
+**票数**: 🔺119  
+**是否精选**: 是  
+**发布时间**: 2026年11月22日 PM04:01 (北京时间)  
+
+---  
+
+## 8. Omi CLI  
+**标语**: 你不在时也能自动运行的AI编程代理  
+**介绍**: Omi 能够构建任何项目。将编程任务交给 Omi，放手让它执行：它将读取你的代码仓库、修复 Bug、运行测试，并利用真实浏览器验证你的应用。并行子代理在独立的工作树中同时处理各项任务。关闭终端后后台代理仍会继续运行；云端代理还能直接发起 Pull Request。支持以 Diff 形式审查变更、撤销错误操作，提供 13 款内置模型可选，也支持接入自有模型。免费开始使用：npm i -g @builditomi/cli  
+**网站**: [立即访问](https://www.producthunt.com/r/GWUUBKQHSYM563?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/omi-cli?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Omi CLI](https://ph-files.imgix.net/launch-image-uploads/12a653df-be78-4f11-a1d0-8abe9be383b2/7e572a2fa8ba203059465045818dd6d15848605113fa6b225a38adb9472c4fad.gif?auto=format)  
+**关键词**: AI编程代理,CLI工具,自动化开发,多智能体架构,代码修复测试,后台持续运行,自动提交PR,多模型兼容,浏览器自动化,开发者工具  
+**票数**: 🔺97  
+**是否精选**: 是  
+**发布时间**: 2026年11月22日 PM04:01 (北京时间)  
+
+---  
+
+## 9. Ulika  
+**标语**: 用于使用 Claude、Cursor 或 Codex 构建网站的可视化编辑器  
+**介绍**: AI 能在一个周末内快速交付一个基于 React、Vite 或 Next 的网站。但当营销团队想修改标题时，却只能提交工单。Ulika 可与网站无缝打通，让任何人都能直接编辑页面上的文案与图片并发布上线，全程无需编写代码。产品现已开放测试，欢迎免费体验：ulika.co。  
+**网站**: [立即访问](https://www.producthunt.com/r/RMUGMIHZYR2MRX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/ulika?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Ulika](https://ph-files.imgix.net/850c86cc-c7ba-4934-a845-9e0f9d81df19.jpeg?auto=format)  
+**关键词**: Ulika, 可视化编辑器, 无代码编辑, AI生成网站, 营销内容管理, 零代码修改, 网站内容管理  
+**票数**: 🔺95  
+**是否精选**: 是  
+**发布时间**: 2026年11月22日 PM04:01 (北京时间)  
+
+---  
+
+## 10. Mockreel  
+**标语**: 你的屏幕录制，但以3D手机形式呈现。免费，无需注册。  
+**介绍**: 每次上线新应用，我都需要那种3D手机展示视频，但每个工具都要么要求下载，要么要求订阅。没门，我自己写了一个。你把录屏（或者截图，随你便）拖进去，它就能放进3D iPhone/MacBook/iPad/浏览器窗口里。选个样式，加点镜头运镜，打上标题，直接导出最高4K的MP4。全程在浏览器标签页内完成。无需上传、无需注册、无水印、无套路。纯免费。赶紧去让你的应用看起来很有档次吧！  
+**网站**: [立即访问](https://www.producthunt.com/r/JMDEOIWLDDDOHB?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+**Product Hunt**: [在Product Hunt查看](https://www.producthunt.com/products/mockreel?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+weekly+%28ID%3A+148189%29)  
+![Mockreel](https://ph-files.imgix.net/6c08b2a2-b4e3-443a-b12b-aeb9d17b1d76.png?auto=format)  
+**关键词**: 3D样机制作, 屏幕录制转视频, 在线免安装, 免费无水印, 无需注册, 4K导出, APP演示视频, 镜头动画  
+**票数**: 🔺93  
+**是否精选**: 是  
+**发布时间**: 2026年11月22日 PM04:01 (北京时间)  
+
+---  
+

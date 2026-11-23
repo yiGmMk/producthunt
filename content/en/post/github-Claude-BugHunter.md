@@ -1,9 +1,9 @@
 ---
 title: Claude-BugHunter
-date: 2026-11-22T23:20:11+08:00
+date: 2026-11-24T03:14:39+08:00
 draft: False
-image: https://images.unsplash.com/photo-1544808193-bcc82fd181e6?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTUzNjA3ODZ8&ixlib=rb-4.1.0
-tags: ['github',Bug Hunting, Red Team, AI Security Agent]
+image: https://images.unsplash.com/photo-1620611824637-d33a5c34dec8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTU0NjEyNTR8&ixlib=rb-4.1.0
+tags: ['github',Bug Hunting, Red Team, AI Security]
 categories: ['github']
 ---
 
@@ -20,17 +20,18 @@ Built by **[Sachin Sharma](https://www.linkedin.com/in/sachinsharma8080/)** — 
 <p align="center">
   <sub>SPONSORED BY</sub>
   <br/>
+  <br/>
   <a href="https://www.apismart.ai/">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/sponsors/apismart-dark.png">
-      <img alt="ApiSmart" src="assets/sponsors/apismart-light.png" height="30">
+      <img alt="ApiSmart" src="assets/sponsors/apismart-light.png" height="28" align="middle">
     </picture>
   </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://threatwatch360.com">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/sponsors/tw360-dark.svg">
-      <img alt="ThreatWatch360" src="assets/sponsors/tw360-light.svg" height="30">
+      <source media="(prefers-color-scheme: dark)" srcset="assets/sponsors/tw360-badge-dark.svg">
+      <img alt="ThreatWatch360" src="assets/sponsors/tw360-badge-light.svg" height="26" align="middle">
     </picture>
   </a>
 </p>
@@ -290,7 +291,7 @@ The per-class `hunt-*` skills address gap-zero (*"what should I look for in weba
 - [x] HackerOne MCP integration — [`mcp/hackerone/`](mcp/hackerone/README.md): disclosed-report duplicate search, program stats and scope; optional logged-in mode for private programs and your own reports
 - [ ] Per-engagement memory layer — pattern recall across targets
 - [x] Industry-specific hunt skills — `hunt-fintech-graphql` shipped; `hunt-healthcare-fhir`, `hunt-gov-compliance` still open
-- [ ] Program-rules-parser skill — auto-generate structured `scope.md` from program text
+- [x] Program-scope importer — `cbh scope import` builds `scope.md` from a program's published scope (HackerOne, Bugcrowd, Intigriti, YesWeHack via [bounty-targets-data](https://github.com/arkadiyt/bounty-targets-data); HackerOne MCP output for private programs; or pasted program text), failing closed on anything ambiguous — see [`cbh` CLI](docs/cbh-cli.md)
 - [ ] Refresh `hunt-*` skills with newer disclosed reports (re-run `public-skills-builder`)
 - [ ] Additional enterprise-platform skills — `citrix-netscaler-deep`, `f5-bigip-attack`, `ad-cs-attack` (AD Certificate Services)
 - [ ] Refresh enterprise-VPN CVE matrix quarterly to track 2026 advisories
