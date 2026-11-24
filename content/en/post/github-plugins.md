@@ -1,9 +1,9 @@
 ---
 title: plugins
-date: 2026-11-24T03:15:56+08:00
+date: 2026-11-25T02:56:19+08:00
 draft: False
-image: https://images.unsplash.com/photo-1594752861210-63a2b2171f83?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTU0NjEyNTR8&ixlib=rb-4.1.0
-tags: ['github',cursor plugins, ai agent integration, developer tools marketplace]
+image: https://images.unsplash.com/photo-1660732106134-f3009a1e90ea?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTU1NDY0NzR8&ixlib=rb-4.1.0
+tags: ['github',cursor plugins, ai developer tools, software integrations]
 categories: ['github']
 ---
 
@@ -162,6 +162,9 @@ Official Cursor plugins for popular developer tools, frameworks, and SaaS produc
 | `fiscal-ai` | [Fiscal.ai](third_party/fiscal-ai/) | Cursor | Integrations | Pull source-linked financials, filings, ratios, prices, segments, KPIs, ownership, fund letters, and news from Fiscal.ai. |
 | `lmty` | [LMTY](third_party/lmty/) | Cursor | Integrations | Read tracked competitors, competitive intelligence reports, change logs, evidence, social mentions, and market feeds for your products, and browse LMTY's public Markets, event timelines, and company, product, and person profiles. |
 | `sabre-developer-hub` | [Sabre Developer Hub](third_party/sabre-developer-hub/) | Cursor | Integrations | Search and read Sabre Developer Hub documentation, OpenAPI specs, and Sabre-published agent skills for travel APIs, SDKs, and product collections. |
+| `freshbooks` | [FreshBooks](third_party/freshbooks/) | Cursor | Finance and Legal | Manage invoices, clients, expenses, bills, time tracking, and accounting reports. |
+| `campfire` | [Campfire](third_party/campfire/) | Cursor | Finance and Legal | Pull financial statements, ledgers, AR/AP, revenue recognition, and close status, and ask Ember about your books. |
+| `easyship` | [Easyship](third_party/easyship/) | Cursor | Integrations | Compare courier rates, create shipments, buy labels, book pickups, track parcels, and read shipping analytics across 550+ couriers. |
 Author values match each plugin’s `plugin.json` `author.name` (Cursor lists `plugins@cursor.com` in the manifest).
 
 ## Repository structure
