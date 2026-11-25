@@ -1,9 +1,9 @@
 ---
 title: plugins
-date: 2026-11-25T02:56:19+08:00
+date: 2026-11-26T02:05:05+08:00
 draft: False
-image: https://images.unsplash.com/photo-1660732106134-f3009a1e90ea?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTU1NDY0NzR8&ixlib=rb-4.1.0
-tags: ['github',cursor plugins, ai developer tools, software integrations]
+image: https://images.unsplash.com/photo-1577922784120-9802bd2683c8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTU2Mjk3OTV8&ixlib=rb-4.1.0
+tags: ['github',Cursor, Plugins, Integrations]
 categories: ['github']
 ---
 
@@ -165,6 +165,7 @@ Official Cursor plugins for popular developer tools, frameworks, and SaaS produc
 | `freshbooks` | [FreshBooks](third_party/freshbooks/) | Cursor | Finance and Legal | Manage invoices, clients, expenses, bills, time tracking, and accounting reports. |
 | `campfire` | [Campfire](third_party/campfire/) | Cursor | Finance and Legal | Pull financial statements, ledgers, AR/AP, revenue recognition, and close status, and ask Ember about your books. |
 | `easyship` | [Easyship](third_party/easyship/) | Cursor | Integrations | Compare courier rates, create shipments, buy labels, book pickups, track parcels, and read shipping analytics across 550+ couriers. |
+| `jobber` | [Jobber](third_party/jobber/) | Cursor | Integrations | Look up clients, quotes, jobs, visits, and invoices, and create clients, requests, and quotes. |
 Author values match each plugin’s `plugin.json` `author.name` (Cursor lists `plugins@cursor.com` in the manifest).
 
 ## Repository structure
