@@ -1,8 +1,8 @@
 ---
 title: plugins
-date: 2026-11-26T02:05:05+08:00
+date: 2026-11-27T01:49:23+08:00
 draft: False
-image: https://images.unsplash.com/photo-1577922784120-9802bd2683c8?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTU2Mjk3OTV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1610540626994-c444956f0d6d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTU3MTUyNDV8&ixlib=rb-4.1.0
 tags: ['github',Cursor, Plugins, Integrations]
 categories: ['github']
 ---
@@ -166,6 +166,7 @@ Official Cursor plugins for popular developer tools, frameworks, and SaaS produc
 | `campfire` | [Campfire](third_party/campfire/) | Cursor | Finance and Legal | Pull financial statements, ledgers, AR/AP, revenue recognition, and close status, and ask Ember about your books. |
 | `easyship` | [Easyship](third_party/easyship/) | Cursor | Integrations | Compare courier rates, create shipments, buy labels, book pickups, track parcels, and read shipping analytics across 550+ couriers. |
 | `jobber` | [Jobber](third_party/jobber/) | Cursor | Integrations | Look up clients, quotes, jobs, visits, and invoices, and create clients, requests, and quotes. |
+| `folk` | [folk](third_party/folk/) | Cursor | Integrations | Search and update people, companies, deals, notes, tasks, and interactions, enrich contacts, and run email campaigns in folk. |
 Author values match each plugin’s `plugin.json` `author.name` (Cursor lists `plugins@cursor.com` in the manifest).
 
 ## Repository structure
