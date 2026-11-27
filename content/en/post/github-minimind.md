@@ -1,9 +1,9 @@
 ---
 title: minimind
-date: 2026-11-27T01:49:02+08:00
+date: 2026-11-28T01:32:04+08:00
 draft: False
-image: https://images.unsplash.com/photo-1555930468-eff5aa2d5d3a?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTU3MTUyNDV8&ixlib=rb-4.1.0
-tags: ['github',Large Language Model, From Scratch Training, Reinforcement Learning]
+image: https://images.unsplash.com/photo-1647514422086-18cde746fa26?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTU4MDA2MzN8&ixlib=rb-4.1.0
+tags: ['github',Large Language Model, MiniMind, PyTorch]
 categories: ['github']
 ---
 

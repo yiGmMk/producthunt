@@ -1,8 +1,8 @@
 ---
 title: plugins
-date: 2026-11-27T01:49:23+08:00
+date: 2026-11-28T01:32:26+08:00
 draft: False
-image: https://images.unsplash.com/photo-1610540626994-c444956f0d6d?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTU3MTUyNDV8&ixlib=rb-4.1.0
+image: https://images.unsplash.com/photo-1577404626752-43812b17b724?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTU4MDA2MzN8&ixlib=rb-4.1.0
 tags: ['github',Cursor, Plugins, Integrations]
 categories: ['github']
 ---

@@ -1,9 +1,9 @@
 ---
 title: Claude-BugHunter
-date: 2026-11-27T01:47:46+08:00
+date: 2026-11-28T01:30:58+08:00
 draft: False
-image: https://images.unsplash.com/photo-1656080735804-b343f7e903b9?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTU3MTUyNDV8&ixlib=rb-4.1.0
-tags: ['github',Bug Hunting, Red Team Operations, Web Application Security]
+image: https://images.unsplash.com/photo-1641399554384-0c4cf62b15e1?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3OTU4MDA2MzN8&ixlib=rb-4.1.0
+tags: ['github',Bug Hunting, Red Teaming, Claude AI]
 categories: ['github']
 ---
 
@@ -91,7 +91,7 @@ Both copy the skills + commands into `~/.claude/` (macOS/Linux) or `%USERPROFILE
 | **B — copy install** | ✅ copied into `~/.claude/` | ✅ from the clone | ✅ from the clone |
 
 The plugin is the fastest path to the skills + slash commands. The terminal-native
-`cbh` runner installs standalone — `pipx install git+https://github.com/elementalsouls/Claude-BugHunter`
+`cbh` runner installs standalone — `pipx install claude-bughunter` (or `pipx install git+https://github.com/elementalsouls/Claude-BugHunter` for the tip of main)
 — so plugin users can add it without a full clone (see [`cbh` CLI](docs/cbh-cli.md)).
 The `hunt` engagement scaffolder ships with the clone (Option B).
 
