@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Seastar on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/seastar/</link>
+        <description>Recent content in Seastar on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Thu, 17 Apr 2025 15:30:57 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/seastar/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>scylladb</title>
+        <link>https://producthunt.programnotes.cn/en/p/scylladb/</link>
+        <pubDate>Thu, 17 Apr 2025 15:30:57 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/scylladb/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1719451643491-d41067a8bffd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ4NzQ5MzB8&amp;ixlib=rb-4.0.3" alt="Featured image of post scylladb" /&gt;&lt;h1 id=&#34;scylladbscylladb&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/scylladb/scylladb&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;scylladb/scylladb&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;scylla&#34;&gt;Scylla
+&lt;/h1&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://slack.scylladb.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/badge/slack-scylla-brightgreen.svg?logo=slack&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Slack&#34;
+	
+	
+&gt;&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/intent/follow?screen_name=ScyllaDB&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/twitter/follow/ScyllaDB.svg?style=social&amp;amp;label=Follow&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Twitter&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;what-is-scylla&#34;&gt;What is Scylla?
+&lt;/h2&gt;&lt;p&gt;Scylla is the real-time big data database that is API-compatible with Apache Cassandra and Amazon DynamoDB.
+Scylla embraces a shared-nothing approach that increases throughput and storage capacity to realize order-of-magnitude performance improvements and reduce hardware costs.&lt;/p&gt;
+&lt;p&gt;For more information, please see the &lt;a class=&#34;link&#34; href=&#34;https://www.scylladb.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ScyllaDB web site&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;build-prerequisites&#34;&gt;Build Prerequisites
+&lt;/h2&gt;&lt;p&gt;Scylla is fairly fussy about its build environment, requiring very recent
+versions of the C++23 compiler and of many libraries to build. The document
+&lt;a class=&#34;link&#34; href=&#34;HACKING.md&#34; &gt;HACKING.md&lt;/a&gt; includes detailed information on building and
+developing Scylla, but to get Scylla building quickly on (almost) any build
+machine, Scylla offers a &lt;a class=&#34;link&#34; href=&#34;tools/toolchain/README.md&#34; &gt;frozen toolchain&lt;/a&gt;,
+This is a pre-configured Docker image which includes recent versions of all
+the required compilers, libraries and build tools. Using the frozen toolchain
+allows you to avoid changing anything in your build machine to meet Scylla&amp;rsquo;s
+requirements - you just need to meet the frozen toolchain&amp;rsquo;s prerequisites
+(mostly, Docker or Podman being available).&lt;/p&gt;
+&lt;h2 id=&#34;building-scylla&#34;&gt;Building Scylla
+&lt;/h2&gt;&lt;p&gt;Building Scylla with the frozen toolchain &lt;code&gt;dbuild&lt;/code&gt; is as easy as:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git submodule update --init --force --recursive
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ./tools/toolchain/dbuild ./configure.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ./tools/toolchain/dbuild ninja build/release/scylla
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For further information, please see:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;HACKING.md&#34; &gt;Developer documentation&lt;/a&gt; for more information on building Scylla.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;docs/dev/building.md&#34; &gt;Build documentation&lt;/a&gt; on how to build Scylla binaries, tests, and packages.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;dist/docker/debian/README.md&#34; &gt;Docker image build documentation&lt;/a&gt; for information on how to build Docker images.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;running-scylla&#34;&gt;Running Scylla
+&lt;/h2&gt;&lt;p&gt;To start Scylla server, run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ./tools/toolchain/dbuild ./build/release/scylla --workdir tmp --smp &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; --developer-mode &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This will start a Scylla node with one CPU core allocated to it and data files stored in the &lt;code&gt;tmp&lt;/code&gt; directory.
+The &lt;code&gt;--developer-mode&lt;/code&gt; is needed to disable the various checks Scylla performs at startup to ensure the machine is configured for maximum performance (not relevant on development workstations).
+Please note that you need to run Scylla with &lt;code&gt;dbuild&lt;/code&gt; if you built it with the frozen toolchain.&lt;/p&gt;
+&lt;p&gt;For more run options, run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ./tools/toolchain/dbuild ./build/release/scylla --help
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;testing&#34;&gt;Testing
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/scylladb/scylladb/actions/workflows/seastar.yaml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/scylladb/scylladb/actions/workflows/seastar.yaml/badge.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Build with the latest Seastar&#34;
+	
+	
+&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/scylladb/scylladb/actions/workflows/reproducible-build.yaml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/scylladb/scylladb/actions/workflows/reproducible-build.yaml/badge.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Check Reproducible Build&#34;
+	
+	
+&gt;&lt;/a&gt; &lt;a class=&#34;link&#34; href=&#34;https://github.com/scylladb/scylladb/actions/workflows/clang-nightly.yaml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://github.com/scylladb/scylladb/actions/workflows/clang-nightly.yaml/badge.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;clang-nightly&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;See &lt;a class=&#34;link&#34; href=&#34;docs/dev/testing.md&#34; &gt;test.py manual&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;scylla-apis-and-compatibility&#34;&gt;Scylla APIs and compatibility
+&lt;/h2&gt;&lt;p&gt;By default, Scylla is compatible with Apache Cassandra and its API - CQL.
+There is also support for the API of Amazon DynamoDB™,
+which needs to be enabled and configured in order to be used. For more
+information on how to enable the DynamoDB™ API in Scylla,
+and the current compatibility of this feature as well as Scylla-specific extensions, see
+&lt;a class=&#34;link&#34; href=&#34;docs/alternator/alternator.md&#34; &gt;Alternator&lt;/a&gt; and
+&lt;a class=&#34;link&#34; href=&#34;docs/alternator/getting-started.md&#34; &gt;Getting started with Alternator&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation
+&lt;/h2&gt;&lt;p&gt;Documentation can be found &lt;a class=&#34;link&#34; href=&#34;docs/dev/README.md&#34; &gt;here&lt;/a&gt;.
+Seastar documentation can be found &lt;a class=&#34;link&#34; href=&#34;http://docs.seastar.io/master/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;.
+User documentation can be found &lt;a class=&#34;link&#34; href=&#34;https://docs.scylladb.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;training&#34;&gt;Training
+&lt;/h2&gt;&lt;p&gt;Training material and online courses can be found at &lt;a class=&#34;link&#34; href=&#34;https://university.scylladb.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Scylla University&lt;/a&gt;.
+The courses are free, self-paced and include hands-on examples. They cover a variety of topics including Scylla data modeling,
+administration, architecture, basic NoSQL concepts, using drivers for application development, Scylla setup, failover, compactions,
+multi-datacenters and how Scylla integrates with third-party applications.&lt;/p&gt;
+&lt;h2 id=&#34;contributing-to-scylla&#34;&gt;Contributing to Scylla
+&lt;/h2&gt;&lt;p&gt;If you want to report a bug or submit a pull request or a patch, please read the &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;contribution guidelines&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you are a developer working on Scylla, please read the &lt;a class=&#34;link&#34; href=&#34;HACKING.md&#34; &gt;developer guidelines&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;contact&#34;&gt;Contact
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The &lt;a class=&#34;link&#34; href=&#34;https://forum.scylladb.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;community forum&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;http://slack.scylladb.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Slack channel&lt;/a&gt; are for users to discuss configuration, management, and operations of ScyllaDB.&lt;/li&gt;
+&lt;li&gt;The &lt;a class=&#34;link&#34; href=&#34;https://groups.google.com/forum/#!forum/scylladb-dev&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;developers mailing list&lt;/a&gt; is for developers and people interested in following the development of ScyllaDB to discuss technical topics.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

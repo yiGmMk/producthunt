@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Servo on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/servo/</link>
+        <description>Recent content in Servo on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Thu, 23 Oct 2025 15:28:44 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/servo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>servo</title>
+        <link>https://producthunt.programnotes.cn/en/p/servo/</link>
+        <pubDate>Thu, 23 Oct 2025 15:28:44 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/servo/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1545584483-5568b8151c62?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjEyMDQ1MTB8&amp;ixlib=rb-4.1.0" alt="Featured image of post servo" /&gt;&lt;h1 id=&#34;servoservo&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/servo/servo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;servo/servo&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;the-servo-parallel-browser-engine-project&#34;&gt;The Servo Parallel Browser Engine Project
+&lt;/h1&gt;&lt;p&gt;Servo is a prototype web browser engine written in the
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/rust-lang/rust&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Rust&lt;/a&gt; language. It is currently developed on
+64-bit macOS, 64-bit Linux, 64-bit Windows, 64-bit OpenHarmony, and Android.&lt;/p&gt;
+&lt;p&gt;Servo welcomes contribution from everyone. Check out:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a class=&#34;link&#34; href=&#34;https://book.servo.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Servo Book&lt;/a&gt; for documentation&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://servo.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;servo.org&lt;/a&gt; for news and guides&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Coordination of Servo development happens:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Here in the Github Issues&lt;/li&gt;
+&lt;li&gt;On the &lt;a class=&#34;link&#34; href=&#34;https://servo.zulipchat.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Servo Zulip&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;In video calls advertised in the &lt;a class=&#34;link&#34; href=&#34;https://github.com/servo/project/issues&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Servo Project&lt;/a&gt; repo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting started
+&lt;/h2&gt;&lt;p&gt;For more detailed build instructions, see the Servo book under &lt;a class=&#34;link&#34; href=&#34;https://book.servo.org/hacking/setting-up-your-environment.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Setting up your environment&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://book.servo.org/hacking/building-servo.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Building Servo&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://book.servo.org/hacking/building-for-android.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Building for Android&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://book.servo.org/hacking/building-for-openharmony.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Building for OpenHarmony&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;macos&#34;&gt;macOS
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Download and install &lt;a class=&#34;link&#34; href=&#34;https://developer.apple.com/xcode/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Xcode&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://brew.sh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;brew&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Install &lt;code&gt;uv&lt;/code&gt;: &lt;code&gt;curl -LsSf https://astral.sh/uv/install.sh | sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Install &lt;code&gt;rustup&lt;/code&gt;: &lt;code&gt;curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://sh.rustup.rs | sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Restart your shell to make sure &lt;code&gt;cargo&lt;/code&gt; is available&lt;/li&gt;
+&lt;li&gt;Install the other dependencies: &lt;code&gt;./mach bootstrap&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Build servoshell: &lt;code&gt;./mach build&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;linux&#34;&gt;Linux
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Install &lt;code&gt;curl&lt;/code&gt;:
+&lt;ul&gt;
+&lt;li&gt;Arch: &lt;code&gt;sudo pacman -S --needed curl&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Debian, Ubuntu: &lt;code&gt;sudo apt install curl&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fedora: &lt;code&gt;sudo dnf install curl&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Gentoo: &lt;code&gt;sudo emerge net-misc/curl&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Install &lt;code&gt;uv&lt;/code&gt;: &lt;code&gt;curl -LsSf https://astral.sh/uv/install.sh | sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Install &lt;code&gt;rustup&lt;/code&gt;: &lt;code&gt;curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://sh.rustup.rs | sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Restart your shell to make sure &lt;code&gt;cargo&lt;/code&gt; is available&lt;/li&gt;
+&lt;li&gt;Install the other dependencies: &lt;code&gt;./mach bootstrap&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Build servoshell: &lt;code&gt;./mach build&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;windows&#34;&gt;Windows
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Download &lt;a class=&#34;link&#34; href=&#34;https://docs.astral.sh/uv/getting-started/installation/#standalone-installer&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;uv&lt;/code&gt;&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://chocolatey.org/install#individual&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;choco&lt;/code&gt;&lt;/a&gt;, and &lt;a class=&#34;link&#34; href=&#34;https://win.rustup.rs/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;rustup&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Be sure to select &lt;em&gt;Quick install via the Visual Studio Community installer&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;In the Visual Studio Installer, ensure the following components are installed:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Windows 10/11 SDK (anything &amp;gt;= 10.0.19041.0)&lt;/strong&gt; (&lt;code&gt;Microsoft.VisualStudio.Component.Windows{10, 11}SDK.{&amp;gt;=19041}&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MSVC v143 - VS 2022 C++ x64/x86 build tools (Latest)&lt;/strong&gt; (&lt;code&gt;Microsoft.VisualStudio.Component.VC.Tools.x86.x64&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;C++ ATL for latest v143 build tools (x86 &amp;amp; x64)&lt;/strong&gt; (&lt;code&gt;Microsoft.VisualStudio.Component.VC.ATL&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Restart your shell to make sure &lt;code&gt;cargo&lt;/code&gt; is available&lt;/li&gt;
+&lt;li&gt;Install the other dependencies: &lt;code&gt;.\mach bootstrap&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Build servoshell: &lt;code&gt;.\mach build&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;android&#34;&gt;Android
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Ensure that the following environment variables are set:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ANDROID_SDK_ROOT&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ANDROID_NDK_ROOT&lt;/code&gt;: &lt;code&gt;$ANDROID_SDK_ROOT/ndk/28.2.13676358/&lt;/code&gt;
+&lt;code&gt;ANDROID_SDK_ROOT&lt;/code&gt; can be any directory (such as &lt;code&gt;~/android-sdk&lt;/code&gt;).
+All of the Android build dependencies will be installed there.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Install the latest version of the &lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/studio#command-tools&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Android command-line
+tools&lt;/a&gt; to
+&lt;code&gt;$ANDROID_SDK_ROOT/cmdline-tools/latest&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Run the following command to install the necessary components:
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo &lt;span class=&#34;nv&#34;&gt;$ANDROID_SDK_ROOT&lt;/span&gt;/cmdline-tools/latest/bin/sdkmanager --install &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;build-tools;34.0.0&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;emulator&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ndk;28.2.13676358&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;platform-tools&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;platforms;android-33&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;system-images;android-33;google_apis;x86_64&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Follow the instructions above for the platform you are building on&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;openharmony&#34;&gt;OpenHarmony
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Follow the instructions above for the platform you are building on to prepare the environment.&lt;/li&gt;
+&lt;li&gt;Depending on the target distribution (e.g. &lt;code&gt;HarmonyOS NEXT&lt;/code&gt; vs pure &lt;code&gt;OpenHarmony&lt;/code&gt;) the build configuration will differ slightly.&lt;/li&gt;
+&lt;li&gt;Ensure that the following environment variables are set
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;DEVECO_SDK_HOME&lt;/code&gt; (Required when targeting &lt;code&gt;HarmonyOS NEXT&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;OHOS_BASE_SDK_HOME&lt;/code&gt; (Required when targeting &lt;code&gt;OpenHarmony&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;OHOS_SDK_NATIVE&lt;/code&gt; (e.g. &lt;code&gt;${DEVECO_SDK_HOME}/default/openharmony/native&lt;/code&gt; or &lt;code&gt;${OHOS_BASE_SDK_HOME}/${API_VERSION}/native&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SERVO_OHOS_SIGNING_CONFIG&lt;/code&gt;: Path to json file containing a valid signing configuration for the demo app.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Review the detailed instructions at &lt;a class=&#34;link&#34; href=&#34;https://book.servo.org/hacking/building-for-openharmony.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Building for OpenHarmony&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;The target distribution can be modified by passing &lt;code&gt;--flavor=&amp;lt;default|harmonyos&amp;gt;&lt;/code&gt; to &lt;code&gt;mach &amp;lt;build|package|install&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Nvim-Lspconfig on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/nvim-lspconfig/</link>
+        <description>Recent content in Nvim-Lspconfig on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Thu, 17 Apr 2025 15:30:46 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/nvim-lspconfig/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>nvim-lspconfig</title>
+        <link>https://producthunt.programnotes.cn/en/p/nvim-lspconfig/</link>
+        <pubDate>Thu, 17 Apr 2025 15:30:46 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/nvim-lspconfig/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1719451643491-d41067a8bffd?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDQ4NzQ5MzB8&amp;ixlib=rb-4.0.3" alt="Featured image of post nvim-lspconfig" /&gt;&lt;h1 id=&#34;neovimnvim-lspconfig&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/neovim/nvim-lspconfig&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;neovim/nvim-lspconfig&lt;/a&gt;
+&lt;/h1&gt;&lt;h1 id=&#34;nvim-lspconfig&#34;&gt;nvim-lspconfig
+&lt;/h1&gt;&lt;p&gt;nvim-lspconfig is a &amp;ldquo;data only&amp;rdquo; repo, providing basic, default &lt;a class=&#34;link&#34; href=&#34;https://neovim.io/doc/user/lsp.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nvim LSP client&lt;/a&gt;
+configurations for various LSP servers.&lt;/p&gt;
+&lt;p&gt;View &lt;a class=&#34;link&#34; href=&#34;doc/configs.md&#34; &gt;all configs&lt;/a&gt; or &lt;code&gt;:help lspconfig-all&lt;/code&gt; from Nvim.&lt;/p&gt;
+&lt;h2 id=&#34;important-&#34;&gt;Important ⚠️
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;These configs are &lt;strong&gt;best-effort and supported by the community (you).&lt;/strong&gt; See &lt;a class=&#34;link&#34; href=&#34;#contributions&#34; &gt;contributions&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;If you found a bug in Nvim LSP (&lt;code&gt;:help lsp&lt;/code&gt;), &lt;a class=&#34;link&#34; href=&#34;https://github.com/neovim/neovim/issues/new?assignees=&amp;amp;labels=bug%2Clsp&amp;amp;template=lsp_bug_report.yml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;report it to Neovim core&lt;/a&gt;.
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Do not&lt;/strong&gt; report it here. Only configuration data lives here.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;This repo only provides &lt;em&gt;configurations&lt;/em&gt;. Its programmatic API is deprecated and must not be used externally.
+&lt;ul&gt;
+&lt;li&gt;The &amp;ldquo;framework&amp;rdquo; parts (&lt;em&gt;not&lt;/em&gt; the configs) of nvim-lspconfig &lt;a class=&#34;link&#34; href=&#34;https://github.com/neovim/neovim/issues/28479&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;will be upstreamed to Nvim core&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://luarocks.org/modules/neovim/nvim-lspconfig&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://img.shields.io/luarocks/v/neovim/nvim-lspconfig?logo=lua&amp;amp;color=purple&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;LuaRocks&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Requires Nvim 0.10 above. Update Nvim and nvim-lspconfig before reporting an issue.&lt;/li&gt;
+&lt;li&gt;Install nvim-lspconfig using Vim&amp;rsquo;s &amp;ldquo;packages&amp;rdquo; feature:
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/neovim/nvim-lspconfig ~/.config/nvim/pack/nvim/start/nvim-lspconfig
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Or use a 3rd-party plugin manager (consult the documentation for your plugin manager).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;quickstart&#34;&gt;Quickstart
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Install a language server, e.g. &lt;a class=&#34;link&#34; href=&#34;doc/configs.md#pyright&#34; &gt;pyright&lt;/a&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm i -g pyright
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Add the language server setup to your init.lua.
+&lt;ul&gt;
+&lt;li&gt;Nvim 0.11+ (see &lt;a class=&#34;link&#34; href=&#34;#vimlspconfig&#34; &gt;vim.lsp.config&lt;/a&gt;)
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vim.lsp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;enable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;pyright&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Nvim 0.10 (legacy, &lt;strong&gt;not supported&lt;/strong&gt;)
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;lspconfig&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pyright.setup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Ensure your project/workspace contains a root marker as specified in &lt;code&gt;:help lspconfig-all&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Open a code file in Nvim. LSP will attach and provide diagnostics.
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nvim main.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;:checkhealth lsp&lt;/code&gt; to see the status or to troubleshoot.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Read &lt;code&gt;:help lspconfig&lt;/code&gt; for details. Read &lt;code&gt;:help lspconfig-all&lt;/code&gt; for the full list of server-specific details.
+For servers not on your &lt;code&gt;$PATH&lt;/code&gt; (e.g., &lt;code&gt;jdtls&lt;/code&gt;, &lt;code&gt;elixirls&lt;/code&gt;), you must manually set the &lt;code&gt;cmd&lt;/code&gt; parameter, see &lt;a class=&#34;link&#34; href=&#34;#vim.lsp.config&#34; &gt;vim.lsp.config&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;configuration&#34;&gt;Configuration
+&lt;/h2&gt;&lt;p&gt;Nvim sets some default options and mappings when a buffer attaches to LSP (see &lt;a class=&#34;link&#34; href=&#34;https://neovim.io/doc/user/lsp.html#lsp-config&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;:help lsp-config&lt;/code&gt;&lt;/a&gt;). In particular:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://neovim.io/doc/user/tagsrch.html#tag-function&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;&#39;tagfunc&#39;&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Enables &amp;ldquo;go to definition&amp;rdquo; capabilities using &lt;a class=&#34;link&#34; href=&#34;https://neovim.io/doc/user/tagsrch.html#CTRL-%5D&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;&amp;lt;C-]&amp;gt;&lt;/code&gt;&lt;/a&gt; and other &lt;a class=&#34;link&#34; href=&#34;https://neovim.io/doc/user/tagsrch.html#tag-commands&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;tag commands&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://neovim.io/doc/user/options.html#%27omnifunc%27&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;&#39;omnifunc&#39;&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Enables (manual) omni mode completion with &lt;code&gt;&amp;lt;C-X&amp;gt;&amp;lt;C-O&amp;gt;&lt;/code&gt; in Insert mode. For &lt;em&gt;auto&lt;/em&gt;completion, an &lt;a class=&#34;link&#34; href=&#34;https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;autocompletion plugin&lt;/a&gt; is required.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://neovim.io/doc/user/options.html#%27formatexpr%27&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;&#39;formatexpr&#39;&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Enables LSP formatting with &lt;a class=&#34;link&#34; href=&#34;https://neovim.io/doc/user/change.html#gq&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;gq&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;K&lt;/code&gt; maps to &lt;a class=&#34;link&#34; href=&#34;https://neovim.io/doc/user/lsp.html#vim.lsp.buf.hover%28%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;vim.lsp.buf.hover()&lt;/code&gt;&lt;/a&gt; in Normal mode.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[d&lt;/code&gt; and &lt;code&gt;]d&lt;/code&gt; map to &lt;code&gt;vim.diagnostic.goto_prev()&lt;/code&gt; and &lt;code&gt;vim.diagnostic.goto_next()&lt;/code&gt;, respectively.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;C-W&amp;gt;d&lt;/code&gt; maps to &lt;code&gt;vim.diagnostic.open_float()&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Further customization can be achieved using the &lt;a class=&#34;link&#34; href=&#34;https://neovim.io/doc/user/lsp.html#LspAttach&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;LspAttach&lt;/code&gt;&lt;/a&gt; autocommand event.
+The &lt;a class=&#34;link&#34; href=&#34;https://neovim.io/doc/user/lsp.html#LspAttach&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;LspDetach&lt;/code&gt;&lt;/a&gt; autocommand event can be used to &amp;ldquo;cleanup&amp;rdquo; mappings if a buffer becomes detached from an LSP server.
+See &lt;a class=&#34;link&#34; href=&#34;https://neovim.io/doc/user/lsp.html#LspAttach&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;:h LspAttach&lt;/code&gt;&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://neovim.io/doc/user/lsp.html#LspDetach&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;:h LspDetach&lt;/code&gt;&lt;/a&gt; for details and examples.
+See &lt;a class=&#34;link&#34; href=&#34;https://neovim.io/doc/user/lsp.html#lsp-buf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;:h lsp-buf&lt;/code&gt;&lt;/a&gt; for details on other LSP functions.&lt;/p&gt;
+&lt;p&gt;Extra settings can be specified for each LSP server:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nvim 0.11+ (see &lt;a class=&#34;link&#34; href=&#34;#vim.lsp.config&#34; &gt;vim.lsp.config&lt;/a&gt;)
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vim.lsp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;config&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;rust_analyzer&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;-- Server-specific settings. See `:help lsp-quickstart`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;settings&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;rust-analyzer&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Nvim 0.10 (legacy, &lt;strong&gt;not supported&lt;/strong&gt;)
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;local&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lspconfig&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;lspconfig&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;lspconfig.rust_analyzer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setup&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;-- Server-specific settings. See `:help lspconfig-setup`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;settings&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;rust-analyzer&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vimlspconfig&#34;&gt;vim.lsp.config
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;nvim-lspconfig&lt;/code&gt; includes configurations compatible with &lt;code&gt;vim.lsp&lt;/code&gt; under &lt;a class=&#34;link&#34; href=&#34;./lsp/&#34; &gt;&lt;code&gt;lsp/&lt;/code&gt;&lt;/a&gt;, so servers can be enabled (auto-activated when a filetype is opened) with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vim.lsp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;enable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;pyright&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;and configured with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vim.lsp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;config&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;pyright&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;cmd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;…&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;which extends the configuration under &lt;a class=&#34;link&#34; href=&#34;./lsp/&#34; &gt;&lt;code&gt;lsp/&lt;/code&gt;&lt;/a&gt;. For further information see &lt;a class=&#34;link&#34; href=&#34;https://neovim.io/doc/user/lsp.html#lsp-config&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;:help lsp-config&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!WARNING]&lt;br&gt;
+Some servers are &lt;a class=&#34;link&#34; href=&#34;https://github.com/neovim/nvim-lspconfig/issues/3705&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;currently missing&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;troubleshooting&#34;&gt;Troubleshooting
+&lt;/h2&gt;&lt;p&gt;The most common reasons a language server does not start or attach are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Language server is not installed. nvim-lspconfig does not install language servers for you. You should be able to run the &lt;code&gt;cmd&lt;/code&gt; defined in each server&amp;rsquo;s Lua module from the command line and see that the language server starts. If the &lt;code&gt;cmd&lt;/code&gt; is an executable name instead of an absolute path to the executable, ensure it is on your path.&lt;/li&gt;
+&lt;li&gt;Missing filetype plugins. Certain languages are not detecting by Vim/Nvim because they have not yet been added to the filetype detection system. Ensure &lt;code&gt;:set ft?&lt;/code&gt; shows the filetype and not an empty value.&lt;/li&gt;
+&lt;li&gt;Not triggering root detection. &lt;strong&gt;Some&lt;/strong&gt; language servers will only start if it is opened in a directory, or child directory, containing a file which signals the &lt;em&gt;root&lt;/em&gt; of the project. Most of the time, this is a &lt;code&gt;.git&lt;/code&gt; folder, but each server defines the root config in the lua file. See &lt;a class=&#34;link&#34; href=&#34;doc/configs.md&#34; &gt;doc/configs.md&lt;/a&gt; or the source for the list of root directories.&lt;/li&gt;
+&lt;li&gt;You must pass &lt;code&gt;capabilities&lt;/code&gt; for &lt;strong&gt;each&lt;/strong&gt; &lt;code&gt;setup {}&lt;/code&gt; if you want these to take effect.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Do not call &lt;code&gt;setup {}&lt;/code&gt; twice for the same server&lt;/strong&gt;. The second call to &lt;code&gt;setup {}&lt;/code&gt; will overwrite the first.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;bug-reports&#34;&gt;Bug reports
+&lt;/h2&gt;&lt;p&gt;If you found a bug with LSP functionality, &lt;a class=&#34;link&#34; href=&#34;https://github.com/neovim/neovim/issues/new?assignees=&amp;amp;labels=bug%2Clsp&amp;amp;template=lsp_bug_report.yml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;report it to Neovim core&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Before reporting a bug, check your logs and the output of &lt;code&gt;:LspInfo&lt;/code&gt;. Add the following to your init.vim to enable logging:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;vim.lsp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set_log_level&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;debug&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Attempt to run the language server, and open the log with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:LspLog
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Most of the time, the reason for failure is present in the logs.&lt;/p&gt;
+&lt;h2 id=&#34;commands&#34;&gt;Commands
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;:LspInfo&lt;/code&gt; (alias to &lt;code&gt;:checkhealth vim.lsp&lt;/code&gt;) shows the status of active and configured language servers.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:LspStart &amp;lt;config_name&amp;gt;&lt;/code&gt; Start the requested server name. Will only successfully start if the command detects a root directory matching the current config. Pass &lt;code&gt;autostart = false&lt;/code&gt; to your &lt;code&gt;.setup{}&lt;/code&gt; call for a language server if you would like to launch clients solely with this command. Defaults to all servers matching current buffer filetype.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:LspStop [&amp;lt;client_id_or_name&amp;gt; ...]&lt;/code&gt; Stops the given server(s). Defaults to
+stopping all servers active on the current buffer. To force stop add &lt;code&gt;++force&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:LspRestart [&amp;lt;client_id_or_name&amp;gt; ...]&lt;/code&gt; Restarts the given client(s), and attempts to reattach to all
+previously attached buffers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;contributions&#34;&gt;Contributions
+&lt;/h2&gt;&lt;p&gt;If a language server is missing from &lt;a class=&#34;link&#34; href=&#34;doc/configs.md&#34; &gt;configs.md&lt;/a&gt;, contributing
+a new configuration for it helps others, especially if the server requires special setup. Follow these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Read &lt;a class=&#34;link&#34; href=&#34;CONTRIBUTING.md&#34; &gt;CONTRIBUTING.md&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Create a new file at &lt;code&gt;lsp/SERVER_NAME.lua&lt;/code&gt;.
+&lt;ul&gt;
+&lt;li&gt;Copy an &lt;a class=&#34;link&#34; href=&#34;https://github.com/neovim/nvim-lspconfig/tree/master/lsp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;existing config&lt;/a&gt;
+to get started. Most configs are simple. For an extensive example see
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/neovim/nvim-lspconfig/blob/master/lsp/texlab.lua&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;texlab.lua&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Ask questions on &lt;a class=&#34;link&#34; href=&#34;https://github.com/neovim/neovim/discussions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Discussions&lt;/a&gt; or in the &lt;a class=&#34;link&#34; href=&#34;https://app.element.io/#/room/#neovim:matrix.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Neovim Matrix room&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;release-process&#34;&gt;Release process
+&lt;/h2&gt;&lt;p&gt;To publish a release:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create and push a new &lt;a class=&#34;link&#34; href=&#34;https://github.com/neovim/nvim-lspconfig/tags&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;tag&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;After pushing the tag, a &lt;a class=&#34;link&#34; href=&#34;./.github/workflows/release.yml&#34; &gt;GitHub action&lt;/a&gt;
+will automatically package the plugin and publish the release to LuaRocks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;License
+&lt;/h2&gt;&lt;p&gt;Copyright Neovim contributors. All rights reserved.&lt;/p&gt;
+&lt;p&gt;nvim-lspconfig is licensed under the terms of the Apache 2.0 license.&lt;/p&gt;
+&lt;p&gt;See &lt;a class=&#34;link&#34; href=&#34;./LICENSE.md&#34; &gt;LICENSE.md&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

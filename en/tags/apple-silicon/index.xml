@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Apple Silicon on Producthunt daily</title>
+        <link>https://producthunt.programnotes.cn/en/tags/apple-silicon/</link>
+        <description>Recent content in Apple Silicon on Producthunt daily</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 26 Jun 2026 18:35:39 +0800</lastBuildDate><atom:link href="https://producthunt.programnotes.cn/en/tags/apple-silicon/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>container</title>
+        <link>https://producthunt.programnotes.cn/en/p/container/</link>
+        <pubDate>Fri, 26 Jun 2026 18:35:39 +0800</pubDate>
+        
+        <guid>https://producthunt.programnotes.cn/en/p/container/</guid>
+        <description>&lt;img src="https://images.unsplash.com/photo-1688534482869-91efe865a07f?ixid=M3w0NjAwMjJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI0Njk5Nzh8&amp;ixlib=rb-4.1.0" alt="Featured image of post container" /&gt;&lt;h1 id=&#34;applecontainer&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/apple/container&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;apple/container&lt;/a&gt;
+&lt;/h1&gt;&lt;h1&gt;
+  &lt;img alt=&#34;Containerization logo&#34; src=&#34;./assets/Containerization-Logo.png&#34; width=&#34;70&#34; valign=&#34;middle&#34;&gt;
+  &amp;nbsp;container
+&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;container&lt;/code&gt; is a tool that you can use to create and run Linux containers as lightweight virtual machines on your Mac. It&amp;rsquo;s written in Swift, and optimized for Apple silicon.&lt;/p&gt;
+&lt;p&gt;The tool consumes and produces &lt;a class=&#34;link&#34; href=&#34;https://github.com/opencontainers/image-spec&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OCI-compatible container images&lt;/a&gt;, so you can pull and run images from any standard container registry. You can push images that you build to those registries as well, and run the images in any other OCI-compatible application.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;container&lt;/code&gt; uses the &lt;a class=&#34;link&#34; href=&#34;https://github.com/apple/containerization&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Containerization&lt;/a&gt; Swift package for low-level container, image, and process management.&lt;/p&gt;
+&lt;h2 id=&#34;get-started&#34;&gt;Get started
+&lt;/h2&gt;&lt;h3 id=&#34;requirements&#34;&gt;Requirements
+&lt;/h3&gt;&lt;p&gt;You need a Mac with Apple silicon to run &lt;code&gt;container&lt;/code&gt;. To build it, see the &lt;a class=&#34;link&#34; href=&#34;./BUILDING.md&#34; &gt;BUILDING&lt;/a&gt; document.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;container&lt;/code&gt; is supported on macOS 26, since it takes advantage of new features and enhancements to virtualization and networking in this release. We do not support older versions of macOS and the &lt;code&gt;container&lt;/code&gt; maintainers typically will not address issues that cannot be reproduced on macOS 26.&lt;/p&gt;
+&lt;h3 id=&#34;initial-install&#34;&gt;Initial install
+&lt;/h3&gt;&lt;p&gt;Download the latest signed installer package for &lt;code&gt;container&lt;/code&gt; from the &lt;a class=&#34;link&#34; href=&#34;https://github.com/apple/container/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub release page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To install the tool, double-click the package file and follow the instructions. Enter your administrator password when prompted, to give the installer permission to place the installed files under &lt;code&gt;/usr/local&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Start the system service with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;container system start
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;upgrade-or-downgrade&#34;&gt;Upgrade or downgrade
+&lt;/h3&gt;&lt;p&gt;For both upgrading and downgrading, you can manually download and install the signed installer package by following the steps from &lt;a class=&#34;link&#34; href=&#34;#initial-install&#34; &gt;initial install&lt;/a&gt; or use the &lt;code&gt;update-container.sh&lt;/code&gt; script (installed to &lt;code&gt;/usr/local/bin&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re upgrading or downgrading, you must stop your existing &lt;code&gt;container&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;container system stop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To upgrade to the latest release, simply run the command below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/local/bin/update-container.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To downgrade, you must uninstall your existing &lt;code&gt;container&lt;/code&gt; (the &lt;code&gt;-k&lt;/code&gt; flag keeps your user data, while &lt;code&gt;-d&lt;/code&gt; removes it):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/local/bin/uninstall-container.sh -k
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/local/bin/update-container.sh -v 0.3.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Start the system service with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;container system start
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;uninstall&#34;&gt;Uninstall
+&lt;/h3&gt;&lt;p&gt;Use the &lt;code&gt;uninstall-container.sh&lt;/code&gt; script (installed to &lt;code&gt;/usr/local/bin&lt;/code&gt;) to remove &lt;code&gt;container&lt;/code&gt; from your system. To remove your user data along with the tool, run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/local/bin/uninstall-container.sh -d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To retain your user data so that it is available should you reinstall later, run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/local/bin/uninstall-container.sh -k
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;next-steps&#34;&gt;Next steps
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Take &lt;a class=&#34;link&#34; href=&#34;./docs/tutorials/start-here.md&#34; &gt;a guided tour of &lt;code&gt;container&lt;/code&gt;&lt;/a&gt; by building, running, and publishing a simple web server image.&lt;/li&gt;
+&lt;li&gt;Learn how to &lt;a class=&#34;link&#34; href=&#34;./docs/how-to.md&#34; &gt;use various &lt;code&gt;container&lt;/code&gt; features&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Read a brief description and &lt;a class=&#34;link&#34; href=&#34;./docs/technical-overview.md&#34; &gt;technical overview&lt;/a&gt; of &lt;code&gt;container&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Browse the &lt;a class=&#34;link&#34; href=&#34;./docs/command-reference.md&#34; &gt;full command reference&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;./BUILDING.md&#34; &gt;Build and run&lt;/a&gt; &lt;code&gt;container&lt;/code&gt; on your own development system.&lt;/li&gt;
+&lt;li&gt;View the project &lt;a class=&#34;link&#34; href=&#34;https://apple.github.io/container/documentation/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;API documentation&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;contributing&#34;&gt;Contributing
+&lt;/h2&gt;&lt;p&gt;Contributions to &lt;code&gt;container&lt;/code&gt; are welcome and encouraged. Please see our &lt;a class=&#34;link&#34; href=&#34;https://github.com/apple/containerization/blob/main/CONTRIBUTING.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;main contributing guide&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;h2 id=&#34;project-status&#34;&gt;Project Status
+&lt;/h2&gt;&lt;p&gt;The container project is currently under active development. Its stability, both for consuming the project as a Swift package and the &lt;code&gt;container&lt;/code&gt; tool, is only guaranteed within patch versions, such as between 0.1.1 and 0.1.2. Minor version releases may include breaking changes until we reach a 1.0.0 release.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
